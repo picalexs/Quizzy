@@ -1,0 +1,3 @@
+# Quizzy
+
+Sal colegii
