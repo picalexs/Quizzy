@@ -1,5 +1,5 @@
 # Cum sa configurezi frontend-ul pentru **Quizzy**
-##ruleaza aceste comenzi in terminal:
+## Ruleaza aceste comenzi in terminal:
 ```bash
 npm install
 npm run dev
