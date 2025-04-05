@@ -28,7 +28,7 @@ Acest ghid te va ajuta să configurezi backend-ul pentru proiectul **Quizzy** pa
 3. Apasă pe **+** în partea stângă sus și alege **Spring Boot**.
 4. La câmpul **Name**, scrie **'Backend'**.
 5. La câmpul **Main Class**, scrie: `com.backend.BackendApplication`.
-6. Apoi o sa trebuiasca sa dai paste la niste informatii trimise in privat.
+6. Apoi o sa trebuiasca sa dai copy la niste informatii trimise in privat.
 7. La secțiunea **Build and Run**, apasă pe **Modify options** -> **Environment variables**.
 8. Apasă pe iconița cea mai din dreapta din campul nou aparut (seamana cu o lista) și lipește variabilele de mediu (la care ai dat copy) în fereastra care apare.
 9. Apasă **OK** și apoi **Apply**.
