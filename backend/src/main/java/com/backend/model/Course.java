@@ -1,19 +1,14 @@
 package com.backend.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.util.Set;
 
 @Entity
 @Table(name = "course")
-@ToString
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Course {
 
     @Id
