@@ -25,6 +25,7 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<Collection<User>> getAllUsers() {
+        System.out.println("dasdas");
         return ResponseEntity.ok(userService.getAllUsers());
     }
 }
