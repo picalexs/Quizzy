@@ -18,8 +18,8 @@ Acest ghid te va ajuta să configurezi backend-ul pentru proiectul **Quizzy** pa
 ## Partea 2: Configuratea Inteliji
 1. În IntelliJ, mergi la **File** -> **Project Structure**.
 2. În secțiunea **Platform Settings** -> **SDKs**, apasă pe **+** și alege **Download JDK**.
-3. Căută **Amazon Corretto** la **Vendor** și alege **Version 23**. Apasă pe **Download**.
-4. După finalizarea instalării, în fereastra **Project Structure**, accesează **Project** și selectează **Corretto-23** la câmpul **SDK**.
+3. Căută **Amazon Corretto** (pentru **Mac**) sau **JDK 23** (pentru **Windows**) la **Vendor** și alege **Version 23**. Apasă pe **Download**.
+4. După finalizarea instalării, în fereastra **Project Structure**, accesează **Project** și selectează **Corretto-23** (Mac)/ **JDK 23** (Windows) la câmpul **SDK**.
 5. Apasă **OK** pentru a salva modificările.
 
 ## Partea 3: Configurarea Aplicației Spring Boot
