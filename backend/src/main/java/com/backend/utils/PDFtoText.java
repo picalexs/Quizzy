@@ -1,4 +1,4 @@
-package com.backend.flashCardGenerator;
+package com.backend.utils;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
