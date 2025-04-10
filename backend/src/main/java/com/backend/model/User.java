@@ -35,6 +35,9 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
+    public String getPassword() {
+        return password;
+    }
     @OneToMany(mappedBy = "user")
     private Set<Enrollment> enrollments;
 

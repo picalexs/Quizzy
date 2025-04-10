@@ -1,14 +1,13 @@
 package com.backend.controller;
 
+import com.backend.dto.LoginRequest;
 import com.backend.model.User;
 import com.backend.repository.UserRepository;
 import com.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -28,5 +27,18 @@ public class UserController {
     public ResponseEntity<Collection<User>> getAllUsers() {
 
         return ResponseEntity.ok(userService.getAllUsers());
+    }
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
+        String email = loginRequest.getEmail();
+        String password = loginRequest.getPassword();
+        boolean valid = userService.checkCredentials(email, password);
+
+        if (valid) {
+            return ResponseEntity.ok("Login reușit!");
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("Credențiale invalide!");
+        }
     }
 }
