@@ -15,7 +15,6 @@ import java.util.Collection;
 @RequestMapping("/")
 public class UserController {
 
-
     private final UserService userService;
 
     @Autowired
@@ -25,9 +24,9 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<Collection<User>> getAllUsers() {
-
         return ResponseEntity.ok(userService.getAllUsers());
     }
+
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
         String email = loginRequest.getEmail();
@@ -35,7 +34,8 @@ public class UserController {
         boolean valid = userService.checkCredentials(email, password);
 
         if (valid) {
-            return ResponseEntity.ok("Login reușit!");
+            String token = userService.generateJwtForUser(email);
+            return ResponseEntity.ok(token);
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body("Credențiale invalide!");
