@@ -5,6 +5,9 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
@@ -17,8 +20,10 @@ public class GeminiService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public String processFile(String inputPrompt) throws IOException {
-        String response = getGeminiResponse(inputPrompt);
+    public String processFile(String inputFilePath) throws IOException {
+        String prompt = Files.readString(Path.of(inputFilePath));
+
+        String response = getGeminiResponse(prompt);
 
         return response;
     }
