@@ -18,8 +18,7 @@ public class GeminiController {
     private final GeminiService geminiService;
 
     @PostMapping("/generate")
-    public String generateResponse(@RequestParam String inputPrompt) throws IOException {
-        // Call processFile method with input and output paths
-        return geminiService.processFile(inputPrompt);
+    public String generateResponse(@RequestParam String inputFilePath) throws IOException {
+        return geminiService.processFile(inputFilePath);
     }
 }
