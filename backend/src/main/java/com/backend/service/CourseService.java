@@ -1,5 +1,6 @@
 package com.backend.service;
 
+import com.backend.dto.CourseDTO;
 import com.backend.model.Course;
 import com.backend.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CourseService {
@@ -23,10 +25,12 @@ public class CourseService {
         return courseRepository.allCourses();
     }
 
-    public void processSelectedCourses(List<Course> selectedCourses) {
-        for(Course c : selectedCourses) {
-            //courseRepository.setCourse((long) 1,(long) c.getId());
-            System.out.println(c.toString());
-        }
+    public Optional<Course> findById(Long id) {
+        return courseRepository.findById(id);
     }
+
+    public boolean checkCourseById(Long id) {
+        return courseRepository.existsById(id);
+    }
+
 }
