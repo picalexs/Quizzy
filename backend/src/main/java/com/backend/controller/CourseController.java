@@ -37,6 +37,25 @@ public class CourseController {
         return courseService.findById(id).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @PostMapping
+    public ResponseEntity<Course> createCourse(@RequestBody CourseDTO courseDTO) {
+        Course createdCourse = courseService.createCourse(courseDTO);
+        return ResponseEntity.ok(createdCourse);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Course> updateCourse(@PathVariable Long id, @RequestBody CourseDTO courseDTO) {
+        return courseService.updateCourse(id, courseDTO)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteCourse(@PathVariable Long id) {
+        boolean deleted = courseService.deleteCourse(id);
+        return deleted ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+    }
+
     @PostMapping("/selected")
     public ResponseEntity<String> receiveSelectedCourses(@RequestBody List<CourseDTO> selectedCourses) {
 
