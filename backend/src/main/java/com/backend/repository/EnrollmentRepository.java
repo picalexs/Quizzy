@@ -29,5 +29,10 @@ public interface EnrollmentRepository extends JpaRepository<Enrollment, Enrollme
 
     @Modifying
     @Query(value = "INSERT INTO Enrollment (userId, courseId, enrollmentdate) VALUES ( :userId, :courseId, CURRENT_TIMESTAMP)", nativeQuery = true)
-    int insertEnrollment(@Param("userId") Integer userId, @Param("courseId") Long courseId);
+    void insertEnrollment(@Param("userId") Integer userId, @Param("courseId") Long courseId);
+
+    @Modifying
+    @Query("DELETE FROM Enrollment e WHERE e.user.id = :userId")
+    void deleteByUserId(@Param("userId") Integer userId);
+
 }
