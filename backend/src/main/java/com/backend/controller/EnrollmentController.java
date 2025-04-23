@@ -75,7 +75,7 @@ public class EnrollmentController {
         return ResponseEntity.ok("All enrollments for user deleted successfully.");
     }
 
-    @GetMapping("my_selection")
+    @GetMapping("/my_selection")
     public ResponseEntity<Collection<Course>> getSelected() {
         Integer currentId = 1;
 

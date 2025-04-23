@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Data
 public class EnrollmentDTO {
-    private Long userId;
+    private Integer userId;
     private Long courseId;
     private Date enrollmentDate;
     private String grade;
