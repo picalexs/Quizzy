@@ -1,13 +1,16 @@
 package com.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "test")
@@ -80,4 +83,9 @@ public class Test {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @OneToMany(mappedBy = "test", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<TestQuestion> questions = new ArrayList<>();
+
 }

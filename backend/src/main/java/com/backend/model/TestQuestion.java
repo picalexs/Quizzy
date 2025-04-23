@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "testquestion")
 @Getter
@@ -54,4 +57,9 @@ public class TestQuestion {
     public void setTest(Test test) {
         this.test = test;
     }
+
+    @OneToMany(mappedBy = "testQuestion", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<TestAnswer> answers = new ArrayList<>();
+
 }
