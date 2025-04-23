@@ -1,6 +1,7 @@
 package com.backend.controller;
 
 import com.backend.dto.CourseDTO;
+import com.backend.mapper.CourseMapper;
 import com.backend.model.Course;
 import com.backend.model.User;
 import com.backend.repository.UserRepository;
@@ -20,11 +21,13 @@ public class CourseController {
 
     private final CourseService courseService;
     private final EnrollmentService enrollmentService;
+    private final UserRepository userRepository;
 
     @Autowired
-    public CourseController(CourseService courseService, EnrollmentService enrollmentService) {
+    public CourseController(CourseService courseService, UserRepository userRepository, EnrollmentService enrollmentService) {
         this.courseService = courseService;
         this.enrollmentService = enrollmentService;
+        this.userRepository = userRepository;
     }
 
     @GetMapping
@@ -39,7 +42,8 @@ public class CourseController {
 
     @PostMapping
     public ResponseEntity<Course> createCourse(@RequestBody CourseDTO courseDTO) {
-        Course createdCourse = courseService.createCourse(courseDTO);
+        CourseMapper mapper = new CourseMapper(userRepository);
+        Course createdCourse = mapper.toEntity(courseDTO);
         return ResponseEntity.ok(createdCourse);
     }
 
@@ -63,9 +67,9 @@ public class CourseController {
             return ResponseEntity.badRequest().body("The user should select exactly four courses !");
         }
 
-        for( CourseDTO course : selectedCourses ) {
-            if ( !courseService.checkCourseById(course.getId())) {
-                return ResponseEntity.badRequest().body("Couldn't find course " + course.getTitle() + " in the database." );
+        for (CourseDTO course : selectedCourses) {
+            if (!courseService.checkCourseById(course.getId())) {
+                return ResponseEntity.badRequest().body("Couldn't find course " + course.getTitle() + " in the database.");
             }
         }
 
