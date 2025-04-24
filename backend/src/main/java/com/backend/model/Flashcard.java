@@ -49,4 +49,55 @@ public class Flashcard {
     @OneToMany(mappedBy = "flashcard", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private Set<AnswerFC> answers;
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getQuestion() {
+        return question;
+    }
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+    public int getLevel() {
+        return level;
+    }
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public Date getLastStudiedAt() {
+        return lastStudiedAt;
+    }
+    public void setLastStudiedAt(Date lastStudiedAt) {
+        this.lastStudiedAt = lastStudiedAt;
+    }
+    public String getQuestionType() {
+        return questionType;
+    }
+    public void setQuestionType(String questionType) {
+        this.questionType = questionType;
+    }
+    public User getUser() {
+        return user;
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
+    public Material getMaterial() {
+        return material;
+    }
+    public void setMaterial(Material material) {
+        this.material = material;
+    }
+
+    public Set<AnswerFC> getAnswers() {
+        return answers;
+    }
+    public void setAnswers(Set<AnswerFC> answers) {
+        this.answers = answers;
+    }
 }
