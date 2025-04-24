@@ -21,6 +21,10 @@ public class User {
     @Column(name = "userid")
     private Integer id;
 
+    public Integer getId() {
+        return id;
+    }
+
     @Column(name = "firstname", nullable = false)
     private String firstName;
 
@@ -66,4 +70,37 @@ public class User {
     @OneToMany(mappedBy = "professor")
     @JsonManagedReference
     private Set<Test> tests;
+
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
