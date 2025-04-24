@@ -41,4 +41,4 @@ jobs:
         run: echo 'Mock test!!'
 
       - name: Shut Down Containers
-        run: docker-compose down
+        run: docker compose down
