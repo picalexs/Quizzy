@@ -14,5 +14,6 @@ public class BackendApplication {
         //String text = PDFtoText.generateTextFromPDF(courseName, courseNumber);
         //System.out.println("Extracted text: " + text);
 
+
     }
 }
