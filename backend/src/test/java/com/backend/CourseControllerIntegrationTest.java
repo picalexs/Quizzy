@@ -14,6 +14,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.List;
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
+@ActiveProfiles("test")
 @SpringBootTest
 @AutoConfigureMockMvc
 public class CourseControllerIntegrationTest {
@@ -44,9 +45,6 @@ public class CourseControllerIntegrationTest {
     @Transactional
     @Rollback
     void setup() {
-        // Resetăm baza de date
-        courseRepository.deleteAll();
-        userRepository.deleteAll();
 
         // Adăugăm un utilizator care va fi profesor
         professor = new User();
