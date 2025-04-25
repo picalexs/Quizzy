@@ -12,6 +12,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class EnrollmentId implements Serializable {
-    private Long userID;
+    private Integer userID;
     private Long courseID;
 }

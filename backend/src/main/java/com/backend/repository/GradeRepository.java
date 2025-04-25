@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public interface GradeRepository extends JpaRepository<Grade, GradeId> {
 
@@ -28,4 +29,10 @@ public interface GradeRepository extends JpaRepository<Grade, GradeId> {
 
     @Query("SELECT AVG(g.grade) FROM Grade g WHERE g.test.course.id = :courseId AND g.user.id = :userId")
     Float getAverageGradeByCourseIdAndUserId(@Param("courseId") Long courseId, @Param("userId") Integer userId);
+
+    @Query("SELECT g FROM Grade g WHERE g.user.id = :userId")
+    List<Grade> findAllByUserId(Integer userId);
+
+    @Query("SELECT AVG(g.grade) FROM Grade g WHERE g.test.id = :testId")
+    Optional<Double> calculateAverageGrade(Long testId);
 }

@@ -2,6 +2,7 @@ package com.backend.controller;
 
 import com.backend.model.Course;
 import com.backend.model.Enrollment;
+import com.backend.model.User;
 import com.backend.repository.CourseRepository;
 import com.backend.service.CourseService;
 import com.backend.service.EnrollmentService;
@@ -32,7 +33,49 @@ public class EnrollmentController {
         return ResponseEntity.ok(enrollmentService.getAllEnrollments());
     }
 
-    @GetMapping("my_selection")
+    @PostMapping
+    public ResponseEntity<String> createEnrollment(@RequestParam Integer userId, @RequestParam Long courseId) {
+        if (!userService.checkUserById(userId) || !courseService.checkCourseById(courseId)) {
+            return ResponseEntity.badRequest().body("Invalid user or course ID.");
+        }
+        enrollmentService.addEnrollment(userId, courseId);
+        return ResponseEntity.ok("Enrollment created successfully.");
+    }
+
+    @PutMapping("/{userId}/course/{courseId}")
+    public ResponseEntity<String> updateEnrollment(@PathVariable Integer userId, @PathVariable Long courseId, @RequestParam Long newCourseId) {
+        if (!userService.checkUserById(userId) || !courseService.checkCourseById(newCourseId)) {
+            return ResponseEntity.badRequest().body("Invalid user or course ID.");
+        }
+        boolean updated = enrollmentService.updateEnrollment(userId, courseId, newCourseId);
+        return updated ? ResponseEntity.ok("Enrollment updated successfully.") : ResponseEntity.notFound().build();
+    }
+
+    @DeleteMapping("/{userId}/course/{courseId}")
+    public ResponseEntity<String> deleteEnrollment(@PathVariable Integer userId, @PathVariable Long courseId) {
+        boolean deleted = enrollmentService.deleteEnrollment(userId, courseId);
+        return deleted ? ResponseEntity.ok("Enrollment deleted successfully.") : ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/course/{courseId}/users")
+    public ResponseEntity<Collection<User>> getUsersByCourseId(@PathVariable Long courseId) {
+        if (!courseService.checkCourseById(courseId)) {
+            return ResponseEntity.notFound().build();
+        }
+        List<User> users = enrollmentService.getUsersByCourseId(courseId);
+        return ResponseEntity.ok(users);
+    }
+
+    @DeleteMapping("/user/{userId}")
+    public ResponseEntity<String> deleteAllEnrollmentsForUser(@PathVariable Integer userId) {
+        if (!userService.checkUserById(userId)) {
+            return ResponseEntity.notFound().build();
+        }
+        enrollmentService.deleteAllEnrollmentsForUser(userId);
+        return ResponseEntity.ok("All enrollments for user deleted successfully.");
+    }
+
+    @GetMapping("/my_selection")
     public ResponseEntity<Collection<Course>> getSelected() {
         Integer currentId = 1;
 
