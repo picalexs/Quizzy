@@ -1,4 +1,5 @@
 package com.backend.model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -30,7 +31,7 @@ public class TestQuestion {
 
     @ManyToOne
     @JoinColumn(name = "testid", nullable = false)
-    @JsonManagedReference
+    @JsonBackReference
     private Test test;
 
     @OneToMany(mappedBy = "testQuestion", cascade = CascadeType.ALL, orphanRemoval = true)
