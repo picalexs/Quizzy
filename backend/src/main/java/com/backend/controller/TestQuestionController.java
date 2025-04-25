@@ -11,7 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 @RestController
-@RequestMapping("/test-questions")
+@RequestMapping("/questions")
 public class TestQuestionController {
 
     private final TestQuestionService testQuestionService;
