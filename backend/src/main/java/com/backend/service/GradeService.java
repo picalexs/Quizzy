@@ -1,6 +1,5 @@
 package com.backend.service;
 
-import com.backend.dto.GradeDTO;
 import com.backend.model.Grade;
 import com.backend.model.GradeId;
 import com.backend.repository.GradeRepository;
@@ -23,41 +22,35 @@ public class GradeService {
     }
 
     public Optional<Grade> getGrade(Long testId, Integer userId) {
-        return gradeRepository.findById(new GradeId(testId, userId));
+        GradeId gradeId = new GradeId(testId, userId);
+        return gradeRepository.findById(gradeId);
     }
 
-    public Optional<Grade> updateGrade(Long testId, Integer userId, Grade gradeDetails) {
+    public Optional<Grade> updateGrade(Long testId, Integer userId, Grade updatedData) {
         GradeId gradeId = new GradeId(testId, userId);
 
-        Optional<Grade> grade = gradeRepository.findById(gradeId);
-        Grade existingGrade;
-        if (grade.isPresent()) {
-            existingGrade = grade.get();
-        } else {
-            return Optional.empty();
-        }
-        if (gradeDetails.getGrade() != 0) {
-            existingGrade.setGrade(gradeDetails.getGrade());
-        }
-        if (gradeDetails.getSubmissionDate() != null) {
-            existingGrade.setSubmissionDate(gradeDetails.getSubmissionDate());
-        }
-
-        return Optional.of(gradeRepository.save(existingGrade));
+        return gradeRepository.findById(gradeId).map(existingGrade -> {
+            if (updatedData.getGrade() != 0) {
+                existingGrade.setGrade(updatedData.getGrade());
+            }
+            if (updatedData.getSubmissionDate() != null) {
+                existingGrade.setSubmissionDate(updatedData.getSubmissionDate());
+            }
+            return gradeRepository.save(existingGrade);
+        });
     }
 
     public void deleteGrade(Long testId, Integer userId) {
-        if (gradeRepository.existsById(new GradeId(testId, userId))) {
-            gradeRepository.deleteById(new GradeId(testId, userId));
-        }
+        GradeId gradeId = new GradeId(testId, userId);
+        gradeRepository.findById(gradeId).ifPresent(gradeRepository::delete);
     }
 
     public List<Grade> getGradesByUserId(Integer userId) {
-        return gradeRepository.findAllByUserId(userId);
+        return gradeRepository.findByUserId(userId);
     }
 
     public double calculateAverageForTest(Long testId) {
-        return gradeRepository.calculateAverageGrade(testId).orElse(0.0);
+        return gradeRepository.findAverageGradeByTestId(testId).orElse(0.0);
     }
 
     public List<Grade> getAllGrades() {

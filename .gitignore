@@ -5,6 +5,7 @@ backend/target/
 !backend/**/src/test/**/target/
 .env
 .idea/
+.DS_Store
 
 ### STS ###
 backend/.apt_generated
