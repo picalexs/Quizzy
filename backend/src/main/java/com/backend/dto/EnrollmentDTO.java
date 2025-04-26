@@ -10,7 +10,7 @@ public class EnrollmentDTO {
     private Date enrollmentDate;
     private String grade;
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
     public void setCourseId(Long courseId) {
@@ -22,7 +22,7 @@ public class EnrollmentDTO {
     public void setGrade(String grade) {
         this.grade = grade;
     }
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
     public Long getCourseId() {

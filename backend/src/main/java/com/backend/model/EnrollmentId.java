@@ -15,10 +15,10 @@ public class EnrollmentId implements Serializable {
     private Integer userID;
     private Long courseID;
 
-    public Long getUserID() {
+    public Integer getUserID() {
         return userID;
     }
-    public void setUserID(Long userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
     public Long getCourseID() {
