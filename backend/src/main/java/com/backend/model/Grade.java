@@ -37,4 +37,35 @@ public class Grade {
     @MapsId("userID")
     @JsonBackReference
     private User user;
+
+    public GradeId getId() {
+        return id;
+    }
+    public void setId(GradeId id) {
+        this.id = id;
+    }
+    public float getGrade() {
+        return grade;
+    }
+    public void setGrade(float grade) {
+        this.grade = grade;
+    }
+    public Date getSubmissionDate() {
+        return submissionDate;
+    }
+    public void setSubmissionDate(Date submissionDate) {
+        this.submissionDate = submissionDate;
+    }
+    public Test getTest() {
+        return test;
+    }
+    public void setTest(Test test) {
+        this.test = test;
+    }
+    public User getUser() {
+        return user;
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
