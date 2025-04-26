@@ -37,4 +37,35 @@ public class Enrollment {
 
     @Column(name = "grade")
     private String grade;
+
+    public EnrollmentId getId() {
+        return id;
+    }
+    public void setId(EnrollmentId id) {
+        this.id = id;
+    }
+    public User getUser() {
+        return user;
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
+    public Course getCourse() {
+        return course;
+    }
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+    public Date getEnrollmentDate() {
+        return enrollmentDate;
+    }
+    public void setEnrollmentDate(Date enrollmentDate) {
+        this.enrollmentDate = enrollmentDate;
+    }
+    public String getGrade() {
+        return grade;
+    }
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
 }

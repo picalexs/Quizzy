@@ -29,4 +29,29 @@ public class TestQuestion {
     @JoinColumn(name = "testid", nullable = false)
     @JsonManagedReference
     private Test test;
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getQuestionText() {
+        return questionText;
+    }
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
+    }
+    public float getPointValue() {
+        return pointValue;
+    }
+    public void setPointValue(float pointValue) {
+        this.pointValue = pointValue;
+    }
+    public Test getTest() {
+        return test;
+    }
+    public void setTest(Test test) {
+        this.test = test;
+    }
 }
