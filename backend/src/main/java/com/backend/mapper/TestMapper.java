@@ -1,13 +1,13 @@
 package com.backend.mapper;
 
 import com.backend.dto.TestDTO;
-import com.backend.model.Test;
+import com.backend.model.TestEntity;
 import com.backend.repository.CourseRepository;
 import com.backend.repository.UserRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TestMapper implements EntityMapper<Test, TestDTO> {
+public class TestMapper implements EntityMapper<TestEntity, TestDTO> {
 
     private final CourseRepository courseRepository;
     private final UserRepository userRepository;
@@ -18,7 +18,7 @@ public class TestMapper implements EntityMapper<Test, TestDTO> {
     }
 
     @Override
-    public TestDTO toDTO(Test test) {
+    public TestDTO toDTO(TestEntity test) {
         if (test == null) return null;
 
         TestDTO dto = new TestDTO();
@@ -38,10 +38,10 @@ public class TestMapper implements EntityMapper<Test, TestDTO> {
     }
 
     @Override
-    public Test toEntity(TestDTO dto) {
+    public TestEntity toEntity(TestDTO dto) {
         if (dto == null) return null;
 
-        Test test = new Test();
+        TestEntity test = new TestEntity();
         test.setId(dto.getId());
         test.setTitle(dto.getTitle());
         test.setDescription(dto.getDescription());

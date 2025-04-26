@@ -30,7 +30,7 @@ public class Grade {
     @JoinColumn(name = "testid")
     @MapsId("testID")
     @JsonBackReference
-    private Test test;
+    private TestEntity test;
 
     @ManyToOne
     @JoinColumn(name = "userid")

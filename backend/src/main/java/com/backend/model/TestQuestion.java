@@ -31,7 +31,7 @@ public class TestQuestion {
     @ManyToOne
     @JoinColumn(name = "testid", nullable = false)
     @JsonManagedReference
-    private Test test;
+    private TestEntity test;
 
     @OneToMany(mappedBy = "testQuestion", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
