@@ -1,6 +1,6 @@
 package com.backend.service;
 
-import com.backend.model.Test;
+import com.backend.model.TestEntity;
 import com.backend.repository.TestRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +23,14 @@ public class TestService {
     }
 
     @Transactional
-    public Test saveTest(Test test) {
+    public TestEntity saveTest(TestEntity test) {
         return Optional.ofNullable(test)
                 .map(testRepository::save)
                 .orElseThrow(() -> new IllegalArgumentException("Test must not be null"));
     }
 
     @Transactional
-    public Test createTest(Test test) {
+    public TestEntity createTest(TestEntity test) {
         return Optional.ofNullable(test)
                 .filter(t -> t.getId() == null)
                 .map(this::saveTest)
@@ -38,12 +38,12 @@ public class TestService {
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> getAllTests() {
+    public Collection<TestEntity> getAllTests() {
         return testRepository.findAll();
     }
 
     @Transactional(readOnly = true)
-    public Test getTestById(Long id) {
+    public TestEntity getTestById(Long id) {
         return Optional.ofNullable(id)
                 .filter(i -> i > 0)
                 .flatMap(testRepository::findById)
@@ -51,7 +51,7 @@ public class TestService {
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findTestsByProfId(Integer profId) {
+    public Collection<TestEntity> findTestsByProfId(Integer profId) {
         return Optional.ofNullable(profId)
                 .filter(id -> id > 0)
                 .map(testRepository::findByProfessorId)
@@ -59,7 +59,7 @@ public class TestService {
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findTestsByCourseId(Long courseId) {
+    public Collection<TestEntity> findTestsByCourseId(Long courseId) {
         return Optional.ofNullable(courseId)
                 .filter(id -> id > 0)
                 .map(testRepository::findByCourseId)
@@ -67,12 +67,12 @@ public class TestService {
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findUpcomingTests() {
+    public Collection<TestEntity> findUpcomingTests() {
         return testRepository.findUpcomingTests();
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findTestsForStudentEnrollments(Integer studentId) {
+    public Collection<TestEntity> findTestsForStudentEnrollments(Integer studentId) {
         return Optional.ofNullable(studentId)
                 .filter(id -> id > 0)
                 .map(testRepository::findTestsForStudentEnrollments)
@@ -80,7 +80,7 @@ public class TestService {
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findByDateBetween(Date startDate, Date endDate) {
+    public Collection<TestEntity> findByDateBetween(Date startDate, Date endDate) {
         return Optional.ofNullable(startDate)
                 .map(start -> Optional.ofNullable(endDate)
                         .filter(end -> !end.before(start))
@@ -90,42 +90,42 @@ public class TestService {
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findByTitle(String title) {
+    public Collection<TestEntity> findByTitle(String title) {
         return Optional.ofNullable(title)
                 .map(testRepository::findByTitle)
                 .orElseThrow(() -> new IllegalArgumentException("Title must not be null"));
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findByDescription(String description) {
+    public Collection<TestEntity> findByDescription(String description) {
         return Optional.ofNullable(description)
                 .map(testRepository::findByDescription)
                 .orElseThrow(() -> new IllegalArgumentException("Description must not be null"));
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findByMonth(Integer month) {
+    public Collection<TestEntity> findByMonth(Integer month) {
         return Optional.ofNullable(month)
                 .map(testRepository::findByMonth)
                 .orElseThrow(() -> new IllegalArgumentException("Month must not be null"));
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findByYear(Integer year) {
+    public Collection<TestEntity> findByYear(Integer year) {
         return Optional.ofNullable(year)
                 .map(testRepository::findByYear)
                 .orElseThrow(() -> new IllegalArgumentException("Year must not be null"));
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findTestsByExactDate(Date date) {
+    public Collection<TestEntity> findTestsByExactDate(Date date) {
         return Optional.ofNullable(date)
                 .map(testRepository::findTestsByExactDate)
                 .orElseThrow(() -> new IllegalArgumentException("Date must not be null"));
     }
 
     @Transactional(readOnly = true)
-    public Collection<Test> findByMonthAndYear(Integer month, Integer year) {
+    public Collection<TestEntity> findByMonthAndYear(Integer month, Integer year) {
         return Optional.ofNullable(month)
                 .flatMap(m -> Optional.ofNullable(year)
                         .map(y -> testRepository.findByMonthAndYear(m, y)))
@@ -197,12 +197,12 @@ public class TestService {
     }
 
     @Transactional
-    public Test updateTest(Long id, Test test) {
+    public TestEntity updateTest(Long id, TestEntity test) {
         return Optional.ofNullable(id)
                 .filter(i -> i > 0)
                 .map(i -> Optional.ofNullable(test)
                         .map(t -> {
-                            Test existingTest = testRepository.findById(i)
+                            TestEntity existingTest = testRepository.findById(i)
                                     .orElseThrow(() -> new EntityNotFoundException("Test not found with id " + i));
                             return updateTestFields(existingTest, t);
                         })
@@ -211,7 +211,7 @@ public class TestService {
     }
 
     @Transactional
-    private Test updateTestFields(Test existingTest, Test testToUpdate) {
+    private TestEntity updateTestFields(TestEntity existingTest, TestEntity testToUpdate) {
         return Optional.ofNullable(testToUpdate)
                 .map(update -> {
                     Optional.ofNullable(update.getTitle())
