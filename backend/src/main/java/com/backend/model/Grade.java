@@ -56,10 +56,10 @@ public class Grade {
     public void setSubmissionDate(Date submissionDate) {
         this.submissionDate = submissionDate;
     }
-    public Test getTest() {
+    public TestEntity getTest() {
         return test;
     }
-    public void setTest(Test test) {
+    public void setTest(TestEntity test) {
         this.test = test;
     }
     public User getUser() {

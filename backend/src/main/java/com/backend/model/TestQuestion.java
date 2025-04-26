@@ -52,10 +52,10 @@ public class TestQuestion {
     public void setPointValue(float pointValue) {
         this.pointValue = pointValue;
     }
-    public Test getTest() {
+    public TestEntity getTest() {
         return test;
     }
-    public void setTest(Test test) {
+    public void setTest(TestEntity test) {
         this.test = test;
     }
 
