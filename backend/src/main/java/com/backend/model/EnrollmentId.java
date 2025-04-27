@@ -1,10 +1,7 @@
 package com.backend.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -13,7 +10,21 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class EnrollmentId implements Serializable {
-    private Long userID;
+    private Integer userID;
     private Long courseID;
+
+    public Integer getUserID() {
+        return userID;
+    }
+    public void setUserID(Integer userID) {
+        this.userID = userID;
+    }
+    public Long getCourseID() {
+        return courseID;
+    }
+    public void setCourseID(Long courseID) {
+        this.courseID = courseID;
+    }
 }

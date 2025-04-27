@@ -46,9 +46,53 @@ public class Course {
 
     @OneToMany(mappedBy = "course")
     @JsonBackReference
-    private Set<Test> tests;
+    private Set<TestEntity> tests;
 
     @OneToMany(mappedBy = "course")
     @JsonBackReference
     private Set<FlashcardSession> flashcardSessions;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public String getSemestru() {
+        return semestru;
+    }
+    public User getProfessor() {
+        return professor;
+    }
+    public Set<Material> getMaterials() {
+        return materials;
+    }
+    public Set<Enrollment> getEnrollments() {
+        return enrollments;
+    }
+    public Set<TestEntity> getTests() {
+        return tests;
+    }
+    public Set<FlashcardSession> getFlashcardSessions() {
+        return flashcardSessions;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public void setSemestru(String semestru) {
+        this.semestru = semestru;
+    }
+    public void setProfessor(User professor) {
+        this.professor = professor;
+    }
 }
