@@ -26,16 +26,19 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
 
+    - name: Change to backend directory
+      run: cd backend
+
     - name: Build with Maven
-      run: mvn clean install --no-transfer-progress -f backend/pom.xml
+      run: mvn clean install --no-transfer-progress
 
     - name: Run Tests with Coverage
-      run: mvn test jacoco:report -f backend/pom.xml
+      run: mvn test jacoco:report
 
     - name: Check Coverage
       id: coverage
       run: |
-        coverage=$(mvn jacoco:report -f backend/pom.xml | grep -oP 'Coverage: \K[0-9]+')
+        coverage=$(mvn jacoco:report | grep -oP 'Coverage: \K[0-9]+')
         echo "Coverage is: $coverage%"
         if [ "$coverage" -lt 85 ]; then
           echo "❌ Coverage is below 85%. Failing build."
@@ -49,5 +52,6 @@ jobs:
       with:
         header: coverage
         message: |
+          ### 🧪 Code Coverage Report
           - Coverage: **${{ steps.coverage.outputs.coverage }}%**
           - Required: **85%**
