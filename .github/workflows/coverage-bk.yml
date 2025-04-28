@@ -2,7 +2,7 @@ name: Java 23 CI with Coverage Enforcement + PR Comment
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
