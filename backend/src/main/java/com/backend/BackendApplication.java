@@ -13,6 +13,7 @@ public class BackendApplication {
         //String courseNumber = "test";
         //String text = PDFtoText.generateTextFromPDF(courseName, courseNumber);
         //System.out.println("Extracted text: " + text);
+       // PDFtoText.generateTextFromPDF();
 
 
     }
