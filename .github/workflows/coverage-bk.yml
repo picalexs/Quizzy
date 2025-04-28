@@ -18,20 +18,20 @@ jobs:
         distribution: 'temurin'
         java-version: '23'
 
-    - name: Install Dependencies
+    - name: Download JUnit and Mockito JARs
       run: |
-        sudo apt update
-        sudo apt install -y junit4 mockito libmockito-java
+        wget https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar -P libs
+        wget https://repo1.maven.org/maven2/org/mockito/mockito-core/3.12.4/mockito-core-3.12.4.jar -P libs
 
     - name: Compile Code
       run: |
         mkdir classes
         javac -d classes $(find src/main/java -name "*.java")
-        javac -d classes -cp "classes:$(find /usr/share/java -name 'junit4.jar' | head -n 1):$(find /usr/share/java -name 'mockito.jar' | head -n 1)" $(find src/test/java -name "*.java")
+        javac -d classes -cp "libs/*:classes" $(find src/test/java -name "*.java")
 
     - name: Run Tests with Coverage
       run: |
-        java -javaagent:/path/to/jacocoagent.jar=destfile=jacoco.exec -cp "classes:$(find /usr/share/java -name 'junit4.jar' | head -n 1):$(find /usr/share/java -name 'mockito.jar' | head -n 1)" org.junit.runner.JUnitCore YourTestClassNameHere
+        java -javaagent:/path/to/jacocoagent.jar=destfile=jacoco.exec -cp "libs/*:classes" org.junit.runner.JUnitCore YourTestClassNameHere
 
     - name: Parse Coverage and Comment
       id: coverage
