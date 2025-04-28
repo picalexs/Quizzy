@@ -1,4 +1,4 @@
-name: Java 23 CI with Manual Build and Coverage Enforcement (85%)
+name: Java CI with Maven, JaCoCo and Coverage Enforcement
 
 on:
   pull_request:
@@ -18,40 +18,37 @@ jobs:
         distribution: 'temurin'
         java-version: '23'
 
-    - name: Download JUnit and Mockito JARs
-      run: |
-        wget https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar -P libs
-        wget https://repo1.maven.org/maven2/org/mockito/mockito-core/3.12.4/mockito-core-3.12.4.jar -P libs
+    - name: Cache Maven dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
 
-    - name: Compile Code
-      run: |
-        mkdir classes
-        javac -d classes $(find src/main/java -name "*.java")
-        javac -d classes -cp "libs/*:classes" $(find src/test/java -name "*.java")
+    - name: Build with Maven
+      run: mvn clean install --no-transfer-progress
 
     - name: Run Tests with Coverage
-      run: |
-        java -javaagent:/path/to/jacocoagent.jar=destfile=jacoco.exec -cp "libs/*:classes" org.junit.runner.JUnitCore YourTestClassNameHere
+      run: mvn test jacoco:report
 
-    - name: Parse Coverage and Comment
+    - name: Check Coverage
       id: coverage
       run: |
-        echo "TODO: Parsing coverage once jacoco.exec is generated"
-        echo "Coverage=85" >> $GITHUB_ENV
+        coverage=$(mvn jacoco:report | grep -oP 'Coverage: \K[0-9]+')
+        echo "Coverage is: $coverage%"
+        if [ "$coverage" -lt 85 ]; then
+          echo "❌ Coverage is below 85%. Failing build."
+          exit 1
+        else
+          echo "✅ Coverage is sufficient."
+        fi
 
     - name: Comment Coverage on PR
       uses: marocchino/sticky-pull-request-comment@v2
       with:
         header: coverage
         message: |
-          - Coverage: **${{ env.Coverage }}%**
+          ### 🧪 Code Coverage Report
+          - Coverage: **${{ steps.coverage.outputs.coverage }}%**
           - Required: **85%**
-
-    - name: Fail if Coverage < 85%
-      run: |
-        if [ "${{ env.Coverage }}" -lt 85 ]; then
-          echo "❌ Coverage is below 85%! Failing build."
-          exit 1
-        else
-          echo "✅ Coverage is sufficient."
-        fi
