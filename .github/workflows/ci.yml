@@ -36,7 +36,7 @@ jobs:
 
       - name: Run Maven tests
         working-directory: ./backend
-        run: mvn verify
+        run: mvn verify -Djacoco.skip=true
 
       - name: Stop Docker Compose
         if: always()
