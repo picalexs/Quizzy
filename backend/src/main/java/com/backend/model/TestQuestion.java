@@ -1,10 +1,14 @@
 package com.backend.model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "testquestion")
@@ -27,8 +31,8 @@ public class TestQuestion {
 
     @ManyToOne
     @JoinColumn(name = "testid", nullable = false)
-    @JsonManagedReference
-    private Test test;
+    @JsonBackReference
+    private TestEntity test;
 
     public Long getId() {
         return id;
@@ -48,10 +52,15 @@ public class TestQuestion {
     public void setPointValue(float pointValue) {
         this.pointValue = pointValue;
     }
-    public Test getTest() {
+    public TestEntity getTest() {
         return test;
     }
-    public void setTest(Test test) {
+    public void setTest(TestEntity test) {
         this.test = test;
     }
+
+    @OneToMany(mappedBy = "testQuestion", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<TestAnswer> answers = new ArrayList<>();
+
 }

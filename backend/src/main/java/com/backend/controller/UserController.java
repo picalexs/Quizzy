@@ -17,11 +17,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.Optional;
+import java.util.Optional;
 
 import static org.springframework.http.HttpStatus.CONFLICT;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/users")
 public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -37,6 +38,11 @@ public class UserController {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable Integer id) {
+        return userService.findById(id).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
     @GetMapping("/login")
     public ResponseEntity<LoginResponse> getLoginPage() {
         logger.info("GET request to /login");
@@ -49,15 +55,15 @@ public class UserController {
         ));
     }
 
-    @PostMapping(value = "/login", 
-                produces = MediaType.APPLICATION_JSON_VALUE, 
+    @PostMapping(value = "/login",
+                produces = MediaType.APPLICATION_JSON_VALUE,
                 consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest) {
         try {
             logger.info("Login attempt for email: {}", loginRequest.getEmail());
             String email = loginRequest.getEmail();
             String password = loginRequest.getPassword();
-            
+
             if (email == null || password == null) {
                 logger.warn("Login failed - email or password is null");
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -69,7 +75,7 @@ public class UserController {
                             false
                         ));
             }
-            
+
             Optional<User> userOpt = userService.checkCredentials(email, password);
 
             if (userOpt.isPresent()) {
@@ -107,8 +113,8 @@ public class UserController {
         }
     }
 
-    @PostMapping(value = "/register", 
-                produces = MediaType.APPLICATION_JSON_VALUE, 
+    @PostMapping(value = "/register",
+                produces = MediaType.APPLICATION_JSON_VALUE,
                 consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<LoginResponse> register(@Valid @RequestBody RegisterRequest req) {
         try {

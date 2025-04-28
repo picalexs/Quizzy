@@ -46,7 +46,7 @@ public class Course {
 
     @OneToMany(mappedBy = "course")
     @JsonBackReference
-    private Set<Test> tests;
+    private Set<TestEntity> tests;
 
     @OneToMany(mappedBy = "course")
     @JsonBackReference
@@ -74,7 +74,7 @@ public class Course {
     public Set<Enrollment> getEnrollments() {
         return enrollments;
     }
-    public Set<Test> getTests() {
+    public Set<TestEntity> getTests() {
         return tests;
     }
     public Set<FlashcardSession> getFlashcardSessions() {

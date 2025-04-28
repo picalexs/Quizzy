@@ -69,7 +69,7 @@ public class User {
 
     @OneToMany(mappedBy = "professor")
     @JsonManagedReference
-    private Set<Test> tests;
+    private Set<TestEntity> tests;
 
     public String getFirstName() {
         return firstName;
