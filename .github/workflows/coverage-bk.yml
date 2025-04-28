@@ -26,14 +26,13 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
 
-    - name: Change to backend directory
-      run: cd backend
-
     - name: Build with Maven
       run: mvn clean install --no-transfer-progress
+      working-directory: backend
 
     - name: Run Tests with Coverage
       run: mvn test jacoco:report
+      working-directory: backend
 
     - name: Check Coverage
       id: coverage
@@ -45,7 +44,7 @@ jobs:
           exit 1
         else
           echo "✅ Coverage is sufficient."
-        fi
+      working-directory: backend
 
     - name: Comment Coverage on PR
       uses: marocchino/sticky-pull-request-comment@v2
