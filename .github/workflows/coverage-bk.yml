@@ -26,20 +26,33 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
 
+    - name: Debug: List Directory Structure
+      run: |
+        echo "Current directory:"
+        pwd  # This will print the current directory
+        echo "Listing files in the current directory:"
+        ls -l  # This will list the files to verify if backend folder exists
+
     - name: Build with Maven
       run: |
         cd backend  # Change to the backend directory
+        pwd  # Check if we are in the right directory
+        ls -l  # List the files in backend/ to verify pom.xml exists
         mvn clean install --no-transfer-progress -e -X
 
     - name: Run Tests with Coverage
       run: |
         cd backend  # Change to the backend directory
+        pwd  # Check if we are in the right directory
+        ls -l  # List the files in backend/
         mvn test jacoco:report -e -X
 
     - name: Check Coverage
       id: coverage
       run: |
         cd backend  # Change to the backend directory
+        pwd  # Check if we are in the right directory
+        ls -l  # List the files in backend/
         coverage=$(mvn jacoco:report -e -X | grep -oP 'Coverage: \K[0-9]+')
         echo "Coverage is: $coverage%"
         if [ "$coverage" -lt 85 ]; then
