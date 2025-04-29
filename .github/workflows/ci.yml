@@ -40,10 +40,10 @@ jobs:
 
       - name: Upload JaCoCo coverage report
         if: success()
+        continue-on-error: true
         run: |
-          mkdir -p coverage
-          cp ./backend/target/site/jacoco/index.html ./coverage/
-          continue-on-error: true
+            mkdir -p coverage
+            cp ./backend/target/site/jacoco/index.html ./coverage/
 
       - name: Stop Docker Compose
         if: always()
