@@ -18,13 +18,9 @@ jobs:
         distribution: 'temurin'
         java-version: '23'
 
-    - name: Cache Maven dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('backend/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
+    - name: Run Maven tests
+        working-directory: ./backend
+        run: mvn test
 
     - name: Debug: List Directory Structure
       run: |
