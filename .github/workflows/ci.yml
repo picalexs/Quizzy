@@ -2,9 +2,11 @@ name: Build and Test
 
 on:
   push:
-    branches: [ horror ]
+
+    branches: [ master ]
   pull_request:
-    branches: [ horror ]
+    branches: [ master ]
+
 
 jobs:
   build:
