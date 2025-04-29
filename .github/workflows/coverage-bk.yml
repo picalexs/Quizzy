@@ -30,11 +30,8 @@ jobs:
         ls -l  # This will list the files to verify if backend folder exists
 
     - name: Build with Maven
-      run: |
-        cd backend  # Change to the backend directory
-        pwd  # Check if we are in the right directory
-        ls -l  # List the files in backend/ to verify pom.xml exists
-        mvn clean install --no-transfer-progress -e -X
+      working-directory: ./backend
+      run:  mvn clean install --no-transfer-progress -e -X
 
     - name: Run Tests with Coverage
       run: |
