@@ -2,9 +2,9 @@ name: Build and Test
 
 on:
   push:
-    branches: [ ci-final ]
+    branches: [ horror ]
   pull_request:
-    branches: [ ci-final ]
+    branches: [ horror ]
 
 jobs:
   build:
@@ -37,6 +37,24 @@ jobs:
       - name: Run Maven tests
         working-directory: ./backend
         run: mvn test
+
+      - name: List Directory Structure
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Listing files in the current directory:"
+          ls -l
+
+      - name: Build and Test with Coverage
+        working-directory: ./backend
+        run: |
+          mvn clean verify --no-transfer-progress -e -X
+
+      - name: Upload JaCoCo Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: backend/target/site/jacoco/
 
       - name: Stop Docker Compose
         if: always()
