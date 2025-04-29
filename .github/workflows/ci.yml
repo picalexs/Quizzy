@@ -38,6 +38,13 @@ jobs:
         working-directory: ./backend
         run: mvn test
 
+      - name: Upload JaCoCo coverage report
+        if: success()
+        run: |
+          mkdir -p coverage
+          cp ./backend/target/site/jacoco/index.html ./coverage/
+          continue-on-error: true
+
       - name: Stop Docker Compose
         if: always()
         run: docker compose -f docker-compose.override.yml down
