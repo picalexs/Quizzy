@@ -1,0 +1,260 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single Question: If Z dl = 2 Z cj in a network flow problem, what does this indicate?
+--InteriorSeparator--
+Answer: The problem has a solution, and a minimum cost flow of value v = Z ci solves the problem.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What is the significance of 'a(P0) : min{a(P) : P augmenting path W.r.t. x}' in the context of minimum cost flows?
+--InteriorSeparator--
+Answer: P0 is an augmenting path of minimum cost with respect to x.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Question: Which of the following is TRUE regarding the relation ≤p (polynomial-time reduction) on decision problems?
+--InteriorSeparator--
+1.(right) It is a transitive relation.
+2.(wrong) It is a reflexive relation.
+3.(wrong) It is an antisymmetric relation.
+4.(wrong) It is only applicable to graph problems.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What is a CNF formula?
+--InteriorSeparator--
+Answer: A CNF formula is a conjunction (AND) of clauses, where each clause is a disjunction (OR) of literals.
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: In the SAT problem, what is the goal?
+--InteriorSeparator--
+Answer: To determine if there exists a truth assignment to the variables that makes the entire CNF formula true.
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Question: How does the truth assignment 't' relate to the stable set 'S1' in the reduction from 3SAT to Stable Set?
+--InteriorSeparator--
+1.(right) If t(ui) is true, then ui is in S1.
+2.(right) If t(ui) is false, then ui is in S1.
+3.(wrong) S1 always contains all variables.
+4.(wrong) t is irrelevant to the construction of S1.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: In the context of graph coloring, what does 'forcing' mean (as related to the H graph with vertices v1, v2, v3, v4)?
+--InteriorSeparator--
+Answer: If c(v1) = c(v2) = c(v3) = a, then necessarily c(v4) = a.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What does it mean for a graph G to be 3-colorable?
+--InteriorSeparator--
+Answer: It means that the vertices of G can be colored with 3 colors such that no two adjacent vertices have the same color.
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: If a directed graph D has a cycle, what does this imply about the corresponding undirected graph G constructed in the reduction DCH ≤p CH?
+--InteriorSeparator--
+Answer: G also has a cycle.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Question: What is a quasi-kernel in a digraph?
+--InteriorSeparator--
+1.(right) A stable set.
+2.(right) Every vertex outside the set can be accessed from the set by a path of length at most 2.
+3.(wrong) A set where every vertex is connected to every other vertex.
+4.(wrong) A set that must contain a given vertex.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What is the objective in the MAX-CUT problem?
+--InteriorSeparator--
+Answer: To find a cut of a graph with a weight at least k, where k is a given real number.
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Question: What graph problems are listed as topics covered?
+--InteriorSeparator--
+1.(right) Maximum stable set
+2.(right) Vertex colorings
+3.(right) Hamiltonian problems
+4.(right) Minimum cost flows
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: In the context of minimum cost flows, what is an "A-path"?
+--InteriorSeparator--
+Answer: An A-path is a path in the residual network R with respect to a flow x.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: In minimum cost flow, what does a negative cycle indicate?
+--InteriorSeparator--
+Answer: The current flow is not the minimum cost flow and can be improved.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: When using shortest path algorithms for minimum cost flows, what does the length of the shortest path represent?
+--InteriorSeparator--
+Answer: It corresponds to a minimum cost augmenting path with respect to the current flow.
+--InteriorSeparator--
+Difficulty: hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What is the BSAT problem?
+--InteriorSeparator--
+Answer: The restriction of the SAT problem where each clause has exactly 3 literals.
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Question: What must be shown to prove that a decision problem is NP-complete?
+--InteriorSeparator--
+1.(right) The problem is in NP.
+2.(right) A known NP-complete problem polynomially reduces to it.
+3.(wrong) The problem is in P.
+4.(wrong) The problem can be solved in linear time.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What does it mean for a digraph to be traceable?
+--InteriorSeparator--
+Answer: It means that the digraph has a Hamiltonian path.
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: How can you show that problem P1 can be efficiently solved if you have an oracle for problem P2?
+--InteriorSeparator--
+Answer: By demonstrating a polynomial-time reduction from P1 to P2.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Question: What is the significance of a stable set S in the reduction from 3SAT to SM (Stable Set)?
+--InteriorSeparator--
+1.(right) It represents a consistent truth assignment.
+2.(right) Its size is related to the number of variables and clauses.
+3.(wrong) It represents the edges that are not included in the solution.
+4.(wrong) S must always contain all of the literals.
+--InteriorSeparator--
+Difficulty: hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: In the 3SAT to 3COL reduction, how are the truth values of variables represented in the graph?
+--InteriorSeparator--
+Answer: By coloring the vertices representing the variables and their negations with different colors.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: If graph G is Hamiltonian, what can you say about graph H (G+K1)?
+--InteriorSeparator--
+Answer: If H = G + K1, then G has a Hamiltonian Path if and only if H is Hamiltonian.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What is the definition of a k-uniform hypergraph?
+--InteriorSeparator--
+Answer: A pair H = (V, E) where V is a finite set and E is a subset of the set of all k-element subsets of V.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What is the NAE-3SAT problem?
+--InteriorSeparator--
+Answer: Determining if there's a truth assignment where each clause has at least one true and one false literal.
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Question: What real-world problems can be modeled as minimum cost flow problems?
+--InteriorSeparator--
+1.(right) Assignment problem.
+2.(right) Hitchcock-Koopmans transportation problem.
+3.(wrong) Maximum spanning tree.
+4.(wrong) Finding the shortest path in a graph.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: Why does one look for closed A-paths in the context of minimum cost flow problems?
+--InteriorSeparator--
+Answer: To determine if it's possible to further reduce cost by adjusting flow around a cycle.
+--InteriorSeparator--
+Difficulty: hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: How does the Cook-Levin theorem relate to the SAT problem?
+--InteriorSeparator--
+Answer: The Cook-Levin theorem proved that SAT is the first NP-complete problem.
+--InteriorSeparator--
+Difficulty: easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What are the key components of the implication digraph used in the ZSAT problem?
+--InteriorSeparator--
+Answer: The vertices represent literals, and the edges represent implications between literals based on the clauses.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: In a directed graph G, what is a kernel?
+--InteriorSeparator--
+Answer: A stable set S such that every vertex outside of S has an incoming edge from a vertex in S.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Question: What is the main goal in the integer linear programming problem (INT)?
+--InteriorSeparator--
+Answer: To determine if there exists an integer assignment x that satisfies the set of inequalities Ax >= b.
+--InteriorSeparator--
+Difficulty: medium
+--FlashCardSeparator--}], role=model}, finishReason=STOP, avgLogprobs=-0.22107545013294236}]
