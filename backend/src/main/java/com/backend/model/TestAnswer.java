@@ -29,4 +29,30 @@ public class TestAnswer {
     @JoinColumn(name = "questionid", nullable = false)
     @JsonBackReference
     private TestQuestion testQuestion;
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getOptionText() {
+        return optionText;
+    }
+
+    public boolean isCorrect() {
+        return isCorrect;
+    }
+    public void setCorrect(boolean isCorrect) {
+        this.isCorrect = isCorrect;
+    }
+    public void setOptionText(String optionText) {
+        this.optionText = optionText;
+    }
+    public TestQuestion getTestQuestion() {
+        return testQuestion;
+    }
+    public void setTestQuestion(TestQuestion testQuestion) {
+        this.testQuestion = testQuestion;
+    }
 }
