@@ -15,6 +15,9 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.crypto.SecretKey;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -26,94 +29,96 @@ class JwtUtilTest {
     private JwtUtil jwtUtil;
 
     private static final String TEST_EMAIL = "test@example.com";
+    private static final String TEST_SECRET = "test-secret-key-that-is-long-enough-for-hmac-sha-256";
+    private static final String TEST_ROLE = "STUDENT";
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
+        jwtUtil.setSecret(TEST_SECRET);
     }
 
     @Test
-    void generateToken_ShouldCreateValidToken() {
-        // Act
+    void generateToken_WithValidEmail_ShouldGenerateValidToken() {
         String token = jwtUtil.generateToken(TEST_EMAIL);
 
-        // Assert
         assertNotNull(token);
-        assertTrue(token.length() > 0);
         assertTrue(jwtUtil.validateToken(token));
         assertEquals(TEST_EMAIL, jwtUtil.getSubjectFromToken(token));
     }
 
     @Test
-    void validateToken_WithValidToken_ShouldReturnTrue() {
-        // Arrange
+    void getSubjectFromToken_WithValidToken_ShouldReturnEmail() {
         String token = jwtUtil.generateToken(TEST_EMAIL);
 
-        // Act & Assert
-        assertTrue(jwtUtil.validateToken(token));
-    }
-
-    @Test
-    void validateToken_WithInvalidToken_ShouldReturnFalse() {
-        // Arrange
-        String invalidToken = "invalid.token.string";
-
-        // Act & Assert
-        assertFalse(jwtUtil.validateToken(invalidToken));
-    }
-
-    @Test
-    void validateToken_WithExpiredToken_ShouldReturnFalse() {
-        // Create an expired token directly instead of trying to modify the expiration time
-        // Get the SECRET_KEY using reflection for this test
-        try {
-            // Create a token that's already expired
-            Date issuedAt = new Date(System.currentTimeMillis() - 2000); // 2 seconds ago
-            Date expiration = new Date(System.currentTimeMillis() - 1000); // 1 second ago (already expired)
-            
-            // Access the private SECRET_KEY field using reflection
-            java.lang.reflect.Field secretKeyField = JwtUtil.class.getDeclaredField("SECRET_KEY");
-            secretKeyField.setAccessible(true);
-            SecretKey secretKey = (SecretKey) secretKeyField.get(null);
-            
-            // Generate an expired token
-            String expiredToken = Jwts.builder()
-                    .setSubject(TEST_EMAIL)
-                    .setIssuedAt(issuedAt)
-                    .setExpiration(expiration)
-                    .signWith(secretKey)
-                    .compact();
-
-            // Verify that our token is detected as invalid
-            assertFalse(jwtUtil.validateToken(expiredToken));
-            
-        } catch (Exception e) {
-            fail("Test failed due to exception: " + e.getMessage());
-        }
-    }
-
-    @Test
-    void getSubjectFromToken_WithValidToken_ShouldReturnSubject() {
-        // Arrange
-        String token = jwtUtil.generateToken(TEST_EMAIL);
-
-        // Act
         String subject = jwtUtil.getSubjectFromToken(token);
 
-        // Assert
         assertEquals(TEST_EMAIL, subject);
     }
 
     @Test
-    void getSubjectFromToken_WithInvalidToken_ShouldThrowException() {
-        // Arrange
-        String invalidToken = "invalid.token.string";
+    void generateToken_WithCustomExpiration_ShouldExpireAfterSpecifiedTime() {
+        // Set custom expiration time to 1 second
+        long customExpiration = 1000; // 1 second
+        jwtUtil.setExpirationTime(customExpiration);
 
-        // Act & Assert
-        Exception exception = assertThrows(RuntimeException.class, () -> {
-            jwtUtil.getSubjectFromToken(invalidToken);
-        });
+        String token = jwtUtil.generateToken(TEST_EMAIL);
 
-        assertTrue(exception.getMessage().contains("Invalid"));
+        // Token should be valid initially
+        assertTrue(jwtUtil.validateToken(token));
+
+        // Wait for token to expire
+        try {
+            Thread.sleep(1100); // Wait slightly more than expiration time
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Token should be invalid after expiration
+        assertFalse(jwtUtil.validateToken(token));
+    }
+
+    @Test
+    void generateToken_WithCustomClaims_ShouldContainClaims() {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("role", TEST_ROLE);
+        claims.put("customField", "customValue");
+
+        String token = jwtUtil.generateToken(TEST_EMAIL, claims);
+
+        assertNotNull(token);
+        assertTrue(jwtUtil.validateToken(token));
+        assertEquals(TEST_EMAIL, jwtUtil.getSubjectFromToken(token));
+    }
+
+    @Test
+    void validateToken_WithInvalidSecret_ShouldReturnFalse() {
+        String token = jwtUtil.generateToken(TEST_EMAIL);
+
+        // Change secret key
+        jwtUtil.setSecret("different-secret-key-that-is-long-enough-for-hmac-sha-256");
+
+        assertFalse(jwtUtil.validateToken(token));
+    }
+
+    @Test
+    void validateToken_WithMalformedToken_ShouldReturnFalse() {
+        assertFalse(jwtUtil.validateToken("invalid.token.format"));
+    }
+
+    @Test
+    void getSubjectFromToken_WithExpiredToken_ShouldThrowException() {
+        // Set very short expiration
+        jwtUtil.setExpirationTime(1);
+        String token = jwtUtil.generateToken(TEST_EMAIL);
+
+        // Wait for token to expire
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        assertThrows(ExpiredJwtException.class, () -> jwtUtil.getSubjectFromToken(token));
     }
 }

@@ -47,8 +47,7 @@ class JwtRequestFilterTest {
         // Arrange
         when(request.getHeader(AUTHORIZATION_HEADER)).thenReturn(BEARER_PREFIX + VALID_TOKEN);
         when(jwtUtil.getSubjectFromToken(VALID_TOKEN)).thenReturn(TEST_EMAIL);
-        // Use lenient() to allow this stubbing even if it's not used
-        lenient().when(jwtUtil.validateToken(VALID_TOKEN)).thenReturn(true);
+        when(jwtUtil.validateToken(VALID_TOKEN)).thenReturn(true);
 
         // Act
         jwtRequestFilter.doFilterInternal(request, response, filterChain);
@@ -110,7 +109,6 @@ class JwtRequestFilterTest {
         jwtRequestFilter.doFilterInternal(request, response, filterChain);
 
         // Assert
-        // The filter will extract the subject but not set authentication because validation fails
         assertNull(SecurityContextHolder.getContext().getAuthentication());
         verify(filterChain).doFilter(request, response);
     }
@@ -127,5 +125,54 @@ class JwtRequestFilterTest {
         });
 
         assertNull(SecurityContextHolder.getContext().getAuthentication());
+    }
+
+    @Test
+    void doFilterInternal_WithCustomHeader_ShouldNotSetAuthentication() throws Exception {
+        // Arrange
+        when(request.getHeader(AUTHORIZATION_HEADER)).thenReturn(null);
+
+        // Act
+        jwtRequestFilter.doFilterInternal(request, response, filterChain);
+
+        // Assert
+        assertNull(SecurityContextHolder.getContext().getAuthentication());
+        verify(filterChain).doFilter(request, response);
+        verify(request, never()).getHeader("X-Custom-Auth"); // Verify that custom header is never checked
+    }
+
+    @Test
+    void doFilterInternal_WithMalformedToken_ShouldNotSetAuthentication() throws Exception {
+        // Arrange
+        when(request.getHeader(AUTHORIZATION_HEADER)).thenReturn(BEARER_PREFIX + "malformed.token");
+        when(jwtUtil.getSubjectFromToken("malformed.token")).thenThrow(new io.jsonwebtoken.MalformedJwtException("Malformed JWT"));
+
+        // Act
+        jwtRequestFilter.doFilterInternal(request, response, filterChain);
+
+        // Assert
+        assertNull(SecurityContextHolder.getContext().getAuthentication());
+        verify(filterChain).doFilter(request, response);
+    }
+
+    @Test
+    void doFilterInternal_WithExistingAuthentication_ShouldNotOverride() throws Exception {
+        // Arrange
+        when(request.getHeader(AUTHORIZATION_HEADER)).thenReturn(BEARER_PREFIX + VALID_TOKEN);
+
+        // Set existing authentication
+        SecurityContextHolder.getContext().setAuthentication(
+                new org.springframework.security.authentication.UsernamePasswordAuthenticationToken(
+                        "existing@example.com", null, java.util.Collections.emptyList()
+                )
+        );
+
+        // Act
+        jwtRequestFilter.doFilterInternal(request, response, filterChain);
+
+        // Assert
+        assertNotNull(SecurityContextHolder.getContext().getAuthentication());
+        assertEquals("existing@example.com", SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+        verify(filterChain).doFilter(request, response);
     }
 }
