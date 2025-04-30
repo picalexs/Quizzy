@@ -3,6 +3,7 @@ package com.backend.controller;
 import com.backend.model.AnswerFC;
 import com.backend.service.AnswerFCService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,31 +12,42 @@ import java.util.List;
 @RequestMapping("/api/answers")
 public class AnswerFCController {
 
+    private final AnswerFCService answerFCService;
+
     @Autowired
-    private AnswerFCService answerFCService;
+    public AnswerFCController(AnswerFCService answerFCService) {
+        this.answerFCService = answerFCService;
+    }
 
     @GetMapping
-    public List<AnswerFC> getAllAnswers() {
-        return answerFCService.getAllAnswers();
+    public ResponseEntity<List<AnswerFC>> getAllAnswers() {
+        return ResponseEntity.ok(answerFCService.getAllAnswers());
     }
 
     @GetMapping("/{id}")
-    public AnswerFC getAnswerById(@PathVariable Long id) {
-        return answerFCService.getAnswerById(id);
+    public ResponseEntity<AnswerFC> getAnswerById(@PathVariable Long id) {
+        AnswerFC answer = answerFCService.getAnswerById(id);
+        if (answer != null) {
+            return ResponseEntity.ok(answer);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping
-    public AnswerFC createAnswer(@RequestBody AnswerFC answerFC) {
-        return answerFCService.createAnswer(answerFC);
+    public ResponseEntity<AnswerFC> createAnswer(@RequestBody AnswerFC answerFC) {
+        return ResponseEntity.ok(answerFCService.createAnswer(answerFC));
     }
 
     @PutMapping("/{id}")
-    public AnswerFC updateAnswer(@PathVariable Long id, @RequestBody AnswerFC answerFC) {
-        return answerFCService.updateAnswer(id, answerFC);
+    public ResponseEntity<AnswerFC> updateAnswer(@PathVariable Long id, @RequestBody AnswerFC answerFC) {
+        AnswerFC updated = answerFCService.updateAnswer(id, answerFC);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteAnswer(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteAnswer(@PathVariable Long id) {
         answerFCService.deleteAnswer(id);
+        return ResponseEntity.ok().build();
     }
 }

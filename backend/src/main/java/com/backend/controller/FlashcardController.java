@@ -3,6 +3,7 @@ package com.backend.controller;
 import com.backend.model.Flashcard;
 import com.backend.service.FlashcardService;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -20,71 +21,49 @@ public class FlashcardController {
     }
 
     @GetMapping
-    public List<Flashcard> getAllFlashcards() {
-        return flashcardService.getAllFlashcards();
+    public ResponseEntity<List<Flashcard>> getAllFlashcards() {
+        return ResponseEntity.ok(flashcardService.getAllFlashcards());
     }
 
     @GetMapping("/{id}")
-    public Optional<Flashcard> getFlashcardById(@PathVariable Long id) {
-        return flashcardService.getFlashcardById(id);
+    public ResponseEntity<Flashcard> getFlashcardById(@PathVariable Long id) {
+        return flashcardService.getFlashcardById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public Flashcard createFlashcard(@RequestBody Flashcard flashcard) {
-        return flashcardService.createFlashcard(flashcard);
+    public ResponseEntity<Flashcard> createFlashcard(@RequestBody Flashcard flashcard) {
+        Flashcard created = flashcardService.createFlashcard(flashcard);
+        return ResponseEntity.ok(created);
     }
 
     @PutMapping("/{id}")
-    public Flashcard updateFlashcard(@PathVariable Long id, @RequestBody Flashcard flashcard) {
-        return flashcardService.updateFlashcard(id, flashcard);
+    public ResponseEntity<Flashcard> updateFlashcard(@PathVariable Long id, @RequestBody Flashcard flashcard) {
+        Flashcard updated = flashcardService.updateFlashcard(id, flashcard);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteFlashcard(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteFlashcard(@PathVariable Long id) {
         flashcardService.deleteFlashcard(id);
+        return ResponseEntity.ok().build();
     }
 
-    // Extra queries
-
     @GetMapping("/user/{userId}")
-    public List<Flashcard> getByUserId(@PathVariable Integer userId) {
-        return flashcardService.getByUserId(userId);
+    public ResponseEntity<List<Flashcard>> getByUserId(@PathVariable Integer userId) {
+        return ResponseEntity.ok(flashcardService.getByUserId(userId));
     }
 
     @GetMapping("/material/{materialId}")
-    public List<Flashcard> getByMaterialId(@PathVariable Long materialId) {
-        return flashcardService.getByMaterialId(materialId);
+    public ResponseEntity<List<Flashcard>> getByMaterialId(@PathVariable Long materialId) {
+        return ResponseEntity.ok(flashcardService.getByMaterialId(materialId));
     }
 
     @GetMapping("/due")
-    public List<Flashcard> getDueFlashcards(
+    public ResponseEntity<List<Flashcard>> getDueFlashcards(
             @RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) Date date,
-            @RequestParam("userId") Integer userId
-    ) {
-        return flashcardService.getDueFlashcards(date, userId);
-    }
-
-    @GetMapping("/level")
-    public List<Flashcard> getByLevelAndUserId(
-            @RequestParam int level,
-            @RequestParam Integer userId
-    ) {
-        return flashcardService.getByLevelAndUserId(level, userId);
-    }
-
-    @GetMapping("/course")
-    public List<Flashcard> getByCourseAndUser(
-            @RequestParam Long courseId,
-            @RequestParam Integer userId
-    ) {
-        return flashcardService.getByCourseIdAndUserId(courseId, userId);
-    }
-
-    @GetMapping("/type")
-    public List<Flashcard> getByQuestionTypeAndUserId(
-            @RequestParam String type,
-            @RequestParam Integer userId
-    ) {
-        return flashcardService.getByQuestionTypeAndUserId(type, userId);
+            @RequestParam("userId") Integer userId) {
+        return ResponseEntity.ok(flashcardService.getDueFlashcards(date, userId));
     }
 }

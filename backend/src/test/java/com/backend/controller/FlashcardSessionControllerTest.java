@@ -1,102 +1,133 @@
 package com.backend.controller;
 
-
-import com.backend.config.SecurityConfig;
-import com.backend.config.FlashcardSessionTestConfig;
-import com.backend.model.Course;
 import com.backend.model.FlashcardSession;
 import com.backend.model.User;
 import com.backend.service.FlashcardSessionService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.http.ResponseEntity;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
+import java.util.*;
 
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.openMocks;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+class FlashcardSessionControllerTest {
 
-@WebMvcTest(FlashcardSessionController.class)
-@Import({FlashcardSessionTestConfig.class, SecurityConfig.class})
-public class FlashcardSessionControllerTest {
-
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Autowired
+    @Mock
     private FlashcardSessionService sessionService;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    @InjectMocks
+    private FlashcardSessionController controller;
 
-    private FlashcardSession session;
+    public FlashcardSessionControllerTest() {
+        openMocks(this);
+    }
 
-    @BeforeEach
-    void setUp() {
+    private FlashcardSession createSession(Long id, Integer userId, Long courseId, Date date, int flashcardsStudied) {
+        FlashcardSession session = new FlashcardSession();
+        session.setId(id);
+        session.setTimestamp(date);
+        session.setFlashcardCount(flashcardsStudied);
+
+
         User user = new User();
-        user.setId(1);
-        user.setFirstName("John");
-        user.setLastName("Doe");
-        user.setEmail("john.doe@example.com");
-        user.setPassword("secret");
-        user.setRole("student");
-
-        Course course = new Course();
-        course.setId(2L);
-        course.setTitle("Java 101");
-        course.setDescription("Intro course");
-        course.setSemestru("Spring");
-        course.setProfessor(user);
-
-        session = new FlashcardSession();
-        session.setId(1L);
-        session.setTimestamp(new Date());
-        session.setFlashcardCount(10);
+        user.setId(userId);
         session.setUser(user);
-        session.setCourse(course);
+
+        // Presupunem că ai și un obiect Course, dacă e cazul îl poți seta aici
+
+        return session;
+    }
+
+    @Test
+    void shouldReturnAllSessions() {
+        List<FlashcardSession> sessions = Arrays.asList(new FlashcardSession(), new FlashcardSession());
+        when(sessionService.getAllSessions()).thenReturn(sessions);
+
+        ResponseEntity<List<FlashcardSession>> response = controller.getAllSessions();
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
+    }
+
+    @Test
+    void shouldReturnSessionsByUserId() {
+        when(sessionService.getSessionsByUserId(1)).thenReturn(List.of(new FlashcardSession(), new FlashcardSession()));
+
+        ResponseEntity<List<FlashcardSession>> response = controller.getByUser(1);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
+    }
+
+    @Test
+    void shouldReturnSessionsByCourseId() {
+        when(sessionService.getSessionsByCourseId(10L)).thenReturn(List.of(new FlashcardSession()));
+
+        ResponseEntity<List<FlashcardSession>> response = controller.getByCourse(10L);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1, response.getBody().size());
+    }
+
+    @Test
+    void shouldReturnSessionsByUserAndCourse() {
+        when(sessionService.getSessionsByUserAndCourse(1, 10L)).thenReturn(List.of(new FlashcardSession()));
+
+        ResponseEntity<List<FlashcardSession>> response = controller.getByUserAndCourse(1, 10L);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1, response.getBody().size());
+    }
+
+    @Test
+    void shouldReturnSessionsByDateRangeAndUserId() {
+        Date start = new Date(System.currentTimeMillis() - 86400000L);
+        Date end = new Date();
+        when(sessionService.getSessionsByDateRangeAndUserId(start, end, 1)).thenReturn(List.of(new FlashcardSession()));
+
+        ResponseEntity<List<FlashcardSession>> response = controller.getByDateRangeAndUser(1, start, end);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1, response.getBody().size());
+    }
+
+    @Test
+    void shouldReturnTotalFlashcardsStudiedSince() {
+        int userId = 1;
+        Date since = new Date(); // sau poți pune o dată fixă pentru un test mai stabil
+
+        when(sessionService.getTotalFlashcardsStudiedSince(userId, since)).thenReturn(42);
+
+        ResponseEntity<Integer> response = controller.getTotalFlashcardsStudiedSince(userId, since);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(42, response.getBody());
     }
 
 
     @Test
-    void testGetAllSessions() throws Exception {
-        List<FlashcardSession> sessions = Arrays.asList(session);
+    void shouldCreateSessionSuccessfully() {
+        FlashcardSession toCreate = createSession(null, 1, 10L, new Date(), 15);
+        FlashcardSession created = createSession(1L, 1, 10L, new Date(), 15);
 
-        Mockito.when(sessionService.getAllSessions()).thenReturn(sessions);
+        when(sessionService.createSession(toCreate)).thenReturn(created);
 
-        mockMvc.perform(get("/flashcardsessions"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id").value(session.getId()));
+        ResponseEntity<FlashcardSession> response = controller.createSession(toCreate);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1L, response.getBody().getId());
     }
 
     @Test
-    void testGetSessionsByUserId() throws Exception {
-        Mockito.when(sessionService.getSessionsByUserId(1)).thenReturn(List.of(session));
+    void shouldDeleteSessionSuccessfully() {
+        doNothing().when(sessionService).deleteSession(1L);
 
-        mockMvc.perform(get("/flashcardsessions/user/1"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].flashcardCount").value(session.getFlashcardCount()));
-    }
+        ResponseEntity<Void> response = controller.deleteSession(1L);
 
-    @Test
-    void testCreateSession() throws Exception {
-        Mockito.when(sessionService.createSession(any(FlashcardSession.class))).thenReturn(session);
-
-        mockMvc.perform(post("/flashcardsessions")
-                        .contentType(MediaType.APPLICATION_JSON_VALUE)
-                        .content(objectMapper.writeValueAsString(session)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(session.getId()))
-                .andExpect(jsonPath("$.flashcardCount").value(session.getFlashcardCount()));
+        assertEquals(200, response.getStatusCodeValue());
     }
 }

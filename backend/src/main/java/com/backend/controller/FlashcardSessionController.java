@@ -4,7 +4,6 @@ import com.backend.model.FlashcardSession;
 import com.backend.service.FlashcardSessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/flashcardsessions")
+@RequestMapping("/api/flashcardsessions")
 public class FlashcardSessionController {
 
     private final FlashcardSessionService sessionService;
@@ -53,13 +52,19 @@ public class FlashcardSessionController {
     @GetMapping("/user/{userId}/total")
     public ResponseEntity<Integer> getTotalFlashcardsStudiedSince(
             @PathVariable Integer userId,
-            @RequestParam("start") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date start) {
-        return ResponseEntity.ok(sessionService.getTotalFlashcardsStudiedSince(userId, start));
+            @RequestParam("since") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date since) {
+        return ResponseEntity.ok(sessionService.getTotalFlashcardsStudiedSince(userId, since));
     }
 
-    @PostMapping(consumes = "application/json;charset=UTF-8")
+    @PostMapping
     public ResponseEntity<FlashcardSession> createSession(@RequestBody FlashcardSession session) {
-        return ResponseEntity.ok(sessionService.createSession(session));
+        FlashcardSession created = sessionService.createSession(session);
+        return ResponseEntity.ok(created);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteSession(@PathVariable Long id) {
+        sessionService.deleteSession(id);//Cannot resolve method 'deleteSession' in 'FlashcardSessionService'
+        return ResponseEntity.ok().build();
+    }
 }

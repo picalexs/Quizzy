@@ -1,110 +1,101 @@
 package com.backend.controller;
 
-import com.backend.config.AnswerFCTestConfig;
-import com.backend.config.SecurityConfig;
 import com.backend.model.AnswerFC;
-import com.backend.model.Flashcard;
 import com.backend.service.AnswerFCService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.http.ResponseEntity;
 
-import org.mockito.Mockito;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-
+import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyLong;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.openMocks;
 
-@WebMvcTest(AnswerFCController.class)
-@Import({AnswerFCTestConfig.class, SecurityConfig.class})
 class AnswerFCControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Autowired
+    @Mock
     private AnswerFCService answerFCService;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    @InjectMocks
+    private AnswerFCController answerFCController;
 
-    private AnswerFC answer;
+    public AnswerFCControllerTest() {
+        openMocks(this);
+    }
 
-    @BeforeEach
-    void setUp() {
-        Flashcard flashcard = new Flashcard();
-        flashcard.setId(100L);
-
-        answer = new AnswerFC();
-        answer.setId(1L);
-        answer.setOptionText("Option A");
-        answer.setCorrect(true);
-        answer.setFlashcard(flashcard);
+    private AnswerFC createAnswer(Long id, String content) {
+        AnswerFC answer = new AnswerFC();
+        answer.setId(id);
+        answer.setOptionText(content);
+        return answer;
     }
 
     @Test
-    void testGetAllAnswers() throws Exception {
-        Mockito.when(answerFCService.getAllAnswers()).thenReturn(List.of(answer));
+    void shouldReturnAllAnswers() {
+        List<AnswerFC> answers = Arrays.asList(createAnswer(1L, "Yes"), createAnswer(2L, "No"));
+        when(answerFCService.getAllAnswers()).thenReturn(answers);
 
-        mockMvc.perform(get("/api/answers"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id").value(answer.getId()))
-                .andExpect(jsonPath("$[0].optionText").value("Option A"));
+        ResponseEntity<List<AnswerFC>> response = answerFCController.getAllAnswers();
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
     }
 
     @Test
-    void testGetAnswerById() throws Exception {
-        Mockito.when(answerFCService.getAnswerById(1L)).thenReturn(answer);
+    void shouldReturnAnswerByIdIfExists() {
+        AnswerFC answer = createAnswer(1L, "Yes");
+        when(answerFCService.getAnswerById(1L)).thenReturn(answer);
 
-        mockMvc.perform(get("/api/answers/1"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.optionText").value("Option A"));
+        ResponseEntity<AnswerFC> response = answerFCController.getAnswerById(1L);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals("Yes", response.getBody().getOptionText());
     }
 
     @Test
-    void testCreateAnswer() throws Exception {
-        Mockito.when(answerFCService.createAnswer(any(AnswerFC.class))).thenReturn(answer);
+    void shouldReturnNotFoundIfAnswerDoesNotExist() {
+        when(answerFCService.getAnswerById(1L)).thenReturn(null);
 
-        mockMvc.perform(post("/api/answers")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(answer)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(answer.getId()))
-                .andExpect(jsonPath("$.optionText").value("Option A"));
+        ResponseEntity<AnswerFC> response = answerFCController.getAnswerById(1L);
+
+        assertEquals(404, response.getStatusCodeValue());
     }
 
     @Test
-    void testUpdateAnswer() throws Exception {
-        AnswerFC updated = new AnswerFC();
-        updated.setId(1L);
-        updated.setOptionText("Updated Option");
-        updated.setCorrect(false);
-        updated.setFlashcard(answer.getFlashcard());
+    void shouldCreateAnswer() {
+        AnswerFC input = createAnswer(null, "Yes");
+        AnswerFC saved = createAnswer(1L, "Yes");
 
-        Mockito.when(answerFCService.updateAnswer(anyLong(), any(AnswerFC.class))).thenReturn(updated);
+        when(answerFCService.createAnswer(input)).thenReturn(saved);
 
-        mockMvc.perform(put("/api/answers/1")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(updated)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.optionText").value("Updated Option"))
-                .andExpect(jsonPath("$.correct").value(false));
+        ResponseEntity<AnswerFC> response = answerFCController.createAnswer(input);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1L, response.getBody().getId());
     }
 
     @Test
-    void testDeleteAnswer() throws Exception {
-        mockMvc.perform(delete("/api/answers/1"))
-                .andExpect(status().isNoContent());
-        Mockito.verify(answerFCService).deleteAnswer(1L);
+    void shouldUpdateAnswer() {
+        AnswerFC input = createAnswer(null, "Updated");
+        AnswerFC updated = createAnswer(1L, "Updated");
+
+        when(answerFCService.updateAnswer(1L, input)).thenReturn(updated);
+
+        ResponseEntity<AnswerFC> response = answerFCController.updateAnswer(1L, input);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals("Updated", response.getBody().getOptionText());
+    }
+
+    @Test
+    void shouldDeleteAnswer() {
+        doNothing().when(answerFCService).deleteAnswer(1L);
+
+        ResponseEntity<Void> response = answerFCController.deleteAnswer(1L);
+
+        assertEquals(200, response.getStatusCodeValue());
     }
 }

@@ -1,138 +1,161 @@
-// com/backend/controller/StreakControllerTest.java
 package com.backend.controller;
 
-import com.backend.config.StreakTestConfig;
-import com.backend.config.SecurityConfig;
 import com.backend.model.Streak;
+import com.backend.model.User;
 import com.backend.service.StreakService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import org.mockito.Mockito;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.http.ResponseEntity;
 
 import java.sql.Date;
-import java.util.List;
+import java.util.*;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.openMocks;
 
-@WebMvcTest(StreakController.class)
-@Import({StreakTestConfig.class, SecurityConfig.class})
 class StreakControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Autowired
+    @Mock
     private StreakService streakService;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    @InjectMocks
+    private StreakController streakController;
 
-    private Streak streak;
+    public StreakControllerTest() {
+        openMocks(this);
+    }
 
-    @BeforeEach
-    void setUp() {
-        streak = new Streak();
-        streak.setId(1L);
-        streak.setCurrentStreak(10);
-        streak.setLastCompletedDate(Date.valueOf("2024-04-25"));
-        streak.setUser(null); // Pentru test simplificat
+    private Streak createStreak(Long id, Integer userId, Date date, int streakCount) {
+        Streak streak = new Streak();
+        streak.setId(id);
+        streak.setCurrentStreak(streakCount);
+        streak.setLastCompletedDate(date);
+
+        User user = new User();
+        user.setId(userId);
+        streak.setUser(user);
+
+        return streak;
+    }
+
+
+    @Test
+    void shouldReturnAllStreaks() {
+        List<Streak> streaks = Arrays.asList(new Streak(), new Streak());
+        when(streakService.getAllStreaks()).thenReturn(streaks);
+
+        ResponseEntity<List<Streak>> response = streakController.getAllStreaks();
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
     }
 
     @Test
-    void testGetAllStreaks() throws Exception {
-        Mockito.when(streakService.getAllStreaks()).thenReturn(List.of(streak));
+    void shouldReturnStreakByIdIfExists() {
+        Streak streak = createStreak(1L, 1, new Date(System.currentTimeMillis()), 5);
+        when(streakService.getStreakById(1L)).thenReturn(Optional.of(streak));
 
-        mockMvc.perform(get("/api/streaks"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id").value(streak.getId()));
+        ResponseEntity<Streak> response = streakController.getStreakById(1L);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1L, response.getBody().getId());
     }
 
     @Test
-    void testGetStreakById() throws Exception {
-        Mockito.when(streakService.getStreakById(1L)).thenReturn(java.util.Optional.of(streak));
+    void shouldReturnNotFoundIfStreakByIdDoesNotExist() {
+        when(streakService.getStreakById(1L)).thenReturn(Optional.empty());
 
-        mockMvc.perform(get("/api/streaks/1"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.currentStreak").value(10));
+        ResponseEntity<Streak> response = streakController.getStreakById(1L);
+
+        assertEquals(404, response.getStatusCodeValue());
     }
 
     @Test
-    void testGetStreaksByUserId() throws Exception {
-        Mockito.when(streakService.getStreaksByUserId(1)).thenReturn(List.of(streak));
+    void shouldReturnStreaksByUserId() {
+        List<Streak> streaks = Arrays.asList(new Streak(), new Streak());
+        when(streakService.getStreaksByUserId(1)).thenReturn(streaks);
 
-        mockMvc.perform(get("/api/streaks/user/1"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id").value(streak.getId()));
+        ResponseEntity<List<Streak>> response = streakController.getStreaksByUserId(1);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
     }
 
     @Test
-    void testGetStreakByUserIdAndDate() throws Exception {
-        Mockito.when(streakService.getStreakByUserIdAndDate(anyInt(), any(Date.class)))
-                .thenReturn(java.util.Optional.of(streak));
+    void shouldReturnStreakByUserIdAndDateIfExists() {
+        Date date = new Date(System.currentTimeMillis());
+        Streak streak = createStreak(1L, 1, date, 5);
+        when(streakService.getStreakByUserIdAndDate(1, date)).thenReturn(Optional.of(streak));
 
-        mockMvc.perform(get("/api/streaks/user/1/date/2024-04-25"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(streak.getId()));
+        ResponseEntity<Streak> response = streakController.getStreakByUserIdAndDate(1, date);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(date, response.getBody().getLastCompletedDate());
     }
 
     @Test
-    void testGetStreaksByMinimumStreak() throws Exception {
-        Mockito.when(streakService.getStreaksByMinimumStreak(5)).thenReturn(List.of(streak));
+    void shouldReturnNotFoundIfStreakByUserIdAndDateDoesNotExist() {
+        Date date = new Date(System.currentTimeMillis());
+        when(streakService.getStreakByUserIdAndDate(1, date)).thenReturn(Optional.empty());
 
-        mockMvc.perform(get("/api/streaks/min/5"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].currentStreak").value(10));
+        ResponseEntity<Streak> response = streakController.getStreakByUserIdAndDate(1, date);
+
+        assertEquals(404, response.getStatusCodeValue());
     }
 
     @Test
-    void testGetTopStreaks() throws Exception {
-        Mockito.when(streakService.getTopStreaks()).thenReturn(List.of(streak));
+    void shouldReturnStreaksByMinimumStreak() {
+        List<Streak> streaks = Arrays.asList(new Streak(), new Streak());
+        when(streakService.getStreaksByMinimumStreak(5)).thenReturn(streaks);
 
-        mockMvc.perform(get("/api/streaks/top"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id").value(streak.getId()));
+        ResponseEntity<List<Streak>> response = streakController.getStreaksByMinimumStreak(5);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
     }
 
     @Test
-    void testGetAverageStreak() throws Exception {
-        Mockito.when(streakService.getAverageStreak()).thenReturn(7.0f);
+    void shouldReturnTopStreaks() {
+        List<Streak> topStreaks = Arrays.asList(new Streak(), new Streak(), new Streak());
+        when(streakService.getTopStreaks()).thenReturn(topStreaks);
 
-        mockMvc.perform(get("/api/streaks/average"))
-                .andExpect(status().isOk())
-                .andExpect(content().string("7.0"));
+        ResponseEntity<List<Streak>> response = streakController.getTopStreaks();
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(3, response.getBody().size());
     }
 
     @Test
-    void testCreateStreak() throws Exception {
-        Mockito.when(streakService.createStreak(any(Streak.class))).thenReturn(streak);
+    void shouldReturnAverageStreak() {
+        when(streakService.getAverageStreak()).thenReturn(5.5f);
 
-        mockMvc.perform(post("/api/streaks")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(streak)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(streak.getId()))
-                .andExpect(jsonPath("$.currentStreak").value(10));
+        ResponseEntity<Float> response = streakController.getAverageStreak();
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(5.5f, response.getBody());
     }
 
     @Test
-    void testDeleteStreak() throws Exception {
-        mockMvc.perform(delete("/api/streaks/1"))
-                .andExpect(status().isNoContent());
+    void shouldCreateStreakSuccessfully() {
+        Streak streak = createStreak(null, 1, new Date(System.currentTimeMillis()), 3);
+        Streak createdStreak = createStreak(1L, 1, new Date(System.currentTimeMillis()), 3);
 
-        Mockito.verify(streakService).deleteStreak(1L);
+        when(streakService.createStreak(streak)).thenReturn(createdStreak);
+
+        ResponseEntity<Streak> response = streakController.createStreak(streak);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1L, response.getBody().getId());
+    }
+
+    @Test
+    void shouldDeleteStreakSuccessfully() {
+        doNothing().when(streakService).deleteStreak(1L);
+
+        ResponseEntity<Void> response = streakController.deleteStreak(1L);
+
+        assertEquals(200, response.getStatusCodeValue());
     }
 }

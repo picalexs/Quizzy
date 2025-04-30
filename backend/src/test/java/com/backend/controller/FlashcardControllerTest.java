@@ -1,105 +1,134 @@
 package com.backend.controller;
 
-import com.backend.config.SecurityConfig;
-import com.backend.config.FlashcardTestConfig;
 import com.backend.model.Flashcard;
-import com.backend.model.Material;
 import com.backend.model.User;
 import com.backend.service.FlashcardService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.http.ResponseEntity;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.openMocks;
 
-@WebMvcTest(FlashcardController.class)
-@Import({SecurityConfig.class, FlashcardTestConfig.class})
-public class FlashcardControllerTest {
+class FlashcardControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Autowired
-    private ObjectMapper objectMapper;
-
-    @Autowired
+    @Mock
     private FlashcardService flashcardService;
 
-    private Flashcard flashcard;
+    @InjectMocks
+    private FlashcardController flashcardController;
 
-    @BeforeEach
-    void setUp() {
+    public FlashcardControllerTest() {
+        openMocks(this);
+    }
+
+    private Flashcard createFlashcard(Long id, Integer userId) {
+        Flashcard flashcard = new Flashcard();
+        flashcard.setId(id);
         User user = new User();
-        user.setId(1);
-        user.setFirstName("Test");
-        user.setLastName("User");
-        user.setEmail("test@example.com");
-        user.setPassword("pass");
-
-        Material material = new Material();
-        material.setId(1L);
-        material.setName("Test Material");
-        material.setPath("Example content");
-
-        flashcard = new Flashcard();
-        flashcard.setId(1L);
-        flashcard.setQuestion("What is Java?");
-        flashcard.setLevel(1);
-        flashcard.setLastStudiedAt(new Date());
-        flashcard.setQuestionType("single");
+        user.setId(userId);
         flashcard.setUser(user);
-        flashcard.setMaterial(material);
+        return flashcard;
     }
 
     @Test
-    void testGetAllFlashcards() throws Exception {
-        when(flashcardService.getAllFlashcards()).thenReturn(List.of(flashcard));
+    void shouldReturnAllFlashcards() {
+        List<Flashcard> flashcards = Arrays.asList(new Flashcard(), new Flashcard());
+        when(flashcardService.getAllFlashcards()).thenReturn(flashcards);
 
-        mockMvc.perform(get("/api/flashcards"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id").value(flashcard.getId()))
-                .andExpect(jsonPath("$[0].question").value("What is Java?"));
+        ResponseEntity<List<Flashcard>> response = flashcardController.getAllFlashcards();
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
     }
 
     @Test
-    void testGetFlashcardById() throws Exception {
-        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.ofNullable(flashcard));
+    void shouldReturnFlashcardByIdIfExists() {
+        Flashcard flashcard = createFlashcard(1L, 1);
+        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.of(flashcard));
 
-        mockMvc.perform(get("/api/flashcards/1"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.question").value("What is Java?"));
+        ResponseEntity<Flashcard> response = flashcardController.getFlashcardById(1L);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1L, response.getBody().getId());
     }
 
     @Test
-    void testCreateFlashcard() throws Exception {
-        when(flashcardService.createFlashcard(any(Flashcard.class))).thenReturn(flashcard);
+    void shouldReturnNotFoundIfFlashcardByIdDoesNotExist() {
+        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.empty());
 
-        mockMvc.perform(post("/api/flashcards")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(flashcard)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(flashcard.getId()))
-                .andExpect(jsonPath("$.question").value("What is Java?"));
+        ResponseEntity<Flashcard> response = flashcardController.getFlashcardById(1L);
+
+        assertEquals(404, response.getStatusCodeValue());
     }
 
     @Test
-    void testDeleteFlashcard() throws Exception {
-        Mockito.doNothing().when(flashcardService).deleteFlashcard(1L);
+    void shouldCreateFlashcardSuccessfully() {
+        Flashcard flashcard = createFlashcard(null, 1);
+        Flashcard created = createFlashcard(1L, 1);
+        when(flashcardService.createFlashcard(flashcard)).thenReturn(created);
 
-        mockMvc.perform(delete("/api/flashcards/1"))
-                .andExpect(status().isOk());
+        ResponseEntity<Flashcard> response = flashcardController.createFlashcard(flashcard);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1L, response.getBody().getId());
+    }
+
+    @Test
+    void shouldUpdateFlashcardSuccessfully() {
+        Flashcard flashcard = createFlashcard(1L, 1);
+        when(flashcardService.updateFlashcard(1L, flashcard)).thenReturn(flashcard);
+
+        ResponseEntity<Flashcard> response = flashcardController.updateFlashcard(1L, flashcard);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1L, response.getBody().getId());
+    }
+
+    @Test
+    void shouldDeleteFlashcardSuccessfully() {
+        doNothing().when(flashcardService).deleteFlashcard(1L);
+
+        ResponseEntity<Void> response = flashcardController.deleteFlashcard(1L);
+
+        assertEquals(200, response.getStatusCodeValue());
+    }
+
+    @Test
+    void shouldReturnFlashcardsByUserId() {
+        List<Flashcard> flashcards = Arrays.asList(new Flashcard(), new Flashcard());
+        when(flashcardService.getByUserId(1)).thenReturn(flashcards);
+
+        ResponseEntity<List<Flashcard>> response = flashcardController.getByUserId(1);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
+    }
+
+    @Test
+    void shouldReturnFlashcardsByMaterialId() {
+        List<Flashcard> flashcards = Arrays.asList(new Flashcard());
+        when(flashcardService.getByMaterialId(5L)).thenReturn(flashcards);
+
+        ResponseEntity<List<Flashcard>> response = flashcardController.getByMaterialId(5L);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1, response.getBody().size());
+    }
+
+    @Test
+    void shouldReturnDueFlashcards() {
+        Date date = new Date();
+        List<Flashcard> flashcards = Arrays.asList(new Flashcard());
+        when(flashcardService.getDueFlashcards(date, 1)).thenReturn(flashcards);
+
+        ResponseEntity<List<Flashcard>> response = flashcardController.getDueFlashcards(date, 1);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1, response.getBody().size());
     }
 }

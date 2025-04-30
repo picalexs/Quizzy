@@ -45,4 +45,9 @@ public class FlashcardSessionService {
     public FlashcardSession createSession(FlashcardSession session) {
         return sessionRepository.save(session);
     }
+
+    public void deleteSession(Long id) {
+        sessionRepository.deleteById(id);
+    }
+
 }

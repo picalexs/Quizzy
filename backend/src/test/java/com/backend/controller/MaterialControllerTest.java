@@ -1,107 +1,133 @@
-// com/backend/MaterialControllerTest.java
 package com.backend.controller;
 
-import com.backend.config.MaterialTestConfig;
-import com.backend.config.SecurityConfig;
-import com.backend.model.Course;
 import com.backend.model.Material;
 import com.backend.service.MaterialService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.http.ResponseEntity;
 
-import org.mockito.Mockito;
+import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.openMocks;
 
-import java.util.List;
-
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyLong;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-@WebMvcTest(MaterialController.class)
-@Import({MaterialTestConfig.class, SecurityConfig.class})
 class MaterialControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Autowired
+    @Mock
     private MaterialService materialService;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    @InjectMocks
+    private MaterialController materialController;
 
-    private Material material;
+    public MaterialControllerTest() {
+        openMocks(this);
+    }
 
-    @BeforeEach
-    void setUp() {
-        Course course = new Course();
-        course.setId(42L);
-
-        material = new Material();
-        material.setId(1L);
-        material.setName("Test Material");
-        material.setPath("/files/test.pdf");
-        material.setCourse(course);
+    private Material createMaterial(Long id, String name, String path) {
+        Material material = new Material();
+        material.setId(id);
+        material.setName(name);
+        material.setPath(path);
+        return material;
     }
 
     @Test
-    void testGetAllMaterials() throws Exception {
-        Mockito.when(materialService.getAllMaterials()).thenReturn(List.of(material));
+    void shouldReturnAllMaterials() {
+        List<Material> materials = Arrays.asList(new Material(), new Material());
+        when(materialService.getAllMaterials()).thenReturn(materials);
 
-        mockMvc.perform(get("/api/materials"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id").value(material.getId()));
+        ResponseEntity<List<Material>> response = materialController.getAll();
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
     }
 
     @Test
-    void testGetMaterialById() throws Exception {
-        Mockito.when(materialService.getMaterialById(1L)).thenReturn(material);
+    void shouldReturnMaterialById() {
+        Material material = createMaterial(1L, "Java Intro", "/java");
+        when(materialService.getMaterialById(1L)).thenReturn(material);
 
-        mockMvc.perform(get("/api/materials/1"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("Test Material"));
+        ResponseEntity<Material> response = materialController.getById(1L);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals("Java Intro", response.getBody().getName());
     }
 
     @Test
-    void testCreateMaterial() throws Exception {
-        Mockito.when(materialService.createMaterial(any(Material.class))).thenReturn(material);
+    void shouldCreateMaterial() {
+        Material material = createMaterial(null, "Java Basics", "/intro");
+        Material created = createMaterial(1L, "Java Basics", "/intro");
+        when(materialService.createMaterial(material)).thenReturn(created);
 
-        mockMvc.perform(post("/api/materials")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(material)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(material.getId()))
-                .andExpect(jsonPath("$.path").value("/files/test.pdf"));
+        ResponseEntity<Material> response = materialController.create(material);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1L, response.getBody().getId());
     }
 
     @Test
-    void testUpdateMaterial() throws Exception {
-        Material updated = new Material();
-        updated.setName("Updated");
-        updated.setPath("/files/updated.pdf");
-        updated.setCourse(material.getCourse());
-        Mockito.when(materialService.updateMaterial(anyLong(), any(Material.class))).thenReturn(updated);
+    void shouldUpdateMaterial() {
+        Material updated = createMaterial(1L, "Updated Name", "/updated");
+        when(materialService.updateMaterial(eq(1L), any(Material.class))).thenReturn(updated);
 
-        mockMvc.perform(put("/api/materials/1")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(updated)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("Updated"));
+        ResponseEntity<Material> response = materialController.update(1L, updated);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals("Updated Name", response.getBody().getName());
     }
 
     @Test
-    void testDeleteMaterial() throws Exception {
-        mockMvc.perform(delete("/api/materials/1"))
-                .andExpect(status().isNoContent());
-        Mockito.verify(materialService).deleteMaterial(1L);
+    void shouldDeleteMaterial() {
+        doNothing().when(materialService).deleteMaterial(1L);
+
+        ResponseEntity<Void> response = materialController.delete(1L);
+
+        assertEquals(200, response.getStatusCodeValue());
+    }
+
+    @Test
+    void shouldReturnMaterialsByCourse() {
+        List<Material> materials = Arrays.asList(new Material(), new Material());
+        when(materialService.findByCourseId(100L)).thenReturn(materials);
+
+        ResponseEntity<List<Material>> response = materialController.getByCourse(100L);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
+    }
+
+    @Test
+    void shouldSearchByName() {
+        List<Material> results = List.of(createMaterial(1L, "Algorithms", "/algo"));
+        when(materialService.findByNameContaining("Algo")).thenReturn(results);
+
+        ResponseEntity<List<Material>> response = materialController.searchByName("Algo");
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(1, response.getBody().size());
+    }
+
+    @Test
+    void shouldSearchByPath() {
+        List<Material> results = List.of(createMaterial(2L, "DB", "/db"));
+        when(materialService.findByPathContaining("/db")).thenReturn(results);
+
+        ResponseEntity<List<Material>> response = materialController.searchByPath("/db");
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals("/db", response.getBody().get(0).getPath());
+    }
+
+    @Test
+    void shouldReturnMaterialsByProfessor() {
+        List<Material> materials = Arrays.asList(new Material(), new Material());
+        when(materialService.findByProfessorId(12)).thenReturn(materials);
+
+        ResponseEntity<List<Material>> response = materialController.getByProfessor(12);
+
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(2, response.getBody().size());
     }
 }

@@ -2,6 +2,7 @@ package com.backend.controller;
 
 import com.backend.model.Material;
 import com.backend.service.MaterialService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,55 +14,62 @@ public class MaterialController {
 
     private final MaterialService materialService;
 
+    @Autowired
     public MaterialController(MaterialService materialService) {
         this.materialService = materialService;
     }
 
     @GetMapping
     public ResponseEntity<List<Material>> getAll() {
-        return ResponseEntity.ok(materialService.getAllMaterials());
+        List<Material> materials = materialService.getAllMaterials();
+        return ResponseEntity.ok(materials);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Material> getById(@PathVariable Long id) {
-        return ResponseEntity.ok(materialService.getMaterialById(id));
+        Material material = materialService.getMaterialById(id);
+        return ResponseEntity.ok(material);
     }
 
     @PostMapping
     public ResponseEntity<Material> create(@RequestBody Material material) {
-        return ResponseEntity.ok(materialService.createMaterial(material));
+        Material created = materialService.createMaterial(material);
+        return ResponseEntity.ok(created);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Material> update(@PathVariable Long id, @RequestBody Material material) {
-        return ResponseEntity.ok(materialService.updateMaterial(id, material));
+        Material updated = materialService.updateMaterial(id, material);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         materialService.deleteMaterial(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok().build();
     }
-
-    // Custom endpoints
 
     @GetMapping("/course/{courseId}")
     public ResponseEntity<List<Material>> getByCourse(@PathVariable Long courseId) {
-        return ResponseEntity.ok(materialService.findByCourseId(courseId));
+        List<Material> materials = materialService.findByCourseId(courseId);
+        return ResponseEntity.ok(materials);
     }
 
     @GetMapping("/search/name")
     public ResponseEntity<List<Material>> searchByName(@RequestParam String name) {
-        return ResponseEntity.ok(materialService.findByNameContaining(name));
+        List<Material> materials = materialService.findByNameContaining(name);
+        return ResponseEntity.ok(materials);
     }
 
     @GetMapping("/search/path")
     public ResponseEntity<List<Material>> searchByPath(@RequestParam String path) {
-        return ResponseEntity.ok(materialService.findByPathContaining(path));
+        List<Material> materials = materialService.findByPathContaining(path);
+        return ResponseEntity.ok(materials);
     }
 
     @GetMapping("/professor/{professorId}")
     public ResponseEntity<List<Material>> getByProfessor(@PathVariable Integer professorId) {
-        return ResponseEntity.ok(materialService.findByProfessorId(professorId));
+        List<Material> materials = materialService.findByProfessorId(professorId);
+        return ResponseEntity.ok(materials);
     }
 }
