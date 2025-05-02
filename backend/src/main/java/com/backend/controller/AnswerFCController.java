@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/answers")
+@RequestMapping("/AnswerFC")
 public class AnswerFCController {
 
     private final AnswerFCService answerFCService;

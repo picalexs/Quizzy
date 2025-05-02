@@ -10,7 +10,7 @@ import java.sql.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/streaks")
+@RequestMapping("/Streak")
 public class StreakController {
 
     private final StreakService streakService;

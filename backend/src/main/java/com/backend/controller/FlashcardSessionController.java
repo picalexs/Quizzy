@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/flashcardsessions")
+@RequestMapping("/FlashcardSession")
 public class FlashcardSessionController {
 
     private final FlashcardSessionService sessionService;
