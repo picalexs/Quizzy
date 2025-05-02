@@ -1,0 +1,287 @@
+[{content={parts=[{text=Okay, here are 30 flashcards based on the provided text, following the requested format and covering a range of difficulties.
+
+--FlashCardSeparator--
+Single [What does G = (V, E) represent in graph theory?]
+--InteriorSeparator--
+A graph, where V is the set of vertices and E is the set of edges.
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [Which of the following are applications of graph theory?]
+--InteriorSeparator--
+1.(right) Social network analysis
+2.(right) Exam scheduling
+3.(wrong) Cooking recipes
+4.(right) Memory register allocation
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the degree of a vertex?]
+--InteriorSeparator--
+The number of edges incident to that vertex.
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [Which of the following statements correctly describe isolated and pendant vertices?]
+--InteriorSeparator--
+1.(right) An isolated vertex has a degree of 0.
+2.(wrong) A pendant vertex has a degree of 0.
+3.(right) A pendant vertex has a degree of 1.
+4.(wrong) An isolated vertex has a degree of 1.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is a stable set in a graph?]
+--InteriorSeparator--
+A subset of vertices where no two vertices are adjacent (no edge between them).
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [In the context of graph coloring, which of the following statements are true?]
+--InteriorSeparator--
+1.(right) Adjacent vertices must have different colors.
+2.(wrong) Vertices connected by 2 edges must have the same color.
+3.(right) The set of vertices with the same color forms a stable set.
+4.(wrong) You need to have a different color for all vertices.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [Define chromatic number of a graph, x(G).]
+--InteriorSeparator--
+The least number of colors needed to color the vertices of G such that no two adjacent vertices share the same color.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [Which of the following are examples of Graph Theory applications mentioned?]
+--InteriorSeparator--
+1.(right) Mobile radio frequency allocation
+2.(wrong) Deciding the best route for a train
+3.(right) Lectures/seminars/timetabling
+4.(right) Coloring maps
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is graph isomorphism?]
+--InteriorSeparator--
+A bijection between the vertices of two graphs that preserves adjacency.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [Which statement is true about isomorphic graphs G1 and G2?]
+--InteriorSeparator--
+1.(right) There exists a bijection between their vertices.
+2.(wrong) They always have different degree sequences.
+3.(wrong) They have different number of edges.
+4.(right) Adjacency is preserved under the bijection.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is a matching in a graph?]
+--InteriorSeparator--
+An independent set of edges, meaning no two edges share a common endpoint.
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [The maximum cardinality of a matching in G is called...]
+--InteriorSeparator--
+1.(right) The matching number of G
+2.(wrong) Vertex independence number of G
+3.(wrong) The chromatic number of G
+4.(right) The edge-independence number of G
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is NP-completeness?]
+--InteriorSeparator--
+A class of problems to which all other NP problems can be reduced in polynomial time.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What does x'(G) represent?]
+--InteriorSeparator--
+1.(right) The edge chromatic number of graph G
+2.(wrong) The vertex chromatic number of graph G
+3.(wrong) The maximum degree of a vertex in G
+4.(right) The minimum number of colors needed to edge-color G
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [Give an example of a stable matching application.]
+--InteriorSeparator--
+Assignment of resident physicians to hospitals, student-project allocation.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What is the purpose of register allocation in compiler optimization?]
+--InteriorSeparator--
+1.(right) Keeping the most used variables in fast processor registers.
+2.(wrong) Deallocating memory that is no longer in use.
+3.(wrong) Assigning a particular type to variables.
+4.(right) Speeding up operations made by the CPU.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What are graph rewriting systems used for?]
+--InteriorSeparator--
+Software verification.
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What is the threshold score needed to take the final test?]
+--InteriorSeparator--
+1.(right) 30
+2.(wrong) 60
+3.(wrong) 90
+4.(wrong) 160
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the threshold score needed to promote the course?]
+--InteriorSeparator--
+80
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What is the role of edges in a graph? ]
+--InteriorSeparator--
+1.(right) Connect vertices.
+2.(wrong) Store data related to vertices.
+3.(right) Represent relationships between vertices.
+4.(wrong) Always have a direction.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What does dg(v) represent?]
+--InteriorSeparator--
+The degree of vertex v.
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [A vertex coloring of a graph G is a function that maps each vertex to a color, such that:]
+--InteriorSeparator--
+1.(right) No two adjacent vertices have the same color.
+2.(wrong) All vertices have different colors.
+3.(wrong) All vertices have the same color.
+4.(right) Vertices sharing a common edge have different colors.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [When is a graph called self-complementary?]
+--InteriorSeparator--
+If the graph is isomorphic to its complement.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [The Chinese Postman Problem involves finding?]
+--InteriorSeparator--
+1.(right) A shortest closed path / cycle.
+2.(wrong) The shortest path between two given vertices.
+3.(wrong) A minimum spanning tree
+4.(right) A cycle that visits every edge of a graph once.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is Edmonds algorithm used for?]
+--InteriorSeparator--
+Finding a maximum cardinality matching in polynomial time.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What is the powerset of a set X?]
+--InteriorSeparator--
+1.(right) The set of all subsets of X.
+2.(wrong) The set of all elements of X.
+3.(wrong) The number of elements in X.
+4.(right) Includes the empty set.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [Define the term 'k-set'.]
+--InteriorSeparator--
+A set with k elements.
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [Which of the following are path problems?]
+--InteriorSeparator--
+1.(right) Graph Traversal
+2.(right) Shortest-Paths
+3.(right) Connectivity
+4.(wrong) Stable Sets
+--InteriorSeparator--
+[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is a major characteristic of Graph Neural Networks?]
+--InteriorSeparator--
+They use graph structures to analyze and process data. They are used in AI.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What is the chromatic number of a graph?]
+--InteriorSeparator--
+1.(right) The minimum number of colors needed to color the graph such that adjacent vertices have different colors.
+2.(wrong) The maximum degree of any vertex in the graph.
+3.(right) The parameter denoted by x(G).
+4.(wrong) The total number of vertices in the graph.
+--InteriorSeparator--
+[Difficulty: medium]
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.2512606518734865}]

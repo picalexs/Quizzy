@@ -33,7 +33,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping("/users")
     public ResponseEntity<Collection<User>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }

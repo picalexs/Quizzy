@@ -1,0 +1,92 @@
+[{content={parts=[{text=Here are 30 flashcards based on the provided text.
+
+--FlashCardSeparator--
+Single [What is a planar graph?] --InteriorSeparator-- A graph that can be drawn in the plane without any edges crossing. --InteriorSeparator--[Difficulty: easy] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is a plane graph?] --InteriorSeparator-- A graph satisfying the constraints b, c, and d in the definition. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is Euler's formula for connected plane graphs?] --InteriorSeparator-- f = m - n + 2, where f is the number of faces, m is the number of edges, and n is the number of vertices. --InteriorSeparator--[Difficulty: easy] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [Which of the following is true regarding the relationship between the number of edges (m) and vertices (n) in a connected planar graph?] --InteriorSeparator-- 1.(right) m <= 3n - 6 2.(wrong) m >= 3n - 6 3.(wrong) m = 3n - 6 4.(wrong) m <= 2n - 4 --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What does Kuratowski's theorem state?] --InteriorSeparator-- A graph is planar if and only if it has no subgraphs homeomorphic to K5 or K3,3. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is a Fary's representation?] --InteriorSeparator-- A planar drawing where vertices are points and edges are straight line segments. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What does the separator theorem (Tarjan & Lipton, 1979) state for planar graphs?] --InteriorSeparator--  There is a partition (A, B, S) of V(G) such that: S separates A from B, |A| <= (2/3)n, |B| <= (2/3)n, and |S| <= 4√n. --InteriorSeparator--[Difficulty: hard] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the time complexity for finding the partition (A, B, S) in the separator theorem?] --InteriorSeparator-- O(n) time. --InteriorSeparator--[Difficulty: easy] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What are the properties of the partition (A, B, S) of V(G)?] --InteriorSeparator-- 1.(right) S separates A from B 2.(right)  |A| <= (2/3)n and |B| <= (2/3)n 3.(right)  |S| <= 4√n 4.(wrong) |S| >= 4√n --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the main idea behind the proof of the separator theorem?] --InteriorSeparator-- Using a BFS traversal to divide the graph into levels and identifying separator levels. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the algorithmic point of view based on Euler's theorem?] --InteriorSeparator--Any planar graph is sparse: if m is its number of edges and n is number of vertices, then m : 0(n) . --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [Define embedding of a graph on a surface.] --InteriorSeparator--It is a graph G’ : (V', E) such that: a) G E G’; b) V’ is a set of distinct points of 5; c) Every edge e’ E E’ is a simple curve; d) Every point of 5 is either a vertex of G’ or it is contained in at most one edge of G’. --InteriorSeparator--[Difficulty: hard] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What are the key properties that must be respected for each faces of a planar graphs?] --InteriorSeparator-- 1.(right) Every cycle of G divides the plane in exactly two connected regions 2.(right) A planar graph may have different planar representations 3.(wrong) Vertices and edges can be joined by curves contained in that region. 4.(right) Every edge of a cycle belongs to exactly two boundaries (of two faces). --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [How can a planar graph be transformed into an equivalent representation with a specific face as the exterior face?] --InteriorSeparator-- By embedding the graph on a sphere and projecting it onto a plane tangent to the sphere at the diametral point of a chosen point inside the desired face. --InteriorSeparator--[Difficulty: hard] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the h(G) transformation?] --InteriorSeparator-- Given a graph G, h(G) removes a degree-2 vertex 'u and replaces its two incident edges with a single edge connecting its neighbors. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [When h(G) is planar?] --InteriorSeparator-- 1.(right) if G is planar 2.(wrong) if G is not planar 3.(right) if it's graph that results from applying repeatedly the h transformation until a graph without vertices of degree two is obtained 4.(wrong) if it's just a connected graph --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [Define homeomorphic graphs.] --InteriorSeparator--Two graphs G1 and G2 are homeomorphic if h*(G1) is isomorphic to h*(G2). --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is a maximal planar graph?] --InteriorSeparator-- Ve E E(G), G + e is not planar. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What does a cycle of G’ passing through the edge u'u E E(G’) imply?] --InteriorSeparator-- Then there exists w 6 V(C’) such that w 5i u, 'u and there is no interior chord of C’ with one extremity in w. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What are the edges of G*?] --InteriorSeparator-- 1.(right) to each edge e of G will correspond an edge e* of G* 2.(wrong) to each edge e of G will correspond an edge v* of G* 3.(wrong) to each face f of G will correspond an edge e* of G* 4.(wrong) to each vertex v of G will correspond an edge e* of G* --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [How the step construction of G;+1 proceeds to guarantee vertices having integer coordinates?] --InteriorSeparator--  The parallel through wp to the ﬁrst bisector intersects the parallel through wq to the second bisector in point P. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the purpose of finding the middle level t1 in the BFS traversal for the separator theorem?] --InteriorSeparator-- To identify a level that potentially divides the graph into roughly equal parts. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [What would happen with number of levels in planar graphs for BFS traversal if the theorem is not applied?] --InteriorSeparator-- 1.(wrong) it would be less than √n 2.(right) it would be more than √n 3.(right) the vertices would be > n 4.(wrong) the vertices would be less than n --InteriorSeparator--[Difficulty: hard] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What values can the degree dG(V0)  take in a planar graph?] --InteriorSeparator-- dG(V0) g 5 --InteriorSeparator--[Difficulty: easy] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What would imply f : 1?] --InteriorSeparator--G has no cycle --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [How is the number of edges related to the number of cycle in a maximal graph] --InteriorSeparator-- 1.(right) Any face of a maximal planar graph is a triangle 2.(right) Each face has 3 edges 3.(right) it has 3n − 6 edges 4.(wrong) each face has 2 edges --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the formula for the number of faces in a planar graph with p connected components?] --InteriorSeparator--f = m - n + p + 1 --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple [Which of the graphs in the following list have the property that the removal of any vertex would result in a planar graph?] --InteriorSeparator-- 1.(right) K5 2.(right) K6 3.(right) K3,3 4.(wrong) K4,5 --InteriorSeparator--[Difficulty: hard] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is the crossing number of a graph?] --InteriorSeparator-- The minimum number of crossings occuring when the graph is drawn in the plane. --InteriorSeparator--[Difficulty: medium] --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single [What is h*(G)?] --InteriorSeparator-- The graph obtained from G by applying repeatedly the h transformation until a graph without vertices of degree two is obtained. --InteriorSeparator--[Difficulty: hard] --FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.32266162395692377}]

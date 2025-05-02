@@ -1,0 +1,122 @@
+[{content={parts=[{text=Here are 30 flashcards based on the provided text, adhering to your specified format and covering various concepts:
+
+--FlashCardSeparator--
+Single What is a complete graph of order n denoted by? --InteriorSeparator-- Kn --InteriorSeparator--[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Which of the following are true regarding bipartite graphs? --InteriorSeparator-- 1.(right) V(G) can be partitioned into two stable sets. 2.(wrong) All vertices must have the same degree. 3.(right) Denoted G = (S, T; E(G)) where S and T are stable sets and S∩T = ∅ 4.(wrong) It cannot be a complete graph --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What are the three types of walks defined in the text? --InteriorSeparator-- Walk, Trail, and Path --InteriorSeparator--[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a connected component of a graph? --InteriorSeparator-- A maximal connected subgraph. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is vertex-connectivity number, k(G)? --InteriorSeparator-- k(G) : max {p G N* : G is p — connected}. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Which of the following are operations on graphs discussed? --InteriorSeparator-- 1.(right) Join (Sum) 2.(right) Cartesian Product 3.(right) Disjoint Union 4.(wrong) Division --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is an F-free graph? --InteriorSeparator-- A graph G that contains no induced subgraph isomorphic to a member of the set F. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Define the distance between two vertices in a graph G. --InteriorSeparator--  dg(u, 'u), is the length of the shortest path in G from u to 'u (if any). --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a cut vertex? --InteriorSeparator-- A vertex 'v € V such that G — 'u is not connected. --InteriorSeparator--[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Which of the following are correct about strongly connected components of a Digraph G? --InteriorSeparator-- 1.(right) Maximal sub-digraphs that are strongly connected. 2.(right) Induced by equivalence classes of a binary relation p. 3.(wrong) They must be disjoint 4.(wrong) They must contain every vertex --InteriorSeparator--[Difficulty: hard]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a multigraph? --InteriorSeparator-- G : (V, E), Where V is a non-empty set (of vertices), and E is the multiset (of edges) on V. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a hypergraph? --InteriorSeparator-- A graph where hyperedges (edges) are not restricted to be 2-subsets of the vertex set but are non-empty subset of vertex set. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Define "degree of vertex 'u" in a graph. --InteriorSeparator-- dG('u) : number of edges incident to 'u. --InteriorSeparator--[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is the complement of a graph G? --InteriorSeparator-- the graph é, with V(@) : V(G) and E(@) I (WP) \E(G). --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a null graph of order n denoted by? --InteriorSeparator-- Nn --InteriorSeparator--[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is the definition of a planar graph? --InteriorSeparator--  A graph that can be represented in a plane such that to each vertex corresponds a point of that plane and to each edge corresponds a simple curve joining the points corresponding to its extremities and these curves intersects only at their endpoints. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Define the girth of a graph G. --InteriorSeparator-- The length of the shortest cycle (if any) in G. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is an Eulerian graph? --InteriorSeparator-- A graph that has a closed trail passing through each edge of the graph. --InteriorSeparator--[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a Hamiltonian graph? --InteriorSeparator-- A graph that has a cycle passing through each vertex of the graph. --InteriorSeparator--[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a pseudograph? --InteriorSeparator-- A graph where edges can be loops and multiple edges between vertices are allowed. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single Define the indegree and outdegree of a vertex in a digraph. --InteriorSeparator-- Indegree: number of arcs incident into the vertex. Outdegree: number of arcs incident from the vertex. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple What are the properties of subgraph H : (V(H),E(H)) of a graph G : (V(G),E(G))? --InteriorSeparator-- 1.(right) V(H) is a subset of V(G) 2.(right) E(H) is a subset of E(G) 3.(wrong) V(H) = V(G) 4.(wrong) E(H) = E(G) --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a line graph of a graph G? --InteriorSeparator--  A graph L(G), with V(L(G)) : E(G) and E(L(G)) : {ef : e,f G E(G), e and f are adjacent in G}.  --InteriorSeparator--[Difficulty: hard]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What are the three types of digraph connectivity? --InteriorSeparator-- Weakly Connected, Unilaterally Connected, Strongly Connected --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is the clique number, w(G)? --InteriorSeparator--  w(G) : max‘ \Q]. Q c11que 1n G --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Which of the following are definitions for edges? --InteriorSeparator-- 1.(right) Cut Edge 2.(right) Edge-Cutset 3.(wrong) Cut Path 4.(wrong) Edge path --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a tournament in graph theory? --InteriorSeparator--  An oriented complete graph (every two (distinct) vertices are joined by exactly one arc). --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple Which of the following are true regarding Symmetric pairs of arcs in directed graph? --InteriorSeparator-- 1.(right) If a digraph has arcs (uv, 'uu) in digraph. 2.(right)  u'u is called the converse 0f 'uu 3.(wrong) Directed graph doesn't contain converse of an arc. 4.(wrong) Directed graph doesn't contain symmetric pair of arcs --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is the cycle of order n denoted by? --InteriorSeparator-- Cn --InteriorSeparator--[Difficulty: easy]
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single What is a k-uniform hypergraph? --InteriorSeparator-- Every edge has cardinality k. --InteriorSeparator--[Difficulty: medium]
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=3771, endIndex=4010, uri=https://profs.info.uaic.ro/~olariu/curent/AG/files/ag2.pdf}]}, avgLogprobs=-0.2222721561504777}]
