@@ -2,20 +2,20 @@ package com.backend.controller;
 
 import com.backend.model.Flashcard;
 import com.backend.service.FlashcardService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/flashcards")
+@RequestMapping("/Flashcard")
 public class FlashcardController {
 
     private final FlashcardService flashcardService;
 
-    @Autowired
     public FlashcardController(FlashcardService flashcardService) {
         this.flashcardService = flashcardService;
     }
@@ -29,47 +29,41 @@ public class FlashcardController {
     public ResponseEntity<Flashcard> getFlashcardById(@PathVariable Long id) {
         return flashcardService.getFlashcardById(id)
                 .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
     public ResponseEntity<Flashcard> createFlashcard(@RequestBody Flashcard flashcard) {
-        return ResponseEntity.ok(flashcardService.createFlashcard(flashcard));
+        Flashcard created = flashcardService.createFlashcard(flashcard);
+        return ResponseEntity.ok(created);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Flashcard> updateFlashcard(@PathVariable Long id, @RequestBody Flashcard flashcard) {
+        Flashcard updated = flashcardService.updateFlashcard(id, flashcard);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteFlashcard(@PathVariable Long id) {
-        boolean deleted = flashcardService.deleteFlashcard(id);
-        return deleted ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+        flashcardService.deleteFlashcard(id);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<Flashcard>> getByUserId(@PathVariable Integer userId) {
-        return ResponseEntity.ok(flashcardService.getFlashcardsByUserId(userId));
+        return ResponseEntity.ok(flashcardService.getByUserId(userId));
     }
 
     @GetMapping("/material/{materialId}")
     public ResponseEntity<List<Flashcard>> getByMaterialId(@PathVariable Long materialId) {
-        return ResponseEntity.ok(flashcardService.getFlashcardsByMaterialId(materialId));
+        return ResponseEntity.ok(flashcardService.getByMaterialId(materialId));
     }
 
     @GetMapping("/due")
-    public ResponseEntity<List<Flashcard>> getDueFlashcards(@RequestParam Integer userId, @RequestParam Date date) {
-        return ResponseEntity.ok(flashcardService.getDueFlashcards(userId, date));
-    }
-
-    @GetMapping("/level")
-    public ResponseEntity<List<Flashcard>> getByLevel(@RequestParam Integer userId, @RequestParam int level) {
-        return ResponseEntity.ok(flashcardService.getFlashcardsByLevel(userId, level));
-    }
-
-    @GetMapping("/course")
-    public ResponseEntity<List<Flashcard>> getByCourse(@RequestParam Integer userId, @RequestParam Long courseId) {
-        return ResponseEntity.ok(flashcardService.getFlashcardsByCourseId(userId, courseId));
-    }
-
-    @GetMapping("/type")
-    public ResponseEntity<List<Flashcard>> getByType(@RequestParam Integer userId, @RequestParam String type) {
-        return ResponseEntity.ok(flashcardService.getFlashcardsByQuestionType(userId, type));
+    public ResponseEntity<List<Flashcard>> getDueFlashcards(
+            @RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) Date date,
+            @RequestParam("userId") Integer userId) {
+        return ResponseEntity.ok(flashcardService.getDueFlashcards(date, userId));
     }
 }
