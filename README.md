@@ -27,3 +27,13 @@ Pentru a opri serviciile:
 ```bash
 docker compose down
 ```
+
+# Setup S3 Bucket
+
+## Instalare CLI (AWS Command Line)
+
+1. Descarcă AWS CLI de la [acest link](https://awscli.amazonaws.com/AWSCLIV2.msi).
+2. După instalare, deschide un terminal și rulează comanda:
+   ```bash
+   aws configure
+3.Toate informatiile necesare de contectare le vei primii in privat
