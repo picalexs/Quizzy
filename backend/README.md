@@ -104,4 +104,8 @@ public class s3test {
 ```
 Bravo!! Ai reusit!
 ## Cum adaugi un curs in bucket?
- 
+ In terminal dupa ce faci iar aws configure si pui datele
+  ```bash
+    aws s3 cp C:\cale\spre\fisier.pdf s3://nume-bucket/folder/fisier.pdf
+```
+
