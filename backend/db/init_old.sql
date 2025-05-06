@@ -137,15 +137,15 @@ ALTER SEQUENCE public.flashcard_flashcardid_seq OWNED BY public.flashcard.flashc
 -- Name: flashcardsession; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.flashcard (
-    flashcardid bigint NOT NULL,
-    question character varying(255) NOT NULL,
-    materialid bigint,
+CREATE TABLE public.flashcardsession (
+    sessionid bigint NOT NULL,
     userid integer NOT NULL,
-    level integer,
-    laststudiedat timestamp without time zone,
-    questiontype character varying(255),
-    pageindex integer DEFAULT NULL
+    courseid bigint NOT NULL,
+    "timestamp" timestamp without time zone NOT NULL,
+    flashcardcount integer NOT NULL,
+    endtime timestamp(6) without time zone,
+    score integer,
+    flashcardid bigint
 );
 
 
@@ -686,20 +686,10 @@ INSERT INTO public.enrollment VALUES (60, 34, '2025-02-14 00:00:00', NULL);
 -- Data for Name: flashcard; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.flashcard (flashcardid, question, materialid, userid, level, laststudiedat, questiontype) VALUES (6, 'Cum funcționează algoritmul de sortare QuickSort?', 2, 22, 2, '2024-03-12 12:30:00', 'Exercițiu');
-INSERT INTO public.flashcard (flashcardid, question, materialid, userid, level, laststudiedat, questiontype) VALUES (7, 'Ce reprezintă termenul de Big O în analiza algoritmilor?', 3, 31, 3, '2024-03-15 15:45:00', 'Teorie');
-INSERT INTO public.flashcard (flashcardid, question, materialid, userid, level, laststudiedat, questiontype) VALUES (8, 'Explicați diferența între stive și cozi?', 4, 13, 4, '2024-03-18 09:00:00', 'Exercițiu');
-INSERT INTO public.flashcard (flashcardid, question, materialid, userid, level, laststudiedat, questiontype) VALUES (5, 'Care este complexitatea algoritmului Dijkstra?', 1, 10, 2, '2024-03-10 10:00:00', 'Teorie');
-
--- Update existing flashcard records with pageindex values
-UPDATE public.flashcard SET pageindex = 5 WHERE flashcardid = 5;
-UPDATE public.flashcard SET pageindex = 12 WHERE flashcardid = 6;
-UPDATE public.flashcard SET pageindex = 7 WHERE flashcardid = 7;
-UPDATE public.flashcard SET pageindex = 3 WHERE flashcardid = 8;
-
--- Insert additional flashcard with pageindex
-INSERT INTO public.flashcard (flashcardid, question, materialid, userid, level, laststudiedat, questiontype, pageindex) 
-VALUES (9, 'Explicați principiile algoritmilor DFS și BFS pentru parcurgerea grafurilor', 10, 14, 3, '2024-04-02 08:15:00', 'Teorie', 15);
+INSERT INTO public.flashcard VALUES (6, 'Cum funcționează algoritmul de sortare QuickSort?', 2, 22, 2, '2024-03-12 12:30:00', 'Exercițiu');
+INSERT INTO public.flashcard VALUES (7, 'Ce reprezintă termenul de Big O în analiza algoritmilor?', 3, 31, 3, '2024-03-15 15:45:00', 'Teorie');
+INSERT INTO public.flashcard VALUES (8, 'Explicați diferența între stive și cozi?', 4, 13, 4, '2024-03-18 09:00:00', 'Exercițiu');
+INSERT INTO public.flashcard VALUES (5, 'Care este complexitatea algoritmului Dijkstra?', 1, 10, 2, '2024-03-10 10:00:00', 'Teorie');
 
 
 --
@@ -865,13 +855,6 @@ INSERT INTO public.users VALUES (69, 'Cristina', 'Lazar', 'cristina.lazar@profes
 INSERT INTO public.users VALUES (70, 'Radu', 'Iliescu', 'radu.iliescu@profesor.com', 'profesor', 'Ep3!Vn5k');
 INSERT INTO public.users VALUES (71, 'Murinho', 'special_one', 'pressure000@profesor.com', 'profesor', 'Ht6@Zp3l');
 INSERT INTO public.users VALUES (72, 'El', 'Professor', 'lacasadepappel@profesor.com', 'profesor', 'Yq9$Tr6x');
-
--- Enable the pgcrypto extension if not already enabled
-CREATE EXTENSION IF NOT EXISTS pgcrypto;
-
--- Update the users table to encode passwords using the crypt() function
-UPDATE public.users
-SET password = crypt(password, gen_salt('bf'));
 
 
 --
