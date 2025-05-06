@@ -41,3 +41,14 @@ Acest ghid te va ajuta să configurezi backend-ul pentru proiectul **Quizzy** pa
 ---
 
 **Felicitări!** Acum ai configurat corect backend-ul pentru **Quizzy**. Dacă întâmpini dificultăți, nu ezita să ceri ajutor!
+
+
+# Setup S3 Bucket
+
+## Instalare CLI (AWS Command Line)
+
+1. Descarcă AWS CLI de la [acest link](https://awscli.amazonaws.com/AWSCLIV2.msi).
+2. După instalare, deschide un terminal și rulează comanda:
+   ```bash
+   aws configure
+3.Toate informatiile necesare de contectare le vei primii in privat
