@@ -52,3 +52,56 @@ Acest ghid te va ajuta să configurezi backend-ul pentru proiectul **Quizzy** pa
    ```bash
    aws configure
 3.Toate informatiile necesare de contectare le vei primii in privat
+4.Incearca sa rulezi comanda 
+ ```bash
+   aws s3 ls s3://quizzy-s3-bucket
+```
+## Setup cu inteliji
+
+1.Asigura-te ca sunt aceste doua dependente in pom.xml
+ ```java
+     <dependency>
+           <groupId>software.amazon.awssdk</groupId>
+           <artifactId>s3</artifactId>
+           <version>2.25.43</version>
+       </dependency>
+       <dependency>
+           <groupId>org.slf4j</groupId>
+           <artifactId>slf4j-simple</artifactId>
+           <version>1.7.30</version>
+       </dependency>
+```
+2.Cod de test:
+```java
+package org.example;
+
+import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.model.ListObjectsV2Request;
+import software.amazon.awssdk.services.s3.model.S3Object;
+
+public class s3test {
+    public static void main(String[] args) {
+        String bucketName = "quizzy-s3-bucket";
+
+        S3Client s3 = S3Client.builder()
+                .region(Region.of("eu-central-1"))
+                .credentialsProvider(DefaultCredentialsProvider.create())
+                .build();
+
+        ListObjectsV2Request request = ListObjectsV2Request.builder()
+                .bucket(bucketName)
+                .build();
+
+        s3.listObjectsV2(request).contents().forEach((S3Object obj) -> {
+            System.out.println(obj.key() + " (" + obj.size() + " bytes)");
+        });
+
+        s3.close();
+    }
+}
+```
+Bravo!! Ai reusit!
+## Cum adaugi un curs in bucket?
+ 
