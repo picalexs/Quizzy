@@ -5,25 +5,39 @@
 -- Dumped from database version 16.8
 -- Dumped by pg_dump version 17.4
 
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
+--SET statement_timeout = 0;
+--SET lock_timeout = 0;
+--SET idle_in_transaction_session_timeout = 0;
+--SET transaction_timeout = 0;
+--SET client_encoding = 'UTF8';
+--SET standard_conforming_strings = on;
+--SELECT pg_catalog.set_config('search_path', '', false);
+--SET check_function_bodies = false;
+--SET xmloption = content;
+--SET client_min_messages = warning;
+--SET row_security = off;
 
-SET default_tablespace = '';
+--SET default_tablespace = '';
 
-SET default_table_access_method = heap;
+--SET default_table_access_method = heap;
 
 --
 -- Name: answerfc; Type: TABLE; Schema: public; Owner: -
 --
+
+DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS testquestion CASCADE;
+DROP TABLE IF EXISTS testanswer CASCADE;
+DROP TABLE IF EXISTS test CASCADE;
+DROP TABLE IF EXISTS streak CASCADE;
+DROP TABLE IF EXISTS material CASCADE;
+DROP TABLE IF EXISTS grade CASCADE;
+DROP TABLE IF EXISTS flashcardsession CASCADE;
+DROP TABLE IF EXISTS flashcard CASCADE;
+DROP TABLE IF EXISTS enrollment CASCADE;
+DROP TABLE IF EXISTS course CASCADE;
+DROP TABLE IF EXISTS answerfc CASCADE;
+
 
 CREATE TABLE public.answerfc (
     answerid bigint NOT NULL,
@@ -109,7 +123,8 @@ CREATE TABLE public.flashcard (
     userid integer NOT NULL,
     level integer,
     laststudiedat timestamp without time zone,
-    questiontype character varying(255)
+    questiontype character varying(255),
+    pageindex integer DEFAULT NULL
 );
 
 
@@ -137,15 +152,15 @@ ALTER SEQUENCE public.flashcard_flashcardid_seq OWNED BY public.flashcard.flashc
 -- Name: flashcardsession; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.flashcard (
-    flashcardid bigint NOT NULL,
-    question character varying(255) NOT NULL,
-    materialid bigint,
-    userid integer NOT NULL,
-    level integer,
-    laststudiedat timestamp without time zone,
-    questiontype character varying(255),
-    pageindex integer DEFAULT NULL
+CREATE TABLE public.flashcardsession (
+    sessionid bigint NOT NULL,
+    userid bigint NOT NULL,
+    courseid bigint NOT NULL,
+    studiedat timestamp without time zone NOT NULL,
+    duration integer,
+    flashcardid bigint,
+    startpage integer,
+    endpage integer
 );
 
 
