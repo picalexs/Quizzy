@@ -1,49 +1,37 @@
 package com.backend.utils;
 
+
+import com.backend.dto.AnswerFCDTO;
+import com.backend.dto.FlashcardDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 enum FlashType {
     SINGLE, MULTIPLE
 }
 
-@ToString
-@Getter
-@Setter
-@NoArgsConstructor
-class FC {
-    private String question;
-    private int level; // 0 - easy, 1 - medium, 2 - hard
-    private FlashType type;
-    private List<String> rightAnswers;
-    private List<String> wrongAnswers;
-}
-
 @Setter
 @Getter
-public class FlashCardParser {
+class FlashCardParser {
 
     private final String content;
-    private final List<FC> list = new ArrayList<>();
+    private final List<FlashcardDTO> list = new ArrayList<>();
 
     public FlashCardParser(String content) {
         this.content = content;
     }
 
-    public List<FC> getParsedText() throws IOException {
+    public List<FlashcardDTO> getParsedText() throws IOException {
         String[] flashCards = content.split("\\s*--FlashCardSeparator--\\s*");
 
         for (String card : flashCards) {
             if (!card.trim().isEmpty()) {
-                Optional<FC> parsedCard = parseCard(card.trim());
+                Optional<FlashcardDTO> parsedCard = parseCard(card.trim());
                 if (parsedCard.isPresent()) {
                     list.add(parsedCard.get());
                 } else {
@@ -55,57 +43,71 @@ public class FlashCardParser {
         return list;
     }
 
-    private Optional<FC> parseCard(String card) {
+    private Optional<FlashcardDTO> parseCard(String card) {
         String[] sections = card.split("\\s*--InteriorSeparator--\\s*");
-        if (sections.length != 3) return Optional.empty();
 
-        FC flashCard = new FC();
+        FlashcardDTO flashCard = new FlashcardDTO();
+        FlashType type = FlashType.SINGLE;
 
         String header = sections[0].trim();
         if (header.startsWith("Single")) {
-            flashCard.setType(FlashType.SINGLE);
-            flashCard.setQuestion(header.substring("Single".length()).trim());
+            flashCard.setQuestionType(header);
         } else if (header.startsWith("Multiple")) {
-            flashCard.setType(FlashType.MULTIPLE);
-            flashCard.setQuestion(header.substring("Multiple".length()).trim());
+            flashCard.setQuestionType(header);
+            type = FlashType.MULTIPLE;
         } else {
             return Optional.empty();
         }
 
-        List<String> rightAnswers = new ArrayList<>();
-        List<String> wrongAnswers = new ArrayList<>();
+        flashCard.setQuestion(sections[1].trim());
 
-        if (flashCard.getType() == FlashType.SINGLE) {
-            String answer = sections[1].trim();
-            if (!answer.isEmpty()) {
-                rightAnswers.add(answer);
-            }
+        Set<AnswerFCDTO> answers = new HashSet<>();
+        if (type == FlashType.SINGLE) {
+            AnswerFCDTO answer = new AnswerFCDTO();
+            answer.setOptionText(sections[2].trim());
+            answer.setCorrect(true);
+            answer.setFlashcardId(flashCard.getId());
+            answers.add(answer);
         } else {
-            List<String> allAnswers = Arrays.stream(sections[1].split("\n"))
-                    .map(String::trim)
-                    .filter(s -> !s.isEmpty())
-                    .toList();
-
-            for (String ans : allAnswers) {
-                if (ans.contains("(right)")) {
-                    rightAnswers.add(ans.substring("(right)  ".length()));
-                } else if (ans.contains("(wrong)")) {
-                    wrongAnswers.add(ans.substring("(wrong)  ".length()));
-                }
+            String[] options = sections[2].lines().toArray(String[]::new);
+            for (String option : options) {
+                AnswerFCDTO answer = getAnswerFCDTO(option, flashCard);
+                answers.add(answer);
             }
         }
+        flashCard.setAnswers(answers);
 
-        flashCard.setRightAnswers(rightAnswers);
-        flashCard.setWrongAnswers(wrongAnswers);
-
-        switch (sections[2].trim().toLowerCase()) {
-            case "easy" -> flashCard.setLevel(0);
-            case "medium" -> flashCard.setLevel(1);
-            case "hard" -> flashCard.setLevel(2);
-            default -> {
+        switch(sections[3].trim()){
+            case "easy":
+                flashCard.setLevel(0);
+                break;
+            case "medium":
+                flashCard.setLevel(1);
+                break;
+            case "hard":
+                flashCard.setLevel(2);
+                break;
+            default:
                 return Optional.empty();
-            }
         }
+
+        flashCard.setMaterialId(Long.parseLong(sections[4].trim()));
+
         return Optional.of(flashCard);
+    }
+
+    private static AnswerFCDTO getAnswerFCDTO(String option, FlashcardDTO flashCard) {
+        AnswerFCDTO answer = new AnswerFCDTO();
+        String substring = option.trim().substring(8, option.length());
+        if (option.startsWith("(right)")) {
+            answer.setCorrect(true);
+            answer.setFlashcardId(flashCard.getId());
+            answer.setOptionText(substring);
+        } else if (option.startsWith("(wrong)")) {
+            answer.setCorrect(false);
+            answer.setFlashcardId(flashCard.getId());
+            answer.setOptionText(substring);
+        }
+        return answer;
     }
 }
