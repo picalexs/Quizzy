@@ -156,11 +156,8 @@ CREATE TABLE public.flashcardsession (
     sessionid bigint NOT NULL,
     userid bigint NOT NULL,
     courseid bigint NOT NULL,
-    studiedat timestamp without time zone NOT NULL,
-    duration integer,
-    flashcardid bigint,
-    startpage integer,
-    endpage integer
+    timestamp timestamp without time zone NOT NULL,
+    flashcardcount integer NOT NULL
 );
 
 
@@ -721,10 +718,10 @@ VALUES (9, 'Explicați principiile algoritmilor DFS și BFS pentru parcurgerea g
 -- Data for Name: flashcardsession; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.flashcardsession VALUES (5, 10, 21, '2024-03-10 09:30:00', 5, NULL, NULL, NULL);
-INSERT INTO public.flashcardsession VALUES (6, 22, 39, '2024-03-12 10:00:00', 8, NULL, NULL, NULL);
-INSERT INTO public.flashcardsession VALUES (7, 31, 39, '2024-03-15 11:30:00', 6, NULL, NULL, NULL);
-INSERT INTO public.flashcardsession VALUES (8, 13, 28, '2024-03-18 08:45:00', 4, NULL, NULL, NULL);
+INSERT INTO public.flashcardsession VALUES (5, 10, 21, '2024-03-10 09:30:00', 5);
+INSERT INTO public.flashcardsession VALUES (6, 22, 39, '2024-03-12 10:00:00', 8);
+INSERT INTO public.flashcardsession VALUES (7, 31, 39, '2024-03-15 11:30:00', 6);
+INSERT INTO public.flashcardsession VALUES (8, 13, 28, '2024-03-18 08:45:00', 4);
 
 
 --
@@ -1114,7 +1111,7 @@ ALTER TABLE ONLY public.enrollment
 --
 
 ALTER TABLE ONLY public.flashcardsession
-    ADD CONSTRAINT fk2a9to8w64cp2c6nxl6an15hek FOREIGN KEY (flashcardid) REFERENCES public.flashcard(flashcardid);
+    DROP CONSTRAINT IF EXISTS fk2a9to8w64cp2c6nxl6an15hek;
 
 
 --
