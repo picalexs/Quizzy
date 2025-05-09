@@ -27,4 +27,7 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
 
     @Query("SELECT f FROM Flashcard f WHERE f.questionType = :type AND f.user.id = :userId")
     List<Flashcard> findByQuestionTypeAndUserId(@Param("type") String type, @Param("userId") Integer userId);
+
+    @Query("SELECT f FROM Flashcard f WHERE f.question = :questionText")
+    Flashcard findByQuestion(@Param("questionText") String questionText);
 }
