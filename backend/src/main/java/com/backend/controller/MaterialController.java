@@ -1,33 +1,35 @@
 package com.backend.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import com.backend.model.Course;
 import com.backend.model.Material;
+import com.backend.service.AWSS3Service;
 import com.backend.service.CourseService;
 import com.backend.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.InputStream;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/Material")
 public class MaterialController {
 
+    @Value("${aws.s3.bucket.name}")
+    private String bucketName;
     private final CourseService courseService;
     private final MaterialService materialService;
+    private final AWSS3Service awsS3Service;
 
     @Autowired
-    public MaterialController(MaterialService materialService, CourseService courseService) {
+    public MaterialController(MaterialService materialService, CourseService courseService, AWSS3Service awsS3Service) {
         this.materialService = materialService;
         this.courseService = courseService;
+        this.awsS3Service = awsS3Service;
     }
 
     @GetMapping
@@ -93,28 +95,22 @@ public class MaterialController {
                 return ResponseEntity.badRequest().build();
             }
 
-            Optional<Material> optionalMaterial = course.getMaterials().stream().filter(m -> Objects.equals(m.getId(), index)).findFirst();
-            Material material = null;
-            if (optionalMaterial.isPresent()) {
-                material = optionalMaterial.get();
-            } else {
-                return ResponseEntity.notFound().build();
-            }
+            Material material = course.getMaterials().stream()
+                    .filter(m -> Objects.equals(m.getId(), index))
+                    .findFirst()
+                    .orElseThrow();
 
             String s3Path = material.getPath();
 
-            InputStream s3InputStream = null;
-            if (s3InputStream == null) {
+            Resource s3Resource = awsS3Service.getPdfResourceFromS3(bucketName, material.getPath());
+            if (s3Resource == null) {
                 return ResponseEntity.notFound().build();
             }
-
-            InputStreamResource resource = new InputStreamResource(s3InputStream);
-
             return ResponseEntity.ok()
                     .header("Content-Disposition", "inline; filename=\"" + material.getName() + "\"")
                     .header("page" + page)
                     .contentType(MediaType.APPLICATION_PDF)
-                     .body(resource);
+                     .body(s3Resource);
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(500).build();
