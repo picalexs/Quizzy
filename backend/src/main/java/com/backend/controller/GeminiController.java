@@ -52,4 +52,43 @@ public class GeminiController {
             return "Error saving flashcards: " + e.getMessage();
         }
     }
+
+    @PostMapping("/compare-answer-to-the-official-one")
+    public Double compareUsersAnswerToOfficialAnswer(@RequestParam String question, @RequestParam String officialAnswer, @RequestParam String usersAnswer) throws IOException {
+        String prompt = "Given question: " + question + "\n" + "Given official answer: " + officialAnswer + "\n Compare the official answer to the user's answer and give back a procentage of how correct the user's answer is. Your answer should be only a rational number, no extra symbol (example: 87.5) \n User's answer: " + usersAnswer;
+
+        // Get the generated content from Gemini API
+        String generatedContent1 = geminiService.getGeminiResponse(prompt);
+        String generatedContent2 = geminiService.getGeminiResponse(prompt);
+        String generatedContent3 = geminiService.getGeminiResponse(prompt);
+        String generatedContent4 = geminiService.getGeminiResponse(prompt);
+        String generatedContent5 = geminiService.getGeminiResponse(prompt);
+
+        Double percentage1 = Double.parseDouble(extractOnlyTheNumber(generatedContent1));
+        Double percentage2 = Double.parseDouble(extractOnlyTheNumber(generatedContent2));
+        Double percentage3 = Double.parseDouble(extractOnlyTheNumber(generatedContent3));
+        Double percentage4 = Double.parseDouble(extractOnlyTheNumber(generatedContent4));
+        Double percentage5 = Double.parseDouble(extractOnlyTheNumber(generatedContent5));
+
+        if(percentage1 == 0.0 || percentage2 == 0.0 || percentage3 == 0.0 || percentage4 == 0.0 || percentage5 == 0.0) {
+            return 0.0;
+        }
+
+        return (percentage1 + percentage2 + percentage3 + percentage4 + percentage5) / 5.0;
+    }
+
+    private String extractOnlyTheNumber(String json) {
+        int start = json.indexOf("text=");
+        if (start == -1) {
+            throw new IllegalArgumentException("Could not find 'text=' in the response: " + json);
+        }
+        start += 5;
+
+        int end = json.indexOf("\\n", start);
+        if (end == -1) end = json.indexOf("\n", start);
+        if (end == -1) end = json.indexOf("}", start);
+        if (end == -1) end = json.length(); // fallback
+
+        return json.substring(start, end).trim();
+    }
 }
