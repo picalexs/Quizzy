@@ -53,7 +53,7 @@ public class GeminiController {
         }
     }
 
-    @PostMapping("/compare-answer-to-the-official-one")
+    @PostMapping("/compare-users-answer-to-the-official-answer")
     public Double compareUsersAnswerToOfficialAnswer(@RequestParam String question, @RequestParam String officialAnswer, @RequestParam String usersAnswer) throws IOException {
         String prompt = "Given question: " + question + "\n" + "Given official answer: " + officialAnswer + "\n Compare the official answer to the user's answer and give back a procentage of how correct the user's answer is. Your answer should be only a rational number, no extra symbol (example: 87.5) \n User's answer: " + usersAnswer;
 
