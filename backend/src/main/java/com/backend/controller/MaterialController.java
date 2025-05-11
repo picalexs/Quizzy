@@ -1,5 +1,6 @@
 package com.backend.controller;
 
+import com.backend.dto.MaterialDTO;
 import org.springframework.beans.factory.annotation.Value;
 import com.backend.model.Course;
 import com.backend.model.Material;
@@ -45,7 +46,7 @@ public class MaterialController {
     }
 
     @PostMapping
-    public ResponseEntity<Material> create(@RequestBody Material material) {
+    public ResponseEntity<Material> create(@RequestBody MaterialDTO material) {
         Material created = materialService.createMaterial(material);
         return ResponseEntity.ok(created);
     }
@@ -86,7 +87,7 @@ public class MaterialController {
         return ResponseEntity.ok(materials);
     }
 
-    @RequestMapping("/{courseName}/pdf/{index}")
+    @PostMapping("/{courseName}/pdf/{index}")
     public ResponseEntity<Resource> getPDF(@PathVariable String courseName, @PathVariable Long index, @RequestParam(defaultValue = "1") int page) {
         try {
             Course course = courseService.findByTitle(courseName);

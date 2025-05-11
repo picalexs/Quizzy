@@ -79,4 +79,8 @@ public class CourseService {
     public Course findByTitle(String Title) {
         return courseRepository.findByTitle(Title);
     }
+
+    public Optional<Course> getCourseById(Long courseId) {
+        return courseRepository.findById(courseId);
+    }
 }
