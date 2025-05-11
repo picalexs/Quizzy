@@ -23,13 +23,6 @@ public class AWSS3Service {
         this.s3Client = s3Client;
     }
 
-    /**
-     * Returnează un fișier PDF din AWS S3 ca Resource.
-     *
-     * @param bucketName Numele bucket-ului S3, nu poate fi null sau gol
-     * @param s3Path     Path-ul (cheia) către fișierul PDF, nu poate fi null sau gol
-     * @return Resource care conține stream-ul fișierului
-     */
     public Resource getPdfResourceFromS3(String bucketName, String s3Path) {
         if (bucketName == null || bucketName.trim().isEmpty()) {
             throw new IllegalArgumentException("Bucket name cannot be null or empty");
