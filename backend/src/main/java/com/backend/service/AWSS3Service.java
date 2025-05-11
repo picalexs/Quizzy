@@ -11,8 +11,6 @@ import software.amazon.awssdk.services.s3.model.GetObjectRequest;
 import software.amazon.awssdk.services.s3.model.GetObjectResponse;
 import software.amazon.awssdk.services.s3.model.S3Exception;
 
-import java.util.Objects;
-
 @Service
 public class AWSS3Service {
 
@@ -40,16 +38,53 @@ public class AWSS3Service {
                     .build();
 
             ResponseInputStream<GetObjectResponse> responseInputStream = s3Client.getObject(getObjectRequest);
+
+            if (responseInputStream == null) {
+                logger.error("Null response input stream for bucket: {}, path: {}", bucketName, s3Path);
+                throw new NullPointerException("S3 returned a null response input stream");
+            }
+
             GetObjectResponse response = responseInputStream.response();
+
+            if (response == null) {
+                throw new RuntimeException("The downloaded object is not a PDF file");
+            }
+
+            if (!"application/pdf".equalsIgnoreCase(response.contentType())) {
+                throw new RuntimeException("The downloaded object is not a PDF file. Content type: "
+                        + response.contentType());
+            }
 
             logger.debug("Successfully retrieved file from S3 - Content Length: {}, Content Type: {}",
                     response.contentLength(), response.contentType());
 
-            return new InputStreamResource(Objects.requireNonNull(responseInputStream));
+            return new InputStreamResource(java.util.Objects.requireNonNull(responseInputStream));
 
         } catch (S3Exception e) {
+
+            String errorMsg = "Error downloading PDF from S3: ";
+
+            if (e.awsErrorDetails() != null) {
+                errorMsg += e.awsErrorDetails().errorMessage();
+            } else {
+                errorMsg += e.getMessage();
+            }
+
             logger.error("Error retrieving file from S3 - bucket: {}, path: {}", bucketName, s3Path, e);
-            throw new RuntimeException("Error downloading PDF from S3: " + e.awsErrorDetails().errorMessage(), e);
+            throw new RuntimeException(errorMsg, e);
+
+        } catch (NullPointerException e) {
+
+            logger.error("Null pointer retrieving file from S3 - bucket: {}, path: {}", bucketName, s3Path, e);
+            throw e;
+        } catch (RuntimeException e) {
+
+            if ("The downloaded object is not a PDF file".equals(e.getMessage()) 
+                || e.getMessage().startsWith("The downloaded object is not a PDF file")) {
+                throw e;
+            }
+            logger.error("Unexpected error retrieving file from S3 - bucket: {}, path: {}", bucketName, s3Path, e);
+            throw new RuntimeException("Error downloading PDF from S3: " + e.getMessage(), e);
         }
     }
 }
