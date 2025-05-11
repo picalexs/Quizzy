@@ -89,7 +89,7 @@ public class MaterialController {
     @RequestMapping("/{courseName}/pdf/{index}")
     public ResponseEntity<Resource> getPDF(@PathVariable String courseName, @PathVariable Long index, @RequestParam(defaultValue = "1") int page) {
         try {
-            Course course = courseService.findByName(courseName);
+            Course course = courseService.findByTitle(courseName);
 
             if (course == null || course.getMaterials().size() <= index || index < 0) {
                 return ResponseEntity.badRequest().build();
@@ -110,7 +110,7 @@ public class MaterialController {
                     .header("Content-Disposition", "inline; filename=\"" + material.getName() + "\"")
                     .header("page" + page)
                     .contentType(MediaType.APPLICATION_PDF)
-                     .body(s3Resource);
+                    .body(s3Resource);
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(500).build();

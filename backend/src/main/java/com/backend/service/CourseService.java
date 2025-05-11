@@ -3,15 +3,12 @@ package com.backend.service;
 import com.backend.dto.CourseDTO;
 import com.backend.mapper.CourseMapper;
 import com.backend.model.Course;
-import com.backend.model.User;
 import com.backend.repository.CourseRepository;
 import com.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -79,7 +76,7 @@ public class CourseService {
         return true;
     }
 
-    public Course findByName(String name) {
-        return courseRepository.findByName(name);
+    public Course findByTitle(String Title) {
+        return courseRepository.findByTitle(Title);
     }
 }
