@@ -25,4 +25,7 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
   
     @Query("SELECT c FROM Course c")
     Collection<Course> allCourses();
+
+    @Query("SELECT c FROM Course c WHERE c.name = :name")
+    Course findByName(String name);
 }

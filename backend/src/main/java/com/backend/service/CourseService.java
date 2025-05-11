@@ -26,6 +26,15 @@ public class CourseService {
         this.userRepository = userRepository;
     }
 
+    public Course createCourse(CourseDTO courseDTO) {
+
+        courseDTO.setId(null);
+
+        CourseMapper mapper = new CourseMapper(userRepository);
+        Course course = mapper.toEntity(courseDTO);
+        return courseRepository.save(course);
+    }
+
     public Collection<Course> getAllCourses() {
         return courseRepository.allCourses();
     }
@@ -40,11 +49,26 @@ public class CourseService {
 
     public Optional<Course> updateCourse(Long id, CourseDTO courseDTO) {
         CourseMapper mapper = new CourseMapper(userRepository);
-        Course newCourse = mapper.toEntity(courseDTO);
-        if(!courseRepository.existsById(id)) {
+
+        Optional<Course> existingCourseOpt = courseRepository.findById(id);
+        if (existingCourseOpt.isEmpty()) {
             return Optional.empty();
         }
-        return Optional.of(newCourse);
+
+        Course existingCourse = existingCourseOpt.get();
+
+        existingCourse.setTitle(courseDTO.getTitle());
+        existingCourse.setDescription(courseDTO.getDescription());
+        existingCourse.setSemestru(courseDTO.getSemestru());
+
+        Integer professorId = courseDTO.getProfessorId();
+        if (professorId != null) {
+            userRepository.findById(professorId).ifPresent(existingCourse::setProfessor);
+        }
+
+        Course updatedCourse = courseRepository.save(existingCourse);
+
+        return Optional.of(updatedCourse);
     }
 
     public boolean deleteCourse(Long id) {
@@ -53,5 +77,9 @@ public class CourseService {
         }
         courseRepository.deleteById(id);
         return true;
+    }
+
+    public Course findByName(String name) {
+        return courseRepository.findByName(name);
     }
 }
