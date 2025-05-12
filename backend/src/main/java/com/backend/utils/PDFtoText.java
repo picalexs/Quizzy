@@ -27,7 +27,7 @@ public class PDFtoText {
 
     public static void generateTextFromPDF() {
         try {
-            String coursesPath = System.getProperty("user.dir") + File.separator + "backend" + File.separator + "courses";
+            String coursesPath = System.getProperty("user.dir") + File.separator + "courses";
             List<Path> pdfPaths = Files.walk(Paths.get(coursesPath))
                     .filter(p -> p.toString().endsWith(".pdf"))
                     .toList();
@@ -46,8 +46,13 @@ public class PDFtoText {
 
     private static String imageToText(BufferedImage image) {
         try (TessBaseAPI api = new TessBaseAPI()) {
-            String tessDataPath = System.getProperty("user.dir") + File.separator + "backend" + File.separator + "tessdata";
+           /* String tessDataPath = System.getProperty("user.dir") + File.separator + "tessdata";
             if (api.Init(tessDataPath, "ENG") != 0) {
+                System.err.println("Could not initialize tesseract.");
+                return null;
+            }*/
+
+            if (api.Init("tessdata", "ENG") != 0) {
                 System.err.println("Could not initialize tesseract.");
                 return null;
             }
