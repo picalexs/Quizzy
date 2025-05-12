@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -38,7 +39,7 @@ public class Course {
 
     @OneToMany(mappedBy = "course")
     @JsonBackReference
-    private Set<Material> materials;
+    private List<Material> materials;
 
     @OneToMany(mappedBy = "course")
     @JsonBackReference
@@ -68,7 +69,7 @@ public class Course {
     public User getProfessor() {
         return professor;
     }
-    public Set<Material> getMaterials() {
+    public List<Material> getMaterials() {
         return materials;
     }
     public Set<Enrollment> getEnrollments() {

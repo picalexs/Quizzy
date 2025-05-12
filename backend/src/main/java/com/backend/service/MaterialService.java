@@ -85,4 +85,12 @@ public class MaterialService {
     public List<Material> findByProfessorId(Integer professorId) {
         return materialRepository.findByProfessorId(professorId);
     }
+
+    public Material getMaterialByIndex(Long index) {
+        return materialRepository.getReferenceById(index);
+    }
+
+    public Material findById(Long index) {
+        return materialRepository.findById(index).orElse(null);
+    }
 }

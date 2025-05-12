@@ -1,5 +1,8 @@
 package com.backend.controller;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.backend.dto.MaterialDTO;
 import org.springframework.beans.factory.annotation.Value;
 import com.backend.model.Course;
@@ -9,6 +12,7 @@ import com.backend.service.CourseService;
 import com.backend.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +24,8 @@ import java.util.Objects;
 @RequestMapping("/Material")
 public class MaterialController {
 
+
+    private static final Logger logger = LoggerFactory.getLogger(MaterialController.class);
     @Value("${aws.s3.bucket.name}")
     private String bucketName;
     private final CourseService courseService;
@@ -87,35 +93,37 @@ public class MaterialController {
         return ResponseEntity.ok(materials);
     }
 
-    @PostMapping("/{courseName}/pdf/{index}")
-    public ResponseEntity<Resource> getPDF(@PathVariable String courseName, @PathVariable Long index, @RequestParam(defaultValue = "1") int page) {
+    @GetMapping("/{courseName}/pdf/{index}")
+    public ResponseEntity<Resource> getPDF(@PathVariable String courseName, @PathVariable Long index) {
+        logger.info("Received request to get PDF for course: '{}' at index: {}", courseName, index);
+
         try {
-            Course course = courseService.findByTitle(courseName);
 
-            if (course == null || course.getMaterials().size() <= index || index < 0) {
-                return ResponseEntity.badRequest().build();
-            }
-
-            Material material = course.getMaterials().stream()
-                    .filter(m -> Objects.equals(m.getId(), index))
-                    .findFirst()
-                    .orElseThrow();
+            Material material = materialService.findById(index);
 
             String s3Path = material.getPath();
-
-            Resource s3Resource = awsS3Service.getPdfResourceFromS3(bucketName, material.getPath());
-            if (s3Resource == null) {
-                return ResponseEntity.notFound().build();
+            if (s3Path == null || s3Path.isEmpty()) {
+                logger.error("Material at index '{}' for course '{}' has an invalid S3 path", index, courseName);
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null); // 500 if S3 path is invalid
             }
+
+            // Step 5: Get the PDF resource from S3
+            logger.debug("Fetching PDF from S3 bucket '{}' with path '{}'", bucketName, s3Path);
+            Resource pdfResource = awsS3Service.getPdfResourceFromS3(bucketName, s3Path);
+            if (pdfResource == null) {
+                logger.warn("PDF file not found in S3 for path '{}'", s3Path);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // 404 if file not found
+            }
+
+            logger.info("Successfully retrieved PDF for course '{}' at index '{}'", courseName, index);
             return ResponseEntity.ok()
-                    .header("Content-Disposition", "inline; filename=\"" + material.getName() + "\"")
-                    .header("page" + page)
                     .contentType(MediaType.APPLICATION_PDF)
-                    .body(s3Resource);
+                    .body(pdfResource);
+
         } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(500).build();
+            // Log the exception with stack trace
+            logger.error("Unexpected error while retrieving PDF for course '{}' at index '{}': {}", courseName, index, e.getMessage(), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null); // 500 for unexpected errors
         }
     }
-
 }
