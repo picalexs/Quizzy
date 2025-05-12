@@ -137,13 +137,17 @@ public class PDFtoText {
                             if (text == null || text.trim().isEmpty()) {
                                 text = "[OCR failed or page was blank on page: " + pageNR + "]";
                                 System.out.println("OCR failed or page was blank on page: " + pageNR);
+                                System.out.println("course where failure occured: " + pdfPath);
                             }
 
-
-                            result.append("***************Beginning Page***************\n")
-                                    .append("***************page number:").append(pageNR).append("**************\n")
-                                    .append(text).append("\n")
-                                    .append("***************Ending Page***************\n\n");
+                            if (text.contains("OCR failed")) {
+                                result.append("\0");
+                            } else {
+                                result.append("***************Beginning Page***************\n")
+                                        .append("***************page number:").append(pageNR).append("**************\n")
+                                        .append(text).append("\n")
+                                        .append("***************Ending Page***************\n\n");
+                            }
                         }
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
