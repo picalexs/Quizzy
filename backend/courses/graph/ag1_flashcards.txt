@@ -1,287 +1,450 @@
-[{content={parts=[{text=Okay, here are 30 flashcards based on the provided text, following the requested format and covering a range of difficulties.
-
---FlashCardSeparator--
-Single [What does G = (V, E) represent in graph theory?]
+[{content={parts=[{text=--FlashCardSeparator--
+Single
 --InteriorSeparator--
-A graph, where V is the set of vertices and E is the set of edges.
+What is a matching in a graph G = (V, E)?
 --InteriorSeparator--
-[Difficulty: easy]
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple [Which of the following are applications of graph theory?]
+A subset M of E such that for all e, f in M, if e != f, then e and f share no endpoint.
 --InteriorSeparator--
-1.(right) Social network analysis
-2.(right) Exam scheduling
-3.(wrong) Cooking recipes
-4.(right) Memory register allocation
+easy
 --InteriorSeparator--
-[Difficulty: medium]
+27
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What is the degree of a vertex?]
+Single
 --InteriorSeparator--
-The number of edges incident to that vertex.
+What is the matching number of a graph G?
 --InteriorSeparator--
-[Difficulty: easy]
+The maximum cardinality of a matching in G, denoted by ν(G).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+27
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [Which of the following statements correctly describe isolated and pendant vertices?]
+Single
 --InteriorSeparator--
-1.(right) An isolated vertex has a degree of 0.
-2.(wrong) A pendant vertex has a degree of 0.
-3.(right) A pendant vertex has a degree of 1.
-4.(wrong) An isolated vertex has a degree of 1.
+What is the chromatic number, χ(G), of a graph G?
 --InteriorSeparator--
-[Difficulty: medium]
+The least value of p such that G has a p-coloring.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What is a stable set in a graph?]
+Multiple
 --InteriorSeparator--
-A subset of vertices where no two vertices are adjacent (no edge between them).
+What are some applications of Graph Theory?
 --InteriorSeparator--
-[Difficulty: easy]
+(right) Analyzing social networks
+(right) Exam scheduling for university departments
+(wrong) Sorting algorithms
+(wrong) Financial modeling
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+10, 11
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [In the context of graph coloring, which of the following statements are true?]
+Single
 --InteriorSeparator--
-1.(right) Adjacent vertices must have different colors.
-2.(wrong) Vertices connected by 2 edges must have the same color.
-3.(right) The set of vertices with the same color forms a stable set.
-4.(wrong) You need to have a different color for all vertices.
+Define a graph G = (V, E).
 --InteriorSeparator--
-[Difficulty: medium]
+V is a finite, non-empty set of vertices (nodes), and E is a subset of pairs of vertices, representing the edges.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+12
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [Define chromatic number of a graph, x(G).]
+Single
 --InteriorSeparator--
-The least number of colors needed to color the vertices of G such that no two adjacent vertices share the same color.
+What is the degree of a vertex v in a graph?
 --InteriorSeparator--
-[Difficulty: medium]
+The number of edges incident to v, denoted as dg(v).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [Which of the following are examples of Graph Theory applications mentioned?]
+Multiple
 --InteriorSeparator--
-1.(right) Mobile radio frequency allocation
-2.(wrong) Deciding the best route for a train
-3.(right) Lectures/seminars/timetabling
-4.(right) Coloring maps
+Which of the following are true about graph representations?
 --InteriorSeparator--
-[Difficulty: medium]
+(right) Graphs can be represented visually with nodes and curves.
+(right) Labels and colors can enhance visual clarity.
+(wrong) Graphs can only be represented mathematically.
+(wrong) Visual representations are standardized across all software.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18, 44
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What is graph isomorphism?]
+Single
+--InteriorSeparator--
+What is a stable set in a graph G = (V, E)?
+--InteriorSeparator--
+A subset S of V such that there is no edge between its vertices.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the notation a(G) represent?
+--InteriorSeparator--
+The maximum cardinality of a stable set of G (stability number).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the Stable Set problem categorized as?
+--InteriorSeparator--
+(right) NP-complete
+(wrong) P
+(wrong) Undecidable
+(right) A decision problem
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is graph isomorphism?
 --InteriorSeparator--
 A bijection between the vertices of two graphs that preserves adjacency.
 --InteriorSeparator--
-[Difficulty: medium]
+medium
+--InteriorSeparator--
+36
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [Which statement is true about isomorphic graphs G1 and G2?]
+Single
 --InteriorSeparator--
-1.(right) There exists a bijection between their vertices.
-2.(wrong) They always have different degree sequences.
-3.(wrong) They have different number of edges.
-4.(right) Adjacency is preserved under the bijection.
+What is the running time complexity known for the Graph Isomorphism problem?
 --InteriorSeparator--
-[Difficulty: medium]
+Quasi-polynomial time.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+36
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What is a matching in a graph?]
+Single
 --InteriorSeparator--
-An independent set of edges, meaning no two edges share a common endpoint.
+Is there a polynomial time algorithm for solving the Maximum Matching optimization problem?
 --InteriorSeparator--
-[Difficulty: easy]
+Yes, Edmonds (1965) showed that P2 ∈ P.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+28
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [The maximum cardinality of a matching in G is called...]
+Single
 --InteriorSeparator--
-1.(right) The matching number of G
-2.(wrong) Vertex independence number of G
-3.(wrong) The chromatic number of G
-4.(right) The edge-independence number of G
+What is a p-coloring of a graph?
 --InteriorSeparator--
-[Difficulty: medium]
+A map c: V -> {1, ..., p} such that c(u) != c(v) for each edge uv in E.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What is NP-completeness?]
+Single
 --InteriorSeparator--
-A class of problems to which all other NP problems can be reduced in polynomial time.
+What is a p-edge coloring of a graph?
 --InteriorSeparator--
-[Difficulty: medium]
+A map c: E -> {1, ..., p} such that c(e) != c(f) for all edges e, f in E with |e ∩ f| = 1.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+33
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [What does x'(G) represent?]
+Multiple
 --InteriorSeparator--
-1.(right) The edge chromatic number of graph G
-2.(wrong) The vertex chromatic number of graph G
-3.(wrong) The maximum degree of a vertex in G
-4.(right) The minimum number of colors needed to edge-color G
+What does an edge coloring represent in terms of matchings?
 --InteriorSeparator--
-[Difficulty: medium]
+(right) A partition of E into matchings.
+(wrong) A coloring of the vertices.
+(right) A set of edges with the same color is a matching.
+(wrong) A spanning tree.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [Give an example of a stable matching application.]
+Single
 --InteriorSeparator--
-Assignment of resident physicians to hospitals, student-project allocation.
+What does the notation χ'(G) represent?
 --InteriorSeparator--
-[Difficulty: medium]
+The edge chromatic number of graph G, the least value of p such that G has a p-edge coloring.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+33
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [What is the purpose of register allocation in compiler optimization?]
+Single
 --InteriorSeparator--
-1.(right) Keeping the most used variables in fast processor registers.
-2.(wrong) Deallocating memory that is no longer in use.
-3.(wrong) Assigning a particular type to variables.
-4.(right) Speeding up operations made by the CPU.
+What is the Edge Coloring problem categorized as?
 --InteriorSeparator--
-[Difficulty: medium]
+NP-complete for p >= 3
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What are graph rewriting systems used for?]
+Single
 --InteriorSeparator--
-Software verification.
+What is the purpose of register allocation in compiler optimization, as mentioned in the text?
 --InteriorSeparator--
-[Difficulty: easy]
+To keep the most used variables in the fast processor registers.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+40
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [What is the threshold score needed to take the final test?]
+Single
 --InteriorSeparator--
-1.(right) 30
-2.(wrong) 60
-3.(wrong) 90
-4.(wrong) 160
+What does it mean for a graph to be self-complementary?
 --InteriorSeparator--
-[Difficulty: easy]
+The graph is isomorphic to its complement.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+42
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What is the threshold score needed to promote the course?]
+Multiple
 --InteriorSeparator--
-80
+What are the main components used for grading?
 --InteriorSeparator--
-[Difficulty: easy]
+(right) Seminars
+(right) Homeworks
+(right) Written final test
+(wrong) Attendance
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [What is the role of edges in a graph? ]
+Multiple
 --InteriorSeparator--
-1.(right) Connect vertices.
-2.(wrong) Store data related to vertices.
-3.(right) Represent relationships between vertices.
-4.(wrong) Always have a direction.
+What kind of path problems were mentioned in the course outline?
 --InteriorSeparator--
-[Difficulty: medium]
+(right) Graph traversal
+(right) Shortest-paths
+(right) Connectivity
+(wrong) Maximum flow
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+23
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What does dg(v) represent?]
+Single
 --InteriorSeparator--
-The degree of vertex v.
+What condition must be met to take the written final test?
 --InteriorSeparator--
-[Difficulty: easy]
+A minimum of 30 points from seminar activity and homeworks.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [A vertex coloring of a graph G is a function that maps each vertex to a color, such that:]
+Single
 --InteriorSeparator--
-1.(right) No two adjacent vertices have the same color.
-2.(wrong) All vertices have different colors.
-3.(wrong) All vertices have the same color.
-4.(right) Vertices sharing a common edge have different colors.
+What is an isolated vertex?
 --InteriorSeparator--
-[Difficulty: medium]
+A vertex with degree 0.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [When is a graph called self-complementary?]
+Multiple
 --InteriorSeparator--
-If the graph is isomorphic to its complement.
+According to the text, what are the potential real-world applications of Eulerian paths and cycles?
 --InteriorSeparator--
-[Difficulty: medium]
+(right) Mail delivery
+(right) Garbage collection
+(wrong) Stock trading analysis
+(right) Street cleaning
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [The Chinese Postman Problem involves finding?]
+Multiple
 --InteriorSeparator--
-1.(right) A shortest closed path / cycle.
-2.(wrong) The shortest path between two given vertices.
-3.(wrong) A minimum spanning tree
-4.(right) A cycle that visits every edge of a graph once.
+What are some examples of applications of maximum flow problems mentioned in the material?
 --InteriorSeparator--
-[Difficulty: medium]
+(right) Scheduling on parallel processors
+(wrong) Network security protocols
+(right) Image reconstruction from X-Ray projections
+(right) Finding the charging level in transportation networks for improving traffic parameters
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+25
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What is Edmonds algorithm used for?]
+Single
 --InteriorSeparator--
-Finding a maximum cardinality matching in polynomial time.
+What is the difference between adjacency and incidence regarding vertices and edges?
 --InteriorSeparator--
-[Difficulty: medium]
+Two vertices are adjacent if they are connected by an edge. An edge is incident with the vertices it connects.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+43
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [What is the powerset of a set X?]
+Single
 --InteriorSeparator--
-1.(right) The set of all subsets of X.
-2.(wrong) The set of all elements of X.
-3.(wrong) The number of elements in X.
-4.(right) Includes the empty set.
+What does it mean for two edges to be adjacent?
 --InteriorSeparator--
-[Difficulty: medium]
+They share a common endpoint.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+43
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [Define the term 'k-set'.]
+Single
 --InteriorSeparator--
-A set with k elements.
+What is a pendant vertex?
 --InteriorSeparator--
-[Difficulty: easy]
+A vertex with degree 1.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [Which of the following are path problems?]
+Multiple
 --InteriorSeparator--
-1.(right) Graph Traversal
-2.(right) Shortest-Paths
-3.(right) Connectivity
-4.(wrong) Stable Sets
+What characteritics are looked for when analyzing graphs for social networks?
 --InteriorSeparator--
-[Difficulty: easy]
+(right) Level of connectivity
+(right) Influence of users within the network
+(wrong) Number of comments per user
+(right) Level of segmentation
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single [What is a major characteristic of Graph Neural Networks?]
+Single
 --InteriorSeparator--
-They use graph structures to analyze and process data. They are used in AI.
+For a finite set X, what does |X| represent?
 --InteriorSeparator--
-[Difficulty: medium]
+The cardinality of X.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+26
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple [What is the chromatic number of a graph?]
+Single
 --InteriorSeparator--
-1.(right) The minimum number of colors needed to color the graph such that adjacent vertices have different colors.
-2.(wrong) The maximum degree of any vertex in the graph.
-3.(right) The parameter denoted by x(G).
-4.(wrong) The total number of vertices in the graph.
+What is the power set of X, denoted as 2^X?
 --InteriorSeparator--
-[Difficulty: medium]
+The set of all subsets of X.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+26
 --FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.2512606518734865}]
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What areas of computer science have applications to graphs?
+--InteriorSeparator--
+(right) Database management
+(right) Software verification
+(wrong) Mechanical engineering
+(right) Artificial intelligence
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What needs to be remembered when submitting homework assignments?
+--InteriorSeparator--
+Solutions should be written in LaTeX or Word (Write) and electronically sent in both source and PDF format.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens if the solutions are copied in the homework assignments?
+--InteriorSeparator--
+The grades of the students which copy will be penalized with -2 points for each copied problem.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.1728673532249131}]

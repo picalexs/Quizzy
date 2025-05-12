@@ -5,6 +5,7 @@ import com.backend.service.GeminiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,14 +32,17 @@ public class GeminiController {
         // Get the generated content from Gemini API
         String generatedContent = geminiService.processFileWithPrompt(inputFilePath, prompt);
 
-        // Parse the input file path to determine output directory and filename
-        Path inputPath = Paths.get(inputFilePath);
-        String filename = inputPath.getFileName().toString();
+        // Get the base path to the courses directory
+        String coursesBasePath = System.getProperty("user.dir") + File.separator + "courses";
+
+        // Parse the relative file path to determine output directory and filename
+        Path relativePath = Paths.get(inputFilePath);
+        String filename = relativePath.getFileName().toString();
         String filenameWithoutExtension = filename.substring(0, filename.lastIndexOf('.'));
         String outputFilename = filenameWithoutExtension + "_flashcards.txt";
 
         // Create the output path in the same directory as the input file
-        Path outputPath = inputPath.getParent().resolve(outputFilename);
+        Path outputPath = Paths.get(coursesBasePath).resolve(relativePath.getParent()).resolve(outputFilename);
 
         try {
             // Ensure the directory exists
