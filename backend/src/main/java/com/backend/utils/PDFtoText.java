@@ -63,13 +63,14 @@ public class PDFtoText {
             api.SetImage(pix);
 
             BytePointer outText = api.GetUTF8Text();
-            String stringText = outText.getString();
+            String stringText = outText != null ? outText.getString() : "";
 
             api.End();
             outText.deallocate();
             leptonica.pixDestroy(pix);
 
-            return stringText;
+            return stringText != null ? stringText : "";
+
         } catch (Exception e) {
             System.err.println("Error during OCR processing: " + e.getMessage());
         }
@@ -89,12 +90,10 @@ public class PDFtoText {
             List<BlockingQueue<PageImage>> queues = new ArrayList<>();
             List<CompletableFuture<String>> ocrFutures = new ArrayList<>();
 
-            // Create 5 queues
             for (int i = 0; i < nrThreads; i++) {
                 queues.add(new LinkedBlockingQueue<>());
             }
 
-            // Fill queues and page map
             for (int page = 0; page < pageCount; page++) {
                 try {
                     BufferedImage bim = renderer.renderImageWithDPI(page, 300, org.apache.pdfbox.rendering.ImageType.RGB);
@@ -108,12 +107,11 @@ public class PDFtoText {
                 }
             }
 
-            // End markers
             for (BlockingQueue<PageImage> queue : queues) {
                 queue.put(PageImage.endPage());
             }
 
-            // Threads
+
             for (int i = 0; i < nrThreads; i++) {
                 final BlockingQueue<PageImage> queue = queues.get(i);
                 CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
@@ -124,11 +122,14 @@ public class PDFtoText {
                             if (pageImage.isEndPage()) break;
 
                             String text = imageToText(pageImage.getImage());
-                            if (text == null) {
-                                throw new RuntimeException("OCR failed on a page.");
-                            }
 
                             int pageNR = numberedPages.get(pageImage);
+                            if (text == null || text.trim().isEmpty()) {
+                                text = "[OCR failed or page was blank on page: " + pageNR + "]";
+                                System.out.println("OCR failed or page was blank on page: " + pageNR);
+                            }
+
+
                             result.append("***************Beginning Page***************\n")
                                     .append("***************page number:").append(pageNR).append("**************\n")
                                     .append(text).append("\n")
@@ -149,7 +150,7 @@ public class PDFtoText {
             );
             allDone.join();
 
-            // Output all
+
             String pdfText = ocrFutures.stream()
                     .map(CompletableFuture::join)
                     .collect(Collectors.joining("\n"));
