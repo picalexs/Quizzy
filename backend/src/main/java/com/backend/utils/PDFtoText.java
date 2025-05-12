@@ -63,13 +63,13 @@ public class PDFtoText {
             api.SetImage(pix);
 
             BytePointer outText = api.GetUTF8Text();
-            String stringText = outText != null ? outText.getString() : "";
+            String stringText = outText != null ? outText.getString() : "The page is blank or ocr failed";
 
             api.End();
             outText.deallocate();
             leptonica.pixDestroy(pix);
 
-            return stringText != null ? stringText : "";
+            return stringText != null ? stringText : "The page is blank or ocr failed";
 
         } catch (Exception e) {
             System.err.println("Error during OCR processing: " + e.getMessage());
