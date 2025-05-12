@@ -83,6 +83,11 @@ public class PDFtoText {
             PDFRenderer renderer = new PDFRenderer(pdfDocument);
             int pageCount = pdfDocument.getNumberOfPages();
 
+            if (pageCount == 0) {
+                System.out.println("Skipped " + pdfPath + " because it has no pages.");
+                return;
+            }
+
             int nrThreads = 5;
             ocrExecutor = Executors.newFixedThreadPool(nrThreads);
 
