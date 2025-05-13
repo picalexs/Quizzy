@@ -32,19 +32,22 @@ jobs:
         run: |
           docker compose -f docker-compose.yml build
 
+      - name: Generate version tag
+        run: echo "VERSION_TAG=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+
       - name: Tag and push backend image
         run: |
           BACKEND_IMAGE="myapp-backend"
           BACKEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/backend"
-          docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:latest
-          docker push $BACKEND_REPO:latest
+          docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:$VERSION_TAG
+          docker push $BACKEND_REPO:$VERSION_TAG
 
       - name: Tag and push frontend image
         run: |
           FRONTEND_IMAGE="myapp-frontend"
           FRONTEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/frontend"
-          docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:latest
-          docker push $FRONTEND_REPO:latest
+          docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:$VERSION_TAG
+          docker push $FRONTEND_REPO:$VERSION_TAG
 
 
 #      - name: Deploy on EC2
