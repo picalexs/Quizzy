@@ -16,6 +16,7 @@ services:
   backend:
     build:
       context: ./backend
+    image: myapp-backend
     container_name: myapp-backend
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mydb
@@ -29,6 +30,7 @@ services:
   frontend:
     build:
        context: ./frontend
+    image: myapp-frontend
     container_name: myapp-frontend
     ports:
       - "36882:80"
