@@ -17,21 +17,33 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v1
+
       - name: Build Docker images
         run: |
           docker compose -f docker-compose.yml build
 
       - name: Tag and push backend image
         run: |
+          BACKEND_IMAGE="myapp-backend"
           BACKEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/backend"
-          docker tag myapp-backend:latest $BACKEND_REPO:latest
+          docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:latest
           docker push $BACKEND_REPO:latest
 
       - name: Tag and push frontend image
         run: |
+          FRONTEND_IMAGE="myapp-frontend"
           FRONTEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/frontend"
-          docker tag myapp-frontend:latest $FRONTEND_REPO:latest
+          docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:latest
           docker push $FRONTEND_REPO:latest
+
 
 #      - name: Deploy on EC2
 #        run: |
