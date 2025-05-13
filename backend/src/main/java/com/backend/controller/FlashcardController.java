@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/Flashcard")
@@ -65,5 +64,24 @@ public class FlashcardController {
             @RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) Date date,
             @RequestParam("userId") Integer userId) {
         return ResponseEntity.ok(flashcardService.getDueFlashcards(date, userId));
+    }
+    
+    @GetMapping("/page/{pageIndex}")
+    public ResponseEntity<List<Flashcard>> getByPageIndex(@PathVariable Integer pageIndex) {
+        return ResponseEntity.ok(flashcardService.getByPageIndex(pageIndex));
+    }
+    
+    @GetMapping("/page/{pageIndex}/user/{userId}")
+    public ResponseEntity<List<Flashcard>> getByPageIndexAndUserId(
+            @PathVariable Integer pageIndex,
+            @PathVariable Integer userId) {
+        return ResponseEntity.ok(flashcardService.getByPageIndexAndUserId(pageIndex, userId));
+    }
+    
+    @GetMapping("/page/{pageIndex}/material/{materialId}")
+    public ResponseEntity<List<Flashcard>> getByPageIndexAndMaterialId(
+            @PathVariable Integer pageIndex,
+            @PathVariable Long materialId) {
+        return ResponseEntity.ok(flashcardService.getByPageIndexAndMaterialId(pageIndex, materialId));
     }
 }
