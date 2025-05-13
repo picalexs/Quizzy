@@ -21,20 +21,22 @@ public class GeminiService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public String processFile(String relativeFilePath) throws IOException {
-        // Use the same path resolution logic as processFileWithPrompt
+    // In GeminiService.java
+    protected String readFile(String relativeFilePath) throws IOException {
         String coursesPath = System.getProperty("user.dir") + File.separator + "courses" + File.separator + relativeFilePath;
-        String fileContent = Files.readString(Path.of(coursesPath));
+        return Files.readString(Path.of(coursesPath));
+    }
+
+    public String processFile(String relativeFilePath) throws IOException {
+        String fileContent = readFile(relativeFilePath);
         return getGeminiResponse(fileContent);
     }
 
     public String processFileWithPrompt(String relativeFilePath, String additionalPrompt) throws IOException {
-        String coursesPath = System.getProperty("user.dir") + File.separator + "courses" + File.separator + relativeFilePath;
-        String fileContent = Files.readString(Path.of(coursesPath));
+        String fileContent = readFile(relativeFilePath);
         String combinedPrompt = additionalPrompt + "\n\n" + fileContent;
         return getGeminiResponse(combinedPrompt);
     }
-
     public String getGeminiResponse(String prompt) {
         String url = GEMINI_API_URL + API_KEY;
 

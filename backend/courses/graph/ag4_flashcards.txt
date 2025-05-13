@@ -1,356 +1,435 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the time complexity of the Bellman-Ford-Moore algorithm if the minimum in the second for loop needs Θ(n) time?
+What type of graph is a dag?
 --InteriorSeparator--
-Θ(n³)
---InteriorSeparator--
-medium
---InteriorSeparator--
-1
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What data structure is used in a typical implementation of Dijkstra's algorithm to maintain the values of vertices not yet in the set S?
---InteriorSeparator--
-Priority queue
---InteriorSeparator--
-medium
---InteriorSeparator--
-5
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is a directed acyclic graph (DAG)?
---InteriorSeparator--
-(right) A digraph without cycles
-(wrong) A graph with no vertices
-(wrong) A graph with no edges
-(right) A directed graph without cycles
---InteriorSeparator--
-easy
---InteriorSeparator--
-10
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is a topological ordering of a digraph G = (V, E) with |V| = n?
---InteriorSeparator--
-(right) An injective function ord: V -> {1, 2, ..., n} such that u -> v ∈ E => ord[u] < ord[v]
-(wrong) An injective function ord: V -> {1, 2, ..., n} such that u -> v ∈ E => ord[u] > ord[v]
-(wrong) Any ordering of the vertices
-(wrong) The reverse of topological ordering
---InteriorSeparator--
-medium
---InteriorSeparator--
-10
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If a digraph has no cycles, does it have a topological ordering?
---InteriorSeparator--
-Yes
---InteriorSeparator--
-easy
---InteriorSeparator--
-10
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What condition is checked in the Bellman-Ford-Moore algorithm to detect negative cost cycles?
---InteriorSeparator--
-If there exists a vertex 'v' such that u_v > min_j((u_j + a_jv))
---InteriorSeparator--
-hard
---InteriorSeparator--
-16
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the time complexity of the Floyd-Warshall algorithm?
---InteriorSeparator--
-(right) Θ(n³)
-(wrong) Θ(n²)
-(wrong) Θ(n log n)
-(wrong) Θ(m + n)
---InteriorSeparator--
-easy
---InteriorSeparator--
-8
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In Dijkstra's algorithm, what does the set S represent?
---InteriorSeparator--
-The set of vertices for which the shortest path from the source is known.
---InteriorSeparator--
-medium
---InteriorSeparator--
-3
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the main idea behind Dijkstra's algorithm?
---InteriorSeparator--
-Greedily select the unvisited vertex with the smallest tentative distance from the source.
+Directed acyclic graph
 --InteriorSeparator--
 easy
 --InteriorSeparator--
 3
 --FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the property of function Ord in a topological ordering of a digraph G = (V, E)?
+--InteriorSeparator--
+For every edge (u,v) in E, Ord[u] < Ord[v]
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What condition must a cost function 'a' satisfy for Dijkstra's algorithm to guarantee finding the shortest paths?
+Which of the following is/are correct about topological ordering?
 --InteriorSeparator--
-(right) a(e) >= 0 for all edges e in E
-(wrong) a(e) <= 0 for all edges e in E
-(wrong) a(e) == 0 for all edges e in E
-(wrong) a(e) can be any real number
---InteriorSeparator--
-medium
---InteriorSeparator--
-3
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does an SP-tree represent?
---InteriorSeparator--
-A directed rooted tree such that the path cost from the root to any vertex is the shortest path cost in the original graph.
---InteriorSeparator--
-hard
---InteriorSeparator--
-2
---FlashCardSeparator--
-Single
---InteriorSeparator--
-When should the Bellman-Ford-Moore algorithm be used instead of Dijkstra's algorithm?
---InteriorSeparator--
-When the graph contains negative-cost edges.
+(right) A digraph G = (V, E) without cycles has a topological ordering.
+(wrong) A digraph G = (V, E) always has a topological ordering.
+(wrong) A digraph G = (V, E) with cycles has a topological ordering.
+(right/wrong) A digraph G = (V, E) with a topological ordering has no cycles.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 3
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the key property that Iterating Dijkstra's algorithm leverages?
---InteriorSeparator--
-A path is of minimum cost with respect to cost E if and only if it is of minimum cost with respect to cost a (where a is the original cost).
---InteriorSeparator--
-hard
---InteriorSeparator--
-7
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does the matrix 'Before' store in the Floyd-Warshall algorithm?
+In the algorithm for recognizing dags, what does the array 'd' represent?
 --InteriorSeparator--
-The vertex before j on the shortest path from i to j.
+The in-degree of each vertex u ∈ V
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 6
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the meaning of 'AU(k)' in the context of matrix-multiplication for shortest paths?
---InteriorSeparator--
-The shortest path with at most k arcs
---InteriorSeparator--
-hard
---InteriorSeparator--
-9
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a consistent estimator in the context of the A* algorithm?
---InteriorSeparator--
-A function g: V -> R+ satisfying two conditions: (i) Vi ∈ V, u_i + g(i) <= min{a(P_st) : P_st ∈ P_st and i ∈ V(P_st)}, and (ii) ∀ij ∈ E, g(i) <= a_ij + g(j).
---InteriorSeparator--
-hard
---InteriorSeparator--
-15
+
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-How is Dijkstra's algorithm modified to solve the single-source shortest path problem on a graph with non-negative edge weights if you only care about the shortest path to a specific target vertex 't'?
+What data structure(s) can be used for S in the dag recognition algorithm?
 --InteriorSeparator--
-(right) Add a test to stop the execution when the target vertex t is introduced in S.
-(wrong) Continue the algorithm until all nodes have been visited.
-(wrong) Run the algorithm twice, once from the source and once from the target.
-(wrong) Do nothing the normal algorithim is already optimal
+(right) Stack
+(right) Queue
+(wrong) Linked List
+(wrong) Binary Tree
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of the dag recognition algorithm?
+--InteriorSeparator--
+O(n + m)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is P2?
+--InteriorSeparator--
+Finding shortest paths from a source vertex s to all other vertices in a digraph
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-15
+7
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the time complexity of finding a SP-topological ordering of the vertices of G?
+How is problem P2 solved for dags?
 --InteriorSeparator--
-Θ(|V| + |E|)
+Topological sorting
 --InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
-3
+7
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the formula for calculating the new edge cost E_ij when iterating Dijkstra's algorithm with negative costs?
+What is the property (I) that holds when solving P2 for dags?
 --InteriorSeparator--
-E_ij = a_ij + φ(i) - φ(j)
+The system (B) can be solved by "substitution."
 --InteriorSeparator--
 hard
 --InteriorSeparator--
 7
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the time complexity to find a cycle C* of D, such that agvg = min {agvg(C) : C cycle in D}?
---InteriorSeparator--
-(wrong) O(n + m)
-(wrong) O(n^2)
-(right) O(nm)
-(wrong) O(n log n)
---InteriorSeparator--
-hard
---InteriorSeparator--
-2
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-In the 'fast' matrix multiplication approach to solving the all-pairs shortest path problem, what operation replaces standard matrix multiplication?
---InteriorSeparator--
-(wrong) Standard Matrix Multiplication
-(wrong) Matrix Addition
-(right) B ⊗ C : P = (p_ij), where p_ij = min_k(b_ik + c_kj)
-(wrong) Bitwise AND
---InteriorSeparator--
-hard
---InteriorSeparator--
-9
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How can Dijkstra's algorithm fail in a graph with negative-cost arcs?
+What algorithm can be used to solve P2 when edge costs are non-negative?
 --InteriorSeparator--
-The "best first" strategy does not work.
+Dijkstra's algorithm
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What invariant does Dijkstra's algorithm maintain?
+--InteriorSeparator--
+Vv ∈ S, dv = min{cost(Ps,v) : Ps,v ∈ Ps,v} and Vv ∈ V \ S, dv = min{cost(Ps,v) : Ps,v ∈ Ps,v, V(Ps,v) \ S = {v}}
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the steps involved in Dijkstra's algorithm?
+--InteriorSeparator--
+(right) Initialize S with the source vertex.
+(right) Repeatedly select the vertex with the minimum distance outside of S and add it to S
+(wrong) Always explore every possible path.
+(wrong) Terminate if target is not found
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-3
+9
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What condition must be satisfied when computing shortest paths with bellman-ford more algorithm?
+What is the condition for using Dijkstra's algorithm?
 --InteriorSeparator--
-a(C) >= 0, VC cycle in G
+All edge weights must be non-negative.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If Dijkstra's algorithm is implemented using a Fibonacci heap, what is its time complexity?
+--InteriorSeparator--
+O(m + n log n)
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-3
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What data structure(s) can be used to implement a priority queue in Dijkstra's algorithm?
+--InteriorSeparator--
+(right) Heap
+(right) Fibonacci heap
+(wrong) Stack
+(wrong) Queue
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What kind of heap will result in the best implementation of dijkstras algorithim?
+What is a consistent estimator used for in Dijkstra's algorithm?
 --InteriorSeparator--
-Fibonacci heap
---InteriorSeparator--
-hard
---InteriorSeparator--
-5
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Explain how to implement bellman ford more algorithm
---InteriorSeparator--
-1) usl P 0;
-2) for (i E V \ {5}) do
-3) u} k a“; //obviously (BM) holds.
-4) for (k : m) d0
-5) for (z' : U) do
-6) 11.er1 <— min (uZ-k, minjﬂ (qu + 09-1));
+Directing the search toward the target vertex.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 15
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-what is shortest paths - Solving all-pairs shortest path problem P3
---InteriorSeparator--
-Given G : (V, E) a digraph and a: E —> 1R ﬁnd Pg; € Piﬁvnj € V, s. t. a(PZ‘j) = min{a(Pij) : P17‘ E 7317'}
---InteriorSeparator--
-hard
---InteriorSeparator--
-3
+
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What is a topological order?
+What conditions must a consistent estimator 'g' satisfy?
 --InteriorSeparator--
-(wrong) ordering of node degrees
-(wrong) alphabetical ordering
-(right) ordering of the nodes with respect to directed edges
-(wrong) reverse alphabetical ordering
+(right) g(i) + w(i,j) ≥ g(j)
+(right) Vi ∈ V, di + g(i) ≤ min{cost(Ps,t) : Ps,t ∈ Ps,t and i ∈ V(Ps,t)}
+(wrong) g(i) < 0
+(wrong) g(i) + w(i,j) <= g(j)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the Bellman-Ford-Moore algorithm used for?
+--InteriorSeparator--
+Solving the single-source shortest path problem with possibly negative edge weights
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-3
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a key assumption for the Bellman-Ford-Moore algorithm to work correctly?
+--InteriorSeparator--
+There are no negative cost cycles in the graph.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of the Bellman-Ford-Moore algorithm?
+--InteriorSeparator--
+O(n^3)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which sorting algorithm will you use to implement Topological sorting?
+What does the Bellman-Ford-Moore algorithm do if there is a negative-cost cycle?
 --InteriorSeparator--
-(wrong) merge sort
-(wrong) bubble sort
-(right) Kahn's Algorithm
-(right) DFS algorithm
+(right) It can detect its presence
+(wrong) It always fails to find the shortest paths
+(right/wrong) It can find the shortest paths if the negative cycle is not reachable from the source
+(wrong) It outputs incorrect shortest paths
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is problem P3?
+--InteriorSeparator--
+Finding all-pairs shortest paths in a digraph
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-3
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If all costs are non-negative, how can P3 be solved efficiently?
+--InteriorSeparator--
+By applying Dijkstra's algorithm for each vertex as the source, resulting in O(n^3) time complexity
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is Johnson's algorithm used for?
+--InteriorSeparator--
+Solving the all-pairs shortest path problem with negative edge weights (but no negative cycles)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of reweighting the edges in Johnson's algorithm?
+--InteriorSeparator--
+To create non-negative edge weights so Dijkstra's algorithm can be used.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-How to implement dijkstras algorithm?
+What are the steps involved in Johnson's algorithm?
 --InteriorSeparator--
-(wrong) only search nearby nodes
-(right) Initialize all nodes to infinity distance
-(right) Start at the root node
-(wrong) traverse random nodes
+(right) Find a function h: V -> R, such that for all edges (u, v), h(u) + w(u, v) >= h(v)
+(right) Reweight each edge using this function: w'(u, v) = w(u, v) + h(u) - h(v)
+(wrong) Do nothing
+(wrong) Double the weights of each edge
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How is the function 'a' constructed in Johnson's algorithm?
+--InteriorSeparator--
+By solving P2 with the Bellman-Ford-Moore algorithm.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the Floyd-Warshall algorithm used for?
+--InteriorSeparator--
+Solving the all-pairs shortest path problem.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of the Floyd-Warshall algorithm?
+--InteriorSeparator--
+O(n^3)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+How does the Floyd-Warshall algorithm handle negative cost cycles?
+--InteriorSeparator--
+(right) It can detect them.
+(wrong) It correctly computes shortest paths in their presence.
+(wrong) It ignores them.
+(right/wrong) Shortest paths may not be computed accurately.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-3
+29
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If there is k < n - 1 such that u^k = u^(k+1), then the algorithm can be stopped. What alogorithm does this apply to?
+What does the diagonal entry represent in the Floyd-Warshall algorithm after it has been executed?
 --InteriorSeparator--
-Bellman-Ford-Moore algorithm
+The minimum cost of a cycle passing through the corresponding vertex.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-16
+29
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What property must be satisfied for SP-topological ordering algorithm to work?
+What matrix operation can be used to describe iterating the Bellman-Ford-Moore algorithm?
 --InteriorSeparator--
-u_j v_i belongs to E, with 1 <= i < j <= n, the vertices v_i, v_(i+1),...,v_j belong to the same strongly connected component of G.
+Matrix multiplication
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-2
+30
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Explain why Dijkstra's algorithm fails with negative cost arcs.
+What is the time complexity for solving P3 using (fast) matrix-multiplication?
 --InteriorSeparator--
-Because the "best first" strategy does not work.
+O(n^3 log n)
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-3
-}], role=model}, finishReason=STOP, avgLogprobs=-0.2813856542155564}]
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+The time complexity for fast matrix multiplication based algorithms can be written as O(n^x). Which of the following is/are value(s) of x?
+--InteriorSeparator--
+(right) log2 7 ≈ 2.81
+(right) 2.3728639
+(wrong) 4
+(wrong) 1
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.1783812382579117}]

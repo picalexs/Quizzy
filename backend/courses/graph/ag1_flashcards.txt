@@ -1,72 +1,184 @@
-[{content={parts=[{text=--FlashCardSeparator--
+[{content={parts=[{text=```
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a matching in a graph G = (V, E)?
+What are the two halfyear lecturers for this course?
 --InteriorSeparator--
-A subset M of E such that for all e, f in M, if e != f, then e and f share no endpoint.
+E. F. Olariu and C. Frasinaru
 --InteriorSeparator--
 easy
 --InteriorSeparator--
-27
+3
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the matching number of a graph G?
+Where will all the lectures and seminars take place?
 --InteriorSeparator--
-The maximum cardinality of a matching in G, denoted by ν(G).
+Onsite
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
-27
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the chromatic number, χ(G), of a graph G?
---InteriorSeparator--
-The least value of p such that G has a p-coloring.
---InteriorSeparator--
-medium
---InteriorSeparator--
-30
+4
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are some applications of Graph Theory?
+Which of the following are components of the final grade?
 --InteriorSeparator--
-(right) Analyzing social networks
-(right) Exam scheduling for university departments
-(wrong) Sorting algorithms
-(wrong) Financial modeling
+(right) Seminar tests and activity
+(right) Homeworks
+(wrong) Attendance
+(wrong) Participation in online forums
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
-10, 11
+5
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define a graph G = (V, E).
+What is the minimum score required on seminar activity and homeworks to take the final written test?
 --InteriorSeparator--
-V is a finite, non-empty set of vertices (nodes), and E is a subset of pairs of vertices, representing the edges.
+30 points
 --InteriorSeparator--
-easy
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the minimum score required to pass the course?
+--InteriorSeparator--
+80 points
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the penalties for copying homework problems?
+--InteriorSeparator--
+(right) -2 points per copied problem
+(wrong) Automatic course failure
+(wrong) Suspension from the university
+(wrong) A warning
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following topics are covered in the course outline?
+--InteriorSeparator--
+(right) Matching theory
+(right) Planar graphs
+(wrong) Relational Databases
+(wrong) Operating Systems
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are graphs used for in the context of social networks?
+--InteriorSeparator--
+Analyzing social/news networks to find characteristics like connectivity, influence, segmentation, and structural stability.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are some applications of graph algorithms outside of social network analysis?
+--InteriorSeparator--
+(right) Minimum spanning tree for connecting communication points
+(right) Eulerian paths for street cleaning
+(wrong) Calculating taxes
+(wrong) Managing inventory
+--InteriorSeparator--
+medium
 --InteriorSeparator--
 12
 --FlashCardSeparator--
 
 --FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following applications use graph colorings?
+--InteriorSeparator--
+(right) Exam Scheduling
+(right) Mobile radio frequency allocation
+(wrong) Protein folding
+(wrong) Financial market analysis
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the degree of a vertex v in a graph?
+What is a key application of stable matchings?
 --InteriorSeparator--
-The number of edges incident to v, denoted as dg(v).
+Assignment of resident physicians to hospitals.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are applications of graph theory in computer science?
+--InteriorSeparator--
+(right) Graph databases
+(right) Graph Neural Networks in AI
+(wrong) Compiler design
+(wrong) Data encryption
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does |X| represent for a set X?
+--InteriorSeparator--
+The cardinality of X.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a graph formally defined as?
+--InteriorSeparator--
+A pair G = (V, E), where V is a finite, non-empty set of vertices and E is a set of edges.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -74,26 +186,23 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-Which of the following are true about graph representations?
+What is the degree of a vertex *v*?
 --InteriorSeparator--
-(right) Graphs can be represented visually with nodes and curves.
-(right) Labels and colors can enhance visual clarity.
-(wrong) Graphs can only be represented mathematically.
-(wrong) Visual representations are standardized across all software.
+The number of edges incident to *v*.
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
-18, 44
+20
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a stable set in a graph G = (V, E)?
+What is a stable set in a graph?
 --InteriorSeparator--
-A subset S of V such that there is no edge between its vertices.
+A subset S of vertices V such that no two vertices in S are adjacent.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -103,9 +212,9 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does the notation a(G) represent?
+What does α(G) represent?
 --InteriorSeparator--
-The maximum cardinality of a stable set of G (stability number).
+The maximum cardinality of a stable set in graph G.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -113,54 +222,39 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-What is the Stable Set problem categorized as?
+Is the stable set decision problem (SM) NP-complete?
 --InteriorSeparator--
-(right) NP-complete
-(wrong) P
-(wrong) Undecidable
-(right) A decision problem
+Yes
 --InteriorSeparator--
-hard
+easy
 --InteriorSeparator--
-24
+26
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is graph isomorphism?
+What is a matching in a graph?
 --InteriorSeparator--
-A bijection between the vertices of two graphs that preserves adjacency.
+A subset M of edges E such that no two edges in M share an endpoint.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does ν(G) represent?
+--InteriorSeparator--
+The maximum cardinality of a matching in graph G.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-36
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the running time complexity known for the Graph Isomorphism problem?
---InteriorSeparator--
-Quasi-polynomial time.
---InteriorSeparator--
-hard
---InteriorSeparator--
-36
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Is there a polynomial time algorithm for solving the Maximum Matching optimization problem?
---InteriorSeparator--
-Yes, Edmonds (1965) showed that P2 ∈ P.
---InteriorSeparator--
-medium
---InteriorSeparator--
-28
+27
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -168,7 +262,7 @@ Single
 --InteriorSeparator--
 What is a p-coloring of a graph?
 --InteriorSeparator--
-A map c: V -> {1, ..., p} such that c(u) != c(v) for each edge uv in E.
+A map c: V -> {1,...,p} such that c(u) != c(v) for each uv in E.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -178,72 +272,106 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
+What does χ(G) represent?
+--InteriorSeparator--
+The chromatic number of G, the least value of p such that G has a p-coloring.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the vertex coloring decision problem (COL) NP-complete for p >= 3?
+--InteriorSeparator--
+Yes.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
 What is a p-edge coloring of a graph?
 --InteriorSeparator--
-A map c: E -> {1, ..., p} such that c(e) != c(f) for all edges e, f in E with |e ∩ f| = 1.
+A map c: E -> {1,...,p} such that c(e) != c(f) for all e,f in E with |e ∩ f| = 1.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does χ'(G) represent?
+--InteriorSeparator--
+The edge chromatic number of G, the least value of p such that G has a p-edge coloring.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Are two graphs G1 and G2 isomorphic?
+--InteriorSeparator--
+If there is a bijection φ: V1 -> V2 such that u1 and v1 are adjacent in G1 if and only if φ(u1) and φ(v1) are adjacent in G2.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+36
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the isomorphism testing decision problem known to be in P or NP-complete?
+--InteriorSeparator--
+No.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the complexity of the best-known algorithm for graph isomorphism?
+--InteriorSeparator--
+Quasipolynomial time (2^{O((log n)^c)} for some c > 0)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+38
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What does an edge coloring represent in terms of matchings?
+If two graphs have the same order, size, and degree sequence, are they necessarily isomorphic?
 --InteriorSeparator--
-(right) A partition of E into matchings.
-(wrong) A coloring of the vertices.
-(right) A set of edges with the same color is a matching.
-(wrong) A spanning tree.
+(wrong) Yes, those are sufficient conditions for isomorphism.
+(right) No, these conditions are necessary but not sufficient.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-33
+39
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does the notation χ'(G) represent?
+Exercise 5. What does P(n) state?
 --InteriorSeparator--
-The edge chromatic number of graph G, the least value of p such that G has a p-edge coloring.
---InteriorSeparator--
-medium
---InteriorSeparator--
-33
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the Edge Coloring problem categorized as?
---InteriorSeparator--
-NP-complete for p >= 3
---InteriorSeparator--
-hard
---InteriorSeparator--
-33
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the purpose of register allocation in compiler optimization, as mentioned in the text?
---InteriorSeparator--
-To keep the most used variables in the fast processor registers.
---InteriorSeparator--
-medium
---InteriorSeparator--
-40
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does it mean for a graph to be self-complementary?
---InteriorSeparator--
-The graph is isomorphic to its complement.
+In any graph with at least n vertices, there are three distinct vertices which are pairwise adjacent or pairwise non-adjacent.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -253,95 +381,12 @@ hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the main components used for grading?
+Exercise 6. Which of the following degree sequences are possible for a graph?
 --InteriorSeparator--
-(right) Seminars
-(right) Homeworks
-(right) Written final test
-(wrong) Attendance
+(right) 2, 2, 3, 3, 3, 3, 6, 6
+(wrong) 1, 2, 2, 3, 3, 3, 6
 --InteriorSeparator--
-easy
---InteriorSeparator--
-22
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What kind of path problems were mentioned in the course outline?
---InteriorSeparator--
-(right) Graph traversal
-(right) Shortest-paths
-(right) Connectivity
-(wrong) Maximum flow
---InteriorSeparator--
-medium
---InteriorSeparator--
-23
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What condition must be met to take the written final test?
---InteriorSeparator--
-A minimum of 30 points from seminar activity and homeworks.
---InteriorSeparator--
-medium
---InteriorSeparator--
-22
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is an isolated vertex?
---InteriorSeparator--
-A vertex with degree 0.
---InteriorSeparator--
-easy
---InteriorSeparator--
-18
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-According to the text, what are the potential real-world applications of Eulerian paths and cycles?
---InteriorSeparator--
-(right) Mail delivery
-(right) Garbage collection
-(wrong) Stock trading analysis
-(right) Street cleaning
---InteriorSeparator--
-medium
---InteriorSeparator--
-24
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are some examples of applications of maximum flow problems mentioned in the material?
---InteriorSeparator--
-(right) Scheduling on parallel processors
-(wrong) Network security protocols
-(right) Image reconstruction from X-Ray projections
-(right) Finding the charging level in transportation networks for improving traffic parameters
---InteriorSeparator--
-medium
---InteriorSeparator--
-25
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the difference between adjacency and incidence regarding vertices and edges?
---InteriorSeparator--
-Two vertices are adjacent if they are connected by an edge. An edge is incident with the vertices it connects.
---InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 43
 --FlashCardSeparator--
@@ -349,102 +394,72 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does it mean for two edges to be adjacent?
+Exercise 7. What is Hn defined as?
 --InteriorSeparator--
-They share a common endpoint.
+Hn : K2 x Pn (n >= 1).
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
-43
+44
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a pendant vertex?
+Exercise 7. What is Gn constructed as?
 --InteriorSeparator--
-A vertex with degree 1.
+Gn is formed by adding two new vertices x and y to Hn, each joined by two edges with one of the two pairs of adjacent vertices in Hn of degree 2.
 --InteriorSeparator--
-easy
+hard
 --InteriorSeparator--
-18
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What characteritics are looked for when analyzing graphs for social networks?
---InteriorSeparator--
-(right) Level of connectivity
-(right) Influence of users within the network
-(wrong) Number of comments per user
-(right) Level of segmentation
---InteriorSeparator--
-medium
---InteriorSeparator--
-11
+44
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-For a finite set X, what does |X| represent?
+Exercise 8. How is a graph constructed to address the examination session scheduling problem?
 --InteriorSeparator--
-The cardinality of X.
+Vertices represent exams, and an edge connects two vertices if there is a student registered for both exams.
 --InteriorSeparator--
-easy
+hard
 --InteriorSeparator--
-26
+45
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the power set of X, denoted as 2^X?
+Exercise 8'. If a graph G can be created by an input for the scheduling problem does this ensure that the NP-hard problems in the context can be solved with polynomial time algorithms?
 --InteriorSeparator--
-The set of all subsets of X.
+No, this only validates that any generic graph can be represented using this kind of scheduling problem. It does not give information about polynomial time solutions.
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
-26
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What areas of computer science have applications to graphs?
---InteriorSeparator--
-(right) Database management
-(right) Software verification
-(wrong) Mechanical engineering
-(right) Artificial intelligence
---InteriorSeparator--
-medium
---InteriorSeparator--
-17
+46
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What needs to be remembered when submitting homework assignments?
+Exercise 9. How is a graph designed to address the register allocation problem in compiler optimization?
 --InteriorSeparator--
-Solutions should be written in LaTeX or Word (Write) and electronically sent in both source and PDF format.
+Vertices represent variables, and an edge connects two vertices if the corresponding variables are needed at the same time.
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
-22
+47
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What happens if the solutions are copied in the homework assignments?
+Exercise 10. What are the two properties of self-complementary graphs in Exercise 10a?
 --InteriorSeparator--
-The grades of the students which copy will be penalized with -2 points for each copied problem.
+A self-complementary graph is connected, and |G| is congruent to 0 or 1 mod 4.
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
-22
+49
 --FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.1728673532249131}]
+```}], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=10077, endIndex=10198}]}, avgLogprobs=-0.13783256870032845}]
