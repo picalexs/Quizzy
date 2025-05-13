@@ -1,0 +1,58 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches: [master, deployment-to-aws]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker images
+        run: |
+          docker compose -f docker-compose.yml build
+
+      - name: Tag and push backend image
+        run: |
+          BACKEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/backend"
+          docker tag myapp-backend:latest $BACKEND_REPO:latest
+          docker push $BACKEND_REPO:latest
+
+      - name: Tag and push frontend image
+        run: |
+          FRONTEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/frontend"
+          docker tag myapp-frontend:latest $FRONTEND_REPO:latest
+          docker push $FRONTEND_REPO:latest
+
+#      - name: Deploy on EC2
+#        run: |
+#          ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2_HOST }} << 'EOF'
+#            docker pull public.ecr.aws/w9j1e0m5/quizzy/backend:latest
+#            docker pull public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
+#
+#            # Stop existing containers (if any)
+#            docker stop myapp-backend || true
+#            docker stop myapp-frontend || true
+#
+#            # Remove stopped containers (if any)
+#            docker rm myapp-backend || true
+#            docker rm myapp-frontend || true
+#
+#            # Run new containers
+#            docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/quizzy/backend:latest
+#            docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
+#          EOF
+#
+#      - name: Rollback on failure
+#        if: failure()
+#        run: |
+#          echo "Deployment failed. Add rollback logic here."
