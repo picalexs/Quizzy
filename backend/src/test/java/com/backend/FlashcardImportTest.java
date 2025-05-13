@@ -126,6 +126,7 @@ public class FlashcardImportTest {
     @Test
     void testFullFlashcardImportDetails() throws IOException {
         String content = """
+            [{content={parts=[{text=```
             --FlashCardSeparator--
             Single
             --InteriorSeparator--
@@ -160,6 +161,7 @@ public class FlashcardImportTest {
             --InteriorSeparator--
             22
             --FlashCardSeparator--
+            ```}], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=10077, endIndex=10198}
             """;
 
         Path flashcardFile = tempDir.resolve("_flashcards.txt");
@@ -186,7 +188,7 @@ public class FlashcardImportTest {
         assertEquals("Single", fc1.getQuestionType());
         assertEquals(0, fc1.getLevel());
         assertEquals(testUser, fc1.getUser());
-        assertNull(fc1.getMaterial());
+        assertEquals(24,fc1.getPageIndex());
 
         Set<AnswerFC> fc1Answers = fc1.getAnswers();
         assertNotNull(fc1Answers);
@@ -201,6 +203,8 @@ public class FlashcardImportTest {
         assertEquals("Which of the following are applications of graph colorings? (Select all that apply)", fc2.getQuestion());
         assertEquals("Multiple", fc2.getQuestionType());
         assertEquals(1, fc2.getLevel());
+        assertEquals(testUser, fc2.getUser());
+        assertEquals(1,fc2.getPageIndex());
 
         Set<AnswerFC> fc2Answers = fc2.getAnswers();
         assertNotNull(fc2Answers);
@@ -224,7 +228,7 @@ public class FlashcardImportTest {
         assertEquals("Single", fc3.getQuestionType());
         assertEquals(0, fc3.getLevel());
         assertEquals(testUser, fc3.getUser());
-        assertNull(fc3.getMaterial());
+        assertEquals(22,fc3.getPageIndex());
 
         Set<AnswerFC> fc3Answers = fc3.getAnswers();
         assertNotNull(fc3Answers);
@@ -238,7 +242,7 @@ public class FlashcardImportTest {
     @Test
     void testImportInvalidFileThrowsException() throws IOException {
         String badContent = """
-            This is not a valid flashcard structure
+            This is not a valid flashcard structure because there are no flashcard sepatators in it
         """;
 
         Path flashcardFile = tempDir.resolve("flashcards.txt");

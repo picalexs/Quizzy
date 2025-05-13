@@ -1,116 +1,82 @@
-[{content={parts=[{text=--FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the definition of a multigraph?
---InteriorSeparator--
-G = (V, E), where V is a non-empty set of vertices, and E is the multiset of edges on V, with a map m: (V choose 2) -> N, where m(e) > 0. If m(e) = 1, then e is a simple edge, otherwise it's a multiple edge of multiplicity m(e).
---InteriorSeparator--
-medium
---InteriorSeparator--
-3
+[{content={parts=[{text=
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How is the support graph of a multigraph obtained?
+What is the support graph of a multigraph?
 --InteriorSeparator--
-By replacing each multiple edge with a simple one.
+The graph obtained by replacing each multiple edge with a simple one.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
 3
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the definition of a pseudograph (general graph)?
---InteriorSeparator--
-G = (V, E), where V is a non-empty set of vertices, and E is the multiset of edges on V U {V choose 2}, with a map m: V U {V choose 2} -> N.
---InteriorSeparator--
-medium
---InteriorSeparator--
-5
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a loop in a pseudograph?
+What is a loop in the context of pseudographs?
 --InteriorSeparator--
 An edge 'e' where |e| = 1.
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 5
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-How is the support graph of a pseudograph obtained?
---InteriorSeparator--
-By replacing each multiple edge by a simple one and removing the loops.
---InteriorSeparator--
-easy
---InteriorSeparator--
-5
+
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is a digraph?
+Which of the following are true regarding arcs in a digraph?
 --InteriorSeparator--
-D = (V(D), E(D)), where V(D) is a non-empty set of vertices, and E(D) is a subset of V(D) x V(D), which is the set of arcs (or directed edges).
+(right) An arc has an initial extremity (tail).
+(wrong) An arc has no direction.
+(right) An arc has a final extremity (head).
+(wrong) Arcs are always bidirectional.
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 7
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the definition of the converse of a digraph D?
+What is an oriented graph?
 --InteriorSeparator--
-Replacing each arc in D with its converse.
+The support graph of a digraph is a simple graph.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 9
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following are true about infinite digraphs?
+Which of the following are characteristics of a k-uniform hypergraph?
 --InteriorSeparator--
-(right) The set of vertices and/or the set of edges (arcs) is countable infinite.
-(right/wrong) An infinite graph is locally finite if N(v) is a finite set, for any vertex v.
-(wrong) The number of edges must be finite.
-(wrong) The number of vertices must be finite.
---InteriorSeparator--
-medium
---InteriorSeparator--
-10
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a k-uniform hypergraph?
---InteriorSeparator--
-A hypergraph where every edge has cardinality k.
+(right) Every edge has cardinality k.
+(wrong) Edges can only be 2-subsets of the vertex set.
+(wrong) It cannot be represented as a bipartite graph.
+(wrong) Some edges have no vertices.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
 11
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the relationship between the sum of degrees of all vertices and the number of edges in a graph?
---InteriorSeparator--
-The sum of the degrees of all vertices is equal to twice the number of edges: Σ dG(v) = 2|E|.
---InteriorSeparator--
-medium
---InteriorSeparator--
-12
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a k-regular graph?
+What is the relationship between the sum of degrees in a graph and the number of edges?
 --InteriorSeparator--
-A graph where the maximum degree and the minimum degree are both equal to k (Δ(G) = δ(G) = k).
+The sum of the degrees of all vertices is equal to twice the number of edges: Σ dG(v) = 2|E|.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
 12
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
@@ -122,38 +88,19 @@ easy
 --InteriorSeparator--
 12
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define the indegree of a vertex 'v' in a digraph.
+Define the indegree of a vertex in a digraph.
 --InteriorSeparator--
-The number of arcs incident into 'v', denoted as d-(v).
+The number of arcs incident *into* the vertex.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
 14
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-Define the outdegree of a vertex 'v' in a digraph.
---InteriorSeparator--
-The number of arcs incident from 'v', denoted as d+(v).
---InteriorSeparator--
-easy
---InteriorSeparator--
-14
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following statements are true regarding the relationship between indegree and outdegree in a digraph?
---InteriorSeparator--
-(right) Σ d+(v) = Σ d-(v) = |E|
-(wrong) Σ d+(v) > Σ d-(v)
-(wrong) Σ d+(v) < Σ d-(v)
-(right) The sum of indegrees equals the sum of outdegrees, which equals the total number of edges.
---InteriorSeparator--
-medium
---InteriorSeparator--
-14
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
@@ -161,342 +108,317 @@ What is a spanning subgraph?
 --InteriorSeparator--
 A subgraph H of G such that V(H) = V(G).
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 16
 --FlashCardSeparator--
-Single
+
+--FlashCardSeparator--
+Multiple
 --InteriorSeparator--
-What is an induced subgraph?
+Which of the following describes how to find an induced subgraph H of G?
 --InteriorSeparator--
-A subgraph H of G such that E(H) = {uv : u, v ∈ A} ∩ E(G), where A is a subset of V(G).
+(wrong) E(H) = B, a subset of E(G).
+(wrong) V(H) = V(G).
+(right) E(H) consists of all edges in E(G) whose endpoints are both in V(H).
+(wrong) Remove edges from G one by one.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 16
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the complement of a graph G?
+What is the notation for a subgraph obtained by deleting a set of vertices A from graph G?
 --InteriorSeparator--
-The graph G' with V(G') = V(G) and E(G') = {(u, v) : u, v ∈ V(G) and (u, v) not in E(G)}.
+G - A
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define the complement of a graph G.
+--InteriorSeparator--
+A graph with the same vertices as G, but with edges present if and only if they are absent in G.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 20
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
 Define the line graph L(G) of a graph G.
 --InteriorSeparator--
-V(L(G)) = E(G) and E(L(G)) = {ef : e, f ∈ E(G), e and f are adjacent in G}.
+A graph where the vertices represent the edges of G, and two vertices in L(G) are adjacent if and only if the corresponding edges in G are adjacent.
 --InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
 21
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the graph obtained from G by insertion of a new vertex z on an edge e = uv?
---InteriorSeparator--
-The graph G' with V(G') = V(G) U {z} and E(G') = E(G) \ {uv} U {uz, zv}.
---InteriorSeparator--
-hard
---InteriorSeparator--
-22
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the graph obtained from G by contracting the edge e = uv?
+What is the result of contracting an edge e = uv in a graph G?
 --InteriorSeparator--
-The graph G/e with V(G/e) = V(G) \ {u, v} U {z}, and E(G/e) = E([V(G) \ {u, v}]G) U {yz : yw or yv ∈ E(G)}.
+A new graph G|e with vertices V(G)\{u,v}U{z} and edges from [V(G)\{u,v}]G)U{yz | yw or yv ∈ E(G)}
 --InteriorSeparator--
 hard
 --InteriorSeparator--
 23
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define the intersection of two graphs G and G' with V(G) = V(G').
+Define the intersection of two graphs G and G' with the same vertex set.
 --InteriorSeparator--
-G ∩ G' = (V(G), E(G) ∩ E(G')).
+A graph with vertex set V(G) and edge set E(G) ∩ E(G').
 --InteriorSeparator--
 easy
 --InteriorSeparator--
 24
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define the disjoint union of two graphs G and G' with V(G) ∩ V(G') = ∅.
+What is the disjoint union of two graphs, G and G', with no shared vertices?
 --InteriorSeparator--
-G ∪ G' = (V(G) ∪ V(G'), E(G) ∪ E(G')).
+The graph with vertex set V(G) ∪ V(G') and edge set E(G) ∪ E(G').
 --InteriorSeparator--
 easy
 --InteriorSeparator--
 25
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define the join (sum) of two graphs G and G' with V(G) ∩ V(G') = ∅.
+What is the join (sum) of two graphs G and G' with no shared vertices?
 --InteriorSeparator--
-G + G' is the graph (V(G) U V(G'), E(G) U E(G') U {uv : u ∈ V(G), v ∈ V(G')}).
+A graph formed by the disjoint union of G and G' along with edges connecting every vertex in G to every vertex in G'.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 26
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What are the order and size of the complete graph Kn?
+Describe the edges in the cartesian product of two graphs, G x G'.
 --InteriorSeparator--
-Order = n, Size = n choose 2
+Edges connect (u,u') and (v,v') if u = v and u'v' is an edge in G', or if u' = v' and uv is an edge in G.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the formula for the number of edges in the complete graph of order n, Kn?
+--InteriorSeparator--
+n(n-1)/2
 --InteriorSeparator--
 easy
 --InteriorSeparator--
 28
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a k-clique?
---InteriorSeparator--
-A k-subset of vertices that induces a complete graph.
---InteriorSeparator--
-easy
---InteriorSeparator--
-32
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define the clique number ω(G) of a graph G.
+What are the vertex and edge sets of the cycle graph of order n, Cn?
 --InteriorSeparator--
-ω(G) = max{|Q| : Q is a clique in G}.
+V(Cn) = {1, 2, ..., n} and E(Cn) = {12, 23, ..., (n-1)n, n1}.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define a k-clique in a graph G.
+--InteriorSeparator--
+A k-subset of vertices of G that induces a complete graph.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 32
 --FlashCardSeparator--
-Multiple
+
+--FlashCardSeparator--
+Single
 --InteriorSeparator--
-What are characteristics of a bipartite graph G = (S, T; E(G))?
+What is a bipartite graph?
 --InteriorSeparator--
-(right) V(G) can be partitioned into two stable sets S and T.
-(wrong) S and T must have the same number of vertices.
-(right) S ∩ T = ∅.
-(wrong) There are no edges within S or within T.
+A graph whose vertices can be partitioned into two stable sets.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 33
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a planar graph?
---InteriorSeparator--
-A graph that can be represented in a plane such that vertices are points, edges are curves, and curves intersect only at their endpoints.
---InteriorSeparator--
-easy
---InteriorSeparator--
-34
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define an F-free graph.
+Define a planar graph.
 --InteriorSeparator--
-If F is a set of graphs, a graph G is F-free if G contains no induced subgraph isomorphic to a member of F.
+A graph that can be drawn in a plane without any edge crossings.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+34
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does it mean for a graph G to be F-free?
+--InteriorSeparator--
+G contains no induced subgraph isomorphic to a member of F.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 36
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Select all of the following which are true for a walk.
+Which of the following describe a walk in a graph G?
 --InteriorSeparator--
-(right) A sequence of vertices and edges of the form (u = v0, v0v1, v1, ..., vr-1vr, vr = v).
-(right) u and v are the extremities of the walk.
-(wrong) All edges are distinct.
-(wrong) All vertices are distinct.
+(wrong) Always contains distinct edges and distinct vertices.
+(right) A sequence of vertices and edges, alternating between the two.
+(right) Can contain repeated vertices and edges.
+(wrong) Can never be of length 0.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 38
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the difference between a trail and a walk?
+What is the difference between a trail and a path?
 --InteriorSeparator--
-A trail is a walk with distinct edges.
+A trail has distinct edges; a path has distinct vertices.
 --InteriorSeparator--
-easy
+hard
 --InteriorSeparator--
 38
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the difference between a path and a walk?
---InteriorSeparator--
-A path is a walk with distinct vertices.
---InteriorSeparator--
-easy
---InteriorSeparator--
-38
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a cycle?
+Define the girth of a graph G.
 --InteriorSeparator--
-A walk with vertices that are distinct except the extremities which are equal.
+The length of the shortest cycle in G.
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 40
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the girth of a graph?
---InteriorSeparator--
-The length of the shortest cycle (if any) in the graph.
---InteriorSeparator--
-easy
---InteriorSeparator--
-40
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the circumference of a graph?
---InteriorSeparator--
-The maximum length of a cycle in the graph.
---InteriorSeparator--
-easy
---InteriorSeparator--
-40
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Define the distance between two vertices u and v in a graph G.
---InteriorSeparator--
-dG(u, v) is the length of the shortest path in G from u to v (if any).
---InteriorSeparator--
-easy
---InteriorSeparator--
-42
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
 Define the diameter of a graph G.
 --InteriorSeparator--
-d(G) = max u,v ∈ V(G) dG(u, v).
+The maximum distance between any two vertices in G.
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 42
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following is a characteristic of a connected graph?
---InteriorSeparator--
-(right) There is a path between any pair of vertices.
-(wrong) The graph contains no cycles.
-(wrong) The graph is strongly connected.
-(wrong) The graph has no cut vertices.
---InteriorSeparator--
-easy
---InteriorSeparator--
-44
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a connected component of a graph G?
+What is a connected component of a graph?
 --InteriorSeparator--
-A maximal connected subgraph H of G (i.e., there is no connected subgraph H' of G, H' ≠ H, H being a subgraph of H').
+A maximal connected subgraph.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 44
 --FlashCardSeparator--
+
+--FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the different types of connectivity in a digraph?
+Which of the following is true for a strongly connected digraph?
 --InteriorSeparator--
-(right) Weakly connected: its support graph M(D) is connected.
-(right) Unilaterally connected: there is a path from u to v or from v to u, for any two vertices u, v ∈ V.
-(right) Strongly connected: there is a path from u to v, for any two vertices u, v ∈ V.
-(wrong) Biconnected.
+(wrong) Support graph must be disconnected.
+(right) There is a path from u to v for any two vertices u, v.
+(wrong) There is a path from u to v OR from v to u, for any two vertices u, v.
+(wrong) The edge directions can be ignored
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 46
+--FlashCardSeparator--
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
 What is a cut vertex?
 --InteriorSeparator--
-A vertex v such that G - v is not connected.
+A vertex whose removal disconnects the graph.
 --InteriorSeparator--
-easy
---InteriorSeparator--
-48
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the definition of a tree?
---InteriorSeparator--
-A connected graph without cycles.
---InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 48
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a forest?
---InteriorSeparator--
-A graph whose connected components are trees.
---InteriorSeparator--
-easy
---InteriorSeparator--
-48
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the vertex-connectivity number k(G) of a graph G?
+Define the vertex-connectivity number, k(G), of a graph G.
 --InteriorSeparator--
-k(G) = max {p ∈ N* : G is p-connected}.
+The maximum p such that G is p-connected.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
 50
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a cut edge (or bridge)?
---InteriorSeparator--
-An edge e ∈ E such that G - e is not connected.
---InteriorSeparator--
-easy
---InteriorSeparator--
-52
+
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the edge-connectivity number λ(G) of a graph G?
+What is the definition of a p-edge-connected graph?
 --InteriorSeparator--
-λ(G) = max {p ∈ N* : G is p-edge-connected}.
+A graph with no edge-cutset of cardinality less than p.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
 52
 --FlashCardSeparator--
-Multiple
+
+--FlashCardSeparator--
+Single
 --InteriorSeparator--
-What are the definitions of Eulerian and Hamiltonian graphs?
+When is a graph considered Eulerian?
 --InteriorSeparator--
-(right) G is Eulerian if there is a closed trail in G passing through each edge of G.
-(right) G is Hamiltonian if there is a cycle in G passing through each vertex of G.
-(wrong) G is Eulerian if there is a cycle passing through each vertex of G.
-(wrong) G is Hamiltonian if there is a trail passing through each edge of G.
+If there is a closed trail in G passing through each edge of G.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
 54
-}], role=model}, finishReason=STOP, avgLogprobs=-0.08794214560956529}]
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.13048061532863778}]

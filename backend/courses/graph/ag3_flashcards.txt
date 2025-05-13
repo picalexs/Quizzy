@@ -1,4 +1,5 @@
-[{content={parts=[{text=--FlashCardSeparator--
+[{content={parts=[{text=
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
 What is the adjacency matrix of a graph G with V(G) = {v1, ..., vn}?

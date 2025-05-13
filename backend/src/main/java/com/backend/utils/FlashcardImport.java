@@ -52,10 +52,12 @@ public class FlashcardImport {
 
         List<Path> flashcardFiles = findFlashcardFiles(Paths.get(baseDir));
 
+        /*
         for (Path flashcardFile : flashcardFiles) {
             System.out.println(flashcardFile.getFileName());
         }
-
+         */
+        System.out.println("Se citeste din flashcardul: " + flashcardFiles.get(totalImported));
         for (Path filePath : flashcardFiles) {
             Path relativePath = Paths.get(baseDir).relativize(filePath);
             String fileContent = Files.readString(filePath);
@@ -105,7 +107,7 @@ public class FlashcardImport {
                 flashcard.setLastStudiedAt(null);
                 flashcard.setQuestionType(fc.getQuestionType());
                 flashcard.setUser(user);
-                flashcard.setMaterial(null);
+                flashcard.setPageIndex(fc.getPageIndex());
 
                 if (flashcard.getAnswers() == null) {
                     flashcard.setAnswers(new HashSet<>());

@@ -24,7 +24,7 @@ Which of the following are examples of problems that can be modeled as minimum c
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-4, 5
+4
 --FlashCardSeparator--
 
 --FlashCardSeparator--

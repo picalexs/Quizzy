@@ -27,7 +27,16 @@ class FlashCardParser {
     }
 
     public List<FlashcardDTO> getParsedText() throws IOException {
-        String[] flashCards = content.split("\\s*--FlashCardSeparator--\\s*");
+        int firstIndex = content.indexOf("--FlashCardSeparator--");
+        int lastIndex = content.lastIndexOf("--FlashCardSeparator--");
+
+        if (firstIndex == -1 || lastIndex == -1 || firstIndex == lastIndex) {
+            throw new IOException("Invalid flash card format.");
+        }
+
+        String trimmedContent = content.substring(firstIndex, lastIndex + "--FlashCardSeparator--".length());
+
+        String[] flashCards = trimmedContent.split("\\s*--FlashCardSeparator--\\s*");
 
         for (String card : flashCards) {
             if (!card.trim().isEmpty()) {
@@ -42,6 +51,7 @@ class FlashCardParser {
 
         return list;
     }
+
 
     private Optional<FlashcardDTO> parseCard(String card) {
         String[] sections = card.split("\\s*--InteriorSeparator--\\s*");
@@ -77,7 +87,8 @@ class FlashCardParser {
         }
         flashCard.setAnswers(answers);
 
-        switch(sections[3].trim()){
+        String fixedDifficulty = sections[3].trim().toLowerCase();
+        switch(fixedDifficulty){
             case "easy":
                 flashCard.setLevel(0);
                 break;
@@ -91,7 +102,16 @@ class FlashCardParser {
                 return Optional.empty();
         }
 
-        flashCard.setMaterialId(Long.parseLong(sections[4].trim()));
+        try {
+            flashCard.setPageIndex(Integer.parseInt(sections[4].trim()));
+        } catch (NumberFormatException e) {
+            try {
+                String fallback = sections[4].trim().split(",")[0].trim();
+                flashCard.setPageIndex(Integer.parseInt(fallback));
+            } catch (Exception ex) {
+                return Optional.empty();
+            }
+        }
 
         return Optional.of(flashCard);
     }
