@@ -23,8 +23,10 @@ jobs:
           role-to-assume: ${{ secrets.USER_ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Login to Amazon ECR
+      - name: Login to Amazon ECR Public
         uses: aws-actions/amazon-ecr-login@v1
+        with:
+          registry-type: public
 
       - name: Build Docker images
         run: |
