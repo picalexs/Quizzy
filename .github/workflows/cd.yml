@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [master, deployment-to-aws]
+    branches: [ master, deployment-to-aws ]
   workflow_dispatch:
 
 permissions:
@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
+  push-to-ecr:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,8 +29,7 @@ jobs:
           registry-type: public
 
       - name: Build Docker images
-        run: |
-          docker compose -f docker-compose.yml build
+        run: docker compose -f docker-compose.yml build
 
       - name: Generate version tag
         run: echo "VERSION_TAG=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
@@ -41,6 +40,7 @@ jobs:
           BACKEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/backend"
           docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:$VERSION_TAG
           docker push $BACKEND_REPO:$VERSION_TAG
+          docker push $BACKEND_REPO:latest
 
       - name: Tag and push frontend image
         run: |
@@ -48,10 +48,48 @@ jobs:
           FRONTEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/frontend"
           docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:$VERSION_TAG
           docker push $FRONTEND_REPO:$VERSION_TAG
+          docker push $FRONTEND_REPO:latest
+
+  deploy:
+    needs: push-to-ecr
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy on EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # Check if Docker is installed, and if not, install it
+            if ! command -v docker &> /dev/null
+            then
+                echo "Docker not found. Installing Docker..."
+                sudo yum update -y
+                sudo amazon-linux-extras install docker -y
+                sudo service docker start
+                sudo usermod -aG docker ec2-user
+                newgrp docker
+            else
+                echo "Docker is already installed."
+            fi
+            
+            docker login -u AWS -p $(aws ecr-public get-login-password --region us-east-1) public.ecr.aws
+            docker pull public.ecr.aws/w9j1e0m5/quizzy/backend:latest
+            docker pull public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
+
+            docker stop myapp-backend || true
+            docker stop myapp-frontend || true
+            docker rm myapp-backend || true
+            docker rm myapp-frontend || true
+
+            docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/quizzy/backend:latest
+            docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
 
   cleanup:
-    runs-on: ubuntu-latest
     needs: deploy
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
