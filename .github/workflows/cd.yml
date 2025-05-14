@@ -52,7 +52,7 @@ jobs:
     needs: push-to-ecr
     runs-on: ubuntu-latest
     env:
-      VERSION_TAG: ${{ env.VERSION_TAG }}
+      VERSION_TAG: ${{ needs.push-to-ecr.outputs.version_tag }}
 
     steps:
       - name: Deploy on EC2
