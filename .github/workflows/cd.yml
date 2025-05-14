@@ -51,6 +51,8 @@ jobs:
   deploy:
     needs: push-to-ecr
     runs-on: ubuntu-latest
+    env:
+      VERSION_TAG: ${{ env.VERSION_TAG }}
 
     steps:
       - name: Deploy on EC2
