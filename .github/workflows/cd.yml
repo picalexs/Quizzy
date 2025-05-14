@@ -50,8 +50,60 @@ jobs:
           docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:$VERSION_TAG
           docker push $FRONTEND_REPO:$VERSION_TAG
 
-  deploy:
+  cleanup:
+    runs-on: ubuntu-latest
     needs: push-to-ecr
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ secrets.I_AM_ROLE }}
+          aws-region: us-east-1
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Cleanup old images in ECR
+        env:
+          REGISTRY_ID: w9j1e0m5
+          REGION: us-east-1
+        run: |
+          clean_repo() {
+            REPO_NAME=$1
+            echo "Cleaning repository: $REPO_NAME"
+
+            IMAGES=$(aws ecr-public describe-images \
+              --region "$REGION" \
+              --repository-name "$REPO_NAME" \
+              --query 'sort_by(imageDetails,& imagePushedAt)[::-1]' \
+              --output json)
+
+            COUNT=$(echo "$IMAGES" | jq length)
+            echo "Image count: $COUNT"
+
+            if [ "$COUNT" -gt 10 ]; then
+              echo "$IMAGES" | jq '.[10:] | .[] | .imageDigest' -r | while read DIGEST; do
+                echo "Deleting image with digest $DIGEST from $REPO_NAME"
+                aws ecr-public batch-delete-image \
+                  --region "$REGION" \
+                  --registry-id "$REGISTRY_ID" \
+                  --repository-name "$REPO_NAME" \
+                  --image-ids imageDigest="$DIGEST"
+              done
+            else
+              echo "No cleanup needed for $REPO_NAME."
+            fi
+          }
+
+          clean_repo "quizzy/backend"
+          clean_repo "quizzy/frontend"
+
+  deploy:
+    needs: cleanup
     runs-on: ubuntu-latest
 
     steps:
@@ -103,55 +155,3 @@ jobs:
 
             docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
             docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
-
-  cleanup:
-    needs: deploy
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          role-to-assume: ${{ secrets.I_AM_ROLE }}
-          aws-region: us-east-1
-
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      - name: Cleanup old images in ECR
-        env:
-          REGISTRY_ID: w9j1e0m5
-          REGION: us-east-1
-        run: |
-          clean_repo() {
-            REPO_NAME=$1
-            echo "Cleaning repository: $REPO_NAME"
-
-            IMAGES=$(aws ecr-public describe-images \
-              --region "$REGION" \
-              --repository-name "$REPO_NAME" \
-              --query 'sort_by(imageDetails,& imagePushedAt)[::-1]' \
-              --output json)
-
-            COUNT=$(echo "$IMAGES" | jq length)
-            echo "Image count: $COUNT"
-
-            if [ "$COUNT" -gt 10 ]; then
-              echo "$IMAGES" | jq '.[10:] | .[] | .imageDigest' -r | while read DIGEST; do
-                echo "Deleting image with digest $DIGEST from $REPO_NAME"
-                aws ecr-public batch-delete-image \
-                  --region "$REGION" \
-                  --registry-id "$REGISTRY_ID" \
-                  --repository-name "$REPO_NAME" \
-                  --image-ids imageDigest="$DIGEST"
-              done
-            else
-              echo "No cleanup needed for $REPO_NAME."
-            fi
-          }
-
-          clean_repo "quizzy/backend"
-          clean_repo "quizzy/frontend"
