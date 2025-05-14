@@ -1,11 +1,11 @@
 package com.backend.controller;
 
 
+import com.backend.model.Course;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.backend.dto.MaterialDTO;
 import org.springframework.beans.factory.annotation.Value;
-import com.backend.model.Course;
 import com.backend.model.Material;
 import com.backend.service.AWSS3Service;
 import com.backend.service.CourseService;
@@ -18,7 +18,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Objects;
 
 @RestController
 @RequestMapping("/Material")
@@ -94,25 +93,34 @@ public class MaterialController {
     }
 
     @GetMapping("/{courseName}/pdf/{index}")
-    public ResponseEntity<Resource> getPDF(@PathVariable String courseName, @PathVariable Long index) {
+    public ResponseEntity<Resource> getPDF(@PathVariable String courseName, @PathVariable Integer index) {
         logger.info("Received request to get PDF for course: '{}' at index: {}", courseName, index);
-
         try {
+            Course course = courseService.findByTitle(courseName);
+            if(course == null) {
+                logger.error("Course '{}' not found", courseName);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+            }
 
-            Material material = materialService.findById(index);
+            List<Material> materials = course.getMaterials();
+            if(index < 1 || index > materials.size() + 1) {
+                logger.error("Material index '{}' out of bounds for course '{}'", index, courseName);
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            }
+
+            Material material = materials.get(index - 1);
 
             String s3Path = material.getPath();
             if (s3Path == null || s3Path.isEmpty()) {
                 logger.error("Material at index '{}' for course '{}' has an invalid S3 path", index, courseName);
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null); // 500 if S3 path is invalid
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
             }
 
-            // Step 5: Get the PDF resource from S3
             logger.debug("Fetching PDF from S3 bucket '{}' with path '{}'", bucketName, s3Path);
             Resource pdfResource = awsS3Service.getPdfResourceFromS3(bucketName, s3Path);
             if (pdfResource == null) {
                 logger.warn("PDF file not found in S3 for path '{}'", s3Path);
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // 404 if file not found
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
             }
 
             logger.info("Successfully retrieved PDF for course '{}' at index '{}'", courseName, index);
@@ -121,9 +129,8 @@ public class MaterialController {
                     .body(pdfResource);
 
         } catch (Exception e) {
-            // Log the exception with stack trace
             logger.error("Unexpected error while retrieving PDF for course '{}' at index '{}': {}", courseName, index, e.getMessage(), e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null); // 500 for unexpected errors
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 }

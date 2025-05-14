@@ -48,8 +48,6 @@ public class MaterialService {
         material.setPath(materialDTO.getPath());
         material.setCourse(course);
 
-        course.getMaterials().add(material);
-
         return materialRepository.save(material);
     }
 
