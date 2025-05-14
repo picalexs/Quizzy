@@ -12,6 +12,8 @@ permissions:
 jobs:
   push-to-ecr:
     runs-on: ubuntu-latest
+    outputs:
+      version_tag: ${{ steps.set_tag.outputs.version_tag }}
 
     steps:
       - name: Checkout code
@@ -32,7 +34,10 @@ jobs:
         run: docker compose -f docker-compose.yml build
 
       - name: Generate version tag
-        run: echo "VERSION_TAG=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+        id: set_tag
+        run: |
+          echo "VERSION_TAG=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+          echo "::set-output name=version_tag::$VERSION_TAG"
 
       - name: Tag and push backend image
         run: |
