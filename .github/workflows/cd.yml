@@ -40,7 +40,6 @@ jobs:
           BACKEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/backend"
           docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:$VERSION_TAG
           docker push $BACKEND_REPO:$VERSION_TAG
-          docker push $BACKEND_REPO:latest
 
       - name: Tag and push frontend image
         run: |
@@ -48,7 +47,6 @@ jobs:
           FRONTEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/frontend"
           docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:$VERSION_TAG
           docker push $FRONTEND_REPO:$VERSION_TAG
-          docker push $FRONTEND_REPO:latest
 
   deploy:
     needs: push-to-ecr
