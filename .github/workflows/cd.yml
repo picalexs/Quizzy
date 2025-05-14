@@ -12,8 +12,6 @@ permissions:
 jobs:
   push-to-ecr:
     runs-on: ubuntu-latest
-    outputs:
-      version_tag: ${{ steps.set_tag.outputs.version_tag }}
 
     steps:
       - name: Checkout code
@@ -37,7 +35,6 @@ jobs:
         id: set_tag
         run: |
           echo "VERSION_TAG=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
-          echo "::set-output name=version_tag::$VERSION_TAG"
 
       - name: Tag and push backend image
         run: |
@@ -56,8 +53,6 @@ jobs:
   deploy:
     needs: push-to-ecr
     runs-on: ubuntu-latest
-    env:
-      VERSION_TAG: ${{ needs.push-to-ecr.outputs.version_tag }}
 
     steps:
       - name: Deploy on EC2
@@ -67,37 +62,47 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            # Check if Docker is installed, and if not, install it
             if ! command -v docker &> /dev/null
             then
-              echo "Docker not found. Installing Docker..."
               sudo dnf update -y
               sudo dnf install -y docker
               sudo systemctl start docker
               sudo systemctl enable docker
               sudo usermod -aG docker ec2-user
               newgrp docker
-            else
-              echo "Docker is already installed."
             fi
 
-            # Log in to Amazon ECR
             docker login -u AWS -p $(aws ecr-public get-login-password --region us-east-1) public.ecr.aws
 
-            # Pull the Docker images
-            echo "Using VERSION_TAG: $VERSION_TAG"
-            docker pull public.ecr.aws/w9j1e0m5/quizzy/backend:$VERSION_TAG
-            docker pull public.ecr.aws/w9j1e0m5/quizzy/frontend:$VERSION_TAG
+            BACKEND_REPO="quizzy/backend"
+            FRONTEND_REPO="quizzy/frontend"
+            
+            # Get the latest image tags
+            LATEST_BACKEND_TAG=$(aws ecr-public describe-images \
+              --region us-east-1 \
+              --repository-name $BACKEND_REPO \
+              --query 'sort_by(imageDetails,& imagePushedAt)[-1].imageTags[0]' \
+              --output text)
 
-            # Stop and remove any running containers
+            LATEST_FRONTEND_TAG=$(aws ecr-public describe-images \
+              --region us-east-1 \
+              --repository-name $FRONTEND_REPO \
+              --query 'sort_by(imageDetails,& imagePushedAt)[-1].imageTags[0]' \
+              --output text)
+
+            echo "Latest backend tag: $LATEST_BACKEND_TAG"
+            echo "Latest frontend tag: $LATEST_FRONTEND_TAG"
+
+            docker pull public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
+            docker pull public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
+
             docker stop myapp-backend || true
             docker stop myapp-frontend || true
             docker rm myapp-backend || true
             docker rm myapp-frontend || true
 
-            # Run the containers
-            docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/quizzy/backend:$VERSION_TAG
-            docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/quizzy/frontend:$VERSION_TAG
+            docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
+            docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
 
   cleanup:
     needs: deploy
