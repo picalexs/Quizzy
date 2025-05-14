@@ -80,6 +80,7 @@ jobs:
             docker login -u AWS -p $(aws ecr-public get-login-password --region us-east-1) public.ecr.aws
 
             # Pull the Docker images
+            echo "Using VERSION_TAG: $VERSION_TAG"
             docker pull public.ecr.aws/w9j1e0m5/quizzy/backend:$VERSION_TAG
             docker pull public.ecr.aws/w9j1e0m5/quizzy/frontend:$VERSION_TAG
 
