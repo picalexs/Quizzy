@@ -78,8 +78,8 @@ jobs:
             docker login -u AWS -p $(aws ecr-public get-login-password --region us-east-1) public.ecr.aws
 
             # Pull the Docker images
-            docker pull public.ecr.aws/w9j1e0m5/quizzy/backend:latest
-            docker pull public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
+            docker pull public.ecr.aws/w9j1e0m5/quizzy/backend:$VERSION_TAG
+            docker pull public.ecr.aws/w9j1e0m5/quizzy/frontend:$VERSION_TAG
 
             # Stop and remove any running containers
             docker stop myapp-backend || true
@@ -88,8 +88,8 @@ jobs:
             docker rm myapp-frontend || true
 
             # Run the containers
-            docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/quizzy/backend:latest
-            docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
+            docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/quizzy/backend:$VERSION_TAG
+            docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/quizzy/frontend:$VERSION_TAG
 
   cleanup:
     needs: deploy
