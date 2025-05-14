@@ -124,7 +124,7 @@ jobs:
               newgrp docker
             fi
 
-            docker login -u AWS -p $(aws ecr-public get-login-password --region us-east-1) public.ecr.aws
+            aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
 
             BACKEND_REPO="quizzy/backend"
             FRONTEND_REPO="quizzy/frontend"
@@ -155,3 +155,5 @@ jobs:
 
             docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
             docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
+            
+            rm ~/.docker/config.json
