@@ -63,25 +63,31 @@ jobs:
             # Check if Docker is installed, and if not, install it
             if ! command -v docker &> /dev/null
             then
-                echo "Docker not found. Installing Docker..."
-                sudo yum update -y
-                sudo amazon-linux-extras install docker -y
-                sudo service docker start
-                sudo usermod -aG docker ec2-user
-                newgrp docker
+              echo "Docker not found. Installing Docker..."
+              sudo dnf update -y
+              sudo dnf install -y docker
+              sudo systemctl start docker
+              sudo systemctl enable docker
+              sudo usermod -aG docker ec2-user
+              newgrp docker
             else
-                echo "Docker is already installed."
+              echo "Docker is already installed."
             fi
-            
+
+            # Log in to Amazon ECR
             docker login -u AWS -p $(aws ecr-public get-login-password --region us-east-1) public.ecr.aws
+
+            # Pull the Docker images
             docker pull public.ecr.aws/w9j1e0m5/quizzy/backend:latest
             docker pull public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
 
+            # Stop and remove any running containers
             docker stop myapp-backend || true
             docker stop myapp-frontend || true
             docker rm myapp-backend || true
             docker rm myapp-frontend || true
 
+            # Run the containers
             docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/quizzy/backend:latest
             docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
 
