@@ -2,8 +2,8 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master, deployment-to-aws ]
-  workflow_dispatch:
+    branches: [ master]
+  workflow_dispatch: #needs to be removed when merged into master
 
 permissions:
   id-token: write
