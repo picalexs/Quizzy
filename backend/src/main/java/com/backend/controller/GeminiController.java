@@ -5,6 +5,7 @@ import com.backend.service.GeminiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -26,19 +27,22 @@ public class GeminiController {
     public String generateResponseWithPrompt(
             @RequestParam String inputFilePath) throws IOException {
 
-        String prompt = "Generate 30 flashcards based on the content of this file. Each flashcard should follow this format: --FlashCardSeparator-- Single [Question] --InteriorSeparator-- [Answer] --InteriorSeparator--[Difficulty: easy/medium/hard] --FlashCardSeparator--OR  --FlashCardSeparator-- Multiple [Question] --InteriorSeparator-- 1.(right/wrong) [Option 1] 2.(right/wrong) [Option 2] 3.(right/wrong) [Option 3] 4.(right/wrong) [Option 4] --InteriorSeparator--[Difficulty: easy/medium/hard] --FlashCardSeparator--  Mix both single and multiple choice flashcards. Ensure questions cover key concepts from the text.";
+        String prompt = "Create 35 flashcards with essential information from the material provided. Format single choice answers as:\n\n--FlashCardSeparator--\nSingle\n--InteriorSeparator--\ndetailed question\n--InteriorSeparator--\nanswer\n--InteriorSeparator--\ndifficulty\n--InteriorSeparator--\npageIndex\n--FlashCardSeparator--\n\nFormat multiple choice answers as:\n\n--FlashCardSeparator--\nMultiple\n--InteriorSeparator--\ndetailed question\n--InteriorSeparator--\n(right) answer option\n(right/wrong) answer option\n(wrong) answer option\n(wrong) answer option\n--InteriorSeparator--\ndifficulty\n--InteriorSeparator--\npageIndex\n--FlashCardSeparator--\n\nEnsure:\n- Mix of single and multiple choice questions\n- Difficulties: easy, medium, hard\n- Minimum 10 hard questions\n- 1-2 correct answers for multiple choice\n- No emojis or additional commentary";
 
         // Get the generated content from Gemini API
         String generatedContent = geminiService.processFileWithPrompt(inputFilePath, prompt);
 
-        // Parse the input file path to determine output directory and filename
-        Path inputPath = Paths.get(inputFilePath);
-        String filename = inputPath.getFileName().toString();
+        // Get the base path to the courses directory
+        String coursesBasePath = System.getProperty("user.dir") + File.separator + "courses";
+
+        // Parse the relative file path to determine output directory and filename
+        Path relativePath = Paths.get(inputFilePath);
+        String filename = relativePath.getFileName().toString();
         String filenameWithoutExtension = filename.substring(0, filename.lastIndexOf('.'));
         String outputFilename = filenameWithoutExtension + "_flashcards.txt";
 
         // Create the output path in the same directory as the input file
-        Path outputPath = inputPath.getParent().resolve(outputFilename);
+        Path outputPath = Paths.get(coursesBasePath).resolve(relativePath.getParent()).resolve(outputFilename);
 
         try {
             // Ensure the directory exists
