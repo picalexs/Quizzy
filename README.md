@@ -27,3 +27,9 @@ Pentru a opri serviciile:
 ```bash
 docker compose down
 ```
+
+Pentru a opri serviciile si pentru a reseta baza de date:
+
+```bash
+docker compose down --volumes
+```
