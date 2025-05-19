@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, CD-FIX ]
   workflow_dispatch:
 
 permissions:
@@ -38,14 +38,14 @@ jobs:
 
       - name: Tag and push backend image
         run: |
-          BACKEND_IMAGE="myapp-backend"
+          BACKEND_IMAGE="quizzy-backend"
           BACKEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/backend"
           docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:$VERSION_TAG
           docker push $BACKEND_REPO:$VERSION_TAG
 
       - name: Tag and push frontend image
         run: |
-          FRONTEND_IMAGE="myapp-frontend"
+          FRONTEND_IMAGE="quizzy-frontend"
           FRONTEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/frontend"
           docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:$VERSION_TAG
           docker push $FRONTEND_REPO:$VERSION_TAG
@@ -148,12 +148,12 @@ jobs:
             docker pull public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
             docker pull public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
 
-            docker stop myapp-backend || true
-            docker stop myapp-frontend || true
-            docker rm myapp-backend || true
-            docker rm myapp-frontend || true
+            docker stop quizzy-backend || true
+            docker stop quizzy-frontend || true
+            docker rm quizzy-backend || true
+            docker rm quizzy-frontend || true
 
-            docker run -d --name myapp-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
-            docker run -d --name myapp-frontend -p 80:80 --link myapp-backend public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
+            docker run -d --name quizzy-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
+            docker run -d --name quizzy-frontend -p 80:80 --link quizzy-backend public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
             
             rm ~/.docker/config.json
