@@ -124,12 +124,17 @@ jobs:
               newgrp docker
             fi
 
+            if ! command -v docker-compose &> /dev/null
+            then
+              sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+              sudo chmod +x /usr/local/bin/docker-compose
+            fi
+
             aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
 
             BACKEND_REPO="quizzy/backend"
             FRONTEND_REPO="quizzy/frontend"
-            
-            # Get the latest image tags
+
             LATEST_BACKEND_TAG=$(aws ecr-public describe-images \
               --region us-east-1 \
               --repository-name $BACKEND_REPO \
@@ -142,18 +147,30 @@ jobs:
               --query 'sort_by(imageDetails,& imagePushedAt)[-1].imageTags[0]' \
               --output text)
 
-            echo "Latest backend tag: $LATEST_BACKEND_TAG"
-            echo "Latest frontend tag: $LATEST_FRONTEND_TAG"
+            mkdir -p quizzy-app
+            cd quizzy-app
 
-            docker pull public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
-            docker pull public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
+            cat > docker-compose.yml <<EOF 
+            version: "3.8"
 
-            docker stop quizzy-backend || true
-            docker stop quizzy-frontend || true
-            docker rm quizzy-backend || true
-            docker rm quizzy-frontend || true
+            services:
+              backend:
+                image: public.ecr.aws/w9j1e0m5/\$BACKEND_REPO:$LATEST_BACKEND_TAG
+                container_name: quizzy-backend
+                ports:
+                  - "3000:3000"
 
-            docker run -d --name quizzy-backend -p 3000:3000 public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
-            docker run -d --name quizzy-frontend -p 80:80 --link quizzy-backend public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
-            
+              frontend:
+                image: public.ecr.aws/w9j1e0m5/\$FRONTEND_REPO:$LATEST_FRONTEND_TAG
+                container_name: quizzy-frontend
+                ports:
+                  - "80:80"
+                depends_on:
+                  - backend
+            EOF
+
+            docker compose down || true
+            docker compose pull
+            docker compose up -d
+
             rm ~/.docker/config.json
