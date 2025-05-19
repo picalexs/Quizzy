@@ -1,38 +1,21 @@
 services:
-  db:
-    build:
-      context: ./backend/db
-    container_name: db
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypass
-      POSTGRES_DB: mydb
-    ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
-
   backend:
     image: public.ecr.aws/w9j1e0m5/quizzy/backend:latest
     container_name: backend
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mydb
-      SPRING_DATASOURCE_USERNAME: myuser
-      SPRING_DATASOURCE_PASSWORD: mypass
-      GEMINI_API_KEY: AIzaSyAUWUg9b-ZsVmTo8lmwr5VewpF28wnDEH8
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
     ports:
       - "3000:3000"
-    depends_on:
-      - db
 
   frontend:
     image: public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
     container_name: frontend
+    environment:
+      - BACKEND_URL=${BACKEND_URL}
     ports:
       - "36882:80"
     depends_on:
       - backend
-
-volumes:
-  pgdata:
