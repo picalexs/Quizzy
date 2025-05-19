@@ -69,7 +69,6 @@ public class AWSS3Service {
                     (e.awsErrorDetails() != null ? e.awsErrorDetails().errorMessage() : e.getMessage());
             throw new RuntimeException(errorMsg, e);
         }
-        // Removed catch (RuntimeException e) to allow NullPointerException to be thrown as expected
     }
 
     public void uploadPdfToS3(String bucketName, String s3Path, Resource pdfResource) {
@@ -132,12 +131,10 @@ public class AWSS3Service {
             s3Client.headObject(headObjectRequest);
             return true;
         } catch (S3Exception e) {
-            // Check if it’s a 404 or NoSuchKey, in which case we return false
             if (e instanceof NoSuchKeyException || (e.statusCode() == 404)) {
                 logger.debug("S3 object does not exist - bucket: {}, path: {}", bucketName, s3Path);
                 return false;
             }
-            // Log additional details about other S3 errors
             logger.error(
                 "S3 error (status code: {}, AWS error message: {}). Bucket: {}, path: {}",
                 e.statusCode(),
@@ -146,54 +143,62 @@ public class AWSS3Service {
                 s3Path
             );
 
-            // Rethrow as RuntimeException, preserving the original message
             throw new RuntimeException("Error checking object existence in S3: " + e.getMessage(), e);
         }
     }
 
-    public List<File> getAllCourseFilesFromS3(String bucketName, String prefix) {
+    public List<File> getAllPdfFilesFromS3(String bucketName) {
         if (bucketName == null || bucketName.trim().isEmpty()) {
             throw new IllegalArgumentException("Bucket name cannot be null or empty");
         }
 
         try {
-            List<File> courseFiles = new ArrayList<>();
+            List<File> pdfFiles = new ArrayList<>();
+            String continuationToken = null;
 
-            ListObjectsV2Request listRequest = ListObjectsV2Request.builder()
-                    .bucket(bucketName)
-                    .prefix(prefix)
-                    .build();
-
-            ListObjectsV2Response listResponse = s3Client.listObjectsV2(listRequest);
-
-            for (S3Object s3Object : listResponse.contents()) {
-                String key = s3Object.key();
-
-                if (!key.endsWith(".pdf")) {
-                    continue;
-                }
-
-                GetObjectRequest getObjectRequest = GetObjectRequest.builder()
+            do {
+                ListObjectsV2Request.Builder listRequestBuilder = ListObjectsV2Request.builder()
                         .bucket(bucketName)
-                        .key(key)
-                        .build();
+                        .maxKeys(1000);
 
-                ResponseInputStream<GetObjectResponse> inputStream = s3Client.getObject(getObjectRequest);
-
-                File tempFile = Files.createTempFile("course-", ".pdf").toFile();
-                try (FileOutputStream outputStream = new FileOutputStream(tempFile)) {
-                    inputStream.transferTo(outputStream);
+                if (continuationToken != null) {
+                    listRequestBuilder.continuationToken(continuationToken);
                 }
 
-                courseFiles.add(tempFile);
-                logger.info("Downloaded course PDF: {}", tempFile.getAbsolutePath());
-            }
+                ListObjectsV2Response listResponse = s3Client.listObjectsV2(listRequestBuilder.build());
 
-            return courseFiles;
+                for (S3Object s3Object : listResponse.contents()) {
+                    String key = s3Object.key();
+
+                    if (!key.toLowerCase().endsWith(".pdf")) {
+                        continue;
+                    }
+
+                    GetObjectRequest getObjectRequest = GetObjectRequest.builder()
+                            .bucket(bucketName)
+                            .key(key)
+                            .build();
+
+                    try (ResponseInputStream<GetObjectResponse> inputStream = s3Client.getObject(getObjectRequest)) {
+                        File tempFile = Files.createTempFile("s3-pdf-", ".pdf").toFile();
+                        try (FileOutputStream outputStream = new FileOutputStream(tempFile)) {
+                            inputStream.transferTo(outputStream);
+                        }
+
+                        pdfFiles.add(tempFile);
+                        logger.info("Downloaded PDF from S3: {}", tempFile.getAbsolutePath());
+                    }
+                }
+
+                continuationToken = listResponse.nextContinuationToken();
+
+            } while (continuationToken != null);
+
+            return pdfFiles;
 
         } catch (IOException | S3Exception e) {
-            logger.error("Error fetching course files from S3", e);
-            throw new RuntimeException("Failed to fetch course files from S3: " + e.getMessage(), e);
+            logger.error("Error fetching PDF files from S3", e);
+            throw new RuntimeException("Failed to fetch PDF files from S3: " + e.getMessage(), e);
         }
     }
 

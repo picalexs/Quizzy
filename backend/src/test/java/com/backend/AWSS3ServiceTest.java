@@ -222,7 +222,7 @@ class AWSS3ServiceTest {
         when(s3Client.listObjectsV2((ListObjectsV2Request) any())).thenReturn(listResponse);
         when(s3Client.getObject((GetObjectRequest) any())).thenReturn(stream);
 
-        List<File> files = s3Service.getAllCourseFilesFromS3("bucket", "courses/");
+        List<File> files = s3Service.getAllPdfFilesFromS3("bucket");
 
         assertEquals(1, files.size());
         assertTrue(files.get(0).getName().endsWith(".pdf"));
@@ -237,7 +237,7 @@ class AWSS3ServiceTest {
 
         when(s3Client.listObjectsV2((ListObjectsV2Request) any())).thenReturn(listResponse);
 
-        List<File> files = s3Service.getAllCourseFilesFromS3("bucket", "courses/");
+        List<File> files = s3Service.getAllPdfFilesFromS3("bucket");
         assertTrue(files.isEmpty());
     }
 
@@ -247,13 +247,13 @@ class AWSS3ServiceTest {
                 .thenThrow(S3Exception.builder().message("fail").build());
 
         RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                s3Service.getAllCourseFilesFromS3("bucket", "prefix"));
+                s3Service.getAllPdfFilesFromS3("bucket"));
         assertTrue(ex.getMessage().contains("Failed to fetch"));
     }
 
     @Test
     void getAllCourseFilesFromS3_invalidArgs_throwsException() {
         assertThrows(IllegalArgumentException.class, () ->
-                s3Service.getAllCourseFilesFromS3(" ", "prefix"));
+                s3Service.getAllPdfFilesFromS3(""));
     }
 }
