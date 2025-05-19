@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './Flashcards.css';
-import Flashcards from './Flashcards';
+import './Flashcards/Flashcards.css';
+import Flashcards from './Flashcards/Flashcards.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Flashcards />);
