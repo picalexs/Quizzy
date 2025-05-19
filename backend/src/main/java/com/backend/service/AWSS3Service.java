@@ -10,8 +10,13 @@ import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.*;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class AWSS3Service {
@@ -138,4 +143,51 @@ public class AWSS3Service {
             throw new RuntimeException("Error checking object existence in S3: " + e.getMessage(), e);
         }
     }
+
+    public List<File> getAllCourseFilesFromS3(String bucketName, String prefix) {
+        if (bucketName == null || bucketName.trim().isEmpty()) {
+            throw new IllegalArgumentException("Bucket name cannot be null or empty");
+        }
+
+        try {
+            List<File> courseFiles = new ArrayList<>();
+
+            ListObjectsV2Request listRequest = ListObjectsV2Request.builder()
+                    .bucket(bucketName)
+                    .prefix(prefix)
+                    .build();
+
+            ListObjectsV2Response listResponse = s3Client.listObjectsV2(listRequest);
+
+            for (S3Object s3Object : listResponse.contents()) {
+                String key = s3Object.key();
+
+                if (!key.endsWith(".pdf")) {
+                    continue;
+                }
+
+                GetObjectRequest getObjectRequest = GetObjectRequest.builder()
+                        .bucket(bucketName)
+                        .key(key)
+                        .build();
+
+                ResponseInputStream<GetObjectResponse> inputStream = s3Client.getObject(getObjectRequest);
+
+                File tempFile = Files.createTempFile("course-", ".pdf").toFile();
+                try (FileOutputStream outputStream = new FileOutputStream(tempFile)) {
+                    inputStream.transferTo(outputStream);
+                }
+
+                courseFiles.add(tempFile);
+                logger.info("Downloaded course PDF: {}", tempFile.getAbsolutePath());
+            }
+
+            return courseFiles;
+
+        } catch (IOException | S3Exception e) {
+            logger.error("Error fetching course files from S3", e);
+            throw new RuntimeException("Failed to fetch course files from S3: " + e.getMessage(), e);
+        }
+    }
+
 }
