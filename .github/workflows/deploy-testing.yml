@@ -9,7 +9,6 @@ permissions:
 
 jobs:
   deploy:
-    needs: cleanup
     runs-on: ubuntu-latest
 
     steps:
