@@ -11,12 +11,10 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-          
+
 
   backend:
-    build:
-      context: ./backend
-    image: quizzy-backend
+    image: public.ecr.aws/w9j1e0m5/quizzy/backend:latest
     container_name: backend
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mydb
@@ -29,9 +27,7 @@ services:
       - db
 
   frontend:
-    build:
-       context: ./frontend
-    image: quizzy-frontend
+    image: public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
     container_name: frontend
     ports:
       - "36882:80"
