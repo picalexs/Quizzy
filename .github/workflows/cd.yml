@@ -135,9 +135,10 @@ jobs:
   
             aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
 
-            BACKEND_REPO="quizzy/backend"
-            FRONTEND_REPO="quizzy/frontend"
-
+            BACKEND_REPO="w9j1e0m5/quizzy/backend"
+            FRONTEND_REPO="w9j1e0m5/quizzy/frontend"
+  
+  
             LATEST_BACKEND_TAG=$(aws ecr-public describe-images \
               --region us-east-1 \
               --repository-name $BACKEND_REPO \
