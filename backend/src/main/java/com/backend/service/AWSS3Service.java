@@ -37,34 +37,43 @@ public class AWSS3Service {
         }
 
         try {
-            logger.debug("Attempting to retrieve file from S3 - bucket: {}, path: {}", bucketName, s3Path);
+            logger.info("Attempting to retrieve file from S3 - bucket: '{}', path: '{}'", bucketName, s3Path);
 
             GetObjectRequest getObjectRequest = GetObjectRequest.builder()
                     .bucket(bucketName)
                     .key(s3Path)
                     .build();
 
+            logger.debug("Sending GetObject request to S3");
             ResponseInputStream<GetObjectResponse> responseInputStream = s3Client.getObject(getObjectRequest);
 
             if (responseInputStream == null) {
-                logger.error("Null response input stream for bucket: {}, path: {}", bucketName, s3Path);
+                logger.error("Null response input stream for bucket: '{}', path: '{}'", bucketName, s3Path);
                 throw new NullPointerException("S3 returned a null response input stream");
             }
 
             GetObjectResponse response = responseInputStream.response();
+            logger.debug("Received S3 response - Content Length: {}, Content Type: {}", 
+                    response.contentLength(), response.contentType());
 
             if (response == null || !"application/pdf".equalsIgnoreCase(response.contentType())) {
-                throw new RuntimeException("The downloaded object is not a PDF file. Content type: "
-                        + (response != null ? response.contentType() : "null"));
+                String contentType = response != null ? response.contentType() : "null";
+                logger.error("Invalid content type for S3 object - Expected: application/pdf, Got: {}", contentType);
+                throw new RuntimeException("The downloaded object is not a PDF file. Content type: " + contentType);
             }
 
-            logger.debug("Successfully retrieved file from S3 - Content Length: {}, Content Type: {}",
+            logger.info("Successfully retrieved file from S3 - Content Length: {}, Content Type: {}",
                     response.contentLength(), response.contentType());
 
             return new InputStreamResource(responseInputStream);
 
         } catch (S3Exception e) {
-            logger.error("Error retrieving file from S3 - bucket: {}, path: {}", bucketName, s3Path, e);
+            logger.error("S3 error occurred - Status Code: {}, Error Message: {}, Bucket: '{}', Path: '{}'", 
+                    e.statusCode(),
+                    e.awsErrorDetails() != null ? e.awsErrorDetails().errorMessage() : e.getMessage(),
+                    bucketName,
+                    s3Path,
+                    e);
             String errorMsg = "Error downloading PDF from S3: " +
                     (e.awsErrorDetails() != null ? e.awsErrorDetails().errorMessage() : e.getMessage());
             throw new RuntimeException(errorMsg, e);
