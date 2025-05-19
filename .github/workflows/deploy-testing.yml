@@ -26,7 +26,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "./docker-compose.yml ./docker-compose.override.yml"
+          source: "./docker-compose*.yml"
           target: ~/quizzy-app/
 
       - name: Deploy on EC2
