@@ -42,6 +42,8 @@ jobs:
           BACKEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/backend"
           docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:$VERSION_TAG
           docker push $BACKEND_REPO:$VERSION_TAG
+          docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:latest
+          docker push $BACKEND_REPO:latest
 
       - name: Tag and push frontend image
         run: |
@@ -49,6 +51,9 @@ jobs:
           FRONTEND_REPO="public.ecr.aws/w9j1e0m5/quizzy/frontend"
           docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:$VERSION_TAG
           docker push $FRONTEND_REPO:$VERSION_TAG
+          docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:latest
+          docker push $FRONTEND_REPO:latest
+  
 
   cleanup:
     runs-on: ubuntu-latest
@@ -103,10 +108,24 @@ jobs:
           clean_repo "quizzy/frontend"
 
   deploy:
-    needs: cleanup
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: List files
+        run: ls -l
+
+      - name: Copy docker-compose files to EC2
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "./docker-compose*.yml"
+          target: ~/quizzy-app/
+
       - name: Deploy on EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -114,8 +133,14 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            if ! command -v docker &> /dev/null
-            then
+            cd quizzy-app
+            echo "BACKEND_URL=$BACKEND_URL" >> .env
+            echo "SPRING_DATASOURCE_URL=$SPRING_DATASOURCE_URL" >> .env
+            echo "SPRING_DATASOURCE_USERNAME=$SPRING_DATASOURCE_USERNAME" >> .env
+            echo "SPRING_DATASOURCE_PASSWORD=$SPRING_DATASOURCE_PASSWORD" >> .env
+            echo "GEMINI_API_KEY=$GEMINI_API_KEY" >> .env
+
+            if ! command -v docker &> /dev/null; then
               sudo dnf update -y
               sudo dnf install -y docker
               sudo systemctl start docker
@@ -124,54 +149,14 @@ jobs:
               newgrp docker
             fi
 
-            if ! docker compose version &> /dev/null
-            then
+            if ! docker compose version &> /dev/null; then
               mkdir -p ~/.docker/cli-plugins
               curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) \
-              -o ~/.docker/cli-plugins/docker-compose
+                -o ~/.docker/cli-plugins/docker-compose
               chmod +x ~/.docker/cli-plugins/docker-compose
             fi
-  
-  
+
             aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
-
-            BACKEND_REPO="quizzy/backend"
-            FRONTEND_REPO="quizzy/frontend"
-  
-  
-            LATEST_BACKEND_TAG=$(aws ecr-public describe-images \
-              --region us-east-1 \
-              --repository-name $BACKEND_REPO \
-              --query 'sort_by(imageDetails,& imagePushedAt)[-1].imageTags[0]' \
-              --output text)
-
-            LATEST_FRONTEND_TAG=$(aws ecr-public describe-images \
-              --region us-east-1 \
-              --repository-name $FRONTEND_REPO \
-              --query 'sort_by(imageDetails,& imagePushedAt)[-1].imageTags[0]' \
-              --output text)
-
-            mkdir -p quizzy-app
-            cd quizzy-app
-
-            cat > docker-compose.yml <<EOF 
-            version: "3.8"
-
-            services:
-              backend:
-                image: public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
-                container_name: quizzy-backend
-                ports:
-                  - "3000:3000"
-
-              frontend:
-                image: public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
-                container_name: quizzy-frontend
-                ports:
-                  - "80:80"
-                depends_on:
-                  - backend
-            EOF
 
             docker compose down || true
             docker compose pull
