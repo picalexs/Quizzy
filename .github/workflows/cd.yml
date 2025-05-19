@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master, CD-FIX ]
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
@@ -135,8 +135,8 @@ jobs:
   
             aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
 
-            BACKEND_REPO="w9j1e0m5/quizzy/backend"
-            FRONTEND_REPO="w9j1e0m5/quizzy/frontend"
+            BACKEND_REPO="quizzy/backend"
+            FRONTEND_REPO="quizzy/frontend"
   
   
             LATEST_BACKEND_TAG=$(aws ecr-public describe-images \
@@ -159,13 +159,13 @@ jobs:
 
             services:
               backend:
-                image: public.ecr.aws/w9j1e0m5/\$BACKEND_REPO:$LATEST_BACKEND_TAG
+                image: public.ecr.aws/w9j1e0m5/$BACKEND_REPO:$LATEST_BACKEND_TAG
                 container_name: quizzy-backend
                 ports:
                   - "3000:3000"
 
               frontend:
-                image: public.ecr.aws/w9j1e0m5/\$FRONTEND_REPO:$LATEST_FRONTEND_TAG
+                image: public.ecr.aws/w9j1e0m5/$FRONTEND_REPO:$LATEST_FRONTEND_TAG
                 container_name: quizzy-frontend
                 ports:
                   - "80:80"

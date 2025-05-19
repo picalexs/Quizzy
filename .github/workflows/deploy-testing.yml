@@ -1,0 +1,86 @@
+name: Deploy Only
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    needs: cleanup
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy on EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            if ! command -v docker &> /dev/null
+            then
+              sudo dnf update -y
+              sudo dnf install -y docker
+              sudo systemctl start docker
+              sudo systemctl enable docker
+              sudo usermod -aG docker ec2-user
+              newgrp docker
+            fi
+
+            if ! docker compose version &> /dev/null
+            then
+              mkdir -p ~/.docker/cli-plugins
+              curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) \
+              -o ~/.docker/cli-plugins/docker-compose
+              chmod +x ~/.docker/cli-plugins/docker-compose
+            fi
+
+
+            aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+
+            BACKEND_REPO="w9j1e0m5/quizzy/backend"
+            FRONTEND_REPO="w9j1e0m5/quizzy/frontend"
+
+
+            LATEST_BACKEND_TAG=$(aws ecr-public describe-images \
+              --region us-east-1 \
+              --repository-name $BACKEND_REPO \
+              --query 'sort_by(imageDetails,& imagePushedAt)[-1].imageTags[0]' \
+              --output text)
+
+            LATEST_FRONTEND_TAG=$(aws ecr-public describe-images \
+              --region us-east-1 \
+              --repository-name $FRONTEND_REPO \
+              --query 'sort_by(imageDetails,& imagePushedAt)[-1].imageTags[0]' \
+              --output text)
+
+            mkdir -p quizzy-app
+            cd quizzy-app
+
+            cat > docker-compose.yml <<EOF 
+            version: "3.8"
+
+            services:
+              backend:
+                image: public.ecr.aws/w9j1e0m5/\$BACKEND_REPO:$LATEST_BACKEND_TAG
+                container_name: quizzy-backend
+                ports:
+                  - "3000:3000"
+
+              frontend:
+                image: public.ecr.aws/w9j1e0m5/\$FRONTEND_REPO:$LATEST_FRONTEND_TAG
+                container_name: quizzy-frontend
+                ports:
+                  - "80:80"
+                depends_on:
+                  - backend
+            EOF
+
+            docker compose down || true
+            docker compose pull
+            docker compose up -d
+
+            rm ~/.docker/config.json
