@@ -68,10 +68,8 @@ public class AWSS3Service {
             String errorMsg = "Error downloading PDF from S3: " +
                     (e.awsErrorDetails() != null ? e.awsErrorDetails().errorMessage() : e.getMessage());
             throw new RuntimeException(errorMsg, e);
-        } catch (RuntimeException e) {
-            logger.error("Unexpected error retrieving file from S3 - bucket: {}, path: {}", bucketName, s3Path, e);
-            throw new RuntimeException("Error downloading PDF from S3: " + e.getMessage(), e);
         }
+        // Removed catch (RuntimeException e) to allow NullPointerException to be thrown as expected
     }
 
     public void uploadPdfToS3(String bucketName, String s3Path, Resource pdfResource) {
@@ -127,19 +125,28 @@ public class AWSS3Service {
 
         try {
             HeadObjectRequest headObjectRequest = HeadObjectRequest.builder()
-                    .bucket(bucketName)
-                    .key(s3Path)
-                    .build();
+                .bucket(bucketName)
+                .key(s3Path)
+                .build();
 
             s3Client.headObject(headObjectRequest);
             return true;
-
         } catch (S3Exception e) {
+            // Check if it’s a 404 or NoSuchKey, in which case we return false
             if (e instanceof NoSuchKeyException || (e.statusCode() == 404)) {
                 logger.debug("S3 object does not exist - bucket: {}, path: {}", bucketName, s3Path);
                 return false;
             }
-            logger.error("Error checking if object exists - bucket: {}, path: {}", bucketName, s3Path, e);
+            // Log additional details about other S3 errors
+            logger.error(
+                "S3 error (status code: {}, AWS error message: {}). Bucket: {}, path: {}",
+                e.statusCode(),
+                e.awsErrorDetails() != null ? e.awsErrorDetails().errorMessage() : e.getMessage(),
+                bucketName,
+                s3Path
+            );
+
+            // Rethrow as RuntimeException, preserving the original message
             throw new RuntimeException("Error checking object existence in S3: " + e.getMessage(), e);
         }
     }

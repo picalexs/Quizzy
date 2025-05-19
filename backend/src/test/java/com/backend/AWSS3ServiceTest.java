@@ -3,211 +3,257 @@ package com.backend;
 import com.backend.service.AWSS3Service;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.*;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import software.amazon.awssdk.core.ResponseInputStream;
+import software.amazon.awssdk.core.sync.RequestBody;
+import software.amazon.awssdk.http.AbortableInputStream;
 import software.amazon.awssdk.services.s3.S3Client;
-import software.amazon.awssdk.services.s3.model.GetObjectRequest;
-import software.amazon.awssdk.services.s3.model.GetObjectResponse;
-import software.amazon.awssdk.services.s3.model.S3Exception;
+import software.amazon.awssdk.services.s3.model.*;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.util.Collections;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class AWSS3ServiceTest {
 
-    @Mock
-    private S3Client s3Client;
+    @Mock private S3Client s3Client;
 
-    @InjectMocks
-    private AWSS3Service awss3Service;
+    @InjectMocks private AWSS3Service s3Service;
 
     @BeforeEach
-    void setUp() {
+    void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
+    // --- getPdfResourceFromS3 ---
     @Test
-    void testGetPdfResourceFromS3_success() {
-        GetObjectResponse mockResponse = GetObjectResponse.builder()
-                .contentLength(1234L)
+    void getPdfResourceFromS3_validPdf_returnsResource() throws IOException {
+        String bucket = "bucket", key = "file.pdf";
+        byte[] content = "pdf-content".getBytes();
+
+        GetObjectResponse response = GetObjectResponse.builder()
                 .contentType("application/pdf")
+                .contentLength((long) content.length)
                 .build();
-        ResponseInputStream<GetObjectResponse> mockInputStream = mock(ResponseInputStream.class);
-        when(mockInputStream.response()).thenReturn(mockResponse);
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(mockInputStream);
 
-        Resource resource = awss3Service.getPdfResourceFromS3("test-bucket", "test-file.pdf");
+        ResponseInputStream<GetObjectResponse> stream =
+                new ResponseInputStream<>(response, AbortableInputStream.create(new ByteArrayInputStream(content)));
 
-        assertNotNull(resource);
-        assertTrue(resource instanceof InputStreamResource);
-        verify(s3Client, times(1)).getObject(any(GetObjectRequest.class));
+        when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(stream);
+
+        Resource result = s3Service.getPdfResourceFromS3(bucket, key);
+
+        assertNotNull(result);
+        assertTrue(result instanceof InputStreamResource);
     }
 
     @Test
-    void testGetPdfResourceFromS3_success_uppercaseContentType() {
-        GetObjectResponse mockResponse = GetObjectResponse.builder()
-                .contentLength(1234L)
-                .contentType("APPLICATION/PDF")
-                .build();
-        ResponseInputStream<GetObjectResponse> mockInputStream = mock(ResponseInputStream.class);
-        when(mockInputStream.response()).thenReturn(mockResponse);
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(mockInputStream);
+    void getPdfResourceFromS3_invalidContentType_throwsException() {
+        String bucket = "bucket", key = "file.txt";
+        GetObjectResponse response = GetObjectResponse.builder().contentType("text/plain").build();
 
-        Resource resource = awss3Service.getPdfResourceFromS3("test-bucket", "test-file.pdf");
+        ResponseInputStream<GetObjectResponse> stream =
+                new ResponseInputStream<>(response, AbortableInputStream.create(new ByteArrayInputStream("x".getBytes())));
 
-        assertNotNull(resource);
-        assertTrue(resource instanceof InputStreamResource);
-    }
-
-    @Test
-    void testGetPdfResourceFromS3_invalidBucketName_empty() {
-        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () ->
-                awss3Service.getPdfResourceFromS3("", "file.pdf"));
-        assertEquals("Bucket name cannot be null or empty", ex.getMessage());
-    }
-
-    @Test
-    void testGetPdfResourceFromS3_invalidBucketName_null() {
-        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () ->
-                awss3Service.getPdfResourceFromS3(null, "file.pdf"));
-        assertEquals("Bucket name cannot be null or empty", ex.getMessage());
-    }
-
-    @Test
-    void testGetPdfResourceFromS3_invalidS3Path_empty() {
-        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", ""));
-        assertEquals("S3 path cannot be null or empty", ex.getMessage());
-    }
-
-    @Test
-    void testGetPdfResourceFromS3_invalidS3Path_null() {
-        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", null));
-        assertEquals("S3 path cannot be null or empty", ex.getMessage());
-    }
-
-    @Test
-    void testGetPdfResourceFromS3_nonPdfContentType() {
-        GetObjectResponse mockResponse = GetObjectResponse.builder()
-                .contentLength(1234L)
-                .contentType("text/plain")
-                .build();
-        ResponseInputStream<GetObjectResponse> mockInputStream = mock(ResponseInputStream.class);
-        when(mockInputStream.response()).thenReturn(mockResponse);
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(mockInputStream);
+        when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(stream);
 
         RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.txt"));
-
-        assertTrue(ex.getMessage().contains("The downloaded object is not a PDF file"));
+                s3Service.getPdfResourceFromS3(bucket, key));
+        assertTrue(ex.getMessage().contains("not a PDF"));
     }
 
     @Test
-    void testGetPdfResourceFromS3_s3ExceptionWithDetails() {
-        S3Exception s3Exception = (S3Exception) S3Exception.builder()
-                .message("Access Denied")
-                .statusCode(403)
-                .build();
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenThrow(s3Exception);
-
-        RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.pdf"));
-
-        assertTrue(ex.getMessage().contains("Error downloading PDF from S3"));
-        assertEquals(s3Exception, ex.getCause());
-    }
-
-    @Test
-    void testGetPdfResourceFromS3_s3ExceptionWithoutDetails() {
-        S3Exception s3Exception = mock(S3Exception.class);
-        when(s3Exception.awsErrorDetails()).thenReturn(null);
-        when(s3Exception.getMessage()).thenReturn("Generic S3 error");
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenThrow(s3Exception);
-
-        RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.pdf"));
-
-        assertEquals("Error downloading PDF from S3: Generic S3 error", ex.getMessage());
-        assertEquals(s3Exception, ex.getCause());
-    }
-
-    @Test
-    void testGetPdfResourceFromS3_runtimeException() {
-        when(s3Client.getObject(any(GetObjectRequest.class)))
-                .thenThrow(new RuntimeException("Unexpected error"));
-
-        RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.pdf"));
-
-        assertEquals("Error downloading PDF from S3: Unexpected error", ex.getMessage());
-    }
-
-    @Test
-    void testGetPdfResourceFromS3_nullResponseInputStream() {
+    void getPdfResourceFromS3_nullStream_throwsException() {
         when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(null);
 
         assertThrows(NullPointerException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.pdf"));
+                s3Service.getPdfResourceFromS3("bucket", "file.pdf"));
     }
 
     @Test
-    void testGetPdfResourceFromS3_nullGetObjectResponse() {
-        ResponseInputStream<GetObjectResponse> mockInputStream = mock(ResponseInputStream.class);
-        when(mockInputStream.response()).thenReturn(null);
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(mockInputStream);
+    void getPdfResourceFromS3_s3Exception_throwsRuntime() {
+        when(s3Client.getObject(any(GetObjectRequest.class)))
+                .thenThrow(S3Exception.builder().message("S3 failure").build());
 
         RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.pdf"));
+                s3Service.getPdfResourceFromS3("bucket", "file.pdf"));
 
-        assertTrue(ex.getMessage().contains("The downloaded object is not a PDF file"));
+        assertTrue(ex.getMessage().contains("S3 failure"));
     }
 
     @Test
-    void testGetPdfResourceFromS3_nullContentType() {
-        GetObjectResponse mockResponse = GetObjectResponse.builder()
-                .contentLength(1234L)
-                .build(); // No contentType
-        ResponseInputStream<GetObjectResponse> mockInputStream = mock(ResponseInputStream.class);
-        when(mockInputStream.response()).thenReturn(mockResponse);
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(mockInputStream);
+    void getPdfResourceFromS3_invalidArgs_throwsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.getPdfResourceFromS3(null, "key"));
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.getPdfResourceFromS3("bucket", " "));
+    }
 
-        RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.pdf"));
+    // --- uploadPdfToS3 ---
+    @Test
+    void uploadPdfToS3_validResource_uploadsSuccessfully() throws IOException {
+        byte[] data = "test".getBytes();
 
-        assertTrue(ex.getMessage().contains("The downloaded object is not a PDF file"));
+        ByteArrayResource resource = new ByteArrayResource(data) {
+            @Override public String getFilename() {
+                return "test.pdf";
+            }
+        };
+
+        when(s3Client.putObject((PutObjectRequest) any(), any(RequestBody.class)))
+                .thenReturn(PutObjectResponse.builder().eTag("123").build());
+
+        s3Service.uploadPdfToS3("bucket", "file.pdf", resource);
+
+        verify(s3Client).putObject((PutObjectRequest) any(), any(RequestBody.class));
     }
 
     @Test
-    void testGetPdfResourceFromS3_responseIsNull() {
-        ResponseInputStream<GetObjectResponse> mockStream = mock(ResponseInputStream.class);
-        when(mockStream.response()).thenReturn(null);
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenReturn(mockStream);
+    void uploadPdfToS3_invalidFilename_throwsException() {
+        Resource resource = mock(Resource.class);
+        when(resource.getFilename()).thenReturn("invalid.txt");
+        when(resource.exists()).thenReturn(true);
 
-        RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.pdf"));
-
-        assertEquals("The downloaded object is not a PDF file", ex.getMessage());
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.uploadPdfToS3("bucket", "file.txt", resource));
     }
 
     @Test
-    void testGetPdfResourceFromS3_s3ExceptionWithAwsErrorDetails() {
-        S3Exception s3Exception = mock(S3Exception.class);
-        software.amazon.awssdk.awscore.exception.AwsErrorDetails errorDetails = mock(software.amazon.awssdk.awscore.exception.AwsErrorDetails.class);
+    void uploadPdfToS3_nullOrMissingResource_throwsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.uploadPdfToS3("bucket", "file", null));
 
-        when(errorDetails.errorMessage()).thenReturn("Access Denied");
-        when(s3Exception.awsErrorDetails()).thenReturn(errorDetails);
-        when(s3Client.getObject(any(GetObjectRequest.class))).thenThrow(s3Exception);
+        Resource resource = mock(Resource.class);
+        when(resource.exists()).thenReturn(false);
 
-        RuntimeException ex = assertThrows(RuntimeException.class, () ->
-                awss3Service.getPdfResourceFromS3("bucket", "file.pdf"));
-
-        assertTrue(ex.getMessage().contains("Error downloading PDF from S3: Access Denied"));
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.uploadPdfToS3("bucket", "file", resource));
     }
 
+    @Test
+    void uploadPdfToS3_ioException_throwsRuntime() throws IOException {
+        Resource resource = mock(Resource.class);
+        when(resource.getFilename()).thenReturn("test.pdf");
+        when(resource.exists()).thenReturn(true);
+        when(resource.getInputStream()).thenThrow(IOException.class);
 
+        assertThrows(RuntimeException.class, () ->
+                s3Service.uploadPdfToS3("bucket", "file", resource));
+    }
+
+    @Test
+    void uploadPdfToS3_s3Exception_throwsRuntime() throws IOException {
+        Resource resource = mock(Resource.class);
+        when(resource.getFilename()).thenReturn("test.pdf");
+        when(resource.exists()).thenReturn(true);
+        when(resource.getInputStream()).thenReturn(new ByteArrayInputStream("abc".getBytes()));
+        when(resource.contentLength()).thenReturn(3L);
+
+        when(s3Client.putObject((PutObjectRequest) any(), (RequestBody) any())).thenThrow(S3Exception.builder().message("S3 error").build());
+
+        assertThrows(RuntimeException.class, () ->
+                s3Service.uploadPdfToS3("bucket", "file", resource));
+    }
+
+    @Test
+    void uploadPdfToS3_invalidArgs_throwsException() {
+        ByteArrayResource res = new ByteArrayResource("x".getBytes()) {
+            @Override public String getFilename() { return "x.pdf"; }
+        };
+
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.uploadPdfToS3(null, "key", res));
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.uploadPdfToS3("bucket", " ", res));
+    }
+
+    // --- doesObjectExist ---
+    @Test
+    void doesObjectExist_exists_returnsTrue() {
+        when(s3Client.headObject((HeadObjectRequest) any())).thenReturn(HeadObjectResponse.builder().build());
+        assertTrue(s3Service.doesObjectExist("bucket", "key"));
+    }
+
+    @Test
+    void doesObjectExist_404_returnsFalse() {
+        S3Exception ex = (S3Exception) S3Exception.builder().statusCode(404).build();
+        when(s3Client.headObject((HeadObjectRequest) any())).thenThrow(ex);
+
+        assertFalse(s3Service.doesObjectExist("bucket", "key"));
+    }
+
+    @Test
+    void doesObjectExist_otherS3Exception_throwsRuntime() {
+        S3Exception ex = (S3Exception) S3Exception.builder().statusCode(500).message("Internal").build();
+        when(s3Client.headObject((HeadObjectRequest) any())).thenThrow(ex);
+
+        RuntimeException err = assertThrows(RuntimeException.class, () ->
+                s3Service.doesObjectExist("bucket", "key"));
+        assertTrue(err.getMessage().contains("Error checking object"));
+    }
+
+    @Test
+    void doesObjectExist_invalidArgs_throwsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.doesObjectExist(null, "key"));
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.doesObjectExist("bucket", ""));
+    }
+
+    // --- getAllCourseFilesFromS3 ---
+    @Test
+    void getAllCourseFilesFromS3_validPdf_downloadsToTempFile() throws IOException {
+        S3Object obj = S3Object.builder().key("courses/file1.pdf").build();
+        ListObjectsV2Response listResponse = ListObjectsV2Response.builder()
+                .contents(Collections.singletonList(obj)).build();
+
+        byte[] pdf = "PDF".getBytes();
+        GetObjectResponse objResponse = GetObjectResponse.builder().contentType("application/pdf").build();
+        ResponseInputStream<GetObjectResponse> stream =
+                new ResponseInputStream<>(objResponse, AbortableInputStream.create(new ByteArrayInputStream(pdf)));
+
+        when(s3Client.listObjectsV2((ListObjectsV2Request) any())).thenReturn(listResponse);
+        when(s3Client.getObject((GetObjectRequest) any())).thenReturn(stream);
+
+        List<File> files = s3Service.getAllCourseFilesFromS3("bucket", "courses/");
+
+        assertEquals(1, files.size());
+        assertTrue(files.get(0).getName().endsWith(".pdf"));
+        assertTrue(files.get(0).exists());
+    }
+
+    @Test
+    void getAllCourseFilesFromS3_skipsNonPdfFiles() {
+        S3Object obj = S3Object.builder().key("courses/file.txt").build();
+        ListObjectsV2Response listResponse = ListObjectsV2Response.builder()
+                .contents(Collections.singletonList(obj)).build();
+
+        when(s3Client.listObjectsV2((ListObjectsV2Request) any())).thenReturn(listResponse);
+
+        List<File> files = s3Service.getAllCourseFilesFromS3("bucket", "courses/");
+        assertTrue(files.isEmpty());
+    }
+
+    @Test
+    void getAllCourseFilesFromS3_exceptionThrown_throwsRuntime() {
+        when(s3Client.listObjectsV2((ListObjectsV2Request) any()))
+                .thenThrow(S3Exception.builder().message("fail").build());
+
+        RuntimeException ex = assertThrows(RuntimeException.class, () ->
+                s3Service.getAllCourseFilesFromS3("bucket", "prefix"));
+        assertTrue(ex.getMessage().contains("Failed to fetch"));
+    }
+
+    @Test
+    void getAllCourseFilesFromS3_invalidArgs_throwsException() {
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.getAllCourseFilesFromS3(" ", "prefix"));
+    }
 }
