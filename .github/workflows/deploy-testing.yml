@@ -1,6 +1,8 @@
 name: Deploy Only
 
 on:
+  push:
+    branches: [ CD-FIX ]
   workflow_dispatch:
 
 permissions:
