@@ -49,7 +49,8 @@ public class PDFtoTextTest {
         PDFtoText.pdfToImage(successPdfPath, outputTxtPath.toString());
         String resultString = Files.readString(outputTxtPath);
 
-        assertTrue(resultString.contains("test"));
+        assertTrue(resultString.contains("test"), "OCR result was: " + resultString);
+
     }
 
     @Test
