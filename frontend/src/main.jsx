@@ -10,6 +10,7 @@ import Explore from './Explore/Explore.jsx';
 import PDFViewer from './PDFViewer/PDFViewer.jsx';
 import CoursePage from './CoursePage/CoursePage.jsx';
 
+import Flashcards from "./Flashcards/Flashcards.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/explore" element={<Explore />} />
             <Route path="/course/:id" element={<CoursePage />} />
             <Route path="/Material/path/*" element={<PDFViewer />} />
+            <Route path="/flashcards" element={<Flashcards />} />
 
         </Routes>
     </BrowserRouter>
