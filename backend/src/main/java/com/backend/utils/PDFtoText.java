@@ -108,15 +108,25 @@ public class PDFtoText {
         return "OCR processing error";
     }
 
-    public static void pdfToImage(String pdfPath, String textPath) {
+    public static boolean pdfToImage(String pdfPath, String textPath) {
+        // First, validate the input path
+        if (pdfPath == null || pdfPath.isEmpty()) {
+            throw new RuntimeException("PDF path cannot be null or empty");
+        }
+
+        File pdfFile = new File(pdfPath);
+        if (!pdfFile.exists() || !pdfFile.isFile()) {
+            throw new RuntimeException("PDF file does not exist at path: " + pdfPath);
+        }
+
         ExecutorService ocrExecutor = null;
-        try (PDDocument pdfDocument = Loader.loadPDF(new File(pdfPath))) {
+        try (PDDocument pdfDocument = Loader.loadPDF(pdfFile)) {
             PDFRenderer renderer = new PDFRenderer(pdfDocument);
             int pageCount = pdfDocument.getNumberOfPages();
 
             if (pageCount == 0) {
                 System.out.println("Skipped " + pdfPath + " because it has no pages.");
-                return;
+                return false;
             }
 
             int nrThreads = Math.min(5, Runtime.getRuntime().availableProcessors());
@@ -138,7 +148,7 @@ public class PDFtoText {
 
                     int queueIndex = page * nrThreads / pageCount;
                     queues.get(queueIndex).put(pageImage);
-                } catch (IOException e) {
+                } catch (IOException | InterruptedException e) {
                     System.err.println("Failed to render page " + page + ": " + e.getMessage());
                 }
             }
@@ -204,7 +214,7 @@ public class PDFtoText {
                     } else {
                         System.err.println("Failed to create directory: " + parentDir.getAbsolutePath());
                         System.err.println("Check permissions and path: " + parentDir.getAbsolutePath());
-                        return;
+                        return false;
                     }
                 }
 
@@ -213,14 +223,17 @@ public class PDFtoText {
                     writer.write(pdfText);
                 }
                 System.out.println("Successfully wrote text to: " + textPath);
+                return true;
             } catch (IOException e) {
                 System.err.println("Error writing to file: " + textPath);
                 e.printStackTrace();
+                return false;
             }
 
-        } catch (Exception e) {
+        } catch (IOException | InterruptedException e) {
             System.err.println("PDF OCR failed for " + pdfPath + ": " + e.getMessage());
             e.printStackTrace();
+            throw new RuntimeException("Failed to load PDF: " + e.getMessage(), e);
         } finally {
             if (ocrExecutor != null) {
                 ocrExecutor.shutdownNow();
