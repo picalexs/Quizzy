@@ -35,6 +35,8 @@ services:
       context: ./frontend
     image: quizzy-frontend
     container_name: frontend
+    environment:
+      VITE_BACKEND_URL: http://localhost:3000
     ports:
       - "36882:80"
     depends_on:
