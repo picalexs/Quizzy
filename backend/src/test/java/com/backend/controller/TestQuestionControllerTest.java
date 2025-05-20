@@ -1,6 +1,5 @@
-package com.backend;
+package com.backend.controller;
 
-import com.backend.controller.TestQuestionController;
 import com.backend.model.TestQuestion;
 import com.backend.service.TestQuestionService;
 import org.junit.jupiter.api.BeforeEach;

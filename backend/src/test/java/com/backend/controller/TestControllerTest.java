@@ -1,6 +1,5 @@
-package com.backend;
+package com.backend.controller;
 
-import com.backend.controller.TestController;
 import com.backend.model.TestEntity;
 import com.backend.service.TestService;
 import org.junit.jupiter.api.BeforeEach;
