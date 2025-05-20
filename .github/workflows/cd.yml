@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master , CD-FIX ]
   workflow_dispatch:
 
 permissions:
@@ -109,14 +109,10 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: cleanup
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: List files
-        run: ls -l
 
       - name: Copy docker-compose files to EC2
         uses: appleboy/scp-action@v0.1.4
@@ -124,7 +120,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "./docker-compose*.yml"
+          source: "./docker-compose.yml"
           target: ~/quizzy-app/
 
       - name: Deploy on EC2
@@ -135,7 +131,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd quizzy-app
-            echo "BACKEND_URL=${{ secrets.BACKEND_URL }}" > .env
+            echo "BACKEND_URL=http://backend:3000" > .env
             echo "SPRING_DATASOURCE_URL=${{ secrets.SPRING_DATASOURCE_URL }}" >> .env
             echo "SPRING_DATASOURCE_USERNAME=${{ secrets.SPRING_DATASOURCE_USERNAME }}" >> .env
             echo "SPRING_DATASOURCE_PASSWORD=${{ secrets.SPRING_DATASOURCE_PASSWORD }}" >> .env
@@ -159,10 +155,19 @@ jobs:
               chmod +x ~/.docker/cli-plugins/docker-compose
             fi
 
-            aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+            # Install the Amazon ECR Docker Credential Helper
+            sudo yum install -y amazon-ecr-credential-helper
+
+            # Configure Docker to use the credential helper for ECR
+            mkdir -p ~/.docker
+            cat > ~/.docker/config.json << 'EOF'
+            {
+              "credHelpers": {
+                "public.ecr.aws": "ecr-login"
+              }
+            }
+            EOF
 
             docker compose down || true
             docker compose pull
             docker compose up -d
-
-            rm ~/.docker/config.json
