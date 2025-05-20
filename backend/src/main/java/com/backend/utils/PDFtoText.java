@@ -150,11 +150,21 @@ public class PDFtoText {
                     queues.get(queueIndex).put(pageImage);
                 } catch (IOException | InterruptedException e) {
                     System.err.println("Failed to render page " + page + ": " + e.getMessage());
+                    if (e instanceof InterruptedException) {
+                        Thread.currentThread().interrupt();
+                    }
                 }
             }
 
-            for (BlockingQueue<PageImage> queue : queues) {
-                queue.put(PageImage.endPage());
+            try {
+                // Add end markers to all queues
+                for (BlockingQueue<PageImage> queue : queues) {
+                    queue.put(PageImage.endPage());
+                }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.err.println("Failed to add end markers to queues: " + e.getMessage());
+                throw new RuntimeException("Thread was interrupted", e);
             }
 
             for (int i = 0; i < nrThreads; i++) {
@@ -168,7 +178,12 @@ public class PDFtoText {
 
                             String text = imageToText(pageImage.getImage());
 
-                            int pageNR = numberedPages.get(pageImage);
+                            Integer pageNR = numberedPages.get(pageImage);
+                            if (pageNR == null) {
+                                System.err.println("Warning: Failed to get page number for image");
+                                continue;
+                            }
+
                             if (text == null || text.trim().isEmpty()) {
                                 text = "[OCR failed or page was blank on page: " + pageNR + "]";
                                 System.out.println("OCR failed or page was blank on page: " + pageNR);
@@ -194,20 +209,25 @@ public class PDFtoText {
                 ocrFutures.add(future);
             }
 
-            CompletableFuture<Void> allDone = CompletableFuture.allOf(
-                    ocrFutures.toArray(new CompletableFuture[0])
-            );
-            allDone.join();
-
-            String pdfText = ocrFutures.stream()
-                    .map(CompletableFuture::join)
-                    .collect(Collectors.joining("\n"));
-
             try {
+                CompletableFuture<Void> allDone = CompletableFuture.allOf(
+                        ocrFutures.toArray(new CompletableFuture[0])
+                );
+                allDone.join();
+
+                String pdfText = ocrFutures.stream()
+                        .map(CompletableFuture::join)
+                        .collect(Collectors.joining("\n"));
+
+                // Handle the case where all pages might have failed OCR
+                if (pdfText.trim().isEmpty()) {
+                    pdfText = "PDF processing completed, but no text was extracted.";
+                }
+
                 // Make sure the directory exists
                 File outputFile = new File(textPath);
                 File parentDir = outputFile.getParentFile();
-                if (!parentDir.exists()) {
+                if (parentDir != null && !parentDir.exists()) {
                     boolean created = parentDir.mkdirs();
                     if (created) {
                         System.out.println("Created directory: " + parentDir.getAbsolutePath());
@@ -224,13 +244,13 @@ public class PDFtoText {
                 }
                 System.out.println("Successfully wrote text to: " + textPath);
                 return true;
-            } catch (IOException e) {
-                System.err.println("Error writing to file: " + textPath);
+            } catch (Exception e) {
+                System.err.println("Error processing PDF or writing output: " + e.getMessage());
                 e.printStackTrace();
                 return false;
             }
 
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             System.err.println("PDF OCR failed for " + pdfPath + ": " + e.getMessage());
             e.printStackTrace();
             throw new RuntimeException("Failed to load PDF: " + e.getMessage(), e);
