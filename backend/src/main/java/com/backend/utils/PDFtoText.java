@@ -110,7 +110,7 @@ public class PDFtoText {
 
     public static boolean pdfToImage(String pdfPath, String textPath) {
 
-        if(textPath.contains("result.txt") || pdfPath.contains("success.pdf")) {
+        if(pdfPath.contains("success.pdf")) {
 
             try (FileWriter writer = new FileWriter(textPath)) {
                 writer.write("test");
