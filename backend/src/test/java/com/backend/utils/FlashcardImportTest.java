@@ -1,4 +1,4 @@
-package com.backend;
+package com.backend.utils;
 
 import com.backend.model.Flashcard;
 import com.backend.model.AnswerFC;
@@ -7,7 +7,6 @@ import com.backend.model.User;
 import com.backend.repository.FlashcardRepository;
 import com.backend.repository.MaterialRepository;
 import com.backend.repository.UserRepository;
-import com.backend.utils.FlashcardImport;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

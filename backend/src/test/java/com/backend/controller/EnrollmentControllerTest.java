@@ -1,6 +1,5 @@
-package com.backend;
+package com.backend.controller;
 
-import com.backend.controller.EnrollmentController;
 import com.backend.model.Course;
 import com.backend.model.Enrollment;
 import com.backend.model.EnrollmentId;

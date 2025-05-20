@@ -1,8 +1,6 @@
-package com.backend;
+package com.backend.controller;
 
-import com.backend.controller.CourseController;
 import com.backend.dto.CourseDTO;
-import com.backend.mapper.CourseMapper;
 import com.backend.model.Course;
 import com.backend.service.CourseService;
 import com.backend.service.EnrollmentService;

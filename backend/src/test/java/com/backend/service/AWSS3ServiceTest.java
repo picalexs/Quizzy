@@ -1,6 +1,5 @@
-package com.backend;
+package com.backend.service;
 
-import com.backend.service.AWSS3Service;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
@@ -14,7 +13,6 @@ import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.*;
 
 import java.io.*;
-import java.nio.file.Files;
 import java.util.Collections;
 import java.util.List;
 
