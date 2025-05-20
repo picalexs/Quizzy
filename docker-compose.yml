@@ -1,6 +1,8 @@
 services:
   backend:
-    image: public.ecr.aws/w9j1e0m5/quizzy/backend:latest
+    build:
+      context: ./backend
+    image: quizzy-backend
     container_name: backend
     environment:
       - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
@@ -13,7 +15,9 @@ services:
       - "3000:3000"
 
   frontend:
-    image: public.ecr.aws/w9j1e0m5/quizzy/frontend:latest
+    build:
+      context: ./frontend
+    image: quizzy-frontend
     container_name: frontend
     environment:
       - BACKEND_URL=http://backend:3000
