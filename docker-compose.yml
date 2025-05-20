@@ -3,6 +3,7 @@ services:
     image: public.ecr.aws/w9j1e0m5/quizzy/backend:latest
     container_name: backend
     environment:
+      - VITE_BACKEND_URL=
       - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
       - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
       - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
