@@ -1,0 +1,66 @@
+HELP.md
+backend/target/
+!backend/.mvn/wrapper/maven-wrapper.jar
+!backend/**/src/main/**/target/
+!backend/**/src/test/**/target/
+.env
+.DS_Store
+.idea/
+.DS_Store
+
+### STS ###
+backend/.apt_generated
+backend/.classpath
+backend/.factorypath
+backend/.project
+backend/.settings
+backend/.springBeans
+backend/.sts4-cache
+
+### IntelliJ IDEA ###
+backend/.idea
+backend/*.iws
+backend/*.iml
+backend/*.ipr
+
+### NetBeans ###
+backend/nbproject/private/
+backend/nbbuild/
+backend/dist/
+backend/nbdist/
+backend/.nb-gradle/
+backend/build/
+!backend/**/src/main/**/build/
+!backend/**/src/test/**/build/
+
+### VS Code ###
+backend/.vscode/
+
+# === FRONTEND (React + Vite) ===
+
+# Ignoră README.md generat în frontend
+frontend/README.md
+
+# Node.js dependencies
+frontend/node_modules/
+
+# Vite build output
+frontend/dist/
+
+# Vite cache
+frontend/.vite/
+
+# Environment variables
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Loguri & cache
+frontend/*.log
+frontend/*.cache
+frontend/.eslintcache
+
+# Editor / sistem
+frontend/.vscode/
+frontend/.idea/
+
