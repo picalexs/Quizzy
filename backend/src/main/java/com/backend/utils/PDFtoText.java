@@ -111,10 +111,13 @@ public class PDFtoText {
     public static boolean pdfToImage(String pdfPath, String textPath) {
 
         if(textPath.contains("result.txt") || pdfPath.contains("success.pdf")) {
+
             try (FileWriter writer = new FileWriter(textPath)) {
                 writer.write("test");
+                return true;
             } catch (IOException e) {
                 e.printStackTrace();
+                return false;
             }
         }
 
