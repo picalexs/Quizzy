@@ -143,7 +143,7 @@ public class PDFtoText {
             for (int page = 0; page < pageCount; page++) {
                 try {
                     BufferedImage bim;
-                    if(textPath.contains("result.txt")){
+                    if(textPath.contains("result.txt") || pdfPath.contains("success.pdf")) {
                          bim = renderer.renderImage(page,300,org.apache.pdfbox.rendering.ImageType.RGB);
                     }
                     else {
