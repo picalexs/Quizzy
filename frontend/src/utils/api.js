@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-//const BASE_URL = process.env.BACKEND_URL || 'http://localhost:3000';
-
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = process.env.BACKEND_URL || 'http://localhost:3000';
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
@@ -23,7 +21,7 @@ axiosInstance.interceptors.request.use(
             console.log('Body:', config.data);
         }
 
-        
+
         return config;
     },
     (error) => Promise.reject(error)

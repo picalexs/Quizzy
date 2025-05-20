@@ -8,7 +8,7 @@ import Library from './Library/Library.jsx';
 import GraphAlgorithmsPage from "./GraphAlgotithmsPage/GraphAlgorithmsPage.jsx";
 import Register from './Register/Register.jsx';
 import Explore from './Explore/Explore.jsx';
-
+import Flashcards from "./Flashcards/Flashcards.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -22,8 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/graph-algorithms" element={<GraphAlgorithmsPage />} />
             <Route path="/register" element={<Register />} />
             <Route path="/explore" element={<Explore />} />
-
-
+            <Route path="/flashcards" element={<Flashcards />} />
 
         </Routes>
     </BrowserRouter>

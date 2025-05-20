@@ -84,7 +84,7 @@ function GraphAlgorithmPage() {
                     <button className="graph-enrolled-button" onClick={() => alert('Enrolled!')}>
                         Enrolled
                     </button>
-                    <button className="graph-start-button" onClick={() => alert('Start learning!')}>
+                    <button className="graph-start-button" onClick={() => navigate('/flashcards')}>
                         Start learning ►
                     </button>
                 </div>
