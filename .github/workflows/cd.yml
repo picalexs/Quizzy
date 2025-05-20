@@ -29,7 +29,7 @@ jobs:
           registry-type: public
 
       - name: Build Docker images
-        run: docker compose -f docker-compose.yml build
+        run: docker compose -f docker-compose.build.yml build
 
       - name: Generate version tag
         id: set_tag
@@ -44,6 +44,7 @@ jobs:
           docker push $BACKEND_REPO:$VERSION_TAG
           docker tag $BACKEND_IMAGE:latest $BACKEND_REPO:latest
           docker push $BACKEND_REPO:latest
+          echo "Backend image pushed as $BACKEND_REPO:latest and $BACKEND_REPO:$VERSION_TAG"
 
       - name: Tag and push frontend image
         run: |
@@ -53,7 +54,7 @@ jobs:
           docker push $FRONTEND_REPO:$VERSION_TAG
           docker tag $FRONTEND_IMAGE:latest $FRONTEND_REPO:latest
           docker push $FRONTEND_REPO:latest
-  
+          echo "Frontend image pushed as $FRONTEND_REPO:latest and $FRONTEND_REPO:$VERSION_TAG"
 
   cleanup:
     runs-on: ubuntu-latest
