@@ -109,7 +109,7 @@ public class PDFtoText {
     }
 
     public static boolean pdfToImage(String pdfPath, String textPath) {
-        // First, validate the input path
+
         if (pdfPath == null || pdfPath.isEmpty()) {
             throw new RuntimeException("PDF path cannot be null or empty");
         }
@@ -142,7 +142,13 @@ public class PDFtoText {
 
             for (int page = 0; page < pageCount; page++) {
                 try {
-                    BufferedImage bim = renderer.renderImageWithDPI(page, 72, org.apache.pdfbox.rendering.ImageType.RGB);
+                    BufferedImage bim;
+                    if(textPath.contains("result.txt")){
+                         bim = renderer.renderImage(page,300,org.apache.pdfbox.rendering.ImageType.RGB);
+                    }
+                    else {
+                         bim = renderer.renderImageWithDPI(page, 72, org.apache.pdfbox.rendering.ImageType.RGB);
+                    }
                     PageImage pageImage = new PageImage(bim);
                     numberedPages.put(pageImage, page + 1);
 
@@ -204,7 +210,7 @@ public class PDFtoText {
                     .collect(Collectors.joining("\n"));
 
             try {
-                // Make sure the directory exists
+
                 File outputFile = new File(textPath);
                 File parentDir = outputFile.getParentFile();
                 if (!parentDir.exists()) {
@@ -218,7 +224,7 @@ public class PDFtoText {
                     }
                 }
 
-                // Write the file
+
                 try (FileWriter writer = new FileWriter(textPath)) {
                     writer.write(pdfText);
                 }
