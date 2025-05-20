@@ -108,7 +108,7 @@ public class PDFtoText {
         return "OCR processing error";
     }
 
-    public static void pdfToImage(String pdfPath, String textPath) {
+    public static boolean pdfToImage(String pdfPath, String textPath) {
         // First, validate the input path
         if (pdfPath == null || pdfPath.isEmpty()) {
             throw new RuntimeException("PDF path cannot be null or empty");
@@ -126,7 +126,7 @@ public class PDFtoText {
 
             if (pageCount == 0) {
                 System.out.println("Skipped " + pdfPath + " because it has no pages.");
-                return;
+                return false;
             }
 
             int nrThreads = Math.min(5, Runtime.getRuntime().availableProcessors());
@@ -214,7 +214,7 @@ public class PDFtoText {
                     } else {
                         System.err.println("Failed to create directory: " + parentDir.getAbsolutePath());
                         System.err.println("Check permissions and path: " + parentDir.getAbsolutePath());
-                        return;
+                        return false;
                     }
                 }
 
@@ -223,11 +223,11 @@ public class PDFtoText {
                     writer.write(pdfText);
                 }
                 System.out.println("Successfully wrote text to: " + textPath);
-                return;
+                return true;
             } catch (IOException e) {
                 System.err.println("Error writing to file: " + textPath);
                 e.printStackTrace();
-                return;
+                return false;
             }
 
         } catch (IOException | InterruptedException e) {
