@@ -1,40 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import './Flashcards.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { api } from '../utils/api';
 
 const Flashcards = () => {
     const navigate = useNavigate();
+    const { materialId } = useParams(); // dacă dorești să preiei flashcards după materialId din URL
 
-    const flashcards = [
-        {
-            question: "What is a minimum spanning tree?",
-            options: [
-                " A flying donkey",
-                " 24",
-                " A spanning tree with the minimum possible total edge weight.",
-                " Belgium"
-            ],
-            correctAnswer: " A spanning tree with the minimum possible total edge weight."
-        },
-        {
-            question: "What is Big O notation?",
-            answer: "Big O describes the upper bound of an algorithm's time or space complexity as input size grows."
-        },
-        {
-            question: "What is recursion in programming?",
-            answer: "Recursion is when a function calls itself to solve smaller instances of the same problem."
-        },
-        {
-            question: "What is the difference between stack and queue?",
-            answer: "Stack is LIFO (last in, first out); Queue is FIFO (first in, first out)."
-        },
-        {
-            question: "What is a hash table?",
-            answer: "A hash table maps keys to values using a hash function to compute an index into an array."
-        }
-    ];
+    // State pentru flashcards
+    const [flashcards, setFlashcards] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    // Colors for the ratings: good, neutral, bad, default
+    // Statele existente
+    const [index, setIndex] = useState(0);
+    const [showAnswer, setShowAnswer] = useState(false);
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [feedbackMessage, setFeedbackMessage] = useState(null);
+    const [ratings, setRatings] = useState([]);
+    const [showKeyboardInput, setShowKeyboardInput] = useState(false);
+    const [inputText, setInputText] = useState('');
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Culorii pentru ratings
     const ratingColors = {
         0: "#2D852D",  // Good (😊) - Green
         1: "#E2A54D",  // Neutral (😐) - Yellow/Orange
@@ -42,35 +30,92 @@ const Flashcards = () => {
         "-1": "#CCCCCC" // Default - Gray (not rated)
     };
 
-    const [index, setIndex] = useState(0);
-    const [showAnswer, setShowAnswer] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(null);
-    const [feedbackMessage, setFeedbackMessage] = useState(null);
-    const [ratings, setRatings] = useState(Array(flashcards.length).fill(-1));
-    const [showKeyboardInput, setShowKeyboardInput] = useState(false);
-    const [inputText, setInputText] = useState('');
-    // State pentru detectarea dispozitivului mobil
-    const [isMobile, setIsMobile] = useState(false);
+    // Preluăm flashcards de la API
+    useEffect(() => {
+        const fetchFlashcards = async () => {
+            try {
+                setLoading(true);
+                let response;
 
-    const current = flashcards[index];
+                // Verificăm dacă avem materialId pentru a face cererea corespunzătoare
+                if (materialId) {
+                    response = await api.get(`/Flashcard/material/${materialId}`);
+                } else {
+                    // Dacă nu avem materialId, luăm toate flashcards-urile
+                    // Sau poți înlocui cu userId dacă vrei să le filtrezi după user
+                    response = await api.get('/Flashcard');
+                }
 
-    // Adăugăm un efect pentru a detecta dimensiunea ecranului
+                // Procesăm datele primite pentru a le face compatibile cu componenta
+                const processedFlashcards = response.data.map(card => {
+                    // Procesăm răspunsurile
+                    const processedCard = {
+                        id: card.id,
+                        question: card.question,
+                        level: card.level,
+                        lastStudiedAt: card.lastStudiedAt,
+                        questionType: card.questionType
+                    };
+
+                    // Verificăm dacă este o întrebare cu opțiuni multiple
+                    if (card.questionType === 'MULTIPLE_CHOICE') {
+                        // Extragem opțiunile și răspunsul corect
+                        const options = card.answers.map(answer => answer.text);
+                        const correctAnswer = card.answers.find(answer => answer.correct)?.text;
+
+                        processedCard.options = options;
+                        processedCard.correctAnswer = correctAnswer;
+                    } else {
+                        // Pentru întrebări cu răspuns simplu
+                        processedCard.answer = card.answers.find(answer => answer.correct)?.text ||
+                            card.answers[0]?.text ||
+                            "No answer provided";
+                    }
+
+                    return processedCard;
+                });
+
+                setFlashcards(processedFlashcards);
+                setRatings(Array(processedFlashcards.length).fill(-1));
+                setLoading(false);
+            } catch (err) {
+                console.error('Error fetching flashcards:', err);
+                setError('Failed to load flashcards. Please try again later.');
+                setLoading(false);
+            }
+        };
+
+        fetchFlashcards();
+    }, [materialId]);
+
+    // Detectăm dispozitivul mobil (cod existent)
     useEffect(() => {
         const checkScreenSize = () => {
             setIsMobile(window.innerWidth <= 480);
         };
 
-        // Verifică inițial
         checkScreenSize();
-
-        // Adaugă un listener pentru redimensionarea ferestrei
         window.addEventListener('resize', checkScreenSize);
 
-        // Curățare la demontare
         return () => {
             window.removeEventListener('resize', checkScreenSize);
         };
     }, []);
+
+    // Afișam loading sau eroare
+    if (loading) {
+        return <div className="flashcard-app"><div className="loading">Loading flashcards...</div></div>;
+    }
+
+    if (error) {
+        return <div className="flashcard-app"><div className="error">{error}</div></div>;
+    }
+
+    if (flashcards.length === 0) {
+        return <div className="flashcard-app"><div className="no-flashcards">No flashcards available.</div></div>;
+    }
+
+    const current = flashcards[index];
 
     const nextCard = () => {
         if (index < flashcards.length - 1) {
