@@ -35,11 +35,8 @@ jobs:
           script: |
             cd quizzy-app
             echo "BACKEND_URL=${{ secrets.BACKEND_URL }}" > .env
-            # echo "SPRING_DATASOURCE_URL=${{ secrets.SPRING_DATASOURCE_URL }}" >> .env
-            # echo "SPRING_DATASOURCE_USERNAME=${{ secrets.SPRING_DATASOURCE_USERNAME }}" >> .env
-            # echo "SPRING_DATASOURCE_PASSWORD=${{ secrets.SPRING_DATASOURCE_PASSWORD }}" >> .env
-            echo "SPRING_DATASOURCE_URL=jdbc:postgresql://database-1.cjwywi0yqj45.eu-central-1.rds.amazonaws.com:5432/postgres" >> .env
-            echo "SPRING_DATASOURCE_USERNAME=postgres" >> .env
+            echo "SPRING_DATASOURCE_URL=${{ secrets.SPRING_DATASOURCE_URL }}" >> .env
+            echo "SPRING_DATASOURCE_USERNAME=${{ secrets.SPRING_DATASOURCE_USERNAME }}" >> .env
             echo "SPRING_DATASOURCE_PASSWORD=${{ secrets.SPRING_DATASOURCE_PASSWORD }}" >> .env
             echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" >> .env
 
