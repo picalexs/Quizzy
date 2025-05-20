@@ -58,8 +58,20 @@ jobs:
                 -o ~/.docker/cli-plugins/docker-compose
               chmod +x ~/.docker/cli-plugins/docker-compose
             fi
-
-            aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+            
+            # Install the Amazon ECR Docker Credential Helper
+            sudo amazon-linux-extras install -y docker
+            sudo yum install -y amazon-ecr-credential-helper
+            
+            # Configure Docker to use the credential helper for ECR
+            mkdir -p ~/.docker
+            cat > ~/.docker/config.json << 'EOF'
+            {
+              "credHelpers": {
+                "public.ecr.aws": "ecr-login"
+              }
+            }
+            EOF
 
             docker compose down || true
             docker compose pull
