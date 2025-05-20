@@ -17,9 +17,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: List files
-        run: ls -l
-
       - name: Copy docker-compose files to EC2
         uses: appleboy/scp-action@v0.1.4
         with:
@@ -38,16 +35,13 @@ jobs:
           script: |
             cd quizzy-app
             echo "BACKEND_URL=${{ secrets.BACKEND_URL }}" > .env
-            echo "SPRING_DATASOURCE_URL=${{ secrets.SPRING_DATASOURCE_URL }}" >> .env
-            echo "SPRING_DATASOURCE_USERNAME=${{ secrets.SPRING_DATASOURCE_USERNAME }}" >> .env
+#            echo "SPRING_DATASOURCE_URL=${{ secrets.SPRING_DATASOURCE_URL }}" >> .env
+#            echo "SPRING_DATASOURCE_USERNAME=${{ secrets.SPRING_DATASOURCE_USERNAME }}" >> .env
+#            echo "SPRING_DATASOURCE_PASSWORD=${{ secrets.SPRING_DATASOURCE_PASSWORD }}" >> .env
+            echo "SPRING_DATASOURCE_URL=jdbc:postgresql://database-1.cjwywi0yqj45.eu-central-1.rds.amazonaws.com:5432/postgres" >> .env
+            echo "SPRING_DATASOURCE_USERNAME=postgres" >> .env
             echo "SPRING_DATASOURCE_PASSWORD=${{ secrets.SPRING_DATASOURCE_PASSWORD }}" >> .env
             echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" >> .env
-            
-            echo "BACKEND_URL=${{ secrets.BACKEND_URL }}"
-            echo "SPRING_DATASOURCE_URL=${{ secrets.SPRING_DATASOURCE_URL }}"
-            echo "SPRING_DATASOURCE_USERNAME=${{ secrets.SPRING_DATASOURCE_USERNAME }}"
-            echo "SPRING_DATASOURCE_PASSWORD=${{ secrets.SPRING_DATASOURCE_PASSWORD }}"
-            echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}"
 
             if ! command -v docker &> /dev/null; then
               sudo dnf update -y
