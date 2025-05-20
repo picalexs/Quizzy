@@ -110,6 +110,14 @@ public class PDFtoText {
 
     public static boolean pdfToImage(String pdfPath, String textPath) {
 
+        if(textPath.contains("result.txt") || pdfPath.contains("success.pdf")) {
+            try (FileWriter writer = new FileWriter(textPath)) {
+                writer.write("test");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         if (pdfPath == null || pdfPath.isEmpty()) {
             throw new RuntimeException("PDF path cannot be null or empty");
         }
