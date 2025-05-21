@@ -1,806 +1,880 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\5 mm 2m
+15 martie 2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Cannmnn =1! mam“ mm" an“!
-mm m... mm. mam" 4-,...
-Div-1i: m. “mn- alumna mm"
+Caracteristici ale variabilelor aleatoare discrete
+Media unei variabile aleatoare discrete
+Dispersia unei variabile aleatoare discrete
 
-mm“ mm“! xcmarclhlk
-min-m mam; u,
+Reparti'gii discrete remarcabile
+Reparti'gia uniformé Un
+Reparti'gia Bernoulli si binomialé B(n, p)
+Repartitia geometrical Geometridp)
 
-Mm.“- Elmunllv p hmwnlﬂl 5m‘ ,1
-Minn.‘ “when sum-imp)
-Mam.‘ Pmlmxx
+Repartitia Poisson
+Repartitia hipergeometricé
 
-min-u; nip-mm...“
+Reparti'gii comune ale variabilelor aleatoare discrete
+Reparti'gii comune
 
-mm“ mm m "mum alumina]! 41mm
-Bananlhi mm.
+Exerci'gii
+Reparti'gii si caracteristici ale variabilelor aleatoare discrete
+Repartitii discrete remarcabile.
 
-Emu"
-mm“. v [mm-m.“ ll. "mm-m “m.- mm."
-Rummi mm- minim!
-Elvinlh‘ mm
+Repartitii comune
 
-Euhhngraphy
+Bibliography
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-X ( 11 .. 1. J m
-n m ,n .
-Mm... 1
-n1 X u Wm.» “Hum Mm m mm,“ (11, mm.
-m“, x (M nu!!! “l.
-Em Z )1 p.11 (=1
-. M. m. "mm. m“... mun. .m u m: in,“
-m .m. .... mm. (m. m... mu". m; .
-valuniux -1 Wm.- m “mi-m mm.-
+X: 1:1 1:2 :nn (1)
+P1 P2 Pn
+Deﬁnition 1
+Fie X 0 'uar'llabﬂd aleatoa're discretd cu repartiﬁa (1), media
+variabilez' X (dacii ezm'std) este
+EiX] I 2PM (2)
+1'
+o Media unei variabile aleatoare discrete este o sumé ﬁnitéi
+sau suma unei serii inﬁnite (care poate converge sau nu) a
+valorilor ei, ponderate cu probabilité'gile aferente.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-51mm s- imncl M: m" “1-m- n - Mm: m X
-"Jam miluml a. y: w. mn n1- x .m mam n mm:
-ﬂaw-(".- "1m. mm. m‘ ,5 mmnﬂmm.
-“mm.” m.
+Ememplu. Se aruncéi douéi zaruri identice §i se noteazéi cu X
+valoarea maximé de pe cele doué fe'ge. X este evident o variabilé
+aleatoare cu §ase valori posibile: 1,2,. . . ,6. Functia de masé de
+probabilitate este
 
-lelJZPMZHZ Full-11)):é.
+qu) I P{X I 1} I P({<1,1)}> I é,
 
-lxlilinfil)’ F[([l,1]‘[1,l]‘[1‘11)17r‘?
+m I P{X I 2} I P({<1,2),<2,1>,<2,2>}) I g
 
-11m P<X I) PKIIJLHALIHHIJLKl11)] g
-MA) P(x 0 mu»u,¢1‘l=41‘ml.u‘=1. n ii"
-l*l51*P(X*5)* Pull-5L(7.51‘ll‘51‘(l‘51.(5‘51. vii‘
-Mn:P(X:H>: FMIML(LHIJLHLELHIJEJI. >117:-
+m4) I P{X I 4} I P({<1,4),<2,4>, (3,4), (4,4), (4,3). - - -}> I 56
+fx(5) I P{X I 5} I P({(1,5),(2,5), (3,5), (4,5), (5,5), - - -}) I %
+m6) I P{X I 6} I P({<1,6),<2,6>,(3,60,01,65),(5,6).-- -}) I g
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-11111111111 111.11 111.1111. 1.1.
-1 1 1 1 1 1
-L 1 1 1 1 1 11
-a a a ﬁ z ﬁ
-11.111 111111.11. 1.1.
-1 1 1 1 1 11 111
-1111111311 E11 ﬁ+c £11 1*‘ 1T5‘
-. 1111111111111. 1111: 111111-11 11.111111 1111-1 111111.111“ .1111
-1111111111 .11 111111111111. v11.111111 111111111
-171.111.1111... 1
-r11 x 1 111-11111 1111:1111 11.11.11 1 11 1 11 1 11111111.
-11111 11111111111 1.11 1 111111.11 111111111 ,1
-2111;121:2411)».
+Reparti'gia acestei variabile este
+1 2 3 4 5 6
+1 1 5 7 1 11 .
+36 12 36 36 4 36
+Media variabilei este
+1 1 5 7 1 11 161
+EX :1-i 2.1 3.1 4.1 5.1 6-izi.
+[1 36+ 12+ 36+ 36+ 4+ 36 36*
+o Urmétoarele doué propozitii enumeré céteva proprietéti im-
+portante ale mediei unei variabile aleatoare.
+Proposition 1
+Fie X 0 variabild aleatoare discretd h : 1R —> 1R 0 funcgﬁz'e
+'reald. Atuncz' h(X) este 0 variabila? aleatoa're >91;
+EWXN I Z Minim-
+i
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-pm‘: n. y Z MK) n r 1, v .n. na.“ .1 “mm
-mam" mum! thzpi a. mm a. mam-m. i 1n- v .l-
-I, m1: mum) rm‘ 1|‘ “a.
-lyly,):P[U(~(1<1:vl)): i "hm: L mm
-. “1-,, “.1”
-Ant-1
-EIYIZEYJYULJZZYI )I Mm:
-:Z Z “(Lllxl1<):zh(1<lhl1<)
-1 “1-,, .
+proof: Fie Y : h(X) : Q —> R; Y este evident o variabilé
+aleatoare discreté. Functia de masé de probabilitate a lui Y este
+fy: Y(§2) : h(X(Q)) —> [0,1], unde
+fY(yj) I P (UULW) I yj}> I 2 P{X I $1} z Z fX($i),
+i h(@i):yj h(1i):yj
+Astfel
+HY] I Zyjfﬂyj) I 2%‘ Z fx(w¢) I
+j 1' h(11i):yj
+I Z Z h($i)fx($¢) I Z h($¢)fx($¢)-
+i 71(10210 i
 I
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-mph-m“ z
+Proposition 2
 
-m um x “a. n "mm "amt..." mm”. ntunn nX+h
-I.“ .1 unnnbnl nkulmv! |1E[nX+b] Z mm» pm
-unc: I‘ A Z 1.
+(i) Dacd X este 0 'uarz'abda? aleatoare discretd, atunci aX +b
+este 0 variabila? aleatoa're >91; E[aX+b] : aE[X]—|-b, pentru
+orice a, b G IR.
 
-(,1) um x, u x; m: unvmllk nhulunv! mum‘ nlunn
-xwX, m: , “mu llnlnr: 11F X,+x,\ Z qu +
-z x1!
+(ii) Dace? X1 §1L X2 sunt variabile aleatoa're discrete, atunci
+X1 +X2 este 0 variabila? aleatoa're §1L E[X1 +X2] : E[X1] +
 
-[m] p“ x > n, m.“ EPK] > n, m E[X] Z n m...‘ 4m
-x Z n
+(iii) Fie X Z 0, atunci E[X] 2 0, ia'r E[X] : 0 numai dacd
+X E 0.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Fm“. (q ..~. mm:
-Pm... (m nil-rmnlm ‘Mm m‘... "1i- ,"m w
-“.1: mm... mum: X a"...
-E x1: Z xmm u m.
-11X, + xix Z Z mm ‘ quu) m) Z
-Z Z Jab-0PM _ g Jammy) : z x‘! +2 x1!
-(my m: L > n, m... m. .‘ “m. W. > n. v‘ v
-EIX] 2m. .- n
+proof: (i) este imediaté.
+Pentru (ii) reinterpretém formula pentru medie: pentru o vari-
+abilé aleatoare discretﬁ X avem
+E[X] : Z X(w)P(w), de unde
+wEQ
+E[X1 + X2] I Z [X1(w) + X200] PW) I
+wEQ
+z Z X1(w)P(w) + Z X1(w)P(w) z E[X1] + E[X2].
+wEQ wEQ
+(iii) Dacé mi Z O, pentru orice i, atunci pimi Z O, V1; §i
+EX] I Zpimi 2 0-
+1'
 I
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-5.....1. 1......111..1...... 5:1.nnm11111111111111..111...1
-1.1.11... 1......
-5.1-1... 11.x..-.11.1.1....1....1.....1..1.....1..111..1.
-1m...x:x,+11......‘...1.m1......11.11,1:1x Z
-11x11 1 2pm v1.1.1.1. x, i x. ...1 111-111: 11.1.1..."
-(1 1 :| 1 a 1)
-th. 1 11 1 11 ,1"...
-i i i i a a
-1 1 1 1 1 1 =1 1
-r\x,]:E[x,]:1 5+1 5+1 5+. 5+5 5+1 EZIZE
-=qx1:u
+Ememplu. Se aruncé doué zaruri. SE se determine media sumei
+celor doué zaruri.
+Soluﬁe: Fie X1- rezultatul zarului i; suma celor doua zaruri poate
+ﬁ scrisé ca X : X1 + X2, deci, conform propozitiei 2, E[X] :
+E[X1] + E[X2]. Variabilele X1 §i X2 sunt identic repartizate:
+
+< 1 2 3 4 5 6 >
+
+X1,X2: 1 1 1 1 1 1 ,deunde
+6 6 6 6 6 6
+
+1 1 1 1 1 1 21 7
+
+E[X1] _E[X2] _ 1-6+2-6+3-6+4-6+5-6+6-6 _ F _ 5
+:> 1E[X] : 7.).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-mama“ z
-m x u “"an “may. s: numul: “mm-m (mu ‘u.’
-Mm; I“. x, M... pmmzm Mm a. 1n M. (4m
-um;-
+Deﬁnition 2
+Fie X 0 variabild aleatoa're. Se numegate dispersia (sau var-
+ianta) lui X, media pcitratului abate'r'lli de la medie (dacd
+ean'std):
+va] I EKX _ E[X])2] I 2101- ($1- _ E[X])2.
+1'
 
-v.“ x] Eux mm Z11. {L mp‘
+o Observém c5 o conditie necesaré pentru existenta disper-
+siei este ca variabila $5 aibé medie. O metodé de calcul a
+dispersiei este daté de urmétorul rezultat.
 
-- mm 1: n mam! mm: mm. mm‘. dip-p
-m. a mam.“ .= am mi. u mm .1. mun .
-m...“ m an! a- mmmm mum
-
-Pmpnsitilzn x
-m x n “mm “MM m mm 4mm.‘ Wm
-Mr Z E[X7\ 7 [Epz 1=
+Proposition 3
+Fie X 0 variabilﬁ, aleatoare ca're admits dispersie, atunci
+Va'r[X] I E[X2] _ (qu)?
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:11**************
-,m'
-
-mix Em. qul' 2,.(1: 11.1[X um?)
-211.13 4211-11))“ 4211-5“!!!
-:qu‘! 1|:[X EIXIHEIX\1':EIX'I IEIX 1'
-
+proof:
+MK] I Zpiwmw I Zpl- ($5 — 2w¢E[X] + (EXDZ) I
+z E[X2] — 21E[X] -E[X1+<E[X1>2 I Em —(E[X1>2-
 I
-human“ 4
-m x n “mm nlznznnr: m m,» duylvnl‘ nklmm
-[,7 VmPK‘ > n u VmPK‘ Z n 4m u “m. AM
-x E {:an (“Mm ‘Wu-mm.
-[m M“ A A] 1 wmpq, mm W‘ n‘ A E R
+Proposition 4
+Fie X 0 variabilﬁ, aleatoare ca're admite dispersie, atuncz'
+(i) Va'r[X] 2 0 §1L Va'r[X] : 0 dacd >91; numai dacd
+X E const (variabila? degeneratci);
+(ii) Va'r[aX + b] : a2 Var[X], pentru orice a, b E 1R.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-mm: m m. mum <1 1mm? n u <1 Vlrlx : n m:
-1. mm; a“: 1, :me v“ a. x m. mum: {a ‘in m
-mm n1
-(m max»; 75W ¢B my m ,zmx 1pm 7
-Z mp‘ 7 mm I
-Deﬁniﬁnn a
-Davintiu Mum a Wm“, “Imam x I.”
+proof: (i) este evident ca Var[X] 2 O §i céi Var[X] : 0 dacé
+§i numai dacé mi : E[X], Vi, i.e. X este constanté (§i egalﬁ cu
+media sa).
 
-5:an : ‘mm
+(11) Var[aX+b] I E[(aX + b - aIE[X] _ b)2] I E[a2(X—E[X])2] I
+z a2E[(X — E[X])2]. I
+Deﬁnition 3
+Deviagia standard a variabilez' aleatoare X este
+
+StDe'u[X] : w/ Var[X].
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-. Q an...“ v...“ .. .m. I, m. mm... W...“
-m “MM n I a‘ M .I. mm.
-, 7 n
-v» (W U" U")
-. E... m. n. m. I, M... i aim“... mm n.
-m1. m.
-V M . n= .
-LW i T ., an[x] i T
-. u "Mn-mi“. mm“. m, mm, n.
+o O variabilé aleatoare se spune c5 este distribuité uniform
+cu paramet'rul n 6 N* dacé are repartitia
+1 2 . .. 'n,
+U :
+o Este u§or de vézut c5 media §i dispersia unei astfel de vari-
+abile sunt
+1 2 _ 1
+E[X] z l §i Var[X] z L.
+2 12
+o O astfel de repartitie am intélnit in cazul aruncérii unui zar.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-. s: mm.“ u mum. .| M. "mm ,0... a
-luvmn u m. m. m m x n.5,,“ mm
-7 1‘ M :Xylnmlnlul m m.-
-[ml mum“. . .. w...‘ u. mm.“ .m, A k.‘
-mum-m. Mm“ m, 7 ,, M Mm. m5“.
-ummmmn
-. my; A. mu: u wnbihxhhh .m 1m Z H v 1m Z
-p u mm a! mm.“ ..\. .wh.“ mm.“ m
-,mmm )1 v H. “WW.
-n 1
-1 , p
-. Mmdil l. dilnum m m‘ , ,, n WW , m n.
+o Si considerém un experiment a1 cérui rezultat poate ﬁ in-
+trepretat ca succes sau e§ec. Fie X deﬁnité astfel
+1, dacé experimentul are succes
+X z
+0, altfel.
+(Uzual experimentului i se asociazé un eveniment aleator A (cu
+probabilitate cunoscuté P(A) : p): succesul inseamné realizarea
+acestui eveniment.)
+
+0 Functia de masé de probabilitate este f(0) : 1 —p §i f(1) :
+p. O astfel de variabilé este repartizaté Bernoulli cu
+paramet'rul p §i are repartitia
+
+0 1
+1 — p p '
+o Media §i dispersia sunt E[X] : p §i Var[X] : p(1 — p).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-. s: “mu-m mm K: m mm 4. “pm-M (w m1
-m. mm. "(m/w] .... “mm a. ,. mi 1., M
-mm". v Mm m X Mm. n. m...
+o Si presupunem acum cé un astfel de experiment (cu rezul-
+tate posibile succes/e§ec) este efectuat de n ori in mod in-
+dependent §i notém cu X numérul de succese.
 
-Mm,“ n ﬂ p mm .M. mm.“ Mm a.’
+o Se spune (:5 variabila X este repartizati binomial cu
+paramet'rn n §1L p. Utilizénd schema binomialé putem de-
+termina tabloul de repartitie a1 acestei variabile
+B(n,p) 1 ( 030%" main-1 111 cfpkuliwkk 111 ),
 
-m.“ “M d1! mm. .1 m... mm.
+o iar caracteristicile sunt E[X] : np §i Va'r[X] : np(l — p).
 
-any-.111 ( d6“,- q,‘ 7,,-1 {M ‘,,- 1‘
+Proposition 5
 
-. i.,=..m.,..ﬁ.,1...,.“ 1W n, ,. wpq w F1
+Fie X1,X2,...,Xn variabile aleatoare independente reparti-
+Tl
 
-“mm... 5
-p‘. Mm ‘xn Wm“. mm “Wm. m»
-D... Bum“. m mm“ , E (m 1, Mm x Z )3 X,
-m. .1 mum "Mum sum '-
+zate Bernoulli cu parametrul p G (0,1). Atuncvl X : 2X1-
+izl
+
+este 0 variabilii repartizatd’ B(n,p).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-a
-Snlu-Xu, (I) Denim: an uuncln nun luﬂmnh nnmu an: In
-n- mm, ... mm.“ MM, m Z m g Z g 2
+Ewemplu. Se aruncé un zar péné apare de trei ori fa'ga cu numérul
+6.
+(a) Care este probabilitatea ca $5 ﬁe necesare exact douézeci de
+
+aruncéri ale zarului?
+(b) Daca zarul este aruncat de douézeci de ori, care este numérul
+
+mediu de aparitii ale fetei §ase?
+Solugﬁz'e: (a) Douézeci de aruncéri sunt suﬁciente numai dacé in
+primele nouésprezece aruncéri fata 6 apare de exact doué ori §i
+mai apare odaté 1a ultima aruncare. Aceste doué evenimente
+sunt independente, deci probabilitatea ceruté (a intersectiei lor)
+este 2 17
+
+(19> (1) <5) -1% 0.035682
+2 6 6 6
+
+(b) Variabila X care numéré de cite ori apare fata §ase in douézeci
+de aruncéri este repartizaté B(20, 1/6). E[X] : 20 - é : € E
+3.333 ‘a
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-hm,» u mm: mam: mm; M.‘ Rm mm
-Mm. mm". “MM mm: ,. m1 m... M...“
-a“ 1. x h u, lvui .. m“: mi .mn l. M “m Mam
-m. n mam: n. I, a...‘ amp u u < l g =1‘ m M
-nnmlxd m. u m“ Du m un .u‘ Mum: mum: u mm
-M ‘m. maummluw a". m. (um: mam
-5.1M‘, F: nmmmmm mum! 1“, X,“ n Hm,
-‘MM. x a. mm; n- ,..=.= d. Mm“... "mm m
-u.“ m.) mm]. mum-- Ulnar-(c ,mmmm c. ,-
-h‘. m .= ‘m Mm .\.. ... w, m.
-u 1 " 5 1 us
-“XV”: (a) (5] (a) Z m‘
+Eccemplu. O varianté echivalenté a jocului numit Roata norocu-
+lui este urmétoarea: un jucétor pariazé pe unul dintre numerele
+de 1a 1 1a 6, apoi se aruncﬁ trei zaruri §i dacé apare numérul
+ales de jucétor de k ori, acesta c€1§tig5 16$ (1 g k g 3), iar dacéi
+numéirul ales nu apare pe nici un zar, atunci pierde 1$. Jocul
+oferé §anse corecte jucétorului? Care este cé§tigu1 mediu?
+Soluﬁz'e: Fie X cé§tigu1jucétorului, valorile lui X pot ﬁ {—l, 1, 2, 3}.
+Variabila X are functia de masé de probabilitate similaré cu
+aceea aunei variabile binomiale. Deoarece probabilitatea ca pe
+fa'ga unui zar sé aparé numérul ales este 1/6, avem
+
+PM I _1}: (3) (1)0 (5)1 i
+
+O 6 6 216
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-J l ‘ E I 75
-1101;11:0(5) (a) ‘m-
-: l 1 5 ‘ 15
-P"‘"”(=)(i) (a) ‘m-
-1 1 - 1 1 1
-m"): (1) (a) (i) : m-
-111111 11.1 11.11 1...- 111.11. 111.11 1... 1111111 1.11..“ 1111111.’
-1.1.1.1.. 1. 1 ,...¢. 1 11.11.. .1. 111/111 > 1/1‘ 1111.511
-....1.1..1.
-111 15 11 1 11
-EIXIZFU ﬁ+l m+l ﬁ+3 ﬁ:,ﬁ‘
+3 1 1 5 2 75
+1 6 6 216
+3 1 2 5 1 15
+2 6 6 216
+3 1 3 5 ° 1
+3 6 6 216
+Jocul nu oferé §anse corecte celui care 11 joacé deoarece proba-
+bilitatea de a pierde a acestuia este 125/216 > 1/2, iar cé§tigul
+mediu este
+125 75 15 1 17
+EX:—1-i 1-i if 3.i:_i
+[ 1 ( ) 216 + 216 + 216 + 216 216‘.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
-. s: (0.1mm. mm m “mm. mm n .m mu...“
-mm- A [n rm Z , Z (u‘1)]ilnuﬂizllmluylvmlnl
-Vuihlliun “m: Mm a. "M" ,mﬂm. .l.
-Bilmnlniuhn m: h =1. mmmmu. A .- mm.
-a m. “Mum. mm“ I“ “mum- ,,
+o S5 considerém acum un experiment aleator §i un eveniment
+aleator A (cu P(A) I p G (O, 1)) asociat acestui experiment.
+Variabilé care noteazé numérul de repetéri independente ale
+experimentului péné 1a realizarea evenimentului A se spune
+cé este repartizaté geometric cu parametrul p.
 
-. mm; n "um-h. ll m; mhl .1. mm". (m. .Zm.
-lunmncl] um
+o Tabloul de repartitie a1 unei astfel de variabile (vezi schema
+geometricéi) este
 
-1 1 . n .
-s .
-"1 (v nu») ,4,pr )
+G(P) : _
+P P(1—P) P(1—P)" 1
 
-. “whim”. “mm... [lam-inc! m.‘
+o Caracteristicile repartitiei geometrice sunt
 
-1 1Z1,
-EX Z Z 1 wx Z i
-l 1 P1 l ,1
+1 . 1 —
+1E[X] I 1 §1 Va'r[X] z i210.
+P P
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:20**************
-hm... s. m...’ ... m mum a... m... M .. m...
-... ........ .5. t. . a... .... m... .. m... ............ ..
-um...’
-5...... A Z“ m“... “M... .... .... I. v
-l
-A :{(1.5),(:‘:),(:|.7145.13.91“): 5
-m. X 1 ml... a. m...“ .......... m...“ mm“...
-A x .... m...“ ........... m Wm...» .. Z .,.
-1.x]:1:.,v..ix gigs!
-,, . .
-s... m...- mmd... g ................. Mm“... M...
-‘.1... .
+Ememplu. Se aruncé in mod repetat doué zaruri péné se ob'gine
+un produs egal cu 6. Care este media §i dispersia numérului de
+aruncéri?
+Soluﬁe: A :" produsul zarurilor este egal cu 6"
+4
+
+Fie X : numérul de aruncéri necesare realizérii evenimentului
+A. X este repartizaté geometric cu parametrul p : 1/9.
+
+1 1 — 8
+
+E[X] : 1 : 9, Va'r[X] : TI’ : i.
+
+P P 9
+Sunt necesare, in medie, 9 aruncéri pentru ob'ginerea unui produs
+egal cu 6. J-
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-. mama-Mm): "hmmam Mm‘ Mum“.-
-x > u M mum n ﬂu m.- a- mum»- m-
-n‘
-IlkJ:P(X:k):: kazn
-- mm: d. "wm- =1 um mm a. "mm. m.
-( n 1 n )
-annm ,r" r» .H .
-‘ T ‘T ‘ T
-in cmmnnirih n.“
-EPK] Z A v WW Z l
+o O variabilé aleatoare X este repartizati Poisson cu parametrul
+
+A > 0 dacﬁ functia sa de maséi de probabilitate este
+
+Ah
+f(k) I P{X I k} I e_Aﬁ,Vk > 0.
+o Tabloul de repartitie a1 unei astfel de variabile este
+PozssonQ): A02 A2 Ami ,
+O! 1! n!
+iar caracteristicile sunt
+E[X] : A §i Var[X] = A.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-. I.“ PM,“ "9qu; Fun-nu mm.“ mm“ mmmub.
-m" m pmduccullumﬂﬂ! “mu. mm mum hmli
-A“.
+0 in general reparti'gia Poisson modeleazé apari'gia evenimentelor
+care se produc cu frecventé scézuté, intr-un interval de timp
+ﬁxat.
 
-. Anu a. main a. win!" i1- "mmn mm um
-mm a! mm" “Mm- gum. mm 1i‘ numlnl] a.
-mm:- um“ d- n I“: "mm-v: mm mum: a-
-m.» m numllul .1. m; mm:- p. n Finn!‘ Mum
-a. up.“ y: m mm “mu n .k
+0 Astfel de exemple de aplicaigii ale repartitiei Poisson sunt:
+numérul de apeluri telefonice gresite dintr-o zi, numérul de
+particule emise de o sursé radioactivé intr-un interval de
+timp dat, numéirul de erori tipograﬁce pe o paginé, numérul
+de nasteri pe oré intr-o anumité zi etc.
 
-. u pm mm mm.“ mm- mm- u datum-l lap,
-m." K: mm n Mum a. m“ .1 P "mi-m n. m
-[mlul mm n» I: a. n mm mum) "mm- hug’
-mull Hwy) Beak n ipwxxmali m Pas-MAUI)
+o O parte dintre aplicatiile acestei repartitii se datoreazé fap-
+tului céi pentru n suﬁcient de mare si p suﬁcient de mic
+(astfel incét np s5 ﬁe o valoare rezonabilé) reparti'gia bino-
+mialé B(n,p) poate ﬁ aproximatéi cu Poisson(np).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-511ml)“ [mm mat-mum nan-"k in \nc m w m: d- 1 lu-
-m
-m c". ....,m...,,,,......=.,,.,r mm. M m“ m.“
-(h) Du cl 1mm uumm nxl I! In nilcl cal will“: \m uni’
-5mm: v- X Mm u m." ,7. m; X ..\. MM
-PM“ ,1
-(a, w Z" Zr‘? 2mm“! Us, 1,
-m m." . M. mm“ M, ..... mm m... m, ..,..
-mm
-
-m)”Zngkkhgmzkk
-
-. m n, m ., m I,
-:H m. 11;, @mmmdm
+Ewemplu. Tntr-o maternitate, na§terile au loc cu o raté de 2.1 pe
+oré.
+(a) Care este probabilitatea ca intr- oré $5 se nascé patru copii?
+(b) Dar ca intr-o anumité oré sé se nascé cel putin trei copii?
+Solugﬁz'e: Fie X numérul de na§teri pe oré, X este distribuité
+Poisson(2.l).
+ix
+(a) P{X : 4} : A45? 2 0.0992310‘ z 2.1)
+(b) Pentru a doua cerinté putem evita calculul sumei unei serii
+astfel
+2
+P{X>3}:ZP{X:k}:1-ZP{X:I¢}:
+1623 k:0
+:1—P{X:0}—P{X:1}—P{X:2}:
+A2
+:1- 6* - AKA - 56* 2 0.350368 (A z 2.1).;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-. Wm mm, M. W mm.“ m, a m m.
-n H. a. mm“. in, in. i w w, .. .. m
-.h
-x. (‘l-[1'7 [UK-."J $16.‘; [TJIVI'J J
+o Reluém contextul schemei bilei neintoarse: intr-o urné sunt
+n bile de doué culori (n1 albe §i n2 neagre) §i se extrag
+simultan k bile din urné. Se noteazé cu X numérul de bile
+albe obtinute; aceasté variabilé se spune cé este repartizaté
+hipergeometric.
 
-( . . L) .
-and! r : anl‘ Yh)
-Elx:%‘vmx\:k u g g
+o Tabloul séu de repartitie (vezi §i schema bilei neintoarse)
+este
+
+0 l j 1"
+X 1 < (ZZ) (Z2) (Z1) ($1) (Z1) (ZZZ) (Z) (ZZZ) > ,
+(Z) (Z) (Z) (Z)
+unde r = min{k, n1}.
+0 Media §i dispersia ei sunt
+E[X]:@,Var[X]:k-U-E-@
+n n — 1 n n
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-. PM , y “maul-"mm." m... mum“,
-X 11 q 1" ‘i Y m m h
-m p, w. m n h
-Mum.“ 4
-Runniﬁia “um. n “In dam! unnlhk “n 1mm m
-Mm... mum!”
-mmx :m v: ML,
+o Fie X §i Y doué variabile aleatoare discrete cu repartitiile
+P1 P2 Pn q1 q2 qm
+Deﬁnition 4
+Repartigia comunﬁ a celor douii 'uam'abz'Ze este formatii d'm
+mulﬁz'mea tripletelor
+(mi: yj: P{X I 13.; O Y Z 'Z/ij'
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-. Wm“ ,v Z m Z W Z y,,,.,....l..m,
-.. I“... m...“ I.“ .., “m mm
-II ‘
-“I“I I“.I II
-I“II--I
-Inl-—lﬂ—l
-" III-I—I
-“IIII——I“
-iwﬁfﬁr“ n .1.
+o Dacé notém cu n]- : P{X : mm Y : yj} repartitia comuné
+se poate reprezenta intr-un tablou astfel:
+X
+$1 $2 - - - mi - - -
+1/1 |--——l ql
+1/2 |--——l <12
+Y I III-I-I
+yj i--——i qj
+P1 P2 ' ' ' Pi ' ' '
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-. s. MM <1 mmumm. um“ culnx m‘ vunhﬂl Fol
-a Mm. mm: nmhaﬂiiiml a.» RM“; mm“.
-hm, (mm v) "mm F. mum (Vim X)
+o Se observé 05 probabilitéi'gile aferente celor douéi variabile pot
+ﬁ ob'ginute adunénd probabilité'gile din reparti'gia comuné pe
+linii (pentru Y) respectiv pe coloane (pentru X):
 
-Zn.- ’ EN] n En.- 71w‘
+21%;‘ I qj,Vj §i 212]‘ I PmV i-
+i j
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-mm. s. m M n"... v, m cm.“ m: m. nun.
-m: W. n m. “a. mi ‘a u, m. mun. m, m. m m,
-“In n n m m. u“. m. uni .5 mm- n b|ll m. .5
-4. i dnui m: s: Mm: m x numilul a. M. m Mm.
-h m v Mm a! an! M... mm.
+Ememplu. Se dau douéi urne: U1 care contine douéi bile albe,
+doué negre §i trei bile ro§ii §i U2 care contine trei bile albe, doué
+negre §i o bilé rogie. Din prima urné se extrage o bilé care se
+introduce in cea de-a doua urnéi, iar apoi se extrage o biléi din cea
+de a doua urné. Se noteazé cu X numérul de bile albe obtinute
+§i cu Y numérul de bile negre obtinute.
 
-m s: .. mm. "my; mm . "mm-m X , y
-HI] s: m MM.“ rennin: Ii :yni mm mm,“ x > y
-5m“ unnumzaumnnu-X u y "magnum. m.
-“m. M "m.- X~ 1 < 1 M... m A, mm“! “-
-.i m m.‘ ... “w. m a. mm“; . i m: m.‘
-m Mm“ 5, m c, mm“ m i m1: mm! m. m,»
-u Z ﬁx
+(a) Si se determine repartitia comunéi a variabilelor X §i Y.
+(b) Si se determine repartitia §i apoi media variabilei X + Y.
+Solutz'e: Observém cé variabilele X §i Y sunt dependente: sunt
+legate prin relatia X + Y g 2. Notéim cu Ai evenimentul "a
+i-a bilé extrasé este albé", cu Bi evenimentul "a i-a bilé extrasé
+este neagré" §i cu CZ- evenimentul "a i-a bilé extrasé este ro§ie"
+(i : W).
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
-x
-n 1 =
-\l 1w
-Y \nnul ’
-\nuul 1
+X
+O 1 2
+2|--| 25/22
+Y |-u| 2
+2l-uul 2
+? ? 8/49
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:30**************
-- Clunuinki .1. "fa-hum gum.“ n in)‘ u‘
-llmhyumms
+0 Caracteristici ale variabilelor aleatoare: 1.1 (a), 1.2,
+1.3, 1.4 (b), 1.6, 1.7, 1.15.
 
-. Iluulniﬂii .umm remnlcubilu: n 1‘ nu‘ us‘ 1w
-m. m!‘ ml m; m5. w;
+0 Repartitii discrete remarcabile: 11.1, 11.3, 11.5, 11.4,
+11.7, 111.1, 111.2, 111.3, 111.5, 1V.5.
 
-. Iluzun'l: 1.5‘ LB‘ m‘ n s‘ m l. IVE. v 1
+. Rezervé: 1.5, 1.8, 11.2, 11.5, 111.4, 1v.3, v.1.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-smgn
+Sfér§it
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-u Dlhnnmii mm. i ﬂaw"... Each’: am“ mam-l.
-mm. mm.
+1.1. Determinati media §i dispersia ﬁecéreia dintre urmétoarele
+variabile aleatoare
 
-71 n 1 z 71 1 1
+—1 0 1 2 —1 1 2
 
-(m (1 . = 5W1 (. 1.)
+(a)X:(113 5)(b)Y:<1 24>
 
-i 2 E fa i i i
-1.1 u mnudl miﬂm: m mmm... n. a in“. “.m 1.
-n mm 2/1. mm- l mm u mm mi m x "mm
-mm" m. Mm: numllul m .1- innit] mm“.- .l.
-mm s: _ dnlrmmu “mm, mm ll mum "mm
-x
-H m. x dvlnenp m‘.- numlnﬂ a. mm" n. “m, g,
-.1. mm la mm". a. m. ma a “i mm. ‘an-mm‘.
-"vamp: v m.‘ “mm, mm.- x
+Z Z E E 5 § 5
+1.2. O monedé falsiﬁcaté are probabilitatea de a apare stema 1a
+o aruncare 2/3. Moneda se aruncé de patru ori. Fie X variabila
+aleatoare care noteazé numérul maxim de aparitii consecutive ale
+stemei. S51 se determine reparti'gia, media §i dispersia variabilei
+X.
+1.3. Fie X difereniga dintre numérul de apari'gii ale stemei §i
+ale banului 1a aruncarea de trei ori a unei monede. Determinati
+repartitia §i media variabilei aleatoare X.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-1.4
+1.4.
 
-(i) s. imnd m. n! i .. mun m X numllu] u- mn-
-m-m s: In “mm-1.1mm“manna-“mum
-“1.1.. x
+(a) Se aruncé un zar §i se noteazé cu X numérul de puncte
+obtinute. Si se determine repartitia, media §i dispersia vari-
+abilei X.
 
-(n) =- mc: 4m n...“ a". ..~. mm 1- 4.“... mm
-m1”. an“: mm n.‘ =1. mun-ma
+(b) Se aruncé doué zaruri. Care este media §i dispersia sumei
+celor doué zaruri? Dar ale produsului?
 
-n u,x m .. um: 4. m: m. n. x. , x, “mm-l.
+1.5. Un zar se aruncé de doué ori. Fie X1 §i X2 rezultatele
 
-"an." Sudnﬁnnl
+obtinute. Se deﬁnesc
 
-x :min(XLX1)||Y:max(X1AX1‘X1 m
-sl I. nllunmu “mm mum,- .1 X v h] y
+Si se determine repartitiile variabilelor a) X §i b) Y.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-u s- “... “i m. m“ mm. a nu: m: I. m my;
-can Aaldmncnlﬁmu m» mum n mu a!“ luntmlahlll
-dhnnm m;- Dmllximiumllllxh'ill um! n .. mixuduzl
-m m du i dun. GDP! cm n “my: n m1! m m du i dﬂli
-m: i .. immdnn m m a. i ‘.m‘ m .n-i- .. mm- D m
-m» mm m: s: n “mm-u mm 9 mum nnminﬂm
-a. m. =1». u“...
+1.6. Se dau trei urne. Prima contine 0 bilé albé §i una neagréi,
+cea de-a doua contine doué bile albe §i §ase negre iar a treia o bil'Ei
+albé §i trei negre. Din prima urné se extrage o bilé §i se introduce
+in cea de-a doua, dupé care se extrage o bilé din cea de-a doua
+urnéi §i se introduce in cea de-a treia; in sfér§it se extrage o bilé
+din ultima urnéi. Séi se determine media §i dispersia numéirului
+de bile albe extrase.
 
-n c1 “mu ‘mu. "Pu in mm, an“ mm. m .m .
-“inn m ﬂan m m‘ m:- PM): u mi mp" h hm.- s:
-.. nuzrminl mm". mlnniz Mm.“ n m. Mm mm n-
-hmlhu (mm-mm n un nun um“ I: ﬁn m m- m.)
+I.7. O anumité familie regalé are copii atéta vreme cét nu a
+apérut un béiat sau sunt mai putin de trei copii in familie. S51
+se determine media §i dispersia numérului de fete intr-o astfel de
+familie. (Probabilitatea ca un nou néiscut sé ﬁe fatéi este 1/2.)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-n m m.“ .. um: m: KM in“. “m 4! pm m
-I“ m: m.“ hmul an pm. an [mm m.- m. mm) m’
-Illminih mm n amp-"ii numilulni n imndn m.“
+LS. O monedéi se aruncéi péné cénd apare stema de patru ori
+sau pénéi apare banul de patru ori (oricare apare mai intéi). De-
+termina'gi media §i dispersia numérului de aruncéri necesare.
+I.9. Se dau trei urne. Prima contine doué bile albe si doué
+negre, cea de-a doua contine cinci bile albe §i trei negre, iar a
+treia con'gine trei bile albe §i trei negre. Se extrage céte o biléi
+din ﬁecare urné. Se cer reparti'gia, media §i dispersia numérului
+de bile negre obtinute.
 
-m sq m m. unm mum.“ mam-um I. m:
-M...‘ m m um men. Um n11! .m u m, w.‘ a. .
-Ami cnlhnu “- m in’: n m, w". s- mm: cm u m1:
-a". Inn]! m: s! u. "um-hi‘ m.‘ n dinuia Mm“.
-4- u. w- ubhnuk
-
-un'. cam' M... mnmm lun\ mm.“ a.“ “Mm 1.
-Em, ,mm, “mum, 4. m la 5 nun an, 4m. 1mm, 1;‘
-mm “mm :ﬁlhgl m can! m “mm m, will Mil
-mumm- 1 m", [nmﬂarinnmlulll ivulzllllgﬂuzuldlnhl
-u cu lunlmlul z n m m, mm m x "mm u-mm
-me Mu: .1. [an mum...‘ 1 m. dniunu nnmnmah
-"mm u mm m. x
+I.10*. Cinci numere distincte sunt distribuite aleator uniform 1a
+cinci jucétori numerotati de 1a 1 1a 5. Cénd doi dintre jucétori i§i
+comparé numerele, c€1§tig5i cel care are numérul mai mare. Mai
+intéi jucétorii 1 §i 2 i§i comparé numerele, apoi cégtigétorul dintre
+ei cu jucétorul 3 §i a§a mai departe. Fie X variabila aleatoare
+care numéré de céte ori jucétorul 1 este cégtigétor. Determinati
+repartitia §i media lui X.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-I n 1m m. mu d- m»- Mn- 4.1- mm, P, ll a, m...
-m m. clﬂii min.“ an“: “mi F, clllill an" m, 1m
-FmdmlL I“ mum“ 1/: lem m x numilul 4. "m,
-1m“ u p, m: 1. mum mum I1 w v Mam 4- m“.
-nniana- F, S:unnuminnuarmﬂnimmnk "mum
-x n v
+1.11. intr-un meci de tenis dintre doi jucétori P1 §i P2, invinge
+cel care cégtigé primul doué seturi. P1 cé§tigé ﬁecare set, inde-
+pendent, cu probabilitatea 1/3. Notéim cu X numérul de seturi
+jucate de P1 péné 1a sférgitul meciului §i cu Y numérul de seturi
+cé§tigate de P2. Si se determine repartitiile §imedii1e variabilelor
+X §i Y.
 
-1.12 thahllnaln m a “m. mm. h .mn uni mm
-a. m- v: mm‘ mu inmclﬁ du “- an. s. mm: cu
-X numlxul a. mm" =1. hum i m y mm mm a.
-mam“ mum"- i1. mm- s: _ mum- "yum-\- 5|
-mm. "madam x l. v
+1.12. Probabilitatea de a apérea stema 1a aruncarea unei mon-
+ezi este 1/3. Moneda este aruncatﬁ de trei ori. Se noteazﬁ cu
+X numéirul de aparitii ale banului §i cu Y numérul maxim de
+aparitii consecutive ale stemei. SE se determine repartitiile §i
+mediile variabilelor X §i Y.
 
-m u“ m .m mm n. ‘.- m x m. "m"; m.
-mm: a. mu m1 w..- nn Mn m m v mun: u cm
-m in... m. m.» pm s: .. mum-n. "pi-mm. .. mm.
-nnahﬂmhl x n v
+1.13. Un zar este aruncat de trei ori. X este variabila care
+noteazé de céte ori apare un numér par, iar Y noteazé de céte
+ori apare un numér prim. Si se determine repartitiile §i mediile
+variabilelor X §i Y.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-m hm .7 ‘(mi .m 5 m1! m n | M. m» sq “m. m
-m: w hdl l. .l Mum-n. m n m: a! mm up“: AW. ..
-m- “my .1 m1: n x numllul 4. m1: m p v “mm: 4.
-hll- mi m.“ we "mm. "ﬂimklw x l. v
+1.14. lntr-o urnéi sunt 5 bile albe §i 4 bile ro§ii. Se extrage din
+urnéi o bilé §i se inlocuie§te cu o biléi de culoare opusé. Apoi se
+mai extrage o bilé. Fie X numérul de bile albe §i Y numérul de
+bile r0§ii extrase. Aflati repartitiile variabilelor X §i Y.
 
-1 u 1M m; m. = M. M... , 5 u- "m s- um. a
-Mm, may. .. mmmm mm. .m m!“ m.
-M h m: m m: mm m a nu: "m, n. M ... "m.
-m Inlumlgh (u m: hzlu .1“ mu“. my‘. Ami u mm
-m a “.1: m. x mm n m. a.“ i ,, Mm n. n...
-"m mu. Aﬂih “mm. u mm. vinahlnhr x n Y
-m s. a“ m: m. W 1 m. in“ u 1 m. mg".
-m’ mm n m m p = h!!! w. s- w“ an W‘ m:
-.W. .m mun-“1.. a! 1‘ . “m.- w m1: m Wm um, mm.
-.. um‘. a m1: m a m. m: FY. x mm a. M! in.
-.am... 1,. m. m: I. v ml"! u W My! din . m.
-m: “mm, "mm. ., mm. ., "mum x ., Y
+1.15. lntr-o urné sunt 3 bile negre §i 5 bile verzi. Se extrage 0
+biléi din urnéi §i se procedeazé astfel: dacéi bila este neagréi ea este
+pusé la loc in urné impreunéi cu o bilé verde, iar dacéi este verde
+se inlocuiegte cu douéi bile de culoare neagréi. Apoi se extrage
+incé o bilé. Fie X numérul de bile negre §i Y numérul de bile
+verzi extrase. Aflati repartitiile §i mediile variabilelor X §i Y.
+L16. Se dau douéi urne: una conigine 2 bile albe §i 2 bile negre,
+iar cealaltéi o bilé albé §i 2 bile negre. Se aruncé un zar, dacéi
+apare un multiplu de 3, se extrage o biléi din prima urné, altfel,
+se extrage o bilé din a doua urné. Fie X numérul de bile albe
+rémase in prima urné §i Y numérul de bile negre din a doua
+urné. Determinati repartitiile §i mediile §i variabilelor X §i Y.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-1.11 m. X n leuhxll mm... cm m.“ mu l. m...-
-(qu Z u ‘waqu Z ,= > n, cmma\1mm'n||nip"Z
-m "mm T“ (ml-hm. “mp-m...“ a! “mm
-m)
-m Ath c: anix Z Y] ¢ vmx v] mm ¢
-:va‘
-m p. x , y an“: mm Mm .na-mm. m
-mm, m... “mi Am.“ n u [(x Z m Z mm
-mu m x l. v in lull: Mm m“
+1.17. Fie X o variabilé aleatoare care admite medie §i dispersie
+(E[X] : y §i Var[X] : a2 > 0). Calculati media §i disper-
+sia variabilei U (aceasta este operatic, numité de standard-
+izare). U
+1.18. Arétati cé Var[X + Y] + Va'r[X — Y] : 2Va'r[X] +
+2Var[Y].
+1.19. Fie X §i Y doué variabile aleatoare independente cu
+aceeagi medie §i dispersie. Aréta'gi cé M [(X — Y)2] : 2 Var[X].
+1.20. Dacé X §i Y au aceea§i dispersie, atunci
 
-Lu): Z nu: vn Z LIX + v w n
+E[(X + Y)(X — Y)] : E[X + Y]E[X — Y].
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:39**************
-u I s: alumni m: mm.“ a. ;iph an u. nu an n m».
+II.1. Se aruncé doué monede de §apte ori. De céte ori se obtine
 
-h m.- n...“ p! “1mm mnnldllﬂ
+in medie stema pe améndoué monedele?
 
-n z u lnlllglnlzniimdlynd-M M, (n zupmhihlhﬁh n I]
+II.2. O sursé genereazﬁ independent biti (O cu probabilitate 0.6).
 
-m c... m pmhahﬂunn c: hum "mm ﬂu llmm \in u
-m: an. n. 1 .1 nun n “I
+(a) Care este probabilitatea ca intr-o secvenigé de §apte bi'gi séi
+aparé doi de 1 §i cinci de O?
 
-1h) em m.‘ numlrd mumu a. M, um cu n hm: "mm
-n. (m. mi"
+(b) Care este numérul mediu de biti egali cu 0 intr-o secventé
+de cinci bi'gi?
 
-m Li mum lucniuhu xxx mm,- ﬂu a (mm: In
+11.3. La inceputul secolului XIX incercarea de a contacta pe
 
-an... um. um“ m u mwhailiﬂ! .1. mm- ‘=1: m. n 15
+cineva prin telefon avea o probabiliate de sucees egaléi cu 0.75.
 
-Cir: n Mam mm u mm- am mama-=- maxim
+Care era numérul mediu de succese din douésprezece incercéri
 
-a. a (mama p. mm min ‘MW
+de a contacta pe cineva prin telefon?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-“.4 m. mm", llllﬁnl m" ESP (pm-m" “nun-mu],
-m mm m mu unnlml n Innudl m ixunnﬂ du m an
-I: . .. m. .= [bin-cl m m... "mm-1! sin. a.“ “\- m.
-lilDunlun I: dnvldclc i n mm Ci" .m mmnm-m i
-n an m mm. ,1 wan hm a. m a“: m. a. a a.“ ssm
-m s. m", m. [up M, .m man 4. In‘, n. m‘ m
-mm." a“ um mm! m.“ u mm ﬂMm-m 1., "I.
-m mil-1.1
+11.4. Un individ sustine cé are ESP (perceptii extra-senzoriale);
+este testat in felul urméitor: o monedé este aruncatéi de zece ori
+§i i se cere s5 ghiceascé in avans rezultatele. Sapte din cele zece
+réspunsuri se dovedesc a ﬁ corecte. Care este probabilitatea de a
+ﬁ dat un réispuns cel putin 1a fel de bun dacéi nu ar ﬁ avut ESP?
+II.5. Se extrag zece cér'gi dintr-un pachet de cér'gi de joc, cu
+intoarcere. Care este numéirul mediu de treﬂe obtinute in cele
+zece extrageri?
 
-n.“ v! nu cum! a. cmunillhl u mum hm m mud mum:
-.1 Inseam-m (n m.‘ m mmm.“ n q 5m "mm.-
-m umcm. um mu m,- 51 mIDux-i “mm, an mm
-n 1 mmmm
+II.6. Pe un canal de comunicatie se transmit biti in mod aleator
+§i independent (0 apare cu probabilitate 0.4). Sunt receptionate
+opt perechi. Care este media §i dispersia numérului de perechi
+0 — 1 receptionate?
 
-"1 s- "m: m: um a. m an m (m an m m,-
-.w. “n Fwdnl W1
+II.7. Se aruncé doué zaruri de opt ori. De céte ori in medie
+apare un produs par?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-nu an. m- 11an mm d- a4 mm“ i an“ mm
-m." “mm. nnui ma... mai M nun an“ 11 nu a m.
-mm W
+III.1. Care este numéirul mediu de de aruncéri a doué zaruri
+necesar obtinerii unui produs mai mic strict deceit 7? Dar a unei
+sume pare?
 
-um s- um um mm Valhﬂ (m Mm“! a.“ m.
-Mm Mm 4. “my” .m-ﬂ mm.“ m mun
+III.2. Se extrag cérti dintr-un pachet (cu intoarcere). Care este
+numérul mediu de extrageri necesar obtinerii unei treﬁe?
 
-nu 51. dm m" trinlmlli m mu m, <5 a. mm‘,-
-“m ‘Km-Mum» Bu- .ummn m: mun-haw.“
-mun c." ulu numllul mldm du m, mama
+III.3. 5% din bitii transmigi de-a lungul unei céi de comunicatie
+sunt receptionati eronat. Bitii se transmit péné 1a aparitia primei
+erori. Care este numéirul mediu de biti transmi§i?
 
-um 5! mnxl 5M: n m‘. mm.“ mm n. aims-10;.
-:n minimum pm cm I! m“ n mm nix! M m cm.
-a." m! Mm; m-iin d- ‘mum mm. nilixlxli mm.
-mm.“
+III.4. Se extrage céte o carte dintr-un pachet de cérti de joc,
+cu intoarcere, péné cénd se obtine o ﬁguré care nu este caro.
+Care este numérul mediu de extrageri necesare realizérii acestui
+eveniment?
 
-m.» s- ..m=¢m..m.¢.mi mun. ma air-"\"mm
-mm ﬁ. amndn m: mm “an nun! am" m. m‘ “my
-um 1m Mn pnm= an Mam mm,“ u mm" m“.-
-Mm m, “m mm. gm Mm
+III.5. Se aruncé douéi zaruri de mai multe ori. Care este numérul
+mediu de aruncéri péné cénd exact unul dintre cele doué zaruri
+este un numér prim? Dar numérul mediu de aruncéri necesare
+obtinerii unei sume divizibile prin cinci?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-lVJ. 1m. m1. 1 u a numllu] min .1. mim- a! p. a
-“mm: m u1 cm "n mmhm-i n m- n n mm
-m1. 1 ‘a a
+IV.1. Tntre orele 7 si 8 numarul mediu de accidente de pe o
+autostrada este 0.7. Care este probabilitatea ca intr-o zi intre
+orele 7 si 8
 
-a] I: m mm: ﬂu mm Inn acclﬂunlu’
+a) sa se produca cel putin trei accidente?
 
-m I: I. mm: um .m “mun
-IVJ. u (mm- dn mum lxutm mm: pm" In m."
-“div-lamb,“ ml a inmnal "mu-A a. m." mm
-m...‘ ,. n um mmm Paul-m cu m,- x Z 15 5| In
-ﬁlm... wﬂpwﬂia in!“ In m‘
+b) sa se produca exact un accident?
+IV.2. O companie de transport are trei masini pe care 1e inchiri-
+aza diversilor clienti cate o zi intreaga. Numarul de cereri pentru
+masini pe zi este distribuit Poisson cu media A : 1.5. s5 se
+calculeze proportia zilelor in care
 
-m m5 a mum: m ml mm
+(a) nici o masina nu este ceruta;
 
-m .i. “ma. .= - "in. m." a. mm.
-1m. mwmn =: Mm dn mun mm" mm: a
-nummni PD...“ m n mid]: a. z m" D! mm; .= .. d.’
-mm mmmnm cl Du a mm nu n Mn m PM“: l
-n-mi \inﬂlnﬂu-
+(b) este nevoie sa se refuze cereri de inchiriere.
+IV.3. Presupunand ca numarul de erori tipograﬁce urmeaza o
+distributie Poisson cu o medie de 3 erori pe pagina, sa se de-
+termine probabilitatea ca pe o pagina data sa avem cel putin 4
+greseli tipograﬁce.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
-w‘. pun-mm :l Mum a. mm“ 9| .m mm.‘
-mm: n nuanmu hm. m 1mm 1,,- mm u I. my
-mm mmmm n Mm in“; a! m. m.‘ .: ﬂuiul
-m muh z Wm.
+IVA. Presupunand ca numarul de aterizari pe un aeroport
+urmeaza o repartitie Poisson cu media de 3 pe minut, sa se deter-
+mine probabilitatea ca intr-un interval de un minut sa aterizeze
+cel mult 2 avioane.
 
-mu. "mm n. m." pm... .m “mu mm: n m.’
-mum lelnn cu u mama du u In Pumnmh u I. mm“
-mahhﬂitnu a! . m m Pllhn z m." m.“ mum!
+IV.5. Numarul de cereri pentru un server web urmeaza o dis-
+tributie Poisson cu o medie de 4 cereri pe minut, sa se determine
+probabilitatea de a avea cel putin 3 cereri intr-un minut.
 
-w s Numilul d- ingulin 4- "in y: m u mm- u um
-a. “15m. “mu: n Mum-pg...” m. mam a P! .. c"-
-.n. mum»- [mm “mu: .1 qnmn n a.“ ‘.1 m»
-n aim-.1
+IV.6. Numarul de asigurari de viata pe care 1e vinde un agent
+de asigurari urmeaza o distributie Poisson cu media 3 pe zi. Care
+este probabilitatea ca intr-o anumita zi agentul sa Vanda cel mult
+o asigurare?
 
-w 1 Hammad: mm. .1. in: mm.“- 1. Pilﬂul Cuﬂnm
-ulmnu! n dim-mum v0...» cu mil s v.1 an s: m dmlmmu
-mmmm n MM .m.“ u a .l m“...- m1 mu“ m:
-mm du 5190M):
+IV.7. Numarul de expozi'gii de arta organizate 1e Palatul Culturii
+urmeaza o distributie Poisson cu media 5 pe an. s5 se determine
+probabilitatea ca intr-o anumit an sa se organizeze cel mult doua
+astfel de expozitii.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:44**************
-w.“ Pl-x n mam]: Mm.“WNW-mummml
-xiv Wu‘,mmmmum.sz.) Mm.
-alum I I“, ‘ Ii “my ml.“ we! mamd’
-W3‘. Fux n mm: Mm.“puimpmmmwmm
-x mm.“
-
-purl-"Mia. H)
-(Paw-‘i duvuhifn m m ‘mm. cu'u'yllﬂ v1 mu m
-ww- FM “WNW-“mmmmx mm
-mm
+IV.8*. Fie X o variabilé aleatoare repartizatéi Poisson cu parametrul
+A € N*. Studia'gi monotonia functiei z' »—> P{X : 2'}. Pentru ce
+valoare a lui 'L' isi atinge aceastéi func'gie maximul?
+IV.9*. Fie X o variabilé aleatoare repartizaté Poisson cu parametrul
+A. Arétati c5
+P{X este par}: 1(eA + ﬁx)
+2 .
+(Folosiigi dezvoltarea in serie Taylor, convergenté pe toaté axa
+k:
+V a:
+reala, eI : Z E.)
+k>0
+IV.10*. Fie X o variabilé Poisson cu parametrul A. Calcula'gi
+E[X!].
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:45**************
-v 1. sum-mm n x n v “mammmM-mm
-v
-J 1 ‘
-x \mlilml
-= WEI-ml
-mum.“ uyampu- .Mm. .l. “mu-m x , v
-v2 Dmmlldlllilimmlldlh-nn munmmhmpu
-m 1 an: in" mm i n m: m.‘ hand h pm mm“.
-var v n animus»: m Mm 4. mm.‘ =1. m... m mu
-mum-1 Dim-mini“ “mm. mm: :cnhux m: mam“
+V.1. Si presupunem cé X §i Y au urmétoarea reparti'gie comuné
+Y
+—3 2 4
+X 1 III-l
+3 l-I-I
+Determinati repartitiile individuale ale variabilelor X §i Y.
+V.2. O monedé este aruncaté de trei ori. Fie X o variabilé egalé
+cu 1 dacé apare stema §i 0 dacé apare banul 1a prima aruncare,
+iar Y o variabiléi egaléi cu numéirul de apari'gii ale stemei in toate
+aruncérile. Determina'gi repartitia comuné acelor doué variabile.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:46**************
-v s. m x n leuhlll “mm cu mam"- mnnhmhu n
-y Z x’
+V.3. Fie X o variabilé aleatoare cu urmétoarea distribu'gie §i
+Y z X 2
+< _2 -1 1 2 >
 
-J 7, 1 z
+1 1 1 3 .
 
-( . 1 . 1 j
-
-i i i i
-Mum.» “mm 1“- v , "pi-m.‘ mmunl i “\m M:
-mam].
-v 4. 1.1M m: in.“ m. w. mun. a“. m1. m. S! “m.-
-m» umi n m1: {l I. Mucmulilcunhllldl mm mm Ayn:
-.. um. chl n m s. whiz: m x mm .1. m- mi I.
-|:n v “mam u mu w- mn- s: n dltlnnm: “yum-i
-mm: a viniﬂllnr x n y
+Z g Z é
+Determinati reparti'gia lui Y §i repartitia comuné a celor douéi
+variabile.
+VA. intr-o urnéi sunt trei bile ro§ii §i cinci bile negre. Se extrage
+din urnéi o bilé §i se inlocuiegte cu o bilé de culoare diferitéi. Apoi
+se extrage incéi o bilé. Se noteazé cu X numérul de bile ro§ii §i
+cu Y numérul de bile negre extrase. S5 se determine repartitia
+comuné a variabilelor X §i Y.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-IE s-n-xi-‘n P‘! N nunxhlJmnunmnn
-anw m.“ 5mm m:
+@ Bertsekas, D. P., J. N. Tsitsiklis, Introduction to
+Probability, Athena Scietiﬁc, 2002.
 
-IE Gmdml‘ H. sumo: Pmmxlw 5min“: v-du‘ N“
-me, m1
+E Gordon, H., Discrete Probability, Springer Verlag, New
+York, 1997.
 
-|3 Lap-(mm, s, um m Pmbhrm u] thuhkty
-thaum‘. mum Slnll‘ mums,“ was
+ﬁ Lipschutz, S., Theory and Problems of Probability,
+Scahaum’s Outline Series, McGraW-Hill, 1965.
 
-IE Hall‘ s M ‘ A mm Cum." umMlIhNIPIInhcqull.
-5m mm m!
+[i Ross, S. M., A First Course in Probability , Prentice Hall,
+5th edition, 1998.
 
-IE 5mm. c 1‘ A cuumm memy and swamp.
-mum, p...‘ mm
+@ Stone, C. J., A Course in Probability and Statistics,
+Duxbury Press, 1996.
 
 ***************Ending Page***************
 

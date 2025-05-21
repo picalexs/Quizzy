@@ -1,14 +1,14 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Chapter 3: Processes
-—
+Cha ter 3' I'OCGSS
+p . P es
+Operating System Concepts - 10th Edition Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-~
-MW Chapter 3: Processes
+wt‘ Chapter 3: Processes
 I Process Concept
 I Process Scheduling
 I Operations on Processes
@@ -17,27 +17,28 @@ I IPC in Shared-Memory Systems
 I IPC in Message-Passing Systems
 I Examples of IPC Systems
 I Communication in Client-Server Systems
-55.55.55 5,..5 55555555455 55.555 55 555555555 55555.55 5555:5555
+I Operating System Concepts -10th Edition 3.2 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-r‘
-WW Ob jectlves
+4m???” I I
+gay’ Objectlves
 
-I Identify the separate components of a process and illusiraie
+I Identify the separate components of a process and illustrate
 how they are represented and scheduled in an operating
-system,
+system.
 
 I Describe how processes are created and terminated in an
 operating system, including developing programs using the
 appropriate system calls that perform these operations.
 
-I Describe and oontrast interprooess communication using
+I Describe and contrast interprocess communication using
 shared memory and message passing.
 
-I Design programs that uses pipes and POSIX snared memory
+I Design programs that uses pipes and POSIX shared memory
 to perform interprocess communication.
 
 I Describe client-server communication using sockets and
@@ -46,1004 +47,1046 @@ remote procedure calls.
 I Design kernel modules that interact with the Linux operating
 system.
 
-amt“, 5m... Cum,“ . w mm 1 a sutwscmu. Gllvln “a my». emu
+Operating System Concepts — 10th Edition 3.3 Silberschatz, Galvin and Gagne ©2012
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-t‘
-MW Process Concept
+My)’ Process Concept
 I An operating system executes a variety of programs that run as a
 process.
 I Process — a program in execution; process execution must
 progress in sequential fashion
 I Multiple parts
-l The program code, also called text section
+' The program code, also called text section
 ' Current activity including program counter, processor
 registers
 ' Stack containing temporary data
-> Function parameters, relum addresses, local variables
+> Function parameters, return addresses, local variables
 ' Data section containing global variables
-' Heap containing memory dynamically allocated during run time
-BMWSMMWWWM u Slum.“MMWJW
+. Heap containing memory dynamically allocated during run time
+Operating System Concepts — 10th Edition 3.4 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-t‘
-MW Process Concept (Cont.)
-I Program is passive entity stored on disk (executable ﬁle);
+My)’ Process Concept (Cont.)
+I Program is passive entity stored on disk (executable file);
 process is active
-' Program beoomes process when executable ﬁle loaded into
+' Program becomes process when executable file loaded into
 memory
-I Execution ol program slarled via GUI mouse clicks, command
-line enlry of ils name, e10
+I Execution of program started via GUI mouse clicks, command
+line entry of its name, etc
 I One program can be several processes
-' Consider multiple users executing lhe same program
-Wm", 5m... Camp‘. , w mm 1 s Slllxucmm 6-w- m my». emu
+' Consider multiple users executing the same program
+Operating System Concepts — 10th Edition 3.5 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-“pf? Process in Memory
+‘63;? Process |n Memory
+m3 "
 max
 0
+Operating System Concepts — 10th Edition 3.6 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-‘3’ i Memory Layout of a C Program
-N h MM M“
-stack 1n: x;
-__[__
-mu - a; 1 < 5; 1w
-low mmm n-
+Q??? Memory Layout of a C Program
+_ #include <stdio.h>
+hlgh #include <stdlib.h>
+argc,agrv
+memory
+stack int x,-
+_ _ I _ _ int y = 15;
+imt main(int argc, char *argv[])
+_ _ I _ _ [int *values;
+heap int i;
+uninitialized | |
+data values = (int *)malloc(sizeof(int)*5);
+initialized for(i = 0; i < 5; i++)
+data values[i] = i;
+|OW tEXt return O;
+memory }
+Operating System Concepts — 10th Edition 3.7 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-A
-MW Process State
+‘new Process State
 I As a process executes, it changes state
 
-i New: The process is being created
+' New: The process is being created
 
 ' Running: Instructions are being executed
 
-i Waiting: The process is waiting for some event to occur
+' Waiting: The process is waiting for some event to occur
 
 ' Ready: The process is waiting to be assigned to a processor
 
-' Terminated: The process has finlshed execution
-0mm, 5m... Emmi , in» mm u Siltxucmm w». m my» emu
+' Terminated: The process has finished execution
+
+A
+
+Operating System Concepts — 10th Edition 3.8 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-*4}; Dlagram of Process State
-° MM Mm. m
-ow
+IW Dlagram of Process State
+Mb ‘
+¢ admitted interrupt exit
+l/O or event completioO or event wait
+| Operating System Concepts — 10th Edition 3.9 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-ﬁe
-W Process Control Block (PCB)
-lnlormalion assocxaled wilh each process
-(mso called task control block)
-I Prooess state , running, walling, elc
-I Program ooumer- locatIon of Instructmn
-‘o next execute P we“ “
-I cpu registers - contents o1 all process- pm'a'" °°“ 9'
-centric regislers .
-reglslers
-I CPU schedulmg \nlormalion- priorities,
-scheduling queue pcimers
-I Memory-management inlormalion -
-memory aHocaled to the prucess
-I Accounting information i CPU usedv dock
-[\me elapsed slnce start‘ time \imils
-I l/O Siaius informahon i l/D devices
-allocated (O process‘ list Of open mes
-own", 5m... Cum,“ , w mm a w summer-um Gan m ﬂlgm emu
+, 421m
+@va Process Control Block (PCB)
+Information associated with each process
+(also called task control block)
+I Process state — running, waiting, etc
+I Program counter — locatlon of Instructlon
+to next execute
+-
+I CPU reglsters — contents of all process- p g u
+centric registers .
+reglsters
+I CPU scheduling information- priorities,
+scheduling queue pointers
+I Memory-management information — list of open files
+memory allocated to the process
+I Accounting information — CPU used, clock _
+time elapsed since start, time limits
+I l/O status information — l/O devices
+allocated to process, list of open files
+Operating System Concepts — 10th Edition 3.10 Silberschatz, Galvin and Gagne ‘©2018;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-t‘
-‘4F; Th reads
-
-I So far, process has a single thread ol execution
-
+454$‘? Threads
+I So far, process has a single thread of execution
 I Consider having multiple program counters per process
-
-' Multiple locations can execute at onoe
-> Muliiple threads ol’ control -> threads
+' Multiple locations can execute at once
+> Multiple threads of control -> threads
 I Must then have storage for thread details, multiple program
-oounters in PCB
-
+counters in PCB
 I Explore in detail in Chapter 4
-
-o........,..m............t..... H. 5......“6...“...“JW
+A
+I Operating System Concepts-10th Edition 3.11 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-W Process Representatlon |n Llnux
-Represented by the C slruc1ure taskistruct
-
-pld tipid; /* process identifler v
-long state; /’ state of the process */
-unsigned 1m: t1me_slice /' scheduling luformaclon '/
-struct taskistruct *pa:enc;/' this process‘s parent */
-struct listihead chxldren; /* this process's childzen “/
-scruct filesistrucc 'flles;/‘ l1sc of open ﬁles '/
-struck: mistruct *mm; I‘ address space of thls process */
-
-A AA
-
-mm...“ mm mm“
-V 1 UV
-‘Mm-M
+ti c
+Represented by the C structure tas k_s truct
+pid t_pid; /* process identifier */
+long state; /* state of the process */
+unsigned int time_slice /* scheduling information */
+struct task_struct *parent;/* this process’s parent */
+struct list_head children; /* this process’s children */
+struct files_struct *files;/* list of open files */
+struct mm_struct *mm; /* address space of this process */
+A A A
+Iiiiiiiiill Iiiiiiiiill Iiiiiiiiill
+process information process information . . . process information
+V i V V
+Current
+(currently executing proccess)
+Operating System Concepts — 10th Edition 3.12 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-y‘
-W Process Scheduling
+‘a’??? Process Scheduling
 I Maximize CPU use, quickly switch processes onto CPU core
-I Process scheduler selects among available processes for nexl
+I Process scheduler selects among available processes for next
 execution on CPU core
 I Maintains scheduling queues of processes
-. Ready queue — set oi all processes residing in main
-memory, ready and wailing to execute
-. Wail queues — set of processes waiting for an event (Le. l/O)
-' Processes migrale among the various queues
-55.r5.555,..55555.5i55.5555.555 m 5555555555.55.555-5Je5i.
+' Ready queue — set of all processes residing in main
+memory, ready and waiting to execute
+' Wait queues — set of processes waiting for an event (i.e. l/O)
+' Processes migrate among the various queues
+A
+I Operating System Concepts-10th Edition 3.13 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Mfr Ready and Wait Queues
-m We m, m,
+/
 
-m— — — .
-Wu mm:- mm
-PCB, PCB" KB-
+4m‘ I
 
-- - - ,
-— — —
-
-Mmﬂwummmmimﬂm :u SMMGMMWW.
+M Ready and Walt Queues
+(\b' >4
+queue header PCB 7 PCB 2
+ready - - -
+PCB3 PCB14 PCB6
+Operating System Concepts — 10th Edition 3.14 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:15**************
-W Representation of Process Scheduling
-
-m
-
-Q mm Im-
-‘Hi-m.
-
-awed
-‘W...
-
-m M
-
-® m m
+W5‘ Representatlon of Process Schedullng
+.——@.
+a l/O wait queue l/O request
+ch'l child .
+.l d termination create Chlld
+l terminates l wait ueue . process I
+interrupt interrupt wait for an
+occurs wait queue interrupt
+Operating System Concepts — 10th Edition 3.15 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-“4);? CPU Switch From Process to Process
+43?? CPU SWItch From Process to Process
 A context switch occurs when the CPU
 switches from one process to another.
-plum“ Fl] WIMW Kym“ m P1
-lmeqmm or 5y$lem Dan
-exzmmng
-j m
-m lmelrumorsyﬁlam cal‘ mum
-I m
-exemmm!
-0mm sh..." mums“, Wm a {e 5mm.“ GIMr-lnd ammo“
+process PO operating system process P1
+interrupt or system call
+executing
+I idle
+idle interrupt or system call executing
+I idle
+executing \—|
+Operating System Concepts — 10th Edition 3.16 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-r‘
-MW Context SWItch
+My)’ Context SWItch
 I When CPU switches to another process, the system must save
-the state of the old process and load the saved slate (or the
+the state of the old process and load the saved state for the
 new process via a context switch
 I Context of a process represented in the PCB
-I Context-switch time is overhead: the system does no useful
+I Context-switch time is overhead; the system does no useful
 work while switching
-' The more complex the OS and the PCB -) the longer the
+. The more complex the OS and the PCB -) the longer the
 context switch
 I Time dependent on hardware support
-' Some hardware provides multiple sets 01 registers per CPU
+P Some hardware provides multiple sets of registers per CPU
 -) multiple contexts loaded at once
-0mm swim. may‘. e in» mm t i1 Silkworm-L w»- "a my». emu
+Operating System Concepts — 10th Edition 3.17 Silberschatz, Galvin and Gagne ‘©2033
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-r‘
-W Multitasking in Mobile Systems
+reel Multitasking in Mobile Systems
 I Some mobile systems (e.g., early version of iOS) allow only one
-process to run‘ the others being suspended
-I Due to screen real estate, user interlaoe lirnils iOS provides for a
-. Single foreground process — Controlled via user interface
-' Multiple background processes — in memory, runnlng, but not on
-the display, and with llmits
-° Limits include single, short task, reoelving notlﬁcation ol events.
-speciﬁc long-running lasks like audio playback
-I Android runs loreground and background, with fewer limits
+process to run, the others being suspended
+I Due to screen real estate, user interface limits iOS provides for a
+' Single foreground process — controlled via user interface
+' Multiple background processes — in memory, running, but not on
+the display, and with limits
+' Limits include single, short task, receiving notification of events,
+specific long-running tasks like audio playback
+I Android runs foreground and background, with fewer limits
 ' Background process uses a service to perform tasks
-. Service can keep running even if background process is suspended
-° Service has no user interface, small memory use
+' Service can keep running even if background process is suspended
+' Service has no user interface, small memory use
+Operating System Concepts -10th Edition 3.18 Silberschatz, Galvin and Gagneghcozoti'x
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-W Operations on Processes
-I System must provide mechanisms ior:
+‘a? ﬁ Operatlons on Processes
+I System must provide mechanisms for:
 ' process creation
-' processtermination
-Wm", 5"..." Emmi 7 w Wm a w summer-m‘ Glivin m1 ﬁwm emu
+' process termination
+| Operating System Concepts — 10th Edition 3.19 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-t‘
-“W Process Creation
+‘Q?’ Process Creation
 I Parent process create children processes, which, in turn
-creale other processes, forming a tree of processes
-I Generally, process identiﬁed and managed via a process
+create other processes, forming a tree of processes
+I Generally, process identified and managed via a process
 identifier (pid)
 I Resource sharing options
 ' Parent and children share all resources
-° Children share subset ol parent's resources
-I Parent and child share no resources
+' Children share subset of parent’s resources
+' Parent and child share no resources
 I Execution options
-' Parent and children execule concurrently
+. Parent and children execute concurrently
 ' Parent waits until children terminate
-55m, 5,..5 5555.,55455 55.555 555 5555555.“ 5555.55 5-55.25“.
+Operating System Concepts -10th Edition 3.20 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-“3f 7' A Tree of Processes |n L|nux
-phi=BM5 mm p1d=1028
-m m
-mm mm
-.3 m m
+(“a A Tree of Processes |n L|nux
+systemd
+pid = 1
+logind python sshd
+pid = 8415 pid = 2808 pid = 3023
+bash sshd
+pid : 8416 pid = 3610
+ps vim tcsh
+pid = 9298 pid = 9204 pid = 4005
+Operating System Concepts — 10th Edition 3.21 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-~
-sag?) Process CreatIon (Cont.)
+e652? Process Creation (Cont.)
 I Address space
 ' Child duplicate of parent
 ' Child has a program loaded into it
 I UNIX examples
-° fork () system call creates new process
+. fork () system call creates new process
 ' exec () system call used after a fork () to replace the
-process‘ memory space with a new program
-' Parent process calls wait () for the child l0 lerrninale
-“WP-M1 A\
-r~r—’Qﬂ/)—. Mm
-W. Aéfrfll if’ i
-wwwswmmwlmm m SMMMMWJW
+process’ memory space with a new program
+' Parent process calls wait() for the child to terminate
+paremwid >0) @ eeeeeteemee
+A
+Operating System Concepts -10th Edition 3.22 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-q); C Program Forklng Separate Process
-ﬁncludl (lyI/Lypel.h>
-ﬁincludu <|tdiu.h>
-“includ- <un1ud.h>
-inc nix-10
+i (
+*‘i ~ C P rog ram F0 rk| n g Se pa rate P rocess
+i\m "
+#include ceyeftypee.h>
+#include cetdio.h>
+#include cunietd.ho
+int mein()
 {
-pm z pm:
-
-/* fork a ahild pron“ v/
-
-pid = mm;
-
-11 [pld < o) { /~ "m nccuned ‘/
-Ipnnzﬂndnr. won Fallﬂd'):
-"tum 1:
-
-)
-
-else 1: (pld = o) ( l‘ mm yncela -/
-lec1p("/bin/ls" . "1!" ‘NW-L):
-
-)
-
-else ( /- Pinﬂt ymcuus v
-h push! wu) mu m m mm to complitn x/
-niﬂWl-L);
-printiﬂﬂhild Complete“);
-
+pid_t pid;
+f* fork a child proceee *f
+pid = fork(1i
+if {pid < U] { f* error occurred *f
+fprintf{etderr, "Fork Failed");
+return 1;
 }
-
-"turn 0;
-
-)
+elee if (pid == U) { 1* child proceee *f
+execlp("fbinf1e","le",NULL)1
+}
+elee { !* parent proceee *f
+1* parent will wait for the child to complete *f
+weitﬁHULL);
+priutf("Ghild Complete");
+}
+return U;
+}
+Operating System Concepts — 10th Edition 3.23 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-WCreatmg a Separate Process wa Wmdows API
-.W. mm)
-m "mm
-gm“
-mummm
-1.“...m... mm».
-hmw, MW,»
-hi “mmnm. h m M... m. a,
--==WM\\.,w=\\..>.mv...-. /. m, .,
-m, h an.‘ m.‘ w... W. “I
-m, hm ,m m... M. .1
-m. A W. mu. mm .1
-m.
-m
-‘ mmrma-n. wmu qucul Yum-7,
-) m
-“WWW” m um w mm. .,
-.WM,.W,.M,,..,.W.. mm.
-mum. CW“).
-V
+‘ if
+' s t P ' W' d API
+M Creatlng a epara e rocess Vla |n ows
+\b M‘
+#include cstdio.h>
+#include <eindoss.h>
+int mainWUID)
+{
+STARTUPIHFU Bi;
+PRHCESS_INFUMHATIUH Pi;
+1* allocate memory *1
+ZeroHemory(&si, sizeof[si));
+si.ch = sizeoftsi);
+ZeroHemory(&pi, sizeof(pi));
+1* create child process *1
+if (!CreateProcess(HULL, 1* use command line *1
+“C:\\HINDDHS\\system32\\mspaint.eze". 1* command *1
+HULL, 1* don’t inherit process handle *1
+HULLI 1* don’t inherit thread handle *1
+FALSE, 1* disable handle inheritance *1
+0, 1* no creation flags *1
+HULLI 1* use parent‘s environment block *1
+NULL, 1* use parent‘s existing directory *1
+tsiI
+tpm
+{
+fprintf(stderr, "Create Process Failed");
+return -1;
+}
+1* parent sill wait for the child to complete *1
+HaitForSingleUhject(pi.hProcess, INFINITE);
+printf("Ghild Complete");
+1* close handles *1
+CloseHandle(pi.hProcess);
+CloseHandle(pi.hThread);
+}
+Operating System Concepts — 10th Edition 3.24 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-r‘
-“W Process Termmatlon
+tag-y?’ Process Termlnatlon
 I Process executes last statement and then asks the operating
-system l0 delete it Using the exitﬂ system call.
-0 Returns status data from child to parent (via wait: ())
-' Process‘ resources are deallooated by the operating system
-I Parent may terminate the execution oi children processes using
-the abort: () system call, Some reasons for doing so:
-. Child has exceeded allocated resources
+system to delete it using the exit() system call.
+' Returns status data from child to parent (via wait() )
+' Process’ resources are deallocated by the operating system
+I Parent may terminate the execution of children processes using
+the abort() system call. Some reasons for doing so:
+' Child has exceeded allocated resources
 ' Task assigned to child is no longer required
-. The parent is exiting and the operating systems does not
-allow a child to oontinue if its parent terminates
-amt“, 5m... may“ , w mm a zs suwscmu‘ Galvin “a my». emu
+P The parent is exiting and the operating systems does not
+allow a child to continue if its parent terminates
+Operating System Concepts — 10th Edition 3.25 Silberschatz, Galvin and Gagne 29201“:
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-r‘
-W Process Termlnatlon
-I Some operating systems do not allow Child to exists ll its parent has
-termlnated. lia process termlnates, then all its Dhlldren must also be
-terminated
-. cascading termination. All children, grandchildren‘ BIC. are
-termlnaled.
-0 The termlrlatlorl IS Initiated by the operating systemv
-I The parent process may wait lorlerminalion ofa child process by using
-the nait () system call . The call returns status inion'nation and the pid
+Qwrf Process Termmatlon
+
+I Some operating systems do not allow child to exists if its parent has
+terminated. If a process terminates, then all its children must also be
+terminated.
+
+' cascading termination. All children, grandchildren, etc. are
+terminated.
+' The termination is initiated by the operating system.
+
+I The parent process may wait for termination of a child process by using
+the wait() system call. The call returns status information and the pid
 of the terminated process
-pid = wait-.(nscacus):
-I If no wailing in the parent (l.e., the parent did not invoke wait: (l ) when
-child terminates. then the Child process becomes a lombie
-I If parent terminates without invoking viii-it) . then the Child process
+
+pid = wait(&status);
+
+I If no waiting in the parent (i.e., the parent did not invoke wait() ) when
+child terminates, then the child process becomes a zombie
+
+I If parent terminates without invoking wait() , then the child process
 becomes an orphan
-0mm, 5m... Cum,“ , w 5.1.th a m suwmm Gllvln m my». emu
+
+Operating System Concepts — 10th Edition 3.26 Silberschatz, Galvin and Gagne‘(¢)201“8wa
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-,9‘ . .
-“ﬁndrmd Process Importance Hlerarchy
-
+“ﬁlindroid Process Importance Hierarchy
 I Mobile operating systems often have to terminate processes to reclaim
-
-system resources such as memory. From most t0 least important:
-
+system resources such as memory. From most to least important:
 O Foreground process
-
-o Visible process
-
-D Service process
-
-o Background process
-
+O Visible process
+O Service process
+O Background process
 O Empty process
-
-I Android w|ll begin terminating processes that are least important.
+I Android will begin terminating processes that are least important.
+I Operating System Concepts -10th Edition 3.27 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-t‘
-W Multiprocess Architecture — Chrome Browser
+a 1F
+My}; Multiprocess Architecture — Chrome Browser
+lg!“ “
 I Many web browsers ran as single process (some still do)
-' ll one web site causes trouble, entire browser can hang or crash
+' lf one web site causes trouble, entire browser can hang or crash
 I Google Chrome Browser is multiprocess with 3 different types of
 processes:
-. Browser process manages user interface, disk and network l/O
-i Renderer process renders web pages, deals with HTML,
+' Browser process manages user interface, disk and network l/O
+' Renderer process renders web pages, deals with HTML,
 Javascript. A new renderer is created for each website opened
-t Runs in sandbox reslriciing disk and network l/O, minimizing
+> Runs in sandbox restricting disk and network l/O, minimizing
 effect of security exploits
-i Plug-in process (or each type of plug-in
----- . “M55. . ..._ w“- 5 ...( e... . 5
-Each lab represenls a separate process
-5W“,5,5..55,,.,.5,57.5555.l,.5, 555 5.555555“, 5.55.55 5555:5551.
+. Plug-in process for each type of plug-in
+@ehmmeemwse, x os-BooK.00M x ‘Wiewopeeiingsmm x meeeeomepage x A
+(- C‘ B https:/lw oogle.com/chrome/bro r/desktop/ i? E
+Q chrome \ toWNLvo v SHIV A v CHROMECAST v
+Each tab represents a separate process.
+Operating System Concepts -10th Edition 3.28 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:29**************
-A
-W Interprocess Communication
-I Prooesses within a sysfern may be independent or cooperating
+‘a’??? lnterprocess Communication
+I Processes Within a system may be independent or cooperating
 I Cooperating process can affect or be affected by other processes,
 including sharing data
 I Reasons for cooperating processes:
-. lnfonnafion sharing
-Q Computation speedup
-0 Modularity
+. Information sharing
+' Computation speedup
+' Modularity
 ' Convenience
 I Cooperating processes need interprocess communication (IPC)
-I TWO models Of IPC
-0 Shared memory
+I Two models of IPC
+. Shared memory
 . Message passing
-Wm55,..555r5.5r55.5555.555 555 5.55555.“55r5r5.555.55f5m5
+A
+Operating System concepts -10th Edition 3.29 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-“4);: Communications Models
-(a) Shared memory‘ (b) Message passing‘
-ll—
-—|
+W Communlcatlons Models
+(a) Shared memory. (b) Message passing.
+.—
+i —|
 -
 -
+MEI-IE
+kernel
 (a) (b)
+Operating System Concepts — 10th Edition 3.30 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-t‘
-“W Cooperating Processes
+‘3X Cooperati ng Processes
 I Independent process cannot affect or be affected by the execution
 of another process
 I Cooperating process can affect or be affected by the execution of
 another process
-I Advantages oi process cooperation
-0 Information sharing
-. Computation speed-up
+I Advantages of process cooperation
+' Information sharing
+' Computation speed-up
 ' Modularity
-' Convenience
-05.5.... 5,..5 55.5.5.55.55 5...... 55. 5.5.5.555 55..."... 5-55.25...
+. Convenience
+I Operating System Concepts -10th Edition 3.31 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-“W. Producer-Consumer Problem
-I Paradigm ior cooperating processes, the pmduce! process
-produces iniorrnaiion that is consumed by a consumer process
-i unbounded-buffer places no practical limit on the size oi
+‘6?’? Producer-Consumer Problem
+I Paradigm for cooperating processes, the producer process
+produces information that is consumed by a consumer process
+' unbounded-buffer places no practical limit on the size of
 the buffer
-i bounded-buffer assumes that there is a ﬁxed buffer size
-0mm, 5m... mum‘ e w mm t u sutwscmm GIMn m ﬂlgm emu
+' bounded-buffer assumes that there is a fixed buffer size
+| Operating System Concepts — 10th Edition 3.32 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-A
-MW lnterprocess Communication — Shared Memory
-I An area of memory shared among the processes that wish to
+$.43}? lnterprocess Communlcatlon — Shared Memory
+I An area of memory shared among the processes that Wish to
 communicate
-I The communication is under the control oi the users‘ processes,
-not of the operating system‘
+I The communication is under the control of the users’ processes,
+not of the operating system.
 I Major issues is to provide mechanisms that will allow the user
 processes to synchronize their actions when they access shared
 memory.
-I Synchronization is discussed in great details in Chapters 6 Br 7.
-swam, 5m... Cum,“ 7 in?‘ mm a a: Slltxrumm em" Ind ﬂlgm emu
+I Synchronization is discussed in great details in Chapters 6 & 7.
+Operating System Concepts — 10th Edition 3.33 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-q}??? Bounded-Buffer - Shared-Memory Solution
-I Shared dais
-#dafine BUmR_SIZE 10
-typedei scruct (
-l item;
-item buffet [BUFFER-SIZE] ,'
-int in = D7
+We‘ $65 Bounded-Buffer — Shared-Memory Solutlon
+we ”
+I Shared data
+#define BUFFER_SIZE 10
+typedef struct {
+} item;
+item buffer [BUFFER_SIZE] ;
+int in = 0;
 int out = 0;
-I solutxon is correct, butcan only use Bwrsa_sxzz—1 elements
+I Solution is correct, but can only use BUFFER_SIZE—1 elements
+Operating System Concepts — 10th Edition 3.34 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
 WProducer Process — Shared Memory
-item nextjroduced;
-while (true) l
-/" pzoduce an 1m in next produced "I
-while (((in + 1) k BUFFER_SIZB) = nut)
-.- l' do nothing "l
-bufiazlin] = nutjzﬂducﬁdi
-in = (in + 1) \ suma_sxzz;
-)
+we ”
+
+item nexu_produced;
+
+while (true) {
+
+/* produce an item in next produced */
+
+while (((in + 1) % BUFFER_SIZE) == out)
+
+; /* do nothing */
+
+buffer[in] = next_produced;
+
+in = (in + 1) % BUFFER;SIZE;
+
+}
+| Operating System Concepts-10th Edition 3.35 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-\$¥&nsumer Process — Shared Memory
-itm next_consumed;
-while (true) (
+t3 r onsumer Process — Shared Memory
+r\3 h
+item next_oonsumed;
+while (true) {
 while (in == out)
-r /" do nothing 'l
-next_conlulnnd = buffs! [out];
-out = (out: + 1) ‘ awmnjnz;
-I’ consume the ibam in next consumed ’/
-l
+; /* do nothing */
+next_oonsumed = buffer[out];
+out = (out + 1) % BUFFER_SIZE;
+/* consume the item in next consumed */
+}
+| Operating System Concepts-10th Edition 3.36 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-~
-MW lnterprocess Communication - Message Passing
+£329’? lnterprocess Communication — Message Passing
 I Mechanism for processes to communicate and to synchronize
 their actions
 I Message system — processes communicate with each other
 without resorting to shared variables
-I IPC facility provides two operalions:
+I IPC facility provides two operations:
 ' send(message)
-0 receive(meSSSge)
-I The message size is eiltier ﬁxed or variable
-OM". Mm “We.” a.” n1 SMM M.“ minim
+. receive(message)
+I The message size is either fixed or variable
+| Operating System Concepts — 10th Edition 3.37 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-r‘
-W Message Passing (Cont)
-I Ii processes P and Q wish to communicate, they need to:
-° Establish a communication link between them
+I t%$§ Message Passing (Cont.)
+I If processes P and Q wish to communicate, they need to:
+. Establish a communication link between them
 ' Exchange messages via send/receive
-I lmplementationissues:
-° How are links established?
-' Can a link be associated with more than two processes?
-' How many links can lhere be between every pair of
+I Implementation issues:
+. How are links established?
+. Can a link be associated with more than two processes?
+' How many links can there be between every pair of
 communicating processes?
 ' What is the capacity of a link?
-' ls the size oi a message that the link can accommodate ﬁxed or
+' ls the size of a message that the link can accommodate fixed or
 variable?
-' ls a link unldirectional or bi—directional?
-55.55.55 555.5 5555.555. 55 55.55. 555 5555555555 5.55.55 5555:5555
+' ls a link unidirectional or bi-directional?
+Operating System Concepts -10th Edition 3.38 Silberschatz, Galvin and Gagnegu©201tx
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-W Message Passing (Cont.)
+@493‘ Message Passing (Cont.)
 I Implementation of communication link
-' Physical:
+. Physical:
 > Shared memory
 > Hardware bus
 > Network
-9 Logical:
-t Director indirecl
+' Logical:
+> Direct or indirect
 > Synchronous or asynchronous
-> Automatic or explicit buﬂering
-WmﬂHmQWPWW n, mm.“EMMHMWJW
+> Automatic or explicit buffering
+I Operating System Concepts-10th Edition 3.39 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-ﬁe
-W Direct Communication
+a is
+{Q}; Direct Communication
 I Processes must name each other explicitly:
-. send (P, message) — send a message to process P
-0 receiveiQ, message) e receive a message from process Q
+' send (P, message) — send a message to process P
+' receive(Q, message) — receive a message from process Q
 I Properties of communication link
-Q Links are established automatically
-° A link is associated with exactly cne pair of communicating
+' Links are established automatically
+' A link is associated with exactly one pair of communicating
 processes
-° Between each pair there exists exactly one link
-Q The link may be unidirectional, but is usually bI-dlrectional
-OWNWMWMPWW :40 mm.“MMWJW
+' Between each pair there exists exactly one link
+' The link may be unidirectional, but is usually bi-directional
+I Operating System Concepts -10th Edition 3.40 Silberschatz, Galvin and Gagn; ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-ﬁe
-“$9 Indirect Communication
-I Messages are directed and received from mailboxes (also reierred
-lo as pons)
+a is
+‘day; lndirect Communication
+
+I Messages are directed and received from mailboxes (also referred
+to as ports)
+
 ' Each mailbox has a unique id
-' Processes can communicate only if tney snare a mailbox
-I Properlies oi communication link
-° Link established only if processes share a common mailbox
-I A link may be associated wilh many processes
-° Each pair of processes may share several communication links
-I Link may be unidirectional or bi-directional
-Wmmnmmwwm :41 gimmeMMWJW
+
+' Processes can communicate only if they share a mailbox
+
+I Properties of communication link
+
+. Link established only if processes share a common mailbox
+
+' A link may be associated with many processes
+
+' Each pair of processes may share several communication links
+. Link may be unidirectional or bi-directional
+
+I Operating System Concepts -10th Edition 3.41 Silberschatz, Galvin and Gagn; ©2018
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:42**************
-M Indlrect Communlcatlon
 I Operations
-' create a new mailbox (porl)
+
+' create a new mailbox (port)
+
 ' send and receive messages through mailbox
-0 destroy a mailbox
-I Primitives are deﬁned as:
-send(A, message) e send a message lo mailbox A
-zeceive(A, message) — receive a message lrom mailbox A
-Dam", 5m... Cum,“ e w mm :42 Silkworm-L 6-w- "a my». emu
+
+' destroy a mailbox
+I Primitives are defined as:
+
+send(A, message) — send a message to mailbox A
+
+receive(A, message) — receive a message from mailbox A
+
+| Operating System Concepts — 10th Edition 3.42 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-t‘
-‘53$’ Indirect Communication
+@ﬁ lndirect Communication
 I Mailbox sharing
-0 P“ P2, and P, share mailbox A
-. Pl, sends; P2 and Pg receive
+' P1, P2, and P3 share mailbox A
+' P1, sends; P2 and P3 receive
 . Who gets the message?
 I Solutions
-. Allow a link to be associated with at most two processes
-i Allow only one process at a time to execute a receive
+' Allow a link to be associated with at most two processes
+' Allow only one process at a time to execute a receive
 operation
 ' Allow the system to select arbitrarily the receiver.
-Sender is notiﬁed who the receiver was.
-WWWMMWMWWGW :41 sums.“elimmgim
+Sender is notified who the receiver was.
+A
+I Operating System Concepts-10th Edition 3.43 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-t‘
-W Synchronization
-I Message passing may be either blocking 0r non-blocking
+By)’ Synchronlzatlon
+I Message passing may be either blocking or non-blocking
 I Blocking is considered synchronous
-i Blocking send -- the sender is blocked until the message is
+' Blocking send -- the sender is blocked until the message is
 received
-' Blocking receive -- lhe receiver is blocked until a message
+' Blocking receive -- the receiver is blocked until a message
 is available
 I Non-blocking is considered asynchronous
-° Non-blocking send -- the sender sends the message and
-coniinue
-° Non-blocking receive -- the receiver receives:
-i A valid message, or
-° Null message
-I Differenl combinalivns possible
-. Ii both send and receive are blocking, we have a rendezvous
-onwswmcmmmmm :44 SW.“QWMWJW
+' Non-blocking send -- the sender sends the message and
+conﬁnue
+' Non-blocking receive -- the receiver receives:
+' Avalid message, or
+' Null message
+I Different combinations possible
+' If both send and receive are blocking, we have a rendezvous
+Operating System Concepts — 10th Edition 3.44 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-‘4} i Producer — Shared Memory
-message nextjzoduced;
-while (true) (
-/* produce an item in nextjxoduced */
-send(nexr._pzoducecl);
-)
+I ‘*3? Producer — Shared Memory
+message next_produced;
+while (true) {
+/* produce an item in next;produced */
+send(next_produced);
+}
+| Operating System Concepts — 10th Edition 3.45 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-‘4} I Consumer- Shared Memory
+I ‘Kg? Consumer- Shared Memory
 message next_consumed;
-while (true) (
-receive (next_con:umed)
-/* consume the item in next_consumed *l
-1
+while (true) {
+receive(next_consumed)
+/* consume the item in next_consumed */
+}
+| Operating System Concepts — 10th Edition 3.46 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-A .
-ugﬁ Buffe r| ng
+ta»)? Bufferl ng
 I Queue of messages attached to the link.
 I Implemented in one of three ways
 1. Zero capacity — no messages are queued on a link.
-Sender must wail for receiver (rendezvous)
-2. Bounded capacity — ﬁnite length of n messages
-Sender rnUSI wait if link full
-3. Unbounded capacity — inﬁnite length
+Sender must wait for receiver (rendezvous)
+2. Bounded capacity — finite length of n messages
+Sender must wait if link full
+3. Unbounded capacity — infinite length
 Sender never waits
-0,.va Syn-m Cum,“ e 1M Wm w Slltwscmm any». "a ﬂwm emu
+Operating System Concepts — 10th Edition 3.47 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-we"
-My’ Examples of IPC Systems - POSIX
+ta??? Examples of IPC Systems - POSIX
 I POSIX Shared Memory
-
-° Process ﬁrst creates shared memory segment
-shm_£d = :hm_open (name, o cnzm | o RDWR, 0666);
-
-° Also used to open an existing segment
-
-. Set the size of the object
-
-{truncate (Shm_£d, 4096) ;
-
-. Use mp l) to memory-map a ﬁle pointer to the snared memory
+' Process first creates shared memory segment
+shm_fd = shm_open (name, O CREAT | O RDWR, 0666) ;
+' Also used to open an existing segment
+' Set the size of the object
+ftruncate (shm_fd, 4096) ;
+' Use mmap () to memory-map a file pointer to the shared memory
 object
-
 . Reading and writing to shared memory is done by using the
-poinler returned by map ()t
+pointer returned by mmap () .
+A
+I Operating System Concepts -10th Edition 3.48 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-MM. 0.... b
-
-MM. (Mm...
-
-M... 0....‘ .>
-
-MM. q...“ »
-
-1...“... 0.1....»
-
-m... 61.1.... ..
-
-m. n...»
-
-i
-
-1. m. ... 1,. m... .1. 1...... m... m... .1
-
-W... 1.. an: . 1...,
-
-1. m... .. u:- ...... m, m... .1
-
-m... d... ...... . m
-
-1. m... m... .. m. m..." .1
-
-w... m. ........1> . "nun".
-
-.w... a... .......... . “1......
-
-1. .M .1... E... M1... .1
-
-... ...
-
-1. P...“ n m... my .1... .1
-
-m. .1...
-1. n... ... m... my ..,... .1
-.1... . .... m1“... nmn 1 um, .55.),
-1. mm... .11. m. .1 nu mm .....1 M... .1
-Km...“ m. sum.
-1. ......, ... .1. m... my ..,... .1
-W . m... 51m. mm, mm, mm, 1».
-1. n... .. m1 m... my m... .1
-m...<,.,..1........,m.
-p. 1. mm...“- .1,
-w.1<.,.,.“1..“.........1.
-p. .. m...h...@. n; A
-m... .1
-
-, x
-
-0......“ =1“... “My... 5...... .1, s1........u16.111.... Mm...
+' a’
+7' 4w" M
+M “ lPC POSIX P d
+I'O UCGI'
+r \a u
+#include <stdio.h>
+#include <stdlih.h>
+#include <string.h>
+#include <fcnt1.h>
+#include <sys/shm.h>
+#include <sys/stat.h:=-
+int mainU
+{
+/* the size (in bytes) of shared memory object *l
+const int SIZE = 4096;
+/* name of the shared memory object *l
+const char *name = "US";
+/* strings written to shared memory *f
+const char *messagel) = "Hello";
+const char *messagel = “Horld!";
+/* shared memory file descriptor */
+int shmjd;
+/* pointer to shared memory ohect *1
+void *ptr;
+1* create the shared memory object *f
+shmid = shm_open(name, U_GREAT | DRDHR, 0666);
+/* configure the size of the shared memory object */
+£troncate(shmid, SIZE);
+/* memory map the shared memory object *4’
+ptr = mmapUJ, SIZE, PRUTJIRITE, HAPBHHLRED, shmid, D);
+/* write to the shared memory object */
+sprintf (ptr, "Is" ,messageﬂ);
+ptr += strlen(message_0);
+sprintf (ptr , "Is" ,message_1);
+ptr += strlen(message_1);
+return 0;
+}
+Operating System Concepts — 10th Edition 3.49 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-‘mum audio.»
-“mud. 0mm.»
-"mm mm.»
-“mm mum»
-mum “pl-my»
-m mm)
-[
-/- m m. <11. hymn) a! mum may uhjan. q
-M“ m sIzr : ms;
-l- um a! m. mm mm m." ‘I
-can" ‘m mm - ms“;
-/- mm lama!’ m, hurlpzur ~/
-m mxd;
-/- point“ u. mm mnry an.“ -/
-"m rpmx;
-/~ upln m- mm mum!’ m.“ a
-mm - :hnrupvnluml‘ nmunLY, “555);
-l~ numy m m: mm namry ohjicz -/
-p" - my“), 5m, mm, mm, mm, m;
-l~ m4 km m mm nlmnry obj-cc ~/
-plum-w ,mm up");
-n “lava m- “and Inmry obj-n ~/
-“awn-mm):
-mm n;
-) k
-Wm", 5m... Cum,“ 7 w Wm a so 5mm.“ GIMn m1 ﬁwm emu
+j :6“. ’.- I
+‘15 lPC POSIX Consumer
+#inclnde <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include {sys/shm.h>
+#include <sys/stat.h>
+int main()
+{
+/* the size (in bytes) or‘ shared memory object *f
+oonst int SIZE = 4096;
+/* name of the shared memory object *f
+const char *name = "[IS";
+/* shared memory file descriptor *l
+int shmid;
+/* pointer to shared mllory obect *l
+1u'oid *ptr;
+/* open the shared memory object *f
+shmid = shm_open(name, UBDUNLY, 0666);
+/* memory map the shared mllory object *l
+ptr = mmap(0, SIZE, PRUTBEAD, MAPBHABED, shmid, O);
+/* read from the shared mllory object *l
+printf ("Zs" , (char *)ptr) ;
+/* remove the shared memory object *f
+shm_nnlink (name) ;
+return 0;
+}
+Operating System Concepts — 10th Edition 3.50 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-A
-W Examples of IPC Systems - Mach
+ta??? Examples of lPC Systems - Mach
 I Mach communication is message based
-
-' Even system calls are messages
-
-I Each task gets two porls at creation- Kernel and Notify
-
-° Messages are sent and received using the mach_msq() iunction
-
-l Ports needed for communication, crealed via
-
-mch_p°m_n110cne i)
-
-' Send and receive are ﬂexible, for example [our options if mailbox full:
+. Even system calls are messages
+' Each task gets two ports at creation- Kernel and Notify
+' Messages are sent and received using the mach_msg() function
+' Ports needed for communication, created via
+mach_port_allocate ()
+' Send and receive are flexible, for example four options if mailbox full:
 > Wait indefinitely
 > Wait at most n milliseconds
 > Return immediately
-> Temporarily cache a message
+I > Temporarily cache a message
+A
+Operating System Concepts -10th Edition 3.51 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-“4} I Mach Messages
-
-#includamach/nach s h>
-
-struct message 4
-mach_msg_header_t header;
-int dam;
-
-) i
-
-mach pert c client;
-
-mach port c server;
+I“??? Mach Messages
+#include<mach/mach.h>
+struct message {
+mach;msg_header_t header;
+int data;
+};
+mach port t client;
+mach port t server;
+Operating System Concepts — 10th Edition 3.52 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-'4} i Mach Message Passmg - Cllent
-/* Client Code 1/
+‘riff t" ‘A’ I I
+Mg é Mach Message Passmg - Cllent
+/* Client Code */
 struct message message;
 // construct the header
-mssssgemessermsgmsize = siseeﬂmsssage);
-message.headermsghxemutespurt = server;
-message.headermsghjlocalsport = ensmc;
-// send ems message
-machmsg(mnessagesheader. // mssssgs header
-MACHSBNDJ'ISG, // sending a messsge
-sizeenmesssge), // size of message sent
-o, // msximum size of received message — unnecessary
-MACHJDRTJIU'LL, // name of reeeive pult — unnecessary
-l"|A(Zl-L\"|SGJI‘IHEWITLIIUPIEy // no time outs
-MACHJDRTJIUIL // no notify port
+message.header.msgh_size = sizeof (message);
+message . header .msghxemote_port = server;
+message . header .msgh_local_port = client;
+// send the message
+machmsg(&message.header, // message header
+MACH_SEND_MSG, // sending a message
+sizeof(message), // size of message sent
+0, // maximum size of received message — unnecessary
+MACHPDRLNULL, // name of receive port — unnecessary
+MACHMSGIIMEUUTNUNE, // no time outs
+MACHPDRTJIULL // no notify port
 );
+Operating System Concepts — 10th Edition 3.53 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-‘"3’ i Mach Message Passlng - Server
-/x Server Code w/
-struct massage masllgl;
-// receive the musing.
-nudlmlﬂhnesnguJendsr. l/ manage hauler
-MACHJKCVJiSG, // "mung n mening-
-0, // m. o! Mme. 5m
-aizaoﬂmeaaage), // mumum nu a! received message
-server, // nnme of receive P02‘!
-MACHJSGJIHBOUTJIONE, // no :Lme out:
-mcumn'rmu // no nmzy poxt
+/ _-\;\ --"'
+‘\b Mach Message Passlng - Server
+/* Server Code */
+struct message message;
+// receive the message
+InaCthsg(&message.header, // message header
+MACHBCVJ'ISG, // sending a message
+O, // size of message sent
+sizeof(message), // maximum size of received message
+server, // name of receive port
+MACHMSGIIMEUUTNUNE, // n0 time outs
+MACHPDRTML // no notify port
 J;
+Operating System Concepts — 10th Edition 3.54 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-A
-W Examples of lPC Systems — Windows
+‘6%?’ Examples of IPC Systems — W|ndows
 I Message-passing centric via advanced local procedure call
 (LPC) facility
 ' Only works between processes on the same system
-Q Uses ports (like mailboxes) to establish and maintain
+' Uses ports (like mailboxes) to establish and maintain
 communication channels
-Q Communication works as follows:
-t The cllent opens a handle to the subsystems
+. Communication works as follows:
+> The client opens a handle to the subsystem’s
 connection port object.
-t The client sends a connection request.
+> The client sends a connection request.
 > The server creates two private communication ports
 and returns the handle to one of them to the client.
 > The client and server use the corresponding port handle
 to send messages or callbacks and to listen for replies.
-awn", 5m... Cum,“ . In.‘ mm a ss sllwwmz. Gllvln “a my». emu
+Operating System Concepts — 10th Edition 3.55 Silberschatz, Galvin and Gagne 283201‘:k
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:56**************
-“9F? Local Procedure Calls |n Wlndows
-M Sm
-WWW"
-will!“ Commit)" Nllldll
-M
-Ell-m
-Cmmunlillwn Pun
-SQM!
-mumm
-Shlved
-SQCIWH Ohm
-¢> as: was»
+Client Server
+Connection
+request Connection Handle
+Port
+Handle Client
+Communication Port
+Server Handle
+Communication Port
+Shared
+Section Object
+(> 256 bytes)
+Operating System Concepts — 10th Edition 3.56 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-t‘
-‘4w Pipes
-I Acts as a oonduit allowing two processes to communicate
+cal-Wt -
+_ y Plpes
+I Acts as a conduit allowing two processes to communicate
 I Issues:
-° ls communication unidirectional or bidirectional?
-' In the case ol two-way communication, is it hall or full-
+' ls communication unidirectional or bidirectional?
+' ln the case of two-way communication, is it half or full-
 duplex?
 . Must there exist a relationship (i.e., parent-child) between
 the communicating processes?
@@ -1053,217 +1096,228 @@ I Ordinary pipes — cannot be accessed from outside the process
 that created it. Typically, a parent process creates a pipe and
 uses it to communicate with a child process that it created.
 
-I Named pipes — can be aocessed Without a parent-child
+I Named pipes — can be accessed without a parent-child
 relationship.
 
-Dummy“... Cummpwmmm :s1 siwm-ue-iw-m“imam.
+Operating System Concepts — 10th Edition 3.57 Silberschatz, Galvin and Gagne ©2018‘
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-A
-W 0rd|nary Pipes
+tag? Ordlnary Plpes
 I Ordinary Pipes allow communication in standard producer-consumer
 style
-I Producer writes l0 one end (the write-end 0f the pipe)
+I Producer writes to one end (the write-end of the pipe)
 I Consumer reads from the other end (the read-end of the pipe)
-I Ordinary pipes are iherefore unidirectional
+I Ordinary pipes are therefore unidirectional
 I Require parent-child relationship between communicating processes
 Parent Child
-Id r012 m in]
-re m rd iii
+fd[0] fd [01
+f
+:fd [112 pipe d[1]: i
 I Windows calls these anonymous pipes
-ovum, 5m... Cum,“ , in!‘ mm a s: Sillxucmm w». m 0w!» emu
+in
+Operating System Concepts — 10th Edition 3.58 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-t‘
-
-MW Named P| pes
-
+Magi“? Named Pipes
 I Named Pipes are more powerful than ordinary pipes
-
 I Communication is bidirectional
-
 I No parent-child relationship is necessary between the
-
 communicating processes
-
 I Several processes can use the named pipe for communication
-
 I Provided on both UNIX and Windows systems
-0mm, 5m... Cum,“ , w Wm t sa Sllbunmm 6-w- m1 ﬁwm emu
+Operating System Concepts -10th Edition 3.59 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Afr Communications in Client-Sewer Systems
+é??? Communications in Client-Server Systems
 I Sockets
 I Remote Procedure Calls
 
-Wm,MMWHWW m SMMG.Mn.n.m.wm
+| Operating System Concepts — 10th Edition 3.60 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-K‘
-MW Sockets
-I A socket is deﬁned as an endpoint for communication
-I concatenation of lP address and port e a number Included at
+fww Sockets
+I A socket is defined as an endpoint for communication
+I Concatenation of lP address and port — a number included at
 start of message packet to differentiate network services on a
-hOSl
-I The Socket 16115.1 9t8:1625 refers t0 port 1625 On host
-1 51 .25.19.8
-I Communication consists between a pair cl sockets
+host
+I The socket 161.25.19.8:1625 refers to port 1625 on host
+161.25.19.8
+I Communication consists between a pair of sockets
 I All ports below 1024 are well known, used for standard
-Services
+services
 I Special lP address 127.0.0.1 (loopback) to refer to system on
 which process is running
-OM", m.“ WWW a.“ as! Sims.“ M.“ swim
+Operating System Concepts — 10th Edition 3.61 Silberschatz, Galvin and Gagne ‘@201?k
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-W“ Socket Communication
+W Socket Communlcatlon
+m5 "
 host X
-(14e.ae.5.20)
+(146.86.520)
 socket
-(1464165201625)
+(146.86.5.20;1625)
 web server
-(161.25.19.23)
+(1 61.25.1913)
 socket
-(15125193280)
-0mm, 5m... mm‘. 7 w Wm a s2 suwumm w». m ﬂwm emu
+(161.25.19.8:80)
+Operating System Concepts — 10th Edition 3.62 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-W Sockets |n Java
-I Three types of sockets “Pm Ji'l>"""'i
-“Pm ,“UW
-' Connection-oriented mm m" Imam-r
-(TCP) ‘ mm Inn: mm Mnmmgu um i
-' Connectionless (UDP) “Simsm mt Z .... Mm“?
-I Multicastsocket $322313?” mum"- -/
-Classi data can be sent, son-z chant - leak-mp“).
-to multiple recipients mum", Pm - m
-mummﬂmm mmpmmuui m.»
-1. m" m m. w m mt.‘ t/
-I Consider this “Date” sewer Pm mum... 1....m1.n.t.0 (mu-.50);
-> . /- m.- m m.‘ m1 m“- -/
-In Java‘ l- nun-mag hr “unann- I/
-channel-(l.
-) i
-mm (Inna-puma in.) t
-) 57".. m WWW“);
-1 i
-0mm, 5m... mum. 7 w mm a s: stem“ Glivln m1 Gwyn emu
+I Three types of sockets import Siam-1,16“;
+import Java.1o.*;
+' COHHQCtiOI'l-Ol'iented public class DateServer
+{
+(TCP) public static void main(String[] args) {
+. try {
+. COnneCtlonleSS (UDP) ServerSocket sock = new ServerSocket(6013);
+. MulticastSocket /* now listen for connections */
+while (true) {
+CIaSS— data can be sent Socket client = sock.accept();
+t0 multipIe I'GCipientS PrintWriter pout = new
+PrintWriter(client .getDutputStreamO , true) ;
+/* write the Date to the socket */
+I Consider thiS “Date” server pout.println(new java.util.Date().toStringO);
+' . /* close the socket and resume *l
+In Java‘ /* listening for connections */
+client .closeO;
+}
+}
+catch (IUException ioe) {
+System. err.println(ioe);
+}
+}
+}
+Operating System Concepts — 10th Edition 3.63 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-“f a‘ Sockets |n Java
-The equivalent Date client
-mm 1......W
-“pm jun-$5 -,
-Tub!“ a... mm."
-thc (nun: vum ulnﬂuilil! ll'n) f
-“'1
-/- m. mm... n "my leak: -/
-mm m1 - m Mai-127.0 a lama);
-“mm... n - .mwmmn-m
-mum.“ M. . ....
-Inlhndlnldnﬂnu hpuuhru-Ilnduhn)h
-/- rud n- un tn. n- “an n/
-m». u."
-m1. ‘ (m. - m nlthuQ) ‘- nun)
-x,"- .nymnnmw;
-1- m.- m. mm calm-cnm-n/
-) .m.¢...<>=
-(nah (mum-yum In) ¢
-) shwurnpnnvhﬂul):
-) 1
-0mm 5m... Cumin” Em = a S\lh1rsnhw,ﬁ|\vln|nd w. e201»
+‘ /
+‘ﬁfr t‘ " I
+4?? if Sockets |n Java
+The eq u Iva lent Date cl lent
+import java.net.*;
+import java.io.*;
+public class DateClient
+{
+public static void main(String[] args) {
+try {
+/* make connection to server socket *l
+Socket sock = new Socket("127.0.0.1",6013);
+InputStream in = sock.getInputStream();
+BufferedReader bin = new
+BufferedHeader(new InputStreamReader(in));
+/* read the date from the socket */
+String line;
+while ( (line = bin.readLine()) != null)
+System.out.println(line);
+/* close the socket connection*/
+sock.close();
+}
+catch (IUException ioe) {
+System.err.println(ioe) ;
+}
+}
+} F! llk
+Operating System Concepts — 10th Edition 3.64 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-A
-W Remote Procedure Calls
+Q13,» My! Remote Procedure Calls
 I Remote procedure call (RPC) abstracts procedure calls
 between processes on networked systems
-0 Agairi uses porls for service differentiation
+' Again uses ports for service differentiation
 I Stubs — client-side proxy for the actual procedure on the
 server
 I The client-side stub locates the server and marshalls the
 parameters
 I The server-side stub receives this message, unpacks the
-marshalled parameters, and performs lhe procedure on lhe
+marshalled parameters, and performs the procedure on the
 server
-I 0n Windows, stub code compile from speciﬁcation written in
+I On Windows, stub code compile from specification written in
 Microsoft Interface Definition Language (MIDL)
-Wmﬂymmcmmmmm m mm.“MMWJW
+Operating System Concepts — 10th Edition 3.65 Silberschatz, Galvin and Gagne @201;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:66**************
-ﬁ
-“W Remote Procedure Calls (Cont.)
+W Remote Procedure Calls (Cont.)
 I Data representation handled via External Data
 Representation (XDL) format to account for different
 architectures
 ' Big-endian and little-endian
 I Remote communication has more failure scenarios than local
-° Messages can be delivered exactly once rather than at
+' Messages can be delivered exactly once rather than at
 most once
 I OS typically provides a rendezvous (or matchmaker) service
-to connect client and sewer
+to connect client and server
+| Operating System Concepts — 10th Edition 3.66 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:67**************
-u...“
-u-n we
-m...-
-M1
-Mm
-W... Mn...
-w m
-m...- m
-M"... mm mu.
-m"... mm w..."
-M my
-WE‘... w M mm...
-it‘; .m MW a...“
-m... m W w
-m .
-M m W
-Mm. “m...
-MW Mlm
-mm ._..
-Mm -
-“1...... M , w.-
-m» h .M mun
-nm- M W m.“
-091mm in..." Cuwpmm :51 S\m.mm,ﬁ.w.m.,.w.
+j 6 - , I
+W? Executlon of RPC
+client messages server
+user calls kernel
+to send RPC
+message to
+procedure X
+From: client
+kernel sends To' server matchmaker
+message to Port' matchmaker receives
+matchmaker to Re' address message, looks
+find port number for RPC X up answer
+From: server
+kernel places To: client matchmaker
+port P in user Port: kernel replies to client
+RPC message Re: RPC X with port P
+Port: P
+From: client daemon
+kernel sends To: server listening to
+RPC Port: port P port P receives
+<contents> message
+_ From: RPC daemon
+kernel recelves Port; p processes
+reply, passes To: client request and
+it t0 user Port; kerne| processes send
+<0mpm> OUtUt A
+Operating System Concepts — 10th Edition 3.67 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:68**************
-End of Chapter 3
-—
+Operating System Concepts - 10th Edition Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 

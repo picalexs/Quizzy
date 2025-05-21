@@ -1,995 +1,1347 @@
 ***************Beginning Page***************
 ***************page number:1**************
-OOP (0H) Desgn Panems
-Dave‘ MW
-‘,Mmmwmm
-mm 2"" M: “3M, w mm.
-Omen 0mm WWW” anal/2022
+OOP (C++): Design Patterns
+Dorel Lucanu
+Faculty of Computer Science
+Alexandru loan Cuza University, lasi, Romania
+dlucanu@info.uaic.ro
+Object Oriented Programming 2021/2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-0 Orv Demqrv Fallerrv:
-O smgmwn
-O cwwsne
-cu-sm Ewmnmu
-Q lem
-Combmlw Commune W vim"
-O 0mm mev
+ﬂ On Design Patterns
+Q Singleton
+Q Composite
+Case Study: Expressions
+9 Visitor
+Combining Composite and Visitor
+6 Object Factory
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Wan
-l'l On Dlilﬂn Fan-mi
-Cass smdy ExDmssmns
-comm Campus“ and lem
+Plan
+Q On Design Patterns
+Case Study: Expressions
+Combining Composite and Visitor
+cl 51 i E i: 0Q‘?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Mexanders Dehnmmv
-em pallem essences a pmmem mm uwm! w:- m W
-agam m M snvlmﬂmﬂm‘ m men dnswbn: m cum mm
-suluhcm mm mm“. m such nwlythal w“ can “um
-ioluﬂoﬂ a mum mew“ Mllmmwwdumg u \hwsame way
-Mme"
-. ipphed Hm m uvbimtm “mum
-- \hevmcunmmwn: m sums’! Dnma wmnmmem
-inllwave wan we"! Bea wealnro! Envsme
-vammmmi] a Wm Cunmﬂgham [wvntnha Hrsxwlwl
-4‘: Manna mmmgfm m1
+Alexanders Definition
+"Each pattern describes a problem which occurs over and over
+again in our environment, and then describes the core of the
+solution to that problem, in such a way that you can use this
+solution a million times over, without ever doing it the same way
+twice"1
+¢ applied first in urbanism architecture
+0 the first contributions in software: prima contributie in
+software: 1987, Kent Beck (creator of Extreme
+Programming) & Ward Cunningham (wrote the first wicki)
+1C. Alexander. A Pattern Language. 1977
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-GOF Bock
-
-Mign Panel-us
-
-mi...”
-
-QB‘! ' V
-
-m. ‘
-g
-
-{m 21mm mm.
-
-i-
+GoF Book
+Elements of Reusable
+Object-Ori =~ ---\- re
+Erid'l Cam ‘
+bann V 7
+, ,7 a“ _ ' includes 23 design patterns
+n KELLEY
+\:| 5| i E if QQQ
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Full Tempme ﬁor a Pansm
-. “mum-mm"
-. “mm-1
-. “Wm
-. mum-m
-. mmm
-. cun-
-. Maw-“m
-w. m“ m i WM ‘mm-
+Full Template for a Pattern
+Q name and classification
+Q intention
+Q known as
+Q motivation
+Q applicability
+Q structure
+Q participants
+Q collaborations
+Q consequences
+Q implementation
+Q code
+Q known use cases
+Q related patterns
+We will use a simplified template.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-massincamn
-- WWW
-m1 m cvlzu mmwstipmmc amen:
-- 5mm‘
-used vn mm lhhslmcluls an“ dasns m Dbmcls
-- hehuworal
-dsicnbe haw we mmmmmew ubml‘ vvlemvm bvdev
-w Mme m véspnnqamhhes
+Classification
+o creational
+used to create complex/specific objects
+. structural
+used to define the structure of the classes and objects
+o behavioral
+describe how the classes and their objects interact in order
+to distribute the responsabilities
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Wan
-O Smwetun
-Cass snm ExDmssmns
-Gombmmg swam and lem
+Plan
+Q Singleton
+Case Study: Expressions
+Combining Composite and Visitor
+i:| 5' i E if QQG
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Maw/anon
-- Chismnavwn
-cvzlhwa‘
-. ‘7|!vale
-mum mm my. I 5mm: ablezt Yasmglz mum)
-. Mom/aw"
-m an mam mm
-. \heve I5 awe we,“
-- mam n “my w wlnduw minigll
-m “we lheve ‘5 my ans web nave manawr
-. Apphmnmv
-wmntheve "mil beemclw ans Inslance
-chsichsmi mus! have access m m». \niume m“ any
-wmelm pm
+Motivation
+o Classification:
+creational
+o Intention:
+designing a class with a single object (a single instance)
+o Motivation:
+in an operating system:
+o there is a file system
+o there is only one window manager
+in a website: there is only one web page manager
+o Application:
+when there must be exactly one instance
+class clients must have access to the instance from any
+well-defined point
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
 Consequences
-. cnmmlad amass m m- ngll mm.
-. "News vednclmn (‘)‘ubalvanaﬂeehmmallom
-. :Hnrws ymwmmeemmm WWW
-- uhrms awed numbev nl mslsnl$ [Dnuwetom Yvwlelon, )
-. mnmﬂenms me“ ﬂee-em‘ “Damian: [Buncmnclmnﬂ
+0 controlled access to the single instance
+o namespace reduction (global variable elimination)
+o allows refinement of operations and representation
+0 allows a fixed number of instants (Doubleton, Tripleton, ...)
+o more flexible than class-level operations (static functions)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Slnmlurs
+Structure
++getUniquelnstance()
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-lmpsmsnlslinn (version n 2 c++2m 1)
+Impementatlon (versmn 1, Z C++2011)
 
-d“, mm.“ <
+class Singleton {
+public:
 
-> v
+static Singleton& instance() {
 
-MHWMK-‘Malena.’ - mm,
+return uniquelnstance;
 
-H mm we
+}
 
-WWW ¢ ,
-H
-Wm.» mm": “WWW”
+// .. .
+
+void operator=(Singleton&) I delete;
+
+Singleton(const Singleton&) : delete;
+protected:
+
+// object state
+
+Singleton() { }
+private:
+
+static Singleton uniquelnstance;
+};
+Singleton Singleton::uniqueInstance;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Tsslmg
-Em, WNW“! MM Mm .19.! ¢
-mm, W WM, \
-u"; » u, /'/ cunpulnq "m
-H W‘ n» mum" W u." M w
-H mm" ,1 1 ,1‘ H (mm
-h
-mum.“ WWW ,1 WWW
-mum“, ,uvmmv ,1 WWW
-,
+Testlng
+class SingletonTest : public testingzzTest {
+protected:
+
+virtual void SetUp() {
+s2.setValue(9);
+// s3 = sl; // compiling error
+s3.setValue(77);
+}
+// Declares the variables your tests want to use.
+Singleton &sl = Singleton::instance();
+Singleton &s2 : Singleton::instance();
+Singleton &s3 = s2;
+// Singleton s4 I s2; // compiling error
+
+};
+
+// Tests the uniqueness.
+
+TEST_F(SingletonTest, Uniqueness) {
+ASSERT_EQ(sl.getValue(), s2.getValue());
+ASSERT_EQ(sl.getValue(), s3.getValue());
+
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-What about the -- ave
+What about the move
 
-construclov/zssgnmenruperatol"
-w.- M manual 02 m
-'m \Vmeaehmnn" w mu x mm aphcmyaecweu "W
-cwsumun m mu b: "mm dame! as mm w Md W, n
-7m" "at MM usemsduveﬂww cwsmmuv
-7m" m "we: Maw-mam, ls-wvmemupelalw.
-7mm m Mm “saw-"amnwgmm my...“
-My" m We, “mm-“mum .m
-4n- mm mmmmm b- WMMM n met-a‘
-Docs \l mm sum w dzcweu mnsvuclovuvm
-saw-m wemmrhr a Swﬂelun"
+constructor/assignment-operator?
+From the manual (12.8):
+"10 If the definition of a class X does not explicitly declare a move
+constructor, one will be implicitly declared as defaulted if and only if
+— X does not have a user-declared copy constructor,
+— X does not have a user-declared copy assignment operator,
+— X does not have a user-declared move assignment operator,
+— X does not have a user-declared destructor, and
+— the move constructor would not be implicitly defined as deleted."
+Does it make sense to declare a move constructor or an
+assignment-operator for a Singleton?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-lmpemsmatinn (vsrsinn 2)
-d.“ mm,“ <
-91mm
-m mm“. Wm" ‘
-u Wmmmm -- n, <
-“meme”! - mum“;
->
->
-H mm ,m.
-h
+Impementatlon (versmn 2)
+class Singleton {
+public:
+static Singleton* instance() {
+if (uniquelnstance :: O) {
+uniquelnstance = new Singleton();
+}
+return uniquelnstance;
+}
+protected:
+// object state
+Singleton() { }
+private:
+static Singleton* uniquelnstance;
+};
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Teslmg
+Testlng
+class SingletonTest : public testingzzTest {
+protected:
 
-WM, W mm \
+virtual void SetUp() {
+sl : Singleton::instance();
+sli>setValue(47);
+s2 = Singleton::instance();
+s2—>setValue(9);
+s3 = sl;
+*s3 = *sZ;
+s3—>setValue(75);
+}
+// Declares the variables your tests want to use.
+Singleton *sl;
+Singleton *s2;
+Singleton *s3;
 
-.kmmmmv
+};
 
-.1 - 5mm" mum",
+// Tests the uniqueness.
 
-hummus),
-H Mm. m mm" W M. .m u
-mm“ “1v
-.mnnpmmnm, mwmm.
-“mummwnm, mwmm.
+TEST_F(SingletonTest, Uniqueness) {
+ASSERT_EQ(sl*>getValue(), $2i>getValue());
+ASSERT_EQ(sl->getValue(), s3—>getValue());
 
-, ,
+}
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:17**************
-Tsslmg
-1 R11 1 sngkwﬂbunnum.
-1 11 1 s,111mﬂm.11mm,.. 11 1.1
-1-----__---1 1 11.1 1m 1 “.1 .11“ 11 m. 111111
-1 1.11111 111."
+Testlng
+[==========] Running l test from l test suite.
+[——————————] Global test environment set-up.
+[——————————] l test from SingletonTest
+[ RUN ] SingletonTest.Uniqueness
+[ OK ] SingletonTest.Uniqueness (O ms)
+[——————————] 1 test from SingletonTest (0 ms total)
+[——————————] Global test environment tear-down
+[::::::::::] l test from l test suite ran. (O ms total)
+[ PASSED ] 1 test.
+Process finished with exit code O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Wan
-O enmmue
-Cass snm ExDmssmns
-Gombmmg swam and lem
+Plan
+Q Composite
+Case Study: Expressions
+Combining Composite and Visitor
+i:| 5' i E if @QG
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-lmemmn
-- u \s a wwluva‘ palm“
-. cnmnmesnhlems m 1m stmmle m @va
-part/whom mm,
-. m mndumi [m m- swam!) mam- \ndmduz‘ am
-cumwma omecls m a “minim w
+Intention
+o it is a structural pattern
+0 composes objects in a tree structure to represent a
+part-whole hierarchy
+o let the clients (of the structure) treat the individual and
+compound objects in a uniform way
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-MOW/BUD"
-2 ’
-__, mum
-MW
-
-n
-
-‘1 M,
+Motlvatlon
+*
+_
+draw()
+add(Graphic)
+remove(Graphic)
+getChild(int)
+A
+_
+— — — r i i draw() .
+‘ * * add‘G'ap“i°g>
+l l remove(Graphic)
+\ \ getChild(int)
+for all g in graphics k l I
+g.draw() J l
+\
+\
+\
+\
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-n \s a Recursive Dehnmmv
-. any (mm) m. ‘"11an mm
-. w (uhlml mm“ "um nblccl
-. any leXV mum» w igmnmcouem
-. a BMW: mad: MD ul mm‘ WEB": mm \s , imam:
-chisel
+It is a Recursive Definition
+0 any (object) line is a graphic object
+o any (object) rectangle is a graphic object
+o any text (object) is a graphic object
+o a picture made up of several graphic objects is a graphic
+object
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Slmclurs
-m '
-m W
--
-m
-M
-m
-u m
-m
-_ 1 my.‘
-5 .W
--‘
+Structure
+m *
+—
+operation()
+addChi/d()
+removeChi/d()
+getCh/Id()
+A
+—
+— [if 0peration() .
+p l removeChi|d()
+\ getChi|d()
+\
+f . ,
+l
+g.operation() , j
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Favﬂmpams v2
-. compunen|<=q,e.whw1
-. dedzmsms mm“ m. me MCI: m IN)
-WWW
-- \mp\0rvwmi m MM behavwv 1w we OOMVWD"
-Menace m an masses
-- dwave: i" \mevliw m awessmg W minim
-mm mmpﬂnems
-- [DMwHHD dalmes an lnlerlace braccessmq pawn!
-cummmnms m m. mm. ilmmm-
-- Leg! M‘ Mama Lme‘ M, em
-. WM“: Wm- amen:
-- a \esl m m7 chIeH
-. 41mm! mum pnmmm mm
+Participants 1/2
+o Component (e.g., Graphic)
+o declares the interface for the objects in the
+composition
+o implements the default behavior for the common
+interface of all classes
+o declares an interface for accessing and managing
+child components
+0 (optional) defines an interface for accessing parent
+components in the recursive structure
+o Leaf (e.g., Rectangle, Line, Text, etc.)
+. represents primitive objects
+o a leaf has no children
+0 defines the behavior of primitive objects
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Fanimpams 2/2
-. Comvusnzkew ‘ mm»
-. avﬂneﬂhe benev-mewmms Mm mum"
-. “Wm mm cumvunems
-. WWW.“ 0mm; vsmod Mm; uHhe
-Cnmwrum “Mm
-. Cher“
-. mum-5m ubllcls m m- wmvusmnn mmugn m.
-Camponenl mtevlnce
+Participants 2/2
+o Composite (e.g., Picture)
+o defines the behavior of components with children
+o memorizes child components
+0 implements operations related to copies of the
+Component interface
+0 Client
+o handles the objects in the composition through the
+Component interface
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-ouuabmuuns
+Collaborations
 
-- chm use I» Componenl \n\ev|acec\ass \omlevam w
-chum m m wuclml
+o clients use the Component interface class to interact with
+objects in the structure
 
-- u me mm”; “w mums, we“ ‘he YEQIAQSI ‘5
-msnhmd may
+o if the container is a Leaf instance, then the request is
+resolved directly
 
-- u In: mm”! acumposnems'arwe, {hen melequest
-\Hnrwirdadmms mud cnmpmvsms. my mm,‘
-upevnhnnsare mums bemvz mmnwm-w
+o if the container is a Composite instance, then the request
+is forwarded to the child components; other additional
+operations are possible before or after forwarding
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Consequences v2
+Consequences 1/2
 
-. Mm a mnmchymdasus mnsmmq m Dwmmm am
-mmmm 0mm
+0 defines a hierarchy of classes consisting of primitive and
+compound objects
 
-. mm mm can hncummsm m muls mm
-mm‘ mm m turncan becnmpuseﬂ “v my Mme
-“my mm m Llecmswm
+o primitive objects can be composed of more complex
+objects, which in turn can be composed of other more
+complex objects, etc. (recursion)
 
-- wmwmm 3W! awvmlwe mm. m can m
-m a wmpovle mm
+. whenever a client expects a primitive object, he can also
+take a composite object
 
-- hrlh: QM w m, Mme‘ n nut! mum m
-¢DIWPQSHG omens nmlolmly
+0 for the client it is very simple; it treats primitive and
+composite objects uniformly
 
-. m: memdoes nnlcme w n m m do wnh a mm nr
-mm“ abysm Lava-6w ‘he use m Mam”
-Hummus)
+o the client does not care if it has to do with a primitive or
+composite object (avoiding the use of switch-case
+structures)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
 Consequences 2/2
 
-. \l \s aasy m and "w ‘ypnm um anMDﬂiNl
-comm-mums‘ I“ m subclasses Wm mmmuy mlh
-m smslmg slmmum and Khﬂcuiwmsvcnde m
-“may was m change 5mm
+0 it is easy to add new types of Leaf or Composite
+components; the new subclasses work automatically with
+the existing structure and the customer code. The
+customer does not change anything.
 
-- mmmww WWW‘
+. makes the design very general
 
-- mm” \I \s mmum m vzsmcl mm mmwnzms can
-appear w a wmpumle mm 4a mm cum r» w week
-mum WWW»
+0 drawback: it is difficult to restrict which components can
+appear in a composite object (a solution could be to check
+during execution)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-‘mmemenlahon Demsmns m Make
-
-. WM reﬂevenm w parent!’
-
-. ihaledoomwrvervli’
-
-. maxlrmzethz \ntzﬂuce’ “my mmmm
-Transpalerwecuwd \ead ‘0mm loe sRW
-smmmm mlweﬂn mm". ‘mu . Cnmpusnm
-
-- wheve \o ""me ME “palms WW chddven’
+Implementation: Decisions to Make
+0 explicit references to parents?
+o shared components?
+0 maximize the interface? safety or transparence?
+Transparence could lead to violation of the SRP!
+Safety requires to convert a Component into a Composite!
+o where to implement the operations handling children?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Wan
-O Commswe
-Case sum may-Sm:
+Plan
+Q Composite
+Case Study: Expressions
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Expressmns m Programmmg
+Expressions in Programming
 Languages
-. mm“ “mm”; a‘ n‘ 2 7 c
-. Manon‘ expvewuns a * 2 < M
-- Bnmean unveismns a < 6 AA (n / n -! < b)
+0 arithmetic expressions: a + b * 2 — c
+o relational expressions: a + 2 < b >l< 3
+¢ Boolean expressions: a < 3 && (b < O l| a < b)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Amhmenc Expvsssmns: Syntax
+Arlthmetlc Expressmns: Syntax
+PrimaryExpression 2::
+IntConstant
+\ VarName
+\ "(“ Expression “)"
+IntConstant :::
+Digit+
+Digit ::=
+"O" I "1" I ' ' ' ‘ "9"
+VarName :z:
+"a" l "b" | ___ ‘ "z"
+MultExpression :2:
+PrimaryExpression (("*" \ "/" | "%") PrimaryEXpression)*
+ArithEXpression ::=
+MultEXpression (("+" | "—") MultExpression)*
+Expression ::= ArithExpression
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-ASTClasses
-E E
-El
+AST Classes
+MultExpression ArithExpression
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:33**************
-Helaﬂonsmp bsiwssn Classes v3
-l==l B:
+Relatlonshlp between Classes 1/3
+PrimaryExpression :1:
+IntConstant
+PrimaryExpression 2:: | VarName
+IntConstant :
+\ VarName +
+\ "(" Expression ")" . .
+PrlmaryExpre551on ::=
+"(" Expression ")"
+. . CHM _
+— 1
+4 v
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Relationshm bsiwesn Classes 2/3
-Ekw
-Elﬂ
+Relatlonshlp between Classes 2/3
+MultExpression :::
+PrimaryEXpressiOn (("*" \ "/" l "%") PrimaryEXpression)*
+MultExpression o Chgldien PrimaryExpression
+ArithExpression :::
+MultEXpression (("+" | "—") MultExpression)*
+ArithExpression o Child?“ MultExpression
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Relationshm bsiween Classes 3/3
-/ \
-\
-El '"uzzl --
-\El El
-My.
+Relationship between Classes 3/3
+1
+4 V
+Ugly!
+Question. What OO design principles are violated?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Using Composﬂe v2
-/ \
-\E/l \\E|
+Using Composite 1/2
+Leafs: lntConst, VarName
+Composites: ArithExpression, MultExpression, Expression
+What about PrimaryExpression? It is both
+It is both, therefore we split it:
+4 V
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Using Composme 2/2
-é El
+Usmg Composne 2/2
+v w
+Q
+TokenExpression CompoundExpression
+1 v 1 A v
+BracketExpression ArithExpression MultExpression
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Class Expresswn m 0H
-mm mm, Mummy quhbem;
-PM“ mm, md immumm, Hm
-mm. vmm mummy) qeunammv
-Pm“. mm, mm mmngm
-Procecwu. “Wimp mm,
-H
-. mmmbrsm
+Class Expression in C++
+
+class Expression {
+
+public: virtual list<string> getLabel();
+public: virtual void addLabel(string str);
+public: virtual list<string> getLabel();
+public: virtual string toString();
+protected: list<string> label;
+};
+
+. we opted for safety
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Class CompoundExpresslon m 0H
-Mm m4 “humuwmm w,
-mm mm mum",
-Mm MQXPMW» Mmmmm
-Mum 1%“?va MUM‘
-1v
-cm. mmmmﬂ I mm mmwmum ¢
-H
-d... mwﬂmn = mum: Cummmmw.‘ ¢
-n
+Class CompoundExpressmn |n C++
+class CompoundExpression : public Expression {
+public: void addChild(Expression* pe);
+public: string toString();
+public: list<Expression*> getChildren();
+protected: list<Expression*> children;
+};
+class ArithEXpression : public CompoundExpression {
+};
+class MultEXpression : public CompoundExpression {
+l;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Expvessmns Parser
-5.. In: Wm»
-m \mplemenlilwlcan Nblmd m I've we.»
-mummmmm, WWW.
+Expressions Parser
+See the appendix.
+The implementation can be found in the folder
+examples/interpreter/cpp/expressions/parser-composite
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Wan
-Cass snm ExDmssmns
-O Vuﬂuv
-Gombmmg swam and lem
+Plan
+Case Study: Expressions
+9 Visitor
+Combining Composite and Visitor
+KI 5' * E :5 one
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-lmemmn
-- \l ‘S a helm/mm‘ mum
-- mm an upeliﬂon [a sew! upevaﬂuntl ‘m runs w
-m: :‘emems m" Bhledﬂmdme
-- aHows we dehmhono! new cperahnwswllhnnl chawmg
-m dais" mm mam-ms mmvwmch m BDemhunszrl
-emuled
+Intention
+0 it is a behavioral pattern
+0 models an operation (a set of operations) that runs over
+the elements of an object structure
+o allows the definition of new operations without changing
+the classes of the elements over which the operations are
+executed
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Maw/anon
+Motivation
 
-. A mm“ BVWWBHI m an 3mm Mam "Be
-msn Tms symamlnlee ‘5 used bum mum wmarmcs
-leg "we cnmnnw am hrwﬂ! wenevnhum cane
-epﬂmlzawrv, mspwy
+0 A compiler is a program like an abstract syntactic tree
+(AST). This syntactic tree is used both for static semantics
+(e.g., type checking) and for code generation, code
+optimization, display.
 
-. mm Dilemmas emu m. an: w»: m \nstmcnnn w
-anorhev Fol example‘ a "m YEMEN-w a" “we”!
-timers lmm a m1- '89"an an lstsmn m
-mmwnemw lhs swarms an lhem wﬂl bedMsvenl
+0 These operations differ from one type of instruction to
+another. For example, a node representing an assignment
+differs from a node representing an expression and
+consequently the operations on them will be different.
 
-. This! ﬁnalmmns mum n! “mm mmmmngm
-‘he 51mm» m me AST
+0 These operations should be performed without changing
+the structure of the AST.
 
-. Emu ﬂms immum mm ASTdmarsvmm om ‘anguzgn
-w “when m: ways m mm m: “mam: ave Mum
-a". 5mm
+o Even if the structure of the AST differs from one language
+to another, the ways in which the operations are performed
+are similar.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Main/anon PcHullng Summon
-E
+Motlvatlon: Pollutlng Solutlon
+_
+typeCheck()
+generateCode()
+prettyPrint()
+4 V
 m
-E E
-v-m m
+_ _
+typeCheck() typeCheck()
+generateCode() generateCode()
+prettyPrint() prettyPrint()
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-mm," Mouvaucn: Solution wmh Vismurs
-El u
-gm
-E E
-m m
-g
-El
-/
-E E
-Ea Ea Ha
+. Motlvatlon: Solutlon WIth VlSltors
+Hlerarchy:
+—. —
+accept(VisitorNode&)
+1 V
+— —
+accept(VisitorNode&) accept(VisitorNode&)
+Visitors:
+—
+visitArithExpressionO
+visitAss/gnStmlO
+v A v
+— — —
+visitArithExpression() visitArithExpressionQ visitArithExpression()
+visitAssignStth visitAssignStmtO visitAssignStmlO
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-mm Slmclurs
-I‘:-
-E' _
-E E
-m- m
-g
-{E
-2 %
-a E
+Hierarchy:
+o _
+accept(Visitor&)
+4 V
+ConcreteElementA ConcreteElementB
+— —
+
+accept(Visitor&) accept(Visitor)
+Visitors:
+
+—
+visitConcreteE/ementAO
+visitConcreteE/ementB()
+
+4 V
+— —
+visitConcreteElementAO visitConcreteElementAO
+visitConcreteElementBO visitConcreteElementBO
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-Favﬂmpams vs
-. wm- (em mum»
-
-. madam: a vliwepmznmv Invonh Cuncvmaﬂsmnm
-cm m me ‘mm
-
-. me name ul live weaken m: {he ugwalule \dermly
-mumsvm um me m Yﬂﬂuesﬂnmewmnr
-
-. \mauom lhs wsneno new», I've span/‘nebvwm
-may av: mm
-
-- mm {he willbmaﬂ M {he \lem wow‘ \ls \nlellace
+Participants 1/3
+o Visitor (e.g., NodeVisitor)
+o declares a visit operation for each ConcreteElement
+class in the structure
+o the name of the operation and the signature identify
+the class that sends the visit request to the visitor
+o this allows the visitor to identify the specific element
+they are visiting
+0 then, the visitor can visit the item through its interface
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Fanimpams 2/3
-. Comvelevmtoﬂe w . YyDeChemHVVE'WY
+Participants 2/3
+0 ConcreteVisitor (e.g., TypeCheckingVisitor)
 
-. \mphmnmi m» npelinnn Mm M» vmmv
+o implements each operation declared by the visitor
 
-. each mam \Mwemznls anew-mum“
-mm maxcmmspulvdsw {he elQmsm m m
-Mme men
+o each operation implements a fragment of the visit
+algorithm that corresponds to the element in the
+structure visited
 
-- w memunzsi \lveslale uhnemsumq “0mm. WW
-an," uncummam me vault: untamed W2 mm
-w 9mm m w 5mm
+0 it memorizes the state of the visiting algorithm, which
+often accumulates the results obtained while visiting
+the elements in the structure
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:49**************
-Fanimpams a/a
-. Eemenlmadey
-. dmms mm“; “Humans. m» haw “my a:
-an awvmenl
-. ConcmsEhmam my
-AswamemNodeManaNeRmNudB]
-. \mp\ammi acmpung npslinnns
-. Omeclswmme Leg ‘ nglam]
-. \l can “SK “5 ski/“ems
-. n can mm “WW menace mum. mm
-Mam“
-. m" mwmmw
+Participants 3/3
+. Element (Node)
+o defines accepting operations, which have a visitor as
+an argument
+o ConcreteElement (e.g.,
+AssignmentNode,VariableRefNode)
+o implements accepting operations
+O ObjectStructure (e.g., Program)
+O it can list its elements
+o it can provide a high-level interface for a visitor visiting
+its elements
+o it can be a "composite"
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Coﬂabnralmn 1Sequence magmrn)
-El
+Collaboratlon (Sequence Dlagram)
+accept(v)
+visitConcreteElementA
+operationA
+<iiiiiiiiiiiiiiiiiiiiiiii
+accept(v)
+visitConcreteElement
+i , , Pp,e@tl°rlbi i i
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-Expmm
-- Msvsume mm campulallnni. u mi m. MW
-acczvlkvl \u a (In Cu ‘ms mans mat a cans a accevlkvl)
-- men a ‘ends I». MWWCQWQQQMA w v
-ll z‘ u ml‘;vwsxlCunmemﬁememNmu). u km nl" v‘
-Phase "SW-1
-I than v‘v\s\ls‘-ll7y enumw a upevannnN)
-- [hen . swwlursuenanu Wu» oand n m v
+Explanation
+
+0 after some internal computations, 0 sends the message
+accept(v) to a (in C++ this means that o calls a.accept(v))
+
+o then a sends the message visitConcreteElementA to v
+(i.e., a calls v.visitConcreteElementA(this), a kind of " v,
+please visit me")
+
+o then v "visits" a by executing a.0perationA()
+
+0 then a similar scenario with o and b and v
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-Consequences v2
-. Mm mam addm new owmwrvwaSY
-. 1mm gm“ m: mm um.“ am “mm m:
-mm“ unes
-. 106mg new mmammmw m m: Mm \s
-dHl-cml
-. caum chimp: mm! mm“ man vMuv:
-- snmehmes mm" \mpiemenlalwn m ‘he mm
-mm dais can make ma,» samev
+Consequences 1/2
+o Visitor makes adding new operations easy
+o a visitor gathers the related operations and separates the
+unrelated ones
+o adding new ConcreteElement classes to the structure is
+difficult
+o causes changes in the interfaces 0f all visitors
+o sometimes a default implementation in the Visitor
+abstract class can make the job easier
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
 Consequences 2/2
-. um \vamluls. a WW“ mm mumpkclais
-mam“:
-- ahwrs {he wwhnon o'cumuliﬂwslales Olhsrwlic. ‘Iva
-cumulahve mm must hztvansmmed u ﬂmmmetzq
-- u mum dvslroy me snupsulaﬂun
-. m: concrete dements must have 1 mm mm.»
-¢apah\e or prwdm an me Wnlmalwn requesIed w
-m. wswnr
+0 unlike iterators, a visitor can traverse multiple class
+hierarchies
+0 allows the calculation of cumulative states. Otherwise, the
+cumulative state must be transmitted as a parameter
+0 it could destroy the encapsulation
+0 the concrete elements must have a strong interface
+capable of providing all the information requested by
+the visitor
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-lmplsmsnlalmn v2
+Implementatlon 1/2
+
+class Visitor {
+public:
+
+virtual void visitElementA(ElementA*);
+
+virtual void visitElementB(ElementB*);
+
+// and so on for other concrete elements
+protected:
+
+Visitor();
+};
+class Element (
+public:
+
+virtual ~Element();
+
+virtual void accept(Visitor&) = 0;
+protected:
+
+Element();
+};
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-Immsmemalmn 2/2
+Implementatlon 2/2
+class ElementA : public Element {
+public:
+
+ElementA();
+virtual void accept(Visitor& v) {
+v.visitElementA(this);
+}
+};
+class ElementB : public Element {
+public:
+ElementB();
+virtual void accept(Visitor& v) {
+v.visitElementB(this);
+}
+};
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-S\mp\e/Doub\e D\spalch
+Simple/Double Dispatch
 
-. Emmemspalch mammm mamamqusiv
-“Danumwmm m. "m n! m: We“ m {he
-We m WW Fovaxamwe. WMMW U mam
-Mmewpwme
+o Simple dispatch. The operation that makes a request
+depends on two criteria: the name of the request and the
+type of receiver. For example, generateCode () depends
+on the type of node.
 
-- mm mm m upmaﬂonmal peﬂolms the vsquen
-mmnmwm m m Wm Fm um.‘ M
-LN.‘ H m“ depends w mm the Mme"! W lhe
-mm
+o Double dispatch. The operation that performs the request
+depends on the types of two receivers. For example, an
+accept () call depends on both the component and the
+visitor.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-Whu Tvzvevses Object Slmcmre°
-Tm: are several BMW“:
-. ms obpcl “Wm \le
-- thzvlsnur
-. 1,. mm
+Who Traverses Object Structure?
+There are several options:
+o the object structure itself
+o the visitor
+o an iterator
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-Wan
-8 V\§\\nv
-Commmm Gempuuls and vwv
+Plan
+9 Visitor
+Combining Composite and Visitor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-RecaH Composwe Diagram m:
+Recall Composne Dlagram for
 Expressmn
--,.,
-m:
-\
-:n El / \
-El El El
+6
+CompoundExpression
+€ V 1 A v
+BracketExpression ArithExpression MultExpression
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Adding Accept <1
-E
-==n~~
-_ E
-
-E E
-
-m ==a
-E E E
-m m [m
+Addingaccept()
+—
+—
+—w
+1 V
+Q
+—
+=
+‘ V (AV
+m-
+——
+———
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-Viswars lor Expressmn
-w
-W
--
-Wm
-m- “1
-WM MWMW“ E!
-MW" mew-Q
-mm“ Wm
+Vl$|tors for Expressmn
+—
+visit/ntConstant()
+visitVarName()
+visitCompoundExpression()
+visitArithExpression()
+visitMu/tExpress/onO
+visitBracketExpressionO
+4 b
+VisitorPretTypr/nt VisitorEvaI . m
+— — —
+visitlntConstant() visitlntConstantO Iookup()
+visitVarName() visitVarNameO updateO
+visitCompoundExpressionO visitCompoundExpression()
+visitArith Expression() visitArith Expression()
+visitMultExpression() visitMultExpressionO
+visitBracketExpression() visitBracketExpressi0n()
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-Immsmsmamn v2
+Implementatlon 1/2
+
+The implementation can be found in the folder
+examples/interpreter/cpp/expressions//visit0r
+main.cpp:
+stdzz cout << "Input: ";
+std::cin.getline(str, 80);
+Parser p(str);
+std::optional<Expression*> ae I p.expression();
+if (ae.has_value()) stdzzcout << ae.value()e>toStrinq() << "\n";
+else stdzzcout << "nothing\n";
+State st;
+VarName a("a"), b("b");
+st.update(a, lO);
+st.update(b, 5);
+st.print();
+VisitorEval visitorEvall(st);
+if (ae.has_value()) {
+
+ae.value()e>accept(visitorEvall);
+
+cout << "ae I " << visitorEvall.qetCumulateVal() << endl;
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-Impmmsmamn 2/2
-mm
+Implementatlon 2/2
+Running:
+$ g++ *.cpp ../*.cpp istd=c++17 *0 demo.exe
+$ ./demo.exe
+Input: a+bi2
+(a + b — 2)
+a |i> 10
+b |—> 5
+ae : 13
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-Wan
-mummy ExDmssmns
-comm Campus“ and lem
-G 0mm Fammv
+Plan
+Case Study: Expressions
+Combining Composite and Visitor
+Q Object Factory
+m 51 i E i: 0Q‘?
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:65**************
-lmemmn
-. \l \s a cmaunna‘ Biﬂlm
-- w wm an mum lnrmealmg Mamdyo!
-\Hlllmﬂﬂahd nrdlnlﬂdnm alum: mm wqu
-we‘. 5mm: was,
+Intention
+o it is a creational pattern
+0 to provide an interface for creating a family of
+intercorrelated or dependent objects without specifying
+their specific class
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-Apphczblky
+Applicabilty
 
-- i syslem 5mm be \"dependem o! haw me pvoduus m
-mauled. wmvuud nr “New
+o a system should be independent of how the products are
+created, composed or represented
 
-- 35mm weak! be Mme w mun-me Mudnmhmlhes
+o a system would be configured with multiple product families
 
-. “my ul \Mzrcnnemeﬂ “My! mum“ mam.
-mm; can he m lbwelhsv
+o a family of intercorrelated objects is designed so that the
+objects can be used together
 
-. ynu wam w 9mm: = Dmﬂuclhhli'y am mm Wm
-menace m mmgme‘ mime ‘mmemmanw
+o you want to provide a product library and you want only the
+interface to be accessible, not the implementation
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-WWMWMW Mollvalmm/Z
-H-
-M..Mm.mwmmmw smwmn many)
+Motlvatlon1/2
+Recall the counter-example from OCP:
+* ShapeContainer
+— _
+A \
+\
+l
+\
+L
+void load(std: :ifstream& inp)
+m Rectangle <
+while (inp) (
+— — int tag;
+inp >> tag;
+switch (tag) {
+case RECTANGLE:
+ggge CIRCLE:
+>
+)
+If we add more shapes, we have to modify ShapeContainer: :load ().
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-Mom/anon 2/2; (Debseriallzalmn n1
+Motivation 2/2: (De)Ser|a||zat|on of
 Expressmns
-@l MIMI-mm
-“22:1,, m WW
-Ln-mm ,ZYZZZZZQ;’I‘l7§:§2<mm
+a+b*2
+I \ Serialization
+I \
+<arith>
+<label> [+1 </label>
+<varName> a </varName>
+<mult>
+<label> [*1 </label>
+<varName> b </varName>
+Deseﬂaﬁzaﬂon <intC0nStant> 2 </intCOnstant>
+</mult>
+</arith>
+XML notation
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-Slmclurs
-In ‘
-_ l=l
-m m" |==|
+AbstractFactory 1
+Client
+_ -
+createProductA()
+createProductBO
+4 }
+iiii iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii‘
+l 1 \
+‘ AbstractProduclA
+v v 1
+ConcreteFaclory1 ConcreleFactoryZ
+_ _ i i
+L i ConcreleProductAZ ConcreteProduclM
+crealeProductA() createProduclA() i i‘
+crealeProductBO createProduclBO ‘
+‘ 1
+l l AbstractProduclB
+\ \ y v
+\ \
+\ \
+l ‘ i i ConcreleProductBZ
+Lifiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ConcreteProduclB1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-Expression Factory
-E
--m m
-mm
-III
-m E:
-m: m m
+_
+registerExpr() ExprManager
+unregisterExpr()
+createExprO
+v w O
+6
+CompoundExpression
+1 i 1 A V
+BracketExpression ArithExpression MultExpression
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-Correspondens wwh the Standard
-Slmcmle
-- AbstmcthduclA: EXDmsslnn
-- AhsvsmPrwucIB - Slammer“! (an! ‘mmemenled m1
-- ComYsKeFamvy Z mmm [oww'ﬁsw'vi ‘m
-slammemzl
-. Cher“ Z ExprManaqer [Mme Mlh waysenahmmm
+Correspondens with the Standard
+Structure
+o AbstractProductA = Expression
+o AbstractProductB = Statements (not implemented yet)
+o ConcreteFactory = Registrar (of expressions and
+statements)
+o Client = ExprManager (in charge with (de)seria|ization)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
 Consequences
-. Mel-“mmmmm
-. “mm exchange o! lhs mm mﬂy
-. mm" eemm 5mg Wm
-. “we new Wee. lammes my
-. raspsms me unnn 'dnssd pvmmpla
+0 isolates concrete classes
+o simplifies the exchange of the product family
+o promotes consistency among products
+O supports new product families easily
+o respects the open / closed principle
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-Favﬂmpams Reglsvar
-. \l \s . cm lhalmaﬂiqli m. wpmmwmm
-. yeqme's A m We ul erpvessmn mm whenmer a new
-.15an das: .5 “mm
-. awn-5mm WWW m» (ddele a gamma;
-. cvsalsiaxpmsiwn mm;
-. an» \"Wlemenlalmn my" use Dans
-lieu‘ cvwaermenl
-. andcaHhadﬂuncﬂuﬂs [m next mm
-. smgwwrv lemplile nan be M506 m Mme a gm mew
-llegmeﬂ
+Participants: Registrar
+0 it is a class that manages the types 0f expressions
+0 registers a new type of expression (called whenever a new
+derived class is defined)
+o delete a registered expression type (delete a derived class)
+O creates expression objects
+o at the implementation level we use pairs
+(tag, createExern)
+0 and callback functions (see next slide)
+o Singleton template can be used to have a single factory
+(register)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-CaHback Funcuons
+Callback Functions
 
-- “when mm» ‘5 a hmmmn mans nalervhmw \mked
+o a callback function is a function that is not explicitly invoked
 
-. ma mspunmmhly 1m m caH \s dehgawdw anulhnl
-Wm lhsl vecelvesﬂl Daumelsvthe addvzssu! \he
-caﬂbad< mm
+. the responsibility for the call is delegated to another
+function that receives as parameter the address 0f the
+callback function
 
-. m: mm vm-y um unmask mmmm weal: mm:
-V0! each lypwheve IS a “mun-m»,- that cleaves
-mm m mm m1.
+0 the object factory uses callback functions to create objects:
+for each type there is a callback function that creates
+objects of that type
 
-- my I've ‘explswon Vaaury' we dedals a" aha‘ lol lhs lyps
-m Ewmsnun “mm wealmmwmmns
+o for the "expression factory" we declare an alias for the type
+of Expression object creation functions:
 
-m Um mmmw k "zmutxmfv m,
+typedef Expression* ( *CreateEXern ) ();
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
-lmplsmenlalmn: Regisvsr v2
+Implementatlon: Reglstrar 1/2
+class Registrar
+{
+public:
+bool registerExpr(string tag,
+CreateEXern createExern )
+{
+return catalog.insert(
+std::pair<string, CreateExern>(
+tag, createExern)
+).second;
+}
+};
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:76**************
-lmplsmenlallnn: Registrar 2/2
-‘ "5:32;; flaiﬁxrw Alex-Kw: u
+Implementatlon: Reglstrar 2/2
+void unregisterExpr(string tag)
+{
+cataloq.erase(tag);
+}
+Expression* createExpr(string tag)
+{
+map<string, CreateExern>zziterator i;
+i = catalog.find(tag);
+if ( i :: catalog.end())
+throw string("Unknown expression tag");
+return (i—>second)();
+)
+protected:
+map<string, CreateExern> catalog;
+};
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-Implemenlslinn: 0mm Crealmn
+Implementatlon: Object Creatlon
+
+Expression* createIntConstant() {
+
+return new IntConstant();
+}
+Expression* createVarName() {
+
+return new VarName();
+}
+Expression* createMultEXpression() {
+
+return new MultExpression();
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-lmpmmemamon ExprMsnsger
-COHSlHAClm
+Implementatlon: ExprManager
+Constructor
+ExprManager::EXprManager() {
+reg I new Registrar();
+regi>reqisterExpr("<intConstant>",
+createIntConstant);
+regi>reqisterExpr("<varName>",
+createVarName);
+regi>registerExpr("<mult>",
+createMultExpression);
+regi>registerExpr("<arith>",
+createArithExpression);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-FuH lmpbmemalmn
-“.Wmmmw-mw
-MWMWWWWMM
-M.-
-
-“M H 4M»
+Full Implementatlon
+The full implementaiion can be found in the folder
+examples/interpreter/cpp/expressionsl/factory
+Running:
+$ g++ *.cpp istd=c++l7 *0 demo.exe
+$ ./demo.exe
+Input: a+bi2
+test .Xml file created:
+<arith>
+<label> [+,*] </label>
+<mult>
+<label> [] </label>
+<varName> a </varName>
+</mult>
+<mult>
+<label> [] </label>
+<varName> b </varName>
+</mult>
+<mult>
+<label> [] </label>
+<intConstant> 2 </intConstant>
+</mult>
+</arith>
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-Condusmn
-
-. ‘15w. pinemizm away v0 \sam haw w mm W
-WWII!“
-
-- idem" pallem I5 a up ma! comes hum peopw Who have
-amen {hevmnﬂcnmmun sumﬂunslmu 5WD‘: dwesnme
-and swam advmes
-
-- 00> m dzﬁgﬂ my"; ave mmwwcs
-
-- oov reaches W Mme mm. n \Sapvugmmmmq
-mmmwv m a pmqrammvvg mmanl
-
-. deslqﬂ Dallemswach m
-
-- hmvvnmmk 1mm pmgmms‘
-. suweit mmum hmlmlw disses! nhwclstosuwe
-:cevlam icananu m a pvogmm
-. Dmveﬂ "MM: mum
-. many mm usem‘ pawms ave )ound m 60F
+Conclusion
+o design patterns are a way to learn how to build your
+programs
+o a design pattern is a tip that comes from people who have
+distilled their most common solutions into simple, digestible
+and suggestive advices
+o OOP and design patterns are distinct topics
+o OOP teaches you how to program, it is a programming
+methodology or a programming concept
+o design patterns teach you
+o how to think about programs,
+0 suggest methods for building classes / objects to solve
+a certain scenario in a program,
+o proven methods t0 succeed
+o many other useful patterns are found in GoF
 
 ***************Ending Page***************
 

@@ -1,594 +1,592 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\I\I\I\I\I\I\I\
-I Qﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ \
-I \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ§ﬂ\ﬂ\ﬂ \
-I\I\I\I\I\I\I\l
-PROGRAMMING IN PYTHON ‘ ifﬂffw‘
+\/\/\/\/\/\/\I\
+1W
+‘W
+1W
+‘ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\
+I\I\I\I\l\l\l\l
+PROGRAMMING IN PYTHON | fjuvrjgfmgos
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Exceptions in Python have the following form:
-
-Python a“ Python 3.x
-
-uy: try:
-trod; X : 5 / D
-
-except : except:
-mmp rm wn' be Merged u print("Except1<>n")
-M:a:& of ar'; exception
+Exceptions in Python hove the following form:
+Python 3.x Python 3.x
+try: try:
+#code X = 5 / O
+except : except :
+#code that will be executed in print("Exception")
+#case of any exception
+()utput
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Exceptions in Python have the following form:
-Python 3.x Pylhon 3.x
-tzy: cry:
-‘mode x = 5 / 1
+Exceptions in Python hove the following form:
+Python 3.x Python 3.x
+try: try:
+#code x = 5 / l
 except: except:
-"code tut mi, be ExeCJted 1r print("EXcepthn")
-#:nsw w my PM?!» m‘ .15.:
-else: print("All 0k"!
-#c'ode mac ww he‘ eXeWJJted w
-Hkrro ,s r1, oxcrpluwn
-Ouapuv
-Allok
+#code that will be executed in print("Exception")
+#case of any exception else:
+else: print("All ok")
+#code that will be executed if
+#there is no exception
+()utput
+AHok
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-All exeepliens in pyvllen are derived from BuseExcepIion class‘ There are mulnple
-types of exceptions including: AriIhmelicError, BuffelErmr, AmibuIeEIror,
-FloulingPoinlElror, lndexErIor, Keybacrdln'errupl, Nollmplemenledirror,
-OverflowError, lndenIalionErrol, and many more‘
+All exceptions in python ore derived from BaseException clolss. There ore multiple
+types of exceptions including: ArithmeticError, BufferError, AttributeError,
+FloatingPointError, lndexError, Keyboardlnterrupt, NotlmplementedError,
+OverflowError, IndentationError, and mony more.
 
-A list of all the exceptions can be found on:
+A list of oll the exceptions com be found on:
 
-- hngm[deeslgxlhemrg[3.8[library1exeegvienmmwsxeegllen
+' https:[ [docs.python.org [3.8 Z libro ry Z exceptionshtmI#Exception
 
-' hﬂgsjldocsvgyihonprg [3.9 [library [excegfionshlmWExcegll'on
+' https:[ [docs.python.org [3.9 Z libraryZexceptionshtmI#Exception
 
-A custom (user-deﬁned) exception lype can also used lmere on this topic el
-“Clusses'l
+A custom (user-defined) exception type coln CllSO used (more on this topic olt
+“Clo|sses”).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Exceptions in Pyihon have the following form:
-Pthon 3.x Python 3.1
-try: dai Test (y):
-try:
-except ExceptionTypel: x : 5 / y
-\ except ArithlneticError:
-except Exceptien'rypez: print("ArlthmetlcError")
-\ ~ except:
-except: print("Generic exceptlon")
-~ else:
-else: print("All 0k") ompm
-' ArilhmeﬁcError
-‘ TESUO) Generic exce ﬂan
-w w P
-Test( aaa ) Allok
-Test(1)
+Exceptions in Python hove the following form:
+Python 3.x Python 3.x
+try: def Test (y) :
+#code try:
+except ExceptionTypel: x = 5 / y
+#code for exception of type 1 except ArithmeticError:
+except ExceptionTypeZ: print("ArithmeticError")
+#code for exception of type l except:
+except: print("Generic exception")
+#code for general exception else:
+else: print ("All ok") Output
+#code that will be executed if . .
+. . ArlthmetlcError
+#there lS no exception Test(0) . .
+H H Generlc exceptlon
+TeSt( aaa >
+Test(l)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Exceptions in Python have the following form:
-Python a,‘ Python 3.x
+Exceptions in Python hove the following form:
+Python 3.x Python 3.x
 try: def Test (y):
 try:
-except ExceptionTypel: x = 5 /
+except ExceptionTypel: X I 5 /
 except:
-excep - 1 i 1 trot:
-except: print1"A1‘th'r\eL,uE:ror")
+excep ‘r1 e 1c rror:
+except: print ("ArithmeticError")
 else:
-else: print1"All o'<"}
-Test (0) Generic excepﬁnn m-‘m be
-Test ("dam") the lasI one. c914; Wu "0|
-Test (1» compxle.
+else: print ("All ok")
+Test (O) Generic exception mpst be
+the last one. Code WIll not
+Test("aaa") _
+Test (1) complle.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Python also have c finally keyword that can be used to executed something at the
+Python ollso holve ol finally keyword tholt coln be used to executed something olt the
 end of the try block.
 Python 3.x Python 3.x
 try: def Test (y):
-“y; Outpul
-except: x Z 5 / y IeaLQh
-t t except: Em,
-else: print ("Error") Hm
-t else:
-print("All ck") 19511:
-finally: finally: All ok
-t t print ("Final") Hm
-t Test (0t
-t Test (1t
+it code try: Output
+except: x I 5 / y Test(0)=
+#code for general exception except: Ewor
+else: print("Error") Hnd
+#code that will he executed else:
+#if there is no exception print("All ok") 1bﬂﬂy
+finally: finally: AHok
+#code that will he executed print("Final") Hnm
+#after the try block execution Test(O)
+#is completed Test(l)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Python cllso have d ﬁndlly keyword that CU" be used to executed something ev the
+Python also hove ol finally keyword tholt com be used to executed something olt the
 end of the try block.
-Python 1X Pyllwn 3.x
-try: def Test 1y):
-“Y: Finally musl he lhe lusl
-except: X Z 5 / Y slu'emenl
+Python 3.x Python 3.x
+try: def Test (y):
+try: Finally must be the last
+except: X I 5 / y statement
 except:
-else: , I _ "
+else: orin "Error"
 finally:
-finally: e sex
-printi"All 0k")
-Test (U)
-Tesul)
+finally: e se:
+print("All ok")
+Test(0)
+Test(l)
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-Exceptions in Pyihon have the following form:
-Pyihun 3.x Pylhon 3.x
+Exceptions in Python hove the following form:
+Python 3.x Python 3.x
 try: def Test (y):
-x try:
-except (Typen'fypezpl'ypen): x : 5 / y
-\ ~ excepc (ArithmetidEzzoz,TypeErzor)z
-' , , pnnc (“Anchmeticlsnorw
+#code try:
+except (Type1,Type2 ,...Typen) : x I 5 / y
+#code for exception of type except (ArithmeticError,TypeError):
+#1,2,m print("ArithmeticError")
 except: except:
-x \ ~ print("Generic exception")
+#code for general exception print("Generic exception")
 else: else:
-\ prlnt("All 0k") Ouipuo
-' ArithmeticError
-Test (U) ArithmeticEVVOr
-Test ("eee'W A" 0k
-Test (1i
+#code that will be executed print("All ok") quwt
+#lf there lS no GXCthlOD Anmmemfnor
+T€St (O) ArithmeticError
+Test("aaa") AHok
+Test(l)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Exceptions in Pyihon have the following form:
-Pyihon 3.x Pylhon 3.:
+Exceptions in Python hove the following form:
+Python 3.x Python 3.x
 try: try:
-r -: x : 5 / O
-except Typex as <variname>: except Exception as e:
-, - \ ~ , i print‘ acne» >
+#code x = 5 / O
+except Type1 as <va;_name>: except Exception as e:
+#code for exception of type print( str(e) )
+#1.
 except:
-else: Ovlpul
-' ‘ dMsIon by 0
+#code for general exception
+#code that will be executed ...
+#lf there lS no exception
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Exceptions in Python have the following form:
+Exceptions in Python hove the following form:
 
-Pylhan 3.x
+Python 3.x
 
-my:
+try:
+#code
 
-excepc (Typev'ly'pezwlypen) as <vaz>1
-‘r:ocx% m1 excegrilcri :1 tyie 1,2, :1
+except (Type1,Type2,...Typen) as <var>z
+#code for exception of type 1,2,m n
 
-my;
-x : 5 / D
+try:
+X = 5 / O
 
-excapt (Exception,Aricmciczzzoz,TypaEzzuz) a: e:
-princ1 str(eh typﬂe) )
+except (Exception,ArithmeticError,TypeError) as e:
+print( str(e), type(e) )
 
-Ouipvi
+Output
 
-P10hon3: dlvlslon by zero <clnss 'ZeroDMslmErrol'>
+Python3: division by zero <c|o|ss 'ZeroDivisionError'>
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Python also has another keyword (raise) the" can be used m creme / throw on
-exception:
-Python 34x
-raise BxceptionType 1parameters)
-raise Bxception'l'ype (parameters) from <excsptionivar>
+Python also hols onother keyword (raise) tholt coln be used to creolte / throw oln
+excepﬁon:
+Python 3.x
+raise ExceptionType (parameters)
+raise ExceptionType (parameters) from <exception_var>
 try:
-raise Excaption("Testing {Else command")
+raise Exception("Testing raise command")
 except Exception as e:
-print (e)
-Ou'pu!
+print(e)
+Output
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
 Each exception has a list of arguments (parameter args)
-
-Pthon 3.x
-cry:
-
-rais. EXCIPCiBnU'Paraml", 10, "Param3")
-emepc Exception as e:
-
-params = e.args
-
-prim: (1en(params)|
-
-print (Params [01)
+Python 3.x
+try:
+raise Exception("Paraml",10,"Param3")
+except Exception as e:
+params I e.args
+print (len(params))
+print (params[0])
+Output
+3
+Param]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
 raise keyword can be used without parameters. In this case it indicates that the
-current exception should be re-ruised.
-Pytlwn 3.x
+current exception should be re-raised.
+Python 3.x
 try:
 try:
-X : 5 / O
-except Exception ac e:
-print ie)
-raise z
-except Exception as e;4...............'
-printi"Return {mm :aise —> “, e)
-Output (Pythen 3.x)
+X = 5 / O
+except Exception as e:
+print(e)
+raise III-IIIIIIIIIIIIIIIIIIIIII:
+except Exception as e:<----------------'
+print("Return from raise —> ",e)
+Output (Python 3.x)
 division by zero
-Retum from raise -> division by zero
+Return from raise -> division by zero
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
-Python 1x supports chaining exception via from keyword.
-Python 3.!
-1 try:
-2 x : 5 / U
+Python 3.x supports chaining exception viol from keyword.
+Python 3.x
+l try:
+2 X = 5 / O
 3 except Exception as e:
-4 raise Exception(“Erhor") from e
-Oulpu'
-Truceback [mniv reoenvoull km):
-Flln Hwy‘: Im- 2, n- <Ilwdlﬂe>
-x=5/n
-ZlmDivilinnEnw: diviﬁun by {m
-Wmnmuhlmnmmm
-Truceback {mm reoemoull Ion]:
-Flln "mPY-v Ilne A4 In <Mu\e>
-In!“ Exaepﬁlnﬂ'ﬁm") am .
-Exceptiun: Elm!
+4 raise Exception("Error") from e
+Output
+Trocebolck (most recent coll lost):
+File "o|.py", line 2, in <modu|e>
+x = 5 / O
+ZeroDivisionError: division by zero
+The above exception was the direct cause of the following exception:
+Trocebolck (most recent coll lost):
+File "o.py", line 4, in <modu|e>
+raise Exception("Error") from e
+Exception: Error
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:16**************
-Python has a special keyword (asserl) that can be used to raise an exception based
-on the evalua'ion of a condi'ion:
-Pyﬂmn 3.x
-age : -1
+Python has a special keyword (assert) that can be used to raise an exception based
+on the evaluation of a condition:
+Python 3.x
+age I —l
 try:
-assert (age>0) , "Age should be a positive number“
+assert (age>O),"Age should be a positive number"
 except Exception as e:
-print 1e!
-owpm
-Age should b8 a pusiﬁve number
+print (e)
+Output
+Age should be a positive number
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-puss keyword is usually used if you wcmt to catch an excepiion but do not wan. ho
-- rocess iI.
-Python 34x
+pass keyword is usually used it you want to catch an exception but do not want to
+. rocess it.
+Python 3.x
 try:
-X : 10 / 0
+X I lO / O
 except:
 pass
-Some eXCeplions [if not handled) CG" be used for various purposes.
-Python 34x W _ ( )‘r
-., _ “ IS excephun | OW?"
-PPM‘ TE“ ' . nol handle will imediaielly _
-‘alga SYSteMX1t Ierminuie your program Te“
-print ("TestZ")
+Some exceptions (it not handled) can be used for various purposes.
+Python 3.x . _ .
+rint ("Test") Thls exceptlon ( ) If Output
+p ' ' "°' h°"°"e Wi" imedi"'e"y
+ratse SystemEx1t terminate your program est
+pr1nt("Test2")
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-l MODULES
-Modules are pyvhon‘s libraries and extends python functionality. Python has a special
-l<e word im-orl lhat can be used la lm-ort modules.
-Formal (Python 3.x)
-Classes or items from a module can be imported separately using lhe following
-Syntax.
-Formal (Python 3.x)
+| M0 DU LES
+Modules are python’s libraries and extends python functionality. Python has a special
+ke word im ort that can be used to imort modules.
+Format (Python 3.x)
+Classes or items from a module can be imported separately using the following
+syntax.
+Format (Python 3.x)
 from module import *
 When importing a module aliases can also be made using “as” keyword
-Formal (Python 3.x)
+Format (Python 3.x)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Python has u lot of default modules (as, sys, re, mth, etc)‘
-There is else e keyword (dir) rhel eeri be used re elsreiri e lisl el ell lhe hirielieris errd
-ob'ecls that a module ex-orls.
-
-Former lelheri 3.x)
-
+Python has a lot of default modules (os, sys, re, math, etc).
+There is also a keyword (dir) that can be used to obtain a list of all the functions and
+ob'ects that a module exorts.
+Format (Python 3.x)
 import math
-
-purl: ( dix-(maLh) )
-
-Quip“! [Python 3.x)
-
-Lew; 'ilcaderi', ‘file-ref‘. 'Jﬂckaqei‘r use‘; ‘deer’, 'uwsh', ‘esih'. 'esihh', 'd'an', 'amnT, ‘elem’, 'eeil', Envysiyn', ‘ms',
-'wsh', deems‘, ‘e', ‘m’. 'nrk', ‘up’, ‘mi-ll‘, Webs‘, ‘leeeriel', 'Hooi', 'lmod', ‘imp', 'lwm', 'gumma', ‘eed', 'hypcl', 'lnl', 'lsdesey 'lsﬂnhi',
-'iilhi'. 'hhehl, ‘Id-1p‘, lgemrhe', 'log', 'lnglﬂ', 'legi pl, 'lugZ', 'mndf‘, he"; 'pl', ‘peel, 'mdlﬂlls', ‘ilh', ‘ilhh', 'seh', were, 'lullh', whim-l
-The lisi of functions/items from e module may vary from Pylhon 2.x to Python 3.,‘ and
-irerri version le version, er from diiiererrl versions ei Pylheri.
+print ( dir(math) )
+Output (Python 3.x)
+['_doc_', '_loader_', '_name_', '_package_', '_spec_', 'acos', lacosh', 'asin', 'asinh', 'atan', latan2', 'atanh', 'ceil', 'copysign', lcos',
+'cosh', ldegrees', 'e', lerf', 'erfc', 'exp', 'expml ', lfabs', Ifactorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', lisfinite',
+'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'logl O', 'logl p', llog2', 'modf', 'nan', 'pi', lpow', Iradians', 'sin', Isinh', 'sqrt', 'tan', 'tanh', 'trunc']
+The list of functions/items from a module may vary from Python 2.x to Python 3.x and
+from version to version, or from different versions of Python.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Python disﬁribuﬁon modules:
-i; Pyvhon 30K 9 hllgszl [dOCSQXVHOmOrg QZQj-modindethll
-Mm I'm-m-
-aHlainn: lmpllmlmulinn =6 din-"m mm" I. quulnl lxprnﬂun imphmlmdﬁan
-my,” Fading and unpuking bym am =-m<. lundum Random mmbln
-"'""“'=‘ Mm law-Inn‘ "mm inlnfunl
-imam um Ma Tim: mm“; “pm-n PM.“
-mi‘ “PPM '°' "M" WM‘ “""5 m syn“. ‘Wm Maw (ndhwdum,
-ham, Implemﬂndliun a dillerem mm, lMDS, 5m, lug-mm‘, lauded mm“ _..)
-"'1 Imaebrxk mum trunebuck
-i‘°" 5°" MM" “"1 “*M“ mm; Hanlenq um / um "qmu, =0:
-mm Morhemaviwl ﬁmians ml XML m: WW
-a: nirmm fvrminns os wed": [make div,
-deleve rues, rsnume me» pm, ."1
+Python distribution modules:
+o Python 3.x 9 https:[ [docs.python.org 1 3 Z py-modindexhtml
+m-_ m-_
+collections Implementation of different containers re Regular expression implementation
+ctype Packing and unpacking bytes into c-like random Random numbers
+structures socket Low-level network interface
+datetime Date and Time operators
+subprocess Processes
+ema|l Support for worklng w'lh ema|ls sys System specific functions (stdin,stdout,
+hashlib Implementation of different hashes (MD5, SHA, arguments, loaded modules, ...)
+"'l traceback Exception traceback
+|son JSON encoder and decoder urllib Handling URLs / URL requests, etc
+math MathematIcal functlons xml XML file parser
+os Different functions OS specific (make dir,
+delete files, rename files, paths, ...)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-l MODULES - svs
-Python documenlalion page:
-a; Pylhon 3ux 9 hllgszl [docsgylhonrorg 3 libmryfsysuhlmmsysmodules
-IM——
-sysargv A lisl of on parameters send to the python script
-sys.plu"orm Curler" plottorrn (wtndows / Llnux / MAC 05x1
-sys.sldin Handlers tor defoull l/O operulions
-syslﬂdoln,
-:ys.!lderrr
-sys.paih A lisl of airings that repreyen' polhs irom where module will be loaded
-syslmodules A dlcﬂonury ot modules mot have been loaded
+| MODULES - svs
+Python documentation page:
+o Python 3.x 9 https:[ [docs.python.org[3Zlibrary[sys.html#sys.modules
+m—
+sys.argv A list of all parameters send to the python script
+sys.platform Current platform (Windows / Linux / MAC OSX)
+sys.stdin Handlers for default l/O operations
+sys.stdout,
+sys.stderrr
+sys.path A list of strings that represent paths from where module will be loaded
+sys.modules A dictionary of modules that have been loaded
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-sywrgv provides u lisl of all parameters mm have been send from lhe command line
-to u pyahon script. The firs| parameter is Ihe name/path of the script
+sys.argv provides a list of all parameters that have been send from the command line
+to a python script. The first parameter is the name/path of the script.
 
-File‘ '(Fy'hon 3.x)
+File ‘ ’ (Python 3.x)
 
 import sys
 
-print (“First parameter is", sys.argv[0]l
+print (“First parameter is”,sys.argv[0])
 
-Oulpu'
+Output
 
->>> pyﬁlbn.exe G\|esr.py
+>>> python.exe C:\test.py
 
-Flrsl Wrumnlu ls C1\vesuvy
+First parameter is C:\test.py
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:23**************
-Pyﬂwn 3.x (File: 1
+Python 3.x (File: )
 import sys
-sums = 0
+suma I O
 try:
-Ea: val in sys.azgv[l:]:
-suma += intWal)
-print ("Sum:“rsuma)
+for val in sys.argv[l:]:
+suma +: int(val)
+print("Sum:",suma)
 except:
-print1"In\/alld parameters")
-Ouvpm
->>> Wm.“- C:\wm.py ‘ 2 3 A
-Sum = ID
->>> pythonmxe G\sum.py ‘ 2 3M
-Invalid Forum's
+print("Invalid parameters")
+Ouiput
+>>> python.exe C:\sum.py 1 2 3 4
+Sum = IO
+>>> python.exe C:\sum.py 1 2 3 fest
+Invalid parameters
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-\ M 0 o u LES - os
+| M 0 D u L ES - 0 s
 Python documentation page:
-o Python 3rx 9 hligszudocsnghonarg Kllibrmyfossmml
-Includes funnions ‘on
-c Environmem
-r: Processes (m0, Groups, etc)
-e File system (change av, enumerule mes, delete ﬁles or directories, etc)
-e File descripmr functions
-O Terminal informcﬂons
-o Process management (spawn processes, fork, etc]
-Q Wcrking with me poms
+0 Python 3.x 9 https:[ [docspythonprg[3(librarygos.html
+Includes functions for:
+o Environment
+o Processes (PID, Groups, etc)
+o File system (change dir, enumerate files, delete files or directories, etc)
+o File descriptor functions
+o Terminal informations
+o Process management (spawn processes, fork, etc)
+O Working with file paths
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-\ M 0 nu LES - os
-Listing me contents of c folder (chisvdir 9 returns u list of child files and folders).
-Pyihon 34x
-print (os.llstc(1r(".”) >
-Quip-n
-‘Pymcn27', 'Py'honlﬂ‘, 'Sysvem Volume Marmoﬁan', 'Users‘, 'Wlndaws‘, ,..]
+| M 0 DU LES - 05
+Listing the contents of a folder (os.listdir 9 returns a list of child files and folders).
+Python 3.x
+import os
+Output
+'Python27', IPython38', 'System Volume lnformation', 'Users', 'Windows‘, ...]
 File and folder operations:
-o osmkdir / osemkdirs -) Io creme folders
-Q os.chdir —) Oo change current puih
-o os.r|ndir / osJemovedirs -) ve deleie a folder
-o os.remove / osiunlink -) Io delete u me
-o owenume / oserenemes -) rename/move operuvien;
+o os.mkdir / os.mkdirs 9 to create folders
+o os.chdir 9 to change current path
+o os.rmdir / os.removedirs 9 to delete a folder
+o os.remove / os.unlink 9 to delete a file
+o os.rename / os.renames 9 rename/move operations
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-as has a submodule (puihl ‘hut can be used to perform different operations with
-file directories -cihs.
-
-Python air
-
-import 05
-
-print (os.path. 70in 1"C:”,”W1ndows”,"System32")i cuipur
-
-prlnt (05>P5Chidlrnﬁm6 1"CZ\\W1ndows\\abc.tXt”)i C:\Vﬂndamx\5ynlm32
-print (ospaLleasename ("C2\\W1nd0ws\\abcit><t”ii @WMM
-print (Os.path.splltsxt ("C:\\Windows\\abc.txt"i) ligiwndmvwnmq
-prlnt (os,pathiexists (”C:\\Windows\\abc,txt")) False ‘
-print (os,path.cxlsts ("Ct\\Wlndow5\\abc.txt")) Yrul
-
-prlnt (OSqJEJZhilSdiI (”C:\\Windows”i) :2’;
-
-print (OSJIQLhilSIlle (”c:\\windows”))
-
-print (os.path.1sflls ("C:\\W1ndcws\\abc.txt"))
+os hos ol submodule (path) that con be used to perform different operations with
+file directories oths.
+Python 3.x
+import os
+print (os.path.join (”C:”,”Windows”,”System32”)) Oukmt
+print (os.path.dirname (”C:\\Windows\\abc.txt”)) QVNmmw§§wmm$2
+print (os.path.basename (”C:\\Windows\\abc.txt”)) C2“mﬂmm
+' ' n - I, q C.TXf
+print (os.path.spiitext ( C:\$Windows\\abc.txt )) Faywmmwnpmﬂﬁmﬂ
+print (os.path.ex1sts (”C:\\Windows\\abc.txt”)) Fdw
+print (os.path.exists (”C:\\Windows\\abc.txt”)) Twe
+print (os.path.isdir (”C:\\Windows”)) Fdw
+print (os.path.isfile (”C:\\Windows”)) Pd“
+print (os.path.isfile (”C:\\Windows\\abc.txt”))
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Listing me contents of a folder recursively.
-Pyihon 1X
-import OS
-for (Icot,d1rector1e$, E1155) in cs‘ walki" - "i:
+Listing the contents of a folder recursively.
+Python 3.x
+import os
+for (root,directories,files) in os.walk("."):
 for fileName in files:
-fullifileName = c5.path.joln1:oot, fileName)
-prlnt (full_fileNamE)
-Ouipui
-
-os module can also be used to execute u system ‘\n
-command or run an application via syslem function “FY
-Pyihon 34x .\n-|.bm
-_ .\Fo|derl\n|siml.6.0.0.|x|
-I-IHPOR OS ‘\Folderl\versiml.é.0.i.Ix'
-cs . system ( “di: * . * /a") .\Fo|devI\Fuldnr2\versim,l.5.0‘8im
+full_fileName = os.path.join(root,fileName)
+print (full_fileName)
+()utput
+os module can also be used to execute a system ,\q
+command or run an application via system function lull”
+. G .CSV
+Python 3.x .\run.bat
+_ .\Folderl \version.l .6.0.0.txt
+1mport OS .\Folderl\version.l.6.0.l.txt
+OS . system ( "dir * . * /a" ) .\Folderl \Folder2\version.l .5.0.8.txt
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-\ INPUT/OUTPUT
-Python has 3 implieii ways m work with l/O:
-A) IN: vie keyboard (wiih inpuI or Iawjnpu' keywords)
-- Tirere are several differencei between pviirerr 2.x Grid pvmeri 3.x regarding reedirrg from sldin
-B] our: via plinI keyword
-C) lN/OUT= via open keyword (Q0 access files]
+| INPUT/OUTPUT
+Python has 3 implicit ways to work with l/O:
+A) IN: via keyboard (with input or raw_input keywords)
+- There are several differences between python 2.x and python 3.x regarding reading from stdin
+B) OUT: via print keyword
+C) lN/OUT: via open keyword (to access files)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
-In Pthon 1x, Ills content read from Ihe :an is considered m be a string and returned
-annno (Python 1x) Pyihon 3.x
-input n >>> Enver: w
-input (message) 1o <cluss 's||'>
-PM“ 1X >>> Enter: 1+2*a.o
-‘ Hm» <clcss 's'r'>
-X : 1nput("Enter: ">
-print 1x, tyPe 1x) a >>> Em" ‘23
-"123" <cluss 'm'>
-° >>> Emer: Vest
-vesv <cluss 'svr'>
+In Python 3.x, the content read from the input is considered to be o string ond returned
+Format (Python 3.x) Python 3.x
+input () >>> Enter: 10
+input (message) iO <c|oss 'str'>
+Python 3.x >>> Enter: i+2*3.0
+_ i+2*3.0 <c|oss 'str'>
+X = 1nput("Enter: ")
+print (X, type (X) ) >>> Enter: 123
+"123" <closs 'str'>
+o
+>>> Enter: test
+test <c|oss 'str'>
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:30**************
-prim CGI'I be used io prim u string or an obied/vcricble ihui can be convened iriio a
+print com be used to print o| string or on obiect/volriolble tholt coln be converted into o|
 string.
-Format {Python 3.x)
-pzint (whims, sep=' ', end= '\rr‘, {ile=sysrxldnvl, ﬂush=Fulxe)
-Pyllion 3.x
->>> prirri (“mi”) >>> prlnf(“12:1",‘|0]
-lest test 10
->>> prim {“|es|",| O,sep:“---"] >>> prim ("ten");prinl(“1est2"]
-lest-“10 fest
-resiz
->>> prim {“Ie$|",endI“***");print[“|es|2“)
-aesr'”iesi2
+Format (Python 3.x)
+print (*obiects, sep=' ', end: '\n', file=sys.stdout, flushIFoIse)
+Python 3.x
+>>> print (“test”) >>> print (“test”,i O)
+test test iO
+>>> print (“test”,i O,sep=“---”) >>> print (“test”);print(“test2”)
+test-“i O test
+test2
+>>> print (“test”,end=“***”);print(“test2”)
+test***test2
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-A ﬁle can be open in python using the keyword open.
-Formal (Py'hon 3.x)
-Fileobject I open (fllePach, mode: 'r‘, bufferlng:—l, encodingINone,
-
+| FILE MANAGEMENT
+A file can be open in python using the keyword open.
+Format (Python 3.x)
+errors=None, newline=None, cl osefd=True, opener=None)
 Where mode is a combination of the following:
-
-o "r" - read (defunli)
-
-o "w" - wrile
-
-J "x" - exclusive creuﬂcn (fun if file exists!
-
-<1 "a" - append
-
-n "b" -bmmy mode
-
-o "a" even mud:
-
-<1 "+" - updﬂie (read and wriie)
+o “r” — read (default)
+O “w” —write
+o “x” — exclusive creation (fail if file exists)
+o “a” —append
+o “b” — binary mode
+o “t” — text mode
+o “+" — update (read and write)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-‘ FILE MANAGEMENT
-Python 3 also supports some extra parcmelers such as:
-c enzuding —> if me file is Open in iexi mode and you need Vrclrislution from diiiereni encodTngs (UTF, erei
-r: error —> specify Ihe Wdy COnVeISiGn errors rd’ dwe'eni encodings should be processed
-e newline 9 also idi iexi mode, speciﬁes Whul should be consider d new line. if viii; value is set IO Ndne
-me chowder Ihu' is specific for iiie :urrem operuiing system wiii be used
+| FILE MANAGEMENT
+Python 3 also supports some extra parameters such as:
+o encoding 9 if the file is open in text mode and you need translation from different encodings (UTF, etc)
+o error 9 specify the way conversion errors for different encodings should be processed
+o newline 9 also for text mode, specifies what should be consider a new line. If this value is set to None
+the character that is specific for the current operating system will be used
 Documentation for open function:
-o Pyrhon 3.x -) hﬂgyZZgggegxihgrigrgLQLIiQIQYXZE ngignehnnigggen
+0 Python 3.x 9 https:[ [docs.python.org[3Zlibrary[functions.html#open
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
-‘ FILE MANAGEMENT
-A file obiect has llie following methods:
-Ci ﬁclose -) closes amen! ﬁle
-0 hell —) remms'he cuvven' file position
-c (seek —> sets lhe currem file position
-r: Mead -) leads a number of byles from ‘he ﬁle
-a; (wile —> write u number of bytes lmo ihe file
-0 ﬁreudllne -) reads a lIne from Ihe ﬁle
-Also - ihe me nb'ecv is iterqble and remrrls ull Iex' lines 6mm c ﬁle.
-Pylhnn 3.x
-prlnt ‘liﬂe>5f77p(,l
-Lines rend using this method contain Ihe line-feed lerminolor. To remove il, use strip or
-rsIIip melhods.
+| FILE MANAGEMENT
+A tile obiect hols the following methods:
+o t.close 9 closes current tile
+o f.te|| 9 returns the current file position
+o t.seek 9 sets the current file position
+o t.reo|d 9 redds or number of bytes from the file
+o t.write 9 write ol number of bytes into the tile
+o t.reo|d|ine 9 reolds or line from the file
+Also — the file ob'ect is iterolble and returns o||l text lines from or tile.
+Python 3.x
+print (line . strip())
+Lines redd using this method contolin the line-feed terminoltor. To remove it, use strip or
+rstrip methods.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:34**************
@@ -596,65 +594,67 @@ Functional programming can also be used:
 
 Python 3.x
 
-X : [llne for line in Opani"f1.lectxt") if "Gen" in llne.stripii]
+X I [line for line in open("file.txt") if "Gen" in line.strip()]
 
-print (lenixli
+print (len(x))
 
-To regd the entire content ot the file in o buffer:
+To read the entire content of the file in a buffer:
 
 Python 3.x
 
-data : open("flle4txt“, "rb") . reaa'tt
+data I open("file.txt","rb").read()
 
-print (LenidataU
+print (len(data))
 
-print (data [Oit
+print (data[O])
 
-read method relurns u string in Python 2.x and o buffer or string depending 0n how the
-file is opened (“rt" vs “rb") in Pylhon Six 9 The output of lhe previous code will be u
-character (in Python 2.x) and a number representing the cscii code at that character in
+read method returns a string in Python 2.x and a buffer or string depending on how the
+file is opened (“rt” vs “rb”) in Python 3.x 9 The output of the previous code will be a
+character (in Python 2.x) and a number representing the ascii code of that character in
 Python 3.x
 
-To obtain a string in Python 3.x use “r0” instead of “rh”
+To obtain a string in Python 3.x use “rt” instead of “rb”
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
-TO Creme G ﬁle and write cement in it:
-Pyllmn 3.x
-open("file.txt", "WC") ‘ WZZEE‘ ("A new file ‘ ‘ . "i
-It is a good policy to embed file operation in a \‘ry block
-Pylllun 3.x
-my:
+To creolte ol tile olnol write content in it:
+Python 3.x
+open("file.txt","wt").write("A new file ...")
+It is o good policy to embed file operation in o try block
+Python 3.x
+try:
 
-f : open("abc,txt")
+f I open("abc.txt")
 
-fa: line in f:
+for line in f:
 
-print (line,5trip())
+print<line.strip())
 
-f . 01059 (h
+f.close()
 except:
 
-print1"Unable to open flle abcxxt")
+print("Unable to open file abc.tXt")
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:36**************
-Once u file is open, the file Obiecf handle can be used to retrieve different information
-regarding ohm file:
+Once a file is open, the file obiect handle can be used to retrieve different information
+regarding that file:
 
-Pylhon a‘:
+Python 3.x
 
-f Z Open‘..a_pyny..rb",
+f = open("a.py","rb")
 
-print ("File name z imame)
+print ("File name : ", f.name)
 
-prlnt (“File open mode = ", Lined?)
+print ("File open mode : ", f.mode)
 
-print ("15 1: closed ? = ", f.closed)
+print ("Is it closed ? : ", f.closed)
 
 ***************Ending Page***************
 

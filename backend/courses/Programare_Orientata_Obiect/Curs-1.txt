@@ -1,6 +1,6 @@
 ***************Beginning Page***************
 ***************page number:1**************
-00 P X Gavrilut Dragos
+0 O P Gavrilut Dragos
 Course 1
 
 ***************Ending Page***************
@@ -8,44 +8,45 @@ Course 1
 ***************Beginning Page***************
 ***************page number:2**************
 > Administrative
-> Glossary
+b Glossary
 > Compilers
 > OS architecture
-SL1 m mary b C++ history and revisions
+sum mary b C++ history and revisions
 > From C to C++
 > Classes
-> Classes - Data Members
+b Classes - Data Members
 > Classes - Methods
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-> Administrative
+‘\ > Administrative
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
 Administrative
-> Site: httgs://sites.google.com/view/fii-Qoo/ ‘3
-> Final grade for the OOP exam: ‘g
-- First lab examination (week a) —) 30 points ‘1
-- Second lab examination {week 14 ur15i —> 30 points
-- Course examination -> an points
-- Lab activity —) up ta 1 point for each laboralury and nn murE than 10 points in total
+b Site: https://sites.google.com/view/fii-poo/
+b Final grade for the OOP exam:
+- First lab examination (week 8) 9 30 points
+- Second lab examination (week 14 or 15) 9 3O points
+- Course examination 9 30 points
+- Lab activity 9 up to 1 point for each laboratory and no more than 10 points in total
 > Minimum requirements to pass OOP exam:
-it capability to write C++ programs based 0n speciﬁcalions
-2, capability lo correctly apply OOP principles (inheritance, polymorphism, etc)
-3, ability t0 understand OO principles/nrogramming-techniques written in C++,~"
-4 ability to detect simple errors in a C++ program and understand them/w"
+1. capability to write C++ programs based on specifications
+2. capability to correctly apply OOP principles (inheritance, polymorphism, etc)
+3. ability to understand OO principles/programming-techniques written in C++
+4. ability to detect simple errors in a C++ program and understand them
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-\ > Glossary
-\
+m’ Glossary
 
 ***************Ending Page***************
 
@@ -53,30 +54,31 @@ it capability to write C++ programs based 0n speciﬁcalions
 ***************page number:6**************
 Glossary
 
-> API —) Application frogram interface
+b API 9 Application Erogram interface
 
-> Library r a set o functions that can be use by multiple programs at the same
-time ((or example math functions like cos, sin, tan, etc)
+> Library — a set o functions that can be use by multiple programs at the same
+time (for example math functions like cos, sin, tan, etc)
 
-> GUI -) graphic Qser interface
+b GUI 9 graphic Qser interface
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Glossary
-> Compiler - a program that translates trorn a source code (a readable code) l
-into a machine code {binary code that is understand by a specific architecture ‘r
-r x86, x64, ARM, etc} r
+G lossa ry
+b Compiler - a program that translates from a source code (a readable code)
+into a machine code (binary code that is understand by a specific architecture
+- x86, x64, ARM, etc)
 > A compiler can be:
-> Native » the result is a native code application (or the speciiic architecture ‘a
-> interpreted e the result is a code lusually called byte-code) that requires an
-interpreter to he executed. lts portability depends on the portability of its
+> Native - the result is a native code application for the specific architecture
+> Interpreted - the result is a code (usually called byte-code) that requires an
+interpreter to be executed. Its portability depends on the portability of its
 interpreter
-b JIT (gust 1n Iime Compiler] - (he result is a byte-cﬂde, but during the Execution
-parts of this code are convened to native code ior performance
-Interereted JIT Native
-I Faster Low Level'
+> JIT (gust 1n ‘l_'ime Compiler) - the result is a byte-code, but during the execution '
+parts of this code are converted to native code for performance
+Interpreted JIT Native
+Faster, Low Le '<
 Portable, High Level
 
 ***************Ending Page***************
@@ -84,593 +86,620 @@ Portable, High Level
 ***************Beginning Page***************
 ***************page number:8**************
 Glossary
-Source 1 Object File ‘
+Source 1 Object File 1
 Executable
-Source 1 Object File Z a‘
-i Source n Object File n Libranes /
+Source 2 Object File 2
+i Source n Object File n Libraries
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Glossary
-> Linker - a program that merges the object files obtained irom the compiler ‘l
-phase into a single executable ‘l
-> It also merges various libraries to the executable that is being create. ‘1
-> Libraries can be linked in the following ways: i‘
-> Dynamically: When applicatinn is executed, the operating system links it with the I
-necessary libraries [if available). Ii not, an execution error may appear
-> Statitt The resulted executable code contains the code from the libraries that it
+G lossa ry
+b Linker - a program that merges the object files obtained from the compiler
+phase into a single executable
+> It also merges various libraries to the executable that is being create.
+b Libraries can be linked in the following ways:
+> Dynamically: When application is executed, the operating system links it with the
+necessary libraries (if available). If not, an execution error may appear.
+> Static: The resulted executable code contains the code from the libraries that it
 uses as well
-> Delayed: similar with the Dynamic load, but the libraries are only lbaded when the
-application needs one runction land not before that moment). ,
-Static Delayed Dynamically r
-——
-I Smaller cOdE'
+> Delayed: Similar with the Dynamic load, but the libraries are only loaded when the '
+application needs one function (and not before that moment).
+Static Delayed Dynamically 4
+Smaller co. ~
 Portable
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-> OS Architecture
+‘\ > ()S Architecture
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-OS Architecture
-> What happens when the OS executes a native application that is obtain from a I
-compiler such as CH ? I‘
-> Let's consider the following C/CH file that is compile into an executable ‘I
-application: ‘1
-APP-(PP I
-“include mm.» l
-m vectnruw]; ‘
-m1 IsNuiber-oddﬂnt In l
-Mum (m x 21:1“);
-)
-ma nil-mm l
-m p01,‘;
-m lWx-on-lwnxdeﬂn») i
-u (um-“mum; t
-v::tcr'[pnz¢¢] - 1;
-l } '
-prlmmrma m m numbers l");
+> What happens when the OS executes a native application that is obtain from a
+compiler such as C++ ?
+b Let’s consider the following C/C++ file that is compile into an executable
+application:
+APP-CPP
+#include <stdio.h>
+int vector[100];
+bool IsNumberOdd(int n) {
+return ((n % 2)==6);
+}
+void main(void) {
+int poz,i;
+for (poz=9,i=1;poz<166;i++) {
+if (IsNumberOdd(i)) {
+vector[poz++] = i;
+}
+}
+printf("Found 199 odd numbers l");
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-OS Archi tectu re
-> Let's assume that we compile “App.cpp" on a Windows system using Microsoit
-C++ compiler icllexey
-> App.cpp is compiled using dynamic linkage for libraries‘
-A . .
-PP cpp APP-Dbl App.exe
-msvcrLlib \
-kemelﬂllb
-ntdlllib
+OS Architecture
+b Let’s assume that we compile “App.cpp” on a Windows system using Microsoft
+C++ compiler (cl.exe).
+> App.cpp is compiled using dynamic linkage for libraries.
+App.cpp App.obj App.exe
+msvcrt.lib
+kernel32.lib
+ntdll.lib
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
 OS Architecture
-b Let's assume that we Compile “Appﬂpp” 0n a WindOWS System using MiCrDSuft
-Cw compiler lcllexe)‘
-> App.cpp is compiled using dynamic linkage (or libraries‘ -
-pp Lpp APP-0b] App.exe \
-msvcrtllib
-“print!” function tells the
-_ linker t0 use the CRT libraly ,
-kernel324lib (where the code for this
-function is located). msvcrtlib
-is (he Winduws version of CRT
-ntdll.lib (Q'Bunlime) library‘
-/,
+b Let’s assume that we compile “App.cpp” on a Windows system using Microsoft
+C++ compiler (cl.exe).
+> App.cpp is compiled using dynamic linkage for libraries. -
+A .c .
+pp pp APP'ObJ App.exe
+msvcrt.lib
+“printf” function tells the '
+_ linker to use the CRT library
+kernel32.lib (where the code for this
+function is located). msvcrt.lib
+is the Windows version of CRT
+ntdll.lib (Q-BunIime) library.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-OS Archltecture
-b Let's assume that we Compile “Appﬂpp” 0n a WlndOWS System using MiCrDSuft
-Cw compiler lcltexe)‘
-> App.cpp is compiled using dynamic linkage (or libraries‘ -
-A .' . l
-pp Lpp APP-0b] App.exe \
-msvcrtlllb
-The implementation o! printf
-_ 1mm msvcrt.lib uses system ,
-kernel324llb lunction to write characters to
-the screen‘ Those lunctions
+OS Architecture
+b Let’s assume that we compile “App.cpp” on a Windows system using Microsoft
+C++ compiler (cl.exe).
+> App.cpp is compiled using dynamic linkage for libraries. -
+App.cpp APP'Obj App.exe
+msvcrt.lib
+The implementation of printf '
+_ from msvcrt.lib uses system
+kernel32.lib function to write characters to
+the screen. Those functions
 are located into the system
 ntdll.lib library kernel32.lib
-/,
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
 OS Architecture
-b Let's assume that we Compile “Appﬂpp” 0n a WindQWS system using MiCrDSuft
-Cw compiler {cliexey
-> App.cpp is compiled using dynamic linkage (or libraries‘ -
-pp Lpp APP-0b] App.exe i
-msvcrtilib
-_ Kernel3Z,lib requires access to ,
-kerneBZlib windows kernel / lo-levelAPl
-functions. These iunctions are
+b Let’s assume that we compile “App.cpp” on a Windows system using Microsoft
+C++ compiler (cl.exe).
+> App.cpp is compiled using dynamic linkage for libraries. -
+App.cpp APP'Obj App.exe
+msvcrt.lib
+_ Kernel32.lib requires access to '
+kernel32.lib windows kernel / lo-level API
+functions. These functions are
 provided through ntdll.lib
 ntdll.lib
-/,
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
 OS Architecture
-> What happens when a.exe is executed:
+b What happens when a.exe is executed:
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-OS Architecture
-> Content of “annexe” is copied in the Process memory
-— I
-—
-k AppleXe
-—
+OS Archltectu re
+b Content of “app.exe” is copied in the process memory
+k
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-OS Archltecture
-> Content nv the libraries that are needed by “a.exe" is Copied in the process
-“my — ‘=
-msvcrtddll — 3
-Winn
-kemel32.dll
-"mud" g NW
+OS Archltectu re
+b Content of the libraries that are needed by “a.exe” is copied in the process
+mm” —
+msvcm —
+kernel32.dll
+kernel32.dll
+ntdll dll ntdll.dll
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-OS Archltecture
-> References to diﬂerent functions that are needed by the main module are
-"8am —
-imparted in App.exe from the
-msvcrtxﬂl CRT libra
-‘ W‘ '-
+OS Architectu re
+b References to different functions that are needed by the main module are
+Address of “printf” function is —
+imported in App.exe from the
+msvcrt.dll CRT librar
+‘ Y’ I'-
 kernel32.dll
+ntdll.dll
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-OS Archltecture
-> Slack memory is created‘ In our example, variable p02, i, and parameter n
-will be stored into this memoryl —
-> This memory is not initialized‘ That is —
-why local variables have undeﬁned
-values, — —
-> Every execution lhread has its own stack — ‘r
+OS Architecture
+b Stack memory is created. In our example, variable poz, i, and parameter n
+
+will be stored into this memory. —
+> This memory is not initialized. That is —
+
+why local variables have undefined
+b Every execution thread has its own stack —
+
 EVERY local variable and
-(unction parameters will be
-stored Into this stack
+function parameters will be
+stored into this stack
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
 OS Architecture
-> Heap memory is allocatede Heap memory is a large memory from where smaller
+b Heap memory is allocated. Heap memory is a large memory from where smaller
 buffers are allocated. Heap is used by —
-the following functions: ;
-, opemr new — 3
-e melee, eeuee, eee — a
-b Heap memory is not initialized.
-e The eeme heee ee eeee by meleele BE-
+the following functions:
+, Opera... new —
+> malloc, calloc, etc —
+> Heap memory is not initialized.
+-
+> The same heap can be used by multiple
 threats
-msvcrt.dll
+kernel32.dll
+ntdll.dll
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-OS Arch1 tectu re
-> A memory for global variable is allucaled. This memory is initialized by
-default with 0 values‘ This is where all —
-global variables are stored, Ii a global
+OS Architecture
+b A memory for global variable is allocated. This memory is initialized by
+default With O values. This is Where all —
+global variables are stored. If a global
 variable has a default value (different —
-than U), that value will be set into this
-memmyspace' EE- r
+than 0), that value will be set into this
+memorym IE-
 > In our case, variable vector will
-\ be stored into this memory,
-—
+be stored into this memory.
+int vectornOO]
+kernel32.dll
+ntdll.dll
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:23**************
-OS Architectu re
-b A memory Space for Constant data is created‘ This memory Stores data that
-will never changer The operating system —
-creates a Special virtual page that does
-not have the wr1te flag enable —
+OS Architecture
+> A memory space for constant data is created. This memory stores data that
+will never change. The operating system —
+creates a special virtual page that does
+not have the write flag enable —
 > Any attempt to write to the memory Global Variables
 that stores such a variable will produce m
-an exception and a system crash‘
-> In our example, the String “Found 160 — ,
-odd numbers I” will be stored into this App.exe
-memory msvcrt.dll Found 100 odd
+an exception and a system crash.
+> In our example, the string “Found 199
+odd numbers !” will be stored into this pp.exe /
+memory. Found m odd
+kernel32.dll numbers !"); ’
+ntdll.dll
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-OS Archltecture ‘
-> Let's consider the followin examle: ‘
-‘
-void main (void) ‘
+OS Archltectu re
+b Let’s consider the followin exam-1e:
+void main (void)
 {
-char 51,52,53; ‘
+char 51,52,533
 char *p;
-51 = 'a‘;
-sZ = 'b‘;
-$3 = 'c‘;
-p = 851;
-*P = '6‘;
+51 = ‘a’;
+52 = 'b';
+53 = 'c';
+p = &51;
+*P = '9';
 P[1] = '1';
-*(P+Z) = '1';
-}—_
+*(P+2) = '2';
+}i—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-OS Archltecture
-> The program has 4 variable (3 0f type Char "a','b’ and ‘C’ and a pointer ‘p'). I
-> Let's consider that the stack start at the physical address 100 r
-App.cpp Stack Address Var I
-2m mm ("may 99 (s1)
-:22; 98 ($21 r
-Z; I ‘it; 97 (53)
-53 Z ‘a;
-v - an; 93 (p)
-w - w;
-um - ‘r;
-‘(My - ‘2w
-)—
+OS Architecture
+b The program has 4 variable (3 of type char -’a’,’b’ and ‘c’ and a pointer ‘p’).
+b Let’s consider that the stack start at the physical address 100
+App.cpp Stack Address Var
+Eloid main (void) 99 (S1)
+2:2: 98 ($2)
+ZZZ 93-; 97 (s3)
+53 = ‘c';
+p = 861; 93 (P)
+*p = ‘6';
+p[1] = ‘1';
+*(p+2) = ‘2';
+}—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-OS Archltecture
-> Let's also consider the following pseudu code that mimic [he behavior of the I
-original code ‘
-2nd main (1mm 99 (S1,
-:::: 98 (s21 l
-iii ‘El; 97 (53)
-53 : 'c';
-5;.‘22 93 (P)
-PP] ' T;
-W . w
-)—
+OS Architecture
+b Let’s also consider the following pseudo code that mimic the behavior of the
+original code
+\{loid main (void) 99 (S1)
+
+2:2: 98 ($2)
+ii Z "3-; 97 ($3)
+53 = ‘c';
+p = 861; 93 (P)
+*p = ‘6';
+pll] = ‘1';
+*(p+2) = ‘2';
+
+}—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-OS Archltecture
-> Upon execution r the following will happen: I
-z,“ mm mm Stack[9§] _ ,a. 99 ‘a, 1
-:22; if”; 9s z 1
-97 2
-33-15;‘ 93 7
-w - I‘;
-PP] ' ‘f;
-‘(W27 - ‘T1
-)—
+OS Archltectu re
+
+b Upon execution — the following will happen:
+
+Eloid main (void) Stack[99] = 'a' 99 ‘a:
+222i iism’ 98 ?
+97 ?
+31155;’ 93 ?
+*p = ‘6';
+p[1] = ‘1';
+*(p+2) = ‘2';
+
+}—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-OS Archltecture
-> Upon execution r the following will happen: I
-z,“ mm mm Stack[9§] _ ,a. 99 ‘a, 1
-5:1; $552,“; Stack[98] = 'b‘ 9s ‘b’ 3
-97 2
-345;‘ 93 7
-w - I‘;
-PU] - T;
-“(my - ‘2w
-)—
+OS Archltectu re
+
+b Upon execution — the following will happen:
+
+Eloid main (void) Stack[99] = 'a' 99 ‘a:
+2:2: igfzﬁg Stack[98] = 'b' 98 ‘b’
+
+97 ?
+
+Z =15; 93 ?
+*p = ‘6';
+p[1] = ‘1';
+*(p+2) = ‘2';
+
+}—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-OS Archltecture
-> Upon execution r the following will happen: I
-z,“ mm mm Stack[9§] _ ,a. 99 ‘a, 1
-5:1; $552,“; Stack[98] = 'b‘ 9s ‘b’ 3
-“i ' lilf |—>sta<k[sv] = '<' 97 ‘c’
-v- ; 93 7
-.,, . I‘;
-PU] - ‘f;
-W, . ‘r:
-)—
+OS Archltectu re
+b Upon execution — the following will happen:
+
+Eloid main (void) Stack[99] = 'a' 99 ‘a:
+2:2: igfzﬁg Stack[98] = 'b' 98 ‘b’
+51:1; Stack[97] = 'c' 97 ‘c’
+
+#1153’ 93 ?
+*p = ‘6';
+p[1] = ‘1';
+*(p+2) = ‘2';
+}—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-OS Archltecture
-> Upon execution , the following will happen: I
-z,“ mm (may steam] _ ,a. 99 ‘ ‘a, 1
-5:: 3551,53; “MW : ,b. 98 ‘b, ‘
-s! - ‘aH \\
-$2 . m‘; Sta<k[97] = 'c' 97 \\ ‘c’
-Z ' '~ \»
-*sucsz] = 99 93 99
-£11 vi‘;
-We, . ‘r:
-)—
+OS Archltectu re
+
+b Upon execution — the following will happen:
+
+Eloid main (void) Stack[99] = 'a' 99 v.__ ‘a:
+2;: Us: Stack[97] = 'c' 97 ‘C,
+
+mStackpB] = 99 93 "5'99
+= Q;
+
+£1] = ‘1';
+*(p+2) = ‘2';
+
+}—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-OS Archltecture
-> Upon execution , the following will happen: I
-Stack[93] = 99, Stack[99] = ‘0’ “
-App.cpp Stack Address Value ‘
-z,“ mm (may steam] _ ,a. 99 ‘0, 1
-2:2; 25*“; smklsn = 'b- 9s ‘b’ ‘
-3:11;: Sta<k[97] = 'c' 97 ‘c’
-3.’ ‘3 5tack[93] = 99 93 99
-#1: - ; L.smk[sta<k[ss11 - 'a'
-) ‘(W27 - ‘T1
+OS Archltectu re
+b Upon execution — the following will happen:
+Stack[93] = 99, Stack[99] = ‘0’
+Eloid main (void) Stack[99] = 'a' 99 so!
+2:2: igfzﬁg Stack[98] = 'b' 98 ‘b’
+ZZZ ii Stack[97] = 'c' 97 ‘c’
+5.3:: c3 Stack[93] = 99 93 99
+*j
+5W2; = ‘5|; Stack[Stack[93]] = a
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-OS Architecture
-> Upon execution , the following will happen: I
-Stack[93] = 99, Stack[99-1] = ‘1' 1
-e
-2mm" ("may meme] - 'e- 99 ‘0' 1
-Eiiiiign'“; 5mm] = 'b- 9s ‘1' ‘
-3211212 smkm] = '<' 97 ‘c’
-E3352 swam] = 99 93 99
-mstackﬁtackﬁsl] - 'a'
-; Stack[5tack[93]-1] - ‘1-
+OS Archltectu re
+b Upon execution — the following will happen:
+Stack[93] = 99, Stack[99-1] = ‘1’
+Eloid main (void) Stack[99] = 'a' 99 so!
+222$ iifm’ Stack[98] = 'b' 98 ‘1’
+ZZZ ii Stack[97] = 'c' 97 ‘c’
+;3==&_?§€, Stack[93] = 99 93 99
+mﬁackﬁtackwﬂ] = '9'
+}— Stack[Stack[93]-1] = '1'
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-OS Archltecture
-> Upon execution , the following will happen: I
-Stack[93] = 99, Stack[99-1] = ‘1' 1
-App.cpp Stack Address Value ‘
-z,“ mm (may steam] _ ,a. 99 ‘0, 1
-5:13:77“; 5m:k[98] = 'b‘ 9s ‘1' ‘
-2;: ‘Li stackm] = -<- 97 *2’
-23-15;’ suck[s:] = 99 93 99
-‘I! - ‘ ‘;
-Stack[5tack[93]] - ‘a
-)— Stack[5tack[93]-1] - ‘1-
-Stack[$tzck[93]-2] - '1'
+OS Archltectu re
+b Upon execution — the following will happen:
+Stack[93] = 99, Stack[99-1] = ‘1’
+Eloid main (void) Stack[99] = 'a' 99 so!
+2:2: igfzﬁg Stack[98] = 'b' 98 ‘1’
+2;: "2: Stack[97] = 'c' 97 ‘2,
+;3==&s§;, Stack[93] = 99 93 99
+*p = ‘6';
+Stack[Stack[93]] = 'e'
+}— Stack[Stack[93]-1] = '1'
+Stack[Stack[93]-2] = '2'
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
 OS Architecture (memory alignment)
-int x; ‘a
-int y; ‘g
-int 1; ‘a
+int x;
+int y;
+int z;
 };
-2 EEEEIIIIIIIIIIIIIIIIIIII '
-IiIlIIIiilliiﬂllllllllllllllllllIi!
+EEIEIIIIIIIIIIIIIIIIIIII '
+illlllllliiillllllllllllllllllli'
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
 OS Architecture (memory alignment)
-char x,- ‘1
-char y; ‘a
-int z; ‘I
-)s E‘
+char x;
+char y;
+int z;
+};
 IIIIIIIIIIIIIIIIIIIIIIII '
-lilllllliillllllllllllllllllllII
+HIlllliIIIIIIIIIIIIIIIIIIIIIII
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
 OS Architecture (memory alignment)
-
-c ha r x,‘ ‘a
-
-c ha r y ; a
-
-Chal‘ z; g
-
-int t; ‘a
-
-L' 1
-II! IIIIIIIIIIIIIIIIIIIIIIII i
-illllliiillllllllllllllllllllli'
+‘1"""‘11‘“““““““““““\ ‘lilllililgilllliillllll
+char x;
+char y;
+char z;
+int t;
+};
+IIE IIIIIIIIIIIIIIIIIIIIIIII '
+illlllliIIllllllllllllllllllllli'
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:37**************
 OS Architecture (memory alignment)
-
-char x 3 ‘1
-char y; =
-c ha r z ; I‘
-shor't s; a
-int t ; I
-
-} s
-
-III IllIIIIIIIIIIIIIIIIIIIIIIIII'!
-illlllililiiiﬂlllllllllllllllllil
+char x;
+char y;
+222;
+}. int t;
+IIE IIIIIIIIIIIIIIIIIIIIIIIIII"
+illllllllHillllllllllllllllllil
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
 OS Architecture (memory alignment)
-
-char X ; ‘I
-short y ,- 1
-char z,‘ ‘a
-short s; a
-int t; I
-
-)s
-
-Ill I!llﬂllllIIIIIIIIIIIIIIIII!’
-illlllliliiiﬂlllllllllllllllllIIII
+itr'uct Test
+222; §i
+222,’;
+}. int t 3
+IIIIIIIIIIIIIIIIIIIIIII!"
+illlllllliiilllllllllllllllllil
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:39**************
 OS Architecture (memory alignment)
 
-double z; 1
-char s; a
-short t; I
+itPUCt TESt sizeof(Test) = 24
+char x;
+short y;
+double z;
+char s;
+short t;
 int u;
 
-h
+};
 
-IIIIIIIIIEEEEEEEE IIIHEEHIIIIIII!"
-iliiiiillllllllliiﬂilﬂllﬂﬂﬂlllllil
+IIIIIIIIIIEEEEE IIIHEEHIIIIIII! '
+iiiillllllil
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 ‘4A
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
 OS Architecture (memory alignment)
-itm Test
-ll'lt Z; 1
-); \l
-BEHEEIIIIIIIIIIIIIEEEEEIIIIIIIIII
-IIHIIIIIIIIIIIIIEHEIIEHEIIIIIII '
+Sﬁﬁﬁle §§
+int z;
+};
+EEEEIIIIIIII
+iiiillllllll '
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
 OS Architecture (memory alignment)
-
-char x; ‘I
-
-short y; 1
-
-int z; ‘a
-
-char t; z
-
-); 1
-Ell!BEBE!liIIIIIIIIIIIIIIIIIIII '
-IiIilliiiliiﬂlllllllllllllllllllIi!
+IIIIIIIIIIEIIIIIIIIIIIIIIIIIIII '
+illllllliiiillllllllllllllllllllll
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
 OS Architecture (memory alignment)
-{ char x; :1‘
-short y; l
-int z; a
-char t; I
+2:25:15?“
+{ char x;
+short y;
+int z;
+char t;
 };
-IIEEEEIIIIIIIIIIIIIIIIIIIIIIIIII '
-illilliilllllllllllllllllllllli'
+IIIEEEEIIIIIIIIIIIIIIIIIIIIIIII '
+illllllillllllllllllllllllllllli'
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
 OS Architecture (memory alignment)
-
-{ char x; a‘:
-short y; I‘
-int z; a
-char t; 1
-
-L‘
-
-EIIBEBE!IIIIIIIIIIIIIIIIIIIIIII '
-IiIllliiliilllllllllllllllllllIi!
+::::§;"%:::k<2>
+{ char x;
+short y;
+int z;
+char t;
+};
+IIIIIIIIEIIIIIIIIIIIIIIIIIIIIII '
+illllllliiiillllllllllllllllllll
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:44**************
 OS Architecture (memory alignment)
-( char X; 1‘:
-short y; I
-int z; ‘a
-char t; I
-)i
-II!!!ElilililﬂEIIIIIIIIIIIIIIII '
-lillllliilliiﬂllﬂHEIIIIIIIIIIIIIIi!
+_declspec(align(16)) struct Test
+{
+char x;
+short y;
+int z;
+char t;
+};
+\ IIIIIIIIIIIIIIEIIIIIIIIIIIIIIII '
+illlllllllllliiillllllllllllllli
+0 1 2 3 4 5 /
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:45**************
 OS Architecture (memory alignment)
-struct Test struct Test2 all
-short y; short y; a
-Testz z; int z; I‘
-int t,- },- z
-char u; I
-1;
-IIIHEHHHHEH HIIIIIIIIIIIIIII
-iliili'iggﬂlﬂllnllllEEIIIIIIIIII '
+struct Test struct Test2
+{ {
+char x; char x;
+short y; ShOPt Y3
+TestZ z; int z;
+int t; };
+char u;
+};
+IIIIIIIIEEE EIIIIIIIIIIIIIII
+HIIIIFEIWHIIIIIIIIIIIIIIIIIIII! '
+Tes'.t22123456789 l
+-—_’_—-
+IIIIEEE
+EIIIIIIE
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
 OS Architecture (memory alignment)
-> Alignment rules for cl.exe (default settings) ‘i
-> Every type is aligned at the first offset that is a multiple of its size. ‘I
-> Rule only applies for basic types ‘a
-> To compute an offset for a type, the following formula can be used: l
-ALIGN(position,type) (- (((position - 1)Islzetrf(type))+1)‘slzecrf(type)
-> The size of a structure is a multiple of the biggest basic type size use
+b Alignment rules for cl.exe (default settings)
+
+b Every type is aligned at the first offset that is a multiple of its size.
+
+b Rule only applies for basic types
+
+b To compute an offset for a type, the following formula can be used:
+
+ALIGN(position,type) é (((position — 1)/sizeo-F(type))+1)*sizeof(type)
+
+b The size of a structure is a multiple of the biggest basic type size used
 in that structure
-> Directive: pragma pack and declspeqalign) are specific to
+
+b Directive: pragma pack and declspecgalign) are specific to
 Windows C++ compiler (cl.exe)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-C++ history and
-revmons
+> C++ history and
+revisions
 
 ***************Ending Page***************
 
@@ -678,30 +707,22 @@ revmons
 ***************page number:48**************
 C++ history and revisions
 -—
-1979 Bjarne Stroustrup starts to work at a super class of the C language‘
+1979 Bjarne Stroustrup starts to work at a super class of the C language.
 The initial name was C with Classes
-
 1983 The name is changed to C++
-
 1990 Borland Turbo C++ is released
-
-199B First C++ standards (ISO/IEC 1488221998) 9 C++9B
-
-2003 Second review —> (~03
-
-2005 Third review —) C++0x
-
-2011 Fourth review —) C++11
-
-2014 Fifth review —) C§+14
-
-2017 The sixth review is expected -) C++17
-
-ZUZO Seventh review 9 CHZO
-
-2023 Eight review —> C++Z3 or C++2b
+1998 First C++ standards (ISO/IEC 1488221998) 9 C++98
+2003 Second review 9 C++03
+2005 Third review 9 C++0x
+2011 Fourth review 9 C++11
+2014 Fifth review 9 C++14
+2017 The sixth review is expected 9 C++17
+2020 Seventh review 9 C++20
+2023 Eight review 9 C++23 or C++2b
+/
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:49**************
@@ -711,253 +732,263 @@ Keywords asm do if return typedef auto double inline short typeid bool
 dynamic_cast int signed typename break else long sizeof union
 case enum mutable static unsigned catch explicit namespace
 static_cast using char export new struct virtual class extern
-Operator switch void const false private template volatile
+operator switch void const false private template volatile
 const_cast float protected this wchar_t continue for public
 throw while default friend register true delete goto
 reinterpret_cast try
 
-Operators [} [ ] it W l ) \\
-(11> <%%>%:%:%I;:.N \
-new delete? c: . .'
-+ * l 96 A & l ~
-1 = < > += =
-'= /= %=
-": Et: |: << >> >>: <<: :: !:
-<= >= ea | | t+ .
->' >
+Operators { } [ ] # ## ( )
+<: :> <% %> %: %:%: ; :
+new delete? :: . .*
++ * / % A & | ~
+l = < > += =
+*= /= %=
+A: &= |= << >> >>= <<= == !=
+<= >= && | | ++ ,
+>* >
+
+/
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-C++ compllers g
-> There are many compilers that exists today for c++ language. However, the I
-most popular one are the following: “
-l
-Visual C++ Microsoft 1011 (14.29.3013!) CHZO I
-(IQ-+13 partial) ‘
-GCC/GH- GNU Compiler 11 .Z C++ZO
-(Ca-+23 partial)
-Cling (LLVM) 13111 CH-ZO
-(c++za partial)
+C++ compilers
+b There are many compilers that exists today for C++ language. However, the
+most popular one are the following:
+Compatibility
+Visual C++ Microsoft 2021 (14.29.30133) C++20
+(C++23 partial)
+GCC/G++ GNU Compiler 11.2 C++20
+(C++23 partial)
+Clang (LLVM) 13.0.1 C++20
+(C++23 partial)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-l From C to C++
+M’ From C to C++
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-C to C++ g
-
-> Let's look at the following C code. I
-APP-(PP I
-slmc! Per-5M l
-
-( , l
-m k<i l
-m mm; l
-in“ mm ‘
-( l
-mm 9; l
-mmlw- - “HP-MP);
-
-DJ“ - -s; ‘
-pmw - manna;
-
->
-
-I b What can we observe that does not have any sense ?
+C to C++
+b Let’s look at the following C code.
+APP-CPD
+struct Person
+{
+int Age;
+int Height;
+}
+void main()
+{
+Person p;
+printf(“Age = %d”,p.Age);
+p.Age = —5;
+p.Height = 100000;
+}
+I > What can we observe that does not have any sense ?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
 C to C++
-b Let's look at the following C code.
-APP-(PP
-5W“ Per-5M
-( ,
-m m:
-m Mm;
-in“ mm
-‘ v .
-DJ‘: - .s;
-pmm . manna; x
-) x
-> The program is Correct, however having these values for the field Age and
+b Let’s look at the following C code.
+APP-CPD
+struct Person
+{
+int Age;
+int Height;
+}
+void main()
+{
+Person .'
+p.Age = -5;
+p.Height = 100000;
+}
+> The program is correct, however having these values for the field Age and
 Height does not make any sense.
-> There is no form of initialization (or the variable p. This means that the value ‘
-for the Age field that printf function will Show is undefined. i
+b There is no form of initialization for the variable p. This means that the value
+for the Age field that printf function will show is undefined.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
 C to C++
-> The solution is to create some functions to initialize and validate structure Person.
+b The solution is to create some functions to initialize and validate structure Person.
 App.c App.c
-5W“ Per-5M SW" Person
-1 , ( ,
-m m; m m;
-m mm; m mm;
-> )
-m4 nlﬂO m4 mum“ 'p)
-( (
-, ,, . was u;
-Puntﬂ'wn = unwm; mum: no;
-)
-Mum . 1m; m4 Selm(PerM mu“ value)
-) (
-a; ((viluol) u ("imam
-ww "in;
-)
-_ m4 MMWOMM WM value)
-(
-n ((mwsn) u (“heal”)
-mum‘: "m;
-, ,
-m4 "no
-(
-Periwi r;
-lmt(lv);
-Saleem). -s>;
-“mama, 1m);
-)
+struct Person struct Person
+{ {
+int Age; int Age;
+int Height; int Height;
+} }
+void main() void Init(Person *p)
+{ {
+-- .. .- p->Age= 10;
+printf(“Age = %d”,p.Age); p->Height= 100;
+p.Age = —5; }
+p.Height = 100000; void SetAge(Person *p,int value)
+} {
+if ((value>0) && (value<200))
+p->Age= value;
+}
+_ void SetHeight(Person *p,int value)
+{
+if ((value>50) && (value<300))
+p->Height= value;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p, —5);
+SetHeight(&p, 100000);
+}
+— +
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:55**************
 C to C++
-> This approach while it provides certain advantages also comes with some drawbacks:
-App.c I‘
-51M! Per-5M i
-( , i
-
-m k<i i
-
-m mum; i
-) i
-ma mums” q» 1
-(
-
-pr)!“ 1n; I
-
-P~>>hum- m;
-) i
-ma SmbgeOer-snn ~p,m mm ‘
-(
-
-a; ((viluvl) u (valued-50))
-
-ww- v.1“;
-
->
-ma Seamlﬂqver-snn ~p,m value)
-(
-
-n ((mmsn) u (“heal”)
-
-P~>>hum- "m;
-
-ma um)
-(
-
-mm v;
-
-mm»;
-
-5:0qu .5);
-
-swumuo. W);
+b This approach while it provides certain advantages also comes with some drawbac
+App.c
+struct Person
+{
+int Age;
+int Height;
+}
+void Init(Person *p)
+{
+p->Age= 19;
+p->Height= 199;
+}
+void SetAge(PePson *p,int value)
+{
+if ((value>9) && (value<299))
+p->Age= value;
+}
+void SetHeight(Person *p,int value)
+{
+if ((value>59) && (value<399))
+p->Height= value;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p, —5);
+SetHeight(&p, 199999);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
 C to C++
-> This approach while it provides certain advantages also comes with some drawbacks:
-:lmc! Per-5m SelHeight must be validated ‘
-m k<i I
-m mum; i
-in“ “MM” -.,) < . , ‘1
-Wm setweﬂersm mm m“) I
-‘ v (OI-hem) u (vlluedBB) u- i
-) p-)ke- value; ‘
-Wm sammwmw ‘min vilu!) < - >
-ma "no
-(
-Person 9;
-mu»);
-saw-(w. ~s>;
-scoumtﬂv, 1m);
+b This approach while it provides certain advantages also comes with some drawbac
+APP-c a) Pointer “p” from functions SetAge and
+itPUCt Person SetHeight must be validated
+int Age;
+int Height;
+}
+void Init(PePson *p) { m }
+void SetAge(PePson *p,int value)
+{
+if ((value>0) && (value<200) && -
+p->Age= value;
+}
+void SetHeight(PePson *p,int value) { m }
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p, —5);
+SetHeight(&p, 100000);
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:57**************
 C to C++
-> This approach while it provides certain advantages also comes with some drawbacks:
-a) Pointer “p” from functions SetAge and I‘
-:lmc! Per-son SetHeight must be validated ‘
-2:: :2”; h] We can still change the values for fields Age‘
-) and Heights and the program will compile
-“'4 “"0"!” 'p) ( ’ ' and execute‘ ‘
-wid Setke(Persw mm m“) I
-‘ v (“are”) u ("Mm u- i
-) p-)A‘e- value;
-ma Setbkiﬂitwersw mm viluQ) c - >
-ma "no
-t
+b This approach while it provides certain advantages also comes with some drawbac
+APP-c a) Pointer “p” from functions SetAge and
+2mm Person SetHeight must be validated
+122 ﬁght, b) We can still change the values for fields Age
+} and Heights and the program will compile
+void Init(Person *p) { m }
+and execute.
+void SetAge(Person *p,int value)
+{
+i-F ((value>0) && (value<290) && -
+p->Age= value;
+}
+void SetHeight(Person *p,int value) { m }
+void main()
+{
 Person p;
-mm»);
-5-0009. ~s>;)_ ,
+Init(&p);
+SetAge(&p, -5);
+- .-'-- :. 99990);
+-.Hei;ht = -2'
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
 C to C++
-> This approach while it provides certain advantages also comes with some drawbacks:
-a) Pointer “p” from functions SetAge and I‘
-:vw Per-son SetHeight must be validated ‘
-2:: :2”; h] We can still change the values for fields Age‘
-) and Heights and the program will compile 1
-ma “mm” q» t . i ‘
-and execute‘
-ma Sethe(Perswi mm value) c _ > I
-1.1 5.1m t k _ 1 t 1 cl Variable p is not initialized by default (we ‘
-‘m n ( PM D‘ n u “2) ( A have to call a special function to do this). ‘
-Md IainO
-‘ .
-I
-) . l . lump-Me);
+b This approach while it provides certain advantages also comes with some drawbac
+a) Pointer “p” from functions SetAge and
+itPUCt Person SetHeight must be validated
+122 ﬁght; b) We can still change the values for fields Age
+} and Heights and the program will compile
+void Init(Person *p) { m }
+and execute.
+void SetAge(Person *p,int value) { m } . _ 0 . _ _
+
+_d S tH _ WP * _ t 1 ) c) Variable p is not initialized by default (we
+V01 e elg em“ Mn va “e { } have to call a special function to do this).
+void main()
+
+{ l-- -_ -
+- A=e = %d",p Age);
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:59**************
 C to C++
-> This approach while it provides certain advantages also comes with some drawbacks:
-ai Pointer “p” from functions SetAge and I‘
-zlruc! Person SetHeight must be validated ‘
-$351; bl We can still change the values for fields Age‘
-) and Heights and the program will compile i
-void hikivei'smi ‘a; 1...) i
+b This approach while it provides certain advantages also comes with some drawbac
+a) Pointer “p” from functions SetAge and
+itruct Person SetHeight must be validated
+is: ﬂight; b) We can still change the values for fields Age
+} and Heights and the program will compile
+void Init(Person *p) {...}
 and execute.
-ma sum Perswi 'rmm mu) l1") I
-m S ‘m ‘ P ' ‘ t l ii Variable p is riot initialized by default (we ‘
-'° ‘ a“ ‘ "5“ P‘ " “ “*1 ""l have w call a special function to do this). i
-ma mm» mm ‘mm "he; (m)
-d m»! t P ’ t l a) Havmg a lot of functions that work With a
-V'" m "m "' m “a “J L") structure means that each time one of
-h“ “"‘“["“°" '° 1'") those functions is called we need to be sure
-m owing“ Perswi ~v7 l1") that the right pointer is pass to that
-— iunctioris
+void SetAge-int value) {...} _ _ _ . _ _
+
+_d S tH _ h _ t 1 ) { } c) Variable p is not initialized by default (we
+V01 e elg ' em“ p 1n va “e have to call a special function to do this).
+void AddYea-int value) {...} _ . _
+
+_d AddH _ ht- _ t 1 ) { } d) Havmg a lot of functions that work With a
+
+g p structure means that each time one of
+int Ge"Ag- {...} those functions is called we need to be sure
+int GetHeight- {...} that the right pointer is pass to that
+— function.
 
 ***************Ending Page***************
 
@@ -965,321 +996,418 @@ m owing“ Perswi ~v7 l1") that the right pointer is pass to that
 ***************page number:60**************
 C to C++
 Basically , we need a language that can do the following:
-> Restrict access to certain structure fields ‘a
-> There should be an at least one initialization function that is l‘
-called whenever an instance of that structure is created. I‘
-> We should find a way to not send a pointer to the structure every 3
+b Restrict access to certain structure fields
+> There should be an at least one initialization function that is
+called whenever an instance of that structure is created.
+> We should find a way to not send a pointer to the structure every
 time we need to call a function that modifies different fields of
 that structure
-> We should not need to validate that pointer (the validation should
-be done during the compiler phase). ,
+b We should not need to validate that pointer (the validation should
+be done during the compiler phase).
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:61**************
 C to C++ (Conversmns)
-‘ In MI;
-( if (Mu)
-v (01:53:; u (‘lawman
-vom ml(P=rsm 'v)
-( 1F (In-mu)
-3.,“ -m
-(
-Iniﬂlo);
-Seth-(19.10); I
-)
+Appﬁ APP-CPD
+struct Person
+{
+int Age;
+}
+void SetAge(Person *p,int value)
+{
+if (p==NULL)
+return;
+if ((value>9) && (value<299))
+p->Age = value;
+}
+void Init(Person *p)
+{
+if (p==NULL)
+return;
+p->Age = 19;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p,10);
+}
+__________________________________________ _____________________________:7,--------
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
 C to C++ (Conversmns)
-APP-c APP-CPD
-( if (Mu)
-
-v (01:53:; u (‘lawman
-vom ml(P=rsm 'v)
-( 1F (In-mu)
-3.,“ -m
-(
-
-Iniﬂlo);
-
-Seth-(19.10); I
-)
+Appﬁ APP-CPD
+int Age;
+}
+void SetAge(PePson *p,int value)
+{
+if (p==NULL)
+return;
+if ((value>9) && (value<299))
+p->Age = value;
+}
+void Init(Person *p)
+{
+if (p==NULL)
+return;
+p->Age = 19;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p,10);
+}
+— +
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:63**************
 C to C++ (Conversmns)
-51m: Wm ch55 Mm
-t _ x ‘ _
-) m W’ m" e' Access modifier (specifies
-rm setbgeWersm “mm um) who can access the ﬁelds
-1F (Filth-L)- thai are declare after ‘(I
-v “mum? M 1v:lue<199))
-D->l:e . value;
-)
-m1 mmpmw w)
-(
-v 19-04mm
+Appﬁ APP-CPD
+struct Person class Person
+{ {
+int Age; private: . _ . ,
+} Access modlfler (spec1f1es
+\{101d SetAge(Person *p,1nt value) Who can access the fields
+if (p==NULL> that are declare after it)
 return;
-ww 1 1a‘
->
-Mn malﬂU
-(
-Person n;
-mum
-Setbiﬂivdﬁli
->
+if ((value>9) && (value<299))
+p->Age = value;
+}
+void Init(Person *p)
+{
+if (p==NULL)
+return;
+p->Age = 10;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p,16);
+}
+__________________________________________ ____________________________:;,--------
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-C to C++ (Conversmns)
-(m W 2,,“ W
-( if (v=lllu.)
-1r (01:53:; u ("mum-m
-vold Xn|l(P=rsm 'v)
-( 1F (DH-MILL)
-3.,“ um)
-(
-Ini\(Io)i
-selheﬂvnl); I
-)
+C t C (C ' )
+Appﬁ APP-CPD
+struct Person class Person
+{ {
+}
+void SetAge(Person *p,int value)
+{
+if (p==NULL)
+return;
+if ((value>9) && (value<299))
+p->Age = value;
+}
+void Init(Person *p)
+{
+if (p==NULL)
+return;
+p->Age = 19;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p,10);
+}
+— +
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:65**************
-C to C++ (Conversmns)
-M“ PM was W
-C (
-M. w;
-
-—
-
-if (Mu)
-
-mm;
-
-1F ((vulme) H (valued-88))
-vold Xml(Persm 'V)
-(
-
-.F (hm
-)
-vum um)
-(
-
-MM p;
-
-mime);
-
-Sellmﬂvnn); '
-)
+C to C onversions
+++ (c >
+struct Person class Person
+{ {
+int Age; private:
+int Age;
+if (p==NULL)
+return;
+if ((value>0) && (value<290))
+p->Age = value;
+}
+void Init(Person *p)
+{
+if (p==NULL)
+return;
+p->Age = 19;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p,10);
+}
+__________________________________________ ____________________________f;7_--------
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:66**************
-C to C++ (Conversmns)
-m 2,,“ W
-‘ mt Mp; urn-tn:
-) in! be;
-‘ i; (PM
-mm; ) Constructor
-1F ((V-Ilue>9) H (valued-88))
-)
-mm um)
-(
-“$00);
-senaﬂvnl); I
-)
+C to C++ (COHV€|‘SIOHS)
+Appﬁ APP-CPD
+struct Person class Person
+{ {
+int Age; private:
+} int Age;
+void SetAge(Person *p,int value) public:
+{ nu - Are 'l _ - -
+1+ <p==NULL>
+, return; } Constructor
+1f ((value>0) && (value<290))
+p->Age = value;
+if (p==NULL)
+return;
+p->Age = 19;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p,10);
+}
+— +
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-C to C++ (Conversmns)
-APP-c APP-CPD
-C (
-) in! lee;
-( void SQKmUIK value);
-if (p=0l:u.) Perin;
-1F (Ml-ma; u (valued-m» .n - mm: > w v1 ..
-W.“ . um; (
-) IF ((valuem) II: (valuumh
-1F (DH-)IILU )
-)
-mm um)
-(
-mm»);
-senaﬂvno); I
-)
+C to C onversions
+++ (C )
+APP-GDP
+struct Person class Person
+{ {
+int Age; private:
+} int Age;
+v01: e Age 'erson p,1n va ue public:
+{ void SetAge(int value);
+if (p==NULL) Person();
+return;
+if ((value>0) && (value<290)) v01. PersonzzSetAge 1nt va ue
+p->Age = value; {
+} if ((value>0) && (value<200))
+v01. n1 'erson "p this->Age = value;
+{ }
+if (p==NULL)
+return;
+p->Age = 19;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p,10);
+}
+__________________________________________ ____________________________l;7_--------
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-C to C++ (Conversmns)
-APP-c APP-CPD
-m d,“ W
-( (
-> M. w;
-( void saueuu value);
-iF (v=ll:h)_ ) Perswoi
-1F ((v-Iluem; u (v-Iluedﬂ!» m Perxmnieﬂgeﬂnt mu)
-Eke . um; (
-) IF ((valuem II: (valuumn
-vnld mumm w) we Z valve;
-( )
-)
-<
-"$00);
-Selhrﬂv-ll); ,
-)
+C to C onversions
+++ (C )
+APP-CW
+struct Person class Person
+{ {
+int Age; private:
+} int Age;
+void SetAge(Person *p,int value) public:
+{ void SetAge(int value);
+if (p==NULL) Person();
+return; }
+if ((value>0) && (value<290)) void Person::SetAge(int value)
+.ge = value; {
+} if ((value>9) && (value<299))
+void Init(Person *p) -ge = value;
+{ }
+if (p==NULL)
+return;
+p->Age = 19;
+}
+void main()
+{
+Person p;
+Init(&p);
+SetAge(&p,10);
+}
+__________________________________________ ____________________________f;7_--------
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-C to C++ (Conversmns)
-App.c App.cpp
-M“ PM <1,“ Pm
-( (
-1n M Wm:
-) in! ‘6!;
-m “Wm W! "M, M:
-( void SklmulK value);
-if (FltlLL) PerEWO;
-m um; )
-,F (MW) u ("mm m ansmm "w
-W.“ . um; (
-If ((valuem) I‘ (valuumﬁ
-.F (mm WWW“)
-w“; (
-Dam Z ll;
-(
-MM p;
-Inmlo);
-sethcﬂvnn); I
-)
+C to C onversions
+++ (c >
+APP'CPP
+struct Person class Person
+{ {
+int Age; private:
+} int Age;
+void SetAge(Person *p,int value) public:
+{ void SetAge(int value);
+if (p==NULL) Person();
+return; }
+if ((value>0) && (value<290)) void Person::SetAge(int value)
+p->Age = value; {
+} if ((value>9) && (value<299))
+v01. Init Person p this->Age = value;
+{
+if (p==NULL) Person::Person()
+return; {
+} }
+v01. main
+{
+Person p;
+Init(&p);
+SetAge(&p,10);
+}
+__________________________________________ ____________________________f;7_--------
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-C to C++ (Converswns)
-W W (his W
-C (
-) in! HE;
-( void SQKMQUIK value);
-if (FltlLL) ) PerEWO;
-1F ((v-Iluem; u (v-Iluedﬂ!» m Per-sm::5eﬂge(m vllne)
-W.“ . um; (
-) If ((valuem) I‘ (valuumﬁ
-vold Xml(Persw 'v) misoke 1 value;
-( )
-.F (Wm, WWW, ‘
-mum; ( ‘
-) )
-mm um) vnm um) I
-( ( L’
-‘ 'nn); "
-)
+C to C onversions
+++ (C )
+App.c App.cpp
+struct Person class Person
+{ {
+int Age; private:
+} int Age;
+void SetAge(Person *p,int value) public:
+{ void SetAge(int value);
+if (p==NULL) Person();
+return; }
+if ((value>0) && (value<290)) void Person::SetAge(int value)
+p->Age = value; {
+} if ((value>9) && (value<299))
+void Init(Person *p) this->Age = value;
+{ }
+if (p==NULL) Person::Person()
+return; {
+p->Age = 19; this->Age = 19;
+} }
+void main() void main()
+{ {
+e ge rule);
+}
+__________________________________________ _____________________________:7_--------
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-C to C++ (Conversmns)
-APP-c APP-CPD
-C (
-) in! lee;
-( void SQKmUIK value);
-if (FIYLL) ) Perin;
-1F (Ml-ma; u ("mum-m m Per-municilgeﬂnt m.)
-W.“ . um; (
-) IF ((valuem) II: (valuumh
-vold Xml(|>ersm 'v) misoke 1 value;
-( )
-Mum; (
-) )
-mm um) WM um)
-( (
-) Selhrﬂvnl); ) ,
+C to C onversions
+++ (C )
+APP-CW
+struct Person class Person
+{ {
+int Age; private:
+} int Age;
+void SetAge(Person *p,int value) public:
+{ void SetAge(int value);
+if (P==NULL) Person();
+return; }
+if ((value>0) && (value<290)) void Person::SetAge(int value)
+p->Age = value; {
+} if ((value>9) && (value<299))
+void Init(Person *p) this->Age = value;
+{ }
+if (p==NULL) Person::Person()
+return; {
+p->Age = 19; this->Age = 19;
+} }
+void main() void main()
+{ {
+PEPSOn p; " 0| l‘
+}
+}
+__________________________________________ ____________________________f;7_--------
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-r r
-
-m w, WM";
-) n2 w.
-Mr SUMWM w,“ “my 9mm:
-r rm 5mm,“ “Mr,
-
-1;<g::mu\y v-r-wnl],
-
-\‘etm'lv, r
-,r umwr) M mrrmrrn mm PursounSutAthu! “1ou
-p We V Mr r
-
-» 11 rrmwm as lvanuzmll
-vmd XmHPzr-wn m my»? Z m“,
-1 r
-
-,r (WM/u) mm rmom
-
-Mm. Z m, and“! Z m,
-r 1
-rm mm rm mm
-r r
-
-rmmrr. . in“ m
-
-Compiler error r ﬂew
-) Age IS declared as
-
+struct Person class Person
+{ {
+int Age; private:
+} int Age;
+void SetAge(Person *p,int value) public:
+{ void SetAge(int value);
+if (p==NULL) Person();
+return; }
+if ((value>0) && (value<200)) void Person::SetAge(int value)
+p->Age = value; {
+} if ((value>0) && (value<200))
+void Init(Person *p) this->Age = value;
+{ }
+if (p==NULL) Person::Person()
+return; {
+p->Age = 10; this->Age = 10;
+} }
+void main() void main()
+{ {
+Person p; Person p;
+Init(&p); -.SetA;e 10 '
+A ' 1 ' - -
+p ge Compller error - fleld
+} Age IS declared as
 Age
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-> Classes
+‘\ > Classes
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-> Member variables E
-A mm deﬁned as member =4 me alas 1
-» Each am membercan have m vvm awe‘ modvﬁer a‘
-A Daramemhermnalwbesulk x‘
-,, Atlas may have no data members 1‘
-b Member functions (methods) X
-A WWW:mum“ g
-° Em- merud m um m own ‘(less mam“ ‘a
-A A mind can accesx any data member deﬁned or other method deﬁned m lhe cla§ regardless 0H1; axes; a‘
-mudlﬁer
-A Aclass may have no mm;
-> Cunstructors
-» Methods Mlmmr A rerum type um are called whenever an mum B! A class ls evened
-,, A :las m6 m have m have mnsmmmrs
-A A consmlcwr my have drﬂerem "<55 mm“ ,7
-> Destructor f
-» Aﬁmmon Wlmullll mum Kw: m“ .5 ulled whenever In Inshnc: 01 A cllss vs 4“qu
->> A (lax mes m have m have a desmxmr
+Classes (format)
+b Member variables
+‘z. Variable defined as member of the class
+‘z. Each data member can have its own access modifier
+.1. Data member can also be static
+‘z. A class may have no data members
+b Member functions (methods)
+‘z. Functions define within the class
+‘z. Each method can have its own access modifier
+‘z. A method can access any data member defined or other method defined in the class regardless of its access
+modifier
+a. A class may have no methods
+b Constructors
+a. Methods without a return type that are called whenever an instance of a class is created
+a. A class does not have to have constructors
+‘z. A constructor may have different access modifiers
+> Destructor
+‘z. A function without a return type that is called whenever an instance of a class is destroyed
+‘z. A class does not have to have a destructor
 > Operators
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:75**************
@@ -1291,48 +1419,57 @@ Classes
 ***************Beginning Page***************
 ***************page number:76**************
 Classes (access modifiers)
-> The are 3 access modifiers defined in C++ language:
-> Eublic (allow access to that member for everyone)
-> grivate (access to that member is only allowed from functions l
-that were defined in that class). This is the default access ‘3
-modifier. ‘
-k > Erutected
+b The are 3 access modifiers defined in C++ language:
+b QUbliC (allow access to that member for everyone)
+> grivate (access to that member is only allowed from functions
+that were defined in that class). This is the default access
+modifier.
+\ > grotected
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:77**************
 Classes (access modifiers)
-> The code compiles and runs “1
-gm‘ P‘: correctly ‘1
-L > mue; > Member "Age" from class Person is l
-(“"d ‘:0 _ declared public and may be access ‘1
-k ) viii-"a; from outside the class. ‘
+
+b The code compiles and runs
+
+glass Person. correctly
+
+} _ _ i“ Age’ b Member “Age” from class Person is
+
+lm “1:an _ declared public and may be access
+\ } JAZZ 316; from outside the class.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
 Classes (access modifiers)
-> This code won't compile (Age is “1
-i'm M” defined as private and can not be ‘1
-) access outside its class/scope). ‘I
-(wid Iain() ‘2
-k ) pm i- ‘
+b This code won’t compile (Age is
+Ems PETS“ _ defined as private and can not be
+access outside its class/ scope).
+goid main() 0
+
+\ }
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:79**************
 Classes (access modifiers)
-> The code compiles and runs I
-2"“ :‘Z’: correctly I
-Nari?‘ W b From outside the class scope only 3
-) "id “WM "m the SetAge method is call (SetAge 3
-YD“ Tmmwm "D is defined as public) “
-in“ um) > As SetAge is a method in class
-Emil»); Person it can access any other
-> method or data member
+b The code compiles and runs
+glass Penson correctly
+prlvate:
+publii'f Age‘ _ > From outside the class scope only
+} Md SHAW“ val)’ the SetAge method is call (SetAge
+void Per'son: :SetAge(int val) , _ ,
+{ 1s defined as pUbllC)
+‘201d maino b As SetAge is a method in class
+Ziiiilgfiim); Person it can access any other
+} method or data member
 regardless of their access
 modifiers.
 
@@ -1342,39 +1479,45 @@ modifiers.
 ***************page number:80**************
 Classes (access modifiers)
 
-> This code won't compile (member
+b This code won’t compile (member
+Eli” PM‘ . Age from class Person is private
+}O_d- and can not be access outside its
+{ Person ' scope)‘
 
-2"“ "m" Age from class Person is private I
-
-l.“ .1 and can not be access outside its ‘1
-
-< __ .. _ scope). I
-
-I > If no access modifier is specified, I
+} b If no access modifier is specified,
 the default access modifier will be
 private.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:81**************
 Classes (access modifiers)
-APP~¢PP > This code won't compile (member
-@211‘ Age from class Person is private
-3i“ ‘who and can not be access outside its
-f scope).
+APP-¢PP b This code won’t compile (member
+-Person { ° '
+
+int Age; Age from class Person is private
+};_ _ and can not be access outSide its
+v01d ma1n()
+{ scope).
 
 Person p;
 
-lege = 10;
->—
-> This code will compile. C++
--:‘[§:J_" ‘ structures support access
-if,“ who modifiers as well. However, the 1
-f default access modifier for a
+p.Age = 10;
+}—
+APP-CPP b This code will compile. C++
+-Person {
 
-:fZZZ"_"§m structure is public.
->—
+int Age; structures support access
+};'d _ o modifiers as well. However, the
+V01 ma1n . .
+{ default access modifier for a
+
+P s . o
+
+553"}... structure is public.
+}
 
 ***************Ending Page***************
 
@@ -1385,57 +1528,62 @@ Classes
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:83**************
 Classes (member data)
-> Member data are variables defined “1
-i'm Pi”: _ within the class ‘1
-Wwi?‘ ‘f"’*”“ b In this example , Age and Height I‘
-i“ 1 Om’ "1-; are private, and Name is public 1‘
-( Person Pi ‘
-k )
+> Member data are variables defined
+Ems PETS” . within the class
+publiZTt Agemeight’ > In this example - Age and Height
+} ‘d _ Om" Name’ are private, and Name is public
+{
+\ }
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
 Classes (member data)
-> This code does not compile ‘E
-gm‘ M” _ because Age is a private data ‘1
-"Mi; “mam; member ‘I
-Mm; =
-) my W; =
-vnld "no ‘
-( 1 .. .> ‘
-k ,
+APP-CPP b This code does not compile
+Eh“ PM‘ because Age is a private data
+rivate:
+
+P int Age,Height; member
+
+public:
+
+char *Name;
+}
+void main()
+{ -- . .
+
+\ }
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:85**************
 Classes (member data)
-
-> This code compiles because Name ‘E
-
-gm‘ “I”: _ is declared as public. ‘1
-“Aug! Ageleﬂl;
-
-(liar ‘Hale; ‘i
-) i
-vnld "no ‘
-k
-)
+APP~CPP b This code compiles because Name
+Ems Palm is declared as public.
+PPlvagﬁé Age,Height;
+public:
+char *Name;
+}
+void main()
+{ -- .l .
+\ }
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:86**************
 Classes (member data)
-> Member data can also be static “1
-gm‘ Pi”: _ and have access modifiers at the ‘1
-same tlmev
-pubhc: . . ‘2
-, 1
+> Member data can also be static
+Ems Pefscm . and have access modifiers at the
+Wm't@ - same time.
+\ }
 
 ***************Ending Page***************
 
@@ -1443,200 +1591,248 @@ pubhc: . . ‘2
 ***************Beginning Page***************
 ***************page number:87**************
 Classes (member data)
-> Member data can also be static and “
-2"“ M” have access modifiers at the same “
-'"Miii “Wm; time ‘g
-sud: m X;
-“Mix” ‘up; > Any static data member that is I
-mu: m v; defined within a class has to be I
+b Member data can also be static and
+glass Pm" have access modifiers at the same
+
+prlvaZEttAgeiniil'ti timG
+
+Publigéar *ameN ’ b Any static data member that is
+
+Static int Y; defined within a class has to be
 defined outside its class as well
 (similar to a global variable).
-> One can also initialize this static
+
+b One can also initialize this static
 variables. If you do not initialize
 these variables, the result is identical
 to the use of global variables (the
-default value will be 0)
+default value will be O)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:88**************
-Classes (member data)
-App,cpp > Static data members can be access as the
-class mm scope of the class or as a member ‘rem of any I‘
-( lav-lute: instance of that class‘ 3
-225$??? b In this case, after the code is executed, V will I
-Wblic: be 6 1
-my mm; ' \
-nun: m v; 1
-Lt MW;
-m mm" e 1n;
-ma "no
-(
-Persm --
-WWW";
+App.cpp > Static data members can be access as the
+class Person scope of the class or as a member from of any
+{ .
+private: Instance of that class.
+int Age,Height; , . .
+static int x; > In thlS case, after the code IS executed, Y Wlll
+public: b 6
+char *Name; E3 °
+static int Y;
+}
+int Personsz;
+int PersonzzY = 10;
+void main()
+{
+Person .-
+p.Y = 5;
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:89**************
-Classes (member data)
-App,cpp > The code does not compile because X is
-in“ mm private, I‘
-"1"!" > We need to create a method to be able to ‘z
-m “yuan .
-mm m x; access this values I
-Wblic: 1
-(m mm; ‘
-mm m v; 1
-l“ MW“;
-m Pmmw e 1n;
-vnld "no
-(
-Person --
-, ﬂm
+App.cpp > The code does not compile because X is
+class Person private.
+{
+Prime‘ _ > We need to create a method to be able to
+1nt Age,He1ght; .
+static int x; access thlS value.
+public:
+char *Name;
+static int Y;
+}
+int Personsz;
+int PersonzzY = 10;
+void main()
+{
+Person .-
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:90**************
-Classes (member data)
-Appxpp > Now the code compiles and X value is set to 6 “
-class Pusan I
-( ‘
-mum ‘
-m “mum; I
-sud: m x;
-Wblic: 3
-(m ‘up;
-nun: m v- \
-‘
-l
-m mm“;
-m Wm" - 1-;
-m4 Min-menu“ value)
-)
-m4 um)
-(
-Perim -
+App.cpp > Now the code compiles and X value is set to 6
+class Person
+{
+private:
+int Age,Height;
+static int X;
+public:
+char *Name;
+static int Y'
+}
+int Personsz;
+int PersonzzY = 10;
+void Person::SetX(int value)
+{
+X = value;
+}
+void main()
+{
+Person .-
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:91**************
-Classes (member data)
-App,cpp b The code compiles and runs correctly ‘1
-2"” q > Static data members belong to the class and l‘
-)_ I“ X"; not to the instance r that's why they don't i‘
-(in! n count When We compute [he size 0f an I
-( m m; instance ‘I
-mm m z; . l ‘
->; b A class may be defined Without any data 1
-:1“! a member. In this case it's size will be 1t
-mm m n _ . .
-i; n > Upon execution the program Will print:
-i; sheaf-‘(C1) = 8
-m uni; _
-m cam; sueoﬂcz) = s
-ma "no
-‘ MH~51Mlu>.a~.,iwlu>>; Sizeoﬂcz) = 1
-wi-itmsimnuwnEmma)n
-mmwnmmn-w,mama»; size0f(c4) = 1
-PrintF("nsz(ﬁl)-Xd',nsz(ﬁl));
+App.cpp > The code compiles and runs correctly
+Elass C1 > Static data members belong to the class and
+}_ int XiYi not to the instance - that’s why they don’t
+ciass cz count when we compute the size of an
+
+{ .
+
+int X”; instance
+static int Z; 0 0
+}; > A class may be defined Without any data
+E1355 CB member. ln this case it’s size will be 1.
+static int T; _ _ .
+
+}; > Upon execution the program Will print:
+
+class C4
+
+§_ sizeof(C1) = 8
+
+int C2::Z; .
+
+mtBuR SlZEOf<C2> = 8
+
+void main()
+
+{ - _
+print-F(“sizeo-F(C1)=%d”,sizeo-F(C1)); Slzeo-F(C3) _ 1
+printf(“sizeof(C2)=%d”,sizeof(C2));
+print'F(“size0'F(C3)=%d”,size0'F(C3)); sizeo-F(C4) = 1
+printf(“sizeof(C4)=%d”,sizeof(C4));
+
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:92**************
-Classes (member data) ‘
-App,cpp Address Name Value ‘
-2"” “m 100000 Dalexl 0 ‘
-Mil?“ 300000 d1 .x z ‘
-mm m z; ‘
-n 300004 dLV z ‘
-m haunt; ‘
-f“ "MO 300000 02.x 2 ‘
-, 0.1. MM" 300011 dZX 2
-200010 le z
-200010 an 2
+Classes (member data)
+
+App.cpp Address Name Value
+
+$1.355 Date 100000 Date::Z 0
+
+31%;?“ 300000 d1 .x 3
+static int Z;
+
+1; 300004 d1.Y 3
+
+1nt Date::Z;
+
+fid main" 300008 d2.X ?
+
+} Date d1’d2’d3’ 300012 d2.Y 2
+300016 d3.X 3
+300020 d3.Y 3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:93**************
-Classes (member data) ‘
-App,cpp Address Name Value ‘
-2"” “m 100000 Dalenl 5 ‘
-"1:3"; 300000 d1 .x z ‘
-mm m z; ‘
-n 300004 um z ‘
-m haunt; ‘
-f“ ""0 300000 02.x 2 ‘
-_'“" 300011 020v 2
-)
-200010 01x z
-200010 an z
+Classes (member data)
+App.cpp Address Name Value
+$1.355 Date 100000 Date::Z 5
+31%;?“ 300000 d1 .x 3
+static int Z;
+1; 300004 d1.Y 3
+int Date::Z;
+fid main" 300008 d2.X 3
+_’d3’ 300012 d2.Y 2
+}
+300016 d3.X 3
+300020 d3.Y 3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:94**************
-Classes (member data) ‘
-Appcpp Address Name Value ‘
-Eh” “m 100000 Dalenl 5 ‘
-h 300004 dLV I ‘
-f“ ""0 300008 d2.X 7 ‘
+Classes (member data)
 
-M“ 5%.”; 300011 dZX I
-) 300016 d3,X 7
+App.cpp Address Name Value
 
-300010 d3.V Y
+$1355 Date 100000 Date::Z 5
+static int Z;
+
+}; 300004 d1.Y 2
+
+int Date::Z;
+
+fid main" 300008 d2.X ?
+3f; 22%,st 300012 d2.Y ?
+
+} 300016 d3.X 3
+
+300020 d3.Y 2
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:95**************
-Classes (member data) ‘
-App,cpp Address Name Value ‘
-21:55 Due 100000 Dalenz 5 ‘
-"1:?le; 300000 d1 .x 7 ‘
-mm m z; ‘
-n 300004 um z ‘
-m haunt; ‘
-:0“ um) 300003 02.x 7 \
-) 300010 le 7
-200010 an z
+Classes (member data)
+App.cpp Address Name Value
+$1.355 Date 100000 Date::Z 5
+31%;?“ 300000 d1 .x 7
+static int Z;
+3; 300004 d1.Y 3
+1nt Date::Z;
+fid main" 300008 d2.X 3
+3?; :1é332,d3; 300012 d2.Y 6
+} 300016 d3.X 3
+300020 d3.Y 3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:96**************
-Classes (member data) ‘
-Appcpp Address Name Value ‘
-21'” “m 100000 Daleul 6 ‘
-"1:3"; 300000 d1 .x 7 ‘
-h 300004 dLV I ‘
-f“ ""0 300008 d2.X 7 ‘
-3:; 2,51,“; 300011 dLv 6
-azx - 15.1 ¢ 1- 300016 d3,X 7
-I
-i 300010 d3.V Y
+Classes (member data)
+App.cpp Address Name Value
+$1.355 Date 100000 Date::Z 6
+ubli :
+p in‘; m 300000 d1 .x 7
+static int Z;
+}; 300004 d1 .Y 3
+int Date::Z;
+fid main" 300008 d2.X 3
+a e d ,d ,d g
+3J2 3532 3 300012 d2.Y 6
+d1.X = 7;
+d2.Y = d3.z + 1- 300016 d3.X ?
+} 300020 d3.Y 3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:97**************
-Classes (member data) ‘
-App,cpp Address Name Value ‘
-21'” “m 100000 Dalenl a ‘
-"1:3"; 300000 d1 .x 7 ‘
-mm m z; ‘
-n 300004 um z ‘
-m haunt; ‘
-f“ “MO 300000 02.x 2 ‘
-3:; 2,51,“; 300011 dLv 6
-41.x - 1;
-) 200010 an z
+Classes (member data)
+App.cpp Address Name Value
+$1.355 Date 100000 Date::Z 6
+ubli :
+p in‘; m 300000 d1 .x 7
+static int Z;
+3; 300004 d1 .Y 3
+int Date::Z;
+goid main<> 300008 d2.X 3
+3?; :1§?2’d3’ 300012 d2.Y 6
+d1.X = 7;
+d2.Y = d3.z + 1; 300016 d3.X 11
+300020 d3.Y 3
+}
 
 ***************Ending Page***************
 
@@ -1647,169 +1843,194 @@ Classes
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:99**************
 Classes (methods)
-> Methods are functions define within
-2"“ Mm the class. Their main role is to
-PM‘; W operate and change data members
-mm?“ ‘"““"“"“"‘ "m from the class (especially private
-); vnld snmrm val); ones)
-‘(M m:1:::::l:l:;:;» > Just like data member, a method can
-( “@31ngth > A method can access any other
-3.,“ "no method declared in the same scope l
-< mm m (that belongs to the same class)
-) P-SQKMUO); regardless of that methods access
+APP-CPP b Methods are functions define within
+glass PM‘ the class. Their main role is to
+PPivatjgt Age; operate and change data members
+public?“ CheckValid<i“t v.1); from the class (especially private
+}. void SetAge(int val); ones)
+[an1 PersonzzCheckValid(int val) k h
+rem (mm) && (va1<2oo)); b Just l1 e data member, a met od can
+} . . have an access modifier.
+:01d Person::SetAge(1nt val)
+1+ (Chiﬁkvalidwaml b A method can access any other
+lS—> ge = va g .
+} _d _ <> method declared in the same scope
+{ P (that belongs to the same class)
+erson p;
+} P-SetAge(4@); regardless of that methods access
 modifier.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-Classes (methods)
-APPIDP > A method can be static and have l
-Em‘ M” an access modifier at the same ‘1
-"' m Age; t1me. 1
-mm > ‘
-1
-Li.“ Mmmm" v.» 3
-( Mum ((vahl) H ("1050);
-3.,“ Mansmmm v.»
-( 1F (Che<k(vil))
-new)‘: Z m;
-and nunO
-mm p;
-if (Perim: :cnxk(w))
+APP-CPP b A method can be static and have
+1 P ' -
+Esss an access mod1f1er at the same
+private: .
+int Age; t1m€.
+publi '
+v01- e ‘ge 1n va ;
+};
+bool Person::Check(int val)
+{
+return ((va1>0) && (va1<200));
+}
+void Person::SetAge(int val)
+{
+if (Check(va1))
+this->Age = val;
+}
+void main()
+{
+Person p;
+if (Person::Check(40))
+{
+printf("40 is a valid age");
+}
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:101**************
 Classes (methods)
-APPIDP > In this case the code does not l
-Em‘ M” compile because Check method is ‘1
-"' h declared pnvate, 1
-‘
-public: ‘l
-vnld s-Uuum "n; ‘
-is.“ Mmmm" v.» ‘
-( Mum ((vahl) H ("1050);
-3.,“ Mmelwm v.»
-( 1F (UlKk(Vil))
-new)‘: Z m;
-in“ "no
-mm p;
-if (Perim: :cnxk(w))
+APP-CPP b In this case the code does not
+Eh“ PM‘ compile because Check method is
+rivate: .
+p int Ae- declared private,
+public:
+void SetAge(int val);
+$801 Person::Check(int val)
+{ return ((va1>0) && (va1<200));
+void Person::SetAge(int val)
+{ if (Check(va1))
+this->Age = val;
+}
+void main()
+{
+Person p;
+if (Person::Check(40))
+grintf("40 is a valid age");
+}
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:102**************
 Classes (methods)
-> The code compiles - SetAge
-Tm M” method is public and can be called I
-Mm: 1
-ililﬁna chxkuu m); b Any method (even if it is declared 1
+APP-CPP b The code compiles - SetAge
+Eh“ PM‘ method is public and can be called
+private:
 
-‘Twin snmun m); private like method Check) can be 1
-Elm anmm m) accessed by another method ‘
-) MW“ (mm) u (mum); declared in that class (in this case
-vnld Per-mmseﬂlrﬂnt v.1) SetAge)
-(
+1225253001 Checkant val); b Any method (even if it is declared
+ublic: . .
+:_ void Set/Again val); private like method Check) can be
+$301 PePSOHIICheck(int va1> accessed by another method
+} em <<va1>@>&&<va1<2@@>>; declared in that class (in this case
+\{loid Person::SetAge(int val) SetAge)
 
-if “Medan!”
+if (Check(va1))
 
-MW“ Z m;
+this->Age = val;
 
-in“ um)
+}
+void main()
+{
 
-Persm >
+Person .-
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:103**************
 Classes (methods)
 
 > A static method can access any
+$1?” Date static member declared in the
+pmatizéi int Y; same scope as the method
+Public;tatic void Increment“ regardless of that member access
+ii;:s::;zn:c€;mento mOd'f'er
 
-if?“ static member declared in the I
+{ Ya; b In this example, Increment
 
-"' " 5;! X; same scope as the method ‘1
-5nd: m v;
+50m mam) function will add 1 to the static
 
-whim‘ u m 1 ‘ _ regardless of that member access I
-5 a z vn Mm O. t t
-
-ii! mm . a; mOd'ﬁer “
-
-Md maximum“) ,
-
-< M > In this example, Increment
-
-3m mm function will add 1 to the static
-
-‘ Mummmi and private data member Y,
-
-)
+i Dateﬂncremento; and private data member Y.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:104**************
 Classes (methods)
-> This code does not compile 1
-“m M! i
-Lin.“ > A static function can not access a 3‘
-222521“ v; non-static member i‘
-Mm: ‘
->; “"k '““ ‘“‘""““" > A static function can not access i‘
-:"DSEZZYIILW the pointer this
-k
-(. v - n
-Mummm;
-) H
+
+APP-CPP b This code does not compile
+
+class Date
+
+Lima b A static function can not access a
+125321“ Y; non-static member
+
+public:
+
+h Stat“ V°1d Incmmemo’ b A static function can not access
+
+33$.Dﬁiiéiﬁiciément the pointer this
+
+—
+
+{
+Date::Increment();
+
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:105**************
 Classes (methods)
-> A method within a class can
-if?“ access private members / I
-D132?“ methods from instances of the ‘
-W {-154 s“"‘<—m m“) same class ! I
-,> > > In this case, p1 can access ‘
-m mm data member ,IAge from p2.
-< MM p,‘ p1; The cod complles and runs
-
-2322?“ W‘ correctlyv
-)
+APP-CPP b A method within a class can
+EPPSS PP°" access private members /
+rivate: .
+P bi"? Age; methods from instances of the
+P void SetAge(-nt value) same class l
+{ .
+} > In this case, p1 can access
+};
+int mam) data member Age from p2.
+{ Pm p1’ p2; The cod compiles and runs
+EZtﬁiEAS?‘&p2’ 1”)’ correctly.
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:106**************
 Classes (methods)
-
-> The same rule applies for
-
-if?“ static methods as well. I
-
-mil? W > _ > > In this example, the code 1
-PM“ a?“ M“ " m m") compiles and runs correctly‘ 1
-
-h > M" - u After the execution, p1 .Age
-
-2n mm IS 20 and p2.Age1s 10.
-
-> m W i
-
-***************Ending Page***************
-
-***************Beginning Page***************
-***************page number:107**************
-y my
+APP-CPID b The same rule applies for
+Ems Pm" static methods as well.
+private:
+publﬁ lg“ _ _ > In this example, the code
+FEW set/fa‘ Pam“ p’ mt value) compiles and runs correctly.
+p->Age = va ue; _
+}_ } After the execution, p1.Age
+int mam) is 20 and p2.Age is 10.
+{ Person .1 .2-
+Person::SetA;e(&-1, 29);
+return 0;
+}
 
 ***************Ending Page***************
 
+
+ 

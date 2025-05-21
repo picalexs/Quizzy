@@ -2,834 +2,851 @@
 ***************page number:1**************
 Chapter 11: Mass-Storage
 Systems
-—
+— —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-WChapter 11 : Mass-Storage Systems
-I Overview oi Mass Storage Structure
+‘3%’ Chapter 1 1 : Mass-Storage Systems
+I Overview of Mass Storage Structure
 I HDD Scheduling
 I NVM Scheduling
 I Error Detection and Correction
 I Storage Device Management
 I Swap-Space Management
-I Storage Atiachmeni
+I Storage Attachment
 I RAID Structure
+I Operating System Concepts-10‘h Edition 11.2 Silberschatzt Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-A I I
-W Objectwes
-I Describe the physical structure oi secondary storage devices and
-the effect of a device's structure on its uses
-I Explain the perlorrnarice characteristics of mass-storage devices
+/‘ m1 if I I
+4:4,?’ Ob jectlves
+I Describe the physical structure of secondary storage devices and
+the effect of a device’s structure on its uses
+I Explain the performance characteristics of mass-storage devices
 I Evaluate l/O scheduling algorithms
 I Discuss operating-system services provided for mass storage,
 including RAID
-Wm", 5"..." CW,“ 7 w mm H 1 “mm-z Gllvln m we slut‘
+Operating System Concepts —10th Edition 11.3 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-A
-W OverVIew of Mass Storage Structure
+‘may,’ OverVIew of Mass Storage Structure
 I Bulk of secondary storage for modern computers is hard disk drives
 (HDDs) and nonvolatile memory (NVM) devices
-I HDDs spin platters ol magnetically-coated material under moving read-
+I HDDs spin platters of magnetically-coated material under moving read-
 write heads
-l Drives rotate at 60 to 250 limes per second
-' Transfer rate ls rate at which data llow between drive and oompuler
-' Positioning time (randomacoess time) is time to move disk arm to
+' Drives rotate at 6O to 250 times per second
+' Transfer rate is rate at which data flow between drive and computer
+. Positioning time (random-access time) is time to move disk arm to
 desired cylinder (seek time) and time for desired sector to rotate
 under the disk head (rotational latency)
-' Head crash results lrorn disk head making contact with the disk
-surface -- Thars bad
+' Head crash results from disk head making contact with the disk
+surface -- That’s bad
 I Disks can be removable
-am",a"..mam.amaa.m m Emma admnmqniam
+Operating System Concepts — 10‘h Edition 11.4 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-“19$? Moving-head Disk Mechanism
-(rank! | spindls
-4~>
-F! a‘
-g $1.1?\
-cylinder c 4H} l i Intimate
-; ; ma
-\ _ ___ I
-m,
-m/
-Malian
+e4, yi Movmg-head Dlsk Mechanlsm
+mm "
+track t spindle
+‘F
+.¢“' b‘ I
+w arm assembly
+I i
+| | .
+cylinder C _>| | read-write
+l l head
+| |
+l"‘- -_~.| \
+Q ‘$4\
+platter
+rotation
+Operating System Concepts —10th Edition 11.5 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-M Hard Dlsk Drlves
-I Planers range 1mm .85" to 14" (histories
-' Commonly 3.5", 2.5", and 1Y8‘ . v > '
-I Range from sues \o 3TB perdrive _ \_ ﬁ'
-I Peﬂormance / /,.,' ~ = W7“ .‘
-AG)“ ¢ ‘ ~.
-' Transler Rate — theoretical — 6 Gbls J " -*
-Q EWemive Transier Rale — real — _ v
-1Gb/sec
-O Seek lime from 3mslo12ms i 9ms
+Hard Disk Drives
+I Platters range from .85” to 14” (historicall Y a _ a .
+' Commonly 3.5”, 2.5”, and 1.8” H .I-f; I i __, _ a:
+I Range from BOGB to 3TB per drive a ﬁt , V i
+I Performance
+' Transfer Rate — theoretical — 6 Gb/s a 03V} if)
+' Effective Transfer Rate — real — __ _ 1" ,
+1Gb/sec ?' ' "' “ a
+. Seek time from 3ms to 12ms — 9ms I i
 common for desktop drives
-O Average seek \Zme measured or
-calculated based on 1/3 of ‘racks
-0 La\ency based on spindle speed
-'1/(RPM/60):60/RPM
-° Average lalency : ‘A lalency
-0mm", 5"..." Cum,“ , m mm H e Ellhvuhllz. SIM“ m em, em
+' Average seek time measured or
+calculated based on 1/3 of tracks
+' Latency based on spindle speed
+>1/(RPM/60)=60/RPM
+' Average latency = 1/2 latency
+Operating System Concepts -1o"1 Edition 11.6 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-r‘
-“W Hard Dlsk Performance
+My?’ Hard Dlsk Performance
 I Access Latency = Average access time = average seek time +
-average lalency
-° For lastest disk 3ms + 2ms = 5ms
+average latency
+' For fastest disk 3ms + 2ms = 5ms
 ' For slow disk 9ms + 5.56ms = 14.56ms
 I Average l/O time = average access time + (amount to transfer/
 transfer rate) + controller overhead
-I For example to transfer a 4K5 block 0n a 7200 RPM disk with a
-Ems average seek lime, le/sec lransler raie with a ,1ms
+I For example to transfer a 4KB block on a 7200 RPM disk with a
+5ms average seek time, 1Gb/sec transfer rate with a .1ms
 controller overhead =
-' 5ms + 4.17ms + Uv1rns + transfer time =
-. Transler time 1 4K5 I 1617/5 " BGb l GB " 1GB I 10241KB 1 32
-/ (1024i) = 0.031 ms
-0 Average l/O time for 4K5 block = 9.27ms + .031ms =
-9.301ms
-om.wsy....ncm.m.em~am M mm.‘ amnmqniam
+. 5ms + 4.17ms + 0.1ms + transfer time =
+' Transfer time = 4KB / 1Gb/s * 8Gb / GB * 1GB / 10242KB = 32
+/(10242) = 0.031 ms
+' Average l/O time for 4KB block = 9.27ms + .031ms =
+9.301 ms
+Operating System Concepts — 10‘h Edition 11.7 Silberschatz, Galvin and 93901; @202‘;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-A
-~43?) The Flrst Commerclal Dlsk Drlve
-_ \ \
-L 1956
-FAA x IBM RAMDAC computer
-‘1/, ’ included the IBM Mudel
-\ ' _ f ~ 350 disk storage system
-1‘ - v . t 5M (7 blt) characters
-HR 1 50 x 24” platters
-.é ﬂ ;& é? ' " Access time = < 1 second
-*4' ‘ _ f‘
-My ._ ,
-,MM..__Y_ _ _ ‘
-om",5,...mcwmkmm H. “mm-z W“ m W181."
+The Flrst CommerCIal Dlsk Drlve
+l-I - I I ‘H- ‘
+i-J 1956
+.. FAA. § IBM RAMDAC computer
+____,_._.:--""';_ 7 included the IBM Model
+g . f f .- " 350 disk storage system
+“IF '. _ 1 .. 1.- 1; 5M (7 bit) characters
+' “if? ' J 50 x 24" platters
+-251!" _.' __ -—:‘" -- “‘ Access time = < 1 second
+Operating System Concepts — 10‘I1 Edition 11.8 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-A
-‘4);’ Nonvolatile Memory Devices
+ta??? Nonvolatile Memory Devices
 
 I If disk-drive like, then called solid-state disks (SSDs)
 
-I Other iorrns include USB drives (thumb drive, ﬂash dnve), DRAM
-disk replacements, surface-mounted on motherboards‘ and main
-storage in devices like smarlphones
+I Other forms include USB drives (thumb drive, flash drive), DRAM
+disk replacements, surface-mounted on motherboards, and main
+storage in devices like smartphones
 
 I Can be more reliable than HDDs
 
 I More expensive per MB
 
-I Maybe have shorter life span i need carelul management
+I Maybe have shorter life span — need careful management
 
 I Less capacity
 
 I But much faster
 
-I Busses can be loo slow -> connect directly to POI for example
+I Busses can be too slow -> connect directly to PCI for example
 
 I No moving parts, so no seek time or rotational latency
 
-***************Ending Page***************
+Operating System concepts -1oth Edition 11.9 Silberschatz, Galvin and Galen: ©2022:
 
+***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-ﬁ
-“w Nonvolatlle Memory DeVIces
+Nonvolatlle Memory DeVIces
 I Have characteristics that present
 challenges
-I Read and written lﬂ “page” increments
-(think sector) but can‘t overwrite in place
-0 Must ﬁrst be erased, and erases
-happen in larger "block" increments
-. Cari only be erased a limited number 0f
-times belore worn out — ~ 100,000
-. Liie span measured in drive writes per
-day (DWPD)
-t A 1TB NAND drive with rating of
+I Read and written in “page” increments
+(think sector) but can’t oven/vrite in place
+' Must first be erased, and erases
+happen in larger "block" increments ‘
+. Can only be erased a limited number of L V
+times before worn out — ~ 100,000 ' ~ ' t
+' Life span measured in drive writes per ,9
+day (DWPD) s‘
+> A 1TB NAND drive with rating of Q
 5DWPD is expected to have 5TB per
 day written within warrantee period
-without tailing
-om".5,...WWHWW n in sit-m.‘ “Mum-“1W.
+without failing
+Operating System Concepts — 10"1 Edition 11.10 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Q
-._ NAND Flash Controller Algonthms
+WMS NAND Flash Controller Algorlthms
 I With no overwrite, pages end up with mix of valid and invalid data
-I T0 lrack which logical blocks are valid‘ controller mainlains flash
+I To track which logical blocks are valid, controller maintains flash
 translation layer (FTL) table
-I Also implements garbage collection lo lree invalid page space
-I Allocates overprovisioning to provide working space for GO
-I Each cell has lilespan, so wear leveling needed to write equally to all cells
-valid valid w V i-
-n“! page
-i an i valid
-pig! r1‘; nag!
+I Also implements garbage collection to free invalid page space
+I Allocates overprovisioning to provide working space for GC
+I Each cell has lifespan, so wear leveling needed to write equally to all cells
+valid valid invalid invalid
+page page page page
+invalid valid invalid valid
+page page page page
 NAND block with valid and invalid pages
-Ovlmmiiyilum Manama.“ ll H alumna gammaaqnwh
+Operating System Concepts — 10"1 Edition 11.11 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-A .
-MW Volatile Memory
-I DRAM frequentiy used as mass-storage devide
-' Nul teenniesily sewndsry storage because volalile, bul can nsve me
-systems, be used like very lasl secondary storage
-I RAM drives (wiin many names, including RAM disks) present as raw block
-devices, eemmeniy file system formatted
-I Computers have buffering, caching ina RAM, se why RAM drives?
-' Caches I buﬂers aliocated / managed by programmer, operaling syslem,
+gig???’ Volatile Memory
+I DRAM frequently used as mass-storage device
+' Not technically secondary storage because volatile, but can have file
+systems, be used like very fast secondary storage
+I RAM drives (with many names, including RAM disks) present as raw block
+devices, commonly file system formatted
+I Computers have buffering, caching via RAM, so why RAM drives?
+' Caches / buffers allocated / managed by programmer, operating system,
 hardware
-' RAM drives under U59? contra‘
-0 Found in an majoroperating sysiems
-' Linux Nev/ram, macOS dlskutil (O create (hem, Linux /tmp of
-me system type tmpfs
+' RAM drives under user control
+' Found in all major operating systems
+> Linux /deV/ram, macOS diskutil to create them, Linux /tmp of
+file system type tmpfs
 I Used as high speed temporary storage
-' Programs could share bulk daie, quickly, by rsading/wriling te RAM drive
-0mm, eye..." emu“ e "P sum u t; Ellhvuhllz. e-inn ."d ems emu
+' Programs could share bulk date, quickly, by reading/writing to RAM drive
+Operating System concepts -1oth Edition 11.12 Silberschatz, Galvin and Gage: ©2512;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-7 P -
-.1.»
-W’ Magnetlc Tape
-WmWWW-“Wmdn-Madmmmm
-m m Ma MM .md m m.“ mm m m
-m w m m my M mm We TM m M
-Mu.“ mmmmmmmmmWM
-"hm/M 5mm WWWmmwmmm
-WHEN“.
-w...“ MLvom-p-nmmnwmm-Mm. A
+@v/ agne IC ape
+
+Magnetic tape was used as an early secondary-storage medium. Although
+it is nonvolatile and can hold large quantities of data, its access time is slow
+compared with that of main memory and drives. ln addition, random access
+to magnetic tape is about a thousand times slower than random access to
+HDDs and about a hundred thousand times slower than random access to
+SSDs so tapes are not very useful for secondary storage. Tapes are used
+mainly for backup, for storage of infrequently used information, and as a
+medium for transferring information from one system to another.
+
+A tape is kept in a spool and is wound or rewound past a read-write
+head. Moving to the correct spot on a tape can take minutes, but once posi-
+tioned, tape drives can read and write data at speeds comparable to HDDs.
+Tape capacities vary greatly, depending on the particular kind of tape drive,
+with current capacities exceeding several terabytes. Some tapes have built-in
+compression that can more than double the effective storage. Tapes and their
+drivers are usually categorized by width, including 4, 8, and 19 millimeters
+and 1 /4 and 1 /2 inch. Some are named according to technology, such as LTO-6
+(Figure 11.5) and SDLT.
+
+Figure 1 1.5 An LTO-6 Tape drive with tape cartridge inserted.
+\
+Operating System Concepts —10‘h Edition 11.13 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-t‘
-“3?; Dlsk Attachment
-I Host-attached storage accessed tnrougn l/o ports talking to IIO busses
+My)’ Dlsk Attachment
+I Host-attached storage accessed through l/O ports talking to l/O busses
 I Several busses available, including advanced technology attachment
-(ATA), serial ATA (5AM; eSATA, serial attached SCSI (5A5), universal
-serial bus (USE), and fibre channel (FC)Y
+(ATA), serial ATA (SATA), eSATA, serial attached SCSI (SAS), universal
+serial bus (USB), and fibre channel (FC).
 I Most common is SATA
-I Because NVM much taster than HDD, new tast intertace for NVM Called NVM
+I Because NVM much faster than HDD, new fast interface for NVM called NVM
 express (NVMe), connecting directly to PCI bus
-I Data trensters on a bus carried nut by special electronic processors called
+I Data transfers on a bus carried out by special electronic processors called
 controllers (or host-bus adapters, HBAs)
-. Hust controller on the computer end ot the bus, device contmller on device
+' Host controller on the computer end of the bus, device controller on device
 end
-l Computer places commend on nosl controller, using memory-mapped l/O
-pons
-t Host controller sends messages to device controller
-t Data transierred via DMA between device and computer DRAM
-0mm in..." “We m sum l. is sum-s em .o mien‘
+' Computer places command on host controller, using memory-mapped l/O
+pods
+> Host controller sends messages to device controller
+> Data transferred via DMA between device and computer DRAM
+Operating System Concepts —10th Edition 11.15 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-t‘
-W Address Mapplng
-I Disk drives are addressed as large l-dirnensional arrays or logical
-blocks, where (he logical block is (he smallest uni! 0' transfer
+lay)’ Address Mapplng
+I Disk drives are addressed as large 1-dimensional arrays of logical
+blocks, Where the logical block is the smallest unit of transfer
 ' Low-level formatting creates logical blocks on physical media
-I The l-dimensional array of logical blocks iS mapped irltO the sectors
-or the disk sequentially
-' Sector 0 is the ﬁrst sector of the first track on the outermost
+I The 1-dimensional array of logical blocks is mapped into the sectors
+of the disk sequentially
+' Sector 0 is the first sector of the first track on the outermost
 cylinder
-0 Mapplrlg proceeds in order through thal track, lherl the rest of the
-lracks in that cylinder, and lherl through the rest ol the cylinders
-lrom oulermusl to innermost
-Q Logical to physical address should be easy
-> Except ror bad sectors
+' Mapping proceeds in order through that track, then the rest of the
+tracks in that cylinder, and then through the rest of the cylinders
+from outermost to innermost
+' Logical to physical address should be easy
+> Except for bad sectors
 > Non-constant # of sectors per track via constant angular
 velocity
-Ovimmi Syn-m Cam,“ e In.‘ arm ii ti Ellhluahlm. rain“ ."a am. em
+Operating System Concepts — 10‘h Edition 11.16 Silberschatz, Galvin and Gag; ©2611‘;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-A
-way-‘i HDD Schedullng
+if
+£39,)’ HDD Schedullng
 I The operating system is responsible for using hardware
-efﬁciently — for the disk drives, this means having a last
+efficiently — for the disk drives, this means having a fast
 access time and disk bandwidth
 I Minimize seek time
-I Seek time = seek distance
-I Disk bandwidth is the total number oi bytes transferred,
-divided by the total time between [he first request for service
+I Seek time z seek distance
+I Disk bandwidth is the total number of bytes transferred,
+divided by the total time between the first request for service
 and the completion of the last transfer
-um“. m..." “We w 5.1....“ it w “mm-z W“ .n. W1 W.
+Operating System Concepts —10‘h Edition 11.17 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-A
-MW Disk Scheduling (Cont.)
-I There are many seuroes oldisk l/o request
-. OS
-' system prooesses
-0 Users processes
-I l/o request Includes input or eutpul mode, eisk address, memory address,
-number (ll SGCIOFS IO transfer
-I os maintains queue ol rsquesls, per dlsk ur device
-I Idle disk can immediately work 0|’! IIO [EQUESL busy diSK means work must
-0 Optimization algorithms only make sense wnen a queue exists
-I In the pest, operating system responsible for queue management, disk
-drive head SCVledUIiﬂg
-. NOW, built iﬂlO (he storage devices, controllers
-' Just pruvlde LBAs, handle sorting of requests
-r Some oi the algorithms tney use described next
+tact Disk Scheduling (Cont.)
+I There are many sources of disk l/O request
+' OS
+. System processes
+' Users processes
+I l/O request includes input or output mode, disk address, memory address,
+number of sectors to transfer
+I OS maintains queue of requests, per disk or device
+I Idle disk can immediately work on l/O request, busy disk means work must
+queue
+' Optimization algorithms only make sense when a queue exists
+I ln the past, operating system responsible for queue management, disk
+drive head scheduling
+. Now, built into the storage devices, controllers
+' Just provide LBAs, handle sorting of requests
+> Some of the algorithms they use described next
+Operating System concepts -1oth Edition 11.18 Silberschatz, Galvin and Gash: @251‘;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-A
-W D|sk Schedullng (Cont.)
+My)’ Dlsk Schedullng (Cont.)
 I Note that drive controllers have small buffers and can manage a
-queue of l/O requests (of varying “depth")
-I Several algorithms exist l0 schedule the servicing 01 disk l/O
+queue of l/O requests (of varying “depth”)
+I Several algorithms exist to schedule the servicing of disk l/O
 requests
 I The analysis is true for one or many platters
 I We illustrate scheduling algorithms with a request queue (0-199)
-98,183,37,122,14,124,65,67
-Head painter 53
-0mmWNWWPM,“ l. l, Slim-a mum-aim“
+98, 183, 37, 122, 14, 124, 65, 67
+Head pointer 53
+| Operating System Concepts-10th Edition 11.19 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-w FCFS
-Illustration shows total head movement of 64D cylinders
-queue : 98, 183,37,122,14,124.65,67
+Illustration shows total head movement of 640 cylinders
+queue = 98, 183, 37, 122, 14, 124, 65, 67
 head starts at 53
-O 14 37 536567 98 122124 183199
-1_1—1_1_u—1—u—1_1
-T
-0mm", 5m... mum. 71M mm qu “mm-z SIM“ m w": mm
+0 14 37 536567 98 122124 183199
+|_l—|_|_u—l—u—l_|
+| Operating System Concepts-10th Edition 11.20 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-W” SCAN
-I The disk arm starls at one end of the disk, and moves toward the
+I The disk arm starts at one end of the disk, and moves toward the
 other end, servicing requests until it gets to the other end of the
 disk, where the head movement is reversed and servicing
-continues.
-I SCAN algorithm Somelimes called the elevator algorithm
-I Illustration shows total head movement ol 208 cylinders
-I But note that if requesls are uniformly dense, largest density at
+conﬁnues.
+I SCAN algorithm Sometimes called the elevator algorithm
+I Illustration shows total head movement of 208 cylinders
+I But note that if requests are uniformly dense, largest density at
 other end of disk and those wait the longest
-Wm. m..." Mum.’ w mm tut mm.‘ W“ .n. W1 W.
+| Operating System Concepts-10th Edition 11.21 Silberschatz, Galvin and Gagne @201‘8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-“6} ' SCAN (Cont.)
-queue i 98,183, 37, 122, 14, 124, 65, 67
+My’ SCAN (Cont)
+‘Lg 5‘
+queue I 98, 183, 37, 122, 14, 124, 65, 67
 head starts at 53
 O 14 37 536567 98 122124 183199
-|_1_|_1_u—1_u—1_|
-‘1
-0mm", 5"..." “mm. 7 w mm 112; “mm-z SIM“ m w": emu
+|_1—|—|_|_1—|—L|—|_|
+‘<11 it
+Operating System Concepts — 10th Edition 11.22 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-W” c SCAN
 I Provides a more uniform wait time than SCAN
-I The head moves from one end ol the disk to the other, serVicing
+I The head moves from one end of the disk to the other, servicing
 requests as it goes
-' When it reaches the other end, however, it immediately
-returns t0 the beginning of the disk, without servicing any
+. When it reaches the other end, however, it immediately
+returns to the beginning of the disk, without servicing any
 requests on the return trip
-I Treats the cylinders as a circular list that wraps around trom the
-last cylinder to the ﬁrst one
+I Treats the cylinders as a circular list that wraps around from the
+last cylinder to the first one
 I Total number of cylinders?
-om“, 5"..." Cum,“ , w mm tIZJ “mm-z s-M“ m w": slut‘
+| Operating System Concepts-10th Edition 11.23 Silberschatz, Galvin and Gagne @201‘8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-W C-SCAN (Cont.)
-queue 98.183.37. 122. 14, 124, 65, S7
-head starls a1 53
+@w C-SCAN (Cont.)
+mg "
+queue I 98, 183, 37, 122, 14, 124, 65, 67
+head starts at 53
 O 14 37 536567 98 122124 183199
-)_|_1_1_u—1_u—1_¢
-r
-0mm", 5"..." Cum,“ 7 w mm 1m “mm-z SIM“ m a...“ emu
+|_i—i—i_|_|—l—Ll—i_|
+1%
+Operating System Concepts — 10‘h Edition 11.24 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-y‘
-~43?) Selecting a Disk-Scheduling Algorithm
-I SSTF Is common and has a natural appeal
-I SCAN and C'SCAN perform beller for systems trial place a heavy lead orl lhe disk
-' Less slarvallon‘ bill sllll Deselble
-I Ta avoid siarvallon Linux implements deadline scheduler
-' Malnlalrls separate read and write queues. gives read priorily
-> Because processes more likely lo block on read lharl write
-' lrnplerrlerlls lqur queues: 2 x read and 2 x wrlle
-> 1 read and 1 wrrle queue serled in LBA order‘ essentially lmplernentirlg OSCAN
-> 1 read and 1 wrile queue sorled ll'l FCFS order
-> All l/O requesls sent in balm sowed in lhalqueue‘s order
-> Aﬂer each balch‘ checks If any requesls in FCFS older than conﬁgured age
-(delauli SOOms)
-- Ii an‘ LBA queue cnnlalrling lhal request is selected ier next batch el l/O
-I lrl RHEL 7 eled NOOP and completely lair queueing scheduler (c FQ) also
-available, deleulle vary by slorsgs device
+A I,“ . . . .
+kg}; Selecting a Disk-Scheduling Algorithm
+I SSTF is common and has a natural appeal
+I SCAN and C-SCAN perform better for systems that place a heavy load on the disk
+' Less starvation, but still possible
+I To avoid starvation Linux implements deadline scheduler
+' Maintains separate read and write queues, gives read priority
+> Because processes more likely to block on read than write
+' Implements four queues: 2 x read and 2 x write
+> 1 read and 1 write queue sorted in LBA order, essentially implementing C-SCAN
+> 1 read and 1 write queue sorted in FCFS order
+> All l/O requests sent in batch sorted in that queue’s order
+> After each batch, checks if any requests in FCFS older than configured age
+(default 500ms)
+— lf so, LBA queue containing that request is selected for next batch of l/O
+I ln RHEL 7 also NOOP and completely fair queueing scheduler (CFQ) also
+available, defaults vary by storage device
+Operating System concepts -1oth Edition 11.25 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-R .
-w)?“ NVM Scheduling
-I NO dlsk heads or rclaﬂonai ialency but still room (or Oplimilalion
-I In RHEL 7 NOOP (no scheduling) i5 used but adjacent LEA requests are
-Combined
-' NVM b95131 Iandcm l/Ov HDD at Sequeniial
-0 Throughput can be similar
-' lnpullOulpul operations per second (IUPS) much higher with NVM
-(hundreds 0f ihousands VS hundreds)
-I But write ampliﬁcation [one write, causing garbage collection and many
-read/writes) can decrease ihe perkmnance advantage
-0mm", 5"..." Cum,“ , w mm "a “mm-z s-M“ m w": emu
+tar,’ y)’ NVM Schedullng
+(gm i“
+I No disk heads or rotational latency but still room for optimization
+I ln RHEL 7 NOOP (no scheduling) is used but adjacent LBA requests are
+combined
+. NVM best at random l/O, HDD at sequential
+' Throughput can be similar
+' Input/Output operations per second (IOPS) much higher with NVM
+(hundreds of thousands vs hundreds)
+. But write amplification (one write, causing garbage collection and many
+read/writes) can decrease the performance advantage
+Operating System Concepts — 10th Edition 11.26 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-y‘
-
-MW Error Detection and Correction
-I Fundamentai aspect of many pans of computing (memory, networking, storage)
-I Error detection determines ii irrere a problem has occurred (for example a bit
-
-ﬂipping)
-' II delecied, can hall [he operation
-0 Detection rrequerruy done via parily bit
-I Parity one form or checksum e uses modular arithmetic to oompule, store,
-compare values 0f ﬁxed-length words
-' Anoihererror-deiection melhod common in networking is cyclic
-redundancy check (CRC) which uses hash function to deiect muliipie-bil
+/ ‘at’ ,_ it I I
+My)’ Error Detectlon and Correctlon
+I Fundamental aspect of many parts of computing (memory, networking, storage)
+I Error detection determines if there a problem has occurred (for example a bit
+flipping)
+' lf detected, can halt the operation
+. Detection frequently done via parity bit
+I Parity one form of checksum — uses modular arithmetic to compute, store,
+compare values of fixed-length words
+' Another error-detection method common in networking is cyclic
+redundancy check (CRC) which uses hash function to detect multiple-bit
 errors
-I Error-correction code (ECC) not only dereeis, but can correct some errors
-' Soﬂ errors correctable, hard errors detected bu‘ not curreded
+I Error-correction code (ECC) not only detects, but can correct some errors
+. Soft errors correctable, hard errors detected but not corrected
+Operating System Concepts — 10‘h Edition 11.27 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
-ﬁ
-“W Storage DeVIce Management
-I Low-level ronnattinq, or physical formatting i Dividing a disk into
+W’ Storage DeVIce Management
+I Low-level formatting, or physical formatting — Dividing a disk into
 sectors that the disk controller can read and write
-' Each sector can hold header information. plus data, plus error
-correction code teccl
-' Usually 512 bytes at data but can he selectable
-I To use a disk to hold ﬁles, the operating system still needs to record its
-owrl data structures on the disk
-. Partition the disk irlto one or more groups or cylinders, each treated
+' Each sector can hold header information, plus data, plus error
+correction code (ECC)
+' Usually 512 bytes of data but can be selectable
+I To use a disk to hold files, the operating system still needs to record its
+own data structures on the disk
+. Partition the disk into one or more groups of cylinders, each treated
 as a logical disk
-i Logical formatting or ‘making a ﬁle system"
-0 To increase efﬁciency mostﬁle systems group blocks into clusters
-t Disk IIO done in blocks
-> File l/O done in clusters
+' Logical formatting or “making a file system”
+' To increase efficiency most file systems group blocks into clusters
+> Disk l/O done in blocks
+> File |/O done in clusters
+Operating System Concepts — 10‘h Edition 11.28 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:28**************
-A
-W'Storage Device Management (cont.)
+lef59?‘;,‘\;1":§’Storage Device Management (cont.)
 I Root partition contains the OS, other partitions can hold other
 Oses, other file systems, or be raw
 ' Mounted at boot time
-. Other partitions can mount automatically or manually
-I At mount time, ﬁle system consistency checked
-0 ls all metadata Correct?
-t Ii not, ﬁx it, try again
-> ll yes, add lo mount table, allow access
+' Other partitions can mount automatically or manually
+I At mount time, file system consistency checked
+' ls all metadata correct?
+> If not, fix it, try again
+> If yes, add to mount table, allow access
 I Boot block can point to boot volume or boot loader set of blocks that
-contain enough code IO know hDW to load the kernel from the ﬁle
+contain enough code to know how to load the kernel from the file
 system
-. Or a boot management program for multi-OS booting
-om",5,...mcm.m.e.n.i.,.m “I, Siam-a Mummiam
+I ' Or a boot management program for multi-os booting
+Operating System Concepts -1oth Edition 11.29 Silberschatz, Galvin and Gagnle ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-t‘
-“W DeVIce Storage Management (Cont)
+“kWDewce Storage Management (Cont.)
 I Raw disk access for apps that
 want to do their own block
-management, keep OS out 01 the
-wa databases for exam le a" m
-y‘ . . . . p ) Imi-
-I Boot block |n|t|al|zes system -\
-pavtmont \ pamlmn
-i The bootstrap is stored in \
-ROM. ﬁrmware WW -
-i Bootstrap loader program palm“ - W'Pamw"
+management, keep OS out of the
+wa databases for exam le /’ boot
+y‘ . . . . p ) Ital
+I Boot block |n|t|a||zes system ,_ -\ _,
+partition 1 \ partition
+. The bootstrap is stored in \
+ROM, firmware partition 2 -
+. Bootstrap loader program partition 3 - boo‘ partition
 stored in boot blocks of boot
+partition partition 4 -
 I Methods such as sector sparing _
-used to handle bad blocks Bootlng from secondary
-storage In Wlndows
-om.nm..mcm.mpmam t. 3., “mm Mummism
+used to handle bad blocks Booting _from_ secondary
+storage in Windows
+Operating System Concepts — 10‘h Edition 11.30 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-t‘
-W Swap-Space Management
-I Used (or moving entire processes (swapping), or pages (paging), irom
+aw)” Swap-Space Management
+I Used for moving entire processes (swapping), or pages (paging), from
 DRAM to secondary storage when DRAM not large enough for all processes
 I Operating system provides swap space management
-l Secondary storage slower than DRAM, so important to optimize
+' Secondary storage slower than DRAM, so important to optimize
 performance
-' Usually multiple swap spaces possible , decreasing l/O load on any
+. Usually multiple swap spaces possible — decreasing l/O load on any
 given device
-' Best t0 have dedicated devices
-° Can be in raw partition or a ﬁle within a ﬁle system (for convenienoe of
+' Best to have dedicated devices
+' Can be in raw partition or a file within a file system (for convenience of
 adding)
-° Data structures for swapping on Linux systems:
->i Mo we e
-p Page a
-‘M
-III--
-nr swiD m-
-0mm in..." Ema.’ m a.“ l. :1 Elam.‘ a.“ .n. w‘. all‘
+' Data structures for swapping on Linux systems:
+l——SWElp area—i
+spiléif'a
+WWII-I-
+orswapfile
+Operating System Concepts — 10‘h Edition 11.31 Silberschatz, Galvin and Gag; @202‘;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-t‘
-W Storage Attachment
+‘rig-‘Sr Storage Attachment
 I Computers access storage in three ways
-Q host—attached
-Q network-attached
-Q cloud
-I Host attached access through local IIO ports, using one of
+' host-attached
+' network-attached
+' cloud
+I Host attached access through local l/O ports, using one of
 several technologies
-Q To attach many devices, use storage busses such as USB.
-lirewire, thunderbolt
-Q High-end systems use ﬁbre channel (FC)
-t High-speed serial architecture using ﬁbre or copper
+' To attach many devices, use storage busses such as USB,
+firewire, thunderbolt
+' High-end systems use fibre channel (FC)
+> High-speed serial architecture using fibre or copper
 cables
-t Multiple hosts and storage devices can connect to the FC
+> Multiple hosts and storage devices can connect to the FC
 fabric
-om", 5"..." “We m a.“ u u mm.‘ a.“ m w‘. W“
+in
+Operating System Concepts — 10‘h Edition 11.32 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-A
-“$9 Network-Attached Storage
-I Network-attached storage (NAS) is storage made avallable over
-a network rather than over a local Connection (such as a bus)
-. Remotely attaching to ﬁle systems
+£43}? Network-Attached Storage
+I Network-attached storage (NAS) is storage made available over
+a network rather than over a local connection (such as a bus)
+' Remotely attaching to file systems
 I NFS and CIFS are common protocols
 I Implemented via remote procedure calls (RPCs) between host
-and storage over typically TCP or UDP on IP network
-I iSCSl protocol uses IP network to carry the SCSI protocol
-Q Remotely attaching to devices (blocks)
-m
-m
-Wm, 5"..." “We m» 5.1.th l. :3 Ell-m.‘ a.“ .n. w‘. gm
+and storage over typically TCP or UDP on lP network
+I iSCSl protocol uses lP network to carry the SCSI protocol
+. Remotely attaching to devices (blocks)
+Operating System Concepts — 10‘h Edition 11.33 Silberschatz, Galvin and Gagne @201‘8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-ﬁe
-say) Cloud Storage
-I Similar lo NAS, provides access to slorage across a network
-' Unllke NAS, accessed over the lntemel or a WAN to remote
+kg}? Cloud Storage
+I Similar to NAS, provides access to storage across a network
+' Unlike NAS, accessed over the Internet or a WAN to remote
 data center
-I NAS presented as just another ﬁle system, while cloud storage is
-API based, With programs using the APls lo provide access
-. Examples include Dropbox, Amazon S3, Microsoft OneDrive,
+I NAS presented as just another file system, while cloud storage is
+API based, with programs using the APls to provide access
+' Examples include Dropbox, Amazon S3, Microsoft OneDrive,
 Apple iCloud
-. Use APls because of latency and failure scenarios (NAS
-protocols wouldn't work well)
-0mm in..." Emmy m a.“ u u mm.‘ a.“ .n. w‘. Wit
+' Use APls because of latency and failure scenarios (NAS
+protocols wouldn’t work well)
+Operating System Concepts — 10‘h Edition 11.34 Silberschatz, Galvin and Gag; @202‘;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-r‘
-MW Storage Array
-I Can just attach disks, or arrays oi disks
-I Avoids the NAS drawback 01 using network bandwidth
+tgyw Storage Array
+I Can just attach disks, or arrays of disks
+I Avoids the NAS drawback of using network bandwidth
 I Storage Array has controller(s), provides features to attached
 host(s)
-Q Ports to connect hosts to array
-' Memory, oontrolling software (sometimes NVRAM, etc)
-Q A few to thousands of disks
-. RAID, hot spares, hot swap (discussed later)
-. Shared storage -> more efﬂciency
+' Ports to connect hosts to array
+' Memory, controlling software (sometimes NVRAM, etc)
+' A few to thousands of disks
+' RAID, hot spares, hot swap (discussed later)
+' Shared storage -> more efficiency
 ' Features found in some file systems
 > Snaphots, clones, thin provisioning, replication,
-deduplioalion, etc
-om",Syihmcmmiamam it as gimme “humanism
+deduplication, etc
+Operating System concepts -1oth Edition 11.35 Silberschatz, Galvin and Gash: @232
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-W‘ Storage Area Network
 I Common in large storage environments
-I Mulliple hosis aﬂached to multiple storage arrays i ﬂexible
-M M
-SW Chum
-SIR
-CBMEY
-was web oomem
-lihvavy pvmidnr
-0mm 5M... CW,“ 7 w mm u as “mm; W“ m 6.“, ﬁlm:
+I Multiple hosts attached to multiple storage arrays — flexible
+client
+client
+client
+storage
+array data-processmg
+center
+‘tape web content
+library provider
+Operating System Concepts — 10th Edition 11.36 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-t‘
-“W Storage Area Network (Cont.)
-I SAN l5 one or more storage arrays
+W’ Storage Area Network (Cont.)
+I SAN is one or more storage arrays
 ' Connected to one or more Fibre
-Channel switches or InfiniBand
-(IB) network
-I Hosts also attach to the switches ‘1 _ l l
-I Storage made available via LUN _________:_>
-Masking from speciﬁc arrays to alum-i‘ g ‘
-speciﬁc servers I ""r"'""::‘ 4 v
-I Easy to add or remove storage, add ‘ "53::
-new host and allocate it storage ---II_II.I?.v
-I Wny have separate storage m“
-networks and communications A Storage Array
+Channel switches or lnfiniBand
+(lB) network a
+I Hosts also attach to the sWItches l f; ,
+I Storage made available via LUN ;
+_ _ _ “ii-ryvvvv-H'I'IWI: t4 E
+Masklng from specific arrays to l ~ "Hull ‘ ,3} E
+specific servers ‘ * IIIWM“ ll ‘
+I Easy to add or remove storage, add < l I; IIIII~l-~-'--*--lé' '
+new host and allocate |t storage - ill-matinnngg . '
+I Why have separate storage x A .
+networks and communicatlons A Storage Array
 networks?
 . Consider iSCSl, FCOE
-awash..."awnaam {1:1 amt-a Mmaamiem;
+Operating System Concepts — 10"1 Edition 11.37 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:37**************
-K‘
-‘$9 RAID Structure
-I RAID — redundant array oi inexpensive disks
+Per’ RAID Structure
+I RAID — redundant array of inexpensive disks
 ' multiple disk drives provides reliability via redundancy
 I Increases the mean time to failure
-I Mean time to repair — exposure lime when another lailure could
+I Mean time to repair — exposure time when another failure could
 cause data loss
 I Mean time to data loss based on above factors
-I "mirrored disks 'ail independently, OOnSider disk with 1300.000
+I If mirrored disks fail independently, consider disk with 1300,000
 mean time to failure and 10 hour mean time to repair
-. Mean time to data loss is 100, 0002 l (2 *10) = 500 *106 hours,
-0r 57,000 years!
+' Mean time to data loss is 100, 0002 / (2 *10) = 500 *106 hours,
+or 57,000 years!
 I Frequently combined with NVRAM to improve write performance
-I Several improvements in disk»use techniques involve the use of
+I Several improvements in disk-use techniques involve the use of
 multiple disks working cooperatively
-gamma“... Mammalian.“ u u Ellhvuhllz. GIIvln-nnslgneﬁluq
+Operating System Concepts — 10th Edition 11.38 Silberschatz, Galvin and 93901; @201;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-(as
-My’ RAID (Cont.)
+My)’ RAID (Cont.)
 I Disk striping uses a group of disks as one storage unit
 I RAID is arranged into six different levels
-I RAID schemes improve performance and improve the reliability er
+I RAID schemes improve performance and improve the reliability of
 the storage system by storing redundant data
 ' Mirroring or shadowing (RAID 1) keeps duplicate of each
 disk
 ' Striped mirrors (RAID 1+0) or mirrored stripes (RAID 0+1)
-provides high periormance and high reliability
-v Block interleaved parity (RAID A, 5, s) uses much less
+provides high performance and high reliability
+' Block interleaved parity (RAID 4, 5, 6) uses much less
 redundancy
-I RAID within a storage array can still fail il the array fails, so
-automatic replication of the data between arrays i8 COmmOn
-I Frequently‘ a small number 0f hot-spare disks are leﬂ
-unallocated, automatically replacing a tailed disk and having data
+I RAID within a storage array can still fail if the array fails, so
+automatic replication of the data between arrays is common
+I Frequently, a small number of hot-spare disks are left
+unallocated, automatically replacing a failed disk and having data
 rebuilt onto them
-OM",rrihmmmsmam h r, Err-arr.‘ alarm-him“
+Operating System Concepts — 10‘h Edition 11.39 Silberschatz, Galvin and 939D; @202‘;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-“w ,, RAID Levels
-IIII
-“mm.”
-IIIIIIII
-mm..-
-IIIII
-ka...‘
-IIIII
-magma...»
-IIIIII
-mum.“
-IIIIII
-IIIIII
-IIIIII
-IIIIII
-IIIIII
-IIIIII
+1% >> RAID Levels
+(a) RAID O: non-redundant striping.
+U D
+(b) RAID 1: mirrored disks.
+D D
+(c) RAID 4: block-interleaved parity.
+D D
+(d) RAID 5: block-interleaved distributed parity.
+M @ U
+(e) RAID 6: P + Qredundancy.
+D D D
+D D
+D D
+U D I D B
+U B B D
+B B B
+(f) Multidimensional RAID 6.
+Operating System Concepts - 10"1 Edition 11.40 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-|‘7'r RAID(0+1)and(1+0)
-a a 1M5 a
+‘i
+I; RAID (0 + 1) and (1 + 0)
+Stripe! I I I
+<
+l mirror
+a) RAID 0 + 1 with a single disk failure.
+stripe
+mirror mirror mirror mirror
+b) RAID 1 + 0 with a single disk failure.
+Operating System Concepts - 10th Edition 11.41 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-r‘
-“)9 Other Features
+fey)’ Other Features
 I Regardless of where RAID implemented, other useful features
 can be added
-I Snapshot is a view of ﬁle system before a set of changes take
-place (Le, al a point in time)
-0 More in Ch 12
-I Replication is automatic duplication 0f writes between separate
+I Snapshot is a view of file system before a set of changes take
+place (i.e. at a point in time)
+. More in Ch 12
+I Replication is automatic duplication of writes between separate
 sites
-. For redundancy and disaster recovery
-. Can be synchronous or asynchronous
-I Hoi spare disk is unused, automatically used by RAID production
-if a disk lails to replace the lailed disk and rebuild the RAID set if
+' For redundancy and disaster recovery
+' Can be synchronous or asynchronous
+I Hot spare disk is unused, automatically used by RAID production
+if a disk fails to replace the failed disk and rebuild the RAID set if
 possible
-° Decreases mean time to repair
-0mm in..." “may m a.“ I“, mm.‘ a.“ .n. w“. W“
+. Decreases mean time to repair
+Operating System Concepts — 10‘h Edition 11.42 Silberschatz, Galvin and Gag; ©2611‘;
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:42**************
-r‘
-MW Extenslons
+‘my’ Extenslons
 I RAID alone does not prevent or detect
-daia Corrupiion 0r other errors, just disk
+data corruption or other errors, just disk
 failures
-I Solaris ZFS adds checksums 0f all data
+I Solaris ZFS adds checksums of all data
 and metadata
-mammal
-I Checksums kepi wiih pointer to object, to m as.“
+metadata block 1
+I Checksums kept with pointer to object, to addressz
 detect if object is the right one and
 whether it changed
-I Can deieci and correct data and metadata
-cormmio" mm
+I Can detect and correct data and metadata
+corruption
 I ZFS also removes volumes, partitions
-' Disks allocated in pools m‘ “M
-Q Filesystems with a pool share that ZFS checksums all
+' Disks allocated in pools dam dam
+. Filesystems with a pool share that ZFS checksums all
 pool, use and release space like metadata and data
-mallocO and freeﬂ memory
-allocate / release calls A
-mammal“... mmmpmmm lua mm“; wounds-gnaw“
+malloc() and free() memory
+allocate / release calls
+Operating System Concepts — 10"1 Edition 11.43 Silberschatz, Galvin and Gagne ©2611‘;
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
-W Traditional and Pooled Storage
-ii ii ii
-(a) Tvadmonal volumes and me systems
-EEEEE
-1h] ZFS and Domed slomqs
+Trad |t|onal and Pooled Storage
+ll ll I I
+(a) Traditional volumes and file systems.
+Ii Ii Ii Ii Ii
+(b) ZFS and pooled storage.
+Operating System Concepts — 10‘I1 Edition 11.44 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:44**************
-y‘
-“W Object Storage
-
-I Genera-Mme compullng, me syslems m sulﬁclenl (or very large some
-
-I Anulher approach e star‘ WM a smrage pool and place omects in m
-0 omen Just a cnnlalner M data
-' No vyay 10 nevigexe me pew 10 m1 objects (no dveﬂory siruqures, (ew
-
-servlces
-
-I Computereonenled‘ nolusereonemea
-
-I Typmal sequence
-0 Create an ohlecl WIthm me pew, reoewe an oh|ect ID
-' Access oblecl via mm \n
-. DQIGIG DbjSCl VIE "131 ID
-
-I Owed swrage management soﬂware like Hadoop file system (HDF$| and
-
-Ceph delermms where m smre objecls, manages prolecﬁon
-' TypicaHy by swring N copies, acvoss N sysiems, in me object siorage clusKer
+‘4%?’ Object Storage
+I General-purpose computing, file systems not sufficient for very large scale
+I Another approach — start with a storage pool and place objects in it
+. Objectjust a container of data
+. No way to navigate the pool to find objects (no directory structures, few
+serVIces
+' Computer-oriented, not user-oriented
+I Typical sequence
+. Create an object within the pool, receive an object lD
+' Access object via that lD
+' Delete object via that ID
+I Object storage management software like Hadoop file system (HDFS) and
+Ceph determine where to store objects, manages protection
+. Typically by storing N copies, across N systems, in the object storage cluster
 ' Horizontally scalable
-. CHINE!“ addressable, unstructured
-we.“ in..." “We w em Hts elemme We m w": W‘
+. Content addressable, unstructured
+Operating System concepts -1oth Edition 11.45 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-End of Chapter 11
-—
+Operating System Concepts - 10th Edition Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 

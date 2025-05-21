@@ -1,514 +1,533 @@
 ***************Beginning Page***************
 ***************page number:1**************
 —
-Umbaje Formals‘ Autcmzne 5| Compﬂaluare
-Cur: a
-— w ~-
+Limbaje Formale, Automate §i Compilatoare I
+Curs 3
+2022-23
+ems 1/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-—
-Siruﬂura cursmw
-Q Aulnmmenmtew Hymn,
-Q “mm mm.“ mm
-g Gmmmnnwsw mum-nun!
+Structura cursului
+
+ﬁ Automate finite cu e-tranzitii
+
+a Automatul determinist minimal
+
+a Gramatici de tip 3 §i automate finite
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-—
 Curs 3
-Q Aulnmalehmew <4“an
-_|—— m .,.
+ﬁ Automate finite cu e-tranzitii
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-—
-Auwmaml determimsi echlvalenl
-WW ‘
-mm w». “mm cu: 7mm” "ml M “mu A’ dulwmmm
-law-1mm A
-um A: (mum M‘ A 7 (0 t q; m um
-. a Z 2B
-- as 1 0m)
-~ ﬂail Z Causing») 8e a.“ t
-. s E F‘ a Sn r ¢ u
+Automatul determinist echivalent
+Teorema 1
+Pentru orice automat A cu e - tranzijii existé un automat A’ determinist
+echivalent cu A
+Dacé A : (Q, 2,6, qo, F) atunci A’ : (0’, Z, 6’, qt’), F’) unde:
+0 Q’ : 2Q
+'%IWM)
+0 6’(S, a) : CI(US€S 5(s,a)) S E Q’, a e Z
+o S e F’ <i> S O F 75 Q)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-—
-Auwmaml determimsi echivalenl
-WW ‘
-mm w». “mm m 7M1” "m M “mu A’ dvlslmmw!
-mum“ A
-um A: (alum; alum‘ A 7 (o Y q; m um
-. u : 2°
-~ % 1 0W
-- mm] = anuﬁsnup) s§ a.“ x
-. s é v Q sh F $ a
-Au w:
-. "1% w] Z am w)‘ W € {-
-. M, 1 LIA)
+Automatul determinist echivalent
+Teorema 1
+Pentru orice automat A cu e - tranzijii existé un automat A’ determinist
+echivalent cu A
+Dacé A = (0,2,6, qo, F) atunci A’ : (0’, Z, 6’, qé, F’) unde:
+0 Q’ : 2Q
+¢ Q6 I CIMO)
+0 6’(S, a) : Cl(Uses 6(s,a)) S e Q’, a e Z
+o S e F’ <I> S O F 5A Q)
+Au loc:
+0 6’(q6, w) : $(q0, W), Vw e 2*
+o L(A’) : L(A)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-—
-Auwmawl determimsi echivalenl V a\gori\m
-. mlvavan4m.-mm|] cm
-- w. mmﬂ-vml'mm 6 nun-mm
-‘:Wan ‘kw
-mm.” r -¢.
-‘HQ/vfsﬂmmf'=F‘HW!
-m. n, E umwrmllm
-“Km
-s Z clU-‘mun
-“1-1::
-mum
-0mm
-W511!"
-\Y(Jer<l]ImF‘=F um‘
->
-v
-Wis)“.
+Automatul determinist echivalent - algoritm
+O lntrare: Automatul A (cu e -tranzi1ii) ; C/(S)
+0 |e§ire: Automatul determinist A’ : (0’, 2,6’, qé, F’), echivalent cu A.
+qé = C/({qo}); O’ = {qé};
+marcat(q6) : false; F’ : 0 ;
+if (qé n F 75 (2)) then F’ : F’ U {qé};
+while (EIS e Q’&&!marcat(S)) {
+for (a G Z){
+S’ = CI(USEs<S(s,a));
+5'(s, a) : 3/ ;
+if (8' e 0’){
+Q’ : Q’ U {S'};
+marcat(S’) : false;
+ii (8’n F75 (2)) then F’: F’ U{S’};
+}
+}
+marcat(S) : true;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-—
-ExempM
-A
-H- ‘ 9?!“
-V
-_|—— m --=
+Exemplu
+b a
+CM 6/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-—
-ExempM
-‘@491
-\
-m - n " 9
-'.
-_|—— m ---
+Exemplu
+b a
+b
+b
+@ {110,111,112}
+a a
+a
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-—
 Curs 3
-Q Aummumldlhlmnm mm.‘
+a Automatul determinist minimal
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-—
-Sién accesbﬂe
-. PM = m L5.m,F)amcmnlﬁmldmm|ms1
-Sm, m1, mm“ Adlai Ema-m swim w E 1:‘ um innit
-q : m», w)
+Stéri accesibile
+
+0 Fie A = (Q, Z, 6, qo, F) automat finit determinist
+Starea q este accesibilé Tn A dacé existé un cuvént w e 2* astfel incét
+q I 6(qo, W)-
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-—
-Sién inseparabﬂe
-FbA : [azmm un nulmaﬂlnnmrmmhl.
-Dnﬁmbﬂ ‘
-51m m w, m WWW w mam! zn a (noismum/ m
-WE z‘ Mahwye Fe6[q;_w)e F
+Stéri inseparabile
+
+Fie A : (Q, Z, 6, qo, F) un automat finit determinist.
+
+Definilie 1
+
+Stérile q1 §i q2 sunt inseparabile in raport cu F, (notat q1pq2) ddacé
+Vwe 2* : 6(q1,w) e F@6(q2,w) e F
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-—
+Stéri inseparabile
 
-Sién inseparabﬂe
+Fie A : (Q, Z, 6, qo, F) un automat finit determinist.
 
-FkA : [01:me un nulmaxﬂnhmrmmisl.
+Definigie 1
 
-Mm ‘
+Stérile q1 §i q2 sunt inseparabile in raport cu F, (notat q1pq2) ddacé
 
-51m a‘ w‘ mmmwe "nmpnrlzu F‘ (mmqw/ daaué
+Vwe 2* : 6(q1,w) e F@6(q2,w) e F
+0 Dacé existé w e 2* cu 6(q1, w) e F §i 6(q2, w) ¢ F (sau invers),
+stérile q1 §i q2 sunt separabile (de cétre w), §i notém q1 ﬁn q2
 
-WE z‘ 6mm Feﬁ[qz_w)e r
-. naaexm: w e z- w mm e w MM, 4 Hun mars)‘
-mjmn m w w m 5mm m- m- wy. g nmim m a “1
-
-~ a‘ a a2 = *mw
+' Q1 a? q2 <I> “Q1PQ2-
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-—
+Stéri inseparabile
 
-Sién inseparabﬂe
+Fie A : (O, Z, 6, qo, F) un automat finit determinist.
 
-FkA : (01:1.me lulmamnhmrmmisl.
+Definigie 1
 
-Mm ‘
+Stérile q1 §i qg sunt inseparabile in raport cu F, (notat q1pq2) ddacé
 
-51m a‘ a a; mmmwe WWWW F‘ (mmw/ daacé
+Vwe 2* : 6(q1,w) e F<:>6(q2,w) e F
+o Dacé existé W e 2* cu 6(q1, w) e F §i 6(q2, w) g F (sau invers),
+stérile q1 gi q2 sunt separabile (de cétre w), gi notém q1 ﬁ q2
 
-WE z‘ 6mm FanZm/je r
-. naaexm: w e z- w mm e w WM 4 Hun M's»
-mjmn m w w m swank-m m- m- wy. w nmim q‘ g q‘
-
-~ a‘ y a2 = *mw
-. owvm a»: q, E r i. a: e r, mm‘ q, mm
+° (71% q2 4:) 171/1112-
+o Observagie: dacé q1 e F gi q2 g2 F, atunci q1 ﬁ q2
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-—
-ExempM
-o “ 0" ‘ Ii‘
-' o
-— h-l —
+Exemplu
+a a,b
+15 a
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
-—
-Automat ""me
-Oh-nnlll:
-. lemma» w: Muhede mm“!
-. a )7 {p azsep {a a‘; MM
+Automat minimal
+Observajii:
+a Relatia p este relaﬁe de echivalengé.
+a Hae Z : 6(p,a)ﬁ)6(q,a) :pﬁq.
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:16**************
-—
-Au\oma\ mlnima‘
-Oh-rvqn:
-. Reluha» est: relﬂhe d: mmma
-~ ark (vﬂgew'qir Pﬁq
-Tacmma 2
-:1“ w WW! mmnﬂltlw loam Mir/la mm Dim we
-JBNIMAMIWBMDWIMWMEIWMMJEMBR
-am,‘ w nu "mull/"iv mm w 51h iv m» Z Lm
+Automat minimal
+Observagii:
+
+o Relatia p este relagie de echivalengé.
+
+o Hae Z : 6(p,a)ﬁ)6(q,a) :pﬁq.
+Teorema 2
+Fie A un automat determinist cu toate sta'rile accesibile. Daca toate
+stérile din A sunt separabile in raport cu F, atunci nu exista" un alt
+automat A’ cu numér mai mic de stéri §i L(A) : L(A’).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-—
-Au\0ma\ul mimma‘
-FkA : (01:1.me lulmamnkmrmmisl n yam- y)
-. nmvma E o wﬂqmnmmmmm
-. mm. amrmum‘ mlmmal'
-A‘ {D ,, z, um F
-, wN-mm mum u‘ my‘ p
-9/!‘ : um E a:
-~ max I» : [mun
-, m au- a: ummanli m m s. m ‘we! a,
-» Mann“ n
+Automatul minimal
+Fie A : (O, Z, 6, qo, F) un automat finit determinist si relagia p.
+o Daca Vq1,q2 e Q : q1 ﬁ q2, atunci A este minimal.
+o Altfel, automatul minimal:
+o Q/p - clasele de echivalenja ale relaliei p:
+Q/p : {[61qu 6 Q}
+° 5AM], a) I [6(q, a)l
+o [qo] clasa de echivalenla in care se afla starea qo
+0 F/p I {lQllq e F}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-—
-ExempM
-o " ‘ ' o‘ WT
-— m —
+Exemplu
+a a,b
+b A a
+b a a,b
+@ a @b [4.’
+CM 13/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-—
-Au\0ma\ul mimma‘
-m Auburn-ML A, : (av/Aw" IMF/M
-. (w. mum! a. “ml-"Inl- "mm P
-. MM‘ ,1 Z m an
-. M mas: de anmvilervli m caress an: mm an
-- n, 7([u1W K F)
-Twmma a
-n9 imomzlul mmnnlilA cu ma» “5m My 4“me A,
-Mm” m M m m, MW nu numirmmm a: 515" cm:
-amp“ MW um
+Automatul minimal
+Fie automatul: Ap : (O/p, Z, 6p, [qo]7 F/p)
+
+o O/p - clasele de echivalenjé ale relagiei p:
+
+o [qo] clasa de echivalenjé Tn care se aflé starea qo
+
+° F/p I {[qu e F}
+Teorema 3
+Fie automatu/ determinist A, cu toate stéri/e accesibi/e. Automatul Ap
+construit ca mai sus este automatul cu numér minim de stéri care
+accepté Iimbaju/ L(A).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-—
-Ngorilm Denim deierminarea re\a‘\e\ ,V
-. F\~A:(G‘t‘a~m F» a: m.“ ,0.»
-- mm WWW/w q]
-, mm,‘ M Z‘ maimﬂm (“Wanda Q] :Mw
-01M)
-. Wnalsmﬂm Q] z ‘can a s F a emu-M»
-, Saunnmnhllﬂwml'iwlw q! p-mnsws " mm
-Mum “mm mm m "pm-1M g‘ mu. a
+Algoritm pentru determinarea relaiiei p
+0 FieA : (O,Z,6,qO,F), O: {q0,q1,...,qn}
+o Tablou separabil[q,-, qj]:
+0 separabil[q,-, qj] I 1 ddacé q,- ﬁ q,- (separabi/[q,-, qj] : O ddacé
+q/qu)
+o inigial separabil[q,-, qj] I 1 ddacé q,- e F, q,- gé F (sau invers)
+o Se va completa apoi separabil[q,-, qj], pentru O g i < j g n, utilizénd
+doar valorile calculate anterior in separabi/ §i funcgia 6.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-—
-Ngorilm peniru deierminarea re\a‘\e\ ,V
-. may» r 1M n
-. ﬁshy-m? DBqu Wmchldealin wwmbﬂlar] : n
-. “Mp ,1: M “WNW! :0 A muaFX P:
-m» Maw)‘ m an ¢ w m
-, m a mm”. p- m“.- c. .8 cummmuj WM
+Algoritm pentru determinarea relaiiei p
+0 lista[p, r] : (p 75 r)
+o definité pentru perechi de stéri cu separabil[p, r] I O
+a lista[p, r] I {(q,, qj)|separabil[q,-, qj] I 0 /\ exista a e Z : p I
+6(qi,a), r: 6(qj78), (QMQj) aé (p,r)}
+o lista se completeazé pe mésuré ce se completeazé separabil
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-—
-Ngurilm peniru deierminarea re\a‘\e\ ,V
-. s. ‘hm-mm llbbul mm (“WWW-q] : 1‘ w:
-a, E a u, a rm Wm,
-. Psnlm awe m, m An g r<1 s n) w mar-mam] : n.
+Algoritm pentru determinarea relaiiei p
+0 Se initializeazé tabloul separabi/ (separabil[q,-, qj] : 1, dacé
+q,- e F, q]- gZ F sau invers)
+0 Pentru orice q,-, qj (O g i < j g n) cu separabil[q,-, qj] : O :
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-—
-Ngurilm Denim deierminarea re\a‘\e\ ,1
-. s¢ ‘hm-‘ma um: sew-M (“WWW-q] Z 1‘ M1
-a, E a u, a rm Wm,
-. Psnlm awe m, m (o 5 , K , g n) w nepambdlﬂrvqll : n‘
-» nun mm .E {wry-"MAW .1 m I“ Z um‘
-- Mm an : ‘
-. “w. ‘mm: WW‘ W mm lumuw“: a: mu .
-amvwnhmun- md- q‘ m Mme m mu an
-MMW an
+Algoritm pentru determinarea relaiiei p
+o Se ini1ia|izeazé tabloul separabi/ (separabil[q,-, qj] : 1, dacé
+q,- e F, q]- ¢ F sau invers)
+o Pentru orice q,-, qj (O g i <j g n) cu separabil[q,-, qj] : O :
+o Dacé existé a e Z cu separabil[6(q,-, a), 6(qj, a)] : 1, atunci:
+o separabil[q,-, q,-] : 1
+0 trebuie modificat tabloul separabil pentru toate perechile de stéri a
+céror separabilitate depinde de q,-, q, (perechile de stéri din
+lisfami, qj-l)
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-—
-Ngorilm pemm deierminarea wave‘ (V
-. s. ‘hm-‘mu “me war-w (“wabﬂlqv-q] Z 1‘ ma
-q, Z F‘ u, q Fun Wm,
-. My“ we a,‘ m (o 51R] s n) w mar-Mum Z n‘
-Z Imam“: .Z {ml-mum .1 m .11 Z um‘
-. WW a}! Z v
-. mam-mmvnmnw WWWMMW-Mw.
-WWW-mam WMWWW
-~va an
-, ARM M.“ m. ,Z tammsnpzvaqu, Z, m a)| Z u,
-. “manmacizuﬂw .ww n mam m-
-mliblw Mu, m
+Algoritm pentru determinarea relaiiei p
+o Se ini1ia|izeazé tabloul separabi/ (separabil[q,-, qj] : 1, dacé
+q,- e F, q]- ¢ F sau invers)
+o Pentru orice q,-, qj (O g i <j g n) cu separabil[q,-, qj] : O :
+o Dacé existé a e Z cu separabil[6(q,-, a), 6(qj, a)] : 1, atunci:
+o separabil[q,-, q,-] : 1
+0 trebuie modificat tabloul separabil pentru toate perechile de stéri a
+céror separabilitate depinde de q,-, q, (perechile de stéri din
+lisfami, qj-l)
+0 Altfel (pentru orice a e Z are loc separabil[5(q,-, a), 6(qj, a)] : O):
+0 pentru orice a e Z cu 6(q,-, a) 75 6(qj, a) adaugé (q,, qj) Ia
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-—
-Ngorilm peniru deierminarea re\a‘\e\ ,V
-[Hm-‘mm ublwnhx,
-.4 mm.“ “mu. mum n “141';
-hm u-n: m4, “.1
-1. M "WW-n. WM
-1 “mmww
-‘. “(weinwfﬁ\\10¢F“wan
-5. MpAnmllqlqu-h
-1 "Pr-WWW“?
--. >
+Algoritm pentru determinarea relaiiei p
+//initializarea tablourilor,
+
+se marcheazé perechile F >< (Q— F) si (Q— F) >< F
+1.for (i=0; i<=n—1; i++)
+
+2. for (j=i+1,j<=n; j++) {
+
+3. lista[qi,qj]=Q);
+
+4- if((qi€F&& qj¢F)||<qi¢F&& qjan
+5. separabil[qi,qj]=l;
+
+6. else
+
+7. separabil[qi,qj]=0;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-—
-m." u-w: NH, Au!
-m. m "WW-n. :NM
-H“ "1m... Am mm: mum.“
-u n (npnnnl|q1wu::°! ‘
-Hm mm . mm m. m -> a “w,
-WWW. g. q; ., q, “.1 kw...“
-12. ‘i ‘1.5: nun-MEN‘ -> m1 111::m
-1/ u n =1 M" uF-m“. u \- m m."
-// “mm. .1. "m mm.“- ¢. M1
-B. Mmmvimm aw
-u. >
-‘a .1" x
-1.. w: “a Manama)“ (amylﬂﬂm Mmm
-n. .W. w w) 1. Mil/5W -> “a =11
-1.. >
-u. 1
-1w. >
+9.for (i=0; i<=n—l; i++)
+10. for (j=i+1,j<=n; j++) {
+//se selecteaza doar starile inseparabile
+11. if (separabi1[qi,qj]==0) {
+//daca exista a astfel incat 6(qLa) §§B 6ﬂﬂ,a)
+//inseamna ca qi si qj sunt separabile
+12 . if (Ela e Z:separabil[6(qi,a),6(qj,a)]::1){
+// qi si qj devin separabile si la fel toate
+// perechile de stari dependente de qi,qj
+13 . update1separabi/(qi,qj);
+14 . }
+15. else {
+16- for (a6 Z 1 6(qu a) #60111 a)&& (qi,qj) ¢ (5(qi,a),6(qf»a)))
+17 . adauga (qi, qj) la lista[6(qi,a),6(qj, a)]
+18. }
+19 . }
+20. }
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-—
-Ngorilm peniru deierminarea re\a‘\e\ ,V
-H q, ., q, an“ kw.“ ,. 1. (:1 w.“
-1/ "mm. ,. u.“ drp'nduu a. M1
-wavuwmbmm"
-mum w] z ‘.
-m um ‘HE um wm
-.. {WIMM-Q! =10)
-MINWMH
->
->
+Algoritm pentru determinarea relaiiei p
+// qi si qj devin separabile si la fel toate
+// perechile de stari dependente de qi,qj
+update_separabil(qi, qj){
+
+separabil[qi, qj] : 1 ;
+
+for ((qf, 01;) E lisfa[qi,qil){
+
+if (separabil[qf, qj] I: O)
+update_separabil(q,4, q; ) ;
+
+}
+
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-—
-Exempm
-°\—'0 I’
-iﬁiﬁi w-r-
-HIM“
+Exemplu
+a a,b
+\Q a 0-D 9b
+‘w
+"MI-
 
-IIIIH ggg
-IIIIH Egg
+IIIII ‘IE-'-
+Iii-II
+IIIII m
+“HI
+IIIIE I-u
 IIIII
-
-— m w-
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-—
-EXEmphJ
-‘é-
-Eﬁﬁﬁi "--
-IIIIH EEE
-EE%EE Egg
-— m m
+Exemplu
+a a,b
+A a b
+a . 1
+\6 6-D 6
+‘@b
+"El--
+(m1 1 III
+Iii-II
+.IIII n
+IIEI
+° 1 II
+3 1
+IIIIE q q u
+I...‘
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-—
-Exempm
-°\—'0 I’
-E3535 II-
-IIWIH 555
-55% Egg
-— m w-
+Exemplu
+a a,b
+A a I’
+\9 a 6-D 9“
+\a
+"MEI-
+IIIII “I'-
+ail--
+IIIII I-ﬂ
+0 1 II“
+IIIII
+CM 21/25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:31**************
-—
-Exempm
-\- \—° ' 9
-%-
-%%Eﬁi ---
-mum
-IWIIH ggg
-IIEII mm
-BIB-BI
-IIIII
-— m w-
+Exemplu
+a a,b
+A a b a
+a .
+W 6-H, 9
+‘ab
+"MEE-
+IIIN "I".
+Iii-II
+(0}1 1 1 q1
+IIm
+.Iw}1 Ii -Cl2 -ql -
+lqﬂnl-I
+I...- “4 (14 (14
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-—
-Exempm
-\-" 6-‘0 I‘
-%-
-EEEEE I..-
-mum
-
-IIIIH ggg
-IIEIE gag
-IIIII
-
-— m w-
+Exemplu
+a a,b
+A a 1
+\GD a 6-H 6b
+\a
+"BEI-
+IIIII ‘IE-'-
+Iii-II
+IIIII III
+1 1 IIu
+IIIII I“ I” I"
+CM 21/25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
-—
-ExempM
-o ' M‘ ii‘
-‘*6
-© r 6-0 H”
-— m —
+Exemplu
+a a,b
+A a q
+a -_ b
+\6 0-D 6
+‘a
+b a a,b
+\A A a b a’
+.@—@
+I
+CM 21/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:34**************
-—
-Curechtudmea a\gommu\ui
-Taummu4
-Amnmnammmummmmvwmw
-mmm ﬂqﬁgmlg n 5mm” u a! 7 ‘ mm,‘ l,
+Corectitudinea algoritmului
+
+Teorema 4
+
+Algoritmul se termina“ fntotdeauna §i fn final se objine, pentru orice
+doué stéri q,- §i qj, 0 g i < j g n: separabil[q,-, qj] : 1 ddacé q,- ﬁ q]-
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:35**************
-—
 Curs 3
-g EMMMMQ “mm-m,
+a Gramatici de tip 3 §i automate finite
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:36**************
-—
-De \a gramaﬁci de up a \a amomaie lvme
-. Penlm awe qrmam! Edema u ﬁnhrmb mvmml) mm“
-5.1mm ‘WWW, am“: 1w = us)
-in wamamm s m ammuM A
-\ Y \ I I 7 \
-N 0:Numf:w
-s m, 1 s
-q a w P z m. ,>
-q a a r E w. ,>
-“mapr seauﬁugiSIuF
+De la gramatici de tip 3 la automate finite
+0 Pentru orice gramaticé G de tip 3 (in formé normalé) existé un
+automat A (nedeterminist) astfel ca L(A) : L(G):
+QINUWFIH}
+se adaugé S la F
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-—
-De \a auiomate hmie \a gramaﬁu de up a
-- Penlm nnee mm m (delevmvmsﬂ emu! o mmahcé e as m
-a ism‘ ca 1w Z um
-m “mm A m wmm a
-\ X \ 7 Z I \
-o ~ Z a
-w s : a,
-m n : n u ~ 1w
-m ,» E r q a a
-mam; selﬂﬂwillz4<
+De la automate finite la gramatici de tip 3
+0 Pentru orice automat finit (determinist) existé o gramaticé G de tip
+3 astfel ca L(A) : L(G):
+II-
+n-
+M a) E F
 
 ***************Ending Page***************
 

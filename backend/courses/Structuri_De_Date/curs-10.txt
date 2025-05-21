@@ -1,329 +1,377 @@
 ***************Beginning Page***************
 ***************page number:1**************
-so mil/2022
+SD 2021/2022
+<E|> <ﬁ>4IE>4IE> IE OQO
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Mm hxcnlon (red'b/azk trees)
-> 5”...“an Erma Rum/am 1912
-> mm“. Em Mm“: (u iiumml W mm . mm,
-> Artur“ MM!“ m m“ m" a. a...“ m. wk
-"mom vav-exiu
-\ m m W mm“ W w MW
-1 mm w "Mk ‘m; w 7 av: r» pm g". “mam; M.
-mhme m Mm
-1 M unmd 5mm .W mmm mm
-‘ dmmume .1, h W m6 h mam: .1. Peimvmer} an my numivde
-MW m.
-— <M~ SW,“ H.
+Arbori bicolori (red-black trees)
+> Symmetric binary B-tree, Rudolf Bayer, 1972.
+V Echilibrarea este mentinuté cu ajutorul unei colorﬁri a nodurilor.
+V Arborii rosu-negru sunt arbori binari de céutare care satisfac
+urmétoarele proprietéti:
+1. un nod este colorat cu rosu sau negru;
+2. rédécina 5i nodurile frunzé (nil — care fac parte din structuré) sunt
+colorate cu negru;
+3. dacé un nod este rosu, atunci ﬁii séi sunt negri;
+4. drumurile de Ia un nod Ia nodurile de pe frontieré au acelasi numér de
+noduri negre.
+Cm 1° SD 2021/2022 2/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Mm hmalon V exemphJ
-a \1 a \J a @a \J
-a’, \J
+Arbori bicolori - exemplu
+20
+® ®
+3 15 21 50
+I I I I I w I I
+I I
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Mm hxcelon
-m“:
-(711:! WM: ihmm 3'59’! bvwlavav: "1mm 2W 71 Mdun
-my.“ W.
-> v 1543!": WWW
-> MM numi'm! 4! mm w- um.“ M 4mm a: I: v I: M m
-we Pk Irv/med “damn! Pe V
-Dimenslvihq
-u curs n
-— M Wm u.
+Arbori bicolori
+Lemé':
+Orice subarbore a/ unui arbore bico/or are cel put/n 2bh(") — l noduri
+interne, unde:
+> v r5d5cina subarbore/ui,
+> bh(v) numéiru/ de noduri negre af/ate pe un drum de la v la un nod
+de pe frontieré’, exc/uzéndu-l pe v,-
+Demonstratie.
+La curs. U
+Cm 1° SD2O21/2022 4/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Mm hxcalon
+Arbori bicolori
 
-Tee's“!
+Teoremé:
 
-l/n W», mm“ .. MW Mm m MW» n g 2m“ 1)
-Demonstviwe
+Un arbore bico/or cu n noduri interne are Tniltimea h g 2 |0g2(n + 1).
 
-Canm Wunellm 1
+Demonstratie.
 
-"zwq Q h/igmzbwl) Q h32b|21n+n n
+Conform proprietﬁfcii 3,
+
+[122'1/221 =» h/2g|og2(n+1) :> hg2|0g2(n+1). m
+Curs 10 SD 2021/2022 5/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Mm \mlon mm"
-
-mm
-
-rm... HM mm w .. My,’ Wm. 4! mm. m MM“,
-W on“ "1
+Arbori bicolori: operatii
+Corolar:
+Intr-un arbore bicolor cu n noduri, operatia de c5utare are comp/exitatea
+timp O(|og n).
+cl 51 i E :2 QQG
+Cm 1° SD2021/2022 6/25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-Opevalia de mserare
-> 5! mu mm .1! my! 5‘ 5! Mm: mm Q an an.‘
-HM». hm" a: mm annulh
-> Sewbmzl W m W m
-> 5c vauuleazl thellme dc aware waw pun roadway: 46 MW
-y Mm .1. mm“ W1.
+Operatla de Inserare
+> Se cautﬁ pozitia de inserare $i se insereazé noua valoare ca Tn cazul
+arborilor binari de céutare obi$nuiti.
+P Se coloreazé noul nod cu r0$u.
+> Se restaureazé proprietﬁfcile de arbore bicolor prin recolorare de noduri
+$i aplicare de rotatii simple.
+Cm 1° SD2021/2022 7/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Opevalia de mserare
-> mm“! mum:
-> vanekalea 2 7 samllwﬁ 4mm m m nod-1M Mm m mm
-um m.‘ Mm =1. Mm Q mm. m W“
+Operatia de inserare
 
-> mm...“ ‘ V 5mm‘: (M m m. Mums“ .1 (Mn
+> Proprietatea 1: satisfécuté.
 
-> Fun i: M m “Wm: Wﬂetalea a m: mm nodum- W
-> M w. m“: mum: w Wm, mm vans cw
+> Proprietatea 2 — satisfﬁcutﬁ (ambii fii ai nodului inserat sunt nil).
+Dacé nodul inserat este rédécina —> recolorare Tn negru.
 
-wax: h my“; W mm“ ¢¢ mm w wm
+> Proprietatea 4 — satisfﬁcutﬁ (noul nod ro$u Tnlocuie$te 0 frunzﬁ).
+
+> Poate 55 nu fie respectaté proprietatea 3 - dac5 pirintele nodului este
+ro$u.
+
+F Muté mai sus aceasté situatie prin recolorarea nodurilor péné' cﬁnd
+poate fi reparatﬁ prin operatii de rotatie 5i recolorare.
+Cm 1° SD2O21/2022 8/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Opevalia de mserare resmurarea prupneléui 3
-> cm. MW Mnmwmmm ,
-Selgmlmuﬂ‘n€nnxe\e'5\ Wm WWW MMWW
-> (a, 2- MM MW mm gm "Km 9 Mu‘ Wm m M
-drevlzhmmhuning »
-s= “his a may‘: mu ‘a ﬂing) WV: mam mm 5- mm
-Finn!
-> c.‘ a. "mm-m MW mm m! Mg". 5‘ mm mm m M
-5m n W M “an: Q
-5! w; a m.“ W‘; ‘i Wm m“ Mm “paw 5‘ mm
-bumc +sevewklrezﬂHaduvﬂe‘piv|me WWW 'huruc m
-M1
-m“ Operau- wwhle 9Q am: perm“ can‘ nmﬂm
+Operatia de inserare: restaurarea proprietétii 3
+> Caz 1: “unchiul” nodului inserat este rosu —>
+Se recoloreazé’ “p5rintele” $i “unchiul” Tn negru $i “bunicul” in rosu.
+> Caz 2: “unchiul” nodului inserat este negru $i nodul inserat este ﬁul
+drept al unui ﬁu sténg —>
+Se aplicé o rotatie simplé la sténga Tntre nodul curent 5i nodul
+pﬁrinte.
+V Caz 3: “unchiul” nodului inserat este negru 5i nodul inserat este fiul
+sténg al unui fiu sténg —>
+Se aplicé o rotatie simplé la dreapta Tntre nodul “p5rinte” 5i nodul
+“bunic” + se recoloreazé nodurile "périnte" (Tn negru) 5i “bunic” (Tn
+ro$u).
+Obs.: Operatii similare se aplicﬁ pentru cazul simetric.
+Cm 1° SD2021/2022 9/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Operatla de mieraré V cal 1
-A A A A
+Operatia de inserare - Caz 1
+—>
+Recolorare
+4b
+cl a] 2 E :5 00c»
+Curs 10 SD 2021/2022 10/25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
-Opevaua d2 mserare V cal 2 5‘ 2
-~\ Q %’ Ea
-M * ,Q m c ®
-Q
+Operatia de inserare - Caz 2 $i 3
+, Rotatiela
+Rotatle la dreapta
+y stanga y si recolorare »
+\. A ' A '
+—>
+A‘ i A A A A A
+
+cl 51 2 E :2 QQG
+Curs 10 SD 2021/2022 11/25
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:12**************
-\Mme 7 “2mm mm 12
-/0\
-v A
-J n D/
-d", \1 Q Q cf, “\1
-\ / \
-a \JJ \J
+Inserare — exemplu: nodul 12
+20
+w 35
+A 15 U Q
+w ﬁ - -
+I I I I
+Curs 10 SD 2021/2022 12/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-\nsemre 7 012m 1 renﬂmave
-/ /®\ \
-/\ D/RE
-d ‘\1 ® ® d ‘u
-®\ u u u
-a b
+Inserare — CAZUL 1: recolorare
+20
+Q 35
+3 15 I ®
+I I w m I I
+Q I I I
+I I
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-\nsemre 7 012m 2 mane I: mm
-/@\
-./ \
-d" 1h o G a" in
-/ \ / \
-® u u u
-\
-a u
+Inserare — CAZUL 2: rotatie Ia sténga
+20
+Q 35
+3 a - w
+I I 14 17 I I
+Q I I I
+I I
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-\nsemre 7 012m 1 ramue I: dreams + recoWare
-/°\
-/ \
-@'
-/ \ /ﬁ\
-@i in f
-0/ b D/ \1 D/ \1
-d/ \t® \D
-/ \
-J \b
+Inserare — CAZUL 3: rotatie Ia dreapta + recolorare
+20
+Q 35
+w 17 - @a
+3 l4 I I I I
+I IQ I
+I I
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-\Mme 7 Avhevde rug-mew mu
-/0\ \
-/ \
-/@ /@
-\ \
-K R K )‘1
-d ‘h ® \J d ‘h d
-/ \ / \
-a h a h
+Inserare — Arborele rosu-negru valid
+15
+3 14 17 35
+I I Q I I I I ®
+I I I I
+Curs 10 SD 2021/2022 16/25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:17**************
-mam. a. mserare algomm
-s. m...“ .: M m . 1mm“. m . “Mm m mum‘.
-MW"
-
-> a... Mm... m 1 "mm.
-
-> ‘More W / w.
-
-> m .4’... noduhnﬂnme (Mn pemmlidwni)‘
-
-> 51g my... M Sm.‘
-
-> 4m adrea MMM
+Operatia de inserare: algoritm
+Se consideré c5 ﬁecare nod a arborelui este o structuré cu urmétoarele
+cémpuri:
+P cheie: informatia utilé a nodului;
+> cu/oare: ro$u / negru;
+> pred: adresa nodului périnte (null pentru rﬁdaciné);
+> stg: adresa ﬁului sténg;
+> drp: adresa ﬁului drept.
+Cm 1° 9920210022 17/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Opevalia de mserare algomm
-mm»; Wm“ m)
+Operatia de inserare: algoritm
+Procedure inserare(t7 val)
 begin
-x f msAImeCa-llakh m)
-x a Mm F W
-whih: m 7 r m a w a MM 7, m) 1.,
-“(HWZZHMAWHWM
-y ‘ x , m , m4 ) a»
-.1 (y 4 “m := w» my.
-(n 1
-ell:
-n/XZZXQWMWM
-(a. 2
-z“ 3
-m
-smnhl w nmura ‘rm ‘m- d Imeﬂcmmblm 5m u. am
-r A MM, v w.“
-m
+x <— insArbBinCautare(t, val)
+x —> cu/oare <- rosu
+while (x! : t and x —> pred —> cu/oare I: rosu) do
+if (x —> pred I: x —> pred —> pred —> stg) then
+y <— X —> pred —> pred —> drp
+if (y —> cu/oare I: rosu) then
+Caz 1
+else
+if (x z: x —> pred —> drp) then
+Caz 2
+Caz 3
+else
+similar cu ramura "then", doar c5 interschimbém stg cu drp
+t —> cu/oare <— negru
+end
+Curs 10 SD 2021/2022 18/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-opmm d2 Mme Caz 1
-x amﬂmw Mm
-
-h {mammm
-qumim/mbm
-x » x Q m Q m
+Operatia de inserare: Caz 1
+x —> pred —> culoare <— negru
+y —> culoare <— negru
+x —> pred —> pred —> culoare <— ro$u
+x <— x —> pred —> pred
+El r51 i E :5 ‘)QQ
+Curs 10 SD 2021/2022 19/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-operm de \nswemre Caz 2
-x » x J PM
-mumealinaltml
+Operatia de inserare: Caz 2
+x <- x —> pred
+rotatie-sténga(t, x)
+\Il 5' ' _= :E ‘)QG
+Curs 10 SD 2021/2022 20/25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
-opmm d2 Mme (51 3
-x ) M Q MW. k w“
-Hmhwﬂuwemw
-mxe-dreaplﬂLx Q M ) w)
+Operatia de inserare: Caz 3
+x —> pred —> cu/oare <— negru
+x —> pred —> pred —> cu/oare <- ro$u
+rotatie-dreapta(t,x —> pred —> pred)
+El 5' i E :5 ‘JQCV
+Curs 10 SD 2021/2022 21/25
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:22**************
-Opevalia d2 mserare V exempml 2
-\ m...” .m,(\‘-z /3\
-.AQ A l ’ ’\
-A 5x
-‘ , 1 @\
+Operatla de Inserare - exemplul 2
+_ y insereazé 4 , ‘p>~\
+\ insereazéZ msereaza3 4P ‘f 1 \\ a 3 'I
+/,_7\4> 4-’ \_V// \_i,
+'_ K VV\ (If
+_ g 2 x 4 j
+/ 2‘\\ \_, IX \__i_/
+1: rédécina -> negru \ /" .. _ i unchi-rosu
+kW. t . / .
+® -> Cal 3: rotagle if K ->coloreaz€\ 2 negru
+f1\ :3\
+\77 j kr/
+/"\
+|\_4//
+cl 51 i E :2 Q ‘1x (‘v
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-Opevalia d2 mserare V exempml 3
-"-—-"-" —‘-
-3 ,§@”@ 3 “95%
-H
-as
-®@
-H
+Operatia de inserare - exemplul 3
+a insereaza 32 w Caz 1
+® é} ® a?
+r‘. r W KN
+\i/ ~45) @2- 4:52
+Q} 39/ 2.? *QQ
+(3}
+KW r "
+\51/ @éib
+\32
+cl 51 2 E :2 QQG
+Curs 10 SD 2021/2022 23/25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:24**************
-Opevalia d2 mserare V exempml 3
-g, @ L"-
-;35 \
-@ER Q é
-32 32
-QM ®
+Operatia de inserare - exemplul 3
+a _ 0:122 w Caz3
+(a g? H a» 2;;
+3:2) @-
+®
+f 20 "55
+a» ea a
+3i) 452 @222
+KI 5' * E :5 Wmv
+Curs 10 SD 2021/2022 24/25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-Mm melon
-v cwmm akwmnw at Mm! / 5%ng on“ n1
-(My
-(In: mm». m1," kg! Dung "huh/x
-— M mm» a 1.
+Arbori bicolori
+P Complexitatea algoritmilor de inserare / $tergere: O(|og n).
+Corolar:
+Clasa arbori/or bicolori este O(|og n)—stabil5.
+cl 51 2 E :2 v?» ‘1x9
+Curs 10 SD 2021/2022 25/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:26**************
-Mm hxcnlon
-> mm.“ mmw dc MW / swgtv: on”; n1
-(mm
-Gas: mm. hm," a! on“; "huh/X
-> Mum"
-. Syikm WW‘ nhks
-> Km 1W 4mm” m 5mm!»
-> memmmm
-> ‘M MM“ wén ch 5n my mm“ mm
-— M Wm a 1.
+Arbori bicolori
+> Complexitatea algoritmilor de inserare / stergere: O(log n).
+Corolar:
+Clasa arbori/or bicolori este O(log n)—stabil5.
+V Utilizéri:
+V System symbol tables
+P Kernel Linux (Completely Fair Scheduler)
+P Runway reservation system
+F Java: TreelVlap, TreeSet; C++ STL: map, multimap, multiset
+Curs 10 SD 2021/2022 25/25
 
 ***************Ending Page***************
 

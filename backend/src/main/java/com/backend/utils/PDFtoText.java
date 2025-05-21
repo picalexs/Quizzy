@@ -63,7 +63,7 @@ public class PDFtoText {
             String txtOutputPath = courseDir + File.separator + txtFileName;
             System.out.println("Output path: " + txtOutputPath);
 
-            // Ensure this call completes before moving to the next PDF
+
             pdfToImage(file.getAbsolutePath(), txtOutputPath);
         }
 
@@ -72,10 +72,10 @@ public class PDFtoText {
 
     private static String imageToText(BufferedImage image) {
         try (TessBaseAPI api = new TessBaseAPI()) {
-            // Correct path for the Quizzy project structure
+
             String tessDataPath = System.getProperty("user.dir") + File.separator + "tessdata";
 
-            // Use "ENG" to match the actual filename ENG.traineddata
+
             if (api.Init(tessDataPath, "ENG") != 0) {
                 System.err.println("Could not initialize tesseract with path: " + tessDataPath);
                 System.err.println("Make sure the directory exists and contains ENG.traineddata");
@@ -111,7 +111,6 @@ public class PDFtoText {
     public static boolean pdfToImage(String pdfPath, String textPath) {
 
         if(pdfPath.contains("success.pdf")) {
-
             try (FileWriter writer = new FileWriter(textPath)) {
                 writer.write("test");
                 return true;
@@ -121,7 +120,7 @@ public class PDFtoText {
             }
         }
 
-        if (pdfPath == null || pdfPath.isEmpty()) {
+        if (pdfPath.isEmpty()) {
             throw new RuntimeException("PDF path cannot be null or empty");
         }
 
@@ -130,19 +129,78 @@ public class PDFtoText {
             throw new RuntimeException("PDF file does not exist at path: " + pdfPath);
         }
 
-        ExecutorService ocrExecutor = null;
+        File outputFile = new File(textPath);
+        File parentDir = outputFile.getParentFile();
+        if (parentDir != null && !parentDir.exists()) {
+            boolean created = parentDir.mkdirs();
+            if (!created) {
+                System.err.println("Failed to create directory: " + parentDir.getAbsolutePath());
+                return false;
+            }
+            System.out.println("Created directory: " + parentDir.getAbsolutePath());
+        }
+
+
+        final int batchSize = 10;
+
         try (PDDocument pdfDocument = Loader.loadPDF(pdfFile)) {
-            PDFRenderer renderer = new PDFRenderer(pdfDocument);
             int pageCount = pdfDocument.getNumberOfPages();
 
             if (pageCount == 0) {
                 System.out.println("Skipped " + pdfPath + " because it has no pages.");
-                return false;
+                try (FileWriter writer = new FileWriter(textPath)) {
+                    writer.write("PDF had no pages to process.");
+                }
+                return true;
             }
 
-            int nrThreads = Math.min(5, Runtime.getRuntime().availableProcessors());
-            ocrExecutor = Executors.newFixedThreadPool(nrThreads);
 
+            int totalBatches = (int) Math.ceil((double) pageCount / batchSize);
+
+            boolean firstBatch = true;
+            int currentPage=0;
+            for (int batchIndex = 0; batchIndex < totalBatches; batchIndex++) {
+                int startPage = batchIndex * batchSize;
+                int endPage = Math.min((batchIndex + 1) * batchSize, pageCount);
+
+
+                String batchResult = processBatch(pdfDocument, pdfPath, startPage, endPage);
+
+
+                try (FileWriter writer = new FileWriter(textPath, !firstBatch)) {
+                    writer.write(batchResult);
+                    if (batchIndex < totalBatches - 1) {
+                        writer.write("\n");
+                    }
+                }
+
+                firstBatch = false;
+
+                System.gc();
+            }
+
+            System.out.println("Successfully processed all " + pageCount + " pages and wrote results to: " + textPath);
+            return true;
+
+        } catch (IOException e) {
+            System.err.println("PDF processing failed for " + pdfPath + ": " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        } catch (Exception e) {
+            System.err.println("Unexpected error processing " + pdfPath + ": " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private static String processBatch(PDDocument pdfDocument, String pdfPath, int startPage, int endPage)
+            throws IOException, InterruptedException {
+
+        PDFRenderer renderer = new PDFRenderer(pdfDocument);
+        int nrThreads = Math.min(5, Runtime.getRuntime().availableProcessors());
+        ExecutorService ocrExecutor = Executors.newFixedThreadPool(nrThreads);
+
+        try {
             Map<PageImage, Integer> numberedPages = new HashMap<>();
             List<BlockingQueue<PageImage>> queues = new ArrayList<>();
             List<CompletableFuture<String>> ocrFutures = new ArrayList<>();
@@ -151,19 +209,15 @@ public class PDFtoText {
                 queues.add(new LinkedBlockingQueue<>());
             }
 
-            for (int page = 0; page < pageCount; page++) {
+
+            for (int page = startPage; page < endPage; page++) {
                 try {
-                    BufferedImage bim;
-                    if(textPath.contains("result.txt") || pdfPath.contains("success.pdf")) {
-                         bim = renderer.renderImage(page,300,org.apache.pdfbox.rendering.ImageType.RGB);
-                    }
-                    else {
-                         bim = renderer.renderImageWithDPI(page, 72, org.apache.pdfbox.rendering.ImageType.RGB);
-                    }
+                    BufferedImage bim= renderer.renderImageWithDPI(page, 300, org.apache.pdfbox.rendering.ImageType.RGB);
+
                     PageImage pageImage = new PageImage(bim);
                     numberedPages.put(pageImage, page + 1);
 
-                    int queueIndex = page * nrThreads / pageCount;
+                    int queueIndex = (page - startPage) * nrThreads / (endPage - startPage);
                     queues.get(queueIndex).put(pageImage);
                 } catch (IOException | InterruptedException e) {
                     System.err.println("Failed to render page " + page + ": " + e.getMessage());
@@ -186,7 +240,7 @@ public class PDFtoText {
                             String text = imageToText(pageImage.getImage());
 
                             int pageNR = numberedPages.get(pageImage);
-                            if (text == null || text.trim().isEmpty()) {
+                            if (text.trim().isEmpty()) {
                                 text = "[OCR failed or page was blank on page: " + pageNR + "]";
                                 System.out.println("OCR failed or page was blank on page: " + pageNR);
                                 System.out.println("Course where failure occurred: " + pdfPath);
@@ -200,6 +254,9 @@ public class PDFtoText {
                                         .append(text).append("\n")
                                         .append("***************Ending Page***************\n\n");
                             }
+
+
+                            pageImage = null;
                         }
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
@@ -214,49 +271,33 @@ public class PDFtoText {
             CompletableFuture<Void> allDone = CompletableFuture.allOf(
                     ocrFutures.toArray(new CompletableFuture[0])
             );
-            allDone.join();
-
-            String pdfText = ocrFutures.stream()
-                    .map(CompletableFuture::join)
-                    .collect(Collectors.joining("\n"));
 
             try {
-
-                File outputFile = new File(textPath);
-                File parentDir = outputFile.getParentFile();
-                if (!parentDir.exists()) {
-                    boolean created = parentDir.mkdirs();
-                    if (created) {
-                        System.out.println("Created directory: " + parentDir.getAbsolutePath());
-                    } else {
-                        System.err.println("Failed to create directory: " + parentDir.getAbsolutePath());
-                        System.err.println("Check permissions and path: " + parentDir.getAbsolutePath());
-                        return false;
-                    }
-                }
-
-
-                try (FileWriter writer = new FileWriter(textPath)) {
-                    writer.write(pdfText);
-                }
-                System.out.println("Successfully wrote text to: " + textPath);
-                return true;
-            } catch (IOException e) {
-                System.err.println("Error writing to file: " + textPath);
-                e.printStackTrace();
-                return false;
+                allDone.join();
+            } catch (Exception e) {
+                System.err.println("Error waiting for OCR tasks: " + e.getMessage());
             }
 
-        } catch (IOException | InterruptedException e) {
+            return ocrFutures.stream()
+                    .map(future -> {
+                        try {
+                            return future.join();
+                        } catch (Exception e) {
+                            System.err.println("Error getting OCR result: " + e.getMessage());
+                            return "";
+                        }
+                    })
+                    .collect(Collectors.joining("\n"));
+
+        } catch (InterruptedException e) {
             System.err.println("PDF OCR failed for " + pdfPath + ": " + e.getMessage());
             e.printStackTrace();
             throw new RuntimeException("Failed to load PDF: " + e.getMessage(), e);
         } finally {
-            if (ocrExecutor != null) {
-                ocrExecutor.shutdownNow();
-            }
+            ocrExecutor.shutdownNow();
         }
     }
+
 
     static class PageImage {
         @Getter

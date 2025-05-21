@@ -1,455 +1,506 @@
 ***************Beginning Page***************
 ***************page number:1**************
-|
-Ring; and Fields
-m x
-pm, {NW Wm Tvlka
+ALGEBRAIc FOUNDATIONS
+of COMPUTER SCIENCE
+\eclures by Ferucio Laurentiu Tiplea
+
+ngs and Fields
+
+Part |
+
+Prof.dr. Ferucio Laurentiu Tiplea
+
+Spring 2022
+
+Department of Computer Science
+
+“Alexandru loan Cuza" University of lagi
+
+la$i 700506, Romania
+
+e-mail: feruciolipleaQuaicmo
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-—
-mmmmw
+Outline
+Definitions, examples, basic properties
+Homomorphism, subring, ideal
+Characteristic of a ring
+Reading and exercise guide
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Deﬁnitions. examples, basic
-Bmwcnics
+Definitions, examples, basic
+properties
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-mm
-\hﬁ'imn 1
-A1minanamehumsmmmev? w n 15.4mm!
-. m t 7 m m mmmww.
-. m, >~ i MW»
-. “ u‘ w "m mum w ’
-m.“ 1
-mm» n )Dezv!"
-1 v w m MW ﬂu“ MW w "WWW
-2 a E (m Memsempmalk ,- MM!
-1 v E mmmm "m m w E “Us! mmmm,
-A We“11$”,kaMMWKMKQMQE mm, M
-“WWW m R m w
-mumm- —_ .,..
+Rings
+
+Definition 1
+A ring is an algebraic structure (R,—i-7 —,O7 ) such that:
+
+o (R,+, —,O) is a commutative group;
+
+0 (R7 ) is a semigroup;
+
+0 - is left- and right-distributive over +.
+Remark 2
+Let (R, +, —, O, -) be a ring.
+
+1. “+" and ”-" are usually cal/ed addition and multiplication;
+
+2. 0 is cal/ed the zero element of R. lt is unique;
+
+3. lf- is commutative then the ring is called commutative;
+
+4. We Will usually denote rings just by their carrier sets. That is, we
+
+will often say “Let R be a ring".
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 2/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-“*um
+Basic properties
 
-pm I». MM‘ WWW
+Prove the following properties!
 
-Pm-him!
+Proposition 3
 
-mm.‘ in mm»; m"
+Let (R, +, —, O, -) be a ring. Then:
+1. a0 I 0a I 0, for any a G R,-
+2. (—a)b I a(—b) I —(ab), for any a, b G R,-
+3. (—a)(—b) I ab, for any a, b G R,-
+4. a(b— c) I ab- ac and (b— c)a I ba — ca, for any a,b,c G R,-
+5. (27:1 a,-)(ij:1 bj) I 27:1 27:1 afbj, for any n, m Z 1 and
 
-lﬂ:ﬂi:ﬂvﬁwinyl<i
-
-2 (*11018kﬂ1'Yibllwa'vyawiﬂ
-
-1 Human WM DER,
-
-A :[b'z]:)£r.1:)nd[hiz]):b.liu,Many)‘b\(<R
-
-s cmxzﬂm-277.277.1vvmwmzlm
-
-w,“ ‘95" Wmsm
-
-~..me-—- ~-
+a;,bjGR,1§i§n,and1§j§m.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 3/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Bid: www-
-pm I». MW‘ WWW
-mum- A
-Lu R b: . W m,
-1 M11: 1m»
-2 WmZmW,
-a m, b1: m” m
-A W»; Z mm)
-5 mm)Z1m=)n Z ,1me
-(7 Wm» Z (Mum
-Mm“ Rindnwv2l
-mumm- —- ~-
+Basic properties
+Prove the following properties!
+Proposition 4
+Let R be a ring. Then:
+1. (*m)a I *(ma);
+2. (m + n)a I ma + na;
+3. m(a + b): ma + mb;
+4. (mn)a : m(na),'
+5. m(ab) : (ma)b : a(mb),'
+6. (ma)(nb) : (mn)(ab),
+foranya,b€ R andm,n2 1.
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 4/25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-Blmmhl ml.
+Binomial formula
 
-“mm... i
+Proposition 5
 
-LMMMMWM 1M 1mm “Mum m:
+Let R be a commutative ring. Then, for any a7 b G R and n Z 1, the
 
-MW Mm; M,
+fol/owing formula holds
 
-(MW :zcw-w
+n
+(a + b)” I Z C,fa”_kbk7
+k=0
 
-ML; :W Mum k S n N Wm‘ m1” .
+where Cf,‘ : W for anyO g k g n, a"b0 is taken a”, and aob” is
 
-t.“ A»
+taken b”.
 
-M,
+Proof.
 
-a, New.‘ Wm a. n ; 1 u
-mum‘. —..
+By mathematical induction on n Z 1. U
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 5/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Blmmhl ml.
-hm a
-m R be a mmmutmvz w
-1 a dun w m4 MM, M: Wm, @mm; w Wm R
-z mam m: bmnmvi! Mm 1|»: mu Wynn: b; E mm
-m m m (vmmuranwty Mm “M w
-1 mm“ N E tikuv) and aw E um b new:
-WW m," m: w has W
-m “mm- —- ~-
+Binomial formula
+
+Remark 6
+
+Let R be a commutative ring.
+
+1. R does not need unity for the binomial formula to hold in R.
+
+2. To apply the binomial formula for a and b, only ab : ba is needed
+and not the commutativity of the who/e ring.
+
+3. Conventions “a”bO is taken a” and “aob” is taken b” are not
+required When the ring has unity.
+
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 6 / 25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-m‘; ww- um
-\hﬁ'imn 1
-A m m» “My/‘MAM w n “um: MM w‘, 7 D. ‘A,
-Wm mm
-. m,‘ 7 u! \szznmmmnklmup
-. m J1 “ a Wm
-. ‘5 k4!’ M Mhlmsmbulne M ,
-m “M e m» mm by l,‘ m1 .1 “Md m umly/xdenuly nl w
-k ‘5 MW
-mum‘- —_ H.
+Rings with unity
+Definition 7
+A ring with unity/identity is an algebraic structure (R,—l-7 —,O7 ~, e)
+which satisfies:
+o (R,+, <0) is a commutative group;
+o (R, -,e) is a monoid;
+o - is left- and right-distributive over +.
+The element e, also denoted by 1R or 1, is called the unity/identity of R.
+lt is unique.
+Profdr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 7/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-m‘; ww- um
-pm I». MW‘ vrsulu
-mum- s
-m 4 7 n. nﬂwmvwmﬂn MR: w)
-minim’. s
-mm» Wm ‘,7 n‘ lymmmmznwm.
-‘ml/Mu W
-w R ‘5 . m m» my m ‘Ml
-MR): (R w, a ab:ba:e\
-1m , W, M, mukwlunm [m ‘m :zHed .MWHM.“
-or m m Mp M a MUM; “gamed m; n! R
-mum“ —- ~-
+Rings with unity
+Prove the following result!
+Proposition 8
+[1‘(R7 +, —, O, -, e) is a ring with unity then e I O iffR I {O}.
+Definition 9
+A ring with unity (R,+, <0, -, e) which satisfies e : O is called a
+trivial/null ring.
+If R is a ring with unity, then the set
+U(R):{a€ Rl3b€ R: ab:ba:e}
+forms a group under multiplication (prove itl), called the group of units
+or the unit group of R. Its elements are called units of R.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 8 / 25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-DMllm um
-\hﬁ'imn m
-1 A dwmm M. m alkd . w Add ‘5 .n mm WM
-w h 7 o “1 m». mm»!
-u (n ‘ 7 WMMMMWF
-n w nhnrvwmﬂznﬂ'vﬂ
-n '.. wry M.“ m» “mu u‘ Z n: = 1,. M; n
-u ‘Wm WMNMWW t
-2 mm.“ MM M. “M , Md
-Prov: “.1 MW. MM‘
-pm.“ n
-u n u , 4m" M, the“ R 7 m Inmu . ,M m MW“
-m “mm- —_ .,..
+Division rings
+Definition 10
+1. A division ring, also called a skew field, is an algebraic structure
+(R,+, —,0, -,’ , e) which satisfies:
+1.1 (R,+, —,O) is a commutative group;
+1.2 (R,~,e) is a monoid and e 75 0;
+1.3 ’ is a unary operation which satisfies aa’ I a’a I e, for any a ¢ O;
+1.4 ' is left- and right-distributive over +.
+2. A commutative division ring is called a field.
+Prove the following property!
+Preposition 11
+If R is a division ring, then R — {0} forms a group under multiplication.
+Profdr. F.L. Tiplea, UAIC. R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 9/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-ama“ w u mullllluﬂon
-m (mum ‘m m mumphzinnn hwds m i w R v
-ac bcuvc; :bvwhaa w: a
-1m W J A t > n
-‘Wu-ii...‘ u
-bnmNixrwv w chm-‘Wm M03 m W 111"va w
-w“ m \mvoﬂzm W my m M dmsmn W but W m<=<\m
-‘.v. “.u ma; Tm m Mm‘: m m: W =1 MM M
-Mm.“
-mum‘- —- m-
+Cancellation law of multiplication
+The cancellation law of multiplication holds in a ring R if
+ac:bcorcazcbimpliesa:borc:0,
+for any a, b, c G R.
+Proposition 12
+Cancellation law of multiplication holds in any division ring.
+There are important rings that are not division rings, but the cancellation
+law still holds. Two such examples are the rings of integers and
+polynomials.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 10 / 25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-180 M 1M m! alum“. Ira
-My...“ n
-A" “M , < R’\D}Q[1Hnl R Mud a M AM ‘I M
-wsxsbv a’ (Mwmmnb:num:n
-El-"Ule n
-“1.2 1“an 15m“
-PM [he MW. Wm!»
-“Wm 15
-1 m WM, w mum u/M WM rscquikvw w Wm.
-m I». Hana/lawn
-z WW W av M M m WM
+Zero divisors and the cancellation law
+Definition 13
+An element a E R — {O} of a ring R is called a zero divisor if there
+exists b G R — {O} such that ab : O or ba : O.
+Example 14
+In Z6, 2,3séOmod6but2-350mod6.
+Prove the following properties!
+Proposition 15
+1. In any ring R, the absence of zero divisors is equivalent to satisfying
+the law of cancellation.
+2. Division rings do not have zero divisors.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 11 / 25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-um,» dnmliu
+Integral domains
 
-\hﬁ'imn n
+Definition 16
 
-A WWW. m R m my z / u m m» m “MW; D
+A commutative ring R with unity e 75 O and with no zero divisors is
 
-nun u mlclm‘ MM
+called an integral domain.
 
-Pmmmm n
+Proposition 17
 
-‘ My ME an Inflﬂaldamm
+1. Any field is an integral domain.
 
-z Any m MVMW m Md
+2. Any finite integral domain is a ﬁeld.
 
-1 m»; gmmmwmpm
+3. Let p Z 2. ZP is a fie/d iffp is a prime.
 
-lel
+Proof.
 
-5“ Mm m M m u
-m “mm- —_ .,..
+See textbook [1] page 319. U
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 12/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-mun-old"!
-//"W"~~\
-/ Rinlimlhumb' \
-\\ﬁ f//
-_..M.—_
+Classes of rings
+Rings
+Rings with unity
+Integral \ Division
+i . FIELDS i -
+dornQ / rlngs
+Figure 1: Relationships between classes of rings
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 13 / 25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-mm
-Mm."
-1 m w + , n1 m MMWW» Daﬁnzcnklhehmw
-mm m B:D lawmaker? rm 0:4 in 1m
-m
-2 z mmmw mm" m mumvhcmun 1m .n mum
-dwmmm m M 10M:
-1 a l MC mm, m MW m1 mumphunun VovmieMs
-A "z “(mu-mm. m» m m 1M meWm-y
-an\y\7n:7l "Zn M:1“W:nw,.mm,
-5 z. m wmmunnv' M. m my u n M pm m." z" M
-M
-mumm- —_ w.
+Rings
+Example 18
+1. Let (R,+, —,0) be a commutative group. Deﬁne on R the binary
+operation - by a- b I O, for any a, b € R. Then, (R, +, —,O, ) is a
+ring.
+2. Z, together with addition and multiplication, form an integral
+domain, but not a field.
+3. Q, 1R, and (C, together with addition and multiplication, form fields.
+4. nZ is a commutative ring with no zero divisors. This ring has unity
+only if n I —1, n I O, or n I 1 (for n I O, the ring is null).
+5. Zn is a commutative ring with unity. lf n is a prime, then Zn is a
+field.
+Profdr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 14/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Hnmomnlphism, subling‘ ideal
+Homomorphism, subring, ideal
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Whiml
-D~ﬁ|inw| n
-mknndﬁammpnumwm imam“
-Mmmm (ovar'vmbé m meHw-th'd
-1 m+>1:n(=h»(bl
-2 Mm z mm»
-r». mm WM m m MW “M mm‘, “A WM h,
-i AE arm ‘naked w Mme “Zn m
-m : m» : w : mm: mmm
-w». W m1" W, q W Q M W WW
-1 1w : a
-mum‘- —_ .,..
+Homomorphisms
+Definition 19
+Let R1 and R2 be rings. A function h : R1 —> R2 is a ring
+homomorphism if, for any a, b € R1, the following hold:
+1. h(a + b) I h(a) + h(b);
+2. h(ab) I h(a)h(b).
+The second property in the definition above may only be required for
+a7 b G R1 i {O}. Indeed, if, for instance, b I 0, then
+h(aO) I h(O) I O I h(a)O I h(a)h(0).
+If R1 and R2 have units e1 and e2, then the property
+3. h(el) I 62
+is required too.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 15/25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-sauna
-D~ﬁ|inw| 2n
-mnmn. human/RmvmgimhmazsgRamm-
-mes m ain\vxh=w=vatwn1wlR rﬂmﬂui w s
-WWW,“ s g R mm» Mm , mhmiolk ‘I
-‘PM; Invzﬂy1b€5
-2 "is mm his
-w» m my = the" z m Dz m s m, w \l x M Wm M. m
-mm m Mm h: mm, >4 w- < 5 m W . A > 5 7 m
-Eunuk 21
-a .5 . Wu 541' MW Mu n rpm. m1 m 5mm mm
-mm" 4Q M m 1 Wm M 2 sz mu
-mum‘- —_ .,..
+Subﬁngs
+Definition 20
+Let R be a ring. A subring of R is a ring S such that S Q R and the
+operations of S are exactly the operations of R restricted to S.
+Alternatively, S Q R nonempty defines a subring of R if:
+1. a—b€5, forany a,b€5;
+2. ab E S, for any a,b 6 5.
+If R has unity e, then e must be in 5 too, and if R is a division ring, the
+second item should be replaced by “abi1 E S, for any a, b G 5 — {0}".
+Example 21
+nZ is a subring of Z, for any integer n (prove itl). The subset of odd
+integers do not form a subring of Z (prove itl).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 16/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-m.“
-\hﬁ'imn 22
-mm»: "mm; R
-1 a . =M , H‘ m m a ‘I R “ a wwmw.‘ addmm W»
-o! R and m g J
-2 a swim 1 "m mm m a w a .s “mmdmmm. W»
-0! w m m g J
-a a . =Ha ,n m.‘ m R w R u N.» = kl! m H.» 4w m R
-¢ J‘;Inmpumu‘le/wnunduhnkzm/:(D)1MJ$R
-PM m MW. Wm
-pm...“ n
-A (WWW rw w W, m hpld m4 M1, 4., 4m M, have
-Wm m»;
-m “mm- —_ m.
+Ideals
+Definition 22
+Let R be a ring and J Q R.
+1. R is called a left ideal in R if R is a subgroup of the additive group
+of R and RJ Q J.
+2. R is called a right ideal in R if R is a subgroup of the additive group
+of R and JR Q J.
+3. R is called an ideal in R if R is both a left and right ideal in R.
+4. J is a proper ideal in R if it is an ideal in R and J yé {O} and J 5£ R.
+Prove the following result!
+Proposition 23
+A commutative ring with unity is a fie/d if and only if it does not have
+proper ideals.
+Prof.dr. F.L. Tiplea, UAIC. R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 17/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Charanerislic a‘ a ring
+Characteristic of a ring
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Cthlulhﬂc n1: m.
-mar-‘M 1.
-1 w: W "m 1 W R m chavxiqvmm ,- 2 1 w n ‘5 n. uniﬁest
-mm‘ m», m». v." n, :q I.“ W = E R
-2 wk», m“ 1 w a m (hnrxunilx m MS Wm "2‘
-mlhna:n(n1|"yi€R
-m (havxmnsuz m . W N Mu be mm w mmﬂ)
-a...“ 15
-A W wrth “um/:4 u “mm r»! WWW 1 mum" W
-M» w Muhawmwm:1rr W Mu w
-M» 2s
-u M: WWW m W R u n \l Mm m MM m MM
-mnremdemuvliERnMM/x
-m “mm- —_ .,..
+Characteristic of a ring
+Definition 24
+1. We say that a ring R has characteristic n Z 1, if n is the smallest
+natural number such that na I O, for any a € R.
+2. We say that a ring R has characteristic zero if does not exist n Z 1
+with na : 0er any a G R.
+The characteristic of a ring R will be denoted by char(R).
+Remark 25
+A ring with unity e 51$ 0 cannot have the characteristic 1. Therefore, the
+only ring of characteristic 1 is the null ring.
+Remark 26
+If the characteristic ofa ring R is n > 1, then the additive order of each
+non-zero element a G R divides n.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 18 / 25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Chizzullnlc n1: a": mmplﬂ
-Eu'wl' :1
-1. Z m ‘ 2 J A 5} “1%.”me "W ‘5 m km MM“
-a! ‘.5 mm Mm;
-- 1 m mm nvﬂev 5
-- 2 h» addmvc m1
-. 1 m mm m 2
-- ‘ m mam NM
-- 5 m MM nvﬂev 5
-My“ 2|
-41> 1m m (“mm m m W m >1
-(z) 1W mum 1.1m m rmunensnz m
-(a) a n m c m hm; dawn-WW m
+Characteristic of a ring: examples
+Example 27
+Z6 : {0, 1,2, 3,4, 5} has characteristic 6, which is the lcm of the orders
+of its non-zero elements:
+0 1 has additive order 6;
+o 2 has additive order 3;
+0 3 has additive order 2;
+0 4 has additive order 3;
+0 5 has additive order 6.
+Example 28
+(1) Zm has characteristic m, for any m Z 1.
+(2) Z is an integral domain of characteristic zero.
+(3) Q, 1R, and (C are fields of characteristic zero.
+Profdr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 19/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Chizzullnlc n1: a": hak pup-ﬂi-
-I'hlmm 29
-m m‘ u 11w a W m» wvwvlwarauwm: n 5| Us"
-1 ﬁ u ‘Mm/1m Mm Mm, mm wmrhszusﬂes M Z n
-2 MHBMMMWMDWM WNW“
-Mum’ a” m m :kmlmshav: m 5mm“! m”
-PM
-5“ Mm m um 129 M‘ , b. MM ‘Manama w. =1 m
-mm M m MM vino!- mm mm n! R mm be
-12nd M.” As m: pm mm" u
-m m: W zbnw Sm 0m m wwm n ‘S W MW my Dr
+Characteristic of a ring: basic properties
+Theorem 29
+Let (R, +, —, O, -, e) be a ring with unity of characteristic n Z 1. Then:
+1. n is the smallest non-zero natural number which satisfies ne : 0;
+2. lfe 71$ 0 and R does not have zero divisors, then n is a prime.
+Moreover, all non-zero elements have the same additive order n.
+Proof.
+See textbook [1], page 328. Just a few words on the second part of the
+second item. The additive order of a non-zero element of R cannot be
+1 and divides n. As n is a prime, it must be n. U
+The first item above says that the characteristic n is the additive order of
+the unity!
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 20/25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-Chizzullnlc n1: a": hak pup-ﬂi-
-Cumilry so
-m {MUM M “my 49m E m .1, i We numbv
-pm,
-me mm 28 D
-(mull! :1
-w “new a!) 1M mm; : “Mum
-Proof
-s<= "an m Pi|< :20 u
-m m Wm m (metensbx ‘5 - W. P .u m m “M;
-m m: mm m p‘
+Characteristic of a ring: basic properties
+Corollary 30
+The characteristic of an integral domain is zero or a prime number.
+Proof.
+From Theorem 29. U
+Corollary 31
+The characteristic of a finite fie/d is a prime number.
+Proof.
+See textbook [1] page 328. U
+Once more, when the characteristic is a prime p, all non-zero elements
+have the additive order p!
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 21 / 25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Chizzullnlc n1: a": hak pup-ﬂi-
-I'hlmm 1:
-v, Mmmmmn we P, m rtmmzms i “We
-Mm“ w m 11M z»
-pm,
-s“ MW m w m u
-delwy 11
-v, Mmmmwmn, m Inn/mm; i WM WNW m
-m M4 a
-pm,
-s" MW m w m u
+Characteristic of a ring: basic properties
+Theorem 32
+If a fie/d has characteristic a prime p, then it contains a subfie/d
+isomorphic to the fie/d Zp.
+Proof.
+See textbook [1] page 329. U
+Corollary 33
+If a fie/d has characteristic O, then it contains a subfie/d isomorphic to
+the fie/d Q.
+Proof.
+See textbook [1] page 329. U
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 22 / 25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-m... Md:
-A W. MM ‘5 a we v.“ dots m7! pm,” ww 5m“; [mm
-I." m: Wm‘ M)
-mm... 14
-A m.menwmwmsmwmmz, Immem.»
-Va
-Prod
-*Mwm‘ warm u
-5m mu m, indd m (mum mmmnn “Wm-W“;-
-cmen» m WW, mm“ M om rm my ma (Wm 1
-pm MM ‘I m: M mmmmu pm p m" m pm
-guru/Md ‘5 Mum m 1, w m subﬁdd m; Lhznzlensnz n M Vm
-sub/Md ‘5 WWMW
+Prime fields
+A prime field is a field that does not possesses proper subfields (except
+for the trivial field).
+Theorem 34
+A fie/d is prime if and only if it is isomorphic to Zp, for some prime p,
+or Q.
+Proof.
+See textbook [1], page 329. U
+Show that no field can contain two distinct prime subfields!
+Combining with the previous results we obtain that every field contains a
+prime subfield: if the field has characteristic a prime p, then the prime
+subfield is isomorphic to Zp; if the subfield has characteristic O, its prime
+subfield is isomorphic to Q.
 
-mum‘- —- m-
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 23 / 25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Reading “a QxeKiSE guide
+Reading and exercise guide
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-k .5 mm WNW.‘ mt M a“ In m um“ Mm m "a W“
-m1 m.‘
-(bum mew:
-1 Pup :usw; 1m ‘mm [1]
-—
+Reading and exercise guide
+lt is highly recommended that you do all the exercises marked in red from
+the slides.
+Course readings:
+1. Pages 315-349 from textbook [1].
+Prof_dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 24 / 25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Reference!
-m WWW“... .ﬁwmmﬂmkm MM hm
-.... “mm- —
+References
+[1] Ferucio Laurentiu Tiplea. Algebraic Foundations of Computer Science. “Alexandru loan Cuza"
+University Publishing House, lasi, Romania, second edition, 2021.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Rings and Fields Spring 2022 25 / 25
 
 ***************Ending Page***************
 

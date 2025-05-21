@@ -1,546 +1,719 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Cmsul V waleme NF-romplete
-1 Motivate
-i.. nq... m... ...... ‘ands!
-\ “mm” AYlllnwhlenulkAY'comPMe
-1 a.“ unwmm m... .... ....~...1.......... N. h. up». .4 mm... mil (k mm.“
-a ...... pm... mum .4’... mum..." m wkllllhlﬂ.
-A .........,....1.. Mm .. ............~... M...
+Oursul V: Probleme NP-cornplete
+1 Motivare
+in acest curs vorn intelege:
 
-m... . ....,W ...... ... ..... ........||. .4- .. .v. w ...... .......>....... .....b........ w ........1...
-"mm .. ... ....,.....-... W... ... ....... ... mmmmﬂr ... m ... .,...... .~.........1....... mm...
-n............1. M... “mum ... “Mm”... lmm- ....... ...... "PM W. .. M...»
+1. ce sunt clasele P, NP 3i problemele NP-cornplete;
 
-FM. m... mhmmun'nh .7... .h. W... .. .... . mm ... ......|...... a! 4k m... m
-W...“ ...- M (k cm. m... .. in ulmm“ . :lm Mk... W... 1M. .....W..... ............ .1.
-p... Mm... W... w...“ mum... mm... ~....-............ P"... .. [mm m... .. mm
-umwnﬂ .1. “.1... .\ pmgmwmui n. M.
+2. de ce e important pentru un informatician sa ﬁe capabil sa identiﬁce astfel de probleme;
 
-n... M. “m... - m... Mm"... Ae . WM. .l. up"... u! ..... gm... W...
-PInMemezMwumnnmk H... m. ... pm...
+3. cum putern arata ca 0 problema este NP-cornpleta;
 
-m... ........... mm... mm .. n 5...“... ........1..... ...... M. mulnu ............ g...
-.................... ... w. m... Mgmmm PM... b... mm... ... WW. m...“ (I: \nvm
+4. curn abordarn astfel de probleme in practica.
 
-PATN
+Pentru a inﬁelege cum an fost identiﬁcate $i de ce sunt importante problemele NP-cornplete,
+trebuie sa ne intoarcem putin in tirnp, in momentele in care an aparut calculatoarele moderne.
+Calculatoarele aveau reputatia de a efectua calcule foarte rapid (mai rapid decat 0 persoana).
 
-Mun u.. mm Z WE». dwumth ml i v.
+Foarte curand, informaticienii $i-au dat searna ca nu e chiar a$az indiferent cat de rapid este
+executat un pas de calcul (curn ar fi adunarea a doi intregi rna$ina), luat individual, nurnarul de
+pa$i necesari pentru rezolvarea anurnitor probleme computaﬁionale poate ﬁ foarte mare $i astfel
+tirnpul de rulare a1 programelor sa ﬁe rnare.
 
-0...... 2...... m“. .m . ,.. ... my.“ a»
-..........>....w um vlmkn :M'Mzb
+Din acest rnotiv, a aparut necesitatea de a proiecta de algoritrni cat rnai eﬁcienti pentru
+probleme computationale care apar in practica.
 
-Pmlm M... nah...“ 0.... .. i- mm... Dnnudnhm pm"... Wm... Mm...“ eﬁmem ..
+Pentru anurnite probleme, curn ar ﬁ cautarea unui drum intre doua noduri dintr-un graf,
+informaticienii an gasit rapid algoritrni eﬁcienpi, care functionau in practica suﬁcient de rapid:
 
-.1... 51m ... .I... .. m WSW“... Ali!)
-PnlMES
-Mun u.. .........1<E|<
-0mm rm k .......~ my
+PATH
 
-wan"... m W... WI...“ .~.. m... mm. .....1.- .. Z 1m... N. ................. W0.
-.1. ........
+INPUT: Un graf G I (V, E)7 doua noduri 5,13 E V;
 
-5...... .... mm... ...... M n .....N..... “M... ... A m~_\.||m|m\1\\mdvmnmmni
-..., Mum." m mm ..N...1..... u.........w.......v ........ MW...“
+OUTPUT: Exista drurn intre s $i t in graful G?
+(in tirnp liniar7 0(n), unde n I |V| + IE‘).
 
-BOUNDED mum;
+Pentru alte probleme, curn ar ﬁ problema primalitatii, prirnul algoritrn determinist eficient a
 
-INN/1 m. “40...... A ....................|1.
+fost gasit in abia in 2002 (algoritrnul AKS).
+PRIMES
+INPUT: Un nurnar k G N;
+OUTPUT: Este k nurnar prirn?
 
-Dunn) >. up...“ A .,. R. ....... A pm’
+Algoritrnul AKS rezolva problema in tirnp OM12), unde n I [092(k) este dirnensiunea datelor
+de intrare.
+
+Pentru alte problerne7 cum ar ﬁ problema opririi in k: pa$i, informaticienii au demonstrat ca
+orice algoritrn care rezolva problerna are complexitate cel pufuin exponentiala.
+
+BOUNDED HALTING
+INPUT: Un algoritrn A, un nurnar natural k;
+OUTPUT: Se 0pre$te A in cel rnult k pasi?
+
 1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-PM......M..........1.. (111.4111) 0...... v (rm... “1......1...
-0.... .10.“... 5.. m... mm“. n... m. m.......k.......1211 m... .. Z 1......)
-Pm... .... M... .............. .m m...“ mm... ................... ....... a‘.
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+Orice algoritm care rezolva problema de mai sus are complexitate 0(2"), unde n I [092(k).
+Pentru alte probleme importante care apareau in piractica7 informaticienii nu au reusit sa
 
-gm... “5...... m... .. M. .. Mu, .. .W W"... M1...“ .19.“...
+gaseasca algoritmi eﬁcienti si nici sa demonstreze ca nu exista algoritmi astfel de algoritmi.
 
-mm... W mm... WM»... 1m... .M (k mm... .......... mm... ... a
+Incercand sa inﬁeleaga aceste probleme, informaticienii au descoperit 0 clasa importanta de
+probleme numite probleme NP-complete. Aceasta clasa de probleme include probleme cum ar ﬁ
+satisﬁabilitatea pentru logica propozitionala, cel mai lung drum simplu in graf, problema clicii,
+problema comis-voiajorului, problema submulpimii de suma data si multe altele.
 
-.........1....... m... W. MW...“ ed ..... 1.... ........ .......1.. g... mm"... ......
+Nu stim daca aceste probleme au algoritmi polinomiali (si doar intamplator nu i-am gasit
+inca) sau pur si simplu astfel de algoritmi nu exista. Insa stim ca aceste probleme sunt echivalente
+polinomial: daca vreuna dintre ele este rezolvabila in timp polinomial7 toate sunt rezolvabile in
+timp polinomial.
 
-p»1.........1 .1... m...- ........ .1. W www.1- ......, “1......1. w... ...... “1......
+In plus fata de interesul stiintiﬁc7 este important ca un programator sa poata identiﬁca 0
+problema NP-completa. Daca este NP-completa, nu are sens sa caute un algoritm polinomial, ci
+trebuie sa gaseasca 0 metoda alternativa:
 
-m... ..|..........1
+0 sa accepte folosirea unui algoritm mai putin eﬁcient in cazul cel mai nefavorabil (de cele mai
 
-........ m. .W............,.....1
-. ... mm. M . W...“ . mm... :41er m. .. m ~P<......... .. w...
-M...
-2 Probleme camputalionzle, probleme de decizie‘ probleme
-.12 opLim
-o mm... m...p............111|......1........>....... pm... m... .1... .1.....m..|...1...1.
-.mm......1...1... .1..."
-1.... am... .1...1....1. ......v
-0...... .1w.......m......1.....,1...1.......k.|...1.1=.....1...>
-o ......1...... .1 .1"... m: . mm“... ... .1... ..........1....~ M... 1.. 1.. “11.1..
-1.1.... .111
-1...... 4.
-0...... 1.1.... ... 1......1. ....1...1 1w
-1..." ..
-5............1..... .1...... m... Mm... 5m m...) mum. Mn"... w...“
+multe ori, bazat pe backtracking);
+
+o sa foloseasca un algoritm de aproximare;
+
+o sa caute rezolvari eﬁciente pentru cazuri particulare ale problemei;
+
+o sa analizeze daca 0 reformulare a problemei astfel incat sa nu fie NP-completa nu a1" putea
+
+ﬁ utila.
+
+2 Probleme computationale, probleme de decizie, probleme
+
+de optim
+
+O problema computaﬁionala (la nivel abstract), este 0 pereche formata din descrierea datelor de
+
+intrare si a datelor de iesire:
+
+INPUT: descriere a datelor de intrare
+
+OUTPUT: descriere a datelor de iesire (in functie de datele de intrare)
+
+O problema de decizie este 0 problema in care outputul este un singur bit (e.g., true/false,
+da/nu7 1/0).
+
+INPUT: d;
+
+QUTPUT: da/nu, in functie de un predicat P(d).
+
+Intr-o problema de optim (sau7 echivalent7 problema de optimizare), la iesire se cere cea mai
+buna solutie dintr-un spatiu de solupii:
+
+0 solutia cu costul minim pentru probleme de minimizare si
+
+0 solutia cu castigul maxim pentru probleme de maximizare.
+
+Schema generala pentru 0 problema de minimizare:
+
+INPUT: d;
+
+OUTPUT: s E S(d) a.i. cost(s) este minim (sau un marker special7 eg. —17 in caZ ca nu
+exista solutii).
+
+Spatiul de solutii aferent intrarii d este notat cu S (d), iar cost(s) returneaza costul unei solupii
+(cantitatea de minimizat).
+
+Universitatea Alexandru Ioan Cuza 2 Varianta preliminara
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
-PmmumuMnm‘m1hlr (Anni/11) 0M v (MM Mum-mm;
-mm.‘ mmhmm U x-vhkmmh- “MW
-Mnrr A
-nm-m , E my H WM m Wm.
-(“mm-“WNW e. 7| mmmmmlm-l
-5mm
-woman-Hm WW“ m. ,Mnmn-u
-hm" un :MC _ mm, m Wm. ml E >4
-Ov'rﬂ') Crl mu mm drum Tum- ~ u ~ m a
-5W.‘ <1 mum. W Rmmlmu (1mm “Wm mm 4 >1!
-Lumm'mn Wm; (k WNW]
-Mm m. mm Z w E) dun) mmm . '6 v
-Uv'rru) a!‘ m. m (luvmmlnpln W 4 ,. I m L;
-inmuumnlylmblmmhl win-mph“. \vmlmdmn (u mkmmw Lumbeﬂpnnum]
-Am! m. \vnasleuyumclve “mam ,mhknmwwmmn mm a mum“
-amt mm» Mwnrl KM, .1! "mmm mm M M Wm. mm .1! mm"
-11mm“ Viablcmcdc mum.‘ nmmlmumm a.“ mm,
-mm mm“ mm.“ xterm: 11mm‘
-MIL: W.
-4 4 k; N
-Own": Uv'rru'!
-maid)“ munum, 52nd!“ Mm“!
-ovum». U.‘M.m,.._u..\ MUM.“ WWW mm m.“ q mm. m MN o1.- h. M
-|h>lmmnhL m _\ Wm. ‘. MM
-g WWW.“ M M.“ m. “Mm Mm»! w W... \mvlﬂmm M ("Mm hm m.
-,Mm, pullmnmvﬂ m M“. pm.“ ﬁe W» Wm
-“(m n
-<
-Du‘ 1 Anun
-mm bun <. x,
->
-Mm“! m WM mum m Wm.“
-mm
-1
-201(k- n.‘ k~><
-u ADM. x7 <
-mm x,
->
->
->
-“me “Wm 1W. cm a Vm-mmn Mumm
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+Schema generala pentru 0 problema de maximizare:
+INPUT: d;
+OUTPUT: s G S(d) a.i. cdgtig(s) este maxim
+(sau un marker special7 eg. —17 in caz ca nu exista solutii).
+Exemple:
+SHORTEST-PATH (problema de minimizare)
+INPUT: Un graf G I (V7 E)7 doua noduri s,t G V;
+OUTPUT: Cel mai scurt drum intre s 3i t in G.
+Spapiul de solutii este reprezentat de toate drumurile intre s gi t.
+LONGEST-PATH (problema de maximizare)
+INPUT: Un graf G I (V7 E)7 doua noduri s,t G V;
+OUTPUT: Cel mai lung drum simplu intre s $i t in G.
+in contextul problemelor NP-complete, lucram doar cu probleme de decizie (nu de optimizare).
+Acest lucru nu este 0 restrictie, deoarece orice problema de optimizare are asociata o problema de
+deciZie echivalenta, folosind schema de transformare ilustrata mai jos pentru probleme de minizare
+(pentru probleme de maximizare transformarea este similara):
+Problema initiala: Problema de decizie asociata:
+INPUT: INPUT:
+d d, k G N
+OUTPUT: OUTPUT:
+s G S(d) a.i. cost(s) e minim 35 G S(d) a.i. cost(s) g k?
+Cele doua probleme sunt echivalente polinomial (daca gtim sa rezolvam una dintre ele in timp
+polinomial7 etim sa rezolvam $i cealalta):
+:> Presupunem ca avem un algoritm polinomial A0 pentru problema de optimizare. Iata un
+algoritm polinomial AD pentru problema de decizie asociata:
+AD(d, k)
+{
+best = A0(d)
+return best <= k;
+}
+<: Presupunem ca avem un algoritm polinomial AD pentru problema de deciZie. Iata un algoritm
+polinomial A0 pentru problema de optimizare:
+AO(d)
+{
+for (k = 0;; k++) {
+if AD(d, k) {
+return k;
+}
+}
+}
+Universitatea Alexandru Ioan Cuza 3 Varianta preliminara
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:4**************
-pm........M......-..|.. (mu...) 0...... v (rm... NFn/mﬂlﬂcl
-Pmmluobnuwuvnuunlmclnwmum!‘-Immnmxmylknwmlmuvnumllmzlnnhnhmnn
-... lac .. mm... hnwﬂ
-am”...
-I. mm...“ ... n... .1.....,.................1........>.......>..... M.».P................1.......
-rleane w‘...
-a»... .. Mm... W... ,. u... {Burrﬂi .<. . m... .1 Wm...“ .<. .k..........m mm...“
-uk ... .1. um..." .... ....1
-m»... W... mm... m...“ MW...
-inn-1 MIA/1
-. . ,E n
-0W... 0...»...
-m. .\ .7... I... ..... rm
-Celeduni thlenw m... eduvnkme ~....-..........\ u... ..... J. whim Mm...’ mudmne
-M. M... minim WK...) .. “mm
-< MW. m. .1"... AX 9mm. mm... mm. rummmn .... MW... m pm... w.
-1-... w. .1”... 1.. M... urm .W
-.W, 1»
-<
-n... . nu).
-mm mm, // m“.- ..m .. .7... M. ... 1..)
->
-§ .m m... m. MW...“ mm... Wm...“ a...“ mm"... ... Mm... A! mml Punk
-1.... mm... ... m "m...-
-m.)
-<
-// ".P “PM”... .. m...“ ...... m... m... ...
-M 4. - a, . < ...-, .... ( // m. . ........... M... .. ......
-...,,[.1 - mix, .>, // m... 9...... . m. . h... m:
-1
-m... m...
->
-Amie Mmeu ... m.. c. M... .w. ... commune dun U. WM... ... dame l... ..
-m. .|.. mm“...
-s Algoribmi nedelermiubli
-u. MM... .KM.,......... m. .... Ngulmn m m. m... In mm... ....-........... "mm..."
-m...
-m... , ... 4 >
-mm... WWW"... "pm... .... m... .. mlcwl (1'va m...“ .1“ .m e... W...
-.1... pm... .. W... WW
-... m m...‘ .<. a‘... .... “gm... m ..... w. n... m... mm... n...“ .m... ..
-..................<... ... m. n... m1 mm...
-hm..."w...".....1m......mm.......
-“WNW... Mm... 1.... c... 4 um... Md.........:.
+Proiectarea Algoritrnilor (2021-2022) Cursul V (Probleme NP-complete)
+Puteni obtine o variantﬁ incé Inai eﬁcientﬁ pentru A0 implementénd o varianté a céutérii binare
+in 100 de céutarea liniaré.
+Conventie
+In continuare in curs7 dacé utilizﬁrn o problemi de optimizare, ne referiin la problema de
+decizie asociaté.
+Existi 0 modalitate incé 5i Inai generalé de a asocia o problemé de decizie oricérei probleme
+(fie ea de optiinizare sau nu):
+Problema initialé: Problema de decizie asociaté:
+INPUT: INPUT:
+x at, i E N
+OUTPUT: OUTPUT:
+ﬂat) a1 i-lea bit din f(;r;)
+Cele doué probleme sunt echivalente computational (dacé stiIn s5 rezolvéun (eﬁcient) una dintre
+ele7 puteIn rezolva (eﬁcient) si cealalté):
+:> dacé aveni un algoritrn AI pentru problema initialé7 construiin un algoritni AD pentru prob-
+leina de decizie in felul urrnitor:
+AD(X, i)
+{
+temp = AI (X);
+return temp [i]; // notatie pentru a1 i-lea bit din f(X)
+1'
+<: dacé avein un algoritni AD pentru problema decizie, construini un algoritin AI pentru prob-
+leina initialé in felul urniétor:
+AI (X)
+{
+// temp reprezinté o variabilé unde memorém datele de iesire
+for (i = O; i < size; ++i) { // size e dimensiunea datelor de iesire
+temp [i] = AD(X, i); // notatie pentru a seta a i—lea bit
+}
+return temp;
+}
+Aceste reduceri ne araté cé putein lucra in continuare doar cu probleme de decizie, firé a
+pierde din generalitate.
+3 Algoritmi nedeterministi
+Un algoritm nedeterminist este un algoritm in care avem la dispozitie suplimentar instructiunea
+choose:
+choose x in { }
+Algoritniii nedeterniinisti reprezinti un model de calcul complet nerealist, dar care este util
+din Apunct de vedere teoretic.
+In acest model de calcul, un algoritrn are una sau mai multe executii. Fiecare executie se
+terminé cu succes, cu esec sau este inﬁnité.
+Iaté un exemplu de algoritin nedeterniinist:
+Universitatea Alexandru Ioan Cuza 4 Varianta preliminaré
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-PmmumuMnm‘m1hlr (Anni/11) 0M v (MM Mum-mm;
-mmlmw. 1.2).
-mmymw. 1,2);
-n <X ~ y -- a) <
-» .1“ <
-hm",
->
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+choose X in { O, 1, 2 };
+choose y in { O, 1, 2 };
+if (X + y == 3) {
+success;
+} else {
+failure;
+}
 
-MW.‘ 4k "W w A" a X z Z 90mm"
+Algoritmul de mai sus are 3 >< 3 I 9 executii.
 
-h "memmt-mun WWW“ AW“_MW..M “whwmw'rwm ,m,
-Brut-mm" h WWW W,“ 2 mm.‘ * W. m m,‘ NM m1 mm“ m.
-m mmw mm 2“ “MM TnUE/Yrij/l
+ln modelul de calcul nedeterminist alegem, dacé existé7 0 executie care s21 se termine cu succes.
+De exemplu, in programul de mai sus, 2 execupii se opresc cu succes‘ Astfel incét programul alege
+una dintre acestea 2 si returneazé TRUE/YES/ DA/ 1.
 
-MM mm", m “WM (1F “ML m, mum ‘N nwlev. Mm.» m * mum“ m
-mm a" mm
+Aceasté asimetrie in modelul de calcul, prin faptul c5 se preferé executiile care se terminé cu
+succes, este esentialé.
 
-m All mm m HM. Wm runukuvlnvm“. W”; mum‘ m “ Mrmun m
-m MK ewnlhlu .1! nl'ﬂunn “em-Mm.‘
-m“. , m ¢ 0,1,1 >,
-m». y m ¢ 0,1,1 >v
-u 4X ‘ y .. 5: ¢
-1 n,- 4 '
+FYI. Alt model de czrlcul7 modelul co-nedeterminist7 preferé executiile care se terminé cu
+esec.
 
-mm‘
->
+laté alt exemplu de algoritm nedeterminist:
+choose X in { O, 1, 2 };
+choose y in { O, 1, 2 };
+if (X + y == 5) {
 
-in Mm Mgwmu m m v mm“. (h. Mm ‘n lumml. m M MM W Mum.‘
-FAUE/NU/NL/n
+success;
+} else {
 
-Abdehvl (k uknl Win-mm m, nemslu-Il m Wu m cue m. w cummh D 1mm
-nmnneyurmxdn mm. Wm m mmlaumn m m m, m“. unioummmncmld Mm“
-WW! WWW.“ mm. Wm,» pm], NPpmneﬁ fummmlu-ubmwull ‘um
+failure;
+}
 
-AW Md drulrul M Wm“ m..." mm m, Mm“. mkl'DnuyAxm-l
-(“mm
-(
+in acest algoritm sunt tot 9 executii, dar toate se terminal cu esec. Astfel incét returneazé
+FALSE/NO/NU/O.
 
-(hm. k n. < 1 “A L // mu‘ n) h "M1 “mm
+Modelul de calcul nedeterminist este nerealist in sensul in care nu este cunoscuté o imple-
+mentare practicé a acestui model in mod eficient7 iar cei mai multl informaticieni cred cé nu existé
+0 astfel de implementare. De altfel, problema P versus NP poate ﬁ formulaté si sub aceasti formé.
 
-,1 ("m "a: (
+Acest model de calcul, mai puternic7 permite scrierea unor algoritmi surprinzétori:
+compus (n)
 
-1 u“ <
+{
+choose k in { 2 .. 11-1 l‘; // 0(10g n) in modelul logaritmic
+if (n mod k == O) {
+success;
+} else {
+failure;
+}
+}
 
-1
-,
+Algoritmul de mai sus testeazé in timp liniar (in functie de dimensiunea datelor de intrare,
+adicé in funcpie de numérul de bifui pe care este reprezentat n) dacé un numér este compus.
 
-annnnl .k M W ‘mull 1.. mnv h“... (m MW (k “WWW (hm 11c um'm'
-“W m lunch! a. Mm“ a. w De cm! W "DR-mm n] M m. ,.“.m..m.m
+Din cauza faptului c5 instructiunea nedeterministé alege “ca prin magie” varianta care conduce
+la “success”, alegerea nedeterministé se numeste si ghicire.
 
-DlnuvlmfmvllwlcmwilmmnnznMxklmlunmnwklz WWW! wmulnrulvmlldnn
-v» WW“ uwmmmmmm. ‘I WWW mm
+Orice algoritm nedeterminist polinomial poate ﬁ reorganizat in dour} etape:
 
-0m mum. mmmm Mmmv Puma h WNW m @va
+1. etapa de “ghicire” (un numér de bipi ghiciti).
 
-\ ELM-“1r mm; m. mm. A, Ml “mm
+2. etapa de “veriﬁcare” (un algoritm determinist care veriﬁczi dacé obiectul ghicit are pro-
 
-1 1mm n11 “Mu... u.“ Mgvmm dun-mm»! my mm Mom‘: mm m m
-
-Wm“ nlqluur >. Mm m
-“me “Wm 1W. cm a Vm-mmn Mumm
+prietétile asteptate si intoarce 1/0);
+Universitatea Alexandru loan Cuza 5 Varianta preliminaré
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-P111........M.111.1111.. (11.1.1111) 01.111.11.111... “1.....11...
-4 Reduced Karp
-1.1.11.1 111.11....
-17111.1...m 1. 1.111..m 1
-11.1.. 1111.
-.11.... 01.1.11
-m1 m/r
-111.111.111 Z M11 1.11.11.11.11... v 11.1.1 11-1 1m Z 110111111111: mmn
-1.. .1111 “1.1.1.1.. 1 .1. 1.1.1111... .1. 11.11.11. 1 1.11.1.1... 11.1 .1. v. x 1.1 5.1 1.1
-M11... K1... .1. 1. >< 1.1
-.111...
-.
-1 - 1/ .11..1..1. 1 .1 1...... 1. 1 <1 . 111......1 11
-...1.. 11.1.11 1/ 1. 11.11. .1.1, .11.. 1. .....1.
-1
-1.1.1.1.. 11.11.111.11... 1.1.1.1.. 11.... .11 .11....
-11.11.... 1.....11.1.1.111.1.1. 1.1.1.1... 1.1.11 1.111.111 1 1.1.1.111... 1 11.1.1.1
-11111.... 111111112 11111.... 1111.11.11.11
-Wm». 1.... ...1 . . . . 11mi11.
-“1.1.11.1 “1.1.1.. 2
-11171111111...
-1........11 <
-< . - . 1 1
-1...... . . 1 N1... 11...1111.111..1,
-> >
-“1.111.111.1111... x...11.1.....111..1v111.... 1....1 11.11 .11 11.111111. 1.111.111.1111
-.1. 11 1. 1. 1 11... .11.... 11.1.1 111.11.111.11 1.1.1.1... ‘.11.... 1.11.11. 1......
-1.111.111 v 1111...... .1 11 1.1.11... M11... 1...... 1.1.1.1..1 1.
-1.1.1.1111.1_.1.1 1.1.1 .1
-1 1.1.1.1.... 1 .1...11...1.1.1 1.
-z 1111.111....1....1.1. x 1.1
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+4 Reduceri Karp
+Fic doué probleme:
+Problema X Problema Y
+INPUT: INPUT:
+x y
+OUTPUT: OUTPUT:
+f (Iv) f (y)
+
+O reducere Karp de 1a X 1a Y este un algoritm A care transformé un input a: pentru problema
+X intr-un input y : A(a:) pentru problema Y astfel incétt f(a:) I g(y) (adicé f(a:) I g(A(m))).
+
+In mod echivalent, 0 alti modalitate de prezentare a reducerilor Karp de la X la Y este sub
+forma un algoritrn pentru problema X care realizeazé o preprocesare a inputului x si apoi apeleazé
+un algoritm pentru Y:
+
+Reducere Karp de la X 1a Y:
+
+Ang(X)
+
+{
+y = . . . // calculeazé y in functie de X (i.e. , algoritmul A)
+return Ang(y); // un singur apel, chiar la sfér$it
+
+}
+
+Atentie! Implementarea Ang nu face parte din reducere.
+
+Reducerea este independenté de algoritmul pentru problema Y, se referé doar 1a modul cum
+se transformé inputul pentru X in input pentru Y.
+
+Exemplu. Fie urrnétoarele probleme:
+
+Probleina PARITATE Problema IMPARITATE
+INPUT: n 6 N INPUT: n e N
+OUTPUT: Este n par? OUTPUT: Este n impar?
+O reducere Karp de la PARITATE 1a IMPARITATE este:
+Prezentare 1 Prezentare 2
+AlgPARITATE(n)
+Reducere (n) {
+{ In = n + 1;
+return n + 1; return AlgIMPARITATE (m) ;
+} }
+
+Dacé avern deja un algoritm pentru Y, 0 reducere Karp de la X 1a Y permite rezolvarea
+problemei X féré a ﬁ nevoie de un algoritm direct pentru X, ci prin cuplarea reducerii cu algoritmul
+pentru Y.
+
+Acest lucru (rezolvarea X prin intermediul Y) poate ﬁ util, dar de cele mai Inulte ori reducerile
+de 1a X la Y sunt folosite altfel. Si anurne7 pentru a demonstra rezultate negative despre
+problema Y pornind de 1a un rezultat negativ pentru problema X.
+
+De exemplu. dacé $tirn 05L
+
+1. problema X nu este calculabilé si
+
+2. gésirn o reducere de la X la Y7
+atunci sigur nici problema Y nu este calculabilé.
+
+Universitatea Alexandru Ioan Cuza 6 Varianta preliminaré
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-W......M..........l.. 0......» W... v (WW “MW...
-WW...“ w... ............ .W M" m1 WWW W... W .l........... W...
-. n. W... .. .. W... .11 .W. . u» W... .W. X. WW... ......... .u
-s... ................N.m... ......................... WWW. .................
-WW... ... .. X .. \' ....... W WWW Y W m...“ .........
-0W»... WW................. W........W.....»..m...... ................
-nlwlrﬁncul pnancxuvdvlzcn'l cﬁcwnllmnmmmum [dinmmrﬁnmll PﬂmnX [.vmnumm‘)
-.....W WW. Wm W...) d: .. x .. v w...- W... x .n. ....
-W W... W............. 4.... WW v
-5 01...... P
-r ..... mm ~.. MW. .............. .1- W..... w..........m....
-P Z (A . x"... ............. W...
-.. W... W"... ..............
-W W. ..... MW... .W A)
-.. W... H... H... ......... .. 5.... W WW... 1W... \
-2...... ... WW...
-. Hm . .7 mm” . .7 50m‘ . r. M... m... .W .. WW...
-W...
-W... W... WW .......... .. M... .. W WW... ... W ...
-WW...
-1 s... .. mm E p. .1“ MW... WW... . in W. W .. 2w! “Ks.
-1 PW. W... WW W .. i| 3.5... llAMlL'lONMNaIRCL'H m» “W...
-Wm... PW... . W... M.................. u .4... .I... W ... P ....
-a 01...... NP
-m... .wmm ..~- . W .....|....... J. WW W................
-w: W W. .. ........... .. W.
-.. W. WW “WW...” .............
-.. W... .,. W WW“ ..W X,
-... 1.. W WW .............
-W... m... WW...‘
-.w ... .. WW... W. WWW... .. ... . WW... PW W...
-u... W..................... ..... P W. .. N» A...“ “W. ....................
-WW... ... W... W... ..... W... W. M. W..." ....W..........
-.. ..... <... WW... m. .. .............. r d... WW... .... W... .......
-WW... m 1... W... .... .1»
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+
+Demonstratie prin reducere la absurd: daca ar fi Y calculabila, putem cupla algoritmul pentru
+Y cu reducerea de la ltemul (2) pentru a gasi un algoritm pentru X, contrazicand Itemul (1).
+
+Sau: daca $tim ca problema X nu are o rezolvare eﬁcienta (e.g., polinomiala) si exista o reducere
+polinomiala de la X la Y, atunci sigur nici problema Y nu are o rezolvare eﬁcienta.
+
+Demonstratie prin reducere la absurd: daca Y ar avea o rezolvare polinomiala, cuplam algorit-
+mulAeﬁcient pentru Y cu reducerea eﬁcienta $0 obtinem un algoritm eﬁcient pentru X (contradictiel).
+
+In principiu7 existenta unei reduceri (eﬁciente) de la X la Y asigura ca problema X nu este (cu
+mult) mai diﬁcila computational decat problema Y.
+
+5 Clasa P
+P (sau PTIME ) este o clasa (multime) de probleme computationale:
+P I {X l Xeste o problema de decizie
+3i exista un algoritm polinomial
+in cazul cel mai nefavorabil pentru X }
+
+in general, clasa P este privita ca ﬁind clasa problemelor “tractabile”.
+
+Exemple de probleme.
+
+1. 2 — SAT E P, BIPARTIT G P, SORT E P, (Atentie! toate vazute ca probleme de
+
+decizie).
+Toate aceste probleme au algoritmi care le rezolva in timp polinomial in cazul cel mai
+nefavorabil.
+
+2. Stim ca PRIMES 6 P, dar algoritmul polinomial a fost gasit abia in 2002 (AKS).
+
+3. Pentru multe probleme, cum ar ﬁ 3-SAT, HAMILTONIAN-CIRCUIT, TSP (Travelling
+Salesperson Problem i problem comis-voiajorului), GI, nu etim daca sunt in P sau nu.
+6 Clasa NP
+NP (sau NPTIME ) este o clasa (multime) de probleme computationale:
+NP I {X | X este o problema de decizie
+5i exista un algoritrn nedeterrninist polinomial
+in cazul cel mai nefavorabil pentru X }
+Singura diferenta in deﬁnitie fata de P este ca permite folosirea unui algoritm nedeterminist
+in loc de un algoritm determinist.
+Atentie! Eroare frecventa!
+NP nu este o prescurtare pentru non-polynomial, ci este o prescurtare pentru nondeter-
+ministic polynomial.
+
+Orice problema computationala din P este $i in NP, deoarece un algoritm determinist este un
+caz particular de algoritm nedeterminist (un algoritm determinist este un algoritm nedeterminist
+cu exact o executie).
+
+In plus (cel mai probabil) fata de problemele din P, clasa NP contine $i alte probleme intere-
+sante:
+
+Problema SAT face parte din NP.
+
+Universitatea Alexandru Ioan Cuza 7 Varianta preliminara
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-PMmumuMw-mmhlr (Anni/11) 0M v (MM Mum/W
-m
-Irwm U lnmnﬂl mpg/M.“ v <6 l 4 Z I. A m m/
-mm. pvxevsnminkuly
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+SAT
+INPUT: o formula propozifuionala 4p (eg.7 Lp I x1 /\ ﬂaig \/ $3)
+OUTPUT: este g0 satisﬁabila?
 
-SAT N. .- Mm. (I: 4W. balm, Wm . .m. c. 1m Pm! 4m .vp, w “mm
-m mm...“ m. ‘mom. MFR-MW Mm»! m mm (A M Mfmurnhll mt m m!"
-PIuMcm-‘MT
-“ﬁn/p»
+SAT este 0 problema de decizie. Asadar7 pentru a arata ca face parte din NP7 este suﬁcient
+sa prezentam un algoritm nedeterminist polinomial in cazul cel mai nefavorabil care sa rezolve
+problema SAT:
 
-(
-m: (A . .1 ‘ ‘ .. my ( // m. 1 ‘unm- m, unbmn
-an“ “mm A. < n‘ 1 1v // MM... a . .m “um A.
-> // “mm. unwnumne am pm
-,1 (Iv-HM“. “gm .. n < // m. 1> mm.“-
-; .1" <
-hm...
-)
->
-Fun/Mm; M1‘ “Mi mm W “WM ‘WW/v PM a‘, Mm. “5..
-mun/mam’. m W. m“ w
-um
-inn/1 0:1» m
-0mm mum-WM
-m. MWMI .w/Mmm ,m.“ 1 col.
-“Mum
-(
-//w....m..v-<o.1,.,nru
-m <1 Z n‘ ‘ < m ~u < 1/ m. 1 mm u mm."
-dawn ch] m < o, 1‘ 2 L
-)
-m m, y» n z) 4 1/ m. 2 "mm. <1 . o zwlunn "m:
-,1 W1 .. Cm! ¢
-Mm // m1 Winn Mum" zulvnu :u mm “W.
-1
->
-) ‘
+AlgSAT(phi)
+{
+for (i = O; i < n; ++i) { // faza 1: ghicirea unei atribuiri
+choose sigma[i] in { O, 1 }; // presupunem (:5 n este numérul de
+} // variabile propozipionale din phi
+if (eval (phi, sigma) == 1) { // faza 2: verificarea
+success;
+} else {
+failure;
+}
+}
+Functia eval calculeaza valoarea de adevar a formulei phi in atribuirea sigma.
+Problema 3-COL face parte din NP.
+3-COL
+INPUT: G : (V7 E)
+OUTPUT: este G 3-colorabil?
+Iata algoritmul nedeterminist pentru 3-COL:
+Alg3COL(G)
+{
+// presupunem V = { O, 1, ..., n — 1 }
+for (i = O; i < n; ++i) { // faza 1: ghicim o 3—colorare
+choose c[i] in { O, 1, 2 };
+}
+for ((X, y) in E) { // faza 2: verificém c5 e o colorare validé
+if (c[x] == c[y]) {
+failure; // doué noduri adiacente colorate cu aceeasi culoare
+1'
+}
+success;
+}
 
-DeannamuanMInmumLelmnmm\ pm “mm Mm“ I.“ (Mums/‘Human!
-m,“ n um W“ n Mm m mad ednvdeul cs mm ch» mm WNW (1w ... m.
-mm- \mhnln! m "mp PMIlmmml m“... MW“ In“:
+Deoarece tofui algoritmii nedeterministi pot ﬁ structurafui in cele doua faze (ghicire si veriﬁcare),
+clasa NP Inai poate f1 deﬁnita7 in mod echivalent7 ca ﬁind clasa acelor probleme care au un
+“certiﬁcat” veriﬁcabil in timp polinomial pentru raspunsul TRUE.
 
-can/mm w w .1! dmeh! gm. m ﬂlgnunnvll WWW.‘
+Certiﬁcatul este dat de datele ghicite in algoritmul nedeterminist.
 
-De mm "mi/nun w“... m M a “mm/1mm“ mm. “Mm; m nmv (e
-mum/1 mm 370m. W .1 wk...‘ . mm
+De exemplu7 certiﬁcatul pentru SAT este o atribuire care face formula adevarata7 in timp ce
+certiﬁcatul pentru 3-COL este 0 3-colorare a grafului.
 
-A“ m.“ dzylzn P; NP lmvvhnu mm M ,. w; p, eneu thnvi aw...‘
-(x1 m. mm 1mm... “WWW “mm/L ,. a p; Np<mchmnMWL am
-M M... m .m mumcm .m M. u (hm/mm WW hm
-vWNww/um/m1mm“ a Vm-mmn “Am/"m
+Am vazut deja ca P Q NP. Tntrebarea inversa7 daca si NP Q P, este 0 problema deschisa.
+Cei mai mulpi informaticieni suspecteaza ca nu este cazul, si ca P Q NP (incluziune stricta), chiar
+daca pana in acest moment nu avem 0 demonstratie a acestui fapt.
+
+Universitatea Alexandru Ioan Cuza 8 Varianta preliminara
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-p1»...1..1.A1.1.1...1|.. (11.1.1111) c......|v<|»..1m....1 Nr.......|..=1
-1 Probleme NP-complele
-u 1.1.1.... 1 .... 1.»...1...“ .1...
+Proiectarea Algoritrnilor (2021-2022) Cursul V (Probleme NP-coniplete)
+7 Probleme NP-complete
+O problomé X cstc NP-coniplcté dacé:
 
-1 X . .17..
+1. X € NP si
 
--. W... 1....»1...1 y E w.‘ 1...... 1. .1... .11......11.X
+2. orice problemé Y G NP se reduce in timp polinomial 1a X.
 
-c. .1. .1...1... 111......1.....1..1.. p.11...1....111..1...1. 11...»... WM...“ .X...
-1.11.1..1...1.1......1. m... .1... 1.1.1.1....1. .11. w ‘1.1.11... “.11.... NF'LunIMm 1....
-..1. ..1. .11....11. 1...... .1. m1... c.....1........1.1.. w
+Cu alte cuvinte, dacé avein o rezolvare polinomialé pentru o problemé NP-connpleté7 existé
+rezolvéri polinoniiale pentru toate problemele din NP. Altfel spus, probleme NP-conlplete sunt
+cele mai diﬁcile din punct de vedere computational din NP.
 
-.11....11.......1~....1.1...11w.......1.1...R1...11.1...1..1...1. mm...” WM
-1w“... 11......111...m1......1........1..1..1........1......1....1.......1. “.11....1...
-.r......111<.v1- 11....
+Dacé o problemé respecté prima conditie dintre cele doué din definitie, problema este NP-facilé
+(NP-easy). Dacé o problemé respecté a doua condipie dintre cele doué din deﬁnitie7 problema este
+NP-diﬁcilé (NP-hard).
 
-1-11.... 111...... 1km .... .1... .1... .1 ..... 11...»...1... 11.... 11.1) ..... WM... 11.
-mm... 5,111.. s11. as“. mums...
+Primele probleme despre care am aﬁat cé sunt NP-coniplete (Cook, 1971) sunt variatii ale
+problemei SAT (e.g., SAT, 3-SAT, CIRCUIT-SAT):
 
-“1...... 1 (cm 11.11. 1.111.... .m "1, MM...
+Theorem 1 (Cook, 1971) Problema 3-SAT este NP-completd.
 
-p.11... .1 .1... .1. um- m.1 nan-.1111... 1......111... .1. “.11....- 1k 1.11.... 1 11....
-1.1.1.... y i NP 1. 11.1.... .1. .1... P1.1.1.1....11. um" 1). .. .. “1.1.11. n. m.1... .1111...
-1.11.1 1.1.1.1.... .1 1...»...1'. m"
+Pentru a aréta cé 3-SAT este NP-completé7 partea diﬁcilé este reprezentaté de Itemul 2: orice
+problemé Y G NP se reduce in tinip polinornial la 3-SAT. De ce ar ﬁ diﬁcilé? De exemplu, fiindcé
+existé o inﬁnitate de probleme Y G NP.
 
-pm“... .1. 1... .1... .11.. 1.1... 1.. .11... i| 1.... 1.1.1.... 1......1. 1.11.1111.1.1.1.
-m. “1.1... 1 .1111»... . E "1-1.1. .1 .1.......1.....1..1|11. We... 1... .11....1... .1»...
-.1) M... 11.1.1... y. .11.... um .1...~1. ..........1..1....1111 1...... v 111,111.... .1.
-..1.......1.....1........1...1......1.1..11...1 ... ., .1...“ ,1...,¢....,...1. 1 “.1...
-..1........;.\ .. 1. ......1 .11.... .. .5“
+Demonstratia nu face parte din curs, dar poate fi u$or gisité in literaturi. Ideea este de a
+fixa arbitrar o problemé Y G NP $i de a analiza algoritmul de veriﬁcare (un algoritrn determin-
+ist) pentru problema Y, algoritin care primeste la intrare certiﬁcatul pentru Y. Algoritmul este
+echivalent cu un circuit combinatorial, care este echivalent cu o formulé propozifuionalé7 care este
+echivzilentéi1 cu o formula aﬂaté in 3-SAT.
 
-11...1...1.1................1.1.1.“.11.....111»........... .1...... 1...... 1......1...
-.1. WvanMMv ........ .1...1..... ...111..
+Din momentul in care cunoaetem deja o problema NP-completé, putern aréta c5 alte probleme
+sunt NP-complete intr-un mod mai simplu.
 
-s... ...1..11.._1 .11.... .. .m. .... WM...“
+Spre exemplu, $21 arétém c5 3-COL este NP-completé.
 
-5.1.1... .1. 1m. N... 1.. w m11.. 1.1.1.1....1... 11.... d1... n.1,... ... 1.... .11....“
-y . .11». 1...... .1 ...... l..1.1...1..11. mm. 1. 1.1.1.1. .1. 1-1.... .1 W11 M. m1“...
-11.1... 1.»...1...“ .1 1.1.11.
+Stiin deja c5 3-COL este in NP, a$adar mai réméne de arétat c5 orice problema orice problemé
+Y G NP se reduce in tinip polinornial 1a 3-COL. Ne folosini de faptul cé 3-SAT este cunoscuté
+deja ca NP-completé, gi a$adarz
 
-.11.. 1.1.1.1.... . e 1.... 1...... .. .1... 11.1....1....111 .M-r 1n
+orice problemé Y E NP se reduce in timp polinomial la 3-SAT. (1)
 
-“1...... 1......1........1...»....1..1
+Arétém (in secpiunea urmétoare) $i 05L:
 
-LSAT 1 1 col-111.111.": 1.1.1.1....1. 121
-.1. “11...... 1.1.1.... p.11...“ M. “.1111... 1......1. .. 1.. ........1.1 .1... .1...“
-y g IvP x 1cm
+3-SAT oc 3-COL(in timp polinomial) (2)
+si, deoarece reducerea polinomialé este tranzitivéi7 obfuinem ce ne intereseazé: orice problemé
+Y € NP o< 3-COL.
 
-And“ .1... .1... .1 1...... u m»... .1..........11...1.1. a... Np.w.1.....1..
-Hm 1. 1.1.1.1.... 1.1-. .1. 1...... .1... .1 .... Wm...“
+Asadar este suﬁcient $5 reducem o problemé despre care $tirn deja c5 este NP-cornpleté (e.g.,
+3-SAT) la problema despre care vreau s5 arét c5 este NP-completzi.
 
-11...... 1. ..1....1..1......1
-s SVSAT x 3.601.
+Atentie la direcpia reducerii!
 
-w. 1. 1...... 111... 1.. 1 er
+8 3-SAT o< 3-COL
+Fie o formulé cp aﬁaté in 3-CNF.
+Construim in timp polinomial un graf G cu proprietatea c5
+4p este satisﬁabilé ddacé G este 3-colorabil.
 
-11...... ...11....11...........1...1..m...11.1......1....
+1echivailenté in sensul in care réspunsul la problema SAT este acela$i (i.e., echisatisﬁabilé)
 
-“4...... .. m. 1... W... . m... ~11 w u... 1.. .............
-v1.1-..1..11..111.1111.1..11M... 1 v1.1.1... .1.....1..1.:.
+Universitatea Alexandru Ioan Cuza 9 Varianta preliminaré
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-pmmmmw WM CW. v (Mm “MM
-all‘ \
-/..\ (.2 a T
-,
-“U ‘ﬁt t" \l")
-/ \ \
-r * ‘ W w.
-j
-p Pmul 1,
-1n amt lmbnum ulc um wan“ dm nnmgm wt pnnu 1 mﬂnn ammunc, (kwmt mm
-Mum.““MWMM ¢,.¢Wm.m,..,My.\g.,..h..mm.
-m M. T‘ m. c. , m wk... “W 1
-r‘ mm“ W MM
-o Pnsul '2'
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+
+Observapi c5 efectuﬁm calcul intr-o singuré directie, dinspre formulé spre graf, dar avem de
+demonstrat 0 dublé implicatie.
+
+Construirn graful G a$a cum este ilustrat in diagrama de mai jos:
+
+a TRUTH GADGET
+° VARIABLE GADGETS
+[pentru fiecare variabilé
+propozitionalé)
+CLAUSE GADGETS
+(pentru fiecare clauzé)
+
+Constructia grafului se poate face in trei pagi.
+
+f Pasul 1.
+
+In primul rind, cream un triunghi cu trei noduri speciale: T, F $i O:
+
+I i l TRUTH GADGET
+
+in orice 3-colorare, cele trei noduri din triunghi vor primi 3 culori distincte, deoarece sunt
+adiacente doué cétte doué. Féré s5 pierdem din generalitate, vorn numi T culoarea nodului T, F
+culoarea nodului F $1 O culoarea nodului O. Cu alte cuvinte, dacé un nod a: a1 grafului are aceeaGi
+culoare cu nodul T, vom spune c5 :0 este colorat cu culoarea T.
+
+Acest triunghi se numegte truth gadget. Culoarile T 5i F vor reprezenta cele doué valori de
+adevér. Culoarea O (other) este folosité pentru a forta nodurile adiacente 55L ﬁe colorate cu T sau
+F , reprezenténd valori de adevér.
+
+o Pasul 2.
+
+Universitatea Alexandru Ioan Cuza 10 Varianta preliminaré
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
-Pmmu Awnmhr (nunvu) <1"va V (l'mbkm thnvlﬂc)
-1k
-‘\ z‘ 4 \ .ﬁ
-1"» c» 0 :1
-Fm MM dc m» W m a". M m. MW wk mm.
-i ,/
-L4’ mm.‘
-“weMMWm“mmMommmmrm
-WMMWMMW .. vmmmm
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+Adéugém céte un variable gadget pentru ﬁecare variabilé propozitionalé din formulé (51:1, x2, . . . , w”):
+a TRUTH GADGET
+o o o 0 VARIABLE GADGETS
+... (pentru fiecare variabilé
+propoziticnalé)
+0 0 0
+Fiecare astfel de variable gadget consté din doué noduri, etichetate cu numele variabilei
+propozitionale $1 cu negatia variabilei, legate intre ele gi cu nodul O:
+% TRUTH GADGET
+I'l/H. ‘I
+\ /
+VARIMLE GADGET
+I" —:1 1
+\__/
+Deoarece cele doué noduri sunt adiacente cu nodul O, pot ﬁ colorate doar cu T sau F:
+a a a TRUTH GADGET
+; ; a a VARIABLE GADGET
+~x1 1x1
+Fiind adiacente 3i intre ele, nodurile xi $1 ﬁxi sunt obligatoriu colorate cu valori de adevér
+opuse:
+Universitatea Alexandru Ioan Cuza 11 Varianta preliminaré
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:12**************
-FMMAWW Wm“) CW. v (mum "MW
-é E/ mm
-mmmmmmw
-‘i "mm
-IPMUIJ
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+TRUTH GADGEF
+VARIABLE GADGET
+In urma Pasului 2, existé o bijecpie intre atribuiri de valori de adevér $1 3-0010rérile grafului.
+De exemplu, atribuirea
+{x1 r—> 0,13 r—> 0,333 »—> 1,...,a*n r—> O}
+este reprezentaté de 3-c010rarea de mai jos:
+TRUTH GADGET
+VARIABLE GADGETS
+... (pentru fiecare variabilé
+propoziticnalé)
+Iar 3-colorarea de mai jos:
+TRUTH GADGET
+VARIABLE GADGETS
+... (pentru fiecare variabilé
+propoziticnalé)
+corespunde atribuirii {x1 '—> 1,3172 |—> 1,123 |—> O, . . . ,atn |—> O}.
+
+0 Pasul 3.
+
+Scopul Pasului 3 e de a forgia ca 3-colorérile posibile $21 reprezinte doar atribuiri care satisfac for-
+mula. In acest scop, pentru ﬁecare clauzé, adaugém un clause gadget. Pentru a nu supraaglomera
+diagrama de 1a Pagina 10, este reprezentat un singur clause gadget7 pentru clauza —\a:1 \/ x2 V —\a:3.
+
+Scopul ﬁecérui clause gadget este s51 calculeze valoarea de adevir a clauzei 5i este alcétuit din
+doui triumghium'.
+
+Universitatea Alexandru Ioan Cuza 12 Varianta preliminaré
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-“Wm-M WM cm. v (mum "MW
-"n M.WMWW...10R Mm. M mm. M Km Mm M
-mm “ml. MW. M m." m.“ MM, “mm... mm Mm.“ X
-my
-‘ /
-\A (R
-Q j
-M m. M“. R ,1 m Mm. T‘ t. MW“. M.
-‘U, ‘1/
-\ K :\\\
-WNW
-/'< , a’ f, , ‘
-w v»; Hf) O,’
-e‘ k
-//
-/
-h. m G. ml m, Wm M...“ X M y mm m, [MM
-“mm Md“, 1W. cm .1 www.mm
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+Un triunghi simuleazé 0 poarté OR. in diagrama de mai jos, nodul R poate ﬁ colorat doar cu
+culoarea aferenté disjunc§iei logice intre valorile de adevér corespunzétoare culorilor nodurilor X
+$1 Y:
+D2105 fortém nodul R sé aibé culoarea T, ca in diagrama de mai jos:
+atunci prin conectarea acestuia cu F $i O, celelalte doué noduri din triunghi trebuie 5:1 aibé
+culoarea F gi O:
+in acest caz, cel putin unul dintre nodurile X $1 Y trebuie six aibi culoarea T:
+Universitatea Alexandru Ioan Cuza 13 Varianta preliminaré
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:14**************
-Pmuuu Mgmhmlwr (IMHMI) (1"va V (hublmu NIMA/mulﬂﬂ
-f 3 / .' / 3
-‘ x' l. 1 5 J
-M h X s‘. m. M r. h. R Mm W Mm
-\
-K I
-é
-Fm W M m... D WW." a m W Mm MM i.‘ m M
-MMNWMM W M hm.“ "W W m. M v Y, V v.1
-“mm MM“, 1W. cm u vmmdum
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+Cazul in care X 5i Y au culoarea F , iar R are culoarea T este imposibil:
+I‘.
+g 7
+Fiecare clause gadget conﬁne 0 inléntuire a celor doué triunghiuri, calculdnd in acest fel
+disjunctia, logicé a celor trei literali (ilustrat mai jos pentru clauza 11:1 \/ $2 \/ wing):
+Universitatea Alexandru Ioan Cuza 14 Varianta preliminaré
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-11111111111111.11111111111111 11.11.1'1111111 1111111111
-g ! \ \
-f \ \g)
-\ )_(\
-g, /
-f» //\
+Proiectarea Algoritmilor (2021-2022) Cursul V (Probleme NP-complete)
+\x}~x1 v x2 v ~x3
+
+Deoarece in graf avem Cate un clause gadget pentru ﬁecare (:lauza7 31colorarile grafului sunt
+in bijectie cu atribuirile care fac toate clauzele din formula adevarate. In acest fel7 graful este
+3-colorabil ddaca formula este satisﬁabila.
+
 9 Concluzie
-1 1 11111111111 1.1111 111111.111
-1 1 111111111“ 11111 11111111111
-4 EULERVTOL'H Lin ['1 u NAAIIL'IONIANVTOLH [NPVHIIIIMMPO
+Foarte multe probleme de optimizare combinatoriala care apar in practica sunt NP-complete.
+
+Desi nu au reusit sa demonstreze acest lueru, cei mai mulpi informaticieni cred ea nu exista
+algoritmi polinomiali pentru problemele NP-complete. Din acest motiv, in cazul in care intalnim
+0 problema NP-completa, nu are sens sa cautam 0 rezolvare polinomiala i trebuie sa abordam
+problema in alte moduri (e.g., folosind algoritmi de aproximare7 euristici, algoritmi exponentiali,
+algoritmi polinomiali pentru cazuri particulare).
+
+Atenpie! Exista multe perechi de probleme aparent similare care sunt (probabil) in clase de
+complexitate diferite. Iata cateva exemple:
+
+1. SHORTEST-PATH (in P) vs LONGEST-PATH (NP-completa);
+
+2. 2-SAT (in P) vs 3-SAT (NP-completa);
+
+3. 2-COL (in P) vs 3-COL (NP-completa);
+
+4. EULER-TOUR (in P) vs HAMILTONIAN-TOUR (NP-completa).
+
+Problema GI (graph isomorphism i dandu-se cloua grafuivi7 sa se determine daca sunt de fapt
+acelasi graf, doar ea nodurile au potential alte nume) joaca un rol special deoarece este una dintre
+putinele probleme pentru care nu a fost gasit pana acum niciun algoritm polinomial si nici nu a
+fost demonstrata a ﬁ NP-completa.
+
+Universitatea Alexandru Ioan Cuza 15 Varianta preliminara
 
 ***************Ending Page***************
 

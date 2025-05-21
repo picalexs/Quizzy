@@ -1,172 +1,200 @@
 ***************Beginning Page***************
 ***************page number:1**************
-—
-Compulmg (he Wit case nme comwexuy
-M WM
-M... ‘15“‘”;"7""' QT“?
-PA 2021/2012
+Computing the worst case time complexity I
+
+Dorel Lucanu
+
+Faculty of Computer Science
+Alexandru loan Cuza University, lasi, Romania
+dlucaaninfo . uaic . ro
+
+PA 2021/2022
+m r51 - '= :E QQO
+Computing the worst case time complexity PA 2021/2022 1/15
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-—
-rm ml: mduda sunk hmlsw m w mm m mm use
-mnmun m h. .wmm mm in m
+These notes includes some hints on how to compute the worst case
+execution time for algorithms written in Alk.
+El 5' i E :5 QQG
+Computing the worst case time complexity PA 2021/2022 2/15
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
 —
-Campulmg the wmst case me camplexlty 1/3
-I A n an eXDIenlM E when: (vacuum {amonlnml cal‘:
-mm : "aw-mum”) WWW“) : n» <= kw w
-. A r! an augment x Z E‘
-YAA/v] Z Yuk/v,
-I An1£(575\ nu 5x
-m1"): max(Tx._Arv]»7§,_d1"l)+ mm)
-I A A a seq-mm‘ mmlmmnn 51 é
-TMM] Z 75‘ ‘(71] + T5141")
+Computing the worst case time complexity 1/3
+0 A is an expression E Without function (algorithm) calls:
+TAG/(n) : max{timed(|[E]|(0)) l sized(a|va,(x)) : n} (a kind of)
+o A is an assignment X : E;
+TA7d(n) I TE7d(n)
+0 A is if (E) 51 else 52:
+TA,d(n) = max{ T51,d(n), T52,d(n)} —l— TE,d(n)
+o A is a sequential composition 51 52:
+TA,d(") I T51,d(") + T52,d(")
+i:| r51 2 E :5 {JQCV
+Computing the worst case time complexity PA 2021/2022 3/15
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:4**************
 —
-Campulmg the wmst case me cnmplexlty 2/3
-. AW mvaw: \Inslm:\wn(el,uhxh, my amy .n
-awmﬂmmcn can he son-Fund
-. Mm 1 (mm “WNW,
-. MM .k M m W WM I, m. mm u,
-. m. mm Z v. * * 1W.
-. Mm 2 4mm awn-mm,
-. MM WWW“ "m, MmMM,‘
-. W ‘k M. “mm .1 Mm“ mm“!
-mm», M1 m, mm», 1M
-. M Y. .1") Z w" x w»
+Computing the worst case time complexity 2/3
+0 A is an iterative instruction (e.g.,while, for): only an
+approximation can be computed
+o solution 1 (better approximation):
+o compute the maximum number of iterations nMax
+0 compute the worst case time complexity for each iteration, say
+T1, . . ., TnMaX
+o take TA,d(n) : T1 + . - - + TnMaX
+o solution 2 (coarser approximation):
+0 compute the maximum number of iterations nMax
+0 find the worst case iteration and compute the worst case time
+complexity for this iteration, say Tim/13X
+o take TA,d(n) I nMax >< Tit/Wax
+Computing the worst case time complexity PA 2021/2022 4/15
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-—
-Campulmg the wmst case me cnmplexlty 3/3
-. Mm m m (M Wm m!
-. - q,
-mm . 0,1 < 1 “no, NA) // 1 1. a m.“ n“
-5 . , ~ “my.
-. . ‘ﬂyin-
-m.“ X An . 1/ . u . m
-n (X m 1 Z n) . Z . u mmmsmn.
-v“.- haw w when m :bmwemy Mm» mm“.
-. Mm. (“mm”) an;
-. m.“ Wm damn“ Wm “Mm” m u“,
-. we Mun m Mm “M mm MM, (a. m
-mm m a, m "Mm
+Computing the worst case time complexity 3/3
+o Atention to the cases of lists, sets, ... :
+s = O;
+for(i = O; i < 1.size(); ++i) // 1 is a linear list
+s = s + l.at(i);
+s = emptySet;
+forall X in a // a is a set
+if (X Z 2 == O) s = s U singletonSet(X);
+You have to mention the complexity of each operation.
+o Function (algorithm) calls:
+o estimate the size of arguments as a function depending on the size of
+instance n
+o use the worst case time of the called algorithm computed for the
+estimated size of the arguments
+Computing the worst case time complexity PA 2021/2022 5/15
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
 —
-Campulmg the wmst case me cnmplexlty m Wm.“
-. Muym “NM a! ‘5 m
-. my . m afwvalwm are awysd (= 1‘ WWW‘
-mm“)
-- m Mm m“ 0mm mum) sum: m used w we
-Hummus ‘.1, rm”)
-Rm“
-0mm Z um \ (a: > IL'h z mm z "WWW s ¢ VWH
-“W, Z um \ e: > M Z 01M z mHW-H z ¢ vmw
-B<r1»u:<n~mzq.q » M, z w» z m1‘: V1»Hs\x(~l\s q 1w
+Computing the worst case time complexity in practice
+o usually the uniform case is used
+o only a part of operations are analysed (e.g., comparisons,
+assignments)
+0 the function classes O(f(n)), Q(f(n)),9(f(n)) are used to give
+approximations for TAO/(n)
+Recall:
+0(f(")) I {g(") l (3C > OM10 2 OXV" 2 "0)lg(")l S C‘ lf(")l}
+90%)) : {g(") | (36 > Omo Z 0W" Z "0)lg(")l Z C - lf(")l}
+90%)) I {g(") l (561,62 > OM10 Z 0)(V" 2 no)¢1~lf(")l S |g(")l S (12- |f(")l}
+Computing the worst case time complexity PA 2021/2022 6/15
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-—
-Example 1 1,2
-Wm m9, ,ikmwm
-W W mph?” ‘mmqhn.
-ml. um \- x) and (x < n-l)
-1 - m,
-n z-m - 11 m - 1,
-.1“ PM - 4;
+Example 1 1/2
+input: n, (ao, . . . , a,,_1),z integers.
+mini a-:z ifia-Iz Q)
+output: poz: { I I } { I _' }7é ’
+—1 0therw1se.
+i = O;
+While (a[i] != z) and (i < n-1)
+i = 1+1;
+if (a[i] == z) poz = i;
+else poz = —1;
+El 5' i E :5 QQG
+Computing the worst case time complexity PA 2021/2022 7/15
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
 —
-AME/Sm Examp\212/2
-
-. mum“ “NM.
-. squzn mm n
-- analysed WWW mum"; MW.‘ my He...“
-. u. mm as! l mm m: tlmeml mm n- 1 w M m m.”
-. = ‘MW lzumvinmn
-- ‘benumbevafwunmiwmemmux ~71
-. h m, w m! M1 mt 7ALH]:[H’1)+1 1,.
+Analysis Example 1 2/2
+0 type of cost: uniform
+o size of an instance: n
+o analysed operations: comparisons involving array elements
+o the worst case: z occurs ﬁrst time on position n — 1 or does not occur
+in a
+0 a while loop: 1 comparison
+0 the number of iterations for the worst case: n — 1
+o execution time for the worst case: TA(n) : (n — l) + 1 : n
+cl 51 2 E :2 Q1\Qv
+Computing the worst case time complexity PA 2021/2022 8/15
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-—
-Example 2 1,2
-mm n (A, 3.7.) mum
-WM mmiqmmggnrn
-nx - ‘m,
-n:(1:1;1 ( m w)
-,1 um > m»
-m Z .m:
+Example 2 1/2
+input: n, (a0, . . . , an_1) integers.
+output: max = max{a,- IO g i g n — 1}.
+max = a[0];
+for (i = 1; i < n; i++)
+if (a[i] > max)
+max = a[i];
+El r51 i E :5 QQQ
+Computing the worst case time complexity PA 2021/2022 9/15
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
 —
-AME/Sm Emma 2 2/2
-
-. "mm/w“ umlmm
-. ﬁlm mm“ :mgnmmu ‘Wm; my ‘km-m
-. m. mm as! , .i mm,
-. = mecnv 1mm.“ Wm ‘[11 > mp
-- ‘Mnumhevuﬂwaxmnﬂwwewm use ~71
-. axlcuhnntxmlkwth! mm! T,[n|:[n71)+1 :n
+Analysis Example 2 2/2
+o type of cost: uniform
+o size of an instance: n
+o analysed operations: assignments involving array elements
+o the worst case: a is increasing
+0 a while loop: 1 assignment (always a[i] > max)
+0 the number of iterations for the worst case: n — 1
+0 execution time for the worst case: TA(n) : (n — 1) + 1 : n
+cl 51 t E :2 QQCV
+Computing the worst case time complexity PA 2021/2022 10/15
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
-—
-Mm‘; Examp\e 1 1 3
-mp.” "2mm"
-MW sum Z 3;“
-..... Z n.
-m u -1, ‘ <- h; v-n
+Analysis Example 3 1/3
+input: n Z O integers.
+,, .
+output: sum : 2,21 I
+sum = O;
+for (i = 1; i <= n; ++i)
+sum = sum + i;
+El i5‘ ' _= IE ‘)QG
+Computing the worst case time complexity PA 2021/2022 11/15
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:12**************
 —
-
-AME/Sm Emma 1 2/3
-. ‘we Mm“ “NM.
-. squzn mm n
-- analysed Wm"; MW.“ \mn'umg u.
-. u. wars! me m“ ‘5 a», me Wm ‘5 n»: mm. m n»:
-
-mm 'wab‘:
-
-. = Mm 1mm."
-- m "my =r mm w m: mm :2“ n
-. mummumk mans: um: n
+Analysis Example 3 2/3
+0 type of cost: uniform
+o size of an instance: n
+o analysed operations: assignments involving sum
+o the worst case: there is only one case, which is the worst and the
+most favorable
+0 a for loop: 1 assignment
+0 the number of iterations for the worst case: n
+o execution time for the worst case: TA(n) : n
+cl 51 2 E :2 oqo
+Computing the worst case time complexity PA 2021/2022 12/15
 
 ***************Ending Page***************
 
@@ -174,58 +202,71 @@ mm 'wab‘:
 ***************Beginning Page***************
 ***************page number:13**************
 —
-AME/Sm Emma 1 2/3
-. W 0/00“ ‘my-M» w wahlem we‘ WM w 0mm“
-. um mm m: w-
-. ﬁlm swam; :mgnmmls Mm m
-. m. mm m! n Z 1M (m mum mm. mm“ {m he
-mm, mamxmed M m ms)
-- a rm» “mm-K
-. u. Mm Dr mm h m mm m: n : 2m
-. elezwwv wn: w m: mm use mm) : 2"
-[m (mum! my") “km. mm mum: hum...“ m ‘w m
-Wm»
+Analysis Example 3 3/3
+o type of cost: logarithmic for problem size, uniform for operations
+o size of an instance: m I log n
+o analysed operations: assignments involving sum
+o the worst case: n : 2"Pl (the biggest natural number that can be
+binarily represented on m bits)
+o a for loop: 1 assignment
+o the number of iterations for the worst case: n : 2m
+o execution time for the worst case: TA(m) I 2m
+Exercise: Compute TA(m) taking into account the logarithmic time for the
+operations.
+Computing the worst case time complexity PA 2021/2022 13/15
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:14**************
-—
-may“ Emma 0 1/2
-mm n a 4w, h, . Mex
-WW! s Z m 5.. n1 R mm“ m h
-“Tl-x | Wm“)
-) \
+Analysis Example 4 1/2
+input: D a digraf, i0 a vertex
+output: S I the set of vertices reachable from i0
+P : emptyMap;
+foreach i from D.V
+Pli] : DAll];
+SB : <i0>;
+S I {i0};
+while (SB.size() > O)
+{ i = SB.topFront();
+if (p[i]1size() I O){
+SB.popFront();
+ilse {
+j = p[i].topFront();
+Plil-POPFrontO;
+if (In in S>>{
+// visit j
+s : s u {J};
+SB.pushFront(j);
+}
+}
+}
+El 5' i E :5 ‘)QG
+Computing the worst case time complexity PA 2021/2022 14/15
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
 —
-Ahab/s‘; Examme 0 2/2
-
-. w Ml Mm
-
-. 5mm mm n: n vmu
-
-. 15mm"; mud! WWW»! z 0m Wm wpﬂwvtlll : 0m
-m4! mmmmy : 0m m4; J my : om‘
-
-. WW Own-W a“ W. MWMW
-
-. xiv-am w: M1 mm : M w a»: u winemvapﬁ]
-
-. mum 0m WW u.“ m m 1°. ,H Z D ,H ‘5 on;
-
-. W, m mmmevmi mm m in ‘S
-pummel): n “in
-mm. wammmﬂy B om m. i“ “WWW hw m
-mm W om
-
-- “W W w». m m!
-rm) Z aﬂhamm ("in 0(1): om
-
-m m b: .n .mpkmm m m WW m
+Analysis Example 4 2/2
+o type of cost: uniform
+0 size of an instance: n I D.V.size()
+0 assumptions: time(B.popFront()) I 0(1), time(B.topFr0nt()) I 0(1),
+time(B.pushFront(j)) I 0(1), time(5 U {j}) I 0(1) 1
+o analysed operations: all those involving vertices
+o the worst case: D.a[i].size() I n — 1 for each i (a complete digraph)
+O foreach: 0(n), assuming that the time for p[i] I D.a[i]; is 0(1)
+O while: the number of iterations for the worst case is
+Z,- D.a[i].size() I n - (n I 1)
+the time for while-body is 0(1) since all operations inside have the
+execution time 0(1)
+o execution time for the worst case:
+TA(n) I 0(1) + 0(n) + n - (n — 1) - 0(1) I 0(n2)
+1It must be an implementations with these execution times.
+Computing the worst case time complexity PA 2021/2022 15/15
 
 ***************Ending Page***************
 

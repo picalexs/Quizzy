@@ -1,98 +1,117 @@
 ***************Beginning Page***************
 ***************page number:1**************
-lngineria Programérii
-Cursul 07 — 29 martie
+I I V I I
+lngmerla Programaru
+Cursul O7 — 29 martie
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-i 9 3 6
 > Alan Turing
-5 ‘On computable numbers, with an application to the
+O ‘On computable numbers, with an application to the
 Entscheidungsproblem‘
 > First code we could recognize
-= Binary
-Q Ran on electronic machines
-a Uses variables, macros, subroutines
-‘ I
+O Binary
+o Ran on electronic machines
+O Uses variables, macros, subroutines
+x 2
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-1 939
-> Bletchley Park —The ' ,1 L7 _ 7 _
-Bombe W
-> Used to crack ~ mm \
-Enigma Code igmﬂim
-> Created using 1 095W“
-electro-mechanical éWqu,
-relays ' ‘ C ,N “I;
-> Clock rate ~ 100 ' _ pg???
-' ~ A;
+> Bletchley Park — The ‘ex-r _H_ _ _ f r e
+Bombe ‘
+> Used to crack WWW .‘
+Enlgma Cede be,
+> Created usmg QQQQ
+electro-mechanical " GM‘ W0. .-
+mhw EQQQQ@&¢-
+> Clock rate ~ 100 ",_/
+~ w ~-¢¢ w,
+Q ,3’ i, I‘
+_ ¢ ' 5 ;
+3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-1942
-
 Colossus- first programmable computer
-‘m i- I ,r= .rI I ‘II,
-11?, .. *- 1! W ‘
+A |.,\‘|- - , ~ ,£9_ _- r > I
+f -no» -~.-, r“! u ' "
+M 4
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-1945 — Design of ACE
+i 945 — Design of ACE
 Designed by Alan Turing
 Worked in base 32
 Used Cathode Ray Tubes for memory
+." i '1.“ __:_
+' - w
+R 5
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-w . . .
-
-v ~1- L’ ‘ ,1},v\!;:I~::::-‘i"§v ‘ "'5' "o'."
-
-V t y ‘ ~ J
-‘ 6
+I; . "' 8-. . 0’
+X ' / 1’ ’ ' ‘ '- Q
+"'w ' ' ‘I ‘ '2‘ ' ~' ‘En’. ° .0-
+I I!“ I ' ,“ﬁﬁ§"__. . ' - '13’ ;, ~ _ Q d
+‘I ‘ ‘J ~ -‘ ‘ q.- _¢ ‘ ‘Z. g "ti. ‘2? .\ .‘\.- 0x . I I . . I "'1 . l I
+' " ‘LL-"a" ,. 7*" :11 WW!" '3',‘ 'F".'"'i ~ .4 o
+"7“ ' ‘i1-"=»"»a,'~1"i' .Zz-‘g.3.fi?'-n-a*§.§.iﬁ.309," _9‘,~_ o ‘,é 'i-
+‘Sin’, ,‘nl'i__I,-§?1,i," {if.-'f.,-'r~=vl-¥u_,|;'i;\§f- b l’! l‘$"_ .‘ ; Y
+"~- ' v’? -."*- . "J ".j ‘PUB-,u .~ ,' 1 °' ’ 0* . 2‘ 4
+' éi-q-"w it?‘ M‘ - 4». Jiffy; .~ .' . ‘ad-q" ' . -' |
+va.,, ‘W.--- -' . 1-55 n.‘ f ' 1 ,
+.fi‘l\' '-;1~¢.: I‘ "59)’? V l“ " 'l-.|,‘l .I".‘ J f. ~ .‘\..\:‘.3..‘ I’. _ P l.‘ I:
+I "~ ‘I I. . "r . I‘...‘II_"\".'.Q:“A‘ \‘Q J‘. " t‘ ‘I ‘ | ‘ ‘.a I . I‘
+I’ i "Q n,‘ L... “\ 0.,
+/ ' -
+‘nr_/ . ,4'“ .-
+\ ' ~ ' "
+x 6
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
 i 945 — What we have so far
 > Turing writes code
-5 Uses binary base 32
-Q Uses add and not
-= Floating point
-=' Subroutines
-Q Stack (for data and subroutine return addresses)
-5 and many more
+O Uses binary base 32
+O Uses add and not
+O Floating point
+O Subroutines
+O Stack (for data and subroutine return addresses)
+O and many more
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:8**************
 i 945 — What we have so far
 
 > “We shall need a great number of
-mathematicians of ability", “there will
+mathematicians of ability”, “there will
 probably be a good deal of this work to be
-done" — Turing, Lecture 0n the ACE
+done” — Turing, Lecture 0n the ACE
 
 > “One of our difficulties will be the
 maintenance of an appropriate discipline, so
 that we do not lose track of what we a re
-doing" — Turing, Lecture 0n the ACE
+doing” — Turing, Lecture on the ACE
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
@@ -104,124 +123,116 @@ doing" — Turing, Lecture 0n the ACE
 
 ***************Beginning Page***************
 ***************page number:10**************
-i 9 5 0 — AC E
+i 950 — ACE
 > One of the first working computers
-5 Vacuum tubes for processing
-u 12 Mercury Delay Lines for memory (audio)
-= 32 instructions/words of 32 bits per line
-=' Frequency ~ iMhz
+O Vacuum tubes for processing
+O 12 Mercury Delay Lines for memory (audio)
+O 32 instructions/words of 32 bits per line
+O Frequency ~ iMhz
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-19505-The Memory Problem
-> Memon/ is expensive
-a 1*10$ perBlT
+iQSOs-The Memory Problem
+> Memory is expensive
+01-1051; perBlT
 > Cheaper versions: Magnetic-core memory
-1 Y v | v v s
-a = gag-mmamm
+i r 'i-i .
+mﬂzumm
+f1:99;!;£§2;1;1;i "1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-z W m A WW W A swim-an 54M Rom Wm»,
-
-( 1W WE Mm W" 5. mm 1W - --- r
-
-( MW V M Wm M 5. M WW , '
-
-t 1W Em WW mm; ourw/T (m 1 1N ms (Wm mm _
-mu mm m 5, 5m, 1A. m. n
-
-Km would (215)
-
-t WWW, M 5W a; M m6 I]; A mm;
-
-z My as mm M m Mun swL so M [W run W, mu
-
-,u. n (m m 777, m
-
-1v: 1F no 717. 177, 7v!
-
-1M 1F (WWW 777. 771, W;
-
-m n ("dour 777, 777, 799
-
-‘7* 510v . r
-
-z usma mm mm M (mm; w
-
-( W M ms WW;
-
-5 L PM; “A . m ¢ K) ,r 1 n
-AREA - 5mm s ~ <5 flOAYFUIU)'(5'FLDIYF1IBUa _
-. <54mmm>> WT“. 1,13
-In!“ WW WE 5v 501, n. n. K. Am ~.__ﬁ1u.,_h...q._,.‘ ‘ “LL
-
-"1 FM‘ (4" A: .1294 a: ,3,“ I: JEAN AREA: ,HH 2, ' 'l'““‘"' w-H \ ‘Hm-u!
-. mm“ W5» -. :::11:.:t1‘1.; ‘ 111.11,:221112
-w- " -..!1:-'.1.':. ‘ ‘ 1‘ ;.::11:.I.1211:|
-
-‘ v;
+1953 — Fortran
+c AREA 0F A TRIANGLE WITH A STANDARD SQUARE ROOT FUNCTION
+c INPUT - TAPE READER UNIT 5, INTEGER INPUT ll" V --=-- V _ . . ‘ . . . _ --~
+c DUTPUT - LINE PRINTER UNIT 6, REAL DUTPUT E ‘ ‘ F»
+c INPUT ERROR DISPLAY ERROR OUTPUT CODE 1 IN JOB CONTROL LISTING _
+READ INPUT TAPE s, 591, IA, IB, IC
+591 FORMAT (315) 1.111.1111111.111.IIIILII.IIII.IIIlIlIlIIILlIIIIII.IIILIII.II.IIII_III1111.11
+c FURTHERMDRE, THE SUM 0F Two SIDES 0F A TRIANGLE > , - T- ~ A - - - I ~
+C MUST BE GREATER THAN THE THIRD SIDE, $0 NE CHECK FOR THAT, TOO :l::::::::::l:::::III::1::::11::1:2:111:11:Sill:IIIILZII:IIIILIIIIIIIIII
+794 IF (IA+IC-IB) 777, 777, 795
+795 IF (IB+IC‘IA) 777, 777, 799 iiiiij'ii""‘i'iiiijii'iiiii'ﬁi;i'iii":j:iijjii'iiiiijijiii‘iiii""1"i“ii
+c USING HERDN'S FDRHULA WE CALCULATE THE
+c AREA 0F THE TRIANGLE
+799 S = FLOATF (IA + IB + 1c) / 2.0
+AREA = SQRTF( S * (S - FLOATF(IA)) * (s - FLOATF(IB)) * ___ _ ____
++ (S - FLOATF(IC))) {KILLIJYLW _ .. _zi* 7:3
+HRITE OUTPUT TAPE 6, 601, IA, IB, Ic, AREA r" J“,,,,,'-_.,fy,.,,,lj,jh"'1Iu'm; ,f,I,‘,,,.,,,>,,.,.,,,,,m,.,:'n';-'t
+591 FORMAT (4H A= ,IS,5H B= ,IS,5H c= ,IS,8H AREA= ,F19.2, l» :‘imi-TIiFiH-‘i7113??IY 1 . "1-??‘11177-‘1-‘T373773i6
+v0 I." ¢>lmv _ ' < I ‘I Hun ~ I. |
+EN” ;,_'_‘_ ;.I.!.LT~.....Y.T.... . . . .I . .. ......III.1'...IIIII|
+~ -' urn-nu ||---.-~ T IIAI 1...?“
+‘I ‘I'IQ .'.'1.‘.“"""|ll'l"'“" - ~ ~ I ~ T-mhunul'u-nll
+‘ 12
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-i 958 — Functional Programming
+1958 — Functional Programming
 > John McCarthy — LISP
 
-r (defun factorial (n)
+O (defun factorial (n)
 
-“ (if (: n O) l
+o (if (I n O) l
 
-= (* n (factorial (— n i)))))
+o (* n (factorial (— n l)))))
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-19505
-In this decade, IBM sold 140 computers
-Fortran
-LISP
-'Er-E£¢£I IrgmiLcTe ‘idiié?
+In this decade, IBM sold I40 computers
+Fortran ' ‘ ' _ .
+LISP ;
+"""T'__ mT-éaiFTE-mlmlkh;‘fp f'i :—
+1; *' '1‘ II;<5_1!.T—' *PJEP? , II 7 {A ‘ ~
+I s: 1W ‘ w “Q” . I»
+I “m 14
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:15**************
-i 960 — What We Have so Far
-> Computers in the world: 0(1e2)
-> Programmers in the world: 0(1 e3)
+i960 — What We Have so Far
+> Computers in the world: 0(1 e2)
+> Programmers in the world: O(i e3)
 > Programmers were:
-Q Mathematicians
-a Engineers
-Q Scientists
-Q Etc.
+O Mathematicians
+O Engineers
+O Scientists
+O Etc.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-The Great Invention —
-
-The Transistor
-More than 10000 IBM 1401 cornputers sbld in’
-the1960$
+The Great Inventlon -
+The Tran5|stor
+. ,,' " A Awe  l§  ~ “him
+More than 10000 IBM1401-C0m'pute'r'550|d- ih
+i the 19605 '
+2- imal Machine
+\ V ’ my 16
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
 l 965
 
-> Computers in the world: O(le4)
+> Computers in the world: O(l e4)
 
-> Programmers in the world: O(l e5)
+> Programmers in the world: 0(l e5)
 
 > In less than 20 years, the number of
 programmers increased by a factor of
@@ -235,97 +246,99 @@ were experienced, disciplined professionals
 ***************Beginning Page***************
 ***************page number:18**************
 1 966
-> IBM produces IOOO IBM 360 each month
-¥
-_ »~ 4
+> IBM produces 1000 IBM 360 each month
+Pa‘ IJI
 4
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-1966 — S|mula 67
+i966 — Slmula 67
 > First object oriented programming language
 > Created by Ole-Johan Dahl, Kristen Nygard
-t Objects
-= Classes
-Q Inheritance
-= Virtual procedures
-Q Garbage collection
-* etc.
+O Objects
+O Classes
+olnherﬁance
+o Virtual procedures
+O Garbage collection
+O etc.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-i 968 — GOTO
-
-> Edsger Dijkstra {73-5
-(physicist) - (301'0 ‘#11 f -,
-Considered Harmful i _ w
-
-v Beginning of r “3-‘7 {,1 '
-structured_ V k WE
-programming \ ' ‘g;
+> Edsger Dijkstra ,7“:
+(phySICIst) — GOTC) (,0, ~,
+Considered Harmful \ ’
+> Beginning of r a “ 7f; j
+structured s W I
+p rog rarn mi n g X " _, '1;
+‘ 2°
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
-i 968 — C
-Ken Thompson, Dennis Ritchie, mathematicians
-_ i / if i
-i ‘ ,
+Ken Thompson, Dennls thchle, mathematICIans
+‘IQ ‘5% ,n ,* if)‘
+(M ‘,4 _, ,w ’ . ‘A? I. F!‘ \w 'T-pizuul lI
+\ ‘X f | ' , , |:_4-_-_—::::‘ '
+I "-1 4 ~ ,,_ m1 7 — ‘.
+.- l !;_l~=-°' “-—~i~
+5k £2;- > -»
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:22**************
 l 970
 
-> Computers in the world: 0(1e5)
+> Computers in the world: O(l e5)
 
-> Programmers in the world: 0(1 e6)
+> Programmers in the world: O(l e6)
 
 > Tens of thousands of CS and EE graduates
 (among the first series)
-Q All were young
-= Almost all male
+O All were young
+o Almost all male
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
 19705
 > Until now
-6 Programmers were disciplined
-u Didn't need much management
-= Could manage their own time, work in groups and
+O Programmers were disciplined
+O Didn’t need much management
+O Could manage their own time, work in groups and
 communicate
-a They understood deadlines
+o They understood deadlines
 > They used a form of Agile development
-u Agile is the process used by disciplined
+O Agile is the process used by disciplined
 professionals in the wild
-‘ 1,
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-i 970 — The Waterfall
+1970 — The Waterfall
 
 > Young, inexperienced programmers, need top
 down supervision
 
-> Average age of programmers drops by iO
+> Average age of programmers drops by lO
 years
 
 > Winston Royce describes the waterfall
 development model
-= an example of a flawed, non-working model
+O an example of a flawed, non-working model
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
@@ -337,7 +350,7 @@ exponentially (roughly doubles every 5 years)
 > Tens of millions of programmers
 
 > Half of them have less than 5 years
-experience
+expenence
 
 ***************Ending Page***************
 
@@ -349,9 +362,10 @@ What Changed
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-What Hasn't Changed
+What Hasn’t Changed
 > Software
 
 ***************Ending Page***************
@@ -363,40 +377,37 @@ i 99 5
 > Original programmers start retiring
 
 > First generation of career programmers are
-now about 40 years old
+now about 4O years old
 
 > These career programmers foresee the need
-for change
-Q Scrum — Schwaber, Beedle, DeVos, et al.
-a XP — Beck, Cunningham
-Q FDD a Coad
-= Crystal — Cockburn
-
-‘ I“
+forchange
+O Scrum — Schwaber, Beedle, DeVos, et al.
+o XP — Beck, Cunningham
+o FDD — Coad
+O Crystal — Cockburn
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:29**************
-Mmmm M Agilk smwm Dev elupment
-w: me \mcovenng Mu ways nfdzvrlnymg
-soﬁWum by domg n ma hclpmg 0mm do 1r
-
-Through um “m w: hm came m mm
-Individuals and inleractions our precesscs and K0015
-Working suﬂwarc ovcrtm'npnicmiw: documentation
-Customer cullsboration W Mm “gunman
-Responding m change over mun“ mg a pm.
-ml ,5‘ ml! \herz ,5 val“! m n“ {\Emsnn
-the nghl, We vulva the “ms mum lcﬁ mow.
-
-Kem Mk ram (wrennmg Rnhm c \lamn
-MM mm Jun lhghsmuh Sm E lvlelldr
-Am u“ Bennekum Andmw Hum Ken Srlw an"
-Alulmr Cockbunu Run “mm my smkmd
-Wad ( munughaln m‘ Kain Dave Thomas
-Mmm | 1m M Bnml Mum)‘
+lWanifesto for Agile Software Development
+We are uncovering better ways of developing
+software by doing it and helping others do it.
+Through this work we have come to value:
+Individuals and interactions over processes and tools
+Working software over comprehensive documentation
+Customer collaboration over contract negotiation
+Responding t0 change over following a plan
+That is, While there is value in the items on
+the right, we value the items on the left more.
+Kent Beck James Grenning Robert C. Martin
+Mike Beedle Jim Highsmith Steve Mellor
+Arie van Bennekum Andrew Hunt Ken Schwaber
+Alistair C ockburn Ron Jeffries Jeff Sutherland
+Ward Cunningham Jon Kern Dave Thomas
+Martin Fowler Brian Marick
+‘
 
 ***************Ending Page***************
 
@@ -417,24 +428,26 @@ Agile Requires Discipline
 
 > Agile is NOT a process
 
-> It is a set of promises
+> lt is a set of promises
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
-Extreme Prog ramming
+Extreme Programmlng
 > The most technical
 
-ﬂ TDD
+o TDD
 
-Q Acceptance tests
+o Acceptance tests
 
-= Simple design
+O Simple design
 
-=' Refactoring
+o Refactoring
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:32**************
@@ -443,17 +456,16 @@ Agile
 > Turing mentioned discipline
 
 > Agile is about
-~ Discipline
-= Craftsmanship
-= Professionalism
+O Discipline
+O Craftsmanship
+o Professionalism
 
 > Business understands discipline but does not
 understand computer programmers or our
 disciplines
 
-‘ n
-
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
@@ -474,12 +486,13 @@ increasingly engineering in nature
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:34**************
 Bibliography
 
-> All images and examples courtesy of Robert
-Cecil Martin and Wikimedia Commons
+> All images ancl examples courtesy of Robert
+Cecil Martin ancl Wikimedia Commons
 
 > Robert C. Martin, Engineering Notebook
 columns for The C++ Report
@@ -487,4 +500,5 @@ columns for The C++ Report
 > Robert C. Martin, The Future of Programming
 
 ***************Ending Page***************
+
 

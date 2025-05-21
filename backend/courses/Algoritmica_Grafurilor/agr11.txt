@@ -1,44 +1,45 @@
 ***************Beginning Page***************
 ***************page number:1**************
-mammmn
+23 decembrie 2022
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-g Mucni n. m, ‘mu Mn. mm. w- Baiun
-- mm Hamlhm
-. thlmu mmbmlimxuhn
-g mam. mumm “pm
-. m Mnnd
-. mm... Mun-1“ Aimnmu a. salami and!
-g My. Pm. .M a... mm“ “mu
-I Anni Aliontwul 1“. M" (demaaﬂfillﬁ)
+a Reduceri in timp polinomial pentru probleme pe grafuri
+o Probleme Hamiltoniene
+o Problema comis-voiajorului
+a Abordéri ale problemelor NP-hard
+o TSP Metricé
+o Colorarea nodurilor: Algoritmul de colorare greedy
+a Exercigii pentru seminarul din urmétoarea séptéméné
+a Anexé: Algoritmul lui Christoﬁdes (demonstratie)
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-[mm 121121514 ZCH
+(Karp, 1972) SM <1: CH.
 
-WWW n. G Z (v.5);11 Z a = mm . plablenm 5M
+Demonstratie. Fie G I (V, E) §ij E N 0 instan'gé a problemei SM.
 
-v“ mm. 1.. mp mum: (.de 1, n Z v7 m m; H mu
+Vom construi in timp polinomial (relativ 1a n : \V‘) un graf H astfel
 
-m m: b ,.. mm mun: 5 m r: S ~] M 5, “W M H
+incét existé o multime stabilé S in G cu |S| Z j dacé §i numai dacé H
 
-ZZZ Mm.“
+este Hamiltonian.
 
-PMZZZ, 54,.“me >n<mmmmﬂmkm¢1
+Fie k: = n — j. Si presupunem cé k: > O (pentru a evita cazurile banale)
 
-11) Fm A Z ('11. M‘ I w) u mumme cl k d: nodun mmnrze
+(i) Fie A : {(11, a2, . . . , ak} 0 mul'gime of k de noduri distincte.
 
-(mm. rm. mm, Z Z W Z 5(a)‘ mum mm
-c; Z mm w v; Z (mm “(wxwm
-Z. 2; Z ([WJMWJMH ws(u.v).!:ﬁ) u
-(Kwl‘1101.‘.3)‘(n.z‘31(v‘:.l)‘[maillwmﬂhlw:.E)(v‘=‘4))
+(ii) Pentru ﬁecare muchie e : u'u 6 E(G), considerém graful
+G2 I (VLEQ) cu Ve/ I {(111,621) I w G {UM/Lizﬁi}
+§i Eé : {(w,e,z')(w,e,i+1) : w€{u,'u},z':ﬁ} U
+{(u, 6,1)(11, e,3),(u, 6,3)(11, 6, 1),(u, 6,4)(11, 3,6),(11, 6,6)(v, 674)}
 
 —
 
@@ -46,90 +47,107 @@ Z. 2; Z ([WJMWJMH ws(u.v).!:ﬁ) u
 
 ***************Beginning Page***************
 ***************page number:4**************
-mennmﬂ: (:ununuilﬂ
+Demonstratie (continuare).
 
-Cvniulueﬁvpllﬂlmd, mm“ \m "hum". a unul ym-hmm
+1; (11.671) (17432) (11,123) (11,124) (2126(5) (“(2,6)
 
-wuizn,HJimun-ddnmewdunll [Mldjﬂlw E (Wm-:ﬁ
+11, (1L (2,1) (11,P,2) (11,,(2,3) (1142(4) (21,6,5) (11,436)
+Graful are proprietatea c5, dacé este un subgraf indus a1 unui graf Hamil-
+tonian, H, §i nici unul dintre nodurile (w, e, 2') cu w E {1140} §i z' : 2, 5
+nu are algi vecini in H, atunci singurele posibilitéti de parcurgere a lui
+G; pe un circuit Hamiltonian sunt:
 
-nu m up vmm m n, nuncn mum Mhﬂnlu d: lexlele l 1m
-
-a; Pl m um.» “Mm m.
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-w ﬁ
-Dummuﬂhe [mm 1mm] Anld, M cucmtul Humdwnun “Mm
-m a; vim-m ma mum-“M m. u an‘ $.11 m. (m M); “m,
-“Phnegw lulu! G‘, d: “amen! pnnn'un nod wleipmnnd lm n
-(“.1 Pm“. in.“ m1 u E v, mm“, Um. mam. mama)
-muchnle madmlzin a cu u e,- : mm»: : wm .1; : W,
-w Z Mu), m EC:([u‘zf‘6](1L1X“_,J) ‘Z m) $-
-sc‘ :<~(u.zr.n‘w.z:.w - ‘:m
+a b c
+g g ﬁ
+Demonstra'gie (continuare). Astfel, dacﬁ circuitul Hamiltonian “intrﬁ”
+in Gé printr-un nod corespunzénd lui u ((u, e, 1) sau (u, e, 6)) atunci
+
+“p5r5se§te” graful G; de asemeni printr-un nod corespunzénd lui u.
+(iii) Pentru ﬁecare nod u G V, considerém (intr-o ordine arbitraré)
+muchiile incidents in G cu u: ef I uvl, e; I U112, . . . , a; I uvp
+(P z dG(u))' F16 E1’: I {(11% 8256Xu1 agilil) 3 7; I W} §i
+E5’ : {ai(u, e1‘, 1)7 (ii-(11,, 65,6) : i: 1, k}
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-13mm» ‘mum-‘1 an...‘ n ... m1 - M (U w) n
-.5:
-Elmzw E;)U(Uw;mq) Wyihhmmmm
-c m-myﬁmma (‘Q-5'1.’ .
+Demonstragie (continuare). Graful H are V(H) : A U (U Vé) §i
+eEE
+E(H) : < U E2) U < U (ELI U ESQ) Evident, poate ﬁ construit din
+eEE uEV
+G in timp polinomial (in n)
+(me/{,l) (uweﬂl'ﬁ) (Ir,e;;,l) (11,6l121,6) (71,651) (1L,B;,6)
+{A.A A.A ‘.4
+\_
+a1 (1k H
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Dmmm (mmm) Am um.“ mm a mummmm
-G n. “1 Puhn ’ nadun a“: n mm, m H me Hamllwman
+Demonstratie (continuare). Acum arétém cé existé o multime stabiléi in
 
-w um u a“ MM“, .mm mm c m cum-t Mm...“
-m H MM A m a mm, mu m H‘ A dump“! m...“
-c mend k Alumunmlundmuncw DNHJYMN‘ .um
+G cu cel putin j noduri dacé §i numai dacé H este Hamiltonian.
 
-m DWI .... “Mm,” 0+1 Z W (M m, “mumm
-1“. H, Mm“ a Wm.‘ m m ,_ p! an» dm v, a [W 1;»,1)
-m “Magma”: 1mm E v
+”<:” Dacé H este Hamiltonian, atunci existé C un circuit Hamiltonian
 
-mp: asuﬂa, D.“ n mm m mm“ cg m. c}, an n n
-Mnmnmm mdwmmmm \... W um Wm“ Mum
-RH, Vi mm {mum “WM mm.“ Wm, mm
-m 1mm: M mm a: mm “mum wmpmmor 1m v,
+in H. Deoarece A este o multime stabilé in H, A descompune circuitul
 
+C in exact k drumuri intern disjuncte: Dai1 mg, Dai2 [11.3, . . . , Daik U41.
+
+Fie Datj “5+1 un astfel de drum (j+1 = 1+(j (mod k2))) Din constructia
+
+lui H, urmeazé c5 primul nod dupé a1] pe acest drum va ﬁ (1115-, eflj , 1)
+
+sau (111], 6:26), unde p : dam-1.), vi] E V.
+
+Dupé aceasta, Daija15+1 va intra in componenta G131 sau Gép care va ﬁ
+
+pérésité printr-un nod corespunzétor lui 'uij. Dacé urmétorul nod nu este
+
+aij +1, va intra in componenta corespunzénd urmﬁtoarei muchii incidente
+
+cu vij, care va ﬁ pérésité de asemeni printr-un nod corespunzétor lui vij.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Mammy. [Mum] Wm,’ d M. d“... Di ~.. m
+Demonstratie (continuare). Urmeazé c5 ﬁecare drum Daljaiﬁl core-
 
-mum: \umnmgnl M v» E v‘ uxfd Luci! mm,“ Mm, muchmalm
+spunde unui singur nod vi]. E V, astfel incét prima §i ultima muchie a lui
 
-PM,“ m» mm»? ‘2L leiw'm w , : 1 u u: mm‘
+Daijaijﬂ sunt a¢](v¢j,e:1j,1:), aij+l(v¢j, @ZZJJI), cu t I 1 §i t’ I dg(’U¢J-),
 
-z:l,z':ﬂnul:dG[I/y].f:Lz:5,z':l
+1::1,a3':6saut:dg('uZ-J), t’:1,:1::6,:v':1.
 
-Unneu! =5 nodunie w mm mm
+Urmeazé c5 nodurile 21¢] sunt distincte.
 
-W v' Z (mm ,M 1km c... mummmnwmm
+Fie V* : {1111, viz, . . . , wk}. Deoarece C este un circuit Hamiltonian in
 
-H‘ mm; =1, v: E E, rm“ m. mm um, m, tnvemu! G;
+H, urmeazé c5, Ve E E, existé un drum Daij alj+1 care traverseazé G2,
 
-mu mu: v E V‘ mudmt cu z V
+astfel existé v G V* incident cu e.
 
-ms: V\V'emamu!§\m:nabluinGgl s Z,
+Deci S I V\ V* este o multime stabilii in G §i |S| I j.
 
-Asllnl‘ m. mm a, am H s»: mm“, Mm m G m1 a
+Astfel, am arétat c5, dacé H este Hamiltonian, atunci in G existé o
 
-mm nub“: n. 1 mm.“ ,, mm", 1, SM mm. mm“ (Q1;
+multime stabilé cu j noduri §i réspunsul 1a SM pentru instanta (G, j)
 
-em m
+este da.
 —
 
 ***************Ending Page***************
@@ -138,133 +156,149 @@ em m
 ***************Beginning Page***************
 ***************page number:9**************
 —
+q‘!
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-5mm...1E...=......E>“=~ Emmy“... mm... I. SM P...’
-m. "mm. a‘, an: a.‘ m... and! s. . mu"... mum]: m a cu
-‘5w: mugs”. s E. m. v~E wk“... M
-swam... m 1-1 pent!" a“... E E W E E‘
-. E... a... .m... d... Eu... {E1 m c; (...E............J a“: w . E
-V.
-. am... a... m... m ... c; (M... m. my m. .. E v' ..
-1/ E v'
-. m... a... n... (1) ... c; Mm... m. w.) M .4 v~ .. . E
-V.
-... m...“ mm... M... m... mugs... mm... Em. $.11.
-[v.-Ll‘.ﬁ)lw:1“.ll.i.(v..l," ..5)[v1.4;‘.l). mﬂpmh.‘ (HIP:
-..(..1>.p=......E hk
-a... E. .. m... ...E ... m... 14......“ ... H u
+Demonstratie (continuare).”:>” S5 presupunem c5 rﬁspunsul 1a SM pen-
+tru instanta G, j este da, astfel existé SO o multime stabilé in G cu
+|SO| >j. Existé S Q SO cu |S| :j. Fie V* : V\S : {111,112,...,'uk}.
+Considerém in H pentru ﬁecare e I 1w E E:
+0 cele doué drumuri din cazul (c) in G2 (desenate mai sus) dacé u, 'u G
+V*.
+0 drumul din cazul (b) in G2, (desenat mai sus) dacéi u E V* §i
+'u §§ V*.
+0 drumul din cazul (a) in Gé (desenat mai sus) dacé u ¢ V* §i 'u E
+V*.
+La reuniunea tuturor acestor drumuri adiugém muchiile ai(vi, 6;”, 1),
+(U11 651,6)(111, 85111));10”: eglla6)(viz 653 l): (vi: 851,6)ai+12 ( C11 p I
+dg('UZ')), pentru i I 1, k.
+Ceee ce se obtine este un circuit Hamiltonian in H. D
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Tuvalu"! Samman mum" T5)‘ Du a : [w s) \m 51am a a ,
-.= ahm“nmammmmmmmd= Sixedcwmmzun
-emu". Harmhnmam HM n x mm Mam pe mucmﬂe 1m a‘ n a!
-mm (Mm Wm mm», Hanullumznz ale 1“. cw
-mum-1 Gwibeﬁumwmiuddmtzwmﬂme. murmur,
-Mlﬂccu nllllllllmb‘ E, dummmm mm min» hm“ .1 “mm
-plutzuﬁxmnmchuwéﬁ‘ dKuv] :MmppmuMm.‘
-ankle 1‘ p 1/.Fxx1mi un an; u m 1m cuumul nmum H.
-mm“ m m. 1cm m an vim-unm- Bmd. m mam
-(cu ww- 1m w) w uu n van: PIKIIIF un mmlbwlllﬂ mm
-a.“ Q, n Mum“.- in nu
-Azranh wk pram,» m m. “ma mm"; we nphmlﬁie NF
-mm
+Traveling Salesman Problem - TSP Dat G : (V, E) un graf §i d : E —>
+R+ o functie de pondere nenegativa pe muchiile sale, sa se determine un
+circuit Hamiltonian, H0, a. i. suma ponderilor pe muchiile lui HO sa ﬁe
+minima (printre toate circuitele Hamiltoniene ale lui G).
+Fie graful G poate ﬁ o retea constand dintr-o multime, V, de ora§e im-
+preuna c cu o multime, E, de rute directe intre ora§e, functia d oferind,
+pentru fiecare muchie m) E E, d('u,v) : distanta pe ruta directa intre
+ora§e1e u §i 'u. FiXand un ora§ de start v0, circuitul Hamiltonian HO
+reprezinta cel mai scurt traseu care viziteaza toate ora§ele exact odata
+(cu exceptia lui v0) pe care il poate parcurge un comis-voiajor plecand
+din v0 §i intorcandu-se in v0.
+Aceasta este probabil, cea mai studiata problema de optimizare NP-
+hard!
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Cumlﬂdm urmlwuu hmuhl: “mum . um whim:
-TSP an» n V n <7. ,~ 11w .1 cum >1 ,5“ >4‘ ddu'num m
-urulv'. Kmmm a,‘ m Kr,‘ m 41m) mm p-an mum
-Hmlmhumznz m 1m K" wk
-4w.) Z E its)
-k M,
-Dan! mm a‘ 1): can uehme q reloivEm TSP nu we mm wmllkt
-m 1m.“ Pukm mnudum: mm.“ 1m m a Fondue (an: mm
-M E 1 ‘ 11nd: M ‘ m mi] my
-Aceut-l at: 1mm. Bluhkma m mm‘ a mum! umﬂzll
-(Md) w“ mm»: pmm m1 c: m- m dig!‘
-In mm meIHImu mp l “=4: mum, m (mldzn am E
-M mm 5.‘... mm I
+Consideréim urméitoarea formulare echivalentéi a acestei probleme.
+TSP Dat n E N (n 2 3) §i d : E(Kn) —> 1R+, s5 se determine un
+circuit Hamiltonian, H0, in Kn, cu d(HO) minim printre toate circuitele
+Hamiltoniene ale lui Kn, unde
+d(HO) I Z d(e).
+e€E(H0)
+Dacéi graful G, pe care trebuie s5 rezolvém TSP, nu este graful complet
+Kn, atunci putem introduce muchiile lipséi cu 0 pondere foarte mare,
+M E Rim uncle M > {VI- max d(e).
+e€E( G’)
+Aceasta este formularea problemei TSP simetrice, o problemé similaré
+(asimetricé) poate ﬁ consideraté pentru cazul cénd G este un digraf.
+in studiul complexitétii timp a acestei probleme, vom considera d(e) E
+N, pentru ﬁecare muchie e.
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-mamas-‘m. muaum
+Problema de decizie asociata este
 
-wrsr
+DTSP
 
-1m...“ m :\ h. 711‘ .1 sum $1 B‘ \
+Instanta: n E N (n 2 3), d : E(Kn) —> N §i B G N.
 
-imam: “mud-wtmmuwm, “mum..- 1 4w.) < a’
+Tntrebare: Exista un circuit Hamiltonian, H0, in Kn, a. i. d(HO) g B?
 
-cu v mp
+CH g P DTSP.
 
-Dmnm“ m z; - mm (w - n) c mug-pawn!
+Demonstratie. Fie G : (V, E) (| V| : n) o instanta a problemei CH.
 
-cmmwwmwmmmm .1 ElK-IQNpBEII,
+Construim in timp polinomial o instanta, d : E(Kn) —> N §i B G N,
 
-. wblmm my mm mm emu m. :ucun MW m K‘ a:
+a problemei DTSP astfel incat exista un circuit Hamiltonian in Kn de
 
-mmmmgwymwcwwumm“
+pondere totala cel mult B daca §i numai dacé G’ este graf Hamiltonian.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-F" ' .. dacwweﬂﬂl
-El C] 4(2) Z l, adml‘ dam! n mm dam! G m \m mum; Humimmm
-$145‘;
-4:26:44
-My’
+Fie c
+1, daca 'u'w 6 E(G) .
+d : i B : .
+('uw) { 2, daca 'uw G E(G) §1 n
+Atunci, exista in Kn un circuit Hamiltonian de pondere g n daca
+§i numai daca exista un circuit Hamiltonian C in Kn astfel incat Ve G
+E(C) d(e) : l, adica, daca §i numai daca G’ are un circuit Hamiltonian:
+(41%‘
+A»!!!
+<1Q~A
+' v
+‘9%?
+A!
+Weight 2
+G weight 1
+Urmeaza ca TSP este o problema NP-hard. B
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-0 ‘Mm mm .m .= (“mam m ‘1.1mm d. am...“ A‘
-m .l mum-4:‘ m nmp pal-mm mm ﬂecm mm“ m
-mum“. 14mm.“ u‘ mm Km WW= “Mm...” u,
-Cahtahu iPmmnlm w." ﬁ Mm.“ {ulumd mam. "M
-d[HA]
-RA 1v, : n. ,i
-K “rm! 9’ 4‘ W mm
-RA 7 m; Rm]
-mm, mm; d: WWW A um m mm M n, m ﬂmiﬂ
-D... Wm. M ‘mm a: PM“. 4 m “mum, (mm; a R‘
-a! ﬁe m! Em h [c1 a: mum u u Nahum and! a m Mal m»
-m Wm“ mm
+O abordare posibilé este s5 considerém un algoritm de aproximare A,
+care s5 construiascé, in timp polinomial, pentru ﬁecare instantﬁ TSP,
+un circuit Hamiltonian H A a1 lui Kn, 0 aproximare a solutiei optime H0.
+Calitatea aproximérii poate ﬁ exprimaté folosind urmétorul raport:
+d H
+RAW) I SllP M
+d:E(Kn)A]R+,d(HO);éO d(H0)
+RA : sup RAM).
+n23
+Evident, algoritmul de aproximare A este util numai dacé R A este ﬁnité.
+Din nefericire, dacé fundgia de pondere d este arbitraré, condi'gia ca R A
+$5 ﬁe ﬁnité este 1a fel de diﬁcilé ca §i rezolvarea exacté a TSP. Mai precis,
+avem urmétorul rezultat:
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-m . . m w M... Wu...“ cu m. a m. v... .. m...
-Wm...
-5mm...“ m: A .... “5...... .1. mm. ... m... Mum... ...
-R“... Emukshumlmiu$k
-m. c r w.s1..............-...........hcn D... . . v, a...“
-mm“... .1 m“; _ n M...“ p...
-7 1. m W E m)
-
-4.... , { .ﬂ. W , E...
-Mm», c m. MM...“ m: .. m .1... 11.. “1.... m...‘ .
-W... \nslang: . 1w, mm»: 4m.) Z ..
-
+Dacé existé un algoritm de aproximare in timp polinomial A pentru
+TSP a. i. RA < oo, atunci problema CH poate ﬁ rezolvaté in timp
+polinomial.
+Demonstratie. Fie A un algoritm de aproximare in timp polinomial cu
+RA < oo. Existé k: 6 N astfel incét RA g k.
+Fie G : (V, E) un graf arbitrar, instanté a CH. Dacé n : \V‘, atunci
+considerém d : E(Kn) —> N deﬁnitﬁ prin
+d(u'u) z 1, dacz:1 u'u E E(G) .
+km, daca uv §§ E(G)
+Evident, G este Hamiltonian dacé §i numai dacéi HO, solu'gia optimé a
+acestei instante a TSP, satisface d(H0) : n.
 —
 
 ***************Ending Page***************
@@ -272,44 +306,54 @@ W... \nslang: . 1w, mm»: 4m.) Z ..
 
 ***************Beginning Page***************
 ***************page number:17**************
-- Dad duh] -: km mum 4(H4) : “51:14 em upnm
-. Du! 4H,] > b.‘ itunn mm > .- IWVM‘ pumpmnnd
-I: 41-1,): m M". % < K‘ “M mm g mp1,] Z M‘
-:mmdkw '
-Uxmeu! d G em Hmuwmn dun! n Mum dun rill-IA) é km 3A‘
-{4%
-‘v 4 I
-W41"?
+Aplicém A pentru a rezolva aproximativ aceasté instantﬁ a TSP.
+o Daci d(HA) g kn, atunci d(HA) : n §i HA este optim.
+o Dacé d(HA) > km, atunci d(H0) > n. intr-adevér, presupunénd
+d H
+cé d(HO) : n, avem M g k‘, astfel d(HA) g kd(HO) : kn,
+O
+contradictje.
+Urmeazé c5 G este Hamiltonian dacé §i numai dacé d(HA) g kn, §i,
+deoarece A ruleazé in timp polinomial, urmeazé c5 CH poate ﬁ rezolvaté
+in timp polinomial. U
+(41%‘
+A»!!!
+<1QQA
+' v
+A!
+WCight 7k
+G weight 1
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Rlduclziin mud-mm’ thkma :mvﬂliiuzulm (-rsp,
-ﬁrm“:
+Teorema 3 poate ﬁ formulaté echivalent astfel: I
 
-‘karma a Wu n furmuhu “mam ante]
+Dacii P 75 NP, atunci nu existé algoritm de aproximare in timp polino-
 
-1mm:
+mial A pentru TSP cu RA < oo.
+—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-rm m TSP Mm d! mm” .1 nth/arr
-a‘ V," g vm) Mm, 4M; \ 4M) + ‘(my
+Dacéi in TSP func'gia de pondere d satisface
+Vu,'u,'w E V(Kn) distincte, d(uv) g d(uw) + d(wv),
 
-Wm ml: m. mum. pvhnnmul 4k aproxlmale A cu n4 Z 2
-Idneaaie a; a mm“ arbﬂl: pm a: M m (Ms'n a.\ 1m
-K“ ,- iw, a! . (an-km m. um.“ amuwm PM“ .1‘ h m
-mm
+atunci existé un algoritm polinomial de aproximare A cu R A : 2.
+Ideea este de a determina un arbore par'gial de cost minim (MST) a1 lui
+Kn §i apoi de a construi un circuit hamiltonian plecénd de 1a acest
+arbore:
 
-ddmnm: r1 un Ms'r i| m (Km .11. WNW WNW“
+d.ell-1er:[I].:i.]l'l5~ To 1111 MST a]. 1111 (Kn, d), // folosind algoritmul lui Prim,
 
-d]1[7n\‘ﬂll‘ﬁﬁvll|'ﬁ| ‘1M Bldmm dis‘ www.mm
+dfs( To, '01) §i ﬁe 111,112, . . . , vn ordinea dfs; // U1 poate ﬁ orice nod;
 
-m". (mu-.1 ("mm Mm)‘
+return circuitul {111, 112, . . . , vn, 111};
 
 —
 
@@ -317,69 +361,80 @@ m". (mu-.1 ("mm Mm)‘
 
 ***************Beginning Page***************
 ***************page number:20**************
-Prov!
+Proof.
 
-. Fm H. m m.» mm.“ a, m Mm ... [Km .11, (mm
-a muchle c dm a. Mm." un "box: pm»: T Z u, e, um!
-M1: awn 1K mm
+0 Fie H0 un circuit hamiltonian de cost minim in (Kn, d); eliminand
+o muchie e din HO ob§inem un arbore partial T : HO — e, astfel
+d(T) z d(Ho - e) < d(HO»
 
-- mm“. mam“. F‘ ,1 \m 1» mammal: ﬂecuremudue d:
-zxaci ﬂu: an le] : ZdU'n]
+o Consideram mersul, P, a1 lui T0 care traverseaza ﬁecare muchie de
+exact doa ori: d(P) : 2d(TO).
 
-. mnmmmwm . Mm M w :1‘:in “.1 v. Pm.
-m “sum )1 “1m. mm, whim .m um.- hlmdwnun H
+o Pastrand doar prirna paritia a ﬁecarui nod, cu exceptia lui 'ul pentru
+care pastram §i ultima aparitie, ob'ginem un circuit hamiltonian H.
 
-. P! d. m: um
+0 Pe de alta parte,
 
-m1! ‘é’ m : m1“) s 1.1m ~: mm)
-. v) .= mm a.“ my...“ mun-15mm:
+(*)
+d(H) s d(P) I 2d<T°> < MT) < WHO)-
+o (*) se ob'gine din inegalitatea triunghiulara.
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-—
+Mersul P:
+1111712:U3|U21U4|U2|U51U6|U51U21U11U71U811,711/9,177:U11U1011111111211111115317111:U101'Ul4,'U101"-’1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Cmtulhlmﬂwnlm tr
-n _ ~X~ﬂ~ “an _1_1,1_.~._,~~~»(_.~_
+a
+r/
+0 @
+4 f’ /
+‘9 e a I‘, (a e:
+l a‘ “ll
+Q ® ®
+Circuitul hamiltonian H: \
+U11U21U3ws}Q/11’4u}‘2/1U5,U6,%}J2/,%U711_78,%U91%%1110,U11,U12,}Yf,11131%}r0/,1’14,%1’1
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-(mmnamm) rm m TSP m“ do Fondue 4 “mm
-4(1411] < “w; + “Mm-1,.“ E mm mm,
-mm um! m, mm“. mm.» ‘1, llemnm A cu R4 : 3/2
-mm» m. m Amﬂ
+(Christoﬁdes,1976) Dacé in TSP functia de pondere d satisface
+d(u'u) g d(uw) + d(wv),Vu, 'u, w E V(Kn) distincte,
+atunci existé un algoritm polinomial de aproximare A cu R A : 3/2.
+Demonstratia este in Anexﬁ. |
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-n- uzwjmm vzm, ,.),§.",..mu...|m v
-Madmanmmbu-wu ‘ma-n
-4-,] Him-1 .- 1. s‘ _ (“L
-lezmldv
-1 to‘
-W“
-1~~,v~w1-n|lledl\h-P‘All$)xl minis].
-my)“
-ﬁrm-"11>m
-u-
-nmi-hn F u. 4m *2; a ~ 5, u (-0‘
-.m
-mmml-hnﬂ-mqwan
-mmw! #ﬂhihln
-=1»! F1 .1, s" ~ m, mu w ' 1‘
-m.‘
-mm
+Fie G = (V, E) un graf, V = {1,2, . . . , n} §i ﬁe 1r o permutare a lui V.
+Construim o colorare a nodurilor c : V —> {1, . . . ,X(G,1r)}.
+c(1r1) <— 1; x(G,1r) <— 1; Sl P {W1};
+for (z I 2,7) do
+j <— 0;
+repeat
+j + +;1J <— primul nod (in 7r), din Sj a. i. m1) E E(G);
+if (Eh!) then
+ﬁrst(1rZ-,j) <— v;
+else
+ﬁrst(1rZ-,j) <— O; C(75) <— j; S'j <— Sj U {1Q};
+end if
+until (ﬁrsﬂvrhj) : O sauj : x(G,7r))
+if (ﬁrst(7r,-,j) 75 0) then
+0(7ri) <—j + 1; Sj+1 <- {7n}; x(G,7r) <—j + 1;
+end if
+end for
 —
 
 ***************Ending Page***************
@@ -387,161 +442,168 @@ mm
 
 ***************Beginning Page***************
 ***************page number:25**************
-s: “bum I, MW a! an,“ Mm a! Wm .m a». m. m.
-dear \VA[G] time“: z! XIGW i 1+ MG)
-m1, mm, d, mm mm n= Wm, d, “W gm
-PM Wmmmmam WWW ﬁe GMWW
-a.“ mm my.“ mpmn Km “Mm h m. m MU
-(y, 1, M, Pm, mm m...“ “I, =1‘
-$11 $11
-‘ 4,, ‘
-‘ )‘4 )‘4
+S51 observﬁm c5 numérul de culori folosite de algoritm nu este mai mare
+decét 1 + A(G). Urmeazé c5 9((G) é 1 + A(G).
+x(G,7r) numérul de culori returnate de algoritmul de colorare greedy,
+poate ﬁ cu oricét mai mare decét x( G). De exemplu, ﬁe G graful ob'ginut
+din graful complet bipartit Knm, cu multimea de noduri {1, 2, . . . , n} LJ
+{1’,2’,... ,n’}, prin §tergerea muchiilor 11’, 22’, . . . , nn’.
+1 1'
+\\,// , \\,//
+2 \\V/) 2 \M»
+@M QM
+\,/§,A/ \,4,»/
+M's , We‘
+4 1w 4 1w
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-D“; K Z (mum. mm')‘ atuncl ﬂgontmul do whnle gaedy
+Dacé 1r I (1, 1’,2,2’, . . .,n,n’), atunci algoritmul de colorare greedy
 
-MW“; cm Z cm‘ {[2} Z [m Z 1‘ 4..) Z cm Z n MM
+returneazé 0(1) : C(l’), 0(2) : c(2’) : 2, C(n) : C(n’) : n. Astfel,
 
-xiGa] : n, P: an: x161: 2
+x(G,1r) : n, pe cénd x(G) : 2.
 
-p: d: ,m PM‘ mn- M.“ m; a‘ cm: w “mm 1 a new“,
+Pe de alté parte, pentru orice graf G, existé o permutare 7r a nodurilor
 
-nl: .md mac xw, ,; Z “a;
+sale astfel incét x(G,1r) : 9((G).
 
-MW“ l: s.‘ s]. ‘sxic, <m=|= dZ mhrm m 1mm WM“ a?
+intr-adevér, ﬁe S1, $2, . . . , SX(G) clasele de colorare ale unei coloriiri op-
 
-umk, mm mm in.“ s, Z.“ a mm...“ nah“: mm,“ [mam
+timale, astfel incét ﬁecare Si este 0 multime stabilé maximalé (relativ
+1*1
 
-h Mum) ... c Z U s, v.5 1 a Pam-m m mm. a mam.“
+la incluziune) in G — U Sj. Fie 1r o permutare care induce 0 ordonare
+4:1
 
-um! men nodnnle 31;, m oldmu Minus a culonlm k1! Axum‘
+astfel incét nodurile ainar in ordinea crescétoare a culorilor lor. Atunci,
 
-1m‘ 11 Z xm)
+X(G,1r) I x(G)-
 
-0 condl'ge ruﬂclent! Pentru coremmdmﬂ illonlmuiul 4e whim
+O conditie suffcienté pentru corectitudinea algoritmului de colorare
 
-5'an
+greedy:
+
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-M M E E H v, \ WWW “M m‘ Mm) <
-
-ﬁvstlwlil m ardunarea ﬂat! d: 1‘ avem ﬁanwJJV E i‘, nunu
-
-XIGJ] XIII)
-
-M o...“ (mm .1 mm“)
+Dacé, V'u'w € E §i Vj < min{c(v),c('w)} astfel incét ﬁrst('u,j) <
+ﬁrst(w, j) in ordonarea daté de 1r, avem ﬁrst(w,j)'u E E, atunci
+x(G,1r) = x(G)-
+:
+Proof. Omisé (dar propusii ca exercitiu).
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-amm- a: M n- w." amaum am) u unnllm w n mm
-muhll 1m: Wm“ Mud am \m mm mm. mm»
-mu min-Dal m a’ “ﬂan
+Conditia de mai sus poate ﬁ testaté in (9(m) ca un ultim pas a1 algorit-
+mului. Dacé este indepinité, atunci avem un certiﬁcat pentru optimali-
+tatea numérului gésit de culori.
 
-Man: d: m. nu n p6.“ dunmm: uand a Gui mm“
-mm m 1m‘ Mums» Z “(c1 s 1(a) Pldnahlpaﬂe‘ .-
-I": “mum”. s pumu an xKG! “my nae uhllxu .1‘ m‘
-Flmumitﬁldlgm'ﬁ'mnﬂylmmhuwunnhlhnmm'hgiadm
-(mum!
+Teorema de mai sus se poate demonstra aréténd c5 daci conditia
+enuntaté are loc, atunci x(G,1r) : w(G) g x(G). Pe de alté parte, se
+§tie cé existé grafuri G pentru care x(G) — w(G) este arbitrar de mare;
+pentru un astfel de graf G nici o permutare 1r nu satisface conditia din
+teoremé.
 
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-mum! 1 Mmmle (Inclunv m "mm lurmak & n mm m
+Exerci'giul 1. Regiunile (inclusiv cea inﬁnité) formate de n cercuri in
 
-phn pm 5 cumin cu dmll (“Jan anld ca dnui rcnum cm zu in
+plan pot ﬁ colorate cu douéi culori astfel ca douéi regiuni care au in
 
-wrnun \m arc d: ME [Menenﬁ xi i: comm: dliem
+comun un arc de cerc (nedegenerat) sé ﬁe colorate diferit.
 
-5mm! 1 m‘ G L [m1 m m; M um.“ mm am...“
+Exercitiul 2. Fie G : (V, E) un graf féré circuite impare disjuncte.
 
-mm‘. d G m! 5mm
+Aréita§i c5 G este 5-colorabil.
 
-Elmiuhu] 3 Penlru \m gal eh: H dcﬂmm grad“! medu- ca villi)
+Exerci'giul 3. Pentru un graf dat H deﬁnim gradul mediu ca ad(H) :
 
-2 SUI]
+i. Pentru un graf G, gradul medlu max1m este
 
-i Mn.” a‘ c, MIMHW.“ .m
+\V(H)\
 
-Mm w “
+mad(G) : max{ad(H) : H subgraf indus a1 lui G}
 
-male] : mixhdw] H luhxnlmdm al \m G)
+Fie k: > 3 un intreg. Arétati c5, dacé un graf G are numérul cromatic
 
-m k P 3 m mg mm, Q, am m gm! a m mm mm
+strict mai mare decét k iar gradul séu mediu maxim cel mult k, atunci
 
-m. m. m ﬁx» k m 5mm 1:" m... mm m mm k, .mm
-
-G mun: m my.‘ mm Mum
+G contine un subgraf indus k-regulat.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-mm.” §
-(a) Mink z: ms: Inf 7w» mm» [9: nodun] cu AIG) +1 unlan
-“,1 ledemm “mm den-ma mmmmmﬂmmdm,
-m, 5,.‘ mum n. .. Mm
-colorl a» {
-u (N51 Q m M
-more“; mu nudunle ha G w (MG) + l) mum ml,
-11x
-ﬁe 321E VIC) a I dcha) :AIGJ'
-mm .0 u. .1 mm m;
-:daleawi mum, h“ [Mama m a“: suiwn um‘
-<7 l <7 [(mhi Nclml)‘
-mum),
-m1 .| 1
-Am»; d “Mm.” a; m, ".- kluqle um] um
+Exerci'giul 4.
+(a) Arﬁta'gi cﬁ orice graf poate colorat (pe noduri) cu A(G') + 1 culori.
+(b) Considerém urmétorul algoritm recursiv pentru colorarea nodurilor
+unui graf 3-colorabil cu n noduri:
+color(G) {
+if (A(G) g W) then
+coloreazé toate nodurile lui G cu (A(G) + l) culori noi;
+else
+ﬁe $0 G V(G) a. i. dG(a:0) : A(G);
+coloreazé $0 cu 0 culoare noué;
+coloreazé nodurile lui [NG(:BO)] G cu doué culori noi;
+G <- G — ({550} U NG(1‘0));
+color( G);
+end if }
+Arétaigi c5 algoritmul de mai sus folose§te (QM/H) culori.
+—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-mm.” 5 amt.“ mm...‘ Mm,
-3.. CW
-1mm o “.“mmmm x‘ mummmmm. MM I
-m. m» k
-Mm x pm n MW W a M h .umm d“ r"
-0mm “mam. hmnmd (a: u, “4,1 Pm... mm.“
-Mel plobleme
-r .7 z‘
-whu: (3: E X nawvcm dz Y’) do
-ﬁg x‘ um; n. m, W...“ m a: mm, “mm,
-7' ‘ F‘ U UL)‘
-“A m;
-Mm r‘
-Mm. 6.1.‘: m m, ‘mm m. “Mm. PM.“ i I." r‘ Mm
-mum“! dc m. m. relurnul! u lubhmme m cel mull minn .“b.
-m1 m. n Z x
+Exerci'giul 5. Considerém urmétoarea probleme:
+Set Cover
+Instan'gé: O multime nevidé X , 0 familie de submul'girni ale lui X: J: I
+{X1,...,Xp} §i k: €N*.
+Tntrebare: X poate ﬁ acoperit cu cel rnult k submul'gimi din F?
+Considerém urmétoarea heuristicé (de tip greedy) pentru rezolvarea
+acestei probleme
+F’ <- Q;
+While (Elm E X neacoperit de F’) do
+ﬁe Xi din J: cu un numér maxim de elemente neacoperite;
+I’ <- F/ U {Xi};
+end While
+return F’;
+Arétaigi 05 dacé m este cardinalul unei subfamilii optime a lui F, atunci
+algoritmul de rnai sus returneazé 0 subfamilie cu cel rnult mln n sub-
+mul imi n : X .
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-memu! s m G : ME) m, um“ n mun u m much)! o
-mam? m q‘ .1“) i “durum 1“. a m. hm...“ w u. d.’
-gralul c. Mum d.“ a pm: mluzmru Mm much“ w cu an“!
-lump-W» m1 '15in s ml E v
-m MM- “n au'wnlm we 5: mm: m cl“ + m) w a‘ are a
-mime ‘(imam-m Pﬁllh'u m A K w
-(h) mm. ignnmul a: m. m pzmm a Mum m nu“ +
-mHngvl] nuleul
-am) Z min“ E h c m n “dam. $m1l9mii)
-m Axlta'ddame UMG area mm“. Munlor c“ mm ‘um
+Exercitiul 6. Fie G : (V,E) un graf cu n noduri §i m muchii. O
+ordonare {$1, 11:2, . . . , run} a nodurilor lui G este k-mérginité dacﬁ in di-
+graful G, obtinut din G prin inlocuirea ﬁecérei muchii minty» cu arcul
+$min{i,j}1$max{i,j}2 avem darn) é k,V m € V‘
+(a) Descrieti un algoritm care s5 testeze in (9(n + m) dacé G, are o
+ordonare k-méirginité, pentru un k € N*.
+(b) Folosigi algoritmul de mai sus pentru a determina in (9((n +
+m) 10g n) numérul
+0(G) : min{k E N : G are o ordonare k-mérginité}
+(c) Arétati céi orice graf G are o colorare a nodurilor cu o( G) +1 culori.
 —
 
 ***************Ending Page***************
@@ -549,145 +611,175 @@ m Axlta'ddame UMG area mm“. Munlor c“ mm ‘um
 
 ***************Beginning Page***************
 ***************page number:33**************
-“Wu-.1 1 L'n wan M putt“ mm.” Mm m w
+Exerci'giul 7. Un algoritm greedy pentru colorarea nodurilor unui graf
 
-“(mm-“mm mmdhmnrmdmmdm
+G I (V, E) este urmétorul: mai intéi, alege o D-ordonare a nodurilor
 
-v : (mm. and‘ -. =., ‘clml 2 40M] 2 > Mm), le
+V : {111,112, . . . , vn}, i. e., dg(v1) 2 dc;('u2) Z 2 dc;('un), apoi
 
-“Mumm=mmmudmmamh,mlmw
+11¢ prime§te cea mai micé culoare nefolosité de vecinii s51 deja colorati.
 
-Cumldulln “mm mum ﬁg an“
+Considerém urmétoarea problemé de decizie
 
-JCCOL
+BGCOL
 
-mum a : iv‘ m u" gray
+instanigii: G I (V, E) un graf.
 
-mum“ A]: n n urwm a . {mm a: m. m Mums»: “1
+intrebare: Are G o D-ordonare a. i. euristica de mai sus folose§te cel
 
-mm 3 uﬂmﬂ
+mult 3 culori?
 
-mm. c! may. i, mom.
+Arétati c5 3COL <1: 3GCOL.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-5mm“, a m a Z [v1]“ 5pm- v Z (m ,n) ,. um) Z
+Exercitiu18. Fie G : (V; E) un graf cu V : {l,2,...,n} §i w(G) I
 
-1 Deﬁmm m yd mu ma] wmdulm nmlune dulunzm .1... G
+2. Deﬁnim un graf nou M (G) considerénd reuniune disjuncté a lui G
 
-u. K, _ [a ‘a... Mm“! uh: “My, 1', ‘my y. mugs“! mm
+cu K1,n (a cérui biparti'gie este ({0}, {1’, 2’, . . . , n’})) §i adéugénd toate
 
-muchnie (1m u’ 11 E are!)
+muchiile {i’j,z'j’ : ij € E(G)}.
 
-(i1 A:naun~[M(C)) Z1 ‘\X[N[C)):X\G]+l
+(a) Arﬁtati c5 w(M(G)) : 2 §i x(M(G)) I x(G) + 1.
 
-(n1 mm d‘ Mn. am: x1 Z ems“ 1m gwl K; m cu numhul
-mm“ y
+(b) Arﬁta'gi cii, pentru orice p G N*, existé un graf Kg-free cu numérul
+cromatic p.
 
-mm“! 9 m s a annual-n: lmmuﬁ dm n mmvm mm mm
+Exercitiul 9. Fie S 0 societate formaté din n indivizi. Fiecare individ,
 
-,Z s‘ mm, n “mum {m g S\(1)A'm'mat£ um up Mm
+2' G S, cunoa§te 0 submultime c(1L) Q 5 \ {i} formaté din a1§i indivizi.
 
-m. mdlvm mm, a a E s nu PM m 111m din wdw Junu m
+Doi indivizi diferiti i, z" E 5 nu pot face parte din ace1a§i juriu dacé
 
-m1 am... .. n {mm- P- alum Wm mm mm. Mm
+unul dintre ei i1 cun0a§te pe celéilalt (putem avea jurii formate dintr-un
 
-“m: membnl)
+singur membru).
 
-mm. c; a.“ 5Z1“ MM mm“ Z1 m.» A ﬂu We. m1 Q
+Arétati 05 dacé ﬁecare individ cunoa§te cel mult k; al'gi indivizi (\ c(z')\ g
 
-k, v‘ Z S),ah|nz1exmi = mm a: “1 mu". (u +1] Jun! dujuwda
+k, Vi E S), atunci existé o familie de cel mult (2k + 1) jurii disjuncte
 
-m mm mung: mt:
+care acoperéi intreaga societate.
 
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-mm" d. mm“ 1|!»th V Alwnmul 1“. cumm-
-m ,4 mm...‘ “mm
+(Christoﬁdes,1976) Daca in TSP functia de pondere d satisface
 
-. Mm“ 1w mummea dc mu. . 1mm mam palm: a: on»
-m a.“ Kn (mm m, mm.‘ , n a 4(4)) hm p“ u m
-mp pwhrwmul {okmnd om» Manna penml MST)
+d(m/) g d(u'w) + d('wv),Vu, v, 'w E V(Kn) distincte.
+atunci exista un algoritm polinomial de aproximare A cu R A : 3/2.
+Demonstra'gie. Fie A urmatorul algoritm:
 
-. m“: w, m mph, Mr.“ a! mum m: m “.me
-1m m Kn do Mum no nodun 41¢ um mp» din mm
-pm; a: w» mm T" (wk Pu .. w. um, Mm“. Mum
-wnce “Wm mm dummm \lmu mph] a: mum muxlm]
+0 Determina To, muligimea de muchii a unui arbore par'gial de cost
+minim din Kn (costul unei muchii e va ﬁ d(e)) (acest pas ia un
+timp polinomial folosind orice algoritm pentru MST).
+
+0 Determina M 0, un cuplaj perfect de pondere minima in subgraful
+indus in Kn de mul'gimea de noduri de grad impar din arborele
+partial de cost minim T0 (acest pas ia un timp polinomial folosind
+orice algoritm pentru determinarea unui cuplaj de cardinal maxim).
+
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-u In mulhgnlul chm-m dm \T“ u thu Pnn dual-m“; mmk
-m a," 1m q MD (5.. m,‘ ,. a. M, mm d! M w.)
-duc'nmnlﬂﬂ vnmm Emmamdm [Wu/m an.) Hmnim
-m MW. mph a! mm .M mm. a mm. m
-mm Mm.“ HA m Kn w mum dé mm. H, Z
-(w WM, M (MM mm” .K m m om)‘
-WmWmmmm m. W “gammummmhmn
+Demonstratie (continuare)
 
-W "A "M. .mm .m d.“ dz ‘hm... l“. summer;
-n. m Z M u Ha a mm mm Armm (W Cumm- k
-Mm“, c,
-v“ ) MBA, Q %dw
+0 ln multigraful obtinut din (To LJ M O) Kn’ prin duplicarea muchi-
+ilor din T0 O M 0 (este conex §i are toate nodurile de grad par)
+determini un parcurs Eulerian inchis, (1111,1112,- “41%). Eliminém
+toate apari'giile multiple ale nodurilor interne pentru a obtine un
+circuit Hamiltonian H A in Kn cu multimea de muchii H A I
+{'uj1 sz, 01-2 121-3, . . . , vjn 'ujl} (améndoué constructiile se fac in @(nz),
+parcursul Eulerian inchis poate ﬁ gésit cu algoritmul lui Hierholzer).
+
+Fie H A solutia aproximativé a TSP datii de algoritmul lui Christoﬁdes.
+Fie m : Ln/ZJ §i H0 o solutie optimé. Arétém (dupé Cornuejols 85
+Nemhauser) cé
+Vn > 3, d(HA) g 3%Tdmo).
 —
 
 ***************Ending Page***************
 
- ***************Beginning Page***************
-***************page number:38**************
-Momma“ (mammal) F“ H.1(vnmw1m M.) (mu: nu:
-n.‘ .dmmm “DMZ;
-m. w Z mm,‘ M) mum. “mum a: pm m
-~1me n < H< < m. mu
-0mm,‘ \‘Mkﬂ/mﬂ'uk'ﬂl) mm“, s'ﬂm' d! W m Kn
-Aphund m mad m» mum, mung-mm lemem 441-11 Y
-“14,1,(Wmm m.“ mm, “MM; em Mm“ a: mm m
-denM do p: muduﬂe 1m H, we ‘mac WWW: mm 1mm“)
-11mm Hummumn- W‘ Puma.” Mmmmmm“
-Pm“ m [w K". M‘ Hm s: yrempunem Zn dlM‘! < 11(le
-Dmmwduldzihzuzzlhu m‘ w. mm Q mm Q unwary
-4w’)! Z (1mm) < mummy m, a Z x. z i 1w") Z
-my“; vadnth “1/2
-—
+
+***************Beginning Page***************
+***************page number:37**************
+To AI‘)
+9 5 3
+1 1
+8
+(i
+7
+1
+
+10 4
+
+Eulerian graph 2 HA
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
+***************page number:38**************
+Demonstragie (continuare) Fie HO : {111112, 112113, . . . , Uni/1} (dacé e nece-
+sar, redenumim nodurile).
+Fie W I {vi-1, viz, . . . , 11m} multimea nodurilor de grad im-
+par din (TO>Kn, 11 < ig < < 12k. Fie H :
+{1111152, 'uizvia, . . . , U12k_1'l/1'2k, 'uizk'uil} circuitul generat de W in Kn.
+Aplicénd in mod repetat inegalitatea triunghiularé, obtinem d(H) g
+d(H0), (ponderea ﬁecérei corzi, d('u¢j 'ui] +1) este majoraté de suma pon-
+derilor de pe muchiile lui H0 care unesc extremitéigile corzii vi]. vZ-j +1).
+Deoarece H este un circuit par, poate ﬁ scris ca reuniunea a doué cuplaje
+perfecte in [W]Kn, M1 LJ M2. Si presupunem c5 d(M1) g d(M2).
+Din modul de alegere a1 lui M0, avem d(M0) g d(M1) g (1/2)[d(M1)+
+d(M2)] : (1/2)d(H) g (1/2)d,(H0). Fie a E R+ a. i. d(MO) :
+ad(Ho). Evident, O < a é 1/2.
+—
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
 ***************page number:39**************
-MWWmW
-Q Q
-Dwammmﬁ'mﬂ‘uﬁzlu1nnuﬂ‘nnmu¢dmll| cm
-{W mm Mi m; ﬁn M- W,“ E M- ,
-wwu- m m," E H‘)-
-’ ,
-I §
+Demonstratie (continuare)
+Q
+Descompunem H0 in H1 LJ H 2 luénd in H i muchiile din HO care
+conecteazé extremitétile ﬁecérei corzi din M i: (111511in E M 1' :>
+'Uij'uz']+1; . . . U¢j+1_1111j+1 E H1).
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-WWW 1%.un Dm “mm \nullihmml. mm >
-4W1, ‘ Z L2 c=| pm unul m.‘ a‘ m. m m “I mu»
-m : W21 mush“ s: Pleluyllnem == m are mm: Plbylmak
-0mm am‘: ; am‘) 2 4m“) mdUM‘ “mm cl mm
-l E H- Mam‘ “,1 4a mm
-m 1 \m album pun» mm.» dun u. nnn Mm. W. mm dc
-Wm m: szm 4m Z “1-1,; 7 $54M g “,1 7
-“1/”.wa BMW, 1w n" m“ mm dz'w» mm in K"
-madam» M4107“ m)
-lemmd ...=mm. mum-.1“: Mm
+Demonstratie (continuare) Din inegalitatea triunghiularé, d(H’) 2
+d(Mi), 2' : 1,2. Cel pu§in unul dintre H1 sau H2 are cel mult
+m : Ln/2j muchii. Si presupunem c5 H 1 are aceasta proprietate.
+Deoarece d(Hl) Z d(Ml) 2 d(MO) : ad(H0), urmeaza ca exista
+e € Hl astfel incat d(e) 2 (a/m)d(H0).
+Fie T un arbore partial ob'ginut din H0 prin §tergerea unei muchii de
+pondere maxima. Avem d(T) : d(HO) — ng?§)d(e) g d(HO) —
+(3E 0
 
-mm 2 dKTDHdIMI s awn) (1 %)¢md{hb1;
+(a/m)d(HO). Deoarece T(J este arbore partial de cost minim in Kn
+urmeaza ca d(To) g d(HO)(l — a/m).
+Folosind inegalitatea triunghiulara ob'ginem
 
-(1+ L“; ‘1) mm 2' ' L27; ‘mam ; 1 r:
+d(m) < d(TO) + d(M0) < d(m) (1 — g) +ad<H0) z
+
+m
+_ 1 041/2 3 _ 1
+I <1 + OW) d(Ho) g Ld(HO),Vn > 3. n
+m 2m
 —
 
 ***************Ending Page***************

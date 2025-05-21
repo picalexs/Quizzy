@@ -1,347 +1,361 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\I\I\I\I\I\I\I\
-I Qﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ \
-I \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ§ﬂ\ﬂ\ﬂ \
-I\I\I\I\I\I\I\l
-PROGRAMMING IN PYTHON ‘ @111?”
+\/\/\/\/\/\/\I\
+1W
+‘W
+1W
+‘ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\
+I\I\I\I\l\l\l\l
+PROGRAMMING IN PYTHON | $333M“
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-\ 1| ME M 0 D u LE
-Implements function thc' allows one to work with time:
-L) Ge' Current time
+| TIME M 0 DU LE
+Implements function that allows one to work with time:
+o Get current time
 O Format time
 o Sleep
-O Time zone infOqulTOﬂ
-Deluils ubouv lime module in Python;
-O nyhon 3: hﬂgszﬂdozspifhanarg L 3 Z Hbrary [fimeh'meOdWe-ﬁme
+o Time zone information
+Details about time module in Python:
+o Python 3: httgs:[ [docspythomorg[3Zlibrary[time.html#module-time
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
 Usage:
-
-Pyﬁhen 3.x
-
+Python 3.x
 import time
-
-w = ["Monny "Tue", "Wed", "Thu", "En", "Sat", "3mm
-
-print ("Time in seconds!",time.time())
-
-print ("Today :",time.c:ime1)|
-
-tmobj = timerlocaltlmeﬂ °"'P"'
-
-print ("Year z" tmobj_m year, Time 1n seconds: 15041395511035“
-, ,, h _,,’ 1 — Today = Sat Nov 1 11:01:01 2020
-
-print ( Mont . ,tmob].tmim0nl Yea: = 202°
-
-print ("Day z",tmobj.tmimday) Mnnth = 11
-
-print ("Day of week :",w[tmobj1tmiwday]) Hay = 1
-> ,, - Day of week = Sac
-
-print ("Day from year 1",tmobqrtmiyday) Day (mm Year = 312
-
-print < Hour = ,tmobj.tm_hour) HO“, = n
-
-print ("Min :",tm0bj.tmiminl Min = 1
-
-print ("Sec 1",tmobjrtmisecl 52° = 1
+W : ["MOn", "Tue", "Wed", "Thu", "Fri", "Sat", "SUI-1"]
+print ("Time in seconds:",time.time())
+print ("Today :",time.ctime())
+. __ . . ()uipui
+tmobj — time.localtime()
+print ("Year :",tmobj .tm year) Time in seconds: 1604739661.403554
+. . — Today : Sat Nov 7 11:01:01 2020
+print ("Month :",tmobj.tm_mon) Year :2020
+print ("Day :",tmobj.tm_mday) Mmmh =11
+print ("Day of week :",w[tmobj.tm_wday]) Day = 7
+print ("Day from year :",tmobj.tm_yday) Eiiiiéfiim: iii;
+print ("Hour :",tmobj.tm_hour) Ewur ; 11
+print ("Min :",tmobj.tm_min) Mn1 =1
+print ("Sec :",tmobj.tm_sec) sec ‘1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Beth leeeltime 0nd gmtime have One perdmeter (the number et seconds from 1970). If this
-peremeter is provided the time obied will be the time eemputed based OI’! thet number.
-Otherwise the time ebieet will be the time based on time.ﬁme (l (eurrerit time) value.
-Pylheh 3.x Oulpul
-import tune tullestructiturle(twiyeaIZ'MJlQ, thleIlZIL thvvdaFIO,
-twihour=14, {millun:30r tmisec:34r
+BoTh localTime and ngime have one parameTer (The number of seconds from 1970). If This
+parameTer is provided The Time obiecT will be The Time compuTed based on ThaT number.
+OTherwise The Time obiecT will be The Time based on Time.Time () (currenT Time) value.
 
-_ ‘ tm wday=6, tm yday=314, tm isdst=ﬂ)
-prlnt (nme.localzmel)) ’ ’ ’
+PyThon 3.x OquuT
 
-. . time.structitlmé(tmiyEAXZZOlg, tmimcinZ1], tmimday110,
-print lmmergmtlvmelll thiheueeiz, mimheen, thiseeeei,
-print (timergmtlmeUOm) l [miwday:6, cmiydeyZBH, EmixsdsLZOl
-punt ‘Elme‘gmnme'mme'“MGM” t1me.strucc_t1me(tm_year:1970r tm_rll0n:1r tm_mday:1r
+import time time.struct_time (tm_year=2019, tm_mon=11, tm_mday=10,
+tm_hour=l4, tm_min=30, tm_sec=34,
 
-tmihOm'ZO, tmimlnslr twiseCZAO,
-tmiwday-l, tmiyday-l, tmiisdst-Dl
-time.structitlmé(tmiyEAXZZOlg, tmimcinZI], tmimday110,
-tmihourZJZ, (mirrunZKEl, ULSECZKA,
-Emiwdﬁysﬁr cmiydayZBHr Lmixsdsl'FOl
+. . . tm_wday=6, tm_yday=314, tm_isdst=0)
+print (t1me.localt1me())
+
+, t t, t, time.struct_time(tm_year=2019, tm_mon=ll, tm_mday=lO,
+Pnfin l THEE.gH2;Pﬂ€()) tm_hour=12, tm_min=30, tm_sec=34,
+prlnt (t1me.gmtlme(lOO)) I tm_wday=6, tm_yday=3l4, tm_isdst=0)
+
+rin im . m im im . '
+
+p t' (t € Q] t €(tl e tlHK9())) time.struct_time(tm_year=l970, tm_mon=1, tm_mday=l,
+tm_hour=0, tm_min=1, tm_sec=40,
+tm_wday=3, tm_yday=1, tm_isdst=0)
+
+time.struct_time(tm_year=2019, tm_mon=1l, tm_mday=lO,
+tm_hour=12, tm_min=30, tm_sec=34,
+tm_wday=6, tm_yday=314, tm_isdst=0)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
 Use mktime to convert from a time obiect struct to a float number.
-Use usctime member to convert from a time obiect to a readable representation of
-the time [string formal)‘
+
+Use asctime member to convert from a time obiect to a readable representation of
+
+the time (string format).
+
 Python 3.x
-import: tlme
-t = tlme1tlmE1)
-tob] : nmelocalrmet)
-tm Z timetmktlmékobj)
-print 1t|nt
-print it)
-print 1t1me1asct1me (tobjn Ovlnui
-1504739710179sz
-Set Nov 1 11:01:50 2020
+
+import time
+
+t = time.time()
+
+tobj = time.localtime()
+
+tm = time.mktime(tobj)
+
+print (tm)
+
+print (t)
+
+print (time.asctime(tobj)) Dunn"
+1604739710.098777
+Sat Nov 7 11 01 50 2020
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Use strftimc to time object to n specified string representation:
-%H Hour iii 24 hour format %M Mimite
-%| Hour m i2 hour format %s Seconds
-%v Year (4 digits) %A Day of week (name)
-%m Month (decimal) %a Day of momti (decimal)
-%B Memii [nume) %p AM or PM
-Python at‘
+Use strftime to time obiect to a specified string representation:
+%H Hour in 24 hour format %M Minute
+%| Hour in i 2 hour format %S Seconds
+%Y Year (4 digits) %A Day of week (name)
+%m Month (decimal) %d Day of month (decimal)
+°/oB Month (name) %p AM or PM
+Python 3.x
 import time
-tobj : time.loralrime() Output
-print (timeszznimei"%i-iz%x~iz%s i %Y*%ni*%d",t0bji) 14:17;25 » 2u19»11-1u
-print (time.srmftimeiwmpﬁmw i %B",cob3i) 32mg“: _dmvigb:;19
-print (time.stzftlmc("%B,ZA w %Y",tobji) ‘we e" ‘m a’
+tobj I time. local time() OWPW
+print (time.strftime("%H:%M:%S — %Y—%m—%d",tobj)) 14:17:25 - 2019-11-10
+print (time . strftime ("%I%p:%M: %S — %B", tobj)) 32PM1117QZ —dNOV:rgb;gl9
+print (time. strftime ("%B, %A %d %Y", tobj)) ovem er’ un ay
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-sIrftime it used without a time obiect applies the string format to the current time.
+strftime if used without a time obiect applies the string format to the current time.
 Time module also has a function sleep that receives one parameter (the number of
 seconds the current script has to wait until it continues its execution).
 Python 3.x
 import time
-for i in zanqe(0,8):
-print tminesrrfmme("%1-i=%14;%s" > °"'P"'
-t1me.sleep12) 11;“:15
-11:45:17
-11145119
-if no time obiect stluctme is provided, 11:45:21
-thims function will use current time to 11=45=23
-. v 11:45:25
-cpply the speciﬁed fommt. 11:46:27
-11=4s=29
+for i in range(0,8):
+print (time.strftime("%H:%M:%S" ) OUlIWt
+time.sleep(2) 11:46=15
+11:46:17
+11:46:19
+If no time obiect structure is provided, 11:46:21
+strftime function will use current time to 11146=23
+-. 11:46:25
+apply the speclfled format. 11:46:27
+11:46:29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-‘ HASHLIB MODULE
-Implements function rhuv allows one m compute different crypmgmphic functions:
-1) MDS
-Q SHA-I
-0 SHAVZZA
-Q SHA-384
-o SHAVSI 2
-Q Shake-128
-o Shake»256
-Details ubouv hushlib module in Py'hon:
-0 Pyvhcn 3: hﬂgs:[[docs.nghcn.clg ﬂHbrurx [hushlibmvml
+| HASHLIB MODULE
+Implements function that allows one to compute different cryptographic functions:
+o MD5
+o SHA-i
+O SHA-224
+O SHA-384
+O SHA-512
+o Shake-128
+o Shake-256
+Details about hashlib module in Python:
+o Python 3: https:[ [docspythonprg[3Zlibrary1hashlibhtml
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-Each hashlib obiect has an update function [to updcne the value of the hash) and a
-digesl or hexdiges' funcri0n(s) '0 compute the final hash.
-
-Pyvhon 3.x
-
-import hashlib
-
-m : hashllb4md50
-
-In‘ update (b"Today")
-
-m.update(b" I‘m having")
-
-m. updatE lb" a Python ") Ouipvl
-
-print immexdlgesnl)
-
-import hashlib
-
-print ihashllb.n\d51b“Tod-ay I'm having a Python course") mexmqenn)
-
-***************Ending Page***************
-
-***************Beginning Page***************
-***************page number:10**************
-Each hashlib obiec! has an update function (lo upduie the value of |he hush) and a
-digexl or hexdiges' funclion(s) Io compute the final hashv
+Eolch holshlib obiect hols on update function (to updolte the value of the holsh) and ol
+digest or hexdigest function(s) to compute the finoll holsh.
 
 Python 3.x
 
 import hashlib
 
-‘ The <b> preﬁx in mm 06 u siﬂng ‘\s ignored in
+m I hashlib.md5()
 
-"‘ = “shim-""350 Python 1|“ Pym" 3 means vhuHhe swing is <1
+m.update(b"Today")
 
-"\- “Pd'at Q‘ - -- v byte lisI. updme mama requires u m of byﬁes
+m.update(b" I'm having")
 
-m-“Pdat94' I m ‘mung > 1mm smug]. Howeverﬁn Python 2 iIczm be
+m. update (b" a Python ") Output
 
-1"‘ Update (11" a Python ") used mm" me prefix ch:-
+m‘ tpdate (b"‘:09r8e")
 
-In. upda te (b"00utse")
-
-print UmbexdigestU)
+print (m.hexd1gest())
 
 import hashlib
 
-print 1hashlib.md5 1b“Today I ‘m havlng a Python course").hsxd1gestl))
+print (hashlib.md5(b"Today I'm having a Python course").hexdigest())
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
+***************page number:10**************
+Each hashlib obiect has an update function (to update the value of the hash) and a
+digest or hexdigest function(s) to compute the final hash.
+
+Python 3.x
+
+import hashlib
+
+. The <b> prefix in front of a string is ignored in
+
+m = haShllb .md5 (l Python 2. In Python 3 means that the string is a
+
+m. updat (a I‘ ' ' ' ' . byte list. update method requires a list of bytes
+
+m. update l "l I 'm haVing") (not a string). However, in Python 2 it can be
+
+m. update lb" a Python "l used without the prefix <b>
+
+m.update(b"course")
+
+print (m.hexdigest())
+
+import hashlib
+
+print (hashlib.md5(b"Today I'm having a Python course").hexdigest())
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
 ***************page number:11**************
-Hashes are she" use on ﬁles (m associate ms content of q ﬁle m u speciﬁc hush)‘
-when 3.x
-import hashllb
-def GetFlleSHAl (fllePath):
-m e hashllbﬁghal (a
-In‘ update (open (filePath, "rb") s [955(0)
-return mshexd1 gest 1) 0mm
-print iGetFileSI-IA11"< a file path >")i
-While this example is 0k, keeg in mind that it lauds the entire file cuntem in memur1!!!
+Hashes ore often use on files (to associate the content of o tile to ol specific holsh).
+Python 3.x
+import hashlib
+def GetFileSHAl(filePath):
+m I hashlib.shal()
+m.update(open(filePath,"rb").read())
+return m . hexdi gest () Output
+print (GetFileSHAl("< a file path >"))
+While this exolmple is ok, keeQ in mind tholt it loolols the entire file content in memory !!!
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-The correct way w do this [having u supper! for large files is us follows):
-Pym" 31X
-import hashllb
-def GetFileSi-IAI (filePathl:
+The correct way to do This (having a support for large files is as follows):
+Python 3.x
+import hashlib
+def GetFileSHAl(filePath):
 try:
-m : hashlihshaln
-f : apen(filePath,"rb"l
+m I hashlib.shal()
+f I open(filePath,"rb")
 while True:
-data : f.rcad(4096)
-if lan(data)==0: bzaak
-m.updare(data)
-LalostiU
-return m.he><<1‘gest()
+data I f.read(4096)
+if len(data)IIO: break
+m.update(data)
+f.close()
+return m.hexdigest()
 except:
-zaturn
+return ""
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-Python has several implementations for data serialization,
+Python has several implementations for data serialization.
 
-Q JSON
+o JSON
 
-o Pklde
+0 Pickle
 
 o Marshal
 
-Documentation tor JSON:
+Documentation for JSON:
 
-o Python 3: httgﬁlldocsgythcnnlg [3 [Ubrury [sommml
+o Python 3: htth:[ [docspythomorg[3Zlibrary['|son.html
 
 Documentation for PICKLE :
 
-a Python 3; httgyllggggxthgngrg ngngvgq [gigklghtml
+O Python 3: https:[ [docs.python.org[3Zlibrarylpickle.html
 
-Documentation for Marshal 1
+Documentation for Marshal :
 
-o Python 3:httgszf[donpxthomorg[31\Tbrury[marshoLhthmodule-murshul
+O Python 3: htth:[ [docspythomorg[3ZlibraryZmarshal.html#module-marshal
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
 JSON functions:
-n isanAump (obi, fp,
-l
-0 isanAumpqoby,
-) -) re obmin Ihe wing
-represemmicn of Ihe obi Tn JSON fmmw
+o ison.dump (obi, fp,
+)
+o ison.dumps(obi,
+) -) to obtolin the string
+representation of the obi in JSON format
 
-O isomloudlfp,
+o ison.load(fp,
 
-l
-u isomloudsls,
+)
+o ison.loc|ds(s,
 
-l
+)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
 Usage (serialization):
-Pwhan 3.x ~ ) , ‘
-_ v serlullzuhonqson
-mp": jSOn v
-Filelddt one 001 002 no: 004 cos nos 001 Text
-d : ( "a": [1 2 3] noooonooo 123 024 n99 024 use 032 na 114 ("5": tr
-,, "-1 ' ' ' uuooouuoa 111 101 MA 022 nu 097 034 058 ue, "a":
-b . 00, unununms n32 091 n49 nu|n32 050 044 022 [1, 2,
-"C"ITI\1& unuuuuuzn n51 09: nu uaz|n34 ass 034 usa a], "b--=
-1 nooonnoaz usz ms nee 043|125 100)
-s = json.dumpsid)
-Open("Seriallzatlon.json", "wt") .write (s)
-pzint is) Oufpvl
-("51": u, 2, 31, "n": mun, "c": mm
+Python 3.x _ _ _ .
+_ . sermhzahonqson
+1mport json .
+FlleAddr 000 001 002 003 004 005 006 007 Text
+c1 = { "a"~ Pl 2 :3] 000000000 123 034 099 034|058 032 116 114 {"c": tr
+"b"-1100 ’ ’ 000000008 117 101 044 032|034 097 034 058 ue, "a":
+' I 000000016 032 091 049 044|032 050 044 032 [1, 2,
+"cﬂ':T111e 000000024 051 093 044 032|034 098 034 058 3], "b":
+} 000000032 032 049 048 048|125 100}
+s = json.dumps(d)
+open("serialization.json","wt").write(s)
+prlnt (s) Output
+{"a": [1, 2, 3], "b": lOO, "c": true}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Usage (ale-serialization):
+Usage (ole-serialization):
 
 Python 3.x
 
-import jsun
+import json
 
-data : Openi"Serlalizationjson",“rt") .readl)
+data = open("serialization.json","rt").read()
+
 d = json.loads(data)
 
-prlnt (d)
+print (d)
 
 import json
 
-d : json.load(open("seriallzatlon4json", "\:t"))
-print (d) 0“va
+d = json.load(open("serialization.json","rt"))
+r'nt d
+
+P) l ( ) ()uiput
+
+{"a": [1, 2, 3], "b": 100, "c": true}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Pickle is eneviier way to serialize obiects iii Python, The seriallzuﬁon is done lﬂ e
+Pickle is another way to serialize obiects in Python. The serialization is done in a
 binary mode.
 
 Pickle can also serialize:
 
-z) Flmdiorls (deﬁned using def and not lambda]
+o Functions (defined using def and not lambda)
 
-u Classes
+o Classes
 
 o Functions from modules
 
-Documentation for PICKLE z
+Documentation for PICKLE :
 
-o Python 3: hvvgszl[docxpyrliomorg[Sllibrury [Qizklelilml
+O Python 3: https:[ [docs.p1thon.org[3Zlibrarygpicklehtml
 
 ***************Ending Page***************
 
@@ -349,93 +363,85 @@ o Python 3: hvvgszl[docxpyrliomorg[Sllibrury [Qizklelilml
 ***************page number:18**************
 PICKLE functions:
 
-o pi=k|..dump4ob1,lile, 1
+o pickle.dump (obi, tile, )
 
-o pickledumpqobi, ) -) to obtain m buffer represemurion of me
-ob; In picme mm
+O pickle.dumps(obi, ) 9 to obtain the buffer representation of the
+obi in pickle format
 
-o pkkleJudmle, 1
+o pickle.load(tile, )
 
-o picklmloudslbyieiobiecf, 1
+o pickle.loads(byte_obiect, )
 
-PICKLE support mulviple version. Be careful when you serialize wivh Pyvhun 2 and try to
+PICKLE support multiple version. Be careful when you serialize with Python 2 ancl try to
 
-ale-serialize with Python 3 ("0| all version supporied by Python 3 are also supported by
+ole-serialize with Python 3 (not all version supported by Python 3 are also supported by
 
-Python 2),
+Python 2).
 
-If you are planning Io swi'ch be'ween versions, either check pickleHlGHESTiPROTOCOL
+If you are planning to switch between versions, either check pickle.HlGHEST_PROTOCOL
 
-m see if me highest protocol is compatible or use o us the protocol value‘
+to see if the highest protocol is compatible or use O as the protocol value.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-01mm a.‘
-
-“'an Plele s:|iulixulion.pi<kl=
-
-d _ [ 0110110100 000 001 002 002 004 005 00s 001 Text
-"a"; [1,2,3], 000000000 120 003 125 11a 000 040 000 001 cnq 1x0
-“b"'100 000000000 000 000 000 000 113 001 130 000 cqeéx
-
-‘ ' 000000010 001 000 000 000 001 112 002 002 0 00p!
-
-"c":True 000000024 111 00: 040 015 001 015 002 015 qumm
-
-1 000000012 001 101 000 0011000 000 000 000 vem 0
-
-000000000 11a 0011 01s 100\111 040 0mm.
-
-buffer : pickle.dumps1d) 11:. 11‘ 7 ‘1 1.» 5 1 ,9‘
-
-open("serialization.pickle",“wb“|1write(buffer)
-
-Pickle need a file to be open in binary made !
+Python 3.x
+:meort plel€ serializationpickle
+d __ { FileAddr 000 001 002 003 004 005 008 007 Text
+"64.:[1 :2 3] 000000000 128 003 125 113|000 040 088 001 0v}q (xe
+"b"'1()0 ’ ' 000000008 000 000 000 099|113 001 138 088 cq©éX
+' , 000000018 001 000 000 000|097 113 002 093 e an]
+"c":Trn1e 000000024 113 003 040 075|001 075 002 075 qv<KeKeK
+} 000000032 003 101 088 001|000 000 000 098 vexe b
+000000040 113 004 075 100|117 048 qQKdu.
+buffer = pickle.dumps(d)
+open("serialization.pickle","wb").write(buffer)
+Pickle need Cl file To be open in binary mode !
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Usage (ale-serialization):
+Usage (ole-serialization):
 
-Python 3.‘
+Python 3.x
 
-impart: pickle
+import pickle
 
-data : Openi"Serializatlon.plckle“,"rb") .readn
+data I open("serialization.pickle","rb").read()
 
-d = pickle‘ loadS (data)
+d I pickle.loads(data)
 
-pnm: (d)
+print (d)
 
-inport pickle
+import pickle
 
-d = pickle. loadhﬂpinI“serlalization,plckle", "tb"))
-lent (<1) om“,
+d I pickle.load(open("serialization.pickle","rb"))
+print (d) Output
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Marshal is unolher way Q0 serialize obiec's in Python. The serializclinn is done in u
-binary mode. Designed {or python compiled code [pyc). The binary result is platform-
-dependent 1!!
+Marshal is another way to serialize obiects in Python. The serialization is done in a
+binary mode. Designed for python compiled code (pyc). The binary result is platform-
+dependent !!!
 
-Marshal fundions:
+Marshal functions:
 
-a mnrshulidump (value, file, imcrshci
+o marshal.dump (value, tile, ) marshal
 
-o marshal-dumpﬂvelue, p -) w cbmin the binary represenlc'ion oi the obi in marshal formci
-O marshu|.load(fiiei
+O marshal.dumps(value, ) 9 to obtain the binary representation of the obi in marshal format
+o marshal.load(ti|e)
 
-o mnIshuLloudﬂsrring/buffer)
+o marshal.loads(string/butfer)
 
-Documentation for Marshal 1
+Documentation for Marshal :
 
-o Python 3: hﬂgszl [docs-girhonvorgl31Hbrury [morshuLh'meodule-mcrshul
+o Python 3: https:[ [docs.python.org[31libraryZmarshal.html#module-marshal
 
 ***************Ending Page***************
 
@@ -445,59 +451,60 @@ Usage (serialization):
 
 Python 3.x
 
-import marshal
+import marshal _. .
 
-serialixuiicm.marsl|ul
+serlallzqhon.marshal
 
-d = ( FLIeAddr one 001 002 cos 004 cos one 001 Text
-"a": [1,2,3], uncommon 251 21s 001 use use 21s no) 091 #3ch
-"b"-100 ooooooooa 091 003 000 000 000 223 001 coo [v so
-.. “j ' ouoooools 000 000 23: uoz 000 can one 2:3 e‘ s
-C ‘True 000000024 003 mm can mm 21s 001 m 2:: v ﬂue
+c1 I { FileAddr 000 001 002 003 004 005 006 007 Text
+"aJ';[]_,2,13], 000000000 251 218 001 099|084 218 001 097 VpDcTﬂDa
+‘W3"'ILOO 000000008 091 003 000 000|000 233 001 000 [v 0©
+‘I H' ' 000000016 000 000 233 002|000 000 000 233 0o 0
+c .Trnle 000000024 003 000 000 000|218 001 098 233 v r©b®
 
-1 000000032 100 nun unu nuu|uaa d 0
+} 000000032 100 000 000 000|048 d 0
 
-buffer = marshal.dumps(d)
+buffer I marshal.dumps(d)
 
-open(“serlalization.mazshal", “wb”! .write (buffer)
+open("serialization.marshal","wb").write(buffer)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Usage (cite-serialization]:
+Usage (ole-serialization):
 
-Pyvhon 1X
-
-import marshal
-
-data : cpen(“senallzat10n ,marshal" , "rb") . read ()
-d : marshal . load51data)
-
-print 1d)
+Python 3.x
 
 import marshal
 
-d = marshal ‘ loadmpen 1 "seriallzation marshal", "rb"))
-print 1d)
+data = open("serialization.marshal","rb").read()
+d = marshal.loads(data)
 
-Marshal serialixution has a different farmer in
+print (d)
 
-Pyihon 2 and Pyihcn 3 (Ihese two are not °"'P"'
+import marshal
+
+d = marshal.load(open("serialization.marshal","rb"))
+print (d)
+
+Marshal serialization has a different format in
+
+Python 2 and Python 3 (these two are not Quip"t
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-\ RANDOM MODULE
-Implemenrs differenr random base fundions:
-o rendernrendemu -) u rundcm Hem number bevween o and I
-z) rundochndTnﬂmimmux} -) e random integer number between [min max]
-1) rundcmxhoiceﬂisv] Q selects :1 vcndom elemem ‘10m c lisV
-0 rundom.shu“|e[\Ts|] -) shuffles the |is|
-o rendern.§enrp|e(n§r,eeunv) -) creme; enemer list horn Ihe cunem one eenmining calm! ekemems
-Demils about random module in Python:
-1) Pyvhon 3:hﬂgqudocsnghgnglg 1 Ubvcrx rundomh'm‘
+| RANDOM MODULE
+Implements different random base functions:
+o random.random() 9 a random float number between O and l
+o random.randint(min,max) 9 a random integer number between [min max]
+o random.choice(list) 9 selects a random element from a list
+o random.shuffle(list) 9 shuffles the list
+o random.sample(list,count) 9 creates another list from the current one containing count elements
+Details about random module in Python:
+o Python 3: httgs:[ [docspythonorg[3Zlibrar11randomhtml
 
 ***************Ending Page***************
 
@@ -505,119 +512,122 @@ Demils about random module in Python:
 ***************Beginning Page***************
 ***************page number:25**************
 Usage:
-Python 31x
+Python 3.x
 import random
-print 1random.random<b)
-print itandom.randint(5,10)) om”.
-1. Z [2,375,7,11113,17,191 2.9410s14s9094ms
-print (randumncholceﬂn 5
-' t d . l 1,3 [19, 17, 11]
-pnn "an om samP e‘ H m, 11, 11, s, 2, 19, 1, 31
-random.shuffl€ll)
-print 11)
+print (random.random())
+print (random.randint(5,10)) Ouﬂnﬂ
+O . 9410874890940395
+l I [2,3,5,7,1l,13,l7,l9] 9
+print (random.choice(l)) 5
+print (random.sample(l,3)) [1% 1% 1U
+[13, 17, 11, 5, 2, 19, 7, 3]
+random.shuffle(l)
+print (l)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-‘ ZIPFILE MODULE
-Implements different functions m work Wm. u zip archive:
-1) Lisv all elements fvom u lip archive
-o Exfruc' (Hes
-0 Add ﬁles I0 cvchive
-o Ger Iile informuﬂon
-Details qun zipfile module in Pyﬂmn:
-1) Pyvhon 3: hngsq [docsnghgmglg 1 Hbvcrx [zigiilghmﬂ
+| ZIPFILE MODULE
+lm|olements clifferent functions to work with a zip archive:
+o List all elements from a zip archive
+o Extract files
+O Add files to archive
+O Get file information
+o etc
+Details about zipfile module in Python:
+o Python 3: htth:[ [docspvthonorg[3Zlibrarﬂzigfilehtml
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Listing the comem of a zip archive:
-Python 3.»
-import zlpfile
-‘ ‘ ‘ , ‘ 0m m
-z = leflle.leFllE("aIChlVE.le“) p /
-. . . . _ MathOps u w
-f“ 1 m ?'l“fPll§t()' HathOps/Complex/ u a
-PIlnt 11.nlename, HathOps/Complex/Sexies>PY 111 19
-i.flleisize, MathOps/CcmPlex/i1n1ti.py as as
-Leon-press Size, MathOps/Simple/ n n
-i MathOps/Simple/Arithmetic.py 54 52
-LClee') HathOps/SimpJe/Bitslpy so 55
-HathOps/Simple/iiniti~Py $1 sq
-MathUpS/illutivpy so an
-B.” 43 4:
-a11.csv 62330555 ansvus
+Listing the content of 0| zip archive:
+Python 3.x
+import zipfile
+. . . . . , Output
+z = leflle . leFlle("arch1ve . 21p")
+for i in z infolist()' MathOPS/ O O
+. ' . . ' MathOps/Complex/ O O
+ijth (l._fll£3nan%9, MathOps/Complex/Series.py 117 79
+i..fil£9 siize, MathOps/Complex/__init__.py 38 38
+i.compress size) MathOpS/Stmple/ 0.0 .
+—- MathOps/Slmple/Arlthmetlc.py 54 52
+Z'Close() MathOpS/Simple/Bits.py 60 55
+MathOpS/Simple/__init__.py 87 84
+MathOps/__init__.py 30 3O
+a.py 43 43
+all.CSV 62330588 8176706
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-To extract u ﬁle from an archive;
-Pyvhon 3,X
-import leflle
-z Z zipflle‘Z1pF1le("archive‘zip")
-z . emecL1"MechoPs/51mple/Anchmecic4py", "MyFolder")
-z . closE U
-Ariihmeﬁcpy will be extracted m "MyF0|der/Mcthps/Simple/Arifhmeﬁcpy“
-To ex'ruct all ﬁles:
-Python 3.‘
-import zlpflle
-z : Zipfile.leFllC("arChiVe.le")
-z ‘ extractail ("MyFQlder")
-z . close U
+To extract a file from an archive:
+Python 3.x
+import zipfile
+z = zipfile.ZipFile("archive.zip")
+z.extract("MathOps/Simple/Arithmetic.py","MyFolder")
+z.close()
+Arithmetic.py will be extracted to “MyFololer/MathOps/Simple/Arithmetic.py”
+To extract all tiles:
+Python 3.x
+import zipfile
+z = zipfile.ZipFile("archive.zip")
+z.extractall("MyFolder")
+z.close()
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-A file con olso be opened directly from on archive. This is usually required if one wonls
-lo exlroci ihe conlenl somewhere else or if lhe conleni needs lo be analyzed in memory,
-Pylhon 1X
+A tile can also be opened directly from an archive. This is usually required it one wants
+to extract the content somewhere else or it the content needs to be analyzed in memory.
+Python 3.x
 
-import leflle
+import zipfile
 
-z : zlpfllelepl'l7e(“azch1ve4zip“l
+z = zipfile.ZipFile("archive.zip")
 
-f : 2.0pcn("MathOps/Simple/Arithmetiu.py"l
+f = z.open("MathOps/Simple/Arithmetic.py")
 
-data = Lreedll
+data = f.read()
 
-f.closP()
+f.close()
 
-open("myiar.py","wb") Jaltekiata)
+open("my_ar.py","wb").write(data)
 
-z . close U
+z.close()
 
-Method open from zipﬁle returns u file-like obiecﬁ. You can also specify a password:
-Format: ZipFile.open(nume, niodeI'r', pv/LJINolle]
+Method open from zipfile returns a file-like obiect. You can also specify a password:
+Format: ZipFile.open(name, modeI'r', pdeNone)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-The following script ereeiee u zip archive and odd files to in
+The following script creoltes ol zip archive ond odd files to it:
 
-when 3.x
+Python 3.x
 
-import zlpflle
+import zipfile
 
-z Z z1pf11eeleFlle("newiarchlveiziph "w", zlpfile.ZIP_DEFLATED)
-Z.w1u Lesuﬁ'cesntxr“, "some texts .,.")
+z I zipfile.ZipFile("new_archive.zip","w",zipfile.ZIB_DEFLATED)
+z.writestr("test.txt","some texts ...")
+z.write("serialization.json")
 
-z . wlltE‘("seriallzatlon.json“)
+z.write("serialization.json", "/dir/a.json")
+z.writestr("/dir/a.txt","another text ...")
 
-z,write-(“Serlallzatlon.json", "/dir/a.j|s<>n")
-z.wrltcstr("/d1r/a.txt", “another text ...")
+z.close()
 
-z i close U
+writestr method writes the content of ol string into ol zip file.
 
-writes" method wrives rhe comen' of a string imo a zip ﬁle.
+write methods o|dd ol file to the olrchive.
 
-wrile methods odd a file to the archive.
-
-When ereeiing en archive one can specify u desire compression: ZIP_DEFLATED,
+When creolting oln olrchive one coin specify Cl desire compression: Z|P_DEFLATED,
 Z|P_STORED, Z|P_BZ|P2 or Z|P_LZMA.
 
 ***************Ending Page***************

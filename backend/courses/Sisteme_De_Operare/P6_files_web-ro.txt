@@ -2,9 +2,9 @@
 ***************page number:1**************
 PROGRAMARE DE SISTEM iN C PENTRU PLATFORMA LINUX (l)
 Gestiunea fi§ierelor, partea l-a:
-Primitivele l/O pentru lucrul cu fi§iere
+Primitivele l/O pentru lucrul cu fi$iere
 Cristian Vidra$cu
-vidraschinfo .uaic . r0
+vidrascu©info uaic ro
 Martie, 2021
 1/25
 
@@ -12,795 +12,849 @@ Martie, 2021
 
 ***************Beginning Page***************
 ***************page number:2**************
+0 o
 Su mar
-‘""QME'E lntroducere
-APLM POSW "HIGH Demm
-ogelalu l/o cwlwe APl-ul POSIX: Iunctii pentru operatii l/O cu fisiere
-gmhmecasmdam d2 c. Principalele categorii de pnmilive l/O
-mm“ pemru opevam v0 cu Primihva access
-hsxere
-Priminva creat
-Hﬂennle mbhngvaﬂce Primilwa Open
-Priminva read
-Primitwa write
-Primitwa \seek
-Primitwa close
-Demo: Un exemplu de sesfun/ de lucru cu fisiere
-Alte primnive l/O pemru ﬁwere
-Priminve l/O pemru direcloare
-Sablonul de \ucru cu directoare
-Despre fi/e'system cache'ul gesnonat de nucleul LlnuX
-Biblioieca standard de C: iunctji pemru operaﬂi l/O cu 1i$iere
-Despre b\b|\oteca standard de C
-Functhle l/O dm b\bl\oteca standard de C
-Functhle de bibﬁotecé pentru l/O formatat
-Demo: Un exemplu de sesfune de /ucru cu ﬂsiere
-Releringe bibliografice
-Memu de navigare Gestiunea 'isierelor, paﬂea La: anitwele HO pentru lucvul cu fisiere 2/25
+'ntroducere Introducere
+API-ul POSIX: functii pentru __ __ _ _
+ogeratii I/Q cufisiere APl-ul POSIX: functll pentru operatll l/O cu flslere
+Bibuotecastandard de o; Principalele categorii de primitive I/O
+functii pentru operatii l/O cu Primitiva access
+L'S'ere— I Primitiva creat
+mm Primitiva open
+Primitiva read
+Primitiva write
+Primitiva Iseek
+Primitiva close
+Demo: Un exemplu de sesiuni de lucru cu fisiere
+Alte primitive I/O pentru fisiere
+Primitive I/O pentru directoare
+Sablonul de Iucru cu directoare
+Despre file-system cache-ul gestionat de nucleul Linux
+Biblioteca standard de C: functii pentru operatii l/O cu fisiere
+Despre biblioteca standard de C
+Functiile I/O din biblioteca standard de C
+Functiile de biblioteca pentru I/O formatat
+Demo: Un exemplu de sesiune de lucru cu fisiere
+Referinte bibliografice
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru Iucrul cu fisiere 2/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
+O O
 lntroducere
-‘"‘mdm'e Functiile pe care le puteti apela in programele C pe care le scrieli, pentru a accesa 5i prelucra fisiere
-APl'ulPOSlX lunclllpenlm A . . . . A . . r r . . A A .. ..
-09mm llOcullslere (atat flslere oblsnurte, cat 5| dlrectoare sau alte tlpun de f|s|ere), se Impart In doua categonl:
-3223;335:1311;ng I APl»ul POSIX, ce ofera functii wrapper pentru apelurile de sistem furnizate de nucleul Linux;
-"m— aceste functii pot fi apelate din programe C ce vor fi compilate pentru platforma Linux si, mai
-mm general, pentru orice sistem de operare din familia UNIX ce implementeaza standardul POSIX.
-— Avamaj: functiile din acest API oferé. practice acces la mate functionalitétile din nucleul Linux "exportale" cétre
-USS/477069.
-i Dezavantaj: programele care fulosesc aceste lunctii nu sunt portabile, e.g. nu pot fi compilate pemru platforma
-windows (cel pulin nu direct, ci dear in mediul WINDOWS SUBSYTEM FOR LINUX, introdus in windows 10).
-I STANDARD C LIBRARY (biblioteca standard de C), ce oferé o serie de functii de nivel mai inalt,
-inclusiv pentru lucrul cu ﬁsiere; aceste functii pot fi apelate din programe C ce vor fi compilate
-pentru orice platforma ce oferé un compilator de C, plus o implementare a bibliotecii standard de C.
-Spre exemplu, pentru platforma Linux eel mai folosit este compilatorul GCC (the GNU Compiler
-Collection) si implementarea GLIBC (the GNU Ilbc) a biblioteoii standard de C.
-i Avantaj: permite scrierea de programe ponablle, intre diverse platforme (e.g., Windows, UNIX/Linux, em).
-i Dezavantaj: cuntine lunctii cu capacitate limitaté de a gestiona resursele sislemului de operare (e.g., lieiere), fiind
-din aces! motiv adecvaté penlru scrierea unor programe simple.
-Meniu de navigare Gesliunea lisierelor, parlea l-a: Primitivele l/O penlm lucrul cu lisiere a 125
+'“tmducere Funotiile pe oare Ie puteti apela in programele C pe care Ie sorieti, pentru a aooesa si preluora fisiere
+API-ul POSIX:functii pentru A . . . . A . . . . . . A A o ..
+operatii I/O cu tisiere (atat fisiere obisnuite, oat si directoare sau alte t|pur| de fisiere), se impart in doua oategoru:
+ﬁggﬁgffgggigICU I API-ul POSIX, oe ofera functii wrapper pentru apelurile de sistem furnizate de nucleul Linux;
+L'S'ere— * aoeste functii pot fi apelate din programe C oe vor ti oompilate pentru platforma Linux si, mai
+——9—Refe"“teb‘b"° ‘aﬁce general, pentru orioe sistem de operare din familia UNIX oe implementeaza standardul POSIX.
+— Avantaj: functiile din aoest API ofera, practio, aooes Ia toate functionalitatile din nucleul Linux “exportate” oatre
+user-mode.
+— Dezavantaj: programele oare foloseso aoeste functii nu sunt portabile, e.g. nu pot fi oompilate pentru platforma
+Windows (oel putin nu direct, oi doar in mediul WINDOWS SUBSYTEM FOR LINUX, introdus in Windows 10).
+I STANDARD C LIBRARY (biblioteoa standard de C), oe ofera o serie de functii de nivel mai inalt,
+inolusiv pentru Iuorul ou fisiere; aoeste functii pot fi apelate din programe C oe vor fi oompilate
+pentru orioe platforma oe ofera un oompilator de C, plus o implementare a biblioteoii standard de C.
+Spre exemplu, pentru platforma Linux oel mai folosit este oompilatorul GCC (the GNU Compiler
+Collection) si implementarea GLIBC (the GNU libo) a biblioteoii standard de C.
+— Avantaj: permite sorierea de programe portabile, intre diverse platforme (e.g., Windows, UNIX/Linux, etc.).
+— Dezavantaj: oontine functii cu oapaoitate limitata de a gestiona resursele sistemului de operare (e.g., fisiere), fiind
+din aoest motiv adeovata pentru sorierea unor programe simple.
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru Iucrul ou fisiere 3/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Agenda
-\mruducere |ntr0ducere
-APLM POEM ﬁunclH Demm __ .. . .
-ogeralu no cwlwe APl-ul POSIX: Iunctll pentru operatll l/O cu flslere
-:g';°l‘f:‘j'g°aleg°"‘“g Principalele categorii de pnmilive l/O
-\ v
-Prlmmva access Prlmmva access
-Prlmmva meat Primmva creat
-Pvimniva open Prim'mva open
-P"m“'va'ead Prim'mva read
-anmva wme
-Prlmmva ‘Mk anmva Wnte
-Prlmmva chase Prim'mva \seek
-05mg Un exemplu de SESVLIHV . .
-de lucrucu hs|eve anmva CIOSG
-Ahe pnmilwe no permuﬂslere Demo: Un exemplu de sesfun/ de lucru cu fisiere
-P"'"““°'/° PM" “mm” Alte primnive l/O pemru ﬁwere
-l \ l | v . .
-
-giiuhtsyugeuﬁlﬁﬁa'e anmve l/O pemru dlrecloare
-geshunat a2 nudeu‘ Linux Sablonul de \ucru cu directoare
-Elbhctecastandald de c- Despre fi/e'system cache'ul gesnonat de nucleul LlnuX
-mm“ pemru upevalll v0 cu
-"we— Biblioteca standard de C: Iuncgii pemru operaﬁi l/O cu Visiere
-Reienme b\bhugral\ce Despre b\b|\oteca standard de C
-
-Functhle l/O dm bibhoteca standard de C
-
-Functhle de binoteoa pentru l/O formatat
-
-Demo: Un exemplu de sesfune de Iucru cu ﬂsiere
-
-Releringe bibliografice
-Memu de navigare Gestiunea 'isierelor, paﬂea \-a: anitwele HO pentm lucvul cu fisiere 4 / 25
+A
+'ntroducere Introduoere
+API-ul POSIX: functii pentru __ __ _ _
+ogeratii I/Q Qufisiere APl-ul POSIX: functii pentru operatii l/O cu fisiere
+Pr_i"9tiPa"i/'g°aie9°riide Principalele oategorii de primitive I/O
+primi ive _ _ _
+Primitiva access Prlmltha aooess
+Primitiva creat Primitiva creat
+Primitiva Open Primitiva open
+P. .. _ _ _
+rfmftfva reifld Primitiva read
+Primitiva write _ _ _ _
+Primitiva lseek Primitiva write
+Primitiva close Primitiva Iseek
+Demo: Un exemplu de sesiuni P . . . |
+de Iuoru cu fisiere rlmltlva C OSG
+Alte primitive l/O pentru fisiere Demo: Un exemplu de sesiuni de Iuoru ou fisiere
+Primitive I/O pentru directoare Aite primitive i/C) pentru fisiere
+S bl Id I d' t . . . .
+bzssrluﬁleijscgﬁaéfiflare Primitive I/O pentru direotoare
+gestionatde nucleul Linux Sablonul de Iuoru ou directoare
+Biblioteca standard de o: Despre file-system cache-ul gestionat de nucleul Linux
+functii pentru operatii l/O ou
+isiere— Biblioteca standard de C: functii pentru operatii l/O cu fisiere
+Referinte bibliografice Despre biblioteoa standard de C
+Functiile I/O din biblioteoa standard de C
+Functiile de biblioteoa pentru I/O formatat
+Demo: Un exemplu de sesiune de Iuoru ou fisiere
+Referinte bibliografice
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru lucrul cu fisiere 4/25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
+O O
 Principalele categorii de primitive l/O
-‘ASWOSW ‘ Sistemul de gestiune a fi$iere|or in UNIX/Linux furnizeazé urmétoarele categorii de
-r uliO ili r ' ' " ' .
-Jégnjjgamjjaljgijdg apelurl SIstem, In conformltate cu standardul POSIX.
-WM w
-Prmams I primitive de creare de noi fieiere, de diverse tipuri: mknod, mkfifo, Inkdir, link,
-Prlmiilva creai
-iii-mumps" symlink, creat, socket
-Pv-mi-Wie I primitive de etergere a unor fisiere: rmdir (pentru directoare), unl ink (pentru toate
-Primiilva iseek
-Pr-mi-vacwse celelalte tipuri de fieiere)
-Demo Un exempiu de SESiUﬂi
-Zje'ﬁiifvgfgiemMm I primitiva de redenumire a unui fieier, de orice tip: rename
-gm“;Zjljjfj'zfgjljjje I primitive de consultare a i-nodului unui fieier: stat/fstat/lstat, access
-§§;?J§§’§§yni'§§uii§”$ I primitive de manipulare a i-nodului unui ﬁeier: chmod/fchmod,
-3337313333111353,g;u chown / f chown/ lchown
-ilsiere . .. . . . . .
-I prlmltlve de extlndere a Slstemulw de ilslere: mount, umount
-Rerermle bibiwgraiiﬂe
-I primitive de accesare si manipulare a continutului unui fisier, printr-o sesiune de
-lucru: open/creat, read, write, lseek, close, fcntl, $.a.
-I primitive de duplicare, intr-un proces, a unei sesiuni de lucru cu un fisier: dup,
+Lgldlpolle t, t Sistemul de gestiune a iisierelor in UNIX/Linux iurnizeaza urmatoarele categorii de
+-U I Ui'iC," pen i'U
+L——;,;§§;',§e"§a1§;ﬁ,de apeluri sistem, in conformitate cu standardul POSIX:
+primitive I/O
+Primitivaaccess i I primitive de creare de noi iisiere, de diverse tipuri: mknod, mkf ifo, mkdir, link,
+Primitiva creat
+PMMMWH symlink,creat,socket
+Primitiva read
+Primitivawriie I primitive de stergere a unor iisiere: rmdir (pentru directoare), unlink (pentru toate
+Primitiva lseek
+Primitivaciose , _ celelalte tipuri de iisiere)
+Demo: Un e>l<emp|u de ses1uni . . . ’ . . . . . .
+Zj’”c’.”‘?.u“$'ere .. I primitiva de redenumire a unUi fiSier, de orice tip: rename
+e primitive l/O pentru iisiere =
+2222:;gglijfjjudgifijjje I primitive de consultare a i-nodului unui fisier: stat/fstat/lstat, access
+55;?;§£’2§ii’§’§ufiih$il I primitive de manipulare a i-nodului unui iisier: chmod/fchmod,
+gigggiigigtjgggggi,g1,, chown / f chown/ 1 chown
+fisiere . . . . . . . .
+_—Rf _t W f I primitive de extindere a sistemulw de iisiere: mount, umount
+eerine i iogra ice ’
+I primitive de accesare si manipulare a continutului unui iisier, printr-o sesiune de
+lucru: open/creat, read, write, lseek, close, fcntl, s.a.
+I primitive de duplicare, intr-un proces, a unei sesiuni de lucru cu un iisier: dup,
 dup2
-Meniu de navigare Gestiuneaiisierelor, pariea i-a: Primitivele i/O pentm lucrul cu tisiere 5 / 25
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru Iucrul cu fisiere 5/25
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:6**************
+O O
+
 Principalele categorii de primitive l/O (cont)
 
-‘ALTdLOSIXI I I primitive pentru consultarea “stérii” unor sesiuni de Iucru cu fi$iere (operatii |/O
+Lgldlpollmncwpemw I primitive pentru consultarea “stérii” unor sesiuni de lucru cu iieiere (operatii I/O
 
-r ii liO ili v . , _
+ﬁﬁW sincrone multiplexate): select, p011
 
-Jégnjj'pamjéljgmdg smcrone multiplexate). select, p011
+21121111130688 i I primitiva ole “trunchiere” a continutului unui iieier: truncate / ftruncate
 
-:mviscess I pr|m|t|va de trunchlere a contlnutulw unw f|$|ei2 truncate/ftruncate
+:Imjjfearf I primitive de modifieare a unor atribute dintr-un proces:
 
-11:11:23 I primitive de modificare a unor atribute dintr-un proces:
+22:25:22 — Chdir: modificé directorul curentde lucru
 
-aniilvawriie — chdir: modificé directorul curentde Iucru
+EEE:§:%;Eggmpiudeses/uni — umask: modificé “masca” permisiunilor implicite Ia crearea unui ii$ier
 
-Prlmiilva iseek
+Ziéugrmiuvji/eéepemwﬁSiere — ChrOOt I modificé rédécina sistemului ole ii$iere accesibil procesului
 
-PDrIj'I'IiIiIiI-vaugigiimwudeﬂsm — umask I modificé “masca” permisiunilor implicite Ia crearea unui fi$ier
+223:2];Igjliizjrldliriijﬁge I primitive pentru acces exclusiv Ia fieiere: flock, fcntl
 
-:jiﬁiifvgsglemﬂwe — ChrOOt I modificé rédécina sistemului de fisiere accesibil procesului
+§§;?;§£’j§ﬁjijjufii’fi I primitiva ole “mapare” a unui fieier in memoria unui proces: mmap
 
-aniilve i/O penilu divemoave _ . . . . .
+iggiiliitjlﬂiijtﬁi,giw I primitiva de creare, intr-un proces, a unui canal de comunicatie anonim: pipe
 
-Sabioniidemmud..ecm I pr|m|t|ve pentru acces exclusw la ﬂslere: flock, fcntl
-
-Despre lr/ersystem cache'ui . . . II I . . .. . .
-
-gesmaidemwm I primitiva de “mapare a unui f|$|er in memorla unui proces: mmap
-
-Blbii i i rid Idd C‘ _ , _ A . . . . 4
-
-zinciiilanifwlaiﬁ/w I primitiva de creare, intr»un proces, a unui canal de comunicatie anonim: plpe
-
-Reierime bibiicgralice I $ .a.
+Reierinte bibliografice I S - a-
 Observatie: in caz de eroare, toate aceste primitive returneazé valoarea -1, precum
-5i un numér de eroare ce este stocat in variabila globalé errno (definitéin fi$ierul header
-<errn0 .h>), eroare ce poate fi diagnosticaté cu functia perrorO.
+ei un numér de eroare ce este stocat in variabila globalé errno (definité in ii$ieru| header
+<errno.h>), eroare ce poate ii diagnosticaté cu iunctia perror().
 
-Meniu de navigare Gestiunea iisierelor, pariea i-a: Primitivele i/O pentru lucvul cu iisiere 6 l25
+Meniu de navigare Gestiunea fieierelor, partea l-a: Primitivele l/O pentru Iucrul cu fi$iere 6/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
+O O
 Primitiva access
-‘ALTdLOSIXI I I Verificarea drepturl'lor de acces la un fisier: primitiva access.
-r “er H‘ v ' ' .
-Jégrijgamjjﬂjgxdg lnterfata funcllel access ([5]).
-‘.v I/o , ,
-2221,; mm 1nt access (char* nume_cale, 1nt drept)
-Prlmmva meat
-11:13:22," i numeica/e = numele fisierului
-11:13:12‘; — drept = dreptul de acces ce se veriﬁcé, ce poate ﬁ o combinatie (i.e., disjunctie
-El'ﬁﬁviiiiimpmw logicé pe biti) a urmétoarelor constante simbolice:
-de Vucru cu hsveve
-Ahepnmmve|Openlvuﬂs\ere _ . v v - -
-PvlmmveVODeMIudwectoave A X_UK (-1) . procesul apelant are drept de executle aflslerulul ?
-222:1“),Zfijgjljifé'hfxa'e ‘ W_UK (=2) I procesul apelant are drept de scriere a fisierului ?
-gesma‘dmc‘euu'mux A R_UK (=4) I procesul apelant are drept de citire afisierului ?
-Bmhmeca standavd de C‘
-Mnclupemru upevatll mm s . . v . I I I
-"m— Nota: pentru drept=F_UK (=0) se verlflca doar eX|sten1a flslerulul.
-we M“ m — valoarea returnata este O, daca accesul(e|e) verlflcat(e) este/sunt perm|s(e),
-respectiv —1 Tn caz de eroare.
-Memu d9 navigare Gestiunea 'isierelor, paﬂea \-a: anihvele HO pentm lucvul cu fisiere 7/25
+'Agldlpoesw I Verificarea drepturi/or de acces la un fisier: primitiva access.
+-u : unctii pentru ’
+0 era ii cu isiere ' ' .
+L——Priin9i;a'|§ecaiegoriide lnterfafta funcfuel access ([5]).
+21222121221688 i int access (char* nume_ca/e, int drept)
+Primitiva creat
+53355331‘ — nume_cale = numele fisierului
+$22312: — drept = dreptul de acces ce se verifica, ce poate fi o combinatie (i.e., disjunctie
+ZZZiEYZZ'ZiZmpludeses/um logica pe biti) a urmatoarelor constante simbolice:
+de lucru cu fisiere
+2:22:32"It/‘éeggitfuegtirrix'aerr: A X_DK (=1) I procesul apelant are drept de executie a fisierului ?
+E22:Slug/‘(jixgnf1522653“ A W_DK (=2) I procesul apelant are drept ole scriere a fisierului ?
+95:22:;(jarljjsigux A R_UK (=4) I procesul apelant are drept ole citire a fisierului ?
+functiipentru operatii l/O cu v . . v . . . _
+L— Nota: pentru drept=F_0K (=0) se verlflca doar eXIstenta flslerulw.
+eerine i io raice v v . . .
+——9—Rf t bb' f — valoarea returnata este O, daca accesu|(e|e) verlflcat(e) este/sunt perm|s(e),
+respectiv -1 Tn caz de eroare.
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru Iucrul cu fisiere 7/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
+O O
 Primitiva creat
-‘""me'e I Crearea de ﬁsiere de tip obisnuit: primitiva creat.
-Awm POSW mum pemm ’ '
-r uh ﬁn v ' ' .
-Jégnjjgagjjﬂjgxdg lnterfata funcllel creat ([5]).
-ETHVZLZESS 1nt creat (char* nume_ca/e, 1nt perm_acces)
-Prlmmva meat
-1:13:22," i numeica/e = numele fisierului ce se creeazé
-11:13:12‘; — permiacces = drepturile de acces pentru noul fisier creat
-522212215‘,me — valoarea returnaté este descriptorul de fisier deschis, sau *1 in caz de eroare.
-de Vucru cu hsveve
-Ahe nmmvelO ennunswe A _ . . . v . . . . . A
-mi.”wepemfudwemm Efect: In urma execunel fUnCIIBI creat se creeaza f|$|eru| speclﬂcat $I, In plus,
-Sablonmdelucvu cu dlrecloave H . H ,_ . _ ,_ . . . .
-newMe'symmm'm acesta este deschls In scrlere (!), valoarea returnata avand aceea$| semnlﬂcatle
-geshunat d2 nudem Llnux
-mmmmmw ca la funclla open.
-mm pentru upevatll v0 cu
-—;f, w f Observaﬁe: Tn cazul cénd acel fisier deja existé, el este trunchiat la zero,
-pastréndu-ise drepturile de acces pe care le avea.
-Nata“: practic, un apel creat(nume_cale, perm_acces) ; este echivalent cu apelul urmétor:
-open(numeicale, U_WRUNLY | [J_CREAT | U_TRUNC, permiacces);
-Memu d9 navigare Gestiunea 'isierelor, panea Ma: anihvele HO pentru lucvul cu fisiere 8 / 25
+'Agldlpoesw I Crearea de fisiere de tip obisnuit: primitiva creat.
+-u : unctii pentru ’ ’
+0 era ii cu isiere ' ' .
+L——Priin9i;a'|§e caiegom de lnterfafta fu ncfuel cre at ([5]) .
+21222121230688 i int creat (char* nume_ca/e, int perm_acces)
+Primitiva creat
+:[Eﬁjjfjjj — nume_cale = numele fi$ieru|ui ce se creeazé
+$22312: — perm_acces = drepturile de acces pentru noul fi$ier creat
+ZZZiEYZZ'ZiZmpludeses/um — valoarea returnaté este descriptorul ole fi$ier deschis, sau - 1 Tn caz ole eroare.
+de lucru cu fi$iere
+Alte primitive l/O pentru fi$iere A , , , , v . . . . . A
+Primitivel/Opemrudirectoare Efect: In urma execujuel funcjuel creat se creeaza f|$|eru| speCIflcat $l, In plus,
+Sablonuldelucru cu directoare H , H A , v A . . . .
+Despreﬁle-systemcache-ul acesta este deschls In scrlere (l), valoarea returnata avand aceea$| semnlflcatle
+gestionat de nucleul Linux
+Biblioteca standard de C: Ca Ia fUHCtla Op€Il.
+flurlwcﬁi pentru operatii l/O cu
+——fRf _t W f Observafie: Tn cazul cénd acel fi$ier deja existé, el este trunchiat Ia zero,
+eerlne l logralce
+péstréndu-i-se drepturile de acces pe care Ie avea.
+Noté: practic, un apel creat (nume_cale, perm_acces) ; este echivalent cu apelul urmétor:
+open(nume_cale, O_WRONLY | O_CREAT | O_TRUNC, perm_acces) ;
+Meniu de navigare Gestiunea fi$iere|0r, partea l-a: Primitivele l/O pentru Iucrul cu fi$iere 8/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
+O O
 Primitiva open
-‘ISMIOIIXI I “Deschiderea”unui ﬁsier, Le. initializarea unei sesiunl' de lucru: primitiva open.
-ZFZZLJSIQZJOLQ lnterfata funcllel open ([5]).
-Smiles int open(char* nume_cale, int tip_desch, int perm_acces)
-Prlmmva meat
-11:13:23ij i numeica/e = numele fisierului ce se deschide
-11:13:12‘; — permiacces = drepturile de acces pentru fisier (utilizat numai Tn cazul Tn care
-El'ﬁﬁviiiiimpmw apelul va avea ca efect crearea acelui fisier)
-delucrucuhsveve I . . II I . .. I . . II I
-AHEPHMIWElopeﬂlwﬂswe — t/p_desch = specmca tlpul deschIdern, putand fl exact una smgura dlntre
-anmve V0 peMIu dWeMQave _ , . . - y
-Sablonmdelucvucuduecloave valorlle U_RDUNLY on U_WRONLY or| O_RDWR, $I, eventual, comblnata cu o
-Despre ll/eVsysIem cashew . . v . I
-geﬂmmmgmdgmux comblnalle (i.e., disjunctie logicé pe bin) a urmatoarelor constante Slmbollce:
-Bmhmeca standavd de C‘
-:unmpemwem--vw O_APPEND, U_CREAT, U_TRUNC, U_EXCL, U_CLUEXEC, D_NONBLUCK, $.a.
-Rasmwbhugm — valoarea returnaté este descriptorul de ﬁsier deschis (lieu indexul in tabela localé
-de fi$iere deschise), sau *1 Tn caz de eroare.
-Memu de navigare Gestiunea 'isierelor, panea La: anihvele HO pentru lucvul cu fisiere 9/25
+Lgldlpolle I “Deschiderea”unui fisier, i. e. initializarea unei sesiuni de lucru: primitiva open.
+-u : unctii pentru ’ ’
+09era ii cu isiere ' ' .
+PrineiigaII/ei categoriide Inter-fate’ functlel Open ([5])'
+21222121?“ i int open(char* nume_ca/e, int tip_desch, int perm_acces)
+Primitiva creat
+:[jﬂjijjjfjjj — nume_cale = numele fieierului ce se deschide
+2:232:23 — perm_acces = drepturile de acces pentru fieier (utilizat numai in cazul in care
+ZZZiEYZZ'ZiZmpludeses/um apelul va avea ca efect crearea acelui fieier)
+de/ucrucufieiere I . . v I I II A I . V _
+Alteprimmvel/Opemwﬁsiere — t/p_desch = speelflca tlpul deschlderu, putand fl exact una smgura dintre
+Primitive I/O pentru directoare . . , . . v
+$ab|onu|delucmudiectoare valorlle O_RDONLY 0r| O_WRONLY 0r| O_RDWR, $l, eventual, combinata cu o
+Despre file-system cache-ul . . V I I
+gestonatdenuc'eu'mnux comblnatle (i.e., disjunctie logica pe biti) a urmatoarelor constante Slmbollce:
+Biblioteca standard de C:
+1turtctiipentruoperatiil/Ocu U_APPEND, U_CREAT, U_TRUNC, U_EXCL, U_CLUEXEC, U_NUNBLUCK, $.a.
+Referimebibiograﬁce — valoarea returnata este descriptoru/ de fie/er deschis (i.e., indexul in tabela locala
+de fieiere deschise), sau - 1 in caz de eroare.
+Meniu de navigare Gestiunea fieierelor, partea l-a: Primitivele l/O pentru Iucrul cu fieiere 9/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
+O O
 Primitiva read
-‘""me'e I Citirea dintr-un ﬁsier: primitiva read.
-APi'm POSiX mum penim '
-r ii Ii ili v ' ' .
-Mgrvjjgagjjaljgxdg lnterfaia funcilel read ([5]).
-imwi'icess 1nt read ( 1nt df, char* buffer, uns 1 gned nr_oct)
-Prlmiilva cveai
-11:13:22," i df = descriptorul fisierului din care se citeste
-11:13:12‘; — buffer = adresa de memorie la care se depun octeiii citiii
-El'ﬁﬁviiiiimpimw — nrioct = numérul de octeii de citit din ﬁ$ier
-de iucru cu iisieve
-AiepnmmvemmM — valoarea returnata este numarul de octeil efectlv cmil, daca eltlrea a reu$|t
-anmve i/O penilu divecioave . _ . A
-Sablomiidelucvucudlrecloave (chlar $| pariIal), sau -1 In caz de eroare.
-Despre li/ersyslem cache'ui
-gesiiunai d2 nucieui Llnux Observatii:
-Bibiicieca siandavd de G‘ '
-11T§QPE""““"E"’"' V0“ 1. La sfarsitul citirii cursorul va ﬁ pozitionat pe urmétorul octet dupé ultimul octet efectiv citit.
-waébibiwgrm 2‘ Numérul de octeti efectiv cititi poate fi mai mic decét s-a specificat (19.9,, dacé Ia inceputul citirii
-cursorul in fisier este prea apropiat de sférsitul fisierului); in particular, acesta poate fi chiar O,
-daca la incepuiul citirii cursorul in fisier este chiar pe pozitia EOF (i.e., end-of-ﬁle).
-Meniu de navigare Gestiunea iisierelor, pariea i-a: Primitivele i/O pentm lucvul cu iisiere 10/25
+'"tmdmere I Citirea dintr-un fisier: primitiva read.
+API-ul POSIX: functii pentru ’
+09era ii cu isiere ' ' .
+PrIinciIEJaII/ei categoriide Inter-fate‘ functlel read ([5])'
+2112311111988 i int read (int df, char>l< buffer, unsigned nr_oct)
+Primitiva creat
+:[Eﬁjjfjjj — df = descriptorul fieierului din care se cite$te
+21:31:33,133 — buffer = adresa de memorie Ia care se depun octetii cititi
+ZZZiEYZZ'ZiZmpiudeses/um — nr_oct = numarul de octeti de citit din fieier
+de/ucrucufieiere v v . . . . . v . . .
+Alteprimmvei/Opemwﬁsiere — valoarea returnata este numarul de octeti efectlv cltltl, daca c|t|rea a F6U$lt
+Primitive I/O pentru directoare . I I A
+Sablonuldelucru cu directoare (ChIar SI partial), SﬂU _1 In CaZ d6 GFOHFQ
+Despre file-system cache-ul
+gestlonat de nucleul L1nux Observatii:
+Biblicteca standard de C: ’
+ILTZEZpemwwerat" V06“ 1. La stareitul citirii cursorul va fi pczitionat pe urmatcrul octet dupa ultimul octet efectiv citit.
+Referimebibliograﬁce 2. Numarul de octeti etectiv cititi poate ti mai mic decat s-a specificat (e.g., daca la inceputul citirii
+curscrul in fi$ier este prea apropiat de stareitul fieierului); in particular, acesta poate fi chiar O,
+daca la inceputul citirii cursorul in fi$ier este chiar pe pozitia EOF (i.e., end-of-file).
+Meniu de navigare Gestiunea fieierelor, partea l-a: Primitivele l/O pentru Iucrul cu fi$iere 10/25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:11**************
+O O
 Primitiva write
 
-‘""me'e I Scrierea fntr-un fisier: primitiva wr it e.
-APLm POSW mncm pentm
+'"tmdmere I Scrierea fntr-un fisier: primitiva write.
 
-r uh ﬁn v ' ' ' .
-Mgrvjjgagjjaljgxdg lnterfata funcllel wrlte ([5]).
-ETHVZLZESS 1nt wr1te(1nt df, char* buffer, uns 1gned nr_oct)
-Prlmmva meat
-:Iiﬂjjffj: i df = descriptorul fisierului Tn care se scrie
-11:13:12‘; — buffer = adresa de memorie al cérei continut se scrie Tn fisier
-522212215‘,me — nrioct = numérul de octeti de scris in fi$ier
-de Vucru cu hsveve
-MepnmmveIonM — valoarea returnata este numarul de octetl efectlv SCFI$|, daca scrIerea a reu$|t
-anmve V0 peMIu dWeMQave . _ . A
-Sablonmdelucvucudueclcave (chlar $| parnal), sau -1 In caz de eroare.
-Despre ll/eVsysIem cashew
-geshunat d2 nudeu‘ Llnux Observatii:
-Bmhoteca standavd de C‘ '
-11T§QPE""““"E"’"' V0“ 1. La sférsitul scrierii cursorul va fi pozitionat pe urmétorul octet dupé ultimul octet efectiv scris.
-waémwwgrm 2‘ Numérul de octeti efectiv scrisi poate fi mai mic decét s-a specificat (e.g., dacé acea scriere ar
+API-ul POSIX: functii pentru ’
 
-provoca mérirea spatiului alocat fisierului, iar aceasta nu se poate face din diverse motive —
-lipsé de spatiu liber sau depésire quota)‘
-Memu d9 navigare Gestiunea 'isierelor, panea Ma: anihvele HO pentm lucvul cu fisiere 11 /25
+0 era ii I/O cu fisiere ' ' ' .
+
+L——Prina;aieie categom de lnterfata functlel wrlte ([5]).
+
+21222121230688 i int write (int df, char>l< buffer, uns igned nr_oct)
+
+Primitiva creat
+
+:[Eﬁijfjjj — df = descriptorul fieierului in care se scrie
+
+3131:1333; — buffer = adresa de memorie al carei continut se scrie in fieier
+
+ZZZiEYZZ'ZiZmpiudeses/um — nr_oct = numarul de octeti de scris in fieier
+
+de lucru cu fieiere v v . . . I V I I
+
+Alteprimmvei/Opemwﬁsiere — valoarea returnata este numarul de octetl efectlv scrlel, daca scrlerea a reu$|t
+
+Primitive I/O pentru directoare I I I A
+
+Sablonuldelucru cu directoare (ChIar SI partial), SﬂU _1 In CaZ d6 GFOHFQ
+
+Despre file-system cache-ul
+
+gestlonat de nucleul L1nux Observatii:
+
+Biblldteca standard de C: ’
+
+Iiﬁgpemwwerat" V00“ 1. La starsitul scrierii cursorul va fi ozitionat pe urmatorul octet dupa ultimul octet efectiv scris.
+
+_— , p ,
+
+Referimebibliograﬁce 2. Numarul de octeti etectiv scriei poate fi mai mic decat s-a specificat (e.g., daca acea scriere ar
+provoca marirea spatiului alocat fieierului, iar aceasta nu se poate face din diverse motive —
+lipsa de spatiu liber sau depaeire quota).
+
+Meniu de navigare Gestiunea fieierelor, partea l-a: Primitivele l/O pentru Iucrul cu fi$iere 11 /25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
+O Q
 Primitiva lseek
-
-:gjdii'); ’ I Pozifionarea CUI'SOfU/U/ THU-UH fi$ier (Le. ajustarea deplasamentului curent in fi5ier):
-
-r H IVO H \ Y ' ' '
-J¥Z£§Lm°§al§giidg pr|m|t|va lseek.
-
-W I/o . .
-222$,va Interfata funcllel lseek ([5]):
-11:11:23 long 1seek(int df, long vaLajust, int modiajust)
-11:13:12‘; — df = descriptorul fisierului ce se (re)pozitioneazé
-El'ﬁﬁviiiiimpmw — vaLa/ust = valoarea de ajustare a deplasamentului
-d9 Vucru cu HSIEYE . . _ . V V
-Mam-WErcpemwm — m0d_a/ust = modul de ajustare, Indlcat dupa cum urmeaza:
-anmve V0 pemlu UNBMDGYE
-2:13;“),:s'jggjifé'hfxa'e ‘ SEEK_SET (=0) : ajustare in raport cu inceputul fisierului
-ﬁxjazzﬁitn ‘ SEEK_CUR (=1) : ajustare in raport cu deplasamentul curent
-IQSQPE"W“”E'E"'V0“ ‘ SEEK_END =2 : a'ustare in ra ort cu sférsitul fisierului
-— l p
-Ra's 'em m — valoarea returnata este noul deplasament In flsler (Intotdeauna, In raport cu
-
-Tnceputul fisierului), sau —1 Tn caz de eroare.
-Meruu d9 navigare Gestiunea 'isierelor, paﬂea \-a: PHmihvele HO pentm lucvul cu fisiere 12/25
+:Ifdluiegllx f I Pozitionarea CUFSOFU/ui fntr-un fisier (Le. ajustarea deplasamentului curent in fi$ier)2
+-u : unciii pentru ’ ’
+09eratii I/O cu fisiere ' ' '
+PriinQinalele categoriide prlmltlva lseek'
+k lnterfaia funciiei 1seek ([5]);
+2222222222922 long 1seek (int df, long val_ajust, int m0d_ajust)
+Primitiva read
+2222222222; — df = descriptorul fi$ieru|ui ce se (re)pozij[ioneazé
+ZZZiEYZZ'ZiZmpludeses/um — val_ajust = valoarea de ajustare a deplasamentului
+de lucru cu fi$iere . . . . v v
+AlteprimmveI/Opemwﬁsiere — m0d_ajust = modul de ajustare, Indlcat dupa cum urmeaza:
+Primitive I/O pentru directoare
+E22:22222272222252];2522953629 A SEEK_SET (=0) : ajustare in raport cu inceputul fi$ieru|ui
+2232;222:2223:qu A SEEK_CUR (=1) : ajustare in raport cu deplasamentul curent
+22222222pemw°perawHOG“ A SEEK_END (=2) : ajustare in raport cu sfér$itu| fi$ieru|ui
+eerine i io raice v A - - A A
+——9—R2 2 bb' 2 — valoarea returnata este noul deplasament In f|$|er (intotdeauna, in raport cu
+inceputul fi$ieru|ui), sau -1 in caz de eroare.
+Meniu de navigare Gestiunea fi$iere|0r, partea l-a: Primitivele l/O pentru Iucrul cu fi$iere 12/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
+O O
 Primitiva close
-‘2;:me m a I “inchiderea”unui fisier, i.e. finalizarea unei sesiuni de lucru: primitiva close.
-‘SHEHZLQQIQZQLQ Interfala funcllel close ([5]):
-onmmve I/o _ .
-anmvaamess mt close (1nt df)
-Prlmmva meat
-:"'"“"“PE" — df = descriptorul de fisier deschis
-2:13:12‘; — valoarea returnaté este O, dacé inchiderea a reusit, respectiv *1 in caz de
-$22312‘?me as eroare.
-de Vucru cu hsleve
-QQZZIQ'ULEQZ'IEKZQKZ Observalie: maniera uzualé de prelucrare a unui fi$ier, i.e. 0 sesiune de Iucru,
-ﬁi::l“)7l3§§[§ﬁ§$§i”e consté in urmétoarele: “deschiderea fisierului", urmaté de 0 buclé de parcurgere a
-geshunatdenudemLiuux _ ._ _ . _ _ _ _ - _ _ _ _
-mbhmﬁagandmddec. acestula cu operatn de cmre $I/sau de scrlere, $| eventual cu schlmban ale pozmel
-hmqupemfu opevaﬁi v0 cu A . . . A . “A . ,, .
-rm— curente m f|$|er, |ar m flnal Inchlderea acestula.
-R ‘arm lubh g h ... . . . .
 
-e e ° me Exemplu: a se vedea cele doua programe ﬁltru dos2un1x. c $| un1x2dos . c ([2]).
-Demo: exerciliile rezolvate [AsciiStatistics] si [Mpr] prezentate in Laboratorul #6 ([3]) ilustreazé alte
-exemple de programs care apeleazé functii I/O din APl-ul POSIX pentru procesarea unor fi$iere.
+'ALIdIPOSIXIIpeIIIIII I “inch/derea” unui fie/er, i. e. finalizarea unei sesiuni de lucru: primitiva close.
 
-Meniu de navigare Gestiunea 'isierelor, panea Ma: anihvele HO pentm lucvul cu fisiere 13 l25
+09era ii cu isiere - -
+
+PrinciEJaII/ei caiegoriide Inter-fate. fUnCtIGI ClOSG ([5]):
+
+primitive I/O . .
+
+Primitivaaccess , lIlt C108€<1Ilt df)
+
+Primitiva creat
+
+:[Qﬁijfjjj — df = descriptorul de fieier deschis
+
+2:232:21 — valoarea returnaté este O, dacé inchiderea a reueit, respectiv -1 in caz de
+
+ZreigthiYiJrﬁlgigmplu de sesiuni e roare '
+
+de lucru cu fieiere
+
+2:12;:'EQGQ/itffltfrili'jrr: Observaiie: maniera uzualé de prelucrare a unui fieier, i. e. o sesiune de lucru,
+
+ZZZSluilijjtlfiiffja“e consté in urmétoarele: “deschiderea fieierului”, urmaté de 0 buclé de parcurgere a
+
+gestionatde nucleul Linux I II . . I I I I V I I I I
+
+Bibliotecastandarddee: acestwa cu operajul de oltlre el/sau de scrlere, $l eventual cu schlmbarl ale pozrgiei
+
+functii entruo eratiil/O cu A . . . A . “A . H .
+
+ﬁsieiep p ‘ curente In fleler, lar In flnal Inchlderea acestwa.
+
+Referinebiblio rafice v . . . .
+
+——g—t Exemplu: a se vedea cele doua programe flltru dos2un1x. c $| un1x2dos . c ([2]).
+Demo: exerciiiile rezolvate [AsciiStatistics] $i [|\/|pr] prezentate in Laboratorul #6 ([3]) ilustreazé alte
+exemple de programe care apeleazé functii I/O din APl-ul POSIX pentru procesarea unor fieiere.
+
+Meniu de navigare Gestiunea fieierelor, partea l-a: Primitivele l/O pentru Iucrul cu fieiere 13/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Demo: Un exemplu de seslunl de Iucru cu f|$|ere
+Demo: Un exemplu de sesrunr de lucru cu flslere
 
-mmwe \até un exemphi de program ce efectueazé doué ses/unl de Iucru cu ﬂeiere mai exact reahzeazé 0 copiers eeevenueia a uﬂw iieier dat:
-:ET;ZJHP‘%SQUX,QQ:Hnew“ A Basic Cp iile copy program. PUSIX implementation. */
-Pnnweielecelegemde kinclude <stdio.h>
-pwmlweVO kinclude <unistd.h>
-anmvaaccess #include <eye/type=.n>
-Prlmmvacveat aiuclude <sys/stat.h>
-anmvaupen ainelude <fcnt1.h>
-anmvavead #dsfius 501151212 4096 // This is exactly the page size, for disk I/u efficiency!
-anmva write
-Pr|mmva\seek int main (int argc, char *argv [1) (
-Primitvvaduse int inputjn, outputjd;
-Demn Unexempmdess'slum ssize_t bytes_in, bytes_out;
-de'”””°“"s‘e'e char buffer[EUF_SIZE];
-“e“"'“"“’E‘°Pe“"“"s‘e’e if (argc !: 3) { printf("Usage: cp fileesrc fileedesthi"); return 1; }
-anmveVOpemrudwectuave input_fd = open(argv[1], U_RDUNLY);
-56mm‘“e'“°'“°““"e°‘°a’e if (input_fd == 71) { perrer<ergv[1]); return 2; )
-Despre n/ereyslem cache'm
-gesmamgmgummux eutputid = epen<ergv[2], 0,wnunLY|u,anAT\UJRUNC, 0600);
+lntroducere lata un exemplu de program ce efectueaza doua sesiuni de lucru cu fisiere, mai exact realizeaza o copiere secventiala a unui fisier dat:
+gliﬁgﬁfgggwmmm /* Basic cp file copy program. POSIX implementation. */
+Principalele categorii de # inc 111519 < S t di O ' h >
+primitive I/O #inClude <uniStd.h>
+Primitivaaccess #include <SyS/typeS .h>
+MMMmcmm #include <sys/stat.h>
+Hmmmomn #include <fcnt1.h>
+memamw #define BUF_SIZE 4096 // This is exactly the page size, for disk I/O efficiency!
+Primitiva write
+Pmmmamwk int main (int argc, char *argv [1) {
+Primitivaclose int input_fd , output_fd;
+Demo: Un e>I<elmp|u de sesiuni ssize_t bytes_in , byte s_out;
+de’”C’”CU“$'ere char buffer [BUF_SIZE];
+NmmhﬁwVOmmmHQme if (argc != 3) { printf("Usage: cp file-src file-dest\n"); return 1; }
+Primitive I/O pentru directoare input _fd = open ( argv [1] , D_RDDNLY) ;
+SablonulldeIucrucudirectoare if (input_fd == _1) { perror(argv [1] ); return 2; }
+Despre file-system cache-ul _
+@ﬁMEMGmMWHJmm output_fd — open(argv[2], 0_WRONLY|0_CREAT|0_TRUNC, 0600);
 
-if (output,fd == 71> { perror(argv[2]); return a; 1
-Binhmeta standavd d9 C
-igggpe""“”pe'a"'m““ /* Preeeee the input file a record at atime. *l
-— while ((byteejn : reed<input,fn, buffer, 511115122» > 0) {
-ML bytesmut : urine(output,fd, buffer, bytesju);
+if (output_fd == —1) { perror(argV[2]); return 3; }
+Biblioteca standard de C:
+IgﬁymmmommWMMm /* Process the input file a record at atime. */
+______________ While ((bytes_in = read(input_fd, buffer, BUF_SIZE)) > 0) {
+Bﬁﬁﬁiﬁﬁmﬁﬁi___ bytes_out = write(output_fd, buffer, bytes_in);
 
-if (byteemut !: bytesjn) {
-perror("Fatal write errer."); return 4;
-1'
+if (bytes_out != bytes_in) {
+perror("Fatal write error."); return 4;
 }
-closeKinput_fd); close(output_fd); return 0;
 }
-Men“, ee navigare Nulé acestexempm eeiemenembn pemru descémare de em; epjusnr ([2]). ‘4/25
+close(input_fd); close(output_fd); return 0;
+}
+Meniu de navigare Nata": acest exemplu este disponibil pentru descarcare ole aici: cp_POSIX . c ([2]). 14 / 25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
+O O
 Alte primitive l/O pentru fi$iere
-‘ALdIZOIIXI I I “Duplicarea” unui descriptor de fi$ier: primitivele dup $i dup2.
-r u 1 Ii v " - ' ' ' ' '
+LZIdIZOeIIIIXI I “Duplicarea” unui descriptor de fi$ier: primitivele dup $i dup2.
+-u : unciii pentru
 
-Jégnjjgaijs°jaljgijdg I Controlu/ operailllor l/O. prlmmvele f cntl $| loctl.
-imwi'icess I Oblmerea de Informal!” conI/nute de I-nodul unu! fl$lefi prlmltlvele stat, 1stat
-Prlmmva cveai
-mm we" sau f st at.
-P"m“'”“'”“ I Crearea/ster erea unei Ie éturi entru un ﬁsier: rimitiva link res ectiv unl ink.
-Pumiwme , g Q P , P , P
-11:13::ij I Schimbarea drepturi/or de acces la un fi$ier: primitiva chmod.
-Demo Un exem lu de SESVLJH! . I , 4 , , . . . .
-MCNMWZ I Sch/mbarea proprietaru/u/unu1fl$ler: prlmmvele chown $| chgrp.
-Aiie primliive i Openlvuﬂsiere . ‘I .. . . . I . . .
-mm vowwwwwe I Configurarea mast/I dreptunlor de acces Ia crearea unu! fl$l6fi prlmltlva umask.
-Sablonui de lucru cu dlrecloave
-g:§$l§l’§§ﬁ'§§ﬁ§"$ I Montarea/demontarea unu! Sistem de {Is/ere: prlmmva mount, respectlv umount.
-$.bhmecasianda.dd78_ I Crearea pipe-urilor (129., canale de comunicatie anonime): primitiva pipe.
-unqupenlru opevaiii cu
-"5‘“— I Crearea ﬁsiere/or d8 tip ﬁfO (i.e., canale de comunicaiie cu nume): primitiva mkfifo.
-mm Interfata functiei mkfifo ([5]):
+% I Contro/u/ operaItiilor l/O: primitivele fcntl $i ioctl.
+21121111130988 i I Obi/nerea de informaIt/i conItinute de i-nodu/ unui fiIsier: primitivele stat, 1st at
+Primitiva creat
+Primitiva open sau f Stat‘
+Primitiva read . v . . . . . . . . .
+Primitivawrite I Crearea/Istergerea une/ legatur/ pentru un fIISIGI'I prlmltlva 1 1nk, respectlv unl 1nk.
+E2221; 13:: I Schimbarea drepturi/or de acces la un fi$ier: primitiva chmod.
+Demo: Un exemplu de sesiuni I I I I I I I I I I
+de i ii$ieie I Sch/mbarea proprietaru/UI unu/ fl$ler: prlmltlvele chown $| chgrp.
+Alte primitive l/O pentrufi$iere I v II I I I I I I I
+Piimiiive iiopeiiiiudiiecioaie I Configurarea maIstll drepturllor de acces la crearea UnUI f/ISIer: prlmltlva umask.
+Sablonuldelucru cu directoare I I I I I I I .
+DestieiIi/z-sysijmfiqhe-ui I Montarea/demontarea unu/ Sistem de fl$lere: prlmltlva mount, respectlv umount.
+QGSIOHH e HUC GU 1nux
+Bibiioiecasiandaiddec: I Crearea pipe-uri/or (i.e., canale de comunicaiie anonime): primitiva pipe.
+funciii pentru operaiii l/O cu
+isiere— I Crearea fl$lerelor d8 Tip flfO (i.e., canale ole comunicaiie cu nume): prlmltlva mkf 1f0.
+——9—Refe“"te bib“° ‘am lnterfaia funciiei mkf if o ([5]):
 
-int mkfifo(char* numeica/e, int permiacces);
+int mkf ifo (char* nume_cale, int perm_acces) ;
 
-— numeicale = numele iisierului Iifo ce se creeazé
+— nume_cale = numele fisierului fifo ce se creeazé
 
-— permiacces = drepturiie de acces pemru acesta
+— perm_acces = drepturile de acces pentru acesta
 
-— vaioarea returnaié este 0 in caz de succes, sau *1 in caz de eroare.
+— valoarea returnaté este O in caz de succes, sau -1 in caz de eroare.
 
-Meniu de navigare I 5-3- Gestiunea iisierelor, pariea i-a: Primitivele v0 pentm lucvul cu iisiere 15 125
+Meniu de navigare I S..8. Gestiunea fi$iere|0r, partea l-a: Primitivele l/O pentru Iucrul cu fi$iere 15/25
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:16**************
+o o
 Primitive l/O pentru directoare
-‘AgIdIWIOIIXI I I Crearea/stergerea unui director: primitiva mkdir, respectiv rmdir.
-V“ unclu em
+'IIIIIdIIIOS IX I I Crearea/stergerea unui director: primitiva mkdir, respectiv rmdir.
+-u : unctii pentru ’ I I .
 
-ogeralu ercuilsieve p Interfaia functiei mkdir ([5]):
+ogIeretii I/O cu iisiereI Interfaia funCilel mkdlr ([5]).
 
-:Q'gijffyﬂewm “e 1nt mkd1r(char* numeicale, 1nt permiacces) ;
+EIrI'QIﬁI'IQZ'f/‘gcateg°r"de int mkdir (char* nume_cale, int perm_acces) ;
 
-Wm“ mess — numeica/e = numele dil'eCiOl'in ce se creeazé
+Primitiva access ' — nume_cale = numele directorului ce se creeazé
 
-2:13: 2:; — permiacces : drepturile de acces pentru acesia
+2:22:32 :Iroeea; — perm_acces = drepturile cie acces pentru acesta
 
-anmvayead i vaioarea returnaié este 0 in caz de succes, sau -1 in caz de aware’
+Primitiva read — valoarea returnaté este O in caz de succes, sau -1 in caz de eroare.
 
-WM wriie
+Primitiva write
 
-WWW I Aﬂarea directorului curent de lucru a/ unui proces: primitiva getcwd.
+Primitiva'seek I Af/area directcru/ui curent de lucru a/ unui proces: primitiva getcwd.
 
-Prlmiilva ciuse
+Primitiva close
 
-Demo Un exempiu de 5mm, I I I I . . . .
+Demo: Un exemplu de sesiuni I I I I I I I .
 
-WW. I Schlmbarea directorulul curent de lucru a! UnUI proces: pnmmva chdlr.
+Lie/meme I Sch/mbarea directcrulw curent de lucru a/ unui proces: primitiva chdlr.
 
-Aiie primliive ISO perilvu ﬁsiere I I ,
+Alte primitive l/O pentru fieiere . . .
 
-WW VODWNWHW Interfata fqncﬂel chdlr ([5]):
+Primitive I/O pentru directoare Interfata fLI'lnCtlel Chdlr ([5])-
 
-Sablonuidelucvucudlrecloave 1m: chd1r(char* numeica/e) ;
+Sablonul de lucru cu directoare lIlt Chdlr (Char* nume_Ca/e) ,
 
-Des re Me's s em cache'ui
+D r fil - tm h -u|
 
-ges:unaide{iu’cieuiL1nux — numeicale = numele noului director cureni de lucru, al procesului apelani
+ggjoﬁaizgiigeufiirfux — nume_cale = numele noului director curent de lucru, al procesului apelant
 
-Bibhciecasiandavd de 0- — vaioarea returnaié este 0 in caz de succes, sau *1 in caz de eroare.
+Biblioteca standard de c: — valoarea returnaté este O in caz de succes, sau -1 in caz de eroare.
 
-mum peniru upevaill v0 cu
+functii pentru operatii l/O cu
 
-'—’II:I w I I “Prelucrarea”ﬁsiere/or dintr-un director: primitivele opendir, readdir $i
+ﬁ i r n ,, . . . . . . . . . .
 
-e we i Wm
-closedir. Alte funciii utile: rewinddir, seekdir, telldir 5i scandir.
-O sesiune de lucru cu directoare se implementeazé aseménétor ca una cu fisiere, i.e. este o
-secventé de forma: “deschidere director", 0 buclé cu operatii de citire, “Tnchidere director".
-Meniu d9 navigare Gestiunea iisierelor, pariea i-a: Primiiivele i/O pentru lucvul cu iisiere 1s / 25
+III III I I Pre/ucrarea fie/ere/cr dintr-un director: primitivele opendlr, readdlr SI
+
+eerinte i iogra ice ’ ’
+closedir. Alte functii utile: rewinddir, seekdir,te11dir $i scandir.
+O sesiune de lucru cu directoare se implementeazé aseménétor ca una cu iieiere, i.e. este 0
+secventé cle icrma: “deschiclere director”, o buclé cu operatii cle citire, “inchiclere director”.
+Meniu de navigare Gestiunea fieierelcr, partea l-a: Primitivele l/O pentru Iucrul cu fieiere 16/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-$ablonul de Iucru cu dlrectoare
+Sablonul de lucru cu dlrectoare
 
-‘""“d““"= Se folosesc tipurile de date DIR si struct dirent, Tmpreuné cu functiile enumerate mai sus, astfel:
+'“tmducere Se folosesc tipurile de date DIR si struct dirent, Tmpreuna cu functiile enumerate mai sus, astfel:
 
-APLM POEM ﬁunclu peﬂtm
+API-ul POSIX: functii pentru
 
-Qgeraw no cu "we _ v v v
+—L——g.ergtHI/OCUHSH? DIR *dd; // descrlptor de dlrector deschls
 
-Prlnwamcalegmdg DIR _ *dd, // descnpngr de-a dlrector deschls
+rrncrpalele categorii de , . . .
 
-Drummer/O strum; dlrent *de; // mnare 1n dlrector
+primitivevo struct dlrent *de; // 1ntrare 1n dlrector
 
-WM access
+Primitiva access
 
-pnmmvwea‘ /» deschiderea directnrnlui *l
+Primitivacreat /* deschiderea directorului */
 
-anmvaupen if( (dd : upsudi!‘ (numejirscndrn Z: NULL)
+Primitivaopen if( (dd = opendir (nume_director)) == NULL)
 
-anmva read i
+Primitiva read {
 
-WWW,“ ... // TDDEI: trateaza eroarea la deschidere
+Primitivawrite ... // TODD: trateaza eroarea la deschidere
 
-anmva ‘seek }
+Primitiva lseek }
 
-Prlmmva chase
+Primitiva close
 
-Demo Unexempmdesssrum /* prelucrarea secventiala a tuturor intrarilor din director v/
+Demo: Unexemplude sesiuni /* prelucrarea secventiala a tuturor intrarilor din director */
 
-“MONUME'E'E uhile( (de : readdir (dd)) !: NULL)
+de/ucrucufi$iere While( (de = readdir (dd)) != NULL)
 
-Ahe prrmlhve r o penlru ﬁsrere {
+Alte primitive l/O pentru fisiere {
 
-PrlmmveWovemwdwevware ... // TDDU: prelucreaza intrarea curenta, ce are numele: de7>d_name
+Primitive l/Opentrudirectoare ... // TODD: prelucreaza intrarea curenta , ce are numele: de—>d_name
 
-sabldnur de lucru cu dlrecloare }
+Sablonul de lucru cu directoare }
 
-Despre n/Hyslem cashew
+Despre file-system cache-ul
 
-ges“““a‘“"“°‘e“""““x A inchiderea directurului w
+gesuonatde nUCIGUILinuX /* inchiderea directorului */
 
-Brbhmeca standard de 0 clusedir (dd) ;
+Biblioteca standard de C: closedir (dd) ;
 
-mm pemru uperatll v0 cu
+functii pentru operatii l/O cu
 
-hsrere
+fisiere
 
-ML Demo: un exemplu de program ce utilizeazé acest sablon — a se vedea exerciliul rezolvat [MyFind #1]
-prezentat in Laboratorul #6 ([3]) (de asemenea, el ilustreazé si folosirea apelului stat O, pentru
-aﬂarea proprietélilor unui fisier).
+MM Demo: un exemplu de program ce utilizeaza acest sablon — a se vedea exercitiul rezolvat [|\/|yFind #1]
+prezentat in Laboratorul #6 ([3]) (de asemenea, el ilustreaza si folosirea apelului stat (), pentru
+aflarea proprietatilor unui fisier).
 
-Meruu de navigare Gestrunea 'isierelor, parlea \-a Prrm'mveha r/o pentm lucml cu fislere 17 / 25
+Meniu de navigare Gestiunea tisierelor, partea l-a: Primitivele l/O pentru Iucrul cu fisiere 17/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
+O O
 Despre file-system cache-ul gestlonat de nucleul Llnux
-‘"‘mdmm La nivelul componentei de gestiune a sistemelor de fisiere din cadrul nucleului unui SO, se foloseste 0
-APi' iPOSiXi i _ . . .. . . .. .. . .
-ogeraulii liOcuilsuigrcem new zona de memorie interna din kernel»space ce lmplementeaza un cache pentru operatIllle cu discul (I.e.,
-:Q';f§§:‘i,'§°a‘eg°"‘°g se péstreazé in memoria RAM ccntinutul celor mai recent accesate blocuri de disc).
-Prmi aaccess , - . A . . . .
-Wimkxam‘ Acest cache este denumlt file-system cache (sau disk cache) In Ilteratura de speCIalltate ([4]), lar el
-P"'"“"“PE" functioneazé dupé aceleasi reguli generale ale cache-urilor de orice fel:
-anihva read . . . . . . . . c . . . . . .
-WM We l) cltirl repetate ale acelu|as| bloc de disc, la Intervale de iImp ioarte scurte, vor regasl Informaila dlreci din cache-ul dln
-WMMQK memorie; ii) scrieri repeiate ale aceiuiaei bloc de disc, ia intervale de limp foarte scurte, vor actualiza informalia direct in
-Prlmiilva Ciuse CBChe-Ul din memorie, iar informaiia pe disc va ii aciualizaié o singura data, la momentul operatiei de cache-ﬂushing;
-Demo Un exemplu de SESiUﬂi .. . . . . . .
-demmuhsm Ill) operaillle de lnvalldare/actuallzare a mforrnatlel din cache: ...;s.a.
-Aiie primiiiveuo pemmisiw . I I I A . I I II
-WWWl/opemchWE Granularitatea acestui cache (i.e., unitatea de alocare |n cache) este paglna lelca, care are o
-ﬁz:::“ly;fs'y“ge“ln°“c:::ﬁa'e dimensiune dependenta de arhitectura hardware (e.g., pentru arhitectura x86/x64 dimensiunea paginii
-gem-3i d2 mew 1.1m esie de 4096 ocieii). Cu alle cuvinte, operaiiile efeciive de l/O prin DMA intre memorie si disc transferé
-f“‘“°‘e°“‘a"d“'d?e°' blocuri de informaiie cu aceasta dimensiune!
-unciii perllm Upeiaill l/O CU
-R ‘e W I Acest file-system cache este unic per Sistem, i.e. eXIsta o smgura instantIa a sa, gestionata de SO $|
-M . . c . . II c . c" .. A .
-
-utilizata Simultan (ca 5| resursa partajata ) de toate procesele ce se executa in Sistem.
-
-Nola: mai multe detalii despre aceste lucruri vetIi afla intr-un curs teoretic ulterior.
-
-Despre implicatiile existentei acestui ﬁ/e—system cache pentru programarea aplicaiiilor folosind functIiile
-
-read si write din APl-ul POSIX putetIi citi aici.
-
-Meniu cie navigare Gesiiunea iisierelor, pariea i-a: Primitivele i/O penim lucrul cu iisiere 18 125
+'“imducere La nivelul componentei de gestiune a sistemelor de fisiere din cadrul nucleului unui SO, se foloseste o
+APl- lPOSlX:f n t"p ntr c . . c . . c .. . .
+Ogersm VOCuﬁslfefe" e u zona de memorie interna din kernel-space ce implementeaza un cache pentru operatiile cu discul (/.e.,
+EII'QI?I'§Z'?/'gcateg°r"de se pastreaza in memoria RAIVI continutul celor mai recent accesate blocuri de disc).
+Primitiva access a . , . A . . . .
+Primitivacreat Acest cache este denumit file-system cache (sau O'ISK cache) in ||teratura de specialitate ([4]), iar el
+Primitivaopen functioneaza dupa aceleasi reguli generale ale cache-urilor de orice tel:
+2:222:32sz1‘: i) citiri repetate ale aceluiasi bloc de disc, Ia intervale de timp foarte scurte, vor regasi informatia direct din cache-ul din
+Primitiva |Seek memorie; ii) scrieri repetate ale aceluiasi bloc de disc, Ia intervale de timp foarte scurte, vor actualiza informatia direct in
+Zrimitii/EItIclose I d . . cache-ul din memorie, iar informatia pe disc va fi actualizata o singura data, la momentul operatiei de cache-flushing;
+(157,13), Quifjglﬁu e ses/unl iii) operatiile de invalidare/actualizare a informatiei din cache: .. . ; s.a.
+Alte primitive l/O pentru fisiere . . . _ A _ _ _ V
+Primitive I/Opemrudirectoare Granularitatea acestui cache (/.e., unitatea de alocare |n cache) este pagina fiZica, care are o
+ZZZEll/‘13352’;‘iifﬁiale dimensiune dependenta de arhitectura hardware (e.g., pentru arhitectura x86/x64 dimensiunea paginii
+gestionatdenucleu'hnux este de 4096 octeti). Cu alte cuvinte, operatiile efective de l/O prin DMA intre memorie si disc transfera
+fBib'i9iecaSiandardtleC: blocuri de informatie cu aceasta dimensiune!
+unctu pentru operatu l/O cu ’
+II I _ I b'bl' I_ Acest file-system cache este unic per srstem, /.e. exrsta o singura instanta a sa, gestionata de SO si
+eerine l iograice I I V I I II V I "7! U A I
+utilizata simultan (ca si resursa partajata ) de toate procesele ce se executa |n sistem.
+Nota': mai multe detalii despre aceste lucruri veti afla intr-un curs teoretic ulterior.
+Despre implicatiile existentei acestui file-system cache pentru programarea aplicatiilor folosind functiile
+read si write din APl-ul POSIX puteti citi aici.
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru lucrul cu fisiere 18/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Agenda
-\mruducere |ntr0ducere
-APLM POEM ﬁuncaleMYu __ __ . .
-ogelalu no wlwe APl-ul POSIX: 'UI'ICQII pentru operatll l/O cu flslere
-mmecasmdam deg Principalele categorii de pnmilive l/O
-mnelu pemvu opevam MO cu Primihva access
-were v _
-Despre blbhateca standard d2 PrlmlIWa Creai
-o , .
-PM.“ m" mm ‘"an ope"
-slandald de c anmva read
-Funcmle de mblluiecé Denim P . .t .t
-Momma‘ r|m| \va wrl e
-Damn Un exemplu de 5mm Priminva \seek
-delucrucu we"; _ _
-Prlmmva close
-R ‘e hm v _ . . .
-‘g? we ‘ m “we Demo. Un exemplu de seS/un/ de Iucru cu flslere
-Alte primnive l/O pemru ﬁwere
-Priminve l/O pentru direcloare
-Sablonul de \ucru cu directoare
-Despre file'system cache'ul gesnonat de nucleul Linux
-Biblioieca standard de C: Iunctji pentru operaﬂi l/O cu 1i$iere
-Despre b\b|\oteca standard de C
-Functhle l/O dm b\bl\oteca standard de C
-Functhle de binotecé pentru HO formatat
-Demo: Un exemplu de sesfune de /ucru cu ﬂsiere
-Releringe biblicgrafice
-Memu de navigare Gestiunea 'isierelor, paﬂea \-a: anitwele HO pentru lucvul cu fisiere 19/25
+A
+'ntroducere Introducere
+API-ul POSIX: functii pentru __ __ _ _
+ogeratii I/Q cufisiere APl-ul POSIX: functll pentru operatll l/O cu fisiere
+functii pentru operatii l/O cu Primitiva access
+fisiere _ _ _
+Despre biblioteca standard de Prlmltlva Great
+C I I I
+Functiile l/O din biblioteca Pr!m!t!va Open
+standard de C Primitiva read
+Functiile de biblioteca pentru . - - -
+l/O formatat Primitiva write
+Demo: Un exemplu de sesiune Primitiva Iseek
+de/ucru cu fisiere _ _ _
+Primitiva close
+f . . I. f- . . I I '
+——9—Re er'nte b'b'o ra 'Ce Demo. Un exemplu de sesmn/ de lucru cu fisiere
+Alte primitive I/O pentru fisiere
+Primitive I/O pentru directoare
+Sablonul de lucru cu directoare
+Despre file-system cache-ul gestionat de nucleul Linux
+Biblioteca standard de C: functii pentru operatii l/O cu fisiere
+Despre biblioteca standard de C
+Functiile I/O din biblioteca standard de C
+Functiile de biblioteca pentru I/O formatat
+Demo: Un exemplu de sesiune de lucru cu fisiere
+Referinte bibliografice
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru Iucrul cu fisiere 19/25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Despre biblioteca standard de C
-Lsdwosm ‘ I Biblioteca standard de C contine functii cu capacitate limitata de a gestiona
-M resursele sistemului de operare (e.g., fi$iere)
-Erbhuteca standard de C
-117;?“ "W" "0 w I Este adeseori adecvata pentru scrierea unor programe simple
-BEE“b“’““‘e°“‘a"“““‘e I Permite scrierea de programe portabile, Tntre diverse platforme (e.g., Windows,
-Functule I'O dm bmlloleca
-warm-“wee V UNIX/Linux, etc.)
-Functllle de brbhoteca pentru
-Léiﬁmiﬁxemrdmm I Include tisierele: <stdlib.h> , <stdio.h> $i <string.h> ([6])
-de Iucru cu hslers
-Remum m I Performanta competltlva
+O O
 
-I Este restrictionata doar la operatii l/O sincrone
+Despre biblioteca standard de C
+
+'Agldlpoesw I Biblioteca standard de C contine functii cu capacitate limitata de a gestiona
+-u : unctii pentru
+
+LM— resursele sistemului de operare (e.g., fisiere)
+Biblioteca standard de C:
+ifsqggpemmperal""Ow i I Este adeseori adecvata pentru scrierea unor programe Slmple
+Beg”bib"°le°as‘a“dardde I Permite scrierea de programe portabile, Tntre diverse platforme (e.g., Windows,
+Functiile l/O din biblioteca .
+standarddee , u UNIX/Llnux, etc.)
+Functule de blblloteca pentru
+ZZEJTSlaéxempludeses/une I Include fisierele: <stdlib.h> , <stdio .h> si <string.h> ([6])
+de lucru cu fisiere v . . v
+Referinte bibliografice I Performanta competltlva
+
+I Este restrictionaté doar Ia operatii l/O sincrone
 
 I Nu avem control al securitatii fisierelor prin biblioteca standard de C
 
-I Apelul fopenO specifica daca ti5ieru| este text sau binar
+I Apelul fopen() specifica daca fisierul este text sau binar
 
-I Sesiuni/e de lucru cu ﬁsiere sunt identificate prin pointeri catre structuri FILE
+I Sesiuni/e de lucru cu fisiere sunt identificate prin pointeri catre structuri FILE
 
 — NULL semnifica valoare invalida
-— Pointerii sunt “handles” pentru obiecte de tipul sesiune de lucru cu un f/sier
-I Erorile sunt diagnosticate cu functiile perror() sau ferror()
-Meniu de navigare Gestiunea tisierelor, parlea t-a: Prrmitrvele t/O pentm lucrul cu risiere 20/25
+— Pointerii sunt “handles” pentru obiecte de tipul sesiune de lucru cu un fisier
+I Erorile sunt diagnosticate cu functiile perror () sau ferror()
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru lucrul cu fisiere 20/25
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:21**************
-Functiile |/O din biblioteca standard de C
+~ Q
 
-Lsdwosm ‘ Biblioteca standard de C contine un set de functii I/O (cele din header-ul <stdio.h> ([6])),
+Functiile l/O din biblioteca standard de C
 
-M care permit si ele prelucrarea unui fisier in maniera uzuala:
+'Agldlpoesw Biblioteca standard de C contine un set de funetii l/O (cele din header-ul <stdio .h> ([6])),
 
-Eibhmeca standard de C
+-u : unctii pentru
 
-1.173?“ "M" "0 c“ I fopen = pentru “deschiderea” fisierului
+L——° eratii'mcuﬁsme care permit si e|e prelucrarea unui fisier Tn maniera uzuala:
 
-Despre bibhciecasiandard d2 4 _ _ _ _ _ .
+Biblioteca standard de C:
 
-C I fread, fwrlte = pentru cmre, respectlv scrlere blnara
+iFSTZEZpemrwpera“"ow I tepen = pentru “desehiderea” fisierului
 
-Funcinle I'O dm biblloleca
+Despre biblioteca standard de 0 . . . . . V
 
-iiiﬁiﬁiﬁmmm I fscanf, fprintf = pentru citire, respectiv scriere formataté
+EuncmleI/Odinbuoteca I f read, fwrlte = pentru eltlre, respectlv scrlere blnara
 
-i/Oiurmala\
+itﬁnniﬁlriﬁiﬁbuaecépentru I fscanf, fprintf = pentru citire, respectiv scriere formatata
 
-ijgjsujfjgz‘“d““m I f close = pentru “inchiderea” fisierului
+l/Oformatat
 
-MW‘ Observatie: acestea sunt functii de biblioteca (nu sunt apeluri sistem) si lucreazé
-buffer-izat, cu stream-uri I/O, iar descriptorii de fisiere utilizati de ele nu sunt de tip
-int, ci de tip FILE*.
-Noté: implementarile acestor functii de biblioteca utilizeazé totusi apelurile de sistem corespunzatoare
-tiecarei plattorme in parte (i.e., Windows vs. Linux/UNIX).
-Observatie: sum mult mai multe functii l/O in biblioteca <stdio .h>; pentru a vedea lista lor si
-descrierea bibliotecii standard de I/O, inclusiv detalii despre cele trei fluxuri I/O standard (i.e., stdin,
-stdout si stderr), v5 recomand consultarea paginii de manual man 3 stdio ([6]).
+5533;;UUQUijjQZ'UdeSQSW I fclose = pentru “Tnchiderea” fisierului
 
-Meniu de navigare Gestiunea iisierelor, pariea i-a: Primitivele i/O pentru lucvul cu tisiere 21 l25
+MM; Observatie: acestea sunt functii de biblioteca (nu sunt apeluri sistem) si Iucreaza
+buffer-izat, cu stream-uri l/O, iar descriptorii de fisiere utilizati de ele nu sunt de tip
+int, ci de tip FILE>I<.
+Nota': implementarile acestor functii de biblioteca utilizeaza totusi apelurile de sistem corespunzatoare
+fiecarei platforme Tn parte (i.e., Windows vs. Linux/UNIX).
+Observatie: sunt mult mai multe functii I/O Tn biblioteca <stdio .h> ; pentru a vedea lista Ior si
+descrierea bibliotecii standard de I/O, inclusiv detalii despre cele trei fluxuri l/O standard (i.e., stdin,
+stdout si stderr), va recomand consultarea paginii de manual man 3 stdio ([6]).
+
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru Iucrul cu fisiere 21 /25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:22**************
-Functiile |/O din biblioteca standard de C (cont)
-‘"‘mm'e Ce inseamna ca aceste functii de biblioteca lucreaza buffer-izat ?
-Awm POSW ﬁuncw pemm ‘
-ogeraYH no cwlwe y A _ V , . . . . ..
-Emecamdamc Raspuns: mseamna ca folosesc un cache pentru dISC Implementat la mvelul b|b||otec||
-1175§l°9""““°e'a"'"0“ standard de C, adica “deasupra” ﬁle-system cache-ului gestionat la nivelul nucleului
-Despre mbhmeca standard de _ V . - . _
-Em.“rowmmmeca SO-uluI, despre care va v0| vorbl la cursurlle teoretlce.
-ﬁlﬁil'é'iiﬁbhoaapm Cu alte cuvinte, acesta este un cache al informatiilor din ﬁle-system cache, care la
-Voiurmalm
-ijgjgjfjggmdem randul sau este un cache al informatiilor de pe disc.
-Refevmle mbhugrahce A
-In plus, acest cache gestionat de biblioteca stdio este implementat in user-space (la
-fel ca si toate functiile bibliotecii), ceea ce inseamna ca este unic per proces $i nu per
+~ '1
+Functiile l/O din biblioteca standard de C (cont)
+IAZIGIPOGSW I__ I Ce Tnseamna ca aceste funclii de biblioteca lucreaza buffer-izat ?
+-u : unc,|| pen ru
+09eratii l/O cu fisiere v A v v . . _ _ _ __
+Bibliotecastandarddea Raspuns: Inseamna ca folosesc un cache pentru dlsc Implementat la nlvelul blbllotecu
+func ii en ruo eraiil/Ocu . v H ,, . . . . .
+ﬁsielep t p I i standard de C, adlca deasupra file-system cache-ulul gestlonat la nlvelul nucleulul
+Despre biblioteca standard de I V I I I I
+(Finalel/Odinbibloteca SO-ulul, despre care va VOl vorbl la cursurlle tecretlce.
+itﬁnniﬁliﬁiﬁblolecépentru Cu alte cuvinte, acesta este un cache al informaliilor din file-system cache, care la
+l/Oformatat
+Z§ZZ}UUQUZf§§r:'Udem randul sau este un cache al informaliilor de pe disc.
+Referinte bibliografice A
+In plus, acest cache gestionat de biblioteca stdio este implementat Tn user-space (la
+fel ca si toate funcliile bibliotecii), ceea ce Tnseamna ca este unic per proces si nu per
 sistem, adica nu exista un singur cache al bibliotecii care sa fie partajat de toate
 procesele ce utilizeaza apeluri ale bibliotecii stdio.
-Concluz/e: retineti faptul ca acest cache gestionat de biblioteca stdio nu este unic per
+Concluzie: relineli faptul ca acest cache gestionat de biblioteca stdio nu este unic per
 sistem, ca Tn cazul file-system cache-ului gestionat de SO, ci este “local” procesului.
-Meniu de navigare Gestiunea 'isierelor, parlea Ma: anitwele HO pentm lucvul cu fisiere 22/25
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru lucrul cu fisiere 22/25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-Functllle de blblloteca pentru l/O formatat
-‘"‘mdmm Biblioteca contine o serie de functii care efectueazé citiri/scrieri “formatate”, adicé efectueazé conversia
-APL tPOStXt l t A .. .. . . . .. . .. . . .. .
-W2.“ homing? Dem“ Intre cele doua reprezentarl, bmara vs. textuala, ale flecarur tlp de data, pe baza unul argument format
-arbrnrecannndamdec ce descrie conversiile de fécut prin niste “specificatori de format". Functiile respective sunt:
-tunctu pentru nperatrr to cu
-gs”— I perechea scanf /printf : citire de Ia stdin/scriere pe stdout ;
-espre blbhcteca standard d2
-gunmuleI'Odmbmhoreoa I perechea fscanf/fprlntf : citire dintr-un fieier de pe disc/scriere Intr-un fisier de pe disc;
-sma'ddec V I perechea sscanf/sprintf : citire dintr-un string in memorie/scriere Tntr-un string in memorie.
-Functllle de brbhoieca pentru
-t/Oturmalat
-Zerlrw UH ixewlu de SEW“ Argumentut formalfoloseste “specificatori de format", de forma ’%|iteré’, pentru a descrie diierite tipuri de date 5i, asﬁel,
-determina ce fel de conversle se va face Intre cele doua reprezentarl, brnara vs. textuala, ale tlpu|u| respectlv de data‘
-‘Me Wm '3'“ Spre exempluv iaté cétiva specificatorr de format si tipul de daté asociat frecéruia:
+o o
+Functule de blblloteca pentru l/O formatat
+'“troducere Biblioteca contine o serie de tunctii care etectueaza citiri/scrieri “formatate”, adica etectueaza conversia
+API-ul POSIX:functiipentru A c c . . v v . c . . c .
+09mm VOCuﬁsiere |ntre cele doua reprezentarl, binara vs. textuala, ale flecarw tlp de data, pe baza unw argument format
+Bibliotecastandarddec: ce descrie conversiile de tacut prin niste “specificatori de format”. Functiile respective sunt:
+tunctii pentru operatii l/O cu
+L'S'ere..— * I perechea scanf/printf : citire de la stdin/scriere pe stdout ;
+Despre blblloteca standard de
+gunctiilel/Odinbiblioteca I perechea fscanf/fprintf : c|t|re d|ntr-un tlsler de pe d|sc/scr|ere |ntr-un flsler de pe d|sc;
+standérddec. . - I perechea sscanf / sprintf : citire dintr-un string Tn memorie/ scriere Tntr-un string Tn memorie.
+Functule de blblloteca pentru
+l/Oformatat
+567w: UH efxémplu de sesiune Argumentul format foloseste “specificatori de format”, de torma ’%|itera’, pentru a descrie diferite tipuri de date si, astfel,
+I’ l l l’ U . A U __, , , V v , , , v
+e uc ucu $9 e determina ce tel de converSIe se va face |ntre cele doua reprezentan, b/nara vs. textuala, ale tlpulw respectlv de data.
+mm Spre exemplu, iata cativa specificatori de format si tipul de data asociat tiecaruia:
 I %c : un caracter
-I D/ns : un strrng (nu/Interminared)
-I %d : un int (un intreg cu semn). reprezemarea IeXIL/ala“ timd cea corespunzéloare scneni numérului m baza 10
-I %u ; un unsigned int (un imreg Iéré semn), reprezenlarea textualéiiind cea corespunzétoare scrierii numz'arului in baza 1o
-I a4,0 : un unsigned int, reprezenlarea textuala' Irlnd cea corespunzélcare scrierii numérului in baza a
-I m SEILI %>< ; un unsigned int, reprezemarea textuala' mm cea corespunzémare scrlerll numz'arului in baza rs
-I w un double (un numér real, cu semntv replezemarea textualé mm cea curespunzétoare scrrerri numérului in notatia cu punct zecimal
-I ‘I/Qe ; un double‘ reprezentalea textualé ma cea corespunzétoare scrrerri numérului in notatia cu mantisé E
-I 5.5.
-Pentru detalii suplimentare despre aceste perechi de functii 5i despre argumentul format utilizat de ele,
+I %s : un string (null-terminated)
+I %d : un int (un Tntreg cu semn), reprezentarea textua/a tiind cea corespunzatoare scrierii numarului Tn baza 10
+I %u : un unsigned int (un Tntreg fara semn), reprezentarea textua/a' tiind cea corespunzatoare scrierii numarului Tn baza 10
+I %o : un unsigned int, reprezentarea textua/a tiind cea corespunzatoare scrierii numarului Tn baza 8
+I %x sau %X : un unsigned int, reprezentarea textua/a tiind cea corespunzatoare scrierii numarului Tn baza 16
+I %t : un double (un numar real, cu semn), reprezentarea textua/a fiind cea corespunzatoare scrierii numarului Tn notatia cu punct zecimal
+I %e : un double, reprezentarea textua/a fiind cea corespunzatoare scrierii numarului Tn notatia cu mantisa E
+I s.a.
+Pentru detalii suplimentare despre aceste perechi de functii si despre argumentul format utilizat de ele,
 consultati documentatia: man 3 scanf si man 3 printf ([6]).
-Suplimentar, puteti consulta 5i materialul disponibil aici.
-Meniu de navigare 23 l 25
+Suplimentar, puteti consulta si materialul disponibil aici.
+Meniu de navigare 23/25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:24**************
-Demo: Un exemplu de seslune de Iucru cu f|$|ere
-mm“ \axa un exempw de program ce electueazé doué sesium de /uc!u cu ﬁsiere mai exact reahzeazé o COFHEFE secvennaia a unw Meier mar
-APLmPOSancIHpeMm H Basic cp file copy program. C library implementation. */
-w #include <stdio.h>
-Eibhumcastandamdec #dsfius BUILSIZE 4096 // This is exactly the page size, for disk I/u efficiency!
-Mnelu pemvu nperaw \ 0 cu
-were i int main (int argc, char ~ergv [1) {
-Desprebibhmecastandardde FILE *input file ‘output file-
-c . ’ . ’ ’ ’
-FunmuleI‘Odwb\bl|oleca sine-t bytes-1n, bytes-out;
-siandavddel) char buffer[EUF_SIZE];
-Calif-"ETibibholecépww if (argc !: s) { printf("Usage: cp filecsrc filecdesthi"); return 1; }
-urmaa . . _ .. .. .
-hemhmmpudeem WWW-ﬁle f foveﬂargﬂlli rb ),
-dwwwmw 1f (input_flle == NULL) { perrnr<ergv[1]); return 2; )
-outputjile = fopen(argv[2], "wb");
-MW‘ if (output,fi1e == mm.) { perrorKarng1); return a; }
-/* Process the input file n record at atime. t/
-while ((bytesjn : frsad(buffsr, 1, aux-151212, inputjilen > 0) {
-bytesgmt : furit9(buffer, 1, bytesjn, outputjile);
-if (bytesmut !: bytesjn) {
-perror("Fatal urite error."); return 4;
+Demo: Un exemplu de sesmne de lucru cu flslere
+lntroducere lata un exemplu de program ce efectueaza doua sesiuni de lucru cu fisiere, mai exact realizeaza o copiere secventiala a unui fisier dat:
+AMuWOSMﬂmQMmmm /* Basic cp file copy program. C library implementation. */
+QEEEMZEEEEL___ #include <stdio.h>
+EWMmmmmwmmmC: #define BUF_SIZE 4096 // This is exactly the page size, for disk I/D efficiency!
+functii pentru operatii l/O cu
+EEEL__________ int main (int argc, char *argv [1) {
+Despre biblioteca standard de FILE *input file *output file .
+C . _ . ’ _ ’
+Functiile l/O din biblioteca $31ze-t bytes-1n , byte S-Out;
+standarddeC char buffer [BUF_SIZE];
+EgFWHEMWM%émmw if (argc != 3) { printf("Usage: cp file-src file-dest\n"); return 1; }
+ormatat - - _ u n .
+Demo: Unexemplude sesiune {anuF-flle _ fopen(argv [1] ’ rb )’
+mMmmdnwme if (1nput_file == NULL) { perror(argv[1]); return 2; }
+_ __ . output_file = fopen(argv[2], "Wb");
+BQEEQQEEEEQ___ if (output_file == NULL) { perror(argv[2]); return 3; }
+/* Process the input file a record at atime. */
+While ((bytes_in = fread(buffer, 1, BUF_SIZE, input_file)) > O) {
+bytes_out = fwrite(buffer, 1, bytes_in, output_file);
+if (bytes_out != bytes_in) {
+perror("Fatal write error."); return 4;
 }
 }
 fclose(input_file); fclose(output_file);
-return 0;
+return O;
 }
-che aces\ exempm es\e dlspombH pentru descércare de ecu cpistdio . c ([2]).
-Demo: exercitiHe rezolvate [AmhmeticMean]. [MyExpr] si [Mch] prezemaie Tn LaboratcmlLab #61lustreazé alte exemple
-, de programe care apeleazé functii l/O din biblmteca standard de C.
-Meruu de navlgare 24 / 25
+Noté: acest exemplu este disponibil pentru descarcare ole aici: cp_stdio . c ([2]).
+Demo: exercitiile rezolvate [ArithmeticIVIean], [MyExpr] si [|\/|ch] prezentate Tn LaboratorulLab #6 ilustreaza alte exemple
+. . ole programe care apeleaza functii I/O din biblioteca standard de C.
+Menlu de naVIgare 24/25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
+O O
 Bibliografie obligatorie
-‘"‘mdm'e [1] Cap. 3, §3.1 din cartea “Sisteme de operare — manual pentru ID‘, autor C. Vidrascu, editura UAIC,
-59:21:21: 1.22:“ new“ 2006. Noté: este accesibilé, in format PDF, din pagina disciplinei “Sisteme de operare":
-Egggfiganifgjggjgjgw o https : //profs . info . uaic . r0/~vidrascu/SU/books/ManualID-SE] . pdf
-ilsiere
-WWW‘ [2] Programele demonstrative amintite pe parcursul acestei prezentari pot fi descércate de Ia:
-l https : //pr0fs . info . uaic . r0/"vidrascu/SO/cursuri/C-programs/file/
+'“imducere .. [1] Cap. 3, §3.1 din cartea “Sisteme de operare — manual pentru ID”, autor C. Vidrascu, editura UAIC,
+2,2;315283132f5"pm“ 2006. Nota: este accesibila, in format PDF, din pagina disciplinei “Sisteme de operare”:
+i'gggfigjjgggj,ﬁi,gw 0 https : //profs . info . uaic . ro/"vidrascu/SO/books/ManualID- SO . pdf
+fisiere
+mm [2] Programele demonstrative amintite pe parcursul acestei prezentari pot fi descarcate de la:
+0 https : //profs . info . uaic . ro/Nvidrascu/SO/cursuri/C-programs/file/
 [3] Suportul online de laborator asociat acestei prezentari:
-o https I //profs . info . uaic . ro/"vidrascu/SO/labs/suport_1ab6 .html
+0 https : //profs . info . uaic . ro/"vidrascu/SO/labs/suport_lab6 . html
 Bibliografie suplimentara:
 [4] Cap. 4, 5, 13, 15 si 18 din cartea “The Linux Programming Interface : A Linux and UNIX System
-Programming Handbook", autor M. Kerrisk, editura No Starch Press, 2010.
-I https : //pr0fs . info . uaic . r0/"vidrascu/SO/b00ks/TLPI l .pdf
-[5] POSIX API: man 2 access, man 2 open, man 2 read, man 2 write , $.a.
+Programming Handbook”, autor M. Kerrisk, editura No Starch Press, 2010.
+0 https : //profs . info . uaic . ro/Nvidrascu/SO/books/TLPI 1 .pdf
+[5] POSIX API: man 2 access, man 2 open, man 2 read, man 2 write, s.a.
 [6] STANDARD C LIBRARY: man 3 stdio, man 3 string, man Op stdlib.h.
-Meniu denavigare Gesiiunea 1isierelor, pariea i-a: Primitivele i/O pentm lucrul cu iisiere 25/25
+Meniu de navigare Gestiunea fisierelor, partea l-a: Primitivele l/O pentru Iucrul cu fisiere 25/25
 
 ***************Ending Page***************
 

@@ -1,897 +1,1073 @@
 ***************Beginning Page***************
 ***************page number:1**************
-CURS 2
-51mm! m; “mm mu; YOUNOAKE
-A, “wk
+SIRURI DE NUMERE REALE. POLINOAME \
+A. Arusoaie
+e-mail: andreea.arusoaieQinfo.uaic.ro
+Web: http : //profs . info .uaic . ro/~a_ndreea . arusoaie/math . html
+Facultatea de Informaticé',
+Universitatea "Alexandru loan Cuza" din la$i
+4 Octombrie, 2021
+UNIVERSITATEA F'
+,,ALEXANDRU IOAN CUZA“ 1
+din |A$l
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-sum“ ("mm
-I 5mm d1 M." m‘!
-- Cunvogzml
-. 5“me
-. Prwnan w “My WWW
-- vacmz mmw‘ "WW
-. mm, mm WWW“.
-. um; 5m w»
-. 5m QM
-. Mk ‘mm! a‘: W w
-I WWW
-— u... .W H ,.
+Structura cursulul
+
+o Siruri de numere reale
+o Convergenté
+0 Subsiruri
+o Proprietéti ale $iruri|or convergente
+0 Teorema convergentei monotone
+0 Teorema Bolzano-Weierstrass
+0 Teorema Stolz-Ceséro
+o $iruri Cauchy
+o Puncte limité ale unui $ir
+
+a Polinoame
+
+A-Ammie “(U/“@1850 2/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-51mm; cursuhn
-I s-M‘ ¢= mm M‘:
-I Mm."
+Structura cursulul
+a $iruri de numere reale
+a Polinoame
+El r51 i E :5 ‘)QG
+A-Ammie WNW) 3/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Pmblcmiv WWW ,1 mun-d M m WM)" Wm Wm
-51mm’: 15 wbwv MN my! M w an" m1" aw: m 2 Wm
-m WM mammmm MW” dwvmrlvz W m,
-m q“ mbun m lmlm! ‘mm “my "w
-m c... 6“ Mm mu! mm" m...’
-— ‘ u... .W m ‘ .
+Problemé: Un copi/ vrea 5a construiascé' un turn folosind niste cuburi colorate.
+El utilizeazé 15 cuburi pentru primu/ nivel, iar fiecare nive/ va avea cu 2 cuburi
+mai put/n decét precedentul. Presupunem c5 turnu/ va avea 8 etaje.
+(a) Céte cuburi s-au utilizat pentru ultimul nivel?
+(b) Care este numérul total de cuburi utilizate?
+A- Arumie F" (UA'C' lasi) 4/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-mem Hnmlvvuz ,1 mun-d M m WM)" Wm Wm
-s! unlrmx! 15 wburv MN "my M u! an" m1“ aw: m 2 Wm
-m WM “WWW Prvmpwl'm dwvmrlvz aw: m,
-m Cm m" W "mm mm WM Mn
-mm can 1
-Auluvmalwwwnmcm “Mm, Z 15 “ZNYZ Z; MM
-‘mm;
-Z,“ W Z n,
-n»! (m ZIZ mmdm‘ mlzl Azmbun ulduzlﬂ
-Mm “m u
-A“ Wm. Wm ‘mmuunmwmtmem Mm M, Z n y. Z5 5‘
-v Z Z2. “mum 1m‘,
-in 7 m‘ 1W
-— ‘m. .W .. ..
+Problemﬁ: Un copi/ vrea sa construiascé’ un turn folosind niste cuburi colorate.
+El utilizeaza” 15 cuburi pentru primu/ nivel, iar fiecare nive/ va avea cu 2 cuburi
+mai put/n decét precedentul. Presupunem c5 turnu/ va avea 8 etaje.
+(a) Céte cuburi s-au utilizat pentru ultimul nivel?
+Réspuns corect : 1
+Ati format un $ir aritmetic, considerénd a1 I 15, n I 8 5i r I —2, utilizénd
+formula
+a“ I a1 + (n I1)1".
+(b) Care este numérul total de cuburi utilizate?
+Réspuns corect : 64
+Ati utilizat suma termeni/or unui $ir aritmetic, pentru a1 I 15, n I 8 5i
+1" I —2, utilizénd formula
+(a1 + an)n
+Sn I f.
+A. Arusoaie Fll (UAIC, la5i) 5/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-thkmi, n Wm. .1, MM mm m m MM Mum,“
-
-a! 1 5m mamumemaslzwvvwvalwzu lawman’: FWMWWMW
-
-1w n! M1, m m, Wm
-
-m a“ Ml. W 191m: m 1 5. Mum
-
-m cm v. n Wm- Ma‘ .k m‘. Pin: I: i 5i ‘1mm
-— ‘ u... .W m ‘ .
+Problemé: O populaItIe de insecte cre,ste fn 35a mod fnc§t noua generapie este
+de 1.5 ori mai numeroasﬁ comparativ cu cea precedenté'. Presupunem c5 ar fi doar
+100 de insecte Tn prima generaﬂe.
+(a) Céte insecte vor aparea Tn a 5-a generatie?
+(b) Care va ﬁ numﬁrul total de insecte péné Ia a 5-a generatie?
+A- Awmie F" (UA'C' lasi) 6/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Publcniv o mmﬂwm mar» :7; M Meimmznwvanrmv
-6:151," mmwrxwmwm mamm- Mpmmhm,
-mo dZ m, in W“ mm
-m cm m“ W, a» a 5 Z .ZZ-W
-WWW‘ 50615 [WWW a»!
-A“ [ml W WM “MM ,,, Z mu v Z g u y, Z v >1, mm
-‘W.
-I,‘ ZN" ‘
-m (m v. n Mm M.‘ AZ NZIZ M I. . 5 . Mm
-Mm W‘ W um
-A“ Wm. W lmnwmwwm Mm h, Z M. n Z1, 5‘
-a Z m. mm Mm
-. WW"
-*~ * T,
+Problemé: O populatie de insecte cre,ste Tn a§a mod Tncat noua generajfie este
+de 1.5 ori mai numeroasa comparativ cu cea precedenta’. Presupunem c5 ar fi doar
+100 de insecte 7n prima generatie.
+(a) Cate insecte vor aparea Tn a 5-a generatie?
+Raspuns corect : 506.25 (aproximativ 506)
+Ati format un ,sir geometric, considerand b1 I 100, n I 5 5i q I 1.5, utilizand
+formula
+bn I blq"_1.
+(b) Care va ﬁ numarul total de insecte pana la a 5-a generatie?
+Raspuns corect : aprox. 1319
+Ati utilizat suma termeni/or unui [sir geometric, pentru b1 I 100, n I 5 5i
+q I 1.5, utilizand formula
+S _ b1(1 — q")
+n — i.
+1 — q
+A. Arusoaie Fll (UAIC, la5i) 7/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Simri de numere reﬂe
-Dalmllle
-s. M..." a: mm w Mm. 1 u a m
-Wm M m m» mm‘! 1 .n WM u € ~ M
-,u :m
-> A, u k Mm “Nd-19W
-> M k mm “mm m... .\ um 1 mm.“ .1. m.‘ H 2‘
-Wm
+Siruri de numere reale
 
-> Um W“ Mm‘ my.‘ 5e u, Mu WM m {1.1m
-Oiwwnk a“:Wmmmwm ‘ mmm‘
-adbt§ﬁ4Mh15§kAkﬁmlxPtmuwmézﬁlﬁﬁleA’:(K-A*LK}Z ,
+Deﬁnitie
+
+Se numeste $ir de numere reale o functie f : N —> R.
+
+Vom nota cu xn, valoarea functiei f Tn punctul n G N, adicé'
+
+> 51:0,1J1,x2, . .. se numesc termeni ai $irului;
+
+P :cn se nume$te termenul general al girului f, sau termenul de rang n al
+
+$iru|ui;
+
+P Un $ir cu termenul general 5c”, se va nota (wn)n€N sau (Jin)n20.
+Observayie: Dacé primii k termeni ai §iru|ui, 5170,:v1, . . . ,$k_1, nu sunt definijci,
+adicé functia este definitﬁ pe multimea {n E N | n Z k} I {k, k +1,k + 2, . . .},
+atunci vom nota $iru| prin (newnzk.
+
+A. Arusoaie Fll (UAIC, la5i) s/ss
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-$iruri de numere reﬂe
-
-Dehmvg
-
-5mm d M w a: Mm m [1.1M en:
-q "mm \nlulm dad em! u E I “.de S ,mv" é n
-“1 "mm use” 42d mu ﬂ E n m Md! I. s M. e ~
-.“1 mud... dad mu 0.5 E [Kn-um“ 5 I, g a, v" e m
-M, nunlmml dad (1.1m. M =1: mlmm
-
-mmm Vn w WM m; mm‘: 9 m.‘ 61d
-
-4mm mm m <.\1 Vrv€74
+Siruri de numere reale
+Definitie
+Spunem c5 un §ir de numere reale (xn)n€N este:
+i) mﬁrginit inferior dacé existé’ 04 G R astfel Tncét a g mmwi 6 N;
+ii) mérginit superior dacé existé ,8 G 1R astfel Tncét atn g ﬁNn € N;
+iii) m5rginit dacé existé 04,5 G R astfel incét a g atn g 5, Vn G N;
+iv) nemérginit dacé (xn)n€N nu este mérginit.
+Observatie: Un $ir (35”)neN este mirginit dacﬁ 5i numai dacé
+HM 6 R, astfel Tncét |wn| g M, Vn G N.
+A. Arusoaie Fll (UAIC, la5i) 9/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Simri de numere reﬂe
-
-“My
-
-‘ W Z H1“... Z N Z‘, Mmmm m‘ 5 ‘ w‘ E N
-
-z W Z u Z :4 .m "WW dwav-cz 1m mam“ M'wuv
-
-m ~Z u v» Z m‘ a“ m m MM WW
-
-; W Z ,. Z h Z‘, my,“ W .RZ mm. MW mam
-“mum-d 4:“ g n v“ Z m
-
-. W ,“ Z Hm" Z N W mm.» MW MW“ Wm, . W
+Siruri de numere reale
+Exemple:
+1. $iru| zn I (-1)”,n G N este mérginit deoarece |xn| g LVn G N.
+2. Sirul cc” I 3”,n G N este nemérginit, deoarece este mérginit inferior
+(acn Z O,Vn G N), dar nu este mérginit superior.
+3. Sirul sun I —n,n G N este nemérginit, nu este mérginit inferior, dar admite
+margine superioaré (xn g (LVn G N).
+4. Sirul ac” : (—1)”3”,n G N este nemérginit, neﬁind mérginit superior 5i nici
+inferior.
+A. Arusoaie Fll (UAIC, mi) 10/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Simri de numere reﬂe
-mm:
-Summer" d M 9| a! MM m [1.1M m,
-> UlllllIAX1AWHZXmVYIGN
-> “gunman” £1" new
-> mm M m Ham's" dualsdlu
-> nun ("laud-111..‘ m. we“
-> m‘ “Bl-mm“; 1a., < 1.‘ v" E n
-> m‘ mm M m Runnesdm' 5m mm “Maw
-[MW
-‘ 5m m Z v 7 l Y, § w me um! undm
-2 W h Z 7,, l: t h Emmi dazradlu
-J $\vu\4‘:!*m "(w "Human"
-‘ sum“ Z, n CA Mmmwmmm mmmwnm‘
-desuesdwv
-— ‘m. WW H.
+Siruri de numere reale
+Definitie
+Spunem c5 un sir de numere reale (17”)HGN este:
+> crescﬁtor dacé xn+1 Z arm Vn e N;
+P descrescétor dacé mn+1 g mm Vn 6 N;
+> monoton dac5 este crescétor sau descrescétor;
+> strict cresc5tor dacé xn+1 > as", Vn G N;
+> strict descrescﬁtor dacé arn+1 < xn, Vn G N;
+P strict monoton dacé este strict crescétor sau strict descrescétor.
+Exemple:
+l. $irul {En I 1 — in € N este strict crescétor.
+2. $iru| :1:n I —n,g G N este sir strict descrescétor.
+3. Sirulac71 : 1 + Pl, n G N* nu este monoton.
+4. $iru| a?” I c, n E %, unde c este o constanté realé, este simultan crescétor si
+descrescétor.
+A- Amie FII (um, |a$i) 11/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Convergengi
-Delmiﬁe
-sum. ,1 M w my“, mmqm M um! m. mam. 1 E |_ mm
-hm!) Wm (mm. mkmm
-v§>ﬂ3n< EN’\1,.*£\<;‘V1|2"<
-rmwm a“: WM m .m w Mm.“ b 1 5 n‘ Mm M m
-n ﬁ , L,‘ A U
-1.,“ y‘ :/
+Convergentﬁ
+Deﬁnitie
+Spunem c5 un $ir (xn)n€N este convergent dacé existé un element 6 G R, numit
+limita $iru/ui (sen)n€N, astfel Tncﬁt:
+V6 > O,Eins G N: Ix" —£| < 6,Vn Z n5.
+Terminologie: Dacé (mn)n€N este un $ir convergent la 6 E 1R, atunci vom nota
+xn ﬁ> Z (In % Z)
+n~>00
+sau
+lirn 3:1,, I E.
+n~>oo
+cl 51 i E :2 A ‘11”
+A. Arusoaie Fll (UAIC, mi) 12/58
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-Convergengl
-Delmiﬁe
-n. W.“ m. w .1! M.‘ m‘. sum d
-> W WW a" ‘m m w
-Y£>m3msl Wimp.‘
-> w MM it W“ a an:
-mums" r,.<*:‘Yn2m
-Denny:
-5M". ,1 ,ml a: Mm mk WW In: Mm dud M a“
-“mm. m; dud he M u. mm n, hmnz we s.“ ix
+Convergentﬁ
+Definitie
+Fie (acn)n€N un $ir de numere reale. Spunem c5:
+> $iru| (xn)n€N are limita +00 dacﬁ
+V5>O,E|nE€N:xn>s, Vnan;
+> $iru| (5%)”.5N are limita —oo dacﬁ
+V<§>0,E|nE ENzxn < —5, VnZnE.
+Deﬁnitie
+Spunem c5 $irul de numere reale (xn)n€N este divergent dacé nu este
+convergent, adicé’ dacé ﬁe nu are limité, ﬁe are limita +00 sau —oo.
+A. Arusoaie Fll (UAIC, mi) 13/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Exemphl d2 5w convergent
-02 - "1}
+Exemplu de sir convergent
+. . n + 1
+Fle $|ru| (an)n€N* cu an I 2—n27 n E N*.
+1.0 '
+0.3
+0.6
+0.4 . I] + 1
+0-2 I 2ﬂ2
+‘.-
+U.U ....'.....IOIOIOIOI
+5 10 15 20 25
+cl a] , E :5 QQO
+A. Arusoaie Fll (UAIC, mi) 14/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Exempm d2 5w convergent
-M‘ .
-02 - 1'?
-Mm:
-hm Wu
+Exemplu de sir convergent
+. . n + 1 *
+Fle $|ru| (an)n€N* cu an I 2—n27 n G N .
+1.0 '
+0.3
+0.6
+0.4
+' n + 1
+0-2 I‘ 2ﬂ2
+a...
+0-0 .u'OOOQIQIQQQQQo
+5 10 15 20 25
+Asadar
+lim an I O
+n4>oo
+cl a] , E :5 QQO
+A. Arusoaie Fll (UAIC, mi) 14/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Exempm d2 5w dlvergent
-Fm 9M why-Em an z W n E n
-
-.. -\ m.-.
-
-J
-PM MM d
-
-hm n" : w‘:
-AM!‘ M w W Mm M m ‘mu M.» m‘
-— ‘ ~--- m»- m
+Exemplu de $|r dlvergent
+F' ' | ( ) n2 e N
+|e $|ru an neN, an : — n .
+(20 + n) ’
+BU
+2
+5.1 an - n {(201m)
+AU
+30 ‘0"’
+20 “wwv
+w ,0”...
+nEl 5....ID ‘5 EU 2'5 a: 36 4U .5 5U
+l'l
+Putem observa c5
+lirn an I +00
+77,—>OO
+Altfel spus, $iru| este divergent, nu are limita numér real.
+cl 51 i E :2 va
+A- Arumie F" (um, W) 15/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-axe-“pm d2 5w dlvergent
-F-mhwn:w..§miw
-Mm 31ml B“ am.
-— M. ' W“ ,;_
+Exemplu de $|r dlvergent
+. . 77,
+Fle (an)neN, an = ns1n §,n E N.
+5O
+40 ‘
+‘ Q
+3] D ‘Q
+a, an I n slr(n12)- , ’ .
+a‘.
+I0 , . ' . .
+OI
+I] y.’ .0‘ : ‘ ‘ ‘
+4° .0.‘ . .
+o 0
+-20 ‘.4 ' Q
+.53 ‘ ¢
+.C
+"10 O
+O
+.m .
+U 5 ID l5 EU 25 N 5 40 45 5|]
+n
+Atunci, $iru| an diverge.
+cl a] , E :5 QQO
+A-Awmie F" (UA'C' mi) 16/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Convergengi
-:M .m iv h m... nah .- limu: nmu' M m um:
-M. iv m-m .- mimn'n. I
+V
+Convergenta
+Teorema
+Dacé un $ir de numere reale are limité', atunci aceasta este unicé.
+Propozitie
+Orice $ir convergent este mérginit.
+El 5' i E :5 QQQ
+A. Arusoaie Fll (UAIC, mi) 17/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Convergemé
-Emu;
-‘ W mm y‘ Z, < h , , k w: WM h,
-2 5m Z; m.“ WWW.“
-1 W 7 % h é n 6.. “Mm mm hm 1
-. W Z KM H m mm A
-5 W H < h‘ .3‘. WW M" u (-1 ,1 y Mm pm
-mm»...
-W4" "my,
-6 W Q g) U“WWWMWWMM,
-Mk,
+Convergenté’
+Exemple:
+1. $iru| constant 1:7, I c,Vn € N, c € R este convergent Ia c.
+_ 1
+2. Slrul xn I *,TL € N este convergent Ia 0.
+n
+. 2n + 4 A . .
+3. Slrul (En : im G N este convergent avand Ilmlta 2.
+n + 3
+4. Sirul :cn I 3n — 2m G N* are limita +00.
+5. Sirul (En I an,n € N* este convergent pentru a G (-1,1] 5i divergent pentru
+a € R\(—1,1].iar
+. O a G (*1 1)
+1 : { 7 7
+H1313" 1, a : 1
+1 TL
+6. Sirul awn I <1 + > ,n E N* este convergent Ia numﬁrul e, numit constanta
+n
+lui Euler.
+A. Arusoaie Fll (UAIC, mi) 18/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Suh5|ruri
-
-Delmiﬁ:
-
-m mm u» ,m MM m win-1M w Irﬂr-ﬂ “mum mm
-naval: W Wk‘ w: Mm,“ .\ lew WM.
-Tm
-
-mmmuwmmnuu nu! mmmwwmm
-WM. .m. mm m,“ h a
-mm 5m Ownsubwz! marwnvulem WWW‘ A: Km mu
-Carola
-
-\ Dad W w m W ,MMM .W x! m “MM
-
-“ Dad W WMMM MW" “WM; m WM,“ .m W
-
-mam,‘
+Sub$|rur|
+Definitie
+Fie (inheN un sir de numere reale $i (nk)k€N un $ir strict crescétor de numere
+naturale. Sirul (1%ka se numeste subsir al $iru|ui (96”)neN-
+Teorema
+Fie (mn)n€N un sir convergent Ia x G R. Dacé (MleN este un sub$ir al Iui
+(mn)n€N, atunci (951%)ng converge la cc.
+Altfel spus: Orice sub$ir a/ unui 7eir convergent este convergent la aceea$i limité’.
+Corolar
+i. Dacé un $ir are un sub$ir divergent, atunci acel $ir este divergent.
+ii. Dace") un sir contine douzua subeiruri convergente cu limite diferite, atunci $iru|
+este divergent.
+A. Arusoaie Fll (UAIC, mi) 19/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Suhynm
-mm:
-1 5m. .(MMN- “MW-M
-'1 ~ 4 v"
-Am: mum: “hum WNW“ m \lmu I n Maw-4| ((AIWWE" m
-W. 7.
+Sub$|rur|
+Exemple:
+1. $iru| :cn : (-1)",n G N*, este divergent.
+I Q . . . . § . . .
+DB
+9.6
+0.4
+UZ
+i'l
+o an ‘('11
+'02
+-U_l
+‘(LB
+418
+‘I § Q . § Q ’ . § Q ’
+[I 2 5 6 8 1|] l2 Ii 15 15 EU
+n
+Acesta conﬁne sub$iru| ((—1)2k)keN cu limita 1 5i subsirul ((—1)2k+1)keN cu
+||m|ta _1'\:| r51 i 2 :5 quv
+A-Amie F“ W, I35» 20/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Sulwrun
-
-w-w
-
-1 W.“ :Hr». "sum-mm “nvmmmsmmku
-hm. m
-
-1 spun-m d w (mm .m Wm dad .m ye 74-, m.‘ m
-mm‘ p Wm" pm”; mm.
-omw “MW pm“ v 2 2 “Mm
+Sub$iruri
+Exemple:
+2. Sirul as” z (-1)"n, n G N este divergent, deoarece contine sub$iru| xgk cu
+limita +00.
+3. Spunem c5 $iru| (mn)n€N este periodic dacé existé p G N*, astfel Tncét
+xn+p I somVn 6 N.
+Numérul p se nume$te perioadé’ a $iru|ui.
+Orice sir periodic de perioada p Z 2 este divergent.
+A. Arusoaie Fll (UAIC, mi) 21/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Prnpnemi Me Wm convergent:
-mm»!
-F>¢Pn71$r< u (mm 6w! u'mn a: Mm m wwwmk I: ‘ é m
-WW h v s m “m au he MM‘, Wm,“
-(m 31M : m
-“>21 "W," “.1 - 1“,
-(m JLWJh m Z a y.
-m1 um , ¢ n‘ W ml M Mm E N 1-“ n A. ¢ m 2 M m
-I.“ a Z 1
-my" v
-(“15-de M“ N .W 2 5 M.
+Proprietéjci ale $iruri|or convergente
+
+Propozitie
+
+Fie (xn)neN 5i (yn)n€N doué $iruri de numere reale, convergente Ia a: G 1R,
+
+respectiv Ia y 6 R. Atunci au Ioc urmétoarele afirmatii:
+
+(P1) nlggolwnl I lml;
+
+(P2) lim (113” :l: y”) : a: :I: y;
+
+n—>OO
+
+(P4) dacé y 51$ 0, atunci existé un rang n0 E N astfel Tncét yn 51$ O,Vn Z n0 iar
+_ as“ 5c
+11m — I —;
+
+(P5) dacé x” g yn,Vn G N, atunci m g y;
+
+A. Arusoaie Fll (UAIC, mi) 22/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Pmpnemi Me mm convergent:
+Proprietéjci ale $iruri|or convergente
+Propozitie (Criteriul c|e$te|ui)
+Fie (mn)n€N 5i (yn)n€N dou5 $iruri de numere reale, convergente Ia :0 € R,
+respectiv Ia y € 1R.
+Dac§ existé $iru| (Zn)neN astfel Tncét arn g zn g ngn G N, iar m I y, atunci
+$iru| (2n)n€N este convergent $i liIn 2n = m.
 
-Pmpuxme 10mm duswm)
+n4)OO
+Exerciﬁu: '
 
-n my.“ u (mm 6w! W‘ a: Mm m wnwm b ‘ E x
-w» I: u E m
-
-M “mm mm. m Md! 1. g l“ g M“ n :1‘ m
-W 4mm an mm“ If; Z,
-
-may“
-
-5: MM“ ‘mu ,W Z w.“ ~-
+. . . . smn
+$5 se calculeze ||m|ta $|ru|m :17" I in € N*.
+n
+A. Arusoaie Fll (UAIC, mi) 23/58
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-Prnpnemi Me Wm, convergent:
-Pmpuzhie ‘cvmm mmm)
-F. (10.81 m. w .1. MM Rd‘- , h “a a“: m1 M w MM
-WWW. ‘i m mil‘ m.
-\Wlmmmu
-amnm my (n: mm.“ . 22:1": z
-[mm 2
+Proprietéjci ale $iruri|or convergente
+Propozijcie (Criteriul majorérii)
+Fie (mn)n€N un sir de numere reale 5i ﬁe a: G 1R. Dacé existé un sir (an)neN
+convergent Ia zero astfel Tncét
+Izcn — 33| g Ozn,V7’L G N
+atunci (Inn) este convergent 5i lim xn I m.
+71-)00
+Exercitiu:
+2
+v u . n + 2n
+Sa se arate ca $|ru| zen I imj 6 N*, converge Ia 1.
+n2 + n + 1
+A. Arusoaie Fll (UAIC, mi) 24/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-(mm majorim
-Ewe!» .
-515mm: W Z % w E N- MW h.
-M.’ mm,“
-“Hm H A 1
-"""’\m"\’\m\sﬁ’;
+Criteriul majorérii
+Exerciﬁu:
+2
+n +2n
+$5 se arate c5 irul a: I im G N*, conver e Ia 1.
+Solutie: Evaluém |scn — 1|:
+2
+n 2n n — 1 n 1
+n2+n+1 n2+n+1 n2 n
+Cum an I i % O, atunCI, aphcand crlterlul majoraru, objunem 11m In I 1.
+n naoo
+A. Aruscaie Fll (UAIC. mi) 25/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-vaemz convergengm mannmne
-Tm (“meme monotone (Wmemrass)
-
-F‘. WM w w .1. MM m‘.
-
-‘1 M W WM “mm, H Mm WW, m, m. Wu.
-
-“1 m W Wm a“ damhwm mm. MW, a.» xsn
-
-WW ‘a mrknm
-PM mm “W, a: m,‘ W" W Mm,
-am 5‘, MW 5‘ MM m: [Mm
-
-My
-
-m Wm m M M» m
-
-u a»: W WM a‘: ﬂaw ¢ mam.“ ,W 1:1" Z +»
-
-m Mm‘ [Mimemuwmwm W \Wnpw
+Teorema convergentel monotone
+Teorema convergentei monotone (Weierstrass)
+Fie (xn)neN un sir de numere reale.
+i) Dacé sirul (xn)n€N este crescétor si mérginit superior, atunci acesta converge
+la sup{xn}n€N;
+ii) Dacé sirul (wn)n€N este descrescétor si mérginit inferior, atunci acesta
+converge la inf{xn}n€N.
+Putem rezuma teorema de mai sus in felul urmétor:
+Orice sir monoton si m5rginit este convergent.
+Corolar
+Fie (wn)n€N un sir de numere reale.
+i) DacS sirul (xn)n€N este crescétor si nemérginit, atunci lim sun I +00.
+n4>oo
+ii) Dacé sirul (wn)n€N este descrescﬁtor 5i nemérginit, atunci lim acn I —oo.
+TL—>OO
+A. Arusoaie Fll (UAIC, mi) 26/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Tamer“: convergengm monetene
-swam 5: 1e “Mm, mm“ WWW w
-1 1 \ ‘
-"*Wmm 11,5"
-Sdulre Mm mm... 5‘ mm‘. W. “mm d
-‘ . ‘ ,. .
-kmm4m‘ +ﬁ:m<|wsu
-A,» W .q. MM 5W". m MW‘.
-. _ L ‘ ; _ L _ é > u
-1M 1M m‘ m * um * n
-ad-d w an W wdwv WM Even-a \m Wewnlnu W WM
-en: My.”
+Teorema convergentei monotone
+Exercitiu: $5 se demonstreze convergenta urmitorului sir
+1 1 1
+: i i i € N*.
+m“ n+1 +n+2 + +2n’”
+Solutie: Studiem mérginirea si monotonia sirului. Observém c5
+1 1 1 n
+0< <i i izi<1V€N3
+m” n+1+n+1+ +n+1 n+1 ,n
+Asadar, sirul este m‘a’rginit. Studiem acum monotonia:
+1 + 1 1 1 > O
+x — x : i i — i I —
+n+1 n 2n+1 2n+2 n+1 2(n+1)(2n+1) 7
+adicé sirul este strict crescétor. Conform Teoremei lui Weierstrass, sirul (wn)nEN*
+este convergent.
+A. Arusoaie Fll (UAIC, mi) 27/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-vaemz Bﬂnnanerstrass
+Teorema Bolzano-Weierstrass
+Teorema Bolzano-Weierstrass
+Din orice $ir mﬁrginit (xn)nEN se poate extrage un subsir (xnk)k€N convergent. l
+Pentru a demonstra acest rezultat, se utilizeazé' urmétorul rezultat:
+Lema
+Dacé (mn)n€N este un $ir de numere reale, atunci existé un sub$ir al s§u care este
+monoton.
+A. Arusoaie Fll (UAIC, mi) 28/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Tamer“: Slolz'CesAm
-
-Tm
-
-F. (10-6. 5‘ mm MW MM mahasﬁmndt WW um m
-mm" , Wm M m
-
-M‘ w 1:“. g a‘ w w N ,
-
-M4,“ 51 k “Wu, m Wm ,2‘. M
+Teorema Stolz-Ceséro
+Teorema
+Fie (93”)neN 5i (yn)n€N doué $iruri de numere reale astfel Tncét (yn)n€N este strict
+monoton 5i nemérginit. Dada’ existé
+a: — a; i
+lim M I a; e R,
+"*OO yn+1 i yn
+. . V . 17” . v
+atunCI eXIsta 11m i 5| este egala cu a3.
+7L‘>OO y,”
+ExerCItlu: Sa se calculeze llmlta $|ru|w 11m —.
+naoo n
+cl 51 i E :2 0&0
+A. Arusoaie Fll (UAIC, mi) 29/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Simri Cauchy
+Siruri Cauchy
 
-deiﬁ:
+Definitie
 
-Fm um“ m. w .1, WM rah
+Fie (xn)n€N un sir de numere reale.
 
-5mm d (1.1M 1m u- Cm», m mm...“ dud
-mum“ ‘km<E,v“,msm,m>w
+Spunem ca’ (atn)neN este $ir Cauchy sau $ir fundamental dac§
 
-deiﬁ:
+V6 > 0,3115 € N1|03n —a:m| < 6,Vn,m G N,n,m 2 ne.
+Deﬁnitie
+Spunem c5 $iru| (xn)neN este §ir Cauchy sau §ir fundamental daca pentru orice
+V5 > 0,31% € N: |xn+p — $n| < 6,Vn,p E N,n Z n6.
+cl 51 i E :2 0&0
 
-5W". d m. WM ‘mi um m w Wm“ m: Mm m
-Ve>l|3M€N \I“'|’¥n\ “MMPEMM
+A. Arusoaie Fll (UAIC, mi) 30/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Tamer": lm may
+Teorema lui Cauchy
 
-MW"!
+Propozitie
 
-he my.“ Immd: Mam“ M 11.1w a“ am M a me
-mlmm
+Fie (mn)n€N un sir de numere reale. Dacé (xn)nEN este Cauchy, atunci el este
 
-Tm
+mérginit.
 
-5W‘ d. mm ml- WM ... “mm 4x: w mm M ... w cum
+Teorema
+
+Sirul de numere reale (mn)n€N este convergent dacé' 5i numai dacé este $ir Cauchy.
+
+cl 51 i E :2 QQG
+
+A. Arusoaie Fll (UAIC, mi) 31/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Simri (“my
-Enrdyiu. Amindymlxn- TN?‘ 0%M|<,,51<...
-W .‘. (My dam WW
-W! Mm‘ m“ AW m
-I ‘ , ‘ ‘ > ‘
+Siruri Cauchy
+s' s' 2 s'
+Exerciﬁu: Arétati c5 girul a?" I ¥ + % + + $m E N7$ E 1R este
+un sir Cauchy, deci convergent.
+Solutie: Fie a > 0 5i mp G N. Atunci, avem:
+1 1 1 n 1 P 1
 
-\M'm SW4 4T”: (a) [17 (2) ] < F we!‘
-Am Mm mm ‘mm-m: W N 5‘ m M ‘i, ‘n M m
-WM m mm
+. . . V . A 1 . . V
+
+Am obpnut o majorare Independenta de p E N, 5|, |n plus, 27 —> 0. DeCI, eXIsta
+1
+n6 6 N, astfel Tncét 27 < 5,Vn Z n5. Prin urmare, |asn+p — mnI < a, deci $iru|
+(007,)n6N este convergent.
+A. Arusoaie Fll (UAIC, mi) 32/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Simri Cauchy
-Emu-mm M, “i4; ‘gm-Wmm
-‘ 9 " ﬁ a W
-Mm v.1m a.» A w: r >0 ‘w im- we N'ﬁvs N W ma‘
-mum‘ z »
-p 7H7; ‘i; , ‘i’ >i’
-“WU WU Fm m
-mind I Z t v 5 N‘ mm n p z n‘ “mm ‘W r In‘ 2 % 2 I ow
-W (‘M W a.‘ um,
+Siruri Cauchy
+Eerc't' A"tt'"'| 1+1+1++1 €N* tC h
+x ||u: raalcaswux: i i in nuese auc.
+l I , 7L ﬂ V5 w) y
+Solutie: Vom aréta c5 existé 5 > O astfel Tncﬁt Vn G N*, Elp 6 N astfel Tncét
+|wn+p _ 1:an 5-
+| | 1 + 1 + + 1 > p
+:v i a: : i i i i.
+"+P " m m m m
+Luénd 6 I é n G N* arbitrar, 5i p : n, obtinem |a§n+p — arn| Z ‘(f2 Z a. Deci
+§iru| (xn)n6N nu este Cauchy.
+A. Arusoaie Fll (UAIC, mi) 33/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Punne um: ale IINJI w
-Denny:
-Fm WM mm Wm m
-> 5W," ,1 , sinks-ma mu n 9mm u“ 1m. M mu .m m.
-‘mum. m‘ mm 1W a 1
-> Vmu M mum-m mm WW hm“! m um
-thuiym: Permu M w WM a! "my, male, Mm L : Q
-— ‘m. "W .3 , .
+Puncte limité ale unui $ir
+Deﬁnitie
+Fie (mn)n€N un $ir de numere reale.
+> Spunem c5 :z: G R este punct limit5 al sirului (xn)n€N, dacé’ existé un sub$ir
+($nk)kEN astfel Tncét sank —> :0.
+> Vom nota multimea tuturor punctelor limité cu L(a:n).
+Observatie: Pentru orice sir (mn)n€N de numere reale, avem L(;vn) 75 Q
+A. Arusoaie Fll (UAIC, mi) 34/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Pumas um: ale IINJI w
-Delmiﬁe
-Fm MM Mm, Mm m‘.
-> 5, "mum \nlululvl . M [MM mamm "Jamar! . MW
-um
-“Wm Z LN" :mmm
-> 5: WWW“ slush"! , Wm mm mm nwwwr'! =
-MM.“ m.» i
-‘WW z 121;, :mm
+Puncte limité ale unui $ir
+Deﬁnitie
+Fie (xn)n€N un $ir de numere reale.
+> Se numeste limité inferioaré a Iui (mn)n€N marginea inferioaré a multimii
+liminfwn I li_m 1:" I infL(9cn);
+n—>oo n—>oo
+P Se nume$te limité superioarﬁ a $iru|ui (90”)neN marginea superioaré' a
+multimii L(a:n);
+lim supxn I lim :zzn I sup L(Jcn)
+n—>oo “ADO
+A. Arusoaie Fll (UAIC, mi) 35/58
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:37**************
-Punne um: ale IINJI w
-cum-w.
-m WM ,m MM m
-n Awem
-21 M mm 5“ M 5‘. mm.“ h W “MA a W
-M: M 9 new:
-n MN w! w <1 “ m -e m, mu a “M W m, mom
-smug.“ a‘ m, we n Mm"; \z Ml 9 mm". m “m
-mm w“ w, 5| Mm: l1 “j,
+Puncte llmlta ale unw $|r
+Observaﬁi:
+Fie (mn)n€N un $ir de numere reale.
+1) Avem:
+liIn inf xn g lim sup Zn.
+“$00 n~>oo
+2) Dacé (Inth este un sir convergent Ia un element a: G R atunci
+L(xn) I {m} 5i are Ioc:
+lim inf 1:7,, : lim sup x” I m.
+n~>oo n—>oo
+3) Pentru orice $ir (xn)7,€N, se poate aréta c5 existé un sub$ir monoton
+descrescétor al acestuia, care 55 conveargé Ia lim acn 5i, respectiv, un subgir
+n~>oo
+monoton crescétor care 55 conveargé Ia lim sun.
+7L—>OO
+A-Ammie “WU/“61850 36/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Lxmiti supevionri Linn! mfeviczri
-
-mm!
-
-F. WM w h. d: W. MI. WM hm m ‘K
-
-1n pvl-whl m 5-“ 911%s [mm] C i ‘W Wu , h.“ ‘m
-.wms Inqlhuln u N
+Limité superioaré’. Limité’ inferioaré
+Propozitie
+Fie (mn)n€N* un $ir de numere reale pozitive. Atunci are Ioc
+lim inf w < linl inf Wm“ < liminf (‘/xn < lim sup E.
+n~>oo [L'n _ n4)oo _ n4)oo — n~>oo {En
+Tn particular, dacé existé lim %€ [0,+oo] C R atunci existé 5i lim 21/90”,
+- n~>oo 'n, 7744)OO
+avénd Ioc egalltatea
+liIn Wynn I lim M.
+n~>oo n~>oo fljn
+El 5' i E :5 ‘)qu
+A. Arusoaie Fll (UAIC, mi) 37/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-51mm; cursuhn
-I s-M‘ ¢= mm M‘:
-I Mm."
-— .. “W U _ u
+Structura cursulul
+a $iruri de numere reale
+a Polinoame
+El r51 i E :5 ‘)QG
+A-Ammie F~<u~cv|a$i> 38/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Pmirmm
-m w +. Mwmm undzk 7 Q 1c z, mm‘ Mm.“
-mednim Mm, mun :(1 h m cum W. my Z A,‘ w. E n,
-M mu ‘WM W w ¢¢ “WNW A v: Mm M "w w MM
-N. Immaxl Wmmmn 1mm m“: a." W‘! (MM Mm
-mum“ m W‘- m my» W. may M. mm‘
-Isvg kWh-1.‘ M1» 1‘ .1“ w
-11mm... m Mm, m K
-Mm“
-A:UIL" 1K‘:wn\ 1 x“:lru| nHI 1
-Wm mm m
-km.“ mum n. n ‘(an .M.“ 1
-:WM‘ um
-— ‘m. WW H
+Polinoame
+Fie (K,+,~) un corp comutativ, uncle K — Q,R,(C,Zp, cu p € N* numér prim.
+Considerém multimea J-"(NJQ I {f : N —> K}. Cum avem f(n) I an,Vn G N,
+vom putea construi un $ir de elemente din K, pe care TI vorn nota cu (6%,th-
+Ne intereseazé o submultime 73 C F(N,K) formaté din $iruri|e (an)n€N pentru
+care termenii sunt nuli cu exceptia unui num5r finit dintre ei.
+f G 77 :> f I (a0,a1,...,an,070,...), an 75 0.
+f - polinom cu coeficienti Tn K.
+Dacé notém
+X I (0,1,0,...), X2 z (0,0,1,...),...,X” z (0,0,...,0,1,0,...),
+atunci putem scrie
+f : ((100,...) + (0,a1,0,...) +...+ (0,0,...,an,0,...)
+:a0+a1X+...+anX".
+A. Arusoaie Fll (UAIC, mi) 39/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Puﬁnoame
-sum nahnammm 1 T" ‘m
-
-[ZN wumwu mun,‘ MW," HR H w
-Mm; 1m, mm; . Dnhnnmmw 1 Wm 4qu Mm anaesdmre
-2klmX
-
-. Km Mm Pnhmlmdwdzmdelemumﬂ \ :uzomm'mm |\
-
-. u‘ e A , M.“ “Mum Dam-‘mm
-
-. SQ Mmmmmm Gunman! mm“ um... \lhev
-
-. ‘mm/1 r $0 m m m Mn my.‘ u m WWW d v.“ ¢ n
-
-— u... WW ..
+Pollnoa me
+Scrierea polinomului f Tn forma
+f I anX” + anilXTW1 + + a1X + a0, unde (10,611, ...,an € K, an 75 O,
+reprezinté forma algebricé a polinomului f, ordonat dupﬁ puterile descrescétoare
+ale lui X.
+0 K[X] - muljcimea polinoamelor de nedeterminaté’ X cu coeficienjci Tn K;
+o a0,a1, ...,an E K se numesc coeficientii polinomului;
+o an se numeste coeficientul dominant, iar a0 termenul liber;
+o grad(f), f 51$ 0 - cel mai mare numér natural n cu proprietatea c5 an 51$ O.
+A- Awmie F" (UA'C' W) 40/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-0pm“. (u palmoame
-m 1H, Z MX] M volwnamekvﬂ m prw v.
-]:|:,..X"W ZMW Van, ,MZM
-
-MM, Z K “my,” Z" u, Z n ,Zm, > w 1U Z l» mm > u
-
-. Wm d WWW‘ r "all w Wm: a v m.“ IZH‘ “a v
-
-mm. M mm :wm), h
-Z MN: Z u
-.1" pan-(“lav IZUZM ZM, 2H
+Operatii cu polinoame
+Fie f,g € K[X] doué polinoame de grad m, respectiv n,
+unde ahbj E K, am7bn I 0, iar ai I O pentru 2' > m $i bj I O pentru j > n.
+o Spunem c5 polinomul f este egal cu polinomul g, 5i scriem f I g, dacé 5i
+numai dac5 grad(f) I grad(g), 5i
+o Tn particular, f I 0 (I) ai I 0,Vz' Z O.
+A. Arusoaie Fll (UAIC, mi) 41/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Opemn (u palmoame
-.Mum ~I4gEKW
-[wﬂnwﬂxn MHMQM‘MWUZMWM
-. MnIA / vs xix!
-1 wwwﬂmwn Wuhan-M.
-4(11muuh ‘ Mm‘ ‘ M mm WA.
+Operatii cu polinoame
+o Adunarea —> f +9 G K[X]:
+f + g : (ap + bp)Xp + . . . + (a1 + b1)X + (a0 + b0), unde p : max{m,n}
+o Produsul —> f-g € K[X]:
+---+ (@0192 + @1191 + a2b0)X2 + (@0131 + a1b0)X + (£0190,
+A. Arusoaie Fll (UAIC, mi) 42/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-mm ponmmu Rédkim 1|! mi poﬁnom
-leeMUJIMX'WanA/V'W WXWHWRA
-
-. st mm mm WWW.‘ 1 Tn , “mm
-
-. Mm“- , i A‘ u" w rum 1 WWW 1 M 1(1):“
-mm
-
-. WWW-“mm 15cm MM‘ mm, 7,2!
-
-. Mwmvim 156m. l:w‘wbwr w r-Iﬁzwkdazd:
-
-‘am
-4H,:ﬁ‘ HmdeA:»27w
+Funcjcia polinomialé. Rédécini ale unui polinom
+Fie f E K[X], f I anX” +an_1X"_1 —|— . . . +a1X +a0, 5i fie ac E K.
+o Se numeste valoarea polinomului f Tn w elementul
+ﬂat) I any” + anilxnil + . . . + all‘ + a0.
+o Elementul x € K este o r5d5cin5 a polinomului f daci f(a:) I 0.
+Exemple
+b
+o Polinomul de gradul 1, f G (C[X], f I ax+b, are rédécina a I —*.
+a
+o Polinomul de gradul 2, f G (:[X], f I @902 + baa + c, are rédécinile date de
+formula: \F
+—bj: A
+a1 2 I i, unde A I b2 —4ac.
+’ 2a
+A. Arusoaie Fll (UAIC, mi) 43/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-mm polinormalé Rédkim 1|! mi poﬁnom
-Tewuni
-MKWMUEK AW
-
-.umm:1(num.
-
-. u gulp/<11 gm
-Denny:
-Fm 1 e qu m mam ml S¢ mm: “1.5.1. um...- mm:
-mm“. 1, hm» 1 K Q x‘ “mu m M1) :lkhxz n
+Funcjcia polinomialé. Rédécini ale unui polinom
+Teoremé
+Fie f,g € K[X] $i ﬁe :0 € K. Atunci
+° (f+9)($) I f(93) +909)?
+° (f~9)($) I f($) -9($)-
+Deﬁnitie
+Fie f € K[X] un polinom nenul. Se nume$te functie polinomialﬁ ata$at5
+polinomului f, functia f : K —> K, deﬁnité prin f(a:) I f(x),Vx E K.
+cl a] , E :5 ‘1:;
+A. Arusoaie Fll (UAIC, mi) 44/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-Tamer": impsmm cu mt
-Tm mam m m
-m ME MX] an “Imam W M we Ahmm am ,- wnl “m
-W5 XIX} u WM»:
-:1 I: v ‘1+1
-M wmlm < mm
-. Mm“: 1 5e m5‘, rump-Km‘ y it "Ml. WW u ,, 5,
-Mm {my "WW muHmp-Mdm
-. Dm xnemﬂmplmm I“ m‘ Mm mum- mm
-mm! “Wm r WW
-. Dxlv :n m: M1: I, u-WMMMIMM. Wm‘
-mm 1y» vv 1m y Me n
+Teorema Tmpértirii cu rest
+Teorema Tmpértirii cu rest
+Fie f,g E K[X] douﬁ polinoame, astfel Tncét g 7Q 0. Atunci exist5 5i sunt unice
+q,r G KiX] cu proprietétile
+a) f I g - q + 1";
+b) grad(r) < grad(g).
+o Polinomul f se numeste defmpé'rtit, g se numeste Tmp5rtitor, iar q 5i r se
+numesc ceitul respectiv restu/ Tmpértirii.
+o Din teorema Tmpértirii cu rest deducem urmétoarea egalitate
+gmrﬂq) : ymd<f> i gmd(g)-
+o Dacé 1" : 0, adici dacé f : g - q atunci spunem c5 f se divide prin g($i
+scriem fig) sau ng (citim: g divide f)
+A. Arusoaie Fll (UAIC, mi) 45/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-impémrea 1 an": palmaame
-“Xmawxww “mm ».X~+>Mx-'\+ mxw
+lmpérjcirea a doué polinoame
+El r51 i E :5 QQG
+A. Aruscaie Fll (UAIC, mi) 46/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Exempm impémrea 1 ma palmaame
-51 imp-n: mm l E am 1 z A‘ ‘X2 41 u WWW
-Ram 8:»!
-— M. Wm n.
+Exemplu: lmpérjcirea a doué polinoame
+SE se Tmpartﬁ polinomul f E C[X],f I X4 + X2 + l Ia polinomul
+g€<C[X],g:X—1.
+El [5' i E :5 QQQ
+A. Aruscaie Fll (UAIC, mi) 47/58
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:49**************
-Tamer": restMui Teorema mi Bemut
-Tm mulm
-Rem Ymplmm WWW 1 E K[X]_ I ¢ ‘m Mm“, Z x 7“ E Km
-m q» B. m“- n-y - Pdhmmuhn I». A
-v“m m. N “ZLMXM + 4,). m ammuimm Whmmmm 1 h y
-Dm m.m.vm>=~m (u restvmn “Mm
-!:LX7u)wy :xxrumwnrM4 7m 7M‘:
-
-Am: ﬁx: mm m: 1mm \m X m.
-rzbnrm‘(anilinukau ‘wﬂwumﬂmm,in»
-MM", Mmanw \m / whhmm
-
-— ‘m. "W .3 . .
+Teorema restului. Teorema lui Bezout
+Teorema restului
+Restul Tmpértirii polinomului f G K[X], f 75 Ola polinomul g : X — a G K[X]
+este egal cu valoarea f(a) a polinomului f Tn a.
+Vom nota cu q I bn_1X”_1 + . . . + le + b0, cétul Tmpértirii polinomului f la g.
+Din teorema Tmpértirii cu rest vom obtine
+f: (X-a)q+r: (X—a)(bni1X”_1 +...+b1X+b0)+r.
+A5adar, dacﬁ ordonﬁm dupﬁ puterile lui X avem
+f I bn_1Xn + (bn_2 — abn_1)Xnil + . . . + (b1 — (1172))(2 + (b0 — ab1)X +7" — abo.
+ldentiﬁcénd coeficientii lui f obtinem
+A. Arusoaie Fll (UAIC, mi) 48/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Sclmma lm Home!
-Vnnumum vumdnummamdnkmummm M. m. thuylmnmm
-Y. m: Mm £411me
-Fy—y—v—y—v—y—\r an M M n, m
-u—————-
-Imm-I-H-I-
-(mmmw M a mm
-— ‘m. WW ..
+Schema |u| Horner
+
+Prin urmare, vom determina coeficientii cétului: bn_1,bn_2, . . . ,b1,b0 $i a restului
+
+r, dupé schema lui Horner
+———-—IIII
+n—————|||l
+‘———-I“
+
+Coeficientii lui q Restul
+A-Awmie “WU/“61850 49/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-Schema lm Homev
-
-Enlayu: "mm 50m lm Hum: 5: gimp“: WNW‘
-
-led-‘Dd[1X14X7¢lehnumuweCIMJZX71
-— ‘ ~._. .. W .3 . .
+Schema lui Horner
+Exercitiu: Utilizénd schema lui Horner, 55 se Tmpartﬁ polinomul
+f Q (C[X],f : X4 +X2 + 1|a polinomul g E (C[X],g : X — 1.
+cl 51 i E :2 @va
+A. Aruscaie Fll (UAIC, mi) 50/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-Pmirmm
-Dalmllle
-Fm 1 g; [<[X] 6w] “1mm 5mm d y ﬂvlde mm‘ 1 5‘ M m
-w Mm: n 6 1([X] “[5va! 1 Z g »
-MW w Mm ﬁth n MWVM / m Pnhmmm v K "Mm
-mum“ n Whmmmul y
-pwm ‘k mm ¢= WWW
-Fm 1 y I» 5 Am WWW m “7mm a" “W K AW m ‘M
-. MW“ m a; Km
-. “mm. an: m s- m .W m,
-. mm“. nul J 7 (rum MM m m in Wm
-. Puhnwnulmmantl u n lirukdrwmrpzmmuncavrwhrwmdm
-mx!
-— ‘m. WW M
+Polinoame
+Deﬁnitie
+Fie f,g E K[X] doué polinoame. Spunem c5 g divide polinomul f, 5i vom nota
+g\f, dacé existé h G K[X] astfel Tncét f I g . h.
+Polinomul g se numeste divizor al polinomului f, iar polinomul g se numeste
+multiplu al polinomului g.
+Proprietéti ale relatiei de divizibilitate
+Fie f,g,h G K[X] polinoame cu coeﬁcienti Tn corpul K. Atunci are loc
+o Reflexivitate: f\f,Vf € K[X];
+0 Tranzitivitate: dacé f|g 5i g|h, atunci fIh;
+o Polinomul nul f I O este divizibil cu orice alt polinom;
+o Polinomul constant f : a, a yé 0 este divizor pentru oricare polinom din
+KtX];
+A. Arusoaie Fll (UAIC, mi) 51/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-C m m d t, C m m m c
-Wm
-u" MM 45 hm ~ mm. nl m; m." w.“ m" i‘ Mm“,
-1 w W:
+C.m.m.d.c, C.m.m.m.c
+Deﬁnitie
+Un polinom d 6 K[X] se nume$te cel mai mare divizor comun al polinoamelor
+f 5i g dacé'
 
-o d mmmw 1‘ M 1 w y an! A” v m.
+0 d este divizor comun al lui f 5i g, adicé d|f $i d|g;
 
-0 m: 4‘ m" an Mm W a‘ ‘u. I v J, m W
-Mm a‘ m. mm” mm Mu 1 v u ,1, u H» m u M
-MW
-F‘. 1 g € Km M ,mm mm,‘ m K AW s m 5:
-WW 1.‘ ..... ".k mm“ m... .1 m1 I M 4.‘.
+e dacé d1 este un alt divizor comun al lui f 5i g, atunci d1|d.
+Notim cel mai mare divizor comun pentru f $i g, cu c.m.m.d.c.(f,g) sau (f,g).
+Deﬁnitie
+Fie f,g E K[X] doué polinoame cu coeficienti Tn K. Atunci m E K[X] se
+numeste cel mai mic multiplu comun al lui f 5i g dacé
 
-. n". 5‘ m. 1m .m Wm (W mm I g y»
+o f|m 5i g|m (m este multiplu comun pentru f 5i g);
 
-. .m ., i e my WW“ {W m". , 5‘ g mm M,‘
-Vnm mm m mm rm: mmnpm :nmwv m \m J w y (u v m m MINI w m / v‘
+0 oricare ar fi m1 E K[X], multiplu comun pentru f 5i g, rezulté m|m1.
+Vom nota cel mai mic multiplu comun al lui f 5i g cu c.171.1n.1n.c(f7 g) sau [ﬁg].
+
+A. Arusoaie Fll (UAIC, mi) 52/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-Tm lu| 5......
-m.dm....u......é.< M...
-.1 a .... m... . .... 1 a... .. M... “d 1 MW... m x 7 . 5 REX].
-.1 D... /.. Wk... .. . mm... . ... 1 a...“ -.. a»... ... ¢
-Delmlhe
-F..17..x17..17n,..m7.<- am...“ 7......“ 5......
-mm... a- ...i... .. am / MW... .. (X 7 ..-» ..... 7...... u.
-ix 7 m"
-NW... < N‘ 1 M... “a... .- mm..=<.... .. ........ . w
-7 .. Mk... . w WM. w»... m,“ W. 7 1 111W")!
-W... m... 4...... m...
+Teorema lui Bezout
+Fie f,g € K[X] cu 97H) 5i fie a € K. Atunci:
+a) 04 este rédéciné a lui f dacé 5i numai dacé f se divide cu X — a G K[X];
+b) Dacé f se divide cu g $i a este rédéciné a lui g, atunci a este r5d5cin§ a lui f.
+Deﬁnitie
+Fie f G K[X], cu f 75 0 5i ﬁe m € N*. Elementul a G K se numeste r5d5cin5
+multipl5 de ordinul m, dacé f se divide cu (X i 04V”, dar nu se divide cu
+(X — a)m+1.
+Numérul m G N* se numeete ordinul de multiplicitate al rédﬁcinii a. Dacé
+m I 1, rédﬁcina 04 se numeete r5d5cin5 simpl5, dacé m I 2, 3, . . ., atunci a se
+nume$te rédéciné dubl5, tripl5,. ..
+A. Arusoaie Fll (UAIC, mi) 53/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-Muhiphnmea m. mama
-m M» whrwmu“ 1 h c Wm d Mm 1 m mm". m d:
-WWW“ 1“wa MM";
-M :11”): Z WWW” 1k» ("1:0
-. M MM.“ ,. t A m MM A, mum“ Mm 1 “m.
-lYX,M5*/A\”nlz
-. M mm. W K 5“ m.» a: WWW 1 Wm 1m
-ILXJWZUIIXX'M‘
-. n1» Mm.“ ,_ 5 n m ﬁsh": d: mum“ x mm 1 mm
-/ IX H»! , 1 AA 70>‘
+Multiplicitatea unei rédécini
+Fie functia polinomialﬁ f : C ~> (C. Spunem c5 funcjcia f are r§d5cina 04, de
+multiplicitate p dacé gi numai dacé
+fw) I f’(a> I I f<P*1><a>I 0 5i f<P><a> I 0-
+o Dace”) elementul a G K este rﬁdécinﬁ de multiplicitate 1 pentru f atunci
+f5(X — a) $i f /(X —Q)2;
+o Dacé elementul a E K este rédéciné de multiplicitate 2 pentru f atunci
+f5(X — 602 5i f /(X — 003;
+0 Dacé elementul 04 € K este rédéciné de multiplicitate 3 pentru f atunci
+f5(X — a)?’ 5i f /(X — (1)4;
+A. Arusoaie Fll (UAIC, mi) 54/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-Pnﬁnoame
-mum-v:
-m 1 5 KW .m Wm kyalm v. v 5 N1 :M \ * mx W
-. o Km“ ‘m M“ + MW” Z u k mmwe ﬁnk lmuu
-.1: a.“ ,, m Mm“ h k h mum!“
-. W, .u“ < u g MM mum“ :m-Ild Y, se WNW.“
-um.‘
-. Ekmzmul "g K m Wmnu I: 1m :0 5: was“! a emihu
-Tmmi mmmmu = algebra
-o xumﬂglhnd Mm t.‘ W 1 m Mme'm mmlﬂnu m“ (.1 W a
-snub! :nmwu}
-cm...“ pm W." Mmm . mam WM A u my: “KW
-AA m.‘ v. t ~- m new.‘ Mm ivkenu H “Mu mm
-— ‘m. .. W .3 . .
+Polinoa me
+Definitie
+Fie f 6 K[X] un polinom de gradul n, n 6 N*, f I anXn + . . . + a1X + a0.
+o O ecuatie de forma aux" + . . . + ala: + a0 : 0 se numeste ecuatie algebricé
+de gradul n cu coeficienti Tn K 5i necunoscuta as.
+o a0,a1, . . . , an G K se numesc coeficienﬁi ecuatiei, n se numeste gradul
+ecuaﬁei.
+o Elementul a € K cu proprietatea c5 f(a) I 0 se numeste solutie a ecuatiei.
+Teorema fundamentalé a algebrei
+O ecuatie algebricﬁ de grad cel putin 1 cu coeficienti complecgi, admite cel putin o
+solutie complexé.
+Observatie: Din teorema fundamentalé a algebrei rezulté c5 o ecuajcie algebricé
+de gradul n E N* cu coeficienti complec$i are exact n solutii complexe.
+A. Arusoaie Fll (UAIC, mi) 55/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-Pmirmm
-new.»
+Polinoame
+Deﬁnitie
+o Polinomul nenul f G K[X] se nume$te reductibil peste corpul K dacé’ existé
+g, h G K[X] de grad cel putin 1, astfel Tncét f I g - h.
+o Un polinom f € K[X] cu grad(f) Z 1, care nu este reductibil peste K, se
+numeste ireductibil peste K.
+Observaﬁe:
 
-. MW mu‘ [e h'[ijmme1belmubllvaluww\ |< m aid
-mhsh'pﬂ dzlradcdwml “Harm/ZV h
+0 Orice polinom de gradul 1 din K[X] este polinom ireductibil peste K.
 
-. U" Mm 1E K[X]<uwmlljj 2‘ wmmmmu my‘ k
-MM.‘ lreiuzﬂml pen: K
+6 Dacé f € R[X] este un polinom nenul, atunci el este ireductibil numai Tn
+urmétoarele cazuri: ﬁe este de gradul 1, fie f este de gradul 2, dar nu are
+rédécini reale. A5adar, orice polinom f E R[X] de grad n Z 3 este polinom
+reductibil peste 1R.
 
-mum-um
-
-Q 0m WM a: Wm m MK} on Wm mm pm: A’
-
-Q um / E Rm m: M WW W‘ arm d 5“ \vvdunlbﬂ W a"
-vahwvﬂznnm Mmﬁmm m 1m: ¢= mm “mm
-“Wm MHHQRWEINMWWI€K\Y1“U$‘7 1m ,Mm
-MW MA m
-
-— ‘m. WW ..
+A. Arusoaie Fll (UAIC, mi) 56/58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-Pmimm
-Ym
-m 1 E cm. 1 :11» 1 mx W M WM k,“ 1, m mzﬁemmu
-am c
-,1 M 1.. 11.1 E c W llikuu .1! \m 1 mm
-1mm in,“ 7w 1x7 1.11
->1 Dad n. ‘n1 e CM deXum mm .1: 1-1- 11 a: mukwhnln:
-"I. m e w mm
-1 : MK mmx 71m". 1x 71-0“
-Ohlcnihl: m Dam-M‘. 1 1 s mu M “MW 11 Drum‘! a.
-11m 11mm 1W
-. u 116“ WM 1mm“ "mm mm W 1i mnem m m.
-M
-. u 1 a: Wm‘WMmem1-MWW "MW mm 1.
-— ‘m. .. W .3 n .
+Polinoame
+Teorema
+Fie f € (C[X], f I anX” + . . . + a1X + a0, un polinom de grad n cu coeﬁcientii
+din (C.
+a) Dacé a1, . . .,an G (C sunt rédécini ale lui f atunci
+fzan(X—a1)(X—042)-...~(X—04n).
+b) Dacé a1, . . .,0¢k € (C sunt rédécini distincte ale lui f, de multiplicitate
+m1, . . . ,mk G N* atunci
+f I an(X — a1)m1(X — a2)m2 - . . . - (X — awn”.
+Observatie: Dacﬁ polinoamele f,g e K[X] sunt descompuse Tn produse de
+factori ireductibili, atunci
+o (f, g) este produsul factorilor ireductibili comuni, luati Ia puterea cea mai
+micé';
+o [ﬁg] este produsul factorilor ireductibili comuni sau necomuni, luati la
+puterea cea mai mare.
+A. Arusoaie Fll (UAIC, mi) 57/58
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-Emlmgrzﬁe
+Bibliografie
 
-IE A Fwy“. Bzmknulvm Milamzhk mm Unmvmm A‘ \
-m. In‘ 1993
+Ii A. Precupanu, Baze/e ana/izei Matematice, Editura Universitatii “AI. l.
+Cuza", lasi, 1993.
 
-IE n We; meduzzveY/Hnma "YWIWHh! mm uwmwm w \
-(m M was
+l3 F.L. Tiplea, lntroducere in teoria multimilor, Editura Universitatii "AI. I.
+Cuza", lasi, 1998.
 
-a M mam‘ Anabzlmawmalmﬂrcwwraplum) mwrwmm
-mm mu
+a M. Postolache, Ana/iza’ matematica’ (teorie si ap/icatii), Editura Fair Partners,
+Bucuresti, 2011.
 
-IE c. Bevgmzn Anlnvmnmm ngplz/Ngrﬂnand Hmveviilfnrutmnmm
-My Mm 1; m (um. 51mm Bunx m as! w ‘5
-‘W Nnm mm, enul'ghnpm/QAs/l
+E G. Bergman, An Invitation to General Algebra and Universal Constructions,
+Henry Helson, 15 the Crescent, Berkeley CA, 94708 1998, 398, pp. 45.
+(http : //math . berkeley . edu/~gbergman/245/)
 
-B c 0mm Mathemahwmfvmwhru 5w“ we‘ Lnndw 2013
+l3 G. O'Regan, Mathematics in Computing, Springer Verlag, London, 2013.
 
-— M- Wm --
+A. Arusoaie Fll (UAIC, mi) 58/58
 
 ***************Ending Page***************
 

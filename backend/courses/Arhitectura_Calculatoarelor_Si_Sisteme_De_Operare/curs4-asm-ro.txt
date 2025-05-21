@@ -1,344 +1,358 @@
 ***************Beginning Page***************
 ***************page number:1**************
 Lucrul cu stiva §i apeluri
-de funcgii
+de funcﬁi
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
 Stiva programului
 
-' procesorul folose$te 0 parte din memoria
+- prowsorul f010s6$t6 0 part6 din mermoria
 
-RAM pentru a o accesa printr-o discipliné
+RAM pﬁntru a 0 accﬁsa printr-o discipliné
 
 de tip LIFO
 
-i gestiune - adresa vérfului stivei
+— gestiune - admsa vérfului stivai
 
-i mcmoraté in rcgistrul ESP
-' structurile de tip stivé sunt necesare in
+— mamoratéi in registrul ESP
+' structurila de tip stiv'Zl sunt necesare in
 
-multe situaﬁi
-—au
+multe: situayii
+—80
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
 Introducere in stivé
 
-- sintaxé
-pu sh operan d
-' operandul poate ﬁ doar pe 2 sau 4 octegi
+' sintaxé
+push operand
+' operandul poata ﬁ doar p6 2 sau 4 octﬁgi
 
 — se recomandé lucrul numai cu operanzi pe 4
 
-octegi
+octeU
 
-' valoarea ESP este $05.2th cu dimensiunea
+' valoama ESP este scézuté cu dimensiunea
 
 operandului (2 sau 4)
 
-i apoi operandul este copiat in vérful stivei
+— apoi 0p€randul ﬁste copiat in vérful stivei
 
-nu
+81
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Arhilectun calcullloarelor 5| sineme a: open" - ASM
-Exemple
-push eax
-push dX
-push dword ptr [200]
-push word ptr [esi*2+ecx]
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Exsmpls
+push sax
+push dx
+push dword ptr [ZOO]
+push word ptr [esi*2+scx]
 push dword ptr 5
-push word ptr 14
-—xz
+push word ptr l4
+—82
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Extragere din stivé
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Extragere: din stivé
 
-~ sintaxé
+' sintaxé
 
-pop destina tie
+pop destinatie
 
-' destinagia poate ﬁ tot pe 2 sau 4 octeti
+' destinagia poatﬁ ﬁ tot p6 2 sau 4 octati
 
-' valoarea din vﬁrful stivei (ESP) se depune la
-destinagie
+' valoaraa din vﬁrful stivﬁi (ESP) se depunﬁ la
+dastina§i6
 
-- apoi, 1a valoarea ESP se aduni numirul de
-octeti ai operandului
+' apoi, 1a valoarera ESP se aduné numérul de
+octeyi ai operandului
 
-—a_1
+—83
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:6**************
-Arhileclun calcullloarelor 5i sineme a: 0pm“ - ASM
-Exemple
-pop eax
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Exezmplez
+pop €ax
 pop cx
 pop dword ptr [ebx+edi]
-pop word ptr [edx+l OO]
-- destinagia nu poate ﬁ 0 constantﬁ
-—“
+pop word ptr [edx+100]
+' destinagia nu poate ﬁ 0 constanté
+—s4
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Utlllzare practlca
-' rolul stivei programului - stocarea de
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Ut1llzare practwa
+- rolul stivei programului - stocarﬁa de
 informatii cu caracter temporar
-i salvarea pentru un limp a valorii unui registru,
+— salvaraa pentru un timp a valorii unui registru,
 pentru a-l folosi in alt scop
-. apoi valoarea salvaté este restauraté in registm
-i variabile locale
-~ create la momentul apelului funcliei $i dismlse la
-terminarea execugiei funqiei
+' apoi valoarea salvaté este restauraté in registru
+— variabile locale
+' create: la momentul apelului functiei §i distruse la
+terminarea execugiei functiei
 85
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Atenpﬁ
-' instrucﬁunile dc introducere in stivé trebuie
-riguros compensate dc cele de scoatere din
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Atﬁnpe:
+
+- instructiunila de introducﬁm in stivé tmbuie
+riguros compﬁnsate de 0616 d€ scoatam din
 stivé
-i ca numir de instrucgiuni
-i ca dimensiunc a opcranzilor
-' orice eroare afecteazi mai multe date deceit
+
+— ca numér d6 instrucljuni
+— ca dinmnsiune a operanzilor
+
+' orice eroare afecteazé mai multe date: deceit
+
 pare la prima vedere
 86
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Arhilectun calcullloarelor 5| sineme a: open" - ASM
-Exemplu ( 1 )
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Exezrnplu (1 )
 push eax
 push edx
 mov eax,[esi]
-mov edx,5
-mul edx
+mov €dx,5
+mul €dx
 mov [esi],eax
 pop eax
-_______________________________7F
+______________________________TF
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Exemplu (2)
-' 0 instrucyiune pop a fost uitaté - efecte
-i registrul eax primeste alti valoare deceit avea
-initial
-i valoarea iniﬁalé a registrului edx nu este
-restauraté
-' similar daci se executé prea multe
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Exetmplu (2)
+' 0 instrucgiunﬁ pep a fost uitatéi - efecta
+— ragistrul eax prime$t6 alté valoare decét avea
+iniljal
+— valoama initialé a registrului edx nu aste
+rastauratéi
+' similar dacé s6 executé prera multe
 instructiuni pop
-BB
+88
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Apelun de funcgn
-
-~ la prima vedere - ca 0 instructiune dc salt
-
-i se intrerupe exﬁcuyia liniaré a programului $i se
-
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Ap61un de funcpl
+- 1a prima vedem - ca 0 instrucyiune de salt
+— se intrerupe executia liniaré a programului $i se
 sare 1a alté adresé
-
-~ diferengé - la terminarea functiei se revinc la
-
-adresa de unde s-a fécut apelul
-
-i deci aceasta a fost memoraté
-
-i informagie temporaré - tot pe stivé
-—sa
+' difer6n§é - 1a t6rminarea functiﬁi $6 r6vin6 la
+adresa de unda s-a fécut apelul
+— deci aceasta a fost mﬁmoraté
+— informayie temporaré - tot pe stivé
+89
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Arhiletlllrl calcullloirelor 5i sixtelnﬂ d: operlre - ASM
-Instnlcgiunea de apel
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Instruclziunﬁa d6 apel
 ' sintaxé
-c a l l a dre s a
-i in Visual C++, adresa este indicati folosind
-chiar numele functiei apelate
-' efectul instructiunii
-i se introduce in stivé adresa instrucgiunii
-unnétoare (adIesa de revenire)
-— se face salt la adresa indicaté in instrucgiune
-90
+call adresa
+— in Visual C++, adresa estﬁ indicaté folosind
+chiar numele funcljei apalate
+' ef6ctul instrucgiunii
+— se introduce in stivé adresa instructiunii
+urmétoare (adresa d€ revenire)
+— se facﬁ salt 1a adrasa indicaté in instrucgiune
+—90
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
-Arhilectura calcullloarelor 5i sixteme a: open“ - ASM
-Revenirea din funcgie
-- sintaxé
-re t
-' efectul instrucgiunii
-i preia adresa de revenire din vérful stivei
-i face saltul 1a adresa respective"!
-—9\
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Revétnlreza dln funcpe:
+' sintaxé
+r € t
+' efﬁctul instrucgiunii
+— preia adresa d6 revﬁnire din vérful stivei
+— face saltul la adrﬁsa resp6ctivé
+91
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:14**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Eron 1n lucrul cu stlva
-- 0 instructiune pop omisi (sau una in plus)
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Er0r1 1n lucrul cu stlva
+' 0 instrucyiuna pop omiséi (sau una in plus)
 
-i 1a execuﬁa unei instructiuni ret se va prelua
-din stivé alt-é. valoare decét adresa coreclﬁ dc
-revenire
+— la 6xﬁcutia unai instrucyiuni ret se va pmlua
+din stivéi altéi valoare deceit adresa corectéi de
+ravenira
 
-i efect - bloom-ea programului sau terminarea sa
-fonaté
+— €fect - blocarea programului sau terminarea sa
+foryaté
 
-—~n
+92
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Parametrn func'gnlor ( 1)
-' sunt tot variabile locale - se gésesc pe stivé
-' apelantul are responsabilitatea
-i dc a-i pune pe stivé la apel
-. folusind instrucgiunca push
-i de a-i scoate de pe stivi la revenirea din funcyia
-apelati
-- nu se folose$te instruqiunea pop, oi se adunz'i la
-ESP numéml total de octeﬂ ocupat dc parametri
-—~n
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Paranmtnl funcpllor ( 1 )
+' sunt tot variabilﬁ locale - $6 gésesc pe stivé
+- apalantul am rﬁsponsabilitatﬁa
+— de a-i puna pe stivé la apel
+' folosind instrucgiunea pu s h
+— de a-i scoate de pe stivéi 1a revﬁnirea din funcgia
+apelaté
+' nu se folose§te instrucgiunea pop, ci se aduné la
+ESP numérul total de octeti ocupat de parametri
+93
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Parametrii funcgiilor (2)
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Paranmtrii funcgiilor (2)
 
-- in C/C++ parametrii trebuie pu$i in stivé in
-ordine inversi celei in care se gésesc in lista
-de parametri
-i motiv - funcgii cu numz'ir variabil de parametri
+- in C/C++ parametrii tr6buie pu$i in stivé in
+ordina inversé C€l€i in cam se gés6sc in lista
+de paramﬁtri
 
-~ dc cc trebuie scosi din stivé 1a revenire?
-
-i 1a ﬁnalul ﬁecérei unitz'lgi de program trebuie si
-lésém stiva a$a cum am gﬁsit-o la intrare
-i altfel apar erori de tipul celor descrise anterior
-u
+— motiv - funcgii cu numér variabil de paramatri
+' de 06 trabuiﬁ sco$i din stivé 1a revﬁnire?
+— la ﬁnalul ﬁecérei unitégi de program tmbuie $51
+lésém stiva aga cum am gésit-o la intrare
+— altfel apar erori d6 tipul calor descrise anterior
+94
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-- codC
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Exezrnplu (1 )
+
+' codCI
 void dif(int a,int b)
 {
+
 int c;
+
 c=a—b;
+
 cout<<c<<endl;
+}
+
+%
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:18**************
-Arhileclurl calcullloarelor 5i sineme a: 0pm“ - ASM
-Exemplu (2)
-' apelul dif (9, 5) se traduce prin secvenla
-de mai jos:
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Exezrnplu (2)
+- apelul dif (9 , 5) se traducﬁ prin secvenga
+dernaijos:
 push dword ptr 5
 push dword ptr 9
 call dif
 add esp,8
-—9@
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Accesul la parametn
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Accmsul la paranwtn
 ' Visual C++ - prin numele lor
-i functii cu numér variabil de parametri‘?
-~ in general - prin adresele lor
-i primul parametru din antetul functiei se gaseste
-intotdeauna la adresa EBP+8
-i urmétorii parametri, mergénd spre dreapta in
-lista parametrilor, sunt 1a adrese corespunzﬁtor
-Inai mari: EBP+12, EBP+16 etc.
-—~17
+— funcgii cu numér variabil de parametri?
+- in gﬁneral - prin adreselﬁ lor
+— primul parametru din antetul functiei se gésagte
+intotdwuna 1a adresa EBP+8
+— urmétorii parametri, mergénd spm dreapta in
+lista parametrilor, sunt 1a admse corespunzétor
+mai mari: EBP+12, EBP+16 6tc.
+—97
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
-Funcgii - returnarea valorilor
-' convengie stabilitﬁ dc compilator
-- Visual C++ - rezultatul se depune intr-un
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Funetii - returnarea valorilor
+' eonventie stabilita de eompilator
+' Visual C++ - rezultatul se depune intr-un
 registru - depinde de dimensiunea sa
-i tipuri de date de dimensiune l octet: a1
-i tipuri de date de dimensiune 2 octeyi: ax
-i tipuri dc date de dimensiune 4 octeﬁ: eax
-i tipuri de date de dimensiune 8 octegi: edx $i
+— tipuri de date de dimensiune 1 octet: al
+— tipuri de date de dimensiune 2 octeti: ax
+— tipuri de date de dimensiune 4 octeti: eax
+— tipuri de date de dimensiune 8 octeti: edx gi
 eax
-—W
+—98
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
-Arllilectura calcullloarelor 5i sisteme m 0pm“ - ASM
-Péstrarea valorilor regi$tri10r
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Pistrarea valorilor r6gi$tri10r
 
-- programul pe care i1 scriem este C/C++
-~ nu $tim cum folose$ts compilatoru] regi$trii
-' pentru orice funcﬁe pe care 0 scriem in
+- programul pe cam i1 scriam 6st6 C/C++
+- nu $tim cum f010s6$t6 compilatorul r6gi$trii
+' p6ntru orice functie pe cam 0 scri6m in
 
-limbaj de asamblare
+limbaj dﬁ asamblam
 
-i la inceputul executiei functiei trebuie salvagi in
+— la inceputul execuyiei funcyiei trabuia salvagi in
 
-stivé regi§trii pe care ii folosim in funcyie
-i 1a terminate, valorile lor trebuie restaurale
-— excepgie - eax 5i edx (returnare valori)
-w
+stivé regi§trii pe care ii folosim in funcgie
+— 1a t€rminare, valorile lor trebuie restauratﬁ
+— 6xcep11ie - eax $i edx (returnare valori)
+99
 
 ***************Ending Page***************
+
+
+
+
 

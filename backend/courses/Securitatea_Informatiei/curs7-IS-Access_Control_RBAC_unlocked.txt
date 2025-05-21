@@ -1,196 +1,269 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Ami; Cnmml
-mam Anni Cur-nu‘
-pm, hm Wm m
+INFORMATION SECURITY
+leciures by Ferucio Laurentiu Tiplea
+Access Control
+Role-based Access Control
+Prof.dr. Ferucio Laurentiu Tiplea
+Fall 2023
+Department of Computer Science
+“Alexandru loan Cuza" University of lasi
+lasi 700506, Romania
+e-mail: ferucio.tiplea@uaic.ro
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-—
-WM m.‘
-WWW
-M M M
-WWW.
+Outline
+Introduction to RBAC
+Base RBAC model
+Hierarchical RBAC model
+Constrained RBAC
+Consolidated RBAC
+RBAC, DAC, and MAC
+RBAC Implementations
+Concluding remarks
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Introduction m RBAC
+Introduction to RBAC
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-mum Aw. um
--WW.>>M.§ mm.“ hm. wk m m m a"
-WWW
-A hm M MM
-. Fm‘ wwnimmmmmm m ‘mm m MW mu;
-mwn m W m
-. m.“ MW baud w WWW" "m mm
-mm, mm n Wm I.’ m" Wm". R, mm
-MA! um WWW Km Wm M a" WM“
-WWW.“ M.‘ m = m “WWM m‘:
-. DA(h1>-!uuu>unluphunum mum rhusubyeeu
-M WWW. MW mum...“ m W, W.“
-WWW.‘ {mum mm“ um‘ “@me
-mm.“ .1 Mum...“ —_ .,..
+Role-based Access Control
+- Access to objects is regulated by the role user has in an
+organization.
+A bit of history:
+o Formal approaches to access control were initiated in the early 19705
+through DAC and MAC:
+
+o lVlAC was introduced based on military security needs, which
+sometimes makes it unsuitable for civilian applications. For example,
+MAC cannot properly enforce access control based on competencies,
+conflict-of-interest rules, or a strict concept of least privilege;
+
+o DAC has a focus on civilian applications, but it assumes that subjects
+own the resources. However, the resources are not owned by subjects
+in companies (organizations, corporations, agencies, enterprises);
+
+Proﬁdr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIRBAC Fall 2022 2 / 30
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-mun-‘4 Aw- cum
-A m m msruv mm
+Role-based Access Control
+A bit of history (cont):
 
-- 11 mm m m -»..= ma; m Wm by szwoh: w Kw
-um] m m m. ,1. m Mammy m4, MM‘ mum “MA
-mm’! mm £1,“me
+o A solution to meet these needs was proposed by Ferraiolo and Kuhn
+(1992) in the form of a non-discretionary access control model called
+role-based access control (RBAC);
 
-. um Mm e. .\ (may “mun-MA , lummvk ‘a RBAC
-made‘; mm“ kmwn ,5 mm akacsubhsth ‘ mad-Mu
+0 Later, Sandhu et al. (1996) introduced a framework for RBAC
+models, commonly known as RBAC96, also establishing a modular
+structure;
 
-. FnHmmnl a msr mm w mt» in mummy mm; luv
-m “kc/me 51mm: n =\ (2mm) annﬂ m um MM
-m snndwvd M Wm m 20m W mm =5 chs
-15mm Wm m! ‘m WEAK]
+o Following a NIST initiative to reach an international consensus for
+the use of RBAC, Sandhu et al. (2000) proposed an RBAC standard.
+The standard was approved in 2004 and adopted as lNClTS
+359-2004 (NIST model for RBAC);
 
-. w Mm Wm,‘ m 2am b, NISY m, “mm m RBAC
-(mm a .\ mum! n. hm W" M: 5mm ‘S Wm;
-zwznlz
+0 The revision initiated in 2010 by NIST adds attributes to RBAC
+(Kuhn et al. (2010)). The latest version of the standard is INCITS
+359-2012.
 
-“mum .M.~.m.....—_ .,..
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 3 / 30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Base RBAC madel
+Base RBAC model
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-mus mIIWIm-I
-An m: m.‘ m be waned is mrmihw “WW-m: m
-mm,“ Um u! WWW.
-. 5m.‘ Mm». M W WWW ."mmmm
-helm!‘ llcm
-. nmﬂmmm ‘mas m1- mmim am! Mm
-an ‘mm-w"
-“mm.” |~."W.....—_ .,..
+RBAC components
+An RBAC model can be viewed as consisting of two separate but
+dependent classes of components:
+0 Static components: users, roles, permissions, and the relations
+between them;
+o Dynamic components: subjects, role authorization, and object
+access authorization.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 4 / 30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Um mm www-
-u." r W M," whw mmzns mm, w» a (on-Wm
-Wm
-mm , , n. “l 21mm m mmwmﬂmm m ,
-mm Wm law"!
-M-iw. r i 6mm a, [2 w m7 “mm mus m
-WWW w an Wm."
-- m REAL made‘ izlv-nmwdnrs my
-WWW, A“ mm» m "M w
-Pmmsmn “M5 M Wm m1 WMMM
-- Fem-mu m WM m“ My ‘k M, w
-Pylon" “m m Wm
-. (mum, Wu made‘ we FMW magnum .n
-m" 4m Mm W {Mm Mm
-lat-Mm“)
-mum“ ., .umww. —_ .,..
+Users, roles, permissions
+User — any person who interacts directly with a computer
+system;
+Role — a set of actions and responsibilities associated with a
+particular working activity;
+Permission — a description of (a type of) authorized access to
+resources or to do something:
+
+0 The RBAC model accommodates many
+interpretations for permissions. The nature of a
+permission depends on system and implementation;
+
+o Permissions are positive: they confer the ability to
+perform actions in system;
+
+o Constraints will model the prohibition to execute an
+action (some authors name them negative
+permissions).
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 5/30
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-n. .m mu...“ a... Rm M.
-I WW“! I "N" I
-I P wt m acrwwurm *
-.MWM“ MM
-mm a . do
-RP ’ R P m“ n 1 m Mohplu
+The static components of an RBAC model
+users roles permissions
+ul f1 P1
+user-role role-permission
+assignment assignment
+un rm Pk
+. U: set of users; We may view a permission as an
+abstract conce t bindin o erations
+o R: set of roles; , p g p
+and ObJGCtS
+o P: set of permissions;
+0 UR Q U >< R: user-role p Q Op >< O7
+assignment;
+. . where O is a set of o erations and O
+0 RP Q R >< P: role-perm|55|on _ p _ p
+. IS a set of ObJECtS.
+aSSIgnment.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 6/30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-mu- w. m-qn m1 coma-mum:
-. WNW"; Wm. hm m m MW. w‘: Wm.»
-WWW m J Wm w M WWW ‘mm-u m»; (vs
-.4“ a! m1 m ‘uh m madman‘: “WM m
-undevslandml M WWW M “mm m ‘Mm n1
-mslime Wmm in 91mm"; m mks ‘5 my
-- m, m 1 M“- W M Mum “a my a: m suhk m"
-‘m;
-. crowsarexmﬂllmemalmniolcmz Fmexlmw: 2Neun he
-um.“ m» my m ‘mp m W Mm" ivilems W. m
-ulhu‘ a w m buuwalvd m Mm WV. a" m w 5
-dgﬁmd w mm"; was! m M "M MM .k .M mm
-m. 10k mdwendem m \mﬂllmennunm
-. n. (nu-Mm.“ m 1 ‘.“mm m.‘ 1m WW
-WWW “w- ﬁnd w . mm My M m M axnzmnd
-w». W my
-“mm.” .M.~.m.....—_ H.
+Roles vs. groups and compartments
+
+o Organizations operate based on roles: identifying roles (as sets of
+permissions) in a system is more priority than identifying groups (as
+sets of users). This leads to the advantage of simplifying the
+understanding and management of permissions in the system. For
+instance, enumerating all permissions for roles is easy;
+
+o Roles add a useful level of abstraction and may be more stable than
+groups;
+
+o Groups are implementation-specific. For example, a file can be
+associated with only one group in some operating systems, while in
+others, a file can be associated with several groups. But the role is
+defined by permissions offered to users who receive it, which makes
+the role independent of implementation;
+
+o The compartments in a lattice-based model allow one-way
+information flow based on a specific policy. Roles are not associated
+with any policy.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 7/30
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-sum m nub-u
-- um ‘5 ,n wsnnu! n02 usevsdmﬂl m 1 Wm
-. mm n Wmmww mum Mm] W. w "m
-o! . use,
-- As nu amunsun a (Wm 915mm m Mm mm m.
-mm W", wn m WWW M m MW Wm w
-mum“ ., .umww. —_ .,..
+Subjects and sessions
+
+o A session is an instance of a user's dialog with a system;
+
+o A subject is a running computer program (process) acting on behalf
+of a user;
+
+o As user's actions on a computer system are performed through some
+programs running on the computer, we often identify subjects and
+sessions.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 8/30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-n. Mm mum a.“ Rm M
-I!I1
-—~-»-/—-
-v ﬁg“
+The dynamic components of an RBAC model
+users roles permissions
+u1 r1 P1
+UR RP
+subjects/sessions
+subject-to-user mapping su : S % U ‘subject-to-role mapping 5r : 5 % 73(R)
+u's roles
+u 4>
+Y 4 Q
+S
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 9 / 30
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-lw- aumuinllcn m an” m- :ulhmlutlnn
+Role authorization and object access authorization
 
-a». aumwnnmn . whim m my have .n anwe m‘. 0m ‘5 M
+Role authorization: a subject can never have an active role that is not
 
-"WM M M usev
+authorized for its user
 
-<15 E QM; a», é 545) § (Wm ,1; we)
+(Vs G S)(Vr G R)(r G sr(s) :> (su(s), r) G UR)
 
-nhm mm WWW A W! m" Peﬂnvm in Mum pm
+Object access authorization: A subject 5 can perform an operation op on
 
-an,“ a W \hhvv msisi m1! Hm ‘S mm m m mm
+object o only if there exists a role r that is included in the subject's
 
-“M w m “a mm nun: “WW n.» n mm w , w»
+active role set and there exists a permission that is assigned to r such
 
-1mm “mm MM: w Wme/xzolw M a
+that the permission authorizes the performance of op on 0
 
-“(u-u w a» Q mi R)l:P>P7(r<th(r w WW a»; ,1
-mum“ ., .MM.W..... —- m-
+access(s, 0p, 0) z» (Elr G R)(E|p G P)(r G sr(s) /\ (r, p) G PR /\ (0p, 0) G p)
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 10/30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-WWI‘! um n. ‘yum- um
-7 Hiiii d‘ imlm
-\ ‘ - L’.
+Conceptual level vs. system level
+users
+(\C} roles permissions
+_ v pro essor Grade records
+m /
+*3 ax [secretary r Records history
+8 G ’ ’
+/
+U Alice II ) I I
+l
+// l
+—
+/ l
+/ |
+2 Alice.$ecretary
+E f r Recordsehistorydbf
+3 Bob.Professor r, \
+g V
+m V
+subjects/sessions
+Gradeerecordsxlsx
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 11 / 30
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
@@ -200,55 +273,65 @@ Hierarchical RBAC model
 
 ***************Beginning Page***************
 ***************page number:16**************
-‘mm mm." in “mum m... hm Mum mm
-‘-,_,_\v in"
-. A "a. mm.“ mum/gm“ . puma‘ m. mm z m
-m 5m a d m‘!
-. M Zones-1mm; mm
-— mu...“ —
+Role hierarchies
+Individual roles within an organization often have overlapping functions!
+Professor Associate Professor
+Teaching staff
+Faculty member Secretary
+Staff
+o A role inheritance relation/scheme is a partial order relation Z on
+the set R of roles;
+0 If r1 Z r2 we say that r1 inherits r2.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 12/30
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:17**************
-lnhuﬂliilu mn-
-Rah mhemime 1m.“ "w “Mm m mm m m is
-- Pin-mum ban “Mm-r M m rd: w wm m 1, J m
-“Mum m
-at’: w RP<nl§nPin>
-. u,» m mm" m4 mmw m W “1-. 5 Wm
-huh ax a m M “me § m M M m"
-r. 2 n u W1; RPM] ,- WW; WW
-- Whmmmm he?! pmwmmmmlws
-m mm av: mzupzd w W Tm
-n 2r: a um"! 2 ww
-“mm.” |~."W.....—_ .,..
+Inheritance schemes
+Role inheritance schemes may be defined in various ways, such as:
+o Permission-based inheritance — here, the role is viewed just as a set
+of permissions. Then,
+0 User- and permission-based inheritance — here, the role is viewed
+both as a set of permissions and a set of users. Then,
+r1 z r2 e RP(r2) g RP(r1) /\ UR_1(r1) g UR_1(r2)
+o User-based inheritance — here, permissions are assigned to groups
+and groups are mapped to roles. Then,
+r1 2 r2 <=> UR_1(r1) Q UR_1(r2)
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on lnformatlon Security Access ControlRBAC Fall 2022 13/30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-mu- unwind um‘ m Plunhlonl
-An m M ‘mm?! rm wk , \I u MW.“ a wk f m:
-WW m X‘ HIM “mm ‘w m N‘. , “
-Mum @1sz Q,»
-UM m M WM mks my w ‘a Wm mks‘
-A WWW p ‘i “mm a, . wk, \IP “NW m 1 wk r
-mm w, m w dam».- Mahmud M»: m , n
-{Rpm (w pmw ~ “I!
-PWEM M ‘53 mm m m Wm w m. Wm m-
-mm.“ ., .M.~.m..... —_ .,..
+Role authorized users and permissions
+An user u is authorized for a role r if u has assigned a role r’ that
+inherits r. The set 0f users authorized for the role r is
+{uE U|Hr’: (u,r/) G UR /\ r'Z r}.
+Users with more powerful roles may play less powerful roles!
+A permission p is authorized for a role r if p is assigned to a role r’
+inherited by r. The set of permissions authorized for the role r is
+{p€ P|Er’: (r’,p)€ RP /\ Hg r}.
+Permissions of less powerful roles are available to more powerful roles!
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 14/30
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-ﬁn
-- ' m
-w ~ E
-m...
-—._.__u.—
+The hlerarchlcal RBAC model
+role hierarchy
+users permissions
+u1 r1 P1
+UR RP
+un rm pk
+roles
+$1, . . . 7 54
+subjects/sessions
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 15 / 30
 
 ***************Ending Page***************
 
@@ -258,81 +341,140 @@ Constrained RBAC
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Conminu
-Mm‘; my in emnm‘ m‘: m mm: Sysham w, m
-. WWW m"
-. m.‘ . haw m M m w.“
-. m m pm,
-‘n Rm MUM pm a "mm m m, m m»
-. (rule m5 w MM“ w. Mm my“
-. mm. [human/m5 Pu m, M Barmsmmi n. M
-. “Wm "so/MW;
-“mm.” |~."W.....—_ .,.
+Constraints
+Constraints play an essential role in shaping a system. They can
+o simplify the design;
+0 create a better view on the system;
+o bring more power.
+In RBAC; constraints play a significant role. They can help
+0 create roles or permissions with mutual exclusion;
+0 control the assignment of roles per user 0r permissions per role:
+o number or roles/permissions;
+a prerequisite roles/permissions;
+a etc.
+Proﬁdr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIRBAC Fall 2022 16/30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Enfo'd'llwlmin-
-Mm
-T vi
-nun/“urn H H V
+Enforcmg constramts
+role hierarchy
+h
+\
+users ‘\ permissions
+roles \
+\
+U1 r1 \ P1
+UR \ RP
+. - . ‘k . . . ~ . .
+\ L
+\ \
+Un ‘ \rm \ \ pk
+\ \ \ \
+\ \
+\ \
+* ~ \ \ \ \ \ \\ l
+\ c \ \ \
+\ \ \ \ \ ‘ \ \ \\
+$1,...754 <________ \\ \\\
+_ _ - Constraints
+subjects/sessions
+Static constraints — applied to the static components (UR, RP, role
+hierarchy)
+Dynamic constraints — applied to the dynamic components (sessions, sr)
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 17 / 30
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Squaw- u duly
-NM." MW 5M1“; mm slum .1, My (5am Mm
-Wm mum-my “mm \nMvmlmn mm m WM
-m. Mm" mmwﬁmnnhe W.» MIMI“: Wm. Aynm
-m. m; a 5M may m m maddi 45k 5W" m MD
-(1991!) wa mm (Mm arsvu MM; m
-. m“ (55D) V .m mum“ m w, n the W m m
-“MM ‘M mm m
-. dYr-aml msm r m Mm whzn m M m mwdy m. W
-mm
-mum“ ., .ummh. —_ .,..
+Separation of duty
+American National Standards Institute: Separation of Duty (SoD) means
+“Dividing responsibility for sensitive information so that no individual
+acting alone can compromise the security of the data processing system."
+There exists a great variety of SoD models (see Simon and Zurko
+(1997)). Two broad categories of SoD methods are:
+o static (SSD) — place constraints on roles at the time users are
+authorized for roles, and
+o dynamic (DSD) — are invoked when the users are actively using the
+system.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 18 / 30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-- “I ___.
-u, x
-I'I E
-m
-M.
-_-._W._
+Static SoD
+role hierarchy
+SSD i i i i i i i >
+\
+\
+users \\ i / permissions
+\ roles
+\
+\
+U1 ‘ r 1 P1
+UR RP
+u” v rm pk
+51, . . . , S!
+Example 1
+Professor Bob cannot be a member of both the Examination Board and
+Appeal Examination Board.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 19 / 30
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-mm.“ sw
-M..~
-M \ J "w.
-" I
-EuVIUkI
-M he , m“. W We hm“ a,“ m Mam
-mm," an...‘ M m M» m m he KM .n Mm
-mum.“ .M.~.m....—_ .,.
+Dynamic SoD
+role hierarchy
+users permissions
+roles
+U1 r1 P1
+UR RP
+un rm Pk
+‘ \
+$1, . . . , 54 ‘ \ \
+DSD
+Example 2
+Bob can be a member both of the Examination Board and Appeal
+Examination Board, but not both roles can be active in the same
+session.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 20 / 30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Dwmﬂmulsoh
-v- “w m
-WM‘ w (n50) r mm M a Md m Mm .u
-“mm "W m a m. mm
-oso m MW 1. m 550mm.» mm- Wmm R»
-“WM._‘.M....—_
+Operatlonal SoD
+/ ’ role hierarchy \\
+Static OSD — — — — — > \\
+\\ l
+users \\ l permissions
+‘\ roles I
+\ r
+u1 ‘ r1 P1
+UR RP
+un rm I‘ Pk
+/
+I
+w\ /
+\ \ /
+\ \ ,
+Dynamic OSD
+Operational SoD (OSD) — no single user is allowed to perform all
+operations required to a critical function.
+OSD can be enforced as an SSD/DSD with additional constraints on RP.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 21 / 30
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
@@ -342,28 +484,38 @@ Consolidated RBAC
 
 ***************Beginning Page***************
 ***************page number:28**************
-MM/ \m...“
-_~._m—
+Consolidated RBAC
+Consolidated RBAC combines hierarchical and constrained RBAC
+Consolidated RBAC
+Hierarchical RBAC Constrained RBAC
+Basic RBAC
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 22 / 30
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-RBAC, nAc, and MAC
+RBAC, DAC, and MAC
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-mm, mo, “a MAE
-Rm ‘5 mm. mt m Mm, Rm m he Mm .n an
-m m m MAC ‘W, m m MM. Mm‘ mm
-m h M m 0mm A M (mm,
-m m“ M m, mm, m.“ m mmm Rm h. m
-mm mm, w. PM mm m m M Rm
-mum.» .~.m~‘.....—_ .,.
+RBAC, DAC, and MAC
+RBAC is neither DAC nor MAC! However, RBAC can be configured to do
+both DAC and MAC (details, which are more of a theoretical interest,
+can be found in Osborn et al. (2000)).
+. DAC MAC
+F|xed owner's discretion one-way IF
+. RBAC
+Flelele policy-independent
+In practice, we never simulate DAC or MAC through RBAC (it is too
+costly). However, we often combine DAC, MAC, and RBAC.
+Proﬁdr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIRBAC Fall 2022 23/30
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
@@ -373,41 +525,114 @@ RBAC Implementations
 
 ***************Beginning Page***************
 ***************page number:32**************
-lnnqplln‘ nu wllh lmlpln n- lMuumm-n
-aw m he my“ w» "<thth m is
-. kaﬂnw mum“ Syglenu mm‘. m Smdhu [200m
-. Wkomphwnw“ (m =1 =| mom
-- Wv-dmlsznd \IMX os
-- Dmnhmm M nmmt we mm mm, A n (2MB!)
-. m.
-- Qua‘; Aw Guva w» m é WNW“ M." I.»
-".mm ddwum; m1 “mum Am, MAME“
-MA‘ Insandahknnwmvns AM "mm
-. Mumh Am RBAC "m Wm: m mm ma m A
-mm‘; (see Mum Am RBAC M
-. Wmdwm 165 m Mum‘ Wm“ 2&5 Emma"): a“,
-mum“ .1 .M. .,.~‘...... —_ w.
+Integrating RBAC with enterprise lT infrastructures
+RBAC can be integrated with technologies such as:
+
+o Workflow management systems (Kandala and Sandhu (2001));
+
+0 Web applications (Park et al. (2001));
+
+o Windows and UNIX OS;
+
+0 Distributed or network file systems (Dekker et al. (2008));
+
+0 Java;
+
+0 Oracle APl Gateway, which is a comprehensive platform for
+managing, delivering, and securing Web APls, uses the RBAC
+model. lt is available on Windows, Linux, and Solaris;
+
+o Microsoft Azure RBAC, which provides fine-grained access to Azure
+resources (see Microsoft Azure RBAC doc);
+
+0 Windows 365 (see Microsoft Windows 365 Enterprise doc);
+
+0 etc.
+
+Prof.dr. F.L.Tip|ea, UAIC, R0 Lectures on Information Security Access ControlRBAC Fall 2022 24/30
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:33**************
-:Jl:“'“" I~I~-—~-
-—._.._.....—
+R BAC in Windows 365
+:: Microsoft | Docs Documentatlcn Learn QaA Code Sample .-
+II MICFOSOf't I Docs Documentation Learn Q&A
+Docs Windows 365 Windows 365 Enterprlse
+Azure Product documentation v Architecture v Learn Azure
+g Role-
+WindOWS 365 Ematime do“ A 11/04/2021 ~ 2 Azure Rolesbased access control
+> Overview
+Role-based ac
+>
+“MP” they can do w Va
+v How'w guides Manager adm A
+v Plan Azure RBAC documentation l
+. . For more infol
+Plannlng guide > Oven/iew 5
+> Requirements v
+. > Quickstarts
+Cloud PC role-based access control WI n d O
+> Tutorials
+lntune rolerbased access control
+Cloud PC SlZES W‘"d°ws 365 > Concepts
+Center and Az
+> D l . > a '
+ep 0y Enterprise anc How to guldes
+> Prowsiomng Azure AD role > Reference
+> Profilesand policies
+> Resources
+> User settings Cl d
+> SECUrIly ou
+> APPS Tim hunt." n
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 25 / 30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-RBAC um“. os-
-
-m. _... w-“ 9-,"
-
-~- my ‘Am-“mm”.
-mwar?“M.:~—"—"'~-"~: ‘1,.
+RBAC UNIX like OSS
+=== = \ .
+s E E ' ' 0 ll
+555:5 Documentation Search in AIX 7.1 E/l gemon Ilnux m
+AIX AIX / 7 1 / Main page Recent changes Help Genmo v Doeiimentation v
+Page Discussion
+Change version R |_ —‘ .
+O e SELlnux/Role-based access control
+7t]. v
+System admini < 5mm“
+addition to sec To provide segregation of duties and privileges based on the leostprii/ilege model,
+D snow full table 0' cements are not allowed to perform tasks oianotner role (segregation ordiities), and addll
+Most envirgnm not gettoo many privileges
+. that no sin les
+V Filter on titles t g contents [time]
+achieve these 1
+1 illldeUCUOﬂ
+A z RRA( iri §Fl lﬂllX
+Security A . , 2.1 Assigning roles to users
+Wh . ’ Traditional l 2.2 Assigning permissions to roles and domains
+at 5 new RBAC resulvi 1.3 Pennissioiis or tloiiiain transitions
+Securing the base operating system A e Elements of 3 Dem" "ms
+. . RBAC allows
+Secure system installation and v -
+conﬁguration RBAC provid Introduct1on
+Users, gmups, and passwords V * AIX RBAF ln a true RBAC situation, people are assigned one or more roles wnien grant or de
+AIX pfOVldE< ‘ . . .
+n an RBAC model, there are a couple of important aspects to nave in an impleme
+Role-based access control A ,
+, Usmg Enhar
+, _ , , , . Permissions are always granted tnrougn roles e no oirett assignetiori to users
+Traditlpnal UNIX administration System ﬂdm - users must be expiltlﬂy granted roles e no role, no rights
+limitations e RBAC-relate RBAC by itself is not all tnat hard to implement. On a Linux system, one can make
+Elements of RBAC v The fulluwin “d EMF “Wages-
+AIX RBAC v ’ RBAc'rela“ RBAC in SELinllX
+The followin
+Using Enhanced RBAC v i Using enhan Tne implementation ova/e BasedAczsss Control (RBAC) in SELlriuX is as follows,
+Proﬁdr. F.L. Tiplea, UAIC. RO Lectures on Information Security Access ControIRBAC Fall 2022 26 / 30
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
@@ -417,65 +642,106 @@ Concluding remarks
 
 ***************Beginning Page***************
 ***************page number:36**************
-mum-u mm
-. mt WM nzuﬂwzdmwsnatmn by m- rm “mm
-m wmulnlv
-. RBAC MM m Wm m WWW beans: m “>5 m
-Inmm mi emPWyxs mug! m» mm mm» m m
-mum mm" WWW
-. RBAt m hzcnnﬁlmai w Wm J WWW “mam-m‘
-WM Mm DAI m MAK pm;
-- m‘ ‘i iwmd w: WWW w/anm Wm Mm
-mum“ ., .umwh. —_ m.
+Concluding remarks
+
+o RBAC simpliﬁes security administration by using roles, hierarchies,
+and constraints;
+
+0 RBAC reduces costs within an organization because it takes into
+account that employees change much more frequently than the
+duties Within positions;
+
+0 RBAC can be configured to support a large variety of access control
+policies, including DAC and MAC policies;
+
+o RBAC is suited to a large variety of applications and software system
+environments.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 27 / 30
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-walla
-‘n “Amm- m [he mm‘; mdmlzd m h, “mm”,
-. mm n a mm
-. mm 5 m 16mm w (20151
-. mm a and “rm-w mu!‘
-. (WM n M mm, mm
-. (mm 22 m Eemm [mm
-- 5mm- “a a (awrzm 1- mm“ mun
-“mm” |~.».~W....—_ .,..
+Readings
+In addition to the materials indicated so far, l recommend:
+0 Ferraiolo et al. (2007);
+o Chapters 6 and 7 of Conrad et al. (2016);
+o Chapters 3 and 4 of Andress (2014);
+o Chapter 11 of Collins (2014);
+0 Chapter 23 of Bertino (2012);
+0 Samarati and de Capitani di Vimercati (2001).
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 28/30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-MM“!
 References
-m. J m“, “human, 5.“, WMMWMMM
-“Kn-MM. 5m... M k." MW
-MW E (mm MM. M. mm.‘ .. v“. "M. M M K
-M K W M ~ m. MWWWMWMMMWMW
-M. E My g m. M." J mi, WMM W. E...‘ 1.
-RM. D MM . um, M... MM.‘ M mmwmw
-§‘“""“'"Jl;tﬁ“ “T'":ir;i"‘“7";' “31".1212"
-mmw.“ lumm.“ —._ .,.
+References
+
+Andress, J. (2014). The Basics oflnformation Security. Understanding the Fundamentals of
+lnfosec in Theory and Practice. Syngress, Elsevier, Boston, 2nd edition.
+
+Bertino, E. (2012). Chapter 23 - Policies, access control, and formal methods. In Das, S. K.,
+Kant, K., and Zhang, N., editors, Handbook on Securing Cyber-Physical Critical Infrastructure,
+pages 573-594. Morgan Kaufmann, Boston.
+
+Collins, L. (2014). Chapter 11 - Access controls. In Vacca, J. R., editor, Cyber Security and IT
+Infrastructure Protection, pages 269-280. Syngress, Boston.
+
+Conrad, E., Misenar, 5., and Feldman, J. (2016). CISSP Study Guide. Singress, Elsevier, 3rd
+edition.
+
+Dekker, M., Crampton, J., and Etalle, S. (2008). Rbac administration in distributed systems. In
+Proceedings of the 13th ACM Symposium on Access Control Models and Technologies,
+SACMAT '08, page 93-102, New York, NY, USA. Association for Computing Machinery.
+
+Ferraiolo, D. and Kuhn, R. (1992). Roleebased access controls. In 15th National Computer
+Security Conference Proceedings “Information Systems Security.‘ Building Blocks to the
+Future”, pages 554-563, Baltimore, Maryland, US. National Institute of Standards and
+Technology, National Computer Security Center.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlRBAC Fall 2022 29 / 30
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Mal-Inn (mm-l
-K...“ S mm . s W“ WM- Wm“. M m
-m h . (m E , .M.‘ Y . mm, A.......‘.,.‘.n»..‘ Wm“
-MW My M.
-w.“ s Sm I H Mm... a ‘m, MW. m W M W ~ m,
-“WM 5m .5 m.
-m 1 S gm . .M K J W, ...._...__m.m._. W
-M. W gm M 4mm"
-5M» D M 12mm: “gm skmm TQWJZS W, W
-m “MM. m. M... 3mm.“ W.“
-'~“;.“;2'.;'~1,L"711' 1:12‘ W M2, .. Wm...
-W“ - S W ‘ , W." M ,1 w." c i W, MW m
-"m M. (mm MM
-W K H M. M M hm." m, . MM MM‘ v m".
-“mum-n INN”... —- ~1-
+References (c0nt.)
+
+Ferraiolo, D. F., Kuhn, D. R., and Chandramouli, R. (2007). Role-Based Access Control. Artech
+House, lnc., USA, 2nd edition.
+
+Kandala, S. and Sandhu, R. S. (2001). Secure role-based workflow models. In DBSec.
+
+Kuhn, D. R., Coyne, E. J., and Weil, T. R. (2010). Adding attributes to role-based access control.
+Computer, 43(6):79—81.
+
+Osborn, S., Sandhu, R., and Munawer, Q. (2000). Configuring role-based access control to enforce
+mandatory and discretionary access control policies. ACM Transactions on Information and
+System Security, 3(2):85—106.
+
+Park, .l. S., Sandhu, R., and Ahn, G.-J. (2001). Role-based access control on the web. ACM
+Trans. Inf. Syst. Secur., 4(1):37—71.
+
+Samarati, P. and de Capitani di Vimercati, S. (2001). Access control: Policies, models, and
+mechanisms. In Focardi, R. and Gorrieri, R., editors, Foundations of Security Analysis and
+Design, pages 137-196, Berlin, Heidelberg. Springer Berlin Heidelberg.
+
+Sandhu, R., Ferraiolo, D., and Kuhn, R. (2000). The NIST model for role-based access control:
+Towards a uniﬁed standard. In Proceedings of the Fifth ACM Workshop on Role-Based Access
+Control, RBAC '00, page 47-63, New York, NY, USA. Association for Computing Machinery.
+
+Sandhu, R. S., Coyne, E. J., Feinstein, H. L., and Youman, C. E. (1996). Role-based access
+control models. Computer, 29(2):38—47.
+
+Simon, R. and Zurko, M. (1997). Separation of duty in role-based environments. ln Proceedings
+10th Computer Security Foundations Workshop, pages 183-194.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIRBAC Fall 2022 30 / 30
 
 ***************Ending Page***************
 

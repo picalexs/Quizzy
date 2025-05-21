@@ -1,452 +1,587 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Algoritmul KMP
-1 lmwducm si Motivate
-m‘ mnmu H. ml “.1 m. hwth “u W.“ “M1... Iva m...“ mm A .M m“ KMI‘
-m "mum. m nhwmmu] Mm“.
+Algontmul KMP
+1 Introducere 5i Motivare
+Algoritrnul KMP (Knuth-Morris-Pratt) este unul dintre cei mai eleganti algoritmi de céutare a
+unui sub$ir intr-un $ir. Timpul de rulare este liniar in cazul cel mai nefavorabil.
 
-mmm“ W m u mm MMIKM]H]1\\|FAE1KK Irhrlr1H|nLAHlMH mm. mhm Wm, Q.
+Nu este folosit de obicei in practice, deoarece existé algoritrni (Boyer-Moore) care sunt incé $1
+mai eﬁcienti in cazul cel mai favorabil sau cazul mediu. Totugi, unele concepte 5i idei din KMP
+sunt refolosite in algoritmul Boyer-Moore.
 
-hp“ no M] m an‘ :u n “mm:
-no M] m 7mm, w - “MW
-may“ , . , n, v.4] .. v
-v0.“ WW mum "MW mlummm
-Tunnuu Mm" WW.» “N.\1m.‘..u|~m.(‘H.WNM .1 In. V 1»
-m "mm." m lmnhuhm mm“ (Ir ‘A n h: . r u
+Problema pe care 0 rezolvé algoritmul KMP este problema céutérii unui subeir intr-un eir:
+Input: TEO..n-1] (un text, cu n simboluri)
 
-Nmum sh ,1 MWM “0mm 1,.‘ s m WW WW‘ “WW w MW ,
-M. . > 1‘ MM.‘ W ‘Mm W w‘
+P[O. .m-l] (un pattern, cu In simboluri)
+Output: i a.i. T[i..i+m—1] == P
+sau —1, daca nu exista un astfel de i
 
-mm n mm "l W,‘ A". .W AM.“ m W 1| m". r mm W‘- 1, d‘-
-Wu rzw MHZ“ n Ann Mwm.“KMNWW...
-Wm. w MUM“ “MW “MFMM. Mm] 2mm“. “A "W .wmmu
+Vorn adopta urmétoarea conventie notationalé:
 
-Algmmmﬂ KMI' M. 5 u... m.“ M‘... n Wm "MW 1‘, mmm- ah wvhhmd
-WM". mm. mix-4| n." m. m
-hp“ m M; m an‘ d. m“, cu m m" mm.)
+Textul este denurnit T, pattern-ul P, textul are n siInboluri (indexate de la 0 la n — 1),
+iar pattern-ul are m simboluri (indexate de la 0 1a m — 1).
 
-m M] m mm, 4. m“, w m m... mm.)
-Guy“ h "m “41.. r >
-“mm. in X. m m‘. .Pmml.)
-In?“ no H1 u... "m .1. “mm m m m. mum.)
+Notatia S [i. .j] desemneazi subsirul lui S care incepe pe pozitia i 5i se termini pe pozitia j.
+Daci i > j7 subeirul este considerat sjrul vid.
 
-no m'l] m Wm. 4- mm m m.) yum. mm.)
-my“ mm 1 1 1 m Wu Z P v
-‘mm m m. i. on" am DA/IU)
-mun-pm. Mm Wh- \h WM . “mlmmm \. r - n11 mum W‘
-um - 5
+Textul $1 pattern-ul sunt din acelasi alfabet, pe care il notém cu Z. Alfabetul poate ﬁ, de
+exemplu, E I {0, 1} sau E I {A, B, . . . , Z}, sau orice alté multime. Algoritmul KMP functioneazi
+1a fel indiferent de alfabet, astfel incét E nu este important in acest capitol (pentru unnétorii
+algoritrni pe care ii studiem, Rabin-Karp $i Boyer-Moore, aﬂabetul Z joacé un r01 mai important).
 
-“0112" w. n. 1 1- mm. 5
-\
-onials§19901234ss1s
-TizuncA'rzhvnnhzwan
+Algoritmul KMP poate ﬁ u$0r adaptat pentru a rezolva urmétoarele variante ale problemei
+céutérii unui sub$ir intr-un $11":
+
+Input: T[O. .n-l] (un text, de obicei cu mai multe caractere)
+P[O. .m-l] (un pattern, de obicei cu mai putine caractere)
+Output: { i | T[i..i+m—1] == P }
+(varianta in care se cer toate aparitiile)
+Input: T[O. .n-l] (un text, de obicei cu mai multe caractere)
+P[O. .m-l] (un pattern, de obicei cu mai putine caractere)
+Output: existé i a.i. T[i..i+m—1] == P ?
+(varianta in care se cere doar DA/NU)
+Exemplu Pentru datele de intrare T = THEDOGATEMYHOMEWORK $1 P = GATE, rezultatul corect
+este i = 5:
+"GATE" apare in T 1a pozitia 5
+l
+v
+0123456789012345678
+THEDDGATEMYHOMEWDRK
 1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Pmlllllllnlmlllllll (maul/11) (‘Wllc 1X. x (Mum ll Wll
-l l l l
-GAKE
-l l 2 a
-z Algoritlnul Imiv
-llmlll W11 -- lll n-i] Wm “l
-l hmmlln-Wlnllll
-2 Y .lw. l mlqllm! Wm, l
-l Y llm T bllevhwluvmml‘ l ll,
-A ,, .Ml ml MW llllllllllllllllll l
-“lull-mm MM“ ml l-l "ml W lllllnlllllklllil MN ll“ P llll Dan}.
-Lu nnvnicm -l, m I. m. .l. m .>
-l
-Mllllllzl. l<l.r.,,.l,..ll<
-ml mm - m.‘
-m (Ln: ll - o, k <lll ~~x\(
-ll (Plxl Th . l1) <
-mum - ml.‘
-m.»
->
-l
-ll um» <
-) ,
->
-, ,
-eulll “l ml Mmlll llmllmr lull,“ ml (H Mam-Ml W mmllllll ll
-. l Z 1.,l/l
-. Z 4/3 lllllm ,lllllllllllll .lmlnl drama‘: mull»
-. l Zr ml ll. V lll, l "ml (ll ll
-"I'm ,lllllrllllllllllm
-EH Flu-ll: lzlmm z MMMMAMBMY Z MMB
-lllmlculllm" llplmml l; lull, "Vmlllllllllml.lllllmmlllpllllll lll
-ml, m. ll - m. ll X WWW“ .llMM/l- li/h ll xzt/J - Ml "M Wm
+Proiectarea Algoritrnilor (2021-2022) Cursurile IX, X (Potrivirea de $iruri)
+| | | |
+G A T E
+O 1 2 3
+2 Algoritmul naiv
+Dacé T[i. .i+m—1] == P[O. .m-l]7 spunem c5:
+1. P apare in T 1a pozitia i sau
+2. P apare in T incepétnd cu pozitia i sau
+3. P apare in T 1a deplasarnentul i sau
+4. P apare in T incepénd cu deplasamentul i.
+Algoritrnul naiv testeazé rénd pe rand toate posibilele deplasamente 1a care apare P in T, péné
+1a prima potrivire:
+int naive(char *T, int n, char *P, int m)
+{
+for (inti=0; i<n—m+1; ++i) {
+bool found = true;
+for (int k = 0; k < m; ++k) {
+if (PIkI != TIi + k1) I
+found = false;
+break;
+}
+I
+if (found) I
+return i;
+}
+I
+return —1;
+}
+Cazul cel mai nefavorabil Readucere aminte: cazul cel mai nefavorabil este reprezentat de
+0 serie de date de intrare (pentru ﬁecare dimensiune posibilé a datelor de intrare, cétte un input
+de dimensiunea respective) care determiné algoritmul s5 execute cei mai multi pa$i dintre toate
+datele de intrare de aceeagi dimensiune.
+In problema ciutirii unui sub$ir intr-un alt $11", datele de intrare au dimensiune d I n + m.
+Déndu-se o dimensiune d G N a datelor de intratre7 cazul cel mai nefavorabil este dat de
+urmétoarea serie de input-uri:
+0 n I 2 >1< d/3;
+o m I d/ 3 (pattern-ul are jumétate din numérul de caractere ale textului);
+71-1
+/—/%
+o T I AAA. . .AAAB (n i 1 de A urrnat de un B);
+m-l
+/—/% ' _
+o P I AA. . .AB (m — 1 A-ur1$1 un B).
+151%., pentru d I 12, aveIn T = AAAAAAAAAAAB $i P = AAAAB. A
+In acest caz7 la ﬁecare deplasament 2' E {0, 17 . . . ,n — m} algoritmul naiv face m comparatii. In
+total7 avem (n — m + 1) >< m compatrattii7 adicé (2 * d/3 — d/3 + 1) >< d/3 I 0(d2)7 ceea ce inseamnét
+c5 algoritmul naiv are complexitate pétraticé in cazul cel mai nefavorabil.
+Universitatea Alexandru Ioan Cuza 2 Varianta preliminaré
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
-PmmmmAWmA" (mum) (Amumc 1X. x (Mum at mm
-s AlgoriunulKMP
-KAI? mm i (Ammm mmmm . niznnnmvlm
-leunml mm". . Wm m. mwm. WW A, wmmnmmmm...
-Mm A \hmm mm A»! “Mm. AmmmA mm“
-nxmssvnmzsws
-1m -!XABABXABIBXABAIY
-mm“ . AmmA-Am
-mAmwm
-mmmmm cA MAMA.“ mm m . Z 2 1.1»ch A-mmk A mm.“ mm. m
-Ammm Am m mmm m Mm,‘ mm, m m MA mm. mu: Aﬂ Mm A mm.“
-Z AMW
-mmss'mmuslss
-Am -HIABAIXAIABXAIAIY
-mum
-mm“. AmmAmm
-0122M1m
-m “A mmu .mmmm A, AZZ A. .mnmmm mmmmmm Z A in .lmmnm my
-"mm-mAmummmmmmmncm,WAMAZAAAM mm Amm mmmdmn m
-(‘vulmmnmvl . Z 1
-AAHAHAHAAHAHAHA
-AAAAAAAAAAAAAAAAAAAAA
-A I A I X A I A I v
-n A 2 3 A 5 s 1 E v
-D17345575201234551520
-)IXABAIXAIAEXABABIAIA!
-A I! A E X A B A a v
-o l 2 3 0 5 E 1 a B
-mm mm “kw-11mm Km’ “Am-mm. ("mm-AA.‘ mm mm (1 mm mm“ rm
-mm 1M .. ‘All!!! mm p m Pm .. m “MA m MAC mm“ mm mm A mnmmm.
-mmmmm m. mmThl] .A m
-Mm A .m-m Amm Amt rm? AW M MANN“ m mmm m WM
-Mum.‘ m Z“ Mm" Am mmmmmmmmw m. MA‘ MA ,Z m" 1| mm
-ovEm/w
-D1234561880123456
-m1 -71A!ABXABABV771W
-WHHHX
-mum. AMBMBABV
-mmwm
-1.. mm mmmAm m uvalZm ABAIXABA!
+Proiectarea Algoritmilor (2021-2022) Cursurile IX, X (Potrivirea de eiruri)
+3 Algoritmul KMP
+KMP poate fi considerat 0 optimizare a algoritrnului naiv.
+
+Ideea principalé este de a refolosi informatia obtinuté prin comparatiile de 1a un anurnit de-
+plasarnent pentru a reduce din comparatiile necesare la deplasamentele ulterioare.
+
+Pentru a ilustra aceastzi idee, consideréin urrnétorul exemplu:
+
+01234567890123456
+TEXT = HIABABXABABXABABY
+pattern = ABABXABABY
+
+0123456789
+
+Presupunem 05 deplasamentul curent este i I 2. Gésim Ci primele 9 simboluri, aﬂate la
+pozitiile 0-8 in pattern, se potrivesc, in timp ce a1 10-1ea simbol, aﬂat 1a pozitia 9 in pattern, nu
+se potriveete:
+
+01234567890123456
+
+TEXT = HIABABXABABXABABY
+| | l l | | | l IX
+pattern = ABABXABABY
+0123456789
+
+in acest punct, algoritmul naiv ar trece la urmétorul deplasament, i I 3. in algoritmul KMP,
+urmétoarele 4 deplasarnente, cele in care i variazé de 1a 3 1a 6, sunt sérite. Trecem direct la
+deplasamentul i : 7:
+
+012345678901234567890
+HIABABXABABXABABYABAB
+= = = = = = = = = 7
+A B A B X A B A B Y
+0 1 2 3 4 5 6 7 8 9
+012345678901234567890
+HIABABXABABXABABYABAB
+= = = = ?
+A B A B X A B A B Y
+0 1 2 3 4 5 6 7 8 9
+
+Mai Inuit, algoritinul KMP economiseete comparatii prin faptul (:21 nu Inai comparé T[7],
+T[8], T[9] $i T[10] cu P[0], PH], P[2] 3i P[3]. “Stie” (323 aceste elemente sunt egale 5i urmétoarea
+comparatie este intre T[11] 5i PM].
+
+Pentru a intege cum anume alege KMP acest nou deplasament, ne concentrém pe preﬁxul
+pattern-ului care s-a potrivit peste partea corespunzétoare din text, preﬁx pe care il numim eirul
+OVERLAP:
+
+01234567890123456
+
+TEXT = ??ABABXABAB??????
+| | l | | | | l Ix
+pattern = ABABXABAB?
+0123456789
+
+in acest caz, ne concentrzirn pe OVERLAP-ul ABABXABAB.
+
+Folosind doar informatia din acest subeir Si nimic atltcevat7 este clar cit urméttoarea posibilé
+potrivire este 1a deplasarnentul i = 7, intrucétt 1a i = 3, i = 4, i = 5 ei i = 6 sunt simboluri
+care nu se potrivesc:
+
+Universitatea Alexandru Ioan Cuza 3 Varianta preliminaré
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:4**************
-mm." Mummulwr (mum) (Wm\x.x<|»wmm1nm1
-, . 1
-m‘! . “muwmm
-Plum Z AEAIXABAM
-‘ Z ‘
-m1 Z ¢unnmluvvww
-m
-pm." Z ABAEXABAE'!
-, Z 5
-TPXI : "Annuals-"11'"
-Pm." . "mum
-1m . MAMAWW
-nu
-mm. = mmm
-mm‘.
-K. Wm. ‘ Z 1‘ ylrrfmﬂ ABAIM ,MMMm wuwnumrnnuimﬂ ABABM 0%“,qu
-l'mnm I mm wnumwnﬂ dryinwnvrm Wm MM.“ PM”, m W (mm-M wk‘ m
-"HI-“m! Wlmﬂnm- WWW” MINIMUOVLRLAP Mm,“ mm,“ M ‘m7
-“M “anmmmhmmhx \rlvlwmrhonnrm 0mm“Mam-MWW
-A “mm Amman
-Obnwvﬂu . u“ Ml mm MW v“ "WM Wm,‘ AHAHXAIMR A.‘-
-nun,‘ ARM MM
-llnmﬂnm! WWW“ um! M \"hm a ‘@me m, My M“ mm
-llnuﬁmnﬂdrpimnmrm Mnuml mm.“ m. 1M“ h,“ mm W Mpwuhmapmmm]
-nxmsswnonsws
-m‘: z nmnlmlmnam
-um
-pm". Z mluxnau'r
-012mm”
-brumwu! ﬂrphwuurul 4m m MW lruuurm M m [wrm mnrmmlwl (h w Mu u
-Wmnun')
-“WWW Mmm M cm é um“ nlrhnulmrﬁ
+Proiectarea Algoritmilor (2021-2022) Cursurile IX, X (Potrivirea de $iruri)
+i = 3:
+TEXT = ??ABABXABAB??????
+x
+pattern = ABABXABAB?
+i = 4:
+TEXT = ??ABABXABAB??????
+l IX
+pattern = ABABXABAB?
+i = 5:
+TEXT = ??ABABXABAB??????
+X
+pattern = ABABXABAB?
+i = 6:
+TEXT = ??ABABXABAB??????
+x
+pattern = ABABXABAB?
+i = 7
+frontiera
+vvvv
+TEXT = ??ABABXABAB??????
+| | l |
+pattern = ABABXABAB?
+frontiera
+La pozitia i = 7, preﬁxul ABAB a1 pattern-ului corespunde cu suﬁxul ABAB a1 OVERLAP-ului.
+Pentru a calcula urrnatorul deplasament viabil7 deplasém pattern-111 spre dreapta astfel incat
+un preﬁx a1 pattern-ului sa se potriveascé cu un suﬁx a1 OVERLAP-ului7 vazut ca subsir a1 TEXT-
+ului. Un asemenea preﬁx7 care este $1 suﬁx, se numegte frontiera. De exemplu, ABAB este 0 frontieré
+a eirului ABABXABAB.
+Observatia 1 Un sir poate avea mai multe frontiere. Tn exemplul nostru7 ABABXABAB are
+ABAB $1 AB ca frontiere.
+ABABXABAB
+ABABXABAB
+ABABXABAB
+ABABXABAB
+Urmatorul deplasament viabil ar trebui s5 suprapuné cea mai mare dintre acestea.
+Urmétorul deplasament, folosind frontiera cea mai mare (nu sunt sense s5 pierdem 0 potrivire):
+01234567890123456
+TEXT = ??ABABXABAB??????
+| | l I?
+pattern = ABABXABAB?
+0123456789
+Urrnatorul deplasarnent daca am folosi frontiera mai mica (avern potentialul de a pierde o
+potrivire):
+Universitatea Alexandru Ioan Cuza 4 Varianta preliminaré
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
-PM......“MW...|.. (mum) 0...“... 1x. x (hmlvnw a. ......
-mmss'mmnsws
-rm . nmlmlmvnv
-w
-....“ . Mm.“
-nxmssm
-... ‘um-......“ mm Wm... mm"... .... ..."... ......v ...... .. ...-..."... Ilvmvcrn
-0...“... 1 FM .... ...... ......“ ,. ...... ... .... ...... "......" ... ...“...
-mm... m...-...... ...... mm
-Au Mm... x . ABA
-MAM
-AIAIA
-......
-......
-mm"... ......"- 1.8..
-017:4
-“mm-... ......m....m..a ...... “1...... ....X Humm?
-AM.‘ ...»..."W .... .M ...»... Mm... ... Mun-.... .h. M. .... ...‘... m...
-......“ >4 .1 ...... ... ......
-mm“... = n... m. ... MN ......“ ... .... ...." pm .| ...... ... raw r... .. mixwz
-...». ...... ... ....
-Pnﬁxvll Mam .._.~.|...1.x.\B/. .... ...»...W. ...i“ ..v v... mm.
-1...... M ......ww.......mr..1 ...“ ...... maul 7min (.... ......7 .. u ~...>.........a W.
-m.“ m. .... ......» "...... mun-.... ... “...... ... mlw 1",.qu
-n... ‘W ...“... .... ......m. hvwhcm ....“ .... MK W"... (...... .... whx .M ....
-M......1.......-......-.._....n.
-0...“... 4 m .... ..." ....M; . ...... ... ., w...“ n “.... ....
-5.... wl .... m .M. ...... “...... . ......“ AECABD
-Am! ...“ .... ...... DmNemedmbne ... AW“... .... ...»...m ...... N... .m ..
-(.... ... .... M. ....M. .... ...... v... annnulolndridmnl ...... minim ......‘ w...
-.... .... .... y. w...“
-m... . .....m... .... ... ......n...“ my ......" ......" .... ......
-. . ..@.m...ﬂ........m..
-1 .. ............ ...<............ .... .... ..."...
-.... ...... MU...“ mm... n. . Z z .. . Z 1
-nxmss'rsimzsase
-m1 Z uxmamluuauv
-mm...
-Pm... Z unawlsv
-012205519‘
-“WNW... Mm... 1.... c... >. ...-......“ “......W...
+Proiectarea Algoritrnilor (2021-2022) Cursurile IX, X (Potrivirea de $iruri)
+01234567890123456
+TEXT = ??ABABXABAB??????
+l I?
+pattern = ABABXABAB'?
+0123456789
+in algoritrnul KMP, urrnétorul deplasament este calculat astfel incét $51 suprapuné frontiera
+cea mai mare.
+Observatia 2 Cea mai rnare frontieré a unui $ir s-ar putea suprapune cu ea insésii.
+De exemplu, consideréun sirul ABABA.
+Are frontierele A $i ABA:
+ABABA
+ABABA
+ABABA
+ABABA
+Observérn frontiera ABA:
+01234
+vvv
+ABABA
+Vizuté ca preﬁx7 se suprapune cu ea inséei, vizuté ca suﬁx, pe pozitia 2.
+Aceasté suprapunere nu ridieé problerne deosebite in algoritrnul, dar este un lucru pe care
+trebuie six il avern in vedere.
+Observatia 3 Din punct de vedere tehnic, eel mai mare preﬁx a1 unui sir care este si suﬁx este
+chiar sjrul in sine:
+Preﬁxul ABABA a1 $iru1ui ABABA este de asernenea suﬁx a1 lui ABABA.
+Totuei, dacé arn deplasa pattern-ul astfel incét acest preﬁx (tot sirul) sf; se suprapuné peste
+suﬁx7 nu arn face deloc progres (pattern-ul ar rérnéne la acelaei deplasarnent).
+Din acest Inotiv nu considerzirn frontieré decét un preﬁx propriu (adiczi un preﬁx Inai rnic
+decét $irul in sine) care este $i suﬁx.
+Observatia 4 Cea mai mare frontieré a unui Sir ar putea ﬁ girul vid:
+Sirul vid este cea mai mare frontieré a $irului ABCABD.
+Acest aspect nu ridicé probleme deosebite in algoritm, dar trebuie s5 tinern cont de e1.
+Cénd cea mai mare frontieré este eirul vid, pattern-ul este deplasat péné imediat dupé partea
+din text care s-a potrivit.
+Pentru a surnariza idea, in algoritrnul KMP tinern rninte doi indici:
+1. i7 deplasarnentul curent;
+2. k, numérul de simboluri care s-au potrivit.
+Iaté cum araté starea algoritrnului 1a i : 2 5i k : 8:
+01234567890123456
+TEXT = HIABABXABABXABABY
+| | l l | | | I?
+pattern = ABABXABABY
+0123456789
+Universitatea Alexandru Ioan Cuza 5 Varianta preliminaré
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:6**************
-rm..." AM........<1...71.11> 0......» 1x. x (Pmnnlw a. m...
-Mm...» Wm...............T... .1.........m.... m] Duimymlmuc mm“...
-mm”... m... m» Mmumn Z 1 H k Z v
+Proiectarea Algoritrnilor (2021-2022) Cursurile IX, X (Potrivirea de $iruri)
 
-nxmsswumzsass
-m1 Z uxmamlmauv
-mm...
-Pm... Z unamlav
-0121mm‘
-a... n. . k m.» WW ... m1... m... N. m... ... “my... .|.~..... m. ulnivluru ......
+La ﬁecare pas, comparfnn simbolul T[i + k] cu simbolul P[k]. Dacé se potrivesc, crestem k cu
+0 unitate:
 
-.......>...n....... .. “m1... W. vn “W... ........1.>.._....M. AIME .1. W... .
-n.........)vr.....rr...W... M. .. M... ....... M... .W.............~.mm...w \....u;\
-v,.......w......~.. A... mm... m...“ . W. .....m...... .|.-........~... M... ..........
+In exemplul de mai sus7 obtinern i I 2 si k I 9:
 
-hm...“ ... k ......... 1. .......... U. w... ........ a.
+01234567890123456
 
-mmssnvnnslss
-m. . nxuumnmuuv
-pm... . Asumuv
-0.2m...»
-M m .. ...........,...>.....w...M m...,W........,............ .... m... lmrmm M...
-,1
-“ﬁrm...
-unwinaennusc
-1m Z mmmmwm
-Pl“n'n : “mam
-003455759
-A“... “mm... M. w... W... ~ W... w"... M ... n, ... Mm. u... .>_...>..........
-m... k... W... “7......
-k - n». V .1
-mmssnvnnslss
-m. . nxuumnmuuv
-pm... = Annuauv
-0.234551”
-x
-c............. w... m... .. nuns‘ .. rut ... m. um W u my... .. W... . m1! W m...
-“kw... .. V .. m ... 0...... m... M..- my...
-u......~.~...=. 1.1mm. 1.... 0-." b um...“ ...v.........:.
+TEXT = HIABABXABABXABABY
+| | l l | | | l I?
+pattern = ABABXABABY
+0123456789
+
+Dacia T[i + k] nu se p0trive$te cu P[k], (zum este cazul in exemplul de mai sus, ciutﬁrn cea mai
+mare frontieré a eirului care s-a suprapus. In cazul nostru7 este ABAB, de lungirne 4.
+
+Deoarece OVERLAP-ul este un preﬁx a1 pattern-ului, puteIn precalcula frontiera cea mai lungs}
+pentru ﬁecare preﬁx, $1 s5 1e stocém intr-un tablou, pe care il numim f.
+
+Elementul f[k - I] va stoca lungimea celei Inai mari frontiere a preﬁxului de lungime k a1
+pattern-ului. Acest tablou, f, este nuInit functia preﬁx (sau functia e$ec) pentru pattern. Vom
+vedea mai térziu cum se poate precalcula f in mod eﬁcient.
+
+Presupunénd 05 f este deja calculat, pentru a gési unnétorul deplasarnent viabil, Inutérn
+pattern-ul cu k pozitii la drepata (in cazul nostru7 9):
+
+i = i + k ...
+01234567890123456
+TEXT = HIABABXABABXABABY
+pattern = ABABXABABY
+0123456789
+$i apoi il retragem spre sténga cu tot atéxtea pozitii céte simboluri are frontiera (in cazul nostru,
+4):
+i=i+k—f[k—1]
+01234567890123456
+TEXT = HIABABXABABXABABY
+pattern = ABABXABABY
+0123456789
+
+Aceste deplaséri au ca efect faptul 021 frontierab7 vézuté ca preﬁx a1 patctern-ului7 se suprapune
+cu suﬁxul corespunzétor a1 OVERLAP-ului7 vézut ca sub$ir a1 textului.
+
+Mai mult, deoarece $tin1 c5 elementele frontierei sunt aceleasi $1 in TEXT $1 in pattern7 actu-
+alizém k cu lungimea frontierei:
+
+k = f[k — 1]
+i
+01234567890123456
+TEXT = HIABABXABABXABABY
+pattern = ABABXABABY
+0123456789
+k
+
+Continuérn péné cénd k atinge m, caz in care arn gésit 0 potrivire 1a pozitia i sau pziné cénd
+i depé$e$te n — m7 caz in care nu existﬁ nicio potrivire.
+
+Universitatea Alexandru Ioan Cuza 6 Varianta preliminaré
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
-PMMMHMW.W (mum) (‘Nut 1x. x (Mum 4W1,“
-4 Algoriunul
-m. "(MW 4m‘ mm hum,
-[mm ‘ . a.“ . n
-m k . n,
-ulnl-{xL-n-Ilkk<-) (
-1/
->
-IhﬂlU;-g'lllk<l)(
-n (m ‘ k1 - my) (
-1/
-»
-m k . n,
-nmhl;<-u*nllk<n)(
-u (m . k1 .. rm) (
-)
-1/
->
-PM.“ m mm. WW X - n
-IMll(l;-g'lllk<l) (
-n (m ‘ A.1-- my) (
-Mu“ u-m <
-1/
-»
-a.“ TEXT)‘ "m. u WM“ (“I-MM“ m Wm. k z n
+Proiectarea Algoritrnilor (2021-2022) Cursurile IX, X (Potrivirea de eiruri)
+4 Algoritmul
+Presupuncm pcntru moment 05 tabloul f [] continc functia suﬁx (voni vcdca in scctiunilc ulterioarc
+cum se calculeazé eﬁcient aceasté functie).
+Incepem cu i = O 5i k = O:
+int i = O;
+int k = O;
+Repetém algoritmul atét timp cét nu am gésit nicio potrivire, dar incé existé gansa 55 gésim
+una:
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+// . . .
+}
+Efectuzim urinétoarea comparatie:
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) {
+// . . .
+}
+Dacé cele doué caractere se potlvivesc7 este suﬁcient s23 incrementim k, numérul de simboluri
+despre care etim 05x se potrivesc 1a deplasamentul actual.
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) {
+k++;
+l
+// . . .
+}
+Dacé cele douﬁ simboluri nu se potrivesc, existé doué cazuri necesare in implementarea noastré.
+Primul caz este cazul special in care k = O:
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) {
+k++;
+} else if (k == O) {
+// . . .
+}
+Dacé k e O (ceea ce inseamné c5 deja primul sin1b01 din pattern nu se potriveete cu simbolul
+din TEXT), trecem la urmétorul deplasament si pastram k = 0:
+Universitatea Alexandru Ioan Cuza 7 Varianta preliminaré
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:8**************
-Pmnumw Mnmmuhrr (mum) (‘w-ﬂy» 1x. x (hmlulw 4r Wu
-m K . “I
-.m. \1<-n'n!lk<l) <
-u (m ‘k1 - rum ¢
-k“,
-» .1» n u :1 m <
->
-1/
->
-pm uuvhxul k w. W n ‘Wu mm» W.“ \. WM". mm, m W Am". m k
-Mm.
-H.11I‘X;-ﬂ-Ilkk(l)(
-u (m ‘ ‘.1-- rm) (
-)1)»; A‘ m -- m <
-1 .1“ < '
->
-N m. A u Mm. WWW. uv MM mum (Mrnmhuhm m .1. ‘mum
-m 1 Z n.
-m k Z u.
-mum-VDMWH
-u nu . 1.1:: rmn
-k“,
-)1l”n “mm
-1 . . . ‘v
-1 .1” <
-2-1'k'Hl'lL
-1/
->
-mm. ‘N n “mm, w .7. k mm...‘ d: 'lmwmr M“. m ‘uh. m ’ MM ‘a
-drnlvmuruml mm,
-mun;-.~--“<-> t
-n (m ~ M1-- mu (
-, .m' 11 (k -- m <
-» .1“ < '
-law'm'n‘
-k Z m r n,
->
-)
-“WWW ~va h... cm a um“ ".de
+Proiectarea Algoritmilor (2021-2022) Cursurile IX, X (Potrivirea de siruri)
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) {
+k++;
+} else if (k == O) {
+i = i + 1;
+l
+// . . .
+}
+Dacé indexul k nu este O (cazul general), trebuie $5 deplasém pattern-ul spre dreapta cu k
+pozipii:
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) {
+k++;
+} else if (k == O) {
+i = i + 1;
+} else {
+i = i + k . . .
+}
+si apoi s5 il retragem spre stzinga cu atétea pozitji céte simboluri sunt in frontieré:
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) {
+k++;
+} else if (k == O) {
+i = i + 1;
+} else {
+i=i+k—f[k—1];
+// . . .
+}
+Trebuie s5 il actualizém si pe k, numérul de elemente despre care stim 05L se potrivesc la
+deplasamentul curent:
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) {
+k++;
+} else if (k == 0) {
+i = i + 1;
+} else {
+i=i+k—f[k—1];
+k = f[k — 1];
+1'
+}
+Universitatea Alexandru Ioan Cuza 8 Varianta preliminaré
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-mm“. AWN Wm“) (‘Wm 1x. x (MW 4r W.)
-Dummnmmww MGM,“ MVWWMHMMK . . Wm
-“Mm , “W .1 r .. "Mm a. m“ Mm Wm". .. mm V.
-MWHVDMWH
-,l m. . u pmn
-> .1” n w D» <
-) .1” <
-1-Hurnvrﬂ‘
-k - m r x1,
-1
->
-,2 {k _ .1 (
-> m. (
->
-5 Comvluitatca»timv a algoritmului KMP
-m1wl..r..“<.> (
-u (m ~ ..1-- PM) ( \
-w‘ \
-)uunu-OH \
-x = ‘ ' n \ ‘ 1mm. Z nu!
-» m. < \
-pukruk'n‘ \
-k Z nx r u, \
-> /
->
-1, u Z m ¢
-> .h. ¢ ‘
-mm. 4‘
->
-1 an.“ | nu ' k1 rm)
-1 m.“ u nu < k, ‘. vm M -- a,
+Proiectarea Algoritrnilor (2021-2022) Cursurile IX, X (Potrivirea de siruri)
+Dupe ce bucla while se opreste, veriﬁcéun de ce. Dacé bucla s-a oprit deoarece k = In, inseamné
+c5 am gésit 0 potrivire si intoarcern deplasamentul i 1a care apare potrivirea. Dacé bucla s-a oprit
+deoarece i a depésit n — m, insealnni (:23 nu existﬁ sansa unei potriviri si intoarcem —1.
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) {
+k++;
+} else if (k == 0) {
+i = i + 1;
+} else {
+i=i+k—f[k—1];
+k = f[k — 1];
+1'
+}
+if (k == m) {
+return i;
+} else {
+return —1;
+}
+5 Complexitatea-timp a algoritmului KMP
+Pentru a intelege complexitatea-timp a algoritmului KMP7 vom numéra céte iteratii ale buclei
+while sunt efectuate, deoarece ﬁecare iteratie se executé in timp 0(1).
+int i = O;
+int k = O;
+while (i<=n—m&&k<m) {
+if (T[i + k] == P[k]) { \
+k++; |
+} else if (k == 0) { |
+i = i + 1; | 1 iteratie = 0(1)
+} else { |
+i=i+k—f[k—1]; |
+k = f [k — 1]; |
+1' /
+}
+if (k == m) {
+return i;
+} else {
+return —1;
+}
+Vorn analiza 0e se intémplé 1a ﬁecare iteratie a buclei cu valorile a doué expresii:
+0 expresia i + k;
+0 expresia i.
+Sunt trei cazuri de analizat, in functie de ramura instructiunii conditionale care este executaté:
+1. CazulI(T[i + k] == P[k])
+in acest caz7 i + k creste cu o unitate7 iar valoarea lui i nu se schimbé.
+2. CazulII (T[i + k] != P[k] sik == 0)
+in acest caZ7 atét i + k cét si i cresc cu 0 unitate.
+Universitatea Alexandru Ioan Cuza 9 Varianta preliminaré
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-Pmnumw Mnmmuhrr (mum) (‘w-ﬂy» 1x. x (hmlulw 4r Wu
+Proiectarea Algoritmilor (2021-2022) Cursurile IX, X (Potrivirea de $iruri)
+3. Cazul III (T[i + k] != P[k] $ik != O)
+in acest caZ7 valoarea expresiei i + k nu se schimbé:
+noua valoarea a lui i vechea valoarea a lui i
+vvvvvvvvvvvvvvvv vvv
+i+k—f[k—1]+f[k—1] =i+k
+noua valoare a lui k noua valoarea a lui k
+T0tu$i, noua valoare a lui i este i + k — f[k — 1]. Deoarece f[k — 1] < k (frontiera
+unui $ir de k siInboluri nu poate ﬁ tot $irul), avein (:5 valoarea lui i cre$te strict.
 
-1 cm.‘ m [m ‘ n ‘. rm M v- m
-
-mm“, Yum-“mum , ‘ Xnvnexwmhh
-M. “hm. . 1.“ , my... "an". , M ,
-“k-m-num-u H‘,
-M", W MW n \m ‘ W , ' k V m V n Mm" m V u < k mevrm
-"Wm mum 1.“ M“ h M m» m" M Mum-w M ‘ m“ m."
-
-Dm WM“ w i M. M MM ‘1r (,1 muhn - u.‘ “MMWMM \e\\\vm||nhmh
-m. ‘ ‘ kszM m.“ I, - .1 , . - M “WWW WmMHanhMm.“ <.
-. .1 . . . 1. - .. . m. ‘ .> lnmlvhnm .hAmmmmmm,“mm;
+Din moment ce i poate sé creascé de cel mult n - m ori inainte de a declansa ie$irea din buclé,
+iar i + k de cel mult (n — m) + m = n 01vi7 inseamné (:51 numérul de iteraﬁii este de cel Inult (n
+— m) + n = 2n — m = 0(n + m) (timp liniar in dimensiunea datelor de intrare).
 
 6 Calculul functiei preﬁx
+Si funcpia preﬁx se poate calcula tot in timp liniar.
+In primul rénd, pentru initializare, setéun f [O] = O (frontiera $irului P [0. .O] are lungirne O).
+f[O] = O;
 
-s. ‘Wm we?“ . Mum“. m w mnv “m.
-InDnnm‘nmhveuuummshnlr wlhmtlﬂl Z DHInmmnumthlO u] “IMHO!
-am . n
+Apoi construini f [1]7 f [2]7 f [3]7 . . . dupé cum urmeazé. Presupunem (:5 am calculat f [O] ,
 
-AP" :umnunu m] 1(2] m] 11le m, umvmi WWW.“ d m. “Wm any
+f [1] , . . . , f [i-1] si calculérn f [i] , adicé lungiinea celei Inai mari frontiere a $irului P [0. . i-l] .
+f [0] = 0;
+for (i = 1; i < m; ++i) {
+}
 
-1m, , an] mm.“ 2m mhdhmpmm Mmmmnrmnmu,Mmm H;
-1m] - n‘
-m n . x, , (m “Q <
->
+Presupunénd 05 aceasté frontieré are lungirne X (adicé P [0. .X-l] == P [i-x. .i-1] ), avern c5
+x — 1 este lungirnea unei frontiere a $irului P [0. . i-2] (nu neapérat cea mai mare). De ce? Din
+P [0. .X-l] == P [i-x. . i-1], aveni iniediat P [O. .x-2] == P [i-x. .i-2] (dém 1a 0 parte ultimul
+simbol).
 
-PMWWM ammlkivuvmemme Wm l (“mum H] -- pm Hy) mm a.
-X V 1Mummmmmmm.m...v1mm "a (mnrmyliml MM mm new um
-m H1 -- ,[n Hy m.“ mums! no X721 -- m1 m mm u Wm "mm
-mnhnl]
+Stiind c5 frontiera cea mai mare a $iru1ui P [0. . i-1] extinde cu un simbol 0 frontieré a $irului
+P[O. .i-2], parcurgern in ordine descrescétoare toate frontierele $irului P[O. .i-2] sj veriﬁcém
+dacé poate ﬁ extinsi cu un caracter.
 
-#:mm a ‘mum m M 1W w nuvhu m H1 mum ulnunhnl a mm , >lmhn
-m "21‘ Mm. 1.. omnu (kwmdxwlr KW hmnnvh mm. no 1'21 ,. mm“.
-M M! n mm rw "n (Mann
+Cea mai lungé frontiers] a $irului P [0. .i-2] este de lungirne f [i-1] .
 
-m "W kw Mum a mm. no H) My “WW 1(141
+A doua cea Inai lungé frontieré (daczi existé) este de lungirne f [f [i - 1] - 1] (exercitiu:
+explicati de ce).
 
-A (1W m. m, hm!‘ Mm. (darn mum] mt Ar Wm mu V \1 V u lrxnrmn
-Wm Ar "v
+A treia cea mai lungé (dacé existé) este de lungime f [f [f [i — 1] — 1] — 1] $.a.rn.d.
 
-AWN‘ umImml(KW!MNMultdrhmlmwllfhh r 11 V u V n mm
-
-m1] - .1
-‘Mu-M‘. "m
-K - ru V 1]‘ // =.. .u 1M. mm. y- m mun- .. n mm...
-M. “ > o n Pm v- ,[m < // m -- mm.“ cur-bun!-
-m x - m V ,1. // W... 1. "mm". {mann-
->
-1r w - n! < // an, x - n . mm rpm.) amm- m r n 1... an m.
-u mu] :1 run <
-m1 : 1,
-> .1» <
-m1 : o,
->
-“WWW ~va h... cm n1 um“ ".de
+f [0] = 0;
+for (i = 1; i < In; ++i) {
+k = f[i — 1]; // cea mai lunga frontiera pe care incercam sa o extindem
+while (k > O 8:8: P[k] != P[i]) { // nu se potrivesc caracterele
+(*) k = f[k — 1]; // trecem la urmatoarea frontiera
+}
+if (k == O) { // cazul k = O e tratat special deoarece f[k — 1] nu are sens
+if (P[O] == P[i]) {
+f [i] = 1;
+} else {
+f[i] = O;
+}
+Universitatea Alexandru Ioan Cuza 10 Varianta preliminaré
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
-PMmmnuMlm-nmlwr (Anni/11) (‘unurﬂc 1x. x (Pmnvlnﬂdr Wu
-) .1“ ( // nu -- m]
-W m1 - k . 1.
->
-v
-Comvhxlhul'ump AW.“ "m mu cu "mum" (k M m M .1“ (mnvkmnur
-mm, m.“ m." M Wk mm."
-M“, w.“ W1!‘ min-mun Mum») \t pm“ mm .1. Wm, .1 m L". WW
-qumv mm ‘Mk h. ,1
-a: “A Imimmm m 4m,“ WK mm M k mm v.“ “W M M \nlwul
-1". k Wm WW. 11.. “MM (“H an.“ k m wk "Wm \qu o‘ “W m. Mt
-\< “WW. ‘k "m mm m Am nuke Dan's“, ‘k "v Mn H W mmmm. ML
-NM MP wx m m "mu rl an
-AM hum “Mm. ‘,7 Wm m m Wm.‘ m "NWW (-1 Mr ‘my um M
-avwwv ;.. mum N. ‘W
-“WWW “Wm 1W. cm u Vm-mmn WNW
+Proiectarea Algoritmilor (2021-2022) Cursurile IX, X (Potrivirea de $iruri)
+} else { // P[k] == P[i]
+(**) f[i] =k+ 1;
+}
+1'
+Complexitatea-timp Aparent existé riscul ca algoritmul de Inai sus six aibé complexitate
+pétraticé, deoarece sunt doué bucle imbricate.
+
+Totusi, corpul buclei interioare (bucla while) se poate executa de maxim m ori (in totalitate,
+pentru toate valorile lui i).
+
+De (3e? Instructiunea (*) descreste strict valoarea lui k. Existé un singur loc unde valoarea
+lui k poate s23 creascé (in instructiunea (**)). Cum k nu scade niciodaté sub O, acesta nu poate
+s5 descreascé de mai multe ori decét cre$te. Dar cre$te de cel mult m-l ori (instructiunea (**));
+abjadar scade tot de ce mult 111-1 ori.
+
+Acest lucru inseamné 05 numérul total de executii ale instructiunii (*) este liniar. Deci 5i
+algoritrnul in ansamblu este liniar.
+
+Universitatea Alexandru Ioan Cuza 11 Varianta preliminaré
 
 ***************Ending Page***************
+
+
+
+
 

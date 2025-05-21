@@ -1,46 +1,46 @@
 ***************Beginning Page***************
 ***************page number:1**************
-n udndnh m:
+11 noiembrie 2022
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-g mm-
-. mum. wan-.1‘ m
-. mm- ynlm mu. u m.
-. cm.“ n- cuﬁul mm. m..." \... 5....
-. mm,- n. uni-l mm Wm“... "um-7K.“
-q Humi 1. nu!-
-. mm- a- m-m
-. m“ dun- ham. ‘mum. um“. mum:
-. Emmi m... "min"... mm,
+a Cuplaje
+o Problema cuplajului maxim
+o Cuplaje perfecte - Teorema lui Tutte
+0 Cuplaje de cardinal maxim - Teorema lui Berge
+0 Cuplaje de cardinal maxim - Algoritmul Hopcroft-Karp
+e Fluxuri in retele
+o Retele de transport
+o Flux, valoarea ﬂuxului, problema ﬂuxului maxim
+a Exercitgii pentru seminarul urmator
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Fin c Z 1v‘ s) m Fri MG mm. mum-IN n1!
+Fie G : (V, E) un graf §i MG familia cuplajelor sale.
+Problem cuplajului maximum.
+P1 dat un graf G : (V, E), determinati M* € MG astfel incét
+|M*| : max |M|.
+M EM G
 
-Prublrm “ml-4m.“ "mm-"1..
+o Folosind formularea ca problemé de programare intreagéi liniearéi
+problema P1 este u§oaré dacéi graful este bipartit.
 
-p, .m .m m: u Z [m E)‘ Mum“ M‘ Z Mg mm “KM
-\w Z FE; M
+o Adaptéri combinatoriale ale algoritmului simplex pentru rezolvarea
+problemei de programare liniaré au condus 1a a§a numita “metodéi
+ungaré" pentru rezolvarea P1 in grafuri bipartite.
 
-. m.“ ‘mm-“n n mm.“ 4. magma’. mm‘: m":
-Dmhllm: r‘ m. mm: ﬂu! mm m. up.“
+o Vom discuta 0 solutie mai rapidé gésité de Hopcroft §i Karp (1973).
 
-. mm“ mummiﬁ- =1. ilgnnhnulnl 5mm um um...“
-thllmn dl Pmlnmuu hum’! m conﬂul 1» m numlh “mm:
-mm" Dunn: whim v. n- “1...; \inanin
-
-- ann 4mm n “1w. m, nmlgllnldnmvmn 51 Km (mi)
-
-. c“ mm mm‘ ‘mm. a. Mum." an: “mm”. hmarl 1;
-:nuymmnmupn mun-m mm: pmmmmwwm
-“mm-l- [m 1mm!) My. mm. m m." binnin-
+o Cu toate acestea, teorema de de dualitate din programarea liniaré §i
+integralitatea solutiei optime pot ﬁ folosite pentru a obtine §i explica
+rezultatele (deja dovedite) despre cuplaje in grafuri bipartite:
 
 —
 
@@ -48,70 +48,76 @@ mm" Dunn: whim v. n- “1...; \inanin
 
 ***************Beginning Page***************
 ***************page number:4**************
-Pxnhhml cllllhjulul mulm
-Tcurcma 1
-Trauma z
+Problema cuplajului maxim
+
+Teorema 1 I
+
+Teorema 2 \
+Algoritmica Grafurilor — Cursul 7 11 nuiembrie 2022 4 / 38
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-cum. p.ﬂ.,.r1\.,......|..\ m.
+Cuplaje perfecte - Teorema lui Tutte
+Fie G be un graf. Evident, |M| g |G|/2, VM € Mg. Un
 
-u G h. w 5..‘ mm u -\ \sz w E Mr u“ (W
-Wm [m 41w m, Gunnmmh, “[ummin...‘ u Z
-\cv: 1. “sun: vmll.
+(sau ) in G este un cuplaj M cu proprietatea [M] :
+\GVZ (i. e., S(M) : V(G)).
+O componentﬁ conexé a grafului G este paré (imparﬁ) dacé numérul
+nodurilor sale este par (impar).
+Remarcﬁ
+Fie G un graf care are un cuplaj perfect. Evident, ﬁecare componentéi
+conexé a lui G este paré. Astfel, q(G) : O. Mai mult, dacéi S Q
+V( G) atunci pentru ﬁecare componenté conexéi impari din graful G — S
+trebuie sé existe o muchie in cuplajul perfect a1 grafului cu o extremitate
+in aceasté componenté conexé §i cealalté in S. Deoarece extremitétile
+muchiilor diferite sunt distincte, urmeazé c5 ‘S! > q(G — S).
+Pentru S : Q in (T), ob'ginem q(G — Q) g O, deci q(G) : 0.
 
-o “mm; mm = mm“. c ..- uni (mm; did mm!
-munm.»..mwpmw1 - ~ V v» v‘ \ v
-Ran-x2!
-
-Fa! c m m: m! u. .m mm mm and.“ a“. mmm.“
-mm i m. z; m um Ann!‘ as‘ : n m, mu“. M s g
-vm) “H. mum: an. “mm-“m: in,“ a.» m.‘ G s
-mu». .:.1~.\-mwn. .,. “mm-m alum-(u “mm-mu
-m a...“ “mum: mu: u mm 1., s um.“ mmm.
-“mm Mm. .m 411mm, mm: I: s > “(a 7 s]
-
-Puma s w m. Mm um e; \ n. “a its; n
+Algoritmica Grafurilor - Cursul 7 11 noiembrie 2022 5/38
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-am;
-(Ml, um) m. y.‘ G m... m, Wm m .. m“; M
-[T] HG S] ‘I \Shvs i ‘1(6)
+denlllponeu E‘i gggponents
+E S 8
+(Tutte, 1947) Un graf G admite cuplaj perfect dacé §i numai dacé
+(T) q<G—S)< ISWSQ V(G)-
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Dummmm. "mm... mum... (1-; a inn “mm m an“;
-a. m.) m. Dumulhilll m mum am n Z z; cl mun m:
-a Z (m 51 mum (1-1‘ .“m' c m m. mph, Wm
-mm ,- Z 1.2 lunnmi m 1m mam In mu mmm a. s un
-an: m n ; z undun can “mm m .. -: Dmnplmlm c: M. m:
-G'lm c' <1", cim “mm- (1-1 in un cum 11mm
-Pia-$1‘; VIGhnlnlmm as 5.,1 7 ‘summminmmmm
-dimlpbmmpr) (1 . ‘ mm. um "mm-mm. s“... 5., mm
-MG s1< s)
-mm“. I: [mun a. inhmII-“lmx ll. m. v(c) mm. m. (1-) m-
-nmﬂmn: cu mm.“ ml nunﬂ‘ n. am‘ mil M 5.. (mm mm
-m u“ m. ,1“ m. len n. “mu-m mum“; I.“ din u‘ mm
-am m Z 1 : \(vm dunirun m" cumin-ml mnuxl an! pm
-i m Inn]! mum-m mm m (.l m". .m and‘ “in: 1m ml-l n-
-m u.)
+Demonstragie. Necesitatea condi'giei (T) a fost dovedité in discu'gia
+de mai sus. Demonstréim prin induc'gie dupé n : |G| céi dacé un graf
+G : (V, E) satisface (T), atunci G are un cuplaj perfect.
+Pentru n : 1,2 teorema are loc evident. in pasul inductiv, ﬁe G un
+graf cu n 2 3 noduri care satisface (T) §i s5 presupunem 05 orice graf
+G’ cu |G’| < n §i care satisface (T) are un cuplaj perfect.
+Fie SO Q V(G) astfel incét q(G-SO) : |SO| §i maximalé cu proprietatea
+cé avem egalitate in (T) (i. e., pentru orice supramultime S a lui SO avem
+q(G — S) < ISU-
+Observém 05 familia de submultimi ale 1ui V(G) pentru care (T) este
+satisfécuté cu egalitate este nevidé, §i, deci, existé un SO (pentru ﬁecare
+nod 'uo care nu este punct de articulatie in componetnta lui din G, avem
+q(G — 110) = 1 : |{'uo}|, deoarece ﬁecare componenté conexé este paré
+§i in ﬁecare componenté conexé cu ce1 putin un nod, existé un astfel de
+nod v0).
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-i MJJI‘ . ‘D. nmpunml pm uni G Sn (k k l1)
-El Iil El
-9 o
+Fie m : |So| > O, C1, C2, . . . , C’m componentele impare ale lui G — SO
+§i D1, D2, . . . , Dk componentele pare ale lui G — SO (k 2 0):
+E q E
+Vom construi un cuplaj perfect compus din
 —
 
 ***************Ending Page***************
@@ -119,138 +125,158 @@ El Iil El
 
 ***************Beginning Page***************
 ***************page number:9**************
-a] m. m. mph, ymm m hm. mm.“ m.“ ,..= 17,;
-h] m. mm m m “mm, u.‘ ‘My mm. . .M u mg.
-., E 5., ‘mam! n E c,[,:1‘m)‘
-c] mph] pmhcl m mun Inhglnh C. v. [x 1 hm]
-a] mm um A K \ < n wk“ [mo We mph; pm'en 1m
-um “nun m > n‘ umnll a u. < ,- h dun Iyulun mdnnwl
-m. main“ .= amlm n s' Z [ma mum. [1-)
-F: S’ 5 D. Did qu‘ 7 S’) > Sh alum nhp-lm umﬂumi
-(“ml-‘i.
-nzcilslws'n: vl5*%)+vl6'*5'11 swarm > slim
-Anhl‘ MIG’ 5'] x SW V5’ £ Z7-‘ I l‘ 6' Ilﬁlllm (T1
+a) céte un cuplaj perfect in ﬁecare componenté conexé paré Di;
+b) un cuplaj cu m muchii, {61, . . . , em}, muchia e, avénd un capét
+s, G SO §ice1$ilalt 11,6 C, (z':1,1,m);
+
+c) cuplaj perfect in ﬁecare subgraph C’, — 'u, (2' : 1, 1, m)
+a) Pentru orice 1 g z' g k graful [DAG admite cuplaj perfect. intr-
+adevﬁr, deoarece m > 0, urmeazé cé |D1| < n §i din ipoteza inductivé
+este suﬁcient s5 arétém c5 G’ : [DAG satisface (T).
+Fie S’ Q Di. Dacé q(G’ — S’) > 1.5”‘, atunci obtinem urmétoarea
+contradictie:
+q(G—(SOUS’)) : q(G—SO)+q(G’—S’) : \So\+q(G’—S’) > |SOUS’\.
+Astfel, q(G’ — S’) g 15”‘, VS’ Q Di, i. e., G’ satisface (T).
+
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-h) m H E (such ‘mm Emmi mum m n Eu.“ mm“.
-5.,‘ mm“ El.“ Mum Emu-ME nun-mm". ‘I. \u. G 5.,‘
-, m mm,“ 4. ‘WE (L c». uni: . E s, inn-1c: m“: v E c, Eu
-W E m s1
-n EE. m Em, Mm [mm-“E "mm E: H mum-.- EM!“
-f. hum: 1m mu mm mm‘. m, my“, u, cm nun-u!
-m. ‘CE;
-p. A g m. ‘on; Aluncl B E MA) g 5.,‘ n a". mum.
-lni u‘ m mm c m "Em m1, mm“ .1. h .m m V E s, E s IE
-un m w E c. E A. Anm Willymxunkulu WE. mm m A “m
-“mummmm m.“ u m a B, mid “(a s] > ‘A mm.“
-G nun-:- mmp. un 1w- m‘ m. a‘ > ,[G E a] Am nap-m
-E: mm Em»
+b) Fie H : (SO, {01, . . . , Gm}; E’) graful bipartit cu 0 clasé a biparti'giei
+SO, cealalté clasé multimea componentelor conexe impare ale lui G — SO,
+§i cu muchiile de forma {s, Ci}, unde s 6 SO astfel cé existé v E CZ- cu
+s'u 6 E(G).
+H are un cuplaj perfect. Intr-adevér, arétém 05 H satisface condi'gia
+din teorema lui Hall pentru existenta unui cuplaj M0 care satureazé
+{01, . . . , Gm}.
+Fie A Q {Gl,...,Gm}. Atunci B : NH(A) Q SO, §i din constructia
+lui H, in graful G nu avem nicio muchie de 1a un nod 'u E SO — B 1a
+un nod 'w E Ci G A. Astfel componentele conexe impare din A rémén
+componente conexe impare §i in G — B; astfel q(G- B) Z |A| Deoarece
+G satisface condi'gia lui Tutte (T), avem \B] 2 q(G — B). Am obtinut
+céyNH(A)1:1B\>yA|-
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-mum-“1mm H m .m {1|th u.“ “Mm: (q, ‘cm;
-m...“ \sn Z m‘ ‘4., uh WM
+Din teorema lui Hall H are un cuplaj M0, care satureazé {01, . . . , Cm};
+deoarece |S0| : m, M0 este perfect.
 
-u“ :(mmn'm ‘MAJ-5'“ Zn“. ‘1mm. E 0..“ Zm.
-(rpm. \mhmuu; Z ch madam WM mm
-“mm “Am-7:‘ m. mam. .= 1mm. c: a “Mm [1-)
-F: s’ E er h um "(5'qu > ‘5' ‘ .wm‘ am.“ “{G'Z 5%
-\s' Zn (m 1) [mm mm m- w; mm: 1: a“: :1 ,»
-\s' +1
-n“: s" Z 5., u (VJU s“ “n
-\5" 9 aims") Z qusHJZqu'ZS'JZm mewsu >
+M0 : {51111,52112, . . .,sm'um},S0 : {$1, . . .,sm}, 'uz- E 015W : l,m.
+c) Vi G {1, . . . , m} graful G’ : [Climb admite cuplaj perfect. Folosind
+ipoteza inductivéi, este suﬁcient $5 dovedim céi G’ satisface (T).
 
-> sanms' uszw
+Fie S’ Q Ci — 'ui. Dacé q(G’ — S’) > IS’), atunci, deoarece q(G’ — S’) +
 
-, ., “a Z m Z w ‘ m Mm“.- m in...“ 1“. 5., (“w-c.
-s“ s s~1
+‘S’! E 0 (mod 2) (pentru c5 \G’) este par), urmeazé cé q(G’ — S’) 2
+
+|S’| + 2.
+
+Dacé S”: S0 U {11¢} U S’, avem
+
+|$”| > q(G—5”) I q(G—So)—1+q(G’—5’) I |$o|—1+q(G’—$’) >
+
+>|501— 1 + \S'l + 2 215"],
+
+i. e., q(G — S”) : |S”|, in contradictie cu alegerea lui SO (deoarece
+
+S0 g S”).
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-“mu- g c. ~.. wm' a‘: z sw i s' .m-um mm ml.
+Astfel VS’ Q CZ- — 'ui, q(G’ — S’) g IS" §i G’ are cuplaj perfect (din
 
-\w....\_a.v|1
+ipoteza inductivé).
 
-Ivili "pm-1 |-| z; uhli-d “in mm.‘- In I. n‘ n1. ll {1 n-
+Evident cuplajul lui G obtinut reunind cuplajele de 1a a), b), §i c) de
 
-mi m. mm“: 1m. m...“- M a. n “mum-u. w“. Inn-mi .
+mai sus satureazé toate nodurile lui G, §i demonstratia prin induc'gie a
 
-Inn-ll u n..-
+teoremei se incheie
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-F. a: (ms) my“, u EMG m. will, mu. c
-m. \mm .lwm. b. z; "hm 1. (“1th M -k. m. m...
+Fie G : (V, E) un graf §i M E MG un cuplaj a1 lui G.
+U11 drum alternat in G relativ 1a cuplajul M este un drum
+P Z 1,01,00,0111111' ' ' ,Uk_]_,'Uk_1'l/k,'l/k
 
-p WWW ‘WM-MW”.
-lilalmrlﬂv.xwl/.mu)r1ll$ﬂ,V\:iLk 1.
-mum“. d‘ Mam. u m. m. (uphl. a»: P ---- m am aux-m
-“h... h u‘ m“ 4m... m: mm. mum." ll. l... p ma
-m mm".- 1.1. u {mm- mn“. “mi. I“. u l. n u)
-n. a,‘ m mum mm M m. m“. h m “m p Wm 114mg:
-mum “Mm “k
+astfel fncét {viil'uh viz/1+1} Q M 73 Q, Vz' : 1, k — 1.
 
+Observém cé, deoarece M este un cuplaj, dacé P este un drum alternat
+
+relativ 1a M, atunci dintre orice doué muchii consecutive ale 1ui P exact
+
+una apartine lui M (muchiile apartin alternativ lui M §i E \ M).
+
+in cele ce urmeazé, cénd ne vom referi 1a un drum P vom in'gelege
+
+mul'gimea muchiilor sale.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-m. \lrum ‘I: mm .11“. z: “hm h upland M .n m. an.“
-
-luv-m M m,“ m: nwdun Mm. up». "m" I. u
-
-mum... d‘ a". Mm.‘ a- uni m mun ndan F .n. un am
-
-a. mm,‘ mun 1- M‘ um. w \ u Z ‘p n u‘ H
+Un drum de cre§tere a1 1u1' G relativ 1a cuplajul M este un drum
+alternat care unegte douéi noduri distincte expuse relativ 1a M.
+Observém cé, din deﬁnitia de mai sus, urmeazﬁ cﬁ dacﬁ P este un drum
+de cregtere relativ 1a M, atunci |P \ M| : |P O MI + 1.
+a, b, n, d , alternating oven path
+g f - alternating odd path
+a e f h j , augmenting path
+t g, fad - a1tarnating odd path
+1, d a, b, c, d, a - closed alternating path
+/_ a, b, n. d. 139, h _ augmenting path
+C J
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-(My. 105mm m u, “PM M (nun mm. n 5mm c um i7
-
-mimn. m nu um mu .m (Imam m G mm h M
-
-u».m,,.mm.. “=- m. u m (will .1. caldinil mm h G s:
-
-prluyuum a P an nu m». .1. mm" '- G "m" Ii u
-
-“mi w Z u“ Z (F\u]u(u\F] E M; hand-m‘ w m‘.
-
-n mm ,m “mamhm mm“, m u m M. m. .m. 1.1. u
+(Berge, 1959) M este un cuplaj de cardinal maxim in graful G daca §i
+numai daca nu exista drum de cre§tere in G relativ 1a M.
+Demonstragie. "i" Fie M un cuplaj de cardinal maxim in G. sa
+presupunem ca P este un drum de cre§tere in G relativ 1a M.
+Atunci, M’: MAP : (P\M)U(M\P) G Mg. intr-adevar, M’ poate
+ﬁ ob'ginut prin interschimbarea muchiilor din M cu cele din afara lui M
+de-a lungul drumului P:
+\ 9 .U
+11 61 f h (‘I E f h
+b (1 \, b d I
+P I a.b‘ud‘f.g. h 7 augmenting path AjAP
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Miimuk‘ ‘m; FNMH1+ mp L u “mm-m.“
-in...“ lm u
-w m- u .m mph] h. z; m memum a .m “In: “my; a!
-null!" m c "mi. h u
-n“: u‘ m un cuvlu dn "mm mm m s. vum uln mm Z
-M n c‘ numb-1 pm.‘ n. MAM‘ m c (a :(v,uAu'])
-s: mum“ <1 aD-m < z‘ w E v II m (nlnvnnunlnh mm m1“.
-a' m a Wm mm.‘ 5mm. a! 1mm. m1 m". m‘ m m...‘-
-Avlm gnu mm“, [n m m» 1Q.‘ muzhnk imm- lm 4- um
-muchll]! m... “m a.“ u)
-cm; h) .m .w. 4mm. m. nn 4m. 4. nqhu mam h u" m.
-mu .m mull] a! mum maxim a...“ q m. =1,“ ﬂan-cl m- m
-m.» .1. nelhn "m" 1. u
+Mai mult, |M’| : |P O M| + 1 +|M\P| : |M| +1, in contradictie cu
+alegerea 1ui M.
+“<:" Fie M un cuplaj in G cu proprietatea ca nu exista drumuri de
+cre§tere in G relativ 1a M.
+Daca M* este un cuplaj de cardinal maxim in G, vom arata ca]M*\ :
+|M|. Fie G’ subgraful generat de MAM* in G (G' : (V, MAM*)).
+Si observam ca dG/(v) g 2, V11 G V §i deci componentele conexe ale lui
+G’ pot ﬁ noduri izolate, drumuri de lungime cel pu'gin unu, sau circuite.
+Avem cinci posibilita'gi (se vad mai jos; muchiile albastre sunt din M *,
+muchiile negre sunt din M).
+Cazul b) nu apare deoarece este un drum de cre§tere relativ 1a M *, care
+este un cuplaj de cardinal maxim. Cazul c) nu apare deoarece este un
+drum de cregtere relativ 1a M.
 —
 
 ***************Ending Page***************
@@ -258,186 +284,192 @@ m.» .1. nelhn "m" 1. u
 
 ***************Beginning Page***************
 ***************page number:17**************
-‘ t j
-Dan! Mm m muKU] Mam a‘. mm. f. u a“. “mm-m
-mu: c . u“ 5' i m mu-[C1numlmln mm" m w m mm;
-cumuununﬂ mnuxl I11“ G" rMmum cl MIC] Z van-(C). Anlnh
-\w u‘ Z Z V Wm:
-, 2 Wm 7 u'\ u
-E m, m, G
+a) .
+Dacé notﬁm cu mM(C) numérul de muchii din M din componenta
+conexéi C’ a lui G’ §i cu mM*(C) numérul de muchii din M * din aceea§i
+componenté conexéi a lui G’, ob'ginem cé mM(C) : mM*(C). Astfel,
+!M\M*\: Z WAC):
+C comp. a lui G’
+I Z mM*(C):!M*\M\
+C comp. a lui G’
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-u.“ u Z um u
-on.“ w “mu.- Dunn: . Mm“ 1m mull] u- m.“ mm
+Deci ‘Ml : \M*]. U
+Obtinem o strategie pentru a determina un cuplaj de cardinal maxim:
 
-ﬁlMunzlthHnG(! “1,14%
+ﬁe M un cuplaj in G (e. g., M : Q);
 
-WM» m rm. a! mm MW h 31):!“
+while (EIP drum de cregtere relativ 1a M) do
 
-1,1- MAE
+M a M AP;
 
-vml Wm
-Li a“... .\.n\.. "M! “Mum h“ u m“. m 1, mm, 1n m1 mun
-"mm-Mm .m lugh| mam“. a. mm.‘ ‘m n. m1.“
-mm mm.“ mun“ mun-m m mm“; mnﬂlﬁ: a“. ‘M!
-\nhnllIllﬂllmlnlﬂlmhmﬂiﬂllnnmnl m.‘ "mm" nun nmm
-Prim! m a. an. amm- mm
+end while
+La ﬁecare iteratie While cardinalul lui M cre§te cu 1, astfel, in cel mult
+n / 2 iteratii ob'ginem un cuplaj fara drumuri de cre§tere, adica de cardinal
+maxim. Neajunsul acestui algoritm este urmatorulz conditia din while
+trebuie implementata in timp polinomial. Acest lucru a fost facut pentru
+prima oara de catre Edmonds (1965).
 
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-F, W4 Z A45‘ M Z v, W Z . ,_ p . Mm m MM a.“
+Fie M,N 6 Mg, |M| I 7", |N| : s §i s > r. Atunci in MAN existi
 
-m1 w.“ Z Y “mm a! mm. “hm h M 4111mm: v: Mu
+cel pu'gin s — 'r drumuri de cre§tere relativ 1a M disjuncte pe noduri.
 
-“MMNMZ F“ :1 Z [v.uAu) ‘i c, (. Z m1 MM“.
+Demonstraﬁe. Fie G’ : (V,MAN) §i Ci (2' : H) componentele
 
-(nun! =1. m. c’ mm m" 1 s ‘ s F‘ mm |:n um) um“
+conexe ale lui G’. Pentru ﬁecare 1 g z' g p, notém cu 6(Ci) diferenta
 
-din" mm] a. mm. .1. \u. u a.“ c. u mm a! m; =1. 1“;
+dintre numéirul de muchii ale lui N din Cl- §i numérul de muchii ale lui
 
-u a". c.
+M din Ci:
 
-arc.) 5mm" \EICJHIU
+5(01‘) I |E(C-;) n 1V'|—|E(C'¢)m M|~
 
-s.‘ nhmni a‘ “urn u i u m. (upllll. c. ml drumlm I“
+Se observéi 05, deoarece M §i N sunt cuplaje, C'Z' sunt drumuri sau
 
-“m. MM m.) Z Hm sgq) Z 1 m .. unmai M c,
+circuite. Astfel 6(01') E {—l,0, 1}. 6(Ci) : 1 dacé §i numai dacé Ci
 
-mu u. drum a. can." “1mm u
+este un drum de cre§tere relativ 1a M.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-m-"me-v lumhmmxvl. um.“-
-Blvdzww fun" :kv,
+Demonstragie (continuare). Deoarece
 
-unnnll a m“: m mm . 7 v [mm-m. mm =1. l... 5' m
+p
 
-aw.) Z 1‘ mil‘ In"! m pm 1 v dnnmm n mm" mum. p-
+25(C¢)IIN\M|—|M\N|:$—T,
 
-mimiwllhmnlhllAN u
+izl
+urmeazé c5 existé cel putin s — 'r componente conexe ale lui G’ cu
+6(Ci) : 1, adicé, existé cel putin s — r drumuri de cre§tere disjuncte pe
+noduri con'ginute in M AN . D
+Dacé I/(G) = s §i M E MG cu |M| = r < s, atunci existéi in G un
+drum de cre§tere relativ 1a M de lungime cel mult 2[r/(s — TH + 1.
+Demonstratie. Fie N 6 MG cu |N| I s I I/(G).
 
-Dan my 7 .. M L M6 m 1.‘ 7 Y, S, “m mnam a“
-
-mm a: Emﬂure mm h u dc 1w,“ m! mu“ 2 v (i 7 m + 1
-
-Drumnmllhm “nu/10"“! :.:~(G;
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-mm. a. mam; mm...’ Alwmmul mummwu
+Cuplaje de cardinal maxim - Algoritmul Hopcroft-Karp
 
-m lei 1‘ um: | 7 v dmmun d-
-mm." mm. p. mm. [amm- amm- D! “M m‘ i as
-pm. w. mm.) mp...“ m MAN um": a m w‘- m, 4..“-
--1- m =1! mu rv/u 1n mm m u mm... Inn-n am d-
-nun!" m- m Inn.“ 1W. 7 m + 1 u
-YullEMn v. alluvlllthlleun
-w» .1. Kllllzunﬁtungimlmmlmipxinhl mu drumunle 4! 5...‘...
-mm 1. u m z;
-,, m v =
+Din Lema 1, exista s — r drumuri de
+cre§tere disjuncte pe muchii (drumurile disjuncte pe noduri sunt §i dis-
+juncte pe muchii) con'ginute in M AN . Urmeaza ca cel pu'gin unul dintre
+ele are cel mult [r/(s — 7")_| muchii din M. Lungimea acestui drum de
+cregtere este cel mult 2ir/(s — 7‘)_| + 1. U
+Fie M G Mg. Un relativ 1a M in G este un
+drum de cre§tere de lungime minima’ printre toate drumurile de cre§tere
+relativ 1a M din G.
+Lema 3
+
+Algoritmica Grafurilor — Cursul 7 11 noiembrie 2022 21/38
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-"mmnmw F. N Z my)“ Mm. “A” Z up’ ..
-m: n+7 mm.1‘mmmammummmmmnm
-mm‘. ,1. mm, F, u P1‘ mum! m “A” mm. F m. m
-m... a! mm mnmnmhhv 1. u‘ “.11,me > mm > 2m
-mm‘ p w' 1p 1F’ >1? J
-Cunndlrlm Mum: “mm
-m ‘V 6,1:D‘
-while (a drnmnn nu um" mhm Ii u.) \lu
-I! F. u am a! m“... mm “h... 1. u,,
-u,., k M1APH
-.q‘
-mm."
-Fia PM,‘ ‘PM, ,mm‘.a.mm“!=...\.,.mi=im.m.\m
-,~. 4. m mm.
+Demonstragie. Fie N : (MAP)AP’. Atunci MAN : PAP’ §i
+|N | : |M | +2. Din Lema 1, existé doué drumuri de cre§tere relativ 1a M
+disjuncte pe muchii, P1 §i P2, continute in M AN . Deoarece P este un
+drum de cre§tere minim relativ 1a M, avem \PAP’\ Z [P1] + [P2] 2 2]P|
+§i, deci, ‘Pi + ]P’| — 2|P m P’! > 2IP]. U
+Considerém urméitorul algoritm:
+M0 <— Q; 'L' I O;
+while (El drumuri de cre§tere relativ 1a Mi) do
+ﬁe P1- un drum de cre§tere minim relativ 1a Mi;
+Mi+1 k MiA-Pi;
+z' + +;
+end while
+Fie P0, P1, . . . , PU(G)_1 secveniga de drumuri de cre§tere minime constru-
+ite de acest algoritm.
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-.er 1w; F *m, dadhnummdmcll" H1 mm
+a) ‘PA g |Pi+1| §i |Pi| : |P¢+1| dacé §i numai dacé P1- §i P¢+1 sunt
 
-6.1m“ De Mm ~11 , v v[G) 7 z
+disjuncte pe noduri, V1 g z‘ g 1/(G) — 2.
 
-mv.‘ Twin) 1‘ am r7 #5.,me pf‘. mmmm
+b) Vi <j < I/(G) — 1, dacii |P¢| : |PJ~|, atunci Pi §i Pj sunt disjuncte
 
-nun-‘m
+pe noduri.
 
-nmnmm .1 mm , Z p, p P’ : PM ,,. hm. a‘ Nahum
+Demonstragie. a) Luénd P : Pi §i P’ : Pi+1 in Lema 3, obtinem
 
-w.“ NAMFNH w.‘ mam.“-Indﬂuinmm.“
+‘Pl-+1‘ 2 ‘Pi\+2\PiﬁPZ-+1\ 2 ‘PJ- Egalitatea are 10c dacé §i numai dacé
 
-,, v PM m. mum‘. ,7. mm.‘ .1. “a. mm sauna-1m“
+P1- §i P¢+1 sunt disjuncte pe muchii, de unde rezulté c5 sunt disjuncte
 
-i PI mm [M Mme mm")
+§i pe noduri (ﬁind drumuri alternate).
 
-u11-mhw1mna-u-n] u
+b) rezulté aplicénd succesiv a) U
 —
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-(Nunrrnh. Km. 1571))11 G Wm. um; Z l “mm, M
+(Hopcroft, Karp, 1973) Fie G un graf cu z/(G) : s. Numérul de
 
-11mm. u.n.nq.\Ln|w/cmn mm .wk w mmmm
+intregi distinc'gi din secven'ga |P0|, |P1|, . . . , |Psn1| (Pi sunt drumuri de
 
-mm m m M. k M up: m1 “Q m. my nu me m mm
+cregtere minime construite de algoritmul de mai sus) nu este mai mare
 
-mum \ 2.
+decét ZLJEJ + 2.
 
-Dmmmmnp “whim M...“ mg‘.
+Demonstratgie. Fie r : [s — m Atunci [MT] : r §i
 
-w, uv/u m4 1 1 r: m/l- r- mm >1<1m1< =
+IPTI é ZV/(S —T)1 +1 I 2H5 — ﬁl/(S — [8 — x/51)1+1< 2N5] +3-
 
-“m mm mh . < .‘ W ..\.......m.m1- MM “mu-mw
+Astfel, pentru orice i < T‘, |P¢| este unu1 din cele Lﬁj +1 numere intregi
 
-m." lm m. mm m“ um H
+impare nu mai mari decét 2L\/§j + 1.
 
-1,. Mum“ F,‘ ‘w, , mmﬂmmrm Lﬁl+lhm|j
+in sub-secventa IPA, . . . , IP54‘ existé cel mult s — r g Lﬁj +1 intregi
 
-a-mch Unnullﬂln "(v-1h mm ...u=. . n mm n...
+distincti. Urmeazé cé in secventa ‘POI, [P1],...,\Ps_1] nu existé mai
 
-m“ a. 1M1“ M... mm. J
+mult de ZLJEJ + 2 intregi distincti. U
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-wk mu 7 r-imn +1 < 1M. ~===
-w- mu: 5 f1 1 <=Ml+1<=
-r- mm = ﬁlé wmw
+2H5 — ﬁl/(s — [s — JED] +1 < 2W5] +3 <I>
+2H5 — ﬁl/(s — [s — JED] < 2W5] +2 <3
+[$—\/§1/(8—[$—\/51)< L\/§J+1<I>
 
-Kx ‘W I/h/H \I WH4I¢1€ ﬁ\7+1 A‘
-Uhﬁ kthﬂmukaﬁ<k > Ldui. (ﬁll<k1>zkn
-m.“ . Z my g z1+u m. .... mph“... n. m.
-m mm‘ a. m; .u. .n. dnmmpul m i... "mum m Elem
-[m .l “min: n hm,“ m.“ a! “mm. n. m...“ mm.
-Mum we nudun ‘ 1mm ﬁll LIE] 4 lugnnn mumunlnx dl
-m..." mm. a.“ i... Wm... M .i nun-n. [mm mm.
-drnmnniw a. cmnln Mm mm“. ,,. [m cur-1H m. m- W
-mm n". 1w...“ 5‘ mm... n “mm a! i... M .m mi w.
-a nwrﬁn + =
+(8 — MED/NH é WE] + 1 <I> 8 é W5? +2L\/5J
+If WE] :kzeN, thenkg ﬁ<k+1,decis:(\/E)2 <kz2+2k+1
+adicé s : (\/§)2 g k2 + 2k: - care este inegalitatea de mai sus.
+Dacé algoritmul de mai sus este descompus in faze astfel incét in ﬁecare
+fazéi se determiné o familie maximalé de drumuri de cre§tere minime
+disjuncte pe noduri , atunci - din Lema 4 - lungimea drumurilor de
+cre§tere minime din faza urmétoare nu va descre§te (altfel, mul'gimea
+drumurilor de cre§tere minime construite in faza curenté nu este max-
+imalé). Din Teorema 5, ob'ginem céi numéirul de faze nu este mai mare
+de 2L\/1/(G)j + 2.
 
 —
 
@@ -445,216 +477,275 @@ a nwrﬁn + =
 
 ***************Beginning Page***************
 ***************page number:26**************
-Allin] Mn “mum ilylmmliunlmdnlmmlxui m. mum m“
-dinal mm. Mm ml in a
-u‘ a‘
-Rm.‘
-Mm.“ v .1 hunks mm“ a! drnmnn a. mm" 1mm!
-“h... h u mm. n! Mn
-m (v E ‘P1 \ln
-u. up‘
-m m.
-umil w a:
-Cumpllnliii hmp i mm“- u m- n. an mm mm A
-m. Emma...‘ \imv i Mum". mm.’ 1>
-1,. mu!,m..1m mm...‘ Mm.“ , Mr, in am“ I: m.“
-Pntlﬁnhﬁuulhmn >771]ll‘ﬁlllllnh'llIIERKmﬂirlcﬂmﬂIﬂHII
-m mmﬁ;
+Astfel avem urmétorul algoritm pentru determinarea unui cuplaj de car-
+dinal maxim intr-un graf dat G:
+M <— I5;
+repeat
+determiné 73 o familie maximalé de drumuri de cre§tere minime
+relativ 1a M disjuncte pe noduri;
+for (P E 73) d0
+M <- M AP;
+end for
+until (73 = z)
+Complexitatea timp a algoritmului de mai sus este (Oh/HA), unde A
+este complexitatea timp a determinérii familiei 73.
+in cazul grafurilor bipartite, Hopcroft §i Karp au arétat (:5 aceasta
+poate ﬁ ob'ginuté in O(n+m) §i, deci, intreg algoritmul are complexitatea
+timp Ohm/H).
+—
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
+***************page number:27**************
+Acest rezultat a fost extins 1a grafuri arbitrare de citre Micali §i Vazi-
+rani (1980) folosind o structuré de date elaboraté pentru a intretine
+etichetele asociate nodurilor pentru constructia drumurilor de cre§tere
+minime.
+Si considerém cazul grafurilor bipartite: G : (S, T; E) §i M G Mg.
+Pornind cu una dintre clase, de exemplu S, considerém multimea ex-
+tremitﬁtilor initiale ale unor drumuri de cre§tere S O E (M). Din ﬁecare
+astfel de nod pornim, in paralel, constructia unor drumuri alternate intr-
+o manieré bfs. Primul drum de cregtere ob'ginut 0pre§te constructia,
+oferind lungimea minimé a unui drum de cre§tere. Familia 73’ este ob'gin-
+uté folosind etichetele §i listele de adiacen'gé in (9(n + m).
+Detaliile sunt omise; un exemplu este dat pe slide-ul urmétor.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
-***************page number:27**************
-Ann mm... . kn m... hm... uh“... a. n... M...“ .. v...’
-m... mm.) mu... . mum: .. am m...“ m... . m...“
-nib“!!- ...u'... “an... m... mum... “mam a. clllkn
-s: mm"... ....| ...1...1.. hipmin z; (5,151 i u k MG
-Mm... :u ... m... d...‘ a. um... s, mm“... mum... .XV
-“ma... “mm. .1. .1... an..." .1. m“... s n Em] m. a..."
-mm. 1... Wm... 11..."... mum...“ ﬂlumuxi mm“...
-. 1...... hfl Pnllllﬂ 4.... a. mun-n m]... Olin“! mnmuchm
-Oh"... 1......“ W... . m... an... a. mp... 5...... v .... we.’
-m: “1...... “new. {Y 1-...1. 4. m...“ In an. + m)
-
-mm... n... nmiu, .. mm... .... h. .. .1“... m“...
-
+***************page number:28**************
 —
+§¥§§
 
 ***************Ending Page***************
 
- ***************Beginning Page***************
+
+***************Beginning Page***************
 ***************page number:29**************
-n M. [.l. "mm; K. ..,.. . i an-qi- 1 .... n “,1. n L
-[5‘ m, c) .....1.
+O regea (de transport) cu sursa s §i destinatia t este o tuplé R :
+(G, s, t, c) unde:
 
-u G [KS] mlmundlglil"
+o G : (V, E) este un digraf,
 
-. 5,, E v‘ 1:1‘ WW‘ 1mm.
+a 5,156 V; s 73 t; dZKS) > 0; dat) > 0,
 
-~ c E r F. ‘ ﬁll] mu mmmam axculul z
-w... mm“... n v Z m, J.) (n E I‘) i s Z m mm,
-[mp-=1. = VX Valui-
+o c : E —> R+; c(e) este capacitatea arcului e.
+Vom presupune céi V : {1,2,...,n} (n G N*) §i |E| : m. Extindem
+func'gia c 1a c : V >< V —> IR+ prin
 
-= ‘ = I
-lawn :{ "3‘ 3;," E
-imilm mun: Lu
+. . _ c(z'j), dacé ij E E
+C((Z'm _{ 0, altfel
+§i notém c((z',j)) : Cij.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-m.
-m. M-[Qmmhmmmn v>< v“. 1
-m n <1" < my E v X v.
-(.n 2,, 251"‘sz vum.
-Hmum'n
-. Du! -, E s mum m.
-n Cnulnnluill (I) cu n
-. Cum-m. [EL z 1. u (-
-r
-1
+Flow
+Un inR:(G,s,t,c) esteofunc§iecczV>< V—>Ra. 1“.
+(ii) Z $14‘ — Z £121?‘ I 0, Vi E V \ {SJ}.
+jev jev
+
+o Dacé z'j E E atunci $15 este
+
+o Constréngerile (i) cer ca
+
+o Constréngerile (ii), ( ), cer ca
+
+(
+).
+Algoritmica Grafurilor — Cursul 7 11 noiembrie 2022 30/38
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
-mum-Inn‘!- m .....,..=. ‘, _ n M ,, t I ML .. h,
-M. . mm. “Mil.
-u z ... n.“ 1.. a Z (5,.‘ L z, “1......” .m. mm...» m,
-[Illilu 1 E V \ (I, [)1 “hp-In
-n: >2 (2'1"ij‘2 21.’): 2w
-+Zz_+}:1.721.721.:
+o Si observém cé, din modul in care am extins functia c 1a V >< V,
+
+constréngerile (i) implicﬁ ch-j : O cénd ij ¢ E. Astfel, un ﬂux este
+
+de fapt o func'gie deﬁnité pe E. Preferém extensia sa pe V >< V
+pentru a simpliﬁca nota'giile.
+
+Fie a; un ﬂux in R = (G, s, t, c). Dacii aduném toate constréngerile (ii)
+(pentru '1; E V \ {5, t}) obtinem
+
+0: Z Z$ji—2$ij I Z Z air Z Z WP
+iisi jEV jEV i¢5,tj7£s,t iisijisﬂﬁ
++ Z $$¢+ Z $ti— Z $¢$— Z wit:
+iisgf iisgf iispﬁ iisi
 —
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:32**************
-um: my :1.»
-1,. min-1mm. um: 1m are image 11. nun-m “mi m, m:
+I Z$si—2$is — int—Z-Tm‘,
+ie V 1'6 V ie v ie v
+Valoarea ﬁuxului a: in R : (G, s, t, c) este
+'u(:z:) : Z wit — Z xii.
+
+iGV iev
+in cuvinte, 1/(a3) este ﬂuxul net care ajunge in destinatia re'gelei sau, dupéi
+cum am demonstrat mai sus, ﬂuxul net care péiréisegte sursa re'gelei.
+Si observém céi in orice re'gea R : (G, s, t, c) existi un ﬂux: m0, ﬂuxul
+nul, cu mg : 0, Vij E E §i 'u(:1:0) : 0.
+
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-21. 2-,:n.v.m
+Problema ﬂuxului maxim: Daté R : (G, s, t, c) o re'gea, $5 se deter-
+mine un flux de valoare maximé.
+Problema ﬁuxului maxim poate ﬁ vézuté ca o problemﬁ LP:
+max v
 
-zwzwq
+Z$j¢— 212g :0,\V/'1;755,t
 
-2*» Eva-'1
+j€ V 1'6 V
 
-“Imam
-....m...ﬂ....(..,.,..k....‘.....,.i.....m......-.,..,...n.
+Z$js—2$sj:—’ll
+
+je v je v
+
+Z (Bjt — Z 2315]‘ I 'U
+
+je v je v
+
+0 g (Bij g Cij,\V/'I;j E E
+Cu toatea acestea, vom considera a abordare combinatorialé directé care
+este importanté cénd existé constréngeri de integralitate a unor variabile
+(de exemplu ﬂuxul de pe arce).
+
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-u’. Z 4.‘ “:17. humid“:
-u x, > z m.
-Pam: nun IEU‘ - ‘II’
-‘>—1
-carﬂmalcll Emil \S‘ k ﬂaclinumal ﬂicl ‘N5[A] Z ‘A k‘ VA g S
+Exercigiul 1. Fie X o mul'gime ﬁnité, X1, . . . , Xn Q X, §i
+d1, 012,... dn E N. Arétaigi c5 existé n submultimi disjuncte YZ' Q Xi,
+\ Y1! : di, W : Lin dacﬁ §i numai dacé
+
+U&>Z@
+
+1e] 1E1
+pentru orice I Q {1, . . . , n}
+Exercigiul 2. Orice graf p-regulat bipartit admite cuplaj perfect (p 2
+1).
+Exercigiul 3. Fie G : (S, T; E) un graf bipartit. Folosind teorema
+lui Hall demonstra'gi c5, pentru ﬁecare O g k g |S|, G are un cuplaj de
+cardinal cel pu'gin |S|—k dacéi §i numai dacé |NG(A)| Z |A|—k, VA Q S.
+
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Dwmgiul ‘ "Mum “mm 1.“ ‘mm annh cl m m1 17mm;-
-mm p Ihqnm m... mm, m.“
-
-Emmi“! a. n. z; Z (ks) .m m1 u "mm"... A g v .n.
-mm: m “ﬁlmy-u a“: a m u- mm u w. mm»: mu
-Mum. am A mm. c; Dllﬂm um. m: “mm. m “mm-m.
-4 |. s m A‘ < ‘a , .. m‘. ill-‘mm: u m n E a \4 mmmn
-.4 JD) m- a. mm. "mm-mm,“ I) mam mum- mixnnll
-mmmmm in mm. mm)
-
-Mum", n v. 1 Z (my 1m mm- m xldklnl‘ § 1mm m ,
-1mm“ I. m “mm mam.“ diun .l man" m ., / v un
-mm u .1 1m T m- m"- Imﬁnu A“: m. m “mm .1. u‘
-u 1 1‘ m m ﬁlm w mm Inch wpmnzm E u
-
-[a] Aﬁiiﬁ I: W. zuphi mumm- 1m mum a! “mini! mm.
-m um m my m. :Iwhl IMPnu mm u. 1m“ a. um n
+Exercigiul 4. Utilizand teorema lui Tutte arata'gi ca un graf 2-muchie
+conex §i 3-regulat admite cuplaj perfect. l
+Exercigiul 5. Fie G : (V,E) un graf. O submul'gime A Q V este
+numita m-z'ndependentei daca G are un cuplaj M care satureaza toate
+nodurile din A. Aratati ca, pentru orice doua multimi m-independente
+A §i B cu |Al < |Bl, se poate determina un nod b E B \ A astfel incat
+A U {b} este de asemeni m-z'ndependenté (:> toate mul'gimile maximal
+m-z'ndependente au acela§i cardinal).
+Exercigiul 6. Fie T : (V, E) un arbore cu radacina; ii notam cu r
+radacina §i cu parent('u) stramo§ul direct al oricarui nod 'u qé 7". Un
+cuplaj M al lui T este numit propri'u, daca orice nod nesaturat de M,
+v 5i 'r, are un frate w astfel incat wparenﬂv) E M.
+(a) Aratati ca orice cuplaj propriu este un cuplaj de cardinal maxim.
+(b) Gasi'gi in (9(1),) un cuplaj propm'u pentru un arbore de ordin n.
+—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:36**************
-memul 1. m- z; : w‘ s1 n pup-mm hivmn u: > n Cum
-iﬂllm umllm'nl lllpmm
-was!“
-ﬂing‘
-uullhl
-B‘v(lts my”).
-.11.". [c' 7 [1/‘s'! mm. m. (rum c1 an
-n! wumuhm. M v u, .m um... ( mm > mm. //
-InnunchEQnF 7 .m
-Amman“. U 2 U
-"RCA/ﬂu.“
-d.‘
--x=1~‘
-m”
-m“.
-s--;.LE n[=]>n),
-My“.
-mu". E’
+Exercitiul 7. Fie G : (V, E) un graf p-regulat bipartit (p 2 l). Con-
+siderém urmétorul algoritm:
+for (e E E) do
+a(e) <— 1;
+end for
+E+<—{e€E : a(e)>0};
+while (G'JF : (V, E+) con'gine un circuit C) do
+ﬁe C : M1 U M2, unde M1 §i M2 sunt cuplaje a. i. a(M1) 2 a(M2); //
+pentru orice F Q E, a(F) : Z (1(6);
+for (e€E(C)) d0 eeF
+if (e E M1) then
+61(6) + +;
+else
+a(e) — —;
+end if
+end for
+E+P{6EE : a(e)>0};
+end While
+return E+'
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:37**************
-mmmiul 1. km; lem‘): )3 an.) Armand
+Exercigiul 7. (cont.) Fie f(E+) : Z (12(6). Aréitati c5
+eEE+
 
-(=1 m: m..- mm.- Wm lzs YT"- ..1. ma. W5 nn cums
-u. m m“ m m: a. 7.1;...“ Mum‘
+(a) dupéi ﬁecare itera'gie while f(E+) este un numéir intreg care cre§te
+cu cel pu'gin |C| fa'gé de valoarea anterioaréi;
 
-(a) duplﬂncuuiilni thn, z “(W1 Z mu E v,
+(b) dupé ﬁecare iteratie While, Z a(uv) : p, Vu E V;
 
-[1:] m my m“: mm- . |:n n < m1 < P,i1¢w-m1=mm;|i
-in! um Z p‘ v; E 5' i In 5- .. .=...= much"!- unui cupla]
-mm i. 1.» s‘
+quE+
 
-(a) mam a. nun" ch m- m1. m1 nu ,, 1w: Fm‘
-m .m My“ m...“ mum mm." ... m m“ ,m‘
+(c) cét timp existé muchii e cu 0 < a(e) < p, algoritmul continue; 1a
+ﬁnal a(e) : p, Ve 6 E+ §i in E+ se gésesc muchiile unui cuplaj
+perfect a1 lui G;
 
-(-11 mmannualspumgnnmmmﬂnimunmn o: 2 c1
+(d) numirul de iteratii While este ﬁnit, 1a ﬁnal f(E+) : np2/2 : pm,
+iar suma lungimilor tuturor circuitelor procesate este cel mult pm;
 
-L m1.
-Mum pm...“ m
-“1 mum...‘ "my a “Mum. m mm“. m. 5W.)
+(e) toate circuitele pot ﬁ gésite in complexitatea timp O( Z |C|)
+
+C cycle
+
+folosind parcurgeri dfs;
+
+(f) complexitatea timp a algoritmului in ansamblu este (9(pm).
+
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:38**************
-Emmi“! s m z; Z Isms) 1m w mum nlnul. mum =1
+Exercitiul 8. Fie G : (S, T; E) un graf bipartit nenul. Aratati ca
+urmatoarele aﬁrmatii sunt echivalente:
+(i) G — {33, y} are un cuplaj perfect, Va: G S,Vy G T.
 
-Mun-.1. ism“; m mm“.
+(ii) G este conex §i orice muchie a lui G apartine unui cuplaj perfect.
 
-(.1 z; (Hymn-(um pun-(m, Z SIVy Z T
+(iii) Isl I lTl §i Q) 7e A Q 3, ING(A)| > IAI-
 
-(.i) a .n. m.‘ i um. mm“ .1“. s “min. unui cunh] 1"th
+Exercigiul 9. Fie G : (V, E) un graf conex care are un cuplaj perfect.
 
-(m1 s Z m ‘.2 ¢A§ s‘ "MAN > A‘
+Descrie'gi (gi demonstra'gi corectitudinea) unui algoritm de complexitate
 
-lkmnuul u n. G Z [v.s) m Wm“ mu Z...“ mull] Mm
+timp O(| VI + |E|) care sa construiasca un arbore par'gial T a1 lui G
 
-Dumlh (n dlmunlhih “mum-11 m, 11mm a! cumulln'mu
+astfel ca V( T) sa admita o bipartitie in doua multimi stabile de cardinal
 
-‘an, m v‘ + Us‘) m. .= sunlimiilzi m. um. mum T =1 lni 5
-
-mum vm In mum! D mum-ammunmmumwmu
-
-mm. a“ lni T
+maxim ale lui T.
 —
 
 ***************Ending Page***************

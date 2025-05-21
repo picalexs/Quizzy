@@ -1,232 +1,274 @@
 ***************Beginning Page***************
 ***************page number:1**************
-BM L12 a“ km-‘W <
-qundewk u mum“
-0M0 22 2m
-_:n-mu -----~ ~—--~-
+Baze de date relationale
+Dependente multivaluate
+Nicolae-Cosmin Vérlan
+October 22, 2019
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-mm“.
-Pew/1mm a WW” w 0w 7 \ w W mm u m
-1mm 5‘ m km a: (unduzev! Mm mm‘: w I;
-cm’ Adwm ‘a W! M WM ‘m
-\ “MM ‘
-\ Mmmm n
-Dm ammnl: mm M M WE a" mmi Mm is Wm :5
-pmm A.‘ ow \ a d“ u mum d, MW“: 5‘ m
-pm; a: mnduzerea zakiuna u Dem m m, M m1 MW
-1 Mum-M n 1mm“; W“ w r‘ (Mm <2 pm v‘
-dsdus m" m mum
-z.“ A WW m.‘ pm n MM
-——- --—-- ~—----
+. Definitii §i observaﬁi
+Exemplu
+Presupunem c5 persoana cu CNP : 1 a fost admisé la doué
+facultﬁjd 5i are permis de conducere pentru categoriile A 5i B:
+CNP Admis Ia facult. Are permis categ.
+r : 1 lnformaticé A
+1 Matematicé B
+De$i anumite rénduri nu sunt scrise Tn tabelé, putem 55 intuim c5
+persoana cu CNP : 1 a dat Ia Facultatea de lnformaticé 5i are
+permis de conducerea categoria B. Deci, de$i Tn 1“ nu existé t-uplul
+< 1,|nformatica,B >, ar trebui s5 existe $i el (pentru c5 poate ﬁ
+dedus din cele existente).
+Care alt t-uplu mai poate ﬁ dedus ?
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-mm“.
-mp Annm ‘.1 {ml A" Mm m!
-\ WWW; ‘
-, \ Mnmma I;
-\ ln/ummd H
-\ Mnemanci \
-c Wt mm m W ar pm m e‘! W redundant
-deoavxe W v‘ mm a“, Mme‘: m: , M
-PM mmmm “gummy Wm“ M mi ‘a :21: whine
-pm Wm Mu.‘ m‘ q k pm "Face Mlenm
-PM “mew démmw WM“?! m In; ‘i m ‘W
-M WW mm mm 3: ‘Q m refer! WW
-—I_---__._----
+. Definitii §i observaﬁi
+Exemplu
+CNP Admis la facult. Are permis categ.
+1 Informaticé A
+r : 1 Matematicé B
+1 Informaticé B
+1 Matematicé A
+t-uplele marcate cu ro$u ar putea Iipsi, ele fiind redundante
+deoarece pot ﬁ obtinute din primele doui t-uple.
+Prin intermediul dependentelor functionale pot afla Ia care coloane
+pot renunta astfel Tncét $5 Ie pot reface ulterior.
+Prin intermediul dependentelor multivaluate pot afla la care linii
+pot renunta astfel Tncét sé Ie pot reface ulterior.
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Umpnmm muhwahlari' Mm?
-
-m \ » g! uMm“mmmWWW“ \ i»
-Rmmy mm “Ni/mpmmm mulmulmn \ i» am
-DMWWMWPM H ‘ muﬁdnde m‘
-My.‘ mpm‘ H 5‘ V, m, M,‘ mm
-> W mu UH ‘)MV‘ I’;
-meumwu avkw/
-“nab/7L \1 r/ mmumﬂmm Mm
-
-—:—m- -------------
+Dependente multivaluate - definitie
+Fie X,Y Q U. O dependenté multivaluaté este notatﬁ cu X —» Y.
+Definition
+Relatia r peste U satisface dependenpa multiva/uaté’ X —>+ Y dacé
+pentru oricare doué tuple 13,152 6 1" satisfécénd t1[X] I t2[X],
+existé tuplele t3 5i t4 din r, astfel Tncét:
+> tsiXi I iliXi»t3iYiIt1iYi7t3iZi I biz];
+> MiXi I 752iXi7i4iYi I t2iYi7t4iZi I tlizi
+unde Z I U — XY (Z mai este denumité $i rest).
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:5**************
-WWW 7 (mm mm]
-l r: 1 u
-n. H ,1,‘ w L ‘mm, \fW
-‘mm mm“ M v
-waxe @h/vw um]! n 7 m H Mm A:
-my mm :mm IMZUW
-1w /».\ w“ 1W 1M I,“
-—n-|m- -------------
+Exemplul 2 (mai formal)
+A B C D
+a1 b1 C1 d1 t1 751”
+a1 b2 Cg d2 t2
+r : a1 b1 cl d2 t3 t2” 1" satisface A —» BC
+a1 b2 02 d1 t4
+a2 b3 01 d1 75/1th
+a2 b3 Cl d2 75,2,tg
+Intrebare: cum alegem t3”, t4” ?
+Deoarece atunci cénd tﬂA] I t2[A] avem c5:
+t4[A] I tg[A],t4[BC] I t2[BC], t4[D] I t1[D]
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-MW? "MW;
-Mm, a“!!! sam/nredmendewammmqu \ i» M
-WWW,‘ 1mm“ ,ymmm
-‘MM \VMUUZM
-mu, mm uwwhqm \\\/j):v=mn\emv
-m MW W m XL cw it“ X! u .w WWW
-l n < u
-‘IMHHIM \IleHH‘ WNW“)
-—:—-u -------------
+Definitie echivalenté
+Relatia 7" peste U satisface dependenpa multiva/uaté' X —» Y, dacﬁ
+pentru orice t1,t2 € r cu t1[X] I t2[X] avem c5
+MYUMXZD Z MY(t2[XZ])
+unde My(t[XZ]) I {t'D/Ht/ € T,t/[XZ] I t[XZ]} I valorile lui Y
+din diferite tuple Tn care XZ sunt egale (cu XZ-ul din parametru).
+A B C D
+a1 b1 Cl d1 I t1
+a1 b2 02 d2 I t2
+'r : a1 b1 01 d2
+6L1 b2 02 d1
+a2 b3 Cl d1
+(12 b3 01 d2
+MYUHADD I MYUZMDD Z {(517007 (112762)}
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-— 243..“
-(“me
-> 1hr‘,nmrqndmmdrhh WMWWU \ ~\ mm
-WW“: , W WM 7W‘)
-- M,va <1»de “WM \ » Wm,
-mm 5‘ Wm“. Mum \ i‘
-- UMrsansfecrd'prndma WNW: \ V» .W
-“(@6me ,m mm W
-WM WW")
-——- ------ ------
+Observatii
+
+P Dacé v" satisface dependenta functionalé X —> Y, atunci
+pentru orice t € r, avem My(t[XZ]) : {t[Y]}.
+
+P Dacé r satisface dependenta functionalé X —> Y, atunci r
+satisface 5i dependenta multivaluaté X —» Y.
+
+P Dacé r satisface dependenta multivaluaté X —» Y, atunci
+putem defini o funcjcie 1/1:T[X] —> 77(T[Y]), prin
+@MHXD I My(7f[XZ]),Vt E T‘ (returneazﬁ valorile diferite din
+proiectia pe Y). Cénd 7" satisface X —> Y, atunci
+w I T[X] —> T[Y] (deoarece valorile pe Y nu sunt diferite Tn cadrul
+dependentei functionale).
+
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-WWW“? mmhw (WNW;
-Mm d N i rm
-A a c n E
-* | ; h
-‘ w < J . u
-w < 2 ‘ .
-DA \ng mm‘,
-_mlI-------~—--—-
+Dependente multivaluate (exercitiu)
+Arétati c5 AC —» BD:
+A B C D E
+8 1 2 O 4
+8 9 2 2 9
+r : 9 3 2 4 9
+8 1 2 O 9
+8 9 2 2 4
+9 3 2 4 4
+DA (este IVIVD)
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-Proprwin a‘? ﬂPandéntth mmmhm
-MVHG[(nmp\emmvnvwg)F\¢\ v /;! “WW
-my,’ $1 \ /' v Dici\s:nshzr \ V» MW
-WW \ i 4
-MVD! WWW“) um v ; \' mm m Maury mu“
-.\ 1
-MVDzltuensw] Hal’ \v 5‘ ‘ mm \ V» MW,
-snsuu w >z
-wummmmv mm ‘ saushzz \ i» m i/ Ilunu
+Proprietéti ale dependentelor multivaluate
 
-WIMA / v
-——IIII ------- ------
+MVDO (Complementariere) Fie X,Y, Z Q U, asfel Tncét
+XYZ I U 5i Y O Z Q X. Dacé r satisface X —» Y, atunci 1"
+satisface X —» Z.
+|\/|VD1 (Reflexivitate) Dacé Y Q X, atunci orice relajcie 1" satisface
+X —» Y.
+|\/|VD2 (Extensie) Fie Z Q W 5i v" satisface X —» Y. Atunci r
+satisface XW H> YZ
+I\/|VD3 (Tranzitivitate) Dacé r satisface X —» Y 5i Y —» Z, atunci
+r satisface X —» Z — Y
+
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-'U
+. Definitii 5i observatii
+Dependente multlvaluate Proprietiﬁ 5i reguli de inferenyé
+Nicolae-Cosmin Vﬁrlan Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
-><
-‘Q u
-_:I|-mll ------_. -._........
+. Definitii 5i observatii
+Dependente multlvaluate Proprietiﬁ 5i reguli de inferenyé
+Nicolae-Cosmin Vﬁrlan Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:12**************
-*
+. Definitii 5i observatii
+Dependente multlvaluate Proprietiﬁ 5i reguli de inferenﬁi
+Nicolae-Cosmin Vﬁrlan Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Proprwin a‘? ﬂPandémPkn mu mum
-MVYN[Psaudmmmhwup)‘11H , mm, \ iv s‘
-m y mm, my,“ \u / >H
-MWWW»,thvm \ » w \ 4W0,
-magi \ i 1 y
-MVUG \Dnuwnmmm) mm MW .\ i> 5‘ \ i z
-amnzmsaushze \ » / \ '1 A \ / »
+Proprietéti ale dependentelor multivaluate
+IVIVD4 (Pseudotranzitivitate) Dacé 1“ satisface X —» Y 5i
+YW —» Z, atunci 1" satisface 5i XW —» Z — YW.
+IVIVD5 (Uniune) Dada’ 1" satisface X —» Y 5i X —» Z atunci1"
+satisface X —>> YZ.
+IVIVD6 (Descompunere) Dacé 1" satisface X —» Y 5i X —» Z,
+atunci rsatisfaceX%+YﬁZ, X—»Y—Z, X—»Z—Y
 
-_:n-|m- ------~------
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Proprwin m x’? Ax? ﬂPand-HVPRN munahmrP
-mwm um ‘ unsure \ i‘ mmwmm \ i»
-rum/02 Dxi ‘ mm \ 7/5» w (“z ' m‘
+Proprietéti mixte ale dependentelor multivaluate
+FD-IVIVDl. Dacé v“ satisface X —> Y, atunci v" satisface 5i X —» Y.
+FD-IVIVD2. Daci 7" satisface X —» Z 5i Y —> Z’, cu Z’ Q Z 5i
+Y O Z I (A, atunci 'r satisface X —> Z’.
 
-\ , /: v ML‘ ‘ WW“ ,/
-vam um ‘ mm \ V» 5‘ \1 / Itmmr
-Wm .\ i if‘
-
-_:n-mu ------~------
+FD-IVIVD3. Dacé 7“ satisface X —» Y 5i XY —> Z, atunci 7“
+satisface X —> Z — Y.
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-W‘ a? mprmi
-
-MVUO' iw‘ \y M
-
-MVD!’ H
-
-MVDz' ﬁkl+
-
-MVDJ' *4?’
-
-Mvm- %
-_mu www.mnm
+Regu | i de inferentﬁ
+MVDOf: W
+MVD 1f: %
+IVIVD2f: %
+|\/|VD3f: %
+|\/|VD4f: %
+Bale de date relationale Dependente multivaluate
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:16**************
-RPM a? Wrma
-
-MVUG' Q1);
-
-W ‘—v—v—v—'
-
-FDMvm! i\ " q 9 H /"
-
-FDMVDJI %
-_m.. mumm
+Regu || de Inferenta
+_ AXHQ/7 X~>+Z
+, XHQ/V, X$Z
+MVD6f' XH+YFTZ, XA>Y*Z, XH+Z*Y
+. X —>Y
+FD-IVIVle. my
+_ X—>+Z7 Y—>Z’, Z’QZ7 YUZIQ
+FD-IVIVD2f. W
+_ XH+Y, XY—>Z
+FD-IVIVD3f. W
+Nola: pruful a sclis gresit
+slideurile originale, le-am
+corectat eu
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:17**************
-_,.___m.____n_.__
+Propozitie
+Fie R o mu/time de regu/i va/ide 5i 'y o regu/a w, astfe/
+incat {041, . . . 04k} I-R 5, atunci si regu/a "y este valida.
+Propozitie
+Fie RFM : {Fle — FD3f1, MVDOf — MVD3f,
+FD — MVDJf — FD — MVDEf}. Avem:
+P FD — M VD3f 5e exprima cu ce/e/a/te regu/id din RFM 5i FD
+P M VDQf 5e exprima prin ce/ela/te regu/i din RF M.
+Propozitie
+Regu/i/e M VD4 f — M VD6f 5e exprima cu ajutoru/ regu/i/or
+M VDOf — M VD3f
+1cele de Ia dependente functionale
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:18**************
-m mum
-- hivonn' “mm ‘WNW, WM»; W M
-\ (m 19>‘:
-_:n-mu ------- ~—-----
+. Definitii 5i observagii
+Blbllografle
+P Baze de date relationale. Dependente - Victor Felea; Univ. Al.
+|. Cuza, 1996
+Baze de date relationale Dependenye multivaluate
 
 ***************Ending Page***************
 

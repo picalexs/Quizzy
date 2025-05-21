@@ -1,571 +1,591 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Sisteme de Operate
-Administrarea informagiilor :
-Sisteme de ﬁ§iere
-Cristian Vidra§cu
-https://profs,infmuaicxo/widrascu
+Sist6m€ d6 Op6rar6
+Administrarﬁa inf0rma§iilor :
+Sistemﬁ: d6: ﬁgiﬁm
+Cristian Vidragcu
+https://pr0fs.inf0.uaic.r0/~vidrascu
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
 Cuprins
-" Conceptele de ﬁgier 5i de sistem de ﬁ§iere
-' Interfaga sistemului de ﬁgiere
-" Implementarea sistemului de ﬁ§iere
-lb‘
+> Concﬁptelﬁ d6 ﬁ§ier §i de sisterm d6: ﬁgierﬁ
+> Int6rfa§a sistﬁmului d6 ﬁ§i6r6
+> Implevmerntarera sistamului d6 ﬁ§i€r6
+2/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Conceptul de ﬁ§1er /1
-' Figier: zoni de stocare contigué d.p.d.v. logic
-(nu neaparit contigué §i d‘p‘d‘v‘ ﬁzic)
+Conceptul de ﬁ§1er/1
+' Figier: zoné de stocare contigué d.p.d.v. logic
+(nu neaparét contigué §i d.p.d.v. ﬁzic)
 ' Continutul unui ﬁgier:
-i dale (numerice, de tip caracler, binare)
-i program
+— date (numerice, de tip caracter, binare)
+— program
 ' Structura unui ﬁgier:
-i nestructurat (Las o secvengé dc octeti oarecare)
-i structuri simpli de tip inregistrare (Las linii/inregistrﬁri, de
-lungime ﬁxzi sau variabilé)
-i structuri complexi (mg, document formatat, ﬁsier executabil cu
-incircare relocabilé, etc)
-i Cine decide Structural (i.e,, modul de interpretare a conﬂnutului) ‘T
-programul (UNIX) vs. sistemul de operare (Windows, 05/2)
-I M
+— nestructurat (i.e., o secventé de octeti oarecare)
+— structuréi simplé de tip inregistrare (i.e., linii/ inregistréri, de
+lungime ﬁxéi sau variabilé)
+— structuré complexé (e. g. document formatat, ﬁ§ier executabil cu
+incércare relocabilé, etc.)
+— Cine decide structura (i.e., modul de interpretare a continutului) ?
+programul (UNIX) vs. sistemul de operate (Windows, OS/Z)
+3/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Conceptul de ﬁ§1er/2
-' Structura unui ﬁgier (c0nt.)
+ptul do ﬁ§1€f /2
+' Structura lllllll fi§1er (c0nt.)
 
-i Cine decide structura (Le, modul de interpretare a cominutului) ?
-programul (UNIX) vs. sistemul de operate (Windows, 05/2)
-In a1 dollea caz (mlrodus o data cu
-trecerea la interfege GUI), decizia "m “WWW”
+— Clnc ClcCldc structura (Le. modul do interpretare a oontinutului) ?
+programul (UNIX) vs. 51stemul do operare (Wlndows, OS/Z)
+treoerea la 1nterfete GUI), dealzla 0b. We ‘angufgepmgraim
+so 1a pe baza extens1e1, 1.6. suﬁxul _ 'anguage’ "OF "nkéd
+d1n numele ﬁ§1611111111 asm, a languages
 
-Se ia pe baza extensieiv Le. suﬁxul
-din numele ﬁ$ierului: --—
-m-uz-_
-m Inna;
-mm-
-mum-
-w-
-mmmw
-mm
-“w-
-mlin WWW
-mum“
-Mim-
+batch bat, sh commands to the command
+--—
+doc formats
+programmers
+format for printing or
+Viewrng
+one file, sometimes com-
+pressed, for archiving
+or storage
+mp3, avi audio or A/V information 4/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-. Conce tul de ﬁsier /3
-' Rolul figlerelor: P ’
-i Persistenyé i date cu viagé lungi, pentru posteritate
-' medii de stocare nevolatile
-' nume cu ingeles semantic (d.p.d.v. al utilizatorului)
-. “ ' u u‘ '
-AbStract“ ﬁ§ler UL‘: (‘if Amlm~lmok mam m mm. SmHh
-I ‘I Amvlmuuu
-m - :ulzll'ﬁlc and, hylu mnpc‘
-‘lnm ‘ m- Syn-m
-um- \lc\ m. Mm =
-Fﬁ{ljli\wr am rm. (yhndu, wcku
-~ ‘Vi-W 77-77;’ < M
+. Concerptul d6 ﬁsim" /3
+' Rolul ﬁglerelor: ’
+— Persist6n§é — dam cu viagé lungé, pentru posteritate
+° medii de stocam nevolatilﬁ:
+' nume cu ingeles s6mantic (d.p.d.v. a1 utilizatorului)
+. AbStl'aCtll ﬁ§l€r “EL-411:3’ Aulalrureahuuk. l'ucm'd fur Juhn Smith
+D I?‘ Appl iL'; Minn
+ml - | £ znlqlrﬁlu —r:'l'|al. lay-n: rungui"
+lljm-a- ‘ Fill: Til-r'r-ittm
++ llck'i-Et. |_‘l-IHIL'|-|; ﬁ
+"-5-- ___----- 5/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Atributele ﬁ$ierului (metadate)
-' Nume i singura informayie pistrati in formé inteligibili uman
-' Tip i neccsar pcntru sistemclc ce suporté diverse tipuri
-' Locagie i pointer la locagia undc este stocal ﬁ$ieml pe disc
-(i.c., pcrifcricul dc stucarc al sistcmului dc ﬁ5icrc din carc facc part0
-accl ﬁ5icr)
-' Dimensiune i dimensiunea curenlé a ﬁ$ieru1ui
-' Protectie i contrclcazé cine poate citi, scrie, executa,
-ﬁ§ierul
-' Timp, daté 5i identiﬁcatorul de ulilizalor i informagii pentru
-protectie, securilale $i monitorizarea ulilizérii
-' Informagiile despre ﬁ$iere sunt pistrate in structura de
-directoare, ce esle menginutﬁ pe disc
-(a M
+Atributele ﬁsierului (metadate)
+' Nume — singura informagie péstraté in formé inteligibilé uman
+' Tip — necesar pentru sistemele ce supcrté diverse tipuri
+' Locagie — pointer 1a lccagia unde este stocat ﬁsierul pe disc
+(i.e., perifericul de stocare a1 sistemului de ﬁsiere din care face parte
+acel ﬁsier)
+' Dimensiune — dimensiunea curenté a ﬁsierului
+' Protecgie — contrcleazé cine pcate citi, scrie, executa,
+ﬁsierul
+' Timp, daté si identiﬁcatorul de utilizatcr — infonnagii pentru
+protecgie, securitate si monitorizarea utilizérii
+' Informagiile despre ﬁsiere sunt pistrate in structura de
+directcare, ce este menginuté pe disc
+6/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Operagii asupra ﬁ§ierelor
-' Create i creat() sau open(..., OiCREAT ...)
-' Citire i read()
-' Scricrc i writc()
-' Repoziﬁonare in ﬁ$ier (Lew céutare in ﬁsier) i lseekO
-' $tergere i unlink()
-' Trunchiere — truncate() sau ftruncateO
-' Deschidere (i.e_, céutarea in stmctura dc directoare de pe disc a
-intrérii ﬁ$ieru1ui 5i copierea cominutului intrérii in memorie) i 0136110
-' inchidere (i.c.‘ mutarca conginutului intrim'i ﬁ$icrului din momoric in
-structura dc dircctuarc dc pc disc) i 010560
-" m
+Operagii asupra ﬁ§i€r€lor
+' Cmare — creat() sau 0pen(..., O_CREAT ...)
+' Citire — read()
+' Scriere — write()
+' Repozigionare in ﬁ§ier (i.e., céutara in ﬁ§ier) —1seek()
+' $tergere — unlink()
+' Trunchiere — truncateO sau ftruncateO
+' D€SChid6r€ (i.e., céutarea in structura de directoare de pe disc a
+intrérii ﬁ§ierului §i copierea conyinutului intrérii in m6m0rie) — Op€n()
+' inchid€r€ (i.e., mutama conginutului intrérii ﬁ§ieru1ui din memorie in
+structura de directoare de pe disc) — ClOS€O
+7/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
 Accesul la ﬁgiere /1
-' Acces sscvengial i acces de 1a inceput spre sférgit,
-posibilitate de intoarcere la inceput (rewind) pentru
-reluarea parcurgerii secvengiale; se pot face citiri 5i
+' Acces secvengia1— acces de 1a inceput spre sfér§it,
+posibilitate de intcarcere la inceput (rewind) pentru
+reluarea parcurgerii secvenyiale; se pct face citiri §i
 scrieri, dar nu ambele simultan in timpul aceleagi
-deschideri i metafora benzii magnetice
-' Acces direct (acces aleatoriu) i acces dupé numﬁrul
-(Le, adIesa) inregistrérii; se pot face citiri §i scrieri in
-0ric6 combinagii dorite i metafora discului de vinyl
-' Acces indexat i acces direct prin conginut, folosind
-diverse tehnici (e.g. ﬁgiere de index, ﬂ$iere multilisté,
-hashing, B-arbori, g3‘)
-X M
+deschideri — metafora benzii magnetice
+' Acces direct (acces aleatcriu) — acces dupé numéirul
+(i.e., adresa) inregistrérii; se pct face citiri §i scrieri in
+orice ccmbinaiii dorite — metafora discului de vinyl
+' Acces indexat — acces direct prin conginut, fclosind
+diverse tehnici (e. g. ﬁ§iere de index, ﬁ§iere multilisté,
+hashing, B-arbcri, $.a.)
+8/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Accesul la ﬁgiere /2
-' Acces secvenpial
-begmning current posmon end
-_ rewind :\:
-read or wrile _
-9 M
+Accersul 1a ﬁ§ier6 /2
+' A0065 secvengial
+, _ current poaition
+begmnmg end
+_ rewind :l:
+read or write —~
+9/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Accesul la ﬁgiere /3
-' Simularea accesului secvengial pe un ﬁ§ier cu acces direct
-acces secvengial ‘ implementarea cu acces direct
-reset cp = 0;
-read cp;
-readnext cp=cp+1;
-write next writ-e cp; _
-CD - CD + 1,
-mm
+Accezsul la ﬁ§ie>re /3
+' Simularﬁa accesului s6cven11ia1pe un ﬁgier cu acces direct
+read next read cp;
+CP = Cp + 1;
+CD = Cp + 1;
+10/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Accesul 1a ﬁ§1ere /4
-' Exemplu dc acces indexat — ﬁ$iere index 5i relative
-lugacm Ieoum
-last name number
+Accezsul 1a ﬁ§1er6/4
+' Exemplu de acces indexat — ﬁ§iere index §i relative
+logical record
+lﬂSt name HUITIIZ'IEIII'
 ——
 ——
-—— Smi'h-M"
--- /
 ——
-indEK hie félallve lile
-l \ bl
+Hr‘:
+-}*.
+*-
+indEx file relative filE
+11/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-C1as1ﬁc€1r1 ale ﬁ§1€f€10f
+Clasﬁicari ale ﬁglerelcr
 
-' Clasiﬁcarea dupi posibilitatea de tipérire (aﬁ$are) ASCII:
+' Clasiﬁcarea dupa posibilitatea de tiparire (aﬁgare) ASCII:
 
-i ﬁsiere text
-i ﬁsjere binare
-° Clasiﬁcarea dupi suportul pe care sunt rezidente:
-ﬁ$iere pe disc magnetic (HDD, FD, ZIP, ..) sau tambur magnetic
-i ﬁ$iere pe bandé magnetic?! sau caseté magneticé
-ﬁsiere pe suport optic (CD, DVD)
-i ﬁ$iere pe suport memorii NAND (stick USB, card SD/MMCI... , SSD, etc.)
-i ﬁ$iere pe imprimanté sau plotter
-i ﬁ$iere pe cartele perforate sau band?! de hértie perforaté
-i ﬁ$iere pe ecran, ﬁsiere tastaturé, $.21.
+— ﬁ§iere teXt
+— ﬁgiere binare
+' Clasiﬁcarea dupa suportul pe care sunt rezidente:
+— ﬁ§iere pe disc magnetic (HDD, FD, ZIP, ...) sau tarnbur magnetic
+— ﬁ§iere pe banda magnetica sau caseta magnetica
+— ﬁ§iere pe supcrt optic (CD, DVD)
+— ﬁgiere pe suport memorii NAND (stick USB, card SD/MMC/ﬂ. , SSD, etc.)
+— ﬁ§iere pe imprimanta sau plotter
+— ﬁ§iere pe cartele perforate sau banda de hartie perforata
+— ﬁ§iere pe ecran, ﬁgiere tastatura, $.a.
 
-' Suportul inﬂuenteazﬁ operatiile §i modurile de acces posibile
-Fug. suportul disc accepté acccsul direct. suportul bandé magneticé acceptz'i
-dour accesul secventia]; ﬁ$ierele pe cartels sau tastaturé accepté dour citiri, iar
-cele pe imprimanté, plotter sau ecran accepti numai scrieri 1: M
+' Suportul inﬂuenteaza operatiile §i modurile de acces posibile
+E. g. suportul disc accepta accesul direct, suportul banda magnetica accepta
+doar accesul secvential; ﬁgierele pe cartele sau tastatura accepta doar citiri, iar
+cele pe imprimanta, plotter sau ecran accepta numai scrieri 12/61
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-Sisteme de ﬁ§1ere/1
+Sisteme de ﬁsiere/ 1
 
-' Deﬁnigie: un sistem de ﬁgiere esle 0 colecgie oarecare de ﬁ$iere,
-iinprcunz'i cu structura dc directoarc in care sunt accstca organizatc
+' Deﬁnigie: un sistem de ﬁsiere este 0 eoleeiie oareeare de ﬁsiere,
+impreuné cu structura de directoare in care sunt aeestea organizate
 
-' Existé mai multe tipuri de sisteme de ﬁ$iere de uz general, e.g. NTFS
-(speciﬁc Windows) sau ethﬁY/exrif's/exM/E, bIr/S, z/S, $.21. (speciﬁcs Linux/UNIX),
-ce diferé prin stnlcturile de date folosite pentru stocarea lor $i prin modul
-de implementare a operagiilor asupra ﬁ§ierelor 5i directoarelor.
+' Existé mai multe tipuri de sisteme de ﬁsiere de uZ general, e.g. NTFS
+(speciﬁc Windows) sau ethfS/ extSfS/ ext4fs, btrfs, ZfS‘, $.21. (speciﬁee Linux/ UNIX),
+ee diferé prin structurile de date folosite pentru stoearea lor si prin modul
+de implementare a operagiilor asupra ﬁsierelor si directoarelor.
 
-' ln plus, existé 5i diverse tipuri de sisteme de ﬁ$iere de uz particularizat,
-egi tmpfs (RAM disk), objfs (kemel debugging), proofs (inierfayﬁ structuri procese), gia.
+' in plus, existé si diverse tipuri de sisteme de ﬁsiere de uz partieularizat,
 
-' Cluster: unitatea de mésuré pentru alocarea spagiului necesar memorﬁrii
-unui ﬂgier, la nivelulﬁleesystemeuluii Cu alte cuvinte, dimensiunea unui
-ﬁ$icr (ivev informaiia ulilé slocaié in e1) cslc un alribul cxprimal in nclcli. ins?!
-spaliul oeupat de conlinutul ﬁ$ierului pe disc este un multiplu de clustere.
+6. g. tmpfS (RAM disk), Obij (kernel debugging), prOCfS (interfa'gé structuri procese), s.a.
 
-° Dimensiunea unui (‘lusteri 0 putere de forma 2", cu n:0,l‘2,.,. , in termeni de
-sectoare (sau blocuriedisc, iiei unitatea de stocare la nivelul discului)
+° Cluster: unitatea de mésuré pentru alocarea spagiului necesar memorérii
+unui ﬁsier, la nivelullee-system-ului. Cu alte euvinte, dimensiunea unui
+ﬁsier (i.e. infonnagia utilé stoeaté in e1) este un atribut exprimat in octegi, insé
+spagiul ocupat de eonginutul ﬁsierului pe disc este un multiplu de clustere.
 
-ll Ivl
+' Dimensiunea unui cluster: 0 putere de forma 2n, cu n:0,1,2,... , in termeni de
+sectoare (sau blocuri-disc, i.e. unitatea de stoeare 1a nivelul discului)
+
+13/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Slsteme de ﬁslere/Z
+Sisteme de ﬁsiere/ 2
 
-- Pentru persistengi, sistemele de ﬁsiere se pistreazé pe dispozitive
-de stocare nevolatihi (Qg. disc IIDD, stick USE: CD/DVD, disc ssu cm),
+' Pentru persistengé, sistemele de ﬁsiere se péstreazé pe dispozitive
+de stocare nevolatilii (e.g. disc HDD, stick USB, CD/ DVD, disc SSD, etc.),
 in entitégi numite volume.
 
-- Un volum poate ﬁ (in multc awn; , in cursul dcsprc pcrifcricclc dc stocarc)1
+' Un VOhlIn poate f1 (mai multe detalii — in cursul despre perifericele de stocare) I
 
-' i opurtiyie a unui disc (schema clasicz'i, MBR/GPT, ce permits
-stocarca mai multor volume per disc)
+' — 0 partiﬁe a unui disc (schema clasicéi, MBR/GPT, ce permite
+stocarea mai multor volume per disc)
 
-- i un disc intreg (avg. slick USB, (TD/DVD» em)
+' — 1111 diSC intreg (e.g. stick USB, CD/DVD, etc.)
 
-— un ansamblu de mai mulre discurz' (ansamblu ce stocheazi un
+— un ansamblu de mai multe discuri (ansamblu ce stocheazé un
 singur sistem de ﬁsiere, prin tehnici precum RAID)
 
-' Formatarea logic?! a unui volum I “crearea sistemului de ﬁsiere“
-rezidenl pe ace] volum, prin inigializarca (p0 disc) a structurilor dc
-date speciﬁcs tipului acclui sistcm dc ﬁsicrc; upcragia arc ca paramotri:
-tipul sistemului de ﬁsiere, numele volumului creat (ix:q o cticheté) si
-dimonsiunca clustcrului (dcﬁnité in tcnncni dc blocuri disc) 14 M
+' Formatarea logicé a unui volum I “crearea sistemului de ﬁsiere”
+rezident pe acel volum, prin inigializarea (pe disc) a structurilor de
+date speciﬁce tipului acelui sistem de ﬁsiere; operagia are ca parametri:
+tipul sistemului de ﬁsiere, numele volumului creat (i.e., 0 etichetéi) si
+dimensiunea clusterului (deﬁnité in termeni de blocuri disc) 14/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Sisteme de ﬁ§iere/3
-° Un exemplu de organizare a sistemului de ﬁgiere
-pavtilmn A msk 2
-diE-k 1
-partition c was
+SlSt€II1€ d6 ﬁ§1€r@/3
+° Un exemplu de organizara a sist6mului de ﬁ§ier6
+partition A ﬁlas disk. E
+diEk 1
+parlitiﬁn G files
 
-panitiun B
+partiiiun E
 
-thik 3
+dial’; 3
 
-M
+15/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Interfaga sistemului de ﬁ§iere
-° Funcgii
-' Structura de directoare
-' Organizare
-' Partaj are
-° Montare
-' Protecgie
+Interfaga sistmnului d6: ﬁ§i€r€
+' Funcgii
+' Structura d6 directoare
+' Organizare:
+' Partaj am
+' Montaré:
+' Protecﬁﬁ
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Func'giile sistemului dc ﬁsiere
-' (Subsistcmul dc directoare) Mapcazé numelc de ﬁsiere
-in identiﬁcamri dc ﬁsierc prin primitiva open (sau creat).
-Crecazé structurilc dc date din nucleu
-' Meniine slructura dc numc (unlink, mkdir, rmdir)
-' Dcterminé plasarea ﬁsicrclor (si a metadatelor) pc disc,
-in termcni dc clusters‘ Gestioneaze'l alocarca clusterclor
-( l clustcr: 2" scctoarc conscculivc) Gcslioncazé cluslcrclc
-cronalc (ic, cclc cc coniin had sectors)
-' Gestioneazé apclurilc dc sistcm read si write
-' Inigiazé operagiile I/O pcnlru transfcrul blocurilor dinspre
-disc spre RAM, respectiv dinsprc RAM spre disc
-' Gestioneazé tampoanelc cache pentru disc
-1" M
+Functiile sistemului de ﬁsiere
+' (Subsisternul de directcare) Mapeazéi numele de ﬁsiere
+in identiﬁcatcri de ﬁsiere prin primitiva open (sau creat).
+Creeazé structurile de date din nucleu
+' Mentine structura de nume (unlink, mkdir, rmdir)
+' Determiné plasarea ﬁsierelcr (si a metadatelcr) pe disc,
+in tenneni de clustere. Gesticneazé alccarea clusterelcr
+(1 cluster = 2n sectcare consecutive). Gesticneazé 01118161616
+eronate (i.e., cele ce contin bad sectors)
+' Gesticneazéi apelurile de sistern read si write
+' Initiazé operatiile I/O pentru transferul blccurilcr dinspre
+disc spre RAM, respectiv dinspre RAM spre disc
+' Gesticneazéi tampcanele cache pentru disc
+17/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Structura dc directoare /1
+Structura d6 directoare: / 1
 
-° Director i 0 colecgie de ﬁgiere, inclusiv sub-directoare
-(rcfcrilc prin slrucluri dc dale specializalc cc conlin inlbrmmii dcsprc accslca)
+' Director — 0 0016c§i6 d6 ﬁ§i6re, inclusiv sub-directoare
+(referite prin structuri de date specializate ce congin informagii despre acestea)
 
-' Atét ﬁsierele propriu-zise, cét §i structura de
-directoare sunt pistrate pe disc
+' Atét ﬁ§i6r616 propriu-Zise, cét gi structura de
+diractoara sunt péstrate pe disc
 
-° Copiile de sigurangﬁ ale acestora sunt pistrate (dc
-obicei) pe benzi, CD-ROM-uri, $.21.
+' Copiile d6 sigurangé ala acestora sunt péstram (de
+obicei) pe b6nzi, CD-ROM-uri, $.21.
 
-' La inceput: director unic (e.g. CP/M, SIRIS - '60), iar
-apoi director pe 2 nivele (Qgr RSX 470180, un SO. in
-timp real pemru DEC PDP-l 1)
+' La incﬁput: director unic (e.g. CP/M, SIRIS — '60), iar
+apoi dimcth pe 2 niv616 (e.g. RSX — '70-'80, un S.O. in
+timp real pentru DEC PDP-l 1)
 
-° in prezent: directoare cu structura arborescenté sau
+' 1n prezent: directoare cu structura arborescenté sau
 cu structuré de graf aciclic
 
-M
+18/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Structura dc directoare /2
-' Cum este organizaté structura de directoare?
-' Listé inléntuité
-' Vector sonat
-' Tabelé hash
-(a se vedea la lmplementarea sistemului dc ﬁ$iere)
-W
+Structura d6 directoare: /2
+' Cum este organizaté structura d6 directoam?
+> Listé inlényuité
+> V€ct0r sortat
+> Tab6lé hash
+(a se vedea la Implementarea sistemului de ﬁgiere)
+19/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Operagii asupra directoarelor
-' Céutarea unui ﬁ§ier
-' Crearea unui ﬁsier
-' $tergerea unui ﬁgier
-' Redenumirea unui ﬁgier
-' Listarea unui director
-' Traversarea sisternului de ﬁgiere
-' cg‘ salvarea/restaurarea unui sistem de ﬁgiere
+Op6ra§ii asupra direrctoarelor
+' Céiutareza unui ﬁ§i6r
+' Cmama unui ﬁgier
+' $tergerea unui ﬁgiﬁr
+' R6d6numir6a unui ﬁ§ier
+' Listarﬁa unui dirﬁctor
+' Trav6rsarea sistﬁmului de ﬁgiﬁre
+' e. g. salvarea/restaurarea unui sistem de ﬁgiere
 
-l‘ M
+21/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Numirea ﬁgierelor
-° Scopuri:
+Numirea ﬁ§ierelor
+' Scopuri:
 
-i Pentru a identiﬁca ﬁgierele (la deschidere, SO-ul
-mapeazé numele de ﬁgiere in obicctc de tip ﬁ§ier
-utilizate intern pentru accesul 1a ﬁ§iere)
+— Pﬁntru a idﬁntiﬁca ﬁ§ierele (1a d6schid6re, SO-ul
+mapeazé numele d6 ﬁgiﬁre in obiectﬁ de tip ﬁ§i6r
+utilizatﬁ intern pentru accesul la ﬁgiere)
 
-i Pentru a permite utilizatorilor sé-§i aleagi propriile
-nume de ﬁgiere firﬁ problems de conﬂict de nume
+— Pentru a permitﬁ: utilizatoriIQr $51-$i alaagé propriile:
+nume d6 ﬁgiere ﬁré probleme d6 conﬂict d€ nume
 
-i U§urin§a de utilizare: nume scurte, grupéri de ﬁ$iere
+— U§urin§a d6 utilizarﬁ: numﬁ scurte, grupéri d6 ﬁ§iere
 
-l1 M
+22/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Organizarea directoarelor / 1
-' Organizarea (logici a) directoarelor, pentru a
-objrine:
-— Eﬁciengﬁ — localizarea rapidé a unui ﬁgier
-— Nume i numele sunt utile pentru utilizatori
-' Doi uiilizatori pot avea acela$i nume pentru ﬁsiere diferite
-' Acela$i ﬁ$ier poate avea mai multe nume diferite
-— Grupare — gruparea logicé a ﬁgierelor dupé
-proprietégi (c.g. toatc programclc C, toatc jocurilc, etc.)
-l‘) M
+Organizama dimctoarelor /1
+' Organizama (logicéi a) directhrelor, pentru a
+0b§in61
+— Eﬁcientii — localizama rapidé a unui ﬁ§i6r
+— Nume — numele sunt utile: pentru utilizathi
+' Doi utilizatori pot avea acela§i nume pemtru ﬁ§ie:re diferitﬁ
+' Acdagi ﬁgier poate avea mai multe nume diferite
+— Grupare — grupareva logicé a ﬁgierelor dupéi
+pmpriﬁtﬁﬁ (e. g. toatﬁ programele C, t0at6 j 0curi16, etc.)
+23/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Organizarea directoarelor /2
+Organizama directoamlor /2
 ' Director unic pentru togi utilizatorii:
-I I E n n a m a»
-Hes....'....
-Probleme (dezavanlaje):
-i conﬂict dc numc
-i imposibilitate de grupare
-24le
+m®ElEEEEE%
+Probleme (dazavantaj e):
+— conﬂict de nume
+— imposibilitat6 de grupare
+24/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Organlzarea dlrectoarelor /3
-' Director ssparat pentru ﬁecare utilizator:
-£222?) H". H data I. ‘M a
-O O O Q O Q O O I U '
+Organlzarea d1ract0arelor/3
+
+' Director s6parat pentru ﬁecare: utilizator:
+maisl'geCrtglj USEFT USEFQ US€f3 USQI'4
+$535551‘; u". n. n- IIn
 Avantaje:
-i cale (path name) i cz'autare eﬁciemé
-i acela$i nume de ﬁ$ier pentru utilizalori diferigi
+— cale (path name) — céutare eﬁciemté
+— acelagi num6 de ﬁ§ier pentru utilizatori diferigi
 Dezavantaje:
-i imposibilitatea de grupare
-23 Ivl
+— imposibilitatea de grupare
+25/61
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-Organlzarea dlrectoarelor /4
-' Directoarc cu structuré arborescenté:
-Avantaje- mm w m pmgrams
-i cale (path name)
-i ciutarc cﬁcicnté
-, posibimmea de m- IIIM III
-gruparcaﬁ5icrclor . a *) \ t, ~. ~) = \ g
-i director curem (de \ ‘ ' " ‘ " v‘ ’ ‘ ’ W
-lucnl) :>
-speciﬁcarea de cii PW “u CW"
-relative vs absolute \Q, ’ ‘ e , ‘
-Dczavantajc: v V ‘J a i‘)
-, imposibilitatea de m u- u
-partajare (prin nh'm- ‘ ‘ ‘ ‘
-uri) let'Y.‘ f Lil?
+Organlzarea d1ract0ar610r/4
+' Dir6ct0are cu structuré arboreswnté:
+Avantaj 6: rue-t spa-Ii Elm mugrams
+— Gale (path name)
+— céutare eﬁcienté
+_pOsibi1itat€a d6 ﬂ- Mr
+grupare a ﬁgierelor .- --"--:| l, a] .1 ‘1- --
+— director cur6nt (de " " “ " "
+lucru) :>
+Speciﬁcama d6 céi Pm? II“ m
+relative vs absolute 1;} ,- M __ ,. H
+Dezavantaje: U a" "x ,» U
+— imposibilitataa de m --m-T.r
+partajare (prin alias- , 5 _ a . ,. 5 . 5
 
-lfvlvl
+26/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Organizarea directoarelor / 5
-' Directoare cu structuri de graf aciclic:
-vODl GK‘! 599M
-{D Q)
-I.) K j: i J m
+()rganizaraa diréctoamlor /5
+' Directoam cu structuré de graf aciclic:
+mull dict spell
+if} :j
+a. ,1 l; .J I; J 27/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Organizarea directoarelor /6
-° Directoare cu structuré de graf aciclic (com)
-i Pot exista subdirectoare §i ﬁgiere partajate
-i Pot avea douﬁ nume difcrite
-— linking hard/ soft — link() , symlink()
-i Problemﬁ: $tergerea unui ﬁ$icr partajat
-— Solutii:
-' Back-pointers, pentru a putea gterge toate referintele
-Problemi: inregistréri cu lungime variabilé
-' Solugia cu contor de referinge pﬁslrat in intrarea ﬁgierului
-lN M
+Organizarera directoar610r/6
+' Diractoare: cu structuré de graf aciclic (cont)
+— Pot axista subdirectoare §i ﬁ§ier€ partaj ate
+— Pot avea douii nume diferite
+— linking hard/ soft — 1ink() , symlink()
+— Problemii: §t6rgerea unui ﬁ§ier partaj at
+— Solugii:
+' Back-pointers, pﬁntru a putea gterg€ toate r6ferin§ele
+Problemé: inregistréri cu lungirne variabilé
+' Solugia cu contor de referinge péstrat in intrarea ﬁgierului
+28/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Organlzarea dlrectoarelor / 7
-' Directoare cu structuré de graf general:
-i Problemi: cum garantém
-inexistenga circuitelor?
-i S oluﬁi: mo! avl m 1m
-° Permitem link-uri dual‘ .
-cétre ﬁgiere, nu §i cétre ,5," m. M mum M
-subdirectoare
-' De ﬁecare daté cénd se . . .
-adaugé un nou link, sé se
-utilizeze un algoritm de mum m,- i mx
-detecgie a circuitelor pentru
-a decide dacé 55 se pemmé . ‘ .
+()rganlzama d1r6ct0am10r / 7
+' Directoam cu structuré d6: graf g€n6ral:
+— Probleméi: cum garantém
+inﬁxist6n§a circuit610r?
+— Solugii:
+' P6rmitem link-uri doar Q1
+cétra ﬁ§iere, nu §i cétm
+subdirﬁctoare
+' De ﬁecare daté 05nd s6 Q‘ Q Q
+adaugé un nou link, s51 s6 _
+utilizeze un algoritm de
+detecgie a circuitelor pentru _
+a decide dacéi s51 se permitéi Q ‘ ‘
 acea adéugare sau nu
 ' Garbage collection
-Z4) Ivl
+29/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Montarea /1
-' Un sistem de ﬁgiere trebuie s5 ﬁe montat inainte
-de a putea ﬁ accesat
-' Un sistem de ﬁ§iere nemontat se montcazﬁ 1a un
+M0ntar6a /1
+' Un sisterm d6 ﬁ§i6r€ trebuie s51 ﬁe montat inainte:
+d6 a putea ﬁ accﬁsat
+' Un sistem d6 ﬁ§iare nﬁmontat s6 monteazé 1a un
 punct de montare (un director de montare)
-' Auto-montarea (la immducerea unei dischete, CD, Stlck USB, $48.)
-' in UNIX/ Linux: mount() , umount()
-:0le
+' AlltO-IIIOHtZIIBEI (la introducerea unei dischete, CD, stick USB, $.a.)
+' In UNIX/ Linux: m0unt() , umount()
+30/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Montarea /2
+Mentama /2
 ' Exemplu:
-/ ' /
-, m.“ mm <_
-m: | u {ml W W k _ ,
-"ll - ‘m mu:
-All III . W .m A
-‘WIN _
-m (b1
-(a) Sistcmul existent (b) Partilic 11cm0ntati Punctul dc mnntarc
-I‘ M
+f I
+I
+l M“ rrs-e'rs q_
+h'l'l'l i I ‘II-"Inf ."-||'|.' ll'n'L'g' -
+“ll _ .- .~1.'.-* mm
+IIH'II'}:
+{m [n1
+(a) Sistemul existent (b) Partigie nemontaté Punctul de montare
+31/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Partajarea ﬁgierelor
+Partaj area ﬁsierelor
 
-' Partajarea ﬁ§ierelor in sisteme multi-utilizator este 0
+' Partaj area ﬁsierelor in sisteme multi-utilizator este o
 
 facilitate de dorit
-' Partajarea se poate face printr-o schemé de protecgie
-' in sisteme distribuite, ﬁgierele pot ﬁ partajate prin
+' Partaj area se poate face printr-o schema de protectie
+' ln sistenie distribuite, ﬁsierele pot ﬁ partaj ate prin
 
-intermediul regelei
-' Protoeoale 5i tehnologii de reyea folosite:
+intermediul retelei
+' Protoooale si tehnologii de retea folosite:
 
-i NFS (Networked File System), cc utilizcazi RPC i SUN
+— NFS (Networked File System), ce utilizeaza RPC — SUN
 
-i CIFSZ prolocolul standard din Windows penlru partajarea ﬁ§ierelor
+— CIFSZ protocolul standard din Windows pentru partaj area ﬁsierelor
 
-i Active Directory-ul din regele Windows
+— Active Directory-ul din retele Windows
 
-i Yellow Pages —> NIS —> NIS+ —> LDAP, folosite in regele
+— Yellow Pages —> NIS —> NIS+ —> LDAP, folosite in retele
 
 UNIX/ Linux
-i sistemul DNS I; M
+— sisteInul DNS 32/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Protectia ﬁgierelor
-' Proprietarul (creatorul) unui ﬁ§ier trebuie $5 poaté
-controla:
-i ce operatii pot ﬁ ﬁcute asupra ﬁgierului
-i 5i de citre cine
-- Drepturi de acces:
-i Read
-i Write (dear modiﬁcarc, nu $i append sau delete)
-i Execute
-i Append (adéugarc dc articolc noi la sférsitul ﬁ§icrului)
-i Delete
-i List
-I‘) M
+Protectia ﬁ§iere10r
+
+' Proprietarul (ereatorul) unui ﬁ§ier trebuie s51 poaté
+
+eontmla:
+
+— ee operatii pot ﬁ féeute asupra ﬁ§ierului
+
+— §i de eétre cine
+' Drepturi de aeees:
+
+— Read
+
+— Write (dear modiﬁcare, nu §i append sau delete)
+
+— Execute
+
+— Append (adéiugare de artieole noi la sfér§itu1 ﬁgierului)
+
+— Delete
+
+— List
+
+33/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Implementarea sistemului dc ﬁ$iere
-' Structura sistemului dc ﬁ§iere
-' Implementarea ﬁ§ierelor 5i directoarelor
-' Metode de alocare
+Implementarea sistemului de ﬁ$iere
+' Structura sistemului de ﬁ§iere
+' Implementarea ﬁ§iere10r §i directoareler
+' Metode de aloeare
 ' Gestiunea spagiului liber
-' Eﬁcienga $i performanga
-' Recuperare
+' Eﬁcienya §i performanya
+' Reeuperare
 ' Sisteme de ﬁgiere jumalizate
 ' Networked File System (NFS)
 ' Sisteme de ﬁgiere “next-generation”
@@ -574,498 +594,522 @@ Implementarea sistemului dc ﬁ$iere
 
 ***************Beginning Page***************
 ***************page number:34**************
-Structura sistemului de ﬁ$iere
-' Structura ﬁ$ierului
-i Unitatea logicé de stocare a informagiilor (date sau programs)
-i O colecgie de informatii inrudite prin ingelesul lor semantic
-' Sistemul de ﬁ§iere se péstreazé pe memoria secundaré
-(i.e., periferice de stocare i discuri: HDD, SSD; FD, CD/DVD, $.21.)
-° Sistem de ﬁgiere organizat ierarhic, pe nivele
-' Blocul de control a1 ﬁgierului — FCB (File Control
-Block) i structura dc date, stocaté pe disc, ce conﬁne
+Structura sistemului de ﬁeiere
+' Structura ﬁgierului
+— Unitatea logieé de stoeare a informagiilor (date sau programe)
+— O eeleegie de infonnagii inrudite prin ingelesul lor semantic
+' Sistemul de ﬁgiere se péstreazéi pe memoria seeundaré
+(i.e., periferiee de stoeare — diseuri: HDD, SSD; FD, CD/ DVD, $.21.)
+' Sistem de ﬁ§iere erganizat ierarhic, pe nivele
+' Bloeul de eontrel a1 ﬁ§ierului — FCB (File Control
+Block) — structura de date, stoeaté pe disc, ce eongine
 anumite informagii despre un ﬁgier
-' Deschiderea unui ﬁgier pune 1a dispoziyie un handle de
-referingé la FCB, utilizat pentru accesele 1a ﬁgier M
+' Desehiderea unui ﬁ§ier pune 1a dispozigie un handle de
+referingii la FCB, utilizat pentru aeeesele 1a ﬁ§ier 35/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Sistem de ﬁgiere pe nivele
+Sistﬁm d6 ﬁ$i6m p€ niverlé
 
-Programf de aplicatie
+Programe de aplicagie
 
-Sistemul iogic de ﬁ$iere
-Modulul de organizare
+Sistemul logic de ﬁgiere
+Modulul d6 organizare
 
-a ﬁsierelor
-Sistemu] (1e bazé de ﬁ$iere
-I/O cinnol FCB-ul unui ﬁgier
+a ﬁ§ierelor
+Sistemul cie bazé de ﬁ§iere
+I/O cintrol FCB-ul unui ﬁgier
 Periferice de stocare
-36%|
+36/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Structun 1nterne
-StrucQunle Slstemulul - - \:|
-de ﬁslere necesare, _ El |:|
-fumizate de SO-uri: I mm'ynw“
-- ﬁg‘ (a): deschiderea “Mme MM] I
-‘ . mow-u mock
-- ﬁg. (b): cmrea
-4 .1 t . ) usevspme “m memory semndaryslnmge
-(51ml ar pen ru scnere (a,
-Structuri de dale in memorie:
-- tabela de montare a - U EU
-sisternelot de ﬁ$iere — “ML:
-- tabela de ﬁ$iere deschise I —" a
-er roces mama; - I
-P P ~ perpm“ syslulwwne mama black
-- tabela globalé de ﬁ$1ere “Wm” We “W'ﬁ'a "M"
-deschise use! space kemel memovy sew-nary swung
-(m
-31 6|
+Structurl 1ntcrnc
+t t ril i t m 1 i
+Sruou esse uu - ED
+dc ﬁcslere necesarci — E E
+furnlzatc dc SO-un: I directory structure
+. open (file name)
+— ﬁg. (a): deschldcrca directorystruaure f-Comrol block
+- ﬁg. (b): citirea
+- - - user space kernel memory secondary storage
+(s1m11ar pentru scnere) (a)
+Structuri de date in memorie:
+- tabela dc montare a - G CU
+sistemelor de ﬁsiere — I U
+. . data blocks
+- tabela dc ﬁ§16f6 deschlse I —"
+€I‘ I'OCﬁS read (index) - -
+p p per-process system-Wide file-control block
+_ tabgla globalé d6 ﬁsiare open-file table open-file table
+d6SChi86 user space kernel memory secondary storage
+(b)
+37/61
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:37**************
-Sisteme de ﬁgiere virtuale /1
-' VFS furnizeazé 0 modalitate orientaté-obiect
-d6 implementare a sistemelor dc ﬁgiere
-° VF S permits utilizarea acelea§i interfege a
-apelurilor dc sistem pentru operagii I/O (Lew
-API-ul I/O din POSIX) pentru diferite tipuri de
-sisteme de ﬁgiere
-(eig. ext3fs, ext4fs, vfat, fatlé, hpfs, ntfs, nfs, m)
-' VFS este o componenté din nucleul Linux
-1N M
+Sistenw d6 ﬁ§ie>re virtuale: /1
+' VFS furnizeazéi 0 modalitatn orinntaté-obinct
+d6 implemﬁntam a sistﬁmalor de ﬁ§ier6
+' VFS p6rmit6 utilizama a0616a§i interf6§6 a
+apelurilor de sistem pentru 0p6ra§ii I/O (i.e.,
+API-ul I/O din POSIX) pantru diferité: tipuri d6
+sisteme de ﬁ§iere
+(e.g. ext3fs, ext4fs, vfat, fat16, hpfs, ntfs, nfs, ...)
+' VFS 6st6 0 componernté din nuclﬁul Linux
+38/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Sisteme dc ﬁ§iere virtuale /2
+Sist6m6 d6 ﬁgiere virtua16/2
+' Sch6ma
 unui VFS:
-We ‘ IypaE type ‘
-H ‘ "QWWK
-WM
+H'FIEI 1 TEE-$2 type 1
+H E 4r
+39/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Implementarea directoarelor
-' Listi liniaré de nume de ﬁ$iere cu pointeri cétre
-blocurile de date
-i simplu dc programat
-i consumator de timp 1a execugie
-' Tabelﬁ hash i listé liniari cu structuré de date hash
-i micgoreazé timpul de ciutare in director
-i coliziuni i situagii in care doui nume de ﬁ§iere au prin
-funcgia hash aceea§i locagie
-— dimensiune ﬁxaté
+Implementarsa directoaralor
+' Lista liniara d6 numa de ﬁsiere cu pointari catre
+blocurile d6 data
+— simplu d6 pmgramat
+— consumator de timp 1a execugie
+' Tabala hash — lista liniara cu structura d6 date hash
+— micsoreaza timpul de cautara in director
+— coliziuni — situagii in care doua nume de ﬁsiera au prin
+funcgia hash aceeasi locagie
+— dimansiune ﬁxata
 ' B+ tree
-4M
+40/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Metode de alocare /1
-' Metoda de alocare se referi 1a modul in care
-blocurile disc sunt alocate pentru ﬁ§iere (is,
-penlru a stoca conginurul propriu-Zis al ﬁgierului, nu 5i
-metadalele sale i acestea sum stccate in FCB-ul ﬁgierului)
-— Alocare contiguz'l
-— Alocare inlﬁnguitﬁ
-— Alocare indexatﬁ
-4‘ M
+M€t0d€ d6 alocare /1
+' Metoda de alocare s6 refaré 1a modul in cam
+blocurilﬁ disc sunt alecatﬁ pentru ﬁ§iere (i.e.,
+pentru a stoca conginutul propriu-Zis a1 ﬁgierului, nu §i
+metadatek sale — aC6st6a sunt stocate in FCB-ul ﬁ§ierului)
+— Alocare contiguﬁ
+— Alocare inlﬁntuitz'l
+— Alocare indexaté
+41/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Metode de alocare /2
-' Alocarea contiguﬁ
-i Fiecare ﬁsier ocupé o multime contigué de blocuri pe disc
-i Simplé i sum necesare doar Iocatia de start (numérul blocului
-de inceput) si lungimea (numérul de blocuri ocupate)
-i Acces aleatoriu (direct)
-i Risipé de spatiu (problema alocirii dinamice a spatiului de
+M€t0d€ d6 alocare /2
+' Alocarea contiguz'l
+— Fiecare ﬁgier ocupé 0 mulyime contigué de blocuri p6 disc
+— Simpléi — sunt necesare doar locagia d6 start (numéirul blocului
+de incﬁput) §i lungimea (numérul de blocuri ocupate)
+— Accas alaatoriu (direct)
+— Risipéi de spagiu (problema alocéirii dinamicﬁ a spagiului de
 stocare)
-i Fisierele nu pot crests in dimensiune
-i Alocarea bazati pe extindere i Veritas File System
-41 M
+— Fi§ier6le nu pot cregte in dimensiune
+— Alocarea bazaté p6 extindere — Veritas File System
+42/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-Mctodc dc alocarc /3
-' Alocarea inlﬁnguiti
-i Fiecare ﬁ$icr cstc 0 listi liniaré simplu inlénluité dc
-blocuri disc; ﬁccare bloc conlinc o parts din datelc
-ﬁsierului $i o rcferinlé (un pointer) citrc urmitorul bloc
-i Blocurile pot ﬁ “impréstiate” oriunde pe disc (nu mai sum
-intr-o zoné contigué)
-i Blocuri adigionalc sum alocalc pc mésuré ce coniinulul
-ﬁ$ierului cre$te in dimensiune
-i Acccsul sccvcngial nu ridicé nici o problemé, in schimb
-accesul dircct nu se poalc face eﬁcient
-i Coruperca lantului dc pointeri provoacé problems majors
-i Tabela dc alocare a ﬁgierclor (FAT) i alocarc utilizati dc
-sistemul de ﬁ$iere FAT (: sislemul de ﬁ5iere principal din MS-DOS,
-Windows 9x gi OS/2<3.0) 4; m
+Mctodc dc alocarc / 3
+' Alocarea inliinguitii
+— Ficcarc ﬁsicr cstc o listéi liniaréi simplu inléinguitéi dc
+blocuri disc; ﬁccarc bloc conginc o partc din datclc
+ﬁsicrului si o rcfcrinﬁx (un pointcr) cétrc urinétorul bloc
+— Blocurilc pot ﬁ “impréstiatc” oriundc pc disc (nu mai sunt
+intr-o zon'Zl contigué)
+— Blocuri adigionalc sunt alocatc pc mésuré cc conginutul
+ﬁsicrului crcstc in dimensiunc
+— Acccsul sccvcniial nu ridicé nici o problcmé, in schimb
+acccsul direct nu sc poatc facc cﬁcicnt
+— Corupcrca laniului dc pointcri provoacéi problcmc maj orc
+— Tabcla dc alocarc a ﬁsicrclor (FAT) — alocarc utilizatﬁ dc
+sistcmul dc ﬁsicrc FAT (I sistcmul dc ﬁsicre principal din MS-DOS,
+Windows 9X si OS/2<3.0) 43/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Metode de alocare /4
-' Alocarea inlﬁnguitﬁ w Wm
-NS SIB" ﬁnd
-0U 1112B 3U IEQP 9 25
-4K] I iI TD
-85 - IE WE 11B
-12.1 [11.I15B
-16“ |7E|1eﬂ19ﬂ
-20B21'22E 23E
-24E 25: 25E 27E|
-211E zsﬂanﬂmﬂ
-J4 (1|
+Mertode: de: alocare /4
+'Alocarea inlz'lnguitz'l ‘v direﬂww
+
+filEl 515111 and
+
+GB 1m EB 3U iBElp El 25
+4E1 I =I rm
+a|:| = EE 112E11|I|
+12.1 Grimm
+11%|] IT|:|1B|:|1EI|:|
+EBEEWIEEUEBU
+24E 25E EEEI ETEI
+Eaﬂaaﬂanﬂmﬂ
+
+44/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Metode de alocare /5
-' Alocarea inlﬁnguité
-dIIBClOfY 9"er
-mag-“-
-name slaﬂ block
-0 —
+M€t0d€ d6 alocare /5
+' Alocarea inlﬁnguitz'l d t t
+lrec ory en ry
+Ila-alu-
+name start block O —
 File Allocation Table -
 (FAT) 217
-numbevuldlsk blocks fl !
+339 la
+number of disk blocks —1 !
 FAT
-43 6|
+45/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Metode de alocare /6
-' Alocarea indexatﬁ
-i Punc laolalté togi pointcrii intr-un bloc dc index
-(alocarea indexati grupeazé referingele impreuné $i 1e
-asociazé cu un ﬁ$ier panicular)
-i Se ulilizeazé 0 labelé de indecsi
-écl
-El
-El
+M€t0d€ d6 alocare / 6
+' Alocarea indexatii
+— Pune laolalté togi pointerii intr-un bloc de index
+(alocarea indexaté grupeazé referingele impreuné §i le
+asociazé cu un ﬁ§ier particular)
+— Se utilizeazé 0 tabelé de indecgi
+étl
+U
 ém
-El
+€El
+B
 index table
-4f» Ivl
+46/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-Metode de alocare /7
-' Alocarea indexatﬁ (c0nt.)
+M€t0d€ d6 alocare / 7
+' Alocarea indexatii (c0nt.)
 
-i Acccs alcatoriu (direct)
+— Acces aleatoriu (direct)
 
-i Acccs dinamic ﬁré m will“
-fragmentare extemz'l 0E1 m6: 3E1
-(optimizat pentru situagia in 4U 55 f YB k
-care in sistemul de ﬁsiere sum "U P "QQH K 9\
-multe ﬁgiere mici) ‘121%\ € :2 \
+— Acc¢s dinamic féré - ﬁle direiCtdyblock
+fragmentare extﬁrné 0U aka 3U
+(optimizat pentru situagia in 4U 5B 7m
+care in sistemul de ﬁgiere sunt 85 “SSW 9
+multa ﬁgiere mici) ‘25135141§\". E
 
-i overhead-ul implicat de ‘6 " J ‘ '9 é ‘
-accesul suplimentar la jig/:62‘ Ky
-blocul de index zaUzeDsoImlIl
+— overhead-ul implicat de 16' WU 19 E?
+accasul suplimentar la 2:52:35;ng 31
+blocul d6 indﬁx 285295305315
 
-i i-noduri i alocare utilizaté
-de familia SO-urilor UNIX,
-inclusiv Linux §i Mac OS X
+— i-noduri — alocare utilizatéi
+d6 familia SO-urilor UNIX,
+inclusiv Linux gi Mac OS X
 
-4" Ivl
+47/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-Metode de alocare /8
-' Alocarea indexati (c0nt.)
-i i-noduri i alocarc utilizaté
-dc Linux, Mac OS X §i a‘
-celelalte UNIX-uri M‘
-FCB_ul (Lei, i-nodul) unui HI win idii
-ﬁsier conﬁne toate atributele, M‘ [I Elm
-inclusiv locaiia i aslfel: MEL. [m E]:
-- 12 adrese directs ET: HIM
-- l adrcsé dc simplé indirectarc ill: g
-- l adresé de dublé indirectare El: IE
-- l adresé de triplé indirectare El: g
-File pointers (adresele): 32*bits E: W‘
-vs 64 bits (ZFS suporié l28-bits)
-4X Ivl
+Mntodn d6 alocare / 8
+' Alocarea indexatii (cont.)
+— i-noduri — alocare utilizaté
+d6 Linux, Mac OS X §i
+C€1€1alt6 UNIX-uri d"e“b'°““ I
+FCB-ul (i.e., i-nodul) unui B:
+ﬁ§ier conﬁne toate atributele, E: E:
+inclusiv locagia — astfel: “2:2:2:t E:
+- 12 adrese directe E: E]:
+- 1 adresé de simplﬁ indirectare: E]:
+- l adreséi de dubléi indirectare E]:
+- 1 adreséi de triplé indirectam E:
+File [winters (adreselﬁt): 32-bits E]:
+vs 64 bits (ZFS suporté 128-bits)
+48/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Gestlunea spapulul hber /1
-° Metode folosite pentru evidenga blocurilor libere:
-i Vectorul dc bigi
-' Instrucgiuni magini pentru gisirea primului bit setat
-' Pentru eﬁcienyi este nevoie de pistrarea vectorului de
+G6stiun€a spagiului 1ib€r /1
+' Metode folosite pentru evidenga blocurilor libere:
+— Vectorul de bigi
+' Instrucgiuni ma§iné pentru gésirea primului bit setat
+' Péntru 6ﬁcien§51, est6 nevoie d6 péstrarea vectorului de
 bigi in memorie, nu pe disc
 ' Exemplu: Mac OS
-i Lista inlinyuiti Z exemplu pe urmétorul slide
-i Gruparea : exemplu peste doué slide_uri
-i Pistrarea unei liste cu zonele libere contigue i perechi de
-forma (numérul blocului liber de Tnceput, dimensiune)
-4‘) M
+— Lista inlénliuité : exemplu pe unnétorul slide
+— Gruparea : ex6rnplu peste doué slide-uri
+— Péistrarea unei liste cu zonele lib6re contigue — perechi de
+forma (numéirul blocului liber d6 inceput, dimensiune)
+49/61
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:49**************
-Gestiunea spagiului liber /2
-' Lista inlinguité
-ligaiicumi liber Iree'speoe llsl head olj ‘U 2- a.
-4- 5- 6E] 7|]
-BI BI ‘ﬁlm-
-12-13. 14E||s|j
-IBEIWI la. IHEI
-zoljalgzzlazlj
-24|j25 ‘"26. 2?‘
-2a|jas|jan|js1|j
-50M
+G6stiun€a spagiului libér /2
+'Lista inlénguité ' .. .. _. . ..
+' ' ' [FEE-B {b-EIEEl h-EELEI
+1a3 sgeililculul hber "1'5 nljl IEI E. 3-
+4- 5- 5|] Tl]
+E-I Elm-Im-
+IE.1E|.14|:|15|:|
+15EI1FI15I15|II
+Eulj 21|:|22 El 2:3|:|
+24E 25 ‘£25 I 2? ﬁ-
+EBEIEQIIIBBEIBHII
+50/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Gestiunea spagiului liber /3
-' Gruparea spagiului liber pe disc
+G6stiun€a spagiului 1ib6r / 3
+' Grupama spagiului liber pe disc
 3\ 3
-5 9 ll 28
-I3 I7 18
-20 2] 22 55 59 61
+5 9 11 28
+13 17 18
+2O 21 22 55 59 61
 23 24 25 62 63 64
 26 27 28 65 66 67
 68 71 72
 74 75 76
-um
+51/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-Eﬁc1en§a s1 performanya /1
-' Eﬁciellta i depindc dc:
-i Algoritmii dc alocarc a discului si pentr'u directoare
-i Tipurile dc date pastratc in inlrarea ﬁsierului din director
-° Performanga i tehnici dc imbunitégire folosite:
+Eﬁcienga si perfcrmanga /1
+' Eficienta — depinde de:
+— Algoritmii de alccare a discului si pentru directcare
+— Tipurile de date péstrate in intrarea ﬁsierului din director
+' Performanga — tehnici de imbunéitéigire fclcsite:
 
-i Disk cache i 0 secyiune separata a mernorici principals
-utilizaté ca memorie cache a blocurilor dc disc utilizate
+— Disk cache — 0 secgiune separaté a memoriei principale
+utilizaté ca memorie cache a blccurilcr de disc utilizate
 frecvent
 
-i Free-behind si read-ahead i tehnici de optimizare a
+— Free-behind si read-ahead — tehnici de cptimizare a
 accesului secvengial
 
-i Dedicarea unei secyiuni a memorici principals drept disk
-virtual (numit uncori si RAM disk)
+— Dedicarea unei secgiuni a memoriei principale drept disk
+Virtual (numit unecri si RAM disk)
 
-‘I M
+52/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-Eﬁcienga §i performanga /2
-' Localizarea cache-ului dc disc
-1-_ _r;m-di_5k_ _ _i
-|—I
-I i f Hal; :
-| I
-CPU i 0DEW"e ‘able i conlloHeI msk
-L__°l“_°'iE"_"§’__J
-mam memory
-u bl
+Eﬁcmnga $1 performanga /2
+' Localizama cache-ului d6 disc
+:__ ‘FQin-EE - 'i M
+l—l
+: : : track :
+- g : I huﬁer I
+| | '- — — — l
+l—l
+CPU I wen-"1E tame I cunrrmler disk
+l—l
+LPPEE EEﬁE". __I
+main memuryr
+53/61
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
 Recuperare
 
-° Veriﬁcﬁri de consistengé — comparﬁ datele din structura de
-directoare cu blocurile de date de pe disc §i incearcé sé
-remedieze inconsistengele gésite; dezavantaj: poate dura mull limp.
+' Veriﬁcari de consistenta — compara datele din structura de
+directcare cu blccurile de date de pe disc si incearca sa
+remedieze inconsistentele gasite; dezavantaj: poate dura mult timp.
 Unealta consistency checker: fsck (in UNIX) sau chkdsk (in Windows)
 
-° Folosirea unor utilitare de sistem pentru backup-ul datelor
-de pe disc pe un alt periferic de stocare (disc extem, CD/DVD,
-bandi magnetici, $41.), operayie ce trebuie realizati periodic!
+' Fclosirea uncr utilitare de sistem pentru backup-ul datelor
+de pe disc pe un alt periferic de stccare (disc extern, CD/DVD,
+banda magnetica, s.a.), cperatie ce trebuie realizata periodic!
 
-+ Rccupcrarca unor ﬁsicrc “picrdutc”/ unui disc “picrdut”
-prin restaurarea daielor dc pe un backup realizat anterior!
++ Recuperarea uncr ﬁsiere “pierdute”/ unui disc “pierdut”
+prin restaurarea datelcr de pe un backup realizat anterior!
 
-' O alti solugie interesanté este fumizati de sistemele de ﬁ§iere
-jurnalizate, respectiv, mai nou, de sistemele de ﬁ§iere “next-
-generation" <4 H
+' O alta solutie interesanta este furnizata de sisternele de ﬁsiere
+jurnalizate, respectiv, mai ncu, de sistemele de ﬁsiere “next-
+generation” 54/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-Slsteme de fi$l€f€ Jurnallzate
-' Sistemele de ﬁ§iere jurnalizate inregistreazé ﬁecare
-actualizare a sistemului de ﬁgiere ca pe 0 tranzacﬁe
-° Toale lranzacgiile sunl scrise intr—un jurnal (log) O
-tranzacgie este consideratz'i comisi atunci cénd este scrisé in
-jurnali Totu$i, se poate ca sistemul de ﬁ$iere 55 nu ﬁ fost
-incﬁ actualizat
-' Tranzacpiile din jumal sunl operate asincron in sistemul de
-ﬁgierei Dupé ce sistemul de ﬁgiere este modiﬁcat, tranzactia
-este $tears2'1 din jumal
-' Dacé sistemul “crapé”, toate tranzacgiile rémase in jurnal
-trebuie si ﬁe operate dupé repornirea sistemului
-- Exemple: NTFS (Windows) sau ext3fs/ext4flv (Linux)
-<< M
+Sisteme de ﬁ$iere jurnalizate
+
+' Sistemele de ﬁgiere j urnalizate inregistreazé ﬁeeare
+aetualizare a sistemului de ﬁeiere ea pe 0 tranzacﬁe
+
+' Toate tranzaegiile sunt serise intr-un j urnal (log). O
+tranzaegie este eonsideraté comisﬁ atunei eénd este serisé in
+jurnal. T0tu§i, se poate ea sistemul de ﬁgiere sé nu ﬁ fest
+ineé aetualizat
+
+' Tranzaegiile din jurnal sunt operate asineron in sistemul de
+ﬁ§iere. Dupé ee sistemul de ﬁ§iere este modiﬁeat, tranzaegia
+este §tears€1 din jurnal
+
+' Daeé sistemul “erapé”, toate tranzaegiile rémase in jurnal
+trebuie s5 ﬁe operate dupéi repornirea sistemului
+
+' Exemple: NTFS (Windows) sau ext3f9/ext4ﬁv (Linux)
+
+55/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-Networked File System
+Networkad Fila Systam
 
-' NFS = o implementare a ﬁrmei Sun Microsystems
-(in SO-urile Solaris, SunOS) §i 0 speciﬁcagie a unui
-sistem software pentru accesarea ﬁ$ierelor de la
-distangﬁ in regele LAN (sau WAN)
+' NFS I 0 implementara a ﬁrmei Sun Microsystems
+(in SO-urile Solaris, SunOS) gi 0 spaciﬁcagie a unui
+sistem software pantru accasaraa ﬁgierelor d6 1a
+distanga in re§616 LAN (sau WAN)
 
-' Stagiile de lucru interconectale prin inlermediul regelei sunl
-privite ca 0 mulrime de magini independente, cu sisteme de
-ﬁgiere independente, ce permit partajarea ﬁgierelor inlre
-aceste sisteme de ﬁ§iere, intr-o manieré transparenti pentru
-utilizator (folosind protocaale de montare, RPC, UDP/IP, 5i
-modelul client-server)
+' Stagiile de lucru interconectate prin intermadiul regelai sunt
+privita ca 0 mulgime de ma§ini indapendante, cu sisteme de
+ﬁ§iere independenta, ca pannit partaj area ﬁ§iere10rintre
+aceste sistema de ﬁ§iere, intr-o maniera transparenta pentru
+utilizat0r (folosind protocoale d6 montara, RPC, UDP/IP, §i
+modelul chant-server)
 
-' Speciﬁcagiile NFS sunt independente de hardware,
-sistem de operare 5i tehnologia de regea {I H
+' Speciﬁcagiile NFS sunt indapandante de hardwara,
+sistam de oparara §i tehnelogia d6 r6§6a 56/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-Sisteme de ﬁsiere “next-generation”
-
-' Sistemele de ﬁsiere “next-generation" incearcé $5 ofere
+' ° CC ' 99
+S1steme de ﬁsiere next-generation
+' Sistemele de ﬁsiere “next-generation” incearca sa ofere
 tolerantd la tipuri de erori ce nu sunt prevenite de tehnologiile
-anterioare: sistemele de ﬁsiere jurnalizate (0e ofera protectie doar la
-nivelul strueturiiﬁle»system-ului, nu 5i pentru continutu] ﬁsierelor) sau tehnicile
-RAID (ce oferé protectie dear in anumite situatii, dar nu 5i contra “hit rot”)
-
-‘ “Bit-rot” = “the silent corruption of data on disk; one at a time, from
-time t0 time, a random bit here or there gets ﬂipped.“
-
-Referintér —
-
+anterioare: sistemele de ﬁsiere jumalizate (ce ofera protectie doar 1a
+nivelul structuriiﬁle-system-ului, nu si pentru continutul ﬁsierelor) sau tehnicile
+RAID (ce ofera protectie doar in anumite situatii, dar nu si contra “bit rot”)
+' “Bit-rot” I “the silent corruption of data on disk; one at a time, from
+time to time, a random bit here or there gets flipped.”
+R6 f6fin§§ll https:// arstechnica.com/ information-technolo gy/ 20 14/0 l/bitrot-and-atomic-cows-inside-next-gen-ﬁlesystems/
 ' Exemple: ZFS (Solaris), btrfs (Linux) sau, mai nou, ReFS (Windows)
-si APFS (for Apple‘s devices)
-
-' Protectia contra “bit-mt”: ZFS stocheazé checksums pentru toate datele si
+si APPS (for Apple’s devices)
+' Protectia contra “bit-rot”: ZFS stocheaza eheeksums pentru toate datele si
 metadatele unui volum, si astfel poate detecta (si corecta) coruperea acestora
-
-' Alte facilitéti: uperatii COWatomice, snapshots, built-in handling o/disk
-
-failures and redundancy, integration 0f RAID functionality, $.ai s" m
+' Alte facilitati: operatii COW atomice, snapshots, built-in handling 0f disk
+failures and redundancy, integration 0f RAID functionality, s.a. 57/61
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:57**************
 Bibliograﬁe
-' Bibliografie obligatorie
+' Bibliograﬁe obligatorie
 
-capitolele despre sisteme deﬁ§iere din
-i Silberschatz : “Operating System Concepts”
+capitolelﬁ: despre sisteme deﬁsiere din
+— Silberschatz : “Operating System Concepts”
 
-(cap.13 §i cap.l4 dm [oscum
+(cap.l3 si cap.14 din [OSC10])
 sau
 — Tanenbaum : “Modern Operating Systems”
 
-(capA di1\[MOS4])
+(cap.4 din [MOS4])
 
-4N M
+58/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-Exercigii de seminar
-' Aplicagii 1a: Sisteme de ﬁsiere i structurile de date FCB
-i Enunt: Se d5 un sistem dc ﬁsiere UNIX ce are caracteristicile
-urmétoare: sector size I 4K8, ﬁle pointers I 32bils.
-Un ﬁsier stocat in acest sistem are lungimea L=l .073.76l .780 octegi.
-Care este “amprenta” sa pe disc, i.e, cét spatiu ocupé ﬁsierul pe disc
-(cxprimat in unitigi de alocare a discului,
-folosil penu'u acelasi concepl)) 7 g
-i Rezolvare: ‘I “"1
-. . _ M‘ K tun.‘
-Indicaile. Em...‘ - W
-L I1i073i761i780:(12*4096>+ Jlftiﬁi
-(1024*4096)+ (261.112*4096+3572) 7;‘ “[331
-Iar261.112+1:254*1024+IOI7 TBIPFﬁ
-Mina‘
-WI
+Exereitii de seminar
+> Aplieatii la: Sisteme de ﬁ§iere — structurile de date FCB
+— Enunt: Se déi un sistem de ﬁgiere UNIX ee are earaeteristicile
+urméteare: sector size I 4KB, ﬁle pointers I 32bits.
+Un ﬁ§ier stoeat in aeest sistem are lungimea L21 073.761 .780 octeti.
+Care este “amprenta” sa pe disc, i.e. eét spatiu oeupé ﬁ§ieru1 pe dise
+(exprimat in unitﬁti de alocare a diseului, ﬁle
+i.e. blocuri-disc (sau sectoare, alt termen
+folosit pentru aeelagi eoneept)) ? _ _
+— Rezolvare: ? '
+BI
+double indirect a a BI:
+. . EB
+Indicaﬂe: 53- E1:-
+L :1.073.761.780 I (12*4096) + 5:5:-
+(1024*4096) + (261.112*4096+3572) 59L
+Iar261.112+1 =254*1024+ 1017 E135:-
+513
+59/61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-Exercigii dc seminar
-' Aplicagii 1a: Sisteme de ﬁsiere i structurile de date FCB
-i Enunt: Se d5 un sistem de ﬁsiere UNIX ce are caracteristicile
-urmétoare: sector size I 4KB, ﬁle pointers I 32bits.
-U11 ﬁsier stocat in acest sistem are lungimea L=l.073.761.780 octegi.
-Care este “amprenta” sa pe disc, i.e, cét spatiu ocupé ﬁsierul pe disci7
-i Rezolvare: u
-u“ hm dc date 001111116 40% (16 oclegi (4KB).
-1111 “11 bloc dz indecgi cunpne 4KB/32b11s : 1024 adrese dc E
-blucuri-disc (gi ucupé pe disc 1014096 omen!) I
-A se 11211211 ﬁll/"14111 d2 141 [adieu/[e => numsml total de 0......“ .._
-blocuri dc date pcnlru a sloca doar coniinutul ﬁ5icrulu| M I E I -
-cslc: 12 blocuvi dime + 1024 dc blocuri dc simplé [I .w E
-indlrccture (plus 1 bloc 115 \ndec51; pnmul nrbore este compiel Mm 1“ 1E E
-111110111) + 251.1 13 11: blncun dc 11111115 lndlfeclﬂfe (al 111111“ "°'“ BI E1: E
-albore esle pariml aiocxl: 1 hm de mam‘ i“ ladacina sa‘ plus dear E1: 1E
-255 bloc1|ndemdec$1pe mvelul 1101]. Arborele lemar es1e “111 E E
-Total Spam! ocupal pe disc : <12+1024+261v1 13 hlocuri de g: E1: 1%
-date) + (1+1izss blncuri dc indccsn : 262.406 dc blncuri. E1: ii
-1.1 care se 111m adaugii spﬂliul necesar pelllnl FCB. x1zeuf(1rnod) 110111
+Exerc1t11 de semlnar
+> Aplicatii la: Sisteme de ﬁsiere — structurile de date FCB
+— Enunt: Se da un sistem de ﬁsiere UNIX ce are caracteristicile
+urmatoare: sector size I 4KB, ﬁle pointers I 32bits.
+Un ﬁsier stocat in acest sistem are lungimea LI1.073.761.780 octeti.
+Care este “amprenta” sa pe disc, i.e. cat spatiu ocupa ﬁsierul pe disc?
+— Rezolvare:
+Un bloc de date contine 4096 de octeti (4KB).
+Iar un bloc de indecsi contine 4KB/32bits I 1024 adrese de _ _
+blocuri-disc (s1 ocupa pe disc tot 4096 octeti!). d"e“b'°‘k‘ 5
+A se vedea formula de la indicatie I> numarul total de singleindirect
+blocuri de date pentru a stoca doar continutul ﬁsierului E: B:
+este: 12 blocuri directe + 1024 de blocuri de simpla E:
+indirectare (plus 1 bloc de indecsi; primul arbore este complet E:
+alocat!) + 261.113 de blocuri de dubla indirectare (a1 doilea E13 5:
+arbore este partial alocat: 1 bloc de indecsi in radacina sa, plus doar E:
+255 blocuri de indecsi pe nivelul doi). Arborele tertiar este nul.
+Total spatiu ocupat pe disc : (12+1024+261.113 blocuri de E]: E:
+date) + (1+1+255 blocuri de indecsi) I 262.406 de blocuri. El:
+La care se mai adauga spatiul necesar pentru PCB: sizeof (i-nod). 60/61
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
 Sumar
-> Conceptele de ﬁgier §i de sistem de ﬁgiere
-* Interfaga sistemului de ﬁgiere
-> Implementarea sistemului de ﬁgiere
-intrebiri ? H M
+> Concﬁptelﬁ de ﬁ§i6r §i d6 sistem d6 ﬁ§ier6
+> Interfaga sistermului d6: ﬁ§i€r6
+> Implenmntaraa sistemului d6 ﬁ§i€re
+intmbéri ? 61/61
 
 ***************Ending Page***************
 

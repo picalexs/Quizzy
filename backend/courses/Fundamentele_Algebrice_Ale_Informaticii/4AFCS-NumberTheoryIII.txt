@@ -1,607 +1,639 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Comnutaﬁonal lmmductiou m Numbev
-Thenty
-
-m m
-
-m1 .1‘ Mm WW Wu
+ALGEBRAIc FOUNDATIONS
+of COMPUTER SCIENCE
+\eciures by Ferucio Laurentiu Tiplea
+Computatlonal Introductlon to Number
+Theory
+Part |||
+Prof.dr. Ferucio Laurentiu Tiplea
+Spring 2022
+Department of Computer Science
+“Alexandru loan Cuza" University of lasi
+|a$i 700506, Romania
+e-mail: feruciortipleaQuaicmo
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Arm-punk Hmnkn
-lehmy Dm- ban: mm: Wiriunm
-MM m m M
+Outline
+Asymptotic notation
+Complexity of the basic arithmetic operations
+Reading and exercise guide
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Asymptotic notatinn
+Asymptotic notation
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-mwwc mm
-(MM N mamm" dahnuhﬂnuwnwxu
-Um Z <1 NJ \L!<>R'IGM>NMW:~7HW£“WM
-m.) Z (1 MHahmuw“Hwy-1mm“Hm
-em = (1 N<LH3nnsl']43r.sN)l\/n>w)
-mm < m) ~ bmm
-um r w N rIAN“I'Hvk<mlv";wlunl:mm}
-minim“!
-um! hmqumem Fannmbexﬂll
-W/[n):><(:(n)\ M/Exm
-04m01mmury erwewmnlmhlmwamr
-mmmumm
-~..U..m-—_ .,..
+Asymptotic notation
+Given g : N —> R+ a function, define the following sets:
+(9(g) I {f : N % R+l(3c G RiXHno E N)(Vn Z n0)(f(n) g cg(n))}
+Q(g) I {f : N —> R+l(3c G Riﬂﬁno 6 N)(Vn Z n0)(cg(n) g f(n))}
+@(g) I {f : N —> R+l(3c1,c2 E RiXHnO G N)(Vn Z no)
+(C1g(") é f(") é C21500)}
+0(g) I {f : N —> R+l(Vc G RiXHnO E N)(Vn Z n0)(f(n) g cg(n))}
+Definition 1
+Let ﬁg : N—> R+ andX G {O,Q,@,o}. f issaid to beX ofg,
+denoted f(n) I X(g(n)), iff G X(g).
+(9 (“big O") Q (“big Q") 9 (“big 9",) and o (“little o") are order of
+magnitude symbols.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 2 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-llyliuwllc mile-l Imnllﬂ
+Asymptotic notation illustrated
+02g(“l
+can) f(n) f(n
+1 f(n) 1 cg(n) Clglﬂl
+‘lo "0 "u
+O(g(n)) 90501)) 6(g(n))
+° f(n) : 0(g("))
+o g(n) is an asymptotic upper bound for f(n)
+o f(n) is no more than g(n)
+o used to state the complexity of a worst case analysis;
+o f(n) : Q(g(n)) — similar interpretation;
+o f(n) I o(g(n)) — f(n) is less than g(n) (the difference between (9
+and o is analogous to the difference between g and <).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 3/34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-an: mm:- D1 .Wm mun".
-k ‘5 . m mu. M W“ m m .M“.,m WM.»
-Mn»,- z
-“mm NA‘ Mn
-1 m1 own
-2 mm : own mm z 0mm W rm z own
-a a") Z (‘uh-11mm: rwwv
-‘ my sum) WNW 0mm W m1 mm»
-5 m, Z QM] “m”, Z awn M
-u m1: WWW imﬂl “m z armmm mm
-5 MM m“ n, < w ,m matﬂn] ; n 1M,” 2 w, m
-m) z 64m» Mm.“ FH Z a
+Basic properties of asymptotic notation
+It is a good exercise for you to prove the following proposition.
+Proposition 2
+Let ﬁg, h, k : N I R+. Then:
+2. if f(n) I @(g(n)) and g(n) I (9(h(n)), then f(n) I @(h(n)),'
+3- f(") I @(g(")) WM") I 90%));
+4- f(") I e(is'(")) iff f(") I @(g(")) and f(") I 9(g("));
+5. if f(n) : O(h(n)) and g(n) : (9(k(n)), then
+(f - g)(") I @(h(")/<(")) and (f + g)(") I @(maX{h(")u k(")});
+6. if there exists no € N such that g(n) yé 0 for any n Z no, then
+f(n) z o(g(n)) ifr/imnw% z o.
+Prof.dr. F.L. Wee. um. R0 Algebraic Foundations of Cenneueen Science - Cennuueennnn Introduction to Number Theory spnng 2022 4 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-uml Inquilhlu
-5m “W mu.“ 1,. m m.’
-. [Slwhngs mm
-‘5%) mum-“mw ,‘a.
-fanny")!
-. k, W m‘ wmlann , w ‘ w» m o 1M‘ < g
-l<|nlnn<lnn1c¢i“""“““">< M < A: < w < w < A" < it‘
-[um WWW MM, .w n 3 m Mme n, \5smlzb\e(hnse"]
-mumm- —_ .,..
+Useful inequalities
+Some useful inequalities are in order:
+o (Stirling's formula)
+n n n n
+\/21rn (i) e12n1+1 g n! g \/27rn (i) e57
+e e
+for any n Z 1;
+0 for any real constants e and c such that O < e < 1 < c,
+1 < lnlnn < Inn < eV(/””)(/”l””) < n6 < nc < n/”” < c” < n” < cc”
+(each inequality holds for all n 2 no, where no is suitable chosen).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 5/34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Alymglmlc nnullnn: lump“:
-sum. 1
-PM W WW. PNDszs
-1 "((-1 Z a: *avw H.» M WWW‘ “ZZZ k W. Z,‘
-MW“ znd m) 5 n Va W . Z N m my Z em‘)
-2 WMZQW'.) Vcrzhyreﬂzonslzmz >1
-1 WZum (umym\mmbu»sazmmw<v\l
-¢ w‘n:om iulnynnumnumhuh >1
-5 n‘ Z m2") ind n- Z M»
-5 mm Z 9mm
-1w “A.mmunpuwywmmmrm
-m
-1m Z ewhw MU
-x o" Z 0m
-m “mm- —_ .,..
+Asymptotic notation: examples
+Example 3
+Prove the following properties:
+1. If f(x) I ao + alx + - - - + akxk is a polynomial of degree k with real
+coefficients and f(x) Z 0 for any x G N, then f(n) : @(nk).
+2. logC n I 9(log n), for any real constant c > 1.
+3. logn : (9(n6), for any real number 6 such that O < 6 < 1.
+4. log,‘ n I @(n), for any natural number k Z 1.
+5. n! I Q(2”) and n! : 0(n”).
+6. /og(n!) I 9(n/og n).
+7. If f: N —> R+ satisﬁes f(n) Z 1 for any n Z no and some no G N,
+then
+f(n) I 9(2l/ng f(n)l)_
+8. 4” 7£ (9(2”).
+Prof.dr. F.L. Tiplea, UAIC. R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 6/34
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-Dwmbm unu- zliudlmulnm
-
-mAmmum/mmmmdmmw1.. om
-
-n!) “a m1 N ~17 nmwm
-
-1 I*A:le\l>¢ﬂ
-
-z A\5 (HIM/41w)
-
-1 M:U gut/n memmm/WM WWW"
-
-wme {A "mead w VA
-
-A AH:VIV<A km
-
-s 0m ukmw
-~..me-—- ~-
+Operations with classes of functions
+Let A and B be sets of functions as those defined above (e.g., (9(g)
+etc), and let f : N —> 11h. Then, we write
+1. f+A: {f+g|g€A};
+2. A+B:{f+g|f€A,g€B};
+3. fA : {f - g|g G A}. If f is the constant c function, then we will
+write CA instead of fA;
+4. AB : {fgif e A, g e B};
+5- @(A) I UM 0m-
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Compute, Science - Computational Introduction m Number Theory spring 2022 1 / 34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-auc my“
-(um/amen A Z I! sums rm A 1 u
-k w é M mm b w“ w WW m Mm‘ WWW
-Prunmwm ~
-ml.‘ NQI‘ m (e1, W
-1 Own + 0mm Z 0m»; + ‘(~11-
-1 {own :vmm
-3 mommy : awn
-¢ omnnmmn : ummm)
-s vmmw: Z “norm”
-mum‘- —- ~-
+Basic properties
+Convention: A I B stands for A Q Z3’.
+It is a good exercise for you to prove the following proposition.
+Proposition 4
+Let ﬁg : N —> R+ and c G 1R+. Then:
+1- (90%)) + @(g(n)) I @(f(n) + g("));
+2. cO(f(n)) : O(f(n));
+3- 0mm)» z we»;
+4- @(f("))@(g(n)) I @(f(")g("));
+5- @(f(")g(n)) : f(")(9(g("))-
+Prof.dr. F.L. Wee. um, R0 Algebraic Foundations er Cemnnnen Science - Computational Introduction to Number Theory Spring 2022 s / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Complexity 01 the basic
-avikhmckir, wcmim-s
+Complexity of the basic
+arithmetic operations
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-pw,m||' my. h‘. law-n
-ngmvmuﬂl m W \mrcm w» M m" m1 mm] ‘S Km‘
-I." WWW (mum “cum [WWW 1w:
-Tm m hm MW M,‘ W“ m, W mm zmhmn‘:
-1 um mm“. llmvemly anuhmMH
-my //vw <4: ‘mmm Mm.“ dun/mm
-2 um» WM“ Emanux‘ mm
-hm: //Pin with “erqu m
-1 Mn mm Vuvk WW1»
-hm; //vw :hmlv WM
-‘ 6MP um m" W mm "WWW Mn
-hm: vahh “1/
-MW ‘5 a M. Mm hhmy MM a! “mm m (m
-“mm a! ‘m
-mum‘- —_ .,..
+Programming with large integers
+Programming with large integers (with more than 100 digits) is crucial
+for cryptography, computer security, computational algebra.
+There have been developed several libraries for large integer arithmetic:
+1. LlDlA (Darmstadt University of Technology)
+http : //WWW . cdc . informatik . tu-darmstadt . de/TI/LiDIA/
+2. PARl/GP (Université Bordeaux l, France)
+http : //pari .math . u-bordeaux . fr/
+3. NTL (New York University)
+http://www.shoup.net/ntl/
+4. GlVlP (faster than any other multi-precision library)
+http://gmplib.org/
+MpNT is a large integer library developed at “Alexandru loan Cuza"
+University of lasi.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 9/34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-am mun“ of law-n
-m $2 z be m warm“ base an’ WWW We“, ,< n;
-:1sz mm Mthl b“. a u . a“ a m"
-Any m "elm: MU m" b: “mug m , M m in
-whenn:a,< 1M1H05r<hvandah|>0 Thnhiwvenwr
-
-4M my
-‘5 HM m mysemzlmn m m m ,1 m Mm .‘ m GM m:
-mum i m m ﬂ m k ‘5m W». n1 m mwsemnm k ‘5 m
-mm w m m n gushes
-\a\.:\\ma\71
-
-‘(mm mm: a, 11mm: ‘1,: m. ,1
-
-mum‘- —- m-
+Base representation of integers
+Let B Z 2 be an integer called base. Each non-negative integer a < B is
+called a digit of the base ,6’ or a base 5 digit.
+Any non-negative integer a can be represented in a given base 5 as:
+_ k—1
+3-3kilﬁ +--~+815+907
+where O g a,- < 5 for all O g i < k, and aksl > O. The k-ary vector
+(3ki1,...780)5
+is called the representation of a in base 5, the numbers a,- are called the
+digits of a in base B, and k is the length of the representation. k is also
+denoted by |a|5 and it satisfies
+lalﬂ I llogﬂ al + 1
+(convention: logﬂ O I O). Therefore, IQI/g : (9(log a).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 10/34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-TIM MM
-rwmmwmq .1, 11mm Mu My; be may“ m m.“
-Wm", ‘I hpnl m “WK Dmmw mi mt
-. mm mum
-. m mm 5mm" m mmnphznwn AW m
-WWW {ﬂaw-061m w i WW MM, m,‘ and é
-- MM m 24m! Mm b1 . a.“ m. “5m znnmslxoh
-MM m . Mme‘)
-mm 5
-m 5mm" m1 Wmiﬂvemnms It m Wm.‘ m mm";
-m uzchnm Mkupinlmvs mm. m mwmm a."
-WNW w wry m M», bk w“
-mum“ —- m-
+Time complexity
+Time complexity of algorithms will always be measured in digit
+operations, i.e., logical or arithmetic operations 0n digits. These
+operations are:
+
+o digit comparison;
+
+0 digit addition, subtraction, and multiplication. Any of these
+operations takes two digits and a carry and produces a digit and a
+carry;
+
+o division of a 2-digit number by a digit (the result consists of a
+quotient and a remainder).
+
+Remark 5
+The shifting and copying operations are not considered digit operations.
+ln practice, these operations are fast in comparison with digit
+operations, so they can safely be ignored.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 11 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-TIM mpldly: mm“ ml IllW-ﬂln'l
-Asume v.“ mm “mm mum W kﬂﬂh k m mmmm m
-a“ {
-‘ .MW m raw om
-2 suhlvxlmnmh MM om
-mum‘- —- m-
+Time complexity: addition and subtraction
+Assume that both operands have the same length k of representation in
+base 5:
+l. addition with carry: @(k)
+2. subtraction with borrow: (9(k)
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 12 / 34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-TIM MM: mmldlunhn
-WM. mm mm. W m» k “WWW m m. 1
-1 Szmmbnnk mun-Wm ow)
-h ‘s ma M (um-~- Mm‘ Wm um M “Wham
-‘n m W 1h: “mm mm WM b, mm m1 M
-m“ ,1’ 11m MM . W WM ‘m WWW M
-mm mmmmw
-z WWW-Wm" (mhul
-k vcducnxhc mmhm" gym k W mm .v own
-WA a.“ MMM by WW‘, WM M mm m
-m We, can;
-@an “1.,ka ‘WW
-3 m W WWW w W1
-u”, I». m MW Wm 1m ‘. MM w M m
-m5 M mun mm mm
-~“WM-- —- .,.
+Time complexity: multiplication
+Assume the operands have the same length k of representation in base [3:
+1. Schoolbook multiplication: (9(k2)
+lt is based on computing partial sums after each row multiplication.
+In this way, the intermediate numbers obtained by addition do not
+exceed 62 — 1 and, therefore, a basic procedure for multiplication 0f
+two base ﬁ digits can be used;
+2. Karatsuba multiplication: O(k'°g3)
+lt reduces the multiplication of two k-digit numbers to (9(kl°g3)
+single-digit multiplications by recursively splitting the operands into
+two smaller parts.
+Generalization: Toom-Cook algorithm;
+3. FFT based multiplication: (9(k log k)
+Uses the Fast Fourier Transform and it is efficient for very large
+inputs (e.g., lOOO-digit inputs).
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 13/34
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:17**************
-TIM mm: amal-
-AW v.“ m M." m» ‘5 7k m m mm \ennh ‘5 M
-1 5%»ka Wm 0011
-m MM m m W mo m W" m n * n m
-my by a ~ m "new m m Dman 5 “llusi ‘mm
-WW.“
-2 qumAw-nn Onvlhhlq“)
-k ‘5 hum on . sum-v .1“ n. xhlloVKlmsuha 5 mmvvhunon
-“mm
-mum‘- —- w-
+Time complexity: division
+Assume that the dividend length is 2k and the divisor length is k:
+1. Schoolbook Division: (9(k2)
+The method uses, as a basic step, the division of a (k + 1)-digit
+integer by a k-digit integer. The main problem is to guess efficiently
+the quotient;
+2. Recursive division: (9(klog3 —l— k log k)
+lt is based on a similar idea to that of Karatsuba's multiplication
+algorithm.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 14/34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-TIM mm: ecu
-1 mm. ahamhm on». an" b»
-2 eryldﬂldmhm quum
-z Lehmusw Swlnsnn's ﬂlnmhm ow, m»
-wth munﬁs m W» ﬂ M ~
-A 50mm“; “mm (In lulu!) (‘[Aﬂqﬂuaﬂqk]
-Mme Mum m W» .l "m k Ymg “mm E bud M
-m “WW m ‘l WW‘ M my w mvuis
-mm mm “I.” “mm; “WNW” M 1,, m
-Mesbnndwi m ﬁgonlhm
-~..LmM-—_ .,..
+Time complexity: GCD
+1. Euclidean algorithm: 0((log a)(|og b))
+2. Binary gcd algorithm: (9((log ab)2).
+3. Lehmer's or Sorenson's algorithm: (9(k2/ log k)
+Where operands have length at most k.
+4. Schonhage's algorithm (the fastest): O(k(log k)2 log log k)
+where operands have length at most k. This algorithm is based on
+FFT arithmetic and it is efficient for very large inputs.
+Extended version of gcd algorithms: same complexity as for the
+corresponding gcd algorithm.
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 15 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-TIM mm: ml- "ml-nu:
-Wm: m gm .5 “my “M mudmarznmmm m m mndmu
-upcvawnﬂwddwwn “MW “Wm-w Ummmnm
-mm ha.“ m m ﬁnavzlmm M Mm ,h. . maﬂula new"
-Moduhv Iddmnn m1 suhlumm m mm mnwememed nkml m
-anew-l m mm. "m;
-1 n u \ 1m
-2 \l;:h_thﬂ>arA<m “A
-1 \|i\bxhenitm’b<m
-rm In 1 b: gm
-mm,“ W MWWMM “mm/mm“ n (my
-Mme k A [he Wm n4 m
-mum‘- —- m-
+Time complexity: modular arithmetic
+Arithmetic in Zm is usually called modular arithmetic. The basic modular
+operations (addition, subtraction, multiplication, exponentiation) are
+obtained from the basic operations on integers plus a modular reduction.
+Modular addition and subtraction can be easily implemented taking into
+account the following remarks:
+1. a + b < 2m,
+2. ifaZb, then0§a—b<m, and
+3. ifa<bthena+mib<m,
+for all a, b G Zm.
+Therefore, the complexity of modular addition/subtraction is (9(k),
+where k is the length of m.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 16/34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-n... mm: modul- maul:
-WM mm Wm m m. M mm, Wham m
-“mm.” M Mm Wmmmmwm Mm
-M m mm. h, mm, M," mm, M
-1 Wm Mm
-1 5m.‘ Mm
-3 Mam-W WW
-—mu——
-~..mm-—-
+Time complexity: modular arithmetic
+Things are more involved in case of modular multiplication or
+exponentiation, where efficient modular reduction techniques are required.
+Three main techniques for modular reduction are mostly used:
+1. reduction by division
+2. Barrett reduction
+3. Montgomery reduction
+—_——
+W/ml
+Multiplication k(k + 4) k(k + 1) 2K(k) + @(k log k)
+Figure 1: Complexity of multiplication under the three reduction methods
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 17/34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-TIM mm! ml- "ml-nu:
-Mnﬂuhvewwentmnnwﬂwrm MWM- madm whevszZ
-“aw Hm. n
-
-1 n. .m MM m! 0me71
-(mm r m1 m w MW“. s r 1 mmwlww mm -
-
-2 WNW w may." ow“ mm?»
-WNW < m m 1 (m . q h q m», m
-
-f m NZ‘ AH" ‘>2 m» '1; MAM»
-m Mm n4 mmhmm .S
-mum“ H, < 2m]
-m“ . § w WW M WWW-W ﬂwwhmx
-mum‘- —_ .,..
+Time complexity: modular arithmetic
+Modular exponentiation problem: Compute ae mod m, where m Z 2,
+aEZm,ande>0.
+1. The naive method: (9(e - (log m)2)
+Compute ae mod m by performing e i 1 multiplications modulo m.
+2. Exponentiation by squaring: (9(l0ge - (log m)2)
+Decompose e in base 2, (ek_1, ek_2, . . .,e1, e0)2, and
+e i ekil 2 eke; 2 e1 2 e0
+a modm_(---((a )m®ma )m"'a )m®ma
+The number of multiplications is
+(k-1)+ek_2+---+e0<2|e|2
+There is a large variety of exponentiation algorithms.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 18/34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-11m mpldly: Ml. lmnmk
-4Algumhm 1. mmmm w Wm
-\Ilwl1m22 “a” ande>ﬂ
-mm, Jr mm
-‘ w»
-1 y 7=
-, ‘ Z‘
-. Mme, \ m,
-. ' :m z
-. -| ~11 W"
-‘ L , Z‘ y mndm
-. y :y ymm
-. V 1 '
-.0 . Z. y M m
-.0.me- —_ .,..
+Time complexity: modular arithmetic
+Algorithm 1: Exponentiation by Squaring
+input :mZZ, aEZm,ande>O;
+output: z I ae mod m;
+
+1 begin
+2 y :: a;
+3 z :: 1;
+4 while e > 1 do
+5 f :: e div 2;
+6 if e > 2f then
+7 Lz::z-ymodm;
+8 y 1: y - y mod m;
+9 e :: f
+10 z 1: z - y mod m
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 19 / 34
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-TIM MM: mm lymbhl
-a“ my n > 1 m wriw i > u
-1 m rm "Mind wwwnmm»
-2 Harv] m mum-w, “mm ﬂlnmhm
-um" um»! \ugluln!
-F, Wm mm m. m m ﬁlmy-i ﬁlamhn“ M m he
-nmms M I“ vakd [mum WWW I“ 1mm mm
-mum‘- —- m-
+Time complexity: Jacobi symbol
+Odd integer n > 1 and integer a > O:
+1. The naive method: (9((log a)(l0g n))
+2. Using the asymptotically fastest gcd algorithm:
+@(log n - (log n)2 - log log n)
+For practical input sizes, the most efficient algorithms seem to be
+variants of the binary gcd (adapted to compute the Jacobi symbol).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 20 / 34
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-Tlm‘ mm: lmﬂutlm
-annu = MM mm n MM Mm m MM mm
-an>l§mmmn:m
-MM , ‘mm mlAlu ‘g mm m he . h"! MM (m m
-ouvhﬂuvlsahr m m4 ,1.“ 2M Wm,‘ 9mm"; “mm
-1 mm zﬁlhwmlqu mlmmn M 2m; MM
-Mm: M." Eden‘ “my r." WWW Seumly m wk
-W" m \m m: m 5m. dim “mm-and m hm Dim m
-QWM “ISSywsan a Wk“ m om,“ cw
-2 wskmz .212 m Wm ".5 framed on on 12 2w; m1 w
-muk “m my“ o" a Wm». z z cm m0 ovum
-WM», m 2 cs RAM ‘W. Wm M "m wbw! mu
-M
-w M m :mu w Mm MW M Mm.
-.....U..~- —- w-
+Time complexity: factorization
+Factoring a positive integer n means finding two positive integers
+a, b > l such that n I ab.
+Factoring a composite integer is believed to be a hard problem (due to
+our failure so far to find a fast and practical factoring algorithm):
+
+1. RSA-200, a 663 bit integer, was factored on May 9, 2005, by a team
+of the German Federal Agency for Information Security. The work
+began in late 2003. The sieving effort is estimated to have taken the
+equivalent of 55 years on a single 2.2 GHz Opteron CPU.
+
+2. RSA-768, a 232 digit number, was factored on Dec 12, 2009, and it
+took almost two years. On a single core 2.2 GHz AMD Opteron
+processor with 2 GB RAM, sieving would have taken about 1500
+years.
+
+For more info, check RSA Factoring Challenge on Wikipedia.
+Profodro F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 21 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-TIM comm! (mum
-1 Panama-an Wma‘ Mm mum M» um WM [mm
-WW "mm, W.)
-2 M“, mm W owﬂ'wmv
-1 Mm“, MWWWMM
-~..u...m.—-- .,.
+Time complexity: factorization
+1. Factorization by trial division: requires 7r(\/5) trial divisions (without
+counting primality testing)
+2. Number Field Sieve: (9(e(1‘923+°(1))v3 (1” mKin/“'02)
+3. Quadratic Sieve: (9(e(1+°(1))v (1” "1W" I” m))
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 22 / 34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Tlmq MM: mun,
-“WWW .mm mm WWW m,"-
-1 m wmmmvm MWMW w h WW
-‘a, w Mm“ M w m Mm
-2 m 1915 we mmhw Mm ‘S m "PM V NP
-1 My 1976 mm, m M QM v, WWW Wm.
-W. MM mm EMMMW NywmesvxkERHY
-A Snlmiv m1 5mm» 1917 PW “mm OWE/O
-5 Wm MW “mm MHWW'W-m
-a Mm‘ Kan‘ we,” 2m aww
-1 kzmu 2nd anzvam 2W: 50w“)
-m0 mommy-M1 dill/O) In: 1W omnwrmn
-thabmsu: “mm .m. 5m m. m mm’
-MM...“- —- .,.
+Time complexity: primality
+Attempts t0 find efficient algorithm for primality testing:
+1. The simplest primality test: check for factors g ﬁ. It is very slow
+for large integers that have large prime factors;
+2. Pratt, 1975: the primality problem is in NPO co — NP;
+3. Miller, 1976: primality can be solved by deterministic polynomial
+time algorithms assuming Extended Riemann Hypothesis (ERH);
+4. Solovay and Strassen, 1977: PPT algorithm (’)(|0g3 n);
+5. Adleman, Pomerance, and Rumely: (log n)o('°g'°g'°g") time;
+6. Agraval, Kayal, and Saxena, 2002: ('N)(log7'5 n);
+7. Lenstra and Pomerance, 2003: (2(Iog6 n).
+soft-O notation f(n) I @(g(n)): Elk s.t. f(n) I O(g(n) Iogk g(n))
+Probabilistic primality testing — still the most efficient!
+Prof.dr. F.L. Tiplea, um. R0 Algebraic Foundations of Compute, Science - Computational Introduction m Number Theory spring 2022 23 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-ml. mphﬂly: mhahlllnk Funny m1";
-rm‘ nnmhly m ‘S hm M m (WNW
-m n r . 5| mod n
-1m W We u m Mm 1 W ml [a M Z‘
-mm“ u
-m n > 1 beznead :wvwmue MUM“ 1 z K n
-1 aunt/MIkrmatmmésfwnrfwﬂn =1
-2 imwmkmnmmmn ,1
-mm m add Mm; mlqevs A m m: .u ,7 z; m Femm m
-n.“ m uHeﬂ ("mm numbers
-m “mm- —_ w.
+Time complexity: probabilistic primality testing
+Fermat primality test is based on the congruence
+F(n,a): ‘3”’1 E 1 mod n
+for any prime n and integer a such that (a7 n) I 1.
+Definition 6
+Let n > 2 be an odd composite integer and 1 g a < n.
+1. a is cal/ed a Fermat Witness for n ifﬁF(n7 a).
+2. a is cal/ed a Fermat liar for n if F(n, a).
+There are odd composite integers n such that all a G Z’; are Fermat liars.
+These are called Carmichael numbers.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 24 / 34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-ml. mphﬂly: mhahlllnk Funny m1";
-—mmm z. Rum! mm m
-myul “>29.”
-
-MM- " “WW m ‘n ‘s pm
-
-\bqin
-
-1 (Museundnmy) him
-
-, .v (a "1 > 1 m.»
-
-‘ \ “(mm
-
-, .1‘:
-
-. ‘ l!1"§hmanmu|
-
-, \ "mmpm
-
-- d»
-
-. L "Wm
-
-(“Mm Uwognlll
-M.Lm~K-—_ .,..
+Time complexity: probabilistic primality testing
+Algorithm 2: Fermat primality test
+input : n > 2 odd;
+output: “n is composite" or “n is prime";
+1 begin
+2 choose randomly a, 1 < a < n;
+3 if (a7 n) > 1 then
+4 i “n is composite"
+5 else
+6 if a"_1 sé 1 mod n then
+7 i “n is composite"
+a else
+9 L “n is prime"
+Complexity: (9((Iog n)3)
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 25 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-TIM mpldly: ‘nub-HIM!‘ P'lmllly unln‘
-
-cm 2 mm mhqrv n 3 z dame
-
-a: (In < ,7 ,1 A m m
-
-n...“ 1
-
-Lu "2 2 a. .n m mmwmq m- um A E z; “a, m."
-
-,4“ a E z; w m. “my, W 5 w , we,“ mm, Ml;
-
-Mm Dumb-“m ‘W1 MW WNW whim \zsuhzn 1'7
-.0.me- —- m-
+Time complexity: probabilistic primality testing
+Given a positive integer n Z 2, denote
+F” :{a|1§ a < n /\ F(n,a)}.
+Theorem 7
+Let n Z 2 be an odd composite integer. Then, F” Q Z: and, if there
+exists a € Z: such that ﬁF(n7 a), then F” is a proper subgroup of ZZ.
+Fermat primality test gives a wrong answer with probability less than 1/2.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 26 / 34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-n... mphﬂly: pinhahllhk |I||I|Illy I...“
-wwwm mm, m. ‘S M w m WWW
-an» (2)1'-‘m¢dn:l
-
-munympm. m “WWW 1i 0:1
-
-m...“-
-
-Lnn~2t><anaadmmpmmmqevandlga<n
-
-1 “(Mum WNW” mi»
-
-2 , “ rm," MM m n mm,
-1M m ".1 w.‘ Wm mm mm Emu WM rm W
+Time complexity: probabilistic primality testing
+Solovay-Strassen primality test is based on the congruence
+3 "*1
+E(n,a): (e) ~aT mod n I 1
+n
+for any odd prime n and integer a such that (a, n) : 1.
+Definition 8
+Let n > 2 be an odd composite integer and 1 g a < n.
+l. a is cal/ed an Euler witness for n if—\E(n7 a).
+2. a is cal/ed an Euler liar for n if E(n7 a).
+There are no odd composite integers n without Euler Witnesses (in other
+words, there are no Carmichael numbers in this case).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 27 / 34
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
-n". mphﬂly: mhahlllnk pun-1y I...“
-—mm... 1. Sway SUM Mam m
-M- “>2”
-
-MM. v. WWW m ‘n ‘s pm
-‘mi’.
-
-1 (Mummy, l\a<n
-
-, "(5):nmm
-
-‘ \ WWW
-
-. .| m :a'.‘ Mann».
-
-. w
-
-, L WNW“.
-cw“ vwmm
+Time complexity: probabilistic primality testing
+Algorithm 3: Solovay-Strassen primality test
+input : n > 2 odd;
+output: “n is composite" or “n is prime";
+1 begin
+2 choose randomly a, 1 < a < n;
+. a _
+3 |f (F) _ O then
+4 i “n is composite"
+5 else
+6 if (2) E a? mod n then
+7 i “n is prime"
+8 else
+9 L “n is composite"
+Complexity: (9((Iog n)3)
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 28 / 34
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:32**************
-um. mphﬂly: mb-hlllnk Funny ml";
-CW 2 MM W," n 3 z dame
-L: (m < =7 H A an In
-n...“ l
-lzrn21bcanvddwmwmuqu< um
-1 [A if"
-2 [A \savwvevsubﬂouhmlf-
-“my 5mm" WWW W M . W. Wm m» MM“ ‘m
-1m m
-mumm- —- m-
+Time complexity: probabilistic primality testing
+
+Given a positive integer n Z 2, denote
+
+5,, I {a|1 g a < n A E(n,a)}.
+Theorem 9
+Let n Z 2 be an odd composite integer. Then,
+2. 6,, is a proper subgroup of Zj.
+
+Solovay-Strassen primality test gives a wrong answer with probability less
+
+than 1/2.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 29 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Tlmq Mummy: mmnm plmllly Imln'
-MHev szm [mm-mm ‘5 mm an m wuwg WW
-m.“- m
-mnimﬂwm.” ":2'171 "melllendruodd
-m" n ribnmeﬂlnduﬂwl
-
-MW; ,‘Emm 1 ‘IMMEAWO
-
-‘My mm ; m ml x" )1 :1
-may...“ n
-m"“kimMmmmmwim1,“
-1 aucallzdzrvMUev nun-awn.” w W ,1
-2 I .s 1.11/94» Mum m" 1m /m n m” .,
+Time complexity: probabilistic primality testing
+Miller-Rabin primality test is based on the following theorem:
+Theorem 10
+Let n Z 2 be an odd integer, n : 2st + 1, Where s, t Z 1 and t is odd.
+Then, n is prime if and only if
+M(n7 a) : at E 1 mod n \/ (Eli < s)(azit E —1 mod n),
+for any integer a such that (n, a) I 1.
+Definition 11
+Let n > 2 be an odd composite integer and 1 g a < n.
+l. a is cal/ed an Miller-Rabin Witness for n if—\M(n7 a).
+2. a is cal/ed an Miller-Rabin liar for n if l\/I(n7 a).
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 30/34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-11m mm» wub-hllhﬂz pun-my unln‘
-—Amm ‘. Mmev Rm Wm." ml
-"A “>29.”
-MM- " “WW m ‘n ‘s m
-\bqin
-I mm“ :TM when mo“
-, (mi mm 2 1< i V n
-‘ a! (g "1’ m".
-, \ “MM:
-. .1“
-1 yzmm
-- ilvtﬂn 11".," "WW
-. "[ng my" WWW"
-u ‘L
-.1 L "WWW
-~..LW“—_ ..,..
+Time complexity: probabilistic primality testing
+Algorithm 4: Miller-Rabin primality test
+input : n > 2 odd;
+output: “n is composite" or “n is prime";
+1 begin
+2 decompose n z: 25t + l, where t is odd;
+3 choose randomly a, 1 < a < n;
+4 if (a7 n) > 1 then
+5 i “n is composite"
+6 else
+7 r :: at mod n;
+8 if r € {17 n — 1} then “n is prime";
+9 if (31 g i g s i 1)(r2i 2 *1 mod n) then
+10 i “n is prime"
+11 else
+12 L “n is composite"
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science - Computational Introduction to Number Theory Spring 2022 31 / 34
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
-n... “My mm...‘ Pm...“ u...“
-MHLUI'I- n ' MOYIH
-n..." n
-M S L
+Time complexity: probabilistic primality testing
+
+Given a positive integer n Z 2, denote
+
+Mn I {a|1 g a < n A M(n,a)}.
+Theorem 12
+Let n Z 2 be an odd composite integer. Then, Mn Q .7” and
+n i l
+
+Miller-Rabin primality test gives a wrong answer with probability at most
+
+1/4.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 32 / 34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:36**************
-Reading “a QxeKiSE guide
+Reading and exercise guide
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:37**************
-Hull" m ulmlll mm-
-k .5 mm mmm mm W an In m WM Mm m vrd W"
-m m
-(MA Mm
-1 PM 151mm‘: mm" ma m5 mm 1M Mm m
-2 m m ‘mm chm W mm.‘ “mm mad I“ QM
-revnrl m
-mumm- —- ~-
+Reading and exercise guide
+lt is highly recommended that you do all the exercises marked in red from
+the slides.
+Course readings:
+1. For asymptotic notation, read pages 196-212 from textbook [1];
+2. For the complexity of the basic arithmetic operations read the entire
+report [2].
+Prof_dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 33/34
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:38**************
-Reference!
-m MWMW“ WWWMMMM, M.“ hm
-m I m.‘ W m M." E 5...”. n Y... g m“ . M ....m m.‘
-MW, mm...‘ i...“ uy mm.‘ m 1km .u t..-
-.....U..~‘- —- -,.
+References
+[1] Ferucio Laurentiu Tiplea. Algebraic Foundations of Computer Science. “Alexandru loan Cuza"
+University Publishing House, lasi, Romania, second edition, 2021.
+[2] C. Hritcu l. Goriac RM. Gordan E. Erbiceanu F.L. Tiplea, S. lftene. A multi-precision number
+theory package. number-theoretic algorithms (I). Technical report, “Alexandru loan Cuza"
+University of lasi, 2003.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 34 / 34
 
 ***************Ending Page***************
 

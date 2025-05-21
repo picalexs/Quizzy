@@ -6,310 +6,317 @@ IV.5. Gestiunea memoriei
 
 ***************Beginning Page***************
 ***************page number:2**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Gestlunea memonel
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Getstlunea m6m0r1€1
 Functii
-' alocarea zonelor de memories cétre aplicapii
-' prevenirea interferengelor intre aplicatii
-- detectarea $i oprirea acceselor incorecte
-—1\7
+' alocarea zonﬁlor dﬁ m6m0ri6 cétm aplicagii
+' prevﬁnimaintﬁrf6r€n§610rintre aplicayii
+' detectama $i oprirea acceserlor incorecte
+117
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Problema fundamentalé
-- mai multe aplicatii a zone dc memorie
-disjuncte
-' ﬁecare aplicapie —> anumite zone dc
-memorie; care sunt aceste zone?
-i depind dc ocuparea memoriei la ace] moment
-i nu pot ﬁ cunoscute la compilare
-—1\x
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Pmblema fundamerntala
+' mai multe aplicatii —> zone de mamori€
+disjunctﬁ
+- ﬁ6car6 aplica§i6 —> anumite zonﬁ d6
+mamorie; care sunt acestﬁ zonﬁ?
+— depind de ocuparea memoriei 1a acﬁl momﬁnt
+— nu pot ﬁ cunoscute 1a compilam
+118
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Arhilectun calcullloarelor 5i sineme a: 0pm“ - pan“ a ll-a
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
 Solutla
 
-~ doué tipuri de adrese
+' doué tipuri d6 adr6s6
 
-i virtuale — aplicatia crede 051 le acceseazz'l
+— virtuala - aplicayia cmda cé 16 acceseazé
 
-i ﬁzice - sunl accesate in realitate
-- corespondenta intre adresele virtuale $i cele
+— ﬁzice - sunt accesate in raalitata
+' corespondenta intre adrﬁsﬁlﬁ virtualﬁ $i 0616
 
-ﬁzice — gestionaté de sistemul de operare
-—1\9
+ﬁzice - gestionaté de sistamul de: opﬁrare
+
+119
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Arhilectllra calcullloarelor 5i sixleme a: 0pm“ - pine: a ll-a
-Adrese v1rtuale $1 ﬁzwe (1)
-Memona
-DZ.“ 0
-PA "a am 1 m‘
-mun I’! 0L1 Mn I
-Adm» Hmmle )nhese llzlw Ailxexe Kn flnle
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Mia-1110110
+ﬂzicn
+5000
+P10010111 1 0000
+3000 P10010111 l
+I 1m -
+0 0 - 0
+Ach'ese 011111010 Aches»: ﬁzice Adrese 101111010
+120
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Adrese virtuale §i ﬁzice (2)
-Gestionarea adreselor ﬁzice $i virtuale
-~ 2 metode diferite
-i segmentare
-i paginare
-- pot ﬁ folosite 5i impreuné
-- componentﬁ dsdicati a procesorului - MMU
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Adrese virtuale $i ﬁzice (2)
+
+Gestionarea adreselor ﬁzice $i Viftll211€
+- 2 metode diferite
+
+— segmentare
+
+— paginare
+' pot ﬁ folosite $i impreuné
+' component’; dedicaté a procesorului - MMU
+
 (Memory Management Unit)
+—121
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-IV.5. 1 . Segmentarea
+IV.5.1. Segmentarea
 memoriei
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Principiul de bazé (1)
-- segment - zoné continué dc memorie
-~ conﬁne informatii de acelasi tip (cod, date
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Principiul d6 bazéi (1)
+' segmemt - zoné continué de memoriﬁ
+' contina informayii de acﬁlagi tip (cod, datﬁ
 etc.)
 ' vizibil programatorului
-' adresa unei locaﬁi - formaté din 2 pérti
-i adresa de inceput a segmentului
-i deplasamentul in cadrul segmentului (ofﬁvet)
-—m
+' adresa unei locayii - formaté din 2 péryi
+— adresa d6 inceput a segmantului
+— deplasamantul in cadrul segmentului (0]jf9et)
+—123
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Principiul de bazé (2)
-' la ruléri diferite ale programului,
-segmentele incep la adrese diferite
-' efectul asupra adreselor locatiilor
-i adresa de inceput a segmentului lrebuie
-actualizati
-i deplasamentul - nemodiﬁcat
-- problema este rezolvatﬁ numai paqial
-i dorim ca adresa s5 nu ﬁe modiﬁcaté deloc
-m
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Principiul d6 bazéi (2)
+- 1a ruléri diferitﬁ ale: programului,
+segmentﬁle incﬁp la adresﬁ dif6rite
+' ef€ctul asupra admselor locayiilor
+— adresa d6 inceput a segmentului trebuie
+actualizaté
+— deplasamentul - namodiﬁcat
+' problema este rezolvaté numai partial
+— dorim ca adrasa s51 nu ﬁe modiﬁcaté d€loc
+124
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-Arhilectun calcullloarelor 5i sixteme a: 0pm“ - pan“ a ll-a
-Descnpton (1)
-
-' descriptor de segment - structuré de date
-
-pentru gestionarea unui segment
-' informatii retinute
-
-i adresa de inceput
-
-i dimensiunea
-
-i drepturi de acces
-
-— etc.
-—|15
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Descnpton ( 1 )
+' dascriptor d6 sﬁgrmnt - structuré de date
+pantru gestionama unui sagmﬁnt
+' informayii retinute
+— adresa d6 inceput
+— dimﬁnsiunea
+— drepturi de accﬁs
+— 6tc.
+125
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Arhilectlln calcullloarelar 5i 5mm do 0pm“ - pan" a ll-a
-Descriptori (2)
-- descriptorii - plasati intr-un tabel
-~ accesul la un segment - pe baza indicelui in
-tabelul de descriptori (selector)
-- adresa virtualé - 2 componente
-i indicele in tabelul de descriptori
-i deplasamentul in cadrul segmentului
-- adresa ﬁzicﬁ = adresa de inceput a
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Derscriptori (2)
+' descriptorii - plasati intr-un tabél
+- accﬁsul la un s6gm6nt - pe baza indicelui in
+tab6lul de descriptori (s6l6ct0r)
+' adresa virtualé - 2 00mp0n6nt6
+— indicelﬁ in tabelul de dﬁscriptori
+— deplasamentul in cadrul sﬁgmantului
+' adresa ﬁzicé I adresa de: incﬁput a
 segmentului + deplasamentul
-lZﬁ
+126
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
 Descriptori (3)
-' la ruléri diferite ale programului,
-segmentele incep la adrese diferite
-' efectul asupra adreselor locapiilor
-i nici unul
-i trebuie modiﬁcatz'l doar adresa de inceput a
-segmentului in descriptor
-i o singuré data‘) (1a incércarea segmentului in
-memorie)
-i sarcina sistemului de operare
-117
+- 1a ruléri dif6rit6 2116 programului,
+segmentele incﬁp la adresﬁ dif6rit6
+' 6f66tul asupra admselor locatiilor
+— nici unul
+— trebuie modiﬁcaté doar adresa d6 incﬁput a
+segmantului in descriptor
+— 0 singuré daté (la incércarea sﬁgmentului in
+m€m0ri6)
+— sarcina sistemului dﬁ operarﬁ
+—m
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Accesul la memone (1)
-' programul precizeazé adresa vinuali
-' identiﬁcare descriptor segment
-' veriﬁcare drepturi acces
-i drepturi insuﬁciente - generare exceptie
-- veriﬁcare deplasament
-i daci deplasamentul depé$e$te dimensiunea
-segmentului - generare exceptie
-—m;
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Accﬁsul la mermone (1)
+
+- pro gramul precizﬁazé admsa Virtualé
+- id6ntiﬁcar6 dﬁscriptor segment
+' veriﬁcare dmpturi accﬁs
+
+— drepturi insuﬁciante - generate excep§i6
+' veriﬁcare: derplasament
+
+— dacé deplasamentul dep51$e$t6 dimensiunea
+
+segmentului - generarﬁ excepyie
+128
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Accesul la memone (2)
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Accﬁsul la mermone (2)
 
-' dacé s-a produs 0 eroare 1a pa$ii anteriori
+' dacé s-a produs 0 ﬁroam 1a pagii antﬁriori
 
-— rutina de tratare a exceptiei termini programul
-' dacé nu s-a produs nici 0 eroare
+— rutina de tratara a exwptiei terminéi programul
+' dacé nu s-a produs nici 0 6r0are
 
-i calcul adresi ﬁzicﬁ (adresé inceput segment +
+— calcul adreséi ﬁzicé (adraséi inceput segmant +
 
 deplasament)
-i acces 1a adresa calculatﬁ
-—119
+— acces 1a adresa calculaté
+129
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Amman" calcullloarelar 5i 5mm do 0pm“ - pan“ a ll-a
-Exempliﬁcare (l)
-Tabel descriptori (simpliﬁcat)
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Ex6mp1iﬁcar6 (1)
+Tabel d6script0ri (simpliﬁcat)
 
-Indies
+Indiw
 
 0 65000 43000
 
-1 2| I 000 1 5500
+1 21 1000 15 5 00
 
 2 20000 30000
 
 3 155000 49000
 
 4 250000 35000
-—m
+—130
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Arhilectun calcullloarelor 5i sineme a: 0pm“ - pan“ a ll-a
-Exempliﬁcare (2)
-Exemplu l:
-mov byte ptr ds: [eax] , 25
-- ds = 3 —> adresa inceput segment = 155000
-- eax = 27348 < 49000
-i deplasament valid (nu depé$e$te dimensiunea
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Exezmpliﬁcam (2)
+Exemplu 1:
+mov byte ptr ds:[eax],25
+' ds I 3 —> admsa inceput segment I 155000
+' eaX I 27348 < 49000
+— deplasament valid (nu depé$e§te dimensiunea
 segmentului)
-- adresa ﬁzicé: 155000 + 27348 = 182348
+' adrersa ﬁzicé: 155000 + 27348 I 182348
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Arhilectun calcullloarelor 5i sineme a: 0pm“ - pan“ a ll-a
-Exempliﬁcare (3)
-
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Exezmpliﬁcam (3)
 Exemplu 2:
-add dword ptr ss: [ebp] , 4
-' ss I 1 —> adresa inceput segment: 211000
-' ebp: 19370> 15500
-
-i deplasament invalid (depi5este dimensiunea
-
+add dword ptr ss:[ebp],4
+' ss I 1 —> adresa inceput sﬁgmant I 211000
+' ebp :19370 > 15500
+— deplasament invalid (depégﬁgte dimensiunaa
 segmentului)
-
-i eroare —> generare excepgie
-
-—|sz
+— eroare —> generare exceptie
+—132
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Zone llbere $1 ocupate (1)
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Z0n6 11b6r6 $1 ocupam (1)
 Problemé
-~ crearea unui segment nou H plasare in
-memorie
-' este necesaré 0 zoné liberé continué
-suﬁcient dc mare
-- pot exista mai multe asemenea zone - care
-este aleasé?
-—131
+' cmama unui segmant nou —> plasare in
+memoriﬁ
+' este n606sar€1 0 zoné libﬁré continué
+suﬁciant de mam
+' pot exista mai multe asmnenea zone - care
+6ste alﬁasé?
+133
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Zone libere 5i ocupate (2)
-Algoritmi dc plasare in memorie
-- First Fit - prima zoné liberé gésité suﬁcicnt
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Z0n6 11b6r6 $1 ocupam (2)
+Algoritmi d6 plasare in memori6
+- F irst F it - prima zoné liberé gésité suﬁciﬁnt
 de mare
-' Best F it - cea mai micé zoni liberi suﬁcient
+' Best F it - cea mai micé zoné libaré suﬁcient
 de mare
-- Worst Fit - cea mai mare zoné liberé (dacﬁ
-este suﬁcient de mare)
-—m
+' Worst F it - 66a mai mare zoné liberé (dacé
+6ste suﬁcient de mam)
+134
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Amman" calcullloarelar 5i sisteme do 0pm“ - pan“ a ll-a
-Zone llbere $1 ocupate (3)
-/i 7mm hlvele
-J J/ Ii x
--
-Fll H FAI 3:4 FA‘ anhf FII
-SEQURH! lmll
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Z0n6 11b6r6 $1 ocupam (3)
+W Zane hbere i
+—
+Segment 11ml
 135
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Arhilectlln calcullloarelar 5i 5mm do 0pm“ - pan" a ll-a
-Fragmentare (1)
-Fragmentarea externé a memoriei
-' multe zone libere prea mici pentru a ﬁ
-utilizate
-' apare dupi un numér mare de alocéri 5i
-eliberéri de segmente
-' indiferent de algoritmul folosit
-' plasarea unui segment poate egua, chiar
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Fragnmntare: (1 )
+Fragmﬁntarea ext6rné a m6m0ri6i
+- multe zon6 1ib6re pma mici pentru a ﬁ
+utilizat6
+' apare dupé un numér mare d6 alocéri $i
+elib6r€1ri de S€gm€nte
+~ indiferﬁnt de algoritmul folosit
+' plasarea unui segment poate: egua, chiar
 dacé spatiul liber total ar ﬁ suﬁcient
 136
 
@@ -317,342 +324,351 @@ dacé spatiul liber total ar ﬁ suﬁcient
 
 ***************Beginning Page***************
 ***************page number:22**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Fragmentare (2)
-Eliminarea fragmentérii externe
-- compactarea memoriei
-i deplasarea segmentelor astfel incit $51 nu mai
-existe zone libere intre ele
-i se creazé 0 singurz'i zoné liberé, de dimensiune
-maxim?!
-i realizati de un program specializat, parte a
-sistemului de operate
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Fragnwntare: (2)
+Eliminarea fragmentérii 6Xtern6
+' compactarﬁa m6m0riei
+— deplasaraa segmentelor astfal incét s21 nu mai
+existe zone libara intre ale
+— se creazé 0 singuréi zonéi libaré, d€ dimensiune
+maximé
+— realizaté de un program spacializat, part6 a
+sistamului d6 operam
 137
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Arhilectllra calcullloarelor 5i sixteme a: open“ - pan“ a ll-a
-Compactare ( 1 )
-W 21w hlvrv e i
-I-I——--—I
-2mm him .1 j‘
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Comp actare (1 )
+W 201112 lllirlElF: —i
+I—I-—--—I
+2011:: lllwem —\
 I-—I_
-\38
+138
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
 Compactare (2)
 
-Rularea programului de compactare a
+Rularﬁa programului de compactam a
 
-memoriei
+m6m0riei
 ' consumé mult timp
 
-i mutarea segmentelor in memorie
+— mutarea segmﬁntelor in memorie
 
-i actualizarca dcscriptorilor dc segment
-' nu poate ﬁ rulat foarte des
-' numai cénd este necesar
+— actualizaraa descriptorilor de sagment
+' nu poate ﬁ rulat foarte: des
+' numai cénd este n6cesar
 
 139
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
 Compactare (3)
 
-Situatii in care se poate decide rularea
-programului de compactare
+Situagii in care s6 poate decidﬁ rularea
+programului d6 compactam
 
-' cénd plasarea in memorie a unui segment
-e§ueazé din lipsé de spatiu
+' cénd plasarea in m6m0ri6 a unui sﬁgnmnt
+e$u€azé din lipsé de spayiu
 
-- 1a intervale regulate de timp
+' la intervale mgulate d6 timp
 
-- cénd gradul de fragmentare a memoriei
-depi§e§te un anumit nivel
+' cénd gradul d6 fragmentare a mermoriei
+depé$6$te un anumit nivel
 
-—un
+140
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Segmentarea - concluzii
-Probleme ale mccanismului de segmentare
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+S€gm€ntarea - ccmcluzn
+Problﬁme: ale m6canismului de s6gmentar6
 ' gestiune complicaté
-— suprapunerea segmentelor » greu de detectat
-' fragmentarea externé - de obicei puternici
-i mult spatiu liber nefolosit
+— suprapunﬁrea S€gment610r - grau d6 datactat
+' fragmentaraa externé - de obicﬁi puternicé
+— mult spatiu liber nafolosit
 ' compactarea consumé timp
-—u\
+—m
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:27**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
 IV.5.2 . Paginarea memoriei
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Principiul de bazé
-- spapiul adreselor virtuale - impﬁrtit in pagini
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Pnnmplul d6 baza
+' spatiul admsﬁlor Vil'tll2116 - impéryit in pagini
 (Pagw)
-i zone de dimensiune ﬁxi
-' spapiul adreselor ﬁzice - impirﬁt in cadre de
+— zonﬁ de dimensiuna ﬁxé
+' spagiul adresﬁlor ﬁzicﬁ - impéryit in cadm de
 paginé (page frames)
-i aceea$i dimensiune ca 5i paginile
-' dimensiune - uzual 4 KB
+— aceea$i dimensiune ca $i pagini1€
+' dimensiune - uzua14 KB
+143
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Arhilectlln calcullloarelar 5i 5mm do 0pm“ - pan" a ll-a
-Tabele de paginare (1)
-~ corespondenta Tntre pagini $i cadre de
-pagini - sarcina sistemului de operate
-' structura de bazé - tabelul de paginare
-' cite unul pentru ﬁecare proces care mleazé
-- permits detectarea acceselor incorecte la
-memorie
-—m
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Tabde d6 paglnam (1)
+' cor6sp0nd6n§a intm pagini $i cadm de
+paginé - sarcina sist6mului d6 operam
+' structura d6 b21251 - tabdul de paginam
+' cétﬁ unul pﬁntru ﬁecam proces care: ruleazé
+' permite: dertectarea acceserler incoracte la
+mamorie
+—144
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Tabele de paginare (2)
-' 1a ruléri diferite ale programului, paginile
-sunt plasate in cadre diferite
-' efectul asupra adreselor locagiilor
-i nici unul
-i trebuie modiﬁcat tabelul de paginare
-— 0 singuré daté (1a incércarea paginii in
-memorie)
-— sarcina sistemului de operare
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Tabde d6 paginam (2)
+- 1a ruléri dif6rit6 2116 programului, paginile
+sunt plasatﬁ in cadrﬁ diferit6
+' ef6ctul asupra adr6s610rloca§ii10r
+— nici unul
+— trebuie modiﬁcat tabelul d6 paginam
+— 0 singuré daté (la incircaraa paginii in
+m€m0ri6)
+— sarcina sistemului dﬁ operarﬁ
 145
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Arhilectlln calcullloarelar 5i 5mm do 0pm“ - pan" a ll-a
-Accesul la memone
-- programul precizeazé adresa virtualé
-' se determiné pagina din care face parte
-- se cauté pagina in tabelul de paginare
-i daci nu este gésitz'l — generare exceptie
-- se determinﬁ cadrul de paginé corespunzétor
-' calcul adresi ﬁzicé.
-~ acces la adresa calculatﬁ
-—uo
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Accezsul 1a m€n10r16
+- programul precizﬁazé adresa virtualé
+' s6 d6t6rmin€1 pagina din cam facﬁ part6
+' se cauté pagina in tab6lul d6 paginam
+— dacé nu aste gésité - generara excaptia
+' se demrminé cadrul de paginé comspunzéitor
+' calcul admsé ﬁzicé
+' acces la admsa calculaté
+146
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Exempliﬁcare (l)
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Ex6mpliﬁcar6 (1)
 
-Tabel de paginare (simpliﬁcat)
-mill-Inn
-M616“ IIIIIIIE
-—u7
+Tabﬁl de paginam (simpliﬁcat)
+null-nu
+Oh III-Illa
+—m7
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Exempliﬁcare (2)
-Exemplu l:
-' dimensiunea paginii: 1000
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Exezmpliﬁcam (2)
+Exemplu 1:
+' dimensiunﬁa paginii: 1000
 ' adresa virtualé: 8039
-i pagina: [8039/1000]=8 ~> cadrul de paginé 3
-i deplasament: 80.39%1000139 (in cadrul
+— pagina: [8039/ 1000]:8 —> cadrul d6 paginé 3
+— deplasamﬁnt: 8039%1000:39 (in cadrul
 paginii)
-- adresa ﬁzicﬁ: 3‘1000+39=3039
-—ux
+' adrersa ﬁzicé: 3 - 1000+39I3039
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Arhilectun calcullloarelor 5i sineme a: 0pm“ - pan“ a ll-a
-Exempliﬁcare (3)
-
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Exezmpliﬁcam (3)
 Exemplu 2:
-~ dimensiunca paginii: 1000
+' dim6nsiun6a paginii: 1000
 ' adresa virtualé: 5276
-
-i pagina: [5276/1000]=5
-
-i nu apare in labelul de paginare
-
-i eroare a generare exceptie
-—ua
+— pagina: [5276/ 1000]:5
+— nu apare in tabelul de paginare
+— eroare —> generate exwpyia
+—m9
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Restncpl
-Construirea tabelelor de paginare
-' sarcina sistemului de operare
-' trebuie sé evite suprapunerile intre aplicatii
-~ restrictii
-i o paginé virtualé poate s5 aparz'i pe cel mult 0
-pozigie intr-un tabel de paginare
-i un cadru de paginé ﬁzicé poate s5 aparé cel
-mult 0 dati in toate tabelele de paginare
-existente la un moment dat
-—|.=n
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+R€strlc§11
+Construirea tabﬁlelor de paginarﬁ
+' sarcina sistemului de oparare
+' trﬁbuie s51 6vit6 suprapunerile intm aplicagii
+' r6stric§ii
+— 0 paginé virtualé poate s5 aparé p6 cal mult 0
+pozi§i6 intr-un tabel de paginare
+— un cadru de paginé ﬁzicé poate s51 aparé eel
+mult 0 daté in toate tabelela de paginam
+6Xistente la un m0m6nt dat
+150
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:36**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Fragmentare (1)
-Fragmentarea interné a memoriei
-' intre pagini nu existé spatiu a nu apare
-fragmentare externé
-' fragmentarea interné
-— spaﬁu liber nefolosit in interiorul unei pagini
-— nu poate ﬁ preluat de alt proces
-i nu se poate face compactare
-- mai putin sevsré deceit fragmentarea externé
-m
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Fragmnntare: (1 )
+Fragmentama interné a mamoriei
+- intre pagini nu existé spayiu —> nu apam
+fragmentam ﬁxterné
+- fragmentama internéi
+— spatiu liber nefolosit in intnriorul unei pagini
+— nu poata ﬁ preluat de alt proces
+— nu se poate facﬁ compactare
+' mai puyin severé deceit fragmentarea externé
+—151
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Fragmentare (2)
-Alegerea dimensiunii paginilor
-- putere a lui 2 (nu rémén rcsturi dc paginé)
-' odati aleasé, nu se mai schimbi
-' se stabile§te ca un compromis
-i prea mare — fragmentare intemé putemici
-i prea micé — mult spatiu ocupat de tabelele de
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Fragnwntare: (2)
+
+Al6g6rea dimﬁnsiunii paginilor
+' put6r6 a lui 2 (nu rémén r6sturi d6 paginé)
+' odaté 211621551, nu s6 mai schimbé
+' se stabi1€$t6 ca un compromis
+
+— prea mare - fragmentara interné puternicé
+
+— prea micé - mult spayiu ocupat de tabﬁlele de
+
 paginare
 — uzual - 4 KB
-—|_=1
+152
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
-Chiar atét de simplu?
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Chiar atét d6 simplu?
 
-Procesor pe 32 biﬁ
-' spaﬁu de adrese: 4 GB (:232)
-' dimensiunea paginii: 4 KB (:212)
-—> tabel cu 220 elemente
+Procesor p6 32 biti
+' spagiu d6 admse: 4 GB (2232)
+' dimensiunﬁa paginii: 4 KB (2212)
+—> taberl cu 220 el6m6nt6
 
-i ar ocupa prea mull 100
+— ar ocupa prea mult 10c
 
-i consumi din memoria disponibili aplicatiilor
-- la procesoarele pe 64 biti - 5i mai réu
+— consumé din memoria disponibilé aplicatiilor
+' la procesoarele pe 64 bigi - gi mai réu
+—153
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Arhilectun calcullloarelor 5i sineme a: 0pm“ - pan“ a ll-a
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
 Solutia 1
 
-- tabele de pagini inversate
-~ nu se retin toate ccle 220 elements
+' tab616 d6 pagini inV6rsat6
+- nu s6 retin toate 6616 220 616m6nt6
 
-i doar paginile folosite
-' plasare/céutare in tabel - functie hush
-' greu dc implementat in hardware
+— doar pagini16 folosite
+- plasar6/651utar6 intab61 - fun6§i6 hash
+~ greu d6 impl6m6ntat in hardware
 
-i vitezé
+— Vitezé
 
-i evitare coliziuni
-—m
+— 6vitar6 601iziuni
+—154
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Arhilectlln calcullloarelor 5i sineme a: upmn - pm" a ll-a
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
 Solutia 2
-- tabele pe mai multe nivele
-~ cazul Intel - 2 nivele
-i catalog de pagini (Page Directory)
-i tabel de pagini (Page Table)
-- elementele din catalog - adrese de tabele de
+' tabale p6 mai multe: nivela
+' cazul Intal - 2 nivela
+— catalog de pagini (Page Directory)
+— tabel de pagini (Page Table)
+' elamentala din catalog - adrase de tabela d6
 pagini
-' se aloci doar tabelele dc pagini folosite
-—|.=5
+' se aloca doar tabelale de pagini folosita
+—155
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Amman" calcullloarelar 5i 5mm do 0pm“ - pan“ a ll-a
-Structura Intel
-Adm-s a virtualn
-31 22 21 12 11 U
-———
-(‘amlug a? pagiui Tnbel a? pagini Pagiln
-— -
-- Aiu-m ﬁzicn
-— -
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+Anthem ﬁrtlmla
+31 EE 21 12 11 III
+[*ntnlug [le- 1135111 Table-l [le- 1135111 1335113
+- - Aﬂrla-sn fizim
 156
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:42**************
-Arhilectlln calcullloarelnr 5i sineme do upmn - pan" a ll-a
-Performanya (l)
-- cataloagele $i tabelele dc pagini se aﬂé in
-memorie
-i prea mari pentru a ﬁ retinute in procesor
-i prca multc - spcciﬁcc ﬁccérui proccs
-' efect — performanté scézuté
-i pentru ﬁecare acces 1a memorie solicitat de
-proccs - 2 acccsc suplimcmarc
-' solutia - cache dedicat
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+P6rf0rmanta (1 )
+' cataloagde $i tab61616 de pagini s6 aﬂé in
+memori6
+— prea mari pentru a ﬁ retinuta in procesor
+— prea multe - spaciﬁce ﬁecérui proces
+' efﬁct - performanté $0512th
+— pentru ﬁﬁcarﬁ acces 1a memorie solicitat de
+proces - 2 accese suplimentam
+' soluyia - cache dﬁdicat
 157
 
 ***************Ending Page***************
 
+
+
 ***************Beginning Page***************
 ***************page number:43**************
-Arhilectun calcullloarelor 5i sineme a: 0pm“ - pan“ a ll-a
-Performanya (2)
-' TLB (Translation Lookaside Buﬂer)
+Arhitectura calculatoarelor 5i sisteme de operare - partea a II-a
+P6rf0rmanta (2)
+' TLB (Translation L00kaside Buﬂer)
 — in interiorul procesorului
-i retine corespondente intre pagini virtuale $i
-cadre de paginé ﬁzice
-i ultimele accesate
-i trebuie invalidat atunci cénd se trece 1a execugia
-almi proces
-—|ss
+— rel;in6 corespondente intre pagini virtuale 5i
+cadrﬁ de paginéi ﬁzice
+— ultimele accesate
+— trebuie invalidat atunci cénd se trec€ la execuyia
+altui proces
+158
 
 ***************Ending Page***************
+
 

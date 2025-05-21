@@ -1,419 +1,518 @@
 ***************Beginning Page***************
 ***************page number:1**************
-so 2021/2022
+SD 2021/2022
+<E|> <ﬁ>4IE>4IE> IE OQO
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-(armmn
-Take‘: :u mm; ﬁned
-—-— Sm,‘ m
+Contlnut
+Tabele cu adresare directé
+El r51 ' _= IE ‘)QG
+Cm 11 SD2021/2022 2/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Tnhele de Slmhnlurl
-v Ovclaw (ant-151)‘ rwifixl “"1451)‘
-> Cm W n WM W .¢ m $7
+Tabele de simboluri
+> Tabela de simboluri S cu n anegistréri;
+> Fiecare anegistrare are asociaté 0 cheie (unicé);
+P Operatii: cauta(57 k), insereaza(57x), sterge($,x);
+> Cum poate ﬁ organizaté structura de date S?
+inregistrareax
+—>
+|(WM
+alte campuri
+(date)
+Cm 11 SD2021/2022 3/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-mm; n. adreszre ﬂuent}
-> u Z (u, 1‘ ‘m *1)"Ml¥\m:a umvers a sham
-> u" “MW ﬂu m4]
-TWZHUM :;:x€$5\xthgw:k
-> Fwnre mm [5M] m.- mm wVQSDIlM: W m- 4w WWI u
-> an: \s\:~ mus»:
-— M. WU.“ ‘x
+Tabela cu adresare directé
+> U : {0, 1, ..., m — 1} multimea univers a cheilor;
+V Un tablou T[O..m — 1]:
+
+x daca X € S si x.cheie : k
+T k I '
+[ 1 { NULL altfel.
+> Fiecare pozitie (slot) din tablou corespunde unei chei din universul U.
+> Dacia IS] I n, atunci n g m.
+Curs 11 SD 2021/2022 4/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-mm; n. mam threat: V Uperalu
-> 0pm.“
-mm (min A)
-helln
-mm Tm
-,1
-quedure mun” x)
-m».
-w Ml] Z X
-m1
-"mm. “"141.”
-mi"
-m ‘my 1 Nl/LL
-ad
-> Cummwlama IWD 1 opeumm em
-— M. W‘ m , H
+Tabela cu adresare directé - Operatii
+> Operatii
+Function cauta(T, k)
+begin
+return T[k]
+end
+Procedure insereaza(T, x)
+begin
+T[x.cheie] : x
+end
+Procedure sterge(T, x)
+begin
+T[x.cheie] : NULL
+end
+V Complexitatea timp a operatiilor: 6(1)
+Curs 11 SD 2021/2022 5/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Tahela n. adresare dxrenE
-> Snanul d: MM.“ envn
-> MW
-- Mt W n M k MM inn!“
-> MM mm =\ mula an Fem: M
-> Mm“sumuuwmumm@MMM»
-> mmnmu mum mm“ m 1m m: mm h u
-> Suhm: um de msaeme
-> a “mm ; M1‘ A: W‘; m :dmavklvezﬁ
-> n Wm 4: a.“ mm WW ‘WWW dummmnv
-— M SW,“ H.
+Tabela cu adresare directé
+> Spatiul de memorare: @(\U|).
+> Probleme:
+> cheile pot $5 nu ﬁe numere Tntregi;
+F domeniul de valori al cheilor este foarte mare:
+P numere pe 64 de bifui (18.446.744.073.709.551.616 chei diferite)
+P $iruri de caractere;
+> multimea de chei memorate este foarte micé relativ Ia U.
+> Solutie: tabela de dispersie
+F 0 generalizare a notiunii de tabelé cu adresare directé;
+P o structuré de date eficienté pentru implementarea dictionarelor.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-(Mum
-Yam a: “ME
-—-— M w-vm w
+Continut
+Tabele de dispersie
+El r51 ' _= :E JDQG
+Cm 11 5D 2021/2022 7/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Tzhela de dlspersie
-> Mm,‘ o MM a: ‘1.59m (my n nemm I “m new 4m
-Wm‘ u mum m Mm m 1. ... 71>
-i ‘
-x’ \ . W
-T". m!
-\ur , k
-, , \ ~~~¢
-w
-> u" demon! cu cm: y m ammali wzma m m mm, r
-> Hm. .1! We,“ mm. Mm.‘ a: "hm = mm 54 ‘mm
-WWW MW." Mm“
-> Mm. a M E s ink‘ M‘ hm m,» Z no‘, (m,
+Tabela de dispersie
+> Utilizeazé’ o functie de dispersie (hash) h pentru a asocia cheilor din
+universul U o valoare din multimea {O,1,--- 7m — 1}.
+T
+O
+' h(k4)
+E h(kl)
+O
+‘
+\ h(k3):h(ig)
+h(k2)
+mil
+V Un element cu cheia k are asociaté pozifcia h(k) Tn tabela T.
+V Functia de dispersie reduce domeniul de valori a indicilor 5i implicit
+dimensiunea vectorului memorat.
+> Coliziune: El x1,x2 G S astfel incét h(x1.cheie) : h(x2.cheie)
+Cm 11 SD2021/2022 8/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-(Mum
-Dispusm mm!
-—-— M w-vm w
+Continut
+
+Tabele cu adresare directé
+
+Tabele de dispersie
+
+Dispersie externﬁ
+
+Functii de dispersie
+
+Dispersie interné
+
+E1 ﬁ ' _= :E ‘)‘RG
+
+Cm 11 5D 2021/2022 9/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Rush/area tohzmmlor prm Wérmme (disperse externi)
-> qumvink m m mm mm 5m w. h mm“ MM mi
-hm: r WM ‘mu .1: mm"
-v
-_
--—~--
-» 50W Wu, a» mm: 5W WWW ¢= mm",
-> cm‘ I!‘ m Mwm lust: {M H mm M‘ m
-> .Wnem em
+Rezolvarea coliziunilor prin Tnléntuire (dispersie externé)
+> anegistrérile care au asociate ace|a$i slot vor fi memorate Tntr-o listé’
+liniarﬁ. T devine tablou de pointeri.
+T
+
+51I5
+h(51)=h(85)=\
+
+> Solutie simplé, dar necesité’ spatiu suplimentar de memorie.
+
+> Cazul cel mai nefavorabil: toate cheile au asociate ace|a$i slot
+
+F timpul de acces: 6(n).
+Curs 11 SD 2021/2022 10/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-0mm enema 7 Opera!“
-Funqim mm” u
-nu...
-mu “mm m (m k Tn hm mm!
-w
-mm’. mun/r x)
-helm
-"m1 x h “mum ‘m mu My)!
-m
-pm.“ 5mg!” x;
-may.
-my‘, x a". \m 1W mare"
-m
+Dispersie externé’ — Operatii
+Function cauta(T, k)
+begin
+cautﬁ elementul cu cheia k Tn lista T[h(k)]
+end
+Procedure insereaza(T7 x)
+begin
+insereazé x Ia Tnceputul listei T[h(x.cheie)]
+end
+Procedure sterge(T, x)
+begin
+$terge x din lista T[h(x.cheie)]
+end
+Curs 11 SD 2021/2022 11/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-stpusie enema 7 anallm mmmmam
+Dispersie externé’ — analiza complexitéfcii
 
-> mm
-Camwawuea m QM w m. ne'iwnbﬂ mm de WW m
+> C5utare:
+Complexitatea Tn cazul cel mai nefavorabil depinde de lungimea listei.
 
-> 1mm
-‘:Wmm m QM ‘e1 m. ne'iwnbﬂ 0m
+> lnserare:
+Complexitatea Tn cazul cel mai nefavorabil: 0(1).
 
-> Shell”!
-an) 61d Iver“ ‘In: \mme duhm mum-w dad \ucvlm cu hm
-M.“ WM mm. ‘Emmi 5; mum X 5‘ 5i m.“
-WWW‘ zaeﬂmh Mm i m. Mane Wanna
+P Stergere:
+0(1) daci avem liste liniare dublu Tnlﬁntuite; dacﬁ lucrém cu liste
+liniare simplu Tnlénfcuite, trebuie Tntéi 55 céutém x $i 55 retinem
+predecesorul acestuia pentru a putea reface legatura.
+
+Curs 11 SD 2021/2022 12/29
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-stpusie enema 7 anallm mmmmam Tn mm mediu
+Dispersie externé’ — analiza complexitéfcii Tn cazul mediu
 
-> \thm “Mm unvlwmcsvvwle mm.“ ks vi.“
-WWW qali ‘16 a n "WWW Wm ‘azure dvv um T w
-“WM a= hm“: 2km (m
+> lpoteza dispersiei uniforme simple: fiecare cheie k G U are o
+probabilitate egalﬁ de a fi memoratﬁ Tn oricare locatie din tabela T $i
+independent de locatiile altor chei.
 
-> MW‘ deindvcan =\ ubdm r at:
-M w an: MW ¢= am (\sn m m MW .1: ‘acalu
-@me”,- DMW n
+V Factorul de Tncércare al tabelei T este
 
-> WWI .1! 0km =| 1mm .1! mm m em
+04 I n/m,
+
+unde n este numérul de chei (15]), iar m numérul de locatii
+(dimensiunea tabloului T).
+
+> Timpul de calcul al functiei de dispersie este 6(1).
+
+Curs 11 SD 2021/2022 13/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-stpusie enema 7 ml.“ mmmmam in mm mediu
-TememE
+Dispersie externé’ — analiza complexitéfcii Tn cazul mediu
+Teoremé:
+Considerénd o tabe/5 de dispersie in care coliziuni/e sunt rezolvate prin
+inlé'ntuire, in ipoteza dispersiei uniforme simple, o c5utare férﬁ succes are
+complexitatea timp in cazul mediu 9(1 + a).
+Teoremé:
+lntr-o tabe/é’ de dispersie in care coliziunile sunt rezo/vate prin fnléntuire,
+in ipoteza dispersiei uniforme simple, o c5utare cu succes are
+complexitatea timp in cazul mediu 6(1 + a).
+Corolar:
+Dac5 num5rul de sloturi este ce/ putin proportional cu numéiru/ de
+elemente (n : O(m) sau, echivalent, a : 0(1)), atunci operatia de
+c5utare are comp/exitatea, in medie, 0(1).
 
-(mm c “mum,” m “mm 1..“ remivakwvv
-um 1,. my, We“, Mm ml! .1 dum: lid M 8.,
-WWW“ W mm "m 9(1 \ "7
-
-yam;
-
-7mm may: .1: dmpeme m are mhuum/e M, remlvale W mum
-Wm 4W” MW. QM a (Mm m 5m; m
-mmmn W m‘ "m en \ u)
-
-(mm
-
-Dad WW 46 ﬂown are “I pm WWW! cu WM a»
-51mm“ 1 0(m7 w MW.“ ﬁ Z on» mm om". .1!
-(Immaremmp/wmez mm“ um
+Curs 11 SD 2021/2022 14/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-(armmn
-Funcw 4. “m!
-—-— M. “m m
+Continut
+
+Tabele cu adresare directé
+
+Tabele de dispersie
+
+Dispersie externé
+
+Functii de dispersie
+
+Dispersie interns?
+
+E1 ﬁ ' _= :E ‘)‘RO
+
+CLIPS 11 SI"021/2022 15/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-mm de dxspersle
+Functia de dispersie
 
-> mmms Mmmm “m Mm. ii Mm!
-momma new mom Mk)
+> Deterministé’: pentru o cheie k, functia trebuie 55 furnizeze
+Tntotdeauna acea$i valoare h(k).
 
-> mm» mm: "Hm-1m :wzmn-‘uv
+V A/eatoare: vizeazé’ minimizarea coliziunilor.
 
-> o hmw: hash m “mum: mu: MW w ‘mam: ubem
+> O functie hash buné distribuie cheile uniform Tn locatiile tabelei.
 
-> ‘pm, mm‘ MM. W1, w mm .1! mm a» musk:
-“Mm MM I“ runnmua mm wand ms: umv (a
-“Mum WW; m h emu“)
+> Ipoteza dispersiei uniforme simple este dificil de garantat, dar existé'
+tehnici euristice care functioneazé bine Tn practicé (atét timp cét
+deﬁcientele acestora pot ﬁ evitate).
+
+Cm 11 SD2021/2022 16/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-mm de disperse 7 Memda dwmunu
-M, k m m
-> Prexuplmem d max: mu: m mm my»
-> m:Mmmmmimk ‘WNW! Iaswinmndzhnxe
-a! . ‘a \merwm K. Mm my“
-. “My MM.“ W Wm.“ g! )ovmi (Hz m) m m
-12! Mimmuh nu! ‘ ma msz
-> m 3. =1“! Wm m a mm m. m .m dwlzwv m .1
-Flewndaema my mmm rmduk: a pane alecn w m
-"um “Wmm
-> a“: M72’ awncwaknm mm dewndcdoarﬂummu , mm
-1‘ ‘m ‘
-> Examplu k Z wumumwm v: 5 _. m :mww
-> 5! m1! m M M...“ an m M m mm 4E a Diner! . ‘m 2
-sau w
-— M, Mm m
+Functii de dispersie — Metoda diviziunii
+h(k) : k mod m
+> Presupunem c5 toate cheile sunt numere naturale.
+P dac§ cheile nu sunt numere naturale, atunci trebuie gasitﬁ o modalitate
+de a le interpreta ca numere naturale;
+P Exemp/u: presupunem un identiﬁcator de forma (112,116); Tn baza
+128, acesta devine (112 >< 128) + 116 I 14452.
+> Nu se alege pentru m o valoare care are un divizor mic d.
+Preponderenta cheilor congruente modulo d poate afecta Tn mod
+negativ uniformitatea.
+> Dace”; m : 2’, atunci valoarea functiei depinde doar de ultimii r bitii
+ai lui k.
+P Exemp/u: k I 1011000111011010 $i r I 6 »—> h(k) I 011010.
+> Se alege m un numar prim care nu este apropiat de o putere a lui 2
+sau 10.
+Curs 11 SD 2021/2022 17/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Functu de disperse 7 Metoda inmulum
-hm = W“ 7 Will
-> A 6101):“: a consnm}
-> Wm M m M m. (m; m “hm ., WM = M 17
-m): w NMTMWH;
-. m Z 1n (mm: m (m ("We m p: w~hml
-> A gm m. "W W, a“. mm.‘ (2W ‘ m
-> an are 0mm‘ u deplagle ‘a drawn w hm
+Functii de dispersie — Metoda Tnmultirii
+h(k) z Lm(kA — 1mm
+> A € (O71) este o constanté.
+> Valoarea lui m nu este criticé (de obicei o putere a lui 2).
+h(k) : (kA mod 2W)rsh(w — r)
+> m : 2’, (ma$in§ Tn care cuvintele sunt pe W—bi’;i).
+V A este un numar impar din intervalul (2W’1,2W).
+V rsh este operatorul de deplasare la dreapta pe biti.
+Curs 11 SD 2021/2022 18/29
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-Functu de disperse 7 Metoda inmulum
-. Em” mzzlywmmﬂm
-1011001 1,
-‘ 1mm u
-wuwmuoon
-we
-> Nu se ‘kl: A we: iwuan: d: 2"" sau 2‘
-> Kmnn A Z (m u/z
-. Wm mm z' .5‘! m‘ "M: T" Mm". z» Wm,
-mm‘ M a" m
+Functii de dispersie — Metoda Tnmultirii
+V Exemp/u: m I 23 5i cuvinte pe W : 7 biti.
+1011001 =A
+X 1101011 = k
+10010100110011
+ﬁ
+WK)
+V Nu se alege A prea aproape de 2W‘1 sau 2'”.
+> Knuth: A : (J5 _ 1)/2.
+> Tnmultirea modulo 2W este mai rapidé' Tn comparatie cu Tmpﬁrtirea;
+operatorul rsh este rapid.
+Curs 11 SD 2021/2022 19/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-mm de aim,“ 7 Dlspevsxa "New:
-n4l);l[ih+b) menu] Mm
-v V Mn:- W... cu P > M
-> a bnumvealnlwredm (u. .D’ n
-v h¢hzvPrnKMMINsz)II/m
+Functii de dispersie — Dispersia universalé
+h(k) : [(ak + b) mod p] mod m
+> p numﬁr prim cu p > |U|;
+> a, b numere aleatoare din {0, ...,p — 1}.
+> k1 75 k2, Pfa’b{h(k1): h(k2)} : 1/m.
+Curs 11 SD 2021/2022 20/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-(Mum
-mm,“ Wm:
-—-— M “mm m
+Continut
+
+Tabele cu adresare directé
+
+Tabele de dispersie
+
+Dispersie externé
+
+Functii de dispersie
+
+Dispersie interné
+
+E1 ﬁ ' _= :E ‘)‘RG
+
+Cm 11 SI"021/2022 21/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Rezoh/arez cohziumlcr prin adresare deszhisi
+Rezolvarea coliziunilor prin adresare deschisﬁ
 
-> DlsFememtemJ
+> Dispersie interné’
 
-> Tone ekmemdz mm! memovmin \ntenmu‘ mm‘ r‘ M an:
-"mm Shaun Wm...“ a! mm: an mu uhdu a! mm
+V Toate elementele sunt memorate Tn interiorul tabelei T; nu este
+utilizat spatiu suplimentar de memorie, Tn afara tabelei de dispersie.
 
-> Mm de Wm “WM: um w: am aw m: a ‘mane
-ma
+> Functia de inserare examineazé tabela péné cénd este gﬁsité o locatie
+liberé.
 
-> rm.- d: dweme new-m: 1m .1! (m m 5‘ 4. mm
+> Functia de dispersie depinde atét de cheie cét 5i de numé'rul
+examinarii:
 
-n um 1. m4hm 1. .mq)
+h: U>< {0,1,...,m—1}|—> {0,1,...,m—1}
 
-> Sezveﬂudguammin .1 m 0mm. M,“ n > mm
-Sunmnmmm m n
+V Secvenfca de examinéri < h(k,0),h(k,1),--- ,h(k, m — 1) > trebuie
+55 fie o permutare a {0, 17 .., m — l}.
 
-> mum-m aha‘: 5e m! W‘. mum pmdmmdms
+> Dezavantaje: tabela se poate umple; $tergerea poate deveni dificilﬁ.
 
-— M, Mm M
+Curs 11 SD 2021/2022 22/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-stpersle mm: 7 Opera!"
-Funninn mm‘ k)
-hagin
-, » u
-mm
-, - “my
-u m1" A then
-WM
-m
-W . 7 1
-Mm rm :: Nl/LL um Z: m‘
-mm NULL
-m
+Dispersie interné’ — Operatii
+Function cauta(T, k)
+begin
+i <— O
+repeat
+j e h(k, i)
+if TU] :: k then
+return _]
+else
+i e i+ 1
+until TU] I: NULL OR i I: m;
+return NULL
+end
+Curs 11 SD 2021/2022 23/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-stpersle mm: 7 Opera!"
-Funnim ‘mun k/
-nu"-
-W o
-Well
-,k Mm)
-.1 m Z: Mun men
-Tm - k
-WM
-m
-W . 71
-Mm , z: m
-m '1
-m
+Dispersie interné’ — Operatii
+Function insereaza(T, k)
+begin
+i <— 0
+repeat
+j e h(k, i)
+if TU] z: NULL then
+TU] <— k
+returnj
+else
+i <- i+ 1
+until i I: m;
+return —1
+end
+Curs 11 SD 2021/2022 24/29
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-stpersie mlemé 7 suing" pentru summare
-m), my“ m”; ‘ M71 m1‘ ‘my!
-> mun-nu KIA/we unmavi {way (‘MINI/VI) 7 m (anneal: sum
+Dispersie interné’ — Strategii pentru examinare
+Examinare liniaré:
+> h’(k) o functie de dispersie uzual5.
+V Pentru o cheie k, secvenfca de examinare este
+h’(k), h’(k) + 1, h’(k) + 2, ..., m — l, O, 1,..., h’(k) — l.
+> Avantaj: metodé simpli.
+V Dezavantaj: grupare primaré' (primary clustering) — se formeazé’ $iruri
+lungi de locatii ocupate; cre$te timpul mediu de céutare.
+curs 11 SD2021/2022 25/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-stpusie mm: 7 Strategli pentru exammare
-‘Jami-m mum
-M ,1 7 (n'm + qr + am m m
-> m1 a Mm a: “We um‘!
-> Mm a (m k W) ‘acme mm‘: aw mm w urmhoarele
-pm“ mm“ 5“... mm, a. mm I! 41M Tm my;
-mm: do pm. ammov emmmzﬂ
-> mum-m, ‘mph: mm’: 7M m: m, 1“ mm m“ ﬁe
-> “mum: m‘ W. m‘ mm". ‘my:
+Dispersie interné’ — Strategii pentru examinare
+Examinare p5tratic5:
+h(k, i) I (h’(k) + c1i+ c2i2) mod m
+> h’(k) o functie de dispersie uzualé.
+> Pentru o cheie k, prima locatie examinaté este h’(k), iar urmétoarele
+pozitii examinate sunt decalate cu cantitéti ce depind Tntr-o manierﬁ
+pétraticé de pozitia anterior examinaté.
+> Dezavantaj: grupare secundaré — dacé doué chei au aceeasi pozitie de
+start a examinérii, atunci secventele de veriﬁcare coincid.
+> Functioneazé mai bine decét veriﬁcarea liniarﬁ.
+Curs 11 SD 2021/2022 26/29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-DIspelsie mlemé 7 51..“in pentru exammare
-my“. duhli
-MA II, WI, . MW m... ...
-> IIIII 5. WI 4...: 6...... I. m"... mI
-> Pznuuudmek w.I....I.u.m....:mn.lk> I.....I......I.
-m... mm... 5.... MI... (a! de WI“. “I”... c. mm
-m... ...
-> Mia MM: nmduzehlleneql rexukaxebaﬂe I.» .I comm-a
-u MW 5; I. “I... m (I m o ......I.I..... .1. . mm m.
-III... “I. xi wwdcvim m .7 pmere . I.- 1 ‘I s! m...- mm .SIIII
-I"... .1 .HIII. 4.... mm I...“
+Dispersie interné’ — Strategii pentru examinare
+Dispersie dubl5:
+h(k7 i) : (h1(k) + ih2(k)) mod m
+
+V h1(k) si h2(k) doué functii de dispersie uzuale.
+
+V Pentru o cheie k, prima locatie examinatia’ este h1(k), iar urmétoarele
+pozitii examinate sunt decalate fat?!’ de pozitia anterioaré cu h2(k)
+mod m.
+
+V Aceasté metodé produce Tn general rezultate foarte bune, cu conditia
+ca h2(k) 55 fie relativ prim cu m. O modalitate de a realiza acest
+lucru este $5 considerém m o putere a Iui 2 $i s5 alegem h2(k) astfel
+Tncét 55 rezulte doar numere impare.
+
+Curs 11 SD 2021/2022 27/29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-stpelsie mm: 7 Mm; cample'xitim
-Wm my!‘ New m" (W pm m W aceaaxv
-pmmmu W" Gm a‘! m‘ WM" u 9M.“ d: mm."
-1mm:
-rm” an!!! a! mm m Mm dams! in mm, 45pm
-“Wm cu hum de Tndrcire ,, < \v MW mm d: mm" an:
-:41 M
+Dispersie interna — Analiza complexitatii
+lpoteza dispersiei uniforme: ﬁecare cheie poate avea, cu aceea$i
+probabilitate, oricare din cele m! permutéri ca secventﬁ de examinare.
+Teoremé:
+lntr-o tabe/5 de dispersie cu adresare deschiséi, Tn lpoteza dispersiei
+uniforme, cu factor de fncé'rcare a < 1, numérul mediu de verificﬁri este
+ce/ mu/t
 
-> i Mm 1196mm n “my! m Mm, Q
+> a pentru operatia de c5utare f§r5 succes, 5i
 
-> {Mg Mm "pm, 4, mm. m Mm
-(mom
-0m h 5:: {mm W mm W an»! .1, mm m
-adrsae “WWW: T" mm M m, mun/n, em
+> l/ni pentru operatia de c5utare cu succes.
+
+04 1-04 '
+Corolar:
+Daca a este constant, atunci accesarea unei tabe/e de dispersie cu
+adresare deschisé necesité’ Tn medie un timp constant, 9(1).
+Cm 11 5D 2021/2022 28/ 29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-mum“
-> Erma! 4! 4m“ M mm ‘a mdexirea Tn bu: .1! .1“
-comnﬂawzre xabelzdewaomn cm cu
-> mm“ M! WW 4! “we (Rt, [Wrapmzhash
-1mm en:
-— M. Wm M
+Utilizéri
+> Tabelele de dispersie sunt folosite la indexarea Tn baze de date,
+compilatoare - tabela de simboluri, cache, etc.
+> Aplicatii ale functiilor de dispersie: CRC, Cryptographic hash
+functions, etc.
+Curs 11 SD 2021/2022 29/29
 
 ***************Ending Page***************
 

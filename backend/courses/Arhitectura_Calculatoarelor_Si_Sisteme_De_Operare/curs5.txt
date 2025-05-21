@@ -1,400 +1,427 @@
 ***************Beginning Page***************
 ***************page number:1**************
-III.6. Reprezentﬁri in
-virgulﬁ mobile“!
+III.6. Reprezentiiri in
+virgulii mobilﬁ
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Probleme cu reprezentérile in
-virgulﬁ ﬁxﬁ
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Problerme cu rerprezerntéinle in
+virguléi ﬁxéi
 
-' lungimea totalé n+m este ﬁxaté prin
-hardware
-' dar, in virgulé ﬁxé, atét n cét §i m sunt la
+- lungimea totalé n+m este ﬁxaté prin
+hardwam
+' dar, in virgulé ﬁxé, atét n cét gi m sunt 1a
 rindul lor ﬁxate
-i deci magnitudinea §i precizia sunt prestabilite §i
-nu pot ﬁ modiﬁcate
-i dacé dorim o precizie mai buni §i suntem
-dispusi s51 reducem magnitudinea (sau invers)?
-185
+— deci magnitudinea §i pracizia sunt prastabilite §i
+nu pot ﬁ modiﬁcat6
+— dacé dorim 0 pracizie mai buné gi suntem
+dispu§i s51 reducem magnitudinaa (sau invﬁrs)?
+—ms
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Notatia $tiin§iﬁcé
-' utilé pentru numere cu multe cifre
-7451942623 >< 10'32 in 10c dc
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Notayia $tiintiﬁcéi
+' utilé pentru numﬁrﬁ cu mu1t6 cifre
+745194.2623 >< 10'32 in 10c: de
 0.000000000000000000000000007451942623
-' acelagi numér - mai multe forme de scriere
-571.42 ><1O2 = 5.7142 ><104 = 571420 >< 10'1 =
-' scriere normalizatﬁ - unicé
-i exact o cifri semniﬁcativé inainte de virgulé
-5.7142 >< lO4
+' a061a§i numér - mai multa f0rm6 d6 scriere:
+571.42 ><1O2 I 5.7142 ><1O4 I 571420 >< 10'1 I
+' scriere normalizaté - unicé
+— ﬁxact 0 cifré semniﬁcativé inainta de virgulé
+5.7142 >< 104
 186
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Notatia $tiin§iﬁc51 in binar
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Notatia $tiin§iﬁcéi in binar
 
-' cifra semniﬁcativﬁ dinaintea virgulei poate
+' cifra sﬁmniﬁcativé dinaintaa Virgulei poate
 
-ﬁ doar l
+ﬁ doar 1
 
-i deci in practici nu este necesari memorarea sa
-' excepgie - reprezentarea numérului 0
+— deci in practicé nu 6st6 necﬁsaré memorama sa
+' exwpﬁe - reprazentama numérului O
 
-i doar cifre de 0
-— scriere normalizaté (numér nenul)
+— doar cifre de O
+' scriere normalizaté (numér nenul)
 
-1.xxmx >< 2y
+1.xx...x >< 2y
 
-— baza 2 este implicité - nu trebuie memorati
+— baza 2 este implicité - nu trebuie mamoraté
 
 187
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Arhilectur: cllculzlnarelor 5i sinune de 0pm" - pm“ l
-Reprezentén in Vlrgulé mobllé
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Rﬁpramntan 1n Vlrgula moblla
 ' componente
-i semnul (S): 0 sau 1 (+ sau »)
-i mantisa (M): l‘xx...x
-- de obicei se foloseste panea fracgionarz'a (t)
-M = l + f; f: 0.101.):
-i caracteristica
-' reprezemarea exponentului in exces
-N = (_1)s X1.f>< 2C-exces
-—|xs
+— semnul (S): 0 sau 1 (+ sau -)
+— mantisa (M): 1.xx...x
+' de obicei se f010se§te partea fracyionaréi (f)
+M 21+ f; f: O.xx...x
+— caractaristica
+' r6prezentarea exp0n6ntului in exces
+N = (-1)S ><1.f>< 2C -
+—1ss
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
 Limite
-' numérul de bin al caracteristicii este ﬁxat
-i deci existi 0 valoare minimé §i una maximé
-pcmru exponent
-' depi$ire superioaré — exponent prea mare
-— numérul este considerat ioo
-' depﬁgire inferioaré - exponent prea mic
-i numérul este considerat 0
-- tipul depégirii nu depinde de semn
-189
+
+- numérul de bigi a1 earaeteristieii este ﬁxat
+
+— deei existé 0 valoare minimé §i una maximé
+pentru exponent
+
+' depégire superioaré - exponent prea mare
+— num'erul este eonsiderat ioo
+
+' depégire inferioaré - exponent prea Inie
+— numérul este considerat 0
+
+' tipul dep€1§irii nu depinde de semn
+
+—189
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
-Standardizare
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Standardizam
 
-' esengialé pentru portabilitate
-- standardul IEEE 754/1985
+' 6sﬁn§ia1€1 pﬁntru portabilitatﬁ
+' standardul IEEE 754/ 1985
 
-i elaborat intrc 1977 3i 1985
+— alaborat intre 1977 §i 1985
 
-i prima implementare comerciala: Intel 8087
-' 2 variante principals
+— prima implementare comercialé: Intﬁl 8087
+' 2 variantﬁ principa16
 
-i simplé precizie (32 bigi)
+— simplé pmcizie (32 bigi)
 
-i dubli precizie (64 biyi)
+— dublé precizie (64 bigi)
 
-— au fost proiectate §i unele extensii
+— au fost proiectate gi unele extensii
 
-WU
+190
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Arhilectur: cllculzlnarelor 5i sixume in 0pm" - plrlea l
-Sll'npla preCIZI€
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Slmpla pmcnzw
 31 30 23 22 0
-C I exponent + 127 f: partea fractionaré a mantisei
-' corespunde tipului ﬂoat din C/C++
-- limite in baza 10
-i minim: z 1.2 >< 10'38
-' orice numir mai mic in modul va ﬁ considerat 0
-i maxim: z 3.4 >< 1038
-' orice numér mai mare in modul va ﬁ considerat :00
-—m
+C I 6Xp0n6nt + 127 f I partea fractionaré a mantisei
+' comspunde tipuluiﬂoat din C/C++
+- 1imit6 in baza 10
+— minim: z 1.2 >< 10'38
+' orice numér mai mic in modul va ﬁ considarat 0
+— maxim: z 3.4 >< 1038
+' orice numér mai mare in modul va ﬁ considerat ioo
+191
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-Arhilectur: cllculzlnarelor 5i sinune de 0pm" - pm“ l
-Dublé precizie
-63 (:2 52 51 0
-~ corespunde tipului double din C/C++
-' limite in baza 10
-i minim: z 1.7 >< 10’308
-i maxim: z 1.7 >< 10308
-- magnitudine mai mare
-- precizie superioaré
-191
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Dubléi pmcizie:
+
+63 62 52 51 O
+' comspunde tipului double din C/C++
+- 1imit6 in baza 10
+
+— minim: z 1.7 >< 10‘308
+
+— maxim: z 1.7 >< 10308
+- magnitudine mai mam
+- preciziﬁ supﬁrioaré
+—192
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
 Structura
-~ de fapt, reprezentarea in virgulé mobilé este
-formata'l din doui reprezentéri in virgulé ﬁxé
-i semnul §i mantisa - reprezentare modul-semn
-i caractcristica - rcprczcntarc in cxccs
-' de ce cémpurile sunt Tn ordinea S,C,f?
-i pentru a compara doui reprezentéri, cémpurile
-trebuie luate in considerare in aceasté ordine
-—w_1
+' d6 fapt, reprez6ntar6a in virgulé mobilé 6st6
+formaté din doué mprezentéri in virgulé ﬁxé
+— semnul §i mantisa - reprezentare modul-sﬁmn
+— caracteristica - reprazentare in excas
+' de 06 cémpurile sunt in ordinea S,C,f?
+— pentru a compara doué reprezentéri, cﬁmpurile
+trebuie luate in considerara in aceasté ordine
+193
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Arhilectllrl cllculllnarelor 5i Sisielne d2 opera" - pineal
-Caracteristici IEEE 754/ 1 985
-— Simpli precizie Dublé precizie
-Exponent maxim 128 1024
-- numere ﬁnite 127 1023
-Exponent minim —127 —1023
-- numere normalizate -126 -1()22
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Caracteristici IEEE 754/1985
+— Simplé precizie Dublé precizie
+
+~ numﬁrﬁ: ﬁnitﬁ: 127 1023
+
+' numem normalizate -126 -1022
+
 1023
-—m
+—194
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Arhilectur: cllculzlnarelor 5i sinune de 0pm" - pm“ l
-Exemplu 1
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Exermplu 1
 
-' ﬁe numérul -23.25
+- ﬁe numérul -23.25
 
-I cum se reprezinté in simpli precizie‘?
-' semnul: 1 (negativ)
-- scriere in baza 2: -23.25(10)= -10111.01(2)
-' normalizare: 10111.01 I 1.0] I I01 >< 24
-' caracteristica: 4 + 127 I 131 I 100000110)
-- reprezentarea
+— cum s6 reprezintéi in simplé precizie?
+' semnul: 1 (n6gativ)
+' scriém in baza 2: -23.25(1O)I -10111.01(2)
+' normalizare: 10111.01 I 1.011101 >< 24
+' caracteristica: 4 + 127 I 131 I 10000011(2)
+' reprezentarera
 
-l 100000110111010...0(2)= C1BA0000<16)
+1 10000011 0111010...0(2) I C1BA0000(16)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Arllilectur: cllculzlnarelor 5i sinune de 0pm" - pm“ l
-Exemplu 2
-' ce numér corespunde reprezentérii
-42138000006) (simplé precizie)?
-42D80000(16) = 0 10000101 10110000...0(2)
-S = O Q numér pozitiv
-C =10000101(2)=133(10)3 e = 133 - 127 = 6
-M= 1 +0.1011 = 1.1011
-' numérul:+1.1011>< 26:1101100(2)=108(10)
+Arhitectura calculatoarelor §i sisteme de operare - partea I
+Exermplu 2
+' 06 numér comspunde rﬁprezentérii
+42D80000U6) (simplé precizie)?
+42D80000<1® I 0 10000101 10110000...0(2)
+S I 0 —> numéir pozitiv
+c :10000101(2):133(10):> 0 :133 -127 I 6
+M 21+ 0.101121.1011
+- numéirul:+1.1011>< 26:1101100(2)=108(10)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Antmetlca extlnsa
-' in plus fagé de aritmetica numerelor reale
-i reprezentarea numirului oo $1 deﬁnirea regulilor
-elementare de calcul cu acesta
-. x/oo,x><sc,ooioo
-i rcprczcmarc pcntru rczultatul operatiilor
-nedeﬁnite (NaN - Not a Number) 5i deﬁnirea
-regulilor de propagare a acestuia
-~ NaN op x = NaN, Vop
-- utilizare - bibliotecile de funcﬁi matematice
-—w7
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Antmertlca 6Xt1IlSEl
+- in plus fagé d6 aritmatica numﬁmlor malﬁ
+— mprezantama numérului oo §i deﬁnirea mgulilor
+ﬁlemﬁntara de calcul cu acasta
+~ x/oo,x><oo,ooioo
+— rapmzentare pentru rezultatul operatiilor
+nedeﬁnim (NaN - Not a Number) 5i deﬁnirea
+rﬁgulilor de propagate a acastuia
+' NaN 0p X I NaN, Vop
+' utilizare - bibliotecila de funcgii matematicﬁ
+—197
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Arhilectur: cllculzlnarelor 5i sinune de 0pm" - pm“ l
-Exemplu
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Exﬁmplu
+
 ' calculul funcgiei arccos cu formula
-arccns(x)=2-arctan1/ (1-x)/(1+X)
-' care este valoarea arccos(-l)?
-x:-1 Q (1-X)/(1+X) : 2/0:oo a
-=> arctanxl (1-x)/(1+x) = ‘IT/2
-- réspuns: arccos (-l) = TE
-i nu ar ﬁ fost posibil de obtinut firé aritmetica
-extinsé
-—ws
+
+arccos (X) :2-arctan1/ (1-K) / (1 +X)
+
+' cam ﬁste: valoarﬁa arccos(-1)?
+
+XI-l :> (1-X)/(1+X) I 2/0:00 :>
+
+:> arctanq/ (1-X)/(1+X) I 1I/2
+
+~ réspuns: arccos (-1) = 1t
+
+— nu ar f1 fost posibil de obginut feiré aritmetica
+€Xtinsé
+
+—198
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Arhilectur: cllcullloarelor 5i sisteme de 0pm" - pm“!
-Tipuri de valori in virgulé mobilé
-S 0(1 0)
-—|w
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Tipuri d6 valori in virguléi mobiléi
+<-1>S><1-fx 26
+<-1>S X w 2g
+S 0 < = 0)
+—199
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:17**************
-Arhilectur: cllculzlnarelor 5i sinune de 0pm" - pm“ l
-Depa§1r1
-~ d¢pé$ire inferioaré
-i in forma normalizati, exponentul negativ nu
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+D6pa§1r1
+' depé$ir6 inferioaré
+— in forma normalizaté, exponﬁntul nﬁgativ nu
 poate ﬁ reprezentat in cémpul caracteristicii
-- numz'arul va ﬁ considera‘ O
-' depi$ire superioaré
-i in forma normalizaté, exponentul pozitiv nu
-poate ﬁ reprezentat in cimpul caracteristicii
-- numérul va f1 considerat ioo, dupé caz
-lell
+- numérul va ﬁ considerat O
+' d6pé$ire superioaré
+— in forma normalizaté, €XpOI1€Iltlll pozitiv nu
+poate ﬁ r6prez6ntat in campul caracteristicii
+' numérul va ﬁ considerat ioo, dupé caz
+200
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
-Reprezentan denorrnallzate
-' numér mai mic in modul deceit cea mai micé
-reprezentare normalizaté nenulé
-i se renungé la normalizare
-i exponentul are valoarea minimé
-. simplé prccizic: -127
-- dublé precizie: -1023
-i in acest caz, mantisa va ﬁ 0.f, in loc de l.f
-—zn\
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Rﬁpramntan dernormahzate:
+- numér mai mic in modul deceit cea mai micé
+repremntam normalizaté nenulé
+— se renunyéi 1a normalizara
+— 6Xponentul are valoarea minimé
+' simplé precizie: -127
+' dublé precizie: -1023
+— in ac¢st caz, mantisa va ﬁ 0.f, in 10c de 1.f
+201
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Aproximéri ( l)
-' depﬁgirea inferioaré este de fapt aproximare
-i un numz'ir nenul foarte mic este considerat 0
-~ care estc precizia reprezcntérii in virgulé
-mobilz'l?
-i depinde de exponent
-i simplé prccizic: 28'23
-i dublé precizie: 2*52
-' exponent foarte mare - precizie foarte slabé
-znz
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Aproximéiri ( 1 )
+' dep5§irea inferioaré este de fapt aproximare
+— un numér nenul foarte mic este eonsiderat O
+' care este preeizia reprezentérii in virgulé
+mobilé?
+— depinde de exponent
+— simplé preeizie: 26-23
+— dublé precizie: 26'52
+' exponent foarte mare - preeizie foarte slabé
+202
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
-Apr0x1mar1 (2)
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+AprcX1mar1 (2)
 ' exemplu: e I 123
-— diferenga intre doué numere consecutive
-reprezentabile exact este 2'23‘23 : 2100 z 103°
+— diferenta intre dcua numere consecutive
+reprezentabile exact este 2123'23 I 2100 z 1030
 ' ce putem reprezenta exact?
-— numere rayionale (nu reale) - doar 0 parte
-depi$<re Superioari dep5$lre Superiuari
-i 1
-Interval rEDrelentahll V Interval rEDrelenlahll
-Immele negallve dsoéglvs menu“: numere nozlllve
-103
+— numere rationale (nu reale) - dear 0 parte
+tifpaaire superieara depagire superiearf
+interval reprezentabil \/I interval reprezentabil
+numere negative depaaire inferieara numere pezitive
+203
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
-Aritmetica in Virgulé mobilé
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Aritmertica in virgulé mobiléi
 
-- ﬁe douﬁ numere
+' ﬁe doué nunmre
 
-XImX-Zex
+XImX-Z'ex
 
-yImy-Zey
-~ operaﬁile aritmeticc clementare
+yzmy-Zey
+' Qperagiilev aritmetice alementarer
 
-X+y=(mX-2°X'CY+my)-ZCY, 1121051 exﬁey
+X+y:(mX-28X'ey+my)-2@Y, dacii exéey
 
-X-y=(mX-29X‘eY-my)-2eY, dacé exsey
+X-y:(mX-2ex'eY-my)-2e1’, dacﬁi exéey
 
-X-y: (mX-my)-2€X+ey
+X-y: (mX-my)-2ex+ey
 
-X:y= (mx:my)-29X'ey
+my: (mx:my)-2@X'ey
 
-m
+204
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Adunarea in virgulé mobilé
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Adunama in virguléi mobiléi
 
-- compararea exponengilor
+' compararaa exponengilor
 
-i sc cgalizcazi prin dcplasarca unci mantisc
-' adunarea mantiselor
+— se 6ga1izeazéi prin deplasarea unei mantise
+' adunarea mantisﬁlor
 
-i in complement fayﬁ de 2
-' normalizarea sumei
+— in complemant fagéi dﬁ 2
+' normalizarea sumﬁi
 
-i dacé apare depégire — oprire
-- rotunjirea mantisei rezultat la numérul
+— dacé apare depé§ire - oprirﬁ
+' rotunjirea mantisei rezultat la numérul
 
-permis de bigi
-
-205
+parmis d6 bigi
+—205
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Inmultirea in virgulﬁ mobil'Zl
-~ adunarea €Xp0n¢n§ilor
-~ inmultirea mantiselor
-' normalizarea produsului
-— dacé apare depégire — oprire
-' rotunjirea mantisei rezultat la numiml
-permis dc bigi
-- determinarea semnului rezultatului
-—zno
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Inmultirera in virguléi mobiléi
+' adunarea exponenyilor
+- inmulgiraa mantisdor
+' normalizama produsului
+— dacé apare depéigim - oprire
+' rotunjiraa mantisei rezultat 1a numérul
+permis de bigi
+' d6terminarea semnului rezultatului
+—206
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
-Terna
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Tﬁma
 
-- urmérigi pa§ii adunérii §i respectiv inmulgirii
-in virgulé mobilé pentru rcprczentérile
-numerelor scrise in baza zece ca -0,75 $i
+' urmérigi pa$ii adunérii §i rﬁsp6ctivinmu111irii
+in virgulé mobilé p6ntru repmzﬁntérile
+numerelor scris6 in baza 26w ca -O,75 5i
 0,375
 
-~ se va considera reprezcntarea in simplé
-precizie
+' se va considerra mprezentarea in simplé
+precizie:
 
-107
+207
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
@@ -406,202 +433,220 @@ calculatorului
 
 ***************Beginning Page***************
 ***************page number:26**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
-Modelul von Neumann (1)
-~ program memorat
-i codurile instrucgiunilor sunt reﬁnute in aceea$i
-memorie ca 3i datele
-~ memoria
-i ideal inﬁniti; timp de acces egal la orice locagie
-' dupi execugia unei instrucgiuni urmeazé
-i instrucgiunea memoraté imediat dupi ea
-i sau instrucyiunea indicate?! de cea curenté (salt)
-109
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Modﬁlul von Nerumann (1)
+- program memorat
+— codurile instrucgiunilor sunt mginutﬁ in aceeagi
+mamoriﬁ ca §i datele
+- m6m0ria
+— idaal inﬁnité; timp de accas agal 1a orica locayie
+' dupé axecugia unei instrucgiuni urmeazé
+— instrucgiunﬁa memoraté imediat dupé ea
+— sau instrucgiunea indicaté de cea curenté (salt)
+209
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
 Modelul von Neumann (2)
-~ adresa instructiunii urmétoare este retinuté
-in permanengi
-i intr-un registru dedicat - PC (Program Counter)
-i $i actualizati permanent, in functic dc tipul
-instrucgiunii curenle ("normalé" sau dc salt)
-- in ﬁecare moment, o singuri instructiune
-este incércaté pentru executie
-—m
+' adresa instructiunii urmétoare este reginuté
+in permanengé
+— intr-un registru dedieat - PC (Program Counter)
+— §i aetualizaté permanent, in funegie de tipul
+instruegiunii eurente ("normalé" sau de salt)
+' in ﬁeeare moment, 0 singuré instruetiune
+este ineéreaté pentru executie
+210
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Arhilectura cllcullloarelor 5i sisteme de operare - pineal
-Arhitectura unui sistem de calcul
-pmg Vi m UH \ \ZECHV
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Arhiterctura unui sisterm de calcul
+program utilizatur
 
-0pm
+upemre
+—211
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Arhilectur: cllculzlnarelor 5i sinune de 0pm" - pm“ l
-Organizarea unui calculator
-.-
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Organlzarera unul calculator
+magiﬁrala sistem
+memorle
+
+magiﬁmla deintrﬁri f iegiri
+
+i“
+
+T%L
+
+regea
+212
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
-Arhltectura s1sternu1u1 - componente
-- arhitectura setului de instrucgiuni (ISA)
-i materializaté prin diverse limbaje
-i in ordine crescitoare a nivelului de
-abstraclizarc
-. limbajul ma§in5
-- limbajul de asamblare
-- limbaje de nivel inalt
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Arh1t6ctura SlSt€II1llllll - componetnte
+' arhit6ctura setului dﬁ instrucgiuni (ISA)
+— materializatéi prin divﬁrse limbajﬁ
+— in ordine crescéitoare a nivelului de
+abstractizare
+' limbajul ma§in51
+' limbajul de asamblare
+' limbaje de nivel inalt
 ' organizarea ma§inii
-—z\3
+—213
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Limbaje de nivel scézut
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Limbajﬁ de: nivetl scizut
 ' limbajul maginé
-i caracteristic ﬁecérui procesor
-i consti din cuvinte peste alfabetul {0, 1}
-' limbajul de asamblare
-i nivel (pugin) mai inalt
-— corespondengé cu limbajul ma§iné (instrucgiuni)
-- exemple
-i limbaj ma$in§: 0100 1010 1101 0010
-i limbaj de asamblare: sub myvar,5
-zu
+— caracteristic ﬁﬁcéirui procesor
+— consté din cuvinte paste alfabﬁtul {0, 1}
+- limbajul de asamblare
+— nivel (puyin) mai inalt
+— corespondengé cu limbajul maginé (instrucgiuni)
+' 6X€H1p16
+— limbaj maginé: 0100 1010 1101 0010
+— limbaj de asamblare: sub myvar,5
+214
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:32**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
 Traducere ( 1 )
 
-~ singuru] limbaj ingeles dc procesor cste
+' singurul limbaj inreles de procesor este
 
-limbajul maginé
+limbajul ma§in€1
 
-— pentru a ﬁ execulat, un program trebuie tradus
-- asamblor (assembler)
+— pentru a ﬁ executat, un program trebuie tradus
+' asamblor (assembler)
 
-i traduce limbajul de asamblare in limbaj ma$iné
-~ compilator (compiler)
+— traduce limbajul d6 asamblare in limbaj ma§iné
+' compilator (compiler)
 
-i traduce un limbaj dc nivel inalt in limbaj
+— traduce un limbaj de nivel inalt in limbaj
 
-magma
-i direct sau via limbajul de asamblare
-ZIS
+ma§1na
+— direct sau via limbajul de asarnblare
+215
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Traduc ere (2)
-le bale de nlvel Tnalt
-lebaj de asamblare
-lebaj maglné
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Traducerre (2)
+—216
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Limbaje de nivel inalt - avantaje
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Limbaj 6 de nival inalt - avantaj 6
 
-' dezvoltare mai rapidé a programelor
+' d6zvoltare mai rapidé a programﬁlor
 
-i instrucgiuni mai usor de ingeles §i mai pugine
-~ intreginere mai u$oaré a programelor
+— instrucgiuni mai u§0r de ingeles §i mai puginﬁ
+- intrﬁginere mai u§0ar€1 a programelor
 
-i aceleagi motive
+— acelea§i motive
 ' portabilitatea programelor
 
-i pugine delalii dependente de ma$ini
+— putine detalii dependentﬁ de maginé
 
-- dar nu deloc - portabilitatea nu e chiar 100%
-— ﬁecare limbaj necesiti un compilator speciﬁc
-Zl7
+' dar nu deloc - portabilitama nu e chiar 100%
+— ﬁecam limbaj n6cesit'21 un compilator speciﬁc
+217
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
-Arhilectur: cllculllnarelor 5i sinune de 0pm" - pm“ l
-Limbaj de asamblare - avantaje
-' eﬁciengé
-i cod mai compact - ocupé mai puginé memorie
-i vitezé - execugie mai rapid?!
-i $i compilatoarele urméresc eﬁcienga
-- dar programatorul poate obﬁne rezultate mai buns
-' acces la resursele hardware
-— exemplu: procesoarele an bigi care indicé
-transponul §i depi§irea la adunare
-' nu sum accesibile din limbajele de nivel inalt
-ZIB
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+lebaj de asamblara - avanta] 6
+' eﬁcienga
+— cod mai compact - ocupa mai pugina memoria
+— vitaza - execugie mai rapida
+— §i compilatoarele urmarasc aﬁcienya
+' dar programatorul poate obgine rezultate mai bune
+' accas la rasursale hardware
+— ﬁxamplu: procesoarele au bigi care indica
+transportul §i dapa§ir6a la adunara
+' nu sunt accesibile din limbaj ele de nivel inalt
+218
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:36**************
-Arhilectur: cllcuhlnarelor 5i sinune de 0pm" - pm“ l
-Optlrnlzare
-~ dorim ca sistemul s51 ﬁe cét mai performant
-i dar nu putem imbunétéyi toate componentele
-' care componente merité efortul de a ﬁ
-imbunitéﬁte?
-i cele care au 0 pondere mai mare in funcgionarea
-sistemului
-i cum misurém aceasté pondere'?
-—z\9
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Optlmlzare
+
+' dorim ca sistemul s51 ﬁ6 cét mai performant
+
+— dar nu putem imbunétéﬁ t0at6 componentﬁk
+' cam componentﬁ merité efortul d6 a ﬁ
+
+imbunéitégim?
+— 0616 cam au 0 pondare mai mare in funcgionarea
+sistﬁmului
+— cum misurém aceasté pondere?
+219
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:37**************
-Arhilectur: cllculllnarelor 5i sisiune d2 0pm" - pm“ l
-Legea 1u1 Amdahl (1)
-' considerﬁm un sistem (hardware, software)
-5i 0 anumité componenti a sa
-' componenta respectivi lucreazé un
-procentaj ft} din timpul de lucru a1 sistemului
-- $i este imbunététité, astfel incﬁt lucreazﬁ de
-a ori mai rapid deceit inainte
-' de cite ori mai rapid devine sistemul?
-—zzu
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Lergﬁra 1u1 Amdahl (1)
+' considﬁrém un sistem (hardwam, softwara)
+gi 0 anumité comp0n6nté a sa
+' componénta resp6ctiv€1 lucmazé un
+procﬁntaj fa din timpul d6 lucru a1 sist6mului
+' $i 6ste imbunététité, astfﬁl incét lucreazé de
+a ori mai rapid deceit inaintﬁ:
+' de céte: ori mai rapid devina sistemul?
+220
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:38**************
-Arhilectur: cllculzlnarelor 5i sinune de 0pm" - pm“ l
-Legea 1u1 Amdahl (2)
+Arhitectura calculatoarelor 5i sisteme de operare - partea I
+Lergea 1u1 Amdahl (2)
 1
-A(a'fa) : if
-_ i
+14(61, fa) I —f
+_ _"-1
 (1 fa) + a
-' cre$tere de vitezi generalé cit mai mare
-i imbunétéyirea pronunﬂati a componentei (a)
-i imbunétﬁlirea componentelor cu 0 ponders (fﬂ)
+' cmgtam d6 vitﬁzé genaralé cét mai mam
+— imbunététirea pronuntatéi a componentai (a)
+— imbunététiraa componentelor cu 0 pondarﬁ (fa)
 cét mai mare
-' deci mai des folosite
-—zz\
+' deci mai des folosit6
+—221
 
 ***************Ending Page***************
 

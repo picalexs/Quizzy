@@ -2,407 +2,422 @@
 ***************page number:1**************
 Rust programming
 Course — 8
-Gavnm Dragos
+Gavrilut Dragos
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-®; Agenda for today
+Agenda for today
 1. Closures
 2. lterators
 3. Vectors
 4. Sorting data sequences
-5. HashMap
+5. HashlVlap
 6. HashSet
-7. BTreeMap
+7. BTreelVlap
 8. BTreeSet
-9. Map comparation between C++ and Rust
+9. IVlap comparation between C++ and Rust A
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-7
 Closures
-L
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
 Closures (or lambda functions) are short functions that can be used in different
-scenarios leg. when sorting, or filtering collection of elements).
+scenarios (e.g. when sorting, or filtering collection of elements).
 Closures are widely used with iterators.
 The general format of a closure is:
-
-|PararnlzTypew ParamlzTypel,...Param‘:Type‘| .> Returniype l codeeblock)
+|Param1:Type1, ParamzzType2,...ParamnzTypen | -> ReturnType { code-block}
 With some observations:
-
-' ReturnType can be omitted. In this case Rust will tr to infer it from the codeeblock return
-value; -) IPar'amV Paraml... Paramnl {code-block}
-
-- Typej, Type2___Type" can be ornltted as Well. Rust w||l trv to infer them from the usage.
-
+' ReturnType can be omitted. In this case Rust will tr to infer it from the code-block return
+value; -) |Param1, Param2,...Paramn| {code-block}
+' Typel, Type2___Typen can be omitted as well. Rust will try to infer them from the usage.
 ' The brackets from the code-code block can be omitted (in particular if the code-block is just a
-simple expression), In this case, the codeeblock contains 'ust the expression that evaluates
-the return value; -) lPararm, Paramj,“ Paramnl returhevalue
-
-~ If brackets are omitted, the ReturnType must be omitted as well.
+simple expression). In this case the code-block contains 'ust the expression that evaluates
+the return value; -) |Param1, Para m2,...Paramn| return-value
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
 Let's see some examples (with a parameter types and return type specified):
-RMA'!
-it: ,1’: -' “1';
-nmvdeUR; it‘; ‘I’, [ 11
-1 Z 6
-E Z a‘;
-while ihg f
-if gait 37w; :1 else q L'aQH'
-renmn 5;
-l:
-printlnll" ",ﬂv_1a)',»;
-pm'nrlnh'“ ",\;ru-n,:\n:,14),1;
+Rust
+let f1 = |x|—>i32 { x+1 }; 11
+let cmmdc = |x:132,y:i32| —>132 { —
+_ 6
+let mut a = x,
+let mut Q = y;
+while al=p {
+it a>Q { a;:Q; } else { 2;:as}
+}
+return a;
+};
+println!("{}",¥1(10));
+println!("{}",cmmdc(18,24));
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-®/ Closures
+CI osu res
 Let's see some examples (with any type specified):
-f" maan ( 0mm
-let f1 : ‘A (x+1);
-let f2 : \x,y\ x+y; 11
-let cmmdc e \X,y| { 3°
-let mut g e X,‘ 5
-let mut g e y;
-while 5EIQ {
-if PE i H; } else i b'jﬂ
-)
-i
-)1
-println!( n mum);
-println!( {) ,fZ(1B,26));
-println!( n ,cmmdc(18,24));
-)
+fn main <> { W‘
+let f1 = |x| { x+1 };
+let f2 = |x,y| x+y; 11
+let cmmdc = |x,y| { 3O
+let mut g = x; 6
+let mut Q = y;
+while §!=g {
+it §>Q { §;:Q; } else { Q;:§;}
+} l
+a lee
+pPintln!( {} ,t1(1@)); lﬁﬁﬁﬁﬁﬁ
+pPintln!( {} ,t2(1@,29)); _lﬁii§§§§§
+pPintln!( {} ,Cmde(18,24)); ,lﬁiiiiiiiii
+} lﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁ
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Keep in mind that a closure is not a template [even if no type is s ecified . In the
-next example, “x” and “y” from f1 are inferred to be of type
-after the first call of printfl Macro.
+i?‘
+Keep in mind that a closure is not a template (even if no type is s ecified . In the
+next example, “x” and "y" from f1 are inferred to be of type
+after the first call of printf! IVIacro.
 As such, the usage of a float value will not be allowed.
-RuSl‘
-mainly l
-t1 I l"-,;, l "w;
-pr'ilitlnll" ",mm,zmi;
-l WM WW. hm “mm W. W
+Rust
+main() {
+t1 = Ix,y| X+ys
+println!(" ",fl 19 26 '
+println!(" ", 1 1.2,2.5 3
+} error[E9398]: mismatched types
+——> src\main.rs:4:22
+|
+4 | println!("{}",F1(1.2,2.5));
+| AAA expected integer, Found Floating-point number
+error[E0398]: mismatched types
+——> src\main.rs:4:26
+|
+4 | println!("{}",F1(1.2,2.5));
+| AAA expected integer, found floating-point number
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-A closure does not need to have parameters, it can just be a simple function that
-
+t?‘
+Closu res
+A closure does not need t0 have parameters, it can just be a simple function that
 prints something on the screen.
-
-RUST
-
-nvainLjv ‘1 -
-, e H println! L'TMst"); °""‘“‘
-pmnclm :31 like"); \llke
-rt’); Rust
-w‘intln‘k_"1 like“; \llke
-n1}; Rust
-‘\
+Rust
+main() {
+P = || pnintln! ("Rust"); W
+pnintln!("I like"); ler
+P(); Rust
+pnintln!("I like"); ler
+P(); Rust
+}
 OBS: This is in particular useful with captures.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
+' ‘- Closu res
 A closure can capture local parameters. Let's analyze the following example:
 Rust
-mainll l
-print -, : ll prilelHHH- hi):
-prwrim;
-
-l
-
-Let's see what's ha pening in this mov Word PU‘ [X111
-
-case (where closure capture
-
-the value of "x") lea Fax‘ [X]
-
-' mov qwnrd ptr‘ [printix],r~ax
-
-lea m, [printix]
-call main: :closuhew
+main() {
+pPith_X = || println! ("x= ",g);
+print_x();
+}
+Let's see what's ha pening in this
+case (where iclosure capture
+the value of ”x"). lea P3X’ [X] .
+mov qword ptr [pr1nt_x],rax
+lea ch,[pPint_x]
+call mainzzclosure$9
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
 A closure can capture local parameters. Let's analyze the following example:
-Rqu
-mainlr (
-flint -, : ll prirler\l("x: ",i):
-pnntgm:
-l
-Let's see what's ha pening in this WV Word PtP [X111
-case (where closure capture
-the value of "x") lea Fax‘ [X]
-' mov qwnm ptr‘ [printix],r~ax
-lea m? ént Xl
+Rust
+main() {
+pPith_X = || println! ("x= ",g);
+print_x )3
+}
+Let's see what's ha pening in this ‘mov dWOPd Ptr [X],1
+case (where iclosure capture
+the value of ”x") lea Pax’ [X]
+' mov qword ptr [print_x],rax
+lea rcxﬁ, gnt x|
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
+Closures
 A closure can capture local parameters. Let's analyze the following example:
-Rqu
-mainlr (
-flint -, : ll prirler\l("x: ",i):
-l
-Let's see what's ha pening in this WV Word PtP [X111
-case (where closure capture
-the value of "x") lea Fax‘ [ll]
-' mov qwnm ptr‘ [printix],r~ax
-x lea m, [printix]
-call main: :closuhew
+Rust
+main() {
+Pint x = || phintln!("x= ",g);
+Let's see what's ha pening in this mov dWOPd Ptr [X],1
+case (where iclosure capture
+the value of ”x"). lea Pax’ [X] .
+mov qword ptr [pr1nt_x],rax
+call main: :closur‘e$9 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
 A closure can capture local parameters. Let's analyze the following example:
-Rust c“ equivalent
-maim'r r l
-,- : 1; ' X;
-flint -, : ll prirler\l("x: ",i): Run!) l
-urwt ‘U: printﬂ">:: ‘wwxr;
-r i r
-Let's see what's ha pening in this mam‘) l
-case (where closure capture '~ 1? V
-the value of "x"). . 1M” "
-lll'lllfijlyi 1 m;
-pr'lHL ~<.Rum r;
-l
+Rust C++ equivalent
+main() { {
+5 = 1; * x;
+phint_x = || phintln!("x= ",g); Run() {
+print_x(); pr1ntf("x=%d",*x);
+} }
+a a u };
+Let's see what's ha penlng |n th|s main() {
+case (where iclosure capture X = 13 _
+the value of ”x"). . p'ﬁlntj’
+phlnt_x.x = &x;
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-.
-Closures
+Closu res
 A closure can capture local parameters. Let's analyze the following example:
-Rust c“ Equivalentfwrrh [11155551
-Irlaim'l l l
-1 : 1; a x;
-[lint -, : ll prjﬂllﬁunx: ",i): :
-printinql; Tempilosurel a mum; Xrlmm-l r‘;
-l operator'Q U l
-Mina?» aux};
-Let's see what's ha pening in this 1»
-case (where iclosure capture 1‘: _ _
-the value of "x"). mam‘) i
-'1 m m;( '- I! ;
-l
+Rust C++ equivalent (with classes)
+mainO { {
+z = 1; & X3
+phint_x = || phintln!("x= ",g); :
+print_x(); TempClosuPe( & value): x(va1ue) {}
+} operator() () {
+printf("x=%d",x);
+Let's see what's ha pening in this }
+case (where iclosure capture };
+the value of ”x"). mai;() i
+phint_x(x);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-a Closures
-So a closure captures references to variables that are being used in its evaluations
+f. Closu res
+So a closure captures references to variables that are being used in its evaluation.
 This also means that every rule that applies to borrowing variables apply here as well.
-Rust
-{l lllaiﬂl l l
 
-1w print; : ll pr‘i|1tlnll“- 1;‘,m;
-primjrr; x from main : 1
-priminu" w-m law i i]“,><'>; X11
-prrirrtixlj j];
-l
-In reality, both print_x and main use immutable references to “x” and as such this
+Rust
+F“ main“ { M
+let x = 1;
+let print_x = || pnintln!("x={}",x); X=1
+print_x(); xfnnnrnah1=1
+pnintln!("x From main = {}",x); X=1
+print_x();
+}
+ln reality, both print_x and main use immutable references to "x" and as such this
 code will workjust fine.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
+t?‘
 Let's consider this code:
 Rust
-p mi.‘ : ll Dr‘llitlﬂll_'")l: ",1]; Kfrumrnzin:1
-
-pi‘intlnll">l fem“ main : ‘35>; “1
-
-iii-1H: Hi;
-“x” is a mutable variable‘ This code works so the way printix capture "X" is by an
+"131W M
+x = 1; _
+pnintln!("x from main = ",g); X=1
+pnint_x();
+}
+"x" is a mutable variable. This code works so the way print_x capture “X” is by an
 immutable reference (if it were to be a mutable reference, the println! macro would
 not compile as it would imply the existence of both an immutable and a mutable
 reference to the same variable).
-OBS: In reality, Rust chases how i! borrows references based 0n haw those references me being used in
-the closure,
+OBS: In reality, Rust choses how it borrows references based on how those references are being used in
+the closure.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
+' ' Closu res
 Let's consider this code:
-FMS!
-mainm <1
-l : 1;
-r’! int!‘ : ll i, println!("x: ".1,>;- 1;
-
-pi‘intlnl(">: rm“ main : ‘35>;
-
-til-1H: ‘All; r"; Wm “Writ
-In this case, we have modiﬁed the closure l l u‘ “‘ ' ‘" J“ "
-to increment the value of "x". For this to 4 l {WW ‘"2313; r M
-happen, "x" must be borrowed as mutable, V l p m,‘ H ‘W"‘“"" m" “ “ ‘ "P
-and as such the println!(...) macro can no l we“! "M ‘3"! “1"”
+Rust
+x = 1;
+pnint_x = || { pnintln!("x= ",g);-};
+println!("x from main = ",g);
+pPint_X(); borrowed as mutable
+} ——> Sl"C\main.r‘s:4:33
+|
+3 | let print_x = || { println!("x={}",x);x+=1; };
+| -- - first borrow occurs due
+In this case, we have modified the closure l l t° °t i“ “m1
+to increment the value of "x". For this to 4 l println!(..x $1121‘; E°E§9tx§jcuts he“
+happen, "x" must be borrowed as mutable, 5 l prim“ A immutable borrow here
+and as such the println!(...) macro can no l mutable borrow later used here
 longer be used as it implies the existence of both immutable and mutable references
 to the same variable.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-a Closures
+I Closu res
 Let's consider this code:
 Rust
-ll in "U; *11
-m: w;
-Notice that - is mutablev This is required as in reality we change the value of one
-of its data members (the mutable reference to "x")4
+"131W M
+x = 1;
+Qnint x = || { pnintln!("x= "inﬁlg };
+m0; X=2
+m0;
+}
+Notice that - is mutable. This is required as in reality we change the value of one
+of its data members (the mutable reference to "x").
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Rust also has a special keyword (move) that can be used to move (asslgn) the value of
+Closures
+Rust also has a special keyword (move) that can be used to move (assign) the value of
 the captured elements into the lambda/closure.
-Rm
-v 'v l
-"mm -‘ Z 1-
-Tl ll n :|:|ll <1 pl intln! l "x: "-il ;£1; }; XII
-ww' w); xfrom mam:1
-p|‘int1nl("'-I from main 7 -, ",\; X12
-“1,: .1); xhommalHII
-p|‘int1nll_"x {Pam main : a "y;
-l
+Rust
+main“ { M
+z = 1;
+print x =E|| { phintln!("x= "AHEL' };
+print x(); xfrom main = 1
+phintln!("x from main = x ")3 X=2
+Epint x(); xfrom main=1
+phintln!("x from main = x ")3
+}
 Let's see what happens in this case.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Rust also has a special keyword (move) that can be used to move (asslgn) the value of
+Closures
+Rust also has a special keyword (move) that can be used to move (assign) the value of
 the captured elements into the lambda/closure.
-mm
-"law l Im-
-_ I 1;
-Hill. : ll lj printlnnw: "Quit; }; X=1
-1m" A); Xfrommam:1
-p|‘int1nl("1 {mm main = "3; x12
-1m: ,1); xlrummalHII
-p|‘int1nll_"x from main : a "3;
-l’ mov eax,dwor‘d pt!‘ [X]
-mov dword ptr‘ [printix],eax
-Let's see what happens in this case.
+Rust
+main“ { m
+s = 1;
+print x = || { phintln!("x= ")Z)35i513 }; X=1
+Epint x(); xfnnnrnaui=1
+phintln!("x from main = x ")3 X=2
+Epint x(); xfnnnrnah1=1
+phintln!("x from main = x ")3
+}
+mov dword ptn [print_x],eax
+Let's see What happens in this case.
 E
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-®/ Closures
+® Closu res
 Let's see a C++ equivalent for this:
-class Temptlosure ( class TempClosure (
+class TempClosuPe { class TempClosuPe {
 int& x; int x;
 public: public:
-Temleosure(jnt& Nye): X(VGLUE) n Tewvtlvw'ﬂint value): XKvalLﬁ) U
-void nprratnro () { void operatoro () <
-pmmﬂ" my); printﬂ" %d",x);
-X+:1; ><+:1;
-} )
-); );
-void main() ( void maln() {
-intx:l; iﬂtXIl;
-TempClnsure printjqx); Temptlosure print_x(x);
-printixo; printixo;
-) )
+TempClosuPe(int& value): x(value) {} TempClosuPe(int value): x(value) {}
+void operator() () { void operator() () {
+printf(" %d",x); printf(" %d",x);
+x+=1; x+=13
+} } _
+void main() { void main() { @ﬁ
+int x = 1; int x = 1; é;
+TempClosuPe print_x(x); TempClosuPe print_x(x); Z;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-5/ Closures
+® Closures
 Let's see a C++ equivalent for this:
-class Temptlosure ( class TempClcsure (
+class TempClosuPe { class TempClosune {
 int& x; int x;
-publit: public:
-\empuosureﬁinta ‘13118 : X(Value) U Tevwilvwvdint value): XNdlLﬁ) i)
-void @1me { void operanm) § {
+public: public:
+TempClosuPe[int& value]: x(value) {} TempClosune(int value): x(value) {}
+void openaton() \ { VOid openaton() > {
 In this case a reference is captured. In this case the value is captured.
-X+Ii§ “:1;
-) )
-); );
-void "mm ( vold maan (
-intx:l; intx:l;
-TempClnsilre printjdx); Temptlosure print_x(x);
-printixo; printixo;
-) }
+x+=1; X+=13
+} } _
+void main() { void main() { @ﬁ
+int x = 1; int x = 1; é;
+TempClosune pnint_x(x); TempClosune pnint_x(x); Z;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
+é?
 This means that the previous example that uses move keyword worked (but only
-because Copy trait is present on I32 type)‘
-Rm
-maimgv -;
-._ : urrumw'ubﬂw;
-Hi‘ r :|:|\\ <1 println!\".\': ‘Zing. rush 5m_"1"\; 1-;
-wrn" w);
-p|‘int1n1("'-I from main 7 -, "A;
-nlrt .1); Twin“ 7::rr'vi4ﬂnwn1nhn .
-p|‘inf1n‘\_"x {Pam main : a "y; r "‘“ “‘" ‘ "
-t ; r m m . “m5 m‘ m h
-r WWW". :W m"
-
-_ = r w m NM, Z u 4 w'mrlnw'-:<.>',-\_- pr|1=h§rr-\‘1‘\- ,>.
-However, If we use a type that does not 1 ‘ LTZ‘Z§I‘1ZLL11“" "
-have a COPY Era" (E-g- a 5mg) the code 1
-Wl|| not compﬂe! 1‘ W's“
-
-5r mm“ \nm M V 4n r,
+because Copy trait is present on i32 type).
+Rust
+main() {
+5 = ::from("abc");
+print x =[::::]|| { println!("x= ",5);5.push str("1"); };
+print x();
+println!("x from main = x ")3
+QPint X( )3 error[E9€82]: borrow of moved value: ‘x‘
+--> rc m in.r :5:39
+println!("x from main = x ")3 | S a S
+2 | let mut x = String::from("abc");
+} | ----- move occurs because ‘x‘ has type ‘String‘, which does not
+| im l m nt th ‘C ‘ tr it
+. 3 | let mut prinz_i i movee|| ?pgrintinl("x={}",x)3x.push_str("1"); };
+However, If we use a type that does not I I------ - 332131312312 due to
+' ' | |
+have a Copy tralt (e.g. a Strlng) the code I value moved into cowl here
+Wl|| not complle ! 4 I “rt-“>5. . ..
+5 | pr1ntln!( x from ma1n = {x} )3
+| A value borrowed here after move
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-This means that the previous example that uses move keyword worked [but only
-
-because Copy trait is present on I32 type)‘
+f. Closu res
+This means that the previous example that uses move keyword worked (but only
+because Copy trait is present on i32 type).
 
 Rust
 
-{n maim') r
-15L mt 5 : String::ﬁ‘om(“¢L¢“\;
-m Hm wint x : "we H t Dr‘1"tlﬂ!l“':l 1‘ v5i\:1~2“5h_5trt“1“J; t; M
-grint “a; mm
-wint x1}; Pam
-grint XL‘); x:abc11
+Fn main() {
+let mut 5 = String::from("abc");
+let mut print x = move || { println! ("x={}",§);5.push str("1"); }; m
+print x(); x=abc
+print x(); x=abc1
+print x(); x=abc11
 
-k
+}
 
 Now the code works, but the ownership of "x" has been moved into the print_x
 
@@ -412,157 +427,175 @@ closure.
 
 ***************Beginning Page***************
 ***************page number:24**************
-.
-Closu res
-One solution to move back a value that was captured by a closure is to return it‘
-RIIS!
-mainl ‘v i
-l : Hrmmwahcw;
-ll ill. :|:|ll { pr irvtln! l "x: ".i) :l.gu5h 5cm "1" l wenwn 1? l;
-l : wwr .~l_‘/;
-l K:Bb(
-x : abcl
-In this example, first “X” is moved into print_><, then it is moved back.
-OBS: In reality, these type of clusures can only be called once (for example in this case, the moment the
-value of "X" is moved buck, the capture prlntix can no longer be used).
+t?‘
+One solution to move back a value that was captured by a closure is to return it.
+Rust
+main() {
+5 = ::fnom("abc");
+print x =E|| { pnintln! ("x= ",Qgpush str‘("1");r‘etur‘n 5; };
+5 = print x();
+pnintln!("x = ",5); m
+} x=abc
+x=abc1
+In this example, first "X" is moved into print_x, then it is moved back.
+OBS: In reality, these type of closures can only be called once (for example in this case, the moment the
+value of ”x” is moved back, the capture print_x can no longer be used).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-One solution to move back a value that was captured by a closure is to return it‘
-RIIS!
-mainl] l
-l : IImel "abc“ ",l;
-lVlFf = :[::::]ll ( printlnl(“x: ",il;l.gu$h 5trl"1"l;return i; h
-i : lr'nt ‘ll:
-V""‘H"l‘~nx Z “'L)‘ K [EM] us: w W" ‘m ‘We
-l -\ l -» Z p-Wrm.
-l 777777777 p ,nrr, m“ in n“; in rhlr >i11
-'l unwhm“ :lwll
-El pmkuh
-l “slu, u,,Q h,-, svlu- mus,
+One solution to move back a value that was captured by a closure is to return it.
+Rust
+main() {
+5 = ::from("abc");
+grint x =[::::]|| { println!("x= ",5);§.gush str("1");return 5; };
+5 = print x();
+' I II = II .
+prifjltln ' ( X )5) ’ error[E0382]: use of moved value: ‘print_x‘
+[Plnt X ; --> src\main.rs:6:5
 l
-nnru >1“ u F >=nnnr hF ,n nven m“ F than n~>F ~F>iurF ,, M“ Fr th a ,QM,F , n“r n, ,rr
-nulwwnw
-~ V.mm 71¢
+} 4 | x = print_x();
+| --------- ‘print_x‘ moved due to this call
+5 | println!("x = {}",X);
+6 | print_x();
+| AAAAAAA value used here after move
 l
-1 1 ,ir m"? p_,nrrt Z mp i ll l pr,nrlnll ;:ll .tl,t Flthrtrrl 1 l,rirurn t. M
-not: (his value tm»;.m.“1§ ‘“u“(= l nh1<h <aus2s A! (a be moved when <alled
-W .smhvrlg
--\l #:p'urw an
+note: closure cannot be invoked more than once because it moves the variable ‘x‘ out of its
+environment
+--> src\main.rs:3:75
+l
+3 | let mut print_x = move || { println!("x={}",x);x.push_str("1");return x; };
+I A
+note: this value implements ‘FnOnce‘, which causes it to be moved when called
+--> src\main.rs:4:9
+4 | x = print_x();
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-g; Closures
+,’ CI OS U res
 
-Each closure implicitly implements at least one of the following 3 traits, The decision
+Each closure implicitly implements at least one of the following 3 traits. The decision
 
 on what to implement belongs to the compiler, based on the operation and how
 
-capture is being used in the closures
+capture is being used in the closure.
 
 1. - 9 closures that can be called only one time (usually a closure that moves
 a value through the return type out of its context)
 
-2, - 9 closures that don't move values out of their context but might change
+2. - 9 closures that don't move values out of their context but might change
 the value of a mutable reference that they capture.
 
-3, I 9 closures that don't move values out of their context and don't modify any
-reference that they capture (they capture immutable references) /
+3. I 9 closures that don't move values out of their context and don't modify any
+reference that they capture (they capture immutable references) ll
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-g; Closures
+,’ CI OS U FGS
 So what if we want to create a function that returns a closure. Well the first thing
 that we need to understand is how to define a pointer/reference to a function (similar
-to how this is defined in C/C++)t
+to how this is defined in C/C++).
 To do this, we will use the keyword fn in the following way:
-
-n (Type ,Types, Type")->ReturnType
+fn (Type1,Type2, Typen)->ReturnType
 Some examples:
-- — -) a function that receives a i32 value and returns another i32 value
-- — -) a function that receives a &str and an usize value and returns an object
+' — -) a function that receives a i32 value and returns another i32 value
+' — -) a function that receives a &str and an usize value and returns an object
 of type String
-~ _-) creates a type that represents a pointerto a function that receives
-a parameter of type char and returns an i32
+' _-) creates a type that represents a pointer to a function that receives
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-® Closures
+' ‘- Closures
 Let's see one example that returns a pointer to a function:
-RUS!‘
-tzw MyFunction : F!!(_i32,i:‘27')132; m
-tn createiaddifunctiont't r= MyFunctinn 1
-VELHWY \-,;132,\,\:132\<\132 ‘i vet“, y wt; t
-I
-F” main(\ t
-let add : create_add_ﬂ|nctjcm_'\:
-Lit sub: MyFunctiun : \- ,w"
-pr“jntlr\!(“"\], 1'1“,addt_l,2t,sub(19,4));
-l
-In this example, MyFunction is a type that defines a pointer to a function that takes
+Rust
+type MyFunction = fn(i32,132)->132;
+fn create_add_function() -> MyFunction {
+return |x:i32,y1132|->132 { return x+y; }
+}
+fn main() {
+let add = create_add_function();
+let sub: MyFunction = |x,y| x-y;
+println!("{}, {}",add(1,2),sub(1@,4));
+}
+ln this example, MyFunction is a type that defines a pointer to a function that takes
 two i32 parameters and returns an i32 value.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
 But what if we want to do something more complex (e.g. to return a closure that
 captures some variables/parameters):
 Rust
-createiclosureg'mlue: w r ‘,r' » r
-return \ 1: \-; -r return ~ r Mme; ‘r:
-‘i
-g U [111121 wrrwrt.»gd [rugr
-maim' "1 r j "' 1 ‘1
-r : createicloiurekllﬂ); 11"‘ . ‘W “r ‘““‘ “"‘" Tiffffiifff’ Y, , ., , .r r r V;
-pr1nrinrr"res : “.rrsuVW: r iiééwg‘ “ ' " ""
-_‘ 1 r MW r111» 121 1. MW ( mm,‘ .u
-r
-Z Hm 1 ‘.1 (ch m WW‘ mu‘ V H1
-ruuwd .ru H g [.1U7Hrgrrr. mrr" r’ 1 11 1 1”]
-nu‘! (resur.s I.“ nqrv n! (alrzlﬂ (a ‘n @v,.s 1‘ rnlv 1” "a! (.ptur! ,nv v.r,.n11s
-1r {m "r “new r ‘(my “he r‘
-r m.“ unuredhere
+create_closure(value: )—> ( )—> {
+return |x: |—> { return x / value; };
+error[E0308]: mismatched types
+main() { --> src\main.rs:2:12
+|
+-F = cpeate closupe(1@) ' 1 | 'Fn create_closure(value: i32)-> 'Fn (i32)->132 {
+_ || " H ’ | ------------- expected ‘fn(132) -> 132‘ because of
+pr1ntln!( PES = ,f(5@)); | mtwntwm
+} 2 | return |x:i32|->132 { return x / value; };
+|
+= note: expected fn pointer ‘fn(i32) -> 132‘
+found closure ‘[closure@src\main.rs:2:12: 2:46]‘
+note: closures can only be coerced to ‘fn‘ types if they do not capture any variables
+--> src\main.rs:2:38
+|
+2 | return |x:i32|—>i32 { return x / value; };
+| AAAAA ‘value‘ captured here
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
+é?‘
 That is because a - is just a pointer while a closure is a struct and its size its
 unknown (pending on what variables it has captured). The solution is to explain the
 output based on what it implements: Fn, FnOnce or FnMut
 Rust
-createiclosurel r. :T m: yr’ , ‘r
-
-return l-; l7» l return ,7 c value; l;
-
-mnwmu'wﬂ Z "manly; - 1 11
-The approach is 0k, but since value mi Mm h:rr:.enuaue1uaue1
+create_closure(value: )—> _{
+return Ix: |-> { return x / value; };
+}
+main() { [E9373]' 1 t1‘ th tr t‘ bt ‘t b
+‘F = create closupe(1@) . ‘er/‘Pi: " Whi.hCiOSle’\"§ 28%: OUh lVSPP ﬁtC-lézgel'tii nUl'iC lOn, U l OPPOWS
+' |
+2 | return |x:i32|->i32 { return x / value; };
+}
+| AAAAAAAAAAAA ----- ‘value‘ is borrowed here
+. . | |
+The approaCh |S 0k’ but S|nce va|ue | may outlive borrowed value ‘value‘
 is not copied, but only borrowed,
 when function create_closure ends, "value" lifetime ends and as a result, it can not
 exist in the returned closure.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
+a?‘
+Closures
 The solution is to move the value that is being capture into the closure. In this case,
-there is no concern related to lifetime as the result is copied‘
-RUSK
-treateiclosureijualue: 1r’ - _l M
-recum|:|l ; l7,» r return - a unluv; l»;
-r
-mainl.) l
-; createiclosurei'lﬁl:
-pr‘1ntlnll_“r‘e5- : "ﬁtwilz
+there is no concern related to lifetime as the result is copied.
+Rust
+create_closur‘e(value: )—> _{
+netunnElx: |-> { return x / value; };
+}
+main() {
+F = create_closune(16);
+pnintln!("nes = ",F(56));
+}
 The code could be written with FnOnce (as we are using move and FnOnce is also
 implemented).
 
@@ -570,136 +603,170 @@ implemented).
 
 ***************Beginning Page***************
 ***************page number:32**************
-But what happens when We use the - keyword ? To answer this, let's analyze the
+iiiiiiiii
+a Closures
+But what happens when we use the - keyword ? To answer this, let's analyze the
 following code:
-RIASI
-(rearujlmlrm .nw w V. l v
-=
-[reamilngumzl ‘we; l '_ l l» l
-"lajnll l —
-'1 7 createidosurellﬂg,
-v; : Lhesteiclusurelllil;
-,.< ,,- Z 1:11
-‘.1 Z - we‘,
-.: 7 @285,
+Rust
+create_closure value: —> —>
+return |X: | —> { return X / value; }; m
+}
+create_closure2 value: —> —>
+return |X: | —> { return X / value; };
+} M
+main() {
+X1 = create_closure(19);
+X2 = create_closure2(19);
+value = 19'
+X3 = |X: | -> { return X / value; };
+y1 = X 9 ;
+y2 = X2(29);
+y3 = X3(29);
+println!(" , , ",y1,y2,y3);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-But what actually happens when we use the - keyword P To answer this, let's
+i?‘
+But what actually happens when we use the - keyword ? To answer this, let's
 analyze the following code:
-RUSK
-muv EdX|29
-lea rcX,[x1]
-call first: :(Peateidosure: :(losuhelae (wwsmcsnsah)
-muv dwurd pt!‘ [y1],eax
-muv EdX|29
-lea rcX,[x2]
-call first: :createidusureZ: :dosurew genrsmmzzen)
-muv dwurd pt!‘ [yZ],eax
-muv EdX|29
-lea rcX,[x3]
-‘.v Z . mu, call ﬁrst: 1m": @05le (B7Was4cln7ﬂn)
-_; 7 .3181, muv dwurd pt!‘ [yi],eax
+Rust
+mov edx,2@
+lea ncx,[x1]
+call first::create_closure::closune$9 (67FF664C31259h)
+mov dword ptr [y1],eax
+mov edx,29
+lea ch,[x2]
+call first::create_closure2::closune$9 (@7FF664C312E9h)
+mov dword ptr [y2],eax
+mov edx,29
+lea ch,[x3]
+y1 = X1(2@);o call firstzzmainzzclosure$6 (97FF664C31379h)
+y2 = X2(29);. mov dword ptP [y3],eax
+y3 = x3(29);¢
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-®
-Closures
-But what actually happens when We use the - keyword ? To answer this, let's
+a Closu res
+But what actually happens when we use the - keyword ? To answer this, let's
 analyze the following code:
-RIASI
-B7FF654C31156h
-- mmmmm
-‘.l : ,- l2l3l,.—| B7FF554€3137B||
-.: e -1lZ€1,l,>—‘
+Rust
+97FF664C31250h
+- a7FF664C312E6h
+y1 = x109)”; | 07FF664C31376h
+y2 = X2(29);o
+y3 = x3(29);¢
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
+i?‘
 This actually means that each closure is a separate type. From this point of view, two
 identical closures (in terms of code, parameters, capture and return value) are
-different from Rust point of view, This is similar to how C++ implements lambda
-functions, and it also explains why the next code does not compile!
-RMS!
-(i'eateiclosureii 71w; i V; i_' i V; ij
-ii ilil—-'1U >
-l @155 i
-return l-: l a: return - .Fl; u; i:
-l mﬂlriii i “1'1”?!le $15213“ my)
-l 5 l rm" “W i», mi V m .1 mil," i mm ii
+different from Rust point of view. This is similar to how C++ implements lambda
+functions, and it also explains why the next code does not compile !
+Rust
+create_closure(value: ) -> ( ) —> {
+if value>19 {
+return |x: | —> { return x / value; };
+} else {
+return |x: | —> { return x / value; };
+}
+} .
+rnai11() { error[E6€68]: mismatched types
+--> src main.rs:5:16
+c = create_closure(19); 1 | fn create_closure(value: 132) -> impl Fn(i32) -> 132 {
+l
+} 5 | return move |x: i32| -> i32 { return x / value; };
+I AAA/\AAAAAAAAAAAAA/\AAAAAAAAAAAAA/\AAAAAAAAAA
+| expected closure, found a different closure
+= note: no two closures, even if identical, have the same type
+= help: consider boxing your closure and/or using it as a trait object
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-. Closures
+l?‘
+Closures
 Since we can not have a function that returns two different type, the next code can
-not be compHed.
-
-RMSF
-create-iclusurem m»: 1 V; r 1 V; 1,
-1¥ ‘ 1‘\lf.1{< 4
-1 else \‘
-return r; \ 7' t; mm. v r; _
-I mainn k
-s o (FCZitCiL'lDSHFLWUJAI
-But... what is the relation between "impl Fn(i32]e>i32” and those two closures ?
+not be compiled.
+Rust
+create_closure(value: ) -> ( ) -> {
+if value>16 {
+return Ix: | —> { return x / value; }; _
+} else {
+return Ix: | —> { return x / value; }; _
+}
+}
+main() {
+c = create_closure(19);
+}
+But... what is the relation between "impl Fn(i32)->i32” and those two closures ?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Closures
-
-Let's assume the following function: createiclosure
-
-(i'EitEillDSUPEl Vluis’ l e‘ l' i r. l
+a
+Closu res
+Let's assume the following function: create_c|osure
+create_closure value: -> ->
+return Ix: | -> { return x / value; };
+}
 When the compiler sees that the return type uses impl keyword, it search any return
 type from the function code and assumes that the return type is what the function
 returns. This means that the previous code will be translated by Rust as follows:
-
-(reateirlns-urel tin,- ‘i V -;
-
-return l>. l e l return > .qiir, i;
-
+create_closure(va1ue: ) -> -{
+return Ix: | —> { return x / value; };
+}
 After this, Rust checks to see if ABCD implements the trait Fn (with one parameter of
-type i321 and if it returns an i32 as well. lfthis is so, then the function is correct, and
+type i32) and if it returns an i32 as well. If this is so, then the function is correct, and
 its return type was inferred from the type of the closure. Furthermore:
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:38**************
-Closures
+ﬁ
+Closu res
 The main advantage of this technique is that it allows static linkage of the closure
 calling method. This means that since we know the type in the compiling phase, we
-know the memory offset where the calling method ofthat type lies, and we can call it
+know the memory offset where the calling method of that type lies, and we can call it
 directly.
 However, let's analyze one of the previous errors and see what Rust suggest:
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-a Closures
+f. Closu res
 So, what does Boxing means in this context ? Well its like the usage of virtual
 methods from C++ !
 
-mm
-t '- 'teiclnsuml 71o; jEIi ~ Emu, l'HlJEZ'l ~ 132 l1
-=
-tn mainli t
+Rust
+fn create_closure(va1ue: i32) -> Box<dyn Fn(132) -> 132> {
 
-1th ( 7 (Feateit'lnzuféllﬁii
+return Box::new(move Ix: 132| —> 132 { return x / value; });
+}
+fn main() {
 
-ugtlm i‘ .LlSBi];
-Notice the usage of the keyword dyn in the definition and the fact that We don't
+let c = create_closure(1@);
+
+println!("{}",c(5@));
+}
+Notice the usage of the keyword dyn in the definition and the fact that we don't
 return from the stack but rather allocate a space on heap (a box) from where we will
 return an object.
 We will talk more about dyn (short from dynamic © ) on another course.
@@ -708,248 +775,262 @@ We will talk more about dyn (short from dynamic © ) on another course.
 
 ***************Beginning Page***************
 ***************page number:40**************
-With this change, we can now return two different closure [one that uses multiply,
+With this change, we can now return two different closure (one that uses multiply,
 and another one that uses division).
-mm
-r" (Peateiclnsurerhslut’ 12:‘ ». aunt,’ mum ~ in r m
-n Hu- 1 :: a -(
-rvﬂrn rm,‘ net-MM,- . In‘ ~ 111; retnr‘ - r pm»; n; 550,5
-r mm: -;
-FUUFH Pox: net/hurt: - jam ~12: r 1w” - ~ ﬁluw; w;
-m malnw 1
-w (1 : createiclnnlreﬂllr,
-1r» (z 7 crlzatciclasumdm,
-u;h<71uuj“::r: ,L1[:59'\,CZ\5EIM;
+Rust
+tn create_closure(value: i32) —> Box<dyn Fn(132) -> 132> { m
+if value % 2 == 6 {
+return Box::new(move Ix: 132| —> 132 { return x / value; }); 550ﬁ5
+} else {
+return Box::new(move Ix: 132| —> 132 { return x * value; });
+}
+}
+fn main() {
+let c1 = create_closure(11);
+let c2 = create_closure(19);
+println!("{},{}",c1(5@),c2(59));
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-7
-Iterators
-L
+\terators
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-g; Ite rato rs
+,’ |t€ ra tO FS
 lterators are object that can be used to iterate over an existing collection. They are
-efficient for cases where index access requires a boundary check, or for collections
-where index access is not possible (esg. a linked |ist— std::collections::LinkedList)
+efficient for cases Where index access requires a boundary check, or for collections
+Where index access is not possible (e.g. a linked list — std::collections::LinkedList)
+
 Collection that use iterators:
 
-~ Arrays
+' Arrays
 
-~ Vectors
+' Vectors
 
-- Maps (BTreeMap, HashMap)
+' |\/|aps (BTreeIVIap, HashIVIap)
 
-- Sets lBTreeSet, HashSet)
+' Sets (BTreeSet, HashSet)
 All collections that implement iterators use the trait - defined in
-std::iter::lterator
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-®
 Basic operation for iterators
 
-“@ch 7 A \ :: ‘I Moves t0 the next e\ement rrorn the coHections.
-rm .5 a vlrtua‘ method that must be Implemented
-by collecnon that implements thrs mm.
+MU?‘ ) -> < I I > Moves to the next element from the collections.
+This is a virtual method that must be implemented
+by collection that implements this trait.
 
-(ountll 7 A \terates untrl the fine‘ e\ement and returns the
-number or \lerauons.
+count( ) -> lterates until the final element and returns the
+number of iterations.
 
-lastr ; V; L z: 1 Hermes until the last Hement from the coHectlons
-and returns it‘
+laSt( ) -> < II > lterates until the last element from the collections
+and returns it.
 
-mxr' j» 7;‘ , :: 1- Returns the maxrrnurn/minrmurn number Vrorn the
+@(81 , n1 ) -> < I I > Returns the nth items from the current position.
 
-mink, > -> r r1 - current posmon
+max( ) -> < II > Returns the maximum/minimum number from the
+
+min( ) -> < 11 > current position
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Ite rato rs
+Iterators
 Let's see how an iterator works:
-RUE!
-WW ME-
-:1 Z [1.2,3,4.s,5,7,.a.“-]; 50mm
-i : [LitEPUZ Somew
-(“ " ~1‘ nexU ) ); Snme(51
-(“ ELMO‘); 3
-(" ‘Ui-mﬂn;
-> ‘
-Let's see how iterators work in this case: |i|
+Rust
+maino { M
+a = [1:2:3:4:5:6J7J8J9]; Some(l)
+l = a-itePOS Some(2)
+(H ‘Bl-MO); Some(6)
+(" ‘bl-MO); 3
+(" ‘Bl-EB»;
+} A
+Let's see how iterators work in this case: é
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-. Iterators
+a?‘
+Iterators
 Let's see how an iterator works:
-RUE!
-mo < mm-
-ﬂ Z [1.z,s,4.s,a,7,vaﬂ-]; 50mm
-i : miter"); Somel2\
-r" — 50mm]
-(“ ‘.14&k. ,v; 3
-K" ‘1-me
-)
+Rust
+maino { M
+a = [1:2:3:4:5:6J7J8J9]; Some(1)
+l = a-iter‘ ' Some(2)
+<" '— Some<6>
+(" ',;.nex 3 3
+(" ‘Bl-M6»;
+}
 Reads the value from current
-WSW”, and (hon advances
-[D [NE HE)“ One
+position, and then advances
+to the next one
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-. Iterators
+Iterators
 Let's see how an iterator works:
-RUE!
-m0 < ME-
-.1 : [1,1,$,4,s,a,7,a,e4]; SDmEll]
-i I [hitEPk'M 50mm
-(“ "mnext ‘y ; 50mm]
-)
-Reads the value from the 2""
-mm", and lhcn advances
-[Olhe nEXl DHE
+Rust
+maino { M
+a = [1:2:3:4:5:6J7J8J9]; Some(1)
+l = a-itePOS Some(2)
+(‘I " i.nEXt ' Some(6)
+<" '— 3
+}
+Reads the value from the 2nOI
+position, and then advances
+to the next one
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-. Iterators
+i?‘
+Iterators
 Let's see how an iterator works:
-RUE!
-mo < mm-
-ﬂ Z [1.z,s,4.s,a,7,vaﬂ-]; 50mm
-i : [LitEPUZ Somel2\
-(“ " ~1‘ nexU ‘r ); Snme(51
-(“ " Lnext! ‘1- 3
-> ‘
-.—.
-Advances s posrllons and
-reads the vame, than move
-(O the next IOUUOHY
+Rust
+main<>{ M
+a = [1:2:3:4:5:6J7J8J9]; Some(l)
+l = a-itePOS Some(2)
+(H ‘Bl-MO); Some(6)
+(" " i.next ' 3
+} A
+Advances 3 positions and
+reads the value, then move
+to the next position.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-. Iterators
+t?‘
+Iterators
 Let's see how an iterator works:
-RUE!
-mo < mm-
-ﬂ Z [1.z,s,4.s,a,7,vaﬂ-]; 50mm
-i : [LitEPUZ Somel2\
-(“ " ~1‘ nexU ‘r ); Snme(51
-(" ",l4nextk_')jv; 3
-(" " Lnth 3 ‘
-)
-.—.
-Counts how many eremems
-are unche ﬁnal‘
+Rust
+maino { M
+a = [1:2:3:4:5:6J7J8J9]; Some(l)
+l = a-itePOS Some(2)
+(H ‘Bl-MO); Some(6)
+(" ‘bi-MO); 3
+(" " i.nth 3 -
+}
+<—>
+Counts how many elements
+are until the final !
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Ite rato rs
+m
+Iterators
 Keep in mind that some methods (like count, last, min or max) consume
 the iterator after usin it notice that count need self and not a reference
 to self: ). This means that the iterator can
 not be used anymore after calling these methods.
-RUE!
-
-majn() {
-a : [1,2,5.-i,5,»5,7.5,s];
-i : mitEH');
-i
+Rust
+main() {
+a = [1:213:4:5:6:7:819];
+i = a.iter();
+(" ",l.COUth()); errorEEgiiiigiZOEovSvgf moved value: ‘i‘
+} 3 l let T?l_l ;o:él::ZSl; because ‘i‘ has type ‘std::slice::Iter<‘_, i32>‘,
+| which does not implement the ‘Copy‘ trait
+4 | println!("{:?}",i.count());
+| ------- ‘i‘ moved due to this method call
+5 | i.next();
+| AAAAAAAA value borrowed here after move
+notel this function takes ownership of the receiver ‘self‘, which moves ‘i‘
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Ite rato rs
+a
+Iterators
 This behavior is different than next() method that does not consume the
 iterator (even after it reaches the end of the sequence of elements).
 Rust
-mint) r
-i : :1.th7"(); Sumelll
-for‘ i in a. .1r-a ( SomelZ)
-K" ",i-HEXUU; smnelil
-} Nam:
-\ None
-J None
-NONE
-Nune
+main() {
+a = [1,2,3]; m
+l = a.iter‘(); Some(1)
+FOP _ in @..19 { SomeQ)
+(" ‘Bi-m0); Somem
+} None
+None
+} None
+None
+None
 None
 None
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-g; Ite rato rs
-lterators are often used in a for loop, There are 3 forms of iterators that are
+,’ l t€ ra tO rs
+lterators are often used in a for loop. There are 3 forms of iterators that are
 usually used in such a context:
+m——
+Creates an iterator that return a reference to each element from a collection
 
-Creates an \teratcr that return a reference m each element from a coileztion
-
-s 1 m ii- t ' ' Stmllar to the prevtous one, but the relerence ts mutahie, and the value can be
-mudlhed,
-t-ht r t t I Nottce that thts iterator has a patameter of type self (and not (belt). This means
-
-that [his iterStOt consumes the content Olthe collecliOn
-
-OBS: Keep in mind that without any explicit specification, the far Ioap will use the
-
-inta_iterform (e.g -). This means that the for laap will consume the
-
-element, and "a" will not be available anymore after the fore/00p ends.
+iter‘—mu’ﬁ(& ) -> < > Similar to the previous one, but the reference is mutable, and the value can be
+modified.
+int0_ite'“( ) -> I I Notice that this iterator has a parameter of type self (and not &se|f). This means
+that this iterator consumes the content of the collection.
+OBS: Keep in mind that without any explicit specification, the for loop will use the
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-a Ite rato rs
-Let's see some cases where .iter() , ,iter_mut() and .into_iter() are used.
+J~- Iterators
+Let's see some cases where .iter() , .iter_mut() and .into_iter() are used.
 Rust
-+n mam) i
+fn main() {
 
-lei. a = [String :fromﬂkLriJ‘Liming: :framﬂqj )]; M
-
-H >1“ mm!) r m
-
-Jpn-mini“ Xi“),- -. j .1 ruin-mg WI
-
-]_ ["abc", "xvz“]
-
-m’1"ifin‘(“ijw‘l‘)§
-i
+let a = [Stringz :from("abc"),Str‘ing: :from("xyz")]; m
+For‘ x in a.iter‘() { abc
+println!("{x}"); // x is a &String XVZ
+} ["8an, "xyz"]
+println!("{a:?}");
+}
 In this case x is an immutable reference to every String element from array
+(I H
 a .
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-® Ite rato rs
-Let's see some cases where .iter() , ,iter_mut() and .into_iter() are used.
+}~- Iterators
+Let's see some cases where .iter() , .iter_mut() and .into_iter() are used.
 Rust
-in niainf) <
-1w "m g : [String :f|‘i)m(_“ in ‘ ),Str‘1ng: #mm‘ -,~ ‘)1: M
-m 5 ii ajter mum) ( m
-w'iminW“ xi“); ~v 1-: .1 Rum wring m
-5.gush 5mm»); ["abﬁ++">“xv1+++“i
-m 1*171‘(“[B,>‘1‘ J;
-)
+Fn main() {
+
+let mut a = [Stringz:from("abc"),Str‘ing::from("xyz")]; m
+for 5 in alter‘ mut() { abc
+phintln!("{x}"); // x is a &mut String XVZ
+ygush str‘("+++"); ["abC+++","XVZ+++"]
+}
+phintln!("{a:?}");
+}
 Notice that since we have used iter_mut for this example, we can modify
 each element from the array "a".
 
@@ -957,72 +1038,83 @@ each element from the array "a".
 
 ***************Beginning Page***************
 ***************page number:54**************
-® Iterators
-
-Let's see some cases where .iter() , ,iter_mut() and .into_iter() are used.
+-~~ Iterators
+Let's see some cases where .iter() , .iter_mut() and .into_iter() are used.
 Rust
-+11 mainll) (
+Fn main() {
 
-let a : [swing#mmymw),smng;:mmwz >1,-
+let a = [Stringz:from("abc"),StPing::fhom("xyz")];
 
-w >1 H a.intuiiter‘() (
+for x in a.into_iter() {
 
-LHintlH‘(“~:Xl“); -, 1g 1 ‘7-7,;va ‘111+; Jana-mm“
+phintln!("{x}"); // X is a String (takes ownership)
 
-In thls case, each element from 1 1 mwgmyw my M ‘
-array Ha" i5 moved, AS a result, \ ,1 mm 11- '1 m» mm nu
-the last println!(...) can not 1 “Jill;
-work, as “a” was moved.
+println '( {a ' '} )" er'r'or'[E9382]: bor'r'ow of moved value: ‘a‘
+
+} --> sr‘c\main.r‘s:6:16
+2 i let a = [String::from("abc"),String::from("xyz")];
+
+. - move occurs because ‘a‘ has t e ‘[Strin ; 2]‘, which does not
+In thls case, each element from 3 i f @mplemezuzeégoﬁy‘ trait yp g
+array "a" is mOVEd- AS a result, | ----:------ ‘a‘ moved due to this method call
+the last println!(...) can not 6 i p"i“t1“!"'{iziilﬂe rerreree rere ereer
+work, as "a" was moved.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-® Ite rato rs
-Let's see some cases where .iter() , ,iter_mut() and .into_iter() are used.
+J~~ Iterators
+Let's see some cases where .iter() , .iter_mut() and .into_iter() are used.
 Rust
-{ii mainij) (
-M a : [1.231; MD
-+1, >< ii aJ'ntaiitePL') i i
-Jiliitlii‘(n~:Xin); -, J‘: a 13>‘ ia cup,‘ i: z
+Fn main() {
+
+let a = [1,2,3]; m
+for x in a.into_iter() { 1
+pnintln!("{x}"); // X is a 132 (a copy !) 2
 } 3
-piiiioliiWWa'Ji‘); [11'51
-i
-Keep in mind that int0_iter tries uses assignment for each element in the
-collection‘ If the element has the Copy trait, it will be copied, otherwise it
+pnintln!("{a:?}"); Uvz'ﬂ
+}
+Keep in mind that into_iter tries uses assignment for each element in the
+collection. If the element has the Copy trait, it will be copied, otherwise it
 will be moved. This means that for these cases, the code will compile as
-the element is not moved H!
+the element is not moved !!!
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-Ite rato rs
-If none of these forms are being used, a for-loop uses —!
-RUSf
-mainﬂ) (
-n : [ ::Frnrvv("ab£"), :2fl‘0m("xyz")];
-for‘ .- 1.. .. {
-} H .I.
-Because of this, elements from "a" l ' ‘.1. bi‘ 11L? ll? W‘ U mg‘ I] ‘ "m “ W m”
-will be moved and will no longer be A l ..,._ m1 .1. > .1....w 1..
-available when printlnl[...) macro i5 l p .......l.“;..
-belng called. l “we Lvu'wueul he's my W19
+' ' Iterators
+If none of these forms are being used, a for-loop uses — !
+Rust
+main() {
+a = [ ::fnom("abc"), ::fnom("xyz")];
+for x in a {
+}
+(H a ")3 er'r'or'[E9382]: borrow of moved value: ‘a‘
+} --> sr‘c\main.r‘s:6:16
+z i let a = [Stringz:from("abc"),StPing::from("xyz")];
+Because of this, elements from "a" l _ Tilieﬁiﬁirihzeiiii‘iiiiis type ‘String; 2]" WM does "Ot
+will be moved and will no longer be 3 I W X in Ii‘ la‘ moved due i0 ihii impiicii ciii i0 ‘.into_iter'()‘
+available when printIn!(...) macro is g" | minim-vain");
+being CHIIEd. | A value borrowed here after‘ move
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-a Ite rato rs
-If none of these forms are being used, a for-loop uses ,into_iter() !
+J~~ Iterators
+If none of these forms are being used, a for-loop uses .into_iter() !
 Rust
-{it mainil) (
-M a Z [Strlngz #mmi‘ mien-,stmg; mm >1,- mm-
-w >< ll hi m
-.1itiiiliii(“{xi“); -, r; L1 ELLJJLHE‘ m
-} ["abc", “xvz“]
-pi i viliii(“ia~'i‘ ‘,1;
-l
+Fn main() {
+let a = [Str'ingz :fnom("abc"),5tr‘ing: :fnom("xyz")]; m
+For‘ x in &a { abc
+pnintln!("{x}"); // X is a &Str‘ing xyz
+} ["abc", llXVZH]
+pnintln!("{a:?}");
+}
 One solution for this cases is to use the & operator to indicate the for loop
 to use references instead of moving the entire value.
 
@@ -1030,220 +1122,233 @@ to use references instead of moving the entire value.
 
 ***************Beginning Page***************
 ***************page number:58**************
-g; Iterato rs
+',® lte rato rs
 Rust also support various adaptors over an existing iterator, that can allow
 one to perform quick actions over a data set. Such a construct usually
 translates into another iterator that can in turn be further used with a
 different set of adaptors.
-
 O O
-r 1 — — r t
-0+, 0*,
-iterator iterator
-ln this point‘ data from the original adaptor
-can be "\odlfied skipped,illtered etc.
+r \= — — r \=
+Iterator Iterator
+In this point, data from the original adaptor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-Ada ptors:
+Ada pto rs:
 
-stepibw . L»; ‘J r ~ , ' Crezles a new \Keramr where every e\ements WIN he read
-lmm (he unng use uslng a 5pr
+5tep_b)’( ’ Step1 ) -> < > Creates a new iterator where every elements will be read
+from the original use using a step
 
-hltew , rr' Fv v r‘ 1 7' : , : Fﬂters a" elemems from (he ongma‘ \(erator and returns
-a new one where (WW the elemems (he! pass (he Me!
+filteﬂ , pPedicatEI ) -> < , > Filters all elements from the original iterator and returns
+a new one where only the elements that pass the filter
 are present
 
-"mp V , x w \ w J - >' . ‘ Maps 3H \tems from an exlsungiterawr {mo another one,
-applying a wrwersmn over each demem.
+map ( , function! ) -> < , > Maps all items from an existing iterator into another one,
+applying a conversion over each element.
 
-impiwmleﬂ . ; 1-‘ in» "J 7- - 7 Sklps/Takes a number oi e\ements based an a predxcated
+SkiP_While( , pPedicatEI ) -> < , > Skips/Takes a number of elements based on a predicated
 
-mama)?‘ w ‘ L‘ @113»: > ~ * , .-
+take_while< >( , predicate: ) —> < , >
 
-IUDK , H \ V » ' 1- Sklps/(akes a number 01%” Hemems 1mm (he origmal
+Skip< i "I ) -> < > Skips/takes a number of "n" elements from the original
 
-(wk-:1‘, , in , 7- . > \(erawr
+take( , n1 ) -> < > iterator
 
-mapcrtz' , J "I >' , ‘ Runsfuncuon "V'for each e\ement, and the" paswt on
-Uselul €or debugging Duwosesv
+inspecﬂ i f1 ) -> < , > Runs function "f" for each element, and then pass it on.
+Useful for debugging purposes.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-I Iterators
-Iterate over a list with step 2:
-Rust m:
-mainU
-{ mainn Q
-a Z [1,1,5,4,5.e,7,s,u]; ‘1 [1,1,34,15,155];
-‘ . , ' », ' l: Lita-r1)
-for 1 1n n.1ter‘().5tepihy(_) or ‘stepihyw
-"' ‘. “ . .il\5pe:t4_\~\ --,~.y,;
-( "U3 minim ‘
-‘ v
-I J
-)
+Iterators
+lterate over a list with step 2:
+Rust Rust
+main()
+{ main() {
+a = [1,2,3,4,5,6,7,8,91; ‘if .t[1’2’3’4’5’6’7’8’913
+for‘ i in a.iter‘().step_by(2) 0r l _ aitzging)
+{ .. H *_ . .inspect(|x| {" ",*X})3
+} ( , 1)) For _ in i {}
+}
+}
 1
+3
 5
 7
 9
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-®
-Ite rato rs
+. lte rato rs
 Rust also has a -adaptor that iterates over all elements. While it
 has the same purpose as a regular I keyword, it can also be used in large
 chains of adaptors as the final one to trigger the iteration.
-Iterates over a collection and calls function "r" for each element‘
-M ED
-Eefurejlep 1
-lvlai|l() i Afterstep 1
-l e vccl[l 2 3 J 51- Between»!
-diterll v l l l J Before HE!) 3
-.inspeccljll- l prilltlrll l"BeF0|‘e step: ‘gull :llililinge
-.stepible nereleszens
-.Forieachi'lzl pmntlnl l“AftEV‘ step: “.‘nil: Aftelslep 5
-l
-l
+lterates over a collection and calls function "f" for each element.
+
+Rust m
+Before step: 1
+main() { Afterstep:1
+a = vec![1, 2, 3) 4) 5]; Beforestep:2
+a iter‘() Before step:3
+‘ins ect(|x| P'ntl I "B f t ' " * Aftersmpﬁ
+. p p 1 n. { e one s ep. , x}) Beforestep:4
+. step_by(2) Before step: 5
+.for_each(|x| println! {"After‘ step: ",*x}); Afterstep;5
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-®
-Ite rato rs
+. lte rato rs
 Rust also has a -adaptor that iterates over all elements. While it
 has the same purpose as a regular I keyword, it can also be used in large
 chains of adaptors as the final one to trigger the iteration.
-Iterates over a collection and calls function "r" for each element‘
+lterates over a collection and calls function "f" for each element.
+
 Rust
-"lei-l0 l M
-I: [1,2,3,-J,5,5,7,S,9]; 1
-a.iter() 3
-.stepibyQ) 5
-.inspect( :< '" H ‘ ‘ ‘ ’
-.Forieach Lin); LIU
-l
+maino { m
+a = [1:213:41516171819]; 1
+a.iter‘() 3
+.step_by(2) 5
+.inspect( x r" " *"“ "
+.for‘_each |_|{}); |_|{}
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-Ite rato rs
+-~" Iterators
 Let's see a more complex example that takes a vector, filters out all even
 elements, multiply the rest of the elements by 2 and then sums them all
 up.
+
 Rust
-l : [1,2,3,J,5,F3,7,S,9]; Flt d
-: atiteN') "Ml
-.ﬁltemlﬂl 1 :: m *1‘;de
-imam l ->| Unhewﬂ " , ‘ ~ ‘n WWW
-~vlavk'I-1l "1‘) Fllteredﬁ
-.ir1spEtt(l , | {"Mappcd m ‘ ~.}) Mappcdm 12
-‘5L1"l(); Flltered S
-("sum is ",-:); Mapped m 15
-\y Sumlhlﬂ
+let a = vec![1,2,3,4,5,6,7,8,9]; _
+let 5:132 = a.iter‘() algeregdztozl
+.filter‘(|x| *X % 2 == a) Filtgfem
+.inspect(|x| println!{"Filte|"ed {:?}",*x}) Mappedto8
+.map(|x| X*2) Filtered6
+.inspect(|x| println!{"Mapped to {:?}",*x}) Mappedto 12
+.Sum(); Filtered8
+pnintln!("sum is {}",s); Mappedt016
+} sum is 4O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-Ite rato rs
-You can also use ,skip and .take to perform operations over a continuous
+é?‘
+Iterators
+You can also use .skip and .take to perform operations over a continuous
 sub-set from a collection. The next example sums up the next four
-elements from the 3"‘ element in a collection:
-Rust‘
-s = [1,2,3,4,5,E,7,8,5]; Valch
-: 3.1mm) ValueS
-.skipﬁi) News
-AakeM) WW7
-.inspectl l ,_| ("Value i-v-Ui) SMIYIiSZZ
-.Sim >,-
-("sum is ",E);
-l
+elements from the 3rd element in a collection:
+Rust
+maino { m
+a = [11213141516171819]; va|UE4
+s: = a.iter() vmueS
+.Skip(3) VMueG
+.take(4) Vdus?
+.inspect(|x| {"Value ",*x}) sum|522
+.sum();
+("sum is ",s);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-g; Iterato rs
-Another wildly use adaptor is -. This adaptor allows transforming a
+Va lte ra to rs
+Another wildly use adaptor is - This adaptor allows transforming a
 collection into another one.
-mm——
-— Iterates over a collection and converts it into another collection.
+M—
+lterates over a collection and converts it into another collection.
 
 How to use .collect():
-1t let varztype = miterators chain“ .collect();
-2t let var = miterators chain“ ‘collect::<type>();
-Usually, the first version is preferred as it avoids the turbo-fish format. i
+1. let varztype = ...iterators chain.. .collect();
+2. let var = ...iterators chain.. .collect::<type>();
+Usually, the first version is preferred as it avoids the turbo-fish format. ‘l
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-a Iterators
+J~~ Iterators
 Let's take the previous example and build a new vector instead of
 computing a sum:
 
 Rust Rust
-w main() { w msiM'J 1
-let a : ‘.‘efl[1,2,3,4,5,5,7,X,9]; Let a : ‘,‘Ewil[l,2,3,4|5,5:,-',8.9];
-1» 5 : a.iter‘(') 1m 5; Veg; : 6.1mm
-.skjp(2) ‘skip(Z)
-.take<3> .take(3]
-.collect: mm“): r_ ); .cullect();
-L\7']Y'\tJV‘(‘V'tS\‘T w; ~1:7'ﬂ,s); Dvlrilﬂ‘(“95\|f\51,2?“‘,5);
-) }
+fn main() { {n main() {
+let a = vec![1,2,3,4,5,6,7,8,9]; let a = vec![1,2,3,4,5,6,7,8,9]3
+let s = a.iten() let s: Vec<_> = a.iteP()
+.skip(2) .skip(2)
+.take(3) .take(3)
+.collect::<Vec<_>>(); .collect();
+pnintln!("nesult is {:?}",s); pnintln!("nesult is {:?}",s);
+} }
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-a Ite rato rs
+}$- Iterators
+
 This method is often used to convert an array into a vector:
+
 Rust
-l'i mini’) l
-1r? a : [l,Z,3,A,5];
-15-. b: v2“; : a.itev‘().collect(',1; M
-py'iiitril(‘ﬂ: I"l“,8,l; v1:[l,23,4‘5]
-iiiiiitliilf'l'i :v‘l“,b); b:l1 2,14,51
-)
-Notice the Vec<_> notation, The underline (_) tells Rust that the type of
+
+fn main() {
+let a = [1,2,3,4,5];
+let b: Vec<_> = a.iter*().collect(); M
+pnintln!("a = {:?}",a);
+pnintln!("b = {:?}",b); b= [1,2,3,4,5]
+
+}
+
+Notice the Vec<_> notation. The underline (_) tells Rust that the type of
+
 the vector must be inferred from the result. We should also mention that
-since .iterl) uses references, vector b will be of type Vec<&i32> !
+
+since .iter() uses references, vector b will be of type Vec<&i32> !
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-Ite rato rs
-Another adaptor is partition. It has a similar purpose as collect , but in this
+{a
+Iterators
+Another adaptor is partition. It has a similar purpose as collect, but in this
 case, it tries to split an existing collection into two partitions. The closure
 function serves this purpose (elements where it returns true will be added
 to the first partition, and the rest of them to the second partition).
 Rust
-maiv\() i
-7| : [l,£,5,4,5,6,7];
-(owl): r‘ an <3) : c1.intoilteri).partition(l>,| ‘w >4);
-("Partition 1 : ",pl);
-("Partition 2 : “mil; m
-i
-Pammnquizsu]
+main() {
+a = [1J2JBJ4J5J6J7];
+(p1,p2): ( <_>, <_>) = a.into_iter().partition(|x| *x>4);
+("Partition 1 = ",pl);
+("Partition 2 = up»; m
+}
+Partition 2 = [1, 2, 3, 4]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-g; Iterato rs
+,’I l t€ Fa t0 rs
 You may have noticed that for the previous example we have used
-into_iter instead of the regular iter. So what is the difference.
+into_iter instead of the regular iter. So What is the difference.
 
 1. - is an iterator that moves the element (meaning that after
 you iterate over it, all elements from the sequence are no longer
@@ -1256,780 +1361,761 @@ of data, that sequence is still available).
 
 ***************Beginning Page***************
 ***************page number:70**************
-. Ite rato rs
-Let's consider the following example:
+I I I -
+Let s con5|der the followmg example.
 Rust
-“\ainl') l
-n : [ :1Fr0ml"ABC"), ::F|‘oml_'“123")];
-my i in Lintoiitemi) (
-f" ".1);
-l
-("a I ",a); IrrwrvafiY.‘lr WC“ 11 "m1 ml. 1
-l .4 "Mu ,m u nu;- "mm Wu
-;~ l Drlntlnll a :l v» .il.
-wul nu:- mum‘ 1.0L:- .NHLVL-lup .w 1m munu ml , Mum mm:- .4
-fl mmmmm V. my mm”.
+main() {
+a = [ ::from("ABC"), ::From("123")];
+for i in a.into_iter() {
+<" 21>;
+("a = H, a), error[E0382]: borrow of moved value: ‘a‘
+} ——> src\main.rs:7:25
+|
+3 | let a = [Stringz:from("ABC"),String::from("123")];
+| — move occurs because ‘a‘ has type ‘[String; 2]‘, which does not implement the
+| ‘Copy‘ trait
+4 | {or i in a.into_iter() {
+| ——————————— ‘a‘ moved due to this method call
+l‘. | println!("a = {:?}",a);
+| A value borrowed here after move
+|
+note: this function takes ownership of the receiver ‘self‘, which moves ‘a‘
+|
+267 | fn into_iter(selF) —> SelfzzIntoIter;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-a Ite rato rs
+}~~ Iterators
 However, if we change the previous example from using iter() instead of
-intoiiterO it works as we will no longer move the object when iterating but
+into_iter() it works as we will no longer move the object when iterating but
 use a reference instead.
 
 Rust
-in niain() (
-iw a : [swing :Froml" w “),Sh‘ing::fl‘(lili(‘ .1“ )1; M
-+1‘, i ll a.iter( ‘,1 { “ABC
-mlrtln‘(“,:1‘i“.i); "115"
-l 3:[“ABC“, “123"l
-w J rumba j:"i“.a);
-J
+
+fn main() {
+let a = [Stringz :from("ABC"),Str‘ing: :from("123")]; m
+For“ i in a.iter‘() { "ABC"
+} a = ["ABC", "123"]
+println!("a = {:?}",a);
+
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-' Ite rato rs
+. lte rato rs
 Another useful adaptor is .find() that can be used to search for a specific
-item that matches a criteria‘
+item that matches a criteria.
 
-+inu< .~<& , we Mr»: ) L == \ Findszn elememlhal .5 matched bythe
-predicate e
-FMS!
-manﬂ) {
-a : [1,2,1,4,5,6.*];
-h e n.1ter().find(\&&e\ 71:4);
-( .Lv);
+m< >(& , predicate: ) -> < II > Finds an element that is matched by the
+predicate P
+Rust
+main() {
+b = a.iter‘().find(|&&x| x==4);
+( , b);
 }
-OBS: .find(f) is equivalent m filter .nexr
-OBS-find predicate is deﬁned as . This means that if an iterator uses
-references the (laser w!!! have to use a daiib/e reference (a reference over rne reference pravrded by rne
-uliginu/ iterator).
+OBS: .find(f) is equivalent to filter .next
+OBS: find predicate is defined as . This means that if an iterator uses
+references the closer will have to use a double reference (a reference over the reference provided by the
+original iterator).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-g; Other functionalities
+,’I 0t h € r icU n Ct l O n a | it l € S
 All of the iterators and adaptors previously described solve some problems.
 However, there are some cases that require a different type of functionality.
-
 1. Peekable
-
 2. enumerate
-
-3. DoubleEndedlterator
+3. DoubleEndedIterator
 4. ExactSizelterator
-
 5. Infinite iterator loops
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-g; Iterators (Peekable)
+"E' Ite rato rs ( Pe e ka lo I e)
 One problem with iterators is that once - is called you can not go
 back. This in fact is a roblem as you need the value that if you need the
 value you get from h to decide if you want to iterate further or not.
 To solve this, Rust added a new adaptor called Peekable (that allows one to
-read the next value, but not move to the next position)‘
-
+read the next value, but not move to the next position).
 Let's analyze the following problem:
-- We have a list of numbers: 1,2,3,..“
-- We want to find number 3, but we don’t want to move next to it (to number 4),
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:75**************
+t?‘
 Iterators (Peekable)
 Let's analyze the following problem:
-- We have a list of numbers: 1,2,3,..u
-- We want to find number 3, but we don't want to move next to it (to number 4),
+- We have a list of numbers: 1,2,3,....
+- We want to find number 3, but we don't want to move next to it (to number 4).
 Rust
-rualnf) l
-4: [1,:,3,4,5,5,7]; M
-i : ariteNLpeekableQ;
-lﬁﬂp r
-if i.geek().isfnon€() 1 mdk; }
-x : ";.geek<),r|rwrap(l;
-if Z a ( break; }
-érnextl');
+main() {
+a = [1,2,3,4,5,6,7]; m
+l = a.iter‘().peekab1e();
+loop {
+if l.Q§§K().iS_n0ne() { break; }
+v = **i-Qeek()-unwrap();
+if v == 3 { break; }
+l.next();
 }
-<" ",i.next().unwr*ap());
-\
-1
+(" ",l-MO-WWPaPO);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:76**************
+{a
 Iterators (enumerate)
-There are situation where While during iteration an index is required. While
+There are situation where while during iteration an index is required. While
 these sort of scenarios can easily be solved by creating an external index,
 and incrementing it after each iteration, Rust also provides an adaptor
 (called enumerate) that does the same thing.
 Rust
-a : ["John". "Mary", "Mike", "George"];
-for 1‘ in J.itEi‘l_ '> .enuiliei‘at5\'l l l9‘ PM“)
-pi'intlnll" ".ll; l1 "Mm"
-i (2, MlkEll
-r 1 raceway‘;
-.»
+"8"") { W
+a = ["John", "Mary", "Mike", "George"];
+for‘ i in a.iter‘().enumer‘ate() { (O,::John"")
+println! (" ",i); (1'..M.ary..)
+(2, |\/||ke)
+} } (3, "George")
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-® Iterators (Infinite loops)
-Iterators can be used to create infinite loops via ,cycle() method. This
+Iterators (Infinite loops)
+lterators can be used to create infinite loops via .cycle() method. This
 method creates an iterator that when it reaches the last element will reset
 itself to point to the first one, thus creating an infinite cycle.
+
 Rust
-+1 mint’) t
-‘9t a : [1,2,3,4,5];
-it X iiE.itEF(l-CYC1€() i
-j 113,451,114 5,1,23,45,11 3,4,5,1,Z,3,4,S,1 2,3,
-} 4,5,1,Z,3,4,5,1,Z,3,4,5,1,Z,3,4,5,l,Z,3,4,5,1,2,3 J,5,1,
-Z,3,4,5,l,2,3,d,5,1,2,3 4,5,1,Z,1,J,5,1,Z 3,451,134,
-S,l,2,3,4,5,1,2,3,4 S 1,2,3,4,5,1,
+fn main() {
+let a = [1,2,3,4,5],'
+for x in a.iter().cycle() {
+print! <'-{X},">; M
+} 1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,
+} 4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,
+2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,
+5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-g; lterators (DoubleEndedlterator)
+',® Iterators (DoubleEndedIterator)
 There are cases where you might need to read elements from both ends of
 a collection. For this cases, there is a special trait (called
-DoubleEndedlterator) that if implemented allows one to also read
+DoubleEndedIterator) that if implemented allows one to also read
 elements from the end of the collection via:
-EEE—I@—
-
-Moves to the previous element lrom the
+M—
+Moves to the previous element from the
 collections starting from its end.
-nt- hi' (.2 i n: 1i r: ‘ -: - Returnsthe prEVIOUS r\"’|temsfromthecurrem
-position.
-OBS: It is important to notice that back andforward iterator can not me
-(one can not go beyond the other one).
+Returns the previous nth items from the current
+position. _
+OBS: It is important to notice that back and forward iterator can not me
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-lterators (DoubleEndedlterator)
+e
+Iterators (Dou loleEnded Iterator)
 Let's see some example:
 Rust
-nalnf) l
-
-while (»;) : umext hach) {
-
-i
-\
-l
-Keep in mind that this is not an iterator but a trait (meaning that not all types that
-implement Iteratortrait also implement DuubleEnded/terator trait). That depends on
+main() {
+while (x) = 11.next back() {
+(" X I‘);
+}
+}
+Keep in mind that this is not an iterator, but a trait (meaning that not all types that
+implement Iterator trait also implement DoubleEndedIterator trait). That depends on
 how the data is store in that collection. For example, a single linked list can not
-implement such a trait, while a vector, array or a double linked list can.
+implement such a trait, While a vector, array or a double linked list can.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-lterators (DoubleEndeollterator)
-Let's see some example: Nenllrom Front Somell)
-Previous from am : - Somali)
-Rust
-in main() ( Neulrom Fiont:\50mel2)
-lrr a : [1,2,3A, 5,5]; Previous lrom am :\Somcl§l
-m j H o. ‘5 ( Nexlfrom From:-Some[3)
-fii'lnllli i (“ni- -t JFHH Flt n 1'; w“ aiming); rpfiffilljllfiqji? Snmelﬂ)
-inhitliii(jjiweui;in limiH new, , {"‘l“,jit‘tnext beam‘); NculroniFrunthonc
-"W HT l vi ‘l ); Previous lrom am :, None
-t
-} Ne" from Front :> None
-Previous from am : - None
+LEt'S SEG some example: Next from Front => Some(1)
+Previous from Back => Some(6)
+‘Fn main () { Next from Front => Some(Z)
+let a = [1’ 2’ 3)4’ 5’ 6]; Previous from Back => Some(5)
+let mut it = a.iter(); '""""""""""""""
+
+For i in 9. . 5 { Next from Front => Some(3)
+println! ("Next From Front => {:?}" ,i_t. next()); Prev'OUSfromBaCk:> some(4)
+prtntln! (:Previous From Back => {:?}",i_tl.Lback( ) ); Next from Front => None
+pr1nt1n!( ""'"""""""""""" )3 Previousfrom Back=>None
+
+} Next from Front => None
+
+Previous from Back => None
 Notice that once back and front iteration reach the middle of the array, the result of
-both .next and .next_bacl< methods is None ! This is because back and next iteration can
+both .next and .next_back methods is None ! This is because back and next iteration can
 not go beyond the other one.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:81**************
-a lterators (ExactSizelterator)
+*- Ite rato rs (Exa ctSizelte rato r)
 Another interesting trait is ExactSizelterator. This trait provides a function
 (len) that returns the number of steps until the end of the iteration (the
 moment from when .next() method will start returning instead of
 Some.
 
-Rm mm-
-l" "l2?! i i" i E E. HEN]; Elcmunt Aixmpstmmmd
-l nil 1~t Saudi) Z iit-EO i klemem D:O~'-tepsuntiler\d
-Lil‘1lllllll(“LA:lEl 11;‘ ,i trips unﬁt El l“, il.len());
-J
-1'
+Ru“ m
+Fn main() { _
+let a = ["A","B","C","D"]; ElementiA,3steps untillenj
+while let some<i> = ii-MO { ElementiD'OStegsuntiend
+pnintln!("E1ement: {i}, {} steps until end", li.1en()); I
+}
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:82**************
-7
-Vectors
-L
+V€ctor5
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:83**************
-g; Vectors
+," V€ Ct O FS
 Vectors are sequences of elements of the same type that can increase or decrease
 in size dynamically. Just like stdzzvector from C++ standard, a vector in Rust is a
-template/generic object,
+template/generic object.
 
 To create a vector, use one of the following forms:
 a)
 b)
-cl
-dl
-at
-fl or use the macro vec! for quick initialization of a vector. /
+a
+d)
+e)
+f) or use the macro vec! for quick initialization of a vector. |
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
-® Vectors
+- Vectors
 Let's see some examples on how to build a vector.
 Rust
-11+ 1m Q : Vcc::<132‘1::new(');
-1-1L v2 : Vei::WED::with_capacity(106')¥ H
-m v3 :1111;\[111s, :,s,4]; fyfu' 1: 1.111; 1:1.
-1-» w = 1-1111[“1:5“,‘\-L-U,“ ;_“],- my’: 11 ‘1.1111 11m [1533-1le
-1%: v5 : Vec::w‘r‘om([1,l,3]); we 11.191; 111 [1 23' a " “*1
-prmﬂn‘r_“-;AWE); l‘ ' l
-1-11111111!(“‘."';“,vz);
-fr"nﬂr"(“-} 11-“,v3);
-p111111n'(“-;~',‘»“,v47;
-1.1 1r1c111:(“-::»'§-“,v5);
-)
+let mut yl = Vec::<i32>::new();
+let v2 = Vec::<u32>::with_capacity(169); H
+let v3 = vec![1u8, 2,3,4]; // type is Vec<u8> q 2 3 4
+let v4 = vec!["123","abc","xyz"]; // type is Vec<&str> kiZéx“]b"" H
+let v5 = Vec::FPOm([1,2,3]); // type is Vec<i32> [1 2 g a c, xyz]
+println!("{:?}",yl); [ " 1
+println!("{:?}",v2);
+println!("{:?}",v3);
+println!("{:?}",v4);
+println!("{:?}",v5);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:85**************
-®
 Basic operations (insert/add/remove) for vectors
 
-‘\ush (& . v JlLlL: :> Adds a new e\ements a\ the end 0f the vector
+MU?‘ , value! ) Adds a new elements at the end of the vector
 
-luseﬂifl , mm ,; , ‘1', H m: 11 Inserts an e\ementat a speciﬁc pos'mon m the
-vector This lumen panics \f index is outside vector
-buundanes
+i—nsert(& , indEXI , element: ) Inserts an element at a specific position in the
+vector. This function panics If index is outside vector
+boundanes
 
-a ~ Yendﬂl , ‘:Lh ; a ) Append: the element m another vector ofthe same
-type to (he current onev
+amw , MI & ) Appends the element of another vector of the same
+type to the current one.
 
-m“ ) 7- : > Retums the last element m the vector (If any) or
-None fur empty vectors
+p_OQ(& ) -> < > Returns the last element in the vector (if any) or
+None for empty vectors
 
-mum/ea. , 1w»: 7 7v Removes the e\ement from a speciﬁc mdex in \he
+WU?‘ s indEXi ) -> Removes the element from a specific index in the
 
-My rem/w , MW: > ~ vector Thlsfunclmn paVIICS \fmdexlsoutsldevscwr
-boundaries
+WW , indEXi ) '> vector. This function panics If index is outside vector
+boundanes
 
-(learwlé'c ,\ Gears the content Of the vector \eaving the capamy
-ofthe vectov un-aﬂeued.
+clear‘(& ) Clears the content of the vector leaving the capacity
+of the vector un-affected.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:86**************
-.
-Ve cto rs
+*- --" Vecto rs
 Let's see some examples on how to build a vector.
-RMA'!
-maim') I’
-m‘ \ in 14.10 { rcmovcﬁommdcxﬂZ :>3
-l.w(i); Pop element: 9
-j Pop element: 8
-("Pcmuvc From inﬁrx #2 :> ",imeoveQD; Pop elememz7
-while <1) : ‘3mm ( Popelementzﬁ
-("Pop element: \ "y Pop clement‘ 5
-‘, Pup element: 4
-) Pop element: 2
+Rust
+fn main() {
+let mut y = Vec::<i32>::new(); m
+for i in 1. .19 { remove from index #2 =>3
+y. gush(i); Pop element: 9
+} Pop element: 8
+println!("r‘emove From index #2 => {}",y.r*emove(2)); Pop element:7
+while let Some(i) = M.m() { Pop element:6
+println! ("Pop element: {i}") Pop element: 5
+} Pop element: 4
+} Pop element: 2
 Pop element: 1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:87**************
-®; Vectors
-Vector has Z remove methods to remove an element from a specific position:
-1) remove(i..)
+"® Vecto rs
+Vector has 2 remove methods to remove an element from a specific position:
+1) remove(...)
 2) swap_remove()
 remove(...)
++2 +3 +4 -----
 A B c E F
-m
-OW." I
-
-* We want to remove element with index 5 (the 4"‘ element)
+Lengt .-
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:88**************
-g; Vectors
-Vector has Z remove methods to remove an element from a specific position:
-1) remove(l..)
-
+v5 Ve cto rs
+Vector has 2 remove methods to remove an element from a specific position:
+1) remove(...)
 2) swap_remove()
-remove(...) A n
+remove(...) n n
 -----
-
 A B c E F
-‘“"—‘>
-
-we." I
-
-* After we delete the element, we will move all of the existing elements after
-index 3 one position to the left
+{Len—gt} _.
+4+’
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:89**************
-g; Vectors
-Vector has Z remove methods to remove an element from a specific position:
-1) remove(i..)
+,’I V€ Ct O rs
+
+Vector has 2 remove methods to remove an element from a specific position:
+
+1) remove(...)
 
 2) swap_remove()
-remove(...)
---------
-A B c E F
-mm
-we." I
 
-* Length is decreased by one, the capacity remains the same
-* Operation cost: -
+remove(...)
+
+----------
+
+A B c E F
+
+I Length I .-
+Capacitv
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:90**************
-®; Vectors
-Vector has Z remove methods to remove an element from a specific position:
-1) remove(i..)
+,’ V€ Ct O FS
+Vector has 2 remove methods to remove an element from a specific position:
+1) remove(...)
 2) swap_remove()
 swap_remove(...)
++2 +3 +4 -----
 A B c E F
-m
-OW." I
-
-* We want to remove element with index 5 (the 4"‘ element)
+‘ Lengt I __
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:91**************
-g; Vectors
-Vector has Z remove methods to remove an element from a specific position:
-1) remove(t..)
+," VE Ct O FS
+Vector has 2 remove methods to remove an element from a specific position:
+1) remove(...)
 2) swap_remove()
 swap_remove(...)
 -----
 A B c E F
-m
-OW." I
-
-* After we delete the element, we swap the last element with the one that we
-have just removed
+‘ Lengt I __
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:92**************
-g; Vectors
-Vector has Z remove methods to remove an element from a specific position:
-1) remove(i..)
-
+,’ VE Ct O FS
+Vector has 2 remove methods to remove an element from a specific position:
+1) remove(...)
 2) swap_remove()
 swap_remove(...)
---------
+----------
 A B c F E
-mm
-we."
-
-* Length is decreased by one, the capacity remains the same
-* Operation cost: -; notice that the order has changed !
+I Length I .-
+4*’
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:93**************
-g; Ve cto rs
+V? Vecto rs
 Vector has 2 remove methods to remove an element from a specific position:
-1) remove(l..)
-2) swapiremoveO
+1) remove(...)
+2) swap_remove()
 Overview:
 1) Use swap_remove if you are not interested in the order of the elements from
 the vector, otherwise use remove
 2) swap_remove has a complexity of 0(1)
-3) remove has a complexity of O[n) /
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:94**************
-Generic al location/resize and infos for vectors
-capacityL'E > -> Returns the capacity ofthe vector
-Resevve addmona‘ e\emenls (on top of the emstmg one)
-truncatem . 1w: '7 Truncaxes a vector to a specific len, dropping the extra
-ElEmerllS.
-m Few-ma , “AU'JMHAU y Tries m reserve some spaceM allocauon mm does m
-Lu. > panic m reserve method does), instead, 1: returns Err.
-Shrunk tiv fit“ ‘J Reduces the capaclly Of the VEClOr t0 match the EXEC!
-number ofe\ements from (he vector.
+Generic allocation/resize and infos for vectors
+
+1en(& ) - > Returns the length of the vector
+
+capacity(& ) -> Returns the capacity of the vector
+
+is_empty(& ) -> True if vector length is O, false otherwise
+
+reserve(& , additional: ) Reserve additional elements (on top of the existing one)
+
+MU?‘ s leni ) Truncates a vector to a specific len, dropping the extra
+elements.
+
+try reserve(& , additional! ) Tries to reserve some space (if allocation fails it does not
+
+-> <0) > panic like reserve method does); instead, it returns Err.
+
+MU?‘ ) Reduces the capacity of the vector to match the exact
+
+number of elements from the vector.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:95**************
-®/ Vectors
+® Vectors
 Output
-_ 4 “5:0, Ewan/:0, H]
-Example usmg prevmus methods. s\ze:2,capacity:4,v:[1,2]
-“9:3, czpzclty134, v:[1, z, 3, 4, 5, 5, 7, 3]
-Fn add v‘ange(!:&mut Vec<1$2>,start:152, end:i32) ( MES’“mamaV:[l'z'3'4'5'6'7'8]
-for‘ i in start.,end+l ( Mwm; } WEI" capa"“’:3' ":[1' 2' 3' "1
-prinrlnm u (1* w} $1Mmidwnyolw;
-)
-frv mm) (
-let mut y : Vec::<i$2>::new();
-PrivtlﬂW U U {1?} .14WHOJLHPHfiWOJX);
-dud \‘avvge(&mut g, 1, z);
-gmeservew);
-addimngvﬂmut y, 2, x),-
-1.5hvunk Lo m0;
-println!( n (} m} ,1,\vn(),!4rnparify(),!);
-!.Lv'uvadLe(/l);
-printlﬂﬂ U U (I?) .1‘ler\().1~<ana@ty(>,y);
-)
+I , _ §2e=0,capacﬁy=0,v=ﬂ
+Example usmg preVIous methods. size=21capacity=4lv=ul 2]
+§2e=8,capacﬁy=34,v=[1,2,3,4,5,6,7,8]
+fn add_r‘ange(y:&mut Vec<132>, start : 132, end: 132) { sfze=8, capacfty=8, V:[1' 2' 3' 4' 5' 6' 7' 8]
+for i in start..end+1 { y.gg§h(i); } sue=4,capacny=8,v=ﬂq2,3,4]
+pPintln!( {} {} {=?} ,y-len(),!-capacity(),!);
+}
+fn main() {
+let mut y = Vec::<132>::new();
+pPintln!( {} {} {1?} ,y-len(),!-capacity(),!);
+add_range(&mut y, 1, 2);
+y.reserve(32); J
+2-shPink t9_£l:(); ﬁﬁﬁﬁﬁ
+} ﬁﬁﬁﬁﬁﬁ
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:96**************
-5/ Ve cto rs
-Ompux
-. . “2:0, capacityID, v:[]
-
-Example usmg prevmus methods. m4, capacityj, v:[1, 2]
-“9:3, czpzclty134, v:[1, z, 3, 4, 5, 5, 7, 3]
-“Fa, capacity:8, v:[l, z, a, 4, s, e, 7, a]
-
-ﬁn‘ i in Start..end+l ( v4pu§h(i); > “ZEIA'capac"v:3"’:[1'2'3"‘l
-A close range can be enforced by uslng .1
-for i in start. .:end {1.Qush(i); }
+Output
+I. , _ size=0, ca pacity=0, v=[]
+Example usmg preVIous methods. size=2, capacityd,’ v=[1, 2]
+size=8, capacity=34, v=[1, 2, 3, 4, 5, 6, 7, 8]
+size=8, capacity=8, v=[1, 2, 3, 4, 5, 6, 7, 8]
+for i in start. . end+1 { y. push(i); } 5|ze=4, capacIty=8, v=[1, 2' 3' 4]
+A close range can be enforced by using ..=
+for i in stant..=end { y.gush(i); }
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:97**************
 Vectors
 Keep in mind that transferring a variable into a vector might imply
 change of ownership (in this case after - is executed, variable
-“t” lifetime has ended as a result of "t" being moved into the vector),
-#[deriVEK i] q l it, i Z Min i 1,.1. ‘mi
-'1; < .~ : ::new( ); i ' In“ mm mi;
-t = “115,131.31 i3: ‘A‘ i; l; l pmmlllll Z l )llllllilillvn borrrwmﬂ herr a'kr mam"
-laugmr); ' ' N '
-("SiZQ: , capacity: , v: ",i.len('),l.capacityi),xi);
-("r : ‘no;
-l
+u n - - u n - -
+t llfetlme has ended as a result of t belng moved Into the vector).
+Rust “Tiliiiiiliniﬁiiilii “Md W1 i
+#[derive( )1 9 l let t = Test{v1:5,v2:1.3,v3:'A'};
+{ V11 , V21 , V31 } | — move occurs because ‘t‘ has type ‘Test‘, which does
+- no im lemen e ‘ o ‘ rai
+maln<> { 19 l v.push(t§; P t th C py t t
+MI < > = I :new(); | . — value moved here
+t = {V115,V211.3,V31'A'}} 12 l prlntln-( t = {U} ,E)va1ue borrowed here after move
+v.push(t);
+("size= , capacity: , v= ",v.1en(),v.capacity(),v);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:98**************
-a Vectors
+*- Vecto rs
 However, if we implement the Copy trait, the code will compile.
 Rust
-#[derivefDebug,CODMCloneH
-rtv'm't To“ ( v1: i32, V22 {32, V3: Chm‘ 1'
-+1‘ maimj) (
-\t-r nun y: Vac-Test’) : Vec::new(_);
-let t : Te;t{v1:5,v2:1.3,v3:‘ w};
-ygusmtt;
-pm wtlntg'“ w»; 1, ' mtt'ttyil 1, 17}:11‘,1‘IEMLXVcaPacityLLXJ;
-privtln‘(“t awn);
-t
-919:1, Capacttyﬂl, v:[Tes\(v1 s v2 13,v3 ‘A’ )1
-t:Test(v1:5‘vZ:13,\/3 ‘A‘}
+#[derive(Debug,Copy,C10ne)]
+struct Test { v1: 132, v2: f32, v3: char }
+Fn main() {
+let mut 1: Vec<Test> = Vec::new();
+let t = Test{v1:5,v2:1.3,v3:'A'};
+y.gush(t);
+println!("size={}, capacity={}, v={:?}",y.1en(),y.capacity(),y);
+println!("t = {:?}",t);
+} M
+she=1,capacHy=4,v=Hest{v1:5,v2:1ﬂ3,v3:7¥}]
+t= Test { v1: 5, v2: 1.3, v3: 'A'}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:99**************
-g Vectors
+® Vecto rs
 Let's compare how effluent vector push method IS for both C++ and Rust.
-Extern ( mnclxda
-
-m m7 "Womb?" [) V> m; mm“
-> mm M (
-m Edi-W» <> r> W t 1va v1‘
-unsafe { ("VUJEMJrumO ) Host v2;
-7 1mm; v3,
-ﬂawmnebnmmwglmn] mm; “[716];
-“PM m { v1, NJ v; W, v; » v4 [WM > ;,
-m W0 Q vmd m0 <
-m mut g \E(<'k>(7 Z \ELIIHMO, st.\:'vector‘<Test> v;
-1n t 7 TEST(V115,VZ 1.2m: ,vA:[iEJS;Z§a-]); Test t,
-let start : I!" MVIO; auto star-t : art’ rkfamtml);
-W ) V w" W W, ( m (am 1 7 V, x < WWW, 1..) (
-ELM» MM ‘Mm,
-) >
-let End = Q: @121), auto End 1 Gethmlourtmﬂ,
-WWW n ,end'start); Wm xa , (mum V mm);
-) )
+extern { #include
+fn GetTickCount64 () —> u64; #include
+} stnuct Test {
+fn get_time () —> u64 { int v1;
+unsafe { GetTickCount64() } float v2;
+} char32_t v3;
+#[denive(Debug,Copy,Clone)] uint8_t v4[256];
+stnuct Test { v1: 132, v2: {32, v3: char, v4: [u83256] } };
+fn main() { void main() {
+let mut y: Vec<Test> = Vec::new(); stdzzvecton<Test> v;
+let t = Test{v1:5,v2:1.3,v3: ,v4:[48u8;256]}; Test t;
+let start = get_time(); auto start = GetTickCount64(); é
+for i in 9..19_999_999 { For (auto i = 9; i < 19999999; i++) { ,£§E
+let end = get_time(); auto end = GetTickCount64()3 ﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁ
+} } ,ﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁﬁ
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-E; Vectors
+"® Ve cto rs
 Both codes were teste in the same environment, for 10 times and the
 average was recorded. All tests were run on x64 architecture (Debug and
-Release). Times are measures in milliseconds‘
-
+Release). Times are measures in milliseconds.
 Keep in mind that GetTickCount function has an error margin of 16ms.
-CH»
-
-(Debug) 2552 2552 25m 257s 257a 251s 2552 257a 2562 2547 2568
-RIISR
-
-(Debug) 1922 1544 1550 1842 1812 1813 1797 17:1 ma 121a 1831
-CH
-
-(Release) 1szs 1751 1797 17:1 1781 1751 1797 1797 1:21 1797 1796
+C++
+(Debug) 2562 2562 2640 2578 2578 2515 2562 2578 2562 2547 2568
 Rust
-
-[Release] 175m 1750 1m 1719 1537 17u3 1712 1537 1703 1587 1709
+(Debug) 1922 1844 1860 1843 1812 1813 1797 1781 1828 1813 1831
+(Release) 1828 1781 1797 1781 1781 1781 1797 1797 1821 1797 1796
+(Release) 1750 1750 1688 1719 1687 1703 1719 1687 1703 1687 1709
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:101**************
-g; Vectors
+,’l I V€ Ct O FS
 As a general conclusion, when it comes to vectors (and copying object not
-moving them), Rust is fasterthan C/C++ (in both debug and release
+moving them), Rust is faster than C/C++ (in both debug and release
 modes).
-
 We should point out that the build that was tested for C++ was compiled
-with Microsoft compiler (cl.e><e) and it does not reflect results for gcc or
+with Microsoft compiler (cl.exe) and it does not reflect results for gcc or
 clang (that might optimize the C++ code in a different way).
-
 However, the question still remains on what's different in Rust vs C++ in
-terms of how vector works ?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:102**************
 Let's see how Rust allocates memory for the previous case.
-Dutplll
-WM “M
-v1: 131, SiZEIUOODUDol,CzpzcityICIOOUUOOII
-v2: m. SizeIOOOOOOOS,CapaciWIOOOOODOS
-if E 1:: ‘i f 1 S\12:00000009,Czpz|:|ty:ClOODUOlD
-} ‘ ' Sx1e100000011,Capacity:00000020
-in who < S\12100000021,Capac|\v:00000040
-1n m g .Emzm V .H mm, ,
-let t : TFET(V]I§,VZIT.§,VZI ,vA:[’8J'<;7’>ﬁ]); v 7 v 7
-m M U am V 1" ,W, “,0; S\1e700040001,Capacny700080000
-M 1 H‘ HWJW < S\ze:DOOBU001,Czpz|:|ty:ClOlDUOOD
-g. Mm. Sxze:00100001,Capacity:OOZUOOOO
-1*} ‘ * ! fwd/U‘ Size100200001,CapacltyIOOADDOOU
-1r (>(Epitlty (
-me Mm (wa} 1w“), ()J S\19:00400001,CzpzcltyIClOSUUOOU
-(awn! Z <, S\1e100800001,Capaci\y:01000000
-\
-\ ,
+Output
+struct Test {
+v1: 132, Size=OOOOOOOl,Capacity=00000004
+V21 F32, Size=OOOOOOOS,Capacity=OOOOOOO8
+V3: Char’ Size=OOOOOOO9,Capacity=OOOOOOlO
+v4: [u8;256] . .
+} Slze=00000011,CapaCIty=00000020
+fn main() { Size=OOOOOOZ1,Capacity=OOOOOO4O
+let mut y: Vec<Test> = Vec::new(); _"
+let t = Test{v1:5,v2:1.3,v3: ,v4:[48u8;256]}; . _ . _
+let mut ca acit = y.capacity(); Slze-OOO40001,CapaCIty-OOOSOOOO
+for‘ i in o..1o_ooo_ooo { Size=00080001,Capacity=00100000
+two); _ Size=00100001,Capacity=00200000
+kt C = M-QIapautyO; Size=00200001,Capacity=00400000
+printlnu {=98X} {=@8><} ,1.1en<>, c); S'Ze=°°400001'capac'tV=°°8OOOOO
+cagacity = c; Size=00800001,Capacity=01000000
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:103**************
 Let's see how Rust allocates memory for the previous case.
 Output
-Wm M < > >
-v1: 131, Rust use; a" allucatorthat S\19100000001,CzpacltyIUOOUOOOll
-v2: m, doubhsme capacity withthe SIZeIOOOOOOOS,CapacitVIOOOOODOB
-: m; . ' i 7
-ii ELK/""71 stancapaclty Df4e|emems_ S\M7000DUOOB,C2pa|:!thOODUOlD
-} Sx1e100000011,Capac|ty:00000020
-in W0 < S\ZeIUDOUUOZ1,Capac|tv:00000040
-let mut g Ham 7 .E( :rsv.(), >
-let t 1 r»;:(v1;s,vz:w 1,vz; ,vA:[’8J~‘;>’>ﬁ]); v 7 v 7
-m M, U am , 1 t W mo, S\1e700040001,CapacnwOOOSOOOO
-m t H MW)“, < S\ze:DOOBUOOl,Czpz|:|ty:UOlDOOOU
-y. MU). Sx1e100100001,Capacity:00200000
-1?‘ ‘ ’ K :“at'm” Size100200001,CapacltVIOOADDOOU
-1~ (Kapwty ‘
-mm“ {W} ( W} ,1 W0, ()J S\12:00400001,CzpzcltyIClOSUUOOU
-(agauty Z <, S\ze:00800001,Capacity101000000
-\
-\ ,
+struct Test { _ _
+} ’ Size=00000011,Capacity=00000020
+fn main() { Size=00000021,Capacity=00000040
+let mut y: Vec<Test> = Vec::new(); _"
+let t = Test{v1:5,v2:1.3,v3: ,v4:[48u8;256]}; . _ . _
+let mut ca acit = Miapacitﬂh Slze-OOO40001,Capaelty-OOOSOOOO
+for‘ i in o..1o_ooo_ooo { Size=00080001,Capacity=00100000
+two); _ Size=00100001,Capacity=00200000
+Pet C = M-Fapautyoi Size=00200001,Capacity=00400000
+printlnu {=98X} {=@8><} ,1.1en<>, c); S'Ze=°°400001'capac'tV=°°8OOOOO
+cagacity = c; Size=00800001,Capacity=01000000
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:104**************
-, .
-Let s see how C++ allocates memory for the prewous case.
+I I
+Let s see how C++ allocates memory for the preVIous case.
 Output
-“W My 5112195688691, (auaoty:BHBHBBm
-5mm Eat ( >11e Mammal, Lapacny ammmml
-m v1; madman memwm
-ﬂoat v1; inﬂame“ (aunnzweneﬂnem
-Hm, ‘ V, WWW‘, WMHWW
-7,. v ' k SlzcwHGBHBEL(aDa(1ty:BHBEBBEP
-“‘ U “Mb sue nuaeuuuﬂ, [apaclty auuunmm
-L. mezwmi, CWWWBW
-vom Mimi) ( Slzc'BﬂGBEBl/h (aunnzweneraaeu
-Sm ~/e<w-<TE;:> V; “WWW, WWWWW
-W t, WWW. (auauty:BHBBBBBV
-M, “WW Z , w, V
-, W‘ sigma”, (WMQWM
-v :wumm, mwzwmm, “pmmmmss
-auto c 1 v.:nv1:1ty(), sunqamsnsﬂ, (apnoty:BHBS7QEJ
-1m: > (Wanty) l
-N HM zssx ‘max >(..H,U>v,~,m(>, (“mum
-(Emmy Z t;
->
-\
+#include Size=99909091, Capacity=90000001
+StPUCt TESt { Size=99909092, Capacity=90000002
+int v1; Size=99999993, Capacity=99690993
+float v2; Size=99909994, Capacity=90900004
+char‘32 t V3. Size=99009995, Capacity=90000006
+) - .
+. _ _ Slze=99909997, Capac1ty=90909009
+_ Ulnt8—t V4[256]’ Size=0999909A, Capacity=9000000D
+}:_ _ Size=9999909E, Capacity=90900013
+V01d ""8an { Size=09999014, Capacity=9000001C
+std: :vector<Test> v; Size=9900991D, Capacity=9000002A
+Test t; Size=99909928, Capacity=9090903F
+aUtO capacity = V'CapaCityO3 s 90249550 c ‘t @036110A
+. _ _ . _ . 12e= , apaC1 y=
+for‘ (aUtO 1 ' 9’ 1_< 19990999’ 1++) { Size=90361195, Capacity=9051198F
+V-pUSh_baCk(t)’ _ Size=90511999, Capacity=9079A656
+auto c = v.capac1ty(); Size=9979A657, Capacity=90B67981
+PPintﬂ %98X %98X , (Hint32_t)V-Size(), (Hint32_t)c)3
+capacity = CS
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:105**************
-, .
+I I
 Let s see how C++ allocates memory for the preVIous case.
 Output
-tn‘ hm“ Suewﬂwﬂeul. (Amati/195695981
-mm mt ( >119 WWW, Lapacny 621%an
-m v1; - “lemma, capazny:eaeewa$
-no“ v1; C"ha"d'ﬁremm'eﬂvwhemhe mmmm WWMW
-‘WU 7 V3 growth factor ls 1.5 (forthe cl.exe/MS mm:nazaam§, WMHWWE
-v. ' t - - SJzQZBHBQHBEL (Amati/185895959
-, w “W 1> 'mvlememaﬂﬂ") mm
-h‘ Sueﬂwwﬂaai, (auecny:eaeaw813
-vom \viJvL) ( sun'eanaamm (achIIV'BEBﬂBBJC
-Sm wed/:PUPEU V; “,ﬂzmmw, WWZWWA
-We t, WWW. (mmmmw
-M, mm,” I , ‘m, V
-v 7 ,t WWW, memm
-v Jm$at<<t>¢ mwzawma, (dwmwzwmss
-auto c 1 v.:ny1:1ty(), sunqamgnsw, (apaotyqsmxswz)
-v‘ (c > canauty) l
-,t HM zssx ‘max NHWUWWKO, (“mum
-(Emmy Z t;
-,\
-\
+#include Size=99999991, Capacity=99999991
+struct Test { Size=99999992, Capacity=90909002
+int v1; - Size=99999993, Capacity=99999993
+ﬂoat v2; C++ has a dlfferent strategy where the Size=69990904, Capacity=90606904
+char~32 t V3. growth factor IS 1.5 (for the C|.exe/MS Size=99999995, Capacity=99999996
+., - .
+. _ _ - - Slze=99900997, Capac1ty=90006009
+Ulnt8—t V4[256]’ Implementatlon) Size=9999999A, Capacity=9999999D
+}3_ _ Size=9999999E, Capacity=99999913
+V01d "18an { Size=99999914, Capacity=9999991c
+std: :vector<Test> v; Size=99999919, Capacity=9999992A
+Test t; Size=99900928, Capacity=9000603F
+aUtO capaCity = V'CapaCityO3 '5"- 99249550 c ‘t 9936119A
+. _ _ . _ . 12e= , apaC1 y=
+for‘ (aUtO 1 ' 9’ 1_< 19990999’ 1++) { Size=9936119B, Capacity=9051198F
+V-pUSh_baCk(t)’ _ Size=99511999, Capacity=9079A656
+auto c = v_capaClty(); size=9979A657, Capacity=90867981
+it (C > capacity) {
+PPintt( %98X %98X , (Hint32_t)V-5ize(), (Hint32_t)c)3
+capacity = CS
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:106**************
-E; Vectors
-So the difference lies in how growth algorithm works for those two
+So the dlfference Iles In how growth algorlthm works for those two
 cases (Rust and C++).
-
-lawman
-lumnnnn
+18000000
+16000000
 14000000
-mum
-gmwnuuu
-§ mnunn
-u sounnnn
-mm
-2000mm
-D =1:QQQQ=====qaa===nnaa======aaa
-mm
+12000000
+3r
+-5 10000000
+f5
+g- 8000000
+U
+6000000
+4000000
+2000000
+oooooooooooooooooooooooooooooooooo __:;55§;§5§5§5§5
+_Rust 888888888888888888888888888888888 _.;;;;§;§;§;§;§;§;§;§;§
+ooooooocooooooooooooooooooooooooo _.;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:107**************
-®/ Vectors
 So lets see the behaVIor If we reserve the memory from the start.
-extern ( Mm imp
-m 5w (\rfmmté" 0 V> m; mm m: (
-) )rvt v1;
-hr grli'uw () '> rm 4’ ‘luat v1,
-unsafe { (Y'V\)~<[\,AY‘L114<) ) mm , W
-7 “mug vAL/H'wj>
-Wm\Q(webw,cwy,:1m)1 )2
-“mfg Hr { v11 vwz v2 H), v3 An", v4 [my 4'] ) volﬂ trawl) (
-r" Wu t , , 5U: vectur<Test> v;
-m mut g \E(<'k>(7 Z \ELII.v)\t‘7LAP.ALA,y(197¥1t1@78ﬁ@), I,“ ‘I
-1n t 7 TEST(V115,VZ 1.1m: ,qu'AAnx-j); W‘w,lemmm
-let start I wt “"0; auto start 1 muttmwtm),
-w 1 m w w" MW’ MW’, r {or (auto 1 7 a; 1 < woe-2002, 1+») r
-bum‘ “my warm);
-t >
-let and = zev MEL), gun; eml Z m (kKnu'v ~10)
-Pri"t1"‘( n twisterw: Wm m , (1Ht)<end V 5mm,
-)
+extern { #lnClUCle
+. #include
+} fn GetT1ckCount64 () —> U64, struct Test {
+fn get_time () —> u64 { 1nt V1;
+unsafe { GetTickCount64() } float V23
+} char32_t v3;
+#[derive(Debug,Copy,Clone)] }. u1nt8_t V4[256]3
+struct Test { v1: 132, v2: {32, v3: char, v4: [u83256] } ’. .
+. v01d ma1n() {
+fn ma1n() { std"vector<Test> v'
+let mut y: Vec<Test> = Vec::with_capacity(19_099_999); Test t' ’
+let t = Test{v1:5{v2:1.3,v3: ,v4:[48u8;256j}; v.reserve(166999@9);
+let start = get_t1me(); _ . a
+for i in 9 19 999 999 { auto start = GetT1ckCount64(), iﬁﬁ
+V ushtt)? — For‘ (auto i = 9,- i < 19999999; i++) {
+liinilﬁlZ ?§t—ii$?§igpt>- auto end = GetTickcounmm ﬁeﬁaﬁ
+} p ' ’ ’ pPintF( %d , (int)(end - start));
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:108**************
-g; Vecto rs
+V? Vectors
 Test were performed in a similar manner like the previous ones (Debug
 and Release, 10 iterations and we compute the average).
 C++
-
-(Debug) 7122 755 751 vee 731 755 797 797 aza 731 784
-RIJS!
-
-(Debug) 924 1094 1063 1031 875 1032 101s aso sue 359 972
-C00
-
-[Release] 547 531 S31 515 500 515 516 500 531 531 521
-RIISR
-
-[Release] 532 sou 531 516 551 531 547 5A7 547 515 532
-
-Keep in mind that there is an error margin of 16 ms for GetTickCount APlv
-
+(Debug) 782 766 781 766 781 766 797 797 828 781 784
+Rust
+(Debug) 984 1094 1063 1031 875 1032 1016 860 906 859 972
+C++
+(Release) 547 532 531 515 500 515 516 500 531 531 521
+Rust
+(Release) 532 500 531 516 562 531 547 547 547 515 532
+Keep in mind that there is an error margin of 16 ms for GetTickCount API.
 This means that the difference between C++ and Rust is insignificant (w
-
-can consider both at the same level).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:109**************
-Vectors
-
-To access an element from an index in the vector use the [..,] index
+if‘
+Vecto rs
+To access an element from an index in the vector use the [...] index
 operator. if the index is out of range, the code will panic.
 Rust
-WWW‘. .‘i
-
-lzl .
-
-,1 . rnwiluswl: mm W m w 1m st ttmw
-' limit i, l i I
-
-“puihi, 4,1:1,1:4 :.,;:':u, 7 [15,::i;];v;t; i maes- W mmw m tam tmn
-l Z m; l my- WWW WWW rm Lia}
-
+#[derive( )]
+{
+v1: ,
+v2: , error[E9597]: cannot move out of index of ‘Vec<Test>‘
+v3: ’ --> src\main.rs:6:13
+} v4: [ $256] 6 i let b = v[6];
+main() { i |
+M = ::< >2 :new(); | move occurs because value has type ‘Test‘, which
+y.pu_5h( {v111,v2:1.2,v3: 'A',v4:[15;256]}); | does not implement the ‘Copy‘ trait
+b = “:91; | help: consider borrowing here: ‘&v[6]‘
+<" ".b);
+}
 In this particular case, the code will not compile because the assignment is
 equivalent to moving an element from the vector.
 
@@ -2037,92 +2123,129 @@ equivalent to moving an element from the vector.
 
 ***************Beginning Page***************
 ***************page number:110**************
-. Vectors
-There are two solution to the previous problem: m
-1. borrow the value of the element from index 0 w, , v, 1‘ ,1 m. N
-M.l1;,15,15,15,15,15,15,
-RUSI 1;, \§,1<. \§,1<, \§,1<, \5v
-a l: l "1"“ 12.15,“. 15,12 15,1215,
-r 1‘ 1;.’ Twain]; [I .77] 151;
-,.puiil, , = , >14 HM: .4 , 7 5,,» H;
-l Z M‘
-El
+There are tWO SQIUtlon t0 the prEVIOUS problem: m
+1. borrow the value of the element from Index O Test{v1:1 $1.2 v3: .A.
+v4: [15, 15, 15, 15, 15, 15, 15,
+Rust 15, 15, 15, 15, 15, 15, 15, 15,
+. 15, 15, 15, 15, 15, 15, 15, 15,
+#[derlve( )1 15, 15, 15, 15, 15, 15, 15, 15,
+{ 15, 15, 15, 15, 15, 15, 15, 15,
+v1: , 15, 15, 15, 15, 15, 15, 15, 15,
+v2: , 15, 15, 15, 15, 15, 15, 15, 15,
+v3; , 15, 15, 15, 15, 15, 15, 15, 15,
+v4: [ ,256] m
+} 15, 15, 15, 15, 15, 15, 15, 15,
+_ 15, 15, 15, 15, 15, 15, 15, 15,
+ma1n() { 15, 15, 15, 15, 15, 15, 15, 15,
+y = ::< >::new(); 15] }
+y.gush( {v1:1,v2:1.2,v3:'A',v4:[15;256]});
+b =‘161;
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:111**************
-® Vectors
-There are two solution to the previous problem: m
-2‘ implement the Copy trait for structure Test w, , v, 1‘ ‘,1 m.
-M. U5‘ 15, 15‘ 15‘ 15‘ 15, 15‘
-a ""1 l“"-35;‘l 12.15,“. 15,13. 15,1215,
-Jr Wli g 1w: .Teftvnnewl l; 1s! l
-‘ r I L/lﬂl;
-‘mull mm.
+%?_ -.
+There are two solutlon to the preVIous problem: M
+2. Implement the Copy tralt for structure Test Test { V1: 1’ sz 1.2, v3: .A.’
+v4: [15, 15, 15, 15, 15, 15, 15,
+RUSt 15, 15, 15, 15, 15, 15, 15, 15,
+. 15, 15, 15, 15, 15, 15, 15, 15,
+#[der1ve(Debug_Copy,C10ne)] 15’ 15)]5’ 15’ 15)]5’ 15, 15’
+StPUCt TQSt {_ 15, 15, 15, 15, 15, 15, 15, 15,
+V1! 132, 15, 15, 15, 15, 15, 15, 15, 15,
+v2: 1°32, 15, 15, 15, 15, 15, 15, 15, 15,
+v3; char‘, 15, 15, 15, 15, 15, 15, 15, 15,
+v4: [u8;256] m
+} 15, 15, 15, 15, 15, 15, 15, 15,
+, 15, 15, 15, 15, 15, 15, 15, 15,
+‘En ma1n() { 15, 15, 15, 15, 15, 15, 15, 15,
+let mut y = Vec::<Test>::new(); 15] }
+y.gush(Test{v1:1,v2:1.2,v3:'A',v4:[15;256]});
+let b = y[9];
+println!("{:?}",b);
+}
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:112**************
+i?‘
 Vectors
-A vector is iterable (for read and write]:
-RIIS! Rust
-Waim,‘ 1 WYEJHH 4'
-w \ m‘ in. m 7 1n!) "L;
-} ix: v‘ i*‘;,‘ H
-1“ w; m m ;
+A vector is iterable (for read and write):
+Rust Rust
+main() { mainO {
+s = 9; é = 93
+foriin_v{ toriinfﬁ !{
+$1; *1 = (*1) * 2;
+} }
+(n ",5); 'For‘ i in !{
+} _ S+_=i;
+m }
+<" ",2);
+} M
+i
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:113**************
-A vector has a special function [cail retain) that can be used to keep only some
-elements that have a speciﬁc characteristics:
-Ream; e“ elements that ‘e, Wm e Melee
+A vector has a special function (call retain) that can be used to keep only some
+elements that have a specific characteristics:
+Retains all elements that for which a function
 Rust
-
-Wm‘ n .e L 1
-
-Malwi 4
-
-,e n,:,:.,4,s];
-y-r-hnmurhiii
+odd(va1ue: & )-> {
+return value % 2 == 1; m
+1~
+main() {
+M = [1:213:415];
+y.netain(odd);
+(" ",y);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:114**************
+emﬁ
 Vectors can be easily converted into slices (much like an array can). We can do this
-via the range operator u or via asisiice[) / asimutisliceﬂ methods‘
+via the range operator .. or via as_s|ice() / as_mut_s|ice() methods.
 Rust
-in Sumrliiti Minn-43:;
-r r 1 1m r 5W: 41
-x“: “M Z r5. ,1. w]. Vim Z w
-\‘etttir IL1>H‘3"4‘1'3,V2,~U
-i
-H'i malm) i
-1m W 1 Z tifi:i[1,$,3,q,1g,5v4];
-L ytlrrM'“: H 7 'i“.-;m"r1.a;;11m‘m;
-tr r 5mg : alums];
-r‘ mm“ ii‘ 1 ii i. ii 7i ,511:e,;un\r§11:e)§;
-r""tir'i‘i“i.—i’rr' 7; i ‘y;
-r‘
+fn sum(list: &[i32])—>i32 {
+let mut s = e; M
+for i in list { am =41
+S+=*i; Slice = [8, 3, 9], sum = 29
+} — Vector = [1, 8, 3, 9, 10, 6, 4]
+s
+}
+fn main() {
+let mut v = vec![1,8,3,9,1@,6,4];
+println!("Sum = {}",sum(v.as_slice()));
+let slice = &v[1..4];
+println!("Slice = {:P}, sum = {}",slice,sum(slice));
+println!("Vector = {:?}",v);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:115**************
-® Vectors
-A vector can also be s lit off into two parts resulting two vectors‘ For this use the
-method i-
+Vecto rs
+A vector can also be s lit off into two parts resulting two vectors. For this use the
+method i.
+
 Rust
-mam) r
-i“. r w'r. “,i,,;.rsaparsityii'i; i~:[a, .t, :1, ‘swing.
-i
-In this case, we split frorn the index Z (meaning that the first two elements will
-remain in the original vector, and the rest ofthem will be transferred to another
+main() {
+M = £113,451; M
+("v= , capacity: ",y,y.capacity()); b=[3, 4, 5], capacity=3
+("b= , capacity= ",Q,Q-Capacity())s
+}
+In this case, we split from the index 2 (meaning that the first two elements will
+remain in the original vector, and the rest of them will be transferred to another
 vector).
 The first vector capacity remains untouched (in this case 5).
 Keep in mind that this method creates another vector (and allocates memory for it).
@@ -2131,148 +2254,161 @@ Keep in mind that this method creates another vector (and allocates memory for i
 
 ***************Beginning Page***************
 ***************page number:116**************
-g; Ve cto rs
+"® Ve cto rs
 A vector also has a set of methods called drain that can be used to remove some
 elements from the vector based on a specific logic or range.
-
-i in“ ‘ i» "t r» Removes all elementsfroma vectorwithin a speciﬁc
-
-I ) ' range
-'i on Hit‘: ' Z , tilt»?! v l w Removes all element irom a vector that are filtered
-~ 1 , l v byz glven function.
-
+M—
+Removes all elements from a vector within a specific
+< , , > range
+Removes all element from a vector that are filtered
+< , ) , > by a given function.
 Note that drain methods return an iterator over the elements that need to be
-removed —) and if used in conjunction with the - method from the iterator,
+removed 9 and if used in conjunction with the - method from the iterator,
 these methods can be used to split a vector in a different way.
-’ drain Jilrer is considered an unstable feature ( we will not discuss about this method)
+* drain _fiIter is considered an unstable feature (we will not discuss about this method)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:117**************
+I i J f
 Let's see some examples:
-Ru" Rust
-
-1mm ,\ "111MB ‘I
-
-: [1,:,;~,4,51; 1: [LAID-MS}:
-
-“GPHJHLZHH y: ‘ _~, : gamma.4401mm:
-
-g i’ K“ 1L‘);
+Rust Rust
+' main() {
+ma1n() { V = [1,2,3,4)5]3 M = [1)2’3)4,5];
+y.dr‘ain(§..); %':' i v)? = y.dr‘ain(3..).co11ect();
+(H ")M) (H ",5)‘:
+} ,_ ,
 }
-[4- 5]
+4, 5
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:118**************
-Vectors
-Its also important to notice that drainiRange) method keeps a mutable reference to
+i?
+Its also important to notice that drain(Range) method keeps a mutable reference to
 the vector. This is more efficient as it does not allocate extra space for the elements
-that are being drained‘ It also means that if you obtain this iterator, you can not
+that are being drained. It also means that if you obtain this iterator, you can not
 modify the existing vector until you consume the drain or you drop it.
 Rust
-mainll I‘
-;: [1,1,3,4,5];
-tr : ;.dr‘airr[:3..};
-if e >1; i irrorllitﬁul 1 cannot: mm. l as )rimutat'li? may» 1t 15 at:
-l V Mutable ticrvcn lam llﬁllﬂ new;
+main() {
+M = [1)2)3)435];
+d = y.drain(3..);
+(" ",x);
+S = 9; error[E0592]: cannot borrow ‘v‘ as immutable because it is also
+. . _ . . borrowed as mutable
+} ‘FOP 1 1n d { E l’ } -—> src\main.rs:5:21
+|
+4 | let d = v.drain(3..);
+| -—-—-—-———-— mutable borrow occurs here
+5 | println!("{:?}",v);
+| A immutable borrow occurs here
+6 | let mut s = 9;
+7| foriind{s+=i;}
+| — mutable borrow later used here
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:119**************
-7
 Sorting
-L
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:120**************
-g; Sorting
+"® Sorting
 
 One of the most common problem when dealing with data sequences
 
 (e.g. a vector, an array, a slice) is to be able to sort them.
 
 Rust has several sort algorithms in place that take into consideration:
-' lfthe sort is stable or not
-' WOi'St C358
-- Memory consumption
-- Sort using a key /
+' If the sort is stable or not
+' Worst case
+' |\/|emory consumption
+' Sort using a key I
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:121**************
 Any mutable vector , array or slice have several sort related methods:
-MethodWectnr/SllcelAmy) ma-
--l tls l Stable sort ll<eeps the order orthe equal
-l l-l,‘ all; , Mll-am l elementslt
-wt l‘.‘ l>tl1 l w. , g: l
-t ll teal-‘ell le.< . Mt: l —'. l
--l tie“ .t lt, la l Unstable sort (may reorder equal elements).
-alw‘l_llll'la1l' e_ll>,t we , lull-ale; ,l
-eta-@m'tal' U2»; a_, , up: , :1 )
-lam lLCl_St > Checks if elements are already sorted.
-ll elm l‘,1 w , Ml .ll-t. jl >
+5_0Pt(& ) Stable sort (keeps the order of the equal
+SOP-t by< >(& _, COmQaPet ) elements)_
+sort by key< , >(& , f: )
+sort by cached key< , >(& , 1c: )
+sort unstab1e(& ) Unstable sort(may reorder equalelements).
+sort unstable by< >(& , comgare: )
+sort unstable by key< , >(& , f: )
+is_sorted(& ) -> Checks ifelements are alreadysorted.
+is_sorted_by< >(& , comgare: ) —> _
+is_sorted_by_l<ey< , >(& , 1c: ) —> ll
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:122**************
 Sort algorithms:
-sort t Algorithm: iterative merge sort inspired by timsnrt
-sort_by . Worst case: Oln‘log[n))
-- Memory: for large vectors allocates extra memory (half the size of the vector]
-- Stable: does not change the arder of equal elements
-- seetter: nearly sorted sequences
-sorl_by_kev srrnr'lur wr'th sun and son‘_by, except for complexity
-t Worst case: Olm‘n + n‘logln]), 0(m) e thne needed to compute the key
-sort_by_cached_key . Algorithm: pattern defeating quick sort
-- Worst case: Olm‘n + n'logml), 0(m) = time needed to compute the key
-- Memory: in worst case it allocates the size a! the vector/slice
-- stable: does no! change the order of equal elements
-' Guarantees: A key i5 computed at most one time
+
+sort - Algorithm: iterative merge sort inspired by timsort
+
+sort_by ' Worst case: O(n*|og(n))
+- Memory: for large vectors allocates extra memory (half the size of the vector)
+' Stable: does not change the order of equal elements
+- Best for: nearly sorted sequences
+
+sort_by_key Similar with sort and sort_by, except for complexity
+- Worst case: O(m*n + n*|og(n)), O(m) = time needed to compute the key
+
+sort_by_cached_key ' Algorithm: pattern defeating quick sort __
+- Worst case: O(m*n + n*|og(n)), O(m) = time needed to compute the key
+- Memory: in worst case it allocates the size of the vector/slice
+' Stable: does not change the order of equal elements
+' Guarantees: A key is computed at most one time
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:123**************
-E; Sorting
+'® Sortmg
 
 Sort algorithms:
-sort_unstable . Algorithm: pattern defeating quick sort
-sort_unstable_by . Worst case: Oln‘log[n))
+sort_unstable ' Algorithm: pattern defeating quick sort
+sort_unstab|e_by ' Worst case: O(n*|og(n))
 
 - Memory: Swap in done in-place (no extra allocation)
 
-- Unstable: itmaychangethenrrierofequalelements
-sortiunstableibvikey Similar with son and 5m, by, Except/a! complexity
+' Unstable: it may change the order of equal elements
+sort_unstab|e_by_key Similar with sort and sort_by, except for complexity
 
-- Worst case: Olm'rl + n‘log(r\]), 0(m) = tlme needed w compute the key
+' Worst case: O(m*n + n*|og(n)), O(m) = time needed to compute the key
 OBS: if elements order is not at issue, unstable sorts are generally faster
 and require less memory than a regular sort. The only cases where stable
 sort is recommended is if the sequence of data contains elements that a
-already partially sorted.
+already partial/y sorted-
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:124**************
-g; Sorting
+Sorting
 What is the difference between regular sort, - and — (or
-the caching form of sort by key)?
+the caching form of sort by key) ?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:125**************
-g; Sorting
+Sorting
 What is the difference between regular sort, - and — (or
-the caching form of sort by key)?
+the caching form of sort by key) ?
 
 Regular sort:
 
@@ -2280,661 +2416,719 @@ Regular sort:
 
 ***************Beginning Page***************
 ***************page number:126**************
-g; Sorting
+"® So rti n g
 What is the difference between regular sort, - and — (or
-the caching form of sort by key)?
+the caching form of sort by key) ?
 
 Sort by:
-my \L\:‘U':‘H\ ,mwm 1
-P E
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:127**************
-g; Sortl ng
+'® Sortmg
 What is the difference between regular sort, - and — (or
-the caching form of sort by key)?
-
+the caching form of sort by key) ?
 Sort by KEY:
-P E
-
-Where KeyITI returns a VBWE mm IS
-comparame {usually a number, a hash, etc)
+CWL'T} (Element ) (Element)
+Where Key( T) returns a value that is
+comparable (usually a number, a hash, etc)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:128**************
-s; Sortlng
+"® So m n g
 What is the difference between regular sort, - and — (or
-the caching form of sort by key)?
-
+the caching form of sort by key) ?
 Sort by KEY (cached):
-Where KeyfT) returns a value that \5
-—---— Lomparahle [mueHy a number, a hash, etc)
+—— CWA} (Element ) (Element)
+Where Key( T) returns a value that is
+—......— comparable (usually a number, a hash, etc)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:129**************
-Let's see some examples:
+1| 3
+Let's SE8 some examples:
 Rust
-m maJnU -;
-L #LlHWW H31);
-‘1
+fn main() {
+lee mue 1 = vec![1,9,6,2,9,3,6,8,3,6,1,3,7,81; M
+println!("{:?}",y);
+}
 and
-RUSK‘
-Fm absnluteivalueg'valueRUSH, r. 151 {
-"
-m maJnU \'
-‘w ‘W x :,w‘[1,"),nrgﬂ‘7:‘,7'3,'3,3v,7r3,'1,j,*,8];
-by)“ by Venabsolutejalue‘:
-L :tlHHIW W31);
-‘r
+Rust
+fn absolute_va1ue(va1ue:&i32) —> 132 {
+ll *veeel < e { -<*velee> l elee l ele l M
+l
+fn main() {
+let mut y = vec![1,-9,6,-2,9,-3,-6,-8,3,-6,-1,3,7,8];
+1.50Pt by key(absolute_value);
+println!("{:?}",y)3
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:130**************
-I
-Sortl ng
-
-Let's discuss an even more complex example‘ We will start by defining the structure
-Student and a function that can be used to create such an object that WIN further
+Let's discuss an even more complex example. We will start by defining the structure
+Student and a function that can be used to create such an object that will further
 be used in our examples.
 Rust
-#[der'ner "1
-
-u m: , ‘
-‘ new: erJ-rLH'ul: A ,u'ihu Ari: . “71);, ‘r: 1 » -;
-
-Mr ‘W n,
+#[derive( )]
+{
+math: ,
+english: ,
+name:
+} _
+{
+new(studentName: & , mathGnade: , englishGPad: ) -> {
+{
+name: ::Fnom(studentName),
+math: mathGPade,
+english: englishGPad
+}
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:131**************
-®
-Let's try to sorta list of students:
+Let's try to sort a list of students:
 Rust
 main() {
-:mew"Andre1",ln,x), WWW.” 11.‘
-::new("m~dgos",s,19), H 1 MW‘
-::new("80gdan",7,7), \ ~ (WW m W mka W 5mm
-“"EWTlEPE'Vgﬂm W‘ W1 m, a W1 m m1 1W m
-1; \
-h _ 11: \ W md.
-‘ :MO) \ ~ - "mum a, this mum 1n SJICEII'JWK‘) m~ 5m
-|
-m PammOrd
-PartiEHEq
+M = [ _ error[E9277]: the trait bound ‘Student: 0rd‘ is not satisfied
+::new("Andre1",16,8), --> src\main.rs:23:7
+::new("Dragos",8,19), 23 i “sorto;
+I :new("Bogdan",7,7), | MM the trait ‘Ord‘ is not implemented for ‘Student‘
+. . ll II I
+1 ' .new( Clara ’9’19) note: required by a bound in ‘slice::<impl [T]>::sort‘
+3 |
+. 275 | T: 0rd,
+} Mm()’ | AM required by this bound in ‘slice::<imp1 [T]>::sort‘
+PartialOrd
+PartialEq
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:132**************
-I
-Sortlng
-Let's see what imp\ementing this traits means‘
+Let's see what Implementlng thls tralts means.
 Rust
-UHF!‘ ‘ \ 1‘ l "v l
-_
+#[derive( )]
+{ math: , english: , name: }
+{
+cmp(& , other:& ) -> {
 }
-‘ 4
+{
+partial_cmp(& , 0ther:& ) -> < > {
+( .cmp(other))
 }
-mm , '\ a A‘ \ V ;
 }
-‘ m
+{
+eq(& , other: & ) -> {
+.cmp(other) == ::
+}
+}
+{}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:133**************
 After we implement these traits, the code compile.
 Rust
-main() (
-IrHEW("AM1P6-i",l@v3>, My." t M" m. WM q, W W11 >
-2:HBM"Dr‘agns",8,lw), 5mm 1 mi?" w mm» -, m! 50;an 1
-,_ ,. H w Mm‘! ; my‘ a‘ me- m, Hm ‘Umtﬂ :1
---HEW( Bﬂgda" , 17)‘ 5mm 1M" s. enghgh m‘ M» n>>
-::rvew("(lar‘a",9,l@)
+fn main() {
+StUdent: :new("Andr‘ei",16,8), Student { math: 10, english: 8, name: "Andrei" }
+Student: :new("Dr‘agos",8,19), Student { math: 7, english: 7, name: "Bogdan" }
+. . I. H Student { math: 9, english: 19, name: "Clara" }
+StUdent' .HEW( Bogdan )7)7)J Student { math: 8, english: 19, name: "Dnagos" }
+Student::new("C1ana",9,19)
 1;
-itsortg');
-for 1 in 1 (
-(H "15)
-)
+!.sont();
+for i in y {
+pnintln!("{:?}",i)
+}
 }
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:134**************
-But what if we don't want to implement all of these traits for a simple sort 'r‘
-W.“ “WW”
-5mm awe‘: 4 math: Na‘ engllsh Ab, name: Sung )
-m1 5mm q
-F" mn~‘(studen€NamE QM, mathGrads ‘a, englishGr-ad: la) > Rmdmr ( l
-l
-m WRJY() l Output
-15¢ mt y V ve(l[ mm ( lreth' 7, englnh v. me "mm" l
-3mm =~~»< , m), 5mm < m" a. English‘ 1E, name. “Dr'zgu3‘ l
-mm‘ ‘M mm, 5mm l "m g, cwghsh m, "m ‘(lal'a' l
-Wm W,‘ >, sudwu < mm w, Wm“ g, "W mm,“ )
-Smurl 1m.< mm
-1W: J, ‘(w/(h mam; lnthis cases, using sort_by_lwycombined witha
-m 1 T" g \, lambda function is ideal, especially "we want w sort
-) wwww l w .17 basedan:fieldfmmthestructure
-l
+But what if we don't want to implement all of these traits for a simple sort ?
+#[derive(Debug)]
+struct Student { math: u8, english: u8, name: String }
+impl Student {
+fn new(studentName: &str, mathGrade: u8, englishGrad: u8) —> Student { m }
+}
+tn main() { loutput I
+let mut M = V9C![ Student { math: 7, english: 7, name: "Bogdan" }
+Studentttnew( ,19,8), Student { math: 8, english: 10, name: "Dragos" }
+Student::new( ,8’19)’ Student { math: 9, english: 10, name: "Clara" }
+Student::new( ,7’7)’ Student { math: 19, english: 8, name: "Andrei" }
+Student::new( ,9,19) ﬁg
+‘1, sort b1: ker“ | 1| imath); In this cases, using sort_by_key combined with a
+For i in 1 { lambda function is ideal, especially if we want to sort
+} printlnl< {=P} ,1) based on a field from the structure
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:135**************
-g; So rt| n g
 Other methods related to sort methods:
-Removes a" consecutive gamma‘ are was.
-mun r, m: v "run" al'l 'r: ‘l Removes allconsecutlve elementsthat belong to the
-same bucket (based on a functlon that determines ‘r
-an element l5 pan of a bucket or not)
-""1"" >1 "w v ‘W , L: r Removes all consecutive elementsthat have the same
+Method (Vector)
+Removes all consecutive elements that are equals.
+MILQW >(& , MI ) Removes all consecutive elements that belong to the
+same bucket (based on a function that determines if
+an element is part of a bucket or not).
+MILQLILEW , >(& , |<_e¥I ) Removes all consecutive elements that have the same
 key.
-All ofthese methods imply that the element in the vector is comparable (has the
-PartialEq trait),
+All of these methods imply that the element in the vector is comparable (has the
 Dedup methods are in particular useful when used after a - command.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:136**************
-® Sortl ng
+§$w__:}x
+So rtl ng
 Dedup methods (Vectors):
-mm
-"mm ,\
-i.nemnl\:
-(“17mm m» “.iv:
-v
+Rust
+main() {
+M = [1,2,7,2)5)1)2’5)713 M
+("Sorted VGCtOPZ ":¥)3 Deduped vector‘: [1, 2, 5, 7]
+y.dedug();
+("Deduped vector: ",1);
+}
 In this case, the following buckets were reduced:
-‘ [.2,2,z,5,5,7,71-) [l2,5,7]
-- l1, 1, -, 5, s, 7, 7] -) [1, I, s, 7]
-- [1,1,2,2,2,.7,7]-)[1,2,l71
-- [1,1,2,2,2,5,5,-1-)[1,1,5]1
+- [-,2,2,2,5,5,7,71-)[I,2,5,71
+- [1,1,-,5,5,7,71-) [115,71
+- [1,1,2,2,2,-,7,71-) [1,2,I,71
+- [1,1,2,2,2,5,5,-1-) [1,2,5,I1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:137**************
+é?‘
+So rtl ng
 Dedup methods (Vectors):
-RUSK
-Sortimndulniﬂ‘ﬁlm?It} H 1
-dedupimnduluih'shwzk w -; Mum \edrr- [1, :1
-1‘\.=.\Hv) ‘mi
-» l
-mainfj Q
-,1 [1,1,*,1.5,1,:,5,*];
-Lsort n» ksﬂsortimaduluilh Module; 1 1 1 1 z z 2 2 z
-Wsmted vertm‘: “,g;
-Mann b" keyfdedupjxodulnj);
-(“02%an mm»; “,iy;
-‘r
+Rust
+sort_modulo_3(value:& )—> {
+<*va1ue> % 3 M
+1‘
+dedup_modulo_3(va1ue:& )—> { Demmedvede=[1’2]
+(*value) % 3
+} l
+main() {
+M = [112:7:2:5:1:2:5:7];
+y.sort by key(sort_modulo_3); ledmo3 1 1 1 1 2 2 2 2 2
+("Sorted vector: ",y);
+y.dedug by key(dedup_modulo_3);
+("Deduped vector: ",1);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:138**************
-. Sortl ng
-
+i?‘
 Dedup methods (Vectors):
 Rust
-
-;: [1,1‘.,1,‘l,1,_',‘=‘.];
-
-(“Slilrtcd \mttm “.u: MUM mm‘ [1' '1
-£119le m kewl lil (1i) ‘a 91;
-(“Heduped “Elem-1 “,il; ‘
-Module! 111111221
-
-The same result can also be obtained via usage of lambda functions/closures [like
+main‘) { ME—
+M = [1:2:7:2:5:1)2:5)7];
+V.SO|"t by ke(|i| (*1) % 3). Sorted vector‘: [1, 7, 1, 7, 2, 2, 5, 2, 5]
+_ ("Sorted VGCtOPf I, V)‘ Deduped vector‘: [1, 2]
+1-dedup by key<l1l (*1) % 3); _
+("Deduped vector‘: ",1); ‘
+}
+M0dul03 111122222
+The same result can also be obtained via usage of lambda functions/closures (like
 in the previous example).
-We will talk more about closures in another course’
+We will talk more about closures in another course.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:139**************
-g; Sortl ng
+,’ S O rtl n g
 Another interesting method (related to a sorted sequence of elements) is the
-ability to use a binary search to quickly find an item (in O(|og[m) complexity). This
+ability to use a binary search to quickly find an item (in O(log(n)) complexity). This
 methods can be used for Vectors, Arrays or slices.
-
-All ofthese methods should be used together with the similar sort functions (e.g.
+All of these methods should be used together with the similar sort functions (e.g.
 use a binary_search_by with the sort_by or sort_unstable_by) and with the same
-function as parameter.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:140**************
-So rt| n g
-Let's see some examples on how to use binary searcht
+§@t_.z.i
+Let's see some examples on how to use binary search.
 Rust
-hem t
-t; , .blnsvyisearctvIISt-J)jt; em;
-I“ ‘X,.binarwieearTMK-JUUJJ; :73;
-t“ ‘y,.thhet-y;eehtht_h>\w>1 "
-t‘
+main() {
+v = [1,2,3,4,5,6,7,81; m
+(" ",v.binany_seanch(&4)); WGB)
+(" ",v.binany_seanch(&496))3 mes)
+|| || . Err‘(0)
+( ,v.b1nany_seanch(&6));
+}
 The binary search function returns:
-- I (with the value the index vvhere the exact match was found)
-' I (with the vame of the dosest index to the va\ue that was searchedl.
-Obs: Natlte that. -t7! I In Rust, h Cunstant VU/IIE is not implicitly converted mtg h cunstant
-reference I/ke in C++ (you have to exp/ic/t/y say you want to do this)‘
+' I (with the value the index Where the exact match was found)
+' I (with the value of the closest index to the value that was searched).
+Obs: Notice that. -or I. In Rust, a constant value is not implicitly converted into a constant
+reference like in C++ (you have to explicitly say you want to do this).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:141**************
-a Sortl ng
+I§@%.. z;-
 
-Let's see some examples on how to use binary search‘
+Let’s see some examples on how to use binary search.
+
 Rust
-rm rriainii I‘
 
-5.50m w kevllll rm 1i; [1,a,1_-\.7.1.§,'1]
+fn main() {
+let mut a = [1,2,34,36,73]; m
+a.sort by key(|i| (*i) % 3); [3,6,1uta 7,2, a 8]
+phintln!("{:?}",a); $31)
+phintln!("{:?}",a.binary_search_by_key(&9,|i| (*i) % 3)); més;
+phintln!("{:?}",a.binary_search_by_key(&1,|i| (*i) % 3)); mes)
+pnintln!("{:?}",a.binary_search_by_key(&2,|i| (*i) % 3));
+pnintln!("{:?}",a.binary_search_by_key(&3,|i| (*i) % 3));
 
-r‘ mum We]; ‘PM’
+}
 
-,w 'tln‘l“l l“,i-tiiIiaWisEer'rhihyikeywﬂ,ljl ('1) s a)»; Ellf'l',‘
-
-r ; tlnli“i Yi“,5.Lunaruiisearwhibvikevit}!,lil ('1) 13>); [Wl'w
-
-r ,rlrrugw "l“,ginnaryiscarihibyikcyi'ﬁl.lll ('11 '12)};
-
-r , will; i 'i ,5.r,mw;gay-Lirivyiiiayrm,iii W1) m;
 Keep in mind that binary_search_by_key receives for the first parameter a key and
-not a value‘ In this case, possible keys are 0,1 and 2 (everything that module 3 can
+
+not a value. In this case, possible keys are 0,1 and 2 (everything that module 3 can
+
 obtained). That is why, the first 3 searches will end up with 0k, while search no 4
-(for the value 3) will return Err as any value module 3 will never result in 31!!
+
+(for the value 3) will return Err as any value module 3 will never result in 3!!!
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:142**************
-L
-ash aps
-H
+Hash maps
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:143**************
-g; Hash ma ps
-Hash maps collection of elements, where every element can quickly (ideally 0(1)) be
-access via a key‘ There are several implementation possible fora Hash maps; Rust
-has a specific object called HashMap (like std::unordered_map) from C++ standard,
-Rust implementation (a variation of httgsﬂabseil.i0[blog[20180927-swisstables)
+"® Hash maps
+Hash maps collection of elements, Where every element can quickly (ideally 0(1)) be
+access via a key. There are several implementation possible for a Hash maps; Rust
+has a speciﬁc object called HashlVlap (like std::unordered_map) from C++ standard.
+Rust implementation (a variation of httpszﬂabseil.ioZblogZ20180927-swisstables)
 To create a map, use one of the following forms:
-
-a)
-
-b) let mut a I HashMap::<kev,value>::new()
-
-c) let mut a: HashlVIap<key,\/alue> : HashMap‘:WItchapacitylcapacity)
-d) let mtit a: HashlVIap<key,value> : HashMap :frornl[(key,vector);c0unt])
+a) let mut a: HashlVlap<key,value> = HashMap::new()
+b) let mut a = HashMap::<key,va|ue>::new()
+c) let mut a: HashlVlap<key,value> = HashMap::with_capacity(capacity)
+d) let mut a: HashlVlap<key,value> = HashMap::from([(key,vector);count])
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:144**************
+Hash maps
 Let's see some examples on how to build a hash map.
 Rust
-H, Caanh/IB, \terWZIO
-m main!) .’ {LCaDamtwlwemwO
-Emu : HashMap: x132 1323mm“), Hahn".lﬂ,“M\ke"er),"Gemge“ 30),Canac|w:3 MW;
-m m2 : HashMap: :<&Str‘,i32>:Ivlithicapacitwilﬂﬂ');
-1'» m3 = HashV-lapnfromﬂ
-(‘ mw,1e), (‘ Me“,ZQ), (“we @9320)
+use std: :collections: :HashMap; M
+{}, Capacity=0, items=0
+‘Fn main O { {}, Capacity=3, items=0
+let m1 = HashMap , , (132 132> , , new() , {"John": 10, "Mike": 20, "George": 30}, Capacity=3, items=3
+let m2 = HashMap::<&sth,132>::with_capacity(199);
+let m3 = HashMap::fhom([
+("John",19), ("Mike",26), ("George",39)
 1);
-printlvl(“‘|*",‘, ijmuilv :5 11m H‘,mlmllmapacityU,leenU);
-fr‘\nT\r"(“-} u, ‘1;'\.'w\",:-{ ‘ vival",m2,n13.capacity(),mZ.len(‘));
-wmrlwu-plg», when, 1|" iL'H I,‘>",m3,m3.capacjty(),m3.len());
-)
-Obs: Notice the use ofstd::collections::HashMap (this is required tn use a hash
+println!("{:?}, Capacity={}, items={}",m1,m1.capacity(),m1.1en());
+println!("{:?}, Capacity={}, items={}",m2,m3.capacity(),m2.1en());
+println!("{:?}, Capacity={}, items={}",m3,m3.capacity(),m3.1en());
+}
+Obs: Notice the use of std::collections::HashMap (this is required to use a hash
 map).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:145**************
-H a s h m a ps
+H a s h m a |os
 It is important to notice that the hashing algorithm use rely on a
-randomized seed, This mean that consecutive execution of the same
+randomized seed. This mean that consecutive execution of the same
 code will result in a different order of elements in memory.
-Ruil‘
-mainil) (
-for i in mil
-m3 = :zfroml_[("]uhri“, 16), Fluke", 30), ("George", 35H);
-l" , Capacity: , items: ", iii, l'iJuCHDatitylHly l'LulEViQYl;
-) >
-("Miw 20 HGCOVgC“,3U,llJOhH“.10),Cap3ti[v:3,illlm>:3
-('6ng 30‘ Mum“ 1t» “Mlké” zai, (Austin/:3, time:
-("Jnhrw“ w “George” 20 “Mlle” 20,‘,(aparity13, “my;
-("Genlge“ 10, "Mike“ Zi'i, “John" 10}, (spam/:3, itémwi
-("Gsolgs“ an, "Miw 20,“iolw”.10),C£|p:|u!y:3,item?!
-("Jahn“ 10‘ “Miw 2n, “610mm so), Capaciws, items’!
-("George“ 30 Warm“ 10 “MAE”ZOl,Capai:it\/:3,it2rn§:2
+Rust
+main() {
+for _ in 6..7 {
+m3 = ::from([("John", 16), ("Mike", 29), ("George", 39)]);
+(" , Capacity= , items= ", m3, m3.capacity(), m3.1en());
+} }
+{"Mike": 20, "George": 30, "John": 10}, Capacity=3, items=3
+{"George": 30, "John": 10, "Mike": 20}, Capacity=3, items=3
+{"John": 10, "George": 30, "Mike": 20}, Capacity=3, items=3
+{"George": 30, "Mike": 20, "John": 10}, Capacity=3, items=3
+{"George": 30, "Mike": 20, "John": 10}, Capacity=3, items=3
+{"John": 10, "Mike": 20, "George": 30}, Capacity=3, items=3
+{"George": 30, "John": 10, "Mike": 20}, Capacity=3, items=3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:146**************
-®
 Basic operations for hash maps
 
-weeme , \ : . ‘,1 > e,» ,_ = lnsertsa key/value pairintothe hash map. lithe key
-emsts m ‘he map, None \s return. lflhs key emsts, It ls
-updated, and the md vame is returned.
+inSEPt(& , |<I , VI ) -> < > Inserts a key/value pair into the hash map. If the key
+exists in the map, None is return. If the key exists, it is
+updated, and the old value is returned.
 
-get (>1 - L: 54 ‘v "I 1& l Get a reference tolhe vame associated with a key
+get (& , |<I & ) -> <& > Get a reference to the value associated with a key
 
-get mut (a , L: s J -: <5 ;>
+get mut (& , k: &) —> <& >
 
-mum/e (1 , \ : s. > e) < = Removes an elemem from the map an rewms its
-vzme.
+remove (& , k: & ) -> < > Removes an element from the map an returns its
+value.
 
-clam-(5‘ > Gears all key/value pairs (em keeps me allocated
-memory for future usage].
+clear(& ) Clears all key/value pairs (but keeps the allocated
+memory for future usage).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:147**************
+Hash maps
 Let's see an example:
-RUE!
-mam) .r
-U : :zfmmﬂ
-("30hn",l~3), ("Mike-“,ZLIV), (“Geol‘ge",59)
+Rust
+fn main() {
+let mut m = HashMap::fnom([
+("John",19), ("Mike",2@), ("George",39)
 1);
-("10m 15 in m; ",lxontainsikeﬂ"10hn"));
-D.insert1_"vincent“, 20);
-(“ ‘Hm:
-(“Value +11,‘ ‘Nike’ is = ",U.get11"Mm"'m
-‘wast mutL'"Gem*ge").um-n‘ap() = 58:
-(" ".m;
-> mm—
-Juhn W m m‘ "us
-“('th 10, “\"leCEMH 2D, “GGOVEG'Y 30, WING" ZU)
-VaMJL' VOr ‘MMC' V, . SquZU!
-Plum“ 10, “vlmenﬂ zu, “Gsurgs": so, “MUG”, 2m
+println!("]ohn is in m: {}",m.contains_key("30hn"))3
+m.insent("Vincent", 29);
+println!("{:?}",m);
+println!("Value For 'Mike' is : {:?}",m.get("Mike"));
+*m.get_mgt("6eonge").unwnap() = 59;
+println!("{:?}",m);
+} m
+John is in m: true
+IiiiiIiiIiiiiiIiiIiiiHiliiliiiiiiillllllllllll
+Value for 'IVIike' is : Some(20)
+{"John": 10, "Vincent": 20, "George": 50, "Mike": 20}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:148**************
-®
 One of the most used method for hash maps is .entry():
-entr'Qk . ‘1w: > e> ~ . > Relurnsaslruc!ure(£ntryl that can be used w modlfylhe
+mm , key: ) -> < , > Returns a structure (Entry) that can be used to modify the
 value of a key.
 Entry struct has the following methods:
-erdinlmUryL . ' l V.‘ Changelhe value assuclated wltha speuflr key wlthavalue
-returned from a funcllun F
-urjnsentl l viral et: ‘l r: H Returns a mutable relerence m a value 01a speciﬁc kev If
-that key l5 not present, l! Wlll be msened and sel up Wlm a
-default value, and then the reference m that default value
-Wlll be returned
-allinserwiwithl , \‘ét'l it: ‘l ' -' f4 Slmllar to or_lns:r2, but uses a function deliult to Ielulrv a
-er insert with re," -l , l PM’: ,l ~ 1: value
+and_modify( , F1 ) -> Change the value associated with a specific key with a value
+returned from a function F.
+or‘_inser‘t( , default: ) -> & Returns a mutable reference to a value of a specific key. If
+that key is not present, it will be inserted and set up with a
+default value, and then the reference to that default value
+will be returned.
+0r‘_inser‘t_with( , default: ) -> & Similar to 0r_insert, but uses a function default to return a
+or‘_inser‘t_with_key-> >( , default: ) -> & value
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:149**************
-a Hash maps
+Hash rna |os
 Let's see some examples on how to use .entry() method:
-Ru“ mm_
-En main() ( .‘ H H ‘. ‘ h H ‘
-1-:L m Z Haghmap;Momqpmu‘,w,» r‘ ‘E-
-Eventr(“\rhn‘).andimodify(‘Q { g : -_ + w; J) (“we 3° "‘ "' “m ‘0'
-w mtlr"("‘|m: w),-
-gentry“whm“).andevodiFyUg‘ { g : ‘5 + 10; y);
-;‘r‘1nflr"(_“}|u: "1“),-
+Rm M
+fn main() { H .. ||_ .. H H
+let mut m = HashMap::fnom([("]ohn",1@), ("Mi|<e",
+m.entny("]ohn").and_modify(|§| { *5 = *5 + 16; }) { eoge' ' 'e' ' O n‘ }
+pnintln!("{m:?}");
+m.gn§[1("30hn2").and_modify(|§| { *5 = *5 + 16; });
+pnintln!("{m:?}");
 }
-Notice that if key is not present than .and_modify(..) has no effect!
+Notice that if key is not present than .and_modify(..) has no effect !
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:150**************
-a Hash maps
+f. Hash maps
 Let's see some examples on how to use .entry() method:
 Rust
-m mainU (
-12L ml m = Hdihmap::fr"om[_'[(“]»hu‘,16), yummy), (“gm Amman);
-let 30m value : Mantryf ‘ mm “Loriinserﬂlﬁllj;
-;"r"1r'\flr"1_“jwhr ‘\jomuraluev);
-1-:L alice value : m.er\n~( gnu“)‘or_insert(2ee>;
-fr‘\nf\r"(“'\\\f\' : laliteivalue'f);
-) mm: 10
-BIHZEZZUU
-("JDNH“ 1U‘ "6“:ng 30,“AMLE“ EDD “Nhke”. 10}
+fn main() {
+let mut m = HashMap::from([("30hn",16), ("Mike",26), ("George",39)]);
+let john value = m.entry("30hn").0P_insePt(296);
+println!("john = {john_value}");
+let alice value = m.entry("Alice").0P_insert(299);
+println!("alice = {alice_value}");
+ptintlnl<"{=?}'vm>; M
+} john = 10
+alice = 200
+{"John": 10, "George": 30, "Alice": 200, "Mike": 20}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:151**************
-Hash ma ps
-Keep in mind that the value returned by .0r_insert(...) method is a
+i?“
+Hash ma|os
+Keep in mind that the value returned by .or_insert(...) method is a
 mutable reference. This means that for example you can not use the
-hashmap as an immutable reference while that reference still exists,
-RUST
-liming) i
-1 : :zH~oni([i“lam\",1a), ("i\iii\e",2~3), ("Geor‘ge",3€i"i]);
-Jilin mi if‘ : u.e|it|‘¥("]0hn",i.nriinse|‘t(29iii‘i;
-i" ‘3111;
-("john : 1mm will; ".i;
-\
-l iViHLJUlL‘ Uuiiuu until’ View:
-ti BHviHviii i ‘i .mi,
+hashmap as an immutable reference while that reference still exists.
+Rust
+main() {
+m = ::from([("John",1®), ("Mike",26), ("George",36)]);
+john value = m.entry("John").or_insert(2@@);
+(" ",m);
+("john = john_value ");
+} error[E0592]: cannot borrow ‘m‘ as immutable because it is also borrowed as
+mutable
+——> src\main.rs:6:21
+5 l let john_value = m.entry("John").or_insert(200);
+| ——————————————— mutable borrow occurs here
+6 | println!("{:?}",m);
+| A immutable borrow occurs here
+7 | println!("john = {john_value}");
+| —————————— mutable borrow later used here
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:152**************
 Hash ma ps
-Keep in mind that the value returned by .0r_insert(...) method is a
+Keep in mind that the value returned by .or_insert(...) method is a
 mutable reference. This means that for example you can not use the
-hashmap as an immutable reference while that reference still exists,
-RUSK
-Iilﬂiﬂl_) i
-1 : : :H~onv([i“1mm",1a), UMike'gzﬂ). ("Geor‘ge",3€i"i]);
-Jam-i mi if‘ : u.entl‘¥("]0hn").nriinsel‘t(29iiii; M
-("john a li'JWVLwt-‘ltl! ")z
-L" ", l); |u|w:10
-) i i“Geurge“: SD, “Mike“' le "Jnhn“ 10,‘
+hashmap as an immutable reference while that reference still exists.
+
+Rust
+
+fn main() {
+
+let mut m = HashMap::fhom([("John",16), ("Mike",26), ("George",39)]);
+let john value = m.entr‘v("John").or‘_inser‘t(299); M
+phintln!("john = {john_value}");
+
+} {"George": 30, "|\/|ike":20, "John": 10}
 In this case we have reversed the order of calls (first we print
-john_value and then m), This will work as the lifetime ofjohn_value
-ends after println! Macro.
+john_value and then m). This will work as the lifetime ofjohn_value
+ends after println! |\/|acro.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:153**************
-a Hash ma ps
+I%%t_ 2;
+*- Hash maps
 Let's see some examples on how to use .entry() method:
 Rust
-n‘ mam) (
-1M w: g : HashMap::¥rum([(“1 \hu‘,18), ("an \ “,20), (“w 1;; “,BBH');
-gentriﬁlmn‘:1.or_inser‘t_with(|| we);
-fr‘\nT\r"(“}nr My‘);
-mentryﬂﬁliu ").m"in$er‘tiwith( |\ we);
-w mtir I(“-:m:'>‘1'“);
-gent'yrfv w‘ ).erinsertiwithikey(\keyI keyienn);
-) Noun". 10, “MWQH ZU, "chrgu" 30)
-gum“; 1n, “651"ng 30, "AIME": 100‘ mm“ 1m
-y'“luhn"‘ 10, “George" 30, "Al\(e"* 100 "N1\ke“ ZO, “Llam" A)
-OBS: .uriinserti withikeyﬂn) uses afunctiorl that receives the key name and returns
-u value (in our case “Liam” has a size uf4 chars).
+in main() {
+let mut m = HashMap::From([("John",19), ("Mike",29), ("George",39)]);
+m.entry("]ohn").or_insert_with(|| 199);
+println!("{m:?}");
+m.entry("Alice").or_insert_with(|| 199);
+println!("{m:?}");
+m.entry("Liam").or_insert_with_key(|key| key.1en());
+} {"John": 10, "Mike": 20, "George": 30}
+{"John": 10, "George": 30, "Alice": 100, "IVlike": 20}
+{"John": 10, "George": 30, "Alice": 100, "IVlike": 20, "Liam": 4}
+OBS: .or_insert_ with_key(...) uses a function that receives the key name and returns
+a value (in our case "Liam" has a size of 4 chars).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:154**************
-a Hash ma ps
-One of the most common usage for .entry() is to count elements from a
-vector / array. The solution is to use .entry(...).oriinsert(.t.) to first
-insert and initialize a string in the map, and then increment the value.
-m mm-
+a»- .-_
 
-ltt mt m : Hashi'lapttnewt');
-let v = ["35 l i“,“¥\1lt~“,‘ 10 l l ‘,‘i-‘ll "H,Hi"\llL"“,“]Jllil ‘,“Ll W];
-w t Vii v i
-‘m.entry(k).oriinseﬂzl'ahil;
-i.
-[JV'ii'it nii‘ im- W“);
-l
+*- Hash maps
+One of the most common usage for .entry() is to count elements from a
+vector / array. The solution is to use .entry(...).or_insert(...) to first
+insert and initialize a string in the map, and then increment the value.
+
+let mut m = HashMap::new();
+let v = ["John","Alice","John","Mike","Alice","John","John"];
+for k in v {
+*m.entny(k).on_insert(@)i51;
+}
+println!("{m:?}");
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:155**************
-® Hash ma ps
+Hash maps
 Hash maps are iterable:
 Rust
-rm main(w <
-191 ‘m g = HashMap::ﬁ‘om[_'[(“JMHWJG'J, (“mrﬁzag (“\E:L\\“,;)>:“,ZB)]);
-m i w E (
-} (“GeorgeT 30]
-) (“Juhn",1[!]
-Mme" 20)
+let mut m = HashMap::fhom([("John",16), ("Mike",26), ("George",39)]);
+for i in m {
+println! ("{:?}",i); m
+} ("George", 30)
+}
+("Mike", 20)
 You can also use .keys() to enumerate directly through keys:
-Rus!
-F” majn() 4
-l-Et rut m : HashMap: from[(“Lwhv\“,10). ("U1\e“,2€1), (“L-rt" ge“ ,38)]);
-w'luLln‘L"1'."¢",i); “M|ke“
-} "George"
-)
+Rust
+tn main() {
+let mut m = HashMap::Fhom([("John",16), ("Mike",26), ("George",39)]);
+for‘ i in m.keys() {
+println! ("{:?}",i); "Mike"
+}
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:156**************
-Hash ma ps
+i?‘
+H a s h rn a ps
 Keep in mind that iterating through an object moves the key/value pair
 instead of returning a reference:
-Rust‘
-mainrv (
-m : ::+mm([
-r ::f|‘om(_"key'1"), ::f|‘om("]uhn")),
-[I ::f|‘0m("key'2"), ::F|‘0m("I‘-Uke")],
-r :2fr‘om(“key-3"), “from "Marr‘y")),
+Rust
+main() {
+m = ::from([
+( ::from("key—1"), ::from("]ohn")),
+( ::from("key—2"), ::from("Mike")),
+( ::from("key—3"), ::from("Marry")),
 1);
-1" ",\ n r
-L \ r 1M W V “My mm
-(" ",nv); r W" W W MM.” rm W W,
-r W Hm M .1 m. mm. L.“ .1 m mm
-\ ' mm tw'r M1 mm mm- n m
+‘FOP i in m { error[E0382]:.borrow of moved value: ‘m‘
+(‘I H j_) . -I> src\ma1n.rs:12:21
+} ’ , 4 | let m = HashMap::from([
+| - move occurs because ‘m‘ has type ‘HashMap<String, String>‘,
+(" ",rn) 3 | which does not implement the ‘Copy‘ trait
+} é‘. | for i in m {
+| - ‘m‘ moved due to this implicit call to ‘.into_iter()‘
+ii. | println!("{:?}",m);
+| A value borrowed here after move
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:157**************
-® Hash ma ps
+Hash rna|os
 The solution is to iterate over a reference of that object instead of the
 object.
+
 Rust
-+1‘ maim (
-let m : HashMap: :+r‘om([
-(String: :fl‘om(_“\ ~\,'1“),St|‘ing: :f|‘0|r\(“'\'hn“)),
-(string: :froM “r; ) ,5U‘iv\g: :me “mt-“)1.
-(String: 1mm“ .“),St|‘ing: mwmw v10 1).
+fn main() {
+let m = HashMap::fnom([
+(String::fnom("key—1"),StPing::from("John")),
+(String::fnom("key-2"),Stning::fnom("Mike")),
+(String::fnom("key—3"),StPing::fhom("MaPPy")),
 1);
-r w 1' it m r
-wmﬂnw“ :>_;“,i'>; "\“ i: r~ ﬂpr \fﬂtr'w'rgﬁmtringb
-2»
-\ (“kw/'1“ Worm“)
-I (“kw/'2“ "N'We“)
-(“kw/'3“, "Marry"1
-{“key’1":“luhn'\ "keyw-“Mrkeﬂ"keyaWMarer
+For i in &m {
+pnintln!("{:?}",i); // "i" is of type (&Stning,&stning)
+} M
+pnintln!("{:?}",m);
+} ("key-1", "John")
+("key-2", "|\/|ike")
+("key-3", "|VIarry")
+{"key-l": "John", "key-2": "Mike", "key-3": "|\/|arry"}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:158**************
-® Hash maps
-To get the map capaCIty and length use .|en() and .capauty() methods
-RMSI
-Fm mainU L
-1‘: m : Ha;h¥‘¥ap:'ﬂ‘mvu_[
-(SLvuvvg::Fv*uuu_'“\ 1 luSLriupiﬁmmy :1‘ ‘n, M
-[Str'lngIIFr-nm(“\— _ ),str1ng;=+mm4 'm- n,
-[Str‘1ng:.ﬁ‘0nv(“\Y'.'\ ),Str‘ing::¥mm( w, y),
-(Strlng:‘ﬁ‘oml_“\ 'v.5mng;:ﬂ~mm hum»).
-(SLPUYQHFPUHHIW luSLrirvgiﬁromy L‘ .w “>3,
-[Str'lngIIFr-nm(“\— ),str1ng;=+mm4 ‘a! w “n,
-v>wmg::me“\- V: ),srmng;;hwm( Mr “ij
-[Strlngt.ﬁ‘onv(“\ ),Str‘ing::¥mm( w. n,
-1'1:
-‘muwg' ‘1. “J :1.‘ up}; ,vmr'apar'ityll), m.len()y;
+Hash maps
+To get the map capacity and length use .|en() and .capacity() methods
+Rust
+Fn main() {
+let m = HashMap::from([
+(String: :from("|<ey—1"),Sthing::From("30hn")), M
+(String::From("key—2"),String::from("Mike")),
+(String: :from("|<ey—3"),String: :from("Mar‘r'y")),
+(String::From("key—4"),String::from("Andy")),
+(String::from("key—5"),String::From("AndPei")),
+(String::from("key—6"),String::From("DPagos")),
+(String::from("key—7"),String::From("CaPlos")),
+(String::from("key—8"),String::from("TePPy")),
+(String::from("key—9"),String::from("Ana")),
+1);
+phintln!("Capacity={}, 1en={}",m.capacity(), m.len());
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:159**************
-® Hash maps
-Use .remove(key) to remove a key from the hash map‘
+Use .remove(key) to remove a key from the hash map.
 Rust
-m mam J
-M W m: HaihMannFrwvvﬂ
-(Striﬂgv :ﬁwuj“ \~>m“),1u\,,
-(Str'mg :Fmvm_“¥‘\ Unzl,
-(snungnfmm“1w 7m.
-(SLr'mgt:H‘um(“L MIME),
-($h‘1ng1:+r‘nm(“~2 m-w",,<),
-1?;
-LL'tanVm V m; r . v m“, :‘1“,m.|‘ervm\.'ef may»;
-L 4&1ij r m urn” ‘uh J, ‘V -; P ,@.r*2m0ve( mm»: n;
-‘, mm?‘ m 7 “"353;
-Remuve Nhke » wnh value SumelE)
-Remove Drags; V, VMUV vama Nuns
-HashmapIPNIanv“ 4 “Andy” S,“luhn"'ll),"Andre|“ 5)
+fn main() {
+let mut m: HashMap::from([
+(String::Fnom("John"),19),
+(String::Fnom("Mike"),8),
+(String::fnom("MaPPy"),4),
+(String::From("Andy"),9),
+(String::From("AndPei"),5),
+1);
+pnintln!("Remove Mike -> with value: {:?}",m.gemgve("Mike"));
+pnintln!("Remove Dnagos -> with value: {:?}",m.remove("DPagos"));
+pnintln!("Hashmap = {:?}",m);
+1’ D
+Remove Mike -> with value: Some(8)
+Remove Dragos -> with value: None
+Hashmap = {"IVIarry": 4, "Andy": 9, "John": 10, "Andrei": 5}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:160**************
-® Hash ma ps
-You can also use ,retain(predicate) to keep in the map only the
+Hash maps
+You can also use .retain(predicate) to keep in the map only the
 elements that match a specific criteria.
+
 Rust
-t
-ht mam t
-1t L Wt m: >415hHJp::Frunu_'[
-(Str'ivvq::+r"cm(“\wtvtt“;,1€!;,
-(Stmng.:ﬁ‘0mk_'“¥'t w),a1‘
-15'3’)th:t'r‘0rnk_“¥"w, ‘Mn,
-(Strﬂngﬂﬁmnﬁt ‘13"1931,
-(stwmgwirmtu L1 mm),
-]);
-mmetalmblggerlthanix‘);
-t ;-r1n\<“; Wm);
+fn bigger‘_than_8(key: &Str'ing,value: &mut 132)—>bool { m
+}
+fn main() {
+let mut m: HashMap::from([
+(String::From("John"),19),
+(String::From("Mike"),8),
+(String::From("MaPhy"),4),
+(String::From("Andy"),9),
+(String::From("AndPei"),5),
+1);
+m.retain(bigger_than_8);
+println!("{:?}",m);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:161**************
-® Hash rna ps
-You can also use ,retain(predicate) to keep in the map only the
+Hash rna|os
+You can also use .retain(predicate) to keep in the map only the
 elements that match a specific criteria.
+
 Rust
-i» W m: HaﬁhiiiapHFrﬂiiiﬂ
-(Sti'lngv malty ii'iiin“i,,lﬂi,
-(Sti‘1iig':ﬁmii(“i‘i Jim,
-(Shungﬂfroml iU r )JJ).
-(3L!‘Hiq1:+i‘0m(“; ‘whey,
-lswing.:ﬁomijW'i-iii- -i“‘y,=),
-1i;
-m.7|2taii\i_lk,l| gm;
-L 4mm; i mm);
+i“ mam‘) { m
+let mut m: HashMap::from([
+(String::fnom("30hn"),19),
+(String::fnom("Mike"),8),
+(String::fnom("Mahhy"),4),
+(String::from("Andy"),9),
+(String::Fhom("Andhei"),5),
+1);
+m.retain(|k,y| *y>8);
+pnintln!("{:?}",m);
 The same result can also be obtained via a closure/lambda
 function.
 
@@ -2942,93 +3136,92 @@ function.
 
 ***************Beginning Page***************
 ***************page number:162**************
-7
-HashSet
-L
+HaShSQt
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:163**************
-g; H a s h sets
+,’ H a S h S €tS
 
-HashSet type in Rust is implemented over a HashMap with a value of type I 9 a
-ZST type thus making sure that there is no extra memory allocated for values,
+HashSet type in Rust is implemented over a HashIVIap with a value of type I 9 a
+ZST type thus making sure that there is no extra memory allocated for values.
 To create a set, use one of the following forms:
 
-a) let mut a: HashSet<type> : HashSet;:new()
+a) let mut a: HashSet<type> = HashSet::new()
 
-b) let mut a : HashSet::<type>::newl)
+b) let mut a = HashSet::<type>::new()
 
-c) let mut a: HashSet<type> = HashSetJWIthicapacitylcapacity)
+c) let mut a: HashSet<type> = HashSet::With_capacity(capacity)
 
-d) let mut a: HashSet<type> : HashSet::froml[<type>;courit]l
+d) let mut a: HashSet<type> = HashSet::from([<type>,-count])
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:164**************
-a Hash sets
-Let's see some examples on how to build a hash set,
-mt
-:1:\1,1 4,5,5)
-
-m mainl') ( 52:4)
-
-12L $1 = HasleeL::frOm([l,Z,3,»'1,5]‘!; 53:4" 1H‘
-
-let 52 : HashSe-t::<i$l>::new0,;
-
-1M 53 : HashSct: :fmm([1,1,2,2,3,3,3,A,5]):
-
-Ll tritlt I(“‘;l 1.3351);
-
-p-mriw'(“-z : 13" “,52);
-
-w llitll'v(u‘ 2 ;;""‘,s3);
-)
-Obs: Natice the use of std::collectians::Hash$et (this is required ta use a hash set).
-Keep in mind that the order of the elements is not guarantee ta be the insertion order
-Alsa using several elements with the same value, will strip down equal elements
+f. Hash sets
+Let's see some examples on how to build a hash set.
+Rust
+use std: :collections: :HashSet; M
+sl = {2, 1, 4, 3, 5}
+tn main() { $2={}
+let sl = HashSet::from([1,2,3,4,5]); s3={L5,LZL3}
+let 52 = HashSet::<132>::new();
+let 53 = HashSet::from([1,1,2,2,3,3,3,4,5]);
+println!("sl = {:?}",sl);
+println!("52 = {:?}",52);
+println!("53 = {:?}",53);
+}
+Obs: Notice the use of std::collections::HashSet (this is required to use a hash set).
+Keep in mind that the order of the elements is not guarantee to be the insertion order.
+Also using several elements with the same value, will strip down equal elements
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:165**************
 Basic operations for hash sets
-“w tr!‘ , N11»: r Insertsavahleinaset.Returnsfabeifthevalue
-already exists ‘m the set, true otherwlse,
-Vi I‘ Hi [l1 , ,'1L|\JZ E A r ' If vame exists M the set, rEmDVES ‘\l and return truev
-Otherwise returns fake.
-tr .u 4'84 "7 Removes all elements from the set {but keeps the
-aHocated memoryforfuture usage). /
+m_—
+in$—EPt(& , V81UEI ) -> Inserts a value in a set. Returns false if the value
+already exists in the set, true otherwise.
+get (& , VI & ) -> <81 > Get a reference to a value if exists in the set
+contains (& , value: & ) —> True if a value exists in the set
+remove (& , value: & ) -> If value exists in the set, removes it and return true.
+Otherwise returns false.
+C—1@a'“(& ) Removes all elements from the set (but keeps the _
+allocated memory for future usage). |
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:166**************
-®/ Hash sets
+Hash sets
 Let's see some examples on how to use a set:
-use std::(cllcctluns::Hashict;
-fn mam) (
-let mut 5 = HashSet::fr'om([l,2,3,4,3]);
-println!( {1?} ,5);
-println|( () (n) ,§.ins0r‘t(3),§);
-println!( {) {:P} ,§.lnsert(7))§); 5'"th
-privtlﬂﬂ U (I?) JEVPLWNMLQ; (114,53)
-println!( {} {9) ,§.v’emuve(&9),§); AddiV>fa\se:>§:(1,2,4,5,3)
-println!( n ,§.<onta1ns(&/)); Addwnwvxm,1,4151)
-Fun-nth“ (:P} ,s.gvr(&§)); Remove17>£rue:>5:[2,4,7,5,3)
-' | s; i , Remove 9 '> fake :> 5 : (Z, 4, 7, 5, 3)
-pr)ntln.( ( } J§’EEL(&8)), \sﬂmlhcsmvlruc
-) cu 5 from m V> sums)
-Get 3 from set e> None
+Rust
+use std::collectionszzHashSet;
+fn main() {
+let mut s = HashSet::from([1,2,3,4,5]);
+println!("{:?}",§);
+println!("Add 3 —> {} => s = {:?}",§.insert(3),§);
+printlnwdd 7 -> t} => s = {=?}",§.insert<7>,§>; M
+println!("Remove 1 -> {} => s = {:?}",§.Pemove(&1),§); U,L4,i3}
+println!("Remove 9 -> {} => s = {:?}",§.Pemove(&9),§); Add3e>hbe=>s=ﬂvl4v53}
+println!("Is 4 in the set -> {}",§.contains(&7)); Add7->Uue=>5={L3%4fZ5l3}
+println!("Get 5 from set -> {:?}",§.get(&5)); Remove1'>Uue=>5={lzh7ﬁi3}
+println!("Get 8 From set -> {:?}",§.get(&8)); Rewpveg'>fmse=>5={LZL7ﬁi3}
+} ls 4 In the set -> true
+Get 5 from set -> Some(5)
+Get 8 from set -> None
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:167**************
-' Hash sets
+. Hash sets
 There are however, some methods specific to sets:
 Methods for union, intersection, difference and symmetric difference
 return an iterator.
@@ -3037,181 +3230,205 @@ return an iterator.
 
 ***************Beginning Page***************
 ***************page number:168**************
-® Hash sets
+Hash sets
 
 Let's see some examples on how set specific methods:
 
-FF‘ '“EiﬂU I’ Umun:M,3‘E,7,5,1‘Z\
-l-JL 51 : HHSNSEKIIFFON([1,Z,3,4,5]); \ntersacuun:(5,4,3)
-m 52 : HashSet::F|‘omk_'[3¥,4,5,6,7]); Sde\ff:(7 (‘in
-12L deshsen; = 51.unjon(&52).collectli); EI'SZIKLI} 5151:45 7)
-let imaghSEt-z; : slimersectionmsz).colleao;
-1M Samashku) : 51.symmetrignjﬁerence(s62).(Qllecto;
-1-:L d1:HashSet<_7 : sl.djfference(&52).collecﬂ);
-m d2:Ha5hSEtcg : 52.diffe|‘enc9(&sl).collect();
-wumlv'ﬂmu» l HEM;
-[.‘lHIlJ1(“\V‘\T9V'5:'N'\V : -;;7§‘ ,j);
-p-imlmﬂm. i+'+' :=‘:“,sd);
-w milviﬁmrs; 1.2; semi 1.";‘,d1,n2);
+1c" main() { Union={4,3,6,7,5, 1,2}
+let Sl = HaShSetiI‘Fr‘0m([1,2,3,4,5]); |ntersecti0n={5,4, 3}
+let 52 = HashSet::from([3,4,5,6,7]); Swndﬁf={16,L2}
+let u:HashSet<_> = sl.union(&52).collect(); $162=Q,1}52§1=%,7}
+let i:HashSet<_> = sl.intersection(&52).collect();
+let sd:HashSet<_> = sl.symmetric_difference(&52).collect();
+let d1:HashSet<_> = sl.difference(&52).collect();
+let d2:HashSet<_> = 52.difference(&sl).collect();
+println!("Union = {:?}",u);
+println!("lntersection = {:?}",i);
+println!("Sym.dift = { ?}",sd);
+println!("sl—52={:?} sZ-sl={:?}",d1,d2);
 
-)
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:169**************
-L
-Bt
+Btree Map
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:170**************
-E; Btree M a p
 A Btree map is an ordered map based on a binary tree algorithm (more on binary
-trees z https:[(en.wikipediaorglwikMB-tree )s The closest equivalence from C++
-space is std::map (even though they use different algorithms under the hood).
+
+trees : httpszﬂenwikipedia.org[wiki[B-tree ). The closest equivalence from C++
+
+space is stdzzmap (even though they use different algorithms under the hood).
+
 Keep in mind that current Rust implementation is slightly different than the
+
 classical one as it tries to optimize search for small sets of data and use as much of
+
 the processor cache as possible.
 
-To create a betree map, use one ofthe following forms:
-a) let mut a: BTreeMap<key,value> : BTreeIVlap ::newll
-b) let mut a = BTreeMap::<key,value>::new()
-c) let mut a: BTreeMap<ke\/,value> : BTreeIVlap ::wllhicapacltykapaclty)
-d) let mut a: BTreeMap <key,va|ue> I BTreeMap ::from([(kev,vector):count])
+To create a b-tree map, use one of the following forms:
+a) let mut a: BTreeMap<key,value> = BTreeMap ::new()
+b) let mut a = BTreeMap::<key,value>::new() __
+c) let mut a: BTreeMap<key,value> = BTreeMap ::With_capacity(capacity)
+d) let mut a: BTreeMap <key,va|ue> = BTreeMap ::from([(key,vector);count])
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:171**************
 Let's see some examples:
-RUE!
-mam ) (
-m‘ J in 9.2.4
-u : :1fr“om([("]0hn",l€"y,(I"Ana",2>3),(“F-‘like",5:1,(“Bugsy”,1>3)]);
+Rust
+fn main() {
+for _i in 0..3 {
+let m = BTPeeMap::from([("John",1@),("Ana",2@),("Mike",5),("Bugsy",19)]);
+println!("{:?}",m);
 }
-m‘ J in e..z{
-u : : :fmmlj[("Jmm",wj1, CAM", :6) ,("F-‘\ike",5), ( "Buggy", 19H);
-} Im-
-) MM" m ‘augsw w “\nhﬂ“ mnwvw s;
-UMxke“ 5' “1mm” 10‘ ‘BHF.>‘|“ 10 Um‘ BU,‘
-Urn-27y“ m Wm“ 2W “Mm? ENQMH" 10]
-(‘whw ﬁ,“h)hn" m,-‘W“ mwmvy m‘,
+phintln!("------—------------------—-------—-");
+for _i in 6..3 {
+let m = HashMap::from([("]ohn",16),("Ana",29),("Mike",5),("Bugsy",19)]);
+println!("{:?}",m);
+} M
+} {"Ana": 20, "Bugsy": 10, "John": 10, "Mike": 5}
+{"Ana": 20, "Bugsy": 10, "John": 10, "Mike": 5}
+{"Ana": 20, "Bugsy": 10, "John": 10, "Mike": 5}
+{"Mike": 5, "John": 10, "Bugsy": 10, "Ana": 20}
+{"Bugsy":10,"Ana":20,"Nhke":5,"John":10}
+{"NMke":5,"John":10,"Ana":20,"Bugsy":10}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:172**************
-®
 Bt re e |\/| a p
 Let's see some examples on how set specific methods:
-RUE!
-mam ) (
-fur‘ ,1 in n..z(
-H : ::¥r‘om([("]ohn",l€v),("Ana"129),("V-‘like",5),("Bugsy",1>3)]);
+Rust
+main() {
+for _i in 9..3 {
+m = ::From([("John",19),("Ana",29),("Mike",5),("Bugsy",1@)]);
+(" m);
 }
-m‘ ,1 in n1\..1{
-u : z:fmmq[("1mm“.10),("Ana",29).("r-11kg“.5),("Bugsy",1e)]);
-um“ 20“B\1gsv“ w “\uhn" 1n,"M\v@“ s;
-(“W 1.1, “SW 1mm" mm?“ {.1
-\ Firm“ 2U,"Bugsv“ 111 Hahn" lb,“M\>.e“ 5)
-NHL-37y“ m "Ayn" 1/1 “Nuke” E,“\uhr\" 10}
-(“Ix/MW“ S “mhrﬂ' 1C1, "Ans“' 10‘ “BUE'IYH ID‘;
+for _i in 6..3 {
+m = ::From([("John",19),("Ana",2@),("Mike",5),("Bugsy",19)]);
+{"Ana": 20, "Bugsy": 10, "John": 10, "IVIike": 5}
+{"Ana": 20, "Bugsy": 10, "John": 10, "IVIike": 5}
+{"Ana": 20, "Bugsy": 10, "John": 10, "IVIike": 5}
+{"lVlike": 5, "John": 10, "Bugsy": 10, "Ana": 20}
+{"Bugsy":10,"Ana“:20,"NMke“:5,"John":10}
+{"NMke":5,"John":10,"Ana":20,"Bugsy":10}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:173**************
-g; Bt ree M a p
+Va Bt ree |\/| a p
 Btree map has the same methods as Hash maps (e.g. insert, get, entry,
 contains, etc). However, since the keys in a btree map are sorted, there
-are other methods available only on BTreeMap objects:
-{Vt-m‘; , ll w: A "l Appends all elementsfromaspeclﬁc Btree
+are other methods available only on BTreeIVlap objects:
+M_
+
+append(& , other: & ) Appends all elements from a specific Btree
 map into another one.
-‘ L‘ v l " possibleiorthese methodsto be available,
-"gm now they not pan Om Sable /
+P_0P\ci—l"5t(& ) -> <( , )> These 4 methods are experimental and are
+pop 1ast(& ) _> <( ’ )> considered m While in the future it is
+. possible for these methods to be available,
+SDK- /
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:174**************
-Btree M a p
-Let's see an example that uses ‘append(...) method:
-RUE!
-mm l
-Q = ::fmm([<"1@hn",1»3),("Amr',19),<"i-iike",5j1,("Bugsy",1>3)]j1;
-g : ::Froml[("Amra",la),("Aiia",wl,(_"Loyd",15),("kr1lt“,1:l]);
-gaggemigs g),-
+Bt ree |\/| a p
+Let's see an example that uses .append(...) method:
 
-l Mﬂ_
+Rust
+
+fn main() {
+let mut ml = BTPeeMap::from([("]ohn",19),("Ana",29),("Mike",5),("Bugsy",19)]);
+let mut mg = BTPeeMap::from([("Andra",16),("Ana",19),("Loyd",15),("EPik",12)]);
+ml.append(&mut mg);
+println!("{:?}",ml);
+
+} m
 Notice that if a key already exists, its value is updated with after the
-append method is called (key “Ana” had initially value 20, after update it
+append method is called (key "Ana" had initially value 20, after update it
 has a value of 10).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:175**************
-a Btree M a p
-Btree map is a well»suited choice for problems Where a priority queue is
+*- Btree |\/|a p
+Btree map is a well-suited choice for problems where a priority queue is
 required. The most common usage in this case is by using iterators and
-their method .nextl) to advance to the next element. The result is that you
+their method .next() to advance to the next element. The result is that you
 can extract / iterate over each elements in their order.
 
 Rust
-
-m mainO t
-m m : Kirceblap::frum([(“i w ‘,16),r_“wtn t“,za),(“nti “,5),(“=,t; t ‘ ,19>]);
-let mt 1 : midterm M
-mil let SQ'WKX) I IMHO t’ EnraetAnawidthv'zluv 1n
-) Eynattlolwwirlrhwlue m
-
-} [martMllewiarhtralut s
-
-OBS: We will discuss mare about iterators in another course.
+fn main() {
+let m = BTneeMap::Fnom([("]ohn",19),("Ana",29),("Mike",5),("Bugsy",19)]);
+While ]_'et Some(x) = i'ne—X-t() { ExtractAnawidthvalue:20
+pr“1nt1n!("Extr‘act {} Wldth value: {}":X~9:X-1)3 ExtractBugsywidthvalue: 10
+} Extract John width value: 10
+} Extract Mike width value: 5
+OBS: We will discuss more about iterators in another course.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:176**************
-7
-BTreeSet
-L
+BTmeSet
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:177**************
-g; BTreeSet
-BTreeSet type in Rust is implemented over a BTreeMap with a value of type I 9 a
-ZST type thus making sure that there is no extra memory allocated for values,
+V? BTreeSet
+BTreeSet type in Rust is implemented over a BTreeIVIap with a value of type I 9 a
+ZST type thus making sure that there is no extra memory allocated for values.
 To create a set, use one of the following forms:
-a) let mut a: BTreeSet<lype> : BTreeSel::newl)
-b) let mut a : BTreeSet: <type>I newl)
-c) let mut a: BTreeSet-itypv = BTreeSet::Wlthicapacitykapaclty)
-d) let mut a: BTleeSet<type> : BTreeSet;:fmm([<type>;cutlm]l
+a)
+b)
+c) let mut a: BTreeSet<type> = BTreeSet::With_capacity(capacity)
+d) let mut a: BTreeSet<type> = BTreeSet::from([<type>;count])
 The logic and methods are similar to the ones from HashSet.
-The similar class from C++ is std::set /
+The similar class from C++ is std::set 'l
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:178**************
-® Btree Set
+Btree Set
+
 Let's see an example on how to use a BTreeSet:
+
 Rust
-w 5 : BTPeeSet: :From’[1e,2,7,4,9,11,3,s,7]i; P 3 4 6 i q m 11
-)
-Similar to BTreeMap, there is an ‘append(.i.) method:
+let s = BTreeSet: :from([16,2,7,4,9,11,3,6,7]); {2 3 4 6 7 9 10 11}
+ppintlni<I-{S=.>}-->;
+
+}
+
+Similar to BTreelVlap, there is an .append(...) method:
+
 Rust
-19¢’ HAT Q : BTPPOSCt::fi‘um([18,1,7,LL9,11,3,6,7]);
-19L iut g : BTr"eeSeL::fi‘0m([l,3,3,6,5]); ‘ ' '
-Q4HEEQHG(&FHT 3);
-i-i-mtln'ﬂinzii“);
-)
+let mut s_1 = BTreeSet::from([16,2,7,4,9,11,3,6,7]);
+let mut sg = BTreeSet::from([1,8,3,6,5]); ' "' " "' '
+gl.aggend(&mut s2);
+println!("{sl:?}");
+
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:179**************
@@ -3222,110 +3439,121 @@ and Rust
 
 ***************Beginning Page***************
 ***************page number:180**************
-g; C++ vs Rust (on maps)
+Va C++ vs Rust (on maps)
 
-Let’s compare how various types of maps work on Rust and C++l
+Let's compare how various types of maps work on Rust and C++.
 
 For this we will use:
-- std::map (C++)
-- std::unurdered_map(C++)
-~ HashMap [Rust]
-- BTreeMap [Rust]
+' std::map (C++)
+' std::unordered_map (C++)
+' HashlVlap (Rust)
+' BTreeIVIap (Rust)
 The same algorithm will be written in both Rust and C++ and tested in Debug and Release
 mode. We will use GetTickCount API to measure time. Each variation of the build will be
-executed for 10 times and the average will be compute. /
+executed for 10 times and the average will be compute. ll
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:181**************
-g C++ vs Rust (on maps)
-So lets see the testlng algorlthm:
-Extern ( m C21T11<£34rt340 .> m4; ) :mlme
-M W Um] .> M < unsafe 1 1w m~um1t> ) » .mlm
-“mg... Mg Mg v1;
-I?[dev1ve(;ebng, (:1), new] Host v2,
-Struzt 'est ( v1 .164, vZ F32, v3: bro] ) bun! v3;
-)1
-m W0 Q m. “(H
-m mut m H.“ mwaz, my» 1 HMWMQUHMO; =th mmnle"alinauumslgnéd )nt, Team m;
-1n start 7 get mm); autu 5mm 7 GetT1:\< 11mm),
-m1 1n 9.. nae 06@( ﬁvv (auto i Z a; 1 < mamas, i“) g
-1M l * Y'W' \' v1 1 as m4, vZ 1 ~,v3 15;“"U, M1‘ ' hum [unngrwd 1mg lawn),
-) >
-let End = 9r. (.1121), “m end 1 Gsticktomiuil);
-WWW n J end . Start); wwm am , mmm . 5mm,
-) )
+® C++ vs Rust (on maps)
+So lets see the testlng algonthm:
+extern { fn GetTickCount64() —> u64; } #include
+fn get_time() —> u64 { unsafe { GetTickCount64() } } #include
+#include
+use stdzzcollections::{BTreeMap, HashMap}; struct Test {
+unsigned long long v1;
+#[derive(Debug, Copy, Clone)] float v2;
+struct Test { v1: u64, v2: {32, v3: bool } bool v3;
+};
+fn main() { void main() {
+let mut m: HashMap<u32, Test> = HashMap::new(); std::unordered_map<unsigned int, Test> m;
+let start = get_time(); auto start = GetTickCount64();
+for i in 9..1_999_999 { For (auto i = 9; i < 1999999; i++) { _é
+let t = Test { v1: i as u64, v2: 1.5,v3: i%2==9}; m[i] = Test{ (unsigned long long)i, ,£§E
+} } ﬁﬁﬁﬁﬁ
+let end = get_time(); auto end = GetTickCount64(); ﬁﬁﬁﬁﬁ
+println!( {} , end - start); printF( %d , (int)(end - start)); ﬁﬁﬁﬁﬁ
+} } E ﬁﬁﬁ
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:182**************
-So lets see the testing algorithm:
-RUSf C++
-“swww 1 aemcmmmmm ~ ; 1 mnclei- v.\-|1n\.1m~ys.h>
-get nmeﬂl 'I ‘I ‘I GetTlckamHAU 1' } #wtluds (Hir-
-I?[der
-.‘v
-mm‘ t MM, ,
-1t; t 7 getitme‘ v: :1» 7 Kieth‘: (Mwm ‘v
-'7 4.;1 , \r, ‘av/w, M1’ 1x H,
-1 m1 1 getitimew, a H- 1 GEtTiUEmth-NH
-L" {P17 :r'wy; py‘iy\tf[“ 1“, t mm V ;r-r¢',‘»v
-1' |‘
+So lets see the testlng algonthm:
+Rust C++
+"system" { GetTickCount64() —> ; } #include <Windows.h>
+get_time() —> { { GetTickCount64() } } #include <map>
+#include <unordered_map>
+#[der
+};
+main() { main
+start = get_time 3 start = GetTickCount64 3
+for i in 9..1_999_999 { For ( i = 9; i < 1999999; i++) {
+t = { v1: i , v2: 1.5,v3: i%2==9}; m[i] = { ( )i,
+m.insert(i, t); 1.5,i % 2 == 9 };
+} }
+end = get_time(); end = GetTickCount64();
+(" ", end - start); printf("%d", ( )(end - start));
+} }
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:183**************
 So lets see the testing algorithm:
 
-cvthug)
+C++ (Debug)
 
-1111:1111“me 935 1255 1390 1323 1250 1297 1250 1344 1435 1437 1298
-(“pulls”)
+std:unordered_map 938 1266 1390 1328 1250 1297 1250 1344 1485 1437 1298
 
-“mm-<1“,- 297 234 235 251 266 266 234 235 234 234 251
+C++ (Release)
 
-(mum-g)
+std:unordered_map 297 234 235 281 266 266 234 235 234 234 251
 
-ﬁdumip 1312 1765 1953 157s 157s 1859 1513 1512 1797 1528 1733
-cmmem)
+C++ (Debug)
 
-s\d"mag 156 141 172 157 141 171 171 155 171 156 159 ‘
-Rust(Dehug)
+std::map 1312 1765 1953 1875 1875 1859 1813 1812 1797 1828 1738
 
-mm, 1141 1197 1255 12511 1251 1312 1355 1297 1143 1297 1284
+C++ (Release)
+
+stdzzmaE 156 141 172 157 141 171 172 156 172 156 159
+
+Rust (Debug)
+
+HashMap 1141 1297 1265 1250 1281 1312 1359 1297 1343 1297 1234
+
 Rust (Release)
 
-mm“, 7s 7B 53 75 7x 9A 93 94 94 94 84
-
-Rusunebug)
-
-MmMap 2703 3155 307a 2905 2755 2375 2937 21m 2350 1731 2890
-Rust (Release)
-
-BYmMap 93 93 109 110 125 110 125 141 125 125 115
+HashMap 78 78 63 78 78 94 93 94 94 94 84
+BTreeMap 2703 3156 3078 2906 2765 2875 2937 2844 2860 2781 Z390
+BTreeMap 93 93 109 110 125 110 125 141 125 125 115
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:184**************
-g; C++ vs Rust (on maps)
-
+V? C++ vs Rust (on maps)
 The general conclusion after these tests is:
-
 ' Rust is slower the C++ when it comes to debug mode (due to many checks)
-
-- In terms of Release mode, Rust is faster (however, it should be noted that we are
+' In terms of Release mode, Rust is faster (however, it should be noted that we are
 not comparing the same algorithms and as such these tests might NOT be
 correct). However, since we've compared the standard algorithms from each
 (Rust and C++) libraries, the results are however relevant.
-
 ' The tests were performed on Windows 11 (using Microsoft compiler). To produce
 accurate results, other C++ compilers (such as clang and gcc) should be tested as
-well. /
+well. ll
 
 ***************Ending Page***************
 
- 
+
+***************Beginning Page***************
+***************page number:185**************
+- @@
+
+***************Ending Page***************
+

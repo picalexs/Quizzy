@@ -1,666 +1,784 @@
 ***************Beginning Page***************
 ***************page number:1**************
-m1? a? ﬁn’? “mm -
-Nuvmuhzme! hunky =1? ﬂat:
-mm (mm H um
-Mum“ 1.» 1p Q
-_:n-mu ~--~~~w----m-
+Baze de date relationale
+Normalizarea bazelor de date
+Nicolae-Cosmin Vérlan
+November l4, 2019
+Baze de date relaﬁonale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Mmm rﬂaymna‘ V m» WWW”? r1? ‘a WW.‘ m“)
-- (M MW » WWW w WWW a mu n
-- (M WW o M WW gm“: WW § WM“
-> 0mm; “Mm,”Wmmduwbmmm
-——- ----- -----
+|\/|ode|u| relational - chei (recapitulare de Ia primul curs)
+
+P Supercheie - un atribut sau 0 multime de atribute care
+identiﬁca unic un tuplu Tntr-o relatie
+
+P Cheie candidat - o supercheie cu proprietatea ca nici o
+submultime proprie a sa nu este supercheie
+
+P Cheie primara - o cheie candidat selectata pentru a identifica
+Tn mod unic tuplele Tntr-o relatie
+
+P Cheie alternativa - Chei candidat care nu au fost selectate
+pentru a juca rolul de cheie primara
+
+P Cheie straina - un atribut sau o submultime de atribute dintr-o
+relatie care face referinté Ia o cheie candidat a altei relatii
+
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-cam chPHm ranrhdat mmzind dcprnﬂwvxc‘? ﬁmwnna‘:
-
-WW chm zamhﬂar are n5 W m»: dmn b zb/vvbvvaw
-‘m WW W», M", monk "mm MW, alum Wm
-umc mm A.“ I mm .\ 4m 0W1“ WWW ,
-m! m. m,
-KW‘ ~1sz Wm; .1‘- mum M >- a WW dl
-“magmmmm gmumde 1w \ , 1mm
-(ind-duddaiA I mn'l \ \' '1
-
-—:—- ---- -—---
+. Gasirea cheilor folusind dependetele functionale
+Gﬁsirea cheilor candidat utilizénd dependentele functionale
+lntuitiv: Cheia candidat, este de fapt formaté’ dintr-o combinatie
+de atribute care pot determina unic linia. Dacé pot determina unic
+linia (deci oricare dintre valorile celorlalte atribute), atunci putem
+considera c5 avem o dependenta functionala de la X Q U c5tre
+toate atributele din U atunci X este cheie Tn orice relatie r
+construité peste R[U].
+Formal: Fie R[U] o schemé de relatie 5i E o multime de
+dependente functionale satisfﬁcute de R[U]. X Q U este cheie
+candidat d.dac5 X+ I U 5i VX’ C X,X’+ 51$ U
+Un atribut se nume$te prim dacé face parte dintr-o cheie candidat.
+Un atribut este neprim dacﬁ nu este parte din nicio cheie candidat.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-m“ mm [rim mm 7;
-\H “st 7n
-R1 Mi A. mm W ‘m mmz
-A, W m
-_mu ---»--~------
+Gasirea cheilor folosind dependetele functionale
+Forme Normale: lNF, ZNF, 3NF, BCNF, 4NF
+. . . reminder (din cursul 2)
+Fie X Q U si RA regulile de inferenté ale lui Armstrong. Not‘a’m cu
++ _
+XRA _ {A|ZJ PM X _> A}
+Regulile de inferenté ale lui Armstrong:
+A1: iAl...An~>Ai’Z I 1,71
+A2 A1‘..Am->Bj 7.7 — 177”
+A17---Am—>Bj1]:ﬁ
+Al~-‘A111_>B17~--Br
+A3 A1,...Am—)B1,...BT, 31,...BT—>01,MCP
+' A1...Am—>C1,...Cp
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Rrvam V Fxémphl‘ x
-Simvmdeﬁml 7\‘ Vf1)5\‘ 7(1 n H m m,
-mm mukvvwz \ ‘.v WW ‘mm am mm
-kin/n» mm “amp/i
-1 Am \AH If’! 5 mm h)
-"min/r» mam h ‘ mun ~r!
-(“7w “mm
-s» 0%:va a /\ m Owe undwm pent“ d m M depmd
-mummy “WE mm
-AK,W<,,W <1:
-Alnbmenfwwz w 4 >
-——IIII -------------
+Gasirea cheilor folosind dependetele functionale
+Forme Normale: lNF, ZNF, 3NF, BCNF, 4NF
+Revenim - Exemplul 1:
+55 considerém U : {A,B,C} 5i E : {A —> B,B —> C}. Vom
+construi multimea X7§A pentru fiecare dintre atribute:
+A?“ I {A,B,C} (A din A1, B din A _> B,
+C din A —> B, B —> C 5i folosind A3)
+B73‘ I {5,0} (B din A1, C din B -> C)
+C73‘ I {C} (C din A1)
+Se observi c5 A este cheie candidat pentru c5 de el depind
+(functional) celelalte atribute.
+Atribute prime: {A}
+Atribute neprime: {B,C}
+Baze de date relaﬁonale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-sawmmwl m n r )ML 4 v ~n u v< Vom
-mm Mm. \ < Mm m“ dvme mm
-Mm WW mmmk wind M 4L W “m M m I"
-new “Whammy m‘
-
-> Sling: AvavnumzxirvruvzrauaHgEndwwdeduvdm x
-
-> Wm Am“ m“5"wamamanndaneme/vmmdm*
-
-> Mm AW Mm a» mu 1mm" dwmdc am \;
-
-5mg: Wm mm
-1 1/ l
-mm: WWW MM», am Sung: W Mm WM A“
-m [mm M nlvnme (a; m" Mme: no! n a" “my: Gm":
-[MW
-——- --—-- -----
+Gasirea cheilor folusind dependetele functionale
+Forme Normale: lNF, ZNF, 3NF, BCNF, 4NF
+$5 considerém U I {A,B,C} si E I {A —> B,B —> C}. Vorn
+construi multimea X734 pentru fiecare dintre atribute:
+Putem organiza atributele tinénd cont de Iocul unde apar ele Tn
+cadrul dependentelor din E:
+P Sténga: Apar numai Tn partea stangé a dependentelor din Z.
+P Mijloc: Apar 5i Tn sténga 5i Tn dreapta dependentelor din E.
+P Dreapta: Apar numai Tn partea dreapté Tn dependetele din E.
+Sténga Mijloc Dreapta
+A B C
+Regulé: Tntotdeauna atributele din Sténga sunt atribute prime, cele
+din Dreapta sunt neprime. Cele din Mijloc pot ﬁ Tn oricare dintre
+categorii.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-prm 7
-
-F\kV’\"!1/v! m‘
-
-L u Mm” H m in <1wwmhmdn>
-_:n-mu --------w-----
+Gasirea cheilor folosind dependetele funcﬁonale
+Forme Normale: lNF, ZNF, 3NF, BCNF, 4NF
+Exemplul 2:
+Fie U z {A, B, c, D, E,F} 5i
+E I {A —> BD,B —> C7 DE —> F}. Care sunt cheile candidat ?
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Hmmphﬂ7
-M ,WH I», w
-L u ~71!’ u 7‘ I» >1‘ (,vgsummmnmn
-Slam; WM [mm
-‘I rm ( y
-w‘ 4m‘ m mh<w,n dwwmi
-WSW“ w k‘
-w, m m.‘ {MM/ax] m (Wm m» w m mm!
-—m ---»--------
+. Gasirea cheilor folosind dependetele functionale
+Exemplul 2:
+Fie U : {A,B,C,D,E,F} 5i
+E I {A —> BD,B —> C7 DE —> F}. Care sunt cheile candidat ?
+Sténga Mijloc Dreapta
+A, E B, D C, F
+A734 : {A,B,C,D} - nu e cheie (nu contine F), dar cu siguranté
+apare Tn orice cheie.
+De fapt, am stabilit c5 ﬁecare cheie candidat va conﬁne toate
+atributele din “Sténga” - Tn cazul nostru pe A 5i pe E:
+AEng I {A,B,C,D,E,F}
+AE I cheie multivaluaté (este compusé din mai multe atribute).
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-prm x
-m‘ 7\‘ ‘qw 7\\ Mi v; v‘ WWW”
-:anddle
-_:n-mu --------w-----
+Gasirea cheilor folosind dependetele funcﬁonale
+Forme Normale: lNF, 2NF, 3NF, BCNF, 4NF
+Exemplul 3:
+Fie U : {AB} 5i E : {A —> B,B —> A}. Care sunt cheile
+ca ndidat ?
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-mm“ z
-
-w 7\‘ ‘qw 4| v/fV! v‘ Aaummldmh
-
-:anddle
-
-gm” Wm ‘1mm.
-w
-
-‘n 4m
-
-n1‘ 7 \ \ m
-
-Am‘! M m‘ :anmda!
-
-Ambmeyxwve \m
-
-Alubmeniwwe u
-_:n-mu -------------
+Gasirea cheilor folosind dependetele functionale
+Forme Normale: lNF, 2NF, 3NF, BCNF, 4NF
+Exemplul 3:
+Fie U : {A,B} 5i E : {A —> B,B —> A}. Care sunt cheile
+candidat ?
+Sténga Mijloc Dreapta
+A, B
+Jr _
+ARA _ {AB}
++ _
+BRA _ {AB}
+Ambele sunt chei candidat.
+Atribute prime: {AB}
+Atribute neprime: Q)
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Ummm. phlw
-
-Fw/VH "Wm “1mm ‘WMWW rle mum ,1 o
-WW d: dependent Wm“ n i“ ‘a: m rm o
-WNW; \ ~ up ,qummmw: \ M‘
-1m‘ \' i ‘r;
-5mm
-mm n
-L (m »( n »nlu y‘;
-luaxedwendemskdm‘ summit‘ MM n ~. mm
-@deka .| J 11 '1 I; YH m)
-1/; UnuzlkphmpsnzmnH: WWW” >1)(\
-
-——-III -------------
+. Gasirea cheilor folosind dependetele functionale
+Dependente pline
+Fie R[U] o schema de relatie peste o multime de atribute U $i Z o
+multime de dependente functionale ce au loc Tn R[U]. O
+dependenta X —> A E 2+ se nume$te pliné dacé 59X’ C X astfel
+Tncﬁt X’ —> A G 2+.
+Exemplu:
+R[A7 B7 C, D]
+E: {AB~>C,B~>D,BC%A}
+Toate dependentele din E sunt pline (e.g. nu avem Tn 2+ nici una
+dintre dependenjcele: A —> C, B —> C, B —> A, C —> A).
+AB —> D nu este pliné pentru c5 B C AB 5i avem B —> D G 2+
+Baze de date relaﬁonale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-mm" "WW dernde
-Fw/VH |v(rm/Mﬂinhhepevenmuhmverle 1"me w o
-WW d: depends“: Wm“ n i“ ‘a: m rm u" ainhm
-U vmunegmlmmm deuwde'vldc \ n 1! ‘i \1
-M :au V mm 1m‘
-. w 7»
-> \ J ‘
-> > > \, L
-> 1 _ \ w
-EMW
-mm u r‘
-L 1m w m ,1)le >1;
-r uvelmrmvwdepemlenrdr \H(\ m‘ 1 n)
-—I-IIIII -------------
+. Gasirea cheilor folusind dependetele functionale
+Atribut tranzitiv dependent
+
+Fie R[U] o schemé de relatie peste o multime de atribute U $i Z o
+multime de dependente functionale ce au loc Tn R[U]. Un atribut
+A G U se nume$te tranzitiv dependent de X (X C U, A gZ X)
+dacé EIY C U astfel Tncét:
+
+P A G U — Y
+
+P X —> Y G 2+
+
+> Y —> A G 2+
+
+P Y —> X Q 2+
+Exemplu:
+R[A, B7 C, D, E]
+E : {AB—> C,AB—> D,CD —>E}
+E este tranzitiv dependent de AB (X : AB, Y : CD).
+
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-WWW“? "mm
-()depmvdrm mmwnm \ ~\ Mm, 1\\<|MK$\W \muhr‘
-1 \
-ummm Wu ‘mm! \ » quwmm \ W
-may MY ,a I]
-_:n-mu -------------
+Gasirea cheilor folosind dependetele functionale
+Forme Normale: lNF, 2NF, 3NF, BCNF, 4NF
+Dependente trlwale
+O dependenté functionalﬁ X —> Y este trivialé dacé 5i numai dacé
+Y Q X
+O dependenté multivaluaté X —» Y este trivialé dacé Y Q X sau
+dacéZ:@(XUY:U)
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Nnvmahmma whemPkur hwﬂnr d0 (1m
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Normalizarea schemelor bazelor de date
+Normalizarea este necesaré din douﬁ motive:
 
-NaWww m Wm“ m don} m/mw,
+P Pentru eliminarea redundantelor.
 
-> Mm (‘Wm “WWW
+P Pentru a p§stra datele Tntr-o manieré consistenté.
+Normalizarea trebuie fécuté Tncﬁ din faza de proiectare a bazei de
+date 5i din acest motiv este ﬁresc 55 vorbim despre
+NORIVIALIZAREA SCHEIVIEI bazei de date 5i nu despre
+normalizarea anumitor relatii.
 
-. Mm . uhlva duekmv u unwed (DWSMBHU
-Mammy“ MW Ezuli 1m 4m rm a: stzmz i Dam “E
-dale 5‘ d.“ m‘ MW me 1W 3: mm mm
-NORMAUZAREA swims ME‘ a! a,“ 5‘ W new:
-WNW, Mm W“
-Emu m.‘ 1mm: We Wm Rum) My! 1am“! (M an
-m m1 Mum. ycwduﬂi mr w w aw m:
-s; “M m (e mnslau
+Existé mai multe forme normale (clasice), fiecare aducénd ceva Tn
+plus faté de forma precedenté: 1NF, 2NF, 3NF, BCNF, 4NF.
+$5 vedem Tn ce constau. ..
 
-——- --—-- -----
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-1 N + ( 1911 )
-—_.. _.___ _.__.._
+N I' Gasirea cheilor folosind dependetele functionale
+“ma ‘we Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Fie U o multime de atribute §i R[U] o schema de relatie.
+Spunem c5 schema de relatie R[U] este in Forma Normala 1 (1NF)
+daca $i numai daca domeniile atributelor sunt indivizibile 5i ﬁecare
+valoare a fiecarui atribut este atomica’.
+Pentru a avea o relatie Tn 1NF, trebuie efectuate urmatoarele
+operatii:
+
+P Eliminarea grupurilor repetitive din fiecare relatie.
+
+P Identiﬁcarea tuplelor ce ar putea avea duplicate Tn coloana
+printr-o cheie.
+
+P Crearea unei noi scheme de relatie avénd ca atribute:
+identiﬁcatorul de la punctul precedent 5i valoarea repetata ca
+atribut atomic.
+
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-1M»
-mm
-AM saber“: 511611111” mm» m! WW 1111mm
-111111111111p1m M 1111 11°11 WW
-1",‘,1111111 we Wm 1,.
-1 1M1“ 11111110111 1
-' 1 mm v.11! 1
-a mm W101)“ 2
-#15111 111mm 111.111,!1111111
-"1,1,1111111 mm m
-‘ 1 1mm 1
-2 vauru 1
-3 Vwkvu 1
-—I—- ------ -----
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Exemplu:
+Avem schema: Studenti[nr,matrico|, nume, prenume, an] Tn care
+studentii ar putea avea céte doué prenume:
+nrimatricol nume prenume an
+1 lonescu Maria loana 1
+1" : .
+2 Popescu VaSIIe 1
+3 Vasilescu Vali Cristi 2
+Pasul 1: Eliminém grupul repetitiv:
+nr1matrico| nume an
+1 lonescu 1
+1" :
+2 Popescu 1
+3 Vasilescu 2
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-1N»
-P151117 11,1111,“n cm
-11,111,111 “W =1
-1 11W,“ 1
-‘ 1 Pﬂpzszu 1
-a VéMki/w 2
-M11 (mm151m11:11:1mm11m 111,, 1' 1" 1W1 "D1.
-11111;»: 11 @1111 1111:1111: W mmm (111
-w
-1 M1111
-1 11111
-' 1 m1!
-a V111
-1 {m1
-——IIII ------- ------
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Pasul 2: ldentificam cheia:
+nr1matrico| nume an
+1 lonescu 1
+r :
+2 Popescu 1
+3 Vasilescu 2
+Pasul 3: Creare relatie Tn care fiecare valoare apare pe un rénd nou
+5i e legati de relajcia principalﬁ prin intermediul cheii:
+nr1matrico| prenume
+1 IVIaria
+, 1 loana
+r : .
+2 Va5||e
+3 Vali
+3 Cristi
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:18**************
-INF
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
 
-M w mm [130,4 d 1munhlavnrngvemw m w
-:nnsnmla pm 1m a" lip! M m 1M m“ is mnmhzim
-schema (‘Q veahhe 1w \ 5‘ 5x mum o W mm: m vehhe
-a" mm mm mm a: m MW“ w 1
-mu Mmmmﬂmmm WW “mum:
-mm 2 a: hp: i mm.‘ u [M mm.‘ Lu 5k M W
-am m" mm m m wv W n (m mm‘ m"
-dwcndvvzdc Wm“,
-mm 1 a: W = (mm a nuui Km; a! Mine m \
-s a, Wm L. T“ “we ‘Wm 5; mswm m; L: NW <5“ w" a
-mm; ms mm mm m. as‘: mama aims
-WW a WWW“ s: mama‘; Wm “Q 1 m1 be‘; ‘k
-m. m mam a: WWW ‘ mm,‘
+De$i ar putea parea ca am utilizat efectiv relajcia care este
+construita peste R[U], Tn fapt nu am facut decat 55 modiﬁcam
+schema de realatie R[U] 5i s5 construim 0 noua schema de relatie
+Tn schema bazei noastre de date denumita R’[U].
+Pasul 1: de fapt a eliminat atributul “prenume” din multimea U.
+Pasul 2: de fapt a identiﬁcat o cheie candidat (ce se poate face
+direct din schema - vezi cum am gasit o cheie candidat din
+dependenjcele functionale).
+Pasul 3: de fapt a construit o noua' schema de relatie R’[U]
+S-ar putea ca Tn unele locuri $5 Tntalniti ideea ca relajcia este Tntr-o
+anumita forma normala. Aceasta idee este incorecta datorita
+faptului ca normalizarea se realizeaza Tnainte de a crea baza de
+date, Tn stadiul de proiectare a acesteia !
 
-——- ---- -—---
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-7M» (mm
-Q Wm 4., ‘CW wr \ m m m W; mmm w b WM
-at “Mm Mww 6“ 1" i W m; Hm‘: UMP!
-(\azkov\\,rah\buv MM d“, w \ we (\euemkm ,MWK.
-m: M 1H \
-5; Mm WW A: u “WW W
-Wm n
-L nu v‘ n mm m
-1 mum:
-2 Gum MM Wm
-1 MM W» w WWW, ,m A! ‘M ‘M, ,
-——-u ---»--- ------
+. Gasirea cheilor folosind dependetele funcgionale
+2NF (1971)
+O schema de relajcie R[U] care este Tn 1NF, Tmpreuné cu 0 multime
+de dependente functionale Z este Tn a doua formé normalﬁ (2NF)
+dacé orice atribut neprim din R[U] este dependent plin de orice
+cheie a lui R[U].
+55 reluém exemplul de la dependente pline:
+R[A7 B7 C, D]
+E: {AB—>C,B—>D,BC—>A}
+1. Gasiti cheile
+2. Gasiti atributele neprime
+3. Atributele neprime sunt dependente plin de cheile gésite ?
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-7M»
-Sq Mm WNW rle ‘.1 “WM Mme
-m | m n
-‘:w; ‘1 H >nm ,q
-memm m m
-Ambmewwe .\ m
-Alnbmeniwwc n
-yr »n\ s nm‘mmwdlmww 111mm: m
-Mm m MM‘ MM“ Ml“, “"me
-1mm: w s M can?" w
-kaunne am m‘ m m mukwwhmxs I.‘ mum“ m, \
-m I" er {MN I: mm "W “mam WC a‘ \. :va
-m. mm, Km “mum n, mnlm'r .mmn nml rhen m,
-Iowa’; MM smguv mm
-—I—- ------ ------
+. Gasirea cheilor folosind dependetele funcgionale
+2NF
+Sa reluam exemplul de la dependente pline:
+R[A, B7 C, D]
+E:{AB—>C,B—>D,BC%A}
+Posibilele chei: AB, BC
+Atribute prime: A,B,C
+Atribute neprime: D
+B —> D € 2+. D nu este dependent plin de AB pentru c5, degi
+avem AB —> D G 2+, avem 5i B —> D G 2+ rezulté c5 R[U]
+Tmpreuné cu E nu este Tn 2NF.
+Observatie: dacé nu avem chei multivaluate, cu siguranté R[U]
+este Tn 2NF (pentru c5 avem numai dependente pline de la chei -
+nu putem gﬁsi submultimi de atribute atunci cénd cheia este
+formaté dintr-un singur atribut).
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-7M»
-
-AM <7 Wm‘ dc MW W me m. w m m; pmem a a
-ducem m ANF Wm mam“ m
-m‘ 1 Menu/‘(Kw chwhumhda-
-Pun‘ 1 cam mm: "1PM":
-mm a MW heave w. “mm WW \ ‘K\w-,‘v‘<1",‘.,<
-M mm‘: dmn n m, a: m new: \
-mm A (mam u "on; "WC n ML wk mm “@li
-h pm‘ mm, MW": U. mu“. WW Mm (W1 ‘m
-dxpcndwvu
-mm m pm m5‘ My‘. ‘Mm mm, m m. m m m
-
-—I—- ------ -----
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Avénd o schemﬁ de relatie R[U] care nu este Tn 2NF, putem 55 o
+ducem Tn 2NF urménd urmﬁtorii pagi:
+Pasul 1: ldentiﬁcém cheile candidat.
+Pasul 2: Gésim atributele neprime.
+Pasul 3: Pentru ﬁecare din atributele neprime A identiﬁcém care
+sunt atributele dintr-o cheie de care depinde A.
+Pasul 4: Creém o noué relatie R’ peste acele atribute identificate
+la pasul anterior Tmpreuné cu atributul neprim pentru care s-a gésit
+dependenta.
+Urmati cei patru pasi pentru exemplul anterior care nu era Tn 2NF.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-2M»
-mm Hm 1”,me .‘5 MM‘:
-mm! WSW in zomvame]
-"m MW 1" (Wm
-Wmdnws XP 2mm WW"
-Mikes 5W 2m Am
-um“ Bmszuvu 2am Hhumu
-WWW 1 2mm WM"
-MarOS WM 2am Appk
-Dznhmu m4 “WWW Wm I‘ Wmdm/s >0’ W hm:
-“Mun Mmdwmu vamc “Wm ‘n
-amm W w d vaows m “m mm. dr Mvmwﬂ $‘
-MxﬂimmmdlAppk nit-MMMM WWW Hear!
-WWW» 11cm! W, m WM m Avem MW my
-——- --—- -—---
+Gasirea cheilor folosind dependetele functionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Exemplu: Daca avem schema de relatie
+OS[nume, versiune, an, companie]
+nume versiune an companie
+Windows XP 2001 Microsoft
+MacOS Sierra 2017 Apple
+Ubuntu Bionic Beaver 2018 Ubuntu
+Windows 7 2009 Microsoft
+MacOS Mojave 2018 Apple
+De obicei, cand ne exprimam, spunem c5 Windows XP este facut
+de Microsoft. Avem dependenta: nume,versiune —> companie. In
+acelasi timp, stim c5 Windows este facut numai de Microsoft si
+MacOS numai de Apple. Deci avem si nume —> companie. Fiecare
+versiune este facuta intr-un anumit an. Avem: versiune —> an.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-7M»
-(‘Meme/W,
-> "WWW"! vaPame
-- “m “Wm
-(M WW “my (W m My “WWW
-mm Wm comm/us
-W" ,W W Q“ “Wm w» Mm l: ‘w Mm
-WWW.“ (mm 'bwdazi my 5‘ m5 WWW
-vm chrwm am MW os iznmm mum w M 1d2v54 u
-Wm ﬁ "W mm‘ mmm
-vm m may
-——-III ------- ------
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+dependenjce:
+P nume,versiune —> companie
+P nume —> companie
+P versiune —> an
+Cheie: (nume, versiune) (apar Tn sténga dependentelor)
+Atribute neprime: companie
+companie nu este dependent plin pentru c5, de$i avem
+nume,versiune —> companie, totodaté avem $i nume —> companie.
+Vom elimina din schema OS atributul companie 5i vom adé'uga o
+schemé de relatie R’[nume, companie].
+Vorn avea a5adar. ..
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-7M»
-iwmdvm xv 20m
-"mos 5M 1017
-UM“ Ewmcﬁeiwv 20m
-Wmdmv; w mus
-MKOS Mmave mg
-5‘
-m, mm,
-wmw; me
-Imus AW‘:
-Ummm Ummm
-Es“ a" 2M’ v M1‘ mm a: Wm‘ a“; in cm mm“ W
-m m. u Mew W mm‘ Mu m‘ u
-—I—- ------ ------
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+nume versiune an
+Windows XP 2001
+IVIacOS Sierra 2017
+Ubuntu Bionic Beaver 2018
+Windows 7 2009
+MacOS Mojave 2018
+si
+nume companie
+Windows Microsoft
+IVIacOS Apple
+Ubuntu Ubuntu
+Este in 2NF ? Mai avem de verificat dacé' an este dependent plin
+sau nu. . .sé’ vedem cum faceti asta voi :D
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-3M» (mm
-
-SUN/“a m 1W, RM Wm w MW a. WWW
-WW: ~; 6R m mm i M Hm‘; W, 6R m
-w M W MM "W, d". w NU m ‘WW dnpzudem (‘Q
-,1‘ m,” MM m Wm ﬁe mm, Wm,
-WW
-{Mm WM We m \ H 1 \ $
-L 1 \u 7‘ ‘ u
-m.‘ M m
-Am“ WW w am m1" 2w 5‘ a" w
-
-——- ------ ------
+. Gasirea cheilor folosind dependetele funcgionale
+3NF (1971)
+Schema de relajcie R[U] Tmpreuné cu muljcimea de dependente
+functionale Z este Tn forma a treia normalﬁ (3NF) dacé este Tn
+2NF 5i orice atribut neprim din R NU este tranzitiv dependent de
+nici o cheie a lui R.
+(Ad/c5 e Tn 2NF 5i orice atribut neprim depinde de chei $i nu de un
+alt atribut neprim sau grupare de atribute neprime)
+Exemplu:
+Considerém schema de relajcie R[A,B,C] 5i
+E:{AB—>C,C—>A}
+Chei: AB, BC
+Atribute neprime: (I) - deci este Tn 2NF 5i Tn 3NF.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:26**************
-3M» V ghmuta <1? p? vmpm
-
-An Mmmmn <7! ("dd sdehmwm a! w WWW we
-mm.‘ We“! w M We zwdenze m 1 (M a! ‘M m; m
-m EM M [Evevy] M my [awmm/ muXL mm a fan about
-m W m, Wm m “WWW, m. w ‘
-/\ MW" who“ wwkwems u“ WWW WM n" 41am x0
-m New,‘
-4M W M . SF, m, n M, NW‘ “W m MW‘
-nazamwﬁm) (mmmmm,mm» n» w w- m
-' M W“ mum» mm", mm MW mm) p m
-
-——- --—-- -----
+Gasirea cheilor folosind dependetele functionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+3NF - glumita de pe Wikipedia. . ..
+An approximation of Codd's definition of 3NF, paralleling the
+traditional pledge to give true evidence in a court of law, was given
+by Bill Kent: [Every] non-key [attribute] must provide a fact about
+the key, the Who/e key, and nothing but the key. 1
+A common variation supplements this deﬁnition with the oath: so
+help me Codd 2.
+lKent, William - A Simple Guide to Five Normal Forms in Relational
+Database Theory, Communications of the ACM 26 (2), Feb. 1983, pp. 120 —
+125.
+2Diehr, George. Database Management (Scott, Foresman, 1989), p. 331.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-3M»
-
-mm dc "0"“an w
-mm] ‘“WWWWW H,‘ WWW m
-Avem “WWW “mm
-LAWWW W wwm, MW, ,m»
-“WWW ‘W, My
-mm WW ,WW u; m; “It mm mum]
-510mm mm,‘ w WT: mﬂmﬂmmp
-my,» WWW, >11”; Dwachemade
-mane S; in; a" m! (mam! mm M mum w a:
-ow)
-vm "0mm “hm WW
-1W‘ Hm Wm,’ r0 “WWWMM
-“hm dJeme (M W w m /, \ H W WNW‘ S‘
-hm “HMHMWUW w
-
-——- --—-- -----
+N I' Gasirea cheilor folosind dependetele funcgionale
+“ma ‘we Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Exemplu de normalizare 3NF
+Fie schema: Concursurﬂmaterie, an, castigator, IQ].
+Avem dependentele functionale:
+E I {(matem'e, an) % castigator, castigator e IQ}
+Cheie primara: (materie,an)
+Atribute neprime: castigator, IQ (IQ este tranzitiv dependent)
+Se observé' c5 (materie, an) —> IQ G 2+, si Tn acelasi timp
+materie —> IQ Q 2+ respectiv an —> IQ g 2+. Deci schema de
+relatie se aflé’ Tn 2NF (atributele neprime ﬁind dependente plin de
+chei).
+Vom normaliza schema pentru
+Concursum'hnaterie, an, castigator, IQ] prin construirea a doué
+scheme diferite: Concursum'hnaterie,an,castigat0r] si
+Intelz'gentakastigator, IQ].
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-HEM» (Hr/erVCndﬂ Nnrma‘ PW, 3 5m Um,
-Q mm d. WW w \ W U. <, M m WWW \
-:51: m MNF m :51an WF i‘ Mm 11mm.
-Wm; Wm \ A h L \ We (Mm m
-karrwne o 5M; a! Mm a ESE 1" m: .5“ m ANF
-_mu ---»--- ------
+Gasirea cheilor folosind dependetele funcgionale
+“ma ‘we Forme Normale: 1NF, 2NF, 3NF, BCNF, 4NF
+BCNF (Boyce-Codd Normal Form) E 3.5NF (1975)
+O schemﬁ de relajcie R[U] Tmpreuna cu o multime de dependente Z
+este Tn BCNF dacé este Tn 1NF 5i pentru orice dependenta
+functionalé netrivialé X —> A G 2+, X este cheie Tn R[U].
+Observatie: O schemé’ de relajcie ce este Tn BCNF este Tn 3NF.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Obs 0 5mm r? W m RCNF we 9 m KNF
-WWW. m \, Tn m; m \NF m W m WW,
-=1 FF (W L; M e m m; m1 W: M m“ my‘... w n
-(m1. 5‘ hm 1mm BM! h Admiensxi \u» h u
-.\ A w; pm.“‘WM-‘m “WWW:
-\1 I\ Am‘ \ 1mm (Mm; m ‘ 1 ($151" sown
-Wmm
-by Um m‘ ‘ \ a mm BCM» "Em 51 hem m w my I!
-M arm» w mt; my: .m mm \mmmmm M
-m‘ \ WWW!“ ‘z \ m WW‘
-\'>er\ ,1: m >\'v1; \va
-“W,MWIWWWv deny‘ > \ U
-pm,“vnmmkwmmm >1» mm;
-my‘ WW1“ aw v“ ereslestF
-—:—- ---- -—---
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: 1NF, ZNF, 3NF, BCNF, 4NF
+Obs: O schemé ce este Tn BCNF este 5i Tn 3NF.
+Consideram (R7 E) Tn BCNF - Tn 1NF este sigur din deﬁnitie.
+a) PP (RA) c5 nu e Tn 2NF, adic‘a’ exist‘a’ un atribut neprim A 5i 0
+cheie K 5i A nu este dep. plin de K. Adicﬁ existﬁ X C K a.i.
+X —> A G 2+. Deoarece nu considerém dep. triviale avem c5
+A g2 K. Atunci X este cheie (pentru c5 (RE) este Tn BCNF).
+Ceea ce Tnseamné c5 K nu este cheie (pentru c5 trebuia $5 fie
+minimalé').
+b) Deci (R, E) ce este Tn BCNF trebuie 55 ﬁe Tn 2NF. PP (RA) c5
+nu ar ﬁ Tn 3NF: adicé existé un atribut A tranzitiv dependent de o
+cheie X. Adica existé Y a.T. A ¢ X, A g Y 5i avem c5:
+X —> Y G 2+,Y —> A E 2+ 5i Y —>X 952+. Y nu contine nicio
+cheie pentru c5 altfel am avea Y —> V G 2+ deci 5i Y —> X € 2+.
+Deoarece Y nu este cheie 5i totusi am Y —> A E 2+ avem c5
+(RE) NU este Tn BCNF - fals. Deci este 5i 3NF
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-‘)KrnmpunPrPa d? Hp W ma WWW
-mmamammmmmmh \V w yumvemdesnve
-“NWMMMH h \4 H» M ‘H v‘
-um \ U “MWWWWMW“\w
-m l» l“ m
-
-UU I‘, m m
-, we a “WWW, a: WM m MU. m WW h a
-WW 4L “mm WW1 >_ m: M u WM
-, 'H l‘ MM‘ \V \. 7.1 M‘ 1‘ U
-——- ----------
+. Gasirea cheilor folosind dependetele functionale
+Descompunerea de tip join Fa'rﬁ pierdere
+Considerém o schemé’ de relatie R[A1,A2, . “Ami. Spunem despre
+Rt[AZ-5,Ai5, . . . Aiiwi} c5 este 0 descompunere de tip join a lui
+t kp
+U U Ai; I {A1...An}
+p21 1:1
+p este o descompunere de tip join fﬁré pierdere cu privire Ia o
+multime de dependente functionale Z dacé V7“ peste R ce satisface
+multimea de dependente functionale Z, avem c5
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-‘)KrnmpunPrPa .1? Hp W ma Wm?
-Rover“ mm ‘m m)wWwWWn ‘w W q
-WW d: 11mm‘ v'uncumme “W H <5“ n dizummmevz
-d: w, |nm u‘: wudm w W" h L dad 5‘ \muw dad
-Mm! ~n 1/7,‘: 5mm”, w, “UL
-zmpm (wwuiwlzhllw m: m m
-‘H Z ‘1m l u w l 1 H 5mm m1“ “Wm
-um“ \m H rm‘ m s
-‘,7, ‘1m \ ll w, u (1W, n. Wm drawer!
-mam u m m mu >\/L
-‘mm r; m 7 m w H41 4*
-
-—I—- ------------
+. Gasirea cheilor folosind dependetele funcgionale
+Descompunerea de tip join fé'rﬁ pierdere
+Teoremﬁ: Dacé p I {R1, R2} este o descompunere a lui R 5i E o
+multime de dependente functionale, atunci p este o decompunere
+de tip join féré pierdere cu privire Ia E dac§ $i numai dacé
+R10R2%R1*R2€E+ SGU leRgﬁ>RgiR1 €E+
+Exemplu: Considerﬁm R[A,B,C] 5i E I {A —> B}.
+p1 : {R1[A, B], R2[A, C]} este féré pierdere deoarece:
+ABﬁAC:A,ABiAC:B§iA%B€E+
+p2 I {R1[A7 B], R2[B, C]} este cu pierdere deoarece:
+ABNBC:B,AB—BC:A$iB—>A¢Z+
+ABUBC:B,BC—AB:C§iB—>C¢E+
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-‘)KrnmpunPrPa d? Hp W ma WWW
-WWW“ M {and Wm h Wm a: “W ‘i M in
-my a?“ m \ L, ; Mm Mum Rm
-W pm ammek (r W T“ ,‘
-(wan-R ‘ m 5‘: H vm
-H ‘mun "J “HEMYWRMMW
-w.“ | m u' Vfu\ m >.'
-Mmdnzu uwywl
-——- ----- -----
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Descompunerea de tip join Fa'rﬁ pierdere
+
+Putem calcula 21> pentru Ri[UZ-] $i continua procesul de
+descompunere péné cénd ajungem la scheme de relatie ce sunt Tn
+BCNF. 21-:{X —> Y\X,Y E U1} - adicé, pentru Ri[U,-] ce este
+un element al descompunerii p luém acele dependenjce din E+care
+sunt peste atributele ce sunt Tn U1.
+Pentru exemplul precedent:
+Considerﬁm R[A, B, C] 5i E : {A a B}.
+p1 I {R1[A, B], R2[A, 0]} este féré pierdere deoarece:
+ABNAC:A,AB—AC:BsiA—>B€E+
+avemc521:{A—>B}$i22:(Z)
+
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
-Mg p! “WWW”; m W ms Wm a? Hp Km»
-Wm, m M
-‘ewe kw“ w w w» 4wmmﬁri Mm
-W WWW: WM“ Lwaw 1,. \ 1‘,
-P151‘ 1, n m\_ Mmdmmmw
-Mm We‘ mm
-P152 (nmpwaanmmw, ‘ “Wm;
-Pull MEX, \ > lam‘ a‘ \Z \ MWM‘
-vim ~ .\_/\ u ~‘ n \
-PKZX HZ” H, ,1,‘ W M
-vim Sczacuknilm L wchzﬂepenzm s 5‘ ‘V
-——- ----------
+. Gasirea cheilor folosind dependetele funcgionale
+Alg. pt. descompunerea Tn join fara pierdere de tip BCNF
+lntrare: (RE)
+lesire: p I {(191,211) ...(Rt, 2%)} : descompunere fara pierdere
+a lui R cu privire la E. Unde (HZ-.21) Tn BCNF,Vi€{1..t}
+Pas 1: p I R : R1; se caculeaza 2+ si cheile din R (necesare
+verificarii formei BCNF).
+Pas 2: Cat timp exista Tn p un cuplu (HZ-,2) ce nu eTn BCNF
+(daca nu e in BCNF atunci exista X —> A si X nu e cheie):
+Pas 2.1: Alege X —> A din Eli a.i. A g X si X nu conﬁne cheie
+Pas 2.2: S1 : X U {A}; SQ I Ri — A;
+Pas 2.3: p:p—R¢; pIpUS1USg;
+Pas 2.4: Se caculeaza 23551’ E; si cheile pentru S1 si SQ.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:34**************
-mm“
-Srhema m Mm
-Ab§u\.em(NP aNume Minn,“ WW was mt
-p ‘UH-m
-L 7 w “News! meme nvedxr ,Wm
-m WW ‘OMS!
-5Q descempune m
-“Mm
-_:n-mu ------- ------
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Exemplu
+Schema de relatie:
+Absolvent(CNP, aNume, adresa,|Cod, INume, lOras, medie,
+prioritate)
+E :{ CNP § aNume,adresa,medie medie % prioritate
+ICod —> lNume, IOras}
+Se descompune Tn:
+...ca|cu|ati
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-mm“.
-Srhema m Mm
-Ab§u\.em(NP aNume "mm," WW was mt
-WNW
-L, w “ummmdw nvedxr WW“
-m WNwMOuSA
-5Q descempune m
-,y WW \Nwm \om WWW wwm
-Rum» ,NW wdwsa mm RMCNP m»
-_:n-|m- ------- ------
+Gasirea cheilor folosind dependetele funcgionale
+“ma ‘we Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Exemplu
+Schema de relatie:
+Absolvent(CNP, aNume, adresa,|Cod, INume, lOras, medie,
+prioritate)
+E :{ CNP § aNume,adresa,medie medie % prioritate
+ICod —> lNume, IOras}
+Se descompune Tn:
+p : { R1[|Cod, INume, lOras], R2[medie, prioritate],
+R3[CNP, aNume, adresa, medie], R4[CNP, |C0|]}
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Urnwdﬂvr muhwahlar? mm vrmmdev)
-Rum: ‘ Mk‘ “Nuancnﬂmumv/MM \ v d4<2
-WW M ‘M h V; r ‘ WNW, m \1 um
-mm WM H 3M dwr mm and‘
->!\\\:!‘\\\/,\\:/\ MZL/
-mm mum‘ h» 1w M
-NM r 7H [/mmﬂwmg‘N)
-WWW“: jam/mammal,“Mm-\ r» a“;
-“New L Mum :‘mem
-www \mmvzu
-W \1, mm WW?’ mm mm
-——- ----------
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Dependente multivaluate (quick reminder)
+Definition
+Relatia r peste U satisface dependenpa multiva/uataT X —» Y dacé
+pentru oricare doué tuple t1,t2 G r satisfﬁcénd t1[X] : t2[X],
+existi tuplele t3 5i t4 din r, astfel incét:
+> t4iX] I t2iXi1t4iYiIt2iYi7t4iZi I tliZi
+unde Z I U — XY (Z mai este denumitﬁ 5i rest).
+Relatia r peste U satisface dependenia multiva/uat5 X —» Y, dacé
+pentru orice t17t2 G T cu t1[X] I t2[X] avem c5
+MY(t1iXZi) I MY(t2iXZi)
+unde My(t[XZ]) I {t’[Y]it’ G r,t’[XZ] I tiXZi} .
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-WWW“? mmhw {wrmq
-Mm d N i rm
-A a c n E
-* | ; h
-‘ w < J . u
-w < 2 ‘ .
-DA \ng mm‘,
-_mu-----~------
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Dependente m u Itivaluate (exercitiu)
+Arétati c5 AC —» BD:
+A B C D E
+8 1 2 0 4
+8 9 2 2 9
+r : 9 3 2 4 9
+8 1 2 O 9
+8 9 2 2 4
+9 3 2 4 4
+DA (este IVIVD)
+Baze de date relaﬁonale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-4N+(Rnnak1 My") (\977]
-I) srhem‘ 4* NW H Wm‘ q mm", d, mm,“
-mmm\.m A Wu) mm m; M .5“ in m; i‘ Mm
-M “www- ‘WWW; ‘ye-M‘: \ i <> A \ we
-(m Mm n
-mm» O Wm; a: KW (r <5“ w ANF ,5" aw
-_mu ------- ------
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: 1NF, 2NF, 3NF, BCNF, 4NF
+4NF (Ronald Fagln) (1977)
+O schemé’ de relajcie R Tmpreuna cu 0 multime de dependente
+multivaluate A (delta) este Tn 4NF dacé' este Tn 1NF 5i pentru
+orice dependenta multivaluaté netrivialé X —» A G AW X este
+cheie pentru R.
+Observatie: O schemé de relatie ce este Tn 4NF este Tn BCNF.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-‘)KrnmpunPrP m 0M»
-‘mun, m \ A‘
-‘ewe H 7 (m m 7 desaummmsve a’; warden i ‘m R I“
-VWWELYL WM! L‘ A \TnﬂNF WU y,
-P151‘ u n “(News A “MAW/“mg.”
-WW ‘mum ANF)
-P152 (nMama"WWW” ‘ AgnnueintNF
-(“annuwnﬂNFnunuouu \ \MXW mm]
-Pull Mex: \ V lam‘ .n \Z \ $\erewhevzhue
-Pﬂzz ~ .\_/\ u ~‘ n \
-PKZX HZ” H, ,1,‘ w M
-m» (mam s“ A“ ‘A A‘ “WWW s s‘ n
-—I—- -----------
+Descompunere in 4NF
+lntrare: (R,E,A)
+lesire: p I {R1, . . . ,Rt} : descompunere fara pierdere a lui R cu
+privire Ia E. Unde (R¢,E¢,Ai) Tn 4NF,Vi€{1..t}
+Pas 1: p I R : R1; se caculeaza 2+.AJF si cheile din R (necesare
+verificarii formei 4NF).
+Pas 2: Cat timp exista Tn p un triplet (R¢.Zi,AZ-) ce nu e Tn 4NF
+(daca nu e in 4NF atunci exista X —» A si X nu e cheie):
+Pas 2.1: Alege X —» A din Eli a.i. A g X si X nu e supercheie
+Pas 2.2: S1 : X U {A}; 5'2 I Ri — A;
+Pas 2.3: p:p—R¢; pIpUS1USg;
+Pas 2.4: Caculam E§1,A§1,E§2, A; si cheile pentru 5'1 si S2.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-mm“. up ﬂPwnmpunHP m 0M
-(MMme WWW "W WW mm,‘
-Smdemm pm n h 1M Wm S‘ Q 1m m‘ mm: Dasmm
-mu A We
-:rwnume Wm
-5! WWW
-‘ 7 mm "my 51k", mm sq“, mm];
-_:n-|m- ------- ------
+Gasirea cheilor folosind dependetele funcgionale
+Forme Normale: INF, 2NF, 3NF, BCNF, 4NF
+Exemplu de descompunere in 4NF
+Consideram schema: Student[cnp, nume, facultate, pasiune]
+Studentul poate ﬁ la doua facultati si sa aiba mai multe pasinui:
+cnp —> nume;
+cnp,nume %> facultate;
+Se descompune in:
+p : {Sl[cnp, nume], S2[cnp, facultate], S3[cnp, pasiune] }.
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-Hm ‘Own?
-> PM.‘ Nmmm M W mm m» m m“ Made‘
-Wk mgr (m W Reseavch Ream men? “W5!
-.vn!
-> nimmmmm WWW Maﬁa UM M
-\ (m m6
-_m|l ---»--- ------
+. Gasirea cheilor folosind dependetele functionale
+Bibliograﬁe
+P Further Normalization of the Data Base Relational l\/|odel. -
+Frank Edgar Codd; IBM Research Report RJ909 (August,
+1971)
+P Baze de date relationale. Dependente - Victor Felea; Univ. AI.
+l. Cuza, 1996
+Baze de date relationale Normalizarea bazelor de date
 
 ***************Ending Page***************
+
+
+
+
 

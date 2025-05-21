@@ -1,112 +1,122 @@
 ***************Beginning Page***************
 ***************page number:1**************
-so 2021/2022
+SD 2021/2022
+<E|> <ﬁ>4IE>4IE> IE OQO
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Arhan dxgxtali (Tues)
-> WWW mm,
-0' 0.
-g <2
-g o
+Arborl dlgltall (Tr/es)
+P Information retrieval
+> O structuré de date pentru a lucra cu $iruri de caractere care
+beneﬁciazé de proprietﬁtile structurale ale acestora
+> Spatiul de memorie necesar reprezentérii unui dictionar este redus:
+rédécina comuné este reprezentaté o singuré’ daté
+> Economie de memorie cand existé multe prefixe comune
+i S
+n a e u
+i r r I n
+e e C I;
+i
+Cm 12 SD2021/2022 2/8
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:3**************
-Mm dxgxtali
-
-> 5mm: d: m can m Mm: De repvexennm mum: a
-1km“,
-
-> u" whore W Mm: Mdaﬂa‘ m um h =1‘ mm‘ 4Q :Nve
-Una! d." mm!
-
-> 5! Mm". I: Amend: m Wm“. W ‘mm a= (‘he
-1mm and! MW. m 1M : "M
-
-— Wm ,,.
+Arbori digitali
+P Structurﬁ de date care se bazeazﬁ pe reprezentarea digitalﬁ a
+elementelor
+> Un arbore cu rédacinﬁ ordonat k-ar, unde k este numirul de cifre
+(litere din alfabet)
+V Se presupune c5 elementele sunt reprezentate prin secvente de cifre
+(litere) de aceea$i lungime m (\U| : mk)
+1 2
+0 2 1
+2 0 1 0 2
+102 120 121 210 211 212
+Cm 12 SD2021/2022 3/8
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Mm dxgxtah V Stmclum de daze
-> 0 m‘, a: "W ﬁgure m “and k i.‘
-> PIm/punavv “new (n, ,k 7 1» ewnemele dm s ml m m
-mm. 4! p. MM mum; Mm“, am“ mm {m
-'e'\
-' n m
-H x . ~ \
-4_4ii4
+Arbori digitali - Structura de date
+> O colectie de noduri, ﬁecare nod avénd k ﬁi
+> Presupunem alfabetul {O7 . . . , k — 1}; elementele din 5 sunt chei, iar
+nodurile de pe frontieré memoreazi informatiile asociate acestor chei
+O 1 2
+gliil€\ 0 1 2
+o 1 ,2 0 1I 2 @K 12
+E S E E S E
+Cm 12 SD2021/2022 4/8
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:5**************
-Mm mgm
-u" “Mmgmm mamaﬂwmkumkcuwnms \s 7 "mm-m
-mam ¢= MUN“: k. are unaware‘: WWW!!!-
-
-» m m4 ml m I.‘ M k 1“
-
-> 10W‘: areal-Mun eaeme
-
-> MW “Mm est: q.» m Wm W mm "mum". m" 5
+Arborl dlgltall
+Un arbore digital care memoreazé 0 colectie de cuvinte S, |S| I n dintr-un
+alfabet de mérime k, are urmétoarele proprietﬁfci:
+> orice nod intern are cel mult k fii
+V arborele are n noduri externe
+V Tnélfcimea arborelui este egalé cu lungimea celui mai mare cuvént din S
+Cm 12 SD2021/2022 5/8
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:6**************
-Mm mgm V cam,“
-> (mi M an...“ m 5mm r mm 4m...“ ﬁrm .1!
-“Wham! 1M4!
-Funcllm “M; m‘ u
-m...
-We
-P- K
-Wm‘! 1, $ NULL AND! < m; 1..
-p F p Q MM."
-H , \ ‘
-mm p
-an!
-> mmmm hmP mm ml m m. ntlzwrahd 04m»
+Arbori digitali - Céutarea
+> Cauté un element a Tn structura t: parcurge drumul descris de
+secvenfca zi[O]7 . . . a[m — 1]
+Function cauta(a, m, t)
+begin
+i <— 0
+p <— t
+while (p yé NULL AND i < m) do
+p <— p —> succ[a[i]]
+i <— i+ 1
+return p
+end
+> Complexitatea timp pentru cazul cel mai nefavorabil: O(m)
+Curs 12 SD 2021/2022 6/8
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:7**************
-Mm mgm V Inserarez
-> "Wm mm x in mum t Wm WNW.
-dun-Mm 464m deienvenh no]. AW n Mm (omnonenw:
-M". m m. m: m.“ 1.. t mam M m4
-/ , ,
-., . 2,. . X‘ .Fg‘
-L? .LU A 1\\
-‘_1 \_lAk_;._l
-m, “Wm no
+Arbori digitali - Inserarea
+> Inserarea unui cuvant xTn structura t: simuleazé parcurgerea
+drumului descris de secventa x[0], . . .x[m — 1]; pentru componentele
+pentru care nu existé noduri Tn t, adaugé un nod nou
+O 1 2
+€§€l\ 0 1 2
+0 1 ‘ﬁfz W 12
+Figura: Inserarea cheii 110
+Cm 12 SD2021/2022 7/8
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:8**************
-Mm dxgxtah V $tergerea
-> U" mm X m “M MM .3‘. Wm in
-> W WWW
-> s¢ Divcwy am...“ dean .ﬂ x 5‘ Q1 mememd m. c M
-> s: mm um m Wo- N 42d pentm W m mu ‘Mm
-w my “m. 5! Mm: mm
-f ~
-H r
-f 4 \\.
-x u x 1
-PM Mm. we‘. m2
+Arbori digitali - Stergerea
+> Un element x care trebuie eliminat este Tmpértit Tn:
+P un prefix comun
+V un sufix care nu mai apartine niciunui element
+> Se parcurge drumul descris de x 5i se memoreazé Tntr-o stivé
+> Se parcurge acest drum Tnapoi $i dacé pentru un nod toti succesorii
+sunt nil, atunci se elimini nodul
+0 l 2
+|?1?€l\\ 0 1 2
+£0 1 2‘\ W
+Figura: Eliminarea cheii 102
+Cm 12 SD2021/2022 8/8
 
 ***************Ending Page***************
 

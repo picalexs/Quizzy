@@ -1,559 +1,582 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\I\I\I\I\I\I\I\
-I Qﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ \
-I \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ§ﬂ\ﬂ\ﬂ \
-I\I\I\I\I\I\I\l
-PROGRAMMING IN PYTHON ‘ @111?”
+\/\/\/\/\/\/\I\
+1W
+‘W
+1W
+‘ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\
+I\I\I\I\l\l\l\l
+PROGRAMMING IN PYTHON | $311M“
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
 Any Python code (python script) can be used as a module.
-Pym" sex Pylhon 3.x
-File: M yMudule.py File: leiLPY
-def Sum(X,y| : impart MyModule Om,“
+Python 3.x Python 3.x
+File: M yModule.py File: test.py
+def Sum(X,y) : import MyModule Output
 
-return x+y
+return X+y
 
-pun: (MyModule.SumllO,2D)l
+print (MyModule . Sum(lO, 20))
 
-Beth files Iesf.py and MyModulelpy are located in the some folder‘
-Aﬁer vhe execution of reshpy c folder wilh the name ‘pyccchei rhm contains a file
-called MyModule.cpylhon-37.pyc will appear in the same folder (for Pyvhon 3.7) -)
-the version will be different for different versions of Python 3 (pyc = python compiled
+Both files test.py and MyModule.py are located in the same folder.
+After the execution of test.py a folder with the name _pycache_ that contains a file
+called MyModuIe.cpython-37.pyc will appear in the same folder (for Python 3.7) 9
+the version will be different for different versions of Python 3 (pyc I python compiled
 files)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
 Any Python code (python script) can be used as a module.
 
-Pynwn 3.x Pylhnn 3.x
+Python 3.x Python 3.x
 
-File: M yModuIe.py File: reshpy
+File: MyModule.py File: test.py
 
-def Sum(x,yl: import MyModule
+def Sum(X,y): import MyModule
 
-return x+y
-punt ("MyModule loaded") prlnl: (MyMQduleHﬂImllO, 20m
-impcxt MyModule
+return X+y
+print ("MyModule loaded") print (MyModule.Sum(lO,20))
+import MyModule
 
-Loading q module will culomuﬂcully execute any code [main code) mm ow.»
-resldes In that module. MyModule lauded
-The main code of u module [code that is written directly and not within a 3°
+Loading a module will automatically execute any code (main code) that Output
+re5|des |n that module. MyModule loaded
+The main code of a module (code that is written directly and not within a 3O
 function or a class) will only me executed once (the first time a module is
-loaded).
+loaded)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Any Pylhon code (python script) can be used as a module.
+Any Python code (python script) com be used ds d module.
 
-Python 3.x Python 34x
+Python 3.x Python 3.x
 
-File: Mymmlwy File: om.”
+File: MyModule.py File: test.py
 
-def Sum(x,y) = import MyModule
+def Sum(X,y) : import MyModule
 
-“tum X+y
+return X+y
 
-print 1"MyModule loaded"! print (MyModule.Sum(10,20))
-mp0" MyModule
+print ("MyModule loaded") print (MyModule.Sum(lO,20))
+import MyModule
 
-What if MyModule is not located in the same folder as Iesf.py file 3
+What it MyModule is not located in the some folder as test.py tile ?
 
-oulpul
+Output
 
-Tracebuck (mosI recem cull IGSf):
+Trolcebolck (most recent colll lost):
 
-File “Yempyn, line I, in <module>
-Import sys,MyModule
-lmporIError: No module named 'MyModule'
+File “test.py", line l, in <module>
+import sys,MyModule
+lmportError: No module nolmed 'MyModule'
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Any Pyahon code [python script) can be used as u module‘
+Any Python code (python script) com be used CIS ol module.
 
-Python 34x Fyihon 3.x
+Python 3.x Python 3.x
 
-File: MyMudu/e.py File: Peﬂpy
+File: MyModule.py File: testpy
 
-def Sum(X, y): import sys
+def Sum(x,y): import sys
 
 return x+y
 
-prlnt (“MyModule loaded") sys .path +: ["<folder>"]
+print ("MyModule loaded") sys.path += ["<folder>"]
 import MyModule
-print (MyMQdule,5um110,20)r
+print (MyModule.Sum(lO,20))
 import MyModule
 
-In the above piece of code “<folder>” represents a pmh to the folder OWN"
+In the olbove piece of code “<folder>” represents Cl polth to the folder OWPW
 
 where the file MyModule.py resides. MyModule loaded
 
-30
+3O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Any Pylhon code (python script) can be used as a module.
-Pthon 3.x Python 3.x
-File: MyModule.py File: ‘Eilpy
-def Sumlx,y): import MyModule
-return x+y
-print ("MyModule loaded") print (d1! (MyModule))
-Ouipul
-['Sum', '_builtins_', '_cached_', '_doc_', '_file_', '_loader‘_',
-'_name_', '_package_', '_spec_‘]
+Any Python code (python script) can be used as a module.
+
+Python 3.x Python 3.x
+
+File: MyModule.py File: festpy
+
+def Sum(x,y) : import MyModule
+
+return X+y
+
+print ("MyModule loaded") print (dir (MyModule))
+
+Output
+
+['Sum' , '_builtins_' , '_cached_' , '_doc_' , '_file_' , '_10ader_' ,
+'_name_' , '_package_' , '_spec_']
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
-Any Python code [python script) can be used as u module‘
+Any Python code (python script) can be used as a module.
 
-Python 34x Python 3.x
+Python 3.x Python 3.x
 
-File.- MyMudl-lle.py File: test.py
+File: MyModule.py File: test.py
 
-def Sum(x,yl : import MyModule
+def Sum(x,y): import MyModule
 
 return x+y
 
-prlnt (“MyModule loaded") print (MyModule.ifllei)
-print (MyModulelinamei)
-print (MyModuleegpdckagei)
+print ("MyModule loaded") print (MyModule ._file_)
+print (MyModule.__name__)
+print (MyModule.__package__)
 
 Attributes:
 
-<> _llle_ -) tull path of me ﬁle that corresponds to the module (it could be e pyc tile us well)
+o _file_ 9 full path of the ﬁle that corresponds to the module (it could be a pyc file as well)
 
-O inumei -) name of the module {in this example l MyModuIe)
+o _name_ 9 name of the module (in this example : MyModule)
 
-o ‘packagev -) name at me package
+O _package_ 9 name ot the package
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:8**************
-Any Pyihon code (pyihon script) can be used us u module.
+Any Python code (python script) com be used as o module.
 
-Python 34X Fthon 3.x
+Python 3.x Python 3.x
 
-File: MyMudule.py File: Peﬂpy
+File: MyModule.py File: festpy
 
 def Sum(x,y): import MyModule as m
-zltuzn x+y
+return x+y
 
-idcci : “Computes the sum of two numbers“ ptint (rmidoci)
+_doc_ = "Computes the sum of two numbers" print (m._doc_)
 
-Oulpui
+Output
 
-Computes the sum of twu numbers
+Computes the sum of two numbers
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Anemenvely, the keyword “he|p" can be used as well
-Pyihon 34X Fthon 3.x
-File: MyMudule.py File: new
-def Sum(x,y)z import MyModule as m
+Alternatively, The keyword “help” ccm be used ols well
+Python 3.x Python 3.x
+File: MyModule.py File: festpy
+def Sum(x,y): import MyModule as m
 return x+y
-idcci : “Computes the sum of two numbers“ help (m)
-Oulpul
+__doc__ = "Computes the sum of two numbers" help (m)
+Output
 Help on module MyModule:
-um:
-MyModule - Computes the sum a§ two numbers
+NAME
+MyModule - Computes the sum of two numbers
 FUNCTIONS
-SWIM, y)
+Sum(x, y)
 FILE
-...\FacultateWythandeules\mymndule‘py
+m\facultate\python_modu1es\mymodule.py
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Anemenvely, the keyword “he|p" can be used us well
-Pyihon 34X Python 3.x
-File: MyMudule.py File: Penpy
+Alternatively, ’rhe keyword “help” con be used ols well
+Python 3.x Python 3.x
+File: MyModule.py File: festpy
 def Sum(x,y): import MyModule as m
-"" "raturns the sum of x plus y“""
-retum x+y help (m)
-idoci = “Computes the sum of two numbers“
-Qulpul
-m» on module Hymule:
-WE
-"module e computes (he sun of M numbers
-chrmus
-Surlbh y)
-returns tn: sw- of x vlus y
+"""returns the sum of x plus y"""
+return x+y help (m)
+__doc__ = "Computes the sum of two numbers"
+()ulpul
+Help on module MyModule:
+NAME
+MyModule - Computes the sum of two numbers
+FUNCTIONS
+Wmv,y)
+returns the sum of x plus y
 FILE
-e:\dncunenKeVicukitHDl/KMWDZB'IBIlVIymnluFY
+e:\documente\facu1tate\python\2029-2021\mymodu1e.py
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Any Python code [python script) can be used as a module.
-Pyihon sex Fyihon 3.x
-File.- MyMudule.py File: Peﬂpy
-def Sum(X,y) : import MyModule
+Any Python code (python script) can be used as a module.
+Python 3.x Python 3.x
+File: MyModule.py File: test.py
+def Sum(x,y): import MyModule
 return x+y
 
-prlnt (inameii
+print (__name__)
 
-Ompu' OulpuI
-
-Eu
-If a python script is executed diredly, the value of _nume_ parameter will be
-_muin_.
-lf n is exeeuoed using import, me value of _nume_ parameter will be the name of the
+Output Output
+It a python script is executed directly, the value of _name_ parameter will be
+_main_.
+It it is executed using import, the value of _name_ parameter will be the name of the
 module.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Any Pyihon code (pyihon script) can be used us u module.
-Python 34x Python 3.x
-File: MyMuduIe.py File: {exhpy
+Any Python code (python script) cdn be used as d module.
+Python 3.x Python 3.x
+File: MyModule.py File: test.py
 def Sum(x,y): import MyModule
-:ltuzn x+y
-1: inamei Z "imaini":
-print(“Main code")
-print(“Test1nq sum(10,20) : ",Sum(10,20))
+return x+y
+if __name__ == "__main__":
+print("Main code")
+print("Testing sum(lO,20) I ",Sum(lO,20))
 else:
-print(“Module loaded")
-Ompu' OquUI
+print("Module loaded")
+Output Output
 Main code Module loaded
-Tes1lng sum('lO,20) = 20
+Testing sum(10,20) = 3O
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
-Python scripts can also be grouped in packages‘ Packages must be grouped in folder,
-and in each folder u _inif_‘py must exist That file is an entry point for that
-package/sub-packagee
+Python scripts com ollso be grouped in packages. Packages must be grouped in fololer,
+omol in eoch tololer o| _init_.py must exist. Tholt file is om entry point for tholt
+package/sub-pockoge.
 MathOps
-tiinitiepy
+|:_init_.py
 Simple
-_im't_epy
-Arithmeticwy
+__init;_.py
+Arithmetic.py
 Bits.py
 Complex
-tiinitiwy
-Seriesepy
+|:_init_.py
+Series.py
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:14**************
 Python scripts can also be grouped in packages. Packages must be grouped in folder,
-and in each folder a _irlif_lpy must exist. That ﬁle is an emry poin| for lllel
-package/sub-pockuge.
-MathO-s P?"‘°"‘3,"
-Flle: Anni.”
-mp e print ("Package MathOps imc")
-_im't_epy
-Arithmeticwy
+and in each folder a _init_.py must exist. That file is an entry point for that
+package/sub-package.
+MathO S P.ython.3:.x
+b Flle: _|n|t_.py
+1mp e print ("Package MathOps init")
+__init;_.py
+Arithmetic.py
 Bits.py
 Complex
-tiinitiwy
-Series l py
+t::___init__.py
+Series.py
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
 Python scripts can also be grouped in packages. Packages must be grouped in folder,
-and in each folder q _inif_‘py must exist. That file is an emry poin| for mm
-package/sub-pockuge.
-MathOps 21'3""‘3,’
-tiinitis Dy IQ. Anni.”
-Simle print ("Package MathOpS.Slmple inn")
--r‘1 me 1c,py
+and in each folder a _init_.py must exist. That file is an entry point for that
+package/sub-package.
+MathOps P.ython.3:.x
+b— 1'. nit_ . py Flle: _|n|t_.py
+Simle print ("Package MathOps . Simple init")
+APlt met1c.py
 Bits.py
 Complex
-tiinitispy
-Seriesspy
+t::___init__.py
+Series.py
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
 Python scripts can also be grouped in packages. Packages must be grouped in folder,
-and in each folder a _inif_‘py must exist. That ﬁle is an emry poin| for that
-package/sub-pockuge.
-P "\on 3.x
-[ETjﬂiti ‘ py FiL: Arithmeh'cpy
-Simple def Add1x,y) ;
-im't e. retuxn x+y
-E- def Sub1X,y):
-Bits.py return X*y
+and in each folder a _init_.py must exist. That file is an entry point for that
+package/sub-package.
+MathOps P.ython.3.x .
+b_ini t— . py Flle: Arlthmetlcpy
+Simple def Add<XIY) :
+‘ini'L' . n return X+y
+E- def Sub<><,y>=
+Bit5_py return X-Y
 Complex
-tiinitiepy
-Series e py
+|:_init_.py
+Series.py
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
 Python scripts can also be grouped in packages. Packages must be grouped in folder,
-and in each folder a _irlif_lpy must exist. That ﬁle is an emry poin| for lllel
-package/sub-pockuge.
-Pylhon 3.x
-'E'jzsniti ‘ py File: Bilslpy
-Simple def sl-lle,yl ;
-_init_‘py retuxn X << y
-E. ' IH’ ‘ppy def SHRlx,y):
+and in each folder a _init_.py must exist. That file is an entry point for that
+package/sub-package.
+MathOps P.ytho.n 3.x
+b_ 1'. n 1'. t_ . py File: B|t$.py
+Simple def SHL (XIY) 1
+_'i_n'i_t__py return X << y
+E Arithmetic.py def SHR(X/Y) :
 return x >> y
 Complex
-tiinitiepy
-Seriesepy
+|:_init_.py
+Series.py
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
 Python scripts can also be grouped in packages. Packages must be grouped in folder,
-and in each folder a _irlif_lpy must exist. That ﬁle is an emry poin| for lllel
-package/sub-pockuge.
-MathOps P?"‘°"‘3,"
-tiiniti ‘ py Flle: Anni.”
-Simple prlnt ("Package MathOps.CQmplex nut")
-_im't_epy
-Arithmeticwy
+and in each folder a _init_.py must exist. That file is an entry point for that
+package/sub-package.
+MathOps P.ython.3:.x
+b— 1'. nit_ . py File: _|n|t_.py
+Simple print ("Package MathOps .Complex init")
+_1'.m'.t_.py
+E Arithmetic .py
 Bits.py
-Comlex
-Serlei e py
+Com.1ex
+Series.py
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Python scripts can alse be grouped in packages. Packages must be grouped in folder,
-and in each folder a _init_rpy must exist. That ﬁle is arr emry poini for mar
-package/sub-pockuge.
-MathOps P?"‘°"§"‘
-tiiniti ‘ py FIIe: Senesrpy
-Simple def Sumﬂpb 1
-_in1't_spy c : 0
-Arithmeticwy for i in pr
-BitS-Py a: i
-Complex return c
-'rr' | def Product(*P)z
--— C I 1
+Python scripts can also be grouped in packages. Packages must be grouped in folder,
+and in each folder a _init_.py must exist. That file is an entry point for that
+package/sub-package.
+MathOps P.ython ‘3.x
+b_ 1'. nit_ . py File: Series.py
+Simple def Sum(*P) r
+_1'.m'.t_.py C I 0
+E Arithmetic.py for i in PI
+Bits.py 6+: i
+Complex return C
+init . a def Product (*p) :
+I— c I 1
 for i in p:
-c *: 1
+c *2 i
 return c
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:20**************
 Usage:
-Pyihan 3.x
-import MathOps‘Simple.Arithmetic
-print (MathOps.Simpls.ArithmetiCJlddiZ,3))
-from Matnopssimple import Arithmetic a: a
-print (8.Add12y 3))
-Oulpu'
-Package MuthOp: Inll
-Package MthOps.Simple init
+
+Python 3.x
+
+import MathOps.Simple.Arithmetic
+
+print (MathOps.Simple.Arithmetic.Add(2,3))
+from MathOps.Simple import Arithmetic as a
+print (a.Add(2,3))
+
+Output
+
+Package MathOps init
+
+Package MathOps.Simp|e init
+
 5
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
 Usage:
-Pylhon 3.x
+Python 3.x
 from MathOps . Simple import *
-print (A:ichmer.1c,add(2,3>)
-print (EithHuz, 3|)
-culpul
-Package MthOps inil
-Package MumOpsSimple iniO
-Truoebcck [most reoem call lust]:
-File "NH-FY", line 3, in <mudule>
-prlm (Allihmellc.Add(2,3)]
-NumeErron name 'AIilhmﬂic' is not defined
+print (Arithmetic.Add(2,3))
+print (Bits.SHL(2,3))
+Output
+Package MathOps init
+Package MathOps.Simple init
+Traceback (most recent call last):
+File “test.py", line 3, in <modu|e>
+print (Arithmetic.Add(2,3))
+NameError: name 'Arithmetic' is not defined
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-To be able to use a syntax similar to “from <module> imgort *" a module variable
-“_all_" must be defined‘ That variable will hold a list of all modules that belongs to
-that package.
-MathOps 27"‘"43?
-tiiniti ‘ Dy |Ie= imllipy
-Simle Print ("Package MathOpS,Slmple inll:
-E—w1th falli set")
-Arithmetic,py falli = ["Arlthmetic","Blts"]
+To be able To use a syntax similar ’ro “from <module> im|c_>or’r *” a module variable
+“_aII_” must be defined. That variable will hold a lis’r of all modules That belongs To
+That package.
+MathOps Python.3:.x
+b_ini t— . py File: _|n|f_.py
+Simle print ("Package MathOps . Simple init
+E— with _all_ set")
+Arithmetic _ py _all_ = [ "Arithmetic" , "Bits " ]
 Bits.py
 Complex
-tiinitipy
-Seriesspy
+|:_1'.nit_.py
+Series.py
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
 Usage:
-Pthon 3.x
-from MathOps . Simple import *
-print (ArithmetimAddQsH
-print (Bics,sHL12, 3) )
-Ou'pu'
-Package MuthOps Inlr
-Package MthOpsSimple in" wuh iallf 5m
+
+Python 3.x
+
+from MathOps.Simple import *
+print (Arithmetic.Add(2,3))
+print (Bits.SHL(2,3))
+
+Output
+
+Package MathOps init
+
+Package MathOps.Simple init with _a||_ set
 5
-16
+
+1 6
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-If you wam a module and/or package to be available to all the scripts that are
-executed on thal system iust copy the module or the entire package folder on the
-Python search path and you will be able to access it directly. These paths are:
-e Windows;<PythonFolder>\le
+If you wanT a module and/or package To be available To all The scrist ThaT are
+execuTed on ThaT sysTem iusT copy The module or The enTire package folder on The
+PyThon search paTh anol you will be able To access iT clirechy. These paThs are:
+O Windows: <PyThonFololer>\Lib
 
-Example: C:\Python27\Lib at C:\Python37\le
-o Linux: /usr/llb/<Pythorl\/ersion>
+Exemple: C:\PyThon27\Lib or C:\PyThon37\Lib
+o Linux: /usr/lib/<PyThon\/ersion>
 
-Example: /usr/lib/pyvllan2.7 or /usr/lib/pytllon3.7]
+Example: /usr/lib/pyThon2.7 or /usr/lib/pyThon3.7)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-Python also has a special library (imponlib) lhul can be used lo dynamically import a
+Python also has a special library (importlib) that can be used to dynamically import a
 
 module.
 
-o impnlhlmpmfimodule lmoduleNume,p0ckcge:None) 9 in impor' c medule
+o importlib.import_module (moduleName,package=None) 9 to import a module
 
-o imponlihrelocd (module) -) Io reload a module IhuI was already laaded
+o importlib.reload (module) 9 to reload a module that was already loaded
 
-Pylllan 3.x Pyllmn 3.x
+Python 3.x Python 3.x
 
-File: C:‘\Py|hon3\ll'b\MyMcdule.py File: Peskpy
+File: C:\Python3\Lib\MyModule.py File: test.py
 
-def Sum(X, y) z import impoztlib
+def Sum(x,y): import importlib
 
-return X+y
-print 1"MyModu1e loaded“) m : importlib.lmpcxtimoduls(“MyModule")
-pnnc lmd5l1m(10,20l)
+return x+y
+print ("MyModule loaded") m = importlib . import_module("MyModule")
+print (m.Sum(lO,20))
 
-olnpul
-MyModule leaded
-30
+Output
+MyModule loaded
+3O
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:26**************
-Python has a keyword (exec) that can be used to dynamically compile and execute
+Python hols d keyword (exec) tholt coin be used to dynamically compile dnd execute
 python code.
+The tormolt is exec (code, [globoll],[loco|l] ) where [global] ond [locoll] represents d list
+of globoll ond locoll definition tholt should be used when executing the code.
 
-The format is exec (code, [globul],[local] ] where [global] and [local] represents a list
-of global and local definition that should be used when executing the code‘
+Python 3.x Output
 
-Python 3.x Outpul
+print(X)
 
-print (x)
+exec("def num_sum(x,y) : return x+y") Output
+print(num_sum(10,20))
+s I "abodefg"
 
-execl"def numisum (x, y) = return x+y"l Outpul
-prlnt(numisul1\(10,20l)
-s = "abcdefg"
-
-axicl"52:srupper() "l Ouipul
-
-print (sZ) ABCDEFG
+exec ("52:5 . upper () ") OUlPUl
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Because of this keyword, python code can obfuscate or modify itself during runﬁme.
+Becoluse of this keyword, python code com obfuscate or modify itself during runtime.
 
-Pythonlx
+Python 3.x
 
-data = [Ox65, 0X66, 0x67, 0X21, 0x54, 0x76, OXEE, 0X62, 0x29, 0x79,
-0X21), DX7A, UXZD, 0x75, UXZA, 0x35, UXOE, 0x05, DXOA, 0X73,
-0x66, 0X75, 0x76, 0x73, OxﬁF, 0X21, 0x79, OXZC, OX7A, OXZC,
-Ox7E]
+data I [OX65, 0X66, 0X67, 0X21, 0X54, 0X76, OX6E, 0X62, 0X29, 0X79,
+OXZD, OX7A, OXZD, OX7B, OXZA, OX3B, OXOE, OXOB, OXOA, 0X73,
+0X66, 0X75, 0X76, 0X73, OX6F, 0X21, 0X79, OXZC, OX7A, OXZC,
+OX7B]
 
-s =
+S : II"
 
-for 1 in data:
+for i in data:
 
+s +2 chr (i-l) Output
 exec(s)
-
-prinmmmm» —
+print<5uma<1,2,3>> —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Because of this keyword, python code con obfuscate or modify itself during runﬁme.
+Because of this keyword, python code con obfuscate or modify itself during runtime.
 
-Py|h0n3.x
+Python 3.x
 
-data I [DX651 0X65, 0X67, 0X21, 0X54, 0X76, UX6E, 0x62, 0x29, 0x79,
-oxzn, onA, onD, was, onA, 0x35, 0m, UXOB, oon, 0x73,
-0X66, 0x75, 0x76, 0x73, OXGF, 0X21, 0X79, OXZC, OX7A, OXZC,
-mus]
+data = [OX65, 0X66, 0X67, 0X21, 0X54, 0X76, OX6E, 0X62, 0X29, 0X79,
+OXZD, OX7A, OXZD, OX7B, OXZA, OXBB, OXOE, OXOB, OXOA, 0X73,
+0X66, 0X75, 0X76, 0X73, OX6F, 0X21, 0X79, OXZC, OX7A, OXZC,
+OX7B]
 
-s : u“
+S I I."
 
-for i in data: dafSumo(x,y,1]z
-s += - Ielum K+y+1 ompm
+for i in data: def Sumo(x,y,z):
 
-pIin uma(1,2,3))
+exe —
+
+priﬂlma(l,2,3))
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Multiple layers of encryplion are also possible:
+Multiple layers of encryption are also possible:
 
-Pylhcn 3.x
+Python 3.x
 
-buf :
+buf =
+[OX74,0X21,0X3E,OX21,0X23,0X67,0X68,0X69,0X5D,0X23,0X76,0X2B,OX64,0X2F,OX65,
+OXZC,OXBD,OX5D,0X23,0X75,0X68,0X77,0X78,0X75,0X71,0X5D,OX23,0X64,0X2E,OX65,0
+X23,0XOE,OXOB,OX74,0X33,0X21,0XBE,0X21,0X23,0X23,0XOE,OXOB,OX67,0X70,0X73,0X
+21,0X64,0X21,0X6A,OX6F,OX21,0X74,0X3B,OXOE,OXOB,OXOA,OX74,0X33,0X21,0X2C,OX3
+E,0X21,0X64,0X69,0X73,0X29,0X70,0X73,0X65,0X29,0X64,0X2A,OX2E,OX33,0X2A,OXOE
+,OXOB,OX66,OX79,OX66,OX64,OX29,OX74,OX33,OX2A]
 
-[0x74], 0X21, OX3E, 0x21, 0X23, 0X67, 0X69, 0x69, OXSD, 0X23, 0x76, OXZB, 0X64, DXZF, 0x65,
-0X20, OX3D, 0x517, 0X23, 0x75, 0x68, 0x77, 0X78, 0x75, 0x71, OXSD, 0x23, 0x64, OXZE, 0X65, O
-x23, 0x012, OXUB, 0X74, 0x33, 0x21, OXEE, 0X21, 0x23,0x23, uon, DXOE, 0x67, 0x70, 0x73, OX
-21, 0x64, 0x21, OXGA, 0X65‘, 0X21, 0x74, 0x313, OXOE, DXOB, OXOA, 0X74, 0X33, 0x21, OXZC, 0x3
-E, 0x21, 0x64, 0x69, 0x73, 0X29, DX7Q, 0x73, 0x65, 0x29, 0x64, UXZA, OXZE, 0X33, OXZA, 11on
-, OXUB, 0X66, 0X79, 0x66, 0X64, 0X29, 0X74, 0x33, OXZA]
-
-s : I.“
+s = n"
 
 for i in buf:
 
-s += chrliil) 0m.“
-
-lxeclsl D
-p:inl:(s(10,20)|
+exec (S)
+print(s(lO,20))
 
 ***************Ending Page***************
 
@@ -561,49 +584,50 @@ p:inl:(s(10,20)|
 ***************page number:30**************
 Multiple layers of encryption are also possible:
 
-Pyihcn 3.x
+Python 3.x
 
-buf :
+buf =
+[OX74,0X21,0X3E,OX21,0X23,0X67,0X68,0X69,0X5D,0X23,0X76,0X2B,OX64,0X2F,OX65,
+OXZC,OXBD,OX5D,0X23,0X75,0X68,0X77,0X78,0X75,0X71,0X5D,OX23,0X64,0X2E,OX65,0
+X23,0XOE,OXOB,OX74,0X33,0X21,0X3E,0X21,0X23,0X23,0XOE,OXOB,OX67,0X70,0X73,0X
+21,0X64,O, ‘ ‘ ‘ ' ' ‘ ' ' ' ‘E,OXOB,OXOA,OX74,0X33,0X21,0X2C,OX3
+E,OX21,0 5 = "fgh\"U*c,d+<\"tngtp\"c-d" 0X29,0X64,0X2A,OX2E,OX33,0X2A,OXOE
+,OXOB,Oxi 52 = "" IXZA]
 
-[0x74], 0X21, OXBE, 0x21, 0X23, 0x67, 0x69, 0x69, OXSD, 0x23, 0x76, OXZB, 0X64, DXZF, 0x65,
-0X20, 0x313, UXSD, 0X23, 0x75, 0x68, 0x77, 0X78, 0x75, 0x71, OXSD, 0x23, 0x64, OXZE, 0X65, O
-X23,DXOE,OXUB,OX74,0X33,DXZl,OX3E,OX21,0X23,0X23,0XOE,DXOE,DXS7,DX7D,OX73,DX
-21,0X64,0 ‘ ' ‘ ‘ ' ' ‘ ' ‘ IE,DXOB,OXOA,OX74,0X3},OX21,0X2C,OX3
-E,Ox21,0 s = "th\“u*c.d+<\"tngtp\"c-d" 0X29,0X64,UX2A,OX2E,OX33,0XZA,OXDE
-,0x0B,o>< 52 = XzA]
+S = "" for c in s:
 
-s = "“ for c :in s:
+for i i 52 += chr(or'd(c)—2)
 
-for 1 i sZ += chr(or'd(c)-Z)
-
-- exec(sZ) Ouipu'
-p21n 5110,20),
+" exec ( 52) Output
+prln s(lO,20))
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
 Multiple layers of encryption are also possible:
 
-Pyihcn 3.x
+Python 3.x
 
-buf :
+buf =
+[OX74,0X21,0X3E,OX21,0X23,0X67,0X68,0X69,0X5D,0X23,0X76,0X2B,OX64,0X2F,OX65,
+OXZC,OXBD,OX5D,0X23,0X75,0X68,0X77,0X78,0X75,0X71,0X5D,OX23,0X64,0X2E,OX65,0
+X23,0XOE,OXOB,OX74,0X33,0X21,0X3E,0X21,0X23,0X23,0XOE,OXOB,OX67,0X70,0X73,0X
+21,0X64,O, ' *‘ ‘ * ' ' ‘ ' ' ‘ IE,OXOB,OXOA,OX74,OX33,OX21,OX2C,OX3
+E,OX21,0< 5 = "fgh\"U*c,d+<\"tngtp\"c-d" 0X29,0X64,0X2A,OX2E,OX33,0X2A,OXOE
+,OXOB,OX€ 52 = "" IXZA]
 
-[0x74], 0X21, OXBE, 0x21, 0X23, 0X67, 0x69, 0x69, OXSD, 0X23, 0x76, OXZB, 0X64, OXZF, 0X65,
-0X20, 0x313, 0x517, 0X23, 0x75, 0x68, 0x77, 0X78, 0x75, 0x71, OXSD, 0x23, 0x64, OXZE, 0X65, O
-x23, 0x012, OXUB, 0X74, 0x33, 0x21, OXEE, 0X21, Ux23,0x23, OXOE, 0x05, 0x67, 0x70, 0x73, 0X
-21,0X64,0 ‘ ‘ ‘ ‘ ' ' ‘ ' ' IE,DXOB,OXOA,OX74,0X3},OX21,0X2C,OX3
-E, 0x21, 0 s = "th\“u*c.d+<\"tngtp\"c-d" 0x29, 0x64, UXZA, OXZE, 0x33, OXZA, 11on
-,0x05,0>< 52 = IXZA]
+S = "" for c in s:
 
-s = "“ for c :in s:
+for i i s += chr(or'd(c)—2)
 
-for 1 i s += chr(or'd(c)-Z)
-
-G)- exe Q
-
-a" ‘ —
-pzin “10,20” def S(a,b). return a+b 3O
+' exe 1 a Output
+prin‘ s(lO,20)) ’ '
 
 ***************Ending Page***************
+
+
+
+
 

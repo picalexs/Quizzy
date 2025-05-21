@@ -1,832 +1,897 @@
 ***************Beginning Page***************
 ***************page number:1**************
-a maxh! znzz
+5 martie 2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-smnmcn
-MM“...
-vmwi-
-smmxa mum:
-vim-1.
-leuuniin 5mm
-mm =1- nmmi mm:-
-m...
-v...,...... “mu. n..."
-unm- m “MW.
-Mun Wm... Mud-"W... “mm...
-um.‘ “an! . hum-mm.‘
-Exhhngraﬁl
+Statisticéi
+Introducere
+Vocabular
+Statisticé descriptivé
+Variabile
+Reprezentéri graﬁce
+Misuri ale tendintei centrale
+Media
+Mediana
+Médul
+Compararea diferitelor misuri
+Cvartile
+Misuri ale variabilitétii
+Domeniul
+Dispersia e§antionu1ui §i deviatia standard a e§antionu1ui
+Mediana, cvartilele §i domeniul intercvartilic
+Valori aberante
+Bibliograﬁe
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-- Ridlzmlll Mm“. Smunn m lahnu 5mm aim
-mu.) (irlhlumnllht mm], Smiubnhaunmuamu:
-um“.
+o Radacinile cuvantului Statistica sunt latine: Status (latina
+veche) care inseamna stat (politic), Statista (italiana) inseamna
+politician.
 
-. h mm; mm“. =1 xvm" 1mm Uninlilik a“
-m: i 1D.‘ MD.“ mm ynma M luvlnlu! nan-n: m
-"m1 dm M‘: Fax-m: l mm“, m1... “mm m-ivinﬂ
-nam-
+o La mijlocul secolului al XVII-lea intr-o Universitate Ger-
+mana a fost folosit pentru prima oara cuvantul statistik cu
+sensul de §tiinta politica a statelor: analiza datelor privind
+statele.
 
-- I» Mun Entlmn \- IBIMnl mm“. va “mm! a.
-.m..\;<=i|mumm. cnuniﬂkkl "ma" n.1,.“ 1mm.
-I.“ mm“: “mm
+o In Marea Britanie la sfargitul secolului XVIII termenul de
+statistica a fost introdus cu un inteles similar: §tiinta statelor
+(sau aritmetica politica).
 
-- mm.“ nannii M . u numi m m up". hm:
-n u “mum mm‘, m“ 1w..- mm“ a. n
-“mm =1 puma-1 5mm...“ hm”- lingual! l.
-.(mm .k
+o Utilizarea statisticii fara a o numi in mod expres dateaza
+de la inceputul civilizatiei umane: forme incipiente de re-
+censamant al populatiei, sistematizarea datelor geograﬁce §i
+economice etc.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-- pum..1.|.m...mﬁ.m uhwnndlnl min-min m n.-
-i w. m“ dzwblnluz: m 1m a“. Illa!) n mm"
-mm. mum:- m. a. a “hm. “1mm a. "in |.
-pmmmmnn: 4- “win-“m u mm vam-
+o Primul studiu statistic este considerat in general a fi cel care
+a pus bazele demograﬁei: in 1662 doi englezi au introdus
+metode statistice cum ar ﬁ tabelele sperantei de via'ga §i
+probabilitatile de supravietuire 1a diferite varste.
 
-- Ahmmnwhdﬂx mum!!! dial-mi: nmhahﬂimﬂn in
-my.“ . l mum: in n\mnimln§n.\ namn:
+o Abia in secolul XIX rezultatele din teoria probabilitatilor au
+inceput a ﬁ folosite in rationamentul statistic.
 
-- Em]! mum-m =1. mm, m cunlnhdn damn: my
-mum Mm. “mam. m ‘mi wnhammﬂllm n“. .KV
-um “mun!
+o Bazele matematice ale statisticii s-au consolidat datorita rezul-
+tatelor profunde obtinute in teoria probabilitatilor din sec-
+olul anterior.
 
-. 1mm :u mm xx m M hum.- m. MM! I.
-mm m n mllulllﬂ mm mmmmm n n dunulhxui
-admins
+o incepand cu secolul XX au fost dezvoltate noi metode §i
+teorii, iar o inﬂuenta asupra statisticii a avut-o si dezvoltarea
+informaticii.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-‘Shhlnn m hm." u. m...» mm. aim. mm. “
-Email"! mum n 1mm P KuW
-c numu mm um mm.
-- m nu m, make “Du-mum mm" a,» 5mm‘
-am mun: a ma. a. m-
-- n mm: a. mum i minrmﬂm m an. |- ﬂu mm
-mm. a mumlw
-um m m. nlnnnapi .i. mm‘: , magma: a: no...
-l. a“. m“; =1. mumu] = 1mm:
-. 5mm. “mm mum“; w-m |. dam-dim.
-mu mm an h mm: mm)
-. 5mm. “1",..an mm." dam- n,‘ mun“ Mk
-m “11m n pvnnmu m um
+“Statistics has become the universal language of the sciences.“
+Elementary Statistics, R. Johnson, P. Kuby
+O studiu statistic tipic cuprinde
+o unul sau mai multe experimente aleatoare din efectuarea
+cérora rezulté o serie de date.
+0 o metodé de extragere a informa'giei din date si de inter-
+pretare a rezultatelor.
+Modul In care informa'gia este procesaté §i interpretaté d5 na§tere
+1a doua ramuri ale statisticii ca §tiin§5n
+0 Statistica descriptivd - colecteazé, prezinté §i descrie datele
+(de multe ori in formé graﬁcé).
+o Statistica inferentialci - folosind datele deja colectate ia de-
+cizii relativ 1a populatia in cauzé.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
 Deﬁnition 1
-Sunni:- “u "Mn “,ka 4mm» mlnprdﬂﬂx
-“at” n Mm n mm ,1 bun mm m
-Cﬂuduulnmnn :lumimcn In» in. mm mum". m.“
-mm“;
-- mum“ mum‘: m mu a. I
-u HM“ m“ inwm. MM
-u w,‘ “mm Wm.“ u ,..\.. m- 1.....1.‘
-. mm“ mjmnpnii m an,‘ m,
-u m... kém". ‘m 4:‘:qu .m...‘
-u "rm", “mm-I Km. m‘ mm.‘ Mm, My‘
-n man... mm. mm.
+Statistica este §timta colectdm'z', descriem'z', interpretdm'z'
+datelo'r §i lud'rz'z' de decizz'i pe baza acesto'r date.
+Cele doué ramuri ale statisticii sunt §i cei doi pagi dintr-un studiu
+statistic:
+0 statistical descriptwd are rolul de a
+o sintetiza, aduna §i reprezenta datele;
+o aranja informatia, pregﬁtind-o pentru luarea deciziilor;
+0 statistica inferentialii are drept scop
+o luarea deciziilor pe baza datelor strénse;
+o estimarea parametrilor (cum sunt media, dispersia etc);
+o veriﬁcarea ipotezelor statistice.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-. 5mm; I, w. mm, MEL m1“ a. map". m
-“mm n Mme.“
+o Statistica i§i are propriul limbaj, dincolo de impértirea in
+descriptivé §i inferentialé.
 
-. m mai impuzum cmmpt m “mm: m.‘ m1; an pm,
-hlu mm. (mm: (nniunira) a Dam-m m. w.’
-m: lnlulul mm m m m mam
+o Cel mai important concept in statisticé este acela de popu-
+latie: colectia completé (exhaustivé) a obiectelor care prez-
+inté interes pentru cel care face studiul.
 
-. mmmmwanm- mnlhmnlmﬂuﬂhlut mm mm“
-mmlnllur mum“. mm“ huh‘ a- “mam-M
-n 1m m- n mm; Inn-\pmci [mun-1n: "mn- 4m ml
+o Exemple de populatii: multimea studentilor din Ia§i, multimea
+roménilor analfabeti, multimea dozelor de cola produse intr-
+o luna intr-o fabricé, multimea furtunilor tropicale din 2018.
 
-DtﬂnlLlnn 2
-o WWI-u“ 1m .1 mun-ml a. “hm (numlt! n MW‘;
-m mm! memﬂh mp mm.
+Deﬁnition 2
+O populatie este 0 multime de obz'ecte (numz'te §i 'mdz'm'zz')
+ale cdror proprietiiﬁ 'uor ﬁ analz'zate.
 
-- c Wm“. m. a Ann: (m: pm. n Wm: mum]
-m mﬂniﬂ (mm-h. cummunhl nu mm m .m
-mm“)
+o O populatie poate ﬁ ﬁnité (dacé poate ﬁ teoretic listaté)
+sau inﬁnité (populatia cutremurelor de pémént din zona
+Vrancea).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-. Dmﬂnlidlmlnnulllwlllihik nnnpnyuhln Mud-ulna-
-.“ .. “mum: mm uni mi“. m. .m' = mm
-mm A“. m. m. mm" m. m“: m mmvm .7
-hm a“. Pﬂvuhil
+o Din cauza dimensiunilor mari ale unei populatii studiul statis-
+tic se concentreazé asupra unei portiuni mai mici a popu-
+latiei. Acesta este un e§antion care consti din indivizi se-
+lectati din populatie.
 
-mnnmnn a
+Deﬁnition 3
 
-u" “mam. .m . “Mu-ml . Mum“ 11mm.» ma
-a; "4m 2mm“: ﬁlm" mlund m mu, W.“ a; n
-um“- “Mme”, u mum» “mm, dzmdlum “l.
-Mu m mud ‘ma-mm. mm a 1m Mm m. "Mm
-1M m.“ “mm mm Mam; w.“ my. M 1..»
-m... nlnum ﬁlm-In
+Un egantion este 0 submultime a populatiei. Dint'r-un punct
+de 'uedere teo'retic ﬁecare individ are acelea§1i §anse de a
+apartz'ne e§antionului, §i orice grup particular de indz'mzz' este
+ales 'Zn mod independent pentr'u, a face parte dz'n e§antion
+Dace? aceste conditii sunt 'aneplinite atunci avem un egan-
+tion aleator simplu.
 
-. chm .l m. D mum;- m m. um.“ 11mm‘ nnniu.
-lniuzuluul a um. \mlml i mmm.
+o Cénd se alege o populatie sau un e§antion pentru studiu,
+intereseazé o anumité tréséturé a indivizilor.
 
-- Ann a! Imam" (mm) ,m n mum “hm-A,
-mip-Mm y- “in Rvnhkn umi. mm“ nag-1m,
-PM", "Mm “Wm av
+o Astfel de tréséturi (atribute) pot ﬁ: inéltimea, volumul,
+magnitudinea pe scara Richter, vérsta, presiunea séngelui,
+milna'rea nchiin'ri sunrafata etc’
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-DzhnALAnu 4
-o wmm m m. nnihut an .1 znmztznnmi n Mm’
-m mum m um"
-. um =- a-m 1m "mm ml“... .= mllurlm “M.
-m“ I“ m- mulm "mn- mm km- m mm,
-.1. w n mm. mu mm. mam bun .k
-Dpﬁnixinn 5
-much .mm mm. wnnxln “1mm a: m ﬁlm "mm
-a". um“
-. c “my. m. d-mll Mm 4. “mm lam.‘ m.’
-v-m Mm mun nirImm-i m‘ h mm; m.
-mm m...“
+Deﬁnition 4
+O variabila sau un atribut este 0 camctem'stz'cd’ a 'mdz'm'zz'lor
+d'm populatz'e sau e§antion.
+
+o Dupa ce alegem un esantion trebuie sa masuram valorile
+unuia sau mai multor variabile asociate. Acestea sunt datele,
+ele pot ﬁ numere reale, intregi, cuvinte, litere etc.
+
+Deﬁnition 5
+Datele sunt valom'le variabilez' colectate de la ﬁecare indz'md
+din e§cmtion.
+
+o O populatie este descrisa numeric de parametm' (medie, dis-
+perse, deviatie standard); parametrii sunt in centrul unui
+studiu statistic.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Den-‘Rim- a
-m. ynnuunru u“ u “1m numlnci m wwm: mm“
-mum“
-. Dulphyuhhnnulninu mill [m (a In 1mm“ mm!
-.m hum... mm. .m Pm. a “km
-- u mm». m a. i (um yilimlllul m- mm u w
-‘m =1 mum... Anna m. u mum:
-. m“ Dm- “mm v m... mm m“: a mm:
-mmwﬂmm
-mam“ 1
-a “nu-M l.“ M anmzhu mum mm un mm“
-m zmz hlrnyu wmm
+Deﬁnition 6
+Un parametru este 0 'ualoa're numerica? care prwe§te intreaga
+populaﬁz'e.
+o Dacé popula'gia este foarte mare (ceea ce se intémpléi adesea)
+un parametru anume nu poate ﬁ calculat.
+o O solu'gie este de a calcula parametrul doar pentru un e§an-
+tion a1 popula'giei. Aceasta este o statisticé.
+o Pentru orice parametru §i ﬁecare e§antion existﬁ o statisticﬁ
+corespunzétoare.
+Deﬁnition 7
+O statistici este un parametr'u, calculat pentr'u, un e§antion
+in locul intregz'z' populaﬁm'.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:11**************
-- Pump‘: mulpmnnnd-illw mm.» in m I"
+0 Populatte: multimea studentilor din primul an din Ia§i.
 
-. sum» .mmmmuﬁmhmmu [AM mm
-.m m. nu m. nn um.“ up“. man“)
+o E§anttonz studen'gii din primul an de 1a FII. (Acest e§antion
+nu este nu este un e§antion simplu aleator.)
 
-. ‘(Wm/mm ﬁlmlnllunm mmml... m cum!
+o Variabtld/at'rtbut: dimensiunea vocabularului lor curent.
 
-- m“ mm‘ :szn, 1m mmim. "mum".
-mm m“ mm am mm M dn 1- m.
+o Date: 4200, 3520, 1800, - dimensiunile vocabularului
+pentru ﬁecare student din primul an de 1a FII.
 
-- mem med]: dimlnnuni vunhuhrulm nudlllhiuz
-m Wm v. 4m hp
+o Parametru: media dimensiunii vocabularului studentilor
+din primul an din Ia§i
 
-- 9mm‘ m. ﬂimmlluni Manama“; nun-11mm a.“
-Wm] m 4. h m
+0 Statistical’: media dimensiunii vocabularului studentilor din
+primul an de 1a FII.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-- Chuﬁzana virvihﬂdm lmmm ‘Mum-m mnivhhv! m
-uhhhvm Anlulmlll
+o Clasiﬁcarea variabilelor imparte atributele in cantitative sau
+calitative. Astfel existé
 
-- ‘mm. m. M": .1 "Al-1mm)" {mum/L m. .. n u.’
-1w“ unhllnnwdmhlnn llllhnll Mum! m clam mm
-n hmimu: [Mm mm“, lillnhu'l mnhvipunill m1,
-m1 4| ylnnnihhll i:- p-de d-m n :nmnmhh (m
-.m‘ mum, Edi-ml“ m a-.m\.=y, mm a. “mm.-
-. {mm m. m,“ .k
+0 Variabile care oferéi o informaﬁe calz'tati'uii, cum ar ﬁ cu-
+loarea ochilor studentilor, genurile literare ale cirtilor dintr-
+o bibliotecé (ﬁctiune, §tiin§é, literaturé motivationalé etc),
+tipul de personalitate ale peroanelor dintr-o comunitate (san-
+guin, coleric, melancolic sau ﬂegmatic), nivelul de satisfactie
+a clien'gilor unui magazin etc.
 
-- vnm- m! m a “Imam unusual/l va! my!“
-“mm. “mum sum-.1“ .m a. m. p. m.
-M nun-m n Mun! Pu clrh mm n ‘mm L l
+o Variabile care dau o informagﬁie cantitati'ud; spre exemplu:
+inél'gimea studen'gilor, greutatea lor, suma de bani pe care
+un student o cheltuie pe cér'gi intr-un an §colar §. a.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Den-‘mun x
-a mm.“- min-nu (m “mg-mu) “l. n unnuhllﬂ m
-4mm “MW MM paw-4“ (“n/m umvmlzgunx)
-o mm. “mm-n" m: a wrmblll m mlaanvﬁ m
-Mm“ m a“ A: 1m Mm dmlrﬂ mm“
-- Vimhxllll Emm- M n Mmmalr I“ mm
-- “rm-l. nummill luni “1m. mm mm: a- mm
-.mm. mu. mlmhnhl m mummy M
-. zmm-“mn-Mmm mvlhldllnillﬂiladillhlux.
-Mm a! “up! (1m m.“ 11ml‘ “mum ,0.‘ m
-"Mm damn-U m.
+Deﬁnition 8
+O variabili calitativi (sau categoricé) este 0 'va'rz'abz'ld’ care
+desc'm'e un indivz'd dintT-o populaﬁe (conform unor catego'rz'i).
+O variabilé cantitativﬁ este 0 variabild care mdsoard sau
+numﬁ/rﬁ, ce'ua legat de un indimd dint'r-o populatie.
+o Variabilele calitative pot ﬁ nominale sau ordinale.
+o Variabilele nominale sunt: culoarea ochilor, tipul de person-
+alitate, numele membrilor unei comunitéi'gi etc.
+o Exampe de variabile ordinale: nivelul de satisfactie a clientilor,
+nivelul de educatie (liceal, post liceal, universitar, post uni-
+versitar, doctoral) etc.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Deﬁnikimz a
+Deﬁnition 9
 
-a “Mm mm...“ m. .1 mum m "mun m a,’
+O variabilé nominalé este o variabilﬁ, ca're nume§te sau de-
 
-.m. “MM MM yup-M“ 1m um. nllgrm n nvdmz
+scrie un individ dintr-o populajie fdrd a putea asigna 0 ordine
 
-“mm “may mun
+naturalé acestor 'ualomI.
 
-o minbill mu...“ 1m . “mm “k m. “1m wt ﬂ
+O variabilé ordinali este 0 variabild ale cdrez' valom' pot ﬁ
 
-mum: m m“ Minn‘
+o'rdonate in mod natural.
 
-- Vuihllulu mm.“- M n My!“ m mntmul c.|.
+o Variabilele cantitative pot ﬁ discrete sau continue. Cele
 
-m: Wm w 5 m“. an!!! “.1. numlri m “man.
-mam-a
+doué tipuri pot ﬁ distinse astfel: unele numéré iar celelalte
+misoaréi.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-- 0111;11..=1.K1-.1.1..1h......1.=.= 1.11:1...111..1...1..
-.1... mam. 11.11:... .1- mm. 11.. 1.1... cm. nc. 11.1.14»:
-.1 1.1.1.1.... 11mm 1.1.1.111: mum/1.11. 1... 1... .11. n
-11......“
-. c 11......“ .11....“ 11:111.: 1.1.1.11... my“. 11.1.1,
-Pmnmn 1.1
-mm“... 1n
-o vnrlnllih .5111“. .... 1 111.11.... m 11. 1.1. 1.1.11.» 1:1..1
-1... mm: .111 numimhl 1. 11.11., 1 1-1:. .1. 1111-1-11”...
-11.1 11.11. 11111.11“... 1.1.11.1“... .11...“ .1. 11 1.1. .1...»
-11.111.
-a 1.1.1.1.... 11......1... m. 1 1.11.1.1... m 11. 1.1. 1.1.1.11
-"W... ,.1..1...11..1m1.. 1. 1.1.1“, 1 11.1.. .1. 111.11.... 11....
-11.1, 1. 111..., 1111. 11.1.11. 1.1.11.1"..."111 11.11, 11.11....“
-1m. 11.1111 wnmm 1v...‘ m 11.... 1.1.11.
+o O variabilé discreté de obicei numéréi: numérul de credite ale
+unui student, numérul de pagini ale unei cérti etc; citeodaté
+o asemenea variabilé sumeazé puncte/note care nu pot ﬁ
+continue.
+o O variabilé continué miscaré: volumul, inéltimea, viteza,
+presiunea etc.
+Deﬁnition 10
+O variabilé discreti este 0 variabilé care a're un numd'r ﬁmt
+sau inﬁn'it dar numiimbz'l de 'ualom'; 0 astfel de variabilii poate
+a'uea 'ualom' corespunzdnd unor puncte 'izolate de pe un inter-
+val 'real.
+O variabilé continuﬁ este 0 'ua'riabz'la? care a're un numﬁ/r
+inﬁnit §1L nenumaimbil de 'ualo'ri; 0 astfel de variabilii poate
+a'uea, de obz'cez', or'ice 'ualoare dintr-un interval Teal, incluzdnd
+orice 'ualoare pos'ibz'lii dintre or'ice doud valom'.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-. mm: 1M: nu lxvluxm Idamn:unuuhhnmnﬂunuun
-“an, Wk. m. w mm m. “mm-,1- Mum.“
-I“ mm) u mm.
+o O primé formé de explorare a datelor este utilizarea reprezen-
+tirilor graﬁce care pot revela un comportament sistematic
+(un §ab10n) a1 variabilei.
 
-. m1.“mumm-“kn-mum.‘mdmmmmm
-‘mm,
+o Tipul de reprezentare graﬁcé depinde in mod normal de tipul
+variabilei.
 
-- m“ an‘ “min.- KIWI-mill]! mm,- Main mm p.-
-m". p w 5-m-
+o Pentru date calitative reprezentérile graﬁce folosite sunt pie
+charts §i bar graphs.
 
-- m“ a“! mm’! lﬂvul mpxulmlnlux mm m-
-n. a in. “m. mm“... mm.
+o Pentru datele cantitative scopul reprezentérilor graﬁce este
+de a aﬂa forma distributiei variabilei.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-- mm. “mum m m. mm "mm-m m amen“.
+o Datele calitative sunt mai intéi transformate in frecvente.
 
-. Mm“ m. mm‘; [n mm. a uni "mm-1 .n.
-Imminﬂ a. "man i1. m1- Dhllﬂih! m niﬂwn
+o Wecvenﬁa unei observa'gii (o valoare a unei variabile) este
+numérul de repetéri ale acelei observatii in e§antion.
 
-. Mm“ mm, . m... mm‘; m. mm; am.-
-imm“. “ump- mm". r Mm ma: a- an.»
-mi mam-MW; unnumlui!
+o Wecvenﬁa relative? a unei observa'gii este raportul dintre
+frecven'ga observa'giei respective §i numéirul total de obser-
+vatii (dimensiunea e§antionu1ui).
 
-. meN/mmmmm“mm-um." mum-1n
-mm:pmndnmmhﬂammunmmmm
-“mam.
+o Distribuﬁa frec'uenﬁelor unei variabile calitative este familia
+tuturor perechilor formate din observa'gie §i frecven'ga sa core-
+spunzétoare.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-- mm an. mm"- mum mum-“mm ll inc-“m-
-"ma.- m manna-m mm a "m. dim-Rubi 1mm.“
+o Pentru date cantitative putem utiliza frecventele §i frecvenigele
+relative sau gruparea datelor pentru a regési distributia frecventelo
 
-V M1! m. gmpnl! n, d“. [m hm!) m. m. um; 1,.’
-"ml! w "mu “mm, mm- m. ‘m;- n n 1mm!
+- datele sunt grupate in clase (sau bins) care sunt uzual in-
+tervale cu aceea§i lungime; clasele nu trebuie sa se acopere.
 
-V n11M:plmxndnlminmahmilmn mum 1+!nln, 1D‘:
-um n m- mmunlmm nunhmnhu
+- o regulé pentru determinarea lungimii claselor: 1+10g n/ 10g 2
+unde n este dimensiunea e§antionu1ui.
 
-V m. hm. m mm p. clul .l “mu: Mu.“
-Bum-m m- ileum mu mm m flaw-M!!!
+- apoi datele sunt sortate pe clase: se determinéi numérul
+observa'giilor din ﬁecare clasé - acestea sunt frecven'gele.
 
-V mm ﬁlnlllkhx .n. uimm....m “Mum; in)
+- suma frecventelor este dimensiunea egantionului (n).
 
-V “Mm. mam! .5 m “mm,” “ml-l. 1. n
+- frecventele relative se pot afla impértind frecven'gele 1a n.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-- c“ uni Mn“ mm: a. "mm... glaﬂd a MM
-Emit." .m my,“
+o Cea mai utilizaté metodé de reprezentare graﬁcéi a datelor
+cantitative este histogram.
 
-- u m: mm: lahdnmanl m‘... llammudl mm. M.
-m- .“mﬂmn/
+o O alté metodé 1a indeméné pentru e§antioanele relativ mici
+este stem-and-leaf.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-mum. m 5....”
+Histogram of sample
+CD
+(D
+DH
+2
+(I)
+:5 ‘I’
+CF
+(I)
+u’:
+(‘U
+D
+I | | 1 ' I |
+0 10 20 so 4o 50 60
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:21**************
-. can Baum "mu-m.“ Wm . Mm .1.“ "um: 1..
-pm. pm.- unaiwimh Immhln
+o Cénd privim reprezentarea graﬁcé a datelor din egantion ne
+putem pune urmétoarele intrebﬁri.
 
-- c". m. "JD-,1! mkik/mniV
+o Care sunt valorile centrale/medii?
 
-- cu d4 Inn“ m» unpmmm lull! am m mull mama
-mm
+o Cét de mult sunt impré§tiate aceste date in jurul valorilor
+medii?
 
-- c"- m. hm mnnnupm
+o Care este froma distributiei?
 
-- an“: "1m m. 1.“ .1 m."- m imam “ml: .
-dvnnhupzrl
+o Existé valori care nu se potrivesc cu imaginea generalé a
+distributiei?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-. demtn mm.“ mum: dumhumml um; (‘hr
-man) a: “mm m“ milnnll man-u- mmk “m
-m‘- hﬂnm m m in“: a- m.“- u- m.-
+0 Tendinpa centrald sau central distribuﬁei este centrul (ab-
+stract) a1 datelor. Toate mésurile tendin'gei centrale sunt
+legate intr-un fel sau altul de no'giunea de medie.
 
-. mm. mdm .1. a dllm mum‘: “ml:
+o Diferite moduri de a deﬁni tendinta centralﬁz
 
-u pm‘- m v“ mum-4);». AM
+o Punctul care tine distribu'gia in echilibru.
 
-n n...“-mnimbmmﬂn.4m\n|-.‘_m=
-n 11......» 0.. .i,.......u..m..m d-wuiln- .. pm.‘
-n CE. mi hm‘: “In...
+o Numérul care minimizeazé suma tuturor deviagiilor absolute.
+o Numérul care minimizeazéi suma tuturor devia'giilor 1a pétrat.
+o Cea mai frecventé valoare.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-- s: mum-m I: "ma. m Ilinﬁnn m» nan‘ ‘ 11
-anilinn u
-lvledin m Wm‘ m Mn. “imamum m. mm
-nnlmdm! a lulunv mm 4m mum»-
-i Z 11 + q $ +1,
+o Si presupunem cé valorile din e§antion sunt m1, TQ, . . . , a3”.
+Deﬁnition 11
+Media de selectie sau media egantionului este media
+aritmeticd’ a tuturor datelor din e§anti0n:
 
-. pummmammmm.mp..hi...\.h“mam
+i $1+$2+"'+$n
 
-m:
-. mm 1”“:an- m-m cu u
+xn : —.
+
+n
+o Formula mediei pentru intreaga popula'gie este in esenté iden-
+ticé.
+
+0 Media populaiiei se noteazé cu ‘LL.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-. Mm”. "m pmhathl\1!n| WWW‘... m.“
-mm mmmmm x‘ .1.‘ Hm mm“. M cnln
-.l. in...“ .in unnuhhl, m’ Em Z u
+o in limbajul teoriei probabilitétilor media popula'giei este me-
+dia unei variabile aleatoare, X, ale cérei valori sunt sunt cele
+ale indivizilor din populatie; deci E[X] : ,u..
 
-. mi‘ d- “huh! l...“ mm.“ (in-Wm: mum,
-um‘,
+o Media de selec'gie este o statisticéi care estimeazé media pop-
+ula'giei.
 
-. “WHWMINUXm ‘xn.m..m.|.|.¢m-B...|.
-Mm um =1 g.,.m.m1u., 1:: 1.." m. a mm =
-"m",- x.
+o Si presupunem c5 X1, X2, . . . , Xn sunt variabilele din spatele
+fiecérui individ a1 e§antionu1ui, iar x1- este doar o valoare a
+variabilei Xi.
 
-. Mm x, m! a an.“ allalnan m um; mm. c.
-max "Mm "mm-m [x.),","_-u»‘-mm=m
-‘mmmn
+o Atunci X1- este o variabilé aleatoare cu aceeagi distribu'gie ca
+a a lui X. Mai mult, variabilele (Xi)1§i§n sunt independente
+in ansamblu.
 
-. k..‘.wh..n-mm¢ laiimnl c. 1...“ d. “he. pm.
-I mm a n “mm mm...‘ w mm ‘mm: an
-m: M... u um.“ mu m mum nunhmu "I". :ln
-i ‘an. an.“ a: a in: mm. a Mm n. “M11
+o Aceste observatii conduc 1a faptul ca media de selectie poate
+ﬁ vézuté ca o variabilé aleatoare, iar media aritmetic calcu-
+laté pentru un e§antion este una dintre posibilele valori ale
+ei (ﬁecare egantion d5 o alté valoare a mediei de selec'gie).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-. a.“ m.‘ n- .1.qu ... u a...» a...“ n pm
-mm m.“
-mud x“ n; -- ¢ x.] Z
+o Daca media de selec'gie este o variabila aleatoare, ii putem
+calcula media:
+X X X
+n
 1
-1w‘ >x=+ “.1:
-Z Elm Him‘ * mm Z u
-. M. mdii a! “m. ... “in WW
-. Q in“. 4. mum: .. m... “mm, mm“ n
-Panmlhului mum.“
-. m.‘ n. ..|.=\.. .m unulmamxudlphm mm m.
-wnnmii
+z HE[X1+X2+---+Xn] I
+_ E[X1] + E052] + ~ ~ ~ + E[Xn] _
+_ n _ [1,.
+o Media mediei de selectie este media populatiei.
+o O astfel de statistica se numegte estimator nedeplasat a1
+parametrului corespunzator.
+0 Media de selec'gie este un estimator nedeplasat pentru media
+populatiei.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-. mm... ..... “5...... ............ -.. .......= m... ....
-“my... 1.. ..... ... mm m... n... ........... “mm...
-...... 1. ..|..... m... .- “1-...
+0 Formula din deﬁnitia anterioaré este valabilé pentru date
+negrupate. Tn acest caz toate datele din e§antion contribue
+direct 1a calulul mediei de selectie.
 
-. P...“ .... m... .. “1...... . mum ... pm...
+0 Pentru date grupate se folosegte o formulé cu ponderi:
 
-m. -1,
-u Z i
-E I-
-...“ n. .n.m.............v....... dam .. .../. mum...
-.. mm... .... ......... ...... .
+M Z mi * ft
+2ft
+2
+unde mi este mijlocul intervalului clasei z', iar f1 este numérul
+de observatii care apartin clasei i.
 
-. I. m... m...‘ mum...- .... ............. 4...... I. n.
-m... m... ... ...... ....... .... .. 1......“ Mn... ...
-m... a“... 5...»... m... mm... m... NM .,... .....
-a- “1......
+0 in aceasté formulé observatiile nu contribuie direct 1a cal-
+culul mediei; cu toate acestea este o formulé preferaté in
+cazul datelor grupate pentru e§antioane mari ﬁind mai u§or
+de calculat.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-. N. Mam m l. mm. "min: {mm m. mm
-Pm) . mldm a! “m.
+o Ne intoarcem acum 1a deﬁni'gia ini'giala (pentru date negru-
+pate) a mediei de selec'gie.
 
-. Mi“, mi. MM.“ “mm M mam: ,1... m1.
-m. 59mm c. mi a.“ mun: '3 uniln m m
-Wm
+o Variatii mici in suma de 1a numarator nu modiﬁca prea mult
+media. Spunem ca media este stabila 1a varia'gii mici ale
+datelor.
 
-. Wm mm. m 11mm: ,m m. I. Mm‘: m".
-.mw. Mai-1 mm“ w ml Inn- m. in".
-m m. .- m. .Mh. mm m1.
+o Valo'rz'le aberante sau extreme pot avea o inﬂuenta mare
+asupra mediei; introducand o valoare foarte mare sau foarte
+mica media se poate schimba foarte mult.
 
-. Main m.‘ n W1,“ Mun! u. m h mm. m, “M.
-mm.)
+o Media este o func'gie liniaré (1a fel ca media unei variabile
+aleatoare).
 
-. mm, nu h m. n.» [L m m. m um m
+o Deviatiile de 1a medie sunt ($1- — In); suma lor este zero:
 
-Ell- i") : n
+2(15' — in) I 0.
+1'
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-. (mmmmmm s.m\m.mm.m.,.m=m
+0 (Deﬁm'ﬁa variaﬁz'onald’) Se poate arata ca media este numarul
 
-u cm mum.‘ .m WM, 1. mm.
-)jrl. m‘
+M care minimizeaza suma deviatiilor 1a patrat:
+i
 
-. m‘: ‘a .1‘. mm; n- mm]: m ah]: a. min-mm: [A]
+o Exista §i alte tipuri de medie in afara de cea artimetica (A):
 
-mum: anncl (a). mum. Imumcl (m
-a: {72in ‘my: ﬁ
-,¢,_ i
-11 q 1.‘
+media geometrica (G), media armonica (H)
+n
+$1 $2 flin
 
-. s: w-wwm n a min: pm... imam: dinn- a“:
-m‘- .1. mu nnul'vhulllﬂkm/m Win/h‘ lDlm/k‘ m
-unkm/h‘ mum a.“ . k... at.“ .. “um-1
+o s5 presupunem ca o ma§ina parcurge distanta dintre doua
+ora§e de patru ori cu vitezele 80km/h, 90km/h, 60km/h, and
+lZOkm/h, respectiv. Care a fost viteza sa medie?
 
-- Pnhnm mm. “mm: mm, us m1». a. m.
-mm“ n. mm: n Ikm/h
+o Folosim media aritmetica ob'ginem 87.5 km/h; dar media
+adecvata aici este cea armonica: 82.3km/h.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
-- um.“ .n. n "WM mdannll‘ “lulu! m mm a-
-m.“- “mm. Mm.“ u..£=m...d.\.1m¢m.‘m
-m.
+o Mediana este o statisticd ordonatd; calculul unei astfel de
+statistici presupune ordonarea crescétoare a datelor din e§an-
+tion.
 
-anilinn n
-Mm“... (u!) l.“ unlumm m mxylnz ‘m mam am
+Deﬁnition 12
+Mediana (Me ) este 'ualoa'rea din m'lljloc cdnd datele din
+e§antion sunt sortate.
 
-um" M: Mm
+0 Mediana imparte datele din e§antion in doué juméité'gi: 0
+jumétate con'gine datele mai mari sau egale decét mediana,
+iar cealalté jumétate 1e contine pe cele mai mici sau egale.
 
-. mam mm. hm. a.“ "mm. m d0“: 1mm. a
-minim: (wﬂml 4am: m- min m .5“ aux Mm,
-a.‘ mm‘: mm- I. mm. D! c.1- m; ma m 1.1!
+o Valoarea medianei este o observatie sau media a doua obser-
+va'gii (pentru e§antioane de dimensiune paré).
 
-- Viiuixnmdnnn m. n mum“. m mm . mm.»
-n\l [pa-mu mm“. ﬂu dzmulmull uni]
-
-- ci mums: mam .n. mn m» m.“ man-um: a-
-lum-m mm, mm
+0 Ca statisticéi mediana este mult mai pu'gin inﬂuentatéi de
+existenta valorilor aberante.
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:30**************
-1mm“. u
-MM"; “>1 “ll-Mm m m‘ mm“ m. um.“
+Deﬁnition 13
+Médul este obse'r'uagfz'a cea maz' f'rec'uentd din egantion.
 
-. mm an: n'lwm I. .159- mu mm (1... cu u m.
-mm “mm cam mam. m. . mum: m“. cm B.
-"ml-m In»; i milrvilulm mlupnnlﬂw 5' L “mp-m
-wmuni a Mum-m
+o Pentru date grupate se alege mai intéi clasa cu cea mai
+mare frecventé clasa modald. Fie z' indexul acestei clase, a1-
+marginea sténgé a intervalului corespunzétor §i L lungimea
+comuné a intervalelor.
 
-. Mnnu mddll pm. a {mum Inhlmd hlmuh
+o Atunci médul poate ﬁ calculat folosind formula
 
-n- u. 1. ‘1
-m4 Z n, + i
-u. *1. n+0, 71..‘1
-- “mm; uh: cu: mu 1,-4.1. km“: hum-m
+L * - — -_
+(fi — f¢_1)+(fi — fi+1)
+0 Antimédul este cea mai putin frecventé observa'gie.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-- Mi. nam- h "mill mm‘. m.“ mi“ |. mﬂﬂul
+o Mai stabile 1a valorile aberante sunt mediana §i médul.
 
-. m.- “mm cum vilnnl! n I“ no». 5 “mum m
-mmldunlvrilunanpmnudimﬂmh: Mn.“ (“Mn m
-nlhmu] mm: a-r-M)
+0 Media incorporeazé toate valorile §i nu poate ﬁ calculaté in
+cazul datelor grupate pentru distributii deschise (primul, sau
+ultimul interval deschis).
 
-. mam n mm] M m1 1mm hail!
+0 Mediana §i médul nu sunt functii liniare.
 
-. Mm; ..~. [mm m. m mm an. "1,...
+o Médul este calculat mai ales pentru date grupate.
 
-- hm dim-Rum iimllncl mm uln! m m, ".1: ml,
-m. mm mm, mam:
+o Pentru distributii asimetrice médul oferé cea mai realé imag-
+ine asupra tendintei centrale.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-- Diciqinhnnuhunhu 4mm“: min mm“: mm m
-am m. mlluxi pal-m; ma...’ mmhmn u r.“ m.
-"mu-mm:
+o Dacé e§antionu1 contine date foarte mari sau foarte mici me-
+diana este misura preferaté mediei - stabilitatea o face mai
+reprezentativéi.
 
-- Plum aimmm imm- "I. \m' mum. m. lwnvl
-‘=1.
+o Pentru distributii simetrice cele trei misuri sunt aproape
+egale.
 
-. Pnrml amnhllhu' m“ n \unu a. “m.- mm mail! n
-mam; [mi m‘. a
+o Forma distributiei poate ﬁ legaté de relatia dintre medie §i
+mediané; forma poate ﬁ
 
-- "mm: I“ In»; din! 1" < u“
+o asimetricé spre sténga daci in < Me;
 
-- maﬁa a": i, Z m.
+o simetricﬁ dacé in : Me;
 
-. mum m. my‘. m: a, > u!‘
+o asimetricé spre dreapta dacé in > Me;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-. W" h mum- mump- mmn null mlmn u m
-w m. m. nahni mm." n I. mliiina
+o Relativ 1a misurile tendin'gei centrale existé miisum' de poz-
 
-Dinitinn u
+z'pz'e care sunt statistici ordonate ca §i mediana.
+Deﬁnition 14
 
-Cvmulnln "ml “(an {m Wm my“: (mum u)
+Cvartilele sunt 'ualori ca're impart domen'llul (ordonat al)
 
-Mmmz" m pm "gm-m £4.11
+observaﬁilor in pat'ru segmente egale.
 
-- an mmu‘ a,‘ m- n vllam mm 1. m m am"
-nh-m‘; m u] mu "=1. (u u, i (.l m“ 15% m.
-m, min m ‘m
+o Prima cvartilé, Q1, este o valoare astfel in cét 25% dintre
+observa'gii sunt cel mult egale cu Q1 §i cel mult 75% sunt
+mai mari sau egale.
 
-. A m.‘ “mm, Q, .n- w "1m. int-1m m 15!: dinlu
-nhnrvq- m (-1 mu“ "in cu q. v "I Mn 15% “m
-m. “a m ‘=1.
+o A treia cvartilé, Q3, este 0 valoare astfel in cét 75% dintre
+observa'gii sunt cel mult egale cu Q3 §i cel mult 25% sunt
+mai mari sau egale.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-. A um mm“. 9,, .m n "m... an!!! m I» m M.-
-Bums-m um.“ 15:11: cu Q:Dm!mu1\5h%lun\mi|
-maxi m ‘=1. Din m“ m“. . um mm m. “in
-n mnmn m Z Q:
+o A doua cvartilé, Q2, este o valoare astfel in cét 50% dintre
+observatii sunt cel mult egale cu Q2 §i cel mult 50% sunt mai
+mari sau egale. Din acest motiv a doua cvartilé este egalﬁ
+cu mediana: Me : Q2.
 
-- Cnnﬂlh in Blvnnulh "mam m c.1- =1. mdiinu an
-m, "mm-n: m in“ a “m nim- u mm.“ w
-mm lam.“-
+o Cvartilele au proprieté'gi similare cu cele ale medianei. Cea
+mai importanté ﬁind aceea c5 sunt stabile in prezenta valo-
+rilor aberante.
 
-. 5mm,“ urdunii: mm. m.- mm mmm. .k
-m" u... mm mm an.“ nnimnn 1., luv-m
-“m. lg.“
+o Statistici ordonate similare sunt: decilele, percentilele etc.
+Toate aceste statistici impart datele ordonate in sube§an-
+tioane egale.
 
-. m lxullllilu mu nun! am cm mm dihln lmm m
-..[.wmngi|.,n.=..,,.n. "pm-MM 1w, a", ‘when
+o De exemplu existé noué decile care impart datele sortate in
+zece pérti egale, ﬁecare parte reprezenténd 10% din e§antion.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-. Duuiﬂlklnnmini human.“d.\.1m.mdm|.\.\m.= m
-mu: m mm Mild-hum m i unnlbmtlmdimiw
+0 Dupé determinarea "centrului" datelor studiul statistic con-
+tinué cu analiza imprdgstz'em'z' sau a variabilitdtz'z' datelor
 
-- v.1w.|. din "mm- ,m .= 5.1m mun mn- .1. .. m: a.
-m...‘ “mmnlv
+o Valorile din egantion pot $5 difere mult intre ele §i faté de
+valoarea "centralé".
 
-- m...“ 1,. m. mm. “clnllill“(mlﬂll ..\-np....mm:
-mm mm. mm.“ mm. n. mum“ (m m.’
-mil) “mm
+o Misura in care valoare "centralé"/medie este reprezentativéi
+pentru intreg egantionul depinde de variabilitatea (sau dis-
+persia) datelor.
 
-. Elaminnu] in radium“: m" m: mi“ "ma inan-
-lm m mm mm hm a4 "mm mu
+o E§antionu1 are variabilitate mare dacéi existéi valori foarte
+mari sau foarte mici faté de valoarea medie.
 
-- mm“ mm um mum]! m. mm“.- a- a mllun
-mm“ mm: [mm ll mm“) "m 1-“ m: mm-
-a- a m...“ hymn-u.
+o Deoarece avem douéi metode mai importante de a mésura
+tendinta centraléi (media §i mediana) vom avea doué metode
+de a misura impréi§tierea.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-mama“ l5
-“mm 1m Numb mm" m m. mu u m m.
-mm unlun: am Linnbun.
+Deﬁnition 15
+Domeniul este diferengﬁa dint're cea ma’; micd §i cea maz'
+mare 'ualoare din e§antion.
 
-mug: Z mu m.
+mnge : mam — mm.
 
-- mm amp- :cnlh m hush! a“, p. mm n7
-m... “a mm, m w.m..1..\.:m. m... mm"
-[um mm. ﬂnmnid nu m- llvnlunhﬁv “m vu-iilmp
-m“ daillnx
+o Deoarece deﬁnitia aceasta se bazeazé doar pe valorile ex-
+treme, dacé minimul sau maximul este foarte mare respectiv
+foarte mic, domeniul nu este reprezentativ pentru variabili-
+tatea datelor.
 
-- s- “um: "Junk mm“ m n mln-ﬂdlnnliluyn
-“mam.
+o Se observé cé valorile aberante au o influenté directé asupra
+domeniului.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-1.1mm w mllunk VIM-mn- um- “ mm!
+Tncepem cu misurile variabilitétii legate de medie.
 
-- “vim. h\n.m.ai.m\ [1, a.)
+o Deviatiile fatﬁ de medie sunt (2:1- — In).
 
-- u 4m“- [km .m mm (“may cm 1. "mm
-mm [mi may am mm. n- "he.
+o O deviatie (mi —in) este pozitivé (negativé) cénd xi este mai
+mare (mai micé) decét media de selectie.
 
-. m“ a “m I. mm. mm “up” m mi 1m’
-15.. “a. :mmnicl l mm main; m. mm chum:
-inﬂux dumb: .m m‘ n mm n. m. m. m
+0 Pentru a descrie o valoare medie a devia'giilor s-ar putea uti-
+liza media aritmeticé a acestor deviatii. Dar pentru césuma
+acestor deviatii este zero, 0 astfel de medie este nulé.
 
-- Puma: mama: m: ulna] 5mm 1: mm nurilhin ;.
-n.1,.“ a mi- numin: m m1 mm “mm.
+0 Putem indepérta acest efect ridicénd 1a pétrat deviatiile §i
+utilizénd o medie pétraticé in locul uneia aritmetice.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Human m
-uiwusi- wnmizmului, a‘, n ﬁmd mmmmmm Elﬁn’
-mum m.
-le- a)“
-, Z -T‘
-. m“... mm." .m mu...“ .. .... .m h‘: ..
-“m. M rm. M mm mun-:-
-. n.-p.,.....mim.u|u. .......i.‘.=...=.m WWW,
-mm 1mm: m ,=
+Deﬁnition 16
+Dispersia egantionului, $2, n ﬁ'llnd dimensiunea e§an-
+tionuluz', este:
+Tl
+i 2
+2W — $11)
+$2 : 1:1 7
+n — 1
+o Dispersia egantionului este nenegativé §i este zero dacéi §i
+numai dacé valorile sunt toate identice.
+o Dispersia e§antionu1ui este statistica asociaté dispersiei pop-
+ulaﬁez', notaté cu a2.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:39**************
-. Mm, Fm w. .. “mu-1.: [n 7 n n "W m
-Mm". Mani. .mrmlu. ... “h c: mlnl .. mm.
-m...mm,..¢.,h..~
+o Morivul pentru care se utilizeazé (n — 1) ca numitor in
+deﬁni'gia dispersiei egantionului este acela cé astfel se obtine
+un estimator nedeplasat.
 
-. M.“pm-“mumMm.mm.im=il..m.n1
-...
+0 Media dispersiei egantionului (vézuté ca o variabilé aleatoare)
+este
 
-[inn m1 i(»X-)"IX1)
-
-"‘1 1E MT :1 W Z
-
-l l
-Z W Z
+2
+n n n
+E 2 z E 1:1— I E ¥ I
+[5 ] n — 1 n2(n — 1)
+2
+Tl Tl 71
+2E TEX} - 2nXi 2X]- + Z X]-
+— n2(n — 1) —
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:40**************
-—
-21 [nlxg] Jug]; [Ema] HE Exf+igx,x,:|
-i +
-niqxg] “jqxﬂ “jinnm
-Z 4"‘ 1m. n “W *
-niung] “nzmxm;
+TL TL TL TL
+2E [MXE] - 2n 2E [Z Xin] + nE [Z XJ-2 + 2 Z Xin]
+_ 1:1 1:1 1:1 1:1 i<j
+— n2(n — 1)
+TL TL TL TL
+n2 2E [XE] _ 2n 215L353] _ 2n 2 2E [Xin]
+I 1:1 1:1 i:1j¢i +
+n2(n — 1)
+7L
+n 21E [X72] + ZnZE [XZ'XJ']
++ j:l i<j :
+n2('n, — l)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
 —
-"(M uiz [x2] ﬂux! m:
-Z min“ Z
-“m. 7 11 ii [x3] 7 hzzmmm
-)iquﬂilz xy
+n(n — 1) Zn: E [X3] _ 2n 2E [Xin]
+I 1:1 n2(n— 1) Kj I
+n2(n - 1) iE [XE] - 2n 2E [Xi] E [Xj]
+I 1:1 n2(n — 1) Kj I
+I img] — Em? I U2
+n
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-. a.m..m..m,-.<.‘..=.\.ul,...,..“..,..,.....n..m
-1“. ...
-“2* (2%]
-I Z W
-Mum“ .1
-mm . Mm, Mum
-. s. m. u... c: M.‘ an“... WM . .....m,...
+o O formula mai simpla (exerci'giu) pentru dispersia esantionu-
+lui este
+TL TL 2
+$2 z 1:1 1:1
+Deﬁnition 17
+Deviatia standard a esantionului, s, este rdddcina pa",-
+tmté a dispersiez' e§antionului.
+o Deviatia standard a esantionului este un estimator deplasat
+a1 deviatiei standard a populatiei, a.
+0 Se poate arata ca media deviatiei standard a esantionului
+este mai mica decat cea a populatiei, EM < a.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Gun-um (u mllun m mama". lupin n mam m.
-ma mm; cllnx mu m...
-nmnmnn m
-5",.qu rm cixn'i mm nil ‘Wu. a’.
-1 mm, m m. mm! m..." m. “mm,
-2 Q, FYMII “mm,
-z m, mzmnnﬂ,
-4 Q, I 1m mmm
-5 m‘ m mm mm Hz..." 4m mm".
+Continuém cu misuri ale impré§tierii legate de mediané. Mai
+intéi sumarul celor cinci numere.
+Deﬁnition 18
+Sumarul celor cinci numere este campus din
+1. min, cea maz' mica’ 'ualoare dz'n e§antion;
+2. Q1, prima c'ua'rtild;
+3. Me, mediana;
+4. Q3, a trez'a c'uartz'ld;
+5. max, cea mad mare valoare din e§anti0n.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-. ummmmm "mum-mm c110: m1. M..."-
-bummwmﬂ.
-anilinn m
-Cvnniln mune m. vulunvn 4. ma“ mm Wm u
-m a: n 1M :wmll
-7 01+ Q1
+0 O metodé graﬁcé de a reprezenta sumarul celor cinci numere:
+box-and-whz'ske'rs.
 
-m.“ 7 I
-Dmmmnkmnn'nnzhr I.“ .vmm mnmpnmn ,. m
-4H m “mum,
+Deﬁnition 19
+Cvartila medie este valoarea de mijloc dintre prima §1L
+cea de-a tre'ia c'ua'rtilci:
 
-‘an : 0| 7 a‘
+midq I M_
+
+2
+
+Domeniu intercvartilic este diferenﬁa dintre prime, §z' cea
+de-a t'rez'a cvartz'ld:
+
+IQR I Q3 — Q1-
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:45**************
-- Vnkunlr “mm in.“ m1. “M. a". um.“ m- M n
-mum“ mm my“ mmliﬂldl mm“- yum
-.l “mm.
+o Valo'rz'le abemnte sunt acele valori din e§antion care pot ﬁ
+considerate prea mici sau prea mari fa'gé de "tabloul" general
+a1 e§antionu1ui.
 
-- nv»¢-m,vuw1-mmnm Inpnduinammnndimw
-1mm uhlmm m. "1m. m a". .m. a. mllm'l‘ h, DUI
-m v I...“ “mm.
+o Evident, valorile aberante sunt legate de variabilitatea datelor.
+in mod obinuit aceste valori vin din erori de misuréi, dar pot
+avea §i cauze naturale.
 
-- mm»: :cln! vﬂnri :hannn (m: m- mm- n.»
-“mm; ,m n mm». .1.“ "mm Ina-nil a- m. in:
-mm mum:
+o Céteodatéi aceste valori aberante (dacé sunt datorate m5-
+surilor) pot ﬁ eliminate din egantion inainte de orice altéi
+analizﬁ statisticé.
 
-- vum m m: :‘ulx .1. nﬂuminale a mm“, mm".
-mm n mmmm dilnhx l mllnixl m awn Hun.
+o Vom avea doué reguli de determinare a valorilor aberante,
+deoarece §i variabilitatea datelor se misoaré in doué feluri.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:46**************
-. m“ ""1: m. 1m‘: a. m.- M a (an-mm‘. "Ian
-mum in!“ mm 11¢ “am-m1“- a" nu “W. mm!
-vilulni (i, h,i,,+1|]
+o Prima regulé este legaté de medie. Pot ﬁ considerate valori
+aberante acele valori ale e§antionu1ui care nu apar'gin inter-
+valului (in — 25,?” + 25).
 
-. A mi 11M: .. m.“- mh 15.1w: p mu. a a
-"1m m. lam‘: a.“ M mm» "nmmhn [Ox
-li~lGR.Q|+l§ulGﬂ]
+o A doua regulé se numegte regula 1.5 * IQR §i spune c5 0
+valoare este aberanté dacéi nu apar'gine intervalului (Q1 —
+1.5 * IQR, Q3 + 1.5 * IQR).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:47**************
-my,“
+Sfélr§it
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:48**************
-IE hum... n . R P"... R m“. SM»... w w u...
-.... l m...“ ... ...»... znn'r
+@ Freedman, D., R. Pisani, R. Purves, Statistics, W. W. Nor-
+ton 8: Company, 4th edition, 2007.
 
-|3 hm... R. p Km. 51......“ 32mm“. Hum/sun,
-an...‘ ..-“... .... “...... 7m:
+@ Johnson, R., P. Kuby, Elementary Statistics, Brooks/ Cole,
+Cengage Learning, 11th edition, 2012.
 
-l3 Shaw. 1 . may...“ mm... 5...... v..|=... 1m
+@ Shao, J ., Mathematical Statistics, Springer Verlag, 1998.
 
-B 5...... u. R. ._ 1 5...“... m... ....‘ mum: .1
-5...“... 5...“... ...“... 5....- m... ...“. .... ....’
-.... 1m
+[j Spiegel, M. R., L. J. Stephens, Theory and Problems of
+Statistics, Schaum’s Outline Series, McGraW Hill, 3rd edi-
+tion, 1999.
 
 ***************Ending Page***************
 

@@ -1,1160 +1,1314 @@
 ***************Beginning Page***************
 ***************page number:1**************
-n m, 2m
+24 mai 2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-1m: m, minim
-1mm! 1
+Teste de semniﬁca'gie
+Testul Z
 
-mm z ink!!!“ mm mm-
+Testul Z - Inferenté asupra mediei
 
-“mu z’ 1.11m“: mm m... “a mm“. Ehmpln
-mm 'I‘
+Testul Z - Inferen'gé asupra mediei unei popula'gii - Exemplu
+Testul T
 
-1m; T hm“ .mw. m...
+Testul T - Inferenté asupra mediei
 
-mm TV lulu-n“ my“ m.- m, mm‘. V mm“
-Inlnmﬂn alum: = m: Wm“
-1mm 1 mm.“ mm a m‘ mum”)
+Testul T - Inferen'gé asupra mediei unei popula'gii - Exemplu
+Inferen'ge asupra a doué popula'gii
+Testul Z (inferenlge asupra a doué popula'gii)
 
-‘mm 171mm“ mm l m: mndn
+Testul Z - Inferen'ge asupra a doué medii
 
-1mm z' m...“- mm a m; mm. mm“
-mum: mm “mm mum dlIDcIn
+Testul Z - Inferen'ge asupra a doué medii - Exemplu
+Inferente asupra raportului dintre dispersii
 
-1m; F 1mm‘. mm i m: m“;
+Testul F - Inferen'ge asupra a doué dispersii
 
-1mm r 1mm mm i m: mm“ mm“
-Am» 1mm! TV “1mm, mm a em mm,
-Ezbhngvafm
+Testul F - Inferen'gé asupra a doué dispersii - Exemplu
+Anexé - Testul T - inferente asupra a doué medii
+Bibliograﬁe
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Pii m. ‘mi-Wis Wm ahmwxindl 1m M a- "mm
-m:-
-n Sllmmullulclhdwnlipm-l HniH. ".viﬁicclﬂliﬂ
-a.“ n, .m "mu:
-1 s! :luF .m ninl a! “mm! .1 V m dn Illnmﬂclﬁvl
-mum .= m "mm. nun“ i nlﬂmgl H“
-4 s“ cum-.1 mmnn m lcnrd mm“
-5 Sidekrminlvilaamuillcl
-n s. cumvui lcnml m nluim cnhci n‘ an: m uni. In
-mm. u“ i .. incl“: u.‘ mm M .. mm: u.
+Pa§ii care trebuie urmati pentru a intreprinde un test de semniﬁ-
+catie:
+1-2. Se formuleazé cele doué ipoteze: H0 §i Ha: Ha va ﬁ acceptaté
+dacé H0 este respinsé.
+3. Se alege un nivel de semniﬁca'gie a - cét de semniﬁcative
+trebuie s5 ﬁe eviden'gele pentru a respinge H0.
+4. Se calculeazé statistica sau scorul testului.
+5. Se determiné valoarea criticé.
+6. Se comparéi scorul cu valoarea criticii §i, dacé este cazul, se
+respinge H0 §i se accepté Ha, altfel nu se accepté Ha.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-. 'lhlu! z m. un\-l nan-n: “mum-m m.» m
-m naiihcx cm urmuhludinﬂuhn mm“ mm mm
-m.“ mu q. mm‘:
+0 Testul Z este un test statistic asupra ipotezelor utilizat pen-
+tru statistici care urmeazé o distributie normalé atunci cénd
+ipoteza nulé este adevératé.
 
-- mum 'Rnxlmn me- cumin Putuln 1m mm z n
-“um mu nﬂnuhha m! “mm “mm .1" a“.
-mm "mm" man [n > an)
+0 Datorité Teoremei Limite Centrale putem folosi testul Z §i
+atunci cénd populatia este aproximativ normalé, dar doar
+pentru e§antioane mari (n 2 30).
 
-. Am uﬁlnﬂ mi m. nu a- w z m cnul t-xului mum
-,m
+o Am utilizat deja un test de tip Z in cazul testului proporti-
+ilor.
 
-- 'lim z I! him-l v! mm“; mum mum gm
-m." ..m». um nn “numb-m.- n M.“ ‘Mn
-an mmmwm. mm wmhmmmmm.
-“my. a. m Mm:
+o Testul Z se bazeazé pe distributia normalé; pentru e§an-
+tioane mici, acest test de semniﬁcatie poate ﬁ utilizat atunci
+cénd e§antionu1 provine dintr-o populatie normalé sau foarte
+aproape de una normalé.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-. Wm mid.“ n Mm. mm i mi Mai. “=1
-"mm
+o Vom considera o populatie statistical a carei dispersie (02)
+este cunoscuta.
 
-. PM“....!.,m|¢i...m..=.. nurim-lunmnivmn:
-m. m.“ mm"
+o Populatia este normal distribuita §i dorim sa testam o ipoteza
+asupra mediei populatiei.
 
-. M, yuan i mp"... m M pup-.1“ M m. a.»
-mum: mm m m.“ um“, m, a: m
+o Testul poate ﬁ intreprins chiar daca populatia nu este dis-
+tribuita normal, daca utilizam e§antioane destul de mari.
 
-. um u“ m. M.- pﬂpdlhy [Mm-4 m 1m..- “1:1.
-W. ml.,.....m..nd 1%“ ..‘.¢..,.hu.m.m.\
-nun“: HUJ] W
+o Daca ,u,0 este media popula'gigi (presupusa in ipoteza nula),
+atunci urmatoarea statistical M este distribuita normal
 
-. m1 1 m m mm
+0N5
+
+standard: N(0,1).
+
+o Testul Z are loc astfel:
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-. PM,“ mm. M I... Mm. K, m...‘ Wm... i.
-z mm. WM nmmm,"..,M....\..mw,..,..
-a.“ w...“ PM .v. m. W a. M...‘ “mm
-(“mum In Mp) m
-(mmnnaudveumm
-8.: M$Aln [mlmﬁm
--,n...1...m=...mm..<m mm i. m
-"Emma
+1. Formulém z'poteza nulﬁ, care sus'gine c5 media populatiei ia
+o anumité valoare:
+2. Formulém ipoteza alternative? conform informa'gﬁlor ob'ginute
+din e§antion. Putem avea trei tipuri de ipotezé alternativé
+Ha : ,u < ,uo (asz'metm'cd la stdnga) sau
+Ha : ,u, > ,uo (asimet'ricd la dreapta) sau
+Ha : ,u, 73 ,u.0 (simetm'cd).
+Ipotezele asimetrice se mai numesc one-tailed, iar cea simet-
+ricé two-tailed.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-1 A...“ .m M, a. mm". R E (Mm
-. mm.“ mi 1 (mmmm \umhn)
-7 in A,
-‘ * m
-5 mm,“ mm. m. mum“... m. ..
-m“ ,,_ "mm 1. nun (1' < n1‘
-—,.,..,.. H. M...“ 1. 4-,“ <,~ > m‘
-r Z mull-m Z wmu my mm a.
-Imam! (1‘ > D)
+3. Alegem un nivel de semniﬁcatie a E {1%, 5%}.
+4. Calculéim scorul z (statistical testului)
+Z z In _ #0
+(IA/H
+5. Determinéim valoarea criticéi corespunzétoare lui a:
+pentru Ha asimetricéi 1a sténga (z* < 0),
+z* : qnorm(l — a) pentru Ha asimetricé 1a dreapta (z* > 0),
+z* : —qn0'rm(a/2) : qnorm(1— 01/2) pentru Ha
+simetricé (2* > 0).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-a Cam“, "Emanmmm mum, with“
+6. Comparém valoarea criticé cu scorul z; dacéi scorul z apar'gine
+zonez' de respmge're, atunci acceptém Ha §i respingem H0.
+Zonele de respingere sunt:
 
-W, a: WWW‘ 1mm “Mm H. i xulmngum m,
-
-w‘ v1 Fm ,,_ “mm h “m
-
-Pym] M.“ n. aim.“ I. mm.‘
-
-l w. an u m ‘w: Mm n. mm;
-
-Du! .m l .m mm- mm a.‘ mm mm u
-m um Mm, mm m mm a: .mmﬁm, R
-Damn: l “may mum: null [Imzvmvu a! n mlmgl
-an "Wm
+(—oo, z*] pentru Ha asimetricé 1a sténga,
+[z*, +00) pentru Ha asimetricé 1a dreapta,
+* * - ' v
+(—oo, —]z I] LJ Hz ],+oo) pentru Ha s1metr1ca.
+Dacé scorul z nu apartine zonei de respingere spunem 05
+nu erm'std suﬁcz'ente do'uezz' cu m'velul de semm'ﬁcaﬁe a
+pentru a respinge ipoteza nulé (incercarea de a resp'mge
+H0 e§ueazd).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Elm-m
-. u mmi n- ‘Om. .1. 1mm“ can!“ nin m... m; n-
-immﬂu mum“ m mm: a a!‘ “mu cu new-m
-"and": , Z 5911a m.- a- m
-. P-mu an "mm- n 15 a: mm, n an“: n mm 4-
-m, m. mm. valnau lmniﬂnhvl mum: (m. m 1.2m
-a. mmpqv a" m 1% M, 4. numb.‘
-Suluhl
-- s- 9.“ I: mm“ m. “ 5mm. . mu!" pupuhhl
-m mm: dn m ail-ml“ [In : any).
-. wumdmum.wm.m nimmm- numaliizl .1."
-in. "mm mm“. mu :nnnlmllplllum mum“,
-.m m z mm mm
+Ememplu.
+
+o O colonie de §oareci de laborator consta din cateva mii de
+animale. Greutatea lor urmeaza o lege normala cu deviatia
+standard a : 59 §i o medie de 309.
+
+o Pentru un e§antion de 25 de §oareci se gasegte o medie de
+329; este aceasta valoare semniﬁcativa statistic (cu 5% nivel
+de semniﬁcatie)? dar cu 1% nivel de semniﬁcatie?
+
+Solut'be.
+
+o Se pare ca adevarata medie de greutate a intregii populatii
+este diferita de cea aﬁrmata (#0 : 309).
+
+o Stiind ca populatia urmeaza 0 distributie normala §i ca devi-
+atia standard a populatiei este cunoscuta putem intreprinde
+un test Z asupra mediei.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-. mm.“ Mum-M. 1-5“. a- mm“. .. a. u...“
-h:m.:§,n:=§j.:==
-. 1 “mum ivmun m1: I. n ivmu-l “hm...” mm“
-H, u::ln H. uézn
-3 Fm
-‘ 5m‘, ,
-, Z U Z u Z 1
-,Nn s,\/:§
-5 w“... m: .\. ,- Z mm“, '11 Z 1 m w,“
-r. w.
-ﬁ m. , > ,~.m.m..-M.M...M=‘.,.=m,,.=...
-a 15mm: m“ = qullhu M .m M. , m.
+o Colectéim informatiile legate de popula'gie §i de e§antionz
+11,0230,a:5, n:25,fn:32.
+1-2. Formulém ipoteza nuléi §i o ipotezé alternativé simetricé
+H0:,u:30 Ha:,u;£30.
+3. a : 0.05.
+4. Scorul z i
+z_ mn—,u0 _ 32—30 _2
+_ (IA/H _ 5/\/25 _ '
+5. Valoarea criticé este 2* : —qn0rm(a/2) : 1.9599, pentru
+a : 5%.
+6. Cum |z| > |z*|, putem respinge ipoteza nulé, §i $5 acceptém
+c5 adevérata medie a popula'giei nu este ,uo : 30 g.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-- mum “new. mi “a w-“mamm aim a. "magnu-
+o Reluém ultimii doi pa§i pentru celélalt nivel de semniﬁcatie:
 
-5' F-h'u a Z m “mm (mm! an: 1' Z meAlﬂ/I] Z
-1 515!
+5’. Pentru a : 1% valoarea criticéi este z* : —qnorm(a/2) :
+2.5758.
 
-n- Cum m < w‘ “(mmm-=|pn|--M|mw==mq
-m m m1 a. “11.1.5an m.“ “mm. a“; W
-m. Mm a. m mm . mp“. a mum: m. .
-PWnlaﬁmi .m mum: a. in!)
+6’. Cum |z| < |z*|, incercarea de a respinge ipoteza nulé e§ueazé
+cu 1% nivel de semniﬁca'gie (nu existéi suﬁciente dovezi pen-
+tru nivelul de 1% pentru a sustine c5 adevérata medie a
+populatiei este diferité de 309).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-- levmd Gm m inlannlﬁll as“ 1mm. mm mm. cl
-mm. .1. ninthzl a“ .m m, m... m- ma mm...‘
-I pup-mm
-- lmrnn an!!! n. n. all! w... A'nrmuh a mum: mmmn:
-inmmcl \- nxuiph.
-l 1 "m1! “m... n.“
-MHZ“ n. y>zn
-1 n n n5
-‘ 5mm! 1
-I: if!“ : "it;
-I, w. W15
+o Privind din nou informa'giile din e§antion putem observa céi
+media de selec'gie, In, este mai mare decét media presupusé
+a populatiei.
+o intr-un astfel de caz am putea formula o ipotezé alternativé
+asimetricﬁ 1a dreapta.
+1-2. Noile ipoteze sunt
+Hoipz30 Ha:,u,>30.
+3. a : 0.05.
+4. Scorul z i
+z: mn—p0 z 32—30 :2.
+U/ﬂ 5/\/ﬁ
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-5 Vlluixlicriﬂci. r Z wmu a] Z 1 an!‘ mm g Z
-5%
+5. Valoarea criticé: z* : qnorm(1 — a) : 1.6448, pentru oz :
+5%.
 
-n um!“ I > ‘gym-m Vllyllglrpﬂi-iIlldlllllimlyﬂlll
-a mm “mm: = wwmm .n. m; mm ﬂ-n M Z
-Iﬂy
+6. Deoarece z > z*, putem respinge ipoteza nulé §i s5 acceptém
+cé media adevératé a populatiei este mai mare decét ,uo :
+309.
 
-- m“ milk.“ M a. “mum,- um
+o Pentru celélalt nivel de semniﬁca'gie (1%):
 
-5- Mm“ :nhﬁ m- l~ Z mm“ Zn) Z z m:
+5’. Valoarea criticéi este z* : qnorm(1 — a) : 2.3263.
 
-a‘ Dunuum 1 < z“ nu unlum mum mum m1: n m 1m
-n. "mun"! [M m.“ Bur!“ Mum. :u 1%. n...‘ n-
-“mmmvu Ymh'u l nu," n mm“ m,- . ylwulahu:
-m- m. m... an“ lug)
+6’. Deoarece z < z*, nu putem respinge ipotez nulé cu 1% nivel
+de semniﬁcatie (nu existé dovezi suﬁciente cu 1% nivel de
+semniﬁcatgie pentru a sus'gine cé adevérata media a popula'giei
+este mai mare deceit 309).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-- Mcnll mm“ cl ylhu mun: m'llnn a. "mp-
-m“. m cwnchun mm- inn-a M1: m‘. n "mm:
-,m... n mm m1 4. "mm," m m 1m m ml
-1mm,“ M- "n
+o Merita observat ca pentru diverse niveluri de semniﬁcatie
+putem avea concluzii diferite: ipoteza nula poate ﬁ respinsa
+pentru un anumit nivel de semniﬁca'gie iar cu un alt nivel
+incercarea poate egua.
 
-. um mm... “u m- ...an m 1% null a- "m1...
-mm v: 5 mlpnll n m 5n. mm mu. a“: lumen mu
-.m pm. a l-Dmll pinhu 5%‘ m. u pm. n nle-i m.
-mm m
+o Daca ipoteza nula este respinsa cu 1% nivel de semniﬁcatie,
+atunci va ﬁ respinsa §i cu 5%; altfel spus, daca ipoteza nula
+nu poate ﬁ respinsa pentru 5%, nu va putea ﬁ respinsa nici
+pentru 1%.
 
-. Ipm-a mum": m."- Immulaﬂ (nnlnnn daulnx a.“
-mm cm m, < < 1. yunm inrmuh n mm mm
-m: ‘um-“ac: 1. mum‘ n. u » m,‘ (M M. >> z,
-Wm Emu]: n mm: .1~.mm i-mllnzl 1. my,
-n. u < In
+0 Ipoteza alternativa trebuie formulata conform datelor din
+e§antionz cand ,uo << in putem formula o ipoteza alterna-
+tiva asimetrica 1a dreapta, Ha : ,u, > ,uo, cand ,uo >> In
+putem formula o ipoteza alternativa asimetrica 1a stanga,
+Ha I ,u' < lu'O-
 
-. nu: and]: a. "my- nu m. m am a. m. v m .m
-u m: m “mp-m m m: mum: l nﬂvuhhun
-Dullm m-nmnz: and’: .m nuamiflm: “mam m
+. Daca media de selec'gie nu este nici atat de mare §i nici atat
+de mica prin comparatie cu media presupusa a populatiei,
+putem presupune ca media este doar diferita de valoarea din
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:15**************
-1 mum mm 1 mm “mm mum. m i, Z m .v
-.1 Z a [mu-u, Imhdm mvnh dn lummﬁclﬁlu]
+I. Reluati testul Z pentru exercitiul anterior cu in : 27g §i
+a : 6. (Folositi ambele nivele de semniﬁcatie.)
 
-n s- .m: c! mm" uni mum“: minim; m m.“
-h un mm “n n mail! a! :5 a- mm cu , Z l. m
-u...“ ism“.- .mmm “m1 aim-1mm 1m “mm M“
-I. mm \ll'mﬂnillk "mm- h m- 1:, n‘ mm, w
-[Mr-DMZ‘; 1m k.‘ curllﬂmultm' mm .1 Z 5% s- m
-mm. c! "mm-1.1a m: m “m Mm.‘ “Wm.
+II. Se aﬁrma ca studentii unei anumite universitati vor obtine
+1a un anumit test o medie de 35 de puncte cu a : 4. Are
+aceasta aﬁrmatie sustinere stiind ca pentru un esantion aleator
+se obtin urmatoarele rezultate 1a test: 33,42, 38, 37, 30,42?
+Intreprindeti un test corespunzator pentru a I 5%. Se pre-
+supune ca rezultatele 1a acest test sunt normal distribuite.
 
-m Cnnfnlm mm; an". m mm Snnmcl lnl-‘Yimu:
-mm. . km“. m sun (an-i. unnnﬂ n-lnhnni] .n.
-a! a: 1 n cu a mm.‘ “mm (mm: a4 , Z 1.1; m.
-m“ m Ilinﬁnn “um-1mm a! 5n Mum-1mm:
-m ﬂnmnnﬂ “mm mama]: .. Ellllﬂulnlmn! u as 2
-'lhiiﬁ mound m1.‘ a. mum. i ﬁmlim m. 1mm:
-m Imm- m= mm: 4- a: 1,- 5% mu 4- “mp-
+III. Conform National Center for Health Statistics, inaltimea
+medie a femeilor din SUA (care este normal distribuita) este
+de 63.7 in cu o deviatie standard cunoscuta de a : 2.75 in.
+Pentru un esantion aleator simplu de 50 femei care lucreaza
+in domeniul serviciilor medicale se gaseste o inatime de 65.2.
+Testati ipoteza ca media de inatime a femeilor care lucreaza
+in sanatate este diferita de 63.7 in. 5% nivel de semniﬁcatie.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-- 'lhiu! T "um: 1PM!!!" naf-nzl 11mm‘ Iminm n.-
-mmn u numbnhu mam
+0 Testul T testeaza ipotezele statistice pentru statistici care
+urmeaza 0 distributie Student.
 
-- vum lucn! m. mni m. i.“ 1 mm i (ulnﬂin m.
-nn- mm, cu n Vim.‘ “mm m 11.,
+o Vom descrie mai intai un test T pentru a compara media
+unei populatii cu o valoare cunoscuta din H0.
 
-- 'lhiu! 1.. Mun“. .“m' cm Mm madam = mm
-mm (“mm “may m. mum-1.:
+o Testul T se folose§te atunci cand devia'gia standard a popu-
+la'giei (distribuita normal) este necunoscuta.
 
-- u“ \qu r um dn Ilumml mm.‘ clad m... a. = m. m
-‘inhuman m' [n < 1mm"- nupuhhl m. m. mm
-mm! nnnnI-‘l (dm mm- mm thI-Ul]
+o Un test T este de asemeni potrivit cand avem de-a face cu
+e§antioane mici (n < 30) pentru popula'gii care sunt aproxi-
+mativ normale (din Teorema Limita Centrala).
 
-- "mm nun ubul'ihl pm... IDmxl K: 1m nu 1 mm
-mm 1mm mm- um cnmpllmlnhr W nu z
+o Urmand aceste observatii putem spune ca un test T pentru
+media unei popula'gii este complementar unui test Z.
 
-. ham-“mm”! “mm-m r mm mi‘ m.
-pnpnlap :u mm.‘ mum-m:
+o in sectiunea urmatoare descriem testul T pentru media unei
+populatii cu dispersia necunoscuta.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-. mam. w Mi“! M...“ . m‘, m“... m) ...
-“mum
+o Consideram o popula'gie statistica a carei dispersie (02) este
+necunoscuta.
 
-. Phpullmunnnnrmaldinrknnih Mummimﬂ
-mm. .Mnm m, . mm.
+o Populatia este normal distribuita §i dorim sa testam o ipoteza
+asupra adevaratei medii a popula'giei.
 
-. 'lhlul m. n minimal M pupmhl m n dumhllhu
-In.“ mm.“ a! mm mm "mm l. m.’
-4m m. m [mm .. uhhuali un kn z)
+o Testul poate ﬁ intreprins daca populatia are o distributie
+foarte apropiata de cea normala, cand e§antionu1 1a dispoz-
+itie este mic (altfel se utilizeaza un test Z).
 
-. m an -... M.‘ Mm. ‘WWW, b. mm. m1,
-.W, mm.“ nninc: ‘W; ..\. MM: Sm’
-m w (n 41pm- 4- “mm m- 711
+0 Daca #0 este media populatiei (presupusa in ipoteza nula),
+atunci urmatoarea statistica M este distribuita Stu-
 
-. u duh-“Unis! w“.- z mm Manna-m‘...
-.mmmmm ,, m mm.‘ "m..." ,.,...D.,..1w
+5N5
+dent cu (n — 1) grade de libertate: T(n — 1).
 
-. hm 1 M... ant-1
+o O diferen'ga fa'ga de un test Z consta in inlocuirea devia'giei
+standard a popula'giei, a, cu devia'gia standard a e§antionu1ui
+s.
+
+o Testul T decurge astfel:
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-. PM,“ mm... Wm“ n.‘ “mammal
-M. .. a m.“ Mm.
-z mm. WM nmmm,"..,M....\..mw,..,..
-a.“ w...“ PM .v. m. W a. M...‘ “mm
-(“mum In Mp) m
-(mmnnaudveumm
-8.: M$Aln [mlmﬁm
--,n...1...m=...mm..<m mm i. m
-"Emma
+1. Formulém mai intéi z'poteza nuld, care sustine cii media pop-
+ulatiei ia o anumité valoare:
+2. Formulém ipoteza alternative? conform informa'gﬁlor ob'ginute
+din e§antion. Putem avea trei tipuri de ipotezé alternativé
+Ha : ,u < ,uo (asz'metm'cd la stdnga) sau
+Ha : ,u, > ,uo (asimet'ricd la dreapta) sau
+Ha : ,u, 73 ,u.0 (simetm'cd).
+Ipotezele asimetrice se mai numesc one-tailed, iar cea simet-
+ricé two-tailed.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-. mm“ m“ [mm mm
-n. mm I, “h; w < n1‘
-—,,..m n. mm! l. 4...,“ w > n],
-I‘: “(I/1.11 IJZilll IlZn l] vi Iiu
-mun-u‘: [1‘ > n)
+3. Alegem un nivel de semniﬁcatie a E {1%, 5%}.
+4. Calculéim scorul t (statistica testului)
+t z in _ #0
+
+5. Determinéim valoarea criticéi corespunzétoare lui a:
+
+t* : qt(a, n — 1) pentru Ha asimetricéi 1a sténga (23* < O),
+
+t* : qt(1 — a, n — 1) pentru Ha asimetricé 1a dreapta (25* > 0),
+
+t* : —qt(oz/2,'n, — 1) : qt(1— a/2,n — 1) pt. Ha
+simetricé (25* > 0).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-a CHEW“ "Jammnmumm. Mm“ . “in.”
-W, a: "11“an mum “mum n. i xulmngulﬂ an
-(*w‘ w mm. H“ mm,“ la my,
-,2 +m) Mm n. mm": h mam
-l w‘ ‘mum -m1p-.m "A mm:
-nu: .ch l M mm. .m a. mm“. Wm “W cl
-m 11ml Mum mm m "MM a: .mmmm a
-mm l mm 1m... m: [wanna ,1. n mm.
-HI: "Wm
+6. Comparém valoarea criticé cu scorul t; dacéi scorul t apar'gine
+zonez' de respmge're, atunci acceptém Ha §i respingem H0.
+Zonele de respingere sunt:
+
+(—0o, 25*] pentru Ha asimetricé 1a sténga,
+[t*, +00) pentru Ha asimetricé 1a dreapta,
+* * - . v
+(—0o, —]t I] LJ Ht \, +00) pentru Ha Slmetnca.
+Dacé scorul t nu apartine zonei de respingere vom spune 05
+nu erm'std suﬁcz'ente do'uezz' cu m'velul de semm'ﬁcaﬁe a
+pentru a respinge ipoteza nulé (incercarea de a resp'mge
+H0 e§ueazd).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-5mm
+Ewemplu
 
-. Cut-mi. n. cu [mnniﬂ n am“) .. mm“ m .m
-mm M“ III-cimlnlnmxu mm an a Pmcml dn mumps
-m m1 Am‘. w.“ m."- “mm.- “but “mm
-mmmlllliﬁi .1- Cu m gum»- a. 531 mmmnﬂ m- m
-n mum‘.- “mm: a! 1n mm Du: mm.“ a: "1'
-m, “.ympm.“ a. 'm “m ,m. n M...” m: .m‘ mum-
-ahnlﬂ
+o Concentratia de CO (monixid de carbon) se mascara cu un
+aparat numit spectrofotometru care are o precizie de aporape
+100 ppm. Aceste aparate trebuie calibrate zilnic masurand
+concentratia de CO din e§antioane de gaz industrial care au
+o concentratie controlata de 7O ppm. Daca aparatul da val-
+ori "apropiate" de 70 ppm poate ﬁ folosit, daca nu, trebuie
+ajustat.
 
-. Px-mmm a m“: cmnmnlhl “mu! a mum.-
-“ml: m mm mm", m. nlzunmmli 1m n m7
-“m: .1 In m. “mm-m "1m,
+0 Presupunem ca aceasta concentratie urmeaza o distributie
+normala dar deviatia standard este necunoscuta. intr-o an-
+umita zi se obtin urmatoarele valori
 
-5! 11 n M u
+58 71 67 64 62.
 
-- PM nmm inn! viiun m m, m dull 1n‘ an“...
-wrn m.“uni-Fummmpunw Sum-Mm»:
-a inanlul hm.- WW
+o Patru dintre aceste valori sunt mai mici decat 70; putem
+explica aceasta doar pe seama intamplarii? Sau aceasta arata
+ca aparatul trebuie ajustat?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Sukuwn
-. En-vunhilcaiparamni minim“... nlévnm\!|\a
-Wmun u mm mu mm a: u“ : 7n.
-. um Dﬂnulaﬁa mm: D mam! mm“, m numii
-nun“: a mum‘- m mmlcuﬂ puhm mum-min
-.m m 1 mm mi
-. lnlnnnﬂﬂl ummd puuuhya n "mm w, Z 1n‘ , Z
-um, y. 5‘ z. nu
-l z Fuumluzmnlalnulln nu.“IluiDm-Iiklmaﬁﬁnmhid
-u...u:1n m “$70
+Solution
+
+o Este posibil ca aparatul sa necesite o ajustare, deci vom testa
+ipoteza ca media este diferita de ,uo : 70.
+
+o Cum populatia urmeaza o distributie normala, iar deviatia
+standard a populatiei este necunoscuta putem intreprinde
+un test T asupra mediei.
+
+o Informatiile privind populatia §i e§antionu12 ,uo : 70, s :
+4.9295, n : 5, in : 64.4.
+
+1-2. Putem formula ipoteza nula §i 0 ipoteza alternativa simetrica
+H0:,u:70 Hazg¢70.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-1 r. nus
-‘ m.“
-in" “Pm
-l: i Z i Z 1 m
--/ﬁ my“;
-5 v.10..m.q.=m..~: m, 1,‘) :1 Winks-i,
-a m m < r ,mﬁm 4. i "IF-1|! WNW-“mu
-(M m.“ “mm. mi mm WM a. 5w mm .
-......,.\ d .Mm m. ; mm,» m. mm n. 7n
-m.)
+3. a : 0.05.
+4. Scorul t
+i — 64.4 — 7O
+t: M I i I _2.5402.
+s/ﬂ 4.9295/\/5
+5. Valoarea criticé este t* : —qt(a/2,4) : 2.7764, for a I 5%.
+6. Cum It] < \t*\, incercarea de a respinge ipoteza nulé e§ueaz€1
+(nu existéi suﬁciente dovezi pentru nivelul de 5% pentru a
+sus'gine 05 adevérata medie a popula'giei este diferité de 7O
+ppm)-
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-- mm. “him. 1a w; mnmm.“ “am a. umniﬂuhl
+o Reluém ultimii doi pa§i pentru celélalt nivel de semniﬁcatie:
 
-5- m“ u Z 1% m“... mm: .m v Z Zmn/m Z
-mm.
+5’. Pentru a : 1% valoarea criticé este 23* : —qt(a/2,4) :
+4.6040.
 
-5- nun-Z m < w , Damn: a! a mm;- ipm-i m“
-lush‘ [nu mm! luﬁzmnu dmnl mm mvdnl a. m
-llnlluilﬂ-Ihn! cl .dwﬂm-unmum... m- Mm“
-n 1n Wm)
+6’. Deoarece |t| < |t*|, incercarea de a respinge ipoteza nuléi
+e§ueaz5 (nu existé suﬁciente dovezi pentru nivelul de 1%
+pentru a sus'gine céi adevéirata medie a popula'giei este diferité
+de 70 ppm).
 
-- Hui]: mum.‘ <= "hm-i uhimilnx m mi m .m .1 m.
-m .m m “mm an“ m up‘ mm mu: M .
-mun a "mi-ml m w. M1 a. "Maw;-
+o Merité observat cé reluarea ultimilor doi pa§i cu un a mai
+mic nu era necesaré, deoarece, §tim deja, ipoteza nulé nu a
+putut ﬁ respinsé cu 5% nivel de semniﬁcatie.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-- mm m mu h alum m mm Mn mm. =4
-mm. a- .mi‘ z.. m- m. mid M‘ mm mm“:
-i mum--
-. um anhl a. mm.- Mm Immuh u Wm um..."
-mum la “up
-l z mm! W... I...“
-Hm u: 'm u. u< 1n
-z ,Zm
-‘ 5m! z
-z, 7 w u 4 Z 'm
-Z i Z i Z Z1 1
-‘ .m szvs/ﬁ 5'”
+o Privind din nou 1a datele din e§antion putem observa ca
+media de selectie, in, este mai mica decat media presupusa
+a populatiei.
+o Tntr-o astfel de situatie putem formula o ipoteza alternativa
+asimetrica 1a stanga.
+1-2. Noile ipoteze sunt
+H0:,uI7O Ha:#<70.
+3. a I 0.05.
+4. Scorul t
+t: M z w z _2.5402_
+s/ﬂ 4.9295/ﬁ
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-5 v.10“. mhcl m- r Z mm) Z 1 mm 91mm g Z
-5%
+5. Valoarea criticé este 25* : qt(a,4) : —2.1318, pentru a :
+5%.
 
-a mm I < z" pnkum mm“ mumiimdip llimuyﬂm
-an“ mm“ iwwlinli‘iu\lma|micl an“ 'Illwm
+6. Deoarece t < t*, putem respinge ipoteza nulé §i s5 acceptém
+cé media adevératé a populatiei este mai micé decét 70 ppm.
 
-. an “min In!!! 4. .mmv. [1%)
+o Cu celéilalt nivel de semniﬁca'gie (1%):
 
-5- Viiuaxu amid m- u an“! z 1m
+5’. Valoarea criticé este 25* : qt(a,4) : —3.7469.
 
-5- mum 1 > v. m. imam "um. mm. Mu m 1% null
-u umnﬂclhn (M “In: dunn mm“ m. m mu 4.
-.mmﬂs- Dnh'n a mm. c! mm.“ mm: = um‘...
-m m. m.“ mu 1n m
+6’. Deoarece t > 25*, nu putem respinge ipotez nulé cu 1% nivel
+de semniﬁcatie (nu existé dovezi suﬁciente cu 1% nivel de
+semniﬁcatie pentru a sustine cé adevﬁrata media a populatiei
+este mai micé decét 7O ppm.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
-1 u mm. nun-Mun: lulﬁnl c: m. mad-m mam!!-
-m m... n‘ in mm 25 a. mm pl mumuldm mm
-"m. Univ-link: Mm.“ m um.“ mm nhinnl
-a. 1. :2 a. mm‘, 2;.mmm m I. m,- n. "my. 4.
-m m.“- II a Annihn "mm u n mm 11ml-
-ulna “m Mum. mum: mm a xziinlz mm."-
-mmw mm. a Z n m (qullwulum I: “m “nu:
-alum" mm: n mm“! “mm
+I. O asociatie studenteasca sustine ca un student calatoreste
+in ﬁecare zi, in medie, 25 de minute pe drumul catre univer-
+sitate. Universitatea determina un esantion aleator obtinut
+de 1a 32 de studenti. Esantionul are o medie de selectie de
+19.4 minute si o deviatie standard de 9.6 minute. Datele
+acestea sunt suﬁciente statistic pentru a respinge aﬁrmatiile
+asociatiei? Folositi a : 0.01. (Presupunem ca timpul unei
+calatorii urmeaza o distributie normala.)
 
-n Sun- n mm; .m; admin-lummlnl m mm m...’
-m. 4. My ‘m [and u“ “m ham ,5 m. “um: mm
-1mm.‘ a". mun a. ‘in. immi (Gr-“M om. V usA
-mi, smmq Mm“ n M,- “mum: 4! :5:
-mimu 11! an 1m w a mm mam u n Sn! m
-mm“ n m." mlmmh “mm n mm“. mm“
-“mum, un mu mhmc mm alum-n mldm mm
-phlhnilli mm‘ mun‘: mum;-
+II. Se §tie ca tinerii adulti cheltuie saptamanal 40$ pentru man-
+care de tip fast food. Un studiu bazat pe un e§anti0n aleator
+fromat din 1000 de tineri adulti (Greenﬁeld Online - USA
+Today Snapshot) determina o medie saptamanala de 35$
+cheltuiti pe fast food cu o deviatie standard de 14.50$. Pre-
+supunand ca aceste cheltuieli urmeaza o distributie normala
+intreprinde'gi un test statistic potrivit asupra mediei acestor
+cheltuieli pentru intreaga populatie.
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:28**************
-m Lucunﬂdl mu .m mu u a "Jam mm a. msnl s.‘
-mm“. a mminnn- a". my“ “mm-m" in u
-m mldm m, mix! mm “mm-m In lulu-Bu M
-‘um mm ml“ 1M.‘ a". u n. .1!“ m mm.
-“Mu-m M-in lw 4| Illllilil an: mm, cu mm!“
-“mam a! 5m: lnhwnnddi 1m k.‘ mum: v. han
-inﬂux M m a Z 5% [=- w-wm :l mm. mm
-m.‘ “m1 “mum 1
+III. Locuintele dintr-un ora§ au o valoare medie de 88950$. Se
+presupune ca locuingtele din apropierea universitatii au un
+pret mediu mai mare. Pentru a testa aceasta, se folosegte un
+egantion aleator simplu format din 12 case alese in apropierea
+universitatii. Media lor de selectie este 92460$, cu o deviatie
+standard de 5200$. Intreprindeti un test statistic pe baza
+acestor date cu a : 5%. (Se presupune ca preturile caselor
+sunt normal distribuite.)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-. an mm qucldunlu mu cm - m lnhmlk uulm i
-an“: pnnuhh:
+0 Vom discuta procedurile prin care se fac inferente asupra a
+doué populatii.
 
-- Mann cud I. climpilldnﬂpwuhln 1m mm- a. am
-mm“, m. m; din Blcarl mum.-
+o Atunci cénd se comparé doué popula'gii avem nevoie de douéi
+egantioane, céte unul din ﬁecare popula'gie.
 
-- m n nhhntuduuhlyunde mm“. zﬂdlpmnuntunu
-mm.”- mum‘; m “alum-n‘. i um ‘m
-mn- .m dun-mini“ d- mm- mm
+o Pot ﬁ utilizate doué tipuri de egantioane: independente sau
+dependente. Dependen'ga sau independen'ga a doué e§an-
+tioane este determinatéi de sursele datelor.
 
-. a m: m‘. n a Fulani‘ .m shun m M. am n.-
-ml- a: "an... u am n“: mm- m .1- mu m m.-
-1mm. lun\ lam-1- Dink“ a mm. hm. mm m...’
-m: mmw.‘ am. mm“ ‘m m "mining “W
-m.
+o O surséi poate ﬁ o persoané, un obiect sau orice altceva care
+poate d5 na§tere 1a date. Dacé acelagi set de surse sau surse
+inrudite sunt folosite pentru a ob'gine datele pentru amén-
+doué populatiile, atunci avem de-a face cu e§antioane depen-
+dente.
 
-. an: .m m... m... m. m in 1.5m: m.- .1. m...
-m.- Ilmfnin: haw-m... u“ “mph. m‘. chum.
-m“. m.
+o Dacéi sunt folosite surse care nu au legéturé intre ele vom
+obtine e§antioane independente. Un exemplu poate clariﬁca
+aceste idei.
 
-- um m. Mn w..h\../.,.,..m. inn-Wm‘.
+0 Noi vom utiliza populatii/e§antioane independente.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-. s- (unlilBI M nu y-hu MW“ i m: m m» n-
-Mm. .m
-. “mm,” "km. m n my». m m. m: “w
-a- mm! l. mi man-1n mm" “mmw \imv a.
-n 1“: m. .. m. [an mamm- nun“ a Mum.
-mmpmhmunlul m A“ h" pmnum m: Pllnuﬁ
-u n.“ .. \m 9mm. mum a.‘ milm m... mm m n
-may.“ m ‘m: A M mam m; m n m“.- “m
-a“ n m: \m in "m aims-1 mm, n n mm n
-"mm Wm. ,1. a.’ .n. 1 mm Mm u I.“
-u Pb. ii M... n...“ m. u ‘mm M. v. m u
-“W a. v, A .v r. “A,” 4., “F B MM! M .n
-"W .u mmén h ‘.1, , m, a mm. mm u
-h.-
-- mm | m: uh “mum! (mm M Mum“.
-m Dlinul n a: Ilinﬁniu “mm” ("n-1....“ mm)
+o Se concepe un test pentru compararea a doua noi tipuri de
+anvelope auto.
+
+o Automobilele selectate vor ﬁ echipate cu cele doua tipuri
+de anvelope §i apoi conduse in conditii "normale" timp de
+o luna. Apoi se vor face masuratori pentru a determina
+comportamentul lor. Au fost propuse doua planuri:
+
+0 Plan I: Un e§a11ti0n format din ma§ini aIease aleator vor ﬁ
+echipate cu tipul A de anvelope, apoi vor ﬁ conduse timp
+de 0 luna. U11 alt e§antion aleator de ma§ini va ﬁ selectat §i
+echipat cu anvelopele B, apoi vor ﬁ conduse pentru 0 111115
+intreaga.
+
+o Plan II: Fiecare ma§ina dintr-un e§antion aleator va avea 0
+anvelopa de tip A §i o anvelopa de tip B (celelalte doua an-
+velope nu participa 1a test) §i apoi vor ﬁ conduse pentru o
+Inna.
+
+o Planul I ofera date independente (sursele sunt neinrudite),
+iar planul II da e§antioane dependente (sursele sunt comune).
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
+***************page number:31**************
+o Considerﬁm doué populatii statistice ale céror dispersii (of
+§i 0%) sunt cunoscute.
+
+o Populatiile sunt normal distribuite §i dorim s5 testém 0
+ipotezé asupra diferentei mediilor.
+
+0 Dorim $5 §tim, de exemplu, dacé una dintre medii este mai
+micé decét cealalté sau dacé sunt diferite.
+
+o Alegem doué e§antioane aleatoare simple independente cu
+mediile de selec'gie Em §i Eng. Considerém (in condi'giile
+ipotezei nule) cé mediile celor doué popula'gii sunt ,u,1 §i ,LL2,
+respectiv.
+
+o Urmétoarea statisticéi este distribuité normal standard
+
+Z : (E111 — f112) — (p'l _ #2)
+02 02
+\/ r1 + r2
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
-***************page number:31**************
-. Cum-“m m: Wm, ﬂamm- ﬂ. M. mm. (u;
-.. m m. mum.
+***************page number:32**************
+o Putem utiliza testul Z chiar dacé cele doué populatii sunt
+doar aproximativ normal distribuite, dacé cele doué e§an-
+tioane sunt suﬁcient de mari (n1, n2 2 30).
 
-. Phpuhlnh m“ m,» dim-hum! 1. dunm I: mum a
-Wain! my an...“ mm
+o Testul se desfé§oaré astfel:
 
-. um .= “in .1. “mm. m m nimn “a m- m.
-m mu all!“ m M m mm.
+1. Formulém z'poteza nulci, care sus'gine (:5 diferen'ga mediilor
+celor doué popula'gii ia o valoare ﬁxatéi:
 
-. Al‘lm m: “mm- mam" .va mam-mn- cu
-mm. a. ..\-=\.. A .. i,- c“..¢..=m (m mm.“-
-w... “1.1:: mm... uh. m: mm. .m u, , ,,,
-"mm.
+H0 I #1 — #2 I m0
 
-- 11mm“ mm "m mum; mm! mm
+2. Formulém ipoteza alternative? conform informa'giilor ob'ginute
 
-1: (L n) [w m
-{L3 + "i
-\ m m
+din egantioane.
 
 ***************Ending Page***************
 
- ***************Beginning Page***************
+
+***************Beginning Page***************
 ***************page number:33**************
-PM ... “i ‘am a. inmn: ‘mm-w:
-(“Wm m Mm; m
-(mm, 1n maria] m
-H. In Mn ¢ M1 (swam!)
-nan-111 mm.“ .5 m. M.“ m um .. m m...’
-m ~1me
-E Algnm nn mvl] a. "mu-mam a E ("LEW
+Putem avea trei tipuri de ipotezé alternativé
+Ha : ,ul — ,ug < m0 (asz'metr'licﬁ, la stdnga) sau
+Ha : ,u1 — ,ug > m0 (asimetr'licﬁ, la d'reapta) sau
+Ha : #1 — ,ug 7i m0 (simetricd).
+Ipotezele asimetrice se mai numesc one-tailed, iar cea simet-
+ricé two-tailed.
+3. Alegem un nivel de semniﬁcatie a E {1%, 5%}.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
 —
-z Z [=1 i m1
-pink“ 1-1, “mun: h lump (r < n)‘
-—,,.,.m. u, in...“ 1. an,“ (1' > n1‘
+4. Calculéim scorul z (statistica testului)
+z I (5m —fn2) — mO
+5. Determiném valoarea criticé corespunzétoare 1ui a:
+pentru Ha asimetricé 1a sténga (2* < O),
+pentru Ha asimetrici 1a dreapta (z* > 0),
+simetricé (2* > 0).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-a Cam“, "hmmmmm mum, with“
+6. Comparém valoarea criticé cu scorul z; dacéi scorul z apar'gine
+zonez' de respmge're, atunci acceptém Ha §i respingem H0.
+Zonele de respingere sunt:
 
-W, a: WWW‘ “m. “Mm H. i xulmngum 5.,
-
-w‘ v1 y-m ,,_ mm: h “m
-
-Pym] M.“ n. aim.“ I. mm
-
-l w. an u m ‘w: Mm n, mm;
-
-Du! .m l .m mm- mm a! mm mm u
-m um Mm, mm m mm a: .mmﬂmm R
-Denim l “may mum: null [Imzvmvu a! n mm“
-an "Wm
+(—oo, z*] pentru Ha asimetricé 1a sténga,
+[z*, +00) pentru Ha asimetricé 1a dreapta,
+* * - ' v
+(—oo, —]z I] LJ Hz ],+oo) pentru Ha s1metr1ca.
+Dacé scorul z nu apartine zonei de respingere spunem 05
+nu erm'std suﬁcz'ente do'uezz' cu m'velul de semm'ﬁcaﬁe a
+pentru a respinge ipoteza nulé (incercarea de a resp'mge
+H0 e§ueazd).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Chum!“
+Observatii
 
-- Mnna' and mmm-ilmum un mu mm mm I dun!
-wllnmi [.1 m. “1.... "m mmm m “m... m; c!
-H1‘ mam-"m ‘m (I a.» “I: n. hum :n)
+0 Atunci cénd intreprindem un test asupra mediilor a doué
+populatii, cel mai adesea vom presupune, in ipoteza nulé, cé
+cele doué medii sunt egale (i. e., ,ul — ,u2 : 0, sau m0 : 0).
 
-- 5mm. “manna-mam.“ “Mm-“MRI” nnlm
-‘ml-“vuIZn-"mu. 1mm
+0 Sintagma "$5 se testeze mediile" are urmétorul inteles: testém
+H0: #1 —,u,2 : 0 versus Ha:,u,1 75 ,u,2.
 
-. u in: nh-mﬁ! m. x... I: mi- I‘ 5 n a ii mum“
-min! m. mum m [- iv mmm z mm mm. m
-75PM!!!’
+o O alté observa'gie este aceea cé pagii 3, 5 §i 6 ai testului
+curent sunt identici cu cei ai testului Z asupra mediei unei
+populatii.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-51mm
+Ewamplu.
 
-- unmam amknmnlnm ¢.w;mm1m...=m.m.
-“Wm: mm n dump-“mm 4. 1 1 m (a. dm m
-mama. Pllhhcll n m n awn. mam a. u v (=5 a.“
-“Nu-“m. gm“) imam: "mm... mm. 1,4.’
-Pun-m in.» a“. “him-mu! m1," u damn...‘ m
-|- m; m “mm-“m. mam. n. mmm. mun) .. n47
-“mu mm du "1m,- u 1 n 15.: a. an pa Immm.
-mm“.
+o Un studiu arata ca studentii din primul an lucreaza in ﬁecare
+saptamana avand o deviatie standard de 8.7 ore (cei din uni-
+versitatile publice) §i cu o deviatie standard de 8.9 (cei din
+universitatile private). Folosind e§antioane aleatoare inde-
+pendente (unul din universitatile publice de dimensiune 900
+§i unul din universitatile private de dimensiune 1000) se de-
+termina mediile de selectie 16.1 §i 15.2 de ore pe saptamana,
+respectiv.
 
-- ‘(mum-mam“ m“ m nammlunm" um M,
-m =1“ “mm;- a: mm “.1 Mum 5% u m ninl a.
-"mumb-
+o Aceasta diferenta intre medii este datorata §ansei? Daca nu,
+ce alta explicatie ar putea avea? Folositi 5% §i 1% nivel de
+semniﬁcatie.
 
-5.1M‘,
+Solutz'e.
 
-. mm“ m m1. mum, mummy” mm mm.
+o Este posibil ca cele doua medii ale populatiilor sa ﬁe diferite.
 
-. u“ um m: cull m: WW1.“ nrmnu! mum. m,’
-mm, m "whim m. "an". n- “; mm a Mu.
+0 Nu §tim daca cele doua populatii urmeaza distributii nor-
+male, dar e§antioanele sunt suﬁcient de mari pentru a folosi
+"-H J-Anl- r7
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-. mm.mamm.“ﬁwmﬂa/"mimm. m, Zn,
-.n Zn‘ m Z mm 1" Zn“, :n‘ m Z mm
-in, Z 15 1
+o Datele privind cele doué p0pu1a§ii/e§antioane sunt: m0 : 0,
+01 : 8.7, n1 : 1000, Em : 16.1, 02 : 8.9, n2 : 900, and
+mg : 15.2.
 
-l z mm“ inn-n m1: l. w inmn: mun": mm
-an u: mZn n. m mu.
+1-2. Formulém ipoteza nulé §i o ipotezé alternativé simetricé
+H01#1—H2:0 Ha1#1—#2¢0-
+3. a : 0.05.
+4. Scorul z i i
+z z W : 2.2244.
+m + 2
+n1 n2
 
-1 “Zuni
+5. Valoarea criticé este z* : —qn0rm(a/2) : 1.9599, pentru
+a : 5%.
 
-‘ m.“ [V 7 w
-
-ZZ 7 Z m,
-I Z ﬁ Z 1 7m
-I; , Z-
-\m n1
-
-5 m1.“ m: .~. ,~ Wmiﬂ/n um Mm
-. Z 5v.
-
-a mum , > r.Munwmpmnmmh‘“my
-“m cl mm m m: pnpnhhi aim: an...“ dintm
-m... qumﬂm m .Z hm“: mm“;
+6. Deoarece Iz] > If], putem respinge ipoteza nulé, §i s21 accep-
+tém cé mediile celor doué populatii diferé: difereniga dintre
+mediile egantioanelor nu se datoreazé hazardului.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-- m“ mH\N\ 1m .1. Emmi“!
+0 Pentru celélalt nivel de semniﬁcatie:
 
-5' Cu a Z 1% “mm mhcl mu 1' Z mum-(m) Z
-1 515!
+5’. Cu a : 1% valoarea criticé este 21* : —qn0rm(a/2) :
+2.5758.
 
-n- Cum m < w‘ “(mmm-=|pn|--M|mw==mq
-m m m1 a. “11.1.5an m.“ “mm. a“; W
-m. Mm a- m pm... i ml,“ I: mm. :llm' m:
-mum. mm
+6’. Cum |z| < |z*|, incercarea de a respinge ipoteza nulé e§ueazé
+cu 1% nivel de semniﬁca'gie (nu existéi suﬁciente dovezi pen-
+tru nivelul de 1% pentru a sus'gine c5 mediile celor doué
+populatii diferé).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-. PX...” a,“ M Mme“ din .mm PM “hm n
-mm. m,- mam-h. ‘Haw-muhlmb-m. .\.
-m. ...i.. M am. a “h, a". “mm. m“...
+o Privind din nou informatiile din e§antion putem observa cé
+media de selec'gie a studen'gilor din universitéi'gile publice este
+mai mare decét aceea a celor din université'gile private.
 
-. M.mmmmmmMum..m.,m.ﬂ..i,,~.
+o Am putea formula o ipotezi alternativé asimetricéi 1a dreapta
 
-.1 “Maumm
-#1.. WW“ H. “Mm
-3 km
-‘ M1, [V 7 I
-, 1&1, 7"... Z
-.7 1m mu
-W ‘ a
+1-2. Noile ipoteze sunt
+H0I#1—#2:0 Har#1—#2>0-
+3. a : 0.05.
+4. Scorul z i i
+z z —($”1 _ f”) _2 m0 : 2.2244.
+m + 12
+n1 n2
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-5 Viiuaxn “and 1' Wm.“ n1 1544!‘ mm. .,
+5. Valoarea criticé: 21* I qnorm(l — a) : 1.6448, pentru a :
 5%.
 
-s Dunnum . 1 1-. mm rulvmgu W... “u. 1| u ,1’
-up". K: mm Dnmu pup-um; me m. m. m‘ .
-uh: a“ dunl. m mum! nu "mm 11 u 11mm“! Mm
-mu.‘- mﬂ mu dni m; .1. I; u mms- mam:
+6. Deoarece z > z*, putem respinge ipoteza nulé, §i sé ac-
+ceptém céi media primei popula'gii este mai mare decét a
+celei de-a doua: in medie un student 1a o institutie publicé
+munce§te mai mult decét unul de 1a o institutie privaté.
 
-. P-m 1% mu! a. "mmmm
+o Pentru 1% nivel de semniﬁca'gie:
 
-5- Viiuaxu amid m- 1': qnumﬂ .1) Z 1 m:
+5’. Valoarea criticéi este z* : qnorm(l — a) : 2.3263.
 
-5- c“. I < 1-‘ .m Wm mm!- W- m :u m ml
-n- "Wm" (M m“: 1M5 luﬁcmﬂl. m. m mm a.
-mum“ alum: mm." I: mm m.- .m m, m.-
-an: nu a“ 4m)
+6’. Cum z < 2*, nu putem respinge ipotez nulé cu 1% nivel
+de semniﬁca'gie (nu existé dovezi suﬁciente, cu 1% nivel de
+semniﬁcatie, pentru a sus'gine 05 prima medie este mai mare
+decét cea de-a doua).
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:42**************
-1 lvanwmup m m mm z mum. mm“... n, Z
-lnnn
-n s. m <= u cmhgm pm.- ..‘ cm“ mi m. m“ maul
-mm m. K...“ mm“ "hm .1 mum: mm.
-mnuﬂmlnl umvuxmun" mm cullun W m. mm:
-1... m.“ m mummnnnam n. u is! ‘PM... m...“
-mm: m 13.12! [Mm my! Fm") sq m M
-mm“. ﬂmm.‘ Mum .1 Z 5% .i .. Mum. M
-mm"- m-w m. a. mum-mum. mm: ynhu
-m1. a“: mm; a! wl-i
-Pulls:
-Mn m 1n! u m 15 mash mu :x m 1mm um 1:5 m
-PM”
-'n nu an “1211131547!!anva mm u: 5! “Ann unis
+I. Intreprindeti din nou testul Z anterior modiﬁcand n1 :
+1000.
+II. Se §tie ca un colegiu privat are costuri mai mari decat unul
+public. Este aceasta diferenta valabila §i pentru costurile
+manualelor universitare? Aceste costuri per curs urmeaza
+legi normale cu deviatia standard de 18.55$ (pentru colegiile
+publice) and 13.12$ (pentru colegiile private). Se aleg doua
+e§antioane aleatoare; folosind a I 5% $5 se determine daca
+costurile medii per curs ale manualelor §colare difera pentru
+cele doua tipuri de colegii.
+Public :
+
+64.69 89.6 101.49 101.75 103.59 106.38 106.77110.69 118.94 135.94
+Privat :
+
+71.00 96.19 97.14 96.47 98.56 98.94 107.79 112.58 114.00 116.55
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
+***************page number:43**************
+o Gand se compara doua populatii, in mod natural vom pune
+fata in fata parametrii fundamentali ai distributiei, "cen-
+trele" si “imprastierea”, adica mediile si deviatiile standard.
+
+o Am descris deja o procedura pentru compararea mediilor a
+doua populatii folosond esantioane independente, cand se
+stiu dispersiile.
+
+o Exista s1 o alta procedura pentru cazul cand dispersiile nu
+se cunosc. Dar pentru acest caz trebuie mai intai stiut daca
+dispersiile sunt egale.
+
+o Urmatorul pas (logic) va ﬁ compararea deviatiilor standard.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
-***************page number:43**************
-. cum In cumliul mu qulltn. m mad mum vnlll Dunn
-M m m: “mm. inndmmali ii dmnhuhu “W
-ml.“ g. “mpmghmf. m: MM! U mm."- "mam
+***************page number:44**************
+o Procedura de inferenta prezentata aici va ﬁ un test de sem-
+niﬁcatie pentru deviatiile standard (sau dispersiile) a doua
+populatii normale.
 
-. Am am... ‘1-1. n mum: mm mwnanna mam" .
-m: WWW rum-M mum. mama-m‘ Km .-
-n... mm...“
+o Pentru acest test prezumtia de normalitate este foarte im-
+portanta.
 
-. an“: |. n m mum: 11mm‘ a...‘ [m an...“ M
-I! cm“. Du mm m: cu mu. um mm “m m:
-nun-nu]: “m ‘=1.
+o Alegem doua esantioane aleatoare independente (de dimen-
+siuni n1 si n2, respectiv) cu deviatiile standard $1 si $2.
 
-. Unnlwrﬂ v:- (1»ch nﬂ cambinxui mum "mm
+o Consideram ca, in conditile ipotezei nule, adevaratele devi-
+atii standard 01 si 02 sunt egale.
+
+o Urmatoarea statistica este distribuita Fisher
+
+2
+F I “12.
+52
 
 ***************Ending Page***************
 
- ***************Beginning Page***************
+
+***************Beginning Page***************
 ***************page number:45**************
-- an“: n [mm a. emu-1m" n.“ PM... mm“. F
-u ‘mun: pm- m: mm u gm- 4| amm- (m-
-m; mm. a"... mm)
+o Existéi o familie de distribu'gﬁ Fisher. Fiecare distributie F
+se identiﬁcé prin doué numere de grade de libertate (céte
+unul pentru ﬁecare e§antion).
 
-. “mummy .l. Mum... F
+o Proprietavﬂgi ale distributiei F:
 
-n Humuﬂmv.“
-n mun-mm
+o F are valori nenegative;
+o F este asimetricé;
 
-- Plh'u mnmmmn mm "Chum um“:- a- m- du
+o Pentru inferentele din aceasté sectiune numerele de grade de
 
-1am.‘- m- v1 :nrn. v1 dud
+libertate sunt r1 : n1 — 1, r2 : n2 — 1.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-. 'lhlul .5 nullmxxuml.
-. mm“. ‘Mm Mu
-f,
-H, 7? ,1
-2 mm“ nﬂﬂlzm mmmmm.mm-ulmmm
-a.“ mm m“. mm» humid! Wuhhmm
-(mum, 1n mum) Wm m .m ma um
-(Mum mm m. w. m: Mm“
-in“ m“... “m... mm.“ m E k m... .. h ..
+o Testul se desfé§oaré astfel:
+1. Formulém ipoteza nuld:
+2
+a
+H0 I i; I 1
+U 2
+2. Formulém ipoteza alternative? conform informatiilor obtinute
+din egantion. Putem avea douéi1 tipuri de ipotezéi alternativéi
+<71 - - v
+(aszmetmca la dreapta) pentru un un test one-2f
+U 2
+U1 ¢ . ., .
+(sametmca) pentru un un test two-tazled.
+U2
+1Este recomandat ca. dispersia mai mare sau care e de a§teptat sa ﬁe mai
+mare séi ﬁe puséi la numérétor.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-z Algal]: mvllﬂ a. lummﬂclhu n E (1%. m
-‘ mm“, mm; F (1mm...m1m;
-F Z 1,
-)1
-5 mum“ we...‘ mm zulllnunllinall m‘... u
-p- Z uu m n. 1‘ m n mm u. "mm h mm;
-P: Z Elli/1.1“ 7 Mu’ 1).’; Z vain/M 71¢“ 711
-hm H, mm
+3. Alegem nivelul de semniﬁca'gie a 6 {1%, 5%}.
+4. Calculém scorul F (statistical, testului)
+2
+52
+5. Determiném valoarea criticé corespunzétoare pentru a
+F* : qf(1 — a, n1 — 1, n2 — 1) pentru Ha asimetricé 1a dreapta
+F: z qf(Ot/2,TL1 — 117L2— 1)1F; z Qf(1—a/21n1 — 11n2— 1)
+pentru Ha simetricé.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-n Cumvulm nlauu mm cu lcnrd P‘ nan mm F mm
-Mn .11 WW“ m“. “mm u. i "mm "n
-mu- a. "In." “m
+6. Comparém valoarea criticé cu scorul F; dacéi scorul F apartine
+zonez' de respmgere, atunci acceptém Ha §i respingem H0.
+Zonele de respingere sunt:
 
-r" m1 Duﬂm n. mun-i: la mm
-
-(m F3 U [F:,+m] mm u. mm:
-nu: .m] F m. mm. m, n. "mm. .mm I:
-nu lzuzl :uﬁnrvli! Mum m ml/Elul a: 11mm»! a
-m‘... a “Inn! IBM!“ m [Manama a: n "5mg.
-an 51ml!)
+[F*, +00) pentru Ha asimetricé 1a dreapta,
+(0, Ff] U [ng7 +00) pentru Ha simetricé.
+Daci scorul F nu apar'gine zonei de respingere spunem cé
+nu ew'zlstﬁ, suﬁciente dovez'll cu ni'uelul de semniﬁcatie a
+pentru a respinge ipoteza nulé (incercarea de a respmge
+HO e§ueazii).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Ezlmllu
+Ememplu.
 
-. u mm! cam Lmbnmhni hm.“ “=me w.“ a
-milmi m. umnk mm .1. m um. Culllﬂimi mum-
-“ mnhululu nmam Imam , [nu mm ,1) m.’
-mu" n. mm n“. “a. c mm mud: i mn\|\l\||
-u mm: nl 5mm“ hum a mimn m- mu m,
-hm: nu: dim-n.‘ .i. m m" mm. nidl m a".
-w“ mu: m w“ pubs: hum:
+o O companie care imbuteliaza bauturi racoritoare detine 0
+magina care umple sticle de 16 uncii. Compania trebuie
+sa controleze devia'gia standard a (sau dispersia a2) can-
+titatii de bautura din sticle. O medie corecta a cantita'gii
+de bautura nu garanteaza faptul ca ma§ina este bine cali-
+brata. Daca dispersia este prea mare multe sticle vor avea
+prea multa sau prea pu'gina bautura.
 
-. AnhL mm mhui .= m: w ﬂIViihl minim [-u m.’
-m...) m m, m: mm
+o Astfel, ma§ina trebuie sa aiba o deviatie standard (sau dis-
+persie) cat mai mica posibil.
 
-. Gunman: dull‘! I: mm: m: I: "mm.- a mum: 4-
-mm» my mam: I, m. nun:
+o Compania dore§te sa decida daca sa instaleze o ma§ina de
+imbuteliat mai moderna §i mai rapida.
 
-- Unldmnumlnmxlrimnu mi L: um“: mu m" a. 1m,
-mm.“ tux-Fund! uni mm." mai mili‘ m n mm“.
-um. “ mu “mam
+0 Una dintre ingrijorari este aceea ca o viteza mai mare de im-
+buteliere corespunde unei dispersii mai mari, iar 0 asemenea
+cre§tere nu este acceptabila.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-- quducmnu nun mum a. mum“ Imm- d we!“
-.m m- mai m" a.“ m a mm; mum,
+o Producétorul noii ma§ini de imbuteliat sus'gine c5 dispersia
+nu este mai mare decét cea a vechii ma§ini.
 
-. v.1 ‘mm n 25 a. mm mumm- 4- mm m: m
-n mm a! Mm!‘ 1., ‘my =- M Ilinfnn a. :2 .ml.
-mum-Im- 4! m,“ mm m n m"... 4. n mm
+o Un egantion de 25 de sticle imbuteliate de magina noué are
+o dispersie de 0.0018, in timp ce un e§antion de 22 sticle
+imbuteliate de ma§ina curenté are o dispersie de 0.0008.
 
-m4‘!
+Soluﬁe.
 
-- vum m“ mum: um...‘- n. Wm mum": m.
-mm mum a mlpunnh: mini m: mm m 41mm"
-m. a mi mm in B nun-xi. mai m.-
+0 Vom testa améndoué tipurile de ipotezé alternativé: mai
+intéi faptul cé dispersiile celor doué ma§ini sunt diferite, iar
+apoi 05 noua ma§iné are o dispersie mai mare.
 
-- um]: mm" 11 culu ml Yﬂvulihl/Qilxhuinu: m Z :5.
-"I: nnnll. m Z 1:15;)‘:n nun!
+0 Datele relativ 1a cele douéi popula'gii/egantioane: n1 : 25,
+$12 I 0.0018, n2 I 22 §i $22 z 0.0008.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-. z mm. inn-n m: .. n inmn: “mm mm
-,; ,;
-‘1.. E x n. a n
-a “wk”.
-‘ cm.“ m1 F ‘l “mi
-p Z L; Z 1 25ml
-5 v.1m.|.m..m“=_~: a”, '1, MM‘; Z n um; Z
-IIU n/Znu Ln: l) 1 7 3515. mm a r 5%
+1-2. Formuléim ipoteza nuléi §i o ipotezéi alternativéi simetricéi
+2 2
+a a
+H0: igzl Ha: %¢l.
+U2 U2
+3. Alegem a : 5%.
+4. Calculéim scorul F a1 testului
+2
+F z “112 z 2.2500
+52
+5. Valorile critice sunt F: : qf(a/2, n1—1, 722-1) : 0.1LP>27,F;= :
+qf(l — 01/2, n1 — 1, n2 — 1) : 2.3675, pentru a I 5%.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-a nun-Z r Z ‘p; PM" Multan: a- a Mam am...
-“a: "mm an mil m-mmp- [nu-1M! "an-m-
-a"... mm. “iv-M u- s-n mm. a "m".- cl aim...“-
-Z1‘.- m: MW “m Mm.)- “Um-1. “m mm.
-hum“.
+6. Deoarece F G [FS*, F3], incercarea de a respinge ipoteza
+nulé e§ueazé cu 5% nivel de semniﬁcatie (nu existé suﬁciente
+dovezi pentru nivelul de 5% pentru a sustine c5 dispersiile
+celor doué ma§ini sunt diferite): diferentele sunt datorate
+hazardului.
 
-. mm. ulhlnn m- w, pluiluuilhh ml n. "my.
+o Reluém ultimii doi pa§i pentru celélalt nivel de semniﬁcatie:
 
-5- thu r. Z m "m- mhcl m d: .m .mu mu mil!
-P; Z dln/MZWZ‘; Zumy; Z ,IUZMMZ
-1.», n Z a m:
+5’. Pentru a : 1% valorile critice vor da un interval mai mare:
+1-7;: qf(a/2, n1 —1,n2—1) : 0.3294, F; : qf(1—a/2, n1—
+1, n2 — 1): 3.1473.
 
-5- and...“ m. mu; m. Dukm “in! W... “n
+6’. Concluzia este aceeagi: nu putem respinge ipoteza nuléi.
 
-- h m n ll n- mm mmw z v T‘ a": a, nu Z mm-
-pm... .1 Z 5% M .. v. “mi-u- m. pm... .1 Z m (mm
-ﬁmnid: "mp-m u 4,“. m “Mum-“mm;
+o La fel ca §i in cazul testelor Z §i T, dacé H0 nu se respinge
+pentru a : 5% nu se va respinge nici pentru a I 1% (pentru
+05 zona de respingere in a1 doilea caz 0 inglobeazé pe prima).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-. m“ dim. mm. "m. .... m. m. m.
-m 4. "mm Mnnn.u..|dm1m..\ mm.‘
-“mm mm 1. m“
+o Deoarece dispersia primului e§antion este mai mare decét
+cea de-a doua vom intreprinde un a1 doilea test cu o ipotezéi
+alternativé asimetricé 1a dreapta.
 
-. z M m... m.
+1-2. Noile ipoteze sunt
+2 2
+H0: %:1 Ha: %>1.
+U2 U2
+3. Alegem a : 5%.
+4. Scorul testului va ﬁ acelagi
+2
+s
+F : £2 : 2.2500
+52
 
-v? f‘
+5. Valoarea criticéi este F* : qf(1— a, n1 — 1, n2 — 1): 2.0540,
 
-m. a, H. ,),
-
-I’? I’?
-1 Mums“
-‘ hmummht.»
-
-Fzgzmn
-5v.h..!mi..(=....i~:m. u, W 1)::nsw,
-
-Wm“
+pentru a : 5%.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-a mm“ F g \F},+m]‘ mm “mug-m Wumn
-{Y u “ma-mm“ mum mun m- mp- m-
-m. m.‘ nun a mi mu
+6. Deoarece F 6 [Fflﬂ +00), putem s21 respingem ipoteza nulé
+§i s5 acceptém ipoteza alternativé: dispersia noii magini este
+mai mare deceit a celei vechi.
 
-. m“ . Z w.
+o Pentru a : 1%
 
-5- Vahaxum'nclml r al[l .1‘ n. 1‘ m n 1 unm
+5’. Valoarea criticﬁ este F* : qf(1— a, n1 — 1, n2 — 1): 2.8010.
 
-5- c“. F < F.‘ Imm- n . “my mm... m,“ "m:
-m m mvd 4! mum-m (M um"! “mm 4m. m
-m. mm a! m Damn: . mm! I: mm m: i.‘ a
-m.“ m, mm]
+6’. Cum F < F*, incercarea de a respinge ipoteza nulé e§ueazéi
+cu 1% nivel de semniﬁca'gie (nu existé suﬁciente dovezi pen-
+tru nivelul de 1% pentru a sus'gine (:5 ma§ina nouéi are 0
+dispersie mai mare).
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:55**************
-- swim». m: mulls “minke =1. d.“- mm"; (.1;
-n w?) ma nucunnlnnlu.
+o Considerém doua populatii statistice ale caror dispersii (of
+si cg) sunt necunoscute.
 
-. vnnuhum m mm; mnnnun: u 4M i: \||\:m a
-mm "up" mlnmlﬂu madman
+o Populatiile sunt normal distribuite si dorim sa testam o
+ipoteza asupra diferen'gei mediilor.
 
-. pm.» n ‘m 4. “ml... m: m 4m. M. m- my
-mil! m“ mm m ﬂu! m dzﬂmm
+o Dorim sa stim, de exemplu, daca una dintre medii este mai
+mare decat cealalta sau daca sunt diferite.
 
-. Mm. m: ‘inhuman mm" .my|. M.y.mn~. m
-maul. a- “m.- i- n a. i dInihl]! mam n ‘i n.
-"mum
+o Alegem doua esantioane aleatoare simple independente cu
+mediile de selectie Em si EH2 si deviatiile standard $1 si $2,
+respectiv.
 
-- Emmi-rim (mums-‘Human.’ “1!; “mm-“mm:
-yngnlap m m r h, mm"
+o Consideram (in conditiile ipotezei nule) ca mediile celor doua
+populatii sunt ,u,1 §i ,u,2, respectiv.
 
-. Exﬂlui “mm. Illhﬂni a-linn. .1. mm a“: m1! M:
-mm“ "m qu- m mm Ant-l, mnmm .m I. m
-"ma-“k um“! T W". ABM-sum \m m1 r “hm 1.
-m-nmn m... mm |lk=|n1<n
+o Expresia scorulului testului depinde de faptul daca cele douéi
+dispersii sunt egale sau diferite. Astfel, inainte de a in-
+treprinde testul T vorn desf5§ura un test F relativ la
+raportul celor doua dispersii.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-- Mnnu and wk m: mm m .pl- Maw-i “in.
-m m. mum“ M.“ n. (n, , m 11w. a! I.»
-mm
+o Atunci cénd cele doué dispersii sunt egale urmétoarea statis-
+ticé este repartizaté Student cu (n1 + ng — 2) grade de lib-
+ertate i i
 
-‘sun h) m m
-,3: .1 ‘
-V 1T1 * E
-M u, unvn-hmin-i
-' W‘ my‘ 1
+t: (mm — $112) — (/J'l — #2)
+i + i
+n1 'I'Lg
+_ 1 2 _ 1 2
+unde s : i0“ )51 + (n2 )52.
+V n1 + n2 — 2
 
-. an: m: an“: [Inn-1 n...‘ mm‘. mam.‘ mm
-muxwmimlsmnum cu mu. 1‘ m 11mm“
-m‘.
+0 Dacé cele doué dispersii sunt diferite urmétoarea statisticé
+este repartizaté Student cu min (n1 — 1, n2 — 1) grade de lib-
+ertate i i
 
-, Z W
-v/iPi
+t: ($111 — $112) — (#1 — #2)
+5i + i
+n1 7L2
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-h... m... m...
-. PM... W... m... .... M... d sum-n: .........
-a... .... ........... .. . .......... .......
-. mm... M... mm... ...|.... M... ... ....
-PM... .... “i 6.... .. .M... .l.........
-mm... 1. 0......
-(nnmlmzl 1. mum) m
-H. In M$YM (musmll
-......1..i............. ...... mm... ... .......
-..............
-3 Mum mva a4 ummﬁnhn n r (15.5%)
+Testul decurge astfel:
+1. Formulém z'poteza nuld, care sustine cé diferenta mediilor
+celor doué populatii ia o anumité valoare:
+H0 I #1 — #2 I m0
+2. Formulém ipoteza alternativd conform datelor din e§an-
+tioane.
+Putem avea trei tipuri de ipotezé alternativé
+Ha : ,u,1 — ,ug < m0 (asimetm'cé la stdnga) sau
+Ha : ,u1 — ,ug > m0 (asimetr'licﬁ, la d'reapta) sau
+Ha : ,ul — p2 75 m0 (simetricd).
+Ipotezele asimetrice se mai numesc one-tailed, iar cea simet-
+ricé two-tailed.
+3. Alegem nivelul de semniﬁca'gie a € {1%, 5%}.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-. m.“ m“ (mm "m,
-., ham-nun. m.‘ .i.
-M. .= Z “3% h MM. n- ...n. n~
-§hﬂﬂl m- n! : m -'-q z
-h. Mm“. .m “wk
-mm.ﬂ.m¢.m.\.mw mi,“ 7 m 41
+4. Calculém scorul t (statistica testului)
+a) dacéi dispersiile sunt egale:
+t : (Em _ 5112) _ m0
+I $2 $2
+i + i
+n1 n2
+— 1 2 — 1 2 _
+unde $2 : w, 1ar numiirul de grade de
+77,1 + n2 — 2
+libertate este df = n1 + n2 — 2.
+b) dacé dispersiile sunt diferite:
+t : (Em _ 5n2) _ m0
+I $2 s2
+i + l
+n1 77,2
+numérul de grade de libertate ﬁind df : min (n1 — 1, n2 — 1).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-5 Mum.» "hm. mm w.--m=m..
-mm n, mm: h mu. (v < n),
-mm H. mm“ h mm. w > n)‘
-I‘ Z Ulla/14!] Z all! n/Zdl] M ll. mam-d ll‘ ~ n]
-a Can-W“, "mmﬂmmm Mum“ “in.”
-my", ,1! "Wm 3mm mm“, n. u xullimguln u“
-(7m m punllu n“ mum la mngi.
-‘a m) Mm n. in...“ h mm.‘
-ziw‘ *W] U Hﬂwwl m". H. nmﬂnﬂ
+5. Determiném valoarea criticé corespunzétoare
+pentru Ha asimetricé 1a sténga (23* < O),
+pentru Ha asimetricé 1a dreapta (15* > 0),
+pt. Ha simetricé (12* > 0).
+6. Comparém valoarea criticé cu scorul z; dacé scorul z apartine
+zonez' de respmge're, atunci acceptém Ha §i respingem H0.
+Zonele de respingere sunt:
+(-00, 25*] pentru Ha asimetricé 1a sténga,
+[t*, +00) pentru Ha asimetricé 1a dreapta,
+(-00, —|t*|] U [|t*|, +00) pentru Ha simetricé.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Bic: lcnml . nu “5.1m. m- a. mm...- mm u
-m. null Mum. m... m my... a. “mum... .
-,m... i mp"... Wm... m: (Wm... 4. . "WW.
-H. "Wm
+Daca scorul t nu apartine zonei de respingere spunem ca
+nu erm'std suﬁcz'ente do'uezz' cu m'velul de semmﬁcaﬁe oz
+pentru a respinge ipoteza nula (incercarea de a resp'mge
+H0 e§ueazd).
 
-5...»...
+Exemplu.
 
-. mu... mm... Minucaﬁmnl Prhyun (101:9)...an
-‘ma-u. ‘mm... mm...“ m... 1. a...“ m mm?
-“111mm. mvlllihmil um “u... um “mum...
-w- “mm... a. .\..; .... ... n .m s- m. .= mum.
-mm. um “m m...» mm...-
+o National Assesment of Educational Progress (NAEP) moni-
+torizeaza tendin'gele performan'gei scolare. in ﬁecare an NAEP
+desfasoara 1a nivel national teste asupra mai multor subiecte
+pe esantioane de elevi care au 17 ani. Se stie ca rezultatele
+acestor teste sunt normal distribuite.
 
-- 'lhmm-kcnuhlm ammumimumm pm...
-m: "um... .1. mun .1. .1... .m... m... i K...» 4.
-1. m I. :55, Mi‘... mm... .1. “man”... a... w
-r =1‘ m..."
+o Testul de lectura a fost dat in 1990 §i din nou in 2004. Pentru
+doua esantioane de 1000 de elevi scorul mediu a scazut de
+1a 290 1a 285, deviatiile standard ale esantioanelor ﬁind 40
+si 37, respectiv.
 
-. mlmnﬁ: .n. 4. s mm m. m... hinxiﬂhnldnhu
-m. m. . m...“ mm (n Z my
+o Diferenta este de 5 puncte; este aceasta datorata hazardului
+sau este o diferen'ga reala? (a I 1%)
 
 ***************Ending Page***************
 
- ***************Beginning Page***************
+
+***************Beginning Page***************
+***************page number:61**************
+Solujz'e.
+
+o Deoarece populatii sunt distribuite normal, iar deviatiile
+standard ale populatiilor nu sunt cunoscute vom intreprinde
+un test T pentru cele doué medii.
+
+0 Mai intdi intreprindem testul F asupra rapo'rtului celo'r
+douﬁ, dispersii.
+
+o Informatiile legate de e§antioane sunt $1 = 40, n1 : 1000,
+Em : 290, $2 : 37, n2 : 1000, Eng : 285.
+
+2 2
+1-2. H0: 1;:1 Ha: %¢1.
+‘72 ‘72
+
+***************Ending Page***************
+
+***************Beginning Page***************
 ***************page number:62**************
-1 “...”. m Z 1%
-4 mum mm P n munm
-F Z Z; Z , W
+3. Alegem oz : 1%.
+4. Calculém scorul F a1 testului
+2
+F z ilz z 1.0810
+~92
 
-5 v.1w.|. m m. r: ENE/7.1“ 1.", n n “VLF;
-W 4/1,“, 4».an 1771, ,mMZm
+5. Valorile critice sunt F: : qf(a/2, n1—1, 722-1) : 0.81194,F;= :
+qf(1 — 01/2, n1 —1,n2 — 1) : 1.1771, pentru a : 1%.
 
-s Dunnum p e mm; manual u l “my xpwiun
-nu.“ "mm m “a... humming. (“mm ...im...
-mm mm Mm a. m mm . mm. cl m mm
-dun-nu ....“ m...) m.,.,,\mim.di.w...|. uh. M:
-mm“ .n dﬂwiﬂ llﬂmyiim
+6. Deoarece F G [F;‘,F§], incercarea de a respinge ipoteza
+nuléi e§ueazé cu 1% nivel de semniﬁca'gie (nu existéi suﬁciente
+dovezi pentru nivelul de 1% pentru a sustine c5 cele doué
+dispersii sunt diferite); diferenta dintre dispersiile celor douéi
+egantioane este datoraté intémplérii.
 
-. 1,. m. Z Wm W» WWW M ‘1-, dual duprvsn
-M. lg,“
+0 in cele ce u'rmeazc? 'uom presupune c5, cele aloud dispersii
+sunt egale.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:63**************
-. Immune... m... M... r ......... a...“ ma...
-n H. qu. n. v.4.“
-a rm.
-. cm“... ....... . a. .-.......
-.1 L» 1.1 Z ......
-.= .= '
-W“
-n. 1..
-m, ,: 5w sum,
-v .M’.
+o intreprindem acum testul T pentru diferen'ga mediilor.
+1-2- H01#1—#2:0 Har#1—#2¢0-
+3. a : 1%,
+4. Calculéim scorul t a1 testului
+t I L“ _ x”) I 2.9003,
+[s2 $2
+i + i
+77'1 n2
+— 1 2 — 1 2
+unde s I MW I 38.5292.
+n1 + m — 2
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:64**************
-5 Viiuaxu mm r Z vim/1411 Z 151:1, “a! 1/ Z
-MWZ=ZmeZm
-o Dunmm , Z l‘.Puumrllpllqlmnmnnuli‘jliuZ
-minim I: “1! m: mdli luni mhin m" mu I. m“
-unnlmnl muizn 1| mm“. dn “RM: u mum
-. luhlllmdlmimm m. ‘.n m mm.==1\..mm.m.naﬂ
-namin-
-n‘ an m 14::n u. m Ma>n
-5- Wm; amt: .n. r Z 9m Z .411 Z z 1mm. 4/ Z
-m ¢ m 1 ml
-5- c“. z > u Dunn mm!- mm. “m , .= izzlpiim I:
-an: mdil m“. mm mu m. mix! am cu: dn = dun:
-(nu. :mu] "Mm mm . mun
-. mum») A m" mm m n dmlla m: r1
+5. Valoarea critici: 23* : —qt(a/2,df) : 2.5782, unde df :
+n1 + n2 — 2 : 1998 (oz : 1%).
+
+6. Deoarece |t| > |t*|, putem respinge ipoteza nulé, §i $5 ac-
+ceptéim c5 cele douéi medii sunt diferite: intre 1990 §i 2004
+rezultatul mediu a1 testului de lecturé s-a schimbat.
+
+o intreprindem acum un test cu ipotezé alternativé asimetricéi
+1a dreapta:
+
+1-2’- H01#1—H2:0 Ha1#1—#2>0.
+
+5’. Valoarea criticé este t* : qt(1— a, df) : 2.3282, unde df :
+n1+n2—2:1998.
+
+6’. Cum t > 25*, putem respinge ipoteza nulé, §i s5 acceptém cé
+prima medie (din 1990) este mai mare decét cea de-a doua
+(din 2004): rezultatul mediu a scézut.
+
+o (Exerciigiu) A fost necesar acest a1 doilea test T?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:65**************
-1 le-llinlnmmmuniblvlnhdnpumﬂmmmuhdnl
-bum" (mum m; any.“ "SA Why) m. “nﬂm
-"m lkmﬂ hunmlllmidnlnnmik “mam-1. "1m
+I. Femeile au in medie cu 8 perechi de pantoﬁ mai mult decat
+barbatii (conform unui Snapshot USA Today). Un studiu
+recent efectuat 1a un colegiu a determinat urmatoarele valori
 
-y. mm n" nu
-Ham‘, :1 u! u:
-pm, :ln 1m 71!:
-Wm“. dinlu .11. m: "mm. m- m; m". an‘
-a. mum mm mm: n n Z 5% (Pvpnmilu m: m7
-m1.)
+n media dev. std.
+Barbati h 4.43
+Femei 30 26.63 21.83
+Diferenta dintre cele doua esantioane este mai mare decat
+8, testati aceasta ipoteza cu a I 5%. (Populatiile sunt nor-
+male.)
 
-n s. (anndn'l u mu“ may =1 (hm: muiiu i mm mum m
-".- vm .n. ‘=1: m awn din hm u“ nudin a.“
-m7 m: i an “mamm- 'in'-
+II. Se considera de mult timp ca chiria medie a unei masini in
+New York este egala cu aceea din Boston. Un studiu din
+2007 insa a dat urmatoarele valori:
 
-n “a. a" m1
-Emma w v51“ 1sn
->1“me u 1:175 15::
-mum“: mm‘: .msmm... Human‘: ‘am-'7
-rm m
+n media dev. std.
+Boston 7.50
+New York 16 127.75 15.83
+Este aceasta diferenta semnﬁcativa sau este datorata sansei?
+(1 % 5%1
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:66**************
-my,“
+Sfélr§it
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-IE hum... n . R P"... R m“. SM»... w w u...
-.... l m...“ ... ...»... znn'r
+@ Freedman, D., R. Pisani, R. Purves, Statistics, W. W. Nor-
+ton 8: Company, 4th edition, 2007.
 
-|3 hm... R. p Km. 51......“ 32mm“. Hum/sun,
-an...‘ ..-“... .... “...... 7m:
+@ Johnson, R., P. Kuby, Elementary Statistics, Brooks/ Cole,
+Cengage Learning, 11th edition, 2012.
 
-l3 Shaw. 1 . may...“ mm... 5...... v..|=... 1m
+@ Shao, J ., Mathematical Statistics, Springer Verlag, 1998.
 
-B 5...... u. R. ._ 1 5...“... m... ....‘ mum: .1
-5...“... 5...“... ...“... 5....- m... ...“. .... ....’
-.... 1m
+[j Spiegel, M. R., L. J. Stephens, Theory and Problems of
+Statistics, Schaum’s Outline Series, McGraW Hill, 3rd edi-
+tion, 1999.
 
 ***************Ending Page***************
 

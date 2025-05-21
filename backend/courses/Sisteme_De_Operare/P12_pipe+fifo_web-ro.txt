@@ -1,1157 +1,1304 @@
 ***************Beginning Page***************
 ***************page number:1**************
 PROGRAMARE DE SISTEM iN C PENTRU PLATFORMA LINUX (V)
-Comunicaﬁa inter-procese:
+Comunicagia inter-procese:
 Canale de comunicagie anonime §i cu nume
 Cristian Vidra$cu
-vidraschinfo .uaic . r0
-Mai,2021
-1/4‘
+vidrascu©info uaic ro
+Mai, 2021
+1/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-\ntmducere \mroducere
-Carma anunime Canale anonime
-Came cu Hume Ma Crearea \on cu pnmmva plpe
-MOdUl d9 UUHZSFS a me canm QHOVWW
-CB'BC‘E"§“°1E“'““"E PW“ Demo. exemme de cornumcane vae doué process
-ambeletlguvlde canals
-Sabloane de wmumcahe imre Canale C“ nume (Ma) v
-prunese— Crearea ‘DY, CU prlrmnva mkflfO
-Modul d9 unhzare a unw cana\ cu Hume
-Avhcaw ale canalemrde , .
-mumm Despre persistema Wormahw dmir'un hmer m
-DEDSEbiH QB cana\e\or Cu Hume faté (18 DEE anomme
-Helsnnle mm vanes _ _ _ _ _
-Caraclerlstlcl comune penlru ambele llpurl de canale
-Caraclenshci Si VESWCN ale canahehar d9 comumcatie
-Componamemm \mphmt de Up bumm
-Comporlamentu‘ de Up nebmcam
-Sabloane d9 comunicatie intre procese
-Clasmcavea 5ab\car\elur de comunlcaue \nter'prucesie
-Samonul d9 COMUHICGUS unu/rla'unu/
-SHWOUUI d9 COVTHJHICGUS unu/rla'mu/l/
-Sabkmul d9 comunlcaue mu/N-Ia-unu/
-Samonul L19 comunlcahe mu/lv/a'mu/tr
-Aplicalii ale canalelor de comunioalie
-Apucaua #1 mplememarea uﬂm semalor
-Apucaua #2 \mplememarea Una aphcam chem'server
-Hefel'ihle biblioglalice
-Memu de navigare Cumumcatia inter-process: Canme d9 cumumcatie anomme 5i cu nume 2 / 4‘
+A
+lntroducere Introducere
+w Canale anonime
+Canale Cu nume IﬁfOI Crearea Ion-cu pr|m|t|valp1pe .
+_ _ _ Modul de ut|l|zare a unul canal anonlm
+caraCterPSt'C! comune pentru Demo: exemple de comunicatie Tntre doua procese
+ambele tlpurl de canale ’
+Sabloane de comunicatie intre' Canale CU nume (hf?) _ _ _
+grocese Crearea lor, cu pr|m|t|va mkf 1f o
+_ _, Modul ole utilizare a unui canal cu nume
+Apllcatu ale canalelor de . . . . . . . .
+comunicatie Despre per5|stenta informatlel dintr-un f|$|er f/fo
+Deosebiri ale canalelor cu nume fata de cele anonime
+Referinte bibliografice _ _ _ _ _
+Caractenstlcl comune pentru ambele tlpurl de canale
+Caracteristici 5i restrictii ale canalelor de comunicatie
+Comportamentul implicit, ole tip blocant
+Comportamentul de tip neblocant
+Sabloane de comunicatie intre procese
+Clasificarea sabloanelor de comunicatie inter-procese
+Sablonul ole comunicatie unul-la-unu/
+Sablonul de comunicatie unul-la-mu/ti
+Sablonul cle comunicatie multi-la-unu/
+Sablonul ole comunicatie multi-la-mu/ti
+Aplicatii ale canalelor de comunicatie
+Aplicatia #1: implementarea unui semator
+Aplicatia #2: implementarea unei aplicatii client/server
+Referinte bibliografice
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 2/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
+f o
 lntroducere
-‘ij Tipuri de comunicatie Tntre procese:
-anaecunume m . . . . . -
-ZEGQEWmgmm I comunlcatla prln memorle partajata (“shared-memory communication")
-ambeke hguvl d2 canals
-53mmammmamm e.g. prin fi5iere mapate in memorie, sau mapéri anonime si cu nume, $.21.
-Avhoaw we canmewl de
-camumcane
-mum‘ I comunicatia prin schimb d6 mesaje (“message-passing communication")
-— comunicalie localé
-A canale anonime (numite, uneori, si canale interns)
-A canale CU nume, i.e. fiSiGFG ﬁfO (numite, uneori, si canale externe)
-- comunicalie la distanlé
+'Cdl Tipuri de comunicatie Tntre procese:
+W I comunicaﬁa prin memorie partajaté (“shared-memory communication”)
+Wm e.g. prin fisiere mapate Tn memorie, sau mapéri anonime $i cu nume, $.a.
+mm I comunicatia prin schimb ole mesaje (“message-passing communication”)
+— comunicafie loca/é
+A canale anonime (numite, uneori, $i canale interne)
+A canale CU nume, i.e. fi$iere ﬁfO (numite, uneori, $i canale externe)
+— comunicafie la distanfé
 ‘ socket-uri
-Meruu d9 navigare Cornurucatia Nev-process: Canme de ccmumcatie anomme 5i cu nume a / 41
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $1 cu nume 3 / 41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-lntroducere (cont.)
+O O
 
-‘""M'E Un canal de comunicalie UNIX, sau pipe, este o “conducti” prin care pe la un capét
-Came annulme . _ A _ . _ -
+lntroducere (cont)
 
-cmmm mg se scrlu mesajele (ce constau In secvenle de octetl), lar pe la celalalt capat acestea
-@chfsm:WEIPEM sunt citite (cu extractia Ior din canal) — deci practic se comporté ca o structuré de tip
-55mmdecommmm coadé, adicé o listé FIFO (First-In,First-Out).
+'“tmdmere Un canal de ccmunicatie UNIX, sau pipe, este 0 “conducta” prin care pe la un capat
+Canale anonime . . A . . v V
 
-prunese— u . . . _ . _ .
+Canalecunume Iﬁfol se scrlu mesajele (ce constau In secvente de octetl), |ar pe la celalalt capat acestea
+Cafjtegsﬁcisomunelpemw i sunt citite (cu extractia Ior din canal) — deci practic se comporta ca 0 structura de tip
+am ee IQUI'I ecanae ’
 
-A Nota: de fapt, un pipe chlar este Implementat de nucleul UNIX/Llnux ca 0 llsta FIFO, cu o capacItate
-Dhcaw me canmek)! de
+SabloanedeGomunicatielntre coada, adica o lista FIFO (First-ln,First-Out).
 
-M constanté, gestionaté Tn kernelspace
+grocese v _ _ , . . c .
+Aplicatiialecanalelor de Nota: ole tapt, un pipe chlar este Implementat de nucleul UNIX/ Llnux ca o llsta FIFO, cu o capaCItate
+wie— constanta, gestionata Tn kernel-space.
 
-Helermle mbhngvahce
+Referinte bibliografice
 
-Rolul unui canal: o asemenea “conducté” FIFO poate fi folosité pentru comunicare
+Rolul unui canal: 0 asemenea “conducta” FIFO poate fi folosita pentru comunicare
 
-de cétre doué (sau mai multe) procese, pentru a transmite date de la unul la altul (!).
+de catre cloua (sau mai multe) procese, pentru a transmite date cle la unul la altul (!).
 
-Canalele de comunicatie UNIX se impart in doué subcategorii:
+Canalele de comunicatie UNIX se impart Tn cloua subcategorii:
 
-I (Jana/e anon/me: aceste “conducte” sunt create Tn memoria interné a sistemului UNIX
-respectiv, féré niciun nume asociat Ior Tn sistemul de fieiere;
+I cana/e anonime: aceste “conducte” sunt create Tn memoria interna a sistemului UNIX
+respectiv, fara niciun nume asociat Ior Tn sistemul ole fieiere;
 
-I cana/e cu nume: aceste “conducte” sunt create tot in memoria inlerné a sistemului, dar au
-asociate céte un nume, reprezentat printr-un fisier de tipul special ﬁlo, care este péstrat in sistemul
-de fisiere (din acest motiv, aceste fisiere fifo se mai numesc si pipe-uri cu nume).
+I cana/e cu nume: aceste “conducte” sunt create tot Tn memoria interna a sistemului, dar au
+asociate cate un nume, reprezentat printr-un fieier de tipul special fifo, care este pastrat tn sistemul
+ole fieiere (din acest motiv, aceste fieiere fifc se mai numesc $i pipe-uri cu nume).
 
-Meniu de navigare Cornumcatia \mev-procese: Canme de ccmumcatie anomme si cu nume 4/41
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 4/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-\ntruducere \ntroducere
-Cana\e annulme Canals anonime
-Clearea luv‘ cu pnmmva pipe Crearea ‘on cu pnmmva pipe
-MW‘ ﬁe “Ware a “"w mil Modul de unhzare a unm canm anomm
-anomm ~ <
-Demo exemple as Demo. exemme de cumumcane mne doua process
-cumumnans We ma Canme cu Hume (m0)
-pyocese Crearea \cv, cu prlmmva mkfifo
-Canms cu nume m Modul de uhhzare a unm cana\ cu nume
-Camden“ mm Dem Despre Perslstema \nlormahe\ dmirryun nw m
-ambslenwmecanale Deosebm a\e caneﬂebr cu Hume late de ce\e anomme
-Sabloane de oomumcaue Imve Caracleristici comune penlru ambele lipuri de canale
-gvocese Caraclenshci 5i reswchi ale canahehar de comumcatie
-Aphcaula|gcana|ewde Componamemm \mphmf de Up bwcam
-cumumcahe Componamemm de up nebmcam
-Refevmle mbhugraﬂce Sablaane de comunicatie inne procese
-Clashcavea sabmanelor de comumcaue mter'procese
-Samonul de comumcaue unu/rla'unu/
-Samonul de comumcaue unu/rla'rnull/
-Samunul d9 comunlcaﬂe mu/N-Ia-unu/
-Samunul d9 Comunicahe mu/(I'la'mu/U
-Aplicatii ale canalelor de comunicalie
-Apﬁcaha #1 ‘mplememarea unw semalor
-Apﬁcaha #2 \mplementarea we‘ aphcaui chem/server
-Helerinle bibliogralice
-Memu de navigare Cumumcatia inler-procese: Canme d9 cumumcatie anomme 5i cu nume 5 / 4‘
+A
+lntroducere lntroducere
+Canale anonime Canale anonime
+Crearea Ior, cu primitiva pipe Crearea lor, cu primitiva pipe
+Modui de utilizare a unui canal Modul de utilizare a unui canal anonim
+anonim _ . . A c
+Demo: exemple de Demo. exemple ole comunicatie intre doua procese
+comunicatie intre doua I Canale cu nume (fifO)
+FOCGSG . . . .
+p Crearea lor, cu primitiva mkf 1f o
+Canale cu nume (fifo) Modul ole utilizare a unui canal cu nume
+Caracteristici comune pentru Despre pchIStenta informatiei dintr-pn f|$|er flfo .
+ambe|e tiguri de Camaﬂe Decsebiri ale canalelor cu nume fata cle cele anonime
+Sabloane cle comunicatie intre Caracteristici comune pentru ambele tipuri de canale
+Procese— Caracteristici $i restrictii ale canalelor de comunicatie
+Apucaﬁi a|e cana|e|or de Comportamentul implicit, ole tip blocant
+comunicatie Comportamentul cle tip neblocant
+Referinte bibliografice Sabloane de comunicatie intre procese
+Clasificarea sabloanelor cle ccmunicatie inter-procese
+Sablonul ole comunicatie unul-la-unu/
+Sablonul cle comunicatie unul-la-mu/ti
+Sablcnul cle comunicatie multi-la-unu/
+Sablonul ole comunicatie multi-la-mu/ti
+Aplicatii ale canalelor de comunicatie
+Aplicatia #1: implementarea unui semafor
+Aplicatia #2: implementarea unei aplicatii client/server
+Referinte bibliografice
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 5/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
+~ Q
 Crearea lor, cu primitiva pipe
-‘"‘mdm'e Un canal anon/m se creeazé cu ajutorul primitivei pipe.
-CanaIe annulme . .. V
-9mm wmmpipe Interfata acesteI funcIII este urmatoarea ([5]):
-mt P1Pe(1nt *p>
-PW I p = parametrul efectIv de apel trebuIe sa er un vector int [2] , care va fI actuallzat
-CanaIe cu Hume m0) . A .. _
-de funCIle In felul urmator-
-ambeIeIWdeml
-sgﬂgjgedewm“"‘°a“e'""e — p [0] va fi descriptorul de fisier deschis pentru capétu/ de cit/re al canalului
-ijmmuanIIczllcanaIeIm — p [1] va fi descriptorul de fi$ier deschis pentru capétul de scriere al canalului
-Reiennle bIbIIugrafIce _ ,_ ,_
-I valoarea returnata este O, In caz de succes, sau —1, In caz de eroare.
-Efect: in urma executiei primitivei intfds[2];
-pipe se creeazé un canal anonim $i p'pe(fds)‘
-este deschis automat la ambe/e capete — (11 a)
-A . . ~ . . . IéaIiiIIIIIIEUI]IIIIJI‘IQI'III‘ IIIHlQIIYIIiE[I]‘IIIULI971)‘
-In cmre la capatul referIt prIn descrIptorul
-p[0] si, respectiv, in scriere la capétul referit prin descriptorul p[1].
-Men'Iu de navigare CcmunIcaIia ImeI-procese: CanaIe de ccmumcaue anomme SI cu nume 6 l 41
+'“"°du°e‘e Un canal anonim se creeaza cu ajutorul primitivei pipe.
+Canale anonime . . . v
+C rer, err errrrrrrrraeaee lnterfaia acestel funcjul este urmatoarea ([5]):
+Modul de utilizare a unui canal
+greasyexemplede lnt p1p6<1nt *p)
+comunicaiie Tntre doua
+pm I p = parametrul efectlv de apel trebwe sa fle un vector int [2] , care va fl actuallzat
+Canale cu numegfifo) _ A V
+Caracteristicicomune pentru de fUﬁCtle In felu' urmator'
+ambele tipuri de canale
+Sfoﬂgjgedecomunicaﬁemtre — p[O] va fi descriptorul cle fieier deschis pentru capatul de cit/re al canalului
+Qggcuagglzifecana'e'orde — p[1] va fi descriptorul de fieier deschis pentru capatul de scriere al canalului
+Referinte bibliografice v A A
+I valoarea returnata este O, In caz cle succes, sau -1, In caz de eroare.
+EfeCt: Tn urma eXGCUtiei prlmltlvel int wisp];
+pipe se creeaza un canal anonim ei p'pei-fds};
+este deschis automaz‘ la ambele capete — (ir_“—i1)‘—\
+" ' ' v - - - fl—'_1lij {frj E:[IIII], tilif, lie-[1]; 'r,.--.,rrit|191-|[f|:j:5;["1 ], trqu liar-p];
+In c|t|re Ia capatul referlt prln descrlptorul
+p[O] ei, respectiv, Tn scriere Ia capatul referit prin descriptorul p[1] .
+Meniu de navigare Comunicatia inter-procese: Canale de comunicaiie anonime 5i cu nume 6/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
+~ Q
 Modul de utilizare a unui canal anonim
-‘"‘mdm'e Dupa crearea unui canal anonim, folosirea sa pentru comunicalia locala Tnlre doua
-Canaleannmrne I . . . I .A I _
-harem cupnmlwapipe (sau ma| multe) procese se face pr|n scnerea Informa'Iuel In acest canal $I, respectlv,
-mymmede prln cmrea Informatlel dln canal.
-ccmumoauslmredoua . A . . . .
-Mme lar scrlerea In canal $| respectlv oltlrea
-Came cu "me his) :ullinglmnu» I I I I I
-WNW-n ,,¢,l1,=‘,ll.»,l dln canal, prln |ntermed|ul celor dol
-Caraclerlsncl ccmune Denim r ' J ‘ . . . -
-mm (’ \ descnpton p[O] SI p[l] , se efectueaza
-1% ‘ l \Ihmmul- I) la fel ca pentru f|$|ere|e oblanwte,
-a w/ Le. folosmd apelunle read $| wrlte,
-Refenneblbllugrahce P V H d l Fl l' .. . . . .
-‘ me” '9 escr'pm ° ermmgn We sau cu funclllle l/O dln blblloteca stdlo.
+'“tmduwe Dupa crearea unui canal anonim, folosirea sa pentru comunicalia locala Tntre doua
+Canaleanonime . . . I I I A _ _
+Creamaorlcuprimmvapipe (sau mal multe) procese se face pnn scnerea Informajuel In acest canal $l, respectlv,
+Modul de utilizare a unui canal
+gggyexemplede prin citirea informaliei din canal.
+comunicalielntre doua , A . . . .
+procese lar scrlerea In canal $l respectlv c|t|rea
+Canalecu Hume ﬁfo mullingprmiusri . . . . .
+ﬁcteﬂsﬂcimpem HM H III.Wm;W clln canal, prln Intermedlul celor dol
+am ee i uri ecanae I ' ' ' V
+ﬁ% Q’ _ “I descrlpton p[O] $l p[1] , se efectueaza
+,a oane ecomunlcale |n re ijrlpt‘ . . . .
+P— LEI-min“ Hf I Ia fel ca pentru flelerele oblenwte,
+Aplicalii ale canalelor de —-_—-'-'III—I" . . . . .
+whe— ‘L1H 11"" I /.e. folosmd apelurlle read $| wrlte,
+Referinte bibliografice P H d ' l Fl l' ' .. . . . .
+ma“ '5 escrlpnrs U mm mg U p'pa sau cu funcfulle l/O dln blblloteca stdlo.
 * * *
-Restrict/‘e importanta:
-Deoarece acest tip de canale sunt anon/me (i.e., nu au nume), pot fi ulilizate pentru
-comunicatie doar de catre procese “inrudite” prin apeluri fork/exec.
-De ce? Motivatia este urmatoarea: . . . (vezi slide_u| urmator)
-Menlu de navigare CcmuﬂlcalialﬂleY-WOCBSBI Canals de ccmumcaue anorume slcu nume 7/4‘
+Restrict/e importanté:
+Deoarece acest tip de canale sunt anonime (i.e., nu au nume), pot fi utilizate pentru
+comunicalie doar de cétre procese “lnrudite” prin apeluri fork/ exec.
+De ce? Motivalia este urmatoarea: . . . (vezi slide-ul urmator)
+Meniu de navigare Comunicatia inter-procese: Canale de comunicalie anonime 5i cu nume 7/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Modul de utilizare a unui canal anonim (cont)
-‘"‘mdm'e Mot/valie: pentru ca doua (sau mai multe) procese sa poata folosi un canal anonim
-Canaleannmme . A _ _ V _ .. _ _
-Omam cupnmmvapipe pentru a comumca Intre ele, acele procese trebme sa alba la dlspozme cel dOI
-mymmede descrlptorl p[0] sl p[1] obtlnutl prln crearea canalulw. Dem procesul care a creat
-pm canalul pnn apelulp1pe,vatrebu|sa|e transmlta cumva celullalt proces.
-Canals cu nume hi0)
-Zaﬁ;fl‘sl“‘§‘;@§"§.§e""“ De exemplu, in cazul cand se doreste s5 se utilizeze un canal anonim pentru
-m p ,. n
-53mmdewmmauem comunicarea intre doué procese de tipul parinte-ﬁu, atunci este suficient sa se
-Aplmamlecanalem apeleze primitiva pipe de creare a canalului inaintea apelului primitivei fork de
-WWW m creare a procesulul ﬂu. In acest fel, pnn clonare, avem la dlspozme $| |n procesul ﬂu
+~ '1
+Modul cle utilizare a unui canal anonim (cont)
+'“tr°d“ere_ Mot/valie: pentru ca doua (sau mai multe) procese sa poata folosi un canal anonim
+W pentru a comunica Tntre ele, acele procese trebuie sa aiba Ia dispozilie cei doi
+rindipldl descriptori p[O] $i p[1] oblinuli prin crearea canalului. Deci procesul care a creat
+ZFQZZZaﬁemedm canalul prin apelul pipe, va trebui sa le “transmita” cumva celuilalt proces.
+Canale cu nume gfifo)
+Zirﬁlifiisﬁﬁﬁiriiﬁiliemw De exemplu, Tn cazul cand se dorecte s51 se utilizeze un canal anonim pentru
+Srabloanedecomumcalemtre comunicarea Tntre doua procese de tipul parinte-fiu, atunci este suficient sa se
+m apeleze primitiva pipe de creare a canalului fnaintea apelului primitivei fork de
+RT—tLb|f— creare a procesului fiu. ln acest fel, prin clonare, avem Ia dispozilie $i Tn procesul fiu
 cei doi descriptori necesari pentru comunicare prin intermediul acelui canal anonim.
-QM M Noté:
-ldlUl mm mm mm H . H . . .
-Transmlterea descrlptorllorcanalulul
-» are loc si Tn cazul apelului primitivelor
-We
-exec (deoarece descriptorii de fisiere
-Valium MW, d es chi s e s e m °$t en esc prin exec).
-Menlu de navigare Ccmunlcatia lﬂleY-WOCBSBI Canals de ccmumcaue anomme SI cu nume 8 l 41
+parent 0th Nota':
+W0) W m) mm “Transmiterea” descriptorilor canalului
+| LL: l are Ioc $i Tn cazul apelului primitivelor
+exec (deoarece descriptorii de fi$iere
+Fi'edesmpwrsmra"“dimrypipe “mm” deschise se moctenesc prin exec).
+Meniu de navigare Comunicatia inter-procese: Canale de comunicalie anonime 5i cu nume 8/41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-mm“ A/fé restrict/e: Figura 1 - un canal anunim, 'rmediat dupé apelul pipe:
-Came annmrrre . A . _ "Q'PWW \Lw MP8‘
-Grammy mnmpipe Daca un proces Isl Inchlde vreunul dIntre - n, -
-| . | . t . m, fdn! mm mm
-mg “mm 7 capete e unur cana anonlm, a un0| nu \ / \
-ﬁligammm“ mai are nicio posibilitate de a redeschide //H\
-CMQMMWWO“ ulterior acel capét al canalului. I I.
-Caramensncr Comuﬂe Denim
-amberermem. r * * km.
-Sabloane de wmumcaue "We
-Dvocese Frgula 2 , urr canal ancmm dupé apelul mm; Frgula a - un canal anunim, dupé cuntigurarea “unul-\a-unul":
-Aphcatu a\e cana\e\or de Wm“ ‘Md Pam“ ‘Md
-—>
-\\\ // 1 V\\ ///
-\ ///><\\ 1/ ///\\\,
-\ / \\ // /"' \_\
-\C-ﬁ
-kernel kvrnK-l
-Noté: vom vedea ulterior cé aceste doué restrictii de folosire a canalelor anonime nu
-mai sunt valabile si in cazul canalelor cu nume (l).
-Menru de navigare 9 l 41
+Intmducere A/té reStriCIIIe: Figura 1 — un canal anonim, imediat dupa apelul pipe:
+CanaIe anonime I A I I USETPIIEESEI 1.1551‘ I'IJCE'SE
+Crearea lor, cu primitivapipe DaCa UH prOCeS ISI lﬁChlde VFGUHUl dlntre - m
+' . - - fr][-El]' fd['l.] Edi-El] [6E1]
+
+Demexemplede capetele unu| canal anonlm, atun0| nu f, a
+
+. -. g’ we
+comunica ie in re doua - - - - - - . f ‘~
+eeeee l t mal are n|c|o pOSIbllltate ole a redeschlole f, H\
+Ca"a'e°“““me””°> ulterior acel capat al canalului. I I.
+Carac eris ici comune en ru
+ambeltetiptiride canalrlreJ t * * * kernel
+Sabloane de comunicaiie intre
+Diocese Figura 2 — un canal anonim, olupa apelul fork: Figura 3 — un canal anonim, dupa configurarea “unul-la-unul”:
+Aplicaiii ale canalelor de parent Child parent Child
+Referinle bibliografice fd [Ell Eli [11 Eli [U1 Ed. [11 flﬂ [II f-ﬂ [UI
+
+‘HR .r
+fr "a
+kernel kernel
+Nota': vom vedea ulterior ca aceste doua restriclii de folosire a canalelor anonime nu
+mai sunt valabile $i in cazul canalelor cu nume (l).
+Meniu de navigare 9/41
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-Demo: exemple de comunicalie intre doué procese
-‘"‘mdm'e I Exemplul #1: un program care exemplifica modul de utilizare a unui canal anonim
-Canals annnrrne I I II V . II
-9mm cupnmlwapipe pentru comunlcana Intre doua procese, de tlpul producator-consumator.
-Moduldeullllzarsaunulcanal A I _ I I I I I I I II
-gwyexemde In acest exemplu se llustreaza foloswea prlmltlvelor read $| wrlte (I.e., funclllle
-Z7lil§““e‘""e“°"a din APl-ul POSIX) pentru a citi din canal, respectiv pentru a scrie in canal.
-Canals cu Hume hi0) . . v .
-or» A SB vedea f|$|eru| sursa P1Pe_eX1-C ([2])-
-ambele \rgun de canale
-51:2? “e WWW "\"e WWI WWII, Efectul acestui program: mai intai se creeazé
-Aplrcalualecanalelorde WWII rmlrfm‘ \ ,/ - un canal anonim si un proces fiu. Apoi, procesul
-M l W l lI W parinte citeste o secventa de caraclere de
-mam‘ lil 4> ‘LII (‘l 4> l1 la tastatura, secvenla terminata cu combinalia de
-r I,l Il taste CTRL+D (Lea, caracterul EDF In UNIX), 5| le
-_" r,r-I:lrw ‘4 transmite procesului fiu, prin intermediul canalului
-““"""""“' "“"““""“ anonim, doar pe acelea care sum Iitere mici. lar
-41 um rnmr Ill :Uk'r mm“; \|||\A\<‘<|1|\*\<’riplllr~ . . . .
-SIM IIIII W II “madam m I mm “Md procesul flu olteste dln canal caracterele trasmlse
-de procesul périnte si le afiseazé pe ecran.
-Observatie: pentru explicatii suplimemare despre acest program demonstrativ, consultali exemplul
-[FirstDemo — pipeiex1] din suportul online de laborator ([3]).
-Menru de navigare Ccmunrcatia rmer-procese: Canals de ccmumcaue anonrme SI cu nume 10 l 41
+~ Q
+Demo: exemple de comunicalie intre doua procese
+lntroducere . ' ' " ' ' ' '
+I Exemplul #1 . un program care exempllflca modul cle utlllzare a unw canal ancnlm
+Canale anonime . . A v . v
+C rer, err errrrrrrrreeree pentru comunlcajua lntre doua procese, ole tlpul producatcr—consumatcr.
+Modul de utilizareaunui canal A . V . . . . . _ . ..
+gggyexemplede In acest exemplu se |lustreaza fclcswea prlmltlvelor read $l wrlte (/.e., funcjulle
+comunica ie Tn re doua - - - - - - A
+ereeeee t t clln APl-ul POSIX) pentru a c|t| clln canal, respectlv pentru a scrle |n canal.
+Canale cu nume (fifo) . I v .
+Caracteristicicomune pentru A se Vedea fl$lerUI sursa plpe—eX1 ° C ([2])'
+ambele tiQUl'i de canale
+Sabloane de comunicaﬁemtre Efectul acestui program: mai lntéi S€ creeaza
+Emcese . .. .
+Aplicawalecanalelorde m“ _n un canal anonim $i un proces fiu. Apoi, procesul
+wie— rrrerr ) < rrrrre parinte citeste o secventa ole caractere ole
+W .. )—.. “I l‘]—- )\ la tastatura, secventa termlnata cu comblnajua de
+( ) I) taste CTRL+D (i.e., caracterul EOF in UNIX), $i le
+\_‘ -"/ transmite procesului fiu, prin intermediul canalului
+""i'l" "Mk" anonim, cloar pe acelea care sunt litere mici. lar
+a} Afterﬂrrkf'_,l hIflAftﬂr clus'mg unused descripturs I f. .t t din n I r t r I tr m.
+Selling upcl pipelc lrunsfardclc: Frcmu purenlhanchild procesu IU Cl eS e I ca a ca aC e e e as lse
+cle procesul parinte $i le afi$eaza pe ecran.
+Observalie: pentru explicalii suplimentare despre acest program demonstrativ, ccnsultati exemplul
+[FirstDemo — pipe_ex1] din suportul online cle laborator ([3]).
+Meniu de navigare Comunicatia inter-procese: Canale cle comunicalie anonime 5i cu nume 10/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Demo: exemple de comunicalie intre doué procese (cont)
+O O
+Demo: exemple de comunicatie intre doua procese (cont)
 
-‘"‘mdm'e Pentru comunicatia prin intermediul canalelor anonime se pot folosi sl funcliile l/O de nivel lnalt:
+'“tmducere Pentru comunicatia prin intermediul canalelor anonime se pot folosi $i functiile l/O de nivel inalt:
 
-Canals annulme
+Canale anonime
 
-lcltfﬁfllifl‘T313515; I Exemplul #2: un alt program care exemplifica folosirea unui canal anonim pentru
+Crearea or, cu rimiiva i e . . v . . .
 
-WW
+Moat-id;utilizafealnuﬁaiai I Exemplul #2: un alt program care exempllflca foloswea unul canal anonim pentru
 
-m“ WM 7 comunicatia lntre doué procese, de tipul producétor-consumator.
+foeguogijaxgjgfrjgoué * comunicatia intre doua procese, de tipul producétor-consumator.
 
-cumunlcalls lnlre doua l
+:“ese De aceasta data, se utilizeaza functiile fscanf $i, respectiv, fprintf (i.e., din
 
-“we De aceasta data, se utilizeaza funcliile fscanf si, respectiv, fprintf (i.e., din
+anale cu nume (fifo)
 
-Canals cu Hume (Mo
+Caracterislammpemw biblioteca stdio) pentru a citi din canal $i, respectiv, pentru a scrie in canal.
 
-CalaclelslaWWW biblioteca stdio) pentru a citi din canal $i, respectiv, pentru a scrie in canal.
+ambele tiQuri de canale
 
-ambsle “W. de canale
+Sabloanedecomunicatetnre A se vedea fisierul sursa pip€_€X2 . c ([2]).
 
-53mmdemmmim A se vedea fisierul sursa pipe_ex2 . c ([2]).
+QFOCGSG s
 
-Wise ,
+fjr'rifuarﬁizjfecana'e'°rde Nota: in acest caz, este necesara conversia descriptorilor de fisiere de la tipul int (i.e., descriptorii
 
-fffjf'cjlca"a‘e‘“'de Nola‘: in acest caz, este necesara conversia descriptorilor de fisiere de la tipul int (La, descriptorii
+Referimebibuograﬁce folositi de apelurile l/O din APl-ul POSIX) la descriptori de tipul FILE>I< (i.e., descriptorii folositi de
+functiile l/O din biblioteca stdio), lucru realizabil cu ajutorul functiei de biblioteca fdopen.
+Efectul acestui program: mai intai, se creeaza un canal anonim $i un proces fiu. Apoi, procesul tata
+citeste o secventa de numere de la tastatura, secventa terminata cu combinatia de taste CTRL+D
+(i.e., caracterul EOF in UNIX), $i le transmite procesului fiu, prin intermediul canalului anonim. lar
+procesul fiu citeste din canal numerele trasmise de procesul parinte $i le afiseaza pe ecran.
+Observatie: pentru explicatii suplimentare despre acest program demonstrativ, consultati exemplul
+[SecondDemo — pipe_ex2] din suportul online de laborator ([3]).
 
-Rehnmemmwm folosili de apelurile l/O din APl-ul POSIX) la descriptori de tipul FILE* (Le, descriptorii folositi de
-funcliile l/O din biblioteca stdio), lucru realizabil cu ajutorul funcliei de bibliotecé fdopen.
-Efeclul acestui program: mai Tntéi, se creeaza un canal anonim si un proces fiu. Apoi, procesul tata
-cileste o secvenla de numere de la tastatura, secvenla terminata cu combinalia de taste CTRL+D
-(i.e., caracterul EOF in UNIX), 5i le transmite procesului fiu, prin intermediul canalului anonim. Iar
-procesul fiu citeste din canal numerele trasmise de procesul périnte si Ie afiseazé pe ecran.
-Observer/e: pentru explicalii suplimentare despre acest program demonstrativ, consultali exemplul
-[SecondDemo , pipe_ex2] din suportul online de Iaborator ([3]).
-
-Meniu de navigare Ccmunlcalia lﬂleY-WOCBSBI Canale de cumunlcalie anonlme si cu nume l1 I41
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 11 /41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-\mmducere \mroducere
-oanaa annnime Canale anonime
-Cam w me n10 Crearea \on cu pnmmva plpe
-AWE,“ In, cu mm“ Modul de uuhzare a unm cana‘ anomm
-mm Demo. exemwe de comunlcane Tmre doué process
-Mudul de utlllzave a unul canal v
-W me Canale cu nume (mo)
-Desple persls'ema mw'maw Crearea \or, cu prlmmva mkflfo
-MW" "W "'0 Modul de unhzare a unw cana\ cu Hume
-“mm?” “MW °“ Despre persistema Wormahw dmimm hmer rm:
-Mme Iala deems anomme . a
-Deosebm a\e caneﬂebr cu Hume fata de ce\e anomme
-Caracter\s\\c\ Eumune permu _ _ _ _ _
-ambeletigunde canals Caraclerlstlcl comune penlru ambele llpurl de canale
-, Caraclenshci si restnchi ale canzﬂehar de comumcatie
-Sabloane de wmumcahe lmre
-"me Comporlamemu‘ \mphmf de Up bwcam
-Comporlamemm de Up nebkncam
-Anhcaw ale canalswr d8
-cumumcans Sablaane de comunicatie intre procese
-olaamavea sabmanelor de comunlcaue \meraprocese
-Helsnnle mbhngvahce
-Samonul de comunlcahe unu/alaaunu/
-Samonul de comunlcahe unu/alaarnull/
-aamunm 119 comunlcaue mu/N-Ia-unu/
-Samuml a9 comunicahe mu/(Iala'mu/tr
-Aplicatii ale canalelor de comunicalie
-Apﬁcaha #1 \mplementalea unw semalor
-Apﬁcaha #2 \mplememarea Una aphcam chem/server
-Helerinle bibliogralice
-Memu de navigare Ccmumcatia imer-procese: name d9 cumumcatie anomme si cu nume 12 / 4‘
+A
+lntroducere lntroducere
+Canale anonime Canale anonime
+Canale Cu Hume IﬁfOI Crearea Ion-cu pnmltlvalplpe .
+Crearea Ion Cu primitiva Modul cle ut|l|zare a unul canal anonlm
+mkfifo Demo: exemple ole comunlcatle lntre doua procese
+Modul de utilizare a unui canal _
+Cu nume I Canale cu nume (flfO)
+DGSDFG persistenla informaliei Crearea lor, cu primitiva mkf ifo
+gntr'ugfls'? f/fo | | Modul cle utilizare a unui canal cu nume
+eose "1a e cana e or .Cu Despre persistenta informatiei dintr-un fisier fifo
+nume fala de cele anonlme _ _ ’ ’ - ’ .
+Deosebln ale canalelor cu nume fata cle cele anonlme
+Caracteristici comune pentru _ _ _ _ _
+ambe|e tiguri de cana|e Caractenstlcl comune pentru ambele tlpurl de canale
+. . A Caracteristici si restrictii ale canalelor de comunicatie
+Sabloane de comumcajue lntre ’ . .’ . . ’
+|;rocese Comportamentul Impllclt, ole tlp blocant
+_ __ Compcrtamentul cle tlp neblocant
+Apllcalu ale canalelor de
+comunicatie Sabloane de comunicatie intre procese
+. . . . Clasificarea sabloanelor cle comunicatie inter-procese
+Refennte blbllograflce ’ _ _ ’
+Sablonul ole comunlcafue unul-la-unu/
+Sablcnul cle comunicatie unul-la-mu/li
+Sablcnul cle comunicatie multi-la-unu/
+Sablonul cle comunicatie mu/fi-la-mu/li
+Aplicatii ale canalelor de comunicatie
+Aplicatia #1: implementarea unui semafor
+Aplicalia #2: implementarea unei aplicalii client/server
+Referinte bibliografice
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 12/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Crearea lor, cu primitiva mkf ifo
+O O
 
-‘""me'e Un canal cu nume se creeazé cu ajutorul primitivei mkf ifo.
+Crearea lor, cu primitiva mkf if o
 
-Came annulme _ .. V
+'“"°du°e‘e Un canal cu nume se creeaza cu ajutorul primitivei mkf ifo.
 
-cmwm mg Interfata acesteI func'nl este urmatoarea ([5]):
+Canale anonime . . . v
 
-ﬁll???“ “WM int mkf ifo (char *nume, int permisiuni)
+Canalecunume ﬁfe Interfata acestel funcjul este urmatoarea ([5]):
 
-Modu‘ de uullzave a unul canal
+$111???“ °“ primitiva i int mkf ifo (char >I<nume, int permisiuni)
 
-ELZSZZQWMWm. I nume = numele fisierului (de tip fifo) ce va ﬁ creat
+Modul de utilizare a unui canal
 
-dmtrun User We
+EZQSEZersistenlainformalei I nume = numele ficierului (de tip fifo) ce va fi creat
 
-Demm'ia'ecana‘8‘°m“ I permisiuni = permisiunile pentru fisierul ce va fi creat
+dintr-un fi$ier fifo
 
-Came?“:Qmunelpww I valoarea returnaté este O, Tn caz de succes, sau *1, Tn caz de eroare.
+fjgiegtrgjggjlgagme I permisiuni = permlsmnlle pentru f|$|erul ce va fl creat
 
-Sji'gjge“"“Wmmmm Efect: in urma execuiiei primitivei mkf if o se creeazé un canal cu nume, dar féré a fi
+Cafﬁtegsﬁc?somunelpemw I valoarea returnata este O, Tn caz ole succes, sau - 1, Tn caz cle eroare.
 
-j:m§;1fs°a"a'@‘°'°s deschis la ambele capete (I), precum se Tntémplé in cazul creérii unui canal anonim.
+am ee IQUFI ecanae
 
-WWW‘ Noté: crearea unui fisier ﬁfo se mai poate face cu ajutorul primitivei mknod apelaté cu flag-ul S_IFIFD.
-De asemenea, mai poate fi creat si direct de Ia Iinia de comandé (119., prompterul shell-ului), cu
+Sljoi'gjgedeC°muni°alielmre Efect: Tn urma executiei primitivei mkfifo se creeaza un canal cu nume, dar fa'ra a fi
+
+ﬁlicfililicana'e'°rde deschis la ambe/e capete (l), precum se Tntampla Tn cazul crearii unui canal anonim.
+
+mm Nora: crearea unui fi$ier fifo se mai poate face cu ajutorul primitivei mknod apelata cu flag-ul S_IFIFO.
+De asemenea, mai poate fi creat $i direct cle la linia ole comancla (i.e., prompterul shell-ului), cu
 comenzile mkfifo sau mknod.
-Exemplu de creare a unui fi$ier fifo: a se vedea fi$ieru| sursé mkfifo_ex. c ([2]).
-Observatie: pentru explicatii suplimemare despre acest program demonstrativ, consultati exemplul
-[ThirdDemo — mkfifoiex] din suportul online de laborator ([3]).
+Exemplu cle creare a unui fi$ier fifo: a se vedea fi$ierul sursa mkfifo_ex . c ([2]).
+Observarie: pentru explicatii suplimentare despre acest program demonstrativ, consultati exemplul
+[ThirdDemo — mkfifo_ex] din suportul online ole laborator ([3]).
 
-Meniu de navigare Cornumcatia \mev-procese: Canme de cumumcatie anomme si cu nume 13 I41
+Meniu de navigare Comunicatia inter-procese: Canale cle comunicalie anonime $i cu nume 13/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
+~ Q
 Modul de utilizare a unui canal cu nume
-‘"‘mm'e Dupa crearea unui canal cu nume, folosirea sa pentru comunicalia locala intre doua
-CWEWW mg (sau mai multe) procese se face prin scnerea informa'nei In acest canal $I, respecllv,
-iii???“ WW“ prin citirea informaliei din canal.
-Modui de ullllzare a unul canal
-3:55?" 13353;“ Wm. lar scrierea in canal 5i, respectiv, citirea din canal se efectueaza la fel ca pentru
-2:;isggz'zzggagiz'nige iisierele obisnuite. Si anume: mai intai se deschide explicit fisierul la “capatul” dorit
-ﬁ;§;f§}‘ﬂf1§§2;;;§e“"“ (cel de citire ei/sau cel de scriere), pentru a se obline descriptorul necesar, apoi se
-5:1‘;ngammumwiwe scrie in el si/sau se citeete din el, prin intermediul descriptorului oblinut explicit, i.e.
-jgmgfsm'sim folosind apelurile de sistem read si write, sau cu funcliile de citire/scriere din
-Helmmimgam biblioteca stdio, iar la sférsit se inchide descriptorul respectiv.
-, * *
-Observatie importanté: deoarece acest tip de canale nu sunt anonime (i.e., au nume
-prin care pot fi referite), pot fi utilizate pentru comunicaiie intre orice procese care
-cunosc numele fi$ierului fifo respectiv, deci nu mai avem restrictia de la canale
+'"tmdmere Dupa crearea unui canal cu nume, folosirea sa pentru comunicalia locala intre doua
+Canaleanonime . . . . . . A _ _
+Canaiecunume;ﬁfo; (sau mai multe) procese se face prin scrierea informaliei in acest canal $l, respectiv,
+$111???“ C“ primitiva i prin citirea informaliei din canal.
+Modul de utilizare a unui canal
+3:352:333318informaiiei lar scrierea in canal ei, respectiv, citirea din canal se efectueaza la fel ca pentru
+Efiiegiéi'iiiilalﬁﬁﬁe fieierele obienuite. Si anume: mai intai se deschide explicit fieierul Ia “capatul” dorit
+jiﬁgijﬂsfﬁ33232;?“ (cel de citire ei/sau cel de scriere), pentru a se obline descriptorul necesar, apoi se
+Sfoi'gjgedeC°municaieimre scrie in el ei/sau se citeete din el, prin intermediul descriptorului oblinut explicit, i.e.
+Qgrlfuarilgifecana'elorde folosind apelurile de sistem read ei write, sau cu funcliile de citire/scriere din
+Referimebibiograﬁce biblioteca stdio, iar Ia sfareit se inchide descriptorul respectiv.
+* * *
+Observafie importanta': deoarece acest tip de canale nu sunt anonime (i.e., au nume
+prin care pot fi referite), pot fi utilizate pentru comunicalie intre orice procese care
+cunosc numele fieierului fifo respectiv, deci nu mai avem restriciia de Ia canale
 anonime, aceea ca procesele trebuiau sa fie “inrudite” prin fork/exec.
-Meniu de navigare Ccmunicalia inlev-procese: Canaie de ccmunicatie anonime si cu nume 14 I41
+Meniu de navigare Comunicatia inter-procese: Canale de comunicalie anonime $i cu nume 14/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
+~ Q
+
 Modul de utilizare a unui canal cu nume (cont)
-‘"‘mdm'e Asadar, operatiile asupra canalelor fifo se vor face fie cu primitivele I/O de nivel scazut (i.e., open,
-M read, write, close), fie cu functiile I/O de nivel inalt din biblioteca standard de l/O din C (i.e., fopen,
-W)? fread/fscanf, fwrite/fprintf, fclose, s.a.).
-mkfxfo
-:1“::::“""WWm‘ La fel ca pentru fisiere obi$nuite, “deschiderea” unui ii$ier fifo se face explicit, printr-un
-Despve persis'emainimmaiiei . . A I .. I . I .
-dimwnwm apel al functiei open sau fopen, intr-unul din urmatoarele treI modurI p08lbl|e,
-Deossblri ale canaleloi cu I I ‘I I . - I
-""“e'a‘“e°e‘“”°"‘me spe0|f|cat prln parametrul transmls funcllel de deschldere:
-Caraclerislici CDMUHE pemvu
-SUSHIILIWIII'IIIIIII I read & write (/.e., deschlderea ambelor capete ale canalulw)
-‘W— I read-only (i.e., deschiderea doar a capatului de citire)
-ADlicalii ale canalsior ds
-M I write-only (i.e., deschiderea doar a capatului de scriere)
-Fleislinle biblingvalice
-Observatie importanta:
-Implicit, deschiderea se face in mod blocant, i.e. o deschidere read-only trebuie sé se
-“sincronizeze” cu una write-only. Cu alte cuvinte, daca un proces incearca s51
-deschida un capat al canalului, apelul funcliei de deschidere rimane blocat (i.e.,
-functia nu returneaza) pana cénd un alt proces va deschide celalall capét al canalului.
-Meniu de navigare Ccmunicalia inlev-prccese: Canaie de ccmunicatie ancnime si cu nume 15 I41
+
+'“troducere Aeadar, operatiile asupra canalelor fifo se vor face fie cu primitivele l/O de nivel scazut (i.e., open,
+
+w read, write, close), fie cu functiile l/O de nivel inalt din biblioteca standard de l/O din C (i.e., fopen,
+
+m? fread/fscanf, fwrite/fprintf, fclose, $.a.).
+
+mkfifo r
+
+21°,‘iﬁlndjmm'mna' La fel ca pentru fieiere obienuite, “deschiderea” unui fieier fifo se face explicit, printr-un
+
+Despre persistenfainformatiei . . A . v . . _ _
+
+gnir-ugquiTrf/fo H apel al functiei open sau f Open, intr-unul din urmatoarele trei moduri peeibile,
+
+"umefaiédm'eammme specificat prin parametrul transmis functiei de deschidere:
+
+Caracteristici comune pentru
+
+ambele ipuride canale . . . .
+
+Sabloantedecomumcaﬁem I read & write (/.e., deschiderea ambelor capete ale canalulw)
+
+FOCGSG . - v I I I
+
+P—A |_ t, I H d I read-only (/.e., deschiderea doar a capatulw de c|t|re)
+
+picailaecanaeor e
+
+m—f— I write-only (i.e., deschiderea doar a capatului de scriere)
+
+Referinte bibliografice
+Observafie importanfé:
+Implicit, deschiderea se face Tn mod blocant, i.e. 0 deschidere read-only trebuie sa se
+“sincronizeze” cu una write-only. Cu alte cuvinte, daca un proces fncearca sa
+deschida un capét al canalului, apelul functiei de deschidere ramane blocat (i.e.,
+functia nu returneaza) pana cand un alt proces va deschide celalalt capat al canalului.
+
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 15/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Despre persistenla informaliei dintr-un fi$ier fifo
-‘""me'e Observalie: un canal cu nume este creat tot in memoria interné a sistemului (ca $i
-Canals annulme I I . . . . I
-Canalwme MI unul anonlm), dar In plus are asoclat un nume, reprezentat prlntr-un f|$|er de llpul
-3;???“ WM“ special ﬁfo, care este pastrat in sistemul de ﬁaiere.
-Modul de ullllzave a unul canal
-CDueggrrggpersslemamlovmallel Conc/uzie: informatiile continute ln acest tip de fisiere sunt stocate Tn memoria principala, nu pe disc, si
-mm" "w ~10 ca urmare nu sunt persistente. (Practic, continutul unui fisier fifo este gestionat, de cétre nucleul
-D b.“ I l l
-"Sifmmiiiilliilfmi SO-ului, tot ca o coada FIFO aﬂaté Tn memorie, Ia fel ca 5i Tn cazul canalelor anonime.)
-Caraclerlsllclcnmune pemvu . . - . . A v
-M Asadar, perloada de retentle a Informallel stocate Intr-un canal este urmatoarea:
-Sabloane de wmumcalleimre . . I I -
-wese— Spre deosebIre de f|$|erele oblsnune ( ce pastreazé informalia scrisa Tn ele pe o perioada
-ZZlTJILZilma'sm'“ nedeterminata — mai precis, pana la 0 eventuala operalie de modificare sau slergere ), Tn cazul unui
-MEL fi$ier ﬁfo informalia scrisa in el se pastreaza doar din momentul scrierii $i péna in
-momentul cand atat procesul care a scris acea informalie, cat $i orice alt proces ce-I
-accesa, termina accesul la acel canal fifo (lnchizandu-sl capetele canalului), iar
-aceasta numai daca informalia nu este consumata mai devreme, prin citire.
-Demo: a se vedea fi$ierul sursé testare_retentie_fifo . c ([2]).
-Noté: pentru mai multe explicatii despre acest program si descrierea comportamentului sau Ia execulie,
-Meniu de navigm consultati exemplul [FourthDemo — testareirelentieififo] din suportul online de laborator ([3]). ‘6,41
+O O
+Despre persistenta informatiei dintr-un fi$ier fifo
+'“tmdmere _ Observaiie: un canal cu nume este creat tot Tn memoria interna a sistemului (ca $i
+2:? w unul anonim), dar Tn plus are asociat un nume, reprezentat printr-un fi$ier de tipul
+ﬁllialii'°“fuprimmva_ i special fifo, care este pastrat Tn sistemul de fi$iere.
+gjgggejiilaiit: Conc/uzie: informatiile continute Tn acest tip ole fi$iere sunt stocate Tn memoria principala, nu pe disc, $i
+(liggigifisazZZnalelorcu ca urmare nu sunt persistente. (Practic, continutul unui fi$ier fifo este gestionat, de catre nucleul
+numefatadeceleanonime SO-ului, tot ca 0 coada FIFO aflata Tn memorie, la fel ca $i Tn cazul canalelor anonime.)
+M A$adar, perioada de retentie a informatiei stocate Tntr-un canal este urmatoarea:
+Wm Spre deosebire d6 fi$iere|e Obi$nuite ( ce pastreaza informatia scrisa Tn ele pe o perioada
+w nedeterminata — mai precis, pana Ia 0 eventuala operatie ole modificare sau $tergere ), Tn CaZUI unui
+MM; fi$ier fifo informatia scrisa Tn el se pastreaza doar din momentul scrierii $i pana Tn
+momentul cand atat procesul care a scris acea informatie, cat $i orice alt proces ce-I
+accesa, termina accesul Ia acel canal fifo (Tnchizandu-$i capetele canalului), iar
+aceasta numai daca informatia nu este consumata mai devreme, prin citire.
+Demo: a se vedea fi$ieru| sursa testare_retentie_fifo . c ([2]).
+Nota: pentru mai multe explicatii despre acest program $i descrierea comportamentului sau la executie,
+Meniu de navigare consultati exemplul [Fourth Demo — testare_retentie_fifo] din suportul online de laborator ([3]). 16/ 41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-Deosebiri ale canalelor cu nume falé de cele anonime
-‘"‘mm'e I Funclia de creare a unui fi$ier ﬁfo (i.e., canal cu nume) nu realizeazé $i
-m deschiderea automaté a celor doué capete ale canalului, precum la canalele
-ﬁll???“ WM“ anonime, ci acestea trebuie sé fie deschise explicit, dupé creare, prin apelul unei
-:dpidpﬂu,ml functii de deschidere a acelui ﬁ$ier.
-g55§ég§égg§§g;§;e I Un canal ﬁfo poate ﬁ deschis, la oricare dintre capete, de orice proces, indiferent
-Si?;‘§ll‘lfl§$§l§.§e""“ dacé acel proces are sau nu vreo legéturé de “rudenie” (prin fork/ exec) cu
-523::dwmmnem procesul care a creat canalul respectiv.
-m Aceasta este posibil deoarece un proces trebuie doar $51 cunoascé numele
-W fisierului ﬁlo pe care doreste sé-l deschidé, pentru a-l putea deschide. Evident,
-mai trebuie $i ca procesul respectiv sé aibé drepturi de acces pentru acel fi$ier fifo.
-I Dupé ce un proces inchide un capét al unui canal fifo, acel proces poate
-redeschide din nou acel capét al canalului.
-Motivul pentru care ar dori aceasta: poate constata, ulterior momentului inchiderii,
-cé are nevoie sé mai efectueze si alte operatii l/O asupra acelui capét.
-Meniu de navigare Ccmunicatia lﬂleY-pYOCBSBI Canale de cumunicalie EﬂOﬂlme si cu nume 17 I41
+~ Q
+Deosebiri ale canalelor cu nume fata de cele anonime
+'"tmdmere _ I Functia cle creare a unui fieier fifo (i.e., canal cu nume) nu realizeaza ei
+2:? w deschiclerea automata a celor cloua capete ale canalului, precum la canalele
+ﬁllialii'°“fuprimmva_ i anonime, ci acestea trebuie sa fie deschise explicit, clupa creare, prin apelul unei
+:dpndptlttfmtl functii cle deschiclere a acelui fieier.
+glftfd'ffﬂm I Un canal fifo poate fi deschis, la oricare dintre capete, cle orice proces, indiferent
+gifgfgstuijiiggrzggzlgemw daca acel proces are sau nu vreo legatura de “rudenie” (prin fork/ exec) cu
+$322129 de Oomunicatie We procesul care a creat canalul respectiv.
+m Aceasta este posibil deoarece un proces trebuie cloar sa cunoasca numele
+;—tlblf— fieierului fifo pe care cloreete sa-l cleschicla, pentru a-l putea deschide. Evident,
+mai trebuie ei ca procesul respectiv sa aiba drepturi de acces pentru acel fieier fifo.
+I Dupa ce un proces inchicle un capat al unui canal fifo, acel proces poate
+redeschicle din nou acel capat al canalului.
+Motivul pentru care ar clori aceasta: poate constata, ulterior momentului inchiderii,
+ca are nevoie sa mai efectueze ei alte cperatii l/O asupra acelui capat.
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 17/41
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:18**************
-\nlmducere \mroducere
-Carma annnime Canale anonime
-Canab w mm Ma Crearea \on cu pnmmva plpe
-4L)‘ Modul de uuhzare a unm canm anomm
-CB'BC‘E"§“°‘ “We PW“ Demo. exemp\e de comunlcane Tmre doué process
-ambeletlgunde canals
-Caractensum S. [mm ale Canal? cu nume (ma)
-“Mel” d2 WW“ Crearea \cv, cu prlmmva mkfifo
-82;“;"amm' "“P“°"‘ “9"” Modul de uhhzare a unm cana\ cu Hume
-Compcnamenluldeup Despre persistema \nlormahe\ mmmn hmer fifo
-nemmm Deosebin a\e caneﬂebr cu Hume ma de ce\e anomme
-Sam" de wmumcamm Caracleristici comune pemm ambele lipuri de canale
-E v v
-"me Caraclenshm SI restnclu ale cana\e\or de comumcatle
-
-Aphcawalecanalemrde Componamemm \mphmt de Up bmcam
-w Componamemm de up nemocam
-Meme Wm '3'" Sablaane de comunicatie intre procese
-
-Clasmcavea sabmanelor de comunlcaue mter'procese
-
-Samonul de comunlcahe unu/rla'unu/
-
-Samonul de comunlcahe unu/Ja'rnull/
-
-Samuml de comunlcaue mu/N-Ia-unu/
-
-Samuml de comunicahe mu/(Ha'mu/tr
-
-Aplicatii ale canalelor de comunicalie
-Apﬁcaha #1 mplememarea unw semalor
-Apﬁcaha #2 \mplementarea Una aphcaui chem/server
-Helerinle bibliogralice
-Memu de navigare Comumcatia inter-process: Canme d9 cumumcatie anomme 5i cu nume 1a / 4‘
+A
+lntroducere lntroducere
+w Canale anonime
+Canale Cu nume IﬁfOI Crearea Ion-cu pr|m|t|valp1pe .
+. . _ Modul cle ut|l|zare a unul canal anonlm
+caraCterISt'C! comune pentru Demo: exemple ole ccmunicatie lntre doua procese
+ambele tlpurl de canale ’
+Caracteristici $i restrictii ale I Canale cu nume (fifo)
+cana'e'or d9 comlm'célle _ Crearea lor, cu primitiva mkf ifo
+aggaﬁrtamentu' 'mpl'C'L de t'p Modul ole utilizare a unui canal cu nume
+Comportamentul de tip Despre persistenta informatiei dintr-un fisier fifo
+neblocant Deosebiri ale canalelor cu nume fata cle cele anonime
+sab'oane d9 comunicaiie We Caracteristici comune pentru ambele tipuri de canale
+QFOCGSG . . . . . .. . .
+Caracteristici 5| restrict“ ale canalelor ole comunlcatle
+Aplicatii ale canalelor de Comportamentul implicit, cle tip blocant
+W'G— Comportamentul de tip neblocant
+Referinte bib'io raﬁce Sabloane de comunicatie intre procese
+Clasificarea sabloanelor cle ccmunicatie inter-procese
+Sablonul ole comunicatie unul-la-unu/
+Sablcnul cle comunicatie unul-la-mu/ti
+Sablcnul cle comunicatie multi-la-unu/
+Sablonul cle comunicatie multi-la-mu/ti
+Aplicatii ale canalelor de comunicatie
+Aplicatia #1: implementarea unui semafor
+Aplicatia #2: implementarea unei aplicatii client/server
+Referinte bibliografice
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 18/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Caracleristici $i restric'Itii ale canalelor de comunicalie
-‘""mm'e I Ambele tipuri de canale sunt canale unidirectionale, adica pe la un capat se scrie
-Canals annulme . _ A . v -
-CIIIIIIIIIIII Mg Informana |n canal, lar pe la capatul opus se olteste.
-ﬁ;§;‘§§1‘ﬂf}§§2;§;§e“"“ Nota“: lnsé putem avea mai mulli scriitori (i.e., toate procesele ce au acces la
-EZJZEZ'FQZ‘§J.;TSIQZYIZ'E capatul de scriere, pot sa scrie Tn canal), si/sau mai multi cititori (i.e., toate
-ComporlarnenlullrnpllclLdellp .. . . ~ . V _
-35;;QIIIIIIIIIIIIIIII procesele ce au acces la capatul de cmre, pot sa olteasca dIn canal).
-nehlncanl I I I I I
-Saw,dewm,,,,,,,e,m,e I Unltatea de Informalle pentru ambele tlpun de canale este octetul.
-,IIhIIIIIIbCIHQQM Cu alte cuvmte, cantltatea mlnlma de Informalle ce poate ll scnsa In canal,
-respectlv cmta dln canal, este de 1 octet.
-Flemnnle blbllngvance
-I Capacitatea unui canal de comunicalie este limitaté la o anumita dimensiune
-maximé (e.g., 4 K0, 16 K0, 64 K0, $.a.), ce este configurabilé.
-Spre exemplu, Tn Linux (incepand de la versiunea 2.6.35) se poate afla, respectiv
-configura, capacitatea unui canal de comunicalie prin operaliile F_GETPIPE_SZ,
-respectiv F_SETPIPE_SZ, disponibile prin apelul de sistem fcntl.
-Pentru detalii, consultali documentalia acestui apel (i.e., man 2 fcntl ), precum $i explicaliile
-prezenlale in exerciliul rezolvat [A pipe‘s capacity].
-Meniu de navigare Ccmunlcalia lmev-procese: Canale de cumunlcalie anornrne si cu nume 19 I41
+O O
+Caracteristici $i restrictii ale canalelor de comunicatie
+'"tmdmere _ I Ambele tipuri cle canale sunt canale unidirectionale, aclica pe la un capat se scrie
+W informatia Tn canal, iar pe la capatul opus se citeste.
+§§§$1§Sfjf§§gﬂggj,§entu i Nota: Tnsa putem avea mai multi scriitcri (i.e., tcate procesele ce au acces la
+SZQZEETSSZiiﬁligliea'e _ capatul cle scriere, pot sa scrie Tn canal), ci/sau mai multi cititcri (i.e., toate
+53:1 dmptlpt de up procesele ce au acces la capatul cle citire, pot sa citeasca din canal).
+8:1, commcaﬁemtm I Unitatea de informatie pentru ambele tipuri de canale este octetul.
+m Cu alte cuvinte, cantitatea minima cle informatie ce poate fi scrisa Tn canal,
+RT—ttbb|f— respectiv citita din canal, este cle 1 octet.
+I Capacitatea unui canal de comunicatie este limitata la c anumita dimensiune
+maxima (e.g., 4 Kc, 16 Kc, 64 K0, $.a.), ce este ccnfigurabila.
+Spre exemplu, Tn Linux (Tncepancl cle Ia versiunea 2.6.35) se poate afla, respectiv
+configura, capacitatea unui canal cle ccmunicatie prin cperatiile F_GETPIPE_SZ,
+respectiv F_SETPIPE_SZ, disponibile prin apelul cle sistem fcntl.
+Pentru detalii, consultati documentatia acestui apel (i.e., man 2 fcntl ), precum $i explicatiile
+prezentate Tn exercitiul rezclvat [A pipe’s capacity].
+Meniu de navigare Ccmunicatia inter-procese: Canale de comunicatie anonime $i cu nume 19/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Caracteristici $i restrictii ale canalelor de comunicatie (com)
-‘""me'e I Practic, ambele tipuri de canale (i.e., si cele anonime, $i cele cu nume)
-m functioneaza ca o coada, adica 0 lista FIFO (First-In, First-Out), deci citirea din
-Eififilsﬂfljiiiﬂiiem'“ canal se face cu “distrugerea” (i.e., consumul din canal a) informatiei citite (!), iar
-fjn'jfgil'liiﬁgiifgjlj'e scrierea Tn canal se face prin “inserarea” Tn coada a informaliei scrise.
-Camponamenlul mm Ge up
-Eiiiilmmmp Concluzie: asadar, citirea dintr-un fi$ier fifo difera de citirea din fi$iere obisnuite,
-222,222.;dwmmahem pentru care citirea se face fara consumarea informatiei din fisier.
-w I in cazul fisierelor obisnuite am vézut ca existé notiunea de offset (i.e., pozilia
-MM‘ curenta in ﬁsier, de la care se efectueazé operatia curenté de citire sau scriere).
-in schimb, nici pentru fi$ierele fifo, nici pentru canalele anonime nu existé aceasta
-notiune de offset, ele functionénd precum o coada FIFO.
-Meniu de navigare Cornumcatia \mev-procese: Canafe de cumumcatie anomme si cu nume 20 I41
+O O
+Caracteristici ei restrictii ale canalelor de comunicatie (cont)
+'“tmdmere I Practic, ambele tipuri cle canale (i.e., $i cele ancnime, $i cele cu nume)
+w , v v . v . v , . . . . .
+Canalecunume ﬁfe functioneaza ca 0 ccada, adlca 0 Ilsta FIFO (First-In, First-Out), decl c|t|rea din
+Cafjtegstcisomunelpenfu i canal se face cu “distrugerea” (i.e., consumu/ din canal a) informatiei citite (l), iar
+am ee IQUI'I ecanae
+5553332835‘;$13539 scrierea in canal se face prin “inserarea” in coada a infcrmatiei scrise.
+Comportamentul implicit, de tip
+EZCmaQQrtamemumeﬁp Concluzie: aeaclar, citirea dintr-un fieier fifo difera de citirea din fieiere cbienuite,
+neblocant , , V v . . . . . .
+Sabloanedecomumcaﬁem pentru care c|t|rea se face fara ccnsumarea Informatlel c||n f|$|er.
+QFOCGSG
+Aplicatiialecanalelorde A , , , , v V . V . . . .
+m_t— I ln cazul f|$|ere|cr cblenwte am vazut ca eXIsta nctlunea de offset (/.e., p02|t|a
+MM; curenta in fieier, cle Ia care se efectueaza cperatia curenta de citire sau scriere).
+in schimb, nici pentru fieierele fifo, nici pentru canalele ancnime nu exista aceasta
+notiune cle offset, ele functionand precum 0 ccada FIFO.
+Meniu de navigare Ccmunicatia inter-procese: Canale de comunicatie anonime $i cu nume 20/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
+~ '1
 Comportamentul implicit, de tip blocant
-‘""me'e I Citirea dintr-un canal de comunicaiie funciioneaza in felul urmator:
-Canals annmrne
-M — Apelul de citire read va citi din canal 3i va returna imediat, fara sa se
-Caraclerislicicnmune penlvu . v . . . H . . A . a
-% blocheze, numal daca mal este suﬂclenta Informatle In canal, |ar in acest caz
-Exilﬁimgiilfmp valoarea returnata reprezinta numarul de octeti citili din canal.
-bl c . . . c . .
-ciﬁiilnaemmip — Altfel, daca canalul este gol, sau nu conllne suf|0|enta Informatle, apelul de
-Samedewmmaiem citire read va raméne blocat pana cand va avea suficienta informaiie in canal
-Apicmlgcanaime pentru a putea citi cantitatea de informaiie specificata, ceea ce se va intampla
-Hammembmgm in momentul cand un alt proces va scrle |n canal.
 
-- Alt caz de excepiie la citire: daca un proces incearca sa citeasca din canal $i
-niciun proces nu mai este capabil sa scrie in canal (deoarece toate procesele
-si-au inchis deja capatul de scriere), atunci apelul read returneazé imediat
-valoarea O prin care se semnalizeaza ca “a citit EDF" din canal.
+'CthI_ I Citirea dintr-un canal de comunicaiie funciicneaza in felul urmator:
+Acana'ecﬁfme ”'"° — Apelul de citire read va citi din canal $i va returna imediat, fara sa se
+M blocheze, numai daca mai este suficienta informaiie in canal, iar in acest caz
+Zinilielftgleeﬁﬁﬁgfdeﬁe valoarea returnata reprezinta numarul de ccteii citiii din canal.
+Egﬁiégarﬁmenwldeﬁp — Altfel, daca canalul este gcl, sau nu ccniine suiicienta informaiie, apelul de
+sﬁgjgedecomumcaiieimre citire read va ramane blocat pana cand va avea suficienta informaiie in canal
+isgcaﬂizifecanaieiorde pentru a putea citi cantitatea de informaiie specificata, ceea ce se va intampla
+T W in momentul cand un alt proces va scrie in canal.
 
-Concluzie: pentru a se putea citi EUF din canal, trebuie ca mai intéi toate
-procesele Sé TnChidé canalul in scriere (adica sa inchida descriptorul corespunzétor
+— Alt caz de excepiie la citire: daca un proces incearca sa citeasca din canal $i
+niciun proces nu mai este capabil sa scrie in canal (deoarece tcate procesele
+$i-au inchis deja capatul de scriere), atunci apelul read returneaza imediat
+valoarea O prin care se semnalizeaza ca “a citit EOF” din canal.
+
+Conc/uzie: pentru a se putea citi EOF din canal, trebuie ca mai intai toate
+procesele Sé TnChidé canalul Tn scriere (adica sa inchida descriptorul corespunzator
 capatului de scriere).
 
-Meniu de navigare Ccmunicatia lﬂleY-pYOCBSBI Canale de ccmumcalie anomme si cu nume 21/41
+Meniu de navigare Comunicaiia inter-procese: Canale de comunicaiie anonime $i cu nume 21 /41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
+~ '1
 Comportamentul implicit, de tip blocant (cont)
-gm‘ I Scrierea intr-un canal de comunicalie functioneaza in felul urmétor:
-M — Apelul de scriere write va scrie in canal $i va returna imediat, léra sa se
-M blocheze, numai daca mai este suficient spaliu liber in canal, iar in acest caz
-ZZTEZ'QZZTLTQﬁQfM valoarea returnata reprezinta numarul de octeti efectiv scri$i in canal (care poale
-ggﬁgi'gamemldﬂp sa nu coincidé intotdeauna cu numarul de ucteti ce se doreau a se scrie, caci pot apare evenluale erori l/O).
-slggggedewmmawm — Altfel, daca canalul este plin, sau nu conline suficient spaliu liber, apelul de
-Aphcawalecanalelurde scriere write va raméne blocat péna cand va avea suficient spaliu liber in
-:22:le canal pentru a putea scrie informaiia specificata ca argument, ceea ce se va
+'Ceeeeeeeel _ I Scrierea intr-un canal de ccmunicaiie funciicneaza in felul urmatcr:
+Ml; — Apelul de scriere write va scrie in canal $i va returna imecliat, fara sa se
+M * blocheze, numai daca mai este suficient spaiiu liber in canal, iar in acest caz
+Zinilieilleeiﬁiﬁifdetip valcarea returnata reprezinta numarul cle ccteii eiectiv scri$i in canal (care poate
+Egigﬁmenwl o'eﬁlO sa nu coincida intotdeauna cu numarul ole octeii ce se doreau a se scrie, caci pct apare eventuale ercri l/O).
+sﬁgjenedecomumcaiieimre — Altfel, claca canalul este plin, sau nu coniine suiicient spaiiu liber, apelul ole
+isgcagiafcanaieiorde scriere write va ramane blocat pana cand va avea suficient spaiiu liber in
+T We canal pentru a putea scrie informaiia specificata ca argument, ceea ce se va
+intampla in momentul cancl un alt proces va citi din canal.
 
-intampla in momentul cénd un alt proces va citi din canal.
+— Alt caz cle excepiie la scriere: daca un proces incearca sa scrie in canal $i
+niciun proces nu mai este capabil sa citeasca din canal (decarece toate
+procesele $i-au inchis deja capatul de citire), atunci sistemul va trimite acelui
+proces semna/u/ SIGPIPE, ce cauzeaza terminarea fcriata a procesului, fara
+8. afi$a insa VFGUl'l mesaj d9 eroare (Nata: versiunile mai vechi cie Linux afi$au “Broken pipe”).
 
-i Alt caz de exceptie la scriere: daca un proces incearca sa scrie in canal si
-niciun proces nu mai este capabil sa citeasca din canal (deoarece toate
-procesele si-au inchis deja capatul de citire), atunci sistemul va trimite acelui
-proces semnalu/ SIGPIPE, ce cauzeaza terminarea forlala a procesului, féra
-a afisa insa vreun mesa] de eroare (Nola: versiunile mai vechi de Linux aﬁsau “Broken pipe").
-
-Meniu cle navigare Ccmuﬂlcalia lﬂleY-WOCBSBI Canale de cumumcatie anomrne si cu nume 22 I41
+Meniu de navigare Comunicaiia inter-procese: Canale cle comunicaiie anonime $i cu nume 22/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Comportamenlul implicit, de lip blocant (cont)
-‘""me'e Observalie: in locul primitivelor read $i write din APl-ul POSIX, putem lolosi
-m functiile l/O de nivel inalt din biblioteca stdio pentru a citi din canal (e.g., cu fread,
-EZZQEIFSEZQZQZIZEM'“ fscanf, $.a.) si, respectiv, pentru a scrie in canal (e.g., cu fwrite, fprintf, $.a.).
-EZETSZ'FQZELTSILZYE'E $i aceste functii de bibliotecé au un comportament implicit blocant, similar cu cel
-QZQIKISTPWD descris mai sus, singura diferenla ﬁind aceea ca, reamintili-vé, aceste functii lucreazé
-2:222“wmmmm buffer-izat (!), i.e. folosind un cache local in user-space.
-23:31 :fecmeiwde Consecinlé: modul de lucru buffer-izat al funcliilor |/O din stdio, poate cauza uneori
-mmembimgm erori logice (i.e., bug-uri) dificil de depistat, datorate neatenliei programatoru/ui, care
-poate uita s51 forleze “golirea” buffer-ului in canal cu ajutorul funciiei ff lush, imediat
-dupa apelul funcliei de scriere utilizate pentru a scrie acea informaiie in canal.
-Si astfel. un proces cititor al acelei informatii va raméne blocat in apelul de citire, deoarece informalia
-inca nu a ajuns in canal, iar programatorul va cauta cauza blocajului in alté parte, crezand ca
-informatia, pe care o scrisese, a ajuns “instantaneu” (i.e., féra nicio intérziere sesizabilé) in canal (!).
-Recomandare: acordali mare atentie sa nu comiteli acest gen de greseli logice, céci Ie-am Observat de
-nenumarate ori, pe parcursul anilor, in programele scrise de studenti.
-Meniu de navigare Ccmunicatia Wiley-process: Canaie de cumunicatie anonime si cu nume 23 I41
+O O
+Comportamentul implicit, de tip blocant (cont)
+'"tmducere _ Observaiie: in Iocul primitivelor read ci write din APl-ul POSIX, putem folosi
+Zi+ funciiile l/O de nivel inalt din biblioteca stdio pentru a citi din canal (e.g., cu fread,
+giﬁgﬁsﬁggrzggzlgeniu i fscanf, $.a.) $i, respectiv, pentru a scrie in canal (e.g., cu fwrite, fprintf, $.a.).
+fjiiﬁirlsjgiﬁggea'e _ Si aceste funciii de biblioteca au un comportament implicit blocant, similar cu cel
+Extxiidmilptdenp descris mai sus, singura diferenia fiind aceea ca, reamintiii-va, aceste funciii Iucreaza
+8:11 comunicatiemtre buffer-izat (i), i.e. folosind un cache local in user-space.
+Qgicuariljfecana'elorde Consecinia': modul de Iucru buffer-izat al funciiilor l/O din stdio, poate cauza uneori
+Reierimebibiograﬁce erori Iogice (i. e., bug-uri) diiicil de depistat, datorate neateniiei programatorului, care
+poate uita sa forieze “golirea” buffer-ului in canal cu ajutorul funciiei fflush, imediat
+dupa apelul funciiei de scriere utilizate pentru a scrie acea informaiie in canal.
+Si astfel, un proces cititor al acelei informaiii va ramane blocat in apelul de citire, deoarece informaiia
+inca nu a ajuns in canal, iar programatorul va cauta cauza blocajului in alta parte, crezand ca
+informaiia, pe care o scrisese, a ajuns “instantaneu” (i.e., fa'ra' nicio intairziere sesizabi/a') in canal (i).
+Recomandare: acordaii mare ateniie sa nu comiteii acest gen de greseli logice, caci le-am observat de
+nenumarate ori, pe parcursul anilor, in programele scrise de studenii.
+Meniu de navigare Comunicaiia inter-procese: Canale de comunicaiie anonime $i cu nume 23 / 41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
+~ '1
 Comportamentul de tip neblocant
-‘"‘mm'e Cele descrise mai devreme, despre blocarea apeluriior de citire, respecliv de scriere,
-Canaleannmme A _ _ . __ _ _ .
-CWEWW mg in cazul canaiulw gol, respectiv plin, corespund comportamentuiw impilclt, de tlp
-Giggle?“:WEIPEM blocant, al canaielor de comunicalie.
-Caraclerislici SI resiviclii ale
-ZZTLEQZLTEZTLTQEITM Acest comportament implicit poate fi modificat, pentru ambele tipuri de canale de
-Siiillnammm comunicafrie, intr-un comportament de tip neblocant, situatie in care apeiurile de citire
-Samedewmmaiem $i, respectiv, de scriere, nu mai rémén biocate in cazul canalului gol $i, respectiv, in
-Apimaiialecanaieim cazul canaluiui plin, ci returneazé imediat vaioarea — 1, seténd in mod corespunzétor
-Helevinle bibiingvalice Varlablla errno'
-Mai muit, putem modifica separatcomportamentul pentru oricare dintre cele doué
-capete ale unui canal, nu suntem limitaii doar la a schimba simultan comportamentul
-pentru ambeie capete (i).
-in plus, in cazul canaielor cu nume, o deschidere neblocanté a unuia dintre capetele
-canaiului va reusi imediat, féré s51 mai astepte ca vreun alt proces sé deschidé celélalt
-capét, precum se intémplé in cazul deschiderii impiicite, de tip blocant.
-Meniu de navigare Ccmunicaiia inlev-procese: Canaie de cumunicaiie anonime si cu nume 24 I41
+'“tmdmere Cele descrise mai devreme, despre blocarea apelurilor de citire, respectiv de scriere,
+Canaleanonime A . . . I I I I I
+Canalecunume ﬁfe in cazul canalulw gol, respectiv plin, corespund comportamentului impIICIt, de tip
+Cafjtegsﬁcisomunelpemw i blocant, al canalelor de comunicatie.
+am ee ipuri ecanae ’
+Caracteristici $i restrictii ale
+gjnrjéegft;fejjj$;§?j;jdetip Acest comportament implicit poate fi modificat, pentru ambele tipuri de canale de
+blocan . . A . . . A . . .
+Cogpirtamenwldeﬁp comunicatle, intr-un comportament de tip neblocant, Situatie in care apelurile de Citire
+ne ocant
+Sabloanedecomunicaiieintre $i, respectiv, de scriere, nu mai raman blocate in cazul canalului gol $i, respectiv, in
+QFOCGSG
+Aplcawaiecanaieiorde cazul canalului plin, ci returneaza imediat valoarea -1, satand in mod corespunzator
+comunicatie . .
+Referinte bibliografice varlablla errno'
+Mai mult, putem modifica separatcomportamentul pentru oricare dintre cele doua
+capete ale unui canal, nu suntem limitati doar la a schimba simultan comportamentul
+pentru ambele capete (l).
+in plus, in cazul canalelor cu nume, o deschidere neb/ocanta' a unuia dintre capetele
+canalului va reu$i imediat, fara sa mai a$tepte ca vreun alt proces sa deschida celalalt
+capat, precum se intampla in cazul deschiderii implicite, ole tip blocant.
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 24/41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-Comportamentul de tip neblocant (cont.)
-‘""me'e Modificarea comportamentului implicit in comportament neblocant se realizeazé prin
-Canaie annulme . _ _ _ . _
-CWEWW mg setarea atrlbutulw U_NONBLOCK pentru descnptorul corespunzator aceluI capat al
-GTE?“:WEIPEM canalului de comunicaiie pentru care se dore$te modificarea comportamentului.
-Caracierisiici SI resmciu ale
-gﬁijﬁejmﬁgfmp Setarea atributului O_NONBLOCK pentru descriptorul dorit, se poate face astfel:
-biocam
-§§Q§§;;?“““'°E“P 1. ﬁe direct la deschiderea explicité a canalului, e.g. printr-un apel de forma:
-S;“Q:§Q*°“°'““"‘°ﬁ“"""* fdiout = open ( " canaljifo" , U_WRONLY | O_NONBLOCK ) ;
-jggjjgfjammm'de care va seta la deschidere atributul D_NDNBLDCK doar pentru capétul de scriere.
-MEL Aceasté modalitate este posibilé numai pentru canale cu nume (i.e., fi$iere ﬁfo).
-2. ﬁe dupé deschiderea, implicité sau explicité, a canalului, utlizénd primitiva fcntl,
-e.g. printr-un apel de forma: fcntl (fd_0ut, F_SETFL, U_NUNBLUCK) ;
-Aceasté modalitate este posibilé pentru ambele tipuri de canale.
-Exerciﬂu: scrieti un program prin care s51 determinaii capacitatea ambelor tipuri de
-canale de comunicajtie pe sistemul Linux pe care lucraii.
-Plaza/vale dacé nu reusm 557i rezcivau singunv ciml exelcllule Iezoivale [A pipe'S capacity] si [A Mds capaclly] prezemale in suporiui de iaborator.
-Meniu de navigare Cornumcatia \mev-procese: Canaie de cumumcatie anomme si cu nume 25 I41
+O O
+Comportamentul de tip neblocant (cont)
+'“imdmere Modificarea comportamentului implicit in ccmportament neblocant se realizeaza prin
+Canale anonime . . . v _ V
+Canalecunume iﬁfol setarea atributulw D_NDNBLDCK pentru descriptcrul ccrespunzatcr acelw capat a|
+Cafjtegsﬁcisomunelpemw i canalului de comunicatie pentru care se doreste modificarea comportamentului.
+am ee IQUI'I ecanae ’ ’
+Caracteristici $i restrictii ale
+gi";§§$;fjf;§i§fdetip Setarea atributului O_NONBLOCK pentru descriptorul dcrit, se poate face astfel:
+blocant
+ﬁjgopcﬂﬁmenw'deim 1. fie direct Ia deschiderea explicita a canalului, e.g. printr-un apel cle forma:
+350213329 de C°mumcaieimre fd_0ut = open ( " canal_fif0" , O_WRONLY i O_NONBLOCK) ;
+jjgcuagiljfecana'e'mde care va seta Ia deschiclere atributul 0_NONBLOCK cloar pentru capatul de scriere.
+MM; Aceasta modalitate este posibila numai pentru canale cu nume (i.e., ficiere fifo).
+2. fie dupa deschiclerea, implicita sau explicita, a canalului, utlizancl primitiva fcntl,
+e.g. printr-un apel de forma: fcnt1(fd_0ut, F_SETFL, D_NDNBLUCK) ;
+Aceasta modalitate este posibila pentru ambele tipuri de canale.
+Exercitiu: scrieti un program prin care sa determinati capacitatea ambelor tipuri de
+canale de comunicatie pe sistemul Linux pe care Iucrati.
+Rezo/vare: daca nu reu$iti sa-I rezclvati singuri, cititi exercitiile rezclvate [A pipe’s capacity] $i [A fifo’s capacity] prezentate in suportul cle Iaborator.
+Meniu de navigare Comunicatia inter-procese: Canale cie comunicatie anonime $i cu nume 25/41
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:26**************
-\mruducere \ntroducere
-Gamma annnime Canale anonime
-Came cu Hume mg Crearea \on cu pnmmva plpe
-
-Modul de uuhzare a unm canm anomm
-Camwm‘ ‘mm Pew“ Demo. exemp\e de comunlcatle Tmre doué process
-ambeletlgunde canals
-Sabloane de cemumcahe imre Canale C“ nume ("I") v
-gracese Crearea \cv, cu prlmmva mkflfo
-Claszcavea sabbanehwvde Modul de uuhzare a unm cana\ cu nume
-commune Inw'pmse Despre persistema \nlormahei dmir'un nw m
-sanlqnm d9 Gamma“ Deosebin a\e caneﬂebr cu Hume Iaté de ce\e anomme
-UHUHS'WMV
-5ablﬂmﬂ de wwumcahe Caracleristici comune penlru amhele lipuri de canale
-"""HEW'" Caraclenshci si restnchi ale canzﬂemr de comumcatie
-ailixmgjfnmmma“ Componamemm \mphcw de Up mocam
-5511mm de commune Componamemm de up nebmcam
-m“""’i""“"' Sabloane de comunicatie inlre procese
-Aphcam ale canaleblde Clasmcarea 5ab\car\elur de comumcaue \nter'prucesie
-MW‘ Samonul de comumcaue unu/rla'unu/
-Mam“ mum; mm Samonul de comumcaue unu/rla'mu/t/
-
-Sabkmul d9 comunlcaue mulll-Ia-unu/
-
-Sabkmul d9 comunlcahe mu/llr/a'mu/U
-
-Aplicatii ale canalelor de comunioalie
-Apﬁcaha #1 implementarea unw semalor
-Apﬁcaha #2 implementarea we‘ aphcaui chem/server
-Helerinle bibliogralice
-Memu de navigare Comumcatia inler-procese: Canme d9 cumumcatie anomme 5i cu nume 26 / 4‘
+A
+lntroducere lntroducere
+w Canale anonime
+Canale Cu nume IﬁfOI Crearea Ior,l<l;u prlmltlvalplpe .
+. . _ Modul ole utlllzare a unul canal anonlm
+caraCterISt'C! comune pentru Demo: exemple de comunicatie Tntre doué procese
+ambele tlQUi'l de canale ’
+Sabloane de comunicaiie intre' Canale CU nume (hf?) _ _ _
+grocese Crearea Ior, cu prlmltlva mkf 1f o
+Clasificarea $abloane|0r de MOdUI d9 utilizare a unui Canal CU nume
+comunicaiie inter-procese Despre persistenta informaiiei dintr-un fisier fifo
+Sablonu' de comun'cai'e Deosebiri ale canalelor cu nume faié ole cele anonime
+unul-la-unul
+$ab|0nu| d9 comunicaiie Caracteristici comune pentru ambele tipuri de canale
+grilli-la-Tu/I/ _ _ Caracteristici $i restrictii ale canalelor de comunicatie
+mﬁigfugjlcomun'cat'e Comportamentul implicit, ole tip blocant
+Sablonul de comunicaﬁe Comportamentul ole tlp neblocant
+mum/3mm?’ Sabloane de comunicatie intre procese
+Aplicaiii ale canalelor de Clasificarea sabloanelor de comunicaiie inter-procese
+wie— Sablonul ole comunicatie unul-la-unu/
+Sablonul de comunlcatle mu/ﬂ-la-unu/
+Sablonul ole comunicatie multi-la-mu/Ii
+Aplicatii ale canalelor de comunicaiie
+Aplicatia #1: implementarea unui semafor
+Aplicaiia #2: implementarea unei aplicaiii client/server
+Referinte bibliografice
+Meniu de navigare Comunicatia inter-procese: Canale de comunicaiie anonime $i cu nume 26/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
+~ Q
 Clasificarea $abloanelor de comunicatie inter-procese
-‘"‘mm'e Dupé numérul de procese “scriitori” si, respectiv, de procese “cititori” ce utilizeazé un
-m anumit canal de comunicatie (anonim sau cu nume) pentru a comunica intre ele,
-Eififilsﬂfljiiiﬂiiem'“ putem diferentia urmétoarele $ab|oane de comunicatie inter-procese:
-1% I Comunicatie unuI-Ia-unul: canalul este tolosit de un singur proces “scriitor” pentru
-gjflggffgjfgﬁjjjf a transmite date unui singur proces “cititor”.
-sbéitmdu'm. I Comunicatie unuI-Ia-multi: canalul este folosit de un singur proces “scriitor” pentru
-ﬁy:g;ymfwumww a transmite date mai multor procese “cititori”.
-i171?;7§j,f°m““‘ca“e I Comunicatie multi-la-unul: canalul e folosit de mai multe procese “scriitori” pentru
-§§‘m‘°j§';'fe‘a"a'e‘°'de a transmite date unui singur proces “cititor”.
-ML I Comunicatie multi-Ia-multi: canalul e tolosit de mai multe procese “scriitori” pentru
+'“tmdmere Dupa numarul de procese “scriitori” $i, respectiv, de procese “cititori” 0e utilizeaza un
+Canale anonime I I I I I A
+Canalecunume Iﬁfol anumlt canal de comunlcajue (anonlm sau cu nume) pentru a comunlca Intre ele,
+Cafjtegsﬁcigomunelpemw putem diferentia urmatoarele sabloane de comunicatie inter-procese:
+am ee IQUI'I ecanae ’ ’ ’
+Sabloane de comunicatie Tntre I I I I II I I II
+W I Comumcafue unul-la-unul: canalul este foIQSIt de un smgur proces scrutor pentru
+2133553: $322125? a transmite date unui singur proces “cititor”.
+unul-la-unul . . . . . I‘ . . ,,
+Sablonwdecomunicaue I Comunlcafue unul-la-mu/Zl: canalul este fo|05|t de un smgur proces scrlltor pentru
+unul-la-mulfi
+mgjjjjfomumcaﬁe a transmlte date mal multor procese “Cltltorl”.
+Ziﬁﬁ;?',,jj;°m“mca“e I Comunicatie mu/fi-la-unul: canalul e folosit de mai multe procese “scriitori” pentru
+fgﬁiizjfecana'e'°rde a transmite date unui singur proces “cititor”.
+MM; I Comunicatie mu/fi-la-mu/fi: canalul e folosit de mai multe procese “scriitori” pentru
 a transmite date mai multor procese “cititori”.
-Meniu de navigare Cornumcatia truer-procese: Canate de cumumcatie anomme si cu nume 27 I41
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime 5i cu nume 27/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
+O O
 $ablonul de comunicatie unuI-Ia-unul
-‘""me'e Comunicatia unul-la-unul reprezinta sablonul cel mai simplu, neridicand probleme
-Canaie annmn'ie . I . . I I I II I _I
-CIIIIIIIIIIII MI deosebIte de implementare. Din acest motiv, este $| cel mai folosn in practica.
-5335:1332g‘;2;;:.:*""“ Example: cele doua programe demonstrative prezentate anterior, in sectiunea despre canale anonime,
-Sabloanedeccmunicatieimre se Tncadreaza in acest sablon de comunicatie.
-Slﬁtiigiifiﬁﬁifjliie Demo: exercitiile rezolvate ['Producer-consumer’ pattern #1, (v2, using fifos for IPC)] 5i, respectiv,
-ijgjjgyutsjmnumm [‘Pr0ducer—c0nsumer‘ pattern #2, (v2, using fifos for |PC)] din suportul online de laborator ([3]),
-sabijnyidimumie ilustreaza alte doua programe care, fiecare in parte, utilizeaza un canal cu nume pentru comunicatia
-Sablonuidecumunioalie unulela'unul intre doué procese, unul cu rol de producétor, iar celalalt cu rol de consumator.
-m In’! V n I
-Saublojuiud: cumurttcalte ,t * ,,
-mullrria'mullr
-2:;ﬁrz'zm'tmde Celelalte trei sabloane ridicé anumite probleme de sincronizare, datorate accesului
-MW‘ concurent al mai multor procese la cate unul, sau la ambele, dintre capetele canalului,
-probleme de care trebuie s51 se tiné cont la implementarea acestor $ab|oane.
-Vom trece in revista, pe rand, aceste probleme de sincronizare, ce pot avea efecte
-asupra integritétii date/0r transmise prin canal (i.e., “coruperea” mesajelor).
-Meniu de navigare Cornunicatia inter-process: Canaie de cumunicatie anonirne si cu nume 28 I41
+'"tmducere Comunioatia unul-la-unu/ reprezinta sablonul oel mai simplu, neridioanol probleme
+Canale anonime . . . I I I I A I V
+Canaiecunumei/fo; oleoseblte de Implementare. D|n aoest motlv, este sl oel mal foloslt |n praotloa.
+$135331?3333,2359“ a Exemple: oele oloua programe demonstrative prezentate anterior, in seotiunea olespre oanale anonime,
+Sabloane de comunicatieintre $9 incadreazé. Tn aCGSt $ab|0n de Gomunicatie.
+QFOCGSG
+ggfnsfjﬁjgfgfrji'fﬁlge Demo: exeroitiile rezolvate [’Produoer-oonsumer’ pattern #1, (v2, using fifos for IPC)] si, respectiv,
+Sabijnyldicomunicatie [Producer-consumer’ pattern #2, (v2, using fifos for |PC)] din suportul online de laborator ([3]),
+Sabllzniildipomunicaﬁe ilustreaza alte oloua programe care, fieoare in parte, utilizeaza un canal cu nume pentru comunioatia
+Sablonuldeoomunicatie unul-la-unu/ intre oloua procese, unul cu ro| ole produoator, iar oelalalt cu rol ole oonsumator.
+multi-la-unu/
+Sablonulde comunioatie .k * *
+multi-la-multi
+QEQCuaiilillcana'e'mde Celelalte trei sabloane riolioa anumite probleme de sinoronizare, datorate aooesului
+MM; oonourent aI mai multor prooese Ia oate unul, sau Ia ambele, olintre oapetele oanalului,
+probleme ole oare trebuie sa se tina oont Ia implementarea aoestor sabloane.
+Vom treoe in revista, pe rand, aoeste probleme de sinoronizare, oe pot avea efeote
+asupra integritétii date/or transmise prin canal (i.e., “ooruperea” mesajelor).
+Meniu de navigare Comunioatia inter-prooese: Canale de oomunioatie anonime si cu nume 28/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-$ablonul de comunicatie unuI-Ia-mulﬁ
+O O
+$ablonul de comunicatie unuI-Ia-mulﬂ
 
-‘"‘mdm'e Factori ce pot genera anumite probleme de sincronizare, cu efecte asupra integrita'tii date/0r:
+'“tmducere Factori ce pot genera anumite probleme de sincronizare, cu efecte asupra integrita'ﬂi date/0r:
 
-Gamma annulme
+Canale anonime
 
-AWEWW "'0 I lungimea mesajelor:
+Canalecu numegfifog I lung/mea mesajelor-
 
-Caractensumcumune emvu
+Caracteristici comune pentru
 
-%% — mesaje de lungime constanté
+—‘°—Zm§e'e“:d't At * — mesaje de lungime constanta'
 
-W Nu ridicé probleme deosebite — fiecare mesa] poate fi citit atomic (i.e., dintr-o
+W Nu ridica probleme deosebite — fiecare mesaj poate fi citit atomic (i.e., dintr-o
 
-ZEZIJESZLEZZ'ZZZSZE daté, printr-un singur apel read).
+213:2? Z'ZLTZZZYZZEZG data, printr-un singur apel read).
 
-“Md/I'm‘ i mesaje de lungime variabila“
+unul-la-unul
 
-SMZTZLYLZZ°W“"‘°““S Pot apare probleme de sincronizare, deoarece mesajele nu mai pot fi citite
+jjjggjfujfomumcaﬁe — mesaje de lungime variabi/a
 
-milﬁvmmm atomic. Solutia este folosirea mesajelor formatate astfel:
+Ziiﬁgiijf°mumcaﬁe Pot apare probleme ole sincronizare, deoarece mesajele nu mai pot fi citite
 
-ZSLﬁrz'im'eb'“ MESAJ = HEADER + MESAJUL PROPRIU-ZIS ,
+Sablonul de comunicatie _ , , _
 
-ML header-ul fiind un mesa] de lungime fixé ce conﬁne lungimea mesajului
+mu/ﬂ-Ia-mu/r/ atom/c. Solufua este foloswea mesajelor formatate astfel:
+
+iEr'LCuaﬁiLZl?eca"a'e'°rde MESAJ = HEADER + MESAJUL PROPRlU-ZIS ,
+
+——9—Re‘e““tebib"° ‘am header-ul fiind un mesaj de Iungime fixa ce conﬁne lungimea mesajului
 propriu-zis.
-Protoco/ul de comunicalie utilizat: sunt necesare 2 apeluri read pentru a citi
-un mesa] Tn intregime, de aceea trebuie garantat accesul exclusiv la canal
-(folosind, spre exemplu, blocaje pe fisiere).
+Protoco/u/ de comunicafie utilizat: sunt necesare 2 apeluri read pentru a citi
+un mesaj Tn Tntregime, de aceea trebuie garantat accesul exclusiv Ia canal
+(folosind, spre exemplu, blocaje pe fi$iere).
 
-Meniu de navigare Cornumcatia \mev-procese: Canme de cumumcatie anomme si cu nume 29 I41
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 29/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-$ablonul de comunicatie unuI-Ia-mulﬁ (cont)
+O O
+$ablonul de comunicatie unuI-Ia-mulﬂ (cont)
 
-‘"‘mdm'e Factori ce pot genera anumite probleme de sincronizare, cu efecte asupra integrita'tii date/0r:
+'“tmducere Factcri ce pot genera anumite probleme de sincronizare, cu efecte asupra integrita'ﬂi date/0r:
 
-Canme annulme
+Canale anonime
 
-M)‘ I destinatarul mesajelor:
+Acana'ew "ume ﬁfo I destinataru/ mesajelor:
 
-Caractensumcnmune ermu
+Caracteristici comune entru
 
 % — mesaje cu destinatar oarecare
 
-W Nu ridica probleme deosebite — fiecare mesa] poate fi citit si prelucrat de
+W Nu riclica probleme deosebite — fiecare mesaj poate fi citit $i prelucrat de
 
-22323313232222‘??? oricare dintre procesele “cititori”.
+21321:? ii: QTZZZZEZZZG oricare clintre procesele “cititori”.
 
-“Md/I'm‘ i mesaje cu destinatar specificat
+SbEir'nd/th — mesaje cu destinatar specificat
 
-31713;?LZ§,°"”“"‘°““6 Trebuie asigurat faptul ca mesajul este citit exact de citre “cititorul” caruia Ti
+Ziggﬂjjf°mumcaﬁe Trebuie asigurat faptul ca mesajul este citit exact de catre “cititcrul” caruia Ti
 
-317:7me mm“ era destinat. Solutia — am putea folosi mesaje formatate astfel:
+1175;13ij omunicaﬁe era destinat. Solutia — am putea folosi mesaje formatate astfel:
 
-ZSLﬁrz'im'eb'“ MESAJ = HEADER + MESAJUL PROPRIU-ZIS ,
+iEr'LCuaﬁiLZl?eca"a'e'°rde MESAJ = HEADER + MESAJUL PROPRlU-ZIS ,
 
-ML header-ul continénd un identificator al destinatarului.
-Pentru citife, siar putea aplica protocolul de comunicatie discutat Ia mesaje de lungime
-variabila. lnsé, apare 0 prob/ems? sup/imentaré: dacé un “cititor” a citit un mesa] care nu-i era
-destinat Iui, cum facem sa-I Iivram celui caruia Ti era destinat? O solutie ar fi sé il scrie Tnapoi
-in canal, si apoi va face o pauza aleatoare Tnainte de a Tncerca sa citeascé din nou din canal.
-Nata: aceasta solutie poate suferi de fenomenul de starvation.
+MM; header-ul continancl un identificator aI destinatarului.
+Pentru citire, s-ar putea aplica protocclul cle comunicatie discutat la mesaje de lungime
+variabila. Insa, apare 0 prob/ema' sup/imentara: claca un “cititor” a citit un mesaj care nu-i era
+destinat lui, cum facem sa-l Iivram celui caruia Ti era destinat? O solutie ar fi sa Tl scrie Tnapoi
+Tn canal, $i apoi va face o pauza aleatcare Tnainte de a Tncerca sa citeasca din nou din canal.
+Nota': aceasta solutie poate suferi cle fencmenul de starvation.
 
-Meniu de navigare Cornumcatia \mev-procese: Canme de cumumcatie anomme si cu nume 30 I41
+Meniu de navigare Ccmunicatia inter-procese: Canale de comunicatie anonime $i cu nume so / 41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-$ablonul de comunicatie mulﬁ-Ia-unul
+O O
+$ablonul de comunicatie muIﬂ-Ia-unul
 
-‘"‘mdm'e Factori ce pot genera anumite probleme de sincronizare, cu efecte asupra integritétii date/0r:
+'“tmducere Factori ce pot genera anumite probleme de sincronizare, cu efecte asupra integrita'ﬂi date/0r:
 
-Cana]e annmrne
+Canale anonime
 
-AWEWW "'0 I lungimea mesajelor:
+Canalecu numegfifog I lung/mea mesajelor-
 
-Caractensumcnmune enivu
+Caracteristici comune pentru
 
-%% — mesaje de lungime constanté
+—‘°—Zm§e'e“:d't At * — mesaje de lungime constanta'
 
-W Nu ridicé probleme deosebite — fiecare mesa] poate fi scris atomic (i.e., dintr-o
+W Nu ridica probleme deosebite — fiecare mesaj poate fi scris atomic (i.e., dintr-o
 
-ZEZIJESZLEZZ'ZZZSZE daté, printr-un singur apel write).
+213:2? Z'ZLTZZZYZZEZG data, printr-un singur apel write).
 
-“ﬂy/I'm‘ i mesaje de lungime variabila“
+unul-la-unul
 
-ii?§,‘f$]jj,°°m“"‘““e Trebuie indicaté “cititorului” lungimea fiecérui mesa]. Solutia este folosirea
+jjjggj'ndujfomumcaﬁe — mesaje de lungime variabi/a
 
-i1712;%:’5,f““""‘““‘e mesajelor formatate astfel:
+ZZ?,!Z,ZELSZ,C°m““ica“e Trebuie indicata “cititorului” lungimea fiecarui mesaj. Solutia este folosirea
 
-§§¥111L21°mme MESAJ = HEADER + MESAJUL PHOPRIU-ZIS ,
+Sablonul de comunicatie _
 
-ML header-ul fiind un mesa] de lungime fixé ce conﬁne lungimea mesajului
+mu/ri-Ia-mu/r/ mesajelor formatate astfel:
+
+iEr'LCuaﬁiLZl?eca"a'e'°rde MESAJ = HEADER + MESAJUL PROPRlU-ZIS ,
+
+——9—Re‘e““tebib"° ‘am header-ul fiind un mesaj de Iungime fixa ce conﬁne lungimea mesajului
 propriu-zis.
-Nu ridicé probleme deosebite — fiecare mesa], astfel formatat, poate fi scris
+Nu ridica probleme deosebite — fiecare mesaj, astfel formatat, poate fi scris
 atomic, printr-un singur apel write, deci nu trebuie garantat accesul exclusiv
-la canal.
+Ia canal.
 
-Memu de navigare Ccmunmatia water-process: Cana]e de cumunmatie anomrne si cu nume 3] M]
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 31 /41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-$ablonul de comunicatie mulli-Ia-unul (cont)
-‘"‘mdm'e Factori ce pot genera anumite probleme de sincronizare, cu efecte asupra integritétii date/0r:
-Canme annulme
-M)‘ I destinatarul mesajelor:
-Caractensum cmmune permu
-w — mesaje cu expeditor oarecare
-W Nu ridicé probleme deosebite — fiecare mesa] poate fi citit de procesul “cititor”
-213.3333: $215752? si prelucrat Tn ace|a$i fel, indiferent de la care dintre procesele “scriitori”
-“EM/I'm‘ provine acel mesa].
-317:3;?L331°°m“"‘”““e — mesaje cu expeditor specificat
-3175me Wm Trebuie asigurat cé mesajul ii indicé “cititorului” care este “scriitorul” care i l-a
-ffliallLZ‘l°a"a‘e‘°'°e trimis. Solutia — mesaje formatate in felul urmétor:
-My‘ MESAJ = HEADER + MESAJUL PROPRIU-ZIS,
-header-ul continénd un identificator al expeditorului.
-Nata“: scrierea mesajului astfel formatat se va face printr-un singur apel
-write, la fel ca la mesaje de lungime variabilé.
-Memu d9 navigare Cornurucatia \mev-procese: Canme de cumumcatie anomme si cu nume 32 / 41
+O O
+$ablonul de comunicatie muIﬂ-Ia-unul (cont)
+ac ori ce p0 genera anumi e pro eme e sincronizare, cu e ec e asupra in egri a’ ii a e 0r:
+
+‘ntmducere F t t t bl d f t t t I d t I
+Canale anonime
+Canalecu numegfifog I destinataru/ mesajelor-
+Caracteristici comune pentru
+% * — mesaje cu expeditor oarecare
+W Nu ridica probleme deosebite — fiecare mesaj poate fi citit de procesul “cititor”
+213:2? Z'ZLTZZZYZZEZG ei prelucrat Tn acelaei fel, indiferent de Ia care dintre procesele “scriitori”
+unul-la-unul
+jjj}jgflr'nduifomun'cat'e provme acel mesa].
+Ziﬁlﬁgﬂjjf°mumcam — mesaje cu expeditor specificat
+Sablonuldecomunicatie , , V . A. . . v H . . .,, H .. ,, .
+mum-Ia-muw Trebwe aSIgurat ca mesajul || Indlca eltltorulw care este scrutorul care | I-a
+ﬁcﬁlillcana'e'm trimis. Solutia — mesaje formatate Tn felul urmator:
+M MESAJ = HEADER + MESAJUL PROPRlU-ZIS,
+
+header-ul continand un identificator a| expeditorului.
+
+Nota': scrierea mesajului astfel formatat se va face printr-un singur apel
+
+write, Ia fel ca Ia mesaje de lungime variabila.
+
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 32/41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
-$ablonul de comunicatie mulﬁ-Ia-mulri
-‘"‘mdm'e Problemele de sincronizare ce pot apare in cazul acestui sablon, pot fi cauzate de oricare dintre factorii
-M discutati Ia sabloanele unuI»/a»multi 5i multi-Iaunul:
-Candi cu nume Illa . .
-6mmmmpem I lunglmea mesalelor
-4M2“ “"“CW'E I expeditorul mesajelor
-51:2? de mum“ m I destinataru/ mesajelor
-Clasrhcarea sabmanemr de
-mmm mwmcgse Tratarea acestora se poate face prin combinarea soluliilor prezentate Ia sabloanele precedente.
-Sablonu) ds cnmumcaue
-“Mr/arm
-5357327Lii,°“m“"““ Noté: pentru simplitatea programarii, uneori se poate prefera Tnlocuirea unui singur
-S bl \d l , , , , . .
-MZ$LZHZ°"”“"W canal foloslt pentru comun|ca1|e unul-la-mu/tl, cu maI multe canale folosne pentru
-Sablonu) de cumumcaue
-mm” comunicatie unuI-la-unul, Le. cu céte un canal pentru fiecare proces “cititor” existent.
-Aphcamale canaleblde _ . . _ . . . .
-we‘ EVIdent, se poate proceda Slmllar 3| pentru sabloanele unul-Ia-muli! $| muIII-Ia-mulil.
-R ‘em brbh g Or _ _ ‘ . v . .
+O O
 
-e ‘e D a ce Demo: a se vedea programele suma,p1pes . c 5| suma,f1fos.c ([2]), care reprezmta rescrlerl ale
-programului suma_fi1es . c din lectia practice despre fork 5i wait, prin Tnlocuirea fisierelor obisnuite
-cu canale (anonime si, respectiv, cu nume) pentru comunicaliile dintre supervisor si workeri.
-Comunicatiile dinspre workeri spre supervisor folosesc sablonul mu/ri-Ia-unul. in schimb, sablonul
-unul-Ia-multi pentru comunicatiile dinspre supervisor spre workeri I-am implementat pe baza ideii de
-mai sus, (Pentru explicatii suplimentare despre aceste doua programe, puteii consulta exemplele
+$ablonul de comunicatie mulﬂ-Ia-mulﬂ
 
-Meniu de navigm [FifthDemo — sumaipipes] $i [SixthDemo — sumaififos] din suportul online de laborator ([3]). ) 33,41
+'“troducere Problemele ole sincronizare ce pot apare in cazul acestui sablon, pot fi cauzate de oricare olintre factorii
+
+w discutati la sabloanele unul-la-mu/ri si mu/ri-la-unul:
+
+Canale cu nume (fifo)
+
+Caracteristici comune pentru I lungimea mesajelor
+
+mm * I expeditoru/ mesajelor
+
+$50233? de C°mu"'°a"e "we I destinataru/ mesajelor
+
+Clasificarea sabloanelor de . . ..
+
+comunicaiieimer-procese Tratarea acestora se poate face prin comblnarea solufuilor prezentate Ia sabloanele precedente.
+
+Sablonul de comunicaiie
+
+unul-la-unul
+
+fif}i',§i',,ji,c°m“"'ca“e Nora’: pentru simplitatea programarii, uneori se poate prefera inlocuirea unui singur
+
+Sablonul de comunicaiie , . . . . .
+
+mum-em canal foloslt pentru comunlcajue unul-la-mu/il, cu mal multe canale folosne pentru
+
+Sablonul de comunicaiie
+
+muirr'mui’ comunlcafue unul-la-unul, /.e. cu cate un canal pentru flecare proces “cltltor” eXIstent.
+
+Aplicaiii ale canalelor de . . I I I I I I
+
+m_t— Evldent, se poate proceda s|m||ar sl pentru sabloanele unul-la-mu/r/ sl mu/il-la-mu/il.
+
+Referinte bibliografice . . . . c . .
+Demo: a se vedea programele suma_p1pes.c s| suma_f 1fos . c ([2]), care reprezmta rescrlerl ale
+programului suma_files . c din lectia practica despre fork si wait, prin Tnlocuirea fisierelor obisnuite
+cu canale (anonime si, respectiv, cu nume) pentru comunicaiiile olintre supervisor si workeri.
+Comunicatiile dinspre workeri spre supervisor folosesc sablonul mu/ri-la-unul. in schimb, sablonul
+unul-la-mulri pentru comunicaiiile dinspre supervisor spre workeri l-am implementat pe baza ideii de
+mai sus. (Pentru explicatii suplimentare despre aceste doua programe, puteti consulta exemplele
+
+Meniu de navigare [FifthDemo — suma_pipes] si [SixthDemo — suma_fifos] din suportul online ole laborator ([3]). ) 33/41
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:34**************
-\nlmducere \mroducere
-Gamma annnime Canale anonime
-Cana\e cu Mme mg Crearea \on cu pnmmva plpe
-4L)‘ Modul de uhhzare a unm cana‘ anomm
-CEme‘ “We PW“ Demo. exemp\e de comunlcane Tmre doué process
-ambeleﬂgmlde canals
-Sabloane de wmumcahe imre Canale c“ nume (ma) v
-2mm Crearea \ov, cu prlmmva mkflfo
-Modul de uhhzare a unm cana‘ cu Hume
-ADUCQW ale CQHQMOI d8 , .
-mmm Despre persistema \nlormahe\ dmir'un hmer m
-‘Mam M ‘mpmmwa Deosebin a\e caneﬂebr cu Mme Iaté de ce\e anomme
-‘"““ 5mm’ Caracleristici comune enlru ambele u uri de canale
-Aphcaha #2 \mp\emen(area v v P _ P v
-\mev aphcaw chem/server Caraclenshm 5| restnchl ale canzﬂehar de comumcane
-Comporlamemu‘ \mphmf de Up bwcam
-‘9*
-Hemmwm '3'" Comporlamemu‘ deup nebkncam
-Sablaane de comunicatie intre procese
-Clasmcavea sabmanelor de comunlcaue \mer'procese
-Samonul de comunlcahe unu/rla'unu/
-Samonul de comunlcahe unu/Ja'rnull/
-Samunul de comunlcaue mu/N-Ia-unu/
-Samunul a9 comunicahe mu/(Ha'mu/tr
-Aplicatii ale canalelor de comunicalie
-Aphcaha #1 mplememarea uﬂm semalov
-Aphcaha #2 \mplememarea unex aphcam chem server
-Helerinle bibliogralice
-Memu de navigare Comumcatia inter-process: Game d9 cumumcatie anomme 5i cu nume 34 / 4‘
+A
+lntroducere lntroducere
+Canale anonime Canale anonime
+Canale Cu nume IﬁfOI Crearea Ion-cu prlmltlvalplpe .
+. . _ Modul cle ut|l|zare a unul canal anonlm
+caraCterISt'C! comune pent“ Demo: exemple ole ccmunicatie intre doua procese
+ambele tlQUi'l de canale ’
+Sabloane de comunicaiie intre' Canale CU nume (hf?) _ _ _
+grocese Crearea lor, cu prlmltlva mkf 1f o
+_ _, Modul ole utilizare a unui canal cu nume
+Apllcaiu ale canalelor de . . . . . . . .
+comunicatie Despre per5|stenia informailel dmtr-un f|$|er f/fo
+m Deosebiri ale canalelor cu nume faia cle cele anonime
+um“ semafor Caracteristici comune ntr mb l ti ri d n l
+Aplicaiia #2: implementarea _ _ _ _ Pen u a e e pu e ca_ a _e
+unei apucatii Ghent/server Caracteristici $| restrict“ ale canalelor de comunlcafue
+R f _ bbr f Comportamentul implicit, ole tip blocant
+e erlnte | logra Ice -
+Comportamentul cle tlp neblocant
+Sabloane de comunicatie intre procese
+Clasificarea sabloanelor cle ccmunicaiie inter-procese
+Sablonul ole comunicaiie unul-la-unu/
+Sablonul cle comunicaiie unul-la-mu/ii
+Sablcnul cle comunicaiie multi-la-unu/
+Sablonul ole comunicaiie mu/fi-la-mu/ii
+Aplicaiii ale canalelor de comunicaiie
+Aplicaiia #1: implementarea unui semafor
+Aplicaiia #2: implementarea unei aplicaiii client/server
+Referinie bibliografice
+Meniu de navigare Comunicaiia inter-procese: Canale de comunicaiie anonime $i cu nume 34/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
+~ '1
+
 Aplicalia #1: implementarea unui semafor
 
-‘"‘mm'e Cum am putea implementa un semafor folosind canale fifo’?
+'“tmdmere Cum am putea implementa un semafor folosinol canale fifo ?
 
-Canals anomme
+Canale anonime
 
-M O posibilé implementare ar oonsla in urmétoarele idei:
+Awna'emume ﬁlo O posibila implementare ar consta Tn urmatoarele idei:
 
-Caraclerlsllcl comune peniru
+Caracteristici comune pentru
 
-ambelellgurlde canals . _ . . . . . . . . ..
+ambeletiguride canale ' I I I I I I I I I I V
 
-55mmdemmmm Initializarea semaforulul s-ar reallza prln crearea unUI fl$lel f/fo de calre un proces cu
+Sabloanedecomumcaﬁeme lnljuallzarea semaforulw s-ar reallza prln crearea unul f|$|er f/fo ole catre un proces cu
 
-A rol de superwzor (acesta poate fl oncare dintre procesele ce vor lol05| acel semafor,
+QFOCGSG . . . . -
 
-Dlloalu ale canalelor de
+Aplcamalecanalelorde rol de superwzor (acesta poate fl or|care ollntre procesele ce vor folosr acel semafor,
 
-AZZTZQIZTT imprgmm sau poate li un proces separat).
+——le?cuarl:§a§iimplementarea sau poate fi un proces separat).
 
-unui semalor
+unuisemafor
 
-3171111 LTZLEEZFJZI“ Acest proces supervizor va scrie inilial in canal 1 octet oarecare, dacé e vorba de un
+A licaia 2: im lemen area . . . . . A v
 
-My‘ semafor binar (sau n octeli oarecare, dacé e vorba de un semafor general n-ar).
-lar apoi va pastra deschise ambele capete ale canalului pe toaté durata de execulie a
-proceselor ce vor folosi acel semafor (cu scopul de a nu se pierde pe parcurs
-informalia din canal, datorilé inexistenlei la un moment dal a macar unui proces care
-sé aibé deschis mécar vreunul dintre capete, conform celor disculate anterior legat de
-perioada de retenlie a informaliei intr-un canal ﬁfo).
+uﬁeialllllGrim/seller Acest proces superwzor va scrle |n|jual |n canal 1 octet oarecare, olaca e vorba de un
 
-Meniu cle navigare Ccmunicalia ruler-process: Canale de comunicalie anonime si cu nume 35 I41
+——9—Re‘e""teb‘b"° ‘aﬁce semafor binar (sau n octeli oarecare, olaca e vorba de un semafor general n-ar).
+lar a|ooi va pastra deschise ambele capete ale canalului pe toata durata de execulie a
+proceselor ce vor folosi acel semafor (cu scopul ole a nu se pierole pe parcurs
+informalia din canal, olatorita inexistenlei la un moment clat a macar unui proces care
+sa aiba deschis macar vreunul olintre capete, conform celor oliscutate anterior legat ole
+|oerioao|a de retenlie a informaliei lntr-un canal fifo).
+
+Meniu de navigare Comunicatia inter-procese: Canale de comunicafrie anonime 5i cu nume 35/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
+O O
+
 Aplicatia #1: implementarea unui semafor (cont)
 
-‘""me'e Operatia wait va consta in citirea unui octet din fieierul ﬁfo.
+'“"°du°e‘e Operatia wait va consta Tn citirea unui octet din fieierul fifo.
 
-M Mai precis, intai se va face deschiderea Iui, urmaté de citirea efectiva a unui octet, 5i apoi eventual
+w Mai precis, Tntai se va face deschiolerea lui, urmata ole citirea efectiva a unui octet, $i apoi eventual
 
-ca a‘ u u e ”° inchidereafieierului.
+anaecu numeg i0) A . . . .
 
-Caracteristici commie penilu
+C ' H |nch|derea f|$|erulu|.
 
-SSHddm'H Operatia s1gnal va consta in scrierea unui octet in fl$lefu| fifo.
+Caracteristici comune pentru
 
-1mm— Mai precis, intai se va face deschiderea Iui, urmaté de scrierea efectivé a unui octet, si apoi eventual
+am ee i uri ecanae ' . . A . . A . . .
 
-:mflgll°a"a‘e‘°me inchiderea fisierului.
+—p—Sa:|0'antede:Omumc'aﬁemtre Operatla elgnal va consta |n scnerea unu| octet |n flelerul f/fo.
 
-A iiCaliaM im lamentarea ..
+M Mai precis, Tntai se va face oleschiolerea lui, urmata ole scrierea efectiva a unui octet, $i apoi eventual
 
-“5w we p Observatn:
+fjicuagigjifecana'e'°r de Tnch iolerea fieieru l u i.
 
-Apiicalia #2 implementarea '
+Aplicatia #1: implementarea ..
 
-“"“”“Ca“‘°“*"‘“'”' i) citirea se va face, in modul implicit, blocant, ceea ce va asigura aeteptarea
+uml senator Observatll:
 
-Refevinle bibiingrafice . . A . . . ~ . A u
-procesului la punctui de intrare in sectiunea sa critica atunCI cmd semaforul este pe
-roeu", adica daca canalul ﬁfo este gol.
-ii) scrierea nu se va putea bloca (cu conditia ca n-ul semaforului general s51 nu
-depaeeascé capacitatea maxima pe care 0 putem configura pentru un canal).
-Temé: implementati in C un semafor binar pe baza ideilor de mai sus si scrieti un program demonstrativ
-in care sé utilizati semaforul astfel implementat pentru asigurarea excluderii mutuale a unei sectiuni
-critice de cod (pentru “inspiratie” in scrierea programului demonstrativ, revedeti problemele de
-sincronizare discutate in cursurile teoretice #5 si #6 ).
+Apllcat|a#2_tlrnplementarea . . . ’ A . . . .
 
-Meniu de navigate Ccmunicatia inter-process: Canaie de cumunicatie anonime si cu nume 36 I41
+‘me'ap""al"""e"”se”er I) c|t|rea se va face, |n moolul Impllclt, blocant, ceea ce va aSIgura aeteptarea
+
+Referinte bibliografice . . A . . . V . A H
+procesulul Ia punctul ole |ntrare |n sectlunea sa cr|t|ca atuncl c|no| semaforul este pe
+roeu”, adica olaca canalul fifo este gol.
+ii) scrierea nu se va |outea bloca (cu conolitia ca n-ul semaforului general sa nu
+depaeeasca capacitatea maxima pe care o putem configura pentru un canal).
+Tema': implementati Tn C un semafor binar pe baza ioleilor de mai sus $i scrieti un program demonstrativ
+Tn care sa utilizati semaforul astfel implementat pentru asigurarea excluderii mutuale a unei sectiuni
+critice ole cool (pentru “inspiratie” Tn scrierea programului demonstrativ, reveoleti problemele de
+sincronizare oliscutate Tn cursurile teoretice #5 $i #6).
+
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 36/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Aplicaiia #2: implementarea unei aplicaiii client/server
-‘""me'e O aplicaiie cu arhitectura de tip client/server este compusa din doua componente:
-Canaie anomme
-Canaremm ma I serverul: este un program care dispune de un anumit numar de servicii (i.e.,
-53.3511?‘ZZQZQZIZEM'“ funciii, operaiii, etc.), pe care le pune la dispozitia clieniilor.
-$3,233?‘*“°'““"‘“““""* I clientul: este un program care “interogheazé” serverul, solicitandu-i efectuarea
-Q:;jj1;jl;°a"a‘e‘°'“e unui serviciu (dintre cele puse la dispoziiie de acel server).
-CES??2;ZL£“°‘E“*“‘”“ Exemp/u: Browserele pe care Ie folositi pentru a naviga pe INTERNET sunt un exemplu de program
-55:11:‘ $522332!” client, care se conecleaza la un program server, numil server de web, solicitandu-i transmiterea unei
-Reiennlebibiingraﬂce pagini web, care apoi este afieata in fereastra grafica a browserului.
-lmp/ementarea unei apl/caii/ de tip client/servero puteii face in felul urmator:
-Programul server va ﬁ rulat in background, ei va stain aeteptarea cererilor din partea
-clieniilor, putand servi mai mulii clienii simultan.
-lar clientii vor putea fi rulaii mai mulii simultan (din acelasi cont si/sau din conturi
-utilizator diferite), 5i se vor “conecta” la serverul rulat in background.
-Nata: pot exista, Ia un moment dat, mai multe procese client care Tncearca, fiecare independent de
+~ Q
+Aplicatia #2: implementarea unei aplicatii client/server
+'“"°du°e‘e O aplicatie cu arhitectura' de tip client/server este compusa din doua componente:
+Canale anonime
+Canaiecunumeiﬁfo, I serverul: este un program care dispune de un anumit numar de servicii (i.e.,
+ZZTQEZSQE?ZZTZQZIZMU functii, operatii, etc.), pe care Ie pune Ia dispozitia clientilor.
+SléfofljjgedeC°mum°aieintre I clientul: este un program care “interogheaza” serverul, solicitandu-i efectuarea
+ﬁji°uagigjtfe°ana'e'°rde unui serviciu (dintre cele puse Ia dispozitie de acel server).
+ﬁiifiiiiigimp'ememama Exemp/u: Browserele pe care le folositi pentru a naviga pe INTERNET sunt un exemplu de program
+ﬁiifiiliiiiLTZLT/Ziiiiiea client, care se conecteaza Ia un program server, numit server de web, solicitandu-i transmiterea unei
+Referintebibliografice pagini web, care apoi este afisata Tn fereastra grafica a browserului.
+lmp/ementarea unei ap/icatii de tip client/servero puteti face Tn felul urmator:
+Programul server va ii rulat Tn background, si va sta Tn asteptarea cererilor din partea
+clientilor, putand servi mai multi clienti simultan.
+lar clientii vor putea fi rulati mai multi simultan (din acelasi cont si/sau din conturi
+utilizator diferite), si se vor “conecta” Ia serverul rulat Tn background.
+Nota: pot exista, Ia un moment dat, mai multe procese client care Tncearca, fiecare independent de
 celelalte, sa foloseasca serviciile puse la dispozitie de acelasi proces server.
-Meniu de navigare Ccmunicatia inleY-WOCBSBI Canaie de cumumcatie anomme si cu nume 37 I41
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime si cu nume 37/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
+O O
 Aplicatia #2: implementarea unei aplicatii client/server (cont)
-‘"‘mdm'e Observatie: in realitate, programul server este rulat pe un anumit calculator, iar clientii pe diverse alte
-M calculatoare, conectate la INTERNET, comunicatia realizéndu-se folosind socket-uri, prin intermediul
-4Q~CWMWW "’° retelelor de calculatoare.
-5:553:22ZZVEZSZIZEM lnsé puteti simula aceasté “realitate” folosind comunicatie prin canale cu nume si executénd toate
-Sabina“dwmwcaneimre procesele (l.e., serverul 5i clientii) pe un acelasi calculator, eventual din conturi utilizator diterite.
-Q:‘;Z";1g§l;°“"a‘e‘°'“e Tipurile de servere existente in realitate, d.p.d.v. al serviri/ “simultane”a mai mu/tor
-Qillcligéfmplmma clienti, se impart in doué categorii:
-unei a llcatll clieanerver . .
-p I server Iterat/v
-Relennle blbllngraflcs
-Cét timp dureazé efectuarea unui serviciu (i.e., rezolvarea unui client), serverul
-este blocat: nu poate réspunde cererilor venite din partea altor clienti. Deci nu
-poate rezolva mai multi clienti Tn acelasi timp!
+
+'“tmducere Observatie: in realitate, programul server este rulat pe un anumit calculator, iar clientii pe diverse alte
+
+w calculatoare, conectate la INTERNET, comunicatia realizandu-se folosind socket-uri, prin intermediul
+
+w retelelor de calculatoare.
+
+Carac erisicicomune en ru A c . . c . . . . . . A
+
+ambeltetigtiridecanal: t lnsa putetl slmula aceasta “realrtate” folosmd comunlcatle prln canale cu nume sl executand toate
+
+Sabloanedecomunicatierntre procesele (i.e., serverul si clientii) pe un acelasi calculator, eventual din conturi utilizator diferite.
+
+QFOCGSG
+
+5531,05,;grgana'e'“ de Tipurile de servere existente in realitate, d.p.d.v. al servirii “simultane” a mai multor
+
+A licatia #1: im lementarea . . A A v ..
+
+Xﬁﬁisgmgizor pl clientl, se Impart |n doua categoru:
+
+picatla :lmpementarea
+uneia licatii client/server , ,
+.p . . . I server Iterat/v
+
+Referinte bibliograflce
+cat timp dureaza efectuarea unui serviciu (i.e., rezolvarea unui client), serverul
+este blocat: nu poate raspunde cererilcr venite din partea altor clienti. Deci nu
+poate rezolva mai multi clienti in acelasi timp!
+
 I server concurent
-Pe toaté durata de timp necesaré pentru efectuarea unui serviciu (i.e., rezolvarea
-unui client), serverul nu este blocat, ci poate réspunde cererilor venite din partea
-altor clienti. Deci poate rezolva mai multi clienti in acelaei timp!
-Meniu de navigare Ccmunlcatia inter-process: Canale de cumumcatie anonlme si cu nume 38 I41
+Pe toata durata de timp necesara pentru efectuarea unui serviciu (i.e., rezolvarea
+unui client), serverul nu este blocat, ci poate raspunde cererilcr venite din partea
+altor clienti. Deci poate rezolva mai multi clienti in acelasi timp!
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime si cu nume 38/41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Aplicaiia #2: implementarea unei aplicagii client/server (cont)
-‘5W1 Detalii legate de implementare:
-M)‘ I Pentru implementarea unui server de tip iterativ este suficient un singur proces
-M secveniial. in schimb, pentru implementarea unui server de tip concurent este
-jbld—mm nevoie de mai multe procese secveniiale: un proces supervisor, care aeteapté
-Q:¥Z"il£§ll°“"a‘e‘°'de sosirea cererilor din partea clieniilor, $i la fiecare cerere sosité, el va crea un nou
-ZZIIMEZZSI proces fiu, un worker care va fi responsabil cu rezolvarea propriu-zisé a clientului
-High“: respectiv, iar supervisor-ul va relua imediat asteptarea sosirii unei noi cereri, féré
-sé astepte terminarea procesului fiu. (Sau, alternativ, se poate implementa printr-un singur
-proces mum-threaded‘)
+~ '1
+Aplicatia #2: implementarea unei aplicatii client/server (cont)
+'“imdmre Detalii Iegate de implementare:
+Canale anonime
+Ml; I Pentru implementarea unui server de tip iterativ este suficient un singur proces
+Caracteristici comune pentru I A . I . I
+M secvential. In schimb, pentru implementarea unur server ole tip concurent este
+Sabloane de comunicatie intre _ _ _ . V
+pocese— nevme de mar multe procese secventiale: un proces superwsor, care asteapta
+A licatii ale canalelor de . . . . . . . . v
+C§municaie sosirea cererilor din partea clientilor, si Ia fiecare cerere sosita, eI va crea un nou
+Aplicatia#1:implementarea I I . I I III I I
+XBiLZZSZZZmpiememarea proces flu, un worker care va fl responsabil cu rezolvarea propriu-ZIsa a clientulw
+RIpI'thI'tI respectiv, iar supervisor-ul va relua imediat asteptarea sosirii unei noi cereri, féré
+eerine l IOQI'alCe
 
-I Pentru comunicarea intre procesele client ei procesul server este necesar sé se
-utilizeze, drept canale de comunicatie, fieiere ﬁfo. (Motivu/z nu se pot folosi canale
-anonime deoarece procesul server si procesele clienti nu sunt anudite prin fork/exec.)
+Sé astepte terminarea prOCeSUIUi fiu. (Sau, alternativ, se poate implementa printr-un singur
 
-I Permisiunile fieierelor fifo folosite pentru comunicaiie trebuie configurate adecvat,
-astfel incét s5 permité executia proceselor client din conturi utilizator diferite (i).
+proces multi-threaded.)
 
-Meniu de navigare Ccmunicatia imer-procese: Canaie de cumunicatie anonime si cu nume 39 I41
+I Pentru comunicarea intre procesele client si procesul server este necesar sé se
+utilizeze, drept canale d9 comunicatie, fisiere fifO. (Motivul: nu se pot folosi canale
+anonime deoarece procesul server si procesele clienti nu sunt inrudite prin fork/exec.)
+
+I Permisiunile fisierelor fifo folosite pentru comunicatie trebuie configurate adecvat,
+astfel incét sé permité executia proceselor client din conturi utilizator diferite (i).
+
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime si cu nume 39/41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
+~ Q
 Aplicatia #2: implementarea unei aplicatii client/server (cont)
-‘"‘mm'e I Un alt aspect legat tot de comunicatie: serverul nu cunoaate in avans clientii ce se
-Canals annulme _ . ._ A _ . I v ~
-CWEWW mg vor conecta la el pentru a le oferI serVIcn, In schImb cllentul trebule sa cunoasca
-Giggle?“:WEIPEM serverul la care se va conecta pentru a beneficia de serviciul oferit de el.
-EZZ'ZZQE“m'wmmwe Ce inseamna aceasta d.p.d.v. practic ’?
-Aplicatu ale canalelor de . _ A _ .
-W Serverul va crea un canal f/fo cu un nume flxat, cunoscut In programul client, 5| va
-:1:g§ﬁ$3‘;ﬂmpigmmea aetepta sosirea informatiilor pe acest canal.
-unei a licatu clientserver _ , _ _
-Remlm m Un cllent oarecare se va conecta la acest canal flfo cunoscut $I va transmlte
-informatii de identificare a sa, care vor fi folosite ulterior pentru realizarea etectivé
-a comunicatiilor implicate de serviciul solicitat (cel mai probabil va fi nevoie sa
+'“imdmere I Un alt aspect legat tot cle ccmunicatie: serverul nu cuncaete in avans clientii ce se
+Canale anonime . . .. A . . _ V V
+Canalecunume ﬁfe vor conecta la el pentru a le cferi serwcu, |n schimb clientul trebwe sa cuncasca
+Cafjtegstcisomunelpemw serverul la care se va conecta pentru a beneficia de serviciul oferit cle el.
+am ee IQUI'I ecanae
+SéfokZlZZQedeC°mum°aiiem Ce inseamna aceasta d.p.cl.v. practic ?
+Aplicatii ale canalelor de _ . A _ _
+W Serverul va crea un canal f/fo cu un nume fixat, cunoscut |n programul client, $| va
+p ica,|a I Imp emen area
+XEiLZZZZZZmpiememarea aetepta scsirea informatiilcr pe acest canal.
+unei aplicatii client/server _ _ _ _
+Rf .t W. f. Un client carecare se va conecta la acest canal f/fc cuncscut SI va transmite
+eerine l iograice ’
+informatii cle identificare a sa, care vcr fi fclcsite ulterior pentru realizarea efectiva
+a ccmunicatiilor implicate de serviciul solicitat (cel mai probabil va fi nevoie sa
 utilizati canale suplimentare, particulare pentru acel client, pentru a nu se
 “amesteca” intre ele comunicatiile destinate unui client cu cele destinate altui
-client conectat la server in acelasi timp cu primul ).
-Temé: implementati un joc multi-p/ayer “in retea", pe baza ideilor descrise mai sus.
-Meniu de navigare Cornunicatia inter-process: Canale de cumumcatie anonime si cu nume 40 I41
+client ccnectat la server in acelaei timp cu primul ).
+Tema': implementati un joc multi-p/ayer “in retea”, pe baza ideilcr descrise mai sus.
+Meniu de navigare Comunicatia inter-procese: Canale de comunicatie anonime $i cu nume 40/41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
+O O
 Bibliografie obligatorie
-‘"‘mdm'e [1] Cap. 5, §5.1,§5.2,§5.3 si §5.5 din cartea “Sisteme de operare — manual pentru ID‘, autor
-M C. Vidrascu, editura UAIC, 2006. Nora": este accesibila, in format PDF, din pagina disciplinei
-4‘—)~cm‘““““" "’° “Sisteme de operare":
-Caracierisiici cmrnune peniru
-Mm o https I //profs . info . uaic . r0/"vidrascu/SU/books/ManualIDeSE] . pdf
-Sabloane de ccmunicatie inire
-pruce5e— . I . I II I I II
-IIIIIIII aiecanaieiorde [2] Programele demonstrative amlntlte pe parcursul acestel prezentari pot fl descarcate de la:
-AZGTMIWTM I I https : //profs . info . uaic . ro/'vidrascu/SO/cursuri/C-programS/pipe/
-“we r Wm
-o https : //pr0fs . info . uaic . r0/”vidrascu/SO/cursuri/C-programs/fifo/
-[3] Suporiul online de Iaborator asociai acestei prezeniari:
-l https : //pr0fs . info . uaic . r0/"vidrascu/SO/labs/suport_1ab12 . html
-Bibliografie suplimeniara:
-[4] Cap. 44 din cartea “The Linux Programming Interface : A Linux and UNIX System Programming
-Handbook", autor M. Kerrisk, editura No Starch Press, 2010.
-o https : //profs . info . uaic . r0/”vidrascu/SU/books/TLPI 1 .pdf
-[5] POSIX API: man 2 pipe, man 2 mkfifo, man 2 fcntl.
-Meniu d9 navigare Ccmunicaiia inter-process: Canaie de cumunicaiie ancnime 5i cu Hume 41 r41
+'“tmducere [1] Cap. 5, §5.1,§5.2,§5.3 si §5.5 din oartea “Sisteme de operare — manual pentru ID”, autor
+w C. Vidrascu, editura UAIC, 2006. Nota: este acoesibila, in format PDF, din pagina disoiplinei
+Canale cu numegfifo) “Sisteme de Operare”2
+Caracteristioi comune pentru
+w 0 https : //profs . info . uaic . ro/"vidrascu/SO/books/ManualID-SO . pdf
+Sabloane de comunicatie intre
+M I I I I o I I o
+Aplicatiialecanalelor de [2] Programele demonstrative amintite pe paroursul aoestei prezentari pot fl desoaroate de la:
+:Tuffatbr f 0 https : //profs . info . uaic . ro/Nvidrascu/SO/cursuri/C-programs/pipe/
+eerine l iograioe
+0 https : //profs . info . uaic . ro/Nvidrascu/SO/cursuri/C-programs/fifo/
+[3] Suportul online de laborator asooiat aoestei prezentari:
+0 https : //profs . info .uaic .ro/Nvidrascu/SO/1abs/suport_1ab12 .html
+Bibliografie suolimentara:
+[4] Cap. 44 din oartea “The Linux Programming Interface : A Linux and UNIX System Programming
+Handbook”, autor M. Kerrisk, editura No Starch Press, 2010.
+0 https : //profs . info . uaic . ro/Nvidrascu/SO/books/TLPI 1 .pdf
+[5] POSIX API: man 2 pipe, man 2 mkfifo, man 2 fontl.
+Meniu de navigare Comunioatia inter-prooese: Canale de oomunioatie anonime si cu nume 41 /41
 
 ***************Ending Page***************
+
+
+
+
 

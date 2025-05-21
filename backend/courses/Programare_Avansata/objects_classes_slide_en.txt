@@ -1,6 +1,6 @@
 ***************Beginning Page***************
 ***************page number:1**************
-gig) Java'
+g) Java
 Advanced Programming
 Objects and Classes
 
@@ -8,112 +8,117 @@ Objects and Classes
 
 ***************Beginning Page***************
 ***************page number:2**************
-OOP Concepts
+GOP Concepts
 
-~ Object = A software entity described by a state and a
+' Object = A software entity described by a state and a
 behaviour.
 
-- Class = A prototype describing objects:
+' Class = A prototype describing objects:
 
 an object is an instance of a class.
 
 - Reference = An entity used to uniquely locate an
 object (may be a pointer to a memory location).
 
-~ Program = A dynamic set of objects interacting with
-each other (within the same JVM).
+- Program = A dynamic set of objects interacting with
+each other (Within the same JVM).
 
 - Interface = A contract a class may agree to follow.
 
-- Package = A namespace for organizing classes.
+' Package = A namespace for organizing classes.
 
 - Module = Runtime modularization
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
 Class — Reference - Object
-PROTOTIP m
-adresi)
+PROTOTIP
+. adresa 1
+adresa 2 :>.
+I adresa 3 .
+EFF‘?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Creating Objects
-
-Declaration Instantiation Initialization
-
+Creatlng Objects
+WWW
 ClassName refName = new ClassName([arguments]);
-Rectangle rl : new RectangleU; A 21:32::
 
-I1 lS he
+Rectangle r1 = new Rectangle(); //"-_!l §§§ii
+r1 is the
+reference .
 Rectangle r2;
-r2 I new Rectangle(0, 0, lOO, 200)?
-Rectangle r3 : new Rectangle(
-new Point (0,0) , new Dimensi0n(100, 100) );
+r2 = new Rectangle(0, O, lOO, 200);
+Rectangle r3 = new Rectangle<
+new Point(0,0), new Dimension(lOO, 100));
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-NullPomterExceptlon
+NuIIPolnterExceptlon
 Rectangle square;
-(equivalent to.‘ Rectangle square : null;)
-square.x = 10,-
-Rectangleﬂ squares = new Rectangle[10];
-squaresl01.x = 10;
+(equivalent to.’ Rectangle square = null;)
+square.x = 10;
+Rectangle[] squares = new Rectangle[10];
+squares[0].x = 10;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
 Usmg Objects
-~ objectReference.variable
-Rectangle square I new Rectangleﬂ), O, 100, ZOO);
-System.out.println (square.width);
-squarex : 10;
-square‘); : 20;
-squareorigln = new P01nt(10, 20);
-- objectReference.method( [parameters] )
-Rectangle square I new Rectangleﬂ), O, 100, ZOO);
-square.setLocation(10, 20);
-square.set$ize(200, 300);
+- objectReference.variable
+Rectangle square = new Rectangle(0, O, lOO, 200);
+System.out.println(square.width);
+square.x = 10;
+square.y I 20;
+square.origin = new Point(lO, 20);
+' objectReference.method( [parameters] )
+Rectangle square = new Rectangle(0, O, lOO, 200);
+square.setLocation(lO, 20);
+square.setSize(200, 300);
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Destroying Objects
+Destroylng 0bjects
 Objects that are not referenced anymore will be
 automatically destroyed.
 An allocated object is no longer referred when all
 its reference variables:
 - no longer exists (in a natural way)
 - explicitly were set null.
-public class Test (
-String a; Test test = new TestO;
-public void init() { testlinito;
-a = new St:ing("a"); ...
-String b = new Strinq("b"); test.stop();
-i
-public void stopO ( a = null; }
-l
+public class Test {
+String a; Test test = new Test();
+public VOid init() { test.init();
+a = new String("a"); ___
+String b = new String("b"); test.stop();
+t
+public void stop() { a = null; }
+t
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
 A JVM component responsible with recovering memory
-‘£4
-mcto retenma
-Systm. gc () : "Suggests" JVM to start the Garbage Collector
-The finalize method: invoked just before the removat 07 an obiect from memonl.
-@Dep’e°a‘ed finalize =e destruclor!
-lava -verbose:gc
-[GC (AI/Ocalwn Fa/lure) 1048576K A 31562K (4019712K), 0.0211351 secs]
-used befule GC used after GC Iota! allocated
+‘x!
+nicio referinta
+System. gc () : "Suggests" JVM to start the Garbage Collector
+The finalize method: invoked just before the removal of an object from memory.
+@Deprecated finalize ¢ destructor !
+java -verbose:gc
+[GC (Allocation Failure) 1048576K —> 31562K (4019712K), 0.0211351 secs]
+used before GC used after GC total allocated
 
 ***************Ending Page***************
 
@@ -123,15 +128,15 @@ used befule GC used after GC Iota! allocated
 GC Implementations
 
 Mark and Sweep
-~ Serial Garbage Collector
+' Serial Garbage Collector
 
-a Stop the world
+— Stop the world
 - Parallel Garbage Collector
 
 — Uses multiple threads for managing heap space
-' CMS Garbage Collector
+- CMS Garbage Collector
 
-a Concurrent Mark Sweep (CMS)
+— Concurrent Mark Sweep (CMS)
 - G1 Garbage Collector (default)
 
 — Garbage First - partitions the heap into a set of
@@ -146,7 +151,7 @@ Generational Collection
 
 Memory is divided into generations, that is, separate pools
 holding objects of different ages. For example, the most
-Widely-used configuration has two generations: one for young
+widely-used configuration has two generations: one for young
 objects and one for old objects.
 
 Generational garbage collection exploits the following
@@ -165,21 +170,22 @@ is more space efficient.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
 Heap, Stack, Metaspace
-- Heap a memory to store all the Objects.
-- Stack a values (primitives and references) existing within
+- Heap —> memory to store all the Objects.
+' Stack —> values (primitives and references) existing within
 the scope of the function they are created in.
-- Metaspace H native memory for the representation of
+- Metaspace —> native memory for the representation of
 class metadata
 - Adjusting memory parameters
-e ja valang. OutOfMemoryError: -Xms1024m, -me2G
-e ja va.Iang.StackOverﬁ0wError: -Xss512k
-— XXMetaspaceS/ze
-— javaJangRunt/me
-Runtime :untime = Runtime.getkuntime();
-long memory = runtime.totalMernOryt) , runtimetfreeMemoryO .-
+— java./ang. OutOfMemoryError: -Xms1024m, -me26
+— java. lang. StackOveﬁ/owError: -Xss51 2k
+— XX:MetaspaceSize
+— java.lang.Runtime
+Runtime runtime = Runtime.getRuntime () ;
+long memory = runtime.totalMem0ry() - runtime.freeMemory();
 
 ***************Ending Page***************
 
@@ -202,20 +208,21 @@ bytes of memory on the heap, but it will use 16 bytes as it
 needs to be aligned to the next 8 byte boundary.
 
 - Each String object costs 24 bytes (plus its actual content).
-Why’?
+Why?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Declarlng a Class
-[public] [abstract] [final]class ClassName
+Declaring a Class
+[public][abstract][final]class ClassName
 [extends SuperclassName]
-[implements Interfacel [, .. ]] (
+[implements Interfacel [, .. ]] {
 The Class Body
-Variables
+variables
 Constructors
-Methods
+.Methods
 Nested classes
 }
 
@@ -223,190 +230,167 @@ Nested classes
 
 ***************Beginning Page***************
 ***************page number:14**************
-Single-responsmility principle
+Single-responsibility principle
 public class Person {
 private int id;
-protected scring name;
-public PersonO ( )
-public Pe:son(St:ing name) (
+protected String name;
+public Person() { }
+public Person(String name) {
 this.name = name;
-)
-public String gemameo (
+}
+public String getName() {
 return name;
-)
-void setName(String name) (
-thismame = name;
-)
-) SOLID
+}
+void setName(String name) {
+this.name = name;
+}
+} SOLID
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
-Using 1000000 QDJects: 69 IIlS
-
-. . Using 1000000 QDJeCts: 57 Ins
-
-publlc Class Main i stng 1000000 ObJBCts: 54 Ins
-
-"31w 1000mm mam: 52 ms
-
-public static vold maln($tring arqu) ( Usmg 1000mm objects: 93 ms
-
-int “Objects = 1 00° 000; Using 1000000 objects: 54 Ins
-
-. t bSte S _ 1 030- — Uang 1000000 QDJects: sa Ins
-
-1n n P - _ I Using 1000000 obJects: 85 Ins
-
-Main app Z new MamU; Using 1000000 QBJeCts: 59 Ins
-
-for (int k : 0; k < anteps; k++) ( vigniéimii 011322;“ is ms
-
-_ _ , 0c: 9.. a “I.
-
-app. testobjects (nbObjects) , 1n|a51sx->3161uxuol9112K)I
-0.0230121 :ecl]
-
-) Using 1000000 obJects: S1 IIlS
-
-private vo1d tastObjectS(1nt n) < 3:12? £38322 3:122:25 ii 2:
-
-long to = System.currentTin\eMllllS11; um; 1mm 01:12:15; 33 m5
-
-Personﬂ Pexsons = new Personln]; stng 1000mm objects: 32 ms
-
-for (int 1 : 0; i < n; 1++J 1 35mg 1332383 0:1“? ii ms
-
-- _ 4 anq o m 5: m5
-
-) personslx] _ new P2250110 ' Using 1000000 obJects: 32 Ins
-
-Using 1000000 ob]ects: 33 Ins
-
-for (int 1 = O; i < n; 1++1 ( Using 11100qu objects: 22 Ins
-
-personsli] ‘setNameC'Person " + i) ; $;é“2.i322222,2“;i§§2;.i2 '“5
-
-i _ 10801861P>11511K(4019712K)1
-long c1 : SystemcurrentTmeMnlls41; 0.01201s2 “=11
-
-Systemwuppnntlnltl i t0),- Using 1000000 obJects: 41 Ins
+Af 'd f C t' Ob' t '7
+Using 1000000 objects: 69 ms
+Using 1000000 objects: 62 ms
+public static void main(String args[]) { Using 1000000 objects: 93 ms
+int nbObjects = 1 000 000. Using 1000000 objects: 94 ms
+I
+. __ -' _ -' Using 1000000 objects: 83 ms
+in? anteps - 1_090' Using 1000000 objects: 86 ms
+Main app = new Main(); Using 1000000 objects: 59 ms
+for (int k = O; k < anteps; k++) { Using 1000000 objects: 56 ms
+- - _ [GC (Allocation Failure)
+app ' testObJects (nbObJects) ' 1048576K—>31610K(4019712K) ,
+0.0230124 secs]
+} Using 1000000 objects: 81 ms
+private void testObjects(int n) { Using 1000000 obqect“ 32 ms
+, , , USing 1000000 objects: 32 ms
+long t0 I System.currentTimeMillis(); Using 1000000 objects: 33 ms
+Person[] persons = new Person[n]; Using 1000000 objects: 32 ms
+;for~ (iryt j_ : (j; j_ < 11; j;++) { Using 1000000 objects: 32 ms
+. __ _ Using 1000000 objects: 31 ms
+persons[i] - new Person() ' Using 1000000 objects: 32 ms
+} Using 1000000 objects: 33 ms
+fQIj (irﬂ; i :: O; i <: n; _i++j { Using 1000000 objects: 32 ms
+persons[i] .setName("Person n + i); USing 1000000 objects: 32 ms
+} [GC (Allocation Failure)
+1080186K—>l4514K(4019712K),
+long t1 I System.currentTimeMillis(); 0.0120782 secs]
+- _ . Using 1000000 objects: 47 ms
+System.out.println(tl t0),
+} ...
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:16**************
 Access Level Modifiers
-Controlling Acoess to Members of a Class
-Modifier Class Package Subclass World
-public '
-protected a
-no mod/fer a O
-private a ' '
-vi Q O Q
+Controlling Access to Members of a Class
+m
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Inherltance
+Inheritance
 
 Single inheritance
 A class has one and only one direct superclas
 except of?
-public class Student extends Person l
+public class Student extends Person {
 
-// Person l5 tke superclass of student
+// Person is the superclass of Student
 
 // Student is a subclass of Person
-J
+}
 No multiple inheritance of implementation
-pubi-ie—e=tass—5§udent—e*tends—l>ersen,—liebet l
+publie—elass—Student—extends—Persen7—Rebet {
 
 // Syntax Error
-1
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-The Object Class
+The 0bject Class
 Object is the root of the class hierarchy.
-Every class has Object as a superclass‘
-All objects, includlng arrays, implement lhe methods of lhis classy
-class A l l
-class A extends Object l l
-. v
-L h
-L
+Every class has Object as a superclass.
+All objects, including arrays, implement the methods of this class.
+class A {}
+class A extends Object {}
+Object
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
 Object Class Methods
 All objects, including arrays, implement the
 methods of the Object class:
-n tcString : Returns a strlng representation of the object.
-ii equals z Indicates whether some other object is "equal to" this one.
-ﬁ hashCode : Returns a hash code value for the object‘
-ﬁ getClass : Returns the runtlrne class oi thls obiectv
-i‘: clone : Creates and returns a copy 01 this Object (by default, a Shel/0w cupy)
-n finalize ; Called by the garbage collector on an object when garbage
-COIleCthrl determlnes that there are I10 more reierences l0 the object.
+u‘: toString : Returns a string representation of the object.
+n‘: equals : Indicates Whether some other object is "equal to" this one.
+n‘: hashCode : Returns a hash code value for the object.
+u‘: getClass : Returns the runtime class of this object.
+n‘: clone : Creates and returns a copy of this object (by default, a shallow copy)
+u‘: finalize : Called by the garbage collector on an object when garbage
+collection determines that there are no more references to the object.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
 Example
-Overndlng Object Methods
-public class Complex 4
+Overrldlng Object Methods
+public class Complex {
 private double a, b;
-publlc Complex add(Complex comp) {
-return new Complexla + Compla, b + comp.b);
-)
-@Ovexride
-public boolean equalswbject obj) (
-ll (obi :: rull) IGLuzn false;
-it [Hob] instanceot ComplexH return false;
-Complex comp : (Complex) om;
-return ( complaIIQ u comp,b::bl;
-)
-@OVerride
-public String tcstrian 4
-Strlnq scmn : (b > o ? "+" 1 M");
-return a + semn + b + "r";
-)
-l
-Complex cl : new Complex(1,2); :rcmplox c2 : new Complex(2,3)i
-SyStemlOutJJrlntlnhﬂladdUIZD),' // 3l0 + 5.0i
-System.out.prlntln(cl .equals (c2) ); // false
+public Complex add(Complex comp) {
+return new Complex(a + comp.a, b + comp.b);
+}
+@Override
+public boolean equals(0bject obj) {
+if (obj II null) return false;
+if (!(obj instanceof Complex)) return false;
+Complex comp I (Complex) obj;
+return ( comp.aIIa && comp.bIIb);
+}
+@Override
+public String toString() {
+String semn I (b > O ? "+" : "—");
+return a + semn + b + "i";
+}
+}
+Complex cl I new Complex(l,2); Complex 02 I new Complex(2,3);
+System.out.println(cl.add(c2)); // 3.0 + 5.0i
+System.out.println(cl.equals(c2)); // false
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-ObjecthashCodeQ
+0bject. hashCode()
 
 - A hash function takes as input some data of arbitrary size and
-maps it to a value of a ﬁxed length (called hash value).
+maps it to a value of a fixed length (called hash value).
 
-° The hashCode method takes as input an object (this) and
+- The hashCode method takes as input an object (this) and
 returns a hash value for that object. This method is supported
-for the benefit of hash tables‘
+for the benefit of hash tables.
 
-- lftwo objects are equal according to the equals method, they
-must produce the same integer hashCode‘
+' lf two objects are equal according to the equals method, they
+must produce the same integer hashCode.
 
-~ It is not required that if two objects are unequal, they must
+' lt is not required that if two objects are unequal, they must
 produce distinct integer results.
 
-- As much as is reasonably practical, the default hashCode
+~ As much as is reasonably practical, the default hashCode
 method defined by Object does return distinct integers for
-distinct objects, (This is typically implemented by converting the
+distinct objects. (This is typically implemented by converting the
 internal address of the object into an integer)
 
 ***************Ending Page***************
@@ -414,339 +398,358 @@ internal address of the object into an integer)
 ***************Beginning Page***************
 ***************page number:22**************
 Example String.hashCode()
-h(s)Is[0]*31”(nI1) + s[l]*31”1ni2) + + s[n*l]
-(s[1] is the lIth character of the strlng)
-public int hashCodeO 4
+h(s):s[O]*31A(n—l) + s[l]*31A(n—2) + ... + s[n—l]
+(s[i] is the i—th character of the string)
 
-mt h I hash,- //hash is by defauli O
-1f (h II O && val\;@.lergth > 0) {
-char valH I value;
-for (1m l I 0; 1 < valLe_lerqth7 l++) (
-r : 31‘ h + valh]:
-)
+public int hashCode() {
+int h I hash; //hash is by default O
+if (h I: O && value.length > O) {
+char val[] I value;
+for (int i I O; i < value.length; i++) {
+h I 31 * h + val[i];
+}
 hash I h;
-)
+}
 return h;
-)
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
 An object can be reffered by a variabile with a proper type.
 Liskov substitution principle (LSP): if S is a subtype of T, then
 objects of type T may be replaced with objects of type S.
-Square retl e new sqtereo; Obj“:
-Rectangle rcfZ e new SquarcO;
-Potyqerr ref} e new sqtareu;
-Object ref4 r new SqLareU;
-%q%fe—bad¥efénM—Reebaeg%eH+ “1Y9”
-Polygon metodalf > t I
-if t.»
-return new squareu; // Ccrrect Recmngle
+Square refl I new Square(); Object
+Rectangle ref2 I new Square();
+Polygon ref3 I new Square();
+Object ref4 I new Square();
+—8quare—hadReé—=—new—Reetanq%€+++ Polygon
+Polygon metoda1( ) { I
+if (m)
+return new Square(); // Correct Rectangle
 else
-return new RectangleU; // Correct
-)
-Rectangle :netoda2( ) 1 Squa“
-1t t.»
+return new Rectangle(); // Correct
+}
+Rectangle metoda2( ) { Square
+if (m)
 return new Polygon(); // Error
 else
-IeLuzn new squazen // CozrecL
-> SOLID
+} return new Square(; // Correct SOLID
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-Class Constructors
-A construclor has Wm, has mmigmmmm,
-cannot be absiract, 5mm ﬂnaL orsynchromzed
-public class ClassName i
-[modifiers] ClassNamaﬂarqm'uentsl) (
+Class Constru cto rs
+A constructor has the same name as its class, has no explicit return type,
+cannot be abstract, static, final, or synchronized.
+public class ClassName {
+[modifiers] ClassName([arguments]) {
 // Constructor
-)
-)
-class A (
-protected int x;
-public A(int X) ( this.x = x; )
-public A() ( this(0);)
 }
-class B extends A(
-public Bum: X) I super(x);)
-)
-class C (
-//De£ault (implicit) constxuctox
-//Genezated by the compile: (if necessary)
-)
+}
+class A {
+protected int x;
+public A(int x) { this.x = x; }
+public A() { this(0);}
+}
+class B extends A{
+public B(int x) { super(x);}
+}
+class C {
+//Default (implicit) constructor
+//Generated by the compiler (if necessary)
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
 Invoklng Constructors
-class A (
-public A() (
-System.cut.pri.ntln("A") ;
-)
-l /I
-class E extends A (
-public BO ¢
-Systemounpxincln("a");
-)
-’ /
-class c extends B ( f
-public CO l 9
-System.out.println("c");
-} O
-l
+class A {
+public A() {
+System.out.println("A");
+}
+} i
+class B extends A {
+public B() {
+System.out.println("B");
+}
+‘ 4
+class C extends B {
+public c0 { 7
+System.out.println("C");
+} D
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-public class ClassName i
-[modifiers] ReturnedType methodNameﬂarqumentsl) (
-// The body of the “\Ethbd
-)
-)
-class A l
-public void he110() 1
-SyQLu,n.uuL.g7llnLlf,L"Hull0")i
-’ —
-publlc v01d hellﬁﬂStzxng str) i
-cyclcu.ul\:.picml-("llclcu " + c111;
-)
-)
-class n extends A 4
+public class ClassName {
+[modifiers] ReturnedType methodName([arguments]) {
+// The body of the method
+}
+}
+class A {
+public void hello() {
+System.out.println("Hello");
+* —
+public void hello(String str) {
+System.out.println("Hello " + str);
+}
+}
+class B extends A {
 @Override
-public void hello() 4
-supez.hell° 0:
-Syctc1\.out.pllntl"["8dlut")i —
-)
-@0vezride
-public void hellolstzing st!) (
-S}sf9ﬂ.ou’.prcnfl"WSFiluf " + my;
-)
-)
+public void hello() {
+super.hello();
+System.out.println("Salut"); —
+}
+@Override
+public void hello(String str) {
+System.out.println("Salut " + str);
+}
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
 Sendlng Parameters
 Always pass-by-value!
-Void method(5tringBuilder 51, StringBuilde: 52, g number)
-(
-// StrlﬂunlldeI 15 a reference data type
+
+void method(StringBuilder s1, StringBuilder s2, in; number)
+{
+
+// StringBuilder is a reference data type
+
 // int is a primitive data type
-sl.append ("bc");
-52 : new StringBullder("yz");
-number 1 123;
-i
-StringBuilder sl = new StringBuilder("a");
-StringBuilder $2 e new StringBulldefP'X")?
-int n I 0;
-methcd(sl, 52, n);
-Systemiout.prlntln(sl + ", " + 52 + ", " + n),
-I
+
+sl.append("bc");
+
+$2 = new StringBuilder("yz");
+
+number = 123;
+}
+StringBuilder sl I new StringBuilder("a");
+StringBuilder $2 = new StringBuilder("X");
+int n = O;
+method(sl, s2, n);
+System.out.println(sl + ", " + s2 + ", " + n)”
+
+Q
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Varlable Number ofArguments
-[modifiexs] RetuxnedType methodNamengumentsType axgs)
-void method(0bject args) (
+Varlable Number of Arguments
+[modifiers] ReturnedType methodName(ArgumentsType ... args)
+void method<0bject ... args) {
 
-for(1nt 1:0; l<args.length; 1++) (
-Systenuoubprlntln(arqs[l] );
-)
-)
-IAééhOd ("Héllo");
-meth0d("HellO", "Java", 1.8);
-System.0\;t.printf("ls "ed in", "Grand‘l'0tal:", 1000);
+for(int i=0; i<args.length; i++) {
+System.out.println(args[i]);
+}
+}
+$é£h0d("Hello");
+method("Hello", "Java", 1.8);
+System.out.printf("%s %d %n", "GrandTotal:", lOOO);
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
 The final Modifier
-“Controlllng“ the Open-Ciosed principle
-° Final Variables — once initialized, cannot be modified
-final int [LAX : 100; . . . M
-flnallntn; l . .n:100;l l ‘H66+
-In consmmimsi
-' Final Methods — cannot be overridden
-class Student K class Computersciencestudent
-. . . extends Student (
-final float géthadE(flOat SCDIES[]] ﬂea-Ege-EGﬁde-{ﬁeﬁeefeS-EH (
-l return 10.05;
-i i// Complle error!
-i
-° Final Classes — cannot be extended
-final class Ai), WM
+“Controlling” the Open-Closed principle
+' Final Variables — once initialized, cannot be modified
+final int MAX = 100; . . . MA%—=—200+
+final int n; . . . n = 100; . . . n—=—200+
+In constructors!
+' F|nal Methods — cannot be overridden
+class Student { class ComputerScienceStudent
+... extends Student {
+final float getGrade(float scoresil) fleat—getGrade+fleat-seeres+++ {
+{ return 10.00;
+} }// Compile error!
+}
+' Final ClaSSGS — cannot be extended
+final class A{}, elass—B—extends—A—++
 SOLID
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-The stat/c Modifier
+The stat/c Mod |f|er
+Every instance of the class shares a class variable, which is in one fixed location in memory.
+Any object can change the value of a class variable, but class variables can also be
+manipulated without creating an instance of the class.
 
-Every inslance oi the class shares a class variable, which l5 ll'l one ﬁxed location in memory.
-Any object can change me value ole class variable, bul class variables can also be
-manipulated without creating an instance oi the class
-
-- Static variables — hold values specific t0 a
+- Static variables — hold values specific to a
 certain class and not for every instance.
 Example: efﬁcient declaration of constants
-static final double PI : 3.14;
+static final double PI I 3.14;
 
-~ Static methods — available at the class level
+- Static methods — available at the class level
 and not for every instance (can only access
 static variables)
+
 Example: “global” methods
-double x = Math.sqrt (2);
+double X I Math.sqrt(2);
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:31**************
-puhllr r15,“ Dog ‘
-pmviie “mg name:
-pub)“; scan: ma; >t11'1g MLS>AGL : "Come Yeze, ",~
-publn: scat}: ma; Sung DEFAULTJAFK : “Woof”;
-public Dowﬁznrvq rams) (
-thlsma'w Z namr:
-v
-Wm“ vcuc mm» <
-5y>m uul.p:ut10(l"l:>5§61 7 rams * "'"y;
-v
-publu‘ static void barkll ,
-Sysmmm.pnrnnwzrmLEARQ;
-Unopstauc vaxlablé nams can 10¢ m :eiezenced £10m a smile cortex:
-v
-mm: stat c v0 a ma nlStHrq argsi v (
-Dog anfy Z (my: Dng["wn1iy“y;
-“HYAOMQ;
-meﬂm, //wa;'n11\g: uni-“mg aw“- wetiwd m fzéld/
-Systenvuut.p:1|‘tln("wo,£/ mm ,1“ thls: " + wify.uyww§m<h
-mummy-
-SysKeW.n\1t.pr1rUn(“A dog mm, 11k; nus; -' 4 Dog nummjmm
-//'no|*stat)c ‘mm DOWEH can 10¢ m :ememed £10m a sumo cortex:
-v
+I I
+I
+Example. Usmg Statlc Members
+public class Dog {
+private String name;
+public static final String MESSAGE = "Come here, ";
+public static final String DEFAULT_BARK = "Woofl";
+public Dog(String name) {
+this.name = name;
+}
+public void come() {
+System.out.println(MESSAGE + name + "!");
+}
+public static void bark() {
+System.out.println(DEFAULT_BARK);
+if—+nameTequals+LPeanutl++—SystemTeutTpriﬁtlﬁ+¥¥ip+¥++
+//non—static variable name cannot be referenced from a static context
+}
+public static void main(String args[]) {
+Dog wolfy = new Dog("Wolfy");
+wolfy.come();
+wolfy.bark(); //warning: accesing static method (or field)
+System.out.println("Wolfy barks like this: " + wolfy.DEFAULI_BARK);
+Dog.bark();
+System.out.println("A dog barks like this: " + Dog.DEFAULT_BARK);
+Begeeeme+++
+//non—static method come() cannot be referenced from a static context
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Statlc |n|t|a||zer Blocks
+Statlo Inltlallzer Blocks
 Class-Level “Constructors”
 static {
-// Initialize: Block
+// Initializer Block
 /*A block of code that runs only
 one time, and it is run before
 any usage of that class*/
-)
-public class Test (
-Stﬂth lnt X : 0, y, z;
+}
+public class Test {
+static int X = O, y, z;
 // Static initializer block
 static {
-Systemioutiprlntln("In;t1alizing Class,,,");
-int t:1;
-y : 2;
-z : x + y + t;
-)
-public TestU 1 )
-)
+System.out.println("Initializing Class...");
+int t=1;
+y = 2;
+Z = X + y + t;
+}
+public Test() { ... }
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
-Classes declared WIthln other classes
-public class Outexclass (
-static class StaticNestedClass k
-// No dlfference Lo any ozher class
-// May be pnvaee, protected, public
-)
-private class Innerclassl <
+Nested Classes
+Classes declared Wlthln other classes
+public class OuterClass {
+static class StaticNestedClass {
+// No difference to any other class
+// May be private, protected, public
+}
+private class InnerClassl {
 // Member Class
-// Access :0 all members oi Lhe ouLer (‘lass
-)
-vold mo:hod() (
-class InnerClassZ <
-// Local Class (simllar to closurE-s)
-// Accss Lo all members or (he oazer class
-// and only to the final varlabiels of the method
-l
-)
-)
-Corngiling nested classes
-OuterCTasslclasS,
-OutezClasS$InneZClassl.class, OutezClasS$InneZClass2.class
+// Access to all members of the outer class
+}
+void method() {
+class InnerClass2 {
+// Local Class (similar to closures)
+// Acces to all members of the outer class
+// and only to the final variabiels of the method
+}
+}
+}
+Compiling nested classes
+OuterClass.class,
+OuterClass$InnerClass1.class, OuterClass$InnerClass2.class
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:34**************
 Abstract Classes and Methods
-[public] abstract class AbstractClass r
+[public] abstract class AbstractClass {
 // Abstract Methods (no implementation)
-abstract ReturnedType abstracﬂdethodﬂargsl);
+abstract ReturnedType abstractMethod([args]);
 // Normal Methods
-l
-- An abstract class deﬁnes a template on which concrete
+}
+- An abstract class defines a template on which concrete
 classes can be created (by subclassing them)
-- Used to share code among several closely related classes‘
+- Used to share code among several closely related classes.
 - Cannot be instantiated.
 Examples:
-java.alrt.Component: Button, List,
-javalanglllumber: integer, Double,
+java.awt.Ccmponent: Button, List, ...
+java.lang.NUmber: Integer, Double, ...
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:35**************
-lnt 1 Z refldntvalueUF
-
-. I Boolean refb : new Booleanltrue)7
-in: 1 : Ken.- //(auto)un.boxi.ng
-boulean b Z refb.‘
+int i = refi.intValue();
+_ I Boolean refb = new Boolean(true);
+boolean b = refb.booleanValue();
+int i = refi; //(auto)unboxing
+boolean b = refb;
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:36**************
-public enuln Signal {
+public enum Signal {
 RED, YELLOW, GREEN;
-t
-public class Traffchlqnts 1
-Signal signal:
-puDElC TrafficnghtstSignal signal) (
-thlS.Slgnal : slgna;;
->
-pub;1c boolean lSCIOSSlnqulOWEdU t
-Wm r5 gnatl t
-case SignaLGREEN: return true,‘
-defaul: return false;
->
-r
-r
-new Traffchlgnts (Signal.YELLOW) .;sCrosslng1\llowedH;
-Enums are transformed by the compller |nto classes'
+}
+public class TrafficLights {
+Signal signal;
+public TrafficLights(Signal signal) {
+this.signal = signal;
+}
+public boolean isCrossingAllowed() {
+switch (signal) {
+case Signal.GREEN: return true;
+default: return false;
+}
+}
+}
+new TrafficLights(Signal.YELLOW).isCrossingAllowed();
+Enums are transformed by the oompller Into classes;
 they contain some other methods : Signal.values()
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:37**************
 Creational Design Patters
 You may want to learn about:
 - Singleton
-- Object Factory
+' Object Factory
 - Object Pool
 - Prototype
 - Builder

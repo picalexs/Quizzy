@@ -1,12 +1,13 @@
 ***************Beginning Page***************
 ***************page number:1**************
-1
+1.
+.
 Clusterlng
 Contains:
-Hycrarchical clusterization: cx. 27, as‘ a4. s‘
-Kimeans alga. (Partitional clustering): ex. 40. 10_ 12, 45. 51.
-EM/GMM alga. (Model-based clustering): ex. 16‘ 18‘ 19, 20. 24. 64
-from the 2023fvcrsion oflhe ML exorcise book by 1.. Clot-Luz m m.
+Hyerarchical clusterization: ex. 27, 33, 34, 6,
+K-means algo. (Partitional clustering): ex. 40, 10, 12, 45, 51,
+EM/GMM algo. (Model-based clustering): ex. 16, 18, 19, 20, 24, 64
+from the 2023f version of the ML exercise book by L. Ciortuz et a1.
 
 ***************Ending Page***************
 
@@ -16,634 +17,622 @@ Hierarchical clustering
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-3
+3.
 Exemplifying the application 0f
 hierarchical agglomerative clustering
 (single-, complete- and average-linkage)
-CMU, 2012 fall, Tom Mitchell, Ziv Barloscph, HW4, pry 2e
-extended by Livin CiDrtllZ
+CMU, 2012 fall, Tom Mitchell, Ziv Bar-Joseph, HW4, pr. 2.21
+extended by Liviu Ciortuz
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-\
-The table below is a distance matrix for 6 objectsi
-A B C U E F
-
+4.
+The table below is a distance matrix for 6 objects.
+A B C D E F
 A 0
-
-B 0,12 0
-
-C 051 0.25 0
-
-U 0.84 0.16 014 0
-
-E 028 0.77 0,70 015 U
-
-1" 0'34 0.01 0'93 0.20 0.67 0
-Show the ﬁnal result of hierarchical clustering with singlw,
-complete- and average—linkage by drawing the corresponding den-
-drogramsi
-New: To compute the average-linkage similarities, you may use the follow-
+B 0.12 0
+C 0.51 0.25 0
+D 0.84 0.16 0.14 0
+E 0.28 0.77 0.70 0.45 0
+F 0.34 0.61 0.93 0.20 0.67 0
+Show the ﬁnal result of hierarchical clustering with single-,
+complete- and average-linkage by drawing the corresponding den-
+drograms.
+N0t€2 To compute the average-linkage similarities, you may use the follow-
 ing formula:
-
-, , i mm’ zHlvlliu'zl
-
-lllxurzl i le ‘ lYl , m
-where x, i and x are muLunlly disjoint cluster». Pruvc this l'unnula.
+|X\d(X, Z) + |Y|d(Y, Z)
+d X U Y, Z : —, 1
+Where X, Y and X are mutually disjoint clusters. Prove this formula.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Solution: ,
-Singlelinkage:
-ABPUF E
-v , ‘ ABIIDF n
-Au ( u L 1~ E n“ u
-Au u
-C 025 0 i
-11 0.1:» 014 0
-E (12?‘ um! 045 u “28 0,25
-F ‘134 um; n'zu um n 025
-021
-.40 (In L 11
-AB u “2
-('11 016 u 020 020
-1: 0.2a n15 0
-F 0.31 nzn um n U“
-ms ms
-4'7"” E F 0M nu
-ABC!) u
-E 028 n “Q “2
-1-" 020 007 u
-1—
-° A B c o F E
+Solution: 5.
+Single-linkage:
+ABCDF E
+A ABCDF 0
+B C D E F E 0.28 0
+AB 0
+C 0.25 0 —
+D 0.16 0.14 0 028 028
+E 0.28 0.70 0.45 0 I I
+F 0.34 0.93 0.20 0.67 0 0.26
+0.24
+AB CD E F
+AB 0 0.22
+CD 0.16 0 0.20 020
+E 0.28 0.45 0 O18
+F 0.34 0.20 0.67 0 I
+0.10 0.16
+ABCD E F Q14 014
+ABCD 0
+E 028 0 0.12 0.12
+F 0.20 0.67 0 . , . . . . .
+0 A B c D F E
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Complumunkagm n
-ABF (‘DE
-ABF o
-1B A‘? F D E r (‘DE 093 (l
-C‘ um u i
-n 054 014 u ‘a
-u 0.17 0.7" 045 n ‘
-F um n03 020 um n as "9“
-oe
-AB (“17 E F
-.7113 n 07 010
-(7D um n us 051
-FT 011 um u
-1" 061 nus nu? u "5
-DA
-ABF (‘u E
-AUF u “a
-cu 003 u n2
-E 0.77 0.70 u a‘ W2 014-
-a -
-A a F c D E
+Complete-linkage: 6.
+ABF CDE
+ABE 0
+AB C D E F
+AB 0 CDE 0.93 0
+C 0.51 0 —
+D 0.84 0.14 0 10
+E 0.77 0.70 0.45 0 ' |
+F 0.61 0.93 0.20 0.67 0 0.9 0-93
+0.8
+AB CD E F
+AB 0 0-7 0.70
+CD 0.84 0 06 Q61
+E 0.77 0.70 0
+F 0.61 0.93 0.67 0 0-5
+0.4
+ABF CD E 03
+ABF 0 '
+CD 0.93 0 0.2
+E 0.77 0.70 0 0.1 Q12 0.14
+O I -
+A B F c D E
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-7
-Average-linkage:
-AB c D E F MARCFJHOZM (1:061ZUJZU38
-AB n 41m u) + may) i (LS-1+0 us i ,
-U (1,38 u ma. n) i! i1 u J
-rJ can on u a 41(14 ﬁnal/1,15) 023“va , r
-u 0 525 0 10 u.45 0 WW‘ I“) 2 2 U “2”
-.' .' ‘ ' ' x ‘ . ‘ \ ' .
-1 041) 0J3 uzo um u (it-4M1‘) I In 1 r) +1101 1-) I n 11mm :nm
-2 2
-AB (‘D E F (“.4110”)ng i w i 0.44
-AU 0 , '- ;
-(7D u 44 n (mun) I w I w I n 575
-E “m "57"’ U z((' F! {4(1) F) uvafuzn
-F 0475 n ms; 01»? u d((‘D.F) I ‘f I f : 056')
-mm? F) F ‘ _. ‘w H r-r
-W MARCH-BI‘? w w 055
-1" 3;; 0L2” 0 mA/mlu")? 24(40 F): 4((0 F) “1 in lag 0 32
+Average-linkage: 7.
+AB 0 D E F d(AB,C) I d(A,C)-;d(B,C) I 051-5025 20.38
+A; 02,8 0 d(AB,D) I d(A, D) -|2-d(B,D) I 084-5016 I 05
+Z £5205 ‘31%5‘ 0215 0 d<AB»E> I —d<A’E) 2d”) I Lg?” I 0-525
+F 0.475 0.93 0.20 0.67 0 d(AB,F) I d(A,F)J2rd(B,F) I 034-5061 I 0.475
+AB CD E F d(AB,CD)<2 w I w I 0.44
+ABCD ABOCD E F d(ABCD,E)(i) 2d(AB,E)1:2d(CD,E) 20525305752055
+g 8:23 0%? 0 (“ABCDj F)@ 2d(AB, F) I 2d(CD, F) z 0.475 J; 0.565 :0_52
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-a
-Averagchnkagc (COHUCI):
-ABC/IF E
-,i 44 4500.5 d FE 2. ‘7
-AB( DF u mABFDF 5)‘! % I Q I n rm
-F n 514 u 5 ~’
-054 055
-.152
-m
-042 D¢A
-use
-0:0
-024
-me
-012 012
-one -
-o
-A a c n F E
+8.
+Average-linkage (c0nt’d):
+ABCDF E
+4d ABCD E d F E 2.87
+ABCDF 0 d(ABCDF, Efi) % I — I 0.574
+E 0.574 0 5 5
+0.54 0-55
+0.52
+
+0.48
+
+0.42 0.44
+
+0.36
+
+0.30
+
+0.24
+
+0.18
+
+0.12 0.12
+
+0
+A B C D F E
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-9
-Nate: The pm“; given bcluw fur the (11 formula fallow! closely the one found in P'wll-
-lam-5 and 501mg“ in Biological Sequence Analysis: Mark BurndovskyT Sfetlana Eki'
-sheva, Cambridge University Press, 2006, pp. 1927193.
-ml 1
-A[X.Y) I W Z 2mm] (2)
-l vC\ VFJ
-V 12! 1
-:>AAUB/\ : i 111,1
-‘ ) (w HBUW 32,, < ‘l
-\
-: i J !,_v + :1 l I]
-<\-4\+\R\>\X\(§§‘ ” 2;‘ >
-A1! 1 .
-fAXA4.A+BXAB.X
-(\Awwnw“ u \( y \u m >>
-I
-: AA/LX )BAB,X
-‘Ammuw JHt >>
+9.
+Note: The proof given below for the (1) formula follows closely the one found in Prob-
+lems and Solutions in Biological Sequence Analysis, Mark Borodovsky, Sfetlana Eki-
+sheva, Cambridge University Press, 2006, pp. 192-193.
+def. 1
+A(X7Y) I w Z Z d(fv,y) (2)
+1 || baggy
+(2) 1
+:>A(AUB,X) : — d(w,y)
+<|A| + |B1>|X| 2;,
+1
+I — ﬁlmy) + (May)
+<|AI + IB1> IXI <22 Z;
+<2) 1
+I —(\A\|X\A(A>X)+|B||X|A(B,X))
+(IAI + lBl) IXI
+1
+I —(|A|A(A,X)+\B\A(B,X))
+1A1+|B|
 Therefore,
-mm); z;+\v Aw Z)
-AfXU Y Z : .
-> W - H
+IXINX» Z) + \YINY, Z)
+A(X UY, Z) : —.
+1X l + 1Y1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-10
+10.
 Hierachical [bottom-up] clustering
 Ward’s metric
 CMU, 2010 fall, Aarti Singh, HW3, pr. 4.1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-11
-ln this problem you will anlayze sh slterristive approach te quantify the
-distsuee between two disjeiut clusters, proposed by .lue H. Ward iu was.
-We will call it Ward} metric.
+11.
 
-Werd's metric simply suys that the distance hetweeu twe disjeiut rlusters, x
-and y. is how much the sum of squares will increase when we merge them.
-Mere formally‘
+In this problem you will anlayze an alternative approach to quantify the
+distance between two disjoint clusters, proposed by Joe H. Ward in 1963.
+We will call it Ward’s metric.
+Ward’s metric simply says that the distance between two disjoint clusters, X
+and Y, is how much the Sllm Of squares will increase when we merge them.
+More formally,
 
-Atx v) : Z \lu s lutrll’ , Z ll s/ull , Z llr, , I'l ll’ <15)
+AOQY) I Z HIM — #XUYH2 — Z “951' — MXH2 — Z “331' — #Yll2 (3)
 
-,‘exul hex her
+ZEZ'EXUY miEX 1Bi€Y
+where ,uX is the centroid of cluster X (similarly, ,uy is the centroid of cluster
+Y, and ,uXUy is the centroid of cluster XUY), and the notation at, E X denotes
+a data point in the X cluster. By deﬁnition, here we will consider ,uX I
+1
 
-where ,lx is the centroid of eluster x (similarly, ,ly is the. eeutrhirl of cluster
-Y_ and hm» is the centroid of eluster xuv), and the notation r, e x riermtes
-a dsts puiht iu the X eluster. By deﬁniﬁon, here we will consider l“ e
-i 21 A \v i,,, where M is the number of elements ih X.
-ii‘ i~
-A[X. Y) can he theught es the merging mt of combining elueters x and Y iritu
-eue eluster. Thst is, ih agglomerative clustering these twe elusters with the
-lewest merging cost are merged. wheu Ward‘s metrie is used as a closeness
-meusure.
+— Zmex xi, where nX is the number of elements in X.
+TLX Z
+A(X, Y) can be thought as the merging cost of combining clusters X and Y into
+one cluster. That is, in agglomerative clustering those two clusters with the
+lowest merging cost are merged, when Ward’s metric is used as a closeness
+measure.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-12
-a. Can you reduce the formula in equation (a) for A(X y) m a simpler form?
-Give me simpliﬁed formula.
-Him: Your formula should he in term; nf mp, (‘luster Sam (19"; dam-He mm
-as HX and m ) and the distance ‘My i m H2 between cluster centroids m and
-M only‘
+12.
+a. Can you reduce the formula in equation (3) for A(X, Y) to a simpler form?
+Give the simpliﬁed formula.
+Hint: Your formula should be in terms of the cluster sizes (let’s denote them
+as nX and ny) and the distance ||,uX — ,u,y||2 between cluster centroids ,LLX and
+,uy only.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Solution 13
-Mm’): Z Uri/‘MW ZH'IHLXH“ ZHIHW
-1,e.\u\/ “X “a
-I Z (11- me )2 - Z (11 — m’ — Em — m )2
-L|E.\IUY J,€.\' L,€Y
-: '"fiiluw- Z n+ 2 15m»
-r .w “EX” hem’
-- ff+2#x-Zr.— Zui- >f+2m -ZL1—Z#§
-, \' “X Md , v “Ev 1,9/
-<ﬁ> 2("XH,\+mM/)2 (muxwwunz a I
-:- + +2 w‘ +2" —n‘—7|
-"X +713» "X +21‘ m AHX uy yuy XMX w»
-("x/1x +1WM')? 2 2
-: ii+n L>+ﬂ L
-"X + W x; .\ w y
-’(77Y!LX +71Y}LY)2+(”X.“2\ +"Y!L§)(”X+7H) 77X”? 2 I
-Z . . Z - 2 +
-"WNW MX+V|y<VX #xm Hy)
-i ﬁnt i H1
-i nx+m ‘X M
+Solution 13.
+NXQY) I Z Him- —#XUY‘|2 — Z H581- —#XHZ — Z Him- — Ml2
+ZC¢€XUY $¢€X $¢€Y
+I Z (513?; — #XLJY)2 — Z (332 — HX)2 — Z (516Z — [Lg/)2
+wiGXLJY 13¢€X LL'Z'GY
+I 51312 — ZHXUY ' Z 952' + Z 1“ng
+ac- XLJY wiEXUY xiéXUY
+05> X {QEX wZEX w EY xZEY 9:7;EY
+6 2 n + n 2 n + n 2
+(I) _ ( XILLX YHY) + ( XHX Y/lY) + ZManﬂX + Zuynyuy _ nxllig _ 12W?
+71X —|— HY 71X + nY
+_ ("XHX + "WM/)2 2 2
+_ nX+nY +nXHX+nYHY
+_(nXHX + "MM/)2 + ("XH%< + nY/lzy)(nX + RY) "XnY 2 2
+I — I — _ 2 +
+"X + ny 71X + ny (#X #XMY HY)
+I wH _ H2
+71X + ny HX HY -
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-14
-a explicative notes
-my Z “a Z WW,“ A W u)
-W HEX “Ex
-U 1 “1w 1
-A4‘ l My 1 .
-,' i x 1+ y v i i
-X Wu m \ m1 Himh'wuwwuv) (a)
-m l “my 1
-um» Z ., mm (mm mm) "Xm l'xu) (M +m MIX»
-, ‘my
-g Wuuwwng (a)
-"x ¢ HY
+14.
+3 explicative notes
+de . 1 no .
+#ijcmzwi2>2$¢:|X‘/LX It nXpX (4)
+{IMGX ZCZ'QX
+def. 1 XmYzw 1 (
+HXUY I — $1" I — 5131+ yz)
+‘X w Z \XI + w Z Z
+(4) 1 not. 1
+I — X + Y z — n +n 5
+(é) _ 2 Xﬁlfzw 2
+MXUY Z £131" — ,LLXUY (nXUY MXUY) — nXUY MXUY — (71X + RY) MXUY
+xiEXUY
+(g) (nXHX + nY/iY)2 (6)
+71X + RY .
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-15
-bl Give an interpretstiun ror Ward‘s metrie. tht do you thinlr it is trying
-to achieve’!
-
-Hint: The simpliﬁed rormuln from above will be helpful to nnswer this pnrt.
+l5.
+b. Give an interpretation for Ward’s metric. What do you think it is trying
+to achieve?
+Hint: The simpliﬁed formula from above will be helpful to answer this part.
 Solution:
-
-With agglomcralive hierarchical elustering. the slim er squeres sLarts ouL ut
-zero (heeuuse every peint is in its own eluster) and then grows es we merge
-rlusters. Ward’; metrio nims to keep this growth in surn of squnres as smnll
-as possible. This is niee if we believe that the sum of squnres (ns a measure
-oi rluster eohereure) should be small‘
-
-Notiee thst both ex and ny (in feet, [half 0f] their harmonic mPnn) show
-up in A[\’.Y) es computed nt port 1.. The intuition is that given two pairs
-ul elusters whose eentei-s are equally far apart. Ward‘s method will prefer te
+With agglomerative hierarchical clustering, the sum of squares starts out at
+zero (because every point is in its own cluster) and then grows as we merge
+clusters. Ward’s metric aims to keep this growth in sum of squares as small
+as possible. This is nice if we believe that the sum of squares (as a measure
+of cluster coherence) should be small.
+Notice that both nX and ny (in fact, [half of] their harmonic mean) show
+up in A(X , Y) as computed at part a. The intuition is that given two pairs
+of clusters whose centers are equally far apart, Ward’s method will prefer to
 merge the smaller ones.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-ln
-
-cl Assurne thst you ere given two pmrs of clusters P, sncl P2. The centers of
-the two clusters in Pl are terther enert thsn the centers oi the two clusters
-in Pit Using Ward’s metric, dues sgglomerstive clustering slwsys choose to
+16.
+c. Assume that you are given two pairs of clusters P1 and P2. The centers of
+the two clusters in P1 are farther apart than the centers of the two clusters
+in P2. Using Ward’s metric, does agglomerative clustering always choose to
 merge the two clusters in P2 (those with less ‘distance’ between their centers)?
-Why (nut)? .lustiiy your unswer with n simple example.
+Why (not)? Justify your answer with a simple example.
 Solution:
-No. net elweys. Which neir will he merged also depends on the size of the
-clusters. one simple eounter example is where the sine of the clusters in P,
-ere 1 and est respectively; and similarly so and so for 1)}.
-H . Zn \‘Hv . t l r
-[hen the harnlnnlr mean f nf clusler sizes IS 2 U 0!) fnr Pl and 2 ‘15 for
-
-o‘ n,
-P3.
-If the distenee hetween the renters nf the clusters in P, is less then 25/0.”
-: 25425) times thc distsnce between the centers of the clusters in 1's, then
-my‘) will he still srnsllcr and so the clusters in Pi ere mergctlt
+No, not always. Which pair will be merged also depends on the size of the
+clusters. One simple counter example is where the size of the clusters in P1
+are 1 and 99, respectively; and similarly 50 and 5O for P2.
+_ Zany . .
+Then the harmonic mean — of cluster s1zes 1s 2 - 0.99 for P1 and 2-25 for
+TLX + RY
+P2.
+If the distance between the centers of the clusters in P1 is less than 25/0.99
+: 25.(25) times the distance between the centers of the clusters in P2, then
+A(P1) will be still smaller and so the clusters in P1 are merged.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-17
-d4 ln clustering it is usually nut trivial to decide whnt is the right numher of
-clusters the untn inlle intc. Using Ward’s metric for agglumerative clustering,
-cnn you come up with a simple heuristic tn pick the number of clusters l':
-Snlutiunr
-Ward’; nlenrithm can give ue n hint in pirk a reasonable i thrnugh the merging
-cost. ll the cost cl merging increases a int, it is probably going too rert and
+17.
+d. In clustering it is usually not trivial to decide what is the right number of
+clusters the data falls into. Using Ward’s metric for agglomerative clustering,
+can you come up with a simple heuristic to pick the number of clusters k7?
+Solution:
+Ward’s algorithm can give us a hint to pick a reasonable k: through the merging
+cost. If the cost of merging increases a lot, it is probably going too far, and
 losing a lot of structure.
-
-Sn one punsiblc itcnm'ttt'c it tn kccp reducing i until thu tint iumpr, and (hon
-use the i right before the jump. ln other wurrle, pick the k just herure the
-merging cost takes oﬂ'.
+So one possible heuristic is to keep reducing k until the cost jumps, and then
+use the k right before the jump. In other words, pick the k just before the
+merging cost takes off.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-18
-Exemplifying the application of
-hierarchical agglomerativc clustering
+18.
+Exemplifying the application 0f
+hierarchical agglomerative clustering
 using Ward’s metric
-Liviu 0mm, 2018. using data from
-Edinburgh. 2000 fall, c4 Williams, v. Lavrenko, HVV4. pr. a
+Liviu Ciortuz, 2018, using data from
+Edinburgh, 2009 fall, C. Williams, V. Lavrenko, HW4, pr. 3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-19
-La prublema CMU, 2010 full, Aam singh, HWB, pr‘ 4.1 um prezentat D
-funcﬂe cle similaritate numité metricn lm' Wani. Potrivit acestei metrici,
-dish-ante dintre dnui clusters disjunrta X §i \’ se (‘IPHHGS'E asﬂ'el:
-Arm): X \J, WWW , X H1! *m" , Z H1» *lWHU W
-“(WY r,“ no’
-unde‘ spre exemplm “X esua centroidul [sau “centrul de greutate“ al] clus-
-tcrului x, iiu' J, ustc o immunga guwrica (unﬁt-“Kl cluster [uurucarc, mm}
-l
-m" deﬁnigie, aici vom considers w i T Z. k \Y In unde nx este numsrul de
-\
-elelnente din X. (Similar sun‘ deﬁnm renh'nizii ,ly 5i MW.)
-Sc puutc mam (vcllcﬁ mm prublcnlu CMU, 2010 full, Ami singh, Hwa, pr‘
-4.1) c5
-. , WW 1 w
-A A \ i i i h
-( > Mm Hm m < >
+19.
+La problema CMU, 2010 fall, Aarti Singh, HW3, pr. 4.1 am prezentat 0
+funcgie de similaritate numitéi metrica luz' Ward. Potrivit acestei metrici,
+distanga dintre douéi clustere disjuncte X §i Y se deﬁne§te astfel:
+A(KY) I Z llwiwwm/ll2 — Z \lw¢—#xH2 — Z ||~"v@—/WH2 (7)
+ZULEXUY miEX 932-EY
+unde, spre exemplu, ,uX este centroidul [sau ,,centrul de greutate“ a1] clus-
+terului X, iar 90¢ este 0 instan§5 genericé dintr-un cluster [0arecare, ﬁxat].
+1
+Prin deﬁnitie, aici vom considera ,uX I — Egg-ex mi, unde nX este numéirul de
+71X Z
+elemente din X. (Similar sunt deﬁniti centroizii ,uy §i ,LLXUy.)
+Se poate aréita (vedeiﬁ tot problema CMU, 2010 fall, Aarti Singh, HW3, pr.
+4.1) céi
+anY 2
+A X ,Y I — — . 8
+( > nX+nYHHX HYH ()
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-20
-Obseruaﬁi:
-14 Pentru perechi de clusters (X. Y) 5i (20)") astfel incét ﬁx : "X, §i 1w : "y,
-n n n ~71 ,
-i 5a“, mai general, atunci mind ¥ I ¥ i formula (s) amt?! ca
-H\'+Hy whim,
-
-la clusterizarc iem-mca este ,,[avorizatl\" area pol-echo pentru care centroizii
-(M 3i my, reapecﬁv my §i m ,) aunt mui apropiwxi
-24 lnvers~ dacé Hux flu/H : \ w iwu, atunci este favmizam perechea pentru
-
-. V www . "Amy! . . “
-cure ponders“ (uduza , respectlv ) este mm mlCiJ.
-
-HX + HY ﬁx‘ + My,
-
-Aceste (mus observajii v5 vor aiuta 55 simpliﬁcau / reduce“ foarte mun
-calculcle pc care m- Lrebui 5:‘ 10 mm penbru a rczolva urmémarca coringél
+20.
+Observatiz':
+1. Pentru perechi de clustere (X, Y) §i (X', Y’) astfel incét nX I nX/ §i ny I ny/
+. . A anY nX/nY’ v v
+— sau, mal general, atunm cand — I — — formula (8) arata ca
+71X -|- 71y nX/ -|- ny/
+la clusterlzare 1erarh1c5 este ,,fav0rlzat€1“ acea pereche pentru care centralzu
+(MX §i ,uy, respectiv ,uX/ §i Myl) sunt mai apropiati.
+2. Invers, dacéi ||,uX —,Lby|| I HMX’ —,uy/ H, atunci este favorizaté perechea pentru
+. v anY . nX’nY’ . . v
+care ponderea (adlca —, respectlv —) este mal mlca.
+71X + RY nX/ + RY/
+Aceste doué observatii v5 vor ajuta séi simpliﬁcaigi / reduceti foarte mult
+calculele pe care ar trebui sﬁi 1e faceti pentru a rezolva urmétoarea ceringéi!
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Apucugi ulguritmul dc clusterizuru iururhicﬁ uglumummn pl: m“! m.- a-m dc la prob- 21
-lama Edinburgh, 2009 fan, c. Williams, v. Lavrenko, Hw4, pr. 1,
-.4 (,4 ,2) I? Hi inc (*2 ,2) n [il_i‘2].l"*(il fl)
-F:(+1 ‘no [+2 +3‘ 1444,”) [>(+3,+4)..7'(+4>+3)
-\nilizﬁnd [d2 aceasté dam] metrics lui Ward. Ca rezultat a] clusterizérii, vegi reprezema
-dendmgrama suh fnrmé nylatvzatli, folosind elipse (5i indici) penuu a indica clusterele
-formatc.
-coincide rczultatul ubginut aici cu vreunul 4 "
-din rczulLaLcle do la problcma Edinburgh, 1 a. I 1
-2mm fall, c‘ Williams, v. Lavrenko. HWA,
-pr. 17 g -
-H
-Pmczznm: Dacé la D mgr-me a algoritmu' | I
-1m cle clusterizare distanﬂele (adirj Samar "
-lamsmg) dintre dnuﬁ perechi d2 clustere 74 71 72 7|
-an aceea§i valoare, mi considera c5 prior- 0 \ 1 * 4 \
-itatea la alcfatuirea noului cluster este dic- 7| I E
-ma 11¢ ordinea ambcma,
-I I I I *2
+Aplicagi algoritmul de clusterizare ierarhicé aglomerativéi pe setul de date de la prob- 21'
+lema Edinburgh, 2009 fall, C. Williams, V. Lavrenko, HW4, pr. 1,
+
+A : (—4,—2),B : (—3,—2),C : (—2,—2),D : (—1,—2),E : (+1,—1)
+
+F 1 (+1,+1),G ; (+2,+3),H; (+3,+2),I; (+3,+4),J ; (+4, +3)
+utilizénd [de aceastéi datii] metrica lui Ward. Ca rezultat a1 clusterizérii, ve§i reprezenta
+dendrograma sub formﬁ aplatizatii, folosind elipse (§i indici) pentru a indica clusterele
+formate.
+
+y
+Commde rezultatul 0b§1nut alcl cu vreunul :
+din rezultatele de la problema Edinburgh, 3 GI. J
+2009 fall, C. Williams, V. Lavrenko, HW4,
+pr.1? 2. i
+Precizare: Dacé la 0 iteraigie a algoritmu- 1......- g g
+lui de clusterizare distantgele (adicé simi- 5F f
+laritéitile) dintre doué perechi de clustere i4 i3 —2 i1 5 1 1
+au aceea§i valoare, ve§i considera (:5 prior- 0 1 2 3 4 X
+itatea la alcétuirea noului cluster este dic- _1......-E
+tatﬁ de ordinea alfabeticé. f
 A B C D
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-22
-Solutic
-1mm“ 1:
-Confunn Ohm-Mum 1 dc lnui sus, u>tu suﬁciunt Ba ulcgum u pcrcchc dc hut-any: uﬂutc
-1a dimma minima. Evident, perechile [A 12), (I? r‘) q-i (an) satisfac “Basra commie.
-Vnm alege [A I?) damma Pv'enzﬁriv, din mum. Asadar,
-. as r-
-m : (11.3). m, I Q, .
-A B f‘ D F‘ F (I H l J
-1\ I)
-u 1/2 n
-Acum, in matnnﬂll up ‘mm-11¢». vmn C -- n
-rumpleta (dear!) pozigiile situ- n -- 1/2 U
-ate inlediat sub diagonala principal?» r --—
-inn-“cit la itcragiilc urmfnuarc Bate F ' 2 U
-‘1* “2' ,, --—-II-
-I --—--- u
-1/ --—---IIII
+22.
+Soluigie
+Iteratia 1:
+Conform Observajiz'ez' 1 de mai sus, este suﬁcient s51 alegem 0 pereche de instanige aﬂate
+la distaniga miniméi. Evident, perechile (AB), (B,C) §i (C, D) satisfac aceastéi condiigie.
+Vom alege (A,B) datorité Precizdrz'z' din enun§. Agadar,
+A B C D E F G H I J
+A u
+. . B -u
+
+Acum, in matmcea de dzstante, vom C --u
+completa (doar!) pozigiile situ- D ---u
+ate imediat sub diagonala principaléi, E ----u
+intrucét la iteratiile urmiitoare este F -----u
+foarte probabil 05 vom avea nevoie G ------u
+de ele.
+
+H -------n
+
+I --------Iil
+
+J ---------II
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-23
-Pentru ﬁecare dim“; iteraﬁile urmétnareT va ﬁ suﬁcientT in general, 55 calculém i
-5i apoi is comparém i distanﬂele pentru dmui perechi de clustere (pv'ivlclpalele doué
-perechil).
-“Emmzz Lisa *2 I 27in '1 2 _ 20
-wwwm 2H an in I, >u *5
-> 5 I Am w»
-ﬁvl : (0.1))‘ m :( I)‘
-Inn-am 3: ,, ,,
-WMMF: u< 3;>*<3;)H':H(02)\\':4>1:A<<G}-<11»>
-ii : 4%>1:A({C} (m)
-f.’ 1:‘ : (0.11}. no, : (i2).
+23.
+Pentru ﬁecare dintre iteragiile urméitoare, va ﬁ suﬁcient, in general, séi calculéim —
+§i apoi sé comparém — distangele pentru douci perechz' de clustere (principalele doué
+perechi!).
+Iterafia 2:
+2 —3.5 —2 2 2 —1.5 2 2 2 9
+1
+> 5 I M0}, {0})
+—1.5
+:> 02 I {0,0}, #02 :( _2 ).
+Iterajia 3:
+4 —3.5 —1.5 2 —2 2
+A<{A»B}7{C>D}>—1H(_2)—(_2)H —H( 0 >H —4>1—A<{G}7{H}>
+2 —1.5 1 2 2 —2.5 2 2 2 2 29
+<{C}{}>3 _2) _1 3 _1) 3(65+>37534
+29 5
+F I 46 > 1 I A({G}7{H})
+2.5
+:> Cg : {G,H}, H03 : (2-5).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Itemﬁu 4: 24
-“(G-“Hm I Z “(52) * <in I Z HGEJHZ I §(““*““>:§ 2-5 :23’ 2:;
->1: AWN-(1)]
+Iteratia 4: 24'
+222222222 I Z H612) — (2W I Z HCEENF I §<222+222> I Z I 5 - 3 I2
 
-:> q I (1,1), m : (2:)
+> 1 I AW}, {JD
 
-Itempin 5:
+IQIMHMQIGQ-
 
-“(G-“W ")1: j “(312) * (iii)? I “CW :2
+Itemp'a 5:
 
-I AME). (PM; Wm “mm as“ non Preuznren din mm
+2222222721» 22> I Z HG?) _ (312W I HCW I 2
 
-:> a" : (E F}, m : ((1,)
+I A({E}, {F}); vom utiliza din nou Preciza'rea din enuni;
 
-Itempin s:
+I» C5 I {E,F}, #05 I ((1)).
 
-“(EH-<61”) I § HQ) * (33W I “(1W1 :2 WWI“
+Itemm 6:
 
-> 2 I mam. (1.1))
+WW» I 2 no» — (22> H2 I HG?) H2 I I
 
-(“15"an §i cr- AMP- P>_ 46- H» < A<{P- P) w m» Mum u”: PM nu > up: MG Hu
-$0., :(c.H.1.J)_m:(§)
+> 2 I A({G,H}, {1, J})
+
+Observati §i <25 AGE, F}, {G7 H}) < A({E7F}, {0,17% intrucét lluE,F—#c,DH > \\#E,F—MG,H\\
+I» 06 I {G,H,I,J}, #06 I (g).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-2s
-Itemﬁn 7:
+25.
+Iteratia7:
 
-. 2 1 r
-MEF>-<G>”>'~”‘:%H($)*(lm IEHU)“ I; 13:7:2:"§
->4:A({A,B) ((7,0))
+2-4 1 3 2 4 —2 2 4 52 1
+A<{E7F}7{G,Hw-mH<O>—<3>1 —§H(_3)Hg-13——17§
+> 4 I MA, B}, {0, 0})
 
-:t'L': : (A u v.0}. um :( i’)
+—2.5
+I>C7I{A,B,C,D}, #C7I( _2 ).
+IteratiaS:
 
-Itemgias: 24 in 1 1 4 i313 9 4 ‘ ,
-> 11% : A[(E F)_{C H 1.71};
+2-4 —2.5 1 2 4 —3.5 2 4
+A<{A7B»@D}»{E»F}>——2+4 H< _2 )— (0)11 —§ 1K _2 )H —§<12-25+4>
+2516.25:%@:@:213
 
->0x {LEG 11.1.1).
-
-nemm 9;
-
-a, : {11.11.1117 15111;,” 1,1).
+3 3 4 3 3
+1
+>17§:A({E,F},{G,H,I,J})
+:>Cg:{E,F,G,H,I,J}.
+IteratiaQ:
+C9:{A,B,C,D,E,F,G,H,I,J}.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-2n
-)
-
-K \I‘
-
-\ C» \
-Concluzie: ((-1 \JJ
-Am ubﬁnutacelaq'irezultat ".\ CA
-(‘a in cazul folnsirii funcﬁei ~\ /
-d9, similaritate cnmylete- m J
-lmkage (vcdegi problema 4 ‘ 2 ( \
-Edinburgh, 2009 fall, c. ' " '
-Williams, v. Luvrenko, ‘ '
-HW4, pr. 1).
-
-A'JB C'i'D
-C1
+26.
+y
+G
+Concluzz'e: ‘I
+Am 0b§inut acela§i rezultat 5C6
+ca in cazul folosirii funcigiei = 5
+de similaritate complete-
+linkage (vedetji problema 4 3 2
+Edinburgh, 2009 fall, C. ‘5 ‘5 f 2 5 4 x
+Williams, V. Lavrenko, E
+HW4, pr. 1). C8
+A B C D
+C7
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-27
+27.
 Exemplifying
-the application uf hierarchical divisive clustering
-and the relationship between slingle-linkage hierarchies and
+the application of hierarchical divisive clustering
+and the relationship between SliIlng-linkage hierarchies and
 Minimum Spanning Trees (MSTs)
-QMU, 2009 spring, Ziv Bar-Joseph, ﬁnal exam‘ pr. 9.3
+CMU, 2009 spring, Ziv Bar-Joseph, ﬁnal exam, pr. 9.3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-29$
-Hierarehieal elustering may be bottom-up or top-down
-In this problem we will see whether a top»d0wn clustering algo-
-rithm ean be exactly analogous to a bottom-up elustering algo-
+28.
+Hierarchical clustering may be bottom-up or top-down.
+In this problem we will see whether a top-down clustering algo-
+rithm can be exactly analogous to a bottom-up clustering algo-
 rithm.
-Consider the follnwing top-down clustering algorithm:
-1. c-alenl-ate the pairwise distanee 1102.11,) between every twn
-objects I’, and P, in the set of ebjeets te be elustered, and build a
-eornplete graph on the set of ohjeets with edge weights being the
-eerrespending distances.
-2. Generate the Minimum Spanning Tree of the graph, itc. choose
-the subset oi" edges 1; with minimum sum of weights such that
-cw I (P, E’) is a single eanneeted treer
-a. Throw eut the edge with the heviest weight te generate twe
-disconnected trees corresponding to top level elusters.
-4i Repeat the previous step reeur-sively on the lower level eluster-s
-to generate a top-down elustering on the set 0f11 nbjeets.
+Consider the following top-down clustering algorithm:
+1. Calculate the pairwise distance d(PZ-,Pj) between every two
+objects H- and Pj in the set of objects to be clustered, and build a
+complete graph on the set of objects with edge weights being the
+corresponding distances.
+2. Generate the Minimum Spanning Tree of the graph, i.e. choose
+the subset of edges E’ with minimum sum of weights such that
+G’ = (P, E’) is a single connected tree.
+3. Throw out the edge with the heviest weight to generate two
+disconnected trees corresponding to top level clusters.
+4. Repeat the previous step recursively on the lower level clusters
+to generate a top-down clustering on the set of n objects.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-29
-
-Piiihl I l/
-
-al Apply this algrlritln hh the dataset given iii P‘ .- 2
-
-the nearby table, using the EllClidiall distance. P’ 2
-
-b. Does this top-down algorithm perform analo- g‘ ‘i
-gously to any bottom-up algorithm that you have I;
-
-encountered in class? Why? P'- 19>
-
-i, ~
+29.
+a. Apply th1s algorltm on the dataset glven 1n
+the nearby table, using the Euclidian distance.
+b. Does this top-down algorithm perform analo-
+gously to any bottom-up algorithm that you have -u-
+encountered in class? Why? -uu
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-30
+30.
 
-Solution: y P"
-a, l2
+Solution: y P6
+a 12
+Kruskal algorithm: 11
+1. (P1,P2), cost 1, 10
+2. (P4,P5), cost 2, 9 6V2
+3. (P3,P5), cost 3, 8
+4. (P2,P3), cost V17 7 P P
+5. (P5,P6), cost 6\/§. 6 _3 3 5
+Prim algorithm: 5 1/17 2
+1. (P1,P2), cost 1, 4 P4;
+2. (P2,P3), cost V17 3
+3. (133.135), cost 3, 2 ‘1,11 1'2?
+4. (P5,P4), cost 2, 1 1
+5. (P5,P6), cost 6\/§. ‘ I ; ‘ I
 
-Kruskal algorithm: “
-
-1. (P..n_,>, (105', I. m
-
-2. (mm). cost 2. “ M
-
-3. (131.9,),605‘ s, K
-
-4. (13.12.), cost W 7 P P
-
-5. (Pym, cost (M2. 6 -‘ J ‘
-
-Prim algorithm: ‘ m I
-
-1. (£1.13), cost 1. ‘ r.
-
-2. (13.1%.). Cost m ‘
-
-3. (133.1%), cost 3, 1 I, ' P,
-
-4. ([1,. P1). (105', 2. . ‘
-
-5. (Rm, cost uﬂ.
-
-ﬁ!2\4is7x?mll\1x
+0 1 2 3 4 5 6 7 s 9 10 11 12 x
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:31**************
-$1
-G,
-C,
-Cl
-Q
-C,
-I’, l'2 '5 '5 P; P»
-(1,2) (212) (3,5) (6,4) (6,5) (12,12)
+3 1.
+l C0
+C4
+C6
+C3
+P1 P2 P3 P4 P5 P6
+(1,2) (2,2) (3,6) (6,4) (6,6) (12,12)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-32
-Note: If there is only one MST for the given dataset. then both
-Kruskal’s and Prinfs algorithm will ﬁnd itt Otherwise, the two
-algorithms can produce rliﬁerents results.
-0ne ean see (hoth on this dataset and also in general) that
-Kruskal’s algorithm is exactly analogous to tho singlu-linkagu
-hottoin-up clustering algorithm,
-Therefore. there is indeed a bottom-up equivalent to the top-down
-clustering algorithm presented in this exercisel
+32.
+Note: If there is only one MST for the given dataset, then both
+Kruskal’s and Prim’s algorithm Will ﬁnd it. Otherwise, the two
+algorithms can produce differents results.
+One can see (both on this dataset and also in general) that
+Kruskal’s algorithm is exactly analogous to the single-linkage
+bottom-up clustering algorithm.
+Therefore, there is indeed a bottom-up equivalent to the top-down
+clustering algorithm presented in this exercise.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
@@ -653,135 +642,112 @@ The K-means algorithm
 
 ***************Beginning Page***************
 ***************page number:34**************
-‘u
-EXCmplifying partitional clustering
-using the K-Ineans algorithm
-TLZ Dresden, 2006 summer, Steffen Hiildobler, Axel Grossmann, HW3
+34.
+EXemplifinlg partitional clustering
+using the K -means algorithm
+T.U. Dresden, 2006 summer, Steffen Heldobler, Axel Grossmann, HW3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-33
+35.
 
-Folosiﬂ algoritmul I\'-mcans 5i distanta euclidiané pcntru a grupa
-urmétoarele 8 insiange din B1} in 3 clustere:
+Folositi algoritmul K-means §i distanta euclidiané pentru a grupa
+urmiitoarele 8 instante din R2 in 3 clustere:
 
-A(2 m). [3(2 5). C(81), mm). EU 5). Pu). 1). Quiz). H(-l_9)
-Sc var lua drcpt ccntroizi iniﬁali punctclc A. D 5i G.
-a, Rulagi prima iceragie a algoritmului K-means, Pe un grid de
-VBIOTi m X 10 vegi mam inst-angels: (late, Imagine centroizilor la
-inccputu] primci itcraﬁi 5i componcnm ﬁccz'mrui cluster la ﬁnalul
-acestei iteragiii ("nasagi medialoarele segmentelor deLerIninate de
-centruizi, ca separaturi ai clusturclor.)
-bi Cite iteraiii sunt necesare pentru ca algoritmul K-means 55
-conveargé'l Desenagi pe Céte un grid rezultatul rulérii ﬁecérei
-itcraQii.
+A(2,10), B(2,5), C(8,4), D(5,8), E(7,5), F(6,4), G(1,2), H(4,9).
+Se vor lua drept centroizi initiali punctele A, D §i G.
+a. Rulati prima iteratie a algoritmului K-means. Pe un grid de
+valori 10 >< 10 veti marca instantele date, pozitiile centroizilor la
+inceputul primei iteratii §i componenta ﬁecérui cluster la ﬁnalul
+acestei iteratii. (Trasati mediatoarele segmentelor determinate de
+centroizi, ca separatori ai clusterelor.)
+b. Céte iteratii sunt necesare pentru ca algoritmul K-means séi
+conveargfi? Desenati pe céte un grid rezultatul rulérii ﬁecérei
+iteratii.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-H H»
-w E! ‘ ‘
-a ~
-7 v
-6 v ,
-S O G
-4 o a
-2 a r
-‘
-o ‘ 2 1 4 5 6 7 a 9 w
+E E
+'l] 1 E 3 4 5 E T" B Eil 'I'l]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-. n a I
-To he used i _ v ‘ f w a
-inclass ,, , . .,
-Datmet: ’ ‘
-4(2 my BLLG), ‘ I ‘ =
-(“ALBUM ‘v t - ‘ > . , é 4 v V t , ‘ ‘ , , J u
-1mm no 41. “ ‘ ‘ ‘ ‘ ‘ ‘ ‘ ‘ ‘ ‘
-00,2] 11(10). ‘" " ‘ ‘ “
-mam] , n 1 a
-centroids: , -
-16,04 ‘ .
+To be used 6 6
+Dataset: 3 3
+C(874),D(5»8), 1ﬂl;;;;.;;;;m 1@;;;;;;;;;w
+centroids: ?. ?
+A, G, D. B 6
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-1x
+38.
 Solution:
-Iteration 0=
-I'M I'm
+Iteration 0:
+—u__
+O O
+#1 I (2, 10) 01 I {A}
+O_ < , > ——— 0 _
+M2 _ <5, 8) i» ——u- i 02 — {@QERH}
+Mg I (1, 2) ———— cg I {5,0}
 ———-
-, ‘ \/\"
-p" :41. 1n] (‘(5. >1 (1‘:(11)
-ﬂan. m Q mm; u i (1,‘:{rcn E RH)
-~';:<1 2, EM (3‘:(1311)
-———
-——— "
-mun
-ILmuiiun 1=
-,1: im' ,(2 1m
-‘i 4+n+u+7+s |+|+5+w+u i“ i) (WIN-11)
-M’ n ‘ n ’ ' ' #11:’ ('5 mum‘)
-.7 - .7 l ;
-rli’(;;l.iut‘)iuslw) aim‘)
+———-
+———-
+Iteratz'on 1:
+11% I #5’ I (2,10)
+1_ 4+5+6+7+8 4+4+5+8+9 _(6 6) 0%:{A7H}
+”2_ 5 ’ 5 _ ’ :>...i 021:{C,D,E,F}
+2+1 5+2 Cl I 57G
+#5 I (T?) I (1-5, 3-5) 3 { }
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-:19
+39.
+Iteration 2:
+2 _
+M _ (3569521 0% I {A,D,H}
+2 _
 
-Itcmtiun 2;
+,ug I p; I (1.5, 3.5) 03 — {B’ G}
 
-1 .
+Iteration 3:
+2 + 4 + 5 8 + 9 + 10
 
-M * (19:11 05:91.11”)
+Hi’: (Ta?) :(11/379) C§:{A,D,H}:C12
 
-vi: (‘T —T) :(05 52;) Q Q Cf:{CE P}
+Hg:(7713/3) :>...:> C§:{C,E,F}:CZQ I>St0p
 
-,2 i
-
-,1§:,L§:u.5.35] ("(5,0)
-
-Iiemiinn If:
-2+4+5 s+s+m
-In‘ i (ff) I (ll/H) (‘fa/1.111;): cf
-MK I (7 1.2/3) Q i (‘g : (can :05 4 sm,»
-(‘f I (5,0) :Pi
-,1; “3 : (1.5. 35)
+u? I M3, I (1-5, 3-5)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-H m
-w m “
-9::‘X?11“‘
-,7
-6v,
-5 O 0
-
-X
-4 on
-X
-3..
-2m’ r
-‘
-o‘21455759w
+11 I I I I I I I I I 40.
+w ....'. . . @r . . . . . . ..
+E
+1 I I I I I I I I I
+'l] 1 E 3 4 5 ‘El T" E- Eil 11]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-11
-Exemplifying one property of K-means:
+41.
+Exemplifying one property of K -means:
 The clusterisation result depends on initialisation
 CMU, 2006 spring, Carlos Guestrin, HW5, pr. 1
 
@@ -789,643 +755,797 @@ CMU, 2006 spring, Carlos Guestrin, HW5, pr. 1
 
 ***************Beginning Page***************
 ***************page number:42**************
-12
+42.
 
-a-b. Consider the data sct in the lollewing rignres. The - symbols indicate
+a-b. Consider the data set in the following ﬁgures. The o symbols indicate
 
-dutu points, while the crosses (x) indicate the cnrrent clnstec centers. Fur
+data points, while the crosses (><) indicate the current cluster centers. For
 
-each ene of these lignres, shew the pregress of the [enteritis nlgerithni by
-shewing how the class centers nieve with each iteration nntil cnnvergence.
+each one of these ﬁgures, show the progress of the K-means algorithm by
+showing how the class centers move with each iteration until convergence.
 
-For each iterntinnv indicate which data points will he essocinterl with eneh
+For each iteration, indicate which data points will be associated with each
 
-ei the clusters es well as the npdeteol class centers. If olnring the elnster
+of the clusters, as well as the updated class centers. If during the cluster
 
-npilntc stcp, n elnster center has no points associated wiLh it, it will not move.
-Use/produce ‘AS many lignres yen neerl nntil convergence uf the elgerithni.
+update step, a cluster center has no points associated with it, it will not move.
 
-c. tht (loos this iniply shout the behavior or the K-Moans algoritlnn?
+Use / produce as many ﬁgures you need until convergence of the algorithm.
+
+c. What does this imply about the behavior of the K-Means algorithm?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-'U
-. .
-. O I ' . O I .
-O. O O O. O O
-. .
-O U . Q U .
-XXX X
-)(X
-. .
+ALGORITMUL de clusterizare K-MEANS — Datele initiale ALGORITMUL de clusterizare K-MEANS - Datele initiale
+1 1
+' 0 ' 0
+O . . O . .
+o . o o . o . o o .
+0 0 . 0 0 .
+O O
+O O
+0 0 o 0
+x x x X
+X x
+..‘ O ..‘ O
+O O
+o Q o Q
+O O O O O O
+O O
+O O
+O 1 0 1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-- . , _ - .
-I . l
-o: .0 - n . -" -° 0..
-I I . I I
-XXX . I I
+ALGORITMUL de clusterizare K-MEANS — Datele initiale ALGORITMUL de clusterizare K-MEANS — lieratiaO
+1 1
+' 0 ' 0
+Q . ' O ' '
+0 ' 0 0 ' 0 ' 0 0 '
+0 0 . 0 0 '
+O O
+O O
+0 0 0 ¢
+X X X X
+Q’, Q Q.‘ Q
+s’ s’
+O O
+, 0 0 0 0 0 0
+Solut 10H‘ ' '
+° o 0
+O 1 0 1
+a‘ . ALGORITMUL de clusterizare K-MEANS — lteratia1 ALGORITMUL de clusierizare K-MEANS - lieratia1
+1 1
+9 P . ' ' .
+i , , \ 0 Q 0
+\ ‘ . / \ /
+\ ‘o , m a / o 0 0
+\ ‘I , / \\ I . . . '
+\ ‘ / / . ' \1 / / '
+\ l 16/ /// \ \ */ ' x
+\ 1 1 / / ‘ \ \ 7
+\ 11:)1/ // \v/‘V 1 . ////’ .
+\W/J/ . . // " .
+\ H 1 / / ’
+1 / ~ / / /
+\H 1/ ‘ / / / /
+\ﬂ/waxx 1 41/4:
+NW 1 X ‘
+4,111‘ 1
+u \
 1
-.1 o
-‘ e a
-Solutlon: a" . ‘,0:
-v I .
-a. ‘ v ‘ .
-- .
-‘I ' ‘.l l . ' u
-o. ¢ , 0 0' n‘ ' 0
-x . ' .
-I 0 j‘ .
-¥ nu . .
-‘a .
-:s‘ .‘l .
+I’ 11,11’ \ 1
+/ 1‘ ‘v \ 1 .'
+/ U‘ l '
+0 ~ ~ 1 0 Q
+O 1 O O O O O
+Q Q
+O 0
+0 1 O 1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-1;
-
-' - - .
-- -, , .0
-3'.‘ .1‘ "0' .Z'
-' I‘ 2. x _.
-ll. .‘l.
-.5‘ .s'
-00 . ..
-o o
--' ' '. -' ° °.
-a. - .0. -
-qu ,‘0 .ou ,‘I
-
-..° ..°
-.‘l- .ﬁ-
-'5‘. . '1".
+45.
+ALGORITMUL de clusterizare K-MEANS — |teratia2 ALGORITMUL de clusterizare K-MEANS — |1eratia2
+1 1
+9 Q . ' - .
+9 1 \ \ - ' '
+\ \ /
+\ p,’ 0 1 0/ ' 0' 0 0 .
+\ . I / ' \\ \ . - »* / ' . z x
+‘ ‘1/.’ \\\\ V\ . ///’
+“Ml \\* //>V< \\ /// /
+‘ H1/ / I \ / ‘ ' /x / ’ .
+\ My!’ \ / /‘/
+‘ "H/ 5 \ / / / /
+\M / X \ / / /
+MK \ / C ’
+1: \ 4 /
+111‘\\\ \
+\\ \
+/ \ \ \ a
+' \\ ' \ ' .
+/ “Q \ O
+0 N \ \ 0 Q
+O v O O O O
+O O
+O O
+O 1 O 1
+ALGORITMUL de clusterizare K-MEANS - lteratiaS ALGORITMUL de clusierizare K-MEANS — lieratia3
+1 1
+' 0 ' 0
+' \ / 0 ' o
+\ \ / \ O O
+\ \ / \ /
+0&3. 0/ . 0' 0 0 .
+r” , ‘My 0 xo-i» ~14;
+/ \ 1 \ / /
+' \ / ‘ \\ ' / //
+\\ X /’ 1 ' / / .
+, /
+X 0 0 , / g 0
+\ / /
+\\ / //
+\\ / ’
+/
+>:< \\ 1/ ,’/
+E \\ / /
+\ / /
+/
+.\» ‘O \\ . ‘Q
+/ \
+I ﬁ \ Q §
+Q \ O O O Q O
+Q O
+O 0
+O 1 0 1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-H»
-I . . ‘ I I . . . I
-l . O Q
-\
-a‘ o"
-4 , . ‘ ~ ' ' ‘
+ALGORITMUL de clusterizare K-MEANS — lteratia4 ALGORITMUL de clusterizare K-MEANS — |teratia4
+1 1
+0 . . 0
+\ / O O
+0 \ \ \ / / \ 0 0 0
+\ \ \ I
+0 / ><0 x / 0 0 \ \ \ \
+O \ , , / ~ \O
+. \ * . \ \ \x
+\ \ /
+/ / 1‘ . , / .
+0 0 I a 0
+1 / / ’
+I \ /
+/
+i l /
+1 , /
+1 l /
+1 I / /
+1 , /
+/
+l I /
+1K‘ ‘ x‘
+O \ ‘ O
+O \ O O O O O
+O O
+O 0
+O 1 0 1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-17
-‘ ' I . O
-I ' I O ' Q
-0.". In. .0‘. .0.
-. 0 I
-. - \ . -
-X ,i
-XX
-:1" :1“
-Solution: v I o‘. . ‘ , ". . ‘
-I I ' 0 . o o . 0 .
-'0'.‘ ... $0..‘ ‘.0
-. .
-- . ° \/-°
-- - 'I l
+ALGORITMUL de clusterizare K-MEANS — Datele initiale ALGORITMUL de clusterizare K-MEANS — lieratiaO
+1 1
+O . . O . '
+¢ 0 ¢ 0
+0 ' 0 0 ' 0 ' 0 0 '
+o 0 . 0 '
+O
+O O
+0 0 0 ¢
+X x
+.,—
+x x x x
+Q’, Q Q.‘ Q
+s’ s’
+Q O
+, 0 0 0 0 0 0
+Solut 10H‘ ' '
+° o 0
+O 1 0 1
+b . ALGORITMUL de clusterizare K-MEANS — lteratia1 ALGORITMUL de clusierizare K-MEANS - lieratia1
+1 1
+O \ \ . . O . .
+O \ \ \ ‘ \ \ X , / , Q 0 Q
+\ \ \ \ \ / , f , z ,
+' ,:<!I::\;>*;/Z g : I j 9i ¥ . . . . X ' .
+'/ I: \\\\\\\\\\ ' // \\
+\ \ \ \ ' / \\ '
+5 0 ' ,’ \ 0 '
+5 / \
+X / \
+\
+1X /
+Q \ O I Q O ‘ ‘I
+Q O
+O 0
+0 1 0 1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-4x
+48.
 Solution [in Romanian]: c.
 
-Este evidQnt din QCQSL eXPrcigiu 65 rezultatul algoritmului K-means depinde
-de puziginnﬂrea impala a rentroizilor. in cazul inigializérii de la punctul u an
-Post necesare 4 noragii pana a so ajungc la convergengé, pe 05ml la punctul 1/
-algoritrnul a cunvers dupa dour u iteraﬁe.
+Este evident din acest exercitiu ca rezultatul algoritmului K-means depinde
+de pozitionarea initiala a centroizilor. in cazul initializarii de la punctul a au
+fost necesare 4 iteratii pana a se ajunge la convergenta, pe cand la punctul b
+algoritmul a convers dupa doar o iteratie.
 
-Mai cstc ima (‘ova importam de remurcut: faptul cé la prima varianté (lo
-inigiulimm, punctul din drcuptu jug, L'uru usu- un outlier (runl., uxccpﬁc. m1
-particular, ubcmgiu) ustc pﬂnﬁ la “mm usuuiut clu>tcrului fun-[nut dc punutulc
-din partea dreapti (sus), in vreme =2 la cea dea doua varianti cle iniﬁalizare
-a] ronstituie \m cluster invade/"singleton", nhligiind in mod indirect grupﬁrile
-d8 punm din stﬁnga-sus 5i dreapta-sus 5:‘ formeze impreuné un singur cum"
-(coca co. Foarte probabil. nu era dc dorit). Dclecgia outlier-elm‘ esu: un capitol
-important din invagarw aummam. lgnorarca 1m- poaLe conduce 1a rczulwte
-eronate sun chizu- Abel-ante ale modeliu'ilun
+Mai este inca ceva important de remarcat: faptul ca la prima varianta de
+initializare, punctul din dreapta jos, care este un outlier (rom., exceptie, caz
+particular, aberatie) este pana la urma asociat clusterului format de punctele
+din partea dreapta (sus), in vreme ce la cea de-a doua varianta de initializare
+el constituie un cluster aparte/ “singleton”, obligand in mod indirect gruparile
+de puncte din stanga-sus §i dreapta-sus sa formeze impreuna un singur cluster
+(ccea ce, foarte probabil, nu era de dorit). Detectia outlier-elor este un capitol
+important din invatarea automata. Ignorarea lor poate conduce la rezultate
+eronate sau chiar aberante ale modelarilor.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-m
+49.
 K-means as an optimisation algorithm:
-The monotonicity of the J]; criterion
-[CMU‘ 2009 spring, Ziv Barloscph, st, pr. 2.1]
+The monotonicity of the J K criterion
+[CMU, 2009 spring, Ziv Bar-Joseph, HW5, pr. 2.1]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-. , so
-Algorltmul IX -means (S. P. Lloyd, 1957)
-Input: I‘. r,, & YR" 5i K € m".
-Output: o anumité l\-pa1'ti§ie pentru (1,... .m).
-Pmreduni:
-[Imginliznm/Itemzin 0;] I F u
-so ﬁxcazé in mod m-bm-m “q. Mg, cemroizii inigiali ai clustcrelor, 5i
->0 asigncazﬁ liccare “hm-gr‘ 1, la canroidul col ma; apropiuL, fornn'uul mm
-clusterele :11‘, “.11.,
-[Corpul itemtiv:] Sc exccum imam ,+ 1:
-Pmmz 1: se calculeazi noile puma; ale centroizilor:”
-1 i
-,U' I WW 2,.“H If.‘ pentruj :15’;
-,1 ,
-Paanl 2:
-5|: rcusigncazi ﬁcuurc J, 1H [clusturul cu] ccntruidul “1 Inui uprupiul, udici
-SE stabilthe noua campunenqa a clusterelcvr la iceragia m (7;, H .Fk:
-[Termrnmzz] péné cénd o anumna commie este indepunua
-(do exemplu: péné cam pozigﬂle canroZzZlor i sau: compuncnip clusterelor
-i nu 5e mui modiﬁci de 1-.‘ D “gram la ma),
-M meuu mm.‘ rumrrlunrlc {ulusnu “mum unchdmuu Punun m mlunl .1.» (“mm m POuYnl q m»
-mm“ “In ﬂmmﬂv
+. 50.
+Algorltmul K-means (S. P. Lloyd, 1957)
+Input: 951,...,;cn E Rd §i K E N*.
+Output: 0 anumitéi K-partitjie pentru {$1, . . . ,azn}.
+Procedural’:
+[Initializare/Iteratz'a 0:] t <— O;
+se ﬁxeazéi in mod arbitrar M1), . . . , #20 centroizii initiali ai clusterelor, §i
+se asigneazé ﬁecare instanigéi £132- la centroidul cel mai apropiat, forménd astfel
+clusterele Ci), . . . , C}?
+[Corpul iterativﬂ Se executé iteratia ++ t:
+Pasul 1: se calculeazéi noile pozitgii ale centroizilorza
+1 _ —
+H5" I T 296E061 332' pentru .7 I 19K;
+le I 1 J
+Pasul 2:
+se reasigneazé ﬁecare xi la [clusterul cu] centroidul cel mai apropiat, adicéi
+se stabile§te noua c0mp0nen§5 a clusterelor la iteratia t: Cf, . . . , Ck;
+[Terminara] péné 05nd 0 anumité conditie este indeplinitii
+(de exemplu: péné cénd pozitjiile centroizilor — sau: componenta clusterelor
+— nu se mai modiﬁcéi de la 0 iteratie la alta).
+a Formula aceasta corespunde folosirii distantei euclidiene. Pentru alte misuri de distangé, este posibil séi ﬁe
+necesare alte formule.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-31
-a, Demonsu-agi c5, de la o iteragie la alta, algoritmul K-means
-miruq'tc weziunea dc ansamblu a clustcrulor. I.c., cunsidcrfmd
+51.
+a. Demonstraigi c5, de la 0 iteragie la alta, algoritmul K-means
+méiregte coeziu'nea de ansa'mblu a clusterelor. I.e., considerénd
 funcgia
-v! / "I / '1 “ll / /
-N’ 41) , ZH'»*VLHU,\H i Zhnwm - (-"’I'c'm))-
-‘:1 ‘:1
-
-uncle:
-
-a’ : ((7:11. 1",‘) cs“ rolrrﬁa a“ clustcn: (m, l\»partiﬁa) la mummwl t
-
-w : (Va-ML 4H“) este colecgia de centruizi ai clusterelor (IGconﬁguraﬁa)
-
-la momentul 1
-
-my“) Ileaelnneazii mam-1| la care eat: “hag”! elelnentul 1,, la imam ¢
-
-operatorul desemneazé Drodusul scalar al vectorilor din r-x‘
-mama c5 J(C". u‘) 2 J(C"‘.;U*‘) pcntru oricc r.
+TL TL
+def. def.
+7f t _ t 2 _ t t
+J(C 7H) — E ||$i — ILLCt(x7;)|| — E ($1 — New”) ' (551' — Howl-D,
+izl 2'21
+unde:
+Ct I (610;, . . . ,Ck) este colectia de clustere (i.e., K-partitia) la momentul t,
+pt : (,ui, ,ug, . . . , pk) este colecgia de centroizi ai clusterelor (K-conﬁguragia)
+la momentul t,
+Ct(w7;) desemneazéi clusterul la care este asignat elementul 33¢ la iteragia t,
+operatorul - desemneazé produsul scalar a1 vectorilor din Rd,
+arétaigi 05 J(Ct,,ut) Z J(Ct+1,,ut+1) pentru orice t.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-52
-Ideea (lemonstragiei
-lnegalitatea de mai sus rezultﬁ din douﬁ inegalitéyi (rare corespund pa§ilor 1
-gi 2 do la iLoragia /)=
-1 I (U I If!‘ I!) ' /+v 1+!
+52.
+Ideea demonstraﬁei
+Inegalitatea de mai sus rezulté din douéi inegalitéiigi (care corespund pa§ilor 1
+§i 2 de la iteraigia t):
+t t (1) t t+1 (2) t+1 t+1
 
-m‘ .m 2 m‘ 4L )3 m: ,M )
-La prima inegalitate (cea corespunzﬁtoare pasului 1) SE poate considera 1:5
-parametrul r" este ﬁxat iar ,A Em variabil, in vreme ce la a doua inegalitate
-(r95 corespumamam pasului 2) Sp, considers ,1‘ ﬁxat §i 0 variabil.
-Prima inegalitute B-e poate obgine insumﬁnd D wig de inegulilﬁﬁ, g; unulne
-céte una pentru ﬁecare cluster (j. A doua inegalitate SE demonstreazé ima’
-dim.
+J((7,u) 2 J(C,# )2 J(C ,u )
+La prima inegalitate (cea corespunzétoare pasului 1) se poate considera c5
+parametrul Ct este ﬁxat iar H este variabil, in vreme ce la a doua inegalitate
+(cea corespunzétoare pasului 2) se consider-5 ,ut ﬁxat §i C variabil.
+Prima inegalitate se poate 0b§ine insuménd 0 serie de inegalitégi, §i anume
+céte una pentru ﬁecare cluster Cg. A doua inegalitate se demonstreazéi ime-
+diat.
 
-Ilustrarca accstci idci, pc un cxcmplu particular:
+Ilustrarea acestei idei7 pe un exemplu particular:
 
-vm unnétoarclc a slide-mi
-Edinburgh, zoos full, c‘ Willianu‘ v. Lavrenku, HWA, pr‘ a]
+Vezi urméitoarele 3 slide-uri
+[Edinburgh, 2009 fall, C. Williams, V. Lavrenko, HW4, pr. 3]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-33
-cacao
-720 40 ,5 u s m
-llel'.0/il1¥llallllllﬂn
-00000 n..-
-720 7w is u s w 72o Au is o 5 w
-iler.1 Siap 1: reiposiiinlling lhe cemroids Slap 2: reicompulillg lhe cluslers
-u... u..-
-720 7m is 07/3 5 m 720 710 75 07/3 5 10
-n»:
-n... n..-
--2o -w -5 u 22/75 w -2o -m _5 o 22/75 w
-her-3
-u... u..-
-izo 7m 7775 a 5 7 m izn 40 7775 o s 7 m
+53.
+O O O O O
+|—|-o—o-o-o-¢—|—¢-o-o-o-o—|
+—20 —10 —5 O 5 10
+lter. 0 / initialization
+O O O O O O O O O O
+WWW WW
+—20 —1 O —5 O 5 1O —20 —1 O —5 0 5 1O
+iter. 1 Step 1: re-positioning the centroids Step 2: re-computing the clusters
+O O O O O O O O O O
+N%H+H+—+¢Hm—l WW
+—20 -10 -5 0 7/3 5 10 —20 -10 -5 0 7/3 5 10
+iter. 2
+O O O O O O O O O O
+|—BI(—*H+—I++H+Q—I |—|9I(—0++¢—|++H+0—|
+—20 -10 -5 0 22/75 10 —20 -10 -5 o 22/75 10
+iter. 3
+O O O O O O O O O O
+l—H-¢9téHb—l—l—¢H%+¢-l |—H—.%Hb—l—l—+%0—l
+—20 —10 —7-5 O 5 7 10 —20 —10 —7-5 0 5 7 1O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-Funtru acust CXBKKIplu 4L- uplicurl: u ulgurihnului lc-mwm, scrim“ cxpw “4
-siile numerice pentru valoarea criteriului .mwkm pentru ﬁecare nemig
-(k:l>1.2..{).
-am. 12(0' ,1’)
-u u+(<ioi(iun)l+ iesiwmll
-+2>(5i(im))l+ . iwikumq) 3
-(*‘J , Him‘ + ‘(,5 , 1/3111 + H) i 7/8)’
-+2“; i 7/1)" + .+ (9 i 1mm 2
-2 1iui<io112+ misiwll’
-v2[<a i 22/7)2 + + (q i 22/711] g
-:x (inivmw (4114);’
-42m 71" x > (‘1 1y]
-Observaﬁe: La prima vedere. este greu 55 dovedim acesua inegamagi
-(J-AC'HJW‘) g ‘1,40 m, pontru r 51.2.1) "Aurel (mm calculimd mum
-vuluuruu cxprusiilur curl: so L'unlpurﬁ. Insﬁ. intruducimd nigh: (unncni inter-
-mediari, inegalitéﬁle acestea SP. vor demonstra imp“ mod fnarte elegant...
+Pentru acest exemplu de aplicare a algoritmului K-means, scriem expre- 54'
+siile numerice pentru valoarea criteriului J2(Ct, ,ut) pentru ﬁecare itera§ie
+(t : 0, 1, 2,3).
+0 + {(-9 - (-10))2 + . . . + (-5 - (-10))2
++2[(5 — (—10))2 + - - - + (9 — (—10))2]} 2
+1. (-9 - (-20))2 + {(-8 - 7/3))2 + . . . (-5 - 7/3)2
++2[(5 — 7/3)2 + . . . —|— (9 — 7/3)2]} Z
+2. (-9 - (-9))2 + . . . (-5 - (-9))2
++2[(5 - 22/7)2 + . . . + (9 - 22/32] 2
+3. (-9 - (-7))2 + . . . (-5 - (-7))2
++2[(5- 7)2 +...+ (9- 7V]
+Observajie: La prima vedere, este greu $5 dovedim aceste inegalitéfgi
+(J2(Ct_1,,ut_1) Z J2(Ct,,ut), pentru t :Al,2,3) ...altfel deceit calculénd efectiv
+valoarea expresiilor care se comparé. Inséi, introducénd ni§te termeni inter-
+mediari, inegalitéigile acestea se vor demonstra intr-un mod foarte elegant...
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-as
-u u\(L 9 L 10W‘ vi 5 l ml!"
-+2[!siyimnz+ +[9ilfl0l12H z
-v 11+((iﬂiT/YS)Z+(’K*7JZUZ+ wiziwn)’ k4!’J’Qk>))1+(lirii7/‘£777i “7571/31:
-=1 (sq/nu +[‘)’7r"()z) > +2l<aivwsﬂ+ +(v77/Jﬂ) -
-2 ‘in"7w“‘i((7n’12/7\\‘+ +liiilﬁ/7)‘ I7‘|7\'*‘Hy"+xir<7140V‘ Hiviliw‘
-‘1K5 21/")‘- \(l! 22/7)‘) 2 \2[(6 22/7)‘- \(l: 22/7)‘ 1
-\ \i'Ii'rTHli» +Ai3ili7H" mph-W" +(*'»*w7Hl
-+2I<671V+ “971m , +7ll277)’+ mm’
-Explicuﬁi:
-1. Inugulimgilc pc orizontuh“: (VI-1(1"*‘.;L‘) 5 AMEN’), pumm 1 : 1,2.3) sunt ugor dc
-dcmonmm, w.- buza uurcspundungci tcnncn cu Lcrlncn. (Elc corc=pund cvcntualclur
-micsorﬁri ale distanﬂelor atunci Bind se face reasignarea instanﬁelor la centroizi.)
-2. Rest"! inegamaqilnr (JACK/1'] > 12w’ “My, pentru r Z u 1 2) Se mmlvs wimp
-0 malaria da nptirnizare simpli. De exemplu, panh'll ¢ Z u em. imediat 1:5 funcﬁa
-(,9, [)1 + (ix i I)’ + + [<3 i ‘)1 + 215’ [)1 + + (of ‘11 igi atinge minimul pemm
-I 1/3, deci 11(C“./1"1 [1’10) 3/(1/3) ‘12(('“.,,\).
+55.
+J2(Ct—1,Mt) J2(Ct,/1t)
+0 + {(-9 - (—10))2 + . . . + (_5 - (_10))2
++2[<5 — <—10)>2 + . . . + (9 — (—10))21} z
+1. 0 + {(—9 — 7/3)2 + (-8 — 7/3)2 + . . . + (—5 — 7/3))2 (—9 — (—20))2 + {(—8 — 7/3))2 + . . . + (—5 — 7/3)2
++2[(5 - 7/3)2 + . . . + (9 _ 7/391} 2 +2[(5 _ 7/3)2 + . . . + (9 _ 7/3)2]} 3
+2. (_9- (—9))2 +{(—8-22/7))2 +...+(-5_22/7)2 (—9- (—9))2 +(—8— (—9))2+...+(—5— (-9))2
++2[(5 - 22/7)2 + . . . + (9 - 22/7)2]} 2 +2[(5 - 22/7)2 + . . . + (9 - 22/7)2] Z
+(—9— (—7))2+---+(—5— (—7))2 (—9— (—7))2+---+(—5— (—7))2
++2[(5_7)2+...+(9_7)2] z +2[(5—7)2+...+(9-7)2]
+Explicatii:
+1. Inegalitiiigile pe orizontaléi (J2(Ct_1, ,ut) Z J2(Ct, ,ut), pentru t I 1, 2, 3) sunt u§0r de
+demonstrat, pe baza c0resp0nden§ei termen cu termen. (Ele corespund eventualelor
+mic§0réiri ale distantelor atunci cénd se face reasignarea instan§elor la centroizi.)
+2. Restul inegalitéitilor (J2(Ct, pt) Z J2(Ct,,ut+1), pentru t I 0, 1, 2) se rezolvii printr-
+0 metodé de optimizare simplé. De exemplu, pentru t I O este imediat cii funcigia
+(—9 — :13)2 + (—8 — x)2 —|— . . . —|— (—5 — :13)2 —|— 2[(5 — 33‘)2 —|— . . . —|— (9 — x)2] i§i atinge minimul pentru
+a: I 7/3, deci J2(C0,,u0) I f(—10)2 f(7/3) I J2(Co,p1).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-if‘
-Step by Step (r I 1) ’
-M U+ﬂiﬂililulll+ iliﬁi(7w]]'
-unwiiiuml+ “(144mm >
-| mu ‘r YMMH v THIN l 5 mm‘ u 1 1n“; u a T,'x))‘- \1 n Tm"
-11m 1mm ‘m WW‘) 3 \2[[5 Trill» 4U: TJHJH L
-Details m be ﬁlled
+Step by step (t I 1) 56'
+J2(Ct_lﬂll't) J2(Ct>/*Lt)
+I 0+{(-9-(-10))2+...+(-5-(-10))2
++2[<5 — <—10>>2 + . . . + (9 — (-10)>21} z
+1. 0 + {(-9 - 7/3)2 + (-8 - 7/3)2 + . . . + (-5 - 7/3))2 (-9 - (-20))2 + {(-8 - 7/3))2 + . . . + (-5 - 7/3)2
++2[(5 - 7/3)2 + . . . + (9 - 7/9021} 2 +2[(5 - 7/3)2 + . . . + (9 - 7/3)2]} 2
+Details to be ﬁlled
 in class
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-Step by step (r I 2) ~"
-t ~17 *Z‘\;;"i((iz§i7r‘£¢¢l+ fwd/w
-+2[('>71','K]1+ imiﬁqln ~
-l Ail", ‘+uixiunw‘i +l73izl/7)’ “~me 7x7 fun fumiw
->20 11ml‘ . m zZ/U'l) , in’, 11m" \ - m llﬂﬂ 3
-Details to he ﬁlled
+Step by step (t I 2) 57‘
+J2(Ct—1,p,t) J2(Ct7/J’t)
+1. (-9- (—20))2+{(—s—7/3))2+...+(—5—7/3)2
++2[(5 — 7/3)2 + ~ ~ . + <9 — 7/3021} 2
+2- (—9 — <—9>)2 + {<—8 — 22/7»2 + . ~ ' + <—5 — 22/7)2 (-9 — (—9))2 + (-8 — (—9))2 + - - - + <—5 — <—9>>2
++2[(5 — 22/7)2 + . . . + (9 — 22/7)2]} 2 +2[(5 — 22/7)2 + . . . + (9 — 22/7)2] 2
+Details t0 be ﬁlled
 in class / at home
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-Step by step (¢ I :s) “8
-1 !"ri\*'vyyz+\ihiliq 7+ imiw-m
-iz\(6722,1»‘+ +xn722/1u1‘ ‘
-k yiﬂivﬂﬁ+ +Ai7iliTH: Him 1+ Hiniwml
-Jun Ty’ \ H0 71"] i \Z[\5 7)‘- H‘! 7;‘1
-Details to he ﬁlled
+Step by step (t I 3) 58‘
+J2(Ct—1,p,t) J2(Ct7/J“t)
+2. (-9— (-9))2 +(-s— (—9))2 +...+(—5— (—9))2
++2[(5 — 22/7)2 + . . . + (9 — 22/7)2] 3
+3- (—9 — (—7))2 + - - - + (—5 — (—7))2 (—9 — (—7))2 + - - - + (—5 — (—7))2
++2[(5—7)2+...+(9—7)2] : +2[(5—7)2+...+(9—7)2]
+Details t0 be ﬁlled
 in class / at home
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-59
+59.
 Graphical illustration
-by Gheorghe Balan, FII student, 2011 fall
-m \N
-g
-i
-\ I
-,, x
+by Gheorghe Balan, FII student, 2017 fall
+m jscore llizariatilclri
+2955
+Ill
+E
+bi
+HEB \
+545 \X I-
+199
+3D \.
+an 1.0 1.5 2.6 2.5 3.:1 3.5
+iteration
+For Edinburgh, 2009 fall, C. Williams, V. Lavrenko,
+HW4, pr. 3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Graphical exempliﬁcation (cm-m) 5°
-x ‘L
-K!‘
-_ II —
-@WHW m > _-“mm,,Rn“Nmmummmum,
-N“, mum", mummy.
-m say-"mm, A NE, 1m WW, HM. (ms. “WWW W, WWW,
+. . Q 7 60.
+Graphlcal exempllﬁcatlon (cont d)
+‘_.. ._. jscure vanatlon
+‘if: "1,-1" J" g
+© 2010-2012 Andrew {5% ﬁ“\\mmmmmmmmmmmnmm
+Ng, Stanford University.
+For Stanford, A. Ng, 2012 spring, HW9 (image segmentation and compression)
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:61**************
-m
+61.
 Demonstragie, pentru cazul general
-Ohﬁe'rvnfle: Pam“ conveniems, ne Wm limita la Dam '1 I 1. Extinderea demnsmuea
-la cazul ‘I > \ nu compma diﬁculzéyi
-Demonstrarea inegalitégii (1): J(c'.m21(ct. w‘)
-(vm pasul 1 a1 Heragici 1.)
-mm] In. K). Dani nntFun ma; *(IHJU. J“), under“! \0; , mm
-, ‘ K
-1(0)”) I 2M *uﬂ) . dcci mud) I 21(0),“).
-,I, 1,,
-macs 5e considerii (I) ﬁxat, iar u; variabiL atunci pulem minimiza imediat funcgia care
-“masoarau caeziunea din interim-Lil clusterului c;
-4/ I ' 1 ‘ x1
-m‘) I JUJI u) In} 2(21“) -_U 4 211 :"Jrgnvnl((‘; U] I 12"!‘ I My‘
-V"\ vii NI‘
-Agudar, 101;“) g J((‘;.,,‘,*‘), per-ml w. in particular, pentru ,A I U’, VDm aveu:
-J((‘;./1;)>J[(‘;./13"). [negalitatea Emma Em valabilé pentru mam clusterele j I
-l. K. Dacia sumsm mm BCGSLG inegalitégi, rezulté: 1(0' ungratw‘),
+Observafie: Pentru convenientgé, ne vom limita la cazul d : 1. Extinderea demonstragiei
+la cazul d > 1 nu comporté diﬁcultéigi.
+Demonstrarea inegalitégii (1): J(Ct,/f)ZJ(Ct,,ut+1)
+(Vezi pasul 1 a1 iteraii'iei t.)
+Fixém j € {1, . ..,K}. Dacﬁ notﬁm cu C; : {552'17551'27- “ml-l}, unde Z 722' |C;|, atunci
+l 2 K
+MM) I Z (snip - #5) , deci J<Cw> I Z M15, #3)-
+p:1 9:1
+Dacéi se considerii C; ﬁxat, iar ,u; variabil, atunci putem minimiza imediat functia care
+,,méisoaréi“ coezz'unea din interiorul clusterului C55
+d f l l 1 l d f
+fW) I' J(C§,u) I M2 — 42%) -#+ 2112 i argminﬂqw) I 7 2% I' x1511-
+p:1 p=1 M p=1
+Agadar, J(C§,,u) Z J(C;,,u;+1), pentru V11. in particular, pentru ,u : ‘u;- vom avea:
+J(C;,/1§)ZJ(C;,MZ+1). Inegalitatea aceasta este valabiléi pentru toate clusterele j I
+1, . . . , K. Dacii suméim toate aceste inegalitéiij, rezulté: J(Ct,,ut)ZJ(Ct,/f+1).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-m
-Demonstrarea inegalitéﬁi (2): J(C‘,p'*‘) 2 J((7'*‘,p'*‘)
-(vm pu>ul z “1 itcrugici r4)
-La acest pas, o instanﬂi oarecare 1,, uncle , < {1. ..n), Em reasignati =12 la
-cluster“! cu centrnidul Hf‘. la un alt centroid 1,1,“, dacs
-‘7,’ny H I 3 Hyi/lleH!b(|,*/l'/,"]l 3(7,’;L;“;1_p9mm orire, j’ i x. .I\'
-in cnntextul itaraﬁei r. acest lucru implici
-1 l
-1+‘ ~, , m
-Surnﬁnd lnclnbru cu Inun'lbru incgulitigilu dc Mm up ubginutu puntru 1 I U,
-rezultﬁ: arty“) > .r4c'+',,n+'>, ceea CE Em (12 demonstrat.
+62.
+Demonstrarea inegalitﬁtii (2): J(Ct,,ut+1) Z J(Ct+1,,ut+1)
+(Vezi pasul 2 a1 iteratiei t.)
+La acest pas, 0 instantéi oarecare xi, unde i G {1, . . . ,n}, este reasignaté de la
+clusterul cu centroidul p§+1, la un alt centroid ,LLZH, dacé
+|\wi—/L;/+1\|2 2 |\$1;—MZ+1\|2 <1> (w¢—#§/+1)2 z<wi—#§+1>2, pentru orice j’ I 1, . . . ,K.
+in contextul iteratiei t, acest lucru implicé
+t+1 2 t+1 2
+
+(331' — HCt($i)) Z (5131' — 'LLCt+1(mZ~)> .
+Suménd membru cu membru inegalitétile de acest tip obtinute pentru 2' I 1,—n,
+rezulté: J(Ct,/f+1) Z J(Ct+1,,ut+1), ceea ce era de demonstrat.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-m
+63.
 Interesting / Useful Remark (in English)
 
-(by Ll Cieetuz, folluwing CMU, znlz fall: E. Xing, A. singh, HW37 pr. 1)
-Following the result obtained uhuve, the Kmmeans clustering algorithm can he
-seen us nn nntimisntinn elgneithm. As input, we are given nnints i‘ in e
-re" mul an integer It‘ > l. 'l'he goal is tn minimize the K-nienns objective
-lunetien/ei-iteiiun, wliieli in the case of using the Ellclidian distanee measure
-is Lllc wiLhill»cluchl' sum ur square distances
+(by L. Ciortuz, following CMU, 2012 fall, E. Xing, A. Singh, HW3, pr. 1)
+Following the result obtained above, the K-means clustering algorithm can be
+seen as an optimisation algorithm. As input, we are given points 2:1, . . . ,asn €
+Rd and an integer K > 1. The goal is to minimize the K-means objective
+function / criterion, which in the case of using the Euclidian distance measure
+is the Within-cluster sum of square distances
 
-‘mi-L1 I Z l1, , m ‘>
-ml
-where ,1 , (n, .nKl are the. ulusier centers (/u e WL and l/ m (r, In) are
-the elustei assiglllllellls (I( e <1 t hi). (Finding the exact minimum of this
-lunetien is computationally dimeult.)
+JWL) I Ellie- —ml-|\2,
+2':1
+Where ,u I (M1,. ..,,uK) are the cluster centers (,uj E Rd), and L I (l1, . . .,ln) are
+the cluster assignments (ZZ- € {1, . . . ,K}). (Finding the exact minimum of this
+function is computationally difficult.)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-m
+64.
 
-Interesting / Useful Remark (conﬁd)
-Lluyws [h»mehus] algorithm, takes seine initial clustel' centers ,1, and pro-
-ceeds es follows:
-step 1; Keeping h ﬁxed. ﬁnd eluster essignrnents L te lnininiizc mt. L]. This
-step enly invelves ﬁnding the neerest eluster eenter(s) for eeeh input peint
-.|,,. Ties can be broken using arbitrary (but ennsistent) rules.
-step 2: Keeping I. ﬁxed, ﬁnrl )1 tn minimize J[/| L). This is a simple step
-that Dnly involves in the 0856 0f using Hie Euclidlan distance meaiure
+Interesting / Useful Remark (cont’d)
+Lloyd’s [K -means] algorithm, takes some initial cluster centers ,u, and pro-
+ceeds as follows:
+Step 1: Keeping ,u ﬁxed, ﬁnd cluster assignments L to minimize J(,Li, L). This
+step only involves ﬁnding the nearest cluster center(s) for each input point
+mi. Ties can be broken using arbitrary (but consistent) rules.
+Step 2: Keeping L ﬁxed, ﬁnd ,u to minimize J(/i,L). This is a simple step
+that only involves — in the case of using the Euclidian distance measure —
 averaging points within a cluster.
-Stepping criterion: ll [this was net the ﬁrst iteration and] none er the values
-in L changed fronl the previeus iteretien. g0 te the next step; etherwise repeet
-froln step 1.
-Termination: Return h and L.
-Note: The initial eluster centers w given as input to the algorithm are often
-pidwd rundulnly li-ern “MUM. (In preetiee, we el'ten repent multiple runs
-er Lluyd’e elgeritlun with diﬂ'erent initielizetiens, end piek the eest resulting
-clustering in terms of the Kemeans objective.)
+Stopping criterion: If [this was not the ﬁrst iteration and] none of the values
+in L changed from the previous iteration, go to the next step; otherwise repeat
+from Step 1.
+Termination: Return ,u and L.
+Note: The initial cluster centers ,u given as input to the algorithm are often
+picked randomly from 51:1, . . . ,ZEn. (In practice, we often repeat multiple runs
+of Lloyd’s algorithm with different initializations, and pick the best resulting
+clustering in terms of the K-means objective.)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-Iii
-b‘ Ce putegi spune despl'e oprirea algoritmului [(-means'!
-Terminé care acest algoritm intr—un numér ﬁnit de pa5i, sau
-(intrucét numﬁru] do K-partiﬁi care pot ﬁ formatu cu cclc H
-instange de antrenament, 11.7.7.1", 95m ﬁlm, §i anume 1;") este
-posibil ca e1 55 reviziteze de 0 inﬁnitate de ori 0 K-conﬁguragie
-anterioaré, ,1: (m. , 4%)?)
+65.
+b. Ce putegi spune despre oprirea algoritmului K -means?
+Termini oare acest algoritm intr-un numér ﬁnit de pagi, sau
+(intrucét numérul de K-partiigii care pot ﬁ formate cu cele n
+instanige de antrenament, x1, . . .,55n, este ﬁnit, §i anume K n) este
+posibil ca el 55 reviziteze de 0 inﬁnitate de ori 0 K-conﬁguragie
+anterioarii, ,u I (/11, . . . Mild?)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-as
-Rispuns:
-Dacﬁ algoritmul reviziteazﬁ o K-pamgie, Bum-i rezultﬁ c5 pemm \m anumit
-/ avem J((" ‘.ﬂ‘) HUN“). Este posibil (‘a arest [apt 55 se imample, §i
-annmc atunci cimd:
-i existé instanye multiple (i.e._ I, i 1/, de§i , ff),
-i criteriul do Opﬂl'n a1 algorihnului K-means (>ch 11¢ fol-ma
-“pinﬁ cind cumpongnga clusterelur nu B-e mui modiﬁca“,
-i is prasllpune (:5. in cazul in rare n instanﬁ r, aste situatﬁ 1B Egan! dismms
-raga de doi sau mai mum centroizi‘ ea puate ﬁ asignaté in mod aleatoriu la
-uricare dinu-c Bi.
-A53 SE intimplé in exemplu! din X1
-ﬁgura alﬁtura'ﬁ dart?! 5e mnsiden: r, v. 11 “2 l‘
-c5 Ia 0 nemgie 1 avem '1 0 a +o—o—o—%
-('1 §i ‘X i 0 e (72'. iar la imagia i1 *1/2 o l/Z 1
-unniituuru ulcgcrn cu a,‘ : 0 F, 11“
-gi 1.1 : u q <3“ gi, din “Du. invur>
-la imam 1A 2.
+66.
+Riispuns:
+Dacé algoritmul reviziteazé 0 K-partiﬁe, atunci rezulté c5 pentru un anumit
+t avem J(Ct_1,pt) I J(Ct,,ut+1). Este posibil ca acest fapt séi se intélmple, §i
+anume atunci cénd:
+— existé instan§e multiple (i.e., x2- I wj, de§i 2' I j),
+— criteriul de oprire a1 algoritmului K-means este de forma
+“pénéi cénd componeniga clusterelor nu se mai modiﬁcé”,
+— se presupune c5, in cazul in care 0 instan§éi $1- este situaté la egalé distanigé
+fatal de doi sau mai multi centroizi, ea poate ﬁ asignaté in mod aleatoriu la
+oricare dintre ei.
+A§a se intémplii in ewemplul din X3
+ﬁgura aléturaté dacéi se consideré x 1 M1 x 2 M2 x4
+cé la 0 iteratie t avem :62 I 0 € 40—|—0—|—0i
+Cf §i x3 I O € C5, iar la iteragia —1 —1/2 0 1/2 1
+urmétoare alegem ca $3 I 0 G Cf“
+§i $2 I O E 05H §i, din nou, invers
+la iteragia t —|— 2.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-m
-Observagii
+67.
+Observatii
 
-- D1121“: at.‘ “Mu-“1:1 criteriul 111“ cu “XL-mp1“ in cnungul prublclnui , “Luca
-se itereazé pans cénd centroizii “scnﬁnnealr , algoritrnul Sn poate Dpri
-1am ca la ultima 1mm“ 1(6'. ,1) Sn ﬁ atins nlinirnul pnsihil. 1n cazul
-1 l
+o Dacii se péistreazéi criteriul dat ca exemplu in enuntul problemei — adicé
+se itereazﬁ péné cénd centroizii “stationeazii” — algoritmul se pqate opri
+féiréi ca la ultima iteratie J(C,,u) s51 ﬁ atins minimul posibil. In cazul
 
+2 2
 1 1 1 2 1 2
-,, 11'“, ,,+2,+,:, “:1 ,+,_
+eemluluidemaisus 0maea— 2-— —:1>—:2- — — .
+X p ,v V 4—|— 4—|—4 3 (3>+<3>
 
-Pmepu “1 n ma1$u< vom avPa 4 4 1 > 3 3 a
-n Dacé n“ existﬁ instanﬂe rnulﬁple care Sn ﬁe situate 1n distanﬂe egale {n15
-an dni sau mn1 “mm centrnizi 1n n iteraﬂie oarecare n algnritmului 11'-
-means (prenlm mm 12 §i 1, in ememplul de mni sus). sau dacfa se impune
-mm'qm ca in “51101 do sZLuagii 11151;““1010 identicc “a ﬁe asignatc la un
->ingur Clu>LCr, estc evident as algoritlnul K-means so 0prc§Lc intr-un
-
-nun-Ain- ﬁnn d“ pin-1,
+0 Dacéi nu existéi instante multiple care $5 ﬁe situate la distante egale fatéi
+de doi sau mai multi centroizi la 0 iteratie oarecare a algoritmului K -
+means (precum sunt £132 §i x3 in ememplul de mai sus), sau dacéi se impune
+restricjia ca in astfel de situatii instantele identice s5 ﬁe asignate la un
+singur cluster, este evident c5 algoritmul K-means se 0pre§te intr-un
+numiir ﬁnit de pa§i.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-m
+68.
 Concluzii
 
-- Algoritlllul A-lllcans cxplorcazé i pornind do la o anumim inigializare
-a color K controizi i, doar un subset um totalul d0 ll" 1l-pmllll,
-usiguréndu'nu imzl ca uru luv; pruprictatcu m'“ ll"; g J(<",ll‘) 2 2
-mm ll’) g m". 1"“), confornl punctului a al acestei probleme.
+o Algoritmul K -means exploreazéi — pornind de la o anumitéi ini§ializare
+a celor K centroizi —, doar un subset din totalul de K" K-partiigii,
+asiguréndu-ne insii c5 are loc proprietatea J(CO,,LL1) Z J(C'1,,u2) Z Z
+J(Ct_1,,ut) Z J(Ct,/ﬁ+1), conform punctului a a1 acestei probleme.
 
-. Atingerea minimului global a1 funcﬁei m7 H) i uncle r‘ Em u vari'
-shill; (‘are parﬂlrge mlllgimea tuturor K-parmiilor care se pm forms cu
-inslanlele ll‘. J") nu este garantaté penml algoritmul K-means.
-Valoarezl [ullcgici l/ Care so obllne la Opril'ea algol'iLmului ll-nlcans estc
-dependentil d2 pluﬁ'dl'eu iniﬁ'dlﬁ a centruizilur ,l, precurn gi 42 modul can’
-cret in care sunt alciltuite clmlerelg in cazul in care u instanQé Daren-Are
-SQ. ans la dismal“; egalﬁ lle dni sau mai mum centroizi, mlps cum an]
-mam in exemplul d6 mai sus.
+o Atingerea minimului global a1 funcgiei J (C, ,u) — unde C este o vari-
+abilé care parcurge mul§imea tuturor K -parti1;iilor care se pot forma cu
+instantele {$1, . . . ,xn} — nu este garantatii pentru algoritmul K-means.
+Valoarea funcgiei J care se obgine la oprirea algoritmului K -means este
+dependentii de plasarea ini§ial€1 a centroizilor ,u, precum §i de modul con-
+cret in care sunt alcﬁituite clusterele in cazul in care o instan§5 oarecare
+se aﬂé la distangéi egalé de doi sau mai multi centroizi, dupéi cum am
+ariitat in exemplul de mai sus.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-no
-K-means algorithm:
+69.
+K -means algorithm:
 The “approximate” maximization of the “distance” between
 clusters
-CMU, 2010 falL Ami sangh, HW3, pr. 5.2
+CMU, 2010 fall, Aarti Singh, HWS, pr. 5.2
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-70
-Note: ln this nmhlnm wt‘ Mu \vurk With .i vl-rsllvll olrln» Irzununs Mgunthm which is slightlv
-“10de in t the unc given m the pl'oblclll CMU. 2mm spring. 2n BitrsJowpll HWC» y)! 2 l.
-whrrv \w hitvv pmvul Hll- mullmmlll llv of lhv rnlvnull J
-Let x v: (memorxn) be our sample points, and It denote the
-number of clusters to use, We represent the cluster assignments
-of the data points by an indicator matrix v e {[11le such that
-s” r l means X‘ belongs to cluster J‘ We require that each point
-belongs to exactly one cluster, so EL 'm i 1r
-[\tc alxrrldv know tlnttl the 1(»mcans algorithm “estimates” q by minimiz-
-ing the following “cohesion criterion” (or, “measure ofdistm'tion”,
-or simply “sum of squares"):
-a .s , 2
-J(V-”l-H2 MK) s 22 m“>9*%H
-rel ,ei
-where H - H denotes the vector 2-normt
-K-mcans alternates between estimating e and rc-computing ufst
+70.
+N ote: In this problem we will work with a version of the K -means algorithm which is slightly
+modiﬁed w.r.t. the one given in the problem CMU, 2009 spring, Ziv Bar-Joseph, HW5, pr. 2.1,
+where we have proved the monotonicity of the criterion J.
+Let X z: {X1,X2, . . . ,Xn} be our sample points, and K denote the
+number of clusters to use. We represent the cluster assignments
+of the data points by an indicator matrix y € {O,1}”XK such that
+vi]- I 1 means X,- belongs to cluster j. We require that each point
+K
+
+belongs to exactly one cluster, so 23:1 vi]- I 1.
+[We already know that] the K-means algorithm “estimates” "y by minimiz-
+ing the following “cohesion criterion” (or, “measure of distortion”,
+or simply “sum of squares”):
+
+n K
+
+._ 2
+
+1:1 9:1
+where H - H denotes the vector 2-norm.
+K -means alternates between estimating y and re-computing ,u,j’s.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-71
-The K-means algorithm (...yet another version!)
-O Initialize ,1, “I, u,“ and lei, C-:{1_.,.,I\’).
-O While the value 0f J i5 still decreasing. repeat the following:
-Step 1: Determine 7 by
-. <~ 1- HXX i IMF 5 HX, i usz- VJ’ E C-
-"J u. otherwise.
-Break Lies arbitrarily.
-Step 2: Recompute “J using the updated w:
-For each / e r, “211,1,” > n set
-21' ‘ﬁn/X‘
-u <~ Inf,
-“ 21H "m
-Otherwise, don} Change 11/-
+71.
+The K -means algorithm (...yet another version!)
+0 Initialize 11,1419,“ .,;tK, and let C z: {1, . . . , K}.
+0 While the value of J is still decreasing, repeat the following:
+Step 1: Determine 'y by
+17 HXi _ ,ujH2 S ||X¢ _ I'Lj/H27 Vj/ é C»
+V117" <— .
+0, otherW1se.
+Break ties arbitrarily.
+Step 2: Recompute ,uj using the updated y:
+For each j € C, if 217:1 Vij > O set
+,u- <_ 211%in
+J 2?:1 Vij
+Otherwise, don’t change ,uj.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-72
-Lot x denote tlio sample moan.
-Consider tho following three quantities:
-Total variatiun: T(X) I M
-H
-W z
-'Yl Xv i ,
-Within-cluster variation: ll;(X) : M for .1 : 1. .I\
-2:‘ w
-K X" ,
-Between-cluster variation: 12(X) : Z (é) “it, *XH2.
-F‘ H
-Wlmt is tlio relation hctwccn these tnnoo quantities?
-Based 0n this relation, show that K-means can be interpreted as
-minimizing a weighted average 0f within-cluster vm-iati'ons whilo
-approxinmtolyu) maximizing the between-cluster variation Note
-that tho tolntion may contain an oxtm torm that docs not appear
-abuve.
+72.
+Let >7; denote the sample mean.
+Consider the following three quantities:
+n — 2
+' Xi — X
+Total variation: T(X) : M
+n
+n 2
+-_ i' Xi — - .
+Within-cluster variation: WAX) : W—HJH for j I 1, . . . , K
+21:1 7117'
+K Z" ..
+Between-cluster variation: B(X) : Z (%%J) Haj — >2||2.
+3:1
+What is the relation between these three quantities?
+Based on this relation, show that K -means can be interpreted as
+minimizing a weighted average of within-cluster variations while
+approximately(!) maximizing the between-cluster variation. Note
+that the relation may contain an extra term that does not appear
+above.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-Solution 73
-To silnplify the notation. we deﬁne n, I 21L, m,‘
+Solution 73'
+To simplify the notation, we deﬁne nj I 212:1 'yZ-j.
 We then have:
-1 I , 1 < I 7 ., 1 I I 7
-mo I pm! Ixu’ I $1me, Ixu' I ILL-Wu» Ixu‘
-I" "M" 1*A1IA
-K H
-1 V q
-I "XE-mm Wm XH' <9)
-km
-l ,
-I gZZw/(uwu, ’+uu,Ixu2+z<X,I~,) (Md);
-H M
-i iLZILWHX, u,\\2+i"/HH, W +gi( ix) Z (x ,
-,zl 1! 1!, 1:1 w 1r :1 H’ ‘:l W ' M’)
-K A»
-I ZTI'MIquWﬁEH,MIX) (“7”). where ,L, I Ly+
-Fl rl '
+1 n _ 2 1 n K _ 2 1 K n _ 2
+T(X) I E Z||X1— XH I E 22711||X1— X|| I H 22111HX1— X||
+1:1 1:1 1:1 1:1 1:1
+1 K n
+I EZZWHX1_#1+”1 _’—‘||2 <9)
+1:1 1:1
+1 K n
+I E Z 2111(||X1— H1112 + ||Hj — >_<||2 + 2(X1— Hj) - (Hj — 5O)
+1:1 1:1
+K 11 K _ K 11
+1121-: 11-HX1-H-H2 "HM-XV 2 _
+I Zﬁ++ZHT JFEZWFXWZW 1W1»
+1:1 J 1:1 1:1 1:1
+K n- 2 K t 2Tb 7.x.
+: Z #Wj(X)—|-B(X) + E an (/117- —>_<) - (113- — 113-), Where [13- :' %.
+1:1 1:1 9
 W
 l
 n
-(l0)
+(10)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-74
+74.
 Notes
-1. In (9), the quantities [Ll can he taken arbitrarily;
-however, they will be thought of iii the end i see the relation (10)
-and also the Conclusion on the next slide i as the eehtreids er the
-clusters l. . .A', as computed at Step 2 [lnﬂl'e exactly, at the previous
-iteration] of the K-llleans elgerithiii.
-2. The equality (10) eh the previous slide hehis heeeuse
-If‘ I’. J
-‘L m 1, e
-I "J (L flu) I "1 (/11 i 1/1)
-1!]
+1. In (9), the quantities ,uj can be taken arbitrarily;
+however, they will be thought of in the end — see the relation (10)
+and also the Conclusion on the next slide — as the centroids of the
+clusters 1,. . . , K, as computed at Step 2 [more exactly, at the previous
+iteration] of the K -means algorithm.
+2. The equality (10) on the previous slide holds because
+wa — My‘) I (Z W951) — “ij I "1+ — "ij
+1:1 1:1 J
+2?: 777351; _
+I "j <+—Hj :"j(#j—#j)
+a
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
+75.
 Conclusion
-We already know i sec ChlU, 2009 spring, Ziv BarJoscph, HWS,
+We already know — see CMU, 2009 spring, Ziv Bar-Joseph, HW5,
 1
-pri 2,1 i that Ir-ineans aims to minimize J, and consequently e],
+pr. 2.1 — that K -means aims to minimize J, and consequently —J,
 n
-which coincides with the ﬁrst tenn in the expression we obtained
-for nx), namely 2/’; Zing)‘;
-Since the total variation T(X] is constant, minimizing the ﬁrst
+which coincides with the ﬁrst term in the expression we obtained
+n .
+for T(X), namely 2511 #Wj (X)
+Since the total variation T(X) is constant, minimizing the ﬁrst
 term is equivalent to maximizing the sum of the other two terms,
-which is expected to be dominated by the between—cluster varia-
-tion B(X> since a good u, should be close to p, (after n certain
+which is expected to be dominated by the between-cluster varia-
+tion B(X) since a good ,uj should be close to ﬁj (after a certain
 number of iterations), making the third term small in absolute
 value.
 
@@ -1433,161 +1553,189 @@ value.
 
 ***************Beginning Page***************
 ***************page number:76**************
-7r»
+76.
 Graphical exempliﬁcation
-by Gheurghc Bum“, FlI student, 2011 full
-I
-I I
-Fur mu. manpmgﬁ 6mm“, HWS pr. 1 Fm Edinburgh. 2009 |a\\.c W\|m..._.v 1.3mm.
-nwm» w :x
+by Gheorghe Balan, FII student, 2017 fall
+jnter-clustere varia ' ~ . . inter-clustere variation
+- 152.1
+31313 \
+m 0.0313 l m
+Q 0.0651 \‘ Q
+43.5 \ \
+0.0060 \ 33.3
+0 1 2 3 4 0 1 2 3
+iteration iteration
+For CMU, 2006 spring, C, Guestrin, HW5, pr. 1 For Edinburgh, 2009 fall, C. Williams, V. Lavrenko,
+HW4, pr. 3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-Graphical exempliﬁcation (cm-m) 7‘
-m
-‘ \L Wm
-_ II —
-@ 2mm: Md.“ I
-Ng, Sk-nfnld Umveniky. ‘_.
-m say-"mm, A NE, 1m WW, HM. (ms. “WWW W, WWW,
+. . Q 77o
+Graphlcal exempllﬁcatlon (cont’d)
+intereclustere varlahon
+:ssaz's - “““““‘m\
+,‘U " A ‘liq-aka‘; 1‘ 15177.0 ’\
+Bx -
+V I‘ The." - 1.; ~in 151192 \‘
+; . 2. 15071.2 .
+‘ N .\ “seam . \‘
+L: S: I‘ g 1499711 \‘
+g; l“ 14983.1
+V aim *1 14911 0 .\
+ll I —
+© 2010-2012 Andrew .\
+Ng, Stanford University. ‘
+For Stanford, A. Ng, 2012 spring, HW9 (image segmentation and compression)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-TX
+78.
 A kernelized version of K-means
-CMU, 2015 spring, T. Mimhull, N. Balcan, HW7, pr. 1.2-4]
+[CMU, 2015 spring, T. Mitchell, N. Balcan, HW7, pr. 1.2-4]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-79
-Ilzrneans with Euclidean distanee rnetrie assumes that each pair of clusters
-is linearly separable. This may not he the case. A classical example is where
-we have twn clnsters corresponding in data paints nn twn concentric circles
-in the 1R2 planet We have seen that we (‘all use kernels te ehtain a non-linear
-version oi an algorithm that is linear by natilre and l\-means is no cxcepLion.
-Recall that there are two rnain aspeeta of kernelized algorithms:
-r. The selntien is expressed as a linear censlsinatien er training examples;
-n The ulgul'ithm relies unly un inner prodnets hetween data points rather
+79.
+K -means with Euclidean distance metric assumes that each pair of clusters
+is linearly separable. This may not be the case. A classical example is where
+we have two clusters corresponding to data points on two concentric circles
+in the R2 plane. We have seen that we can use kernels to obtain a non-linear
+version of an algorithm that is linear by nature and K -means is no exception.
+Recall that there are two main aspects of kernelized algorithms:
+i. The solution is expressed as a linear combination of training examples;
+ii. The algorithm relies only on inner products between data points rather
 than their explicit representation.
-We will shew that these twe aspects can he satisﬁed in Krmeans.
-a. Let a” he an indicator that is equal te l if the r, is currently assigned to
-the 1"‘ cluster and n oﬂlerwise (I g l g a and l g 1 g k). Show that the 1”‘
-cluster eenter ,tj ean he updated as 21;‘ time Speciﬁcallys show how "U can
-he conipnted given all vs.
+We will show that these two aspects can be satisﬁed in K-means.
+a. Let fyZ-j be an indicator that is equal to 1 if the asl- is currently assigned to
+the jth cluster and O otherwise (1 g 2' g n and 1 g j g k). Show that the jth
+cluster center uj can be updated as 221:1 ozijxi. Speciﬁcally, show how ozij can
+be computed given all 'y’s.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-P50
-b4 Given two dut-u paints t, and 1,2, show thut the square distance H'm , 11H‘
+80.
+b. Given two data points $1 and x2, show that the square distance ||x1 — 902||2
 can be computed using only (linear combinations of) inner products.
-r. Given the results orpnrts (t and I’, show how to oompute the squnre distnnee
-u [Ht/u’ using only (linear rnmhinations of) inner products between the dntn
-points 1'1.” .11..
-d. [in Romanian] Considerind data o funcgie de Hmapal-e“ o . w’ e 1R“
-gi runetiumueleu curespunzituare I; 1 w‘ >< 1R“ o 1R, cu Mt. v) I @(J) - @(v),
-soneti pseudosccvdul algoritmului K-means kernel-hat." Concret, veﬁ porni
-cu enunnte nunete initinle ca centroizi si veﬁ rulosi nssnnnsul d2 la punctul n
-ca s5 gisiﬁ rel mni upropint centroid pentru ﬁecare instants, utilizénd valurile
-variabilelor-indicamr -,,,. Apoi veg [ace uz repetat de mspunsul de la punctul
-a pcntru n reasigna instangcle 1n ccntroizi §i pentru a netunuzn variabilelc m
-t, ,umnn nunnn t‘ unonmnln Knmmm» mu o-Innnnn lmmn nnn tluswwlv n» \‘m [mum (u
-my‘; ‘mm c w" not. Iolunvﬂx an.“ (‘um .nnn.u~|n,, E w." (nun nnnnnnn! 1mm Hun h n A", nn n
+c. Given the results of parts a and b, show how to compute the square distance
+||xi —uj ||2 using only (linear combinations of) inner products between the data
+points 51:1, . . . ,xn.
+d. [in Romanian] Considerand data o functie de ,,mapare“ (I) : Rd —> Rm
+si functia-nucleu corespunzatoare K : Rd >< Rd e R, cu K(;v,y) : @(x) - @(y),
+scrieti pseudo-codul algoritmului K -means kernel-izat.“ Concret, veti porni
+cu anumite puncte initiale ca centroizi si veti folosi raspunsul de la punctul c
+ca sa gasiti cel mai apropiat centroid pentru ﬁecare instanta, utilizand valorile
+variabilelor-indicator 'yij. Apoi veti face uz repetat de raspunsul de la punctul
+a pentru a reasigna instantele la centroizi si pentru a actualiza variabilele 'yZ-j.
+a Aceasta varianta a algoritmului K -means cauta separatori liniari intre clusterele ce se vor forma cu
+@(zcl), . . .,(I>(a:n) G Rm, insa foloseste efectiv doar instantele 932- G Rd (prin intermediul functiei-nucleu K) nu si
+imaginile lor prin functia de mapare ((1)) in Rm.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:81**************
-81
+81.
 Solution
-e. We have tu write u] us g;;\t>,,t,. lt is kown (see for instunee CMU,
-1
-zolo lull, AarLi Singll, HWBt pr. 5.2) that Mt : (T) grew“, I
-til in
-XI‘: n "’ .t,. Therelere, we shell set in, I n "/ .
-‘Zuelm Zuelm
-N012 thet this result hulds also when ins-teed uf r, we would wurk with Me),
-for all t :1. in
-"i "ll/@(Iw) : Hijmh)
-where ti, I l iﬁ” all“) helnngs tn the rluster ,.
-h. H,,,t1"'f(,,,t) [1,“) t t+ t' tnzt t'. The last equality isdue
-tu the distriblltiviLy ul the dot product () with respect tu the subtraction /
-sun! of vetturs.
-Nete that in ruet this results holds iu any voctorial speeet in particular in the
-l'enture suuee llv".
+a. We have to write uj as 2?:1 aid-mi. It is kown (see for instance CMU,
+1 n
+2010 fall, Aarti Singh, HW3, pr. 5.2) that uj : <2n—) 21:1 yijxi :
+i=1 'Yij
+n Wig‘ 71g‘
+22.: n—xZ-. Therefore we shall set 0%- : n—.
+1 Zi’:1 7M , J Ei’:1 7W
+Note that this result holds also when instead of 51:2- we would work with @(asi),
+for alli: 1,...,n:
+(211 Via‘ g J g 21/:1 WU
+where 'yZ-j : 1 iff @(xz) belongs to the cluster j.
+b. Ha: — :13’||2 déf' (:10 — an’) - (x — an’) I x - :1: +56’ ~31: — 23: - x’. The last equality is due
+to the distributivity of the dot product () with respect to the subtraction /
+sum of vectors.
+Note that in fact this results holds in any vectorial space, in particular in the
+feature space Rm.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:82**************
-P52
-c. By subsLituting in the above result ‘I, to I and “J w ‘I’. and subsequently
-taking mm accuunt the furm of M, develuped at part m we can write:
-w‘, m’ I um ZMM
-‘i,
-M [I A M
-I, ‘1+ZZ'MU'M; w 1,~*ZZM,'/I, I,’ (11)
-‘"1 W7‘ , 7|
+82.
+c. By substituting in the above result xi t0 a: and uj to at’, and subsequently
+taking into account the form of uj developed at part a, we can write:
+TL
+llxi — Hjll2 I llﬂﬁi — Z Uzi/11717‘?
+i’:1
+TL TL TL
+I $1‘ ‘551' + (Z 04m $1”) ' (Z 04M‘ $1”) — 2%“ (Z 04M $1")
+i’:1 i”:1 i’:1
+TL TL TL
+I £131‘ ' SC»; + Z Z Obi/j Ody/j 331v ' SUZ'I/ — 2 Z OLi/j 331' ' £1717 (ll)
+1/:1¢//:1 1":1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:83**************
-m
-Note chm a similar formula ran he obtained when rnnsidaring M1,) in “m
-place of L, and EL, Mum in the place of u, in the above formula So, we
+83.
+Note that a similar formula can be obtained when considering @(xi) in the
+place of mi and 22:1 ai/j<l>(x;) in the place of pj in the above formula. So, we
 will have:
-\mwhkiwmﬂ) \l : ‘pm “MHZ 2",’, n", @(m ‘mm
-H WW’,
-W
-W,
-42M, ‘Mm-‘Mm
-M
-i m’, 1,)’; Zuwm l\'(w,, 1,”;
-HZ‘ ‘H
-*ZXHMIYOPJV] (12)
-¢L1
+||@(f11¢) — Z ai/j<1>(w¢/)ll2 I @(371') ~<I>(w@-) + Z Z OW 0417C? @(ZW) ' (5%”)
+27:1 17:1 il/Il
+_/—/
+H;-
+1":1
+i’:1i”:1
+1/:1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
-m
-d‘ Here fulluws uur pseudocude fur the kernelized K'means:
-o lnili'dlilc [possibly randomly] m. a“ c 1R".
-compute ,1, : ‘I'm-m“ MK : @(ukl c 112'", and M w : (1,....1c),
-- Whilewhe value Orv/(7.)“. 4M“) “" 21;, 21;, wumgiml (which is
-Dmnputcd “hing (12)" ) is mu demeaning, mph“ tho following:
-“:th ,u, m Mlhuqvltml‘, M» ‘1w [lummn A‘ u, mph" mm“. pmdm'b
+84.
+d. Here follows our pseudo-code for the kernelized K -means:
+
+0 Initialize [possibly randomly] ,ul, . . . ,uK E Rd,
+compute M1: @(ul), . . . ,u’K I @(HK) € Rm, and let C I {1, . . .,K}.
+
+. While the value of J(’y,]J,/1,...,[,L/K) déf' 2;;1 2le Vij||<1>(xi) - “HP (which is
+computed using (12)“ ) is still decreasing, repeat the following:
+
+a Except for the ﬁrst time / iteration, when you shall use (11), where £131 must be substituted with @(mi) and uj
+with [1,9, and subsequently use the function K to replace the dot products.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:85**************
-as
-1. Determine '1 by
-I HMXJ , p; 2 s W‘) , pm W a ('
-P Non» mm um qulmlnv 4mm‘: hv rlvtr'nnmml hv “Mug nmmllv
-m“ (1|) and um, (12)
-u otherwise.
-Break m! arbitrarily.
-2. Recompute u; using the updated x:
-Fons“ u)and1€{l...lx),
-m,
-<2, ¢ u
-y ZN,‘ 1m
-FDr each w; (‘. if Sign] > u set
-, " ‘ 2'L|"v,,'l>(x~)
-u < “4mm: ' H ‘ .
-J g ' 2mm
-Otherwise: don’t change Lu,‘
+85.
+1. Determine 'y by
+1, ll‘I>(X@') — MHIZ £ll‘1>(Xi)— “glue W’ € C,
+e Note that this inequality should be determined by using initially
+l” (11) and then (12).
+0, otherwise.
+Break ties arbitrarily.
+2. Recompute p;- using the updated 'y:
+For 2' E {1,...,n} and j € {1,...,K},
+'Yij
+04¢ <— n—.
+] 20:1 l1"?
+For each j E C, if 2221715 > O set
+/ n 2?:1 'l/ijq)(Xi)
+p- e ail-(May) : n—.
+3 ZZZ; J 21:1 7U
+Otherwise, don’t change it}.
 
 ***************Ending Page***************
 
@@ -1598,489 +1746,501 @@ for Gaussean Mixture Models
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:87**************
-a7
-Exemplifying the application of a simple version of
-EM/GMM
-on data from [R
-("1 I ‘72 I1~/'\1I7T2 I 1/2)
-CMU, 2012 spring. Ziv Bar-Joseph, ﬁnal exam, pr‘ 3,1
+87.
+Exemplifying the application 0f a simple version of
+EM /GMM
+0n data from R
+(0'1 I 0'2 I 1,7T1 I 7T2 I 1/2)
+CMU, 2012 spring, Ziv Bar-Joseph, ﬁnal exam, pr. 3.1
 enhanced by Liviu Ciortuz
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:88**************
-M8
+88.
 
-Suppose a CMM has two cornpDnents with known variance and an equal prior
-distribution I 1
+Suppose a GMM has two components with known variance and an equal prior
+distribution 1 1
 
-[WWI] l 21V<ll3,l].
-The observed rliith are r‘ I or, and 1-2 : 2, and the mirrent estimates of ,1‘
-and m are l and 2 respectively.
+§NW1>1>+ §NW2>1>~
+The observed data are £121 I 0.5 and 902 I 2, and the current estimates of #1
+and ,ug are l and 2 respectively.
 a. Execute the ﬁrst iteration of the EM algorithm.
-Hint: Normal denritier fur the standardized variable WZMZU ht n. n 5. 1, 1:»,
-2 are n l, nun, n 24, 0.137 Am; respectively.
-b. Consider the logelikelihoud function for the “observable” data,
+Hint: Normal densities for the standardized variable ywzogazl) at 0, 0.5, 1, 1.5,
+2 are 0.4, 0.35, 0.24, 0.13, 0.05 respectively.
+b. Consider the log-likelihood function for the “observable” data,
 
-II 4 2 2
+d f ' d 2 2
+£(,u1,,ug) glnP(:131,5102|,u,1,/.L2) mzep' ZlnP(a:,\u1,ug) I 2111 ZP($1,Zij|H17/l2) 7
+1:1 71:1 Zij
 
-lull-m) “ 1m» Izlm-l'z) Zlﬂl"(nlm-/12) El“ 2m ivlm-Mz)
-where 2,, e (u l) and 21,2” :l for all l e {I 2).
-Compute the values of f function at the beginning and also at the end of the
+where 2,",- 6 {0,1} and 23:1 zij : l for all 7L € {1, 2}.
+Compute the values of E function at the beginning and also at the end of the
 ﬁrst iteration of the EM algorithm.
-Wh-tit :lu you so!!!
+What do you see?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:89**************
-5011111011 (a1) 89
+Solution (81.) 89'
 The E-step:
-i i _ 111/. P11,1Z,.*1111>P<Z11*I>
-E1211] i PM“ i 1"" M i P1r11z,.:1>111)P<z11:1)I 170,211 I1 112)P(Z,2 I1)
+B.Th. P(£135|Z¢1 I 17H1)P(Zi1 I 1)
+EZ, :PZ,:1a.~,-, I —
 1
-i l’(|1\Z11:i-m) E
-i l 1
-FUJZn I PM) ' g + 17011212 :1 1'21 5
-i 1’(',\Z,1 1-111) 1
-’ P111121.:1>111>+P11,1Z‘2:1>1131‘WH' I)
-Therefore.
-1112 *11 ) i N111; 1,1) i mm 0,1) i 0.35 i g
-“ i J‘ “ i 1\1(05.1.1)+N(05.2.1) i1w'(0.s.u.1)+1v(15.0.1)i 035+0.13 i111
-i i 1Y1211) i “1,1111 i 1124 i g if
-HZ” i 1"’ 111 i N12 1.11+Mz=2 1)’A'(1 0,1)+1'V(0.0.l) *1121+01’11.1‘»1 i a
-Similarly.
-v , , 1.2
-Pllu :1111.11) I PM“:0'1',,11):1I1’(A“:111',,1|,)I E
-P1227 :111'1/11 I P(zz1Iur2,,,)I1I PM“ I 11,241‘) I i
+P(£E¢\Z¢1 I 17M1)'§
+I I
+P(a:i|Z,-1 I 1,441) ' 5 +P($12|Z¢2 I 17/42) ' 5
+P($i,Zi1 I 1M1) .
+: — for z e 1,2 .
+P($¢|Z51 I 1M1) + P(335|Z¢2 I 1M2) { }
+Therefore,
+N 0.5; 1,1 N 0.5;0,1 0.35 35
+N(0.5, 1,1) + N(0.5,2, 1) N(0.5,0, 1) + N(1.5,0, 1) 0.35+0.13 43
+N 2,1,1 N 1,0,1 0.24 0.24 3
+N(2, 1,1) +N(2,2,1) N(1,0, 1) +N(0,0, 1) 0.24+0.4 0.64 3
+Similarly,
+13
+P(212 I 111mm) I P(Zn I 0|$17MI 1 — P(Zn I 1|IB1M1) I 4—8
+5
+P(Zz2 I 1‘a7271u) I P(Z21 I 0|:122,11): 1 — P(Z21 I 1|$27H1) I g
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:90**************
-90
+90.
 The M-step:
-HM», I 27L, PM." I 27L, VIZ” :1 1M 1,
-‘ £7! mm xi‘ p12,, , n1, M)
+2 2
+Mel) _ ZZZ-:1 EVm'] 11% _ ZZZ-:1 P(Z¢j I 1|$i,u(t)) $1
+' _ 2 — 2
+J ZZZ-:1 EMA 21-21 P(Zij I 1m, PM)
 Therefore,
-m z; 1.4 n
-in’, i-z - furi2 ‘
-luv:1x +x :m'zmuu and 1H}:18 MM :1““z|»,4
-/' §+§ 1m; ‘ '1 §+§ eu- '
-4x x 4s >1
+
+35 3 13 5
+<1>:—4—8'0'5+§'2:@e1009 and (1):—4—8.0'5+§2:1—%e154
+“1 §+§ 106 ' “2 §+§ 86 '
+
+48 8 48 8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:91**************
-50mm“ (1),) 91
-1 J
-1111.111] “2 2111mm“ 111):21"(ZP(1,211111.110)
-1:1 c1 2,,
+Solution (b.) 91'
+d f 2 2
+“Mb/$2) 2' 21HP($i|/~L1»M2): 2111 ZP($i>Zij|H1,M2)
+izl 71:1 Zij
 2
-i 211. 211<|,\:1,.,1,.1111 thu-m)
-r1 I‘, T
-1 1 '1 '1
-Z gm 2;P(1,\:,,1n./11) I; 11,211“ ;P(1,\:U:1/1,)
-:11 I’("'1\l1,-111-111J
-1 1 ,
-,4, :1. 2w :0 Emmi?“ ﬂu)’;
-;., in. 1U ,1 ﬁrxﬂigh| ﬂu)‘;
-1 1 ,
-“.1, :1. 11-1 :0 Emmi?” q“);
-1 w L 1 J , 1
-<11’l\-~13*l Vgum 2111 [11) J
+I 21H ZP($11Z11,H1,H2) 'P(Zij|,u1,#2)
+71:1 Zij 1/2
+2 1 2 2
+I 21H 521321211112) z Z -1n2+1n ZPm-mj I 1,17»
+2:1 Zij 1:1 jzl
+Zij P($¢1Z¢j,ﬁb1,#2)
+1 0 1 < 1< >2)
+z : z : —e —— $ —
+11 7 12 ﬁ Xp 2 1 M1
+1 1
+Z11 I 0, 212 I 1 \/—2—7r exp(—§($1 — My)
+1 1 2
+Z21 I 1, Z22 I 0 \/—2—vr 6XP(—§($2 — N1) >
+1 1
+Z21 I 0, Z22 I 1 E exp(—§(x2 — My)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:92**************
-92
+92.
 Therefore,
-P( ), ‘712i! i1 “(it Ill‘ (10 ")
-hill} e .h n m" mi]: 2 ti hi1, (Xp 2t, or]
-+1., i ~ lit , 11>+~ ll< e 1"’)
-‘g LXI) 2 1 in up 2'1 m
-I I
-:i21n2*1n(21f]+1n (twilight,e/llllﬁrxpljmehzlll)
-I 2 I 2
-<1“ "Xvi 2(1'1 111))H‘Xl>[ 2m #2)]
+a > 212+1<1 ( <1< >2>+ <1< >2)»
+, :—n n—eX——x— eX——w—
+M1H2 @1021/11 1321112
++1 ( 1 ( <1< >2>+ <1< >2)»
+n—eX——x— eX——w—
+ﬁ p 2 2 M1 p 2 2 M2
+1 1
+: —21n2 — ln(27r) + ln <exp(—§(w1 — ,ul)2) —|— exp(—§(a:1 — ,ug)2)>
+1 2 1 2
++ln exp(—§(w2 —,u1) )+6Xp(—§(332 —,LL2) )
 and
-lul UH’; if, (H ll), ﬁ§ if .7.
-mt, m ), (1.2)’ 2.)!31833SIUI, .liz )il(mo, so e 2.46.217.
-meaning that the value orthe log-likelihood rimetioh increases, which is ih line
-with the theoretical reshlt CDnCCﬂling the correctness of the EM algorithm
+107 133
+2,401,191) I 2(1,2) I -2.561833 g mil), Mg“) I z —, — I -2.462877,
+106 86
+meaning that the value of the log-likelihood function increases, which is in line
+with the theoretical result concerning the correctness of the EM algorithm.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:93**************
-93
+93.
 Addenda (in Romanian)
 
-Penn-u [conﬁrrnuruu g-q cztindmuu Mug-mi rczulta'“ prczcntiu'n in slideul
-urmétor rezultatele “minute cu ajutnrul unei implememsn a algoritmului
-EM:”
-i in graﬁcul din partea sténgé sum reprezentate valorile Tuncﬁei de lug-
-verosimilitato obginme do EM la iniﬁalizare gi apoi la linalul ﬁDCZH'Oiﬂ din
-primelc 1s iLm-agii,
+Pentru [conﬁrmarea §i] ewtinde'rea acestui rezultat, prezentam in slide-ul
+urmator rezultatele 0b§inute cu ajutorul unei implementari a algoritmului
+EMza
 
-in graﬁcul din purle'd dreupti uveln reprezentzu'ea sub forma dd curbs d2
-izocontur a valorilur log'verosimilitégii in funcgie dd cei doi parametri. d, =1
-m. Pd aces‘ 81 doilea graﬁc a rm adﬁuga' un “drum” care punP. in avidenu“!
-succesiunea de valori pentru perechile (m. ,12) de-a lungul iteragiilor executate
-d8 algoritmul EM.
+— in graﬁcul din partea stanga sunt reprezentate valorile funcgiei de 10g-
+verosimilitate 0b§inute de EM la ini§ializare §i apoi la ﬁnalul ﬁecareia din
+primele 19 iteratii,
 
-~ hunk} m,p\muw a M rvahzmi m 21“de(invﬂudvntul 5mm“, thmm
+— in graﬁcul din partea dreapta avem reprezentarea sub forma de curbe de
+izocontur a valorilor log-verosimilitagii in func§ie de cei doi parametri, ,ul §i
+#2. Pe acest a1 doilea graﬁc a fost adaugat un ,,drum“ care pune in evideniga
+succesiunea de valori pentru perechile (/11, n2) de-a lungul iteratiilor executate
+de algoritmul EM.
 
-***************Ending Page***************
-
-***************Beginning Page***************
-***************page number:94**************
-n ‘ 2 I l 5 L 1 a g w ‘z “ m n ‘ i nj\\\\\:\\\\v\~x\\\ \f/Q' WNW
+a Aceasta implementare a fost realizata in 2018 de catre studentul Sebastian Ciobanu.
 
 ***************Ending Page***************
 
+ 
 ***************Beginning Page***************
 ***************page number:95**************
-5)]
-Derivation 0f the EM algorithm for
-a mixture of K uni-variatc Gaussians:
-the general case (Lei, when all parameters 7. W11 are free)
+95.
+Derivation of the EM algorithm for
+a mixture of K uni-variate Gaussians:
+the general CHSG (i.e., when all parameters 1T,,u,02 are free)
 following Dahua Lin,
-An Intmductian to Empectation-Mamimization
-(MIT7 ML 6768 cuurse7 2012 fall)
+An Introduction t0 Echectation-Maazimization
+(MIT, ML 6768 course, 2012 fall)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:96**************
-9!;
+96.
 Note
-24:"an
+Z~Bern0ulli
 
-my:
-We will ﬁrst (ionsidur I\’ I 2. 1 1
-Generalization w 1\' > 2 will be momma”, X~Gaussian2
-shuwn afferwards. (up Hf) (up “9
+WE
+We will ﬁrst consider K I 2. 1 2
+Generalization to K > 2 will be X~Gaussian1 X~Gaussian2
+shown afterwards. (M1, (7%) (H2, O?
 
 x
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:97**************
-97
+97.
 Estimation (E) Step:
-11,, 'I” P(z,,:1\x,.p.mr)"":‘“’E[z,‘,\X,.,,.m]
-P()<‘ : 1,‘ij : 1.}L,z1.w) - 1m, : 1 \ Mm)
-ZLPfX‘ *1, \ z”, i 1,/1,!7.W)'P(Z,,y i 1 \ New)
-1 (Jr/L02)
--cx e '1
-i Minn, p< 2qf 1
-i 1 (Hui/11)‘) 1 ( (Ir/12):)
--cx ,, -7r > -0x1 e -1r
-‘5m P< 2n; ' ‘Fm l 2e; Z
-Therefore, for 1 > o we will have:
-p4) We;
-W (fr/L )
-lin<iil
-<i . i ,,
-J i’ U e (mi/Ii’ ">"’ WE’ " (mi/1‘! y)J‘
-W“? ’W +W'ml‘ *W
-(n 2w. ) H2 1K", J
+not. calcul
+_ P(X¢:95iIsz217#7077T)'P(Zij:1Maﬁa”)
+1 (33¢ — My)
+_ v27mj p < 2092' j
+— 1 (551' — #02) 1 < (5% — my)
+—-eX —— '7T—|——-€X —— '7T
+x/27r01 p < 20% 1 \/ 27TUQ p 20% 2
+Therefore, for t > 0 we will have:
+FF) ,eXp < (1'1- — M9152)
+t_1 1:_1
+10G) I U; ) 2(0; ))2
+m t_1 t—1 t—1 1:—1
+7T; )-€Xp (_($i —H(1 W) + 7T; ) -exp <_(332_1ng W)
+t_1 t_1 t_1 t—1
+a; > 2w; >>2 a; > 2w; >>2
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:98**************
-98
-The likelihood of a “complete” instance (I,,Z“.Z,Z)I
-P<X, : :1,» Z.1 : :n. 2,, : 1,, l 11- w w)
-I P(X. I 1, l Zil : :H*Z|Z I liz-LIMD-W.) ' 10(211 : ZVI'ZV'Z I z,2 l lA-(nfn)
-1 (1i Ml i
-I :.- e l - l l ,:1 d,l:nf
-1 1 (11‘me h
-I v, -le> 1i] ~ m’ We"
-l/er n1’ r12 ( 21%) 0f
-The logJikelihood hr lhe same “complete” hie-whee will be:
-lnPLX, e 11.2,‘ e :,|.Z,2 e 1,2 l Wm)
-2 2 l l
-1 l w, e 1
-I ,2 high) e ZZHIUUJ e 2 21,,“ Hf’) l 25,,lll1r,
-Fl ,ei 1 Fl
+98.
+The likelihood 0f a “complete” instance (232-,z11, 21-2):
+P(X¢ I $1,211 I Z117Z¢2 I Z¢2 \ H707”)
+I P(X@' I $1‘ I Z11 I Zn; Z12 I Z¢27Mi70177w ' P(Z@'1 I 211,212 I 2121M170¢77T0
+I —-eX —— ~11, where zi- I 1 and 21-1 : 0 for ’
+\/ 27mj p ( 2032 J J j J 75 J
+I —-/_z-Z ' exp —_ Z Z217—2 '7T17J17T222
+2W 01 1 02 2 < 2 je{1,2} Uj
+The log-likelihood 0f the same “complete” instance will be:
+1nP(Xi I 332,211 I 2117212 I 222 \ M707”)
+2 2 2
+1 1 (Ii — H ‘)2
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:99**************
-99
-Given the (lataset X : {1]. . urn}, the log-likelihood function will be:
-[(uﬂj)! mmxzbzg Wm)!‘ mnmx,:1,,z,‘.z,l p.01]
-H
-I mex, I r,_Z,,.Z,2 \ [1.6.10
-M
-1 ,i ~
-i ig 111(2W)*ZZZ,/lnrrj i 3222,,%+ZZZV 1m
-wit Jil —1i‘ji| f wit 7*‘
+99.
+Given the dataset X : {$1, . . . , Jan}, the log-likelihood function will be:
+“luv 0-1 7T) déf. 1nP(X1 Z11 ZZ I ILL7 017T) zzzd 1HH P(XZ : £131‘, Z111 Z712 I ILL? 017T)
+1:1
+I ZlnPOQ I 331>Z111212 \ H701”)
+1:1
+1:1 3:1 1:1 1:1 J 1:1 3:1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-1 ,
-The expectation of the log-likelihood function: 0°
-u[tut'(,\<z|,zg t p.010] :
-r! t 1 (-1. i IL )‘
-71.42?) e Z Z Em] In n1 e 5 Z Z E[ZU]T‘ + Z Z E[z,,] In 1r]
-‘ x:| 1:! ,:1/:1 J x:| 1:!
-Here above, the probability function w,r.t. which the expectation was eeme
-puted was left unspeciﬁed‘ Now we will make it explicit:
-QOLJTJI \ ;t\'),n\'>,1r\'>) ":” um Wm “Jetpumxzbzz \ W111]
-,. z
-: eg may) e 22 E[Z,, \ ,\',,;N>,n\'\7r\'>]1M,
-.e. 1:‘
-1 " ‘ (1:, e t 1
-,5 225w” ‘ X,. Hwy Um‘ KWTI)
-“ ,:\ ,:\ 1
-+ Z: Z: E ZU \X,.}AH).U(/). WW} 1,th
-e, 1:.
+l .
+The expectation of the log-likelihood function: 00
+TL n 2 1 n 2 ($2 _ ,LLj)2 n 2
+1:1 1:1 1:1 9:1 J 1:1 9:1
+Here above, the probability function w.r.t. which the expectation was com-
+puted was left unspeciﬁed. Now we will make it explicit:
+Q<H7017Tl H(t)70-(t)77r(t))nét.EZ|X7M(t)7U(t>,7T(t)|:11/l P(Xa Zla Z2 l [U7 U: 7TH
+n 2
+: g 111(21) - Z Z Em]- y Xi, 11(1), W, 11w] ln Uj
+1:1 1:1
+n 2
+1 (5151' — M ‘)2
+—§ Z Z ElZm' l X11/l(t)10(t)17T(t)lTj
+1:1 1:1 J
+n 2
+1:1 1:1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:101**************
-101,
-,7}? "2 E[Z,J \ x. 11"".r1mmm :>
-ngm,1("',”("1<’>)i
-H "2 1"? (1/1)! H 2
-, ‘ (w (r “r
-H H ,4 H J H H
-Since A’ : 2 and m - 12 :1, we get
-ngm \ }r'/7.z7‘/7.ﬁm) i
-w k < 1 1 ("rﬂ r I‘ ,
-i311‘ mi 221,411va i 5221,)? +23% hum +,,}Q1“(1im))
-‘ H ,4 H ,4 J H
+101.
+pg) 71g. E[Zij I XHLL“), 0-(t)17T(t)] i
+QM 0,71 I u“), a“), 71(2) I
+77, n 2 1 n 2 (x ,U )2 n 2
+t t i — ' t
+1:1 9:1 2:1 3:1 j 1:1 9:1
+Since K I 2 and 711 —|— 7T2 I 1, we get
+6201,0211 \ M“), 52,110”) I
+n 2 n 2 2 n
+n (t) 1 (t) ($1: — #1) (t) (t)
+_§ 111271 — 22pm- 1n 09- — 5 g 2pm- 0—32- + Ella-1111711 +pZ-21n(l—7rl))
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:102**************
-102,
-Maximization (M) Stop:
-[For 1c : 2;]
-a , 1 " ,, 1 “ M
-i w (1)’ (‘MW iflwi (if u’<:>
-Unaw- 1/1 a 1 ) mg)“, lingm
-H 111 ,1 11> H 111 ., UL ,1 111 m ,. up -
-21.1:11KZP“ 1 inﬁﬁzpn ~11an -1nz>1=2m Hm
-g 1:1 :1 1:1 :1 Hf; 1:1
-11+!) 1 n 1:]
-a 11. <~ H 2])“
-H
-Taking mm account that 1;“) 1 1w : 1 and pf‘) 1 pr : 1 for 1:17.”,
-n+1) 1 1, 1M
-if? Hgim
-H
+102.
+Maximization (M) Step:
+[For K I 2:]
+lax” U 7T | Ha) (,(t) 7H”) I 0 (i) l 2713190) I é 27131175)‘:
+6W1 7 7 ’ 7 7T1 1:1 21 1 — 7T1 7;:1 Z2
+220E? I M21??? + 229E?) <I> 210$) I 7T1 2Q??? + PE?) 4:) 229$) 2W1
+¢:1 i:1 i=1 1:1 i=1 v i:1
+1 TL
+i wit“) t 5 21);?
+1:1
+Taking into account that WYH) + WétH) I 1 and pg) +195? : 1 for 2' : 1, . . . , n,
+1 n
+t+1 1:
+:> 7T; ) <— E 212919
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:103**************
-103,
-0 m m 1/) 1 H w H u)
-$qumm ,(7 ,w )IUQﬁZpH(mi/AQIUQZIIH(Li/111:0
-‘ \ [:1 [:1
-:> Nam‘, <~ L121 IMO‘?
-2:, 1m
-H m _
-Similarly, AF“ H i271)?“
-Z?‘ m’
-(u can he easily shown that 21L‘,,{{‘ > u and 27,1142 > u‘)
+103.
+l QM U 7T | Mt) 0“) HO) — 0(1) 1 n (t) n (t)
+57m ’ ’ ’ ’ — $22071 ($1—M1):0<:>Zpil (5131-_,u1):()
+"L: 1:1
+n (t) ,
+i MY“) k Z:—P(f
+21:1pz'l
+n (t)
+Similarly, #gw <_ 2:1—P2(5f
+n t
+21:11912
+(It can be easily Shown that 21721105‘? > 0 and 221:1 pg) > 0-)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:104**************
-10-1,
-0 1 “ v 1 ” e
-< .m, “have!” :0<_>e 1~‘+ [11*1 1:0.
-[)0] 201 Ml ) (“gill 022m ll)
-ti (v) [MHZ
-. ~ Z 7 he
-QM 1/) < Ewing‘ will 1
-Xlellm
-2 eh (‘llﬂi (Ml);
-Similarly, (Hg/Ul) 921,411,121, will )
-Being
-N018: oiie could relatively easily prove that these solutions
-(neiiiely, ,~."+'>,h('~‘_e<'+'1) of the pertiel derivatives of the mie-
-iliary function Q designate the values for which Q reaches its
-meeimem
+104.
+i QM a 7T \ W a“) 77>) I 0 e —i id” + i ipWQ/Ji - 77172 I 0
+801 7 7 7 7 011.21 11 0-? 7;:1 11 7
+2 77, (7:) ._ (7+1) 2
+:> (gym) e 27:11071 £117 ($1 )
+21:11971
+2 7? (t) __ (H1) 2
+Similarly, (091)) <— —Zz:1p725f ($2 )
+27:1191'2
+Note: One could relatively easily prove that these solutions
+(namely, 7T(t+1),/i(t+1),0'(t+1)) of the partial derivatives of the aum-
+il'ia'ry function Q designate the values for which Q reaches its
+maximum.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:105**************
-105,
+105.
 Generalization to K > 2
 In this case, the Bernoulli distribution is replaced by a categorical
 one. The only one change needed in the above proof concerns
-updating the parameters of this distribution,
-Since 7r‘ A. .+ n,‘ e l, we lnust solve the following constraint
+updating the parameters of this distribution.
+Since 7T1 + + 71K : l, we must solve the following constraint
 optimization problem:
-maxQ[K.;l.(7\7rm.}tm,!7w)]
-1,”
-n
-suhjmt m 2n, e l and 1r, 2 u, v; e 1.7.7.10
-,ei
-By letting asside the 2 constraints, and using the Lagmngean
-multiplier A e 1R, this problem becomes:
-i»
-mix (Q(W.ll.n\¢rm M em) + AU e 2m)
-lei
+max Q<7Ta Ill/7 UIWU)’ ILL(t)7 0-05))
+7T,,u,(7
+K
+subject to 27g :1 and 7Tj Z 0, Vj I 1,...,K.
+3:1
+By letting asside the Z constraints, and using the Lagrangean
+multiplier A € R, this problem becomes:
+K
+maX (QUE u, 0W), M“), 0(a) + M1 — Z 7%)) -
+7T,,u,0
+3:1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:106**************
-106,
-For l ilunlﬁ
-5 w, (l; in H (rl 1 (1+!) l H m
-aim/well, .e .T ):(]©2pui:k©wj :ezpu.
-1r] H 7U A lel
-Because XI‘; if" e1, it follows mm
-ll H l A» n
-ll if
-A: 2214;: 221w’ I 21 I
-lei ,ei e1 ,ei .ei
-‘i
-Therefore.
-ll+ll i 1' m
-lei
-Note that. indeed HAW" 3 0, because the 111;’ terms designate some
-probabilities (soc E-step),
+106.
+
+ForjI1,...,K:
+i Q(,u 0 7T l ,uw 0(15) 71-05)): O <I> ip<l>l I A (I) TIGJFD I l ipll).
+871:7’ 7 7 a 1 1-21 1] 7le j A 2'21 Z]
+Because 23111 7T§t+1> I 1, it follows that
+
+K n n K n
+
+_ (t) _ (t) _ _
+)‘— 2219111 — ZZP11— 21—”'
+3:1 1:1 1:1 3:1 1:1
+1
+Therefore,
+(1+1) 1 n (t)
+
+Note that indeed 7r;t+1) Z O, because the pg) terms designate some
+probabilities (see E-step).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:107**************
-107,
-To summarize:
-Estep:
-HY, m 2 » WW
-mwlw i1 .m 2min] *M
-11,] , (Hr H.114”) ,. w h , m ->,~ m
-21:, MY, W -(”r)(/)-q
-” l (mfg)!
-wu'C (1 111 nj) ﬁn] up 2”?
+107.
+T0 summarize:
+E Step:
+. (f) 2. (t) . (if)
+19(5) n2‘ P(z-j = 1 | ‘fly-LN) (02W) 7m) I W
+Z Z 7,7 , 7 t t
+Z:l:1 N(97i | H; >(Uzz)(t)) ' 7T1
+Where N 5132- 302. dzf — ~eX (_¥ .
 M Step:
-1 n
-(9+!) it}
-”/ F 521).,
-H
-H ﬂ
-H \
-1v [f] V14) Z
-2 Z I’ (law >
-(7+1) M ., ,
-2H1",
+(15+1) 1 n (t)
+7T1 k 52pm
+1:1
+n t
+(t+1) 21:1 pgj)93i
+“1' * n—<t>
+22:1 pij
+n t t+1
+Uj n (t)
+21:1 pij
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:108**************
-103,
-Example: Modelling the waiting and eruptiun time! for
-the om Faithful geyser,
-(YeHOWstolle Pal-k, USA)
-Michael Eichler (University of Chicagm Statistics course (24600) - Spring 2004)
-R nude
+108.
+Example: Modelling the waiting and eruption times for
+W,
+(Yellowstone Park, USA)
+Michael Eichler (University of Chicago, Statistics course (24600) - Spring 2004)
+R code
 Starting values:
-P4’:LD§ 4n an‘ 20‘ 20) m)
-:mstep<’ﬁmnlcn(¥ DH p : 01
-a? “7014' dwzctvlﬁlil sinmgglm ,,"" m 11w‘ 4
-p WM p AW ll ’ 1,
-+0 M117‘WWWNELWKMSIH) M" i <10, m" i 4
-pukimnlgn
-,pldlmlu . V)l5um([17
-P|:]< mm V 51w] ,l M0751)
-p|6]< sumlEZ ‘ (V7 p[2])‘2] l’ sum(EZJ V
-play Mm V 51) ' (v7 pmyzp , mu V Ez) rm‘
-l P l
-emlleullqu’(lm(!mn(V p n:ll7)( ' I
-w (l w n "Ml ..
-p ("\lele v) 5 r V k
-l M - v , yl K
-,,
-’ <0, w qu 20 20, ‘ y, ‘ ‘ ‘
-SK’: v ‘V l
-pl mwmlv p 1m ‘I II I;
-p muuuumnszuulm
-NEW," p) mlmmmhllvd
-v
-l
+p< —c(0.5, 40, 90, 20, 20) (0)
+emstep<—function(Y, p) { 19(0) I 0.4 (O)
+EZ<—P[1] * dnorm(Y, p[2], Sqrt(p[4]))/ I 40, I 4
+(pm * dnormw. p[21,5qrt(p[4])) “in 0%0)
++(1-p[11) * dnormw, p[31.sqrt(p[51>>) H1 I 90, 01 I 4
+p[l]<—mean(EZ)
+p[2]<—sum(EZ * Y) / sum(EZ)
+p[3]<—sum((1 - EZ)*Y) /sum(1-EZ)
+p[4]<—sum(EZ * (Y - p[2])A2) / sum(EZ)
+p[5]<—Sum((1 - EZ) * (Y - p[3])/\2) /sum(1 - EZ) r.‘
+p l
+} ‘l
+emiteration<—function(Y, p, n:10) { E h I
+for (i in (1:n)) { .1
+p<—emstep(Y, p) g- 1F r k
+} LL 1 F 1 Fl l
+p .
+} ‘ V 1 . 1
+p<—c(0.5, 40, 90, 20, 20) I -l" k
+p<—emiteration(Y, p, 20) d‘ I. Ii
+p an as 52 5a 5-: m m a2 aa 91 1m
+p<—emstep(Y, P) Wailqllna-b-alwa-anmpmmﬂ
+P
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:109**************
-100.
-k 1)“) 111 111' "1' "1
-1 03003 54 22 70.91 5.105 5000
-2 03530 5-188 700-1 5071 0015
-5 03502 5-140 1000 5744 5000
-4 03518 5-151 80.02 5.737 5935
-5 0.3533 5455 30.05 5.315 5012
-6 0.3505 5457 30.06 5.831 5807
-7 03000 54 50 3007 58-10 5887
-8 03003 5-100 3003 5355 5880
-0 03005 5-100 3003 5300 5870
-10 0.3606 5461 30.09 5.364 5873
-11 0.3607 5461 30.09 5.366 5871
-12 0.3603 5401 30.00 5.303 5870
-10 03003 5-101 3000 5000 5800
-14 03003 5-101 3000 5070 5800
-15 03009 5-101 8009 5310 5808
-20 0.3600 5461 30.09 5.371 5868
-25 0.3600 5461 30.00 5.371 5868
+109.
+k pug) 1“le lugs} 01M; 02M}
+1 0.3508 54.22 79.91 5.465 5.999
+2 0.3539 54.38 79.94 5.671 6.013
+3 0.3562 54.46 79.99 5.744 5.969
+4 0.3578 54.51 80.02 5.787 5.935
+5 0.3588 54.55 80.05 5.815 5.912
+6 0.3595 54.57 80.06 5.834 5.897
+7 0.3600 54.59 80.07 5.846 5.887
+8 0.3603 54.60 80.08 5.855 5.880
+9 0.3605 54.60 80.08 5.860 5.876
+10 0.3606 54.61 80.09 5.864 5.873
+11 0.3607 54.61 80.09 5.866 5.871
+12 0.3608 54.61 80.09 5.868 5.870
+13 0.3608 54.61 80.09 5.869 5.869
+14 0.3608 54.61 80.09 5.870 5.869
+15 0.3609 54.61 80.09 5.870 5.868
+20 0.3609 54.61 80.09 5.871 5.868
+25 0.3609 54.61 80.09 5.871 5.868
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:110**************
-110,
+110.
 Exemplifying
-some methodological iSSUeS regarding the application of
+some methOdOlOgical iSSllES regarding the application of
 the EM algorithmic schema
-(using a simple EM/GMM algorithm on dam from R (m : 7:, : 1/2))
-GMU. 2007 spring Eric Xing. ﬁnal exam. pr, L8
+(using a simple ElVl/GMM algorithm on data from R (7T1 I 7T2 I 1/2))
+CMU, 2007 spring, Eric Xing, ﬁnal exam, pr. 1.8
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:111**************
 111.
-A lung tiurc agu tlrcrc was a village arnidst lrundrcds ur lakcs. Twu types uf
-ﬁsh lived in the regicu, hut enly one type in each lake.
-Thesc Lypcs of llslr buth looked cxactly the sarnc. srncllcd exacLly tnc sarnc
-when ceelred, and had the exact sarne delicicus taste a except one was pcie
-sonous and would kill any villager who ate it. The only ether difference
-hetween the ﬁsh was their etfect on the pH (acidity) nethe lake. they uccupy.
-The pH rer lakes eccupied by the nenepcisenuus type of rish was distributed
-according to a Gaussian with unknown ruean (law) and variance (054,) and
+A long time ago there was a village amidst hundreds of lakes. Two types of
+ﬁsh lived in the region, but only one type in each lake.
+These types of ﬁsh both looked exactly the same, smelled exactly the same
+when cooked, and had the exact same delicious taste — except one was poi-
+sonous and would kill any villager who ate it. The only other difference
+between the ﬁsh was their effect on the pH (acidity) of the lake they occupy.
+The pH for lakes occupied by the non-poisonous type of ﬁsh was distributed
+according to a Gaussian with unknown mean (psafe) and variance (agafe) and
 the pH for lakes occupied by the poisonous type was distributed according
-tu a diﬂerent Gaussian with unknown rnean (“one”) and variance (aim).
-(Poisonous ﬁsh tcndcd to cause slightly more acidic cenditiens),
-Naturally, the villagers turned to machine. learning for help. However, there
-was much dchatc about tlic right way to apply EM to tlicir problem. For each
-of tlrc fulluwing praccdurcs. indicate wlrcthcr it is an accuratc irnalcrncnta-
-tiun ul Expcctatien-Maxirniaatiun and will pruvidl: a rcascnalilc catirnatc rer
-parameters /i and 02 rcr each class.
+to a different Gaussian with unknown mean (pdeadly) and variance (ageadly).
+(Poisonous ﬁsh tended to cause slightly more acidic conditions).
+Naturally, the villagers turned to machine learning for help. However, there
+was much debate about the right way to apply EM to their problem. For each
+of the following procedures, indicate whether it is an accurate implementa-
+tion of Expectation-Maximization and will provide a reasonable estimate for
+parameters ,u and 02 for each class.
 
 ***************Ending Page***************
 
@@ -2088,407 +2248,428 @@ parameters /i and 02 rcr each class.
 ***************page number:112**************
 112.
 a.
-Guess initial values of ,t arul o1 lor eaeh elass.
-(1) Fur eueh lake, ﬁnd the must likely eluss ul' iish for the lake.
-(2) Uprlate the h and a‘ values using their maximum likelihood estimates
-based ah these prerlietierrs.
-lterate (l) aml (2) umil eouvergeuee.
-be
-For eaeh lake, guess ah initial prnhahility that it is sare.
-(1) Using these probabilities ﬁnd the maximum likelihuod estimates lor the
-it and r1 values for eaeh elasst
-(z) Use these estimates or it and 0 to reestimate lake aal'cty prohahilities.
-Iterate (1) uml (2) uutil eeuvergeuee.
-e.
-Compute the mean and variance or the plI levels across all lakes.
-Use these values fur the h and r12 value of e-seh el-sss of ﬁsh.
-(1) Use the ,1 and a’ values of each class ta compute the belief that eaeh lake
-rnntains poisnncms ﬁsh.
-(2) Find the maxinlunl likelihood values for it aud o2.
-iterate (1) and (2) uutil convergence.
+Guess initial values of ,u and 02 for each class.
+(1) For each lake, ﬁnd the most likely class of ﬁsh for the lake.
+(2) Update the u and 02 values using their maximum likelihood estimates
+based on these predictions.
+Iterate (1) and (2) until convergence.
+b.
+For each lake, guess an initial probability that it is safe.
+(1) Using these probabilities, ﬁnd the maximum likelihood estimates for the
+,u and a values for each class.
+(2) Use these estimates of ,u and a to reestimate lake safety probabilities.
+Iterate (1) and (2) until convergence.
+c.
+Compute the mean and variance of the pH levels across all lakes.
+Use these values for the ,u, and 02 value of each class of ﬁsh.
+(1) Use the ,u and 02 values of each class to compute the belief that each lake
+contains poisonous ﬁsh.
+(2) Find the maximum likelihood values for ,u and 02.
+Iterate (1) and (2) until convergence.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:113**************
-11.x.
+113.
 Solution
-a. It’l] do 0k if W0 givc sensible enough )1 and (Y2 initial values.
-b. Ck, this is the same as (I after the ﬁrst M»stcp.
-(See the general EM algorithmic schema on the next slide)
-cl This will be stuck at the initial ll and r72:
-in the Estep we“ geL:
-mllnm) mn/n) |
-P ‘l . I I ,
-( (‘M’) P(.|,\.mf(‘) Ptﬂlft‘) + P<.r,‘l]l,mll|/) Pmmrn) 2
+a. It’ll do ok if we give sensible enough ,u and 02 initial values.
+b. Ok, this is the same as a after the ﬁrst M-step.
+(See the general EM algorithmic schema on the next slide.)
+c. This will be stuck at the initial u and 02:
+In the E-step we’ll get:
+P - P 1
+P(5af@‘$) : M : _
+P(x\5afe) - P(safe) + P(5v|deadly) - P(deadly) 2
 1
-since on nnc side we assunu: Ppnifl) I P([mh0n] I 5 and un the other side
-milm/l) : P[|\pumml) because W], I )llhlvllh/ and "Elf: "ﬁnit-
-In the Mistep ,1 and r77 will not change Sim-e we are ngnin letting them he
-calculated from all lakes (weighLed equally).
+since on one side we assume P(safe) I P(p02'son) I 5 and on the other side
+P(a:\safe) I P(:c|p02'son) because psafe I ,Lbdeadzy and 6?an I Ugeadly'
+In the M-step ,u and 02 will not change since we are again letting them be
+calculated from all lakes (weighted equally).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:114**************
-111,
+114.
 The [general] EM algorithmic schema
-(In
-hm —> E[Zl x, hm]
-m In P(th)
-h"*"= argTaX EHZIX; hm) [In P(X,Zlh)]
+t1!)
+h“) —> E[Z | x, hm]
++th|— In P(th)
+h(‘+1)= argnhwax EP(Z|X; hm) [In P(X,Zlh)]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:115**************
-11w,
+115.
 
 The EM algorithm for modeling
-mixtures of Inulti-variate Gaussians
+mixtures of multi-variate Gaussians
 
-With diagonal covariance matrices
+with diagonal covariance matrices
 
 Utah University, Piyush Rai
-ML course (CSi'v350/6350)7 2009 fall,
-lecture notes, Gaussian Mixture Models
+ML course (CS5350/6350), 2009 fall,
+lecture notes, Gaussian Miaztu're Models
 [adapted by Liviu Ciortuz]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:116**************
-11¢.
-Fic mixtura dc distribugii gaussienc ’
+116.
+Fie mixtura de distribuigii gaussiene
 K
-Wm.) I 271 .w W, 0'11).
-,I.
+9mm) I Z @- N<x; W, 021),
+3:1
 unde
-J s 1R“,
-prubamumgug a prim-i d2 selecgie K, E R “time (cu ue 0mm) mmqme 7, 2 0
-pentru , I 1... .1; §12f,mI1;
-mediile gaussienelnr J I 1... .K sunt vech-ii p, a :11". m
-matricele de covariangé ale acestor gaussine sunt identice, ba chiar an forma par-
-ticularﬁ 011, cu r7 F, m gi 0 > u. matricea 1 ﬁind matricea identitate.
-Se cnnsideré instanmle |.. 1.. e 1K" generate cu distrihuﬁa probabilisti de mai sus
-(7mm).
-in aces‘ exarniﬁu veﬁ deduce regulile 48 actualizrlm din cadrul [pasului E 5i .11 pasului M
-al] algoritmului EM care face estimarea parametrilor 1 "I" m. “14.”! (m. .W.)
+a: € Rd,
+probabilitéigile a priori de selecigie 7Tj € 1R satisfac (ca de obicei) restrictiile 7rj Z O
+. . K
+pentru y : 1,...,K §1 ijlm : 1;
+mediile gaussienelor j : 1, . . . ,K sunt vectorii #1 € Rd, iar
+matricele de covariantéi ale acestor gaussine sunt identice, ba chiar au forma par-
+ticularéi 021', cu 0 E R §i 0 > 0, matricea I ﬁind matricea identitate.
+Se considerii instangele 5E1, . . . ,atn € Rd generate cu distribuigia probabilistéi de mai sus
+(9mm).
+in acest exercitjiu ve§i deduce regulile de actualizare din cadrul [pasului E §i a1 pasului M
+a1] algoritmului EM care face estimarea parametrilor 7T nit (7T1, . . . ,7TK),,LL ng' (H1,-- -,HK)
 §i 0.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:117**************
-117,
+117.
+a. Se §tie c5 expresia funcigiei de densitate a distribugiei gaussiene multi-
+variate (d-dimensionale) de medie ,u 6 Rd §i matrice de covarianigii E € RdXd
+este
+1 ( 1< FEW >>
 
-a. S2 §tie c5 Expresia funcﬁei de densitnte a distribugiei gallssiene multi-
-variate (vi-dimensionale) de media /‘ & W 5i mnmnn de cnvarian§§ 2 E RM
-851.9
+—eXP ——$—H $—,LL a
 
-éexp (iv , ﬁrm , m).
-
-(v '11)” \/ W 2 I
-uncle r 3i n sunt cnnsiderngi vectorincoloani din 1R", iar operatorul T desenn
-neazﬁ nperaﬁa de transpunere a vectnrilnr/matricelor.
-Aducegi Expresia de mai sus la forms CeB mai simpm pentru cazul z : ~11.
-vs recomandém 55 rolnsm faptul c5 “PM? I ('|‘*;|)T(rip] I (PM) (PM,
-unde operamrul desemneazii prudusul scalar 31 vectorilor.
-Ohm-mm: Frima din ultimclu 11mm egnumi irnplicﬁ un ugur ubuz (sau, nnn
-degrabﬁ, n cunvenﬁe) d2 noinjie: D nnnmce realé d2 dimensiune 1 >< 1 Em
-identiﬁcati cu un numar real: care Em chizu- singurul Ea element. Acelaq'i tip
-d2 ahnz/cnnvanﬁe a intervenit §i in sm'ierea expresiai mwr ) de mni 5115.
+(v 27W \/ IEI 2
+unde a: §i ,u sunt considerati vectori-coloanii din Rd, iar operatorul T desem-
+neazéi operagia de transpunere a vectorilor/matricelor.
+Aducegi expresia de mai sus la forma cea mai simpléi pentru cazul E I 021.
+V51 recomandiim s51 folosigi faptul céi ||x — /1J||2 : (x — #)T(a: — p) I (x — p) - (m — ,u),
+unde operatorul - desemneazii produsul scalar a1 vectorilor.
+Observajie: Prima din ultimele douéi egalitéti implicé un u§0r abuz (sau, mai
+degrabii, 0 conventie) de notafie: 0 matrice realii de dimensiune 1 >< 1 este
+identiﬁcaté cu un numiir real, care este chiar singurul ei element. Acelagi tip
+de abuz/convenﬁe a intervenit §i in scrierea expresiei exp(. . .) de mai sus.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:118**************
-118,
+118.
 Answer
-‘ 1 -7\ 1
-L : 0 1 a’ L I i1.
+2 —1 1
+0
 and also
-Y1 i My’ % WW’ n" Sinté w > u
-Thereform
-. 1 1 T . | ‘
-Am M z my imp<i7h 1,) L u i“;
-Mg)" m Z
-l 1 r l
-i Wowpikm ”j(|*;1))
-1 x 7
-mwpﬁﬁul *NH)
+‘2| I (02)d :> \/\E| I 0d since a > O.
+Therefore,
+1 1
+Nx; ,EIJ2I : —ex (——a:— TE_1a:— )
+(H ) (ﬁwmpfm (M)
+1 1 T 1
+— Wen) (5(ZUH) EQUAL»
+1 1 2
+I (—W6XP —ﬁ||x—/1H
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:119**************
-11"),
+119.
 
-b‘ Vom asocia ﬁecérei instange :I', un vect0r—indicat0r (mai precis.
+b. Vom asocia ﬁecﬁrei instan§e x1- un vector-indicator (mai precis,
 
-un vector de variabile aleatoare 1, g (0.1)“, cu z, ‘é (1,‘. . .5“)
+un vector de variabile aleatoare ZZ- € {O,1}K, cu zz- n2 (22-1, . . .,zZ-K)
 
-§i 1‘, : | aw; §i numai claw": 'r, a rm gcmcrat dc gaussiana
+§i 22-]- : 1 dacﬁ §i numai dacé x1- a fost generat de gaussiana
 
-.wf. W021).
+NQC; ILLj7O-2I).
 
-Pentru pasul E 31 algoritmului EM, vegi demonstra mai imai ca
+Pentru pasul E al algoritmului EM, ve§i demonstra mai intéi cii
 
-media um] ‘:" upuhpmuj], uncle 1,1 : (m. . .M) C 1R", p “:"
+media E[Zij] nét. E[Z¢j|$i;ﬁ,ﬂ,0], unde £131‘ I ($11,. . . ,ind) € Rd, ILL nét.
+(M1,---,,LLK) E (Rd)K §i 0 6 R+, are valoarea P(zq;j I 1|;Ui;7r,,u,0), iar
 
-(11» .11“) e mad)“ §i n E 1R‘, are valoarea Pg‘, : lhwwwwﬁ, iar
-
-apoi mi clabora formula dc calcul a accstci probabnnau, folosind
-teorema 1m Bayes‘
+apoi ve§i elabora formula de calcul a acestei probabilitéifgi, folosind
+teorema lui Bayes.
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:120**************
-120,
+120.
 Answer
-For Lhe sake of simplicity, we will designate Etnhhmml in, mm.
-50,
-E[z,,] "2' E[:,,\'l,>m|.n] "Q 0 111,, :(m, w p.0]+1~l’\3y,:1‘1y w “.0;
-I P(z,, I my.“ “.01
-1M“, lamina,” “.01 P(;,,:l"yr.p.n)
-110,.” W1)
-Pom‘, :1 mm) mt‘, I 1.71%”)
-gamut“ : l.7r,;1.0] 11;”, :1.” W1)
-I 1 . )
-L (“5(1)”wa 10$ 1, *H/H “J
-i K l 1
-( 1 x u")
-TU “KP if} 1r“, '
-2 V
-I i” 1 (1a)
-_1<
-Liz. w m, (iﬁul, *m I)
+For the sake of simplicity, we will designate E[zij|:ci; 7m, 0] as E[zZ-j].
+So,
+Eizij] mg. Eizij|$d7Tﬁlei déf'O.P(ZZ'j :0|$i;7T,M,U)+1'P(Zij :1|961;7T7H,U)
+I 13(21111 I llwimuﬂ)
+Bayis F. P($Z-|zij I 1;7r,,u,0) -P(zZ-j I 1;7r,,u,0)
+_ P(:cZ-;7T,,u,0)
+— K
+Zj’:1 PCUZIIZU’ I 1377-7111170) ' P(Zij’ I 1;7T,,LL,O')
+i ( 1 || H2)
+—eX —— mi— ' 7T'
+i ( 2W0)d p 202 ILL] J
+_ 1 1
+K 2
+'/_ —€X —— ZUZ'— '/ 7T'/
+2, _1 (ﬂed 10(262“ My u) J
+1
+@- eXp Qﬁnwi — IMHQ)
+I —1 (13>
+K
+2H w exp Qﬁuwi — #j’2>
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:121**************
-121,
-C. Arétagi 05 expresia funcgiei cle logiverosimilitate a datelor
-4,,colzlplete“ in rapurt cu parametrii 1r. ,1 §i ,1 este
-1.1,,(',;.1\ﬁ,,1,0) : 22 141% +1“N(.,‘1W”11)).
-‘:\ F‘
-undef'g (1,.H..J,1,)§i.“:" (:4. . .3”).
-Deducegi 3pm expresia ,,func§iei auxiliare“
-<9(w.,L.U\1rl'>.w.w)":1 E[lnp(:r. mm»
-cu precizarea 05 media aceasta este calculatﬁ in raport cu
-distribuﬂa / distributiilc P(z,/\:r,,¢r(", MW“)-
+121.
+
+c. Arétaigi c5 expresia funcgiei de log-verosimilitate a datelor
+,,complete“ in raport cu parametrii 7T, ,u §i 0 este
+
+n K
+
+1np(513, ZIW, ,u, a) : Z Z 212-an 7Tj +1nN(a:Z-;Iuj,021)),
+
+1;:1 j=1
+unde 5U n25. (x1, . . .,£Un) §i z ng' (21, . . . , Zn).
+Deduceigi apoi expresia ,,func§iei auxiliare“
+
+QM, M, awn W, A“) If E[1np<w,z\w,0>1,
+
+cu precizarea c5 media aceasta este calculaté in raport cu
+distribu§ia / distribugiile P(zZ-j|asi,7r(t), p(t),0(t)).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:122**************
-Answer 122’
-Tho lug-vcrusimility of me cumplctc mm. ab
-mm, m ,1 r1) "J 1]\]l((r‘:‘) .(r,‘.2v)\7F/|_r1]":" 1an<heJmen
-,4
-e zllxphpq MM) "““L""' Zluﬂ'lﬂipmwﬂ) Maw-pm
-H H Wm
-H !\'
-e 22:1,UHA'WWJ)+1m,]
-H m
-zinc‘: 4‘ Z (z, M He‘, v.1, N], Wm, 4, , e 1 and z, ,y e u fur all J" e 1‘
-nuthermore, using the result we got at part a, we can write
-“ “' (I 1
-1mm: 1.2/10): 22:.U[’Eln(21m“)i Wu,‘ emu’ e lv\1rj:|
-,e ,e
-Finally, using (he linearity of expectation,
-Q(w_/1 am” WA”) ‘Ll F[lnp(r ew ,m)‘
-,, I\
-a ‘ I 1
-I %%E[z‘,1[l51n(2m§e F 1, e mu’ +11%]
+122.
+Answer
+The log-verosirnility of the complete data is
+1n19<$>zlmll7® défi 1np<<£617 Z1): ' - ' 7 (ZUn, Zn)|7Tn H7 U) Liz'd. ll] Hp(mi7 Zilﬂ-v ILL7 0)
+1:1
+n mult. rule n
+I ZIHPWmZiWMU) I Zlnpmlzwnma) 'P(Z@|W,M,U)
+1:1 1:1 T
+n K
+I 22%‘ [1HN(%|#170)+1H7T1],
+1:1 j:1
+since zz- I (23-71, . . .,zZ-,j, . . .,zZ-,K), with zm- I 1 and zm-l I 0 for all j’ #j.
+Furthermore, using the result we got at part a, we can write
+2
+lnp(:13,z\vr,p,0) : 23:223-3- [—§ ln(27r02) — FMS“ — ,ujII —|— lnwj] .
+Finally, using the linearity of expectation,
+Q(W,u,0\7r(t),u(t),v(t)) dif' Ellnp(w,Z|7T,mv)l
+2 2
+I ggEtzU-l [—§ln(27m )— ﬁIIacZ — ,LLjII + lnwj].
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:123**************
-12.1.,
-Pom“ PM“: M, in contoxtul prccizat in mung, vom avca dc
-rezolvat urmétuarea problemﬁ de optimizure:
-(WW ‘ ‘MN ' UAW) i mganm. ,L. U WNW/AWN). (14)
-M.”
-A
-nu minr'mlrfrjhﬂ) 2 0 mm; i 1.. v.14 w 21¢“) i1
+123.
+Pentru Pasul M , in contextul precizat in enung, vom avea de
+rezolvat urmétoarea problema” de optimizare:
+(W(t+1),u(t+1),0(t+1)) I argmaX QUE u, 0W), M“), 0w)’ (14)
+7T,/l,,0'
+K
+. .. (15+1) - _ - (H1) _
+cu Test'mcgfzzle 7Tj Z O pentm j — 1, . . . , K 52 ij _ 1.
 
-H
-Aceasté problems se rezolvz“: optimizénd mmgaa ei obiectiv in mod
-soparat in raport cu variabilclc w. u §i fr.
-d. Aplicagi lnctoda multiplicatorilor 1m Lagrange pcntru a m-
-zolva problema de optimizare cu restricgii (14) in raport (dear) cu
-variabilele W.
+3:1
+Aceastéi probleméi se rezolvéi optimizénd funcgia ei obiectiv in mod
+separat in raport cu variabilele W711i §i 0.
+d. Aplicagi metoda multiplicatorilor lui Lagrange pentru a re-
+zolva problema de optimizare cu restrictii (14) in raport (doar) cu
+variabilele 7T.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:124**************
-12-1,
+124.
 Answer
-For nnw, we will ignnre the nnnslrainls h] :3 u. Thus_ the Lllgmngerul jnnmnnnl asst»
-rimad to our npﬁmisaﬁnn prnhlem is:
+For now, we will ignore the constraints 713- Z 0. Thus, the Lagrangean functional asso-
+ciated to our optimisation problem is:
 K
-(WWW “(Mm/W) : lngnnn'qmn nlwﬂtlll'l w") , AU , Zwm (15)
-MM Fl
-with A r, 1R playing Lhc wh- Ur Lugru'nguavl 1nulliplicr. (After Bulving chin uptimisutiun
-prublem it will be seen that indeed i’, > ll for all [:1 . K.)
-By taking the partial derivative of the Lagrangean functional with respect m 1:‘ (with
-J a (l m) and (hen solving for m
-) , "
-Jim” ll.rTlWH]./l‘/‘.le + Ml , 27,1) i 0 Q
-0 l, l d l ., l
-67/ ZZFM [Tlnmnm i p ll, , ,|,ll~ +11%] + A i u m Z RM; i A
-,Zl ,Zl ,Zl
-we will ubtain the solution
-l 1 " v
-H," I: A ZE[:l,]. (1h)
-H
+(W(t+1),u(t+1),v(t+l)) I arsmaﬂQW u, 617%”,th 0(6) — M1 — Z 71.1)), (15)
+7r,,u,a,>\ -_
+]_1
+With A G R playing the role of Lagrangean multiplier. (After solving this optimisation
+problem it will be seen that indeed wj Z 0 for all j I 1, . . . ,K.)
+By taking the partial derivative of the Lagrangean functional with respect to 113- (with
+j€ {1, . . .,K}) and then solving for it,
+8 K
+87f?‘ j=1
+a n K d 2 1 2 n 1
+a ZZElZZj] —§1n(27m ) — FHZEZ — ij +ln7rj + A I O (I) ZELZU]; I A
+9 2:1 9:1 1:1 9
+we will obtain the solution
+1 TL
+1+1
+7T§ > : X ZEpij]. (16)
+1:1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:125**************
-125,
-MUl-L-uwr, since thcsl: >ulutiuns should misty the CUIISU'uinL if,‘ I,’ ‘ “ I 1, it fulluwa
+125.
+Moreover, since these solutions should satisfy the constraint 23111 7r;t+l) : 1, it follows
 that
-K1,, Ill‘. Illw
-Z XZL'FHI :1c» X 22mm I l I» X 221’le I l Thml 0) I 1 I
-H Il IlIl ,Il/Il
-.. ll H
-1 I
-A;;P(:,,Illrpml U)I1IA;lI1=~gIlIAIH
-%,—1
-l
-By replacing all! value of A back into rclutiun rm), wc will get
-WW“ I 125p, 1. (m
-' n If‘ I
-h is obvious that wj'“) 2 n.
+1:1 1:1 1:1 1:1 1:1 1:1
+1 11 K 1 11 11
+XZZPW- :1|.1~1,11,11,0) :1<:> X21 :1<:> X : 1(:>A:n.
+1:1 9:1 1:1
+@—/
+1
+By replacing this value of A back into relation (16), we will get
+1 TL
+1e 1
+@+:;me- (m
+1:1
+It is obvious that 7T§t+1> Z 0.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:126**************
-e. Optimizaﬁ funegia z) (Lee, rewlvagi prublema d2 optimizare (14)) in raport cu val-i’ 12$»
-ahilele ,K.
-Indicnjie: Un'nitnarea formulé cle der'i'unre 'uecioriahi (preluati din documentul Matrix
-Identities, de Sam ROWeis, 1999) vs poate ﬁ de £0105:
-a
-(5g) 37(th + Noam + b) : (a + CT)(Xu + md
+e. Optimizati functia Q (i.e., rezolvati problema de optimizare (14)) in raport cu vari- 126-
+abilele ,u.
+Indicatie: Urméitoarea formuléi de derivare vecto'm'ald (preluaté din documentul Matrix
+Identities, de Sam Roweis, 1999) v5 poate ﬁ de folos:
+§
+(5g) 8—X(Xa + b)TC(Xa + b) : (C + CT)(Xa + b)aT
 Answer:
-Remember me notatinn ,1 (m. We) e OW)“, with u, e 1R"f0r1 1. .A.
-‘urn “K. ,1 ‘1 ,2
-VHJQUTJLOM ‘A a‘ y:v,.JZZm:,,1[jumhﬂﬂe WU“ *M n.7,]
-,Z, ,e. ~
-I in, 1 ,iv [1- e“ )1 ‘Quiiw 2(1- e“ )H)
-ks‘ u 201 H, k 1 2”‘ 1:‘ ﬂ/ k 1
-1 ‘._ 1 H‘ H‘
-Z $211: lulu, en,‘ : Z Llﬂzuln e Law] ,U
-
-After equating this expression m zero (in fact, the cnlurnn-vector (u. 0)‘ '< IR"). we
+Remember the notation ,u, I (p1, . . . HuK) € (Rd)K, With ,Ltj € Rd for j I 1, . . .,K.
+(t) (1:) (t) _ 2 9 / 2
+z: J I
+I iEizi-i -iv m- - W ‘5%) —i imam - u-)(—1)
+1.21 .7 202 PL] J 202 [LII]- .7 .7
+1 n 1 TL n
+I F ZEizinwi — My‘) I p KZEM-ﬂm) _ (XI-EMA) M1]
+71:1 1'21 11:1
+After equating this expression to zero (in fact, the column-vector (O, . . . , O)T € Rd), we
 get the solution:
-
-Hm SQEMIM
-
-H I ,. , 18
-
-1 21m ‘ >
+[MW-1) I 2?:1 Eizij133i (18)
+j 21-11 E1215]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:127**************
-127,
-f. Optimiznyi funcﬁa Q (i.e., rezolveyi problems de optimizare (14>) in raport eu vari-
-abila 0.
+127.
+f. Optimizati functia Q (i.e., rezolvati problema de optimizare (14)) in raport cu vari-
+abila a.
 Answer:
-The partial derivative 0fQ(W.;L.I7\Tr<".;LW,(7(O) with respect m n is:
-‘d cm.” HWY 1H” 0"‘)
-(in
-o"'\U "112' 1 ‘1
-e 32,2‘ m *5“ m )*W\\-h*m\\ + w
-’ r‘) (t ‘p Z l , 1
-I ZZEM$[ 51mm) Wu.“ H,“
-em
-/I 2a *2 d 1
-I ZZE;,,1[ 2 02 Wu“ “,F]:ZZE[:~ [ U - 0m m]
-I WHMZZngZMH“emu’) I ;(~~1”1+ZZEZU Hue/e VJ
+The partial derivative of Q(W,#,U|W(t),#(t), 0w) with respect to 0 is:
+362W H U|7T(t) MU) 0(6)
+60' 7 7 7 7
+: 3 277:5:qu 111127102) - i111: 11-112 +1117?
+(90 7:1 9:1 Z] 2 202 Z ‘7 "7
+n K
+— Z Ema-187 [-5 mm >- gut - mu 1
+1:1 3:1
+n K n K
+d 20 —2 d 1
+I 22%] [5 - F - F196: w] I ZZEW [; + gut — W]
+1;:1 3:1 1;:1 9:1
+1 n K n K 1 n K
+I $th ZZEW +ZZE1ZZ-mm - MHZ) I gendﬁ + ZZEvZ-mm - Mu?)
+1:1 3:1 1:1 3:1 1:1 3:1
+1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:128**************
-12x,
-. 0 , , , .
-By equating 7 ()(w u-ﬂh‘ LN‘ v 0‘ ‘) t0 u we get the solutlun:
-t n
-1 H I\
-WM’ i i i ‘_ , 1H, Z
-w > , ,"(Lllibiztm n, H z“ (1m
-if w
-1t is not too difficult to see that this solution leads tuythe maximization Ur
-Q. (Note that n > u and the expression ind/72 + 21L, 2"; E[;,j]\ I, in, F as a
-function ul' n1. i> linear and decreasing.)
+128.
+~ a (t) (t) (t) -
+By equating 8—Q(7T,/L,0"7T ,u ,0 ) to O we get the solutlon:
+0
+1 n K
+(t+1) 2 _ _ _, __ (H1) 2
+<0 > - nd ZZELZWHIQJZ #j || 2 0- (19>
+2:1 jzl
+It is not too difficult to see that this solution leads to the maximization of
+Q. (Note that 0 > O and the expression —nd02 —|— 217:1 29111 E[z@j]Ha:i — ,uj||2 as a
+function of 02, is linear and decreasing.)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:129**************
-120,
-g. Sumarizaﬁ rezultatele obyinute b punctele de mai sus (I) §i d-f), redactimd in pseudo-
-cod algoritmul EM pentru rezolvarea mixturii de gaussiene din mung.
+129.
+g. Sumarizati rezultatele obtinute la punctele de mai sus (b si d-f), redactand in pseudo-
+cod algoritmul EM pentru rezolvarea mixturii de gaussiene din enunt.
 Answer:
-By gathering the relations (U), (17), (is) and (10), we are nbw able m write the pseudo-
-L'Udﬂ uf uur alguritlun:
-- Initialize "l0 u priuri prububilitiu! 7r, tr“.- mwm ,i, and “ll: variance w’.
-- chrnLc until a certain termination condition it "wt:
-Step E: Compute the expectation (La. a pastel-0H probabilities) bi‘ ; variables:
-w ¢ . w k!) t
-i Mi w A (My ,(U )1)
-pf,’ I Elliih, v‘”>/W)-r7"']:i‘,ﬂ My .“ H,
-111,’,er Mi i5, .(Umyl)
-Step M: Compute new values for M and n:
-"i I 1L“, l‘, I <1, (” ) :JLLPI/ “Tr”, H
-H Lwilh; ril/ii
+By gathering the relations (13), (17), (18) and (19), we are now able to write the pseudo-
+code of our algorithm:
+0 Initialize the a priori probabilities 7r, the means ,u, and the variance 0'2.
+0 Iterate until a certain termination condition is met:
+Step E: Compute the expectation (i.e., a posterori probabilities) of z variables:
+(t) . (t) t 2
+(t) vigiE ,. _. (t) (t) (t) _ 7T3‘ N(33aluj >(U()) I)
+pij — [ZZJIZMW nu ,0- l — K (t) (t) (t) 2
+Zj/Il 7le N($;,uj, ,(0 ) I)
+Step M: Compute new values for 71,,u and 0:
+<t+1> _ 1 (t) <t+1> _ 2,2129” $1‘ (t+1) 2 _ 1 (t) , (t) 2
+711 — g 2%‘ #1 — W (a ) — $221)” llwz —:uj ll
+1:1 1:1 p19‘ izl jzl
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:130**************
-Important Remark: a slight generalization 130‘
-siippaee that our mixture model is made of Gaussians with unrestricted die
-agnnal covariance ninirices, i.e._
+Important Remark: a slight generalization 130'
+Suppose that our mixture model is made of Gaussians with unrestricted di-
+agonal covariance matrices, i.e.,
 
-z, ~ cumin“ "lull .lm)
-[0, i )1 ll .. 0
-ill i 2 :
-XllZ, fem’ [ E ] o (ml .
-E U
-l! l i/
-0 u (m A)’
-ii can be easily be pl'ovon [by going along the lines of the above proof) Lhat
-the only update "dutiun that eh-nngee in the forniuluﬁun 0min EM ulguriﬂlrn
-is (1U). It becomes:
-Z“1F[1nl(r,wll”f“lz
-("WW *‘i' 3 0 for J l. .A endi l. .ll (20)
-" Le, bled
-This is indeed what we would expect, given on one hand ihe fact that the
-Gaussian (Olnpnnellﬁs are lnutually independenh and on ihe. lather hand the
-updating formulas [ihai we have already obtained] for ihe EM algorithm for
-solving mixtures or iinI-variate Gaussians [of unrestricted limnl
+Z, ~ Categorical(p1,.. . ,pK)
+(O'j,1)2 0 . . . 0
+M331 2 :
+XZ-IZZ'IJWV [ 5 ] 0 (0”) '
+N ,d
+J 0 0 (WV
+It can be easily be proven (by going along the lines of the above proof) that
+the only update relation that changes in the formulation of the EM algorithm
+is (19). It becomes:
+TL E Zi' $2, _ (‘15+1) 2
+(0%“)? I W—’k”1k) 20 forj: 1...K and k: 1,...,d. (20)
+This is indeed what we would expect, given on one hand the fact that the
+Gaussian components are mutually independent, and on the other hand the
+updating formulas [that we have already obtained] for the EM algorithm for
+solving mixtures of uni-variate Gaussians [of unrestricted form].
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:131**************
-1.41,
-Th0 EM algorithm for modeling
-mixtures of multi-variate Gaussians
-Stanfurd University, Prof. Andrew Ng
+131.
+The EM algorithm for modeling
+mixtures 0f multi-variate Gaussians
+Stanford University, Prof. Andrew Ng
 ML course, 2009, lecture notes, parts VIII and IX
 [adapted by Liviu Ciortuz]
 
@@ -2496,347 +2677,371 @@ ML course, 2009, lecture notes, parts VIII and IX
 
 ***************Beginning Page***************
 ***************page number:132**************
-132,
-Suppose that we are given the instances 1...‘..1,” c 1R" (all seen
-as column-vectors) We wish to model these data by specifying a
-joint distribution p(li,. a) : p(.r,lz,)- ms)’ Herc,
-z, ~ Catsgorrcelw),
-1t denotes the number of values that the ops can take on, namely
-a, ”':" 17(1‘ :1) for)‘: 1,. ..1t, with 21¢, :1, and
-the [conditional] distribution i ‘ls, a _} is a Gaussian of mean vector
-,il and covariance matrix 2/.
-Thus, our model posits that each n was genemted by randomly
-choosing 2, From {I .Ii'}, and thon r, was drawn from one of
-the 1i’ Gaussians, depending on ;,, This is called the mixture of
-[mulLi-umviate] Gaussians model. Remember that
-r l 1 T fl
-Mr.“ yr) : W0“) Gui") 2 (i an)
-Note that the Zia are latent random variables, meaning that
-they’re hidden/unobserved.
+132.
+Suppose that we are given the instances .901, . . .,:1:n G Rd (all seen
+as column-vectors). We wish to model these data by specifying a
+joint distribution p(:1:Z-,zz-) I p(xz|zz) p(zZ-). Here,
+zz- N Categorical(7r),
+K denotes the number of values that the zfs can take on, namely
+wj nIt'pQZ- Ij) for j I 1,...,K, with 2217b‘: 1, and
+the [conditional] distribution xllzl I j is a Gaussian of mean vector
+uj and covariance matrix Ej.
+Thus, our model posits that each x1- Was generated by randomly
+choosing zz- from {1, . ..,K}, and then 2:2- Was drawn from one of
+the K Gaussians, depending on zi. This is called the mixture of
+[multi-var'iate] Gaussians model. Remember that
+M > 1 1< YEW >
+x' 0I—ex ——x— x—
+Note that the z/s are latent random variables, meaning that
+they’re hidden / unobserved.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:133**************
-13.1,
-[Use the EM general schunic (sec Torn Mitchell’! Machine Learning buuk,
-1097, pugt 194495) tu] prove that the EM algorithm for estimating the pie
-rameters Tr [I and Z of our mixture nf multivariate Gaussian distributions has
-the following updnte rules:
+133.
+[Use the EM general scheme (see Tom Mitchell’s Machine Learning book,
+1997, pag. 194-195) to] prove that the EM algorithm for estimating the pa-
+rameters 7T, ,u and E of our mixture of multi-variate Gaussian distributions has
+the following update rules:
 E-step:
-Le, e‘ E[:,:/\J,Tr,p.$ :ﬁA (21)
-LetNhr-HKL'J m
-Mestew
-l H H
-w I ,, Z <12)
-re,
-M I 3:,‘ m)
-Ere‘ M1
-g, I w (24)
-where r’, ,1’ and t’ represent the values of our parameters at initializatinn,
-and respectively the previous iteration of the EM algnrithm.
+no - N z‘; I» El '
+ww- :t- Em I Jl$i37Tl>Ml>Ell z —K <3” ” >7” <21)
+Zl21N(w¢; M’, E’) 7n
+M-step:
+1 TL
+1:1
+2511 wig-$1-
+J 21:1 will
+Ej I 217:1 wij (113i; WWI/"i — #j)T_ (24)
+21:1 we‘
+where 7T’, ,u’ and E’ represent the values of our parameters at initialization,
+and respectively the previous iteration of the EM algorithm.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:134**************
-, 13.1,
-Hmt: You may ﬁnd useful the following formulas, from Matrix Identities,
-by Sam Rnweis, 1999 (http /'/wwwvcs nyu edu,/~10wevs,/notes/'m2tn><|d pt“).
+. 134.
+Hlnti You may ﬁnd useful the following formulas, from Matrix Identities,
+by Sam Roweis, 1999 (http://www.cs.nyu.edu/Nroweis/notes/matrixid.pdf).
 
-(19-) (WW I MT)"
-1
-2b m1 I
-( ) \ \ W
-(4a) aixmxm I \AXB\(X"]T I \AXB (X14
-'7
-(41,) 0'71!qung I (xUA
-0 T I i -T I
-(5a) ﬁn XIOXA "In
-(5b) ﬁxiu I [A+AT).\’
-(5c) £11‘ Yh:nb‘
-l r Ii i r I T
-(5e) ax" MIOXH x aqu
-(5g) {3((X114I m'mX” + r’) I (C + (7T)[Xa + 7:)va
+(16) (14H)T I (AT)_1
+l
+(2b) A_1\ I —
+' |A|
+6
+(4a) 6—X|AXB\ : |AXB|(X_1)T : |AXB](XT)_1
+ﬁ
+(4b) 8—X 1H|Xl I (X_1)T I (XT)_1
+8 T _ 8 T _
+(5b) 8%XTAX z (A+AT)X
+§ T T
+8 T _ 8 T T _ T
+(5e) 8X0, Xa_ 8X0, X a_aa
+(5g) 8%(Xa + b)TC(Xa + b) : (C + CT)(Xa + b)aT
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:135**************
-135,
+135.
 Solution
-The mm,’ is easy (use Bay's: rule):
-H», “:" El; : m, mus’ :m: : m, may] I
-, 1M1, ,1 w mm; in’) , ~\"["|-l'/ m W’,
-ELM" :,*7 [1'_y.']11(:,*l_17') D’;,.Vw,_,w w‘; m
+The E-step is easy (use Bayes rule):
+wij mg EM I jlfm; 7T’, u’, 3'] I WIZ- I jlwi; 7T’, u’, Z’) I
+I p(33i|Zi I MAE’) 19(22- INT’) I NWMCE’) 7T}
+Zfilpm-IZZ- I l; w, 2') m- : l; w’) Zfile; w, 2/) m
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:136**************
-1m,
-We will now concentrate on the Mine,“
-According m Lhe geneml EM mime, we need w maximize. with rcspecL to
-our purunlctcra W 2, the "auxiliary" function
-‘ i , i, m1 v v
-meiw-i-m I LWiWih-pu w‘ mi
-,. ii
-I 2217(ZiIIr"7i/./I/X/)1!l])(r,.l,:[,II,E.I]
-,ii H
-H K
-I 22144:, r,_K' [I’.E’)hl(]!(.f,“§,:/ ,1 21745:, 7))
-,ii H
-H ii
-l i ,
-iii, lllﬁ (‘A1)(*f['li*)1) eru J) i
-g; 1 [mmmjih 2 1 , i 1
-H l\ 1
-, 221'»,[iii-(<1w>""lu,i‘i”>i a“ *H/ﬂ xj‘<1.w>*h-m] (2;)
-if! Jii
+136.
+We will now concentrate 0n the M-step:
+According to the general EM scheme, we need t0 maximize, with respect t0
+our parameters 71,11, E, the “auxiliary” function
+/ / I def-
+Q<7T1M>Ei7T1ll1Z) I Ep(zi:j|mi;7r’,11’,2’) lnp<£v 2;,11/9 217T)
+n K
+1:1 9:1
+n K
+I Z ZP<Z1Ij|$1;7T/1MI1EI)1H(P($1|Z1:j5M1E)P(Z1:31?»
+1:1 9:1
+I w1-1I1—-eXp(——(w1—M-)TE-_1(IB1—M'))'7T'
+n K 1
+I 22%- [—1n<<21>d/2|2111/2> — 5(11- M $51011- — 11>+1n111 <25)
+1:1 9:1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:137**************
-13’,
-First, [aﬁs derive the NI-step npdnte rule fnr itn with I : | .li'. ’
-We have to maximize (25) with iespeet to in, so leL‘s eempnte the eerie
-spunding derivative:
-iZIZ~ e1<w>"”ivi"'11e3( e 11% e > i
-3m nu n .1r W 2'1‘ it, y ti u, +n1rj
-e. F,
-0th l 1v, i)"
-i ei . T e1
-I emggnﬁheiti z, (Irm) : 720$; w) E, r1‘ w)
-m i " 0 " e e
-g *EZM/MZW/‘+(E,‘)T)(-ri*/'/)
-: 5ZWZIEJ+<ZTJ '><t,ett>:;ZthEt‘it, eitl
-- iei ,ei Y - ,ei ,ei
-e Em (275, e 27w’) e 2mm , ZMM
-e1 ei e.
-Setting this to zero and solving for it, therefnre yields the update rule
-i 29:, mum
+137.
+First, let’s derive the M-step update rule for 111, With Z I 1, . . . , K.
+We have to maximize (25) with respect to ,ul, so let’s compute the corre-
+sponding derivative:
+n K
+l 22w. _1n((27T)d/2|2.|1/2) _ 1(x- _ .)T E—1($. _ .) +1n7T.
+(911; U 9 2 l pi? j 1 #9 J
+1:1 9:1
+I ——ZZw11—<11—111>T211111111)I ——Zw11—2<w1 —111>T2;1<w1 —111>
+(9M1 1:1 3:1 2 2 1:1 (9M 1:1
+(5_g) 111 __8 n2_1 E—1T _ '
+— —§Zw118—2< j +< j > > (11-111)
+1:1 m 1:1
+(1e) 1 n n — — 1 n n —
+I 52111921251121)1><1i_,1j>: 52101122211 (11-111)
+1:1 1:1 V i=1 1:1
+21'
+I 21011 (Ef1$1— Eflm) I Zw112f1$1— Zwuzfl/ljz-
+1:1 1:1 1:1
+Setting this to zero and solving for ,ul therefore yields the update rule
+m I —22711 l -
+21:1 wil
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:138**************
-138,
-Sucundly, wc’ll derive the Mitch updates h.) 2,9 fur J :1, Hm
-Grouping together unly the terms that depend on 2, in (2:). we ﬁnd that we
-need tn maximize
-it n
-l l 7
-22%, [In ‘E ‘m 2th m‘ 21%., 11,1]
-,Zi 1:1 I
-[D v H I‘ l
-: 22% [In Fifi": i Win/1])‘ 27\('t*/l/):|
-,ii H -
-We “>5 the usual trick hf working with the precisiun nintiix ii, “Z' 2;‘. where
-z, i=- assumed invertible.
-When maximizing the above quantity with respect tn ‘\j by taking derivatives,
-WC ﬁnd:
+138.
+Secondly, we’ll derive the M-step updates to Ej, for j : 1, . . . , K.
+Grouping together only the terms that depend on Ej in (25), we ﬁnd that we
+need to maximize
+22711111‘ “W — 5(931' —Hj) j (1%‘ —Hj)
+1:1 3:1 9
+(2b) n K 1
+_ T _
+I 22w” [1n \2, H1” - 5m - M) 2,- 1<mi - w]-
+1;:1 9:1
+We use the usual trick of working with the precision matrix A9- mg. 2951, where
+Ej is assumed invertible.
+When maximizing the above quantity with respect to Aj by taking derivatives,
+we ﬁnd:
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:139**************
-13"),
-0 " , 1
-imzknilwmm 2m mun m]
-’ (*1
-1 " u 1 " 0 T
-if whim if Mimi/'1 Hui/‘J
-m, (m L " 1 "
-L 52m»,‘WELL-wrumwﬂ
-H H
-Jw"- 1"‘ ,
-*5‘, ;“'/’§;“H(JI’IU)(H’IH)-
-Setting this m zero and solving, we get:
-L] A] . , 2L, “WIN/u!‘ im
+139.
+8 n 1/2 1 T
+@210” IMAM —5($i—#j) Aj<$i—#j)
+1 n a 1 n a
+I — wi‘—1n|A'|—- wi'— (wwmwwm
+2; szj J 2; 98Aj1 J J J1
+(4b),(5c) 1 n _ 1 n
+I 5 Zwm'Aj 1 — 5 210M131 — WWW — My
+1:1 1:1
+1 _1 n 1 n T
+I 5113- 21%" — 5 Zwijw — MOW — My‘) -
+1'21 2'21
+Setting this t0 zero and solving, we get:
+21:1 wij
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:140**************
-1.10.
-Finally, letle durivc the M-step update l'er the enrernetere a,,
-Grouping together only the ternae that depend cln r, in (21), we ﬁnd that we
-neerl tn maximize r
-rel ,ei
-
-However, there is en ethlitien-el eenstr-eint thet the we sunl te l, einee they
-represent the. prnhahilities "J I Mi. I , r). To deal with the constraint that
-ZJ'L‘ a, I 1, we eenstrnet the Lngr-engi-nn
-
-H s rt
-
-at”) :Zzlrulnaj +.1 Zn] e1 _
-
-,ei ,el ,el
-where 1 ie the Lagrange multiplier.
-Note: We tlnnw neerl tn wnrry ahnnt the eanstraint that 7r] 3 ll, heeanse as
-we)" shortly see, the snlntlnn we'll ﬁnd rrrnn this rierivntinn will antnrnatteally
+140.
+Finally, let’s derive the M-step update for the parameters 7Tj.
+Grouping together only the terms that depend on 7Tj in (25), we ﬁnd that we
+need to maximize
+n K
+Z: Z wZ-j lIl 7Tj .
+3:1 3:1
+However, there is an additional constraint that the ﬁfs sum to 1, since they
+represent the probabilities 7T3- I p(z3 I j;7r). To deal with the constraint that
+K .
+23:1 7Tj : 1, we construct the Lagranglan
+n K K
+L(7T)IZZ’LU¢lel7Tj-|-6 2715-1 7
+1:1 3:1 3:1
+where [3 is the Lagrange multiplier.
+Note: We don’t need to worry about the constraint that 7Tj Z 0, because as
+we’ll shortly see, the solution we’ll ﬁnd from this derivation will automatically
 satisfy that anyway.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:141**************
-1-11,
-Taking derivaﬁves of LU), we ﬁnd:
-0 H “t, ‘ H
-i‘, I i def x ‘a
-ML“) Z W] + 7] Z” j
-e, e‘
-. . . 21,.“
-Settmg nus tn zero and solving. we get 1Q : eff
-By using the rnnstraint 2,3 i I, and given the fart that 2/031 i 1 einee
-WU 14:, j\t,.T'.;|/ um we easily ﬁnd
-*H:ZZ|1',,:21:H
-H it, e‘
-We therefore have our [\I'step derivation for the parameters 7,:
-1 H
-and, ubviuusly, t, t; 0.
+141.
+Taking derivatives of £(7T), we ﬁnd:
+(9 n w~ 1 n
+—L 7T I i —|— I — w-- + .
+2I1 1:1
+- - . 21-11 we
+Settlng th1s to zero and solv1ng, we get 7r]- I _—6.
+By using the constraint 23- 7Tj I 1, and given the fact that Z]. wij I 1 since
+wij nIt' p(zi I j\x¢;7r’,,u’, Z’), we easily ﬁnd
+n K n
+1:1 j:1 1:1
+We therefore have our M-step derivation for the parameters 7Tj2
+1 TL
+7Tj I E Zwij,
+1I1
+and, obviously, wj Z 0.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:142**************
-1.12,
+142.
 Remarks
-1. Lefs cantrast the update rules in the Meetep with the formulas we wcmlrl
-heve when the :,s were known exactly (see the MIA-1 of the parameters of
-a single mulLi-variato Gausscan diskributione cmu, 2010 l'ull. AarLi singii,
-nw1. p12 3.11):
-1 ‘L
-w, e 311i; em
-,, 2;; w, A‘,
-“ Zl'ei Hr, e1)
-S I EILtWQ:/)(R*/I/)(M*/I/)“
-1 XL W :1 i H
-with 1p, e J) (“indicator functions“) indienting iien. which Gaunian each
-dutupuint inni eenne.
-1‘th are identical, except that insteed of the indicator rnnetione Hz, i J}
-indicating from which Gaussian catch datapoint had eenie, we now have the
-iii/s.
+1. Let’s contrast the update rules in the M-step with the formulas we would
+have when the zis were known exactly (see the MLE of the parameters of
+a single multi-variate Gaussean distribution, CMU, 2010 fall, Aarti Singh,
+HWl, pr. 3.2.1):
+1i H '}
+7T‘ I — ZZ' I 7
+J n 1:1 J
+,LL' I 221:1 H23 I j}$¢
+J 2?:1 1{z@- : j} 7
+E‘ _ 22:1 1{Zi I j}(i'31 — WNW — MDT
+j — n - 7
+213:1 1{Zi I J}
+with 1{zi I j} (“indicator functions”) indicating from which Gaussian each
+datapoint had come.
+They are identical, except that instead of the indicator functions 1{zi : j}
+indicating from which Gaussian each datapoint had come, we now have the
+wij 7S.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:143**************
-1.1.x.
-Remarks (conﬁd)
-2. The [MW-algorithm is reminiscent nf the. K-niesns clustering algorithln,
-except thnt instead of the ‘"llard“ elustei assignments nil)‘ we have the “soft”
-assignments n-,,.
-3. Similar to K-uienns, the EM algorithm is also susceptible tn local optima,
-so roinitializing at several different initial parameters may bc a good idea.
-4. It‘; clear that the EM algnnithni has a very natural interpretatinn of
-repeatedly trying to guess the unknown 13st
+143.
+Remarks (cont’d)
+2. The EM-algorithm is reminiscent of the K-means clustering algorithm,
+except that instead of the “hard” cluster assignments C(i), we have the “soft”
+assignments wij.
+3. Similar to K -means, the EM algorithm is also susceptible to local optima,
+so reinitializing at several different initial parameters may be a good idea.
+4. It’s clear that the EM algorithm has a very natural interpretation of
+repeatedly trying to guess the unknown zfs.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:144**************
-1-1-1,
-¥
-Ila.‘
-
-‘ H .»:=:~=-§-:-.0.~:-.--::_~:~—=~.=-‘::$=:-1-_-=:- ‘
-M°de"‘"g ‘he wa'm'g and m WWW s
-eruption times for s» 'Tt'iz'liiz'ftzzlgziféizfiEZZZ-Iglli-Z? 2
-the 0m Faithful geyser, w "~'-'-Z~'.~'Z:Z-_'_Z;Z-:I-:§ ‘
-(Yellowstune Park, USA) w “f a
-Michael Emu“:
-
-Univmny uf Chicago ‘,wa 5
-Statistics ccmrse (2460(1). _ a,’ _‘ -v _ "'i/4"1'§".-> ‘ 5 P
-Spring 2004 "‘.¢'L'#.',_-;=:_»_f-;-j f ' ' 4 5‘
-.0 ‘ s L5
-50 M , Q;
-Wm'hngt m . g“
-"'2 my"? on u
-m
+144.
+dis
+Example. ‘ﬁlll'.‘.‘éﬁﬁggém 5
+‘if-r‘: Ir III...-
+M . . - .Mamméé 4
+odelllng the waltlng and 4U hﬁﬁﬁmmﬁ 3
+q a II- I- ll’ ll’ i I‘ -_- 1hr 1i
+eruption times for 5H 'H*W E
+- **:#:*:*:*ar ‘I'll-:4-
+the Old Fazthful geyser, “m ‘W 1
+‘ﬁr-'1.
+(Yellowstone Park, USA) 9'1 u
+Michael Eichler
+University of Chicago . a
+Statlstlcs course (24600), . ,_ __._ , -. ,,..,f._-;,:¢__;;.f,1__. 5 E?‘
+o ‘in. I‘ :i i -+ - l '- :': I. - -" H,‘
+Sprlng 2004 --"-}:=:-;.-.:_-:_?_.-:. t . . 4 ‘5
+a $9
+4n
+50 2 _§
+an 3f
+minim, .TC' 1 <41?
+g time . ED
+(mm) 90
+u
+1m:
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:145**************
-11'»,
+145.
 A link between
-K-means and EM/GMM (the multi-variate case)
-CMU, 2008 fall, Eric Xing, HW47 pr. 2.2
-(see also CMU, 2010 fall7 Aarti Singh7 HW4, pr. 1.2)
+K -means and EM / GMM (the multi-variate case)
+CMU, 2008 fall, Eric Xing, HW4, pr. 2.2
+(see also CMU, 2010 fall, Aarti Singh, HW4, pr. 1.2)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:146**************
-1'15.
-Given N data points :1‘, (l : l. , .N), K-nleans will gruup them
-into K clusters by rriiriirriizirig elie distortion function
-e A
-J e 2 2mm #1ng-
-el ,ei
-where ,lj is elie centroid of the 14h eliisier, and
-w e l if r, belongs to the Hi. cluster and w e o otherwise.
-In this exereise, we will use the following procedure for [(-irieaiis
-e Initialize [randouily] clie eliisier centroids ,lj, J I 1H,..K;
+146.
+Given N data points xi, (i = 17 . . .,N), K-means will group them
+into K clusters by minimizing the distortion function
+N K
+J I Z Zwlm — MHZ»
+1:1 3:1
+where ,uj is the centroid of the j-th cluster, and
+"yij : 1 if (1:2- belongs to the j-th cluster and 'yZ-j = 0 otherwise.
+In this exercise, we will use the following procedure for K-means:
+o Initialize [randomly] the cluster centroids ,uj, j : 1, . . . , K;
 o Iterate until convergence:
-e for every data point I", update its cluster assignment:
-m e1 if J e ,irgiiiiril H1. e M14, and 7U , n otherwisei
-, , 2;!‘ we
-, fer each elueier ,, update Its centroid: ,lJ : Xvi
-if] ﬁ'v
+— for every data point £13m update its cluster assignment:
+yij I 1 ifj I arg mink ||xi — MHZ, and yij I O otherwise.
+N
+— for each cluster j, update its centroid: ,uj : 2211;“?
+i:1 Vii
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:147**************
-1'17,
-Remember that in GMM, 17(1) e 2]’; ,"rk NUUQ-EJ), where 1r, is
-the prior [probability] fur the f" component, n, and 2, are tlie
-mean and eevnrinnee matrix for the /"' component respectively.
-In the E-step of the EM algorithm, we will npolate
-t MW .2 )
-PM] i Uri) n “1%
-2m M 1\“(fi\llt-Et)
+147.
+Remember that in GMM, p(:1:) I 2511 7T], N(x|,LLj,Ej), where 7r]- is
+the prior [probability] for the jth component, ,uj and Zj are the
+mean and covariance matrix for the jth component respectively.
+In the E-step of the EM algorithm, we will update
+Z] _ z _
 
+2211 wk MW 2k)
 Now, suppose that
-1,21‘: r72], fur some (r > U, and for all k :1. , .K
-u. m % 0 for k : 1.. v. ,1\' [LCz at any iteration or the EM algoritm], and
-m Hmrllpu ¢ ‘hurl/ll‘ fur any k’ ¢ k [at nny iteration omie EM nlgoritm].
-Under the above assumptions, prove that when o A 0+ we will
-gel. 14:” : 1\:|,) H 6,], where or, is the cluster assignment used in
-Kemeanst
+1L. E], :02], for some 0 > O, and for all k: l,...,K
+ZZ. Wk §é 0 fOI‘ [<3 : l, . . . , K [LC: at any iteration of the EM algoritm], and
+ZZZ. H513Z —,LLk/H 75 ||£1§7;—,LZ]§H fOI‘ any 116/ 7g k [at any iteration of the EM algoritm].
+Under the above assumptions, prove that when 0 e 0+ we will
+get p(z,-j I 1|35,-) —> 'yij, where "yij is the cluster assignment used in
+K -means.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:148**************
-Answer: 1 14K
-m, , m , m ‘mm-El) , “' PX" ('5 “’ ' “'H‘)
-, l , k ,, , \ l .
-Em m A (ml/1km] 21:‘ m W, (*WH'“ , Ml)
-i l
-’ 7m l , l
-*3ng F‘HF1*LH\"H"W’MH
+Answer: 1 148'
+. _— ._ . 2
+7U Mel-mm» 7T3 exp( 202sz m )
+k::1 k: 1 Mk, k: Zkzl 77k exp <_?ﬂ$i _ MAP)
+_ 1
+— 1 Wk‘ 1 . . 2 . 2
+
++ 21¢?- ?j eXP FUW — My“ — 119% — Mkll )
 Case 1:
-1H1, ill,“ :lml-l ll, full , men for em. k #1 we have “1,1,, ll i lll, ﬁll ll < nl Since
+If ||xZ — ,ujH : mink3 ||xi — Mk“, then for each k 753' we have Hzcz — /ch||2 — ||xZ — ,ukH2 < 0. Since
+
 1
-n H 0+, n will follow that up (., M“ i “All i HI» i mull) A u. $0.142,’ :1\1,)4vl.
-m
+a —> 0+, it will follow that exp (F($@ _ W112 _ ‘15132 _ Mk2)) —> O. So, p(zZ-j : 1|xz) —> 1.
+0
 Case 2:
-1r lll, , u,“ ¢ mull H r‘ , Ml“, then
-- fur all k such um HM i M < lll, i mu it will follow (exactly as above) um
-l q '3
-mp (ﬁ( l-, full-i ll, *HkHT) H u;
-' l a
-- for all k sunk thal H r, i l1,“ > H1, i ,1‘ H we will have 91p (Wm ﬁll“? i HM *mH'l)
-A W.
-l
-Therefore‘ 1M I llm a m : 04
+If11$1— MU ¢ mink llflh' — likll, then
+o for all k: such that ||a2Z — ,LLjH < “1131' — pk!‘ it will follow (exactly as above) that
+1
+exp (wai — MHZ — Hwi — we) a 0;
+1
+o for all k: such that Ha:Z — ,uj|| > ||acZ — ,ukH we will have exp (2—2(agZ _ M112 _ Hg;Z _ Mk2))
+0
+
+—> +00.
+
+1
+
+ere ore, p(z j |x ) 1 + 00
 
 ***************Ending Page***************
 

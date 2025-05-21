@@ -1,215 +1,230 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Sisteme de Operate
-Sincronizarea proceselor
-partea I-a
-Cristian Vidra§cu
-https://profs‘infouaicxo/Nvidrascu
+Sist6m€ d€ Op6rar6
+Sincronizarera prowsdor
+part6a I-a
+Cristian Vidragcu
+https://pr0fs.inf0.uaic.r0/~vidrascu
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
 Cuprins
-" Introducere
-" Problema secjciunii critice
-, Enungul pmblemei $i ceringele de rezolvare
-i 50mm penlru ca7ul 2| doui process
-i Solulii penlm cazul a n > 2 process
-Solutii hardware
-, Solugii concrete: spinlnck'uri gi scmafuurc
-' Interblocajul $1 infometarea
-' Probleme clasice de sincronizare
-Problcma Produczitur'Cunsumator
-i Problcma Cititori 5i Scnitori
-i Problema Cina Filozoﬁlm
-i Problema Bérbierului Adomm
-" Monitoare (§i alts abordéli ale problemei SC)
-I 5h
+
+> Introducem
+> Problema secgiunii critice
+
+— Enungul problemei §i cerinyele de rezolvare
+
+— Solugii pentru cazul a doué procese
+
+— Solugii pentru cazul a n > 2 procese
+
+— Solugii hardwam
+
+— Solugii concrete: spinlock-uri §i semafoare
+> Int€rblocajul $1 infomﬁtarw
+> Probleme clasic6 d6 sincronizam
+
+— Problema Producétor-Consumator
+
+— Problema Cititori §i Scriitori
+
+— Problema Cina Filozoﬁlor
+
+— Problema B'erbierului Adormit
+> MOIlltO 211% (gi alte: abordéri a16 probleméi SC)
+
+2/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Introducere
-*Procesarea paraleli §i concurentz'l
-este fundamentul sistemelor de
-operare multiprograrnate
-‘*Pentru a asigura execugia ordonaté,
-in paralel §i concurent, a mai multor
-programe, SO-ul trebuie s51 ofere
-mecanisme pentru sincronizarea 5i
-comunicagia proceselor V
+Introducem
+>Pr006sarea paralérlé §i concurenté
+esta fundamentul sistemelor d6
+0p6rare multiprogramam
+>P6ntru a asigura 6X6cu§ia ordenaté,
+in parald §i concurent, a mai multor
+progranm, SO-ul tmbuie $51 0f6r6
+m6canisme pentru sincronizarea gi
+comunicagia pmwsdor
+3/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Introducere
-
-c ‘G ' ' ,9,
-
-' race condltlons .
-Uneori procesele cooperante pot partaja un spatiu de stocare
-pe care ﬁecare proces il poate cili §i scrie (acest spatiu comun
-poate ﬁ e.g‘ 0 zoné in memoria principali, ori un ﬁgier pe disc)‘
-in acest context, rezultatul ﬁnal al executiei acelor procese
-poate depinde nu numai de datele de intrare, ci 5i de “cine
-executé exact ce anume 5i cénd anume" (Le. de ordinea exacti
-de executie a instructiunilor atomice ale acelor procese)‘
-Asemenea siluatii sunt denumite “race conditions”.
-Nani: uneori mai sunt numite §i “data races”, sau “Heisenbugs”,
-(A se vedea https://en.wikipedia.org/Wiki/Heisenbugv)
-
-4 5h
+Introduccrc
+ac ' ' 99,
+> racc condltlons .
+Uncori proccsclc cooperantc pot partaja un spatiu dc stocarc
+pc care ﬁccarc proccs i1 poatc citi gi scric (accst spatiu comun
+poate ﬁ c. g. o zona in memoria principala, ori un ﬁ§icr pc disc).
+In accst context, rczultatul ﬁnal a1 cxccutici acclor proccsc
+poatc dcpindc nu numai dc datclc dc intrarc, ci §i dc “cinc
+cxccuta exact cc anumc §i cand anumc” (i.c. dc ordinca exacta
+dc cxccutic a instructiunilor atomicc alc acclor proccsc).
+Ascmcnca situatii sunt dcnumitc “racc conditions”.
+Notd: uncori mai sunt numitc §i “data races”, sau “Heiscnbugs”.
+(A se vcdea https://en.wikipcdia.org/Wiki/Heiscnbug.)
+4/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Introducere
-> Exemplu de “race condition”:
-Doué procese A 5i B care partajeazi 0 variabili v, inigializatﬁ cu
-valoarea 0r Procesul A executi operagia v : :v+1 , iar B executé
-operagia v : :v’ 1. Rezultatul ﬁresc al execugiei celor doué
-procese ar ﬁ ca variabila v si aibé in ﬁnal tot valoarea 0r
-Cele doui operagii constau de fapt din urmétoarele secvenge de
+Introducern
+> Exnmplu d6 “race: condition”:
+D0115 procese A §i B care partajnazé 0 variabilé v, inigializaté cu
+valoarﬁa O. Procesul A exncuté operagia v : =v+ 1 , iar B executé
+operagia v : =v- 1. Rezultatul ﬁrasc a1 ex6cu§iei celor doué
+procesn ar ﬁ ca variabila v s51 aibéi in ﬁnal tot valoama O.
+Cele douéi operagii constau d6 fapt din urmétoarele secvenies de
 instrucgiuni atomice (in limbaj maginé):
-A: LD regl, adriv B: LD reg2,adriv
-INC regl DEC reg2
-ST regl, adriv ST regZ , adriv
-Dacé ambele instrucgiuni Load sunl executale inaintea ambelor
-instrucgiuni Store, atunci rezultatul ﬁnal esle eronal ~> justiﬁcare:
-5 511
+A: LD regl, adr_v B: LD regZ, adr_v
+INC regl DEC regZ
+ST regl,adr_v ST reg2,adr_v
+D2105 ambale instrucgiuni Load sunt executate inaintea ambelor
+instrucgiuni Store, atunci rezultatul ﬁnal este eronat —> justiﬁcare:
+5/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Introducere
-’ Exemplu de “race condition” (cont):
-Cénd cele douz'l secvenge de cod A 5i B sum executate in paralel (prin
-paralelism real, Le. pe multLCPU, sau dear aparent, i.e. pe l CPU prin
-time-slicing), sunt posibile urme'noarele 6 ordini de execulie:
-l) LDA A» STA ~> LD ‘H ST“ ;in aces! ca; rczullalul ﬁnal cslc v:0
-2) LDB —> STE —v LDA—> STA ;§i in acest caz razultatul ﬁnal este v10
-3) LDA A» LDH~> STA ~> ST“ ;ln aces! ca; rczullalul ﬁnal cslc v:il (l)
-4) LDB —> LDA—v STi —> STA ;In acest caz rezultalul ﬁnal este v: +l (l)
-5) LDA 4v LDH~> ST l ~> STA gsi in accsl caz rczullalul ﬁnal cslc v: +1 (Z)
-6) LnB -> LDF—» STA _> STE ;§i in acest C31 razultatul ﬁnal aste v: ,1 (1)
-lmpcrlam col: bcazun dcscnu 01mm: rcmporalcdllcmc in care sc p0! Mecnm =¢|¢4 opera!!! LD $1 5T ACESKC4 opcmw
-luumui m mm". mung. a“ cu AChkA§l mm dc mtmnnc u l», mlnma undc t~lC mm; “mm v in mcrnunu RAM)
-Cazurile in care rezultatul ﬁnal este eronat sum caracterizate prin: “ambele
-instmcgiuni Load sum executate inaintea ambelor instrucliuni Store”.
-(a 5U
+Introduc era
+> Examplu d6 “race: condition” (cont):
+Cand cale doua sacvanlze d6 cod A §i B sunt axecutate in paralel (prin
+paralelism real, i.e. pe multi-CPU, sau doar aparent, L6. pe l CPU prin
+time-slicing), sunt posibile: urrnatoarale 6 ordini de exacuﬁe:
+l) LDA —> ST A —> LDB—> STB ; in acest caz rezultatul ﬁnal este V20
+2) LDB —> STB —> LDA—> ST A ; §i in acest caz rezultatul ﬁnal este V20
+3) LDA —> LDB—> STA —> STB ;in acest caz rezultatul ﬁnal este v: —l (!)
+4) LDB —> LDA—> STB —> STA ; in acest caz rezultatul ﬁnal este v: +1 (!)
+5) LDA —> LDB—> STB —> STA ; §i in acest caz rezultatul ﬁnal este v: +l (!)
+6) LDB —> LDA—> STA —> STB ; gi in acest caz rezultatul ﬁnal este v: —l (!)
+Important: cele 6 cazuri descriu ordinile temporale diferite in care se pot efectua cele 4 operaﬁi LD §i ST. Aceste 4 operaﬁi
+lucreaza cu regi§tri diferiﬁ, dar cu ACEEASI adresa de memorie (1.6., adresa unde este stocata variabila v in memoria RAM).
+Cazurile in care rezultatul ﬁnal este eronat sunt caracterizate prin: “ambele
+instrucﬁuni Load sunt 6X60utate inaintea ambelor instrucﬁuni Stora”.
+6/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Introducere
-" Cum evitém “race conditions” ?
-ldeea dc evitare a acestor situatii, cc sunt nedorite in
-orice context ce implici o resursi/informatie partajaté
-(cg. mcmoric panajaté, ori ﬁ$icrc partajatc7 sau oricc alt
-fel de resursi partajaté), consti Tn a gési un mecanism
-pentru a impiedica sé avem mai mult de un singur
-proces, in acelagi timp, care s5 citeasci sau $51 scrie
-resursa/informatia partajaté.
-"Sh
+Introducem
+> Cum ﬁvitéim “racﬁ: conditions” ?
+Id66a de avitare a acestor situalzii, ce sunt nedoritﬁ in
+orice context ce implicé 0 resursé/informagie partajatii
+(e.g. mﬁmorie partajaté, ori ﬁ§i6re partajate, sau orice alt
+fel de msursé partajaté), consté in a gési un m€canism
+pentru a impiedica séi avem mai mult d6 un singur
+proces, in acela§i timp, care séi citeascéi sau s51 scrie
+resursa/informagia partaj atéi.
+7/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Introducere
-" Cum evitém “race conditions” ? (cont)
-Cu alte cuvinte, avem nevoie de excludere mutualé,
-adicﬁ de o tehnicé care sﬁ ne garanteze c5 dacé un proces
-utilizeazé o resursé panajati, atunci toate celelalte
-procese vor ﬁ impiedicate s51 o utilizeze.
+Introducem
+> Cum 6vit€1m “r2106 conditions” ‘.7 (cont)
+Cu altﬁ cuvinte, avem nﬁvoie d6 excludere mutualz'l,
+adicéi d6 0 t6hnicé care séi ne garanmze (:51 dacéi un proces
+utilizaazé 0 resursé partaj até, atunci toate céldaltﬁ
+pr006se vor ﬁ impiedicate s5 0 utilizﬁza
 Notd: alegerea operagiilor primitive adecvate pentru realizarea
-excluderii mutuale este 0 problem?! de proiectare majoré la toate
-nivelurile: arhitecturé hardware, sistem de operate, aplicagii.
-Vom studia in continuare aceastﬁ problemé, punénd accent pe soluliile
-de la nivelul SOeului.
-< 5h
+exclud6rii mutuale 6st6 0 problemé de proiactam majoré la toate
+nivelurile: arhitecturé hardware, sistem de operam, aplicaiii.
+Vom studia in continuara aceasté problamé, punénd accant pe solugiile
+de la nivelul SO-ului.
+8/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Problema Secgiunii Critice
-P Enunyul problemei secgiunii critice
-" Ceringele dc rezolvare
-P Solugii pentru cazul a doué procese
-" Solugii pentru cazul a n>2 procese
-’ SOlullll hardware: instrucgiuni hardware specializate
-’ SOllltll COHCTBK? in SO. spinlock-uri $i semafoare
+Problema S€C13iunii Critice:
+> Enungul problenmi sércgiunii critice
+> C€rin§elé d6 mzolvam
+> Solulzii p6ntru cazul a douéi pr066s6
+> Solugii pﬁntru cazul a n>2 procesﬁ
+> 801111,le hardware: instrucyiuni hardwam spacializate
+> SOIUUI COHCf€t6 in SO. spinlock-uri §i semafoare
+9/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Problema Secgiunii Critice
-Enungul problemei secjciunii critice:
-- Avem n procese Pi, 1:0,...,n-I, cu viteze de execugie necunoscute
-' Ficcarc proccs arc o zoné dc cod, numité secﬁune critic?! (SC),
-in care cfcctucazé divcrsc operaiii asupra unci rcsursc partajatc
-- Execugia scciiunilor criticc dc cétrc proccsc trcbuic sé sc producé
-mutual exclusiv in limp: la oricc moment dc limp ccl mult un
-proccs s5 sc aﬂc in SC propric
-' Oprirea oricérui proces are 10c numai in afara SC a acestuia
-' Fiecare proces trebuie s51 cearz'i permisiunea sé imre in propria
-lui SC‘ Secvenia de cod ce implementeazi aceasté cerere este
-numiiﬁ secgiunea de intrare
-~ Secgiunea criticé poate ﬁ urmaté de o secﬁune de iegire
-' Restul codului din ﬁecare proces este secgiunea rest
-10 Vi
+Problema S6c§iunii Critice
+Enun§u1 problemei s6c§iunii criti06:
+' Avﬁm n procase Pi, iIO,...,n-1, cu vitez6 de axﬁcugie necunoscuta
+' Fiecam proces are 0 zonéi d6 cod, numitéi secﬁune criticz'l (SC),
+in care efectueazé diverse operagii asupra unei resurse partaj ate
+' Execugia secgiunilor critice d6 cétm procesﬁ trabuie sé se producé
+mutual exclusiv in timp: la oricé: momﬁnt d6 timp cel mult un
+proces s51 se aﬂe in SC proprie
+' Oprirea oricérui proces are loc numai in afara SC a acastuia
+' Fiecare proces trebuie sé cearé permisiunea s5 intre in propria
+lui SC. Secvenga de cod ce implem6nteaz€1 aceasté cerare este
+numité secﬁunea de intrare
+' Secgiuma criticéi poata ﬁ urmatéi de 0 secgiune de ie§ire
+' Restul codului din ﬁecare proccas 6ste secgiunea rest
+10/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Problema Secglunn Crltlce
+Problema Sncpunn Cflth€
 
-Solugia problemei SC trebuie sé satisfacé urmétoarele 3 ceringe:
+Solugia problemei SC trebuie s51 satisfacé urmétoarele 3 ceringe:
 
-'Excluderea mutuali: dacé procesul Pi executé instrucyiuni in SC
-proprie, atunci nici un alt proces nu poate executa in propria SC.
+‘Excluderea mutualﬁ: dacé procesul Pi executé instruclziuni in SC
+proprie, atunci nici un alt proces nu poatﬁ: executa in propria SC.
 
-'Progresul: dacé nici un proces nu execuli in SC proprie, $i uncle
-dintre procese sunt in “conﬂict” 1a intrare (i.e., duresc simultan s5
-inure In propriile lor SC), atunci selectia unuia dintre ele, singurul
-céruia i se va permite intrarea, nu poate ﬁ aminaté 1a inﬁnit,
-(Comecingﬁ: numai acele process care nu execulé in secliunile lor rest, vor parlicipa la
-luarcu dccxzici cure va ﬁ urmitorul pmccs cc va mm in sc pmpl'ic.)
+'Progresul: dacéi nici un proces nu 6X6cutéi in SC proprie, §i unele
+dintm procese sunt in “conﬂict” la intrare (i.e., doresc simultan sé
+intre in propriile: lor SC), atunCi S€16Ctia unuia dintm 616, Singurul
+céiruia i se va permitn intrarea, nu poate ﬁ amﬁnaté 1a inﬁnit.
+(Consecinﬂi: numai acele procese care nu executé in secgiunile lor rest, vor participa la
+luarea deciziei care va f1 unnéitorul proces ce va intra in SC proprie.)
 
-'A§teptarea limitatéz trebuie sé exists 0 limiti a numérului de
-permisiuni acordate, intre momentul cénd un proces a cerut
-accesul Tn propria SC $1 momentul cénd va primi permisiunea de
-intrare, altor procese de a intra in SC proprii.
+'Agteptarea limitatii: trﬁbuie s51 existe 0 limité a numérului de
+pnrmisiuni acordata, intre momentul cénd un proces a cerut
+accesul in propria SC §i momentul cénd va primi parmisiunea d6
+intrara, altor procese de a intra in SC proprii.
 
-l \ V,
+11/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Problema Secgiunii Critice
-Opgiuni de implementare a excluderii mutuale:
+Problﬁma S6c§iunii Critic6
+Opgiuni de implemﬁntare: a 6X01ud6riimutuale:
 ' Dezactivarea intreruperilor
-(pnsibilé dnar penlru sislemele unipmcesnr 5i eﬁcienlz'l dnar penlru secvenge critics scurle)
-' Solugii de a§teptare ocupatﬁ
-i executé 0 buclé While de agteptare daci SC este ocupaté
-i folosirea unor instrucyiuni atomice specializate
-- Sincronizare blocantﬁ
-i Sleep (inserarea in coada de agteptare) Cit [imp SC 65K? ocupaté
-Primitivele dc sincronizare (diverse abstracgii, precum
-lacétele pe ﬁgiere), ce sunt puse 1a dispozigie de un
-sistcm, pot ﬁ implementate prin aceste tchnici sau prin
-combinagii ale unora dintre aceste tehnici.
-ll <6
+(posibilé doar pentru sistamele uniprocesor §i eﬁcienté doar pentru scavenge critice scurte)
+' Solugii de a§teptare ocupatii
+— executé 0 buclé While de a§teptare dacé SC estﬁ ocupaté
+— folosirea unor instrucgiuni atomice spacializate
+' Sincronizare blocantﬁ
+— Sl66p (inserarea in coada de a§teptare) Cat timp SC 6St6 ocupatéi
+Primitivﬁle de sincronizare (divarsﬁ abstracgii, precum
+lacétele pe ﬁ§i€r6), C€ sunt puse la dispozigie d6 un
+sistam, pot ﬁ implem6ntat6 prin a0€st6 tehnici sau prin
+combinagii 2116 unQra dintre acﬁstﬁ tﬁhnici.
+12/56
 
 ***************Ending Page***************
 
@@ -217,414 +232,423 @@ ll <6
 ***************Beginning Page***************
 ***************page number:13**************
 Problema Secgiunii Critice
-Un gablon tipic de proces:
+Un §ab10n tipic de: proces:
 repeat
-secpiunea de intrare
-sectiunea criticé
-sectiunea de ie$ire
-sectiunea rest
+secgiunea de intrare
+secgiunea criticé
+secpiunea de ie$ire
+secgiunea rest
 forever
-l1 5n
+13/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Problema Secgiunii Critice
-Solugii pentru cazul a n=2 process:
+Problema S€C13iunii Critice:
+Solugii pentru cazul a n22 proc6s6:
 
-— Doué process P0 §i P1 ce executé ﬁecare intr-o buclé
-inﬁnitﬁ cite un program ce consté din douﬁ secyiuni:
-secgiunea criticz'l co , respectiv 01, §i restul
-programului i secgiunea necriticé r0 , rcspectiv r1.
-Execugia secgiunilor co gi 01 nu trebuie sé se
+— D0115 proces6 P0 gi P1 ce executé ﬁecam intr-o buclé
+inﬁnitii céte un program ce consté din dQuEi secgiuni:
+sﬁcgiunea criticé co , respectiv 61, §i restul
+programului — sﬁcgiunea necriticé r0 , r6sp6ctiv r1.
+Exacugia secgiunilor co §i 01 nu tmbuiﬁ s51 se
 suprapuné in timp.
 
-i Cénd se va prezenta procesul Pi, se va utiliza Pj
-pentru a ne referi la celélalt proces 6:1’ i)‘
+— Cénd $6 va prezenta procesul Pi, s6 va utiliza Pj
+pentru a ne referi la celélalt proces (j:1— i).
 
-H Vv
+14/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Problema Secgiunii Critice
-Solugia 1 (0 primé idcc dc rczolvarc)
-— Cele doué procese vor partaja 0 variabilé intreagé
-comuné tum inigializaté cu 0 (sau cu l).
-i Daci tum I i , atunci procesul Pi este cel céruia i se
-per-mite sé-si execute SC‘
-15 56
+Problema S€C13iunii Critice:
+Solugia 1 (0 primé idese de rezolvare)
+— C616 doué procﬁse vor partaja 0 variabilé intrﬁagé
+comunéi turn inigializatéi cu O (sau cu 1).
+— Dacé turn I i , atunci procesul Pi ester eel céruia i se
+permitﬁ sé-§i 6X€Cllt6 SC.
+15/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Problema Secgiunii Critice
+Problema S€C13iunii Critice:
 Solugia 1
-Procesul Pi :
+Proc6sul Pi :
 repeat
-while turn ¢ i do nothing;
-secyiunea criticé ‘
-turn ;: j;
-secpiunea rest
-forever A$teptare ocupaté
-M“
+while turn ¢ i do nething;
+seepiunea criticé
+turn := j; \
+secyiunea rest
+forever Agteptare ocupaté
+16/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Problema S6C§1u1111 Cntlce
-Solugia 1 este incompletﬁ !
+Problema Seepunn Cntlee
+Solugia 1 este ineompletéi !
 
-— Motivul: ea satisface condiyia de excludere mutualé $i cea dc
-a§teptare limitaté, in schimb caringa de progres nu-i indeplinité
-E.g., dmcé lumIO, dupé ce proceeul P1 a lrecul ultimul priu SC, 5i P1 vrea sé inlre din
-nou in SC proprie, in lot aces! limp procesul P0 ﬁind “ocupal” la inﬁnil in sectiunea sa
-rust (ﬁe execulil o buclé innnnzr ﬁe igi termini! execugia), munci sclccﬂa pruccsului P1 csu:
-amz'matz'i la inﬁnit.
+— Motivul: ea satisfaee condigia de exeludere mutualéi $1 eea de
+aeteptare limitatéi, in sehirnb eeringa de progres nu-i indeplinitéi
+E.g., daeé turnIO, dupé ee procesul P1 a treeut ultimul prin SC, §i P1 vrea s51 intre din
+nou in SC proprie, in tot acest timp procesul P0 ﬁind “oeupat” la inﬁnit in seelziunea sa
+rest (ﬁe executé 0 buelﬁ inﬁnité, ﬁe i§i termini exeeugia), atunei seleegia procesului P1 este
+aménaté la inﬁnit.
 
-Cu ahe cuvime se poale manifesta fenomenul de ,slarvalinn in cazul aceslei solugii.
+Cu alte euvinte, se poate manifesta fenomenul de starvation in cazul aeestei solugii.
 
-Po: m:
+Po : P1 :
 
 repeat repeat
-while turn e o do nothing; while turn e 1 do nothing;
-secgiunee criticé secgiunea cziticé
-turn ::1; turn1: O;
-secgiunea rest sectiunea rest
+While turn ¢ O d0 nothing; while turn ¢ 1 do nothing;
+sectiunea criticé sectiunea criticé
+turn := l; turn := O;
+secpiunea rest secpiunea rest
 
 forever forever
 
-11 in
+17/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Problema Secgiunii Critice
-
-Solugia 2 (0 a doua idcc dc rczolvarc)
-— Variabila comuni turn este inlocuiti cu un tablou
-
-comun ﬂag[], inigializat cu valoarea false:
-
-ﬂag[0] I false , flag[1] I false .
-I Prin ﬂag[i] I true se indicé faptul cé procesul Pi
-
-doregte sﬁ-gi execute SC‘
-
-It 56
+Problema Seefiunii Critice
+Solufia 2 (0 a doua idee de rezolvare)
+— Variabila eomuna turn este inloeuita eu un tablou
+eomun flag[], inifializat eu valoarea false:
+ﬂag[0] I false , ﬂag[l] I false .
+— Prin ﬂag[i] I true se indica faptul ea procesul Pi
+doreste sa-si execute SC.
+18/56
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
 Problema Secgiunii Critice
+
 Solugia 2
 Procesul Pi :
 repeat
+
 flag[i] := true;
+
 while flag[j] do nothing;
-secyiunea criticé ‘
-flag[i] z: false;
-S e C ,t i Lln ea re S t A$tcptarc ocupati
+
+secpiunea criticé
+
+flag[i] := false; \\
+
+S € C 2;: i UH G a r G S t Agteptare ocupaté
 forever
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Problema Secpunll Crltlce
-$i solugia 2 este incompleté !
+Problema Socpunn Cntlco
+$i solugia 2 osto incompleté !
 
-— Motivul: condigiile de excludere mutual?! gi dc agteptare limitaté
-sunt satisfécute, in schimb ceringa dc progres nu este indeplinité
-Solulia este dependenté de timing-ul execugiei proceselor: in situagia dc “conﬂict”,
-dacz'l cele 2 alribulri se execulé inainlea celor 2 while-u", amnci selecyla unuia dinlre P0
-$i Pl esle aménalé la inﬁnil, deoarece ﬁecare Tl a§leaplé pe celélalt sé-5i reseleze ﬂagul.
-Cu ﬁlm cuvintc, in cazul uccslci sulugil SC pUK manifcsm simuhan fcnumcnu] dc deadlock
-5i ccl dc .vlarvnlinn.
+— Motivul: condigiile de excludere mutualé gi de agteptare limitaté
+sunt satisfacute, in schimb ceringa de progres nu este indeplinité
+Solugia este dependenté de timing-ul execugiei proceselor: in situagia de “conﬂict”,
+dacé cele 2 atribuiri se executé inaintea celor 2 While-uri, atunci selecgia unuia dintre P0
+§i P1 oste aménatﬁ la inﬁnit, deoarece ﬁecare i1 a§teapt€1 pe colélalt sﬁ-gi reseteze ﬂagul.
+Cu alte cuvinte, in cazul acestei solugii se pot manifesta simultan fenomenul de deadlock
+gi col d6 Starvation.
 
-Pu: P1:
+P0: P1:
 repeat repeat
-flag[0] =: true; 4—> Heqm =: true;
-while flag [1] do nothing; while flag [ u] do nothing;
-secpunee critica“ seepiunee criticé
-flag[0] =: false; Heqm =: False;
-sectlunea rest secgiunea rest
+flag[O] := true; flag[1] := true;
+while flag[1] do nothing; while flag[0] do nothing;
+seepiunea criticé secpiunea criticé
+flag[0] := false; flag[l] := false;
+secpiunea rest seepiunea rest
 forever forever
-10 56
+20/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Problema Secgiunii Critice
-Solugia 3 (completa I) (Peterson '81)
+Problema S€C13iunii Critice:
+Solugia 3 (completa !) (Petﬁrson '81)
 
-i Este 0 combinagie a solugiilor 1 gi 2.
+— Este 0 combinagie a solugiilor 1 §i 2.
 
-i Procesele paﬁajeazi variabila turn §i tabloul ﬂag[]‘
+— Pmcﬁsele partaj6az€1 variabila turn §i tabloul ﬂag[].
 
-i Inigializﬁri: ﬂag[0] = ﬂag[l] = false, turn = O (sau 1).
+— Inigializéri: ﬂag[()] I ﬂag[1] I fals6, turn I O (sau 1).
 
-— Pentru a intra in SC, procesul Pi seteazé flag[i] I true
-§i apoi ii d5 voie celuilalt proccs Pj s5 intre in propria
-sa SC, dacé doregte acest lucru (tum I j).
+— Pentru a intra in SC, procesul Pi s6t6azé ﬂagﬁ] I trué
+§i apoi ii d5 veie cduilalt proces Pj s51 intre in propria
+sa SC, dacé d0re§t€ acast lucru (turn I j).
 
-i Dacé ambcle procese dorcsc 551 intre in acela§i timp,
-valoarea lui turn va decide céruia dintre cele doué
-procese ii este permis sé intre primul in SC proprie.
+— Dacé amb616 process doresc $51 intm in acalagi timp,
+valoama lui turn va dacide céruia dintre cele doué
+procﬁse ii estﬁ permis s51 intre primul in SC proprie.
 
-i Nolﬁ: istnric, prima solulie complete": a fost cea datoraté lui Dekker (‘65)
+— Note)’: istoric, prima soluyie completéi a fost cea datoraté lui Dekker ('65)
 
-I‘ <6
+21/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
 Problema Sectiunii Critice
-Solutia3
+Sohnk13
 Pi: repeat
-flag[i] 2: true;
-turn z: j;
-while (flag[j] and turn:j)
-do nothingh ‘
-, - - u A$teptare ocupata
-sectlunea crltlca
-flag[i] z: false;
-sectiunea rest
+flag[i] z: true;
+turn := j;
+while (flag[j] and turn=j)
+d0 1'2 O t h l 1'2 g; ‘e A§teptar6 ocupaté
+S€C§1Uﬂ€a crltlca
+flag[i] := false;
+secpiunea rest
 forever
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Problema Secgiunii Critice
-Solugia 3 este corecté §i completé !
-Justiﬁcare:
-— Motivul #1: condigia de excludere mutualé este
-satisﬁcuté‘ Intr-adevér:
-Fiecare proces Pi poate intra in SC proprie doar dacé ﬁe
-ﬂagﬁ]:false, ﬁe tum:i‘
-Presupunénd oi ambele process ar putea $5 execute in SC
-proprie in acelagi timp, atunci am avea ﬂag[0]:ﬂag[l]ﬂrue.
-Dar aceasta ar Tnsemna oi Po 5i P1 nu ar ﬁ putut sé-gi execute
-cu succes instrucgiunile while proprii in acelagi timp.
-I‘ 56
+Problema Seegiunii Critiee
+Solugia 3 este eereeté gi completéi !
+Justiﬁeare:
+— Motivul #1: condigia de exeludere mutualé este
+satisfacuté. Intr-adevér:
+Fieeare proees Pi poate intra in SC proprie dear daeé ﬁe
+ﬂag[j]zfalse, ﬁe turnzi.
+Presupunénd 05 ambele procese ar putea sé execute in SC
+proprie in aeela§i timp, atunei am avea ﬂag[0]:ﬂag[1]:true.
+Dar aeeasta ar insemna 051 P0 §i P1 nu ar ﬁ putut sé-gi execute
+cu sueees instrueyiunile While proprii in aeelagi timp.
+23/56
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-Problema Secpunll Critice
-Solugia 3 este corecté gi completé ! Justiﬁcare:
-i Motivul #2: condigiile de progres §i de agteptare
-limitaté sunt satisﬁicute. Intr-adevér:
-Pa: P1:
+Problema Socpunn Cntlco
+Solugia 3 esto corecté gi complotéi ! Justiﬁcare:
+— Motivu1#2: condigiile de progres §i de agtaptare
+limitaté sunt satisfécute. Intr-adevér:
+P0: P1:
 repeat repeat
-flag[0] z: txue; flaqU] :: true;
-turn z: 1; <—>turn z: 0,-
-while (HegU1 and turnen while (flag[0] and turnIO)
+flag[0] z: true; flag[l] := true;
+turn := l; turn := O;
+while (flag[1] and turn=1) while (flag[O] and turn=O)
 do nothing; do nothing;
-secpiunea critica” secpunee Crthcé
-Hagw] z: False; flag[l] :1 false;
-secgiunea rest seqmunea rest
+sectiunea criticé secpiunea criticé
+flag[0] := false; flag[1] z: false;
+sectiunea rest seepiunea rest
 forever forever
-Z456
+24/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Problema Secpunn Cntlce
-Solugia 3 este corecté 5i completé ! Justiﬁcare:
-i Motivul #2 (cont):
-Un proces Pl poate ﬁ impiedicat si intre in SC (i,e,, si progreseze)
-doar daci este blocat in bucla while. in acest caz, daci Pj nu-i gata si
-intrc in SC, amnci ﬂagﬁ]=falsc §i P1 poatc intra in SC propric,
-Dacé Tnsz'i Pj a setat deja ﬂagLiFtrue $i-$i executﬁ $i e1 bucla while,
-atunci avem tumIi sau turan. Dacé turnIi, atunci Pi va intra in SC,
-Dacé insi turan, atunci Pj va intra in SC, iar dupi ce Pj va iegi din
-SC, i$i va reseta ﬂagﬁ] la false, permigindu-i lui Pi si intre in SC,
-Accasta dcoarccc, chiar dacé apoi Pj sctcazi ﬂagﬁ] la truc pcntru a
-intra din nou in SC, e1 va seta de asemenea $i turnIi.
-Astfel, Pi va termina bucla while §i va intra in SC (progres) dupé cel
-mult 0 intrare a lui P] in SC (agteptare limitati),
-Bibliograﬁe: cap. 6.3 din [oscw] & hnps,Umwik1p=dimrgw‘ki/Pemsumzxﬂgmnhm
-15 56
+Problema Secpunn Cflth€
+Soluiia 3 este corecté §i completéi ! Justiﬁcare:
+— Motivul #2 (cont):
+Un proces Pi poate ﬁ impiedicat s51 intre in SC (i.e., s5 progreseze)
+doar dacé este blocat in bucla while. in acest caz, dacé Pj nu-i gata s51
+intre in SC, atunci ﬂag[j]=fals6 gi Pi poate intra in SC proprie.
+Dacé insé Pj a setat deja ﬂag[j]ztrue §i-§i executé §i el bucla while,
+atunci avem turnzi sau turn=j . Dacé turn=i, atunci Pi va intra in SC.
+Dacé insé turn=j, atunci Pj va intra in SC, iar dupé ce Pj va iegi din
+SC, igi va reseta ﬂagﬁ] 1a false, permiiéndu-i lui Pi s51 intre in SC.
+Aceasta deoarece, chiar dacé apoi Pj seteazé ﬂagﬁ] 1a true pentru a
+intra din nou in SC, e1 va seta d6 asemenea §i turn=i.
+Astfel, Pi va termina bucla while §i va intra in SC (progres) dupé eel
+mult 0 intrare a lui Pj in SC (agteptare limitatﬁ).
+Bibliograﬁe: cap. 6.3 din [OSCIO] & https://en.wikipedia.org/Wiki/Peterson%27s_a1g0rithn1
+25/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Problema Sectiunii Critice
-Prima solutie corecti 5i completi: Dekker '65
+Problema S6c§iunii Critice:
+Prima solugie comcté §i completéz Dekker '65
 
-I Initial propusi de Dekker intr-un context diferit, a fost
-aplicati de Dijkstra pentru rezolvarea problemei SC.
+— Inigial propusé d6 Dekker intr-un context diferit, a fost
+aplicaté de Dijkstra pentru rezolvama problemei SC.
 
-I Dekker a adus ideea unui proces favorit §i a permiterii
-accesului in SC a oriciruia dintre process Tn cazul cénd 0
-gerere de acces este necontestaté de celélalt
+— Dekker a adus ideea unui pr006s favorit §i a permitarii
+accﬁsului in SC a oricéiruia dintre procese in cazul 05nd 0
+camre de acces este nacontestatéi de celéilalt
 
-I In SChimb, dacé este un conﬂict (Let ambele process vor sé intre
-simullan in SC-urile proprii), unul dintre process este favorizat,
-iar prioritatea se inverseazé dupé executia cu succes a SC.
+— In SChiInb, dacé €St€ un COnﬂiCt (Le. ambﬁle: procase vor s'Zl intm
+simultan in SC-urile proprii), unul dintre procese estﬁ favorizat,
+iar prioritatea se inverseazéi dupé execugia cu succes a SC.
 
-I Procesele partajeazi variabila turn 5i tabloul ﬂag[].
+— Procasele partaj eazé variabila turn §i tabloul ﬂag[].
 
-I lnitializéri: ﬂag[0] I ﬂag[l] I false, turn I 0 (sau I).
+— Inigializéri: ﬂag[0] I ﬂag[1] I false, turn I O (sau 1).
 
-If» 56
+26/56
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
 Problema Secgiunii Critice
-P1: repeat
-flag[i] := true;
-while (flagU' 1) do
-if (turan) then begin
-flag[i] z: false;
-while (turan) do nothing;
-flag[i] z: true; ‘
+Pizrepeat
+flag[i] z: true;
+while (flag[j]) do
+if (turnzj) then begin
+flag[i] := false;
+while (turn=j) do nething;
+flag[i] == true; ‘\\\
 end A§teptare ocupaté
-secgiunea criticé
+seepiunea criticé
 turn := j;
-flag FL] ;: false; T611152 incercagi séjustiﬁcali
-sec/t1 unea res t corectitudinea acestui algoritm
-forever Bibliognﬁcz Imps://cn.wiklpcdia.org/wiki/Dckkcmlﬁsialgonthm 1* in
+f l ag [ ,l 1 ; Z f a l S € ; Tem'Zl: incercagi s51 justiﬁcagi
+S e C 4: l UH e a I‘ € S t corectitudinea acestui algoritm.
+f 0r eve r Bibliograﬁe: https://en.Wikipedia.org/Wiki/Dekker%27s_alg0rithm 27/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Problema Secgiunii Critice
+Problema S€C13iunii Critice:
 Solugii pentru procese multiple:
 
-i Trebuie dezvoltagi algoritmi diferigi dc cei
-anteriori, pentru a rezolva problema secgiunii
-critics pentru cazul a n procese (n > 2)
+— Trebuie d6zvo1ta§i algoritmi difﬁrigi de cei
+ant6ri0ri, pentru a rezolva problema secgiunii
+critice pﬁntru cazul a n proces6 (n > 2)
 
-It 56
+28/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Problema Sectiunii Critice
+Problema S€C13iunii Critice:
 Algoritmul brutarului (Lamport '74)
-— La intrarea in magazin, ﬁecare client primegte un
-numér dc ordine‘
-— Clientul cu cel mai mic numér este servit primul.
-i Dacé Pi §i Pj primesc acela§i numﬁr §i dacé i<j,
-atunci Pi este servit primul.
-i Algoritmul este deterministic
-(numele proceselor sunt unice gi total 0rd0nate).
-i Nutzi: istoric, prima solutie completé pentru cazul n > 2 a fost cea
-datoratz'l lui Eisenberg & McGuire ('72)
-I‘) <6
+— La intrarea in magazin, ﬁacare c1i6ntprime§t6 un
+numiir d6 ordinﬁ.
+— Clientul cu cal mai mic numér este servit primul.
+— Dacé Pi §i Pj primesc a06la§i numér gi dacé i<j,
+atunci Pi 6st6 sﬁrvit primul.
+— Algoritmul 6ste dﬁtﬁrministic
+(numﬁrle procesﬁlor sunt unicﬁ: §i total 0rd0nat6).
+— Notd: istoric, prima solugie completé pentru cazul n > 2 a fost 66a
+datoraté lui Eisenbearg & McGuire ('72)
+29/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Problema Secgiunii Critice
+Problema Seegiunii Critiee
 Algoritmul brutarului (bakery alg.)
-— Structurile de date comune (partajate de cele n
-process) sunt tablourile choosing[] 5i number[].
-— Inigializéri: choosingﬁ] I false , number[i] I 0.
-i Notagii:
-(a,b) < (c,d) dacé a<c sau (21:0 5i b<d) ;
-max(a0,...,an- 1) : un numér k astfel Tncﬁt
-k 2 ai , pentm i:0,...,n-l.
+— Structurile de date eomune (partaj ate de eele n
+procese) sunt tablourile ehoosingﬂ §i number[].
+— Initializari: ehoosingﬁ] I false , numberﬁ] I O.
+— Notagii:
+(a,b) < (e,d) daea a<e sau (aze §i b<d) ;
+max(a0,...,an-1) I un numar k astfel ineat
+k Z ai , pentru i:0,...,n-1.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Problema Secpunll Crltlce
-Pi (O§i§n—l):
-repeat (Alg, brutarului)
-choosing [i] :=true;
-number [i] :Imax (number [O] , . . . , number [nil] ) +1;
-choosing [i] :=false;
-for j :IO to nil do begin
-while choosing [j] do nothing;
-while number [j 1 #0 and
-(number [j] , j ) < (number [i] , i) do nothing;
+Problema Secgiunii Critice
+Pi(O§i§n—l)I
+repeat (Alg. brutarului)
+choosing[i]:=true;
+number[i]:=max(number[0],...,number[n—l])+l;
+choosing[i]:=false;
+for j:=O to n-l do begin
+while choosing[j] do nothing;
+while number[j]#0 and
+(number[j],j)<(number[i],i) do nothing;
 end
 seepiunea criticé
-number [i] 2:0;
-secpiunea rest
-forever Bibliograﬁe: Imps://en.wik1pod1a.orywiki/lmnpon%27sihaketyialgonlhm M 56
+number[i]:=0;
+seepiunea rest
+f O reve r Bibliograﬁe: https://en.wikipedia.org/Wiki/Lamport%27s_bakery_alg0rithm 3 1 /5 6
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Problema Secgiunii Critice
-Prima solugie corecti: Eisenberg & McGuire ‘72
-(Este practic o generalizare a solugiei lui Peterson)
-— Structurile de date comune (partajate de cele n process)
+Problema S€C13iunii Critice:
+Prima solulzie coracté: Eisenberg & McGuire '72
+(Este practic 0 generalizare a SOlu§i€i lui Pet6rson)
+— Structurilﬁ d6 dam comune (partaj atﬁ de 6616 n pr006s6)
 sunt variabila turn §i tabloul ﬂag[], cu
-turn 6 {0,1,...,n-1},
-ﬂag[i] E {idle, want-in, in-cs}, 0 S i S n-lv
-i Inigializéri:
-ﬂag[i] I idle, 0 S i S n-1,§i
-turn : 0 (sau orice valoare intre 0 5i n-l).
-31 56
+turn E {O,1,...,n-1},
+ﬂag[i] E {idle, want-in, in-cs}, O 5 i 3 n-l.
+— Inigializéri:
+ﬂag[i] = idle, O S i S n-l, §i
+turn I O (sau ori0€ valoare intre O §i n-l).
+32/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-, Problema Sectlunn Cntlce
-P1. var k:0..n; ,
-:epeat
+_ Problema Soctlunn Cntlce
+Pf var k:O..n; 9
 repeat
-flag[l] 1: want-in;
-k :: turn;
-while k ¢ i d0
-if flag[k]:idl€ than k 1: (k + l) mod n;
-else k 1: turn;
-flaq[i] ;: inics;
-k :: O;
-while (k<n) and (k:1 o: flag[k]¢in—cs) do k z: k + 1;
-until (kZH) and (turn=i OI‘ flag[turn]=idle);
-turn z: l;
-secgiunea criticé
-k := (turn + 1) mod n;
-Whila (flag[k]:idl€) d0 k I: (k + l) IllOd n;
-turn z: k;
-flag[i] := idle; Teméiincercayiséjustiﬁcaﬂcorecliludineaalgorilmului.
-s ecgi unea res t Bibliognﬁe: hups'ch wikipodia orgwlki/EiunbcrLWnZﬁiMcGuircialgondlm
-forever 3356
+repeat
+flag[i] := want—in;
+k := turn;
+while k ¢ i do
+if flag[k]=idl€ then k := (k + l) mod n;
+else k := turn;
+flag[i] := in—cs;
+k := O;
+while (k<n) and (k=i or flag[k]¢in—cs) do k := k + l;
+until (an) and (turn=i or flag[turn]=idle);
+turn z: i;
+secpiunea criticé
+k := (turn + l) mod n;
+while (flag[k]=idle) do k := (k + l) mod n;
+turn := k;
+flag [i] I: i dl e; T611151: incercagi $51 justiﬁcagi corectitudinea algoritmului.
+S e C Z: i LII] € a re S t Bibliograﬁo: https://en.wikipedia.org/Wiki/Eisenberg_%26_McGuire_algorithm
+forever 33/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Problema Secgiunii Critice
-Solugii hardware (1)
-i Instrucgiunea atomicé specializaté Test-and-Set
+Problema Sercgiunii Critice:
+Solugii hardware (1 )
+— Instrucgiunea atomicﬁ spﬁcializaté Tast-and-Set
 Semantica ei (in pseudo-cod):
-function Test-and-Set (var target: boolean): boolean;
+function Test-and-Set (var target: bOQIean): boolean;
 begin
-Test-and-Set I: target; // valoarea returnaté
-ta-Vget I: true; Exemplu: majoritatea arhitecturilor de calcul
-end, multiprocesor posedé o instructiune dc tipul
-TSL reg, adr
-e.g> pentru pP Intel x86 avem insn'ucgiunea
+T68t-and-S6t I: target; // valoarea returnaté
+Mfg 81 I: ‘[1116; Exemplu: majoritatea arhitecturilor de calcul
+end’ multiprocesor posedé 0 instrucgiune de tipul
+TSL reg,adr
+e. g. p6ntru nP Intel X86 avem instrucgiunea
 lock bts opl,op2
-34 56
+34/56
 
 ***************Ending Page***************
 
@@ -634,16 +658,16 @@ lock bts opl,op2
 Problema Secgiunii Critice
 
 Solugii hardware (1)
-° n procese; variabila comuni lock, inigializata cu false.
+' n procese; variabila comuné lock, inigializaté cu false.
 Pi: repeat
 
-while Test-and-Set (lock)
+while Test-and-Set(lock)
 
-do no thing;
+do nothing;
 
-secpiunea cri ticé
+seepiunea criticé
 
-lock := false;
+lock z: false;
 
 secpiunea rest
 
@@ -653,371 +677,378 @@ forever
 
 ***************Beginning Page***************
 ***************page number:36**************
-Problema Secgiunii Critice
+Problema Seeyiunii Critiee
 Solugii hardware (2)
-— Instrucgiunea atomicé specializaté. Swap
+— Instruegiunea atomieé speeializatéi Swap
 Semantica ei (in pseudo-cod):
 procedure Swap (var a,b: boolean);
-var temp: boolean;
+var temp: beolean;
 begin
-temp ;: a;
-a := b;
-b .: temp‘ Exemplu: pentru pP Intel x86 avem instruqiunea
-‘ ’ xchg opl , op2
-end; undo operunzii sunt doi wgi5m. sau “n leglsh'u si 0 adwsé a: memoric.
-36 56
+temp I: a;
+a I: b;
+b .: temp‘ Exemplu: pentru pP Intel x86 avem instruegiunea
+' ’ xchg opl,op2
+end; unde operanzii sunt doi regigtri, sau un registru §i 0 adresé de memorie.
+36/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Problema Secgiunii Critice
-Solugii hardware (2’)
-i Vaﬂanta conditionali a instrucgiunii atomice Swap este
-instrucgiunea atomicé Compare-and-Swap
-Semantica ei (in pseudo-cod):
-function Compare»and-Swap (var val3im; expected, newvaljint);
+Problema Sectlunn Cntlee
+Solutii hardware (2’)
+— Varianta eonditionaléi a instructiunii atomiee Swap este
+instructiunea atomieéi Compare-and-Swap
+Semantiea ei (in pseudo-cod):
+function Compare-and-Swap (var val:int; expected, newval:int);
 var temp: int;
 begin
-temp := val;
-if val I expected then val 1: newval;
-Compare-andSwap 3: temp; // valoarea retumaté
-911d; Exemplu: pentru pl’ Intel X86 avem instructiunea
-lock cmpxchg opl , op2
-und: upcxallzii sum doi regiski, suu un rcgisml 5| o mu a: memorie,
-37 56
+temp 3: val;
+if val I expected then val I: newval;
+Compare-and-Swap 1: temp; // valoarea returnaté
+end; Exemplu: pentru nP Intel X86 avem instructiunea
+lock cmpxchg opl,op2
+unde operanzii sunt doi regigtri, sau un registru §i 0 adresé de memorie.
+37/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
 Problema Secgiunii Critice
-Solugii hardware (2)
-' n process; variabila comuné lock, inigializati cu false.
-Pi: var key: boolean; //variabi1alocalé key
+Soluyii hardware (2)
+' n procese; variabila comuné lock, inigializaté cu false.
+Pi: var key: boolean; // variabila localéi key
 repeat
-key : = true;
-repeat Sau: key : compameandeswap Llock, false, true),-
-Swap (lock,key) ;<
-until key : false;
-sec,ti unea cri ti cé
-lock z: false;
-secpiunea rest
-forever 3W,
+key := true;
+repeat
+Swap(lock,key);t/////
+until key = false;
+seepiunea criticé
+lock := false;
+seepiunea rest
+forever %%
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Problema Secgiunii Critice
+Problema Sacgiunii Critice:
 
-Solugii hardware (3)
+Solulzii hardware (3)
 
-i N015: solugiile anterioare satisfac condigiile dc
-excludere mutualé gi de progres, dar nu indeplinesc §i
-ceringa dc a§teptare limitatﬁ.
+— Nora’: solugiile anterioare satisfac condigiile d6:
+excludare mutuala §i de progras, dar nu indaplinesc §i
+caringa d6 a§teptar6 limitata.
 
-i O solugie completﬁ folosind Test-and-Set (sau Swap) :
-' n process;
+— O soluﬁa completa folosind Test-and-Sat (sau Swap) :
+' n procese;
 
-' variabila comuné lock, inigializatﬁ cu false, §i
-vectorul cornun waiting[0..n-l] , inigializat cu false
-' limita dc astcptare: n-l
-PM,
+' variabila comuna lock, inigializata cu falsa, gi
+vactorul comun waiting[0..n-1] , inigializat cu falsa
+' limita d6 a§t6ptar61 n-l
+39/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Problema Secpunll Crltlce
+Problema Socpunn Cntlco
 Solugii hardware (3)
-PJOSiénil):
-var j :0 . .nil; keyzboolean;
-repela‘? _ Sau: .. . do Swap (key, lock);
-wa1t1ng[1] :Itrue;
-key::true; 4
-while waitingli] and key do key::Test*and*Set (lock);
-waiting[i] :=false;
-sec;iunea criticé
-j::i+l mod n;
-while j#i and not waiting[j] do jz=j+l mod n;
-if j:l then lock::false;
-, else waltlngh] :=false; Temi: incercagiséjustiﬁcagi
-secpunea rest corcctitudinca accstuialgoritm.
-forever 4‘, y,
+Pi (O£i£n— 1) :
+var j:O..n-l; keyzboolean;
+repeah [.1 Sml ... do Swap(key,lock);
+waiting l :=true;
+key:=true; 1////////
+while waitingii] and key do key:=Test-and—Set(lock);
+waiting[i]::false;
+secpiunea criticé
+j:=i+1 mod n;
+while j¢i and not waiting[j] do j::j+l mod n;
+if jzi then lock:=false;
+. else waiting[j]:zfalse;Tbnﬁtﬁumnmﬁséﬁmﬁﬁmni
+S e c 1’: l un ea res t corectitudinea acestui algoritm.
+forever 4m%
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Problema Secpunll Crltlce
-Solugii concrete (1): Lacéte mutex (sau spinlocks)
+Problema Sacpunn Cntlca
+Solugii concrate (1): Lacate mutax (sau spinlocks)
 
-' Cea mai simplé solugie software utilizaté in nucleul SO penlru
-protecgia unei SC: la intrare trebuie s5 dobzinde$ti lacétul, iar la
-iegire si-l eliberezi, prin intennediul a douz'i operagii standard,
-atomicc: operagia acquirco $i operagia rOlCaSCO, 180511111 avimd o
-valoare booleané available, ce aratzi daczi este disponibil sau nu‘
+' Cea mai simpla s01u§i6 softwara utilizata in nuclaul SO pentru
+protecgia unei SC: 1a intrare trebuia sa dobandegti lacatul, iar 1a
+iegira sa-l eliberezi, prin intermediul a doua oparagii standard,
+atomice: operagia acquiraQ gi oparagia releasaQ, lacatul avand 0
+valoare booleana available, ce arata daca este disponibil sau nu.
 
-' Semantica operapiei acquireo :
+' Semantica oparayiei acquir6() :
 
-while lavailable do nothing; 4- a$teptare ocupati
-available::false; l
+while lavailable do nothing; <_ agtaptare ocupata
+available:=false; .
 
-° Semantica operatiei release() : spinlock
+' Semantica operagiei releaseO : spinlgck
 
-available::true;
+availablezztrue;
 
-° Pentru a ﬁ atomice, cele doui operagii se implementeazi folosind
-instrucgiunile atomice specializate (TSL sau Swap)‘ 4‘ <6
+' Pentru a ﬁ atomice, cele deua operagii se implementeaza folosind
+instrucgiunile atomice specializate (TSL sau Swap). 41/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-Problema Secgiunii Critice
-Excluderea mutuali implementaté cu spinlocks
-' Problema SC cu n process; variabila comuné lock este
-un spinlock liber (i.c., inigializat cu true).
+Problema Secgiunii Critice:
+Excluderea mutualé implementatéi cu spinlocks
+' Problema SC cu n procese; variabila comuné 100k este
+un spinlock liber (i.e., inigializat cu true).
 Pi: repeat
-acquire (l ock);
-sec;i unea cri ti c5
-release (lock);
-sec,ti unea rest
+acquire(lock);
+seepiunea criticé
+release(lock);
+secgiunea rest
 forever
-- Scenarii de utilizare: in situagiile in care durata de execugie a secgiunii
-critice este scuné (comparativ cu durala unui contextixwitch).
-Ex; inseryia sau extracyia unui proces din coada ready a planiﬁcatorului CPU‘ 42 in
+' Scenarii de utilizare: in situagiile in care durata d6 execugie a secgiunii
+critic6 68t6 scurtﬁ (comparativ cu durata unui context-switch).
+EX.: insergia sau extracgia unui proces din coada ready a planiﬁcatorului CPU. 42/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Problema Sectiunii Critice
-Solutii concrete (2): Semafoare
-' Concept introdus de E.W. Dijkstra in ’65
-' Un semafor S este 0 variabilé intreagé care este
-accesaté (exceptﬁnd operatia de initializare) numai prin
-intermediul a doui operatii standard, atomicc:
-i operatia sau wait() (proberen I a testa), §i
-i operatia sau signalO (verhogen I a incrementa).
-° Semantica operatiei wait(S) :
-while SSO do nothing; S : :S—l;
-~ Semantica operatiei signa1(S) : S : =S+l;
-41 in
+Problema Sacgiunii Critice:
+Solugii concrate (2): Semafoara
+' Concapt introdus de E.W. Dijkstra in ’65
+' Un semafor S asta 0 variabila intraaga cam esta
+accﬁsata (exceptand oparagia de inigializare) numai prin
+intarmadiul a doua operagii standard, atomice:
+— Qperagia P $2111 wait() (proberen I a tasta), §i
+— oparagia V sau signa1() (verhogen I a incrementa).
+' Samantica operagiei wait(S) :
+while SﬁO do nothing; S:=S—1;
+' Samantica operagiei signa1(S): S:=S+1;
+43/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Problema Secgiunii Critice
+Problema Secriunii Critice
 Semafoare — implementare la nivelul SO:
-i Scmafoarclc pot suspenda $i rcporni proccsc/thrcad-uri,
-pcntru a cvila aﬂeptarea ocupatd (Le. risipa de cicli CPU)
-i Semaforul se deﬁne$te ca un articol:
+— Semafoarele pot suspenda §i reporni procese/thread-uri,
+pentru a evita aﬂeptarea ocupatéi (i.e. risipa d6 cicli CPU)
+— Semaforul se deﬁnegte ca un articol:
 typedef struct {
 int value;
 struct thread *ListHead;
 } semaphore;
-i Se consideré urmétoarele 2 operagii:
-suspend () : suspendé execugia thread-ului care-l apeleazé
-resume (T) : reia execuyia unui thread T blocat anterior
-(printr-un apcl suspcncK) )
-44 56
+— Se consideré urmétoarele 2 operagii:
+suspend () : suspendéi execugia thread-ului care-l apeleazéi
+resume (T) : reia execugia unui thread T blocat anterior
+(printr-un apel suspendO )
+44/56
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:45**************
 Problema Secgiunii Critice
-Semafoare — implementare la nivelul SO:
-i Cele 2 operayii atomice cu semafoare se deﬁnesc atunci astfel:
-l) operagia wait (S) z
+Semafoare — implementare 1a nivelul SO:
+— Cele 2 operagii atomice cu semafoare se deﬁnesc atunci astfel:
+l) operagia wait (S) :
 S.value——;
-if (S.va1ue < 0) (
+if (S.value < 0) {
 add this thread to S.ListHead;
-suspend() ;
+suspend();
 }
 2) operagia signal (S) :
-S .value+'4-,~
-if (S.value <= 0) (
-remove a thread '1‘ from S.ListHead;
-resume (T) ;
+S.value++;
+if (S.value <= 0) {
+remove a thread T from S.ListHead;
+resume(T);
 }
-Noté: atomicilatea celor doué secvenge de cod se realizeazé folosind spin/ock'uri.
-45 56
+Noté: atomicitatea celor doué secvente de cod se realizeazé folosind spin/ock-uri.
+4556
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:46**************
-Problema Secgiunii Critice
-Semafoare i implementare 1a nivelul SO:
+Problema Sectiunii Critice
+Semafoare — implementare la nivelul SO:
 
-° Mai multe detalii dc implementare in S.O.-urile
-moderne: a sc citi §6,6i2, page 274-276, din Silbcrschatz:
-“Operating System Concepts”, edigia 10 [OSCIO]
+' Mai multe detalii d6 implementare in S.O.-uri16
+m0d6rn6l a se citi §6.6.2, pag. 274-276, din Silberschatz:
+“Operating System Concepts”, editia 10 [OSCIO]
 
-° La nivelul aplicagiilor, semafoarele pot ﬁ simulate
-prin diverse entitégi logice (e.g. ﬁsiem canale ﬁfo,
-semnale, sa. )
+' La nivelul aplicatiilor, semafoarele pot ﬁ simulate
+prin diV€rS€ €ntit511i logicér (e.g. ﬁ§iere, canale ﬁfo,
+semnale, $.21. )
 
-° Biblioteca IPC (introdusé in UNIX System V) permits
-lucml cu semafoare in aplicagii (inclusiv in Linux)
+' Bib1i0t€Ca IPC (introdusé in UNIX System V) p€rmit€
+lucrul cu semafoare in aplicatii (inclusiv in Linux)
 
-' DCSprﬁ SpiI'IIOCkS i a se vedea https://wiki,0sdev,0rg/Spinlock
+' D€Spf€ SpinlOCkS — a se vedea https://Wiki.0sdev.org/Spinlock
 
-4i» <6
+46/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-Problema Secgiunii Critice
-Excluderea mutualé implementaté cu semafoare
-' Problema SC cu n procese; variabila comuné mutex
-este un semafor binar (Le, semafor inigializat cu 1).
+Problema S€C13iunii Critice:
+Exclud6rea mutualé implamentaté cu semafoarﬁ
+' Problama SC cu n procese; variabila comuné mutax
+€St€ un sﬁmafor binar (Le, semafor inigializat cu 1).
 Pi: repeat
-wait (mutex);
-secti unea cri ti cé
-s ignal (mutex);
-secti unea rest
+wait(mut€x);
+secpiunea criticé
+signal(mutex);
+secpiunea rest
 forever
-' Scenarii dc utilizare: in situagiile in care execugia secgiunii critice
-durcazé suﬁcicm dc mull (comparativ cu durata unui con/extixwilch). 4 Y
-7 > v
+' Scenarii de utilizare: in situagiile in care execugia secgiunii critice
+dureazé suﬁcient d6 mult (comparativ cu durata unui context-switch). 47/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Problema Secgiunii Critice
+Problema S€C13iunii Critice:
 Semafoare — clasiﬁcare:
-— Dupé modul de utilizare, putem clasiﬁca semafoarele in
-urmétoarele doué tipuri:
+— Dupé modul de utilizare, putem clasiﬁca s6maf0arele in
+unnétoarele doué tipuri:
 
-' Semafoarele binare (i.e., semafoare inigializate cu
-valoarea 1) pot asigura excluderea mutualé
-(e.g., pot solutiona problema secgiunii critics)
+' S€maf0ar6l€ binam (i.e., semafoare inigializate cu
+valoarea 1) pot asigura axeludﬂea mutualéi
+(e.g., pot solugiona pr0b16ma secgiunii critice)
 
-° Semafoarele generale (i.e., semafoare inigializate cu
-valoarea n > 1) pot reprezenta 0 resursé cu instanye
-multiple (i‘e., cu n instange)
+' Semafoarele genarala (i.e., semafoare inigializatg cu
+valoarea n >1) pot mprezenta 0 msursé cu instan§6
+multipk: (i.e., cu n instanlze)
 
-(e.g., pot solutiona problema producétor-consumator)
-4K 56
+(e.g., pot solugiona problama producétor-consumator)
+48/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Problema Secgiunii Critice
-Semafoare i alte scenarii de utilizare
-° Pot ﬁ folosite pentru a rezolva diverse alte probleme
-de sincronizare intre procese
-' Exemplu: execute‘ B in P2 numai dupé ce s-a executat A in P|
-' Solugie: folosim un semafor synch inigializat cu 0, astfel:
-P|: P2:
+Problema S€C13iunii Critice:
+Semafoarﬁ — altﬁ swnarii d6 utilizare
+' P0t ﬁ folosite pantru a mzolva div6rse alta problﬁme
+d6 sincronizare intre: procﬁs6
+' Exemplu: 6xecut€1 B in P2 numai dupé 06 s-a exacutat A in P1
+' Solugie: folosim un semafor synch inilzializat cu 0, astfel:
+P11 P21
 A wait(synch);
 signal(synch); B
 
-4‘) 56
+49/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Problema S ecpunll Crltlce
-Semafoare — alte scenaru de utlllzare (cont)
-pxelnplul ante'nor ‘a rcferea la mum un prnccs ncbuie sirl z$lepKe p8 alluL imHm anumil punct am cod
-Intrebare puate ﬁ generaliml 14 mm muhe pmccsm $| cum mm"
-Rﬁspuns. in pnmul mud. generaluarea m mm mulls process nu es\e UNICA! Spre exemplll, cuunle exlreme 14
-gcncrahmrc a: n 1) N-l process cam dorcsc sé a5lcpic \m amlmn proccs (m1 dccir cclc N1) ; rcspccnv 2) \m
-proccs vrea 55 a§leplc smlultall all: N-l pmm. Plus, male cazunle mtclmcdlarc pOSIbﬂB inns m1: 2 cxlrcme.
-smuwa cu accl scmafol' Swirh am p: sllde-M antenol nu pom ﬁ gcncvahlei pma usol \a male accslc cazun
-gencmhzale de a$teplare
-3pm cxcmplm dam’ penlru cazul extrem 2) dcscns mm m, Q ‘whim solugie cu scmzfoaw at puleﬂ ﬁ cele Nil
-prucexe c: lrebuie “mm-41¢ \ur n a: furma P‘ (IS ls N-l ), \ar procmul m new: >11 le New: p: mm Camus m ﬁ
-dc l'orma Q mama mm 105 ; [closum N-l scmafcarc Ayurlh Wm ‘ lmnahzau: cu o. parmjalc dc Q cu P.‘
-Pl : Q :
-
-A‘ wait(synch |); wait(synchg); ... ; wait(synchv71);
-signal(synch,); B
+a
+S emafo are — alte seenarn de utlhzare (cont)
+Exemplul anterior se referea la situatia: un proees trebuie sé-l aetepte pe altul, intr-un anurnit punet din cod.
+Intrebare: poate f1 generalizat 1a mai multe procese, gi cum anume?
+Réspuns: in primul rénd, generalizarea 1a mai multe procese nu este UNICA! Spre exemplu, eazurile extreme la
+generalizare ar ﬁ: 1) N-l procese care doresc s5 aetepte un anurnit proces (altul deeét eele N-l) ; respectiv 2) un
+proees vrea s51 agtepte simultan alte N-l procese. Plus, toate cazurile intermediare posibile intre cele 2 extreme.
+Solutia cu aeel semafor synch daté pe slide-ul anterior nu poate ﬁ generalizaté prea u§0r 1a toate aeeste eazuri
+generalizate de agteptare.
+Spre exemplu, doar pentru eazul extrem 2) descris mai sus, 0 posibilé solutie cu semafoare ar putea ﬁ: cele N-l
+procese ee trebuie a§teptate vor ﬁ de forma Pi (ls i s N-l), iar procesul ce trebuie s51 1e agtepte pe toate eelelalte va ﬁ
+de forma Q indicaté mai j os ; folosim N-l semafoare synchl ,..., synchN-1 initializate cu 0, partajate de Q cu Pi :
+Pi I Q I
+Ai wait(synch1); wait(synch2); ; wait(synchN-1);
+signal(synchi); B
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-Problema Secpunll Crltlce
-Semafoare — alte scenarn de utlhzare (cont)
-Rcfcritor la cxcmplclc anteriuarc u: agtcpmrc, mai cxisui g1 ﬁlm mccanismc dc sincmnizarc,
-p: lﬁngﬁ scmafoarc, can: sum mai adccvatc pcntru anumitc furmc dc sincronizarc intrc un
-numér N > 2 de pmceSe,
-Un astl'el de mecanism de sincronizare esle cel de "barieré" (burner, in englezé) care remlvé
-problcma aglcptérii simultane pcntru un numzir N (oarccarc) dc pruccsc, la (cétc) un punct
-din codul ﬁccéruia.
-Modul dcfhncﬂunure ul bariersi: ﬁecare proces “ajunge la barieré” in rilmu] séu, $i le
-agleaplé acolo pe loale celelalle. Abia dupé ce au ajuns male‘ “se ridicé bariera” simultan
-pcntru Koatc proccsclc, Cuf07§l vor cominua astfc] cxccupa ﬁccarc cu codul propnu cc
-urmeazi dupé apelul barierei.
-Penlru mai multe delalii despre mecanismul de "barieré", consullagi urmétoarea referime'l:
-hﬂps://en.wik1pcdin.0rg/wiki/Banicrlcnmputeriscience)
+Problema Sncpunn Cflth€
+Semafoam — alte scﬁnarn d6 utlhzam (cont)
+Referitor la exemplele anterioare de agteptare, mai existﬁ §i alte mecanisme de sincronizare,
+pe lﬁngé semafoare, care: sunt mai adecvate: pentru anumite forme de sincronizare intre un
+numér N > 2 de procese.
+Un astfel d6 mecanism de sincronizare este eel de "barieré" (barrier, in englezé) care rezolvé
+problema a§tept€1rii simultane pentru un numér N (oarecara) de procesa, la (céte) un punct
+din codul ﬁecéruia.
+Modul defuncﬁanare al barierei: ﬁecare proces “ajunge la barieré” in ritmul séu, §i le
+agteapté acolo pe toate celelalte. Abia dupi ce au ajuns toate, “se ridicﬁ bariera” simultan
+pentru toate procesele, care-gi vor continua astfel execugia ﬁecare cu codul propriu c6:
+urmeazé dupﬁ apelul barierei.
+Pnntru Inai multe detalii despre mecanismul de "bariﬁré", consultagi unnétoarea referingé:
+https://en.wikipedia.org/Wiki/Barrier_(c0mputer_science)
 
-sx Sn
+51/56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-Interblocajul si infometarea
-' lnterblocajul (deadlock)
+Intarblocajul §i infcmﬁtama
+' Interblocaj ul (deadlack)
 
-i O situagie in care doué sau mai multe process asteapté
-pe ter'men nelimitat producerea cite unui eveniment
-(eag, execugia unei operagii signal pe un semafor),
-eveniment ce ar putea ﬁ cauzat doar de cétre unul
-dintre celelalte process ce asteaptﬁ.
+— O situagie in care douéi sau mai multa procﬁse agtﬁapté
+pe termen nﬁlimitat producﬁrﬁa céte unui ewnimﬁnt
+(e.g., execugia unai operagii signal pe un semafor),
+€v6nim6nt ce ar putea ﬁ cauzat doar de c'thre unul
+dintre ce161a1te pr0c6s6 ce a§teapté.
 
-— Aceste procese se spune cé sunt interblocate.
+— Aceste procese se spune (:51 sunt interblocate.
 
-' Blocajul nelimitat sau infometarea (starvation)
+' Blocajul nelimitat sau infometarea (starvatiOn)
 
-i O situagie in care un(ele) proces(e) asteapté nelimitat
-(eagw 1a un semafor: procesul at putea sta suspendat in coada
-d6 asteptare asociaté acelui semafor pe termen nelimitat).
+— O situa§i6 in care un(61€) proces(6) a§teaptéi nelimitat
+(e.g., 1a un sﬁmafor: procesul ar putaa sta suspendat in coada
+de a§teptare asociaté acdui sﬁmafor pe termen nelimitat).
 
-51 <6
+52/56
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
-Interblocajul §i infometarea
-' Interblocaj ul (deadlock)
-i Exemplu: douz'l process folosesc 2 semafoare binare S $1 Q
-(i.c. inigializatc cu l) in Ofdinea d6 maijOSI
-P, z P7:
-wait(S); wait(Q);
+Intablocajul §i infcmeztama
+' Interblocajul (deadlock)
+— Exemplu: doué pr066s6 folosesc 2 semafoare binam S §i Q
+(Le. inigializate cu 1) in ordinea de mai jos:
+Pﬁ Pf
+wait(S); W61it(Q);
 wait(Q); wait(S);
 signal(S); signal(Q);
-signal(Q); signal($);
-Se observé 051 este posibil $51 aparé interblocaj. in ce situagie
-apare? (Speciﬁcagi un scenariu dc execugie care duce la interblncaj...)
-SOlLlliC (pennu a nu ﬁ posibil interblocajul)2 ambele programe at trebui
-s5 execute operagiile wait() pe cele doui semafoare in aceea$i urdine I
-51 5n
+signal(Q); signal(S);
+Se observé cé este posibil s5 aparé interblocaj. in ce situagie
+apare? (Speciﬁcagi un scenariu de axecugie cam duce 1a interblocaj...)
+SOlu§i€ (pentru a nu ﬁ posibil interblocajul): ambale programe ar tr6bui
+$51 axecute operagiile wait() pe cele doué semafoare in aceea§i ordina !
+53/56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:54**************
-Probleme clasice de sincronizare
+Probleme elasiee de sinoronizare
 
-i Problema Producétor-Consumator
+— Problema Produeéitor-Consumator
 
 (Producer-Consumer or Sender-Receiver problem)
-i Problema Cititori §i Scriitori
+— Problema Cititori §i Seriitori
 
 (Readers and Writers problem)
 — Problema Cina Filozoﬁlor
@@ -1028,43 +1059,52 @@ i Problema Cititori §i Scriitori
 (Sleeping Barber problem)
 
 (va urma)
-54 v,
+54/56
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:55**************
 Bibliograﬁe
 ' Bibliograﬁe obligatorie
 
-capitolele despre sincronizarea proceselor din
-i Silberschatz I “Operating System Concepts”
+capitolele despre sineronizarea proceseler din
+— Silberschatz : “Operating System Concepts”
 
-(cupﬁ din [0500])
-sau
+(cap.6 din [OSC10])
+SEIU
 — Tanenbaum : “Modern Operating Systems”
 
-(a lreia pane a capYZ din [MOS4])
+(a treia part6 a cap.2 din [MOS4])
 
-55 <6
+55/56
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:56**************
 Sumar
-' Introduc6re
-' Problema secgiunii critice
-Enungul problcmci g! curmu- dc rczulvarc
-, 50mm pcntm cazul a doué proccsc
-i Solugii pemru czzul a n > 2 process
-, Soluui hardware
-i Soluﬂi concrete: spinlvck-uri $i semafoare
-" Interblocajul gi infometarea
-(va unna)
-> Probleme clasice de sincronizare
-’ Monitoare ($i alte abordiri ale problemei SC)
-intrebéri ? <5 <6
+
+> Introduc ere
+> Problema seegiunii eritice
+
+— Enun§u1 problemei §i eeringele de rezolvare
+
+— Solugii pentru eazul a doué procese
+
+— Solugii pentru eazul a n > 2 procese
+
+— Solugii hardware
+
+— Solugii concrete: spinlock-uri §i semafoare
+> Interbloeajul §i infometarea
+
+(va urma)
+> Probleme elasiee de sineronizare
+> MOHitOElIB (§i alte abordéri ale problemei SC)
+intrebéri ‘.7 56/56
 
 ***************Ending Page***************
 

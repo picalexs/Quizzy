@@ -1,39 +1,40 @@
 ***************Beginning Page***************
 ***************page number:1**************
-lngineria Programérii
-Curs 1 i 21,22 Februarie 2023
+lngineria Pragramérii
+Curs 1 — 21,22 Februarie 2023
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Cuprins
+Cu prins
 > Context
-> Motivayie
+> Motivagie
 > Erori celebre
 > Statistici
-> Definiﬂi
-> Etapele dezvoltérii programelor
+> Definiyii
+> Etapele dezvoltéirii programelor
 > Modele de dezvoltare
-~ Cascadé
-~ Spirali
+O Cascadé
+O Spiralii
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
 Context
 
-> Aplica§ii de dimensiuni mari (milioane de linii
+> Aplicatii de dimensiuni mari (milioane de linii
 de cod) scrise pe durata a céteva luni, ani,...
 
-> Echipe de lucru: Project manageri, Ana|i$ti,
-Arhiteqi, Programatori, Testeri, lngineri de
-suport (de ordinul 10, 100,1.000 de
+> Echipe de lucru: Project manageri, Ana|i§ti,
+Arhitecti, Programatori, Testeri, Ingineri de
+suport (de ordinul 10, 100, 1.000 de
 persoane,...)
 
-> So|u§ia acestor probleme este o solugie scrisé
-intr-un limbaj de programare orientat-obiect
+> Solutia acestor probleme este 0 solutie scrisé
+Tntr-un limbaj cle programare orientat-obiect
 
 ***************Ending Page***************
 
@@ -42,30 +43,31 @@ intr-un limbaj de programare orientat-obiect
 Care e contextul vostru?
 
 > Ce este un program mare pentru voi?
-a Cite linii de cod ayi scris?
-Q Cite persoane ari lucrat la acela§i proiect?
+O Céte linii de cod agi scris?
+O Céte persoane agi lucrat la acela§i proiect?
 
-> Ce se intimplé cénd lucreazi din ce Tn ce mai
-multe persoane la un proiect? Cum cregte
-eficienta?
-a 3 persoane termini proiectul Tn doui siptiméni :>
+> Ce se Tntémplé cénd lucreazé din ce Tn ce mai
+multe persoane Ia un proiect? Cum cre§te
+eficienga?
+O 3 persoane terminéi proiectul Tn douéi séiptéméni :>
 
-6 persoane termini proiectul Tntrio séptéméné?
+6 persoane terminéi proiectul Tntr-o séptéméné?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Motivatie 1
+Motlvatle 1
 
-> Din ce in ce mai multe sisteme sunt controlate
+> Din ce Tn ce mai multe sisteme sunt controlate
 de software: controlul traficului (aerian, feroviar,
-auto, naval, etc.), bincile, telefonia mobilé,
+auto, naval, etc.), bancile, telefonia mobila,
 Internet, supermarket, case inteligente
 
-> Economiile tuturor statelor depind de software
+> Economiile tuturor statelor depind cle software
 
-> lngineria programarii propune teorii,
+> Ingineria programarii propune teorii,
 metodologii si instrumente pentru dezvoltarea
 de software profesional
 
@@ -73,30 +75,31 @@ de software profesional
 
 ***************Beginning Page***************
 ***************page number:6**************
-Motlvape 2
+Motivagie 2
 
-> 1946 Goldstine 5i von Neumann: “1.000 de
-instrucyiuni reprezinti o limité superioaré
-rezonabilé pentru complexitatea problemelor ce
+> 1946 Goldstine §i von Neumann: “1.000 de
+instrucyiuni reprezinté 0 limitéi superioaré
+rezonabiléi pentru complexitatea problemelor ce
 pot fi concepute ca rezolvabile cu ajutorul
-calculatorului"
+calculatorului”
 
 > Sistemul de rezervare a biletelor pentru
 compania aerian a KLM continea, Tn anul 1992,
-doua'l milioane de linii de cod Tn limbaj de
+douﬁ milioane de linii de cod Tn limbaj de
 asamblare
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Motivayie 3
+Motivagie 3
 
 > Sistemul de operare System V versiunea 4.0
-(UNIX) a fost obyinut prin compilarea a
+(UNIX) a fost obginut prin compilarea a
 3.700.000 linii de cod
 
-> Programele scrise pentru naveta spatialé NASA
+> Programele scrise pentru naveta spatialéi NASA
 au circa 40 de milioane de linii de cod obiect
 
 > Pentru realizarea sistemului de operare IBM
@@ -106,62 +109,67 @@ au circa 40 de milioane de linii de cod obiect
 
 ***************Beginning Page***************
 ***************page number:8**************
-Motivagie — Erori celebre 1
-> Facturi imense la energia electrici pentru
+Motlvape - Erorl celebre 1
+> Facturi imense Ia energia electricéi pentru
 pensionari, recalcularea pensiilor
-> IBM 05360 conﬁnea la fiecare relansare 1.000
-l de gre$eli. Resemnare...
+> IBM 05360 continea Ia fiecare relansare 1.000
+de gre§e|i. Resemnare...
+g 8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Motivayie — Erori celebre 2
+Motlvalge — Erorl celebre 2
 
-> Programaroru/ ghinionisr de la 0 banca“: Banca
-dorea sa trimité la cliengi prin po§t5 o scrisoare
-care $5 le semnaleze diverse servicii
+> Programatorul gh/n/on/st de la 0 bancéi: Banca
+dorea séi trimité Ia cliengi prin po§téi 0 scrisoare
+care 55 Ie semnaleze diverse servicii
 
 > Programatorul a scris un program ce selecta 2.000
-de clienyi $i le scria o scrisoare personalizati
+de cliengi §i le scria 0 scrisoare personalizaté
 
 > in procesul de testare acesta a folosit un nume
 fictiv de client Rich Bastard
 
-> Din picate 2.000 de cliengi au primit o scrisoare
+> Din picate 2.000 de cliengi au primit 0 scrisoare
 
-.“icepea "Dear Rich Bastard,
+_“|ncepea "Dear Rich Bastard,
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Motivatie — Erori celebre 3
-> Sacramento: un dentist primeste Tn césuga
-postalé intrio séptéméné 16.000 de formulare
-pentru plata taxelor — “it was a computer
-prob/em" a declarat un oficial
-> “Failure t0 convert English measures to metric
-values was the root cause 0f the loss of the Mars
-Climate Orbite..."
-a Catamwmm Q m “mm ‘mama New“,
-(X V OK
+MotlvatIe — Erorl celebre 3
+
+> Sacramento: un dentist primeste Tn casuta
+postala Tntr-o saptaména 16.000 de formulare
+pentru plata taxelor — “It was a computer
+prob/em” a declarat un oficial
+
+> “Fa/‘lure t0 convert English measures t0 metric
+values was the root cause 0f the loss 0f the Mars
+C //'ma te Orb/‘te. .
+
+Error g
+6 Catastrophicfailure 8 The operation completed successfully.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:11**************
-Motivayie — Erori celebre 4
+Motivagie — Erori celebre 4
 
 > Pierdere vehicul explorare Venus. Ah, era de fapt
-.,. in FORI...
+.,. in FOR/...
 
 > Sistem de avertizare anti-racheté activat.
 Atacém sau nu?
 
-> Ariane 5 explodeaza. Cost artiﬁci/Z'
-500.000.0005?
+> Ariane 5 explodeaza. Cost art/‘ﬁc/i:
+500. 000. 000$
 
 ***************Ending Page***************
 
@@ -169,60 +177,56 @@ Atacém sau nu?
 ***************page number:12**************
 Motlvatle — StatlstICI 1
 > Acestea nu sunt doar “erori amuzante"
-. -,
-_. f ' qr ‘ .,.
-' ' ‘l. " Y5"
-a / -
-t ~ ‘q ﬂ
-V , 1 V.‘ t
-,§' ‘Z “ ”\\-,;_V
+' i a1: u‘. A “5-?
 > Proiectele mari software pot fi cele mai complicate
 produse realizate de cineva
-> Si ne uitém pe statistici
-a Vom considera c5 un proiect software are succes, daci este
-realizat intr-un timp rezonabil 5i cu un buget rezonabil
-al unui produs software are loc atunci cénd
-ealizat sau cénd nu poate fi folosit .1
+> sa ne uitam pe statistici
+o Vorn considera ca un proiect software are succes, daca este
+realizat Tntr-un timp rezonabil si cu un buget rezonabil
+al unui produs software are loc atunci cancl
+ealizat sau cand nu poate fi folosit 12
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Motlvagle — StatlstICI 2
+Motlvalge — StatlstICI 2
 > Studii de succes: USA’82 — Gibson & Singer
 > 18 proiecte
-a Succes: 17%
-= Partial Tn folosinyi: 28%
-a Satisfacéitoare 1 1%
-a Egec: 22%
-~ Neevaluate: 11%
-> Motivele e$ecuri|or
-~ Problems de organizare
-~ Noile metode de lucru 5i politicile salariale
-l ~ Modificérile neprevézute in afacere
+O Succes: 17%
+o Pargial 1n folosingé: 28%
+O Satisfacétoare 11%
+o E§ec: 22%
+O Neevaluate: 11%
+> Motivele e§ecuri|0r
+O Probleme de organizare
+O Noile metode de lucru §i politicile salariale
+l O Modificéirile neprevézute Tn afacere
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Motlvatle — StatlSthl 3
+M0t|val;|e — StatlstICI 3
 > Studii de succes — ONNI’88 (Finland)
 > Din peste 100 proiecte
-a Succes: 33%
-a Cu probleme: 42%
-a E$ec2 25%
-> Motivele e$ecuri|or
-~ Slaba pregétire a inginerilor software
-~ Resurse insuficiente
-~ Problems de management
+O Succes: 33%
+O Cu probleme: 42%
+o E§ec: 25%
+> Motivele e§ecuri|or
+O Slaba pregétire a inginerilor software
+O Resurse insuficiente
+o Probleme de management
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Motivatle — StatlSthl 4
+Motlvatle — StatlstICI 4
 
-> The Robbins-Gioia Survey (200]), Alexandria —
+> The Robbins-Gioia Survey (2001), Alexandria —
 Virginia, made a study over the perception by
 enterprises of their implementation of an E.R.P.
 (Enterprise Resource Planning) package.
@@ -247,7 +251,7 @@ Motivatie — Statistici 5
 
 > The Conference Board Survey (2001)
 
-> At i i 7 companies that attempted ERP implementations
+> At ll7 companies that attempted ERP implementations
 
 > 34 % were very “satisfied”
 
@@ -255,7 +259,7 @@ Motivatie — Statistici 5
 
 > 8 % were unhappy with what they got.
 
-> 40 % of the projects failed to achieve their business
+> 4O % of the projects failed to achieve their business
 
 case within one year of going live
 
@@ -264,57 +268,60 @@ case within one year of going live
 achievement took six months longer than expected.
 
 > Implementation costs were found to average 25 % over
-net
+Net
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-lP — Definigie 1
+IP — Iefinitje 1
 
-> Prima definitlie a ingineriei programérii
-(NATO,1968): Ingineria programirii este
-stab/lirea ,Si uti/izarea de principii ingineregti
-so/ide penrru a obfine in mod economic
-programe care sunt sigure ,si funcfioneaza'
-eficienr pe magini de calcu/ concrete
+> Prima definigie a ingineriei programéirii
+(NATOJ 968): ingineria programérii este
+stabi/irea si uti/izarea o’e ,orin cipii in gin eres ti
+so/io’e ,oentru a obfine in moo’ economic
+programe care sunt sigure si funcfioneazé
+eficient ,oe masini o’e ca/cu/ concrete
 
-> O definiyie mai recenté (/EEESranc/ard Glossary
-of Software Engineering Tehno/ogy, I 983):
-Ingineria programérii reprezinta“ abordarea
-sistematica“ a dezvo/tirii, funcfionirii,
-intrefinerii, §i retragerii din funcfiune a
+> O definiyie mai recenté (/EEEStandard Glossary
+of Software Engineering Tehno/ogy, i 983).‘
+Ingineria programérii reprezin to’ abordarea
+sis tema ticé’ a o'ez vo/térii, fun cfionérii,
+in trefinerii, si re tragerii din fun cfiune a
 
-He/or
+Helm
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-lP — Defmlple 2
+lP — leflmtle 2
+> Se refera Ia doua lucruri:
 
-> Se referi la doué lucruri:
-a "software engineer" care a inlocuit termenul de
+O "software engineer" care a Tnlocuit termenul de
 "programmer"
-~ "Software Engineering" care este folosit pentru a
+
+O "Software Engineering" care este folosit pentru a
 descrie "building of software systems which are so
 large or so complex that they are built by a team or
-teams of engineers“ i Fundamentals ofSoftware
-Engineering (Ghezzi,jazayeri, and Mandrioli)
+teams of engineers“ — Fundamentals 0f Software
+Engineering (Ghezzi, Jazayeri, and Mandrioli)
 
-‘ ‘E
+x 18
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-lP — Definitii 3
+IP - Iefinitii 3
 
 > FreeDictionary: “The process of manufacturing
 software systems. A software system consists of
 executable computer code and the supporting
 documents needed to manufacture, use, and
-maintain the code."
+maintain the code.”
 
 > Webopedia.com: “The computer science
 discipline concerned with developing large
@@ -328,12 +335,12 @@ I directing programming teams, scheduling, and
 
 ***************Beginning Page***************
 ***************page number:20**************
-lP — Definitii 3
+IP — leflnltll 3
 
 > Wikipedia: “Software engineering is the application of
 a systematic, disciplined, quantifiable approach to the
 development, operation, and maintenance of software,
-and the study of these approaches“
+and the study of these approaches"
 
 > Answers.com: “The systematic application of scientific
 and technological knowledge, through the medium of
@@ -342,7 +349,7 @@ computer programs, and to the requirements
 definition, functional specification, design description,
 program implementation, and test methods that lead
 
-I up to this code"
+I up to this code”
 
 ***************Ending Page***************
 
@@ -350,30 +357,30 @@ I up to this code"
 ***************Beginning Page***************
 ***************page number:21**************
 lP — Pe scu rt
-> Este o discipliné inginereascé care 5e ocupé de
-toate aspectele dezvoltérii unui program de
-dimensiuni mari, de citre 0 echipé de dezvoltatori
-> Propune adoptarea unei abordiri sistematice 5i
+> Este 0 disciplinéi inginereascé care se ocupéi de
+toate aspectele dezvoltéirii unui program de
+dimensiuni mari, de cétre 0 echipéi de dezvoltatori
+> Propune adoptarea unei abordéri sistematice §i
 organizate a procesului de dezvoltare software
 > Propune folosirea tehnicilor §i instrumentelor
 adecvate avénd Tn vedere
-Q problema care trebuie rezolvaté
-n restriqiile impuse
-, resursele disponibile
-2‘
+O problema care trebuie rezolvatéi
+<> restricgiile impuse
+O resursele disponibile
+21
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Costurlle produselor software
+Costurlle produselor saftware
 100%
 90%
 80%
 70%
 60%
-50% I HW
-40% Isw
+50% IHW
+40% ISW
 30%
 20%
 10%
@@ -381,6 +388,7 @@ Costurlle produselor software
 I 1955 1975 1985
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
@@ -390,61 +398,63 @@ Software build (black) vs. buy (red)
 
 ***************Beginning Page***************
 ***************page number:24**************
-Costurile produselor software
+Costurlle produselor software
 
-> in prezent costurile acestora sunt mai mari
-decit costurile rezervate componentelor
+> Tn prezent costurile acestora sunt mai mari
+decat costurile rezervate componentelor
 hardware
 
-> Costul Tntreginerii unui program este de regulé
-mai mare decét costul realizérii unui program
+> Costul Tntreginerii unui program este de regula
+mai mare decat costul realizarii unui program
 
-> Software — reprezinti programele 5i
-documentayia aferenté acestora
+> Software — reprezinta programele §i
+documentagia aferenta acestora
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
 Atributele unui program bun
 
-> $5 ofere funqionalitiﬁle cerute
+> Sa ofere functionalitagile cerute
 
-> $5 fie u§or de modificat, completat, schimbat
-> 55 fie sigur
+> Sa fie u§or de modificat, completat, schimbat
+> Sa fie sigur
 
-> Si nu iroseascé resurse hardware
+> Sa nu iroseasca resurse hardware
 
-> Si fie u$or de folosit
+> Sa fie u§or de folosit
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-A
-lncad rarea lP
-> lP vs informaticé
-u lnformalica se ocupa de aspectele teoretlce ale dezvollarii software
-~ IP se ocupa de aspectele practice ale dezvoltarii software
+T d lP
+nca rarea
+> lP vs informatica
+<> lnformatica se ocupa de aspectele teoretice ale dezvoltarii software
+<> lP se ocupa de aspectele practice ale dezvoltarii software
 > lP vs ingineria sistemelor
-u lngineria sislemelor se ocupa de toate aspectele dezvcrltarll
+<> lngineria sistemelor se ocupa de toate aspectele dezvoltarii
 sistemelor de calcul (hardware, software, ingineria proceselor)
-~ IP este o parte din ingineria sistemelor 5i se ocupa de:
-- Specificarea cerinyelor
-- Proiectarea arhitecturala'l
+<> lP este 0 parte din ingineria sistemelor si se ocupa de:
+- Specificarea cerintelor
+- Proiectarea arhitecturala
 - lmplementare
 - Testare
 - lntegrare
-o ment
-25
+oyment
+26
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Repartizarea costurilor pe etape
+Re partizarea costu ri lor pe etape
 Etapele dezvoltarii
-IScriere cod IAnalizé 5i proiectare ITeslare
+I Scriere cod I Analizé §i proiectare I Testare
 
 ***************Ending Page***************
 
@@ -452,54 +462,51 @@ IScriere cod IAnalizé 5i proiectare ITeslare
 ***************page number:28**************
 Repartizarea erorilor pe etape
 Erori pe etape
-I Programare I Simaxé I Proiectare
+I Prog ramare I Sintaxé I Proiectare
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
-Costurile fixérii erorilog
-ZZ|— |
-|—I I
-21-, | |
-l-‘ﬂ I I I
-MIL mum. Test-Sist Client 25
+Costurile fixérii eroril
+mm. Test. Int. Test.sist. Client 29
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:30**************
-Dificultapi m lP
-> Sistemele mai vechi care trebuie intreginute $i
+lelcultalg In lP
+> Sistemele mai vechi care trebuie Tntreyinute §i
 actualizate
 > Eterogenitatea sistemelor software/hardware
-> Presiunea pentru a livra programul repede, cu
-l un cost mic 5i cu o calitate buné
+> Presiunea pentru a Iivra programul repede, cu
+l un cost mic §i cu 0 calitate bunéi
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
 Modele de dezvoltare
 
-> Pentru a dezvolta un program este nevoie de:
-Q O Tngelegere claré a ceea ce se cere
-Q Un set de metode 5i instruments de lucru
-Q Un plan de acﬁune
+> Pentru a dezvolta un program este nevoie cle:
+O O Tnyelegere clara a ceea ce se cere
+O Un set de metode §i instrumente de lucru
+O Un plan de acgiune
 
-v Plan de acyiune I $ab|on I model de
+> Plan de acgiune : §ab|0n I model de
 dezvoltare
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Etapele dezvoltﬁrii programelor
-> lngineria cerintelor (Requirements engineering)
+Etapele dezvoltarii programelor
+> Ingineria cerintelor (Requirements engineering)
 > Proiectarea arhitecturala (Arhitectural design)
 
-> Proiectarea detaliatzi (Detailed design)
+> Proiectarea detaliata (Detailed design)
 
 > Scrierea codului (Implementation)
 
@@ -513,57 +520,59 @@ Etapele dezvoltﬁrii programelor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-lngineria cerinyelor
+lngmerla cerlngelar
 
-> Se stabi|e$te ce anume I/rea c/ientu/ ca
-pragramu/ 5a“ faca“
+> Se stabile§te ce anume vrea c/ientu/ ca
+programu/ 55 facé'
 
-> Scopul este inregistrarea ceringelor intr-o
-manieré cit mai claré 5i mai fidelé
+> Scopul este anegistrarea ceringelor Tntr-o
+manieréi cét mai claréi §i mai fidelii
 
 > Probleme
-Q Comunicare
-n Negociere
-u Sfituirea clientului
+O Comunicare
+O Negociere
+O Sféituirea clientului
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Pr0|ectarea
+Prolectarea
 
 > Arhitecturalé
-Q Din motive de complexitate, programele mari nu
+<> Din motive de complexitate, programele mari nu
 pot fi concepute §i implementate ca o singuré
 bucaté
-Q Programul este impérgit in module sau componente
+<> Programul este impérgit in module sau componente
 mai simple, care pot fi abordate individual
 
 > Detaliaté
-Q Se proiecteaza'i fiecare modul al aplicaxiei, in cele
+O Se proiecteazé fiecare modul al aplicayiei, in cele
 mai mici detalii
 
-‘ 3'
+x 34
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
 lmplementare + mtegrare
 
 > lmplementare
-Q Proiectul detaliat este transpus Tntr-un Iimbaj de
+O Proiectul detaliat este transpus Tntr-un limbaj de
 programare
-n Acesta se realizeazé modular, pe structura rezultaté
-la proiectarea arhitecturali
+O Acesta se realizeazéi modular, pe structura rezultaté
+Ia proiectarea arhitecturaléi
 
 > lntegrare
-Q Modelul big-bang
-n Modelul incremental
+O Modelul big-bang
+O Modelul incremental
 
-‘ “
+x 35
 
 ***************Ending Page***************
 
@@ -571,31 +580,32 @@ n Modelul incremental
 ***************page number:36**************
 Valldare 5| verlflcare
 
-> Validare: ne asigurém c5 programul indepline§te
-cerinyele utilizatorului
-~ Constru/m produsu/ corect?
+> Validare: ne asigurém c5 programul Tndepline§te
+ceringele utilizatorului
+O C onstru/‘m produsu/ corect?
 
 > Verificare: ne asigurém c5 programul este stabil
-$i c5 functioneazé corect din punctul de vedere
+§i c5 functioneazé corect din punctul de vedere
 al dezvoltatorilor.
-~ Constru/m corect produsul?
+O C onstru/‘m corect produsul?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:37**************
 lntrepnere
 
-> Dupé livrare
-Q Sunt descoperite gre§e|i ce trebuie reparate
-Q Pot apérea schimbéri in specificagii
-Q Pot apérea noi ceringe
-Q lnstruirea celor ce vor folosi produsul
+> Dupé Iivrare
+O Sunt descoperite gre§e|i ce trebuie reparate
+O Pot apérea schimbéiri Tn specificagii
+O Pot apérea noi ceringe
+<> lnstruirea celor ce vor folosi produsul
 
-> intreginere = gestionarea acestor tipuri de
+> Tntreginere I gestionarea acestor tipuri de
 probleme
 
-‘ 3,
+x 37
 
 ***************Ending Page***************
 
@@ -603,150 +613,152 @@ probleme
 ***************page number:38**************
 Modele de dezvoltare
 
-> Cum efectuim activitagile indicate de etapele
-dezvoltirii programelor
+> Cum efectuam activitagile inclicate de etapele
+dezvoltarii programelor
 
-> Exemple de modele de dezvoltare:
-~ Adihoc: descurcéite cum poyi
-~ Modelul in cascadé (cu feedback)
-~ Prototipizare
-~ Modelul in spirali
-~ RUP (Rational Unified Process)
-a ViModel
-= XP (Extreme Programming)
-= Agile, Lean, Scrum
+> Exemple cle modele de dezvoltare:
+O Ad-hoc: descurcéi-te cum pogi
+O Modelul in cascada (cu feedback)
+O Prototipizare
+O Modelul in spirala
+O RUP (Rational Unified Process)
+O V-Model
+o XP (Extreme Programming)
+O Agile, Lean, Scrum
 
-H0, AMDD
+ND, AMDD
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:39**************
-Modelul in Cascadé (Waterfall)
+Modelul Tn Cascadé (Waterfall)
+‘ﬂoyce in 1970
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:40**************
-Modelul m Cascadi +-
+Modelul m Cascada +-
 
-> +: imparte o sarciné complexé Tn pa§i mai mici
+> +: Tmparte 0 sarciné complexii Tn pa§i mai mici
 
-> +: U§or de administrat §i controlat
+> +: U§0r de administrat §i controlat
 
 > +: Fiecare pas are ca rezultat un produs bine
 definit
 
-> +: Tot timpul $tim unde ce am ficut péné Tn
-acel moment §i §tim ce mai avem de fécut
+> +: Tot timpul §tim uncle ce am fécut péné Tn
+acel moment §i §tim ce mai avem de fiicut
 
-> —: Erorile se propagé Tntre pa§i
+> —: Erorile se propagii Tntre pa§i
 
-> —: Nu exista mecanisme de reparare a erorilor
+> —: Nu exista mecanisme cle reparare a erorilor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-wcélscadi cu Tntoarcere
-H?
-‘_ H1 4,
+ﬂ/ITSCascadé cu Tntoarcere
+H1 q
+m
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-Modelul Tn cascadé cu intoarcere +-
+Medelul Tn cascadé cu Tntoarcere +-
 
 > +: Oferé cadrul pentru remedierea erorilor
 din pasul precedent
 
-> —: Erorile la pasul i care sunt descoperite la
+> —: Erorile Ia pasul i care sunt descoperite Ia
 pasul i + 2 nu sunt remediate
 
-> —: Clientul vede produsul final abia la
-sfir$itul dezvoltirii
+> —: Clientul vecle produsul final abia Ia
+sfér§itu| dezvoltérii
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Modelul m Splrala (Splral)
+Modelul In Splrala (Splral)
 > Studiul de fezabilitate
 > Analiza ceringelor
 > Proiectarea arhitecturii
 > lmplementarea
-Pentru ﬁecare pas, se fac urmétoarele activitigi:
-1 : prcgz'itirca 2 : gestiunea riscului
+Pentru fiecare pas, se fac urmétoarele activitéigi:
+1 : pregéitirea 2 : gestiunea riscului
 [take stock] [dealing with risk]
-4 I planiﬁcarea 3 : dczvoltarca
-urmétonllui stagiu [development]
+4 I planiﬁcarea 3 : dezvoltama
+urmétorului stagiu [development]
 lanning]
-4,
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Modelul Tn Spiralé +—
-> +: Pistreazé avantajele modelului in
+Modelul Tn Spiralé. +-
+> +: Péstreazéi avantajele modelului Tn
 cascadé
-> +: Ia Tn calcul nogiunea de risc
+> +: la Tn calcul nogiunea de risc
 > Exemple de riscuri:
-D O firmi concurenti lanseazi un produs
+O O firmél concurenté Ianseazé un produs
 similar
-D Un arhitect pérése$te echipa
-D Clientul schimbi ceringele
-ithipé nu respecti termenele de livrare
+O Un arhitect piirése§te echipa
+O Clientul schimbé ceringele
+Echipé nu respecté termenele de livrare
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:45**************
-Concluzii
-
-> Statisticile ne demonstreazi importanga folosirii
-unor tehnici inginere$ti Tn dezvoltarea de
+Concluzu
+> Statisticile ne demonstreazé importanya folosirii
+unor tehnici inginere§ti Tn dezvoltarea de
 software
-
-> Definitliile lP-ului folosesc cuvinte cheie precum:
-metode ingineregti, praiecte de dimensiuni man‘
-care sum‘ imp/ementate in echipa“, pragrame
-sigure care funcfianeaza“ eficient, dezvo/tare,
-fnrreﬂnere, p/aniﬁcare, buyer
-
-> Etapele necesare dezvoltirii proiectelor de
+> Definigiile lP-ului folosesc cuvinte cheie precum:
+metode l'ng/nere5ti, pro/ecte de dl'mensiun/ marl‘
+care sum“ l'mp/ementate in ech/pér', programe
+s/gure care funcp'oneazz? ef/c/en t, dezvo/tare,
+fntrep'nere, p/an/ﬁcare, buget
+> Etapele necesare dezvoltéirii proiectelor de
 dimensiuni mari
-
-Hodele de dezvoltare: Ad-Hoc, Cascadi, Spirali
+odele de dezvoltare: Ad-Hoc, Cascadé, Spiralii
+k 45
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:46**************
-lntrebari
+lntrebarl
 
-> De ce e util $5 Tnvégagi aceasti materie.7
+> De ce e util sé Tnvéigagi aceasté materie?
 
-> V-aﬂ Tntélnit cu o parte din elementele ce
-compun lngineria Programérii? Unde?
+> V-agi Tntélnit cu 0 parte din elementele ce
+compun lngineria Programérii? Uncle?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:47**************
-Bibliografie
+libiiografie
 
-> Ovidiu Cheorghie$z
-http:[[www.infoiasi.ro[~ogh[filesliplcurs-
-01.pdf
+> Ovidiu Gheorghie§:
+httg:[[www.infoiasi.r0[~ogh[filesZichurs-
+Oi .chf
 
-> Andy Kramek, New Software — Build 0r Buy? A
-Personal View: httg:[[weblogsfoxitacoml
-andykramek [archivej2009[07[25[8674.aspx
+> Andy Kramek, New Software — Build or Buy? A
+Personal View: httQ:[[weblogsfoxitexoml
+andykramek [archiveZ2009ZO7z25[8674.asgx
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:48**************
@@ -757,11 +769,11 @@ Links
 > Wikipedia
 
 > Failure rate: httg:[[www.it—
-cortex.com[Stat_Failure_Rate.htm
+cortex.c0m[Stat_Fai|ure_Rate.htm
 
 > RUP in the dialogue with Scrum:
-httg:1[www.ibm.com[developerworks[rationalZli
-braryifebOSZkrebsi
+httg:[[www.ibm.com[develogerworksirational[Ii
+brarnyebOSZkresz
 
 ***************Ending Page***************
 

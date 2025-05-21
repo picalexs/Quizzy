@@ -1,14 +1,14 @@
 ***************Beginning Page***************
 ***************page number:1**************
-lngineria Programérii
-Cursul 2 — 28 februarie,1 martie 2023
-adiftene@info.uaic.ro
+l I I P V I I
+Cursul 2 — 28 februaneJ martle 2023
+adlftene@|nfo.ua|c.ro
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Cuprms
+Cu prlns
 
 > Din Cursul 1...
 
@@ -32,34 +32,35 @@ Cuprms
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Din Cursul 1 —1
+lin Cursul 1 —1
 > lngineria programérii (Software engineering)
-~ Se referi Ia metodologiile folosite Tn rezolvarea
+O Se referéi Ia metodologiile folosite Tn rezolvarea
 proiectelor mari care sunt rezolvate de echipe de
-camenl
-a Folosirea principiilor inginere§ti Tn anal/'zarea,
-dezva/rarea, punerea in funcﬂune, restarea,
-fnrrep'nerea, rerragerea produselor software
-~ Tot aici mai pot fi prinse: gestionarea resurse/or,
-coordonarea echipe/or, p/aniﬁcare, buget
-> Scop: oblginerea de programe sigure 5i care
-functioneazé eficient pe ma§ini de calcul
-OnCFEtE
-‘ 1
+oamenl
+O Folosirea principiilor inginere§ti Tn anal/zarea,
+dezvo/tarea, punerea fn funcﬂ'une, testarea,
+fntreﬂnerea, retragerea produselor software
+O Tot aici mai pot fi prinse: gestionarea resurse/or,
+coordonarea echipe/0r, p/an/ﬁcare, buget
+> Scop: obginerea de programe sigure §i care
+functioneazéi eficient pe ma§ini de calcul
+COHCFEtE
+x 3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Din Cursul i — Etapele dezvoltirii
+Iin Cursul i — Etapele dezvoltarii
 
-prog ramelor
+programelor
 
 > Analiza cerintelor (Requirements analisys)
 
-> Proiectarea architecturalé (Arhitectural
+> Proiectarea architecturala (Arhitectural
 design)
 
 > Proiectarea detaliata (Detailed design)
@@ -72,289 +73,285 @@ design)
 
 > Verificare (Verification)
 
-> intretinere (Maintenance)
+> lntretinere (Maintenance)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
 Prototlplzare (Prototypmg)
 > Tipuri de prototipuri
-D De aruncat (throw-away)
-- Scop: clarificarea specificaigiilor
-- Se dezvolti repede, orice altceva e secundar
+<> De aruncat (throw-away)
+- Scop: clarificarea specificagiilor
+- Se dezvoltéi repede, orice altceva e secundar
 (quick-and-dirty)
-- Util in a rezolva “architecural/technology spikes“
-- Programul “adevirat” este scris apoi de Ia 0
-D Evolutionar
-- Scop: construire incrementalé a produsului final
-- Se construie$te un nucleu funqional la care se
-adaugé apoi noi funcyionalitigi
+- Util Tn a rezolva “architecural/techn0|ogy spikes"
+- Programul “adevéirat” este scris apoi de Ia O
+<> Evolutionar
+- Scop: construire incrementaléi a produsului final
+- Se construie§te un nucleu funcgional Ia care se
+adaugéi apoi noi functionalitéigi
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Prototipizare +-
+Pr0t0tipizare +-
 
-> +: Se poate elimina lipsa de claritate a specificatviilor
+> +: Se poate elimina lipsa de claritate a specificagiilor
 
-> +: Clienﬁi pot schimba cerinyele (e ieftin de
-
+> +: Cliengii pot schimba ceringele (e ieftin de
 gestionat)
 
-> +: intreﬁnere ieftiné (verificare pe parcurs)
+> +: intreginere ieftinéi (verificare pe parcurs)
 
 > +: Se poate facilita instruirea utilizatorilor
 
-> —: Mediu artificial, problems ascunse
+> —: Mediu artificial, probleme ascunse
 
-> —: Da' nu-I' apmape gata?! De ce ma/ dureaza' atét?
+> —: Da'nu—/ aproape gata?! De ce ma/ dureazzi' atét?
 
-> —: Putem sé schimbém spec/ﬁcaﬂi/e? Pa/ a; vrea 5/...
+> —: Putem 55 sch/mbé'm spec/ﬁcafiile? Pa/ a; vrea ,si...
 
-> —: Ad/cai munca mea este aruncaté la gunoi?
-‘ 5
+> —: Ad/cé munca mea este aruncatzi’ la gunoi?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-RUP (Ratlonal Unlfled Process)
+RU P (Ratlonal U n |f|ed Process)
 > Model iterativ folosit de IBM din 2003
 Phases
-Business Modeling ' l
-Analysis a Design M
-Deployment i .
-mug-mm"
-"WWW A
-PNIeﬂ Management M
-Envlronment ' ' i
+Business Modeling ' :
+Requirements : E
+Analysis & Design M
+Test ' '
+Deployment E : 2
+Conﬁguration i g g
+WW" "9"“ __;___-i|—
+Project Management M
+Environment : ' :
+I Iteratlons 7
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-RU P
-> lngineria funcgionalitigii. Sunt sintetizate
-necesitéyile functionale.
-> Are la baza 4 etape:
-~ Inception: pentru validarea costurilor 5i bugetului,
-studiu de risc, ingelegerea ceringelor
-Q Elaboration: analiza domeniului problemei,
-arhitectura proiectului este stabilité
-~ Construction: construcgia sistemului, se obgine
+RUP
+
+> lngineria functionalitatii. Sunt sintetizate
+necesitatile functionale.
+
+> Are Ia baza 4 etape:
+O Inception: pentru validarea costurilor §i bugetului,
+stucliu de risc, intelegerea cerintelor
+O Elaboration: analiza domeniului problemei,
+arhitectura proiectului este stabilita
+O Construction: constructia sistemului, se obtine
 prima versiune a sistemului
-~ Transition: tranzigia Ia sistemul din producyie
-‘ “
+o Transition: tranzitia Ia sistemul din productie
+
+x 8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-> A fost utilizat in Germania gi SUA in anii '80
-> Partea stingi , analiza ceringelor 5i crearea
-specificagiilor sistemului
-> Partea dreapti , integrarea pérgilor 5i validarea Ior
-> V de Ia Verificare 5i Validare
-cpemlan
-C t f
-03355503: Ver'Qggm M-intsii-ncn
-P _ t Validation 5 t
-r0 =t
-Deﬁriition R'““'§:§‘="“ Verigcitriim
-Artnltttture and Validation
-lnreﬂrallom .
+> A fost utilizat in Germania §i SUA in anii ’8O
+> Partea stﬁngé — analiza cerintelor §i crearea
+specificatiilor sistemului
+> Partea dreapti — integrarea pértilor §i validarea lor
+> V de Ia Verificare §i Validare
+Operation
+c t r . . .
+oggfaeﬁoé ver'gﬁgt'm Mainignjance
+_ Validation
+PrPJF'Pt Requirements System
+Deﬁnltlon and Veriﬁcatlon
+Architecture and Validation
+Integration,
 Detailed Test, and Project
 Design Veriﬁcation Test and
 Integration
-Implementation
-.—)
-Tlme 9
+implementation
+.—>
+Time 9
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-V-Model — ObIectlve
 > Minimizarea riscurilor
-> lmbunétégirea 5i garantarea calitégii
+> lmbunétéitirea si garantarea calitéitii
 > Reducerea costurilor
-> imbunétégirea comunicérii
-“mm; > m I SW WM.‘
-2E £5’ “Wm,
-.1.m:'§.::.t'm.m. m g; m WWW.“
-s‘
-“f
-m W
-_ m Dawn Muw-m-ms Mm
-35:1 ZIZELTELZK'KJZ 2551 lifkﬁiflﬁiiﬁiﬁlw
-m
+> lmbunétéitirea comunicéirii
+<> is’
+ta i; Subsystems
+Item Level LU Configuration Items
+Design Requirements PDR \ $89’ TRR
+g Assemblies
+‘I?
+CDR Components
+_ All Design Requirements Complete
+PDR = preliminary Design Review SVR = System Verification Review
+CDR = Critical Design Review 10
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
 V-Model + —
 
-> +: utilizatorii V-model participa'l la dezvoltare 5i la
-intreginere
+> +: utilizatorii V-model participéi Ia dezvoltare §i Ia
+Tntreginere
 
 > +: existé un grup ce controleazé modificérile din
-specificagii. Acesta 5e intélne§te ndati pe an gi
-hotéré$te ce modificéri sunt acceptate
+specificagii. Acesta se Tntélne§te odaté pe an §i
+h0téiré§te ce modificéri sunt acceptate
 
-> +: modelul asiguré Ia fiecare etapi asistengé $i
-definegte explicit ce avem de ficut
+> +: modelul asiguréi Ia fiecare etapéi asistengéi §i
+define§te explicit ce avem de féicut
 
-> -: nu se asiguri intreﬁnerea
+> —: nu se asiguré Tntreginerea
 
 > —: e folosit Ia proiecte de dimensiuni relativ mici
 
-‘ "
+x “
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
 Extreme Programmlng
-> Why "Extreme"? Releaseplan
-Q Extreme" mefins these .. months /,itergnon man
-practices get turned up / A e t
-to a much higher "volume" wfés “We S
-than on traditional /,/ d s Stan up er/tipg
-projects. “ Pair otiat'b/n
-> What really matters? i h is ‘ \/
-~ Listening,Testing, Coding, \ m'm'tes U kt
-Designing \E Pei gramming
-ode
-‘ m
+b Why "EXtreme"? Releaseplan
+o "Extreme" meens these .. months ﬂ_____lte@t_ion plan
+practlces get turned up / Acégtt nce Est
+to a much higher "volume" “geeks D‘Q.._\
+than otn tradltlonal d S Stan up “ﬂee/ting
+proiec s. , ,
+h Palr- __ otlaton
+> What really matters? la is 3/
+<> Listening, Testing, Coding, m'm'tes U ESt
+Designing \ Pai gramming
+\Code
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
 XP — Caracteristici
 
-v XP este un model modern, u§or (lightweight),
+> XP este un model modern, u§0r (lightweight),
 de dezvoltare, inspirat din RUP
 
-v Dezvoltarea programelor nu Tnseamni ierarhii,
-responsabilitégi 5i termene limité, ci Tnseamné
-colaborarea oamenilor din care este formaté
+> Dezvoltarea programelor nu inseamné ierarhii,
+responsabilitéti §i termene limitéi, ci inseamné
+colaborarea oamenilor din care este formatii
 echipa
 
-v Membrii echipei sunt ?ncuraja§i si-5i afirme
-personalitatea, 55. ofere 5i 55. primeasci
-cunoa§tere 5i si deviné programatori strilucigi
+> Membrii echipei sunt Tncurajati sé—§i afirme
+personalitatea, sé ofere §i sé primeascé
+cunoa§tere §i sé deviné programatori strélucigi
 
-> XP consideri c5 dezvoltarea de programe
-“ eamné ‘in primul rind scrierea de programe
+> XP consideré c5 dezvoltarea de programe
+“ eamné in primul rénd scrierea de programe
 
-erPoint nu se pot compila) U
+erPoint nu se pot compila) 13
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Idel majore |n XP
+Idel maJore In XP
 > Proiectul este Tn mintea tuturor programatorilor din
-echipa, nu Tn documentagii, modele sau rapoarte
+echipa, nu Tn documentatii, modele sau rapoarte
 > La orice moment, un reprezentant al clientului este
-disponibil pentru clarificarea ceringelor
-> Codul se scrie cét mai simplu. Se scrie cod de test Tntéii
-> Daca apare necesitatea reiscrierii sau aruncirii de cod,
-aceasta se face féri mili
+disponibil pentru clarificarea cerintelor
+> Codul se scrie cét mai simplu. Se scrie cod de test Tntéi
+> Daca apare necesitatea re-scrierii sau aruncérii de cod,
+aceasta se face fﬁré milé
 > Modificérile aduse codului sunt integrate continuu (de
-citeva ori pe zi)
+céteva ori pe zi)
 > Se programeazi Tn echipi (programare Tn perechi).
-Echipele se schimbi la sszr§itul unei iteragii (1*2
-séptéméni)
-> Se lucreazi 40 de ore pe siptimini, firi lucru
-imentar
-k n
+Echipele se schimbﬁ la sfﬁr§itul unei iteratii (1-2
+séiptéméni)
+> Se lucreazﬁ 4O de ore pe siptémﬁné, fﬁré lucru
+limentar
+x ‘4
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
-X P R u l e s
+X P R u | e s
 Planning Coding
-'I‘ i chi stone» ma vmltcn '1‘ i The cmlomci 1» alway» available
-'1' i Releme )Lmiunz creates the >chednle >1‘ i (‘ode 1mm be vnulten to agieed
--I- i Make liequenl small lCl€A<€s >l2thnltL<
--:‘ i The ijccl Velocity n meanlued -:‘ a Cod: ‘11¢ “int ten fin!
--:‘ iTlle pimecl n divided into itemnmn -:| s All plodllclmn code n mu )lovzmmmed
-'I' i Itemtmn \Immmg xtmh each itemtmn >1‘ i (ml) une 1m“ ll\|€21ﬂ'€§ nude at a time
-'I‘ i ane no 11s mound 'I- i liitsgate oﬁen
-'I‘ i A stand-u v macmw stall» each day '1‘ i Um COUCCHVQ COLIC owncmlu v
-'1' i FLY XP when it break> >1‘ i Leave o )tumzwnon ll.“ last
->I- 5N0 KYVCHHHC
+'I' :1 User stories are written. 'I' :1 The customer is alwax-Fs available.
+'I‘ :1 Release planning creates the schedule. '1' :1 Code must be written to agreed
+'I' :1 Make frequent small releases. standards.
+'I' :1 The Project Velocitv is measured. 'I' :1 Code the unit test. ﬁrst.
+'I‘ :1 The project is divided into iterations. 'I' :1 All production code is pair programmed.
+'I' :1 Iteration planning starts each iteration. 'I' :1 Only one pair integrates code at a time.
+'I' :1 Move people around. 'I' :1 Integrate often.
+'I' :1 A stand-up meeting starts each day. 'I' :1 Use collective code ownership.
+'I' '1 Fix XP when it. breaks. 'I' :1 Leave optimization till last.
+'I' :1 No overtime.
 Designing
 Testing
-
-'I‘ i Sim ghcitv
-'I‘ i<‘1\00§£ it >\ stem mam )hOl 'I' i All code “\lht have \uut test;
-‘2' s me wm' caulx rm dengn >e$>lnus >21 i All cmle mini pa» all \uut new befnie n
-~l- i (Acute >pik: >olutiom to ixluc: link can be iclca>cd
-'I‘ i No functionality IS added emlv '1‘ i \Vhen a bug Li found tests me ciented
-'Z‘ i Reiiiclul \vheuevei mid \\Il¢l¢\6| ':' i Acne Nance |6\‘|,\‘ inn‘ mu vile“ illltl III:
-pmnbie mm
-
-n published ‘
-
-,
+'I' :1 Simplicitv.
+'I' :1 Choose a svstem metaphor. 'I' :1 All code must have unit tests.
+'I' :1 Use CRC cards for design sessions. 'I' :1 All code must pass all unit tests before it
+'I' :1 Create spike solutions to reduce risk. can be released.
+'I' :1 No functionality is added earlv. '1' :1 \Vhen a bug is found tests are created.
+'I' :1 Refactor Whenever and wherever 'I' :1 Acceptance tests are run often and the
+possible. score
+is published. 15
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:16**************
-Aglle
-
-> Satisfacerea rapidé a clientului prin oferirea continué
-de software util (séptéménal dacé e posibil)
-
-> Progresul se misoaré Tn funcgie de partea
-functionalé a proiectului
-
-> Chiar 5i modificirile tirzii Tn ceringe sunt binevenite
-
-> O cooperare foarte apropiati 'intre client 5i
+Agile
+> Satisfacerea rapidé a clientului prin oferirea continuéi
+de software util (séptéiménal dacéi e posibil)
+> Progresul se méisoaréi in functie de partea
+functionaléi a proiectului
+> Chiar 5i modificérile tﬁrzii in cerinte sunt binevenite
+> O cooperare foarte apropiaté Tntre client §i
 programatori
-
-> Discutiile faceitoiface constituie cea mai buné
-formé de comunicare
-
-> Adaptare continui la modificirile care apar
-
-> Dezvoltarea unui spirit de evidengiere §i rezolvare a
-problemelor, nu de ascundere sau 'neobservare' a Ior
-
-‘ ‘5
+> Discutiile face-t0-face constituie cea mai bunéi
+forméi de comunicare
+> Adaptare continué la modificérile care apar
+> Dezvoltarea unui spirit de evidentiere §i rezolvare a
+problemelor, nu de ascundere sau 'neobservare' a lor
+x ‘6
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Manifesto for Agile Software Development
-We me “iiGOYﬂiilg118'i€1‘\\‘£\y< ofdeielopmg
-snﬁwaie b) doing n and helping otlien do ii
-
-Tlimiigh Yhis “wk “a lime cmiie m vnine
-Indiﬂduals and interactions in =1 1110mm and mob
-Working software 0Y8! cmnpiehemive documentation
-
-Customer collaboration over coiilmbl negotiation
-Responding to change ovei following a pin“
-Tlifdl m. \\liile kiwi: is value ni lli: ileiiis Oil
-[he llgilli we \ aliir: (lie nuns on llir: lei] moi:
-[\ﬂll Beck Janie; (j'lclulllig Robcil i: BLAH!“
-1\[ll\=‘ Beedl: .Tini Highsiiinli Stair: I\I:lloi
-A1 ie van Beniielniiii Andiew Hunk Ken Sclnmbei
-Alislan' (‘ockblii'ii Ron Ieiﬁim Ieﬁ' Siillieilaiid
-\‘i'ai'd Cunningham Ion Keni Dave Tlionim
-Mann] Fowler an Mariel; ‘ ’
+l\"Ianifesto for Agile Software Development
+We are uncovering better ways of developing
+software by doing it and helping others do it.
+Through this work we have come to value:
+Indh-"iduals and interactions over processes and tools
+WOl'klllg SOft\\--’211‘6 over comprehensive documentation
+CUStOanl' COllﬂbOlHthl] over contract negotiation
+Responding to change over following a plan
+That is, while there is value in the items on
+the right, we value the items on the leﬁ more.
+Kent Beck James Grenning Robert C. Martin
+Mike Beedle .Tim Highsmith Steve Mellor
+Arie van Bennekum Andrew Hunt Ken Schwaber
+Alistair Cockbuin Ron .Teffries .T eff Sutherland
+Ward Cunningham I on Kenl Dave Thomas
+1\=-"[art in Fowler Brian Marick 17
 
 ***************Ending Page***************
 
@@ -363,41 +360,43 @@ Mann] Fowler an Mariel; ‘ ’
 Aglle +-
 
 > —I
-a lmposibilitatea realizirii documentagiei necesare
-a Se lucreazé doar cu dezvoltatori “senioklevel”
-a lnsuficienté structurare a modelérii software
-Q Poate duce la negocieri de contract dificile
+o lmposibilitatea realizarii documentatiei necesare
+O Se lucreaza cloar cu dezvoltatori “senior-level”
+O lnsuficienta structurare a modelarii software
+O Poate duce Ia negocieri cle contract dificile
 
-r +2
-Q Companiile care au adoptat metoda de lucru Toyota 5i-
-au Tmbunitiﬁt cu 83% productivitatea, cu 93% timpul
-de produqie, cu 91% calitatea produselor 5i au redus la
-jumﬁtate overtime-ul , dupé cum araté un studiu
-oficial U.S., realizat Tn urmi cu cégiva ani pe companii
+> +1
+o Companiile care au adoptat metoda de lucru Toyota §i—
+au Tmbunatatit cu 83% productivitatea, cu 93% timpul
+de productie, cu 91% calitatea produselor §i au redus la
+jumatate overtime-ul — dupa cum arata un studiu
+oficial U.S., realizat Tn urrna cu cativa ani pe companii
 din industria auto —
 
-‘ \x
+x ‘8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Scru m (“g rémadi”) "4'43 i
-k '4“ \ "x
+.4 ‘a -,~‘ , ' '=°
+n v v n ﬂ >17 8&4»; QM,‘
+Sc ru m ( g ramada ) A9 ﬁg
 > Clientul devine parte a echipei de dezvoltare
 > Frecvente distribuiri intermediare a pérgii software, cu
-verificéri 5i validiri imediate
+verificéri 5i validéri imediate
 > Discutii zilnice:
-u Ce ai fécut ieri? (realizéri)
-U Ce ai de gind 55 faci péné mime? (de realizat)
-u Care sunt problemele care teiar putea incurca?
+O Ce ai fécut ieri? (realizéiri)
+o Ce ai de génd 551 faci péné mﬁine? (de realizat)
+o Care sunt problemele care te-ar putea Tncurca?
 (probleme/riscuri)
-> Transparengé Tn planificare 5i dezvoltare
-> intélniri frecvente pentru a monitoriza progresul
-> Nu sunt problems tinute sub covor
-> Eficien'ga muncii: “sé lucrezi mai multe ore" nu
-ni neapérat “ob'ginerea mai multor rezultate"
-k W
+> Transparentéi Tn planificare §i dezvoltare
+> Tntélniri frecvente pentru a monitoriza progresul
+> Nu sunt probleme ginute sub covor
+> Eficienga muncii: “sé lucrezi mai multe ore" nu
+iﬁnéi neapérat “0b1;inerea mai multor rezultate"
+19
 
 ***************Ending Page***************
 
@@ -405,12 +404,10 @@ k W
 ***************page number:20**************
 Metodologia Scrum
 SCRUM Methodology
-Davelop Wrap
-i Q
-Architecture
-‘
+x
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
@@ -418,19 +415,19 @@ Lean (“sprijin”)
 
 > Principiile Lean Software Development (LSD)
 
-1‘ Eliminarea lucrurilor nefolositoare
+1. Eliminarea lucrurilor nefolositoare
 
-2‘ Amplificarea invigérii
+2. Amplificarea Tnvétérii
 
-2. Decide cit mai térziu posibil
+3. Decide cét mai térziu posibil
 
-4. Terminé cét mai curénd posibil
+4. Termini cét mai curénd posibil
 
-s. Oferé responsabilititgi membrilor echipei
+5. Oferé responsabilitélgi membrilor echipei
 
 6. Construie§te un proiect integru
 
-1. Construie§te vézénd tot proiectul Tn ansamblu
+7. Construie§te véizénd tot proiectul Tn ansamblu
 
 ***************Ending Page***************
 
@@ -438,7 +435,7 @@ s. Oferé responsabilititgi membrilor echipei
 ***************page number:22**************
 Kanban
 
-> A scheduling system for lean and just-in-time (JIT)
+> A scheduling system for lean and just-in-time (HT)
 production
 
 > Taiichi Ohno at Toyota in 1953
@@ -453,13 +450,12 @@ shipment when material is consumed
 
 > An approach where the "pull" comes from demand
 
-‘ H
-
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-Kanban — Toyota's Six Rules
+Kan ban — Toyota’s SIX Rules
 
 > Later process picks up the number of items
 indicated by the kanban at the earlier process.
@@ -467,7 +463,7 @@ indicated by the kanban at the earlier process.
 > Earlier process produces items in the quantity
 and sequence indicated by the kanban.
 
-> No items are made 0r transported without a
+> No items are made or transported Without a
 kanban.
 
 > Always attach a kanban to the goods.
@@ -492,7 +488,7 @@ Anderson
 an emphasis on just-in-time delivery while not
 overloading the team members
 
-> A visual processemanagement system that tells
+> A visual process-management system that tells
 what to produce, when to produce it, and how
 much to produce
 
@@ -502,11 +498,12 @@ l to understand the work and the workflow
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Kan ban prinprles
+Kanban princlples
 
-> Start with existing process , The Kanban method does
+> Start with existing process — The Kanban method does
 not prescribe a specific set of roles or process steps
 
 > Agree to pursue incremental, evolutionary change —
@@ -520,51 +517,59 @@ and job titles with the goal of gaining broader support
 > Leadership at all levels — Acts of leadership at all levels
 in the organization are encouraged
 
-‘ z,
+x 25
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
 Kanban — Visual Example
-with; Amzsiysis Dzvzljpmmt TZse 0450105
-5 5 é 51$ 5 5
-5 35 5
-5 . 55 '
-Backlog ToDo Development® Tesnﬂgé) 022:1’? Don:
-i (3 0min, m 0m...‘ m... (D
-G ‘
-B A
-LE: Ci Q Q
-I " '3
-l
+PenZing Amjlysis Develjpment T551: Deliloy
+5 as é B a
+5 5 ; B 5
+5 g g 5
+Backlog To Do Developmenté) Testingqi) Dsnpelglh Done
+_ <2) Ongoing Done Ongoing Done {D
+,_ B A
+Lg: Ci Q Q
+I L“ é 9
+‘ |
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Kanban — Examples
-
-1-04» Dvl'ha ngk 1-04» Doing 5:3;
-
-a“ L§ - {9'11
-
-?g‘§%“w a Eggs.“
-
-E|___'_ __....
-
-at ‘a h:
-
-'i
-E? P‘
+—
+I D
+.
+‘I ado Domg DOM Todo Domg Wﬂwneeek
+tI-us week 5
+"I I ‘I "' “WM-In PM‘!!! .'— ...
+Aim _ m MUSE“ Qty-M. W an 52:3“
+.w m . .. |_ ‘whin- . in “mm-“H .. I _ Zip-:33“
+“""“°""’M“ ‘a '“"--- w" i’ — “...”... m,
+mean-mm" u- kw H _ “mm” “Mosul "fuzz"
+FIB! .. .LDM EH1. a _ — m
+O‘ I. “I I A’ - 51"!“th
+mm...
+mm.
+—___
+—_l_-||
+_
+-' a“ ‘ I V
+(3.117?‘
+W8 - _
+‘on ‘ \‘PA. "109};- _-___
+J ‘5;: =9 .v 1_
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Model Driven Development
+Model lriven Development
 
-> Mode/ Driven DevelopmenﬂMDD) is a
+> Model Driven Development(M DD) is a
 paradigm for writing and implementing
 computer programs quickly, effectively and at
 minimum cost
@@ -574,81 +579,84 @@ where extensive models are created before
 source code is written
 
 > A primary example of MDD is the Object
-Management Group (OMG)‘s Model Driven
+Management Group (OMG)’s Model Driven
 Architecture (MDA) standard
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-> Thinking Through What You'll Do This Iteration
-High <=> ) Each iteratiun implement the highest-
-Priority 5_ priority work items
+> Thinking Through What You’|| Do This Iteration
+High c } Each iteration implement the highest-
+Priority g priority work items
 o
 2
-Modeled in g Each new work item is
-greater detail c> 4- o prioritized and added to
-g the stack
-Q
+Modeled in / 2 Each new work item is
+greater detail 5 4- c: prioritized and added to
+o: the stack
+CID
 o
 E D Work items may be
-Modeled in o: reprinritizad at any time
-. c
-lesser dem" c_ I Wurk items may be remuved
-a at any time
+. o reprioritized at any time
+Modeled In g
+lesser detall 2 Work items may be removed
+6 at any time
 o
-Low g
+c:-
+Low 8
 Priority 2
-Work Items wwwm 200472007 Swilw Ambler 29
+WOI'k Items Copyright 2004-2007 Scott W. Ambler 29
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Test Driven Development
-To Mu: Rum“
-‘res-v Pass
-an"! TIN“
-or Mus T513
-_ ‘m’
+Test Iriven Ievelapment
+t.
+FAILING
+T£$T
+T551 Pnss
+59"éii'2'r2213
+h ‘m’
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:31**************
-Cum vom face nol?
+Cum vom face nel?
 
 > O comunicare foarte buné cu CLIENTUL care face parte
-din echipi (SCRUM)
+din echipéi (SCRUM)
 
-> Dupé fiecare etapé vegi obxine un produs finit care de
-regulé nu va putea fi refécut Ia pa§ii urmétori (Cascade?!)
+> Dupé fiecare etapéi vel;i obgine un produs finit care de
+regulé nu va putea fi reféicut la pa§ii urmétori (Cascadéi)
 
-> Ca membru al “echipei” v51 voi sprijini cit mai mult
+> Ca membru al “echipei” v51 voi sprijini cét mai mult
 posibil (LEAN)
 
-> Fiecare va fi Tncurajat sé facz'i ce ii place mai mult (XP)
+> Fiecare va fi Tncurajat sé facé ce Ti place mai mult (XP)
 
-> NU am 551 aduc modificéri continue Tn ceringele mele
+> NU am sé aduc modificéiri continue Tn ceringele mele
 (NU AGILE) A
 
-> (NU) vom face un studiu de risc ((NU) MODEL IN
+> (NU) vovm face un studiu de risc ((NU) MODEL IN
 SPIRALA)
 
-> Vom realoca resurse cénd 0 echipé intémpiné dificultégi
+> Vom realoca resurse cénd 0 echipéi Tntémpinéi dificultégi
 
-I iKANBAN)
+I (KANBAN)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
 Etapele dezvoltarii programelor
-> ln englezi: Software Development Life Cycle
+> ln engleza: Software Development Life Cycle
 —
 > Proiectarea arhitecturala (Architectural design)
-> Proiectarea detaliati (Detailed design)
+> Proiectarea detaliata (Detailed design)
 > Scrierea codului (Implementation)
 > lntegrarea componentelor (Integration)
 > Validare (Validation)
@@ -658,123 +666,126 @@ I > lntretinere (Maintenance)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Cum mcepe un prolect?
-> Un client doregte si-gi
-~ imbunétigeascé productivitatea
-a Rezolve 0 problem?! de personal
-a Facé reclami Ia produsele pe care le vinde
-a Gestioneze mai u§0r activitatea sucursalelor din 'garii
+Cum Tncepe un proiect?
+> Un client dore§te sé-gi
+O Tmbunétégeascéi productivitatea
+O Rezolve 0 probleméi de personal
+O Facé reclamé la produsele pe care Ie vinde
+O Gestioneze mai u§0r activitatea sucursalelor din garéi
 > Un proiect interesant
 > O idee, nevoia de a-mi gestiona cheltuielile
 zilnice, etc.
 > Din acest punct urmeazé lngineria Ceringelor!
-‘ n
+x 33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-lngineria ceringelor (Requirement
+lngineria cerintelor (Requirement
 
-analysis) — Definitie
+analysis) — lefinitie
 
-> Procesul ingelegerii nevoilor clientului §i a
-agteptirilor acestuia de la aplicalgia noastri
+> Procesul lntelegerii nevoilor clientului §i a
+a§teptarilor acestuia de la aplicatia noastra
 
-> O etapi bine definité din ciclul de viagé al
-dezvoltirii unui produs (Software Development
+> O etapa bine definita din ciclul de viata al
+dezvoltarii unui produs (Software Development
 Life Cycle)
 
-> La ce ne a§teptém de la 0 aplicalgie 55 facé
+> La ce ne a§teptam de la 0 aplicatie sa faca
 
-> Cum ar trebui sistemul 55 se comporte 5i care
+> Cum ar trebui sistemul sa se comporte 5i care
 
 int caracteristicile acestuia
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-lnglnerla cerlngelor — Exemplu
-> Realizagi un program C++ care 55 realizeze
-suma a doué matrici citite din fi§ier.
-> +2
-~ Se specificé limbajul
-~ $tim c5 citirea se face din fi§ier
-> —:
-~ Nu §tim ce 55 facem cu doué matrici care nu au
+lngmerla cermgelor — Exemplu
+> Realizagi un program C++ care sé realizeze
+suma a doué matrici citite din figier.
+> +1
+<> Se specificéi limbajul
+<> Stim céi citirea se face din fi§ier
+b —I
+<> Nu §tim ce 551 facem cu douéi matrici care nu au
 acelea§i dimensiuni
-~ Ce facem cu rezultatul?
-‘ is
+<> Ce facem cu rezultatul?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-lngineria ceringelor — Cine?
+lngmerla cermgelor — Cme?
 
-> Datorité multitudinii de tipuri de interacgiuni
+> Datorita multitudinii de tipuri de interacgiuni
 care pot exista intre utilizatori, procese de
 business, dispozitive hardware, etc., pot exista
-diverse tipuri de ceringe, de la aplicaigii simple, la
+diverse tipuri de cerin1;e, de Ia aplicagii simple, Ia
 aplicagii complexe
 
-> Procesul de analizé a ceringelor presupune
+> Procesul de analiza a cerini;e|0r presupune
 alegerea si documentarea acestor tipuri de
-ceringe, si construirea documentelor ce vor
+cerinl;e, si construirea documentelor ce vor
 constitui baza construirii sistemului
 
-ine se ocupi? Project Manager, Program
-u Business Analyst 35
+ine se ocupa? Project Manager, Program
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-lngineria ceringelor — De ce?
+Inglnerla cerlngelor — Ie ce?
 
-> Studiile fécute demonstreazi c5 atengia
-insuficienté acordati analizei cerimgelor este cea
-mai des Tntélniti cauzé in cadrul proiectelor
+> Studiile facute demonstreaza ca aten1;ia
+insuficienta acordata analizei ceringelor este cea
+mai des intalnita cauza in cadrul proiectelor
 vulnerabile
 
-> Foarte multe organizatii au cheltuit sume
-imense pe proiecte software care Tn final nu
-ficeau ceea ce se dorea inigial de la ele
+> Foarte multe organizagii au cheltuit sume
+imense pe proiecte software care in final nu
+faceau ceea ce se dorea iniigial de Ia ele
 
-> in momentul de fagé foarte multe companii
-investesc timp 5i bani pentru a face 0 analizé a
+> in momentul de faga foarte multe companii
+investesc timp §i bani pentru a face 0 analiza a
+ceringelor eficienta
 
-$
+x 37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-lngineria ceringelor — Pagi
-1. Stabilirea limitelor aplicagiei
+lngineria. ceringelor — Pasi
+1. Stabilirea limitelor aplicaigiei
 
-2. Gisirea clientului
+2. Gésirea clientului
 
-3. Identificarea ceringelor
+3. ldentificarea cerintelor
 
-4. Procesul de analizé a cerimgelor
+4. Procesul de analizé a ceringelor
 
-s. Specificarea ceringelor
+5. Specificarea cerintelor
 
-6. Gestionarea cerintelor
+6. Gestionarea ceringelor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-IC - Limitele aplicatgiei (1)
+lC — Limitele aplicagiei (1)
 
 > Ca prim pas, are ca scop identificarea
-modului in care aceasté noué aplicagie se va
-integra in mediul pentru care va fi conceputé
+modului Tn care aceasté noué aplicatie se va
+integra Tn mediul pentru care va fi conceputé
 
 > Care va fi scopul aplicagiei
 
@@ -784,281 +795,306 @@ integra in mediul pentru care va fi conceputé
 
 ***************Beginning Page***************
 ***************page number:40**************
-lC- Gasirea clientului (2)
+lC- GaSIrea clientulul (2)
 
-> Obiectivul ultimilor ani: Cine esre utilizatoru/
-(clientul) care va fo/asi efectiv ap/icaﬂa .7
+> Obiectivul ultimilor ani: Cine este uti/l'zatoru/
+(cl/‘en tul) care va f0/05/ efect/v ap/l'cafia .7
 
-> Ca rezultat, vom §ti exact ce persoane vor ﬁ
+> Ca rezultat, vom §ti exact ce persoane vor fi
 direct sau indirect afectate de realizarea
-acestui produs
+acestui proclus
 
-> Vom §ti pe cine $5 Tntrebém pentru eventuale
-clarificéri
+> Vom §ti pe cine séi intrebém pentru eventuale
+clarificéiri
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-lC — Identlflcarea cermgelor (3)
-> Ceringele se colecteazi de la mai multe grupuri
-ce au fost identificate in etapa anterioari
-> Se identifici ce anume doresc acegtia ca
-aplicatia 55 realizeze
+IC — Identlflcarea cerlngelor (3)
+> Ceringele se colecteazéi de Ia mai multe grupuri
+ce au fost identificate Tn etapa anterioaré
+> Se identificé ce anume doresc acestia ca
+aplicagia sé realizeze
 > Nivelul de detaliere depinde de:
-~ Numirul 5i de dimensiunea grupurilor
-~ Complexitatea procesului de business
-a Dimensiunea aplicagiei
-> Probleme intﬁlnite in aceasté etapi
-a Ambiguitiqi Tn intelegerea proceselor
-~ Inconsistenqi Tn Tnlelegerea aceluia§i proces
-~ Date insuficiente
-H'iicéri in ceringe dupé Tnceperea proiectului
+O Numéirul si de dimensiunea grupurilor
+O Complexitatea procesului de business
+O Dimensiunea aplicagiei
+> Probleme Tntﬁlnite Tn aceastéi etapéi
+O Ambiguitégi Tn Tngelegerea proceselor
+O lnconsistengé Tn ingelegerea aceluiasi proces
+O Date insuficiente
+‘i'ficéri Tn ceringe dupé Tnceperea proiectului
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-lC — Cine face identificarea
+IC — Cine face identificarea
 
-cerimgelor ? (3)
+ceringelor ? (3)
 
-> Aceasté persoané trebuie $5 interactioneze
+> Aceasta persoana trebuie sa interactioneze
 direct cu multe grupuri de lucru
 
 > Are de a face cu idei contradictorii
 
-> Trebuie sé aibé abilitégi de comunicare 5i de
+> Trebuie sa aiba abilitagi de comunicare 5i de
 lucru cu oamenii
 
-> Trebuie si aibi cuno§tin§e de programare
+> Trebuie sa aiba cuno§tin§e de programare
 
-> Tn final trebuie 55 cadé de acord cu clientul Tn
+> in final trebuie sa cada de acord cu clientul in
 
-.rivinga ceringelor
+.rivinta cerintelor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-lC — Metode folosite Tn
+IC — Metode folosite Tn
 
-identificarea cerin'gelor (3)
+identificarea cerimgelor (3)
 
-> lnterviuri cu viitorii utilizatori 5i cu grupuri de
+> lnterviuri cu viitorii utilizatori §i cu grupuri de
 utilizatori
 
-> Folosirea documentatiei existente (manuale de
-utilizare, diagrame ale organizagiei, specificagii
+> Folosirea documentagiei existente (manuale de
+utilizare, diagrame ale organizatiei, specificagii
 de sistem, etc.)
 
 > Metode:
-~ Prototipuri
-~ Diagrame "Use case"
-~ Diagrame de flux a datelor 5i a proceselor
+<> Prototipuri
+<> Diagrame “Use case"
+<> Diagrame de flux a datelor §i a proceselor
 
-‘rage utilizator
+‘rfege utilizator
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-lC — Procesul de analizé a
+IC — Procesul cle analizé a.
 ceringelor (4)
-> Se face 0 analizé structuraté care folosegte
+> Se face 0 analizé structuraté care folose§te
 tehnici specifice:
-Q “animarea” cerinlelor
-Q Ragionament automat
-Q Privire critical din punct de vedere al cunoa§terii
-Q Verificarea consistengei
-Q Rationament analogic 5i bazat pe exemple
+<> “animarea” ceringelor
+<> Rationament automat
+<> Privire criticéi din punct de vedere al cunoagterii
+<> Verificarea consistengei
+<> Rationament analogic 5i bazat pe exemple
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:45**************
-IC — Specificarea cerlngelor (5) i
+lC — Specificarea cerlntelor (5) i
 
 > Se face intr-un mod clar, neambiguu
 
-> Scrierea unui document in care se specificé cerintele
+> Scrierea unui document in care se specificéi cerintele
 este obligatoriu!
 
 > Acest document va circula intre toate persoanele
-implicate in aceasté fazé: client, grupuri de
-uti/izatorl', ech/pe/e de dezvo/[are ,sl' de testare
+implicate in aceastéi fazé: client, grupur/ de
+uti/izatari, ech/pe/e de dezvoltare 5/‘ de testare
 
 > Documentul va fi folosit la:
-v Validarea cerintelor de citre client
-c Contractul dintre client 5i echipa de dezvoltare
-c Bazé pentru proiectarea sistemului de cétre dezvoltatori
-w Bazé pentru planificéri
-v Sursé pentru realizarea scenariilor de testare
+O Validarea cerintelor de céitre client
+O Contractul dintre client 5i echipa de dezvoltare
+O Bazéi pentru proiectarea sistemului de céitre dezvoltatori
+O Bazéi pentru planificéri
+O Surséi pentru realizarea scenariilor de testare
 
-‘ .,
+x 45
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-IC — SpeCIflcarea cermgelor (5) 2
-> Trebuie sé surprindé viziunea clientului despre
+IC — SpeCIflcarea cerlngelor (5) 2
+
+> Trebuie séi surprindé viziunea clientului despre
 produs
-> Reprezinté rezultatul colabora'lrii dintre utilizator
+
+> Reprezinté rezultatul colaborérii clintre utilizator
 (care nu e un expert) 5i analistul de sistem (care
-surprinde situagia in termeni tehnici)
-> E posibil ca specificarea cerin'gelor 55 se faci Tn
-doué documente separate:
-~ Cerintele utilizator , scrise Tn clar folosind cazuri de
+surprincle situagia Tn termeni tehnici)
+
+> E posibil ca specificarea ceringelor sé se facéi Tn
+douéi documente separate:
+
+O Cerin1;ele utilizator — scrise Tn clar folosind cazuri de
 utilizare (pentru utilizator)
-=' Cerintele sistemului , descrise folosind un model
-matematic sau programatic (pentru dezvoltatori §i
+
+O Cerin1;ele sistemului — descrise folosind un model
+matematic sau programatic (pentru dezvoltatori 5i
 pentru testeri)
-‘ ‘5
+
+x 46
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-IC — Specificarea cerinyelor (5) 3
+IC - Specificarea cerintelor (5) 3
 
-> in ceringele utilizatorului nu trebuie 55 aparé
-nogiuni tehnice (protocol de comunicare,
-criptarea folosind MDS, http, IP, etc)
+> Tn cerintele utilizatorului nu trebuie sé aparé
+notiuni tehnice (protocol de comunicare,
+criptarea folosind MD5, http, IP, etc)
 
-> in ceringele sistemului trebuie si apari formatul
+> Tn cerintele sistemului trebuie séi aparé formatul
 de export al datelor (XML), adresa serverului de
 pe care se fac citiri, locul Tn care se depoziteazé
-figierele log
+fi§ierele log
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-lC — Speclflcarea cerlngelor (5) 4
+lC — SpeCIflcarea cermgelor (5) 4
 
 > Nivelul de detaliere:
-=' Ridicat , presuspune multé muncé, uneori inutilé (este
-mai precis §i mai clar)
-~ Scizut , poate fi vag (nu ajuti Tn procesul de
-dezvoltare 5i testare)
+O Ridicat — presuspune multéi muncéi, uneori inutiléi (este
+mai precis 5i mai clar)
+O Scézut — poate fi vag (nu ajuté Tn procesul de
+dezvoltare §i testare)
 
 > Exemplu:
-~ Realizali un program care sé facé suma a doué matrici.
-~ Realizagi un program C# care 55 aibé clasa Matrice cu
-atributele n,m de tip int reprezenténd numirul de linii
-5i de coloane 5i matrice de tip int[3][3] reprezentind
+O Realizagi un program care sé facé suma a douéi matrici.
+O Realizagi un program C# care séi aibéi clasa Matrice cu
+atributele n,m de tip int reprezenténd numérul de linii
+5i de coloane §i matrice de tip int[3][3] reprezenténd
 elementele matricii. Metodele disponibile Tn clasa
 Matrice sunt
 
-‘ A
+x 48
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-IC — Speclflcarea cerlngelor (5) 5
-> Tipuri de cerinte:
+IC — SpeCIflcarea cermgelor (5) 5
+> Tipuri de ceringe:
 
-a Cerinte utilizator: legate de locul uncle va fi folosit
-sistemul, eficienqi, durata de viali a produsului
-(pradusu/ l/a f/ fo/os/t de campart/‘mentu/ ﬁnancial)
+O Cerinige utilizator: legate de locul uncle va fi folosit
+sistemul,eficien1;é, durata de viagé a produsului
+(produsu/ va f/ f0/05/‘t de compart/mentu/ ﬁnancial?
 
-=' Cerinte functionale: despre modul Tn care se fac
+O Cerinige functionale: despre modul Tn care se fac
 anumite calcule, modul Tn care se manipuleazé datele
-(impoz/ru/ pe sa/ar este de I 6 9n’)
+(/mpoz/tu/ pe sa/ar este de l 6 %)
 
-~ Ceringe de performangi: modul Tn care anumite funcgii
-sunt apelate cantitativ, calitativ (sistemu/ va perm/re
-1000 de interoga'rl' pe secundé)
+O Cerinige de performangi: modul Tn care anumite functii
+sunt apelate cantitativ, calitativ (sistemu/ va perm/te
+l 000 de interogér/ pe secunda")
 
-Q Constrirlgeri: nu 5e va permite ca doui persoane $5
-introducé simultan date in tabele
+O Constrﬁngeri: nu se va permite ca doué persoane séi
+introducé simultan date Tn tabele
 
-‘ .9
+x 49
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-IC — Gestionarea ceringelor (6)
+lC — Gestlonarea cermgelor (6)
 
 > Este un proces continuu care surprinde toate
-aspectele identificirii ceringelor §i in plus
-asiguri verificarea, validarea acestora
+aspectele identificérii ceringelor §i Tn plus
+asiguré verificarea, validarea acestora
 
-> Pentru a fi utili trebuie 55 asigure
-neambiguitatea ceringelor, eliminarea erorilor
+> Pentru a fi utiléi trebuie séi asigure
+neambiguitatea cerintelor, eliminarea erorilor
 5i completarea omisiunilor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-Requlrement Example or had requiremeni ‘Example or good requirement
+Requirement ‘Example of bad requirement ‘Example of good requirement
+
 Quality
-Atomic Students wlll he able to enroll to Students wlll he able to enroll to
+
+Atomic ‘Students will be able to enroll to ‘Students will be able to enroll to
 undergraduate and post graduate undergraduate courses
-curses Students wlll he able to enroll to p05!’
-raduate courses
-Unlquely ‘l’ Students Wlll be able to enroll to ‘l ,Course Enrolment
-identified undergraduate courses] e Students Wlll zstuoents will be able to enroll to
-be able to enroll to pustrgraduate undergraduate courses
-ourses 3>Students Will be able t0 enroll to DOS!’
-raduate courses
-Complete professor userwrll log irito tne professor userwrll log irito tne system by
-system by provrdirig lllS usornemo, provrdirig lllS usornemo, password and
-password, and otner relevant epertrnent code
+courses ‘Students will be able to enroll to post—
+
+graduate courses
+
+Uniquely l— Students will be able to enroll to l.Course Enrolment
+
+identified undergraduate coursesl — Students will 2.Students will be able to enroll to
+be able to enroll to post—graduate undergraduate courses
+courses 3.Students will be able to enroll to post—
+
+graduate courses
+
+Complete A professor user will log into the A professor user will log into the system by
+system by providing his username, providing his username, password and
+password, and other relevant department code
 information
-Conslsterlt student wlll have either student wlll have either underegraduate
-and undergraduate courses or poste r post graduates but not both
-unambiguous raduate (nurses but not born. Some
-nurses will be open to born unoere
-raduate and posteoraouate
-Traceable t/lalﬂtillﬂ student informationernapped ‘Malntalﬂ student informationeMapped tn
-o BRD req.lD7 BRD req ID 4.1
-PriDrltlZed Registered student-Priority lMalrltain Register Student-Priorltv lMalntain User
-User lnforrnatlon-Prlorlty lErerll Inlormation-Prlorlty ZErerll courses-
-ourses-Priontv ll/iew Report Card- Priorlty lVleW Repori Card-Priorlty3
-Priorlty I
-Testable Each Page 0| the system Will load in an Register student and enrol courses pages 0
-cceptable time'frame he system Wlll load within 5 seconds
+
+Consistent A student will have either A student will have either under—graduate
+
+and undergraduate courses or post— or post graduates but not both
+
+unambiguous graduate courses but not both. Some
+courses will be open to both under—
+graduate and post—graduate
+
+Traceable ‘Maintain student information—mapped ‘Maintain student information—Mapped to ‘
+to BRD req.|D? BRD req ID 4.1
+
+Prioritized Registered student—Priority iMaintain Register Student—Priority iMaintain User
+User lnformation—Priority lEnroll lnformation—Priority 2Enroll courses—
+courses—Priority iView Report Card— Priority iView Report Card—Priority3
+Priority l
+
+Testable Each page of the system will load in an Register student and enrol courses pages of
+acceptable time—frame the system will load within 5 seconds
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-Scenarii de utilizare 1
+Scenarll cle utllizare 1
 > Folosesc actori (elemente cu care programul
-interactioneazi):
-~ Utilizatori umani
-~ Elemente software (Ex: program care prelucreaza
+interactioneaza):
+o Utilizatori umani
+o Elemente software (Ex: program care prelucreaza
 informatiile colectate de pe Internet)
-a Elemente hardware (Ex: cititor de coduri de bare,
+o Elemente hardware (Ex: cititor de coduri de bare,
 telefoane mobile, etc.)
 > Folosesc scenarii (use case)
-=' Acestea descriu cum interactioneazi actorul cu
+O Acestea descriu cum interactioneaza actorul cu
 sistemul
-~ Cum reactioneazé sistemul Tn urma acestor actiuni
-~ Care e rezultatul vizibil pentru actori
-‘ ,2
+O Cum reactioneaza sistemul Tn urma acestor actiuni
+O Care e rezultatul vizibil pentru actori
+52
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-Scenarii de utilizare 2
-> Ce nu contin acestea:
-Q Diagrame de class
-=' Structura modulari a programului
-Q Tipul datelor de intrare 5i de ie§ire
-> Use Case — Tipuri de conginut:
-~ Pe scurt , descrie principalul caz de succes
-~ Cazual , conﬁne ce ar trebui fécut in caz c5 se
-intimplé ceva
-a Detaliat , 5e prezinti pe larg toate situatiile posibile
-‘ ”
+Scenaru de utlllzare 2
+> Ce nu congin acestea:
+O Diagrame de clase
+O Structura modularéi a programului
+O Tipul datelor de intrare §i de ie§ire
+> Use Case — Tipuri de continut:
+O Pe scurt — descrie principalul caz de succes
+O Cazual — congine ce ar trebui fécut Tn caz c5 se
+Tntémplé ceva
+O Detaliat — se prezinté pe larg toate situagiile posibile
+x 53
 
 ***************Ending Page***************
 
@@ -1066,42 +1102,43 @@ a Detaliat , 5e prezinti pe larg toate situatiile posibile
 ***************page number:54**************
 Use Case — Exemple
 
-> Pe scurt: Programul trebuie 55 poati aduna 2 matrici
+> Pe scurt: Programul trebuie séi poaté aduna 2 matrici
 
-> Cazual: Programul trebuie 55 poati aduna 2 matrici
-dacé au acelagi numir de linii 5i de coloane, altfel se
-V3 Elﬁ§él un mesa] de eroare corespunzétor
+> Cazual: Programul trebuie séi poaté aduna 2 matrici
+dacéi au ace|a§i numéir de linii §i de coloane, altfel se
+va afiga un mesaj de eroare corespunzétor
 
-> Detaliat: Programul trebuie sé poaté aduna doué
-matrici de numere intregi citite de la tastaturé, daci
-au ace|a§i numér de linii 5i de coloane, iar matricea
-rezultati se va afi§a intr-un figier “rezultat.txt" cite
-o linie pe rind. Altfel 5e va afi§a un mesaj de eroare
-corespunzétor intr-un fi§ier “mesaj.txt" aflat Tn
+> Detaliat: Programul trebuie 551 poaté aduna doué
+matrici de numere Tntregi citite de Ia tastaturé, dacé
+au ace|a§i numéir de linii §i de coloane, iar matricea
+rezultatéi se va afi§a Tntr-un fi§ier “rezultat.txt" céte
+0 linie pe rénd. Altfel se va afi§a un mesaj de eroare
+corespunzéitor Tntr-un fi§ier “mesaj.txt” aflat Tn
 
-.irectorul curent. (Mai [rebuie spec/ﬂea! ceva?)
+.irectorul cu rent. (Mai trebuie spec/ﬁcat ceva?)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-Diagrama cazurilor de utilizare
+liagrama cazurilor de utilizare
 (Use Case Diagram)
-> Este o diagrami comportamentalé care
-capteazé cerimgele sistemului
-> Delimiteazé grani§e|e sistemului
-> Punctul de plecare Tl constituie scenariile de
+> Este 0 diagramé comportamentalé care
+capteazéi ceringele sistemului
+> Delimiteazé granigele sistemului
+> Punctul de plecare TI constituie scenariile de
 folosire a sistemului din fi§a ceringelor
 > Poate prezenta:
-= specificarea ceringelor (externe) din punctul de
+O specificarea ceringelor (externe) din punctul de
 vedere al utilizatorului
-= specificarea functionalitégii sistemului din punctul
+O specificarea functionalitéigii sistemului din punctul
 de vedere al sistemului
-> Congine:
-= UseCaseiuri I functionalitégi ale sistemului
-7 Actori é entitégi externe cu care sistemul
-Interacgloneaza
-i agii
+> Contine:
+O UseCase-uri : functionalitéti ale sistemului
+O Actori :_ entitay externe cu care sistemul
+Interactloneaza
+‘law
 
 ***************Ending Page***************
 
@@ -1109,38 +1146,39 @@ i agii
 ***************page number:56**************
 UseCase
 
-> Este 0 descriere a unei multimi de secvente de actiuni
-(incluzind variante) pe care un program Ie executé
-atunci cénd interactioneazé cu entitégile din afara Iui
-(actor!) 5i care conduc Ia obginerea unui rezultat
+> Este o descriere a unei muligimi de secvenge de actgiuni
+(incluzénd variante) pe care un program Ie executéi
+atunci cénd interactioneazéi cu entitéigile din afara Iui
+(actorl) §i care conduc Ia obtinerea unui rezultat
 observabil
 
-> Poate fi un sistem, un subsistem, o clasi, o metodi
+> Poate fi un sistem, un subsistem, 0 claséi, 0 metodé
 
-> Reprezinti o functionalitate a programului
+> Reprezinté o functionalitate a programului
 
-> Precizeazi ce face un program sau subprogram
+> Precizeazé ce face un program sau subprogram
 
-> Nu precizeazi cum se implementeazi 0
+> Nu precizeazﬁ cum se implementeazé 0
 functionalitate
 
-> ldentificarea UseCaseiurilor se face pornind de Ia
-cerin'gele clientului §i analizénd descrierea problemei.
+> ldentificarea UseCase-urilor se face pornind de Ia
+ceringele clientului §i analizénd descrierea problemei.
 
-‘ ”
+x 56
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-Use-Case — Reprezentare
+UseCase — Reprezentare
 > Notagie
 > Atribute
-o Nume I fraza verbali ce denumegte o
-operagie sau un comportament din
+o Nume I fraza verbalﬁ ce denume§te o
+operalgie sau un comportament din
 domeniul problemei.
 > Restricgii
-a Numele este unic
+O Numele este unic
 
 ***************Ending Page***************
 
@@ -1148,20 +1186,21 @@ a Numele este unic
 ***************page number:58**************
 Actor
 > Reprezinté un rol pe care utilizatorii unui
-UseCase Tl joacé atunci cénd interactioneazé cu
+UseCase TI joacé atunci cénd interactioneazéi cu
 acesta
-> Este 0 entitate exterioaré sistemului
-> lnteracgioneazé cu sistemul:
-= lnigiazé execugia unor cazuri de utilizare
-= Oferi functionalitate pentru realizarea unor cazuri
+> Este 0 entitate exterioaréi sistemului
+> Interactioneazé cu sistemul:
+o Initiazéi execugia unor cazuri de utilizare
+O Oferéi functionalitate pentru realizarea unor cazuri
 de utilizare
 > Poate fi:
-7 Utilizator (uman)
-= Sistem software
-'stem hardware
-,g
+O Utilizator (uman)
+O Sistem software
+istem hardware
+58
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:59**************
@@ -1171,72 +1210,73 @@ Actor — Reprezentare
 
 > Atribute
 
-> Nume = indicii rolul pe care actorul Tl joaci Tn
-interactiunea cu un UseCase
+> Nume I indicé rolul pe care actorul TI joacé Tn
+interacgiunea cu un UseCase
 
 > Restricgii
-a Numele este unic
+O Numele este unic
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:60**************
 Relagii
-> Se stabilesc Tntre doué elemente
-> Tipuri de relaKii:
-= Asociere: Actor — UseCase, UseCase — UseCase
-= Generalizare: Actor , Actor, UseCase i UseCase
-= Dependenga'n: UseCase - UseCase (<<inc|ude>>,
+> Se stabilesc Tntre douéi elemente
+> Tipuri de relagii:
+O Asociere: Actor — UseCase, UseCase — UseCase
+O Generalizare: Actor — Actor, UseCase — UseCase
+O Dependenté: UseCase — UseCase (<<inc|ude>>,
 <<extend>>)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-Relatgia de Asociere
+Relagla de Asoaere
 
 > Modeleazé 0 comunicare Tntre elementele pe
 care Ie conecteazé
 
-> Poate sa aparé intre
+> Poate sa aparéi Tntre
 
-= un actor §i un UseCase (actorul inigiazé executia
-cazului de utilizare sau oferi funcgionalitate pentru
+O un actor §i un UseCase (actorul initiazé execugia
+cazului de utilizare sau oferé functionalitate pentru
 realizarea acestuia)
 
-= doui UseCase-uri (transfer de date, trimitere de
+O douﬁ UseCase-uri (transfer de date, trimitere de
 mesaje/semnale)
 
 > Notatie —
 
-‘ 6'
+x 6]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-Relagia de Generalizare
+Relalgia de Generalizare
 
-> Se realizeaza intre elemente de acelagi tip 2
+> Se realizeaza Tntre elemente de acelagi tip =>
 ierarhii
 
-> Modeleaza situagii Tn care un element este un
+> Modeleaza situatii Tn care un element este un
 caz particular al altui element
 
-> Elementul particular mo§tene§te relagiile in care
+> Elementul particular mo§tene§te relagiile Tn care
 este implicat elementul general
 
 > Notatie: <—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-Exe m pl u 1
+Exemplu 1
 Persoané
 / \ Sistem de
-I Logare
+Logare
 
 ***************Ending Page***************
 
@@ -1246,69 +1286,89 @@ Relagia de Generalizare
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-Relagia de Dependenga
-> Apare Tntre doui UseCase-uri
-> Modeleazé situagiile in care
-~ Un UseCase foloseste comportamentul definit in alt
+Relagla cle Iependenga
+
+> Apare Tntre douéi UseCase-uri
+
+> Modeleazéi situagiile Tn care
+O Un UseCase folose§te comportamentul definit Tn alt
 UseCase (<<inc|ude>>)
-= Comportamentul unui UseCase poate ﬁ extins de
+O Comportamentul unui UseCase poate fi extins de
 citre un alt UseCase (<<extend>>)
-l >N0ta§ie <-------------'
+
+l >Notal;ie <--------------
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-Exemplul2
-MW” i
-(m MOI!“
-w m...»
-@ w
-‘W
-a:
-_ : ~==' *5: 55
+<<m>> "1'"
+m
+MGM‘
+“M M on“
+Module
+<<onond>>
+0mm
+M
+\i <<0xiend>>
+b
+@ scam
+i
+School
+86800!
+@
+i 66
+lecl'm
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-Exemlul 3
-I
+SlasOrduSydom
+1; "'"22Fm"";""'§
+Customer .
+‘\gExtond» I
+“~\ SalesManager
+4 V
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-Exemplu 4
-<<include>> /.\\<<include>>
-I», ‘4
+Exe m pl u 4
+<<include>> .\\<<include>>
+.k: b
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:69**************
 Concluzii
 > Metodologii
-> lngineria cerintelor
+> lngineria ceringelor
 > Diagrame Use-case
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-lntrebiri
+lntrebéri
 
-> 1) Ce metodologie ar fi mai utili pentru
-angajayii companiei de IT?
+> 1) Ce metodologie ar fi mai utilé pentru
+angajagii companiei de IT?
 
-> 2) Ce metodologie ar fi mai utilé pentru client
+> 2) Ce metodologie ar fi mai utiléi pentru client
 (manager, end-user)?
 
 > Exemplu: eSims
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:71**************
@@ -1321,42 +1381,46 @@ Spring, Hibernate and Eclipse, 2006
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:72**************
-ArgoUM L
-> Link: http:[[argoum|—
-downloads.tigris.org[argouml-O.34[
-> Varianta “zip” trebuie doar dezarhivaté
-> Trebuie si avegi instalatjava
-~ in Path 5a aveti c:\Program FilesUava\jdk1.8.0_l4l\bin
-~ Variabila
-JAVA_HOME:c:\Program FilesUava\jdk1.8.0_I4l\
+ArgoUML
+> Link: httg:[[argouml—
+downloads.tigris.org[argoum|—0.34[
+> Varianta “zip” trebuie doar dezarhivatéi
+> Trebuie séi aveti instalatJava
+O Tn Path sa aveti c:\Program Files\Java\jdk1.8.0_141\bin
+O Variabila
+JAVA_HOME:c:\Program Files\Java\jdk1.8.0_141\
 
 ***************Ending Page***************
+
+
 
 ***************Beginning Page***************
 ***************page number:73**************
-Llnks
-> XP: hitQIZ[www.exiremeprogramming.0rg[rules.hlml
-> Agile: htlptl[agilemanifestuorgl
-> Scrum: http:[1'effsutherland.comloopslalschwagub.|gdf
-> Lean: http:Z[www.gro'ectgerfect.com.au[info lean developmentghg
-> V-model: httg:Z[en.wikipedia.0rg[wiki[ViModeL
-htt%:Z[en.wikigedia.org[wikiZVi
-M0 e _%28so lware_ eve ogment%29
+L| n ks
+> XP: httg:[[www.extremegrogramming.org[rules.htm|
+> Agile: httg:[[agilemanifestoorgz
+> Scrum: httg:[Z'|effsuther|and.com[oogslalschwagubgdf
+> Lean: httg:[[www.gro'|ect|gerfect.com.auZinfo_|ean_develogment.ghg
+> V-model: http:[[en.wikigedia.org[wiki[V-Model,
+httgj[en.wiki|gedia.org[WikiZV-
+Model_%2850 tware_deve|o|gment%29
 > Project Management White Paper Index:
-http:[[www.gro'ectgerfecl.com.aupr_index.phg
+httg: Z (WWW.gro'|ect|gerfect.com.au [wg_index.|gh|g
 > Requirements analysis process:
-httg:[[www.0ulsource2india.comZsoftware[ReguirementAnalysisasg
+httg:[[www.outsourceZindia.com(software!ReguirementAnalysisasg
 > lmageCup 2009:
-httg:l1fiisludenl.wordg_ress.co_m[200811_2Z101imagineicugi2009i
-ceiari I’ acaimtrioimiamia UVIQE*IOII* aimuzeul
-> Curs ZIP — Ovidiu Gheorghie5:
-httg:Z[www.infoiasi.ro[~ogh[filesliglcuryOZQdf
-> Software house: httg:l[en.wikigedia.org[wiki[Software_house
-' www. uru99.com learnisofiwareire uirementsianal sis’
-. [I'Yl
+httg:[[fiistudent.wordgress.com[20081i21101imagine-cug-2009-
+ce-ar-fi-daca-intr-o-zi-am-aiunge-toti-Ia-muzeuZ
+> Curs 2 lP — 0vidiu Gheorghies:
+httgj[www.infoiasi.ro[~ogh[filesZichurs-OZJQdf
+> Software house: httg:[[en.wiki|gedia.org[wikiZSoftware_house
+.:iiwww.;uru99.comilearnsoftwarereguirementsanalysis
+ud .html
 73
 
 ***************Ending Page***************
+
 

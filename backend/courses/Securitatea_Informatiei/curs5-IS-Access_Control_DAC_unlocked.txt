@@ -1,573 +1,691 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Ami; Cnmml
-DMYﬂ-una'y Access 0mm
-pm, hm Wm m
+INFORMATION SECURITY
+leciures by Ferucio Laurentiu Tiplea
+Access Control
+Discretionary Access Control
+Prof.dr. Ferucio Laurentiu Tiplea
+Fall 2023
+Department of Computer Science
+“Alexandru loan Cuza" University of lasi
+lasi 700506, Romania
+e-mail: ferucio.tiplea@uaic.ro
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-lmdumn m w
+Outline
 
-1». m. mm mm "m
-w» ma“
-m =1», wakm
-Wmmm
+Introduction to DAC
 
-um- ’.W DAL m
+The access control matrix model
+The model
+The safety problem
+Implementation
 
-A "Ii/w m"- a m med-k
+Other related DAC models
 
-(Md-min‘ mm, an m: mu-
+A major weakness of DAC models
+
+Concluding remarks on DAC models
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Introduction m DAC
+Introduction to DAC
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-nbmunn-y Aw- Oumnl
-—
-. mc ".1me m“ mm‘ m4 a" m mm wl
-mm.“
-- m made‘; mm “"me .5 M m helwen m
-My “I BMW M qu mm M
-. m WM“ “My NM“ MM mm mm,
-. DM Md; .HMMW MW
-. MW“, mﬂmm mm.“ mm Mm Mm.
-“mum .M.~.m.....—_ .,..
+Discretionary Access Control
+0 DAC models enforce access control based on the identity of
+requesters;
+o DAC models are called "discretionary" as users can be given the
+ability of passing on their privileges t0 other users;
+0 DAC mechanisms usually include a concept of object ownership;
+o DAC models are state-transition systems:
+0 A state specifies the rights that subjects have over objects at a given
+time;
+o A transition shows how the state changes when a command involving
+subjects, objects, or rights is executed.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 2 / 39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-The access cnnlml matrix model
+The access control matrix model
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-TM wu- mml mm‘ mu
-m m lemul w made‘ ‘5 m! 1:(& (MUM mm (AIM) m.‘
-My, QM m m- mm mvdd m m m m mmﬂuwi w
-Hausa“ n .\ new
-—
-. n u 1 sulunmlmn iynzm
-- 5m" n mm‘ MW m» Wmmwmm 1 mm m.
-MW M's-w‘ m .n “M m . M WM m "nu;
-m.“ m; m, .n Mum
-- mmw hm“ m, w: MM WWW»
-. mm a. chm-s m
-mm.“ ., .M.~.m..... —_ .,..
+The access control matrix model
+The most general DAC model is the access control matrix (ACIVI) model,
+also called the access matrix model or the HRU model, introduced by
+Harrison et al. (1976).
+
+0 It is a state-transition system;
+
+0 States are matrices Where each row corresponds to a subject, each
+column corresponds to an object, and a cell specifies the rights a
+subject has over an object;
+
+o Transitions between states are performed by commands;
+
+o Subjects are objects too.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 3/39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Sun-
-m Mm MM MM“ 2 m 1mm Mme in 09 m“
-ﬂair-1M 1
-A snuwu R m mp‘. a: 1; o A} may: s m1 o». nm'mmv
-m 1m mum and abyKis WWW m A m"
-5‘ X \ m my "M Mm W mm =4 R
-sum. z
-m5:¢m, WA‘, 0:5‘ We, M “w >1
-um yum M
-mush , , w
-Wm , . r
-mm [s 0 A) Emma»: l, w x» Alpmm Mm“
-m "m, Wm. h» w w‘ "my , m w
-“WM-n |~,>....W....>—_ H.
+States
+In what follows, R denotes a non-empty finite set of rights.
+Definition 1
+A state over R is a triple Q I (57 O,A), where S and O are non-empty
+finite sets of subjects and objects, respectively, and A is an
+| 5 | >< | O |-matri>< whose elements are subsets of R.
+Example 2
+Let S : {processl7 processz}, O : S U {file}, and A given by:
+processl proce552 ﬁle
+processl r r, W
+proce552 r,x r
+The triple (S, O, A) is a state over R I {r, W,x}. A(processl, file) lists
+the rights processl has over file, namely r and w.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 4/39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-sm-
-Fm M vndammy m my MM sxnzs MW.“ mm Th-s
-WWW ‘5 immum 'abOmm mm‘ mm m 5W,
-um , M mm‘ M m AIM mm‘
-sumo: a
-m m
-Dark Mm M4 1D. 5mm m1 “Den W5 sum Q1: “Mn; A
-uwm m m x w y mm I». "m K ".5 My y
-mum“ ., .M. MM...“ —_ .,..
+States
+For more readability, one may represent states by directed graphs. This
+representation is speciﬁc to the Take-Grant model (Lipton and Snyder
+(1977)), a sub-model of the AClVl model.
+Example 3
+mount root
+x t r, W _
+user .—>.—>.—>O filel
+s
+O O
+fileg device
+Dark vertices stand for subjects and open vertices stand for objects. A
+labeled arc from x to y speciﬁes the rights x has over y.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 5 / 39
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-Piniﬂm apimlnl-
-(mow um m m my" K hm M DvenserEﬁmd mks 70"qu
-Wm m mmmnﬁswn m mm u, u‘ mmumw
-m v. M v¢ MM» WW Wm.“ “W "WNW m
-m...“ l
-A MM MW M R m Mum.” m! a»: M. inﬂmmﬂl
-“MW R m v.‘ mm v.1
-1 Mm , m», mm
-2 km: , 1,". we. m
-3 m.“ MM x‘
-A m.“ Ali/x! x.
-5 mmzv “WK! x.
-5 mﬂw WK! x.
-mam“ ., .M. MM...» —_ .,..
+Primitive operations
+Changing rights in the system is based on precisely defined rules, formally
+speciﬁed by commands that are made up of primitive operations.
+Let V5 and V0 be sets of subject-type and object-type variables, resp.
+Definition 4
+A primitive operation over R is a construct of the one of the following
+types (r € R, Xs G V5, and X0 E V0):
+1. enter r into (XS,XO)
+2. delete r from (X5,Xo)
+3. create subject X5
+4. create object Xo
+5. destroy subject Xs
+6. destroy object Xo
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 6/39
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-(‘An-nanﬁ
-Dnﬁ'ilmi
-A mm“ W R M (mm m I»! m
-mmmm an»
-mmmm m ,r r. mm m m
-“P- W» .wax.)
-“a
-‘Amen 5,,
-w
-Wmnzm ix. ‘Kay/.uvu x. :vmm ‘m
-x‘ 6mm. m n § R “AM .vinavzhnevauansma
-mhmmm m x.)
-WNW “D m Mk w \m Wm, m m M WM
-“mum” .M....~M....>—_ H.
+Commands
+Definition 5
+A command over R is a construct of the form:
+command a(X1, . . . ,Xk)
+if r in X X and
+command a(X1, . . . ,Xk) 1 ( 51’ 01)
+o o .
+end p17 7 pn rm In (Xsm,XOm)
+then op1,. . . ,op”
+end
+where m,n Z 1, {X1,...,Xk} Q V5 UVO, XS’. 6 Vs ﬁ{X1,...,Xk},
+Xo,- € V0 ﬁ {X17 . . . ,Xk}, r,- € R, and op1,. . . ,op” are operations over
+R with variables in {X17 . . . ,Xk}.
+Commands do not check the lack of rights but only their existence!
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 7/39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Ennplu M mm-
-Enrwln s [>1an n a. umn
-“WM (AEAYELMn m,»
-(m ohm, Ne
-w" W mm [Wm we}
-m
-an,“ 1 www- m =4 mm!
-{Mm tom's»? READlnvmer W4 my
-,1 M MM" m
-m
-Wm , m MW my
-M
+Examples of commands
+Example 6 (Harrison et al. (1976))
+command CREATE(process, file)
+create object file
+enter own into (process, file)
+end
+Example 7 (Harrison et al. (1976))
+command CONFERsREAD(owner, friend7 file)
+if own in (owner7 file)
+then
+enter r into (friend , file)
+end
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 8 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Ennplu M mm.
-mm. 1 (Mm. n a. umn
-mm‘ REMOVE #90me “hm W
-,r M m {MU WM
-, m Wm.’ we}
-Merv
-MN M Wm“ m,»
-M
-52mm: g mm...“ and a: cum .1. ‘mm mum
-mmm wws»: mew, Mm m)
-M MW, m,»
-KM
-mm , m UM": Ne)
-m
+Examples of commands
+Example 8 (Harrison et al. (1976))
+command REMOVEsREAD(owner, exfriend, file)
+if own in (owner, file) and
+r in (exfriend7 file)
+then
+delete r from (exfriend, file)
+end
+Example 9 (Samarati and de Capitani di Vimercati (2001))
+command TRANSFERsREAD(subj, friend7 file)
+if r in (subj7 file)
+then
+enter r into (friend7 file)
+end
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 9/39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-sﬂhlllllﬂlun
-n WM :ammznd M lam!‘ Wm.“ M In mm m».
-m.‘ mm‘; m; .S dune hmmummﬂ M" mm .A
-mums xwvmﬂl w m w“
-. Mm; w memmm m
-. mm n um iynkvamkﬂg
-vawumnm m hwmwv-uwmcﬂw Ix awhu! w MMMWW “a
-Mm“;
-Emm- m
-l!a(X):A/\¢¢E$=ndn[)(']:hk€ o (hen
-.1me, , m» (x x'» : mm Hm “mm
-“mum .MM.W.....—_ .,..
+Substitution
+To execute a command, its formal parameters must be replaced with
+actual parameters. This is done by substitutions that assign values to
+variables according to their types:
+o subjects to subject-type variables, and
+o objects t0 object-type variables.
+Substitutions can homomorphically be applied to primitive operations and
+commands.
+Example 10
+If 0(X) : Alice G S and 0(X’) : file € O, then
+0(enter r into (X,X')) : enter r into (Alice, file)
+Prof.dr. F.L. Tiplea. UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 10 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-m." in “pm” w m = mum .7 mm! m, mm
-admit-w
-[S.mA)a,(~1(-T.V‘A')
-"HNMWMWMMWM
-.mzumq
-. 1,; a. 1M
-—._.__u.—
+Transition relation
+Given an operation op and a substitution a, deﬁne the binary relation
+:>U(op) on states by
+(5, 0,14) iﬂop) (5/, 0/,Al)
+if and only if one of the following properties holds:
+(7(X) I 5,110’): O
+O O
+i i i i
+uuluuuulut enterrinto(X,Y) uuluuuulut
+—,
+<—
+filiiiﬁi' deleterfrom(X,Y) filiiiﬁi'
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 11 / 39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-4nd...“ .v
-mwx 3
-‘PO-I'm-vnm-n ' 3
-.ixr:-'~—¢w I
-MMX 3
-"" inﬂn "" 3
-M-MMW...»
-M
-(5.0,A):,¢squ',4') a a, [svnalanmrs'vmwy
-—._.._.....—
+Transition relation
+0(X) : 5/ new subject 5’
+i
+create subject X l
+—,
+matrix A matrix A l
+<—
+destroy subject X I
+c c c c c t r t
+0(X) : s’ existing subject 5’ i
+i
+0(X) : 0' new pure object Q’
+i
+create object X l
+—,
+matrix A matrix A l
+<—
+destroy object X I
+0(X) : o' existing pure object
+Then,
+/ / I _ / / /
+(5, O,A) $0,, (5 ,0 ,A) e 30. (5,0,A) imp) (5,0 ,A)
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 12 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-n-uum- mm
-rm 2 mmm H m a WWW a m». m {my "hum
-WM sumWLi a A) M xs' 014w
-\ ‘hm-mam“; EMS-mm a Ls o A) m
-l5’ r7 m ‘s a»
-2 mm usnﬁ m ‘5 mm a [s 0 m m M m
-Q: o. 41“ m» m
-(s a m 0° m-m Q W», w») an w a‘ A1
-W. am M ‘5 m hndy m A
-“mm
-(s a A15" is‘ 0' A'y a 1” (5 0 ‘Wm? o‘ n
-is a pr a A’) Q :n ‘5 unpus' a #1
-“mm.” |~."W.....—_ .,..
+Transition relation
+Given a command a and a substitution a, define the binary relation
+:>U(a) on states by (5, O,A) :>U(a) (5’7 O’,A’) iff:
+1. if the test of 0(a) is not satisfied at (S, O,A), then
+(5’, OCA’) I (5, QA);
+2. if the test of 0(a) is satisfied at (5, O, A), then there exist
+Q0, Q1, . . . 7 Q” SUCh that
+(5101A) : Q0 :>a(op1) Q1 :>U(Op2) ' ' ' :>U(Opn) Qn : (5/7 0/7 A’)
+where Op1,.. .,op,, is the body of a.
+Define then:
+(S7 O,A) :>a (5’7 O’,A’) (I) Ha: (5,0,A):>U(,1)(5’,O’7A’)
+(57 O,A) :> (5’, O’,A’) (i) 3a: (S, O,A) :>a (5’7 O’,A’)
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 13/39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Tmlliﬂnn mam
-Eu'wl' n erallul-m by zap/“HEM
-
-Am 5w M. m
-
-M.“ WM ,w
-
-m 1
-
-mum Rum/‘k M w
-
-Ann up» hm we,
-
-MW WW ,w
-
-m I r
+Transition relation
+Example 11 (Transition by CONFERcREAD)
+Alice Bob filel ﬁl62
+Alice own, r7 W r, W
+Bob r
+CONFERcREAD(A/ice, Bob7 filel)
+Alice Bob filel fileg
+Alice own, r7 W r, W
+Bob I r
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 14 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-TM mud I.’ day
-‘n m mama‘: hem AM: my mm "mm ma w,“ m Emmdy
-Irlq
-w .K i “m Ah<z|us m1 “m WNW m Mq w m W hlq m
-Mn ‘Mwmmmmwm MW‘, Mn CNN-‘dud:
-ngw
-“mum .MM.W.....—_ .,..
+The need for safety
+In the example below, Alice only has the right to read filel, and Bob only
+fi/e2.
+filel
+lAfr/1V r y
+4» 4» “3}? Rights: (Alice,r)
+Alice \\
+\\\W
+\x‘ ﬁ/eZ
+*> -*r> g Rights: (Bob,r)
+Bob
+If at a time, Alice gets the right of writing in fi/e2, it can write filel in
+fileg, thus giving Bob's ability to read, indirectly, filel. Can we decide
+this?
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 15/39
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-thq
-\hﬁ'imn n
-A mm" sﬂem W R M m“ gut WWW‘; wev a
-A mm» Mm Wm W m“ WW. m "m. um. m .
-WM an,“ we "m ‘. Ana m "m m, ‘. Wm pm...“
-Abnuz m we m, m mk MM
-mm n
-kttmawmxzwnsymmwuﬂ mum's,“ hm“
-MSW“ u Inks ,M q Nxhevznvm a “mm”, W ‘m
-1 m m! wl m1 w smhul an a
-2 M W 0., a. 1;“th
-- 0.:45. a Ma», QMQ :4; 0,41
--r<Aku)'A\b¢1lwwmenmn
-whzvzﬂm ‘M ‘muxhcbvwdu and]; vs"
-mam“ ., .M. MM...» —_ .,..
+Safety
+Definition 12
+A protection system over R is a finite set C of commands over R.
+A protection system specifies the rules governing the rights granting in a
+system. Despite the name, it does not mean that it provides protection.
+About this, we have to talk further.
+Definition 13
+Let C be a protection system over R, Q a state of C, r G R, and a G C.
+We say that a leaks r from Q if there exists a substitution a such that:
+1. the test of 0(a) is satisfied at Q;
+2. there exist Q0, Q1, . . . , Q,- such that:
+° Q0 I (507 00,140) I>U(Op1) 30(0pl') Q; I (5i, Cir/4i);
+o r G A,-(s, o) i A,-_1(s, o) for some s and o,
+where op1,...,op,-,...,op,1 is the body ofa and 1 g i g n.
+Prof.d1. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 16 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-thq
-My...“ u
-m1.’ in a mm" W". W R u 1 m wiC 2nd K 1e w:
-m mu" ‘cab , m a WWW" ‘Wm Mm“ ‘My
-m u
-Damn“. 1;
-ma be . WWW W". M, a a a mm an‘ M m R w,
-5-, m: u E unsﬂe Q1: , \hhere wits! mm“ 5m: D 1M a
-m n.“ c \uks vrmm 0‘
-We Q, v." a ‘5 sale 1m m w ‘S m Wm. My
-Mm n
-um aw m Hezmﬂvlybaﬂl A", Wm" WMWYM m
-mm’; Um M m, "An “NM, M lea)“ MM W
-omnirunaummzsdstnei
+Safety
+Definition 14
+Let C be a protection system over R, Q a state of C, and r € R. We
+say that C leaks r from Q if there exists a command of C that leaks r
+from Q.
+Definition 15
+Let C be a protection system over R, Q a state of C, and r E R. We
+say that Q is unsafe for r if there exists a reachable state Q’ from Q
+such that C leaks r from Q’.
+We say that Q is safe for r if it is not unsafe for r.
+Remark 16
+Leaks are not necessarily bad! Any interesting protection system has
+commands that leak some rights. However, these leaks should not
+occur at unauthorized states.
 
-“WM-n |~,>.,..M...>—- m.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on lnformatlon Security Access ControlDAC Fall 2022 17/39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-u-lmmmy “I ukly
-n. “WM 5n m shnws us 0m K ‘S mum w h: in‘. w a“
-mm é mm" Wm \. ‘alrw m M “s m.“
-My WM ‘u mm MM,
-MM VMKW Wm Covumme m hum
-“QM My”
-am.» \. o 5m <, ~
-Yhmun n mm...» u .| (1915»
-"kn/(W mm Mm zandrlvwvame v m M MW";
-WW1’: wwmmm dm'w “Dcranunﬂwzcwn
-MM. u “mam
-mam“ ., .M. MM...» —_ .,..
+Undecidability of safety
+The discussion so far shows us that it is imperative to be able to decide
+whether a protection system is safe or not for its rights.
+Safety problem for protection systems
+Instance: Protection system C over some set R of rights,
+state Q ofC, and r E R
+Question: ls Q safe for r?
+Theorem 17 (Harrison et al. (1976))
+The safety prob/em for bi-conditional (i.e., at most two conditions)
+monotonic (i.e., without delete and destroy operations) protection
+systems is undecidab/e.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 18 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-mm. my
-m m" mam m 5:9er VDMem rm mm‘ Dmhunm iysmms
-\. vrry Mm
-“m... u mum I. .| (1915»
-1 m 91-:me hmunvwmlkuHve w summandhis
-vac!» W 9mm WWW Wm r! m» Wm
-2 my!» My“ mmmmm, WWW,“
-Mam; mm,” Wm ‘5 PiPAti<qu¢
-1 m QM, mblz'm bvmunvcundrlvwnlmwn Mm MM
-Mm MW, “ emu:
-MM pm.‘ Wm NM m :nnﬂmo/ul “may
-npen thkm 5mm. mmmwm\ mm" Warn
-mm...“ ., .M. Hm...» —_ .,..
+Deciding safety
+Even when decidable, the safety problem for practical protection systems
+is very complex.
+Theorem 18 (Harrison et al. (1976))
+1. The safety prob/em for mono-operational (i.e., each command has
+exact/y one operation ) protection systems is NP-comp/ete.
+2. The safety prob/em for state-bounded (i.e., without create
+operations) protection systems is PSPACE-comp/ete.
+3. The safety prob/em for mono-conditional protection systems without
+destroy-operations is decidable.
+l\/lost practical systems require multi-conditional commands!
+Open Problem: safety for mono-conditional protection system.
+Prof.d1. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 19 / 39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-“.1me
-Aw \"vnkmmmrvs non-1x mm“ 1 hank m 5.1 m mum
-m WWW. Wm M in ACM $15 mm“ mm-
-wk M MWMMWN “A my". KM,
-m. lvuhvlellwwkhsm WWW. KM AIM m a m1.‘ ww
-1 ‘mm-1m ans' svmhv w Wm‘ "v.5 m mama“
-WWW
-2 lmwnvd w (ACU "th m mm‘ M ACM
-a (avabmlv mm the: m W M w ACM
-Morenvev M m m mun; nlsabij m "mull lbw amen;
-mun-"M 1. I mm‘; ngvlmmlr; m1 mm m M
-Dc mslmm m . 5m WWW WW N i .W m brmlwlﬂ
-b, ,u \u Mm
-mum“ ., .umwh. —_ .,..
+Implementation
+ACM implementations do not scale well: a bank with 50,000 staff and
+300 applications would have an AClVl of 15 million entries!
+We need compact ways of storing and managing ACMs.
+There are three approaches to implementing the ACIVI in a practical way:
+1. Authorization tables — similar to relational tables in the database
+management;
+2. Access control lists (ACL) — these are columns of the ACM;
+3. Capability lists — these are rows of the ACM.
+Moreover, we can use groups of subjects to manage their privileges
+simultaneously (e.g., Employees, Programmers, etc.). Groups need not
+be disjoint and a single authorization granted to a group can be enjoyed
+by all its members.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 20 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-‘undullon an.
-An “Mum uhk hzsmmexummns mimmwbm
-Wm m chm) 59mm w m; W M mm m5
-MM m...“ mm
-WW \ W“ \ on,“ \
-\m \ , ‘m \
-\ws| \ , \ ﬁe \
-mm. \ w \ ﬁle \
-wk» \ , \ m, \
-m! WWW “we WW» ‘S mm“, used m mm
-mm“ Wm Wm WWW“ W Md “mw
-(mm-mm “ms! a, I». 41mm
-hum“ lumm.....—_ m.
+Authorization tables
+An authorization table has three columns corresponding to subjects,
+privileges, and objects. Somehow, it unfolds the non-empty access
+control matrix cells.
+l Subject l Access l Object l
+j processl j r j processg j
+l processl l r l ﬁle l
+l processl l w l ﬁle l
+l process; l r l file l
+The authorization table approach is generally used in database
+management systems, where authorizations are stored as catalogs
+(relational tables) of the database.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 21 / 39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-‘w. mm M,
-mm W M V m m mm w W M. W
+Access control lists
+An access control list (ACL) is a column of the ACIVI (therefore,
+associated to an object - the ACL associated t0 o is denoted ACLO, and
+it is stored along with 0).
+0 Simple to implement;
+0 Suited to environments where users manage their own file security;
+o Less suited where the user population is large and constantly
+changing;
+0 Less suited where users want to be able to delegate their authority to
+run a particular program to another user for some set period of time;
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIDAC Fall 2022 22 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-‘w. mm M,
-M .w M M mm‘ W MW, W W
+Access control lists
+o Security checking at runtime is difficult (usually, the operating
+system knows which user is running a particular program, rather
+than which files it has been authorized to access);
+0 Tedious to ﬁnd all the files to which a user has access;
+o Tedious to run system wide checks, such as verifying that no files
+have been left world-writable by users whose access was revoked.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIDAC Fall 2022 23/39
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
-chl mm lhu I" um
-. EMMmrmMWIMMMWSM Wm
-M W5 a! WWW
-- Pummsmns m Mm 1N w“ 1W5”? M
-. I»: m. D4 .k “k
-. m- (wan mum W Manna
-. “Mkkwm
-m MM" we Mum‘, M ulna ,um m Aemnd
-WM w, a m
-“mum .M.~.m.....—_ .,..
+Access control lists in Unix
+0 Every file or folder has associated access permissions. There are
+three types of permissions:
+o read access
+o write access
+o execute access
+o Permissions are defined for three types of users:
+0 the owner of the ﬁle
+o the group that the owner belongs to
+o anyone else (world)
+Each permission type has exactly two values, allowed or denied,
+specified by a bit.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 24 / 39
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:28**************
-‘can mu.“ lln: l" um
-Eu'wl' n
-m h a Mr
-“HM” “m “my.”
-m m Emmi m m m ‘5 ‘m 1 Ne [he ml M: M; M
-“mtg m“ m». Wm m M mu m; [We W» m
-m: ‘m Wu m Mznynnzdx n MM KM m Wm mmzznd
-‘k .w "m
-mm: 20
-m Va . MM
-nxuxnxn/x m“ hm."
-m m M Wm 0m m ACL W1 Man (61mm) mt m
-w hm the W mammasabwc
+Access control lists in Unix
+Example 19
+ACL for a file:
+— rw — r — — — — — Alice Accounts
+The first bit specifies that the ACL is for a file, the next three bits give
+the access rights for the owner, the next three bits for the group, and
+the last three bits for anyone else. It follows then the owner name and
+the group name.
+Example 20
+ACL for a folder:
+drwxrwxrwx Alice Accounts
+The first bit specifies that the ACL is for a folder (directory); the next
+bits have the same meaning as above.
+Prof.dr. F.L. Tiplea. UAIC. RO Lectures on Information Security Access ControlDAC Fall 2022 25/39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Aw- mm lhu I" um
-m , Lmux m; 5W‘ wab [m is Mums) m m».
-“Wm-‘ma m m IX thw WNW» m», my WK WM“
-Um mm m “and Mm)
-. .m (.1. m, ‘41
-. I»: mum-Wm Mm Wm ., “.4 [mun , .n
-my m w m m . MW. m mu mm W , MW‘
-M‘, My
-. M. m mm “W Mm MM, "MM M BM“
-. an. m m: mum w m: Wm M w. W,
-. .M (sex ‘mp ‘41 r "Mm sum-r m m M1 mm m m:
-IMP m. a4 W
-m; MM m, M m gem Wm, Wm;-
-mum“ ., .umwh. —_ .,..
+Access control lists in Unix
+Unix / Linux offers special tools (such as programs) which enable
+unprivileged users to be able to accomplish tasks that require privileges
+(for instance, to run passwd programs):
+o suid (set user id)
+
+o the owner of the program mark the program as suid (the bit x in
+owner ACL is set to s meaning both x and suid, or to S meaning
+only suid);
+
+o then, the program is placed in some folder where some user Bob has
+access;
+
+0 Bob can run the program with the privilege of its owner;
+
+o sgid (set group id) — things are similar, but the bit s occurs in the
+group area of bits.
+This method may lead to serious security breaches!
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 26 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-chl mm lhu In Wlndm
-- Pummsmns "w helmnled m mm W» 1mm“ m
-wwmm-wy wwhhmmm M» .um w
-M
-. 0mm; WM: MM Iahmi Mums "My M “1 AM
-Dwenmy Dcmam Semi up D5) My“
-. m WWW; mm n. in mm Mm on me'wevfnhpen
-. 5m “(Prim WWW m mm m m W mum
-m mm pun-“M b . mm, W an) uhwmp
-WWW MW m m my
-. Tymﬂnszwwu meda-lnn ma mm Mum”
-m. M :nmm‘ rad L um! Mn m 1m mm
-m; m m; mm aim rm
-(unxlgnwwlmzunnl)
-F, M Mud; ﬂung: WM. (2am) M
-“mum .MM.W.....—_ m.
+Access control lists in Windows
+0 Permissions may be granted to users and groups (other than the
+resource's owner), with three values each: denied, allowed, and
+audit;
+0 Objects include files, folders, printers, registry keys, and Active
+Directory Domain Services (AD DS) objects;
+o The permissions attached to an object depend 0n the type 0f object;
+0 Six types of permissions in Windows NT: read, write, execute,
+delete, change permissions (i.e., modify the ACL), take ownership
+(make current account the new owner);
+0 Types of permissions in Windows 10: read, modify, change owner,
+delete, full control, read & execute, write, list folder contents.
+ACLs are lists of entries of the form
+--- (user/group,permissions) ---
+For more details please see Microsoft (2021) docs.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 27/39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-up-umy In:
-An mummy m (mm) m M .11 m A(M MM.“ assnnnm m .
-WW V m c m Mm m ‘5 am.” c. 2nd w 5W EM
-w. ,1
-‘n mm, ‘l ‘5 M wmmnumm ‘ 0m c, u 1 m =~ pm
-u, ,1 wheve r, ‘5 in “hm m m. "m WWW 5m . W Mu
-h: quad . Wm m" c‘ WW, é m ofuwlxhw) m
-“MW m; m, W. rm 5 l, Mg a Wm mum,
-Wm “mum m mmm “Q
-m MW! ‘5 m m Enos ‘(M-mm MM ovum Svswn)
-M» wwrwurnlcm ((Mu) ‘BM 5mm,” W M/Aw Amzb:
-“MM WM Wm a:
+Capability lists
+An capability list (C-list) is a row of the ACM (therefore, associated to a
+subject - the C-list associated to s is denoted C5, and it is stored along
+with s).
+In practice, it is more convenient to store a C-list C5 as a list of pairs
+(0, r), Where 0 is an object and r is a right (permission). Such a pair will
+be called a capability; then, Cs becomes a list of capabilities. Each
+capability acts like a ticket for s to access o with permission r.
+Therefore, capabilities are authentication tags.
+This technique is used in EROS (Extremely Reliable Operating System),
+Hydra operating system (CIVIU), lBlVl System/38 and AS/400, Amoeba
+distributed operating system etc.
 
-“mm.” |~."W.....—_ .,..
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 28/39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-up-umy In:
-. Mm Mm mm a m (in-mm in m
-n. W ,4 u 5 My.“ mm M Ix 1 W ‘an ‘rm mress
-(NW 11 mm Wm a: N m WW m mp m. "MB
-and “Mm MW.‘ m.“ idem)
-- mm, m1» “Wm-W Mrwvmw um m may M
-mm“;
-. Mm m; m n. mum mlheupabdwv MN \hal
-m: {WW Mm“, .k ("N1 WM
-. howled “manna map-Wm m PM, WWW m.‘
-a‘. m “NM. m MW
-. WW.“ “my m, = mm." Wm w MW
-“wa ‘M m4 mnmhzmnnmcipibﬂmes
-. mum», “Wm.”
-“mm.” .M.~.m.....—_ .,..
+Capability lists
+o How to represent object o in capability (o, r)?
+The use of 0's address might not be a good idea if the address
+changes. A solution would be to use random bit strings, hash tables,
+and translation techniques (naming schemes);
+o How to make capabilities unforgeable? There are a number of
+possibilities:
+o Hardware tags: 1-bit tag associated to the capability, showing that
+the capability can/cannot be changed or copied;
+a Protected address space: store capabilities in parts of memory that
+are not accessible to programs;
+o Language-based security: use of a programming language to enforce
+restrictions on access and modiﬁcation to capabilities;
+0 Cryptography: use encryption.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIDAC Fall 2022 29 / 39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Mil-Inuwhlklu
-\ \ “MW \ WWW \
-‘Ammw\ Wdunwmm \ wmmmw \
-WW \ WWW,“ \ WWW“ \
-“bins Iw MUM: asks
-mm“ .._.M....—_
+ACLs vs capabilities
+‘ ‘ ACLs ‘ Capabilities ‘
+_ _ require subject auth and require integrity and
+Authenticatlon _ _ _
+ACL Integrlty propagat|on control
+l Access review l suited 0n object-basis l suited on subject-basis l
+l Revocation l suited on object-basis l suited on subject-basis l
+. . provide for ﬁner-grained,
+Least prIVIlege _ _
+especially dynamic
+control w.r.t. — _ _
+_ short-llved subjects created
+subjects . .
+for speCIflc tasks
+ACLs are preferred to capabilities: most systems use ACLs.
+Proﬁdr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIDAC Fall 2022 30/39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-on.” related DAC models
+Other related DAC models
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Th1 "Man! mdll
-I Mm m m spwzl nlms uh! (r1 m1 rum (I)
-[Sham-n 1m mm lino?!)
+The take-grant model
+lt was proposed by Lipton and Snyder (1977). Basic features:
+
+o It is a state-transition system;
+
+0 Subjects are not objects;
+
+0 States are directed graphs whose nodes are subjects and objects, and
+whose arcs are labeled by sets of rights;
+
+0 There are two special rights: take (t) and grant (g):
+
+0 if x has the right t for y, then x can “borrow” from y all his rights;
+o if x has the right g for y, then x can “lend” to y all his rights;
+
+. In this model, _ in the size
+of the initial graph (state);
+
+0 Main drawback: the _ although one
+can use it to check certain security properties in computer networks
+(Shahriari and Jalili (2007)).
+
+Prefer. F.L. Tiplea, UAIC, R0 Lectures on Information Security Access ControIDAC Fall 2022 31/39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Th‘ sum Modd
-k m; pm" I’, Sindhu (was) m 0“ m: 0D brim!" m m.“ m
-WWW my”: Hm: maﬁa‘ m m \mncubd'lyw H m "my
-MW mm.‘ m m ‘WM Mm.» ahm My.“
-made‘ bu emm mmmhry “QM,
-n. mm: made‘ suwmzs Mm “MM” mm" m.“ m
-W. MW“: ,Wm m'uv mm‘. ‘5mm [mum
-m M \saimmuhmrwu‘ mu nun-<1‘ maven.
-mum“ ., .umwh. —_ .,..
+The Schematic Model
+lt was proposed by Sandhu (1988) to ﬁll the gap between the richness in
+expressive power of the HRU model and its intractability w.r.t. the safety
+question as compared with the limited applicability of the take-grant
+model but efficient decidability of safety.
+The schematic model subsumes several well-known protection models in
+terms of expressive power and safety analysis (Sandhu (1992)).
+The model is of more theoretical than practical interest.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 32/39
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:37**************
-Am. mu mm w m‘ m mu
-- Pm. m "Hum WWW; V m minivan m
-(WNW my w um WWW é WW H.» m WW
-mm M b, m M mm] M . mm: "m m: Mm
-mmmmm ndude v." member ham [mm] 2m
-Eumﬂk M vs! Wmdnws
-. Wuk m m". WWW V weak WWW Wm m.
-ulhu m‘: W. WWW Mm w WNW W
-mm, Wm Wham M mm. h: Mm“
-. Wm “A “PM mm“ MM Mum m h:
-4mm m m MM
-- (wmm "mm;
-. Cums“ “Mm "mm;
-w m ﬂnwls pm it 5W1“ m a (Wm m ‘1mm (mu
-“mum .MM.W.....—_ .,..
+Adding new features to the DAC model
+
+o Positive and negative permissions — their combination is a
+convenient way to express exceptions: a positive right to a group
+(shared thus by all its members) and a negative right to a member
+of the group would exclude that member from getting access.
+Example of use: Windows;
+
+o Weak and strong permissions — weak permissions override each
+other, while strong permissions override weak permissions (no
+matter their specificity) and cannot be overridden;
+
+o Implicit and explicit permissions — implicit permissions can be
+derived in the system;
+
+o Context-based permissions;
+
+0 Content-dependent permissions.
+
+For more details please see Samarati and de Capitani di Vimercati (2001).
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 33/39
 
 ***************Ending Page***************
 
@@ -578,27 +696,46 @@ models
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-w. M, m w
+We may trust users
+We assume that Alice and Bob are trustworthy, and even if Alice has the
+right to write in filez, she will not write filel in fi/e2 to allow Bob to read
+ﬁlel
+Ill’: \‘ r O"
+a 4> "Tl Rights: (Alice,r)
+Alice
+W
+ﬁle2
+4> -4r> :5 Rights: (Alice,w), (Bohr)
+Bob
+Assuming the users obey the access restrictions, the subjects operating
+on their behalf do the same?
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 34 / 39
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-hm w lubjlnﬂ
-A Tmnn m yummy! m my Mm “Mm m";
-WW m mm” mm‘ am ngnmuu
-gl/
-M. \
-\'\
-\‘W
-Q %-% m. “hm-M
-m W,“ m, "m AW WM; MK 6h m mum w m ma.
-‘um EM m4 “v
-mamu».ﬂ.~.m....—_ .,..
+but not subjects!
+A Trojan horse is a rogue software that may perform illegitimate actions
+unknown t0 the caller, exploiting access privileges of the caller.
+filel
+P 0' R' ht (AI' )
+~ ﬁ> rogram r “q; |g s: Ice,r
+-/
+Alice
+W
+ﬁlez
+4,-4r) g Rights: (Alice,w), (Bob,r)
+Bob
+The Trojan horse takes Alice's privileges, reads filel, and copies it in fileg,
+allowing Bob to read it!
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 35/39
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
@@ -607,64 +744,90 @@ models
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:42**************
-mum-u mm
-. m who“ WW ms‘ Mm‘ M I». mm m! ‘MW
-m mm, W mm mm ‘m
-. DAK W; Wm mm" Mm mrsand mm; m
-mm 1“ mums sub-“mm w: pm; (5mm) W". W
-"MM" W "W .humwmm “m m
-. DAK pm; a“ ":1!ka mm Wm Wm; mnexeml:
-mahzwux my.“ (w n no,“ Huvxl)vp1mlmllhc Wm
-Mk MM “WWW M m WM
-. 1m Wm a“ mmumww on ‘MW WWW
-W m WWW Wm by: mm
-Tm W0 m“ QM: m nmmszmn m mead 1m
-5.9mm M m Wm; m mmmﬂmg m M m WWW
-“mm.” |~."W.....—_ .,..
+Concluding Remarks
+
+o DAC policies enforce access control on the basis of the identity of
+the requester and explicit access rules;
+
+0 DAC policies ignore the distinction between users and subjects and
+evaluate all requests submitted by a process (subject) running on
+behalf of some user against the authorizations of the user;
+
+o DAC policies do not offer protection against processes that execute
+malicious programs (such as Trojan Horses) exploiting the privileges
+of the user on behalf of Whom they are executing;
+
+0 DAC policies do not enforce any control on the flow of information
+once this information is acquired by a process.
+
+Two things that emerge from our discussion: the need for
+separating users from subjects and controlling the flow of information!
+Proﬁdr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControIDAC Fall 2022 36 / 39
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
-walla
-‘n “Amm- m [he mm‘; mdmlzd m h, leA-mm“y "Mmmenﬂ
-. omwmwmw um)
-- [mm z m ‘ 6mm mm
-. Cthm u r» cm; mm
-. m,“ 2; M Eemnn mm
-- Sanmm m a! um‘ m vaevnl‘ (inn!)
-“mm” |~.».~W....—_ m.
+Readings
+In addition to the materials indicated so far, l additionally recommend:
+0 Chapter 6 of Conrad et al. (2016);
+o Chapters 3 and 4 of Andress (2014);
+o Chapter 11 of Collins (2014);
+o Chapter 23 of Bertino (2012);
+0 Samarati and de Capitani di Vimercati (2001).
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 37/39
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:44**************
-MM“!
 References
-m. J m“, “human, 5.“, WMMWMMM
-“Kn-MM. 5m... M k." MW
-MW E (mm MM. M. mm.‘ .. v“. "M. M M K
-M K W M ~ m. MWWWMWMMMWMW
-M. E My g m. M." J mi, WMM W. E...‘ 1.
-M." m A m w - W m» J D (mu WU WNW.
-m" M "nu-H"
-“hum, M..-“ Mm.“ W-"
-mmw.“ .__mm.._.—— ~-
+References
+
+Andress, J. (2014). The Basics of Information Security. Understanding the Fundamentals of
+lnfosec in Theory and Practice. Syngress, Elsevier, Boston, 2nd edition.
+
+Bertino, E. (2012). Chapter 23 - Policies, access control, and formal methods. In Das, S. K.,
+Kant, K., and Zhang, N., editors, Handbook on Securing Cyber-Physica/ Critical Infrastructure,
+pages 573-594. Morgan Kaufmann, Boston.
+
+Collins, L. (2014). Chapter 11 - Access controls. In Vacca, J. R., editor, Cyber Security and IT
+Infrastructure Protection, pages 269-280. Syngress, Boston.
+
+Conrad, E., Misenar, 5., and Feldman, J. (2016). CISSP Study Guide. Singress, Elsevier, 3rd
+edition.
+
+Harrison, M. A., Ruzzo, W. L., and Ullman, J. D. (1976). Protection in operating systems.
+Commun. ACM, 19(8):461—471.
+
+Lipton, R. J. and Snyder, L. (1977). A linear time algorithm for deciding subject security. J. ACM,
+24(3):455-464.
+
+Microsoft (2021). Windows security. Technical report, Microsoft.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 38 / 39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-MM“. (mm-l
-n...“ JI-Lwi“ h‘. M11. Wm" ~12“ W
-5..” . S wt) n. mm .1“. m... ....n..ﬂ.n..~\,~.h_..K
-WWW. 1 m mm»
-Mu . 3 W “Mnmmmuwmm 1 W. W
-5W“ N . WM K (m, mmhwmmw, WWW, m
-m.~..m.,m..m. rams.“ 1mm
-“mum-n INN”... —- ~-
+References (cont.)
+Samarati, P. and de Capitani di Vimercati, S. (2001). Access control: Policies, models, and
+mechanisms. In Focardi, R. and Gorrieri, R., editors, Foundations of Security Analysis and
+Design, pages 137-196, Berlin, Heidelberg. Springer Berlin Heidelberg.
+Sandhu, R. S. (1988). The schematic protection model: lts definition and analysis for acyclic
+attenuating schemes. J. ACM, 35(2):404—432.
+Sandhu, R. S. (1992). Expressive power of the schematic protection model. J. Comput. Secur,
+1(1):59—98.
+Shahriari, H. R. and Jalili, R. (2007). Vulnerability Take Grant (VTG): An efficient approach to
+analyze network vulnerabilities. Computers & Security, 26:349-360.
+Prof.dr. F.L. Tiplea, UAIC, RO Lectures on Information Security Access ControlDAC Fall 2022 39 / 39
 
 ***************Ending Page***************
 
