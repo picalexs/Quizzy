@@ -48,7 +48,6 @@ function CoursePage() {
             const userId = localStorage.getItem('userId');
             if (!userId) return setEnrolled(false);
             try {
-                // Fetch enrolled courses for user
                 const response = await api.get(`/enrollments/student/${userId}`);
                 const enrolledCourses = response.data;
                 setEnrolled(enrolledCourses.some(c => String(c.id) === String(id)));
@@ -67,9 +66,10 @@ function CoursePage() {
             const response = await api.post(`/enrollments?userId=${userId}&courseId=${id}`);
             if (response.status === 200) {
                 setEnrolled(true);
+                setNotification('Successfully enrolled in course!');
             }
         } catch (err) {
-            setNotification(err.response?.data || "Failed to enroll in course");
+            setNotification(err.response?.data?.message || "Failed to enroll in course");
         } finally {
             setEnrolling(false);
         }
@@ -82,6 +82,7 @@ function CoursePage() {
         try {
             await api.delete(`/enrollments/${userId}/course/${id}`);
             setEnrolled(false);
+            setNotification('Successfully unenrolled from course');
         } catch (err) {
             setNotification(err.response?.data?.message || err.message);
         } finally {
@@ -89,7 +90,16 @@ function CoursePage() {
         }
     };
 
-    const handleClick = (label) => {
+    const handleMaterialClick = (material) => {
+      navigate(`/Material/path/${material.path}`, {
+        state: {
+          title: material.name,
+          pages: material.pages
+        }
+      });
+    };
+
+    const handleNavClick = (label) => {
         if (label === "Home") navigate('/dashboard');
         else if (label === "Library") navigate('/library');
         else if (label === "Explore") navigate('/explore');
@@ -122,15 +132,13 @@ function CoursePage() {
         ]
     };
 
-    if (loading) return <div className="graph-container"><div className="library-loading">Loading course...<br/>id: {id}<br/>loading: {String(loading)}</div></div>;
+    if (loading) return <div className="graph-container"><div className="library-loading">Loading course...</div></div>;
     if (error) return <div className="graph-container"><div className="library-loading">Error loading course. Please try again.</div></div>;
     if (!course) return <div className="graph-container"><div className="library-loading">No course found.</div></div>;
-    console.log('CoursePage debug:', { id, course, error, loading });
 
-    // Adună toate flashcardurile din toate materialele
     const allFlashcards = course.materials
-      ? course.materials.flatMap(mat => (mat.flashcards ? mat.flashcards : []))
-      : [];
+        ? course.materials.flatMap(mat => (mat.flashcards ? mat.flashcards : []))
+        : [];
 
     return (
         <div className="graph-container">
@@ -139,7 +147,7 @@ function CoursePage() {
                     {notification}
                 </div>
             )}
-            
+
             <div className="graph-logo">
                 <img src="/quizzy-logo-homepage.svg" alt="Logo" />
             </div>
@@ -147,7 +155,7 @@ function CoursePage() {
             <div className="graph-box" />
 
             {/* Sidebar buttons */}
-            <button className="graph-icon-wrapper graph-icon-home" onClick={() => handleClick("Home")}>
+            <button className="graph-icon-wrapper graph-icon-home" onClick={() => handleNavClick("Home")}>
                 <img src="/home-logo.svg" alt="Home" className="graph-icon-image" />
                 <span className="graph-icon-text">Home</span>
             </button>
@@ -158,12 +166,12 @@ function CoursePage() {
                 <div className="graph-icon-text">Library</div>
             </button>
 
-            <button className="graph-icon-wrapper graph-icon-explore" onClick={() => handleClick("Explore")}>
+            <button className="graph-icon-wrapper graph-icon-explore" onClick={() => handleNavClick("Explore")}>
                 <img src="/explore-logo.svg" alt="Explore" className="graph-icon-image" />
                 <span className="graph-icon-text">Explore</span>
             </button>
 
-            <button className="graph-icon-wrapper graph-icon-profile" onClick={() => handleClick("Profile")}>
+            <button className="graph-icon-wrapper graph-icon-profile" onClick={() => handleNavClick("Profile")}>
                 <img src="/profile-logo.svg" alt="Profile" className="graph-icon-image" />
                 <span className="graph-icon-text">Profile</span>
             </button>
@@ -225,7 +233,10 @@ function CoursePage() {
                     {course.materials && course.materials.length > 0 ? (
                         course.materials.map((mat, i) => (
                             <div key={mat.id || i}>
-                                <div className="graph-file-entry">
+                                <div
+                                    className="graph-file-entry clickable"
+                                    onClick={() => handleMaterialClick(mat.path)}
+                                >
                                     <FaFilePdf size={40} color="#E74C3C" />
                                     <div className="graph-file-text">
                                         <p className="graph-file-name">{mat.name || 'Unnamed Material'}</p>

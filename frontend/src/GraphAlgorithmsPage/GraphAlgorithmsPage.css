@@ -651,3 +651,24 @@ html, body {
     margin-top: 8px !important;
     font-weight: normal !important;
 }
+
+.clickable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clickable:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.graph-file-entry {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.graph-file-text {
+    flex: 1;
+}

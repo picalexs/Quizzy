@@ -5,9 +5,10 @@ import Login from './Login/Login.jsx';
 import Dashboard from './Dashboard/Dashboard.jsx';
 import Profile from './Profile/Profile.jsx';
 import Library from './Library/Library.jsx';
-import GraphAlgorithmsPage from "./GraphAlgotithmsPage/GraphAlgorithmsPage.jsx";
+import GraphAlgorithmsPage from "./GraphAlgorithmsPage/GraphAlgorithmsPage.jsx";
 import Register from './Register/Register.jsx';
 import Explore from './Explore/Explore.jsx';
+import PDFViewer from './PDFViewer/PDFViewer.jsx';
 
 
 
@@ -23,9 +24,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/register" element={<Register />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/course/:id" element={<GraphAlgorithmsPage />} />
-
-
+            <Route path="/Material/path/:pdfPath" element={<PDFViewer />} />
 
         </Routes>
     </BrowserRouter>
 );
+
