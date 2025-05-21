@@ -49,6 +49,17 @@ public class UserController {
         return userService.findById(id).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/profile")
+    public ResponseEntity<User> getUserByEmail(@RequestParam String email) {
+        logger.info("Getting user profile by email: {}", email);
+        return userService.findByEmail(email)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> {
+                    logger.warn("User not found for email: {}", email);
+                    return ResponseEntity.notFound().build();
+                });
+    }
+
     @GetMapping("/login")
     public ResponseEntity<LoginResponse> getLoginPage() {
         logger.info("GET request to /login");
