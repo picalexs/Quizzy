@@ -60,6 +60,10 @@ public class UserService {
         return userRepository.findById(id);
     }
 
+    public Optional<User> findByEmail(String email) {
+        logger.info("Finding user by email: {}", email);
+        return userRepository.findByEmail(email);
+    }
 
     public String generateJwtForUser(String email)
     {
