@@ -141,7 +141,7 @@ public class PDFtoText {
         }
 
 
-        final int batchSize = 70;
+        final int batchSize = 10;
 
         try (PDDocument pdfDocument = Loader.loadPDF(pdfFile)) {
             int pageCount = pdfDocument.getNumberOfPages();
@@ -212,7 +212,7 @@ public class PDFtoText {
 
             for (int page = startPage; page < endPage; page++) {
                 try {
-                    BufferedImage bim= renderer.renderImage(page, 300, org.apache.pdfbox.rendering.ImageType.RGB);
+                    BufferedImage bim= renderer.renderImageWithDPI(page, 300, org.apache.pdfbox.rendering.ImageType.RGB);
 
                     PageImage pageImage = new PageImage(bim);
                     numberedPages.put(pageImage, page + 1);
@@ -296,7 +296,7 @@ public class PDFtoText {
         } finally {
             ocrExecutor.shutdownNow();
         }
-        }
+    }
 
 
     static class PageImage {

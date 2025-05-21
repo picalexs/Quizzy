@@ -1,73 +1,78 @@
 ***************Beginning Page***************
 ***************page number:1**************
-on? ‘cw: oo Mudehng a Design
-m‘ mm
-mmcmwmm
-Omen Onemen WWW anal/2022
+OOP (C++): OO Modeling & Design
+Dorel Lucanu
+Faculty of Computer Science
+Alexandru loan Cuza University, Iaei, Romania
+dlucanu@info.uaic.ro
+Object Oriented Programming 2021/2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-0 Mudds
+Q Models
 
-Q ~10qu Mm um
-Gus: Dmgmm
+9 Modeling with UML
+Class Diagram
 
-O [Sq-w) Ob|ecl0nentcd Dew" anﬂwes
-m Smng-Fhspmmmhly Pvmmple (5an
-m ODEWCMM WW ‘cm
-m Uikw Suhsmuvwn mm
-Dewmenw lnvemun mam
+Q (Some) Object Oriented Design Principles
+The Single-Responsibility Principle (SRP)
+The Open-Closed Principle (CPP)
+The Liskov Substitution Principle
+Dependency Inversion Principle
 
-O ounumWn
+Q Conclusion
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-wan
-I Mud-‘s
-mass Dmglam
-m 5W5 ResponsmHHy Pﬂndple (saw;
-m cpwcmm Pvmmpl: (07>)
-m mm Subsmum" Pmmwe
-DnDlndenv/ lrwamun www-
+Plan
+ﬂ Models
+Class Diagram
+The Single-Responsibility Principle (SRP)
+The Open-Closed Principle (CPP)
+The Liskov Substitution Principle
+Dependency Inversion Principle
+i:| 5' i E if QQG
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-A Kind m Dehnmmv
-A made‘ \s an abstmmmn uHhesuhwave :yxlem w he
-davsmpndmi! “mm \mwsmemzvm" (nglimmmg) mm
-mm user
-A made‘ mum" mam mmwms (Hemensmchuwwk.
-ms»
-. Mﬂww mm‘ ‘5 away: In \mnq! mum» a!
-sumemmg
-- nmcm 1 maﬁa‘ doe: mow, In 1mm m m:
-WM‘
-. Prlgmlnim z m1!‘ shumdb' um“
+A Kind of Definition
+A model is an abstraction of the software system to be
+developed that makes the implementation (programming) of the
+system easier.
+A model has three main characteristics (Herbert Stachowiak,
+1973):
+o Mapping: a model is always an image (mapping) of
+something.
+0 Reduction: a model does not capture all attributes 0f the
+original.
+0 Pragmatism: a model should be useful.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Quzhly 0| a Made‘
+Quality of a Model
 
-n \s dammm'ﬂ w m- Qunng cnavmunm: @m 5m
-mm
+It is determined by the following characteristics (Bran Selic,
+2003):
 
-. Aluminum
+. Abstraction
 
-- ummmm
+. Understandability
 
-. Ancmacy
+. Accuracy
 
-- WWW
+O Predictiveness
 
-. Goslrsﬁoclwerlsis
+O Cost-effectiveness
 
 ***************Ending Page***************
 
@@ -75,126 +80,178 @@ mm
 ***************page number:6**************
 UML
 
-. Tu we a mode‘. you need a mudelwg language
+o To write a model, you need a modeling language.
 
-. um LUmHed Modehnq Language) w a \anguwe and
-muﬂeww lechmqu: smlzﬂ: w “mmmm
-pvoglimmmg um k used \o ‘new spam mm am
-dummem “mm mmeﬂ mm‘
+o UML (Unified Modeling Language) is a language and
+modeling technique suitable for object-oriented
+programming UML is used to view, specify, build, and
+document object-oriented systems
 
-- m ms MM we mu use um Elemeﬂls m mm m
-mncepls and \aws MOOP
+0 In this course we will use UML elements to explain the
+concepts and laws of OOP.
 
-- Fm sull w; BOUML, Alganm‘ [W sumce). v-MI
-mm". um kOnhne EXszss mum
+0 Free soft tools: BOUML, Argouml (open source), Visual
+Paradigm UML (Online Express Edition),. ..
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-wan
-O Madam mm UMI.
-mass Dmglam
-m 5W5 ResponsmHHy Pﬂndple (saw;
-m cpwcmm Pvmmpl: (07>)
-m mm Subsmum" Pmmwe
-DnDlndenv/ lrwamun www-
+Plan
+9 Modeling with urvu.
+Class Diagram
+The Single-Responsibility Principle (SRP)
+The Open-Closed Principle (CPP)
+The Liskov Substitution Principle
+Dependency Inversion Principle
+i:| 5' i E if QQG
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-UMLDiagrams
-up
-m I==I
-EEEE BEBE
-EB as
-
-EH
-m E\E
+U M L D | ag ram s
+A
+Structure Diagram Behavior Diagram
+A A
+Class Package Object State Machine Use Case
+Diagram Diagram Diagram Diagram Diagram
+Component Profile Activity Interaction
+Diagram Diagram Diagram Diagram
+A
+Composition Structure
+Diagram
+Interaction Overview
+Deployment Dlagram Dlagram
+Diagram
+Communication Timing
+Diagram Diagram
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Wan
-O quehrw wuh um
-c1“ mu,“
-r ‘7 s‘ M P mmww w PH my. » ‘saw
-m Ova" cm: PH'UF I ‘chm
-thwy/SJ “\va W
-chm mm WW PH'vUD c
+Plan
+9 Modeling with UML
+Class Diagram
+The Single-Responsibility Principle (SRP)
+The Open-Closed Principle (CPP)
+The Liskov Substitution Principle
+Dependency Inversion Principle
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Spsciﬁcauon 0| a Class In UML
-M
+Specification of a Class in UML
+class Parser {
+private:
+string input/- m
+vector<char> sigma; _ input : string
+int index; —sigma : vector<char>
+public: —index : int
+char sym () ; + sym () : char
+void nextSym () ; + nextSym() : void
+i;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-N013“)?!
-El W W
-m "mu n
-m
-.5-
+Notation
+— input : string
+— sigma : vector<char>
+
+_ + sym () : char
+
+"TpUt + nextSym( ) : void
+
+sigma
+
+index
+
+nextSym() —
+
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Palamslnzed Class
+Parametrized Class
 
-mphmclm r>
-m“ Stuck 4 ‘7;;
-kavane: J
+template<class T>
+class Stack { 7”‘
+private: LTJ
 
-'n nu;
+T* elts; Stack
 
-m (up:
+int top; elts
 
-mu“
+public:
 
-um punm;
+void push(T);
 
-vmﬁ mu;
-n
+DOPO
+
+};
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
 Abstract Class
-cm. m <
-Mm, u
-mm, m cmmwu - n‘ M
-mm A.“ mm“ n . a‘ M
-H 1 a p , n,
-Nme ‘he uw m we w‘ tom
+
+class-Ast {
+public:
+
+virtual int size() = O;
+
+virtual int chldNo() = O; 5/290
+
+virtual Ast* child(int i) = 0,- Ch/IdNPO,
+
+virtual void print() I O; Chi/dam’)
+}. Pr/"TO
+Note the use of the italic font.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Genemlizalmn: lrvhemancs
-Mr. aaaibuneiCmn/Qe),
-h “WW,
+Generalization: Inheritance
+
+string name; name
+
+string address; address
+public:
+
+void changeAddress(); changeAdmessO
+}; ‘
+class Student : public Person {
+
+list<Course> studyProgram; m
+public:
+
+void addCourse(Course); swdmegmHI
+} ; addCourse(Course)
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:15**************
-Generaﬁzaﬂcn: massincamn
-m“ mm!» mm m l
-L
-m7», kwth/nf\pzy my’; m ,
-v‘
+Generalization: Classification
+class AstEmpty : public Ast {
+i;
+class AstNonEmpty : public Ast {
+i;
 —
-—
+A
 — _
 — _
 
@@ -202,622 +259,917 @@ v‘
 
 ***************Beginning Page***************
 ***************page number:16**************
-Classmicaﬂon: A Svnpb Case Sludy
-§
-FT" Cnfvlmmlv mmphﬁcd) ‘
-E E
+Classmcatlon: A Slmple Case Study
+—
+—
+A
+Frm C++ Grammar (simpliﬁed)
+literal:
+int-constant
+varename
+— —
+primary_expression: F —
+literal
+( expression )
+_ —
+_ _
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-lnteﬂacs
-
-E
-
-Iz-
-Iﬂl
-— —
-m- m
-In
+| nte rface
+<<interface>>
+Printable
 —
-Iz-
+
+A
+
+l
+m
+— —
+
+A
+
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-\msrlaces m C++
-- Mimhtﬂ M; ahinamdamu
-(m, mm,“
-Mm: “mm Wm pm” - a‘
-h
-cm. Venn" = Mn: kannable l
-Mm: vutuar We mm,‘
-1
-ma PerianHVLnlU l
-1
+Interfaces in C++
+Are described using abstract classes:
+class Printable {
+public: virtual void print() = O;
+t ;
+class Person : public Printable {
+public: Virtual void print();
+l
+void Person::print() {
+l
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Bmwsclional Bmary Assnciauans
-__
-v
-“mu mm“ “mama;
-| ..
+Bldlrectlonal Bmary Assomatlons
+
+— 1.2 *-
+— —
+
+class Professor {
+
+private: list<Course*> courses;
+
+}
+
+class Course {
+
+private: Profesor* lecturers[2];
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-ledwsclional Bmary Assnclauons
-7." "pm-w ‘mm-M m. mletmevweww knuvvsme
-m w w Wm»
-7|». Subwasmﬂkmw lurummhwruww ‘I \s wed luv
-mm
-_ ‘_
-m mm
-913m, ml» “m,
-mm V, WU, H ,nwwwm
-v
-\
+Unidirectional Binary Associations
+— an expression is evaluated in a state (the expression knows the
+state it is evaluated)
+— the state does not know for which expression it is used for
+evaluation
+IIIIIIII IIIIIIIIIII
+‘-
+class Expression {
+private: State* state;
+public: int valExpr(); // uses state->valVar()
+l
+class State {
+public : int valVar(VarName vn);
+// returns the value of the variable vn
+l
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Asswamn Class
-m“ mum." \
-// w" Mum may wily
-MGM-“w "um",
-M manm. iulﬂﬂqullh
-m, .mﬂmmw, “Wm-H
-h
+Ass00|at|on Class
+followers study
+lliIIHIlIejaaaae-—-TAAAAAAAAAAAT14liiiiiiiiiill
+‘ u
+e e e Blnary assomatlon class
+enroHO
+graduateO
+class Enrollment {
+// class invariant: study l= empty
+private:
+list<Student*> followers;
+list<StudyProgram*> study;
+Date startDate;
+public:
+void enroll(Student, StudyProgram);
+void graduate(Student, StudyProgram);
+};
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Shared Agregalmn
-CW MW,“ ¢
-v: _
-7725355'Zmnw mum" \- .sz
+Shared Agregatlon
+curriculum courses
+StudyProgram Q m
+
+class StudyProgram {
+
+private: vector<Course*> courses;
+};
+class Course {
+
+// class invariant: includedln != empty
+
+private: list<StudyProgram*> curriculum;
+};
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Slvong Agvegauon (Composmion)
-MW," . ‘WW-‘M1
-m- M _. M‘ "1Q M
-m
-‘ Wm . “I. 21:11:11
-IZ- > v
+Strong Agregatlon (Composrtlon)
+configuration : < program, state )
+state : var1 r—> va/1, var2 e> val2,
+class Configuration {
+private:
+Ast program;
+1 prooram 1 state State state;
+m m H
+class State {
+private:
+* -. alues map<VarName, Value> varValues;
+varName };
+value
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Wan
-mass quram
-O 45mm 0mm 0mm Dawn Pnnmplzs
-The 5W9 ResponstW Prmdple (saw;
-m opwmum Pvmmﬂle mm
-m uswv Sunsnmhn" inme
-mummy lrwcmcn PWWD‘:
+Plan
+Class Diagram
+Q (Some) Object Oriented Design Principles
+The Single-Responsibility Principle (SRP)
+The Open-Closed Principle (CPP)
+The Liskov Substitution Principle
+Dependency Inversion Principle
+Cl 5' i E if QQG
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Wan
-ll lime) omen Onemed new" Vnnmme:
-m Smgls mpummmy Pﬂndple (saw)
+Plan
+Q (Some) Object Oriented Design Principles
+The Single-Responsibility Principle (SRP)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-nennmmv
-Smgb'Respnnsmxlxly inme
-A mas: 5mm m: an: m my nus mm m change‘
-meimnqmﬂl a mm momd have only omwb
+Definition
+Single-Responsibility Principle
+A class should have one and only one reason to change,
+meaning that a class should have only one job.
+Robert C. Martin. Principles of Object Oriented Design,
+https://drive.google.com/file/d/OBymeqahinuGNHEthSOekchMkk/view
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-w v2
-mmwmmlumwm
-Wm, - "Pruuwn g Mangrvmnl
-( “mm \ // Wm‘ nauunnz
-mat-mm. Hmwm‘ Gamma“
-‘g ‘.mmm \ mm“ H n
-‘g ‘.mmm \ mm“ .1“ mm.“ //n
+'S'H'P' 1/2
+From C++ grammar (modified)
+statement:
+var-name : expression ; //asignement
+{ statement } // compound statetement
+(statement)* //sequential composition
+if ( expression ) statement // if
+if ( expression ) statement else statement //if
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-5H! 2/2
-Tm “my Vﬂwﬂmbiﬁel
+expr : Expression lexe91;sstign(li
+
+varName : VarName :ojlgotndg ag __
+
+stetements : Stetement* execCompound()
+
+tag : ShapeType else if (tag == seq)
+Too many responsibilities.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:29**************
-SHP v2
-W. Dr inmlvwrlleY
-321522;; >
+From C++ grammar (simplified)
+statement:
+assign-statement
+compound-statement
+statementeseq
+selection-statement
+assignestatement:
+var-name : expression ;
+compoundestatement:
+{ statement }
+statement-seq:
+statement
+statement-seq statement
+selectionestatement:
+if ( condition ) statement
+if ( condition ) statement else statement
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-sHPz/z
-
-In
-
+SRP2/2
 —
-m m [m In
-— — — —
-m m m m
+A
+w-wm
+————
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Wan
-ll lime) 0mm Onemed Dewgn mm»!
-m upwcmm vamnll LCVPI
+Plan
+Q (Some) Object Oriented Design Principles
+The Open-Closed Principle (CPP)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-nennmmv
-span-mom PM,“
-5&1“va "mu-Wm» madmas mnclmrw. my mama n-
-Wen lore'xlensmn. a“! unsed m- mudmmmn
+Definition
+Open-Closed Principle
+Software entities (classes, modules, functions, etc.) should be
+open for extension, but closed for modification.
+Robert C. Martin. Principles of Object Oriented Design.
+https://drive.google.com/file/d/
+OBthYaYDn8EgN2M5MTkwM2EtNWFkZCOOZTI3LWFjZTUtNTFhZGZiYmUZODcl/view
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-QGP
-
--‘ m
-
--'"-"- a
-m |:.::|
-m m
+* ShapeContainer
+— _
+A
+\
+\
+\
+x
+void load(stcl: :ifstream& inp)
+while (inp) (
+— — int tag;
+lnp >> tag;
+switch (tag) {
+case RECTANGLE:
+eéée CIRCLE:
+)
+}
+If we add more shapes, we have to modify ShapeContainer: :load ().
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-OCF'
-m prewunsexamrﬂeﬁn be med In new“)! OCP “5m
-[Mum mmvy mm mm ‘mm-v
+OCP
+The previous example can be fixed to respect OCP using
+Object Factory Pattern (next lecture).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Wan
-ll (Some) 0mm Onemed mg" Pnndme!
-m UM Suhﬂnmun Panms
+Plan
+Q (Some) Object Oriented Design Principles
+The Liskov Substitution Principle
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Demon
-Uskov' Subsnmnnn Pnnmlile
-LEI Pm be a wpsny prwaws abum omens I or lyps r
-Tm‘ m, mama be m Mum“ y mxype s whee 55 a
-snmyﬂs ul r
-In ulhllwwds s \XISUDIYDI m mum!" yuu can ulna
-n you ma m use an s‘, Y can he msmm m a“ m
-NB Neveme nnhon 01 'subiyne‘ 5mm he msamas
-wmmm mm!“ (w- w.“ axwam \aurlhl dmumncs)
-4mg M-NTW. \nvwrvmwmn WWW WW!
-mmm qaznmmmvgmg»
+Definition
+Liskov1 Substitution Principle
+Let P(x) be a property provable about objects x of type T.
+Then P(y) should be true for objects y of type S, where Sis a
+subtype of T.
+ln other words, Sis a subtype of T if anywhere you can use a
+T, you could also use an S (a T can be substituted by an S).
+NB Here the notion of "subtype" should be meant as
+"behavioural subtype" (we will explain later the difference).
+Barbara Liskov, Jeannette M. Wing: A Behavioral Notion of Subtyping. ACM Trans. Program. Lang.
+Syst. 16(6): 1811-1841 (1994)
+
+1Turing Award, 2008, for contributions to programming languages
+
+development, especially OO languages.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-A Simple Exampb
+A Simple Example
+
+class Base (
+public:
+
+Base() = default;
+
+~Base() = default;
+
+void doBaseAction() const ( privateBaseAction(); i
+private:
+
+void privateBaseAction() const { stdzzcout << "A base action\n"; i
+i;
+class Derived : public Base (
+public:
+
+Derived() = default;
+
+~Derived() = default;
+
+void doDerivedActiOn() const i stdzzceut << "A Derived action.\n"; i;
+i;
+int main() {
+
+Base b;
+
+Derived d;
+
+d.doBaseAction();
+
+return O;
+i
+It seems that Derived is a (behavioral) subtype pf Base.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-A Counter'Examwe v4
-A rushed modshng m We IeWWv “Any Ewe \s a valangle“
-“ms \s an mum: m m: ‘is a‘ lemma")
+A Counter-Example 1/4
+A rushed modeling of the relation "Any square is a rectangle"
+(this is an instance of the "is a" relation):
+A
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-A Counlev-Exampls 2/4
-m m- m
+A Counter-Example 2/4
+Let’s refine it:
+- i i i i P(r) E r.area() ==
+getWidth()*getHeigth()
+helgth
+setWidth()
+setHeigth()
+getWidth()
+getHeigthO k
+area() . r .
+v0|d setSlze(|nt x) {
+A setWidth(x); )
+int getSizeO {
+w return getWidth();
+— }
+setSizeO i i i i int area() ( return
+getSize() getSize()’getSize();
+area() }
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-A Counter'Examwe 3/4
-mum-uncan-
-, ,me, // New“
-“Magnum, mum‘
-Wm“.phymmhmnmahqh
-pm n mwm WW Hm Nu
-Quzstmn
-Wham m. "gm mm» m..." “may .m
-‘am-awe 1
+A Counter-Example 3/4
+Consider the code:
+Square s;
+s.setWidth(5); // inherited
+s.setHeight(10); // inherited
+Assume that s plays the role of a Rectangle.
+Does it satisfy the property P(s)? No.
+Question
+What is the right relationship between "subclass" and
+"subtype"?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-A Counter~Examp\e 4/4
-A mnem mewchy
-,/ \
+A Counter-Example 4/4
+A correct hierarchy:
+-
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:42**************
-Quesmn
-n seem: mamuubdas: mam" m" w
-[ma-mm. prism-dais)
-‘5 "m me same'mlh matmsumyve
-SL1
-mm m: "gm WNW between ‘mum! and
-wwww
+Question
+It seems that the subclass relation, given by
+(child-class, partent-class)
+is not the same with that of subtype.
+So,
+What is the right relationship between "subclass" and
+"subtype"?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Types, Types, Types. . .vs
-m WM, mu; M.“
-0mm; "MM mmmmmhgmmmwmwm “WM
-.m mmm-mym-m vmmmmrmm-me
-mm.mnp.m.mm...m...nn,.m.,mm
-www.mm-Wmmmm,
-‘WWW
-mm. www.mmme-w
-WWW-m
-.m
-5W M.‘ W N‘ W W‘
-“mm WWW “m
-“W w»-
-WWW
-Mm“
-mm.‘
-WWW
-m W
+Types, Types, Types, . . . 1/3
+From (online) manuals2 (partial):
+Objects, references, functions including function template specializations,
+and expressions have a property called type, which both restricts the
+operations that are permitted for those entities and provides semantic
+meaning to the otherwise generic sequences of bits.
+Type classification
+The C++ type system consists of the following types:
+fundamental types
+void
+signed integer types int, long int, ...
+floating-point types float, double,. . .
+compound type
+reference type
+pointer type
+array types
+function types
+class types
+thtps : / /en . cppreference . com/w/cpp/language/type
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Types, Types, Types. . ,2/3
-Sn‘ aclus Mow
-NR m mm“ W.
-A a»: \ncmdes w nrlhuuﬂnal ms
-Slammm‘ rm:
-\mwememalwn
+Types, Types, Types, . . . 2/3
+So, a class is a type?
+N0, not completely true.
+A class includes two orthogonal things:
+static/behavioral type
+implementation
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Types, Types, Types. . .3/3
-Suluwu [mum w
-uw-nmnux 1,2 mum-Max RIM
-:3: >1 “We mm"
-—m1 mm“ WWW. WWE
->
-ancmn» Mm "Winn-Wm MM [In-mymcnnw
+Types, Types, Types, . . . 3/3
+Static types (abstract view):
+Declaration ofX Type associated toX Remark
+int X; int
+struct X {
+int a; .
+double b; 1nt x double product type
+}
+int X (double a) ; double ~> int function type
+class X {
+in? Size; void —> X constructor X()
+publlc: . .
+, t etSize()- X —> lnt getSlze
+1n. g _ ', X >< int e X setSize
+v01d setSlze(lnt a);
+}
+For classes, only the types of the public members (interface) are considered.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-Sublypmg Promem v2
-wnmaWueSnagubwupwnlyuenwmtan£( w
-Funnslmmazchnnsanm Damn»-
-vzs mwmu,“ mama» km Wm.’ M
-NO ‘17¢7asmlamnc1m'ltb1mgm 71 m m mm m
-Man4zumu/q “:1
-Wml Wm Hm mode‘ 1m m m dams’!
+Subtyping Problem 1/2
+
+When a type S is a subtype of a type T (written S <: T)?
+For instance, each int is a long int. Do we have
+
+(int,_+_: int >< int —> int) <: (long int,_+_: long int >< long int)?
+YES, if we consider _ + _ as partial functions (no over/under-flow).
+NO, if _ + _ as total functions (MAX_INT + 2 on int is different from
+MAX_INT + 2 on long int).
+What happens if we model int and long int with classes?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-Sublypmg Promem 2/2
-Mme qenem‘ mm“
-wmhs’ My
-Wham WM!‘ when A \s a 115557
-Wmm W s > WM MN A WM
-Who/[5) < WAN’ h e ‘ when A and Bvesped LP’)
+Subtyping Problem 2/2
+More general questions:
+When A—> B<: A’ —> B’?
+What is typeOf(A), when A is a class?
+When class B : public class A implies
+typeOf(B) <: typeOf(A)? (i.e., when A and B respect LP?)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
 On
-Comravanance/Covanance/‘nvanance
-\mmm a mm mm me “mm mm how “3mm
-mm" \s Dmmnkd w mmwum um
-. a Me ‘5 Mm": vaasswsnM omen"; m lypes <
-- 1 Me ‘S eravalmM M mum m “mm <
-. a Me \s Wm"! u \l ‘5 nul nsnhevcuvaﬂam Hov
-mmmm
-E u ‘1”va brﬁumhon Miss \smnlluvahanl a“ avuumenls
-m minim an "um
-A’ < A s < s
-(4A Q a; < (wiQ g)
+Contravariance/Covariance/ Invariance
+Within a type system, the variance refers how the subtype
+relation is promoted to compound types.
+. a rule is covariant if preserves the ordering of types <:
+0 a rule is contravariant if it reverses this ordering <:
+o a rule is invariant if it is not neither covariant nor
+cotravariant
+E.g., the rule for function types is contravariant on arguments
+and covariant on result:
+A’ <: A B <: B’
+(A —> B) <: (A’ —> B’)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Comysvanance/Cnvanance/‘nvanancs
-m C++
-c“ w mmdden hmnlmm u mmm an all-mm In»
-m awn-m an Ian/ll w ‘
-me [he manual
-m1 th/w M,- M a!‘ WWW WW m“ kw m.’ Md w m. W"
-W u! m mm‘ WW w WWW» m w»; w w WW
-“WW u vwwm WW = \ ‘he w“ WW‘ ‘he WWW
-MM q My mum ‘he Wm cnlzm
-m ‘limmavewmevsxodasses bum{lemmevemvewesvucmses m
-m M Wm Wm» m Masses
-m 1H» m m w Wm W ms v\gmeumzcmngmmmsm
-‘MW ‘WHM n \ mm mmmm “WMMMMM
-mmmmm wmerzmlvlwlﬂ‘ n ,
-la a, i mm WM m ‘MM W m: m (Manhciunn 1mm:
-“WWW annw WWW“ “mm mum
-MummmmmWmmmmvm E \
-'s" I» Cams: s
+Contravariance/Covariance/lnvariance
+in C++
+C++ for overridden functions is invariant on parameters type
+and covariant on result type.3
+From the manual:
+The return type of an overriding function shall be either identical to the return
+type of the overridden function or covariant with the classes of the functions.
+If a function D::f overrides a function B::f, the return types of the functions are
+covariant if they satisfy the following criteria:
+(8.1) — both are pointers to classes, both are Ivalue references to classes, or
+both are rvalue references to classes
+(8.2) — the class in the return type of B::f is the same class as the class in
+the return type of D::f, or is an unambiguous and accessible direct or indirect
+base class of the class in the return type of D::f
+(8.3) — both pointers or references have the same cv-qualification and the
+class type in the return type of D::f has the same cv-qualification as or less
+cv-qualification than the class type in the return type of B::f.
+38ee also Course 5. a 51 , E :5 oqo
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-C++I Return Cnvariam Examme 1
+C++: Return Covarlant Example 1
+class Base
+(
+public:
+Base() = default;
+virtual Base* clone() const { return new Base; )
+virtual ~Base(){ stdzzcout << "~Base()\n"; )
+virtual void introduceYourself() const {stdzzcout << "I am a Base.";}
+l;
+class Derived : public Base
+{
+public:
+Derived () = default;
+Derived* clone() const override { return new Derived; }
+virtual void introduceYourself() const override {stdzzcout << "I am a Derived.\n";}
+~Derived() Override ( stdzzcout << "~Derived()\n"; }
+l;
+int main() (
+Derived d;
+Base* pb = d.clone();
+pb’>introduce¥ourself(); // I am a Derived.
+delete pb;
+return O;
+l
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-0H: Rslum Cnvarism Exampb 2*
+. - 4
+C++. Return Covarlant Example 2
+
+class Animal {
+public:
+
+virtual void makeNoise() I O;
+
+virtual ~Animal() I default;
+l;
+class Dog : public Animal (
+public:
+
+void makeNoise() override ( std::cout << "ham!\n"; }
+};
+class AnimalBreeder {
+public:
+
+virtual Animal* produce() I O;
+l;
+class DogBreeder : public AnimalBreeder (
+public:
+
+Dog* produce() override ( return new Dog(); }
+
+l;
+int main()(
+
+DogBreeder db;
+
+Dog* dp I db.prcduce();
+
+dpe>makeNoise(); // ham
+
+delete dp;
+l
+
+4 .. .
+
+The example ls Insplred from here:
+https://quuxplusone.github.io/blog/2019/01/20/covarianceand-contravariance/
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-c“; Avgumem Camrsvanam
-(ecumensxampm
+C++: Argument Contravanant
+(Counter) Example
+
+class Animal (
+public:
+
+virtual void makeNoise() = O;
+
+virtual ~Animal() = default;
+i;
+class Dog : public Animal (
+public:
+
+void makeNoise() override ( std::cout << "ham!\n"; }
+i;
+class DogDoctor {
+public:
+
+virtual void treat(Dog *dog) { stdzzcout << "Dog treated!\n"; )
+i;
+class AnimalDoctor z public DogDoctor (
+public:
+
+void treat<Animal * animal) override { stdzzcout << "Animal treated!\n"; i // error
+i;
+Remember that C++ is invariant on arguments.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-Behaviors‘ Type m a mass vs
+Behavioral Type of a Class 1/3
 
-mm.’ m- me w‘. mm.
-1m Square K
+Consider the following simple example:
+class Square {
 
-Pm!“
+int size;
+public:
 
-mummy , - a»;
+Square(int s = O);
 
-m gummy
+int getSize();
 
-m areail wwmvmmjmn,
+int area() throw(overflow_error);
 
-m1 ham“;
->
+void halve();
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-Behaviors‘ Type m a mass 2/3
-‘mm m m mm mm: a! m: mm .m cmskl: 0|
-. mum" WMWW
-. mm MW
-EYWP'Q nelsmn 20
-_ Much Emma
-MW“
-mm mm m MW
-Prawrﬁmun
-mm 5 2 n
-r chonwnw
-aw. WW1 >0
-V "- ﬂaws" ‘I w“
+Behavioral Type of a Class 2/3
+Includes also the behavioral interface of the objects and consists of:
+o a description of the value space
+* class invariants
+Example: getSize () Z O
+>r for each constructor c
+— its signature
+Example: Square : int —> Square
+— precondition
+Example: s Z O
+e postcondition
+Example: getSize () Z O
+— the exceptions it signals
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:55**************
-Behaviors‘ Type m a mass 3/3
-. 7mm" M mm m
-w MW“.
-mm mm,“
-. nmcmmn
-Examuh “eﬂqewuemﬂwvhave!
-. ,mmm
-Exambh areal] :: Q 2; ~0A4(aleim Um mue)
-_ ma mm“ n Wm
-. 1w m» pulimultnhulei
-. M»-
+Behavioral Type of a Class 3/3
+. for each public method m:
+>r its signature
+Example: area: Square —> int
+halve : Square —> Square
+* precondition
+Example: even(qetSize()) (for halve)
+* postcondition
+Example: area() :: 0.25 >l< old(area()) (for halve)
+>l< the exceptions it signals
+o for each public attribute a:
+96 its type
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:56**************
-A Possible Specilicauan inr lhs
-Bshavmra‘ Type
-awn-nu“ 5 Z m V D
-:Z::;§§:l,,
-Mm“
-21:25:33,,
-m.“ mm -- qusmhmmw
-W We“;
-mm. “WWW
-, =
+A Possmle Specmcatlon for the
+Behaworal Type
+type Square {
+
+invariant getSize() >= O
+
+Square(int s = O)
+requires s >: O
+ensures true
+noexcept(true);
+
+int getSize()
+requires true
+ensures true
+noexcept(true);
+
+int area()
+requires true
+ensures result :: getSize()*getSize()
+throw(overflow_error)
+void halve();
+requires even(getSize())
+ensures area() == O.25*old(area())
+noexcept(true);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-The Subsmuuon Prinmme Exphmed
-using Behavmvz‘ Types v2
-mum“ (mum) m 1mm.‘ my». um. mm“
-(WWW A‘ B< A‘ .1
-. memummsu/me:Wevdm-vlwnewed Wmembdus
-l5 mums meAvamﬂ] me wmurwnwn nlme Sway-am
-\mphe! wmwmnulmeA MW‘ .e‘
-/\ U = A U
-M’, WA,
-. 1mm Mme“ mm, m
-, a mHandA mmmwmmmmm
-, wmvuvuvmvcewargumems ﬂlherlharwumemmi mu
-.5 v‘ mm H» "we". W mm u “mm < 4,
-V mmmmm, wmerusuﬂlypi w mm ‘5,. “am:
-mum,” MW. Mme“ K ,.
+The Substitution Principle Explained
+using Behavioral Types 1/2
+A child class (subclass) B is a behavioral subtype of the parent class
+(superclass) A, B <: A, if:
+
+. the invariants of the superclass are preserved by the subclass
+(B values are A values): the conjunction of the B invariants
+implies conjunction of the A invariants, i.e.,
+
+/\ ¢ :f /\ <i>
+¢€Inv(B) d>€lnv(A)
+0 for each overridden method m
+— B::m() and A::m() have the same number of arguments
+— contravariance of arguments: if the i-th argument of B::m()
+is 6,- and the i-th argument of A::m() is 04,-, then a,- <: B,-
+i covariance of result: if the result type of A::m() is a and the
+result type of B::m() is 5, then ﬂ <: a
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-The Subsmuuon Prinmme Exphmed
-using Behavmvz‘ Types 2/2
-7 “WWW. mum-mmmmms mum
-Mm." mam “mum mm w A mu
-7 wmanucso/ww memodx ‘i Unscrvm
-n 1m pmmnmlkm at A MU ‘who: mi pvmommun m B "'0
-n 1m mmm a! B mu “Mmmmmm a‘
-A "'0
-N a YhaiasWDHHnd wmuolmnuwmammmnen
-Eumn SWIM w < m k m/MM)
+The Substitution Principle Explained
+using Behavioral Types 2/2
+e exception rule: the set of exceptions signaled by B::m() is
+included in the set of exceptions signaled by A::m()
+— semantics of the methods is preserved:
+o the precondition of A::m() implies the precondition of B::m()
+o the postcondition of B::m() implies the postcondition of
+A::m()
+N.B. This is a simplified version of the original definition.
+Exercise. Show that T <: T (<: is reflexive).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-Comravarlanoe/Cm/anancs Rule WM
+Contravariance/Covariance Rule with
 Diagrams
-u u u
-m: _ _
-s , Y 2 E E
-E < Y m
-WM“:
-5mm.» WW Mum-"m
-MW.’ MW WW.
-mum:
+— — —
+A A A
+s <1 T I- II II
+— — —
+Contravariance
+Contravariance Covariance of arguments and
+of arguments of result Covariance
+of result
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Semanlics Rule mm Diagrams
-r< I‘ :-
-v, g P.
-D- g DA
+Semantics Rule with Diagrams
+T<:T, :-
+PA i PB
+QB :> QA
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-Contra-Example Revlsmed
-We exumwé ‘AW Square Is a rename‘ vmates weval rules
-. “mum mm >5Mwm nunmtpmsmm
-the squzc vrwananl qumunl) Z IQ!NL‘J1Lh[)
-. m: “mm” m Same 1mm, m m Mum:
-wilwndhwrv =|W1W.,.W U
+Contra-Example Revisited
+The example "any square is a rectangle" violates several rules:
+0 the nethod Square: :setHeigth() does not preserve
+the Square invariant getWidth() I getHeigthO
+0 the postcondition of Square: :area (> does not imply the
+postcondition Of Rectangle: :area (l
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-Wan
-o lime) Omen 0mm Dem Vnnmme:
-Dwmmnmmmw
+Plan
+Q (Some) Object Oriented Design Principles
+Dependency Inversion Principle
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-Dehnmmv
-. wwm Mm mam magma on Wm
-mm Both mum dewd on mum-W
-- Abswchunsihnulﬂ nm den-m on mam: on“ 5mm
-depend a“ abstraelms
+Definition
+o High-level modules should not depend 0n low-level
+modules. Both should depend on abstractions.
+o Abstractions should not depend on details. Details should
+depend on abstractions.
+Robert C. Martin. Principles of Object Oriented Design.
+https://fi.ort.edu.uy/innovaportal/file/ZOBZ/l/designiprinciples.pdf
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-Absuacmsw
-Nomme mum ﬂmeqenae between the dependence am
-mums Mal-w lrvhemnce m mm dependomy
+Abstract View
+/// ‘ \\\
+/ l \
+// l \\
+// // l \\ \\
+A A A
+Note the notational difference between the dependence and
+inheritance relations. Inheritance also implies dependency.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:65**************
-Examms
-EFE
-In El In
+Example
+ShapeRepository -
+¢ A v
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:66**************
-Examms
-m u
-m m [m In
-_ — _ _
-m m m m
+Example
+— m
+A
+w w m
+— — — —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:67**************
-wan
-mass Dmglam
-m 5W5 ResponsmHHy Pﬂndple (saw;
-m cpwcmm Pvmmpl: (07>)
-m mm Subsmum" Pmmwe
-DnDlndenv/ lrwamun www-
-O Candusmn
+Plan
+Class Diagram
+The Single-Responsibility Principle (SRP)
+The Open-Closed Principle (CPP)
+The Liskov Substitution Principle
+Dependency Inversion Principle
+0 Conclusion
+i:| 5' i E if QQG
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:68**************
-Condusmn
-- Mms rm
-. Appw {he ngmoo Deswn PM“ wHeYeVSI wch a
-Dnnmwe \s who.»
-. Reuse Yum mm»; hum paewous \amramues am
-duquhmrmnddi am mm m- Dian-s whsvl
-Pnnmwes ave Wuhan:
+Conclusion
+. Models first.
+o Apply the right OO Design Principle wherever such a
+principle is applicable
+o Revise your applications from previous laboratories and
+design their models and identify the places where
+principles are applicable.
 
 ***************Ending Page***************
 

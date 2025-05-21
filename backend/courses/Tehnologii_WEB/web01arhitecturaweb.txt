@@ -1,11 +1,13 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Tehnologii Web
-FRDNHND
-concepte primare w: \
-. . . (Q97 ' \x
-§1v1z1une 49 ~ ' ~ (I
-1” If,’
+O.
+Tehnologn Web
+FHUNT-END
+concepte prlmare _ I, M ,
+$1 VlZIune mg: ~ ‘(I
+\ 'aw ‘ ‘,Jivcé“
+.40 q;
+BACK-END
 Prof. Sabin Corneliu Buraga — profs.info.uaic.rol~busacol
 
 ***************Ending Page***************
@@ -19,6 +21,7 @@ Franz Kaﬂm
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
 Ce este Web-ul?
@@ -29,15 +32,16 @@ Ce este Web-ul?
 ***************page number:4**************
 world wide web
 Serviciu Internet
-WWW ¢ Internet
+WWW i Internet
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
 world wide web
-Spajdu informagional comun in care comunicém
-prin interconectarea 5i partajarea unor elemente
+Spaiiu informational comun in care comunicém
+prin interconectarea gi partajarea unor elemente
 de interes denumite resurse
 inventat de Sir Tim Berners-Lee in 1989
 
@@ -45,104 +49,124 @@ inventat de Sir Tim Berners-Lee in 1989
 
 ***************Beginning Page***************
 ***************page number:6**************
-WS'"
+wsr'
 
-_" FOR wwwmr an FASF
-Slr T|m Berners-Lee, Inventor of the World Wlde Web,
-to recelve the AC M A.M. Tu nng Award
-Slr Tlm Berners-Lee —laur1at al premlulul Turlng (2 0 1 7]
+—V FOR IMMEDIATE RELEASE
+S|r Tim Berners-Lee, Inventor of the World Wlde Web,
+to receive the ACM A.M. Tu ring Award
+Slr Tlm Berners-Lee — laurlat a1 premlulul Turlng (2 0 1 7)
 
-cea mai importanti distincgie in domeniul informaticii
+cea mai importanté distinctie in domeniul informaticii
 
-Mtg: IMww W3 mg! a 4 Apnl 2011 a The ACM. me Assomanon lcr Compulmg Machmery today named su mu
-Beme|s~Lee_ mvenmr u! the Web and Duectnv 0| the Wuﬂd W|de Web Cunsomum‘ as the lemplem of [he 2015
-ADM A M Tunng Award
-rue ACM Turmg Awam m recagmzed as lhe hlghes! amumau m Cnmpuler samuae and m aameumea ve'evred \a
-aa me “Nobel Pnze o! Cumpnlmg - Tue Awavd m named ior the ammu Cnmpmev Seaman Alau Tunng who \s
-known as me key 'nundev cl theorems‘ aampma' smence and amﬁmel \nleWgenoe as Wen as (01 me devempmenl
-a0 ma Tunng machme considered a mode‘ 0| a geuem purpose computev
-SW mu m hemg gwen mm awam lav mvenlmg {he World Wme Web‘ me ﬁrst web browse!‘ and me (unﬂamemm
-pmlamIs aua mgnnlhms anammg we Web m same Consmered one M ma mus! mﬂuenﬂa‘ sempulmg mnovaunns
-m mamm. \he Wand wma Waa m ma mammal mmammam a. aaama ama aaa amaay aaaaaa (he mama
-mnnechwy plaﬂulm
+https://www.w3.org/ — 4 April 2017 — The ACM, the Association for Computing Machinery, today named Sir Tim
+Berners-Lee. inventor of the Web and Director of the World Wide Web Consortium, as the recipient of the 2016
+ACM A.M. Turing Award.
+The ACM Turing Award is recognized as the highest distinction in Computer Science and is sometimes referred to
+as the "Nobel Prize of Computing." The Award is named for the British Computer Scientist Alan Turing who is
+known as the key founder of theoretical computer science and artiﬁcial intelligence as well as for the development
+of the Turing machine, considered a model of a general purpose computer.
+Sir Tim is being given this award for inventing the World Wide Web, the ﬁrst web browser, and the fundamental
+protocols and algorithms allowing the Web to scale. Considered one of the most influential computing innovations
+in history, the World Wide Web is the technical infrastructure of society and has already become the universal
+connectivity platform.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
 world wide web
-ldee (Sir Tim Berners-Lee la CERN — 1989]
-integrarea unor sisteme informaﬁonale
+Idee (Sir Tim Berners-Lee la CERN — 1989)
+integrarea unor sisteme informationale
 disparate intr-un mod unitar,
-féri diferenge intre sursele de date
+féré diferenjce intre sursele de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
 world wide web
-ldee (Sir Tim Berners-Lee la CERN — 1989]
-integrarea unor sisteme informagionale
+Idee (Sir Tim Berners-Lee la CERN — 1989)
+integrarea unor sisteme informaﬁonale
 disparate intr-un mod unitar,
-firi diferenge intre sursele de date
+féré diferenjce intre sursele de date
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
 world wide web
-ldee (Sir Tim Berners-Lee la CERN — 1989]
-integrarea unor sisteme informapionale
+Idee (Sir Tim Berners-Lee la CERN — 1989)
+integrarea unor sisteme informajdonale
 disparate intr-un mod unitar,
-féré diferenye intre sursele de date
+fﬁrﬁ diferen§e intre sursele de date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
 world wide web
-ldee (Sir Tim Berners-Lee la CERN — 1989]
-integrarea unor sisteme informaﬁonale
+Idee (Sir Tim Berners-Lee la CERN — 1989)
+integrarea unor sisteme informationale
 disparate intr-un mod unitar,
-féri diferenge intre sursele de date
-anything can link t0 anything
+féré diferenjce intre sursele de date
+anything can Iink t0 anything
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
 world wide web
-Bazat pe modelul client/server
-client —cerere
-Web SEI'VBI‘
-[bl'OWSEI'] _ Web
+Bazat pe modelul client/ server
+client —Cerere
+Web SGPVGI‘
+(browser) — Web
 raspuns
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Mmmm
-primul Server Web 'i/ E mfjfﬂliqfs'“
-- _ F" WNW/WW
-~ . Cosme UH Sesmvweh
-Mmmww
-- a: Ammmm
-L-V; , ‘ 5 “23:1‘il1'L' J‘ :"11, ‘ ‘ , ~ Q memamvm»
-‘ W ww
-4 MW > -' 31-‘ WabZDQJuMZ Mum“.
-k;\ New‘ Farmha m
-Sabm Buraga: Dezvoltalor Web?! (2019) ‘sums — n V
-...§i pe hipertext [hipermedia)
+‘ " Web 2020 01/12: World
+prlmul server Web :___ W ‘_1, Wide Web _ aspecte
+_ '1 5' L _ ' h‘ arhitecturale
+- - t “"“ Web 2020 02/12:
+I ~ . j , .. .' ' - Programare Web — HTTP.
+~ ~24 i Cookie-uri. Sesiuni Web
+III!- Sabin Buraga
+I“ a Web 2020 03/12;
+Programare Web —
+,~.—.—.=.J-.. '1.‘ Arhltectura apllcaiulor Web.
+Empc in dunultm'm unui aplicagii Web m lnginerie Web
+Sabin Buraga
+‘ Cermty — rcqirirmirrils
+.~\n.|lu.': v1 pmwcmro — ~if'!.i'.'il'i‘ilr.~z_\'u
+‘ lmplrnirnlnru — lmriil ‘Mi, W w - .
+.- u: ..: "we l'us “m _ a‘ m" _qu \ m .-._ \\ cu _
+' ‘ % f‘; W m‘ EXPlOdttdre—LtlLTPIL'yjllL'HI - _ Web 2020 04/12
+I" .. _W “r!”- \__ \“J Montcnangi - Immm'nmm' ‘ (‘Q filii\ . .- u.“ .- I‘ a Pfogf'amare Web _
+lluvlu w — i'vuln mu v'mu hunpnhthtb-. \ V.,. / iv ._ 7- _ __
+.. i _ K r a“ m ' I.‘ - . Dezvoltarea apilcapilor Web
+Sabin Buraga
+{ 14 of 118 } I, , ‘1:5, . Web 2020 05/12; Modelarea
+£512” t datelor. Familia XML.
+_ 1 383 views w Mfg. M‘ Extragerea datelor cu XPath.
+Sabln Buraga: Dezvoltator Web?! (2019) ‘ m
+Sabin Buraga
+' h' t t h' “ii
+...§1 pe lper ex ( lperme 1a)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
 world wide web
-Scopuri (intenjcii) principale:
-independenta de dispozitiv
-independenga de software
+Scopuri (intenﬁi) principale:
+independenjca de dispozitiv
+independenjca de software
 scalabilitatea
 ubicuitatea
 
@@ -151,15 +175,16 @@ ubicuitatea
 ***************Beginning Page***************
 ***************page number:14**************
 world wide web
-Bazat pe principii §i standarde deschise
-stipulate de Consorﬁul Web
-Webfor all & 0n everything
+Bazat pe principii gi standarde deschise
+stipulate de Consortiul Web
+Web for all & 0n everything
 Web for rich interaction
-Web of data & services
+Web 0f data & services
 Web 0f trust
-www.w3.org/Consortium/mission
+www.w3.org/Consortiumlmission
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
@@ -167,195 +192,207 @@ arhitectura Web-ului
 Resursele sunt identificate prin adresa lor
 identificator uniform de resurse
 URI — Uniform Resource Identifier
-https:l/profs.info.uaic.rol~busacolteachlcourses/webl
+https:l/profs.info.uaic.rol~busacolteachlcourseslwebl
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
 arhitectura Web-ului
-Accesul la conﬁnutul — reprezentarea —
+Accesul la conyinutul — reprezentarea —
 resurselor Web
-se realizeazé printr-un protocol
-HTTP — HyperText Transfer Protocol
+se realizeazéi printr-un protocol
+HTTP — HyperT ext Transfer Protocol
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
 adrese Web protocoale Web
 URI = URL + URN HTTP, HTTPS,...
-codiﬁcarea nume de protocoalele
+codificarea nume de protocoalele
 datelor domenii Internet
 Unicode DNS TCP/IP
-a b c Z .com ‘org .io ‘r0 TCP / UDP
-$69513m $ .uaic.r0 IRICMR...
-=: G) >I< 0 2] .infuuaicm acces 1a mediu
+a b c Z .com .org .io .ro TCP / UDP
+g 6 e 5 13 [U $ .uaic.r0 IP, ICMP,...
+‘z (9 >:e Q g) .inf0.uaic.r0 acces la mediu
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-identiﬁcator prutocul HTTP
-unnorm de resursé "securxzat"
-adrese Web protocoale Web
+identificator protocol HTTP
+uniform de resursé ,,securizat”
+adrese Web pro ‘ s coale Web
 URI = URL + URN HTTP, HTTPS,...
-codiﬁcarea nume de protocoalele
+codificarea nume de protocoalele
 datelor domenii Internet
-Unicode DNS TCP/IP
-a b c Z .com ‘org .io ‘r0 TCP / UDP
-$69513m $ .uaic.r0 IRICMR...
-=: G) >I< 0 2] .infuuaicm acces 1a mediu
-TCP : control a1 transmitcrii datclor [Transmission Control Pmtncal]
-IP : protocol dc interconcctarc a rcgclclnr (Internet PmmmI)
-DNS I adrcsé IPHdomDmu simholi: — e._q., 85.122.23109prols.info‘uaic.ro
+Unicode DNS TCP/1P
+a b c z .com .org .io .ro TCP / UDP
+g 6 e 5 l? [U $ .uaic.ro IP, ICMP,...
+
+‘z (9 >:e Q g) .info.uaic.ro acces la mediu
+TCP = control al transmiterii datelor (Transmission Control Protocol)
+lP = protocol de interconectare a retelelor (Internet Protocol)
+DNS = adresé IP<—>domeniu simbolic — e.g., 85.122.23.20<—>profs.info.uaic.ro
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-(body ltems:0pe="" ltéﬁltype:"http://s<hema.nrg/Wehl>age" 16:‘!09")
-(div class="nav">
-<n=v>
-<11 dasvaz ma;n“><a hrnf=")ndex.htm]“ t1t1.="Tehnologu web (spre pagans
-pr)n(1pa1llt259;)" ittQiikly:“N“>'leb</i)(/1!>
-<11 class="cpt f!)m"><a hrafﬂ'weh'hlmmtml' titl.="hlmu) deszllZSQﬂUSl;ur&¢25§;rn
-materiei" ac:nsskny:“F">f11m</a></1!>
-<11 class=“opt pro]e(ts"><i hraf='&pﬂje£[5.html" titln="1nfnr‘mal1355;il refer-)toare )a
-prulette" acclsskny:“P">pro!ecte</i></Ji>
-<15 :llss="opt exam"><a hrnf:"wehrexam.html“ titli:‘mbﬂ259;mmte prlvitoare 1a mndul de
-examiners DBSJU notare" accesskey=“H">materia</a></1i)
-<11 class=“opt bibho"><= hrlf="wehrhib1)u.html" titll="InFm-malh355;ii despre resurseie
-bibliograﬁte" lecesskey="B“>hib1io</a></1i>
-(Ii cllss="opt contazt"><a hrefi'web'tmvtact.html" tit1n="PosibiUtllZSQﬂJBSS;i de (ontact
-(detahi VillBCil'Kﬂld echipei disciplinei)" accisskly:"(">(ontact</a></li>
-<11 ¢1=55=wp¢ mum; magma" title=“La licirzmceputu] ECQStEi pagini web"
-a::lsskly=“5">l¢x17f8;HIM/Ii)
-</ul>
-(/IliV)
+<body itemscope="" itemtype="http://schema.org/WebPage" id="top">
+<div c1ass="nav">
+<nav>
+<u1>
+<li c1ass="opt main"><a href=“index.htm1“ tit1e="Tehnologii Web (spre pagina
+principal&#259;)" accesskey="W">#web</a></1i>
+<1i c1ass="opt film"><a href="web-film.htm1" tit1e="Filmu1 desf&#259;&#351;ur&#259;rii
+materiei" accesskey="F">film<la></li>
+<1i c1ass="opt projects"><a href="!gg;gggjects.html" title="Informa&#3SS;ii referitoare 1a
+proiecte" accesskey="P">proiecte</a></li>
+<11 c1ass="opt exam"><a href="web-exam.html" tit1e="Am&#259;nunte privitoare 1a modul de
+examinare &#351;i notare" accesskey="M">materia</a></li>
+<li c1ass="opt biblio"><a href="web-biblio.html" tit1e="Informa&#355;ii despre resursele
+bibliografice" accesskey="8">biblio</a></li>
+<li c1ass="opt contact"><a href="web-contact.html" tit1e="Posibilit&#259;&#355;i de contact
+(detalii viz&acirc;nd echipei disciplinei)" accesskey="C">contact</a></li>
+<11 c1ass="opt main"><a href="£§gg" tit1e="La &icirc;nceputul acestei pagini Web"
+accesskey="S">&#x27F0;</a></li>
+</u1>
+</nav>
 </div>
-<2rti(1:>
-(headew
-m1 itempraprl"neme“>Yehr\nlogii HEM/71D
-<p :1:ss:"510gan" itellprup="descriptio
-<lh:ader>
-,0
-resursele — documentele i 1nclud <marca1e />
+<article>
+<header>
+<h1 itemprop="name">Tehnologii Web</h1>
+<p c1ass="slogan" itemprop="description I)Elg;i11i \AJE3t)
+</header>
+.0
+resursele — documentele — 1nclud <marca]e />
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-marcajele conjtin 1a réndul lor V "
-URI-uri b hipertext (hipermedia) a ~v
-h-‘Qw-
-,.
-‘N'J
-/> twittemomlpinkﬂoyd
-Bogdan V ' 1 YL'TJT“I‘YJTL
+_.€Z—
+marcajele conpn la randul lor
+URI-uri b hipertext (hipermedia) a my
+Anca 1'1"” .
+"Wiw
+.‘ii -
+twitter.comlpinkfloyd
+Pink Floyd’ Gjlpmkllnyd - ‘a? Feb
+PinkFiovd,Inklm'PULSE Restcned
+t’ w gmmlubecmn album
+E t Pink Floyd - Coming Back To Life (P.U.L.S.E.)
+1:: ‘E Pink Floyd's: PULSE > Restored {Q Re-Edneu'
+Bogdan 5 "n _, A :eieased Febluary 18th. Pre-om'e: here: ..
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Relayiile dintre o resursé Web, adresa ei (URI) 51
+Relayiile dintre 0 resursé Web, adresa ei (URI) 5i
 reprezentarea structuraté a resursei
 adresabilitate via URI
-htlp:Ilworldjnfoleurope/romanialiasilwealherﬂoday
+http:l/world.info/europe/romania/iasilweather?today
 reprezentare
-identificé (section id="meteo">
-(div class="weather">
-_ __ (p lang="ro">la§i</p>
-Informatu _ y <span>¢ily<lspan>
-' reprezmta .. ..
-meteo <9 lang= en >Temp.
-l _ I' _. <span id="today">
-C 95p‘ e asl is <strong>...<lstrong>
+identificé <section id="meteo">
+<div class="weather">
+_ __ <p lang="ro">la§i<lp>
+Informatll . V <span>city<lspan>
+reprezmta .. ..
+meteo <p lang= en >Temp.
+d I . <span id="today">
+espre a$l is <strong>...<lstrong>
 resursé Web &deg;C</span>
-<lp>
-<ldiv>
-<lsectlon>
+<Ip>
+<Idiv>
+<lsection>
 formatul HTML
 (utilizatori umani, uzual)
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:22**************
-Relayiile dintre o resursé Web, adresa ei (URI) $1
-reprezentarea structuraté a resursei
+Relayiile dintre 0 resursé Web, adresa ei (URI) 5i
+reprezentarea structuratii a resursei
 adresabilitate via URI
-htlp:Ilworldjnfoleurope/romanialiasilwealherﬂoday
+http:l/world.info/europe/romania/iasilweather?today
 reprezentare
-identificé “WP” .. .. .. ..
-<polmlat= long= >
+identificé <weather> .. .. .. .-
+<po|ntlat= |ong= >
 <name lang="ro">
-informatii _ _ ‘W
-' reprezmta <lnamg>
-meteo <ly|n>cily<ltype>
-(lespre Iasi
-<Ipoim>
+informatii _ V |a§i
+’ reprezmta <lname>
+meteo <type>city<ltype>
+despre Iagi
+<lpoint>
 resursé Web <temperature when="...">
-<va|ue>...<lvalue>
-<Ilomporalure>
-<Iwealher>
+<value>...<lvalue>
+<ltemperature>
+<lweather>
 formatul XML
-[procesat de software)
+(procesat de software)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Relayiile dintre o resursé Web, adresa ei (URI) $1
-reprezentarea structuraté a resursei
+Relayiile dintre 0 resursé Web, adresa ei (URI) 5i
+reprezentarea structuratii a resursei
 adresabilitate via URI
-htlp:Ilworldjnfoleurope/romanialiasilwealherﬂoday
+http:l/world.info/europe/romania/iasilweather?today
 reprezentare
-identificé (
-"point" : (
-informatii _ _ 99° ‘(um .. f
-‘ reprezmta long . ),
-IneteO "name" : "laﬁ",
-. .1 e" :‘ci ..
-(lespre Ia51 ), yp
-"lam eralure':
-resursé Web "mm,- ; -_|_-‘-‘
-"value" : "..."
-)
-)
+identificé {
+"point": {
+informatii _ V 99° ‘{Jat .. f
+’ reprezmta long - },
+I "t ell : "Cit II
+despre Iagl }, yp y
+V "tem erature":
+resursa Web "vehen" ; "HI-i,
+"value" :
+}
+}
 formatul ISON
-[procesat de software)
+(procesat de software)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Relayiile dintre o resursé Web, adresa ei (URI) $1
-reprezentarea structuraté a resursei
+Relayiile dintre 0 resursé Web, adresa ei (URI) 5i
+reprezentarea structuraté a I'GSUI'SEi
 adresabilitate via URI
-htlp:Ilworldjnfoleurope/romanialiasilwealherﬂoday
+http:l/world.info/europe/romania/iasilweather?today
 reprezentare
-identificé (section id="meteo">
-(div class="wealher">
-. .. (p Ian
-Informatu _ _ <5,“ reprezentare
-' reprezmta (
-meteo <9 la
-(lespre Ia51 i: ‘wwmrf'i ‘§
-when : ,
-resursé Web &- value ;
-<lp> )
-<ld| }---
-<lsectl
+identificé <section id="meteo">
+<div class="weather">
+. .. <P lan- reprezentare
+1nf0rma§11 _ V <Spa
+reprezmta {
+meteo <p la
+. <8. llll. ll
+1‘ I 1 _ temperature :{
+deSp e 31$ l5 "when": "...",
+resursé Web 8" value =
+<lp> }
+<ldiv> }
+<lsecti
 reprezentarea — intr-un format deschis (e.g., HTML, XML,
-]SON, RUE...) — include date propriu-zise + meta-date
+ISON, RDF,...) — include date propriu-Zise + meta-date
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Ce inseamné hiperteXtul?
+Ce inseamnéi hipertextul?
 
 ***************Ending Page***************
 
@@ -363,11 +400,12 @@ Ce inseamné hiperteXtul?
 ***************page number:26**************
 hipertext: definire
 ,,Material scris sau grafic interconectat
-intr-o manieré complexé care in mod convenpional
-nu poate fi reprezentat pe hértie.“
+intr-o manieréi complexéi care in mod convenjcional
+nu poate fi reprezentat pe hértie."
 Ted Nelson, 1965
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
@@ -378,71 +416,73 @@ Text non-liniar
 
 ***************Beginning Page***************
 ***************page number:28**************
-hipertext: definire
+hlpertext: deflnlre
 Text non-liniar
 Tehnologii Web
-Fundatia um” vntur dnvohawr
-Web profesmmst
-versus
-— Q proiecle
-i materia
-a biblin
+Fundatia unui viitor dezvoltator
+Web profesionist
+' V8!" S US
+— $ proiecte
+é 'r'nateria .
+c?’ biblio
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
 hipertext: definire
-O formé de document electronic
+O forméi de document electronic
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
 hipertext: definire
-0 formé de document electronic
+O forméi de document electronic
 formate deschise de reprezentare a continutului:
 DocBook
 HTML (HyperText Markup Language)
 ODF (Open Document Format)
-PDF [Portable Document Format)
+PDF (Portable Document Format)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
 hipertext: istoric
-Vannevar Bush —As We May Think, 194-5
+Vannevar Bush — As We May Think, 1945
 MEMEX (MEMory EXtended)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-weea
-aim 'L
-1 @051»ng 1
-1 ‘35,211; ﬂit IA! ii‘; " will ‘~\ '
-= ,1 :1 =. 5
-11 § z
-“Consider a future device far individual use, which is a sort af
-mechanized privateﬁle and library [...] It affords an immediate step,
-however, to associative indexing, the basic idea afwhich is a provision
-whereby any item may be caused at will ta select immediately and
+mug
+~ qu-si
+82%;‘! 1'» 1 1i" ‘i’ HAW‘ v W ;
+H 1 ' E
+F " " ‘I
+“Consider a future device for individual use, which is a sort of
+mechanized private file and library. [...] It aﬁords an immediate step,
+however, to associative indexing, the basic idea of which is a provision
+whereby any item may be caused at will to select immediately and
 automatically another. [...]
 The process of tying two items together is the important thing."
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
 hipertext: istoric
-Douglas Engelbert
-Augment (1968]
-mouse, interfe;e grafice, procesare a textului,
-po§té electronicé, script-uri, ferestre pe ecran etc.
-The Mother ofAII Demos [1968]
-www.youtube-nocookie.comlembed/yJDv-zdthY
+Douglas Engelbart
+Augment (1968)
+mouse, interfejce grafice, procesare a textului,
+pogtéi electronicé, script-uri, ferestre pe ecran etc.
+The Mother ofAII Demos (1968)
+www.youtube-nocookie.comlembedlyJDv-zdthY
 
 ***************Ending Page***************
 
@@ -455,11 +495,12 @@ propune termenul ,,hipertext"
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
 hipertext: istoric
 Hipermedia = hipertext + multimedia
-Multimedia = E medii
+Multimedia = Z medii
 
 ***************Ending Page***************
 
@@ -467,18 +508,19 @@ Multimedia = E medii
 ***************page number:36**************
 hipertext: istoric
 Hipermedia = hipertext + multimedia
-Multimedia = E medii
+Multimedia = Z medii
 medii de comunicare:
-continue (audio, video] 5i/sau discrete (text)
+continue (audio, video) gi/sau discrete (text)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:37**************
 hipertext: ingrediente
 Hipertextul ca (di)graf
 noduri = concepte
-legéturi = relaﬁi
+legéituri = relajcii
 
 ***************Ending Page***************
 
@@ -486,68 +528,77 @@ legéturi = relaﬁi
 ***************page number:38**************
 hipertext: ingrediente
 Noduri interconectate prin legéturi
-nod sursé = referingé (ancoré)
-nod destinayie = referent [ancorﬁ]
+nod surséi = referinyé (anceréi)
+nod destinajcie = referent (anceréi)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-h . _ | v .
-lpertext. egaturl
-- Undaslandmg ECMASmp! a r Nkhcﬂas c. Zakas
-- Undevslandmg JavaSUlpt OOP (SureHn)
-- You Dom mm
-Jivzsclipl Flameworks
-For vesourzes on “gum, Backbone, as, DuJu, Ember, Express, Jewry, modem, Mexeor, Ream and any omer JS
-\uoWII/Qrimzwmk please Mex 10 Javasznpl Framewmks Resourzss and Tatum‘;
-Nodejs
-- An mlmduwon w [lbw V mom Mamihe (PDF V 2mm
-- JavaScht and Node FUNdamemm - Am Mardanov
-u Mum‘; Node Bonk
-. Nude Up m Runmng V Tom Hugheycvoucher
-- Nuclei; Su(cm(“y‘ Syndusmn (Pun Kmdle) (1w: ml the/721d; Mm any values]
-. We Node Begvmel Bonk
-referenglale (non-1erarh1ce]
-organlzaponale [lerarhlce, structurale)
+h o . I v o
+ipertext. egaturi
+0 Understanding ECMAScript 6 - Nicholas C. Zakas
+0 Understanding JavaScript OOP (Sorella)
+0 You Don't Know JS
+Javascript Frameworks
+For resources on Angular, Backbone, D3, Dojo, Ember, Express,jQuery, Knockout, Meteor, React and any other JS
+toolkit/framework, please refer to Javascript Frameworks Resources and Tutorials.
+Node.js
+0 An Introduction to libuv ~ Nikhil Marathe (PDF - ePub)
+0 JavaScript and Node FUNdamentals - Azat Mardanov
+o Mixu's Node Book
+Q Node: Up and Running - Tom Hughes-Croucher
+0 Nodejs Succinctly, Syncfusion (PDF, Kindle) (Just ﬁll the ﬁelds with any values)
+0 The Node Beginner Book
+referentlale (non-1erarh1ce)
+organlzatlonale (1erarh1ce, structurale)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-~“*"°'“— = HTML: HyperText Markup Language
-> E (SS
-HM My.“ M=,ku.,..ngug,, We m MW mm MM, H MM.
-- DOM MHWWMWW WWWMWWNWWQ
-' "Mbmi ‘ A Hypervexl velersw \mkﬂhalmmvezlweb Piqexw cne alvulhev‘ mmerwlmw awvg‘: warm: m
-, mum mWW,mmmmmw MMMm,Wmmwmwm
-M
-. mm e
-v a m, WM mm, mmW,mmmmmwWWW mm
-' wan w P P! 5 l
-5mm“ 6mm," “m9 "m “magem An HTMI ekmvvilx m mnmm mhenmmadommﬂ“ Why; wmch mnsmovme elemzm
-(andnmm mum; y Y
-(“WM mum," mm;MmWMWWMM
-statlce [1nd1cate de autorul unul document] versus
-dmamlce — generate de un program
+OW— : HTML: HyperText Markup Language
+> E CSS
+HTML (HyperText Markup Language) is the most basic building block of the Web. It deﬁnes the
+’ m DOM meaning and structure of web content. Other technologies besides HTML are generally used to
+describe a web page's appearance/presentation (CSSB) or functionality/behavior (JavaScript L').
+’ Attributes ' "Hypertext" refers to links that connect web pages to one another, either within a single website or
+b Elements 15; between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet
+’ Miscellaneous 3.’, and linking it to pages created by other people, you become an active participant in the World Wide
+Web.
+> Obsolete 7'."
+v '2 HTTP HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML
+_ markup inCIUdBS special "elements" SUCh BS <head>, <title>, mini, <header>, (footem, <artic1e>,
+V GUldeS 5.8 <section>, (p), <div>, (span), <img>, <aside>, (audim, <canvas>, (datalist>, (details), (embed),
+Authentication <nav>, <output>, <progress>, <video>, <ul>, <ol>, <1i> and many others.
+Browser detection using the user agent An HTML element is set off from other text in a document by "tags", which consist of the element
+Caching name surrounded by " < " and " > The name of an element inside a tag is case insensitive. That is, it
+Compression can be written in uppercase, lowercase, or a mixture. For example, the <tit1e> tag can be written as
+<Title> , <TITLE> , or in any other way.
+Conditional requests
+Connection management in HTTP 1.x The articles below can help you learn more about HTML
+statice (indicate de autorul unui do cument) versus
+dinamice — generate de un program
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
 hipertext: documente
-Conginut
-tipuri de medii: text, imagine, audio, video,...
+Conjcinut
+tipuri de medii: text, imagine, audio, vide0,...
 Organizare
-noduri + legﬁturi structurale
+noduri + legaturi structurale
 Prezentare
-textualé, graficé, multimedia, 3D, mixté — [ne)interactiv5
+textuala, grafica, multimedia, 3D, mixta — (ne)interactiva
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-FULLELIEI!
+FULLEEZEI]
 DEVELOPER
 
 ***************Ending Page***************
@@ -555,7 +606,7 @@ DEVELOPER
 
 ***************Beginning Page***************
 ***************page number:43**************
-Cum identiﬁcém [adresém) resursele Web?
+Cum identificém (adresém) resursele Web?
 
 ***************Ending Page***************
 
@@ -566,27 +617,29 @@ Fiecare resursé Web este desemnaté de
 identificatori uniformi de resurse
 Uniform Resource Identiﬁer
 RFC 2396, 3986
-www.rfc-editor.orglrfclrfc3986.txt
+www.rfc-editor.org/rfclrfc3986.txt
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-URI: definitii
-Resursi
-,,lucru" care posedé o identitate
+URI: deﬁnitii
+Resursé
+,,lucru" care posedé 0 identitate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
 URI: definitii
-Resursi
-,,lucru" care posedé o identitate
-insemnare, CV, fotograﬁe, prezentare, melodie, program,
-persoané, bazé de date, concept arbitrar etc.
+Resursé
+,,lucru" care posedéi 0 identitate
+insemnare, CV, fotografie, prezentare, melodie, program,
+persoanéi, bazé de date, concept arbitrar etc.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:47**************
@@ -601,16 +654,17 @@ obiect care poate juca rolul unei resurse
 URI: definitii
 Identificator
 obiect care poate juca rolul unei resurse
-secvengé (§ir] de caractere avénd o sintaxé precisé
+secvenjcé ($ir) de caractere avénd 0 sintaxé precisé
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:49**************
 URI: definitii
 Uniformitate
 resurse eterogene pot fi desemnate
-pe baza acelora$i convenpii sintactice,
+pe baza aceloragi conveninii sintactice,
 fiind interpretate semantic in mod uniform
 
 ***************Ending Page***************
@@ -620,20 +674,21 @@ fiind interpretate semantic in mod uniform
 URI = URL + URN
 Uniform Resource Locator
 identificé resursele prin intermediul mecanismului
-de accesare: adresé de regea, domeniu simbolic
-RFC 2717,2718
+de accesare: adresé de reyea, domeniu simbolic
+RFC 2717, Z718
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:51**************
 URI = URL + URN
 Uniform Resource Locator
-http:/Idlinkrouterjocal
-https:I/profs.info.uaic.rol~busacolteachl
+http:/Idlinkrouter.local
+https:llprofs.info.uaic.rol~busacolteachl
 mailto:tux@pinguin.info
-ftpzllftpjunet.filpub/README.txt
-data:imagelpng;base64,iVBORwOKGgoAA...Yll=
+ftp:llftp.funet.filpublREADME.txt
+data:image/png;base64,iVBORw0KGgoAA...Yll=
 tel:+40232201090
 geo:47.16667,27.60000
 
@@ -644,63 +699,68 @@ geo:47.16667,27.60000
 URI = URL + URN
 Uniform Resource Name
 identificé resursele prin nume, in mod persistent,
-chiar dacé resursa este una abstracté
-RFC 2141
+chiar dacé resursa este una abstractii
+RFC 2 141
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
 URI = URL + URN
-urnzmimetypes
+urn:mimetypes
 urn:lSBN:973-681-988-4
 urn:ietf:rfc:7700
-urn:mozilla:instal|-manifest
+urn:mozilla:install-manifest
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
 URI = URL + URN
-[Media Typvs]
-urn:mimetypes"
-mm- prin ISBN
-
-.0.
-
+tipuri de date MIME
+7 (Media T ypes)
+carte . - '.
+urn.m|metypes
+unic prin ISBN
+V .0.
 urn:lSBN:973-681-988-4
-
-m urn:ietf:rfc:7700 ‘I gm
-
-urn':Friozillaﬁnstall-manifest
+specificapie
+_ 7 (standard)
+V urn:|etf:rfc:7700 " *
+componenta
+..
+urn:mozilla:install-manifest
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-schema: / [authority/path7query
-http://www.pinguin.inf0/prog/cauta?id=Tux
+schema: / / authority/ path?query
+http://www.pinguin.inf0/pr0g/cauta?id=TuX
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-schema: / [authority/path7query
-http://www.pinguin.inf0/prog/cauta?id=Tux
-schema reprezinté 0 schemé de adresare standardizaté
-(recunoscuté de client — e.g., navigatorul Web)
+schema: / / authority/ path?query
+http://www.pinguin.inf0/pr0g/cauta?id=TuX
+schema reprezinta 0 schema de adresare standardizata
+(recunoscuta de client — e.g., navigatorul Web)
 about data file ftp geo http https im imap ipp ldap mailto
 nfs sip sms stun tel turn tv urn ws xmpp etc.
-www.iana.org/assignments/uri-schemes/uri-schemes.xhtml
+www.iana.orglassignmentsluri-schemesluri-schemes.xhtml
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-schema: / [authorig/pathi'query
-http://www.pinguin.info/prog/cauta?id=TuX
-authority poate include informagii de autentificare
-a utilizatorului [nume:parola — specificate "in clar"!)
+schema: / / authority/ path?query
+http://www.pinguin.inf0/pr0g/cauta?id=TuX
+authority poate include informatii de autentificare
+a utilizatorului (numeiparola — specificate nin clar"!)
 +
 date privind domeniul/adresa Internet,
 eventual portul de acces
@@ -709,44 +769,46 @@ eventual portul de acces
 
 ***************Beginning Page***************
 ***************page number:58**************
-schema: / [authority/gathi'query
-http://www.pinguin.info/prog/cauta?id=TuX
-path referé o cale (virtualé) de directoare
-spre un nume de resursé — interpretabil ca nume de fi§ier,
-eventual avénd o extensie
+schema: / / authority/ Qath?query
+http://www.pinguin.inf0/pr0g/cauta?id=TuX
+path referéi 0 cale (virtualéi) de directoare
+spre un nume de resurséi — interpretabil ca nume de figier,
+eventual avénd 0 extensie
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-schema: / / authority/patmguely
-http://www.pinguin.inf0/prog/cauta?id=TuX
-query speciﬁcé date de intrare
-uzual, perechi cheie=va|oare delimitate de ,,&"
+schema: / / authority/ path?guery
+http://www.pinguin.inf0/pr0g/cauta?id=TuX
+query specificéi date de intrare
+uzual, perechi Cheie=va|0are delimitate de ,,&"
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-U RI
+URI
 Caractere rezervate
-; I ? : @ & = + $ ,
+; l ? : @ & = + $ ,
 se codificé in baza 16, precedate de %
-..
+,.
 URL
-encodin
+encodinv
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:61**************
 U RI
 Caractere rezervate
-; I ‘.7 : @ & = + $ ,
+; l ? : @ & = + $ ,
 se codificé in baza 16, precedate de %
 exemple: w
-spaﬁul va deveni %20 ‘°
-htlps:llemojipedia.org/emoji/%F0%9F%96%A4l
+spaﬁul va deveni %20 "
+https:llemojipedia.orglemojil°/oF0%9F°/096°/0A4l
 www.urbandictionary.comldefine.php?term=%2FS
 
 ***************Ending Page***************
@@ -755,60 +817,62 @@ www.urbandictionary.comldefine.php?term=%2FS
 ***************page number:62**************
 U RI
 URL-uri absolute
-http:llwww.info.uaic.rol~busacolcv.html
-apar obligatoriu componentele schema 5i authority
+http:l/www.info.uaic.ro/~busacolcv.html
+apar obligatoriu componentele schema gi authority
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:63**************
 U RI
 URL-uri relative
-../..Iweb.css
-se indicé doar construcgii referitoare la
+../..lweb.css
+se indicéi doar construcpii referitoare la
 componenta path $i, eventual, query
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:64**************
-U RI
-,,Fragmente" dintr-un conyinut
-pot fi referite prin Ueref
-(referinge, fragment identiﬁers)
+URI
+,,Fragrnente" dintr-un conjcinut
+pot fi referite prin URIref
+(referinjce, fragment identifiers)
 URI#Ueref
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-U RI
-,,Fragmente" dintr-un conpinut
+URI
+,,Fragmente" dintr-un conjcinut
 pot fi referite prin URIref
-(referinm, fragment identifiers)
+(referinjce, fragment identifiers)
 URI#Ueref
 web-biblio.html#web
-https:l/html.spec.whatwg.org/multipage/dom.html#documents
-https:Ildrive.google.coml#my-drive
+https:llhtml.spec.whatwg.org/multipage/dom.html#documents
+https:l/drive.google.coml#my-drive
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-U RI
+URI
 URI-urile trebuie considerate opace
-nu trebuie ,,ghicit" tipul conginutului
-inspectﬁnd URl—ul asociat resursei
+nu trebuie ,,ghicit" tipul conjcinutului
+inspecténd URI-ul asociat resursei
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:67**************
 U RI
 URI-urile trebuie considerate opace
-nu trebuie ,,ghicit" tipul conginutului
-inspectﬁnd URl—ul asociat resursei
+nu trebuie ,,ghicit" tipul conyinutului
+inspecténd URI-ul asociat resursei
 tipul unei resurse nu este dat de extensie — e.g., .html —,
 ci de tipul MIME transmis de server
 
@@ -818,86 +882,93 @@ ci de tipul MIME transmis de server
 ***************page number:68**************
 U RI
 URI-urile trebuie considerate opace
-nu trebuie ,,ghicit" tipul conginutului
-inspectﬁnd URl—ul asociat resursei
-starea/conﬁnutul resursei poate evolua in timp,
+nu trebuie ,,ghicit" tipul conjcinutului
+inspecténd URI-ul asociat resursei
+starea/conyinutul resursei poate evolua in timp,
 dar URI-ul asociat ei nu
-“C001 URIs d0n’t change" — www.w3.0rglProvider/SQer/URl.html
+“C001 URIs don't change" — www.w3.orglProvider/Style/URl.html
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-lRl
+IRI
 Internationalized Resource Identifier
 permite folosirea caracterelor Unicode in URI
-a se vedea 5i IDN (lnternationalized Domain Name]
+a se vedea §i IDN (Internationalized Domain Name)
 exemplificéri:
-http:llthefreedictionary.comlrosé
-https:I/dexonline.roldefinitielpéianjen -._
-http://www.iélﬁiﬁitw/
+http:/lthefreedictionary.comlrosé
+https:lldexonline.roldefinitie/péianjen -._
+http://wwwmﬁﬁaitwl
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-HPP WPEﬁ H5 HOMES mwasz con
+HPP T'SPES Q5 HOMES Momxeausencom
+UEB ' .
+1,, 8%;
+I I EMBEDDED
+Ce categorll d621,};
+apllcatll Web
 
-Ce categorii de P‘ if‘! .
-aplicaﬁi Web Qwﬁ $11‘-
-' _\ l
-putem dezvolta? AIM
-$5‘ v m ‘ 1:1,}; £9‘ 1 11%!
+putem dezvolta?
+e we]
+m mg 1*, - 51%;: \M
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:71**************
 Sit Web
-sistem pe care ruleazé un server Web
-gézduind 0 serie de pagini (resume) inrudite
-ale unei organizayii, companii sau persoane
+sistem pe care ruleazéi un server Web
+gézduind 0 serie de pagini (resurse) inrudite
+ale unei organizajcii, companii sau persoane
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-Aplicatie Web
-colecgie interconectaté de pagini Web
-cu conyinut generat dinamic, menitﬁ a oferi
-utilizatorilor 0 funcgionalitate specificé
-de studiat 5i S. Buraga, ,,Dezvoltator Web?!"
-www.slideshare.netlbusaco/sabin-buraga-dezvoltator-web-ZM9
+Aplicayie Web
+colecjcie interconectaté de pagini Web
+cu continut generat dinamic, menité a oferi
+utilizatorilor 0 funcyionalitate specificé
+de studiat §i S. Buraga, ,,Dezvoltat0r Web?!"
+www.slideshare.net/busaco/sabin-buraga-dezvoltator-web-2019
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:73**************
 Aplicaﬁe Web
-interacgiunea dintre aplicagie 51 utilizatori
-are loc via 0 interfaﬁ Web
+interacjciunea dintre aplicajcie §i utilizatori
+are loc via 0 interfajcéi Web
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
 Aplicaﬁe Web
-interacgiunea dintre aplicagie 5i utilizatori
-are 10c via 0 interfaﬁ Web
-uzual, sit Web E aplicayie Web
+interacjciunea dintre aplicajcie gi utilizatori
+are loc via 0 interfajcéi Web
+uzual, sit Web E aplicajcie Web
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
-Aplicaﬁe Web
-exemplificéri:
+Aplicayie Web
+exemplificéiri:
 
-CodePen, Coursera, Devdocsjo, DuckDuckGo, GitHub,
-Heroku, IceDrive, inf0.uaic.ro, lnfoQ, loomla, ISBin,
+CodePen, Coursera, Devdocsio, DuckDuckGo, GitHub,
+Heroku, IceDrive, inf0.uaic.r0, InfoQ, loomla, ISBin,
 Medium, OpenStreetMap, Pocket, Reddit, REPL.it, Quora,
 SlideShare, Unsplash, Vimeo, Wikipedia, WordPress
-...si multe, multe, multe altele
+s...i multe, multe, multe altele
 
 ***************Ending Page***************
 
@@ -906,170 +977,244 @@ SlideShare, Unsplash, Vimeo, Wikipedia, WordPress
 categorii de aplicatii web
 Centrate pe documente
 Interactive
-Tranzacﬁonale
+Tranzactionale
 Colaborative evolutia
-Orientate spre portaluri complexlitﬁyii
+Orientate spre portaluri compleXJitéitii
 Web social
 Web semantic
 De tip ubicuu
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
 Centrate pe documente — document centric
-conginut/pagini static[e):
-situri de organizaﬁi, companii, referitoare la persoane
+conyinut/pagini static(e):
+situri de organizajcii, companii, referitoare la persoane
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-turnpiémentsaza w nu
-subsntule {Melanie m 0mg d2
-ms s‘ laboratoare
-.. . ‘ . , ‘ @k mod de examinare
-~th , m... ~ pmielt! v makeril ahihlin "mm |
-’ . Evaluarea \a aieasla mmpm va (unsta
-- Resursal! “pa-"ME m ndrul azsslw m Wab (Omvlamenteiza biblio dm (Mum ubhqalurle z mm
-w W 5mm“ DrezeMa la orele a! (MS 5| laboralceve. “aim mm‘ mum mm“
-rntemlnrspenfmate
-1 mod dc examinare
--| m, idwmmm;
-new“ magma msnvlmé va mm“ reahzarea abhqalonee unur ,' 1 V
-. ‘ > Lemur la realizarea
-pnnazk pm!“ :valua! mnFurm mterulor spenﬁcal:
-pmwuww. \nlerfeim Web
-. l‘15%)’d€li mum zermreiur m reahzarei DraloUDuhn mterfetex H
-Web - s (ESinliprezentarea
-arhmntuni Bumps‘ w» 5‘ a
-> s [55%)iprezentareaarmtectunlaphawm wan-a WW mqmew (MW FWUMM ‘ demo 51
-4demoaivrme<kulm ' '
-ammusm.
-Prulzirllmpcrnnu _ ‘ __
-Preclzan importanle
-. Cnmvunenteiel s‘ s W r. mum! (n mmn: d! la u 4a m
-. @mwmmtexe I 5‘ Evorﬂ
-- mm. a mm.“ Hetare 5mm trehme $5 0mg minim s mm l, evaluate (u Dunn? de m o m
-punctawlﬁnalzakulalmnfnrm Formulelrmmdﬂ . a.“ . s . mlsy w m,
-52 5
-. Feutm a Drumcva, fiecare
-studentlrebuie sé owaa
-Inlnlm s punch: [a Dunn-11M
-fmalcaiculatconform
+complementeazé $i nu
+substituie prezenta la orele de
+curs si laboratoare.
+- - - , .» ' , 1' - 19> mod de examinare
+#web l t filrn _ 2 proiecte 24+ materia 6.‘; biblio O contact t
+' ' ' Evaluarea la aceasté discipliné va consta
+2 Resurseée disbonibile in cladruilacgstui sit We: complementeazé biblio din realizarea obligatorie a unui
+$l nu su stltUIe prezenta a ore e e curs $l a oratoare. proiect practic evaluat conform
+, criteriilor speciﬁcate:
+@s mod de examinare
+- _ _ _ u _ _ _ , _ 2 |(15%) — de la stabilirea
+Evaluarea la aceasta disclpllna va consta dln realizarea obligatorie a UﬂUI . .
+. . . .. . . cerintelor la reallzarea
+prolecl: practlc evaluat conform criterulor speciﬁcate: _ _ _ .
+prototlpulm interfetel Web.
+2 l (15%) - de la stabilirea cerintelor la realizarea prototipului interfetei
+Web. 2 S (85%) — prezentarea
+_ __ . _ _ _ _ _ _ arhitecturii aplicatiei Web si a
+2 S (85%) - prezentarea arhitecturu apllcatiel Web si a solutlel functionale - . -
+. . solutlel functionale + demo al
++ demo al prorectulur. . .
+prolectulw.
+Preciziri importante , .. _ ,
+Preclzarl importante
+2 Componentele I si S vor Fi evaluate cu puncte de la Ola 10.
+2 Componentele l si S vor ﬁ
+2 Pentru a promova, fiecare student trebuie sé obtiné minim 5 puncte la evaluate CU puncte de la Ola
+punctajulfinalcalculat conform Formulei round(I x 0.15 + s x 0.85), cu 10.
+S 2 S.
+
+2 Pentru a promova, ﬁecare
+student trebuie sé obtiné
+minim 5 puncte la punctajul
+ﬁnal calculat conform
+
+2nl‘2.r- x= + x
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:79**************
 Interactive
-expozigii virtuale
-situri de §tiri
-sisteme de facilitare a célétoriilor (e-travel]
+expozitii virtuale
+situri de gtiri
+sisteme de facilitare a ciilétoriilor (e-travel)
 chi0§curi informative
-participare la evenimente online
+participare 1a evenimente online
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-ooo I. I - f ,
-7/_ \ ,
-i \ a ‘ _
-o ~ ‘.n L g( 2?
-' I
-K a '
-Er‘ . PRESENTATIONS ABOUT DEVELOPMENT
-J o a
-7, f _ \ ‘ . . ‘ \
-Them and Back Apin: Our Rust Module Endemion: [he Fedzralcd
-mopnon Jaumey Applications Revolution
+'(‘l'li - "' “a, - . I
+E 7 ~ - , I i ‘I -
+- a "' a _
+r . . . [__1 . PRESENTATIONS ABOUT DEVELOPMENT
+D‘ " ’ ‘i i . mcwozs =
+i TRANSCR'." E ' - \ In; w‘- ,
+;_ ' ~ \ ‘ i ‘~\ ' - .J
+$.69 _.
+'i n‘ , ' ‘ i W ' 48m “ﬁ' 48:43
+UJLIURE H: ME IH(_)DS WEB DEVELOPMENI
+There and Back Again: Our Rust Module Federation: the Federated
+Adoption journey Applications Revolution
+Lilian‘ y,'._[r_1|[§-: l IN iLE‘ ’ .4'.-'\~._\. /'\\ lt-LIN \xf-J ‘ll’ ".1; 3H3;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:81**************
-Tranzacgionale
+Tranzacﬁonale
 online banking
-solugii B2B (business-to-business)
-aplicaﬁi BZC (business-to-consumer]
-sisteme C2C [consumer-to-consumer]
-ﬂuxuri de activitégi [Web workﬂow-uri)
+solu'gii BZB (business-to-business)
+aplicalcii BZC (business-to-consumer)
+sisteme CZC (consumer-to-consumer)
+fluxuri de activitéijci (Web workﬂow-uri)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:82**************
-minim :mm llluu
-mum-mu." m"... um...
-. m m-
-— mus! :mmln lliﬂillll
-.1
-um.‘ a”. o X f
-“WM m‘ “MW “.me haw-mm
-“mmmmm WWW a." unzvm
-mm: s31.“
-Mum-.M.“ _ m 7
-~ Tmil Due E SaluclPaymenl E 1mm“
-$ 5-17.“ I $5?‘ > \5 12%..‘
-im“ i EEK, ’ $
-ﬁri- EE I mm»- > """ ‘ W '"""
-i ’ mm...“
+You“ ORDER SHIP To lChange Blll. Tl] lChange
+Klamath Long Sleeve Button Down Brian Gonzales Brian Gonzales
+Shirt
+Size: X-Large
+Colon Blue Chambray
+Price: $29.98/ea
+my: 1- $29.98
+mosﬁ smmm; METllﬂll
+S b I $29 98 J
+u tota 2 . Q x i
+Standard $7.98 Two Day $20.00 Next Day $30.00
+Shipping Cost: $7.98
+Estimated Delivery: Dec 9th - Dec 11th
+HAVE A PROMO OR GiFT CODE? 1-‘
+Total: $37.96
+You're savingm offretal/ -’-"' v - Ill \' I . u _ .1 " . v n "
+,, ._ Boxes _ .-
+A' - thal Dug _ 7- Salem Payment = ThankYQu
+244 Russell‘: Malls Rd‘ xxxxxxxxxxxxtnw 244 Ruuoll's Mllla Rd.
+w South Dartmouth. MA 02748 ‘J South Dartmouth, MA 02748
+508,946_2344 ,- Pliil Debit Card 505,946,344
+— M Expim om ) —
+unwxxxwlw 4020mm; 11mg" Transaction "4450
+BLBRY SCN 3-75 Tormlml I04 Cuhlor: Brynnn
+cam. LATI'E SM 4.60 ’ PorscnalPayPalAacouni > __ ﬁ _
+Dally Dark LG 3.70 PuyPal —_ — i
+NAYA Bar 2,15 You PAID 14.41
+REWARDS EARNED 5
+TOTAL REWARDS 74
+Subiotal: 13.50 ~ -
+T“ '91 Payment Used:
+Total Duo: 14.41
+— ' Pomona l PayPll Account
+PayPal
+Pr-w
+him-WP You! I ‘Hr-m101W"muupnna-
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:83**************
 Colaborative
-tele-conferin;e Web
-aplicaﬁi Web de tip wiki
-servicii e-Iearning
+tele-conferinye Web
+aplicajcii Web de tip Wiki
+servicii e-learning
 aplicajcii Web peer-to-peer
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
-I WIN/5W c m e 1mm
-"m >
-IARUSTS Sllvllinll'lllv
-
-new; “V M
-
-Wm rs
-|mvmm ‘ ‘ ‘ ' If“ '
-Innumunnmi" , “ ‘ ~.
-
-'5 WhalUXfrom19B9canieachus m
-‘ uxﬂesxgn<c,w\mm.ﬁ
-o .L
-“Hummus Mm
+- WIKIART <1 van B SIGNIN
+VISUAl AU? INCV'QLOVLD A
+Home Amsts Surreausm Salvador Dal:
+HOME
+Salvador Dall
+| ARTISTS .
+Anmovemems “ ’ 1 ‘ 1“" ~
+Schools and groups 4 )\ __ m.“- 11 w 4‘ F-.~“;;¢,--; zany,“ ‘
+GENES ' M ' .ln cum; -3‘ WE".Fa::.v_-‘I¢-‘_~,r.~;:=|r| A
+. Z‘) 1'31" 1095'
+Flelds -
+Nationalmes “ - $ ,_._-.~5|,: i.
+CEmUHeS q\ '> .H ("-w ‘uh: |lt"¥':'~ "'.r.'.'u“|, ,vtm-Ulv'lli '1
+AH iHSIiIUIiOnS a,‘ ,_,|- \l _'u .‘t-Z- "_ ‘,l u q 4*."pr L‘; "l||
+‘vil; g In‘ :2; J-Jx T.1H-.-ﬂ".<'. 1'31 1L-'.|"_“q"§_' '3‘, '
+IARTWORKS L, ,
+Styles ‘vi-"J- \_ ‘ .v;"1|"-y |-,|,-| .2'1'," -,-~ [-, -.‘ ‘-.| n H: P14 '
+l:-:-'l'_"_' L"; JZJ>;.‘ Fun
+Games
+l-‘vr-I ‘xv-mm :»= i-»=l tr. wig" -“~
+Media 1 ‘V’ 57' :n}"n‘ v ‘,4 I 1| Y ‘ r‘, n
+I coum METRAGE "i H , ,
+,3’!I'1\3=‘
++ Posted by u/katerina-serél) 21 hours ago
+45 What UX from 1989 can teach us
+‘ uxdesign.cc/what-u... U m
+O I
+[5'
+- 33 Comments ﬁ Share 'H
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:85**************
-Orientate spre portaluri
-localizare unitaré a informa'giilor
+()rientate spre portaluri
+localizare unitarii a informapiilor
 tehnice, de afaceri, guvernamentale,...
-specie: Web-ul cetigenesc
+specie: Web-ul cetéyenesc
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:86**************
-um Euro lndlcalorsdashboard a eurostat.
-cw Mm, Q cw WW Q “MMMMW. 9
-m-MmmMmm," Q nmimmwm Q “WNW. Q
+- ~ A
+llnl Euro Indlcators dashboard m eurostat-
+r 1 I"(\|‘usum<lr‘a|uj ~ ' ' ‘ F'mc'nmcn' lnmunmondl Industry tx'adc a Hus-muss d
+L _, Uvu lL o housmg prlces Eﬂ \ ‘ 1 m hnancc- Pg‘ truer, Bold-Wu h and servlces ‘v. La! our mdmu Eli" 3w wu >
+OT Fla','l‘n&m:~ Lunildenc
+.W ‘ ‘ 'A_—_____________‘—€u l’___—__—_____‘~____~ ‘H
+GVA: Industry a GVA: Construction a GVA: Trade and transport a
+V 96 chango comparod lo previous quarter V $6 change compared to provlous quaﬂor V ‘Iv change compared to provious quallor
+b
+S a . V
+‘i SS
+., 4 v =, v
+‘ 4 s r
+'J , — 3 4.... -___.____‘_.__.
+j; , ow é? ow ESEA’ mow
+' H 1 . H 2" . Fl
+1
+O ‘S A —
+1:1 7 r r - r 1 0-3
+o
+-v—I—I—I—r— —I_—I—V_ w—y—y_—v—
+0-4 22m 01-20:: 02-202: 03-20:: own: 04-2021 012222 or 2022 050022 o: 202: 04-2021 01-2022 oz an: os->:2: 04am:
+GVA: Information 8r communication Q GVA: Finance & insurance 0 GVA : Real estate a
+V Bichango comparodlo previous quartor V 96chango comparodlo provious quarter V %chango comparodto previous quarior
+w Ethiuruu "HAM
+° I;
+u -|
+.1
+‘I
+a
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:87**************
 Web social
 platforma in care utilizatorul i§i controleazé propriile date
-a§a—numitul Web 2.0, conform Tim O'Reilly, 2005
+a§a-numitul Web 2.0, conform Tim O'Reilly, 2005
 
 ***************Ending Page***************
 
@@ -1077,195 +1222,220 @@ a§a—numitul Web 2.0, conform Tim O'Reilly, 2005
 ***************page number:88**************
 Web social
 mediatizare (syndication)
-filtrare colaborativé pe baza adnotérilor
-efectuate de utilizatori — [hashlmgging
-spaﬁi de lucru virtuale
+filtrare colaborativé pe baza adnotiirilor
+efectuate de utilizatori — (hash)tagging
+spapii de lucru virtuale
 divertisment social
 social (game) computing
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:89**************
-0b‘ ‘t Asucien 4
-O O " l“ " mentale ’ mgy'W
-de
-V _ multlple
-mteres ‘concepm
-tagging-ul reprezinté o modalitate particularé de adnotare
+ObieCt Asocieri .
+_> _> mentale -_> taggmg
+de .
+_ multlple
+Interes (concepte)
+tagging-ul reprezinté 0 modalitate particularé de adnotare
 a resurselor electronice — digital content annotation
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:90**************
-- \ Asucierl 4
-O O -> 02f“ -> mt] —> magma
-V _ e multlple
-mteres ‘concepm
-tag = (meta)daté simplé — termen arbitrar ales —
-asociaté extern unui obiect [unei resurse)
-cu scopul de a identifica, sorta, agrega etc. acea resursi
+Ob' t Asocieri i .
+_> dleC _> mentale taggmg
+_ e multiple
+Interes (concepte)
+tag = (meta)datéi simpléi — termen arbitrar ales —
+asociaté extern unui obiect (unei resurse)
+cu scopul de a identifica, sorta, agrega etc. acea resursé
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:91**************
 Pirple @WeArePirple - 20h
-Can you firld the error in the followlng HTML code?
+Can you find the error in the following HTML code?
 #htmlS #html #pirple #code #learnToCode #coding #dev
--»css Mavascrlpl
-HTMLS & CSS Development: Learn How to
-223,a7z vlews r Feb ls. zull;
-790 How rd creme a flle in memory for user rd download, but ndrmrddgh server’?
-ms ls lhere ally way l call creme a lexl vlle on me cllerrr slde and Drolhpr me userlo download ll‘ WllhOUl any
-interacllorl Wllh (he server’ l KNOW I Cal“ erle drrecrly In lhelf machlne (secunly and v
-2° lewd ls Mess Mr Sup a d e 6 M
-I Joseph Sllber
-eddrm 175x em ~3ls .259
-447 Max parallel hup connecilons lrl a browser?
-We‘ l em crsaung seme suspended eemeerldrrs \e an HTTP server (camel. reverse elex ere) lr works 0k bm l see
-\he browser Drlly allows rwd suspended CDI'll'lECllDl'lS ID a gwen ddmsm Slrl'lullil'lebuSly sd ll
-l .12 Ml ml, WW“. deem.“ Md M, r2 ‘4,9 a‘ 7 23
-Mark
-mrwm
+-#CSS #Javascript
+HTML5 & CSS Development: Learn How to
+223,872 views - Feb 19, 2019
+790 How to create a file in memory for user to download, but not through server?
+VOles ls there any way l can create a text file on the client side and prompt the user to download it, without any
+20 interaction with the server? l know l can't write directly to their machine (security and
+answers javascript ﬁle client-side asked Sep 8 '10 at 6:24
+l Joseph Silber
+400k views 175k 040 'u" 315 0 259
+447 Max parallel http connections in a browser?
+VOles i am creating some suspended connections to an HTTP server (comet, reverse ajax, etc). It works 0k, but l see
+' ‘ the browser only allows two suspended connections to a given domain simultaneously. So if
+enlirs html http persistent-connection web-performance asked Jun 12 '09 at 7:23
+— Mark
+328k views
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:92**************
 Web semantic
-[Web of Data — Web-ul datelor interconectate]
-modelarea cun0§tin§e10r
-pentru a fi ,,in;elese" de calculatoare
-date b informayii V cunogtinye
+(Web of Data — Web-ul datelor interconectate)
+modelarea cun0§tinjce10r
+pentru a fi ,jn'gelese" de calculatoare
+date b informajcii b cun0$tinjce
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:93**************
-Query Linked Data on the Web #LD avansat
-lee m your browser, PM,“ by leple Panem Fragments‘ hmmmmn
-Choose daiasources. . X _ .
-wmkkaqm Cme este Llnus Torvalds?
-siLEcrmancr'
-wowrwwvmwn
-m W‘ ‘ W, \ ‘ —PersonWithOccupalion
-Exennequcry \ ‘ .‘ , .H ‘ ,
-CompmerPioneers
-. . FinnishCom ulerPro rammers
+Query Linked Data on the Web #LD HVHHSH'E
+Live in your browser, powered by Triple Pattern Fragments. Linked Data Fragments
+Choose datasources: DBpedi-a 2016-04 ' _ _ 7
+Type or pick a query: Directors of movies starring Brad F Clne eSte Llnus Torvalds '
+SELECT DISTINCT * _ ' "
+WHERE{ _ Carpenters killed by crucifixion A
+shttpvldlopediaorglresourc Death causes of rnale American actors
+jconcept. Desserts made vvith plants
+LIMIT 'ISO Events that took place in the Trentino region
+Find all classes extending dcat:Dataset PersonWithOccupation
+Execute query Find your ovvn vocabularies
+ComputerPioneers
+- - FinnishCom uterPro rammers
 dlverse URL-url p g
-A FreeSonareProgrammers
-desemnand concepte ‘
-. . LlnuxKemelHackers
-[th "19$, "0t S tr l "515] LivingPeople
-PeoplelnlnfonnationTechnology
-Goller
-interogéri asupra DBpedia
-(varianta procesabilé de cétre maginé a enciclopediei Wikipedia)
+A FreeSoftwareProgrammers
+desemnand concepte .
+. . LinuxKernelHackers
+(thmgs, not strm gs) Livingpeople
+PeoplelnlnformationTechnology
+Golfer
+interogari asupra DBpedia
+(varianta procesabila de cétre masina a enciclopediei Wikipedia)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:94**************
 De tip ubicuu
-aplicaﬁi/servicii mobile bazate pe locajria utilizatorului,
+aplicayii/servicii mobile bazate pe loca'gia utilizatorului,
 disponibile pe mai multe plaforme:
 desktop, dispozitiv mobil, tableté,
-consoli de jocuri, aparat casnic,...
-Web-u] mobil
+consolé de jocuri, aparat casnic,...
+Web-ul mobil
 cloud computing
-l-nker-netWeb of Things — WoT
+lntemetWeb of Things — WoT
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:95**************
-Cloud E d9:
-.1 “mm/mm "x,
-‘ ‘ ‘ m w Rumor" A3255 57mm,“
-J, I “mummmm. ‘ ‘
-ﬁ I'M-"m" WWW“, ‘$311335?
-m.“ s M ll I‘ mm
-Wehlnlegrallnn V ‘ w ‘ ‘ -I
-. . Complement
-I'll - h
-M ‘ m $23502‘? H ‘ r “ “ Exlstlng Devices ‘ H
-‘ \3' lml Network
-Web ofThings Architecture — WoT 1.1 [W3C, 2023]
-w30.github.iolwot-architecturel
+avansat
+Cloud
+Edge
+4 Intermediary / Thing M
+Behavior -.._ ‘
+‘(I Interaction Affordances ‘<I Intermediar [Thin
+Data Schemas Behavitar g
+‘(I — ‘<1 Interaction Affordances
+Protocol Bindings
+' Remote Access Data SChemaS
+' I and Synchronization
+Protocol Bindings
+Consumer -
+B h _ Thing-to-cloud _ Integration and
+e av'or Thing-to-gateway Orchestration
+Protocol Bindings
+seamless _ Thing I I‘ Thing + Consumer Existing Device
+Web Integration Behavior Behavior 4
+Interaction Affordances Interaction Affordances +
+Data Schemas D. t Data Schemas =>Thing
+Thin ltgcThin c°mplement
+Protocol Binding Intgeraction g Protocol Bindings EXiSting DEViCES '“3Prot0col
+M Local Network
+Web ofThmgsArchltecture — WoT 1.1 (W3C, 2023)
+w3c.g|thub.|olwot-arch|tectu rel
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:96**************
-Care este arhitectura unei aplica'lcii Web?
+Care este arhitectura unei aplicayii Web?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:97**************
-front'end back'end
+front-end back-end
 _ HTTP
 cllent Web server Web
-IavaScript {1:32} server de 313116., framework
-conginnt cunnnul conglnut
-static \‘UHAHHC StaKiC
-Em] a
+lavaScript +5311ng server de aplic., framework
+continut continut continut continut
+static dinarnic static dinarnic
+-
+date .
+locale
 date externe
-[serviciu Web)
-via 0 interfagé Web, utilizatorul interacgioneazi cu clientul
-(front-end] 5i initiazi acgiuni — e.g., cereri HTTP [a)sincrone
+(serviciu Web)
+via 0 interfata Web, utilizatorul interactioneaza cu clientul
+(front-end) si initiaza actiuni — e.g., cereri HTTP (a)sincr0ne
 — ce vor fi executate de diverse componente implementate
-la nivel de server [back-end], pentru a obrine date
+la nivel de server (back-end), pentru a obtine date
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:98**************
-Aplicaﬁe Web = lnterfap'a + Program + Conginut (Date)
+Aplicatie Web = Interfa§5 + Program + Conﬁnut (Date)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:99**************
-Aplicaﬁe Web = lnterfapi + Program + Conginut (Date)
-mitul 1: cea mai importanté este interfaga
-mitu12: cel mai important este programul
+Aplicaﬁe Web = Interfatéi + Program + Conﬁnut (Date)
+mitul 1: cea mai importanté este interfaya
+mitul 2: cel mai important este programul
 
-mitu13zcele mai importante sunt datele
+mitul 3: cele mai importante sunt datele
 standarde deschise:
-HTML, CSS, Ajax, SVG, WebGL, WebXR, WAI,...
+HTML, CSS, Ajax, SVG, WebGL, WebXR, WAL...
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-Aplicaﬁe Web = lnterfap'a + Program + Conginut (Date)
+Aplicatie Web = Interfatéi + Program + Continut (Date)
 mitul 1: cea mai importanté este interfata
 mitul 2: cel mai important este programul
 
-mitu13zcele mai importante sunt datele
-server: C#, lava, JavaScript, PHP, Python, Ruby, Scala,...
-client: JavaScript, WebAssembly (WASM)
+mitul 3: cele mai importante sunt datele
+server: C#, lava, IavaScript, PHP, Python, Ruby, Scala,...
+client: lavaScript, WebAssembly (WASM)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:101**************
-Aplicaﬁe Web = lnterfap'a + Program + Conginut (Date)
-mitul 1: cea mai importanté este interfata
-mitu12: cel mai important este programul
+Aplicaﬁe Web = Interfatéi + Program + Conyinut (Date)
+mitul 1: cea mai importanté este interfajca
+mitul 2: cel mai important este programul
 
 mitul 3: cele mai importante sunt datele
-relagiunale (SQL), grafuri (NoSQL), ISON, XML, RDF etc.
+relajdonale (SQL), grafuri (NoSQL), ISON, XML, RDF etc.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:102**************
-Aplicaﬁe Web = lnterfap'a + Program + Conginut (Date)
-mitul 1: cea mai importanté este interfaga
+Aplicaﬁe Web = Interfaﬁi + Program + Conﬁnut (Date)
+mitul 1: cea mai importantéi este interfajca
 mitul 2: cel mai important este programul
 
 mitul 3: cele mai importante sunt datele
@@ -1273,35 +1443,39 @@ fapt: sunt importante toate!
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:103**************
 Client Date
-interfapé cu stocate
+interfatéi cu stocate
 utilizatorul persistent
 
+Q Internet A
 Server
-sit/aplicajtie Web
-Aplicaﬁe Web = lnterfapil + Program + Conﬁnut (Date)
+sit/aplicatie Web
+Aplicatie Web = Interfatéi + Program + Continut (Date)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:104**************
 rezumat
-terminologie, modelul client/server, hipertext,
-URI, sit vs. aplicapie, tipuri de aplicapii Web
+terminologie, modelul client/ server, hipertext,
+URI, sit vs. aplicaﬁe, tipuri de aplicayii Web
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:105**************
-@Ia ©\
-\ 505 I “‘
-_ -. 7:1
-episodulviitor: A , (f o “1'
-P FM”, V “\\\\“\é
-dela HTTP Q1 ‘WWW
-la script-uri CG] 415
+0'. @‘ﬁ
+3 05 =3 ‘*7 f *rjﬂ?"
+episodul viitor: _ -
+'2‘ ‘“ ,7
+de la HTTP i Q mtlmic.krm8Tmevstallio
+la script-uri CGI 41 5
+Unsupported Media Type m
 
 ***************Ending Page***************
 

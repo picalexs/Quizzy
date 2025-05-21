@@ -1,632 +1,632 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\I\I\I\I\I\I\I\
-I Qﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
+\I\I\I\I\I\/\/\
+1 \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\l
 \ ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ \
-I \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ§ﬂ\ﬂ\ﬂ \
-I\I\I\I\I\I\I\l
-PROGRAMMING IN PYTHON ‘ ‘$31M
+1 \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\l
+\ ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ \
+/\1\1\/\1\1\1\,
+PROGRAMMING m PYTHON | 55511;)“;me
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-A lambda function is a function without any name. It has multiple roles (for example it
-is often use as a pointer ta function equivalent when dealing with other functions that
+A lambda function is a function without any name. lt has multiple roles (for example it
+is often use as a pointer to function equivalent when dealing with other functions that
 expect a callback).
-
-Lambdas are useful to implement closures‘
+Lambdas are useful to implement closures.
 A lambda function is defined in the following way:
 
-lambda <Z/l'n of puturvleferx>zreturrl value
+lambda <Iist_of_parameters> : return_value
 The following example uses lambda to define a simple addition function
 
-Python lxlwithout lambda) Python 3.x(with lambda)
+Python 3.x(without lambda) Python 3.x(with lambda)
 
-def addition (x,y)z addition e lambda X,y1 x+y
+def addition (X,y): addition = lambda X,y: x+y
 
-Xetuxn x+y print laddition(3,5))
-print (dddl tion (3, 5))
+return X+y print (addition(3,5))
+print (addition (3,5))
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Lambdas are bind during the run-time. This mean that a lambda with a specific
-behavior can be build al the run-lime using the data dynamically generated‘
-Python 3.x
-def CreeteDivizibleCheckFunctiOn(n) :
-return lambda X: X%n::0
-£nDiv2 : CreateDivizibleCneckFunctlon (2b
-aniV'l I CreeteDlVizlbleCheCkFunctiUn (7i
-X : 14
-print < X, mnvz (x), aniv7 1x) )
-In this case aniv2 and aniv7 are dynamically generated. Oulpul
-This prngramming paradigm is called closure. l4 Tn“? 1'“
+Lambdas are bind during The run-Time. This mean ThaT a lambda wiTh a specific
+behavior can be build aT The run-Time using The daTa dynamically generaTed.
+PyThon 3.x
+def CreateDivizibleCheckFunction(n):
+return lambda X: x%n::O
+aniv2 = CreateDivizibleCheckFunction (2)
+aniv7 = CreateDivizibleCheckFunction (7)
+X = 14
+print ( X, aniv2(X), aniv7(X) )
+In This case aniv2 and aniv7 are dynamically generaTed. OquuT
+This programming paradigm is called closure. l4 True True
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-A sequence in pyvhen is a duh: structure represented by c vecior of elements 'hut
-don’| need to be of ihe some type.
-Lists have lwo represenmﬁon in python:
-~Z~ lisI ‘)muiubie vecior (eiemenis from IhuI lisi can be added, deleted, eve). Lisi edn be defined
-using [...] cpelu'ov er Ihe lisl keyword
-~:~ iupls -) Tmmu'ubie vecior (me :losesi equivaleni is u consiunf list) -) addition, deleﬁon, ere
-opevc'ion can nor be used an rm; Iype of ebiecr. A mple is usuciiy deﬁned using [...] or by using
-rhe luple keyword
-lisI and luple keywords can also be used to initialized o tuple or lisI from another lisi
-of iuple
+A sequence in python is a data structure represented by a vector of elements that
+don’t need to be of the same type.
+Lists have two representation in python:
+‘9 list 9mutable vector (elements from that list can be added, deleted, etc). List can be defined
+using [...] operator or the list keyword
+‘9 tuple 9 immutable vector (the closest equivalent is a constant list) 9 addition, deletion, etc
+operation can not be used on this type of obiect. A tuple is usually defined using (...) or by using
+the tuple keyword
+list and tuple keywords can also be used to initialized a tuple or list from another list
+of tuple
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Pylhon3.X
+Python 3.x
 
-X : list () (1X is an empty 1ist
+X = list () #X is an empty list
 
-X = [1 (0X is sn sinpty iist
+X = [] #X is an empty list
 
-X I [10,20,"rest”] (0X is list
+X = [10,20,”test”] #X is list
 
-X = [10,1 (1X is 1ist Contalnlnq [10]
+X = [10,] #X is list containing [10]
 
-X = [1,2] * 5 (0X is 1ist Containing [1,2, 1,2, 1,2, 1,2, 1,2]
-X,y : [1,2] (0X is 1 and y is 2
+X = [1,2] * 5 #X is list containing [1,2, 1,2, 1,2, 1,2, 1,2]
+X,y = [1,2] #X is 1 and y is 2
 
-X = tupie () (1X is an empty tiipis
+X = tuple () #X is an empty tuple
 
-X = () (0X is an empty tuple
+X = () #X is an empty tuple
 
-X : (10,20,”test”) (X is a tuple
+X = (10,20,”test”) #X is a tuple
 
-X = 10,20,”test” (X is s tiipis
+X = 10,20,”test” #X is a tuple
 
-X = (10,) (0X is tuple Contawﬁng (10)
+X = (10,) #X is tuple containing (10)
 
-X = (1,2) * 5 (1X is tiipit containlnq (1,2, 1,2, 1,2, 1,2, 1,2)
-X = 1,2 ~ 5 (0X is tuple containing (1,10)
+X I (1,2) * 5 #X is tuple containing (1,2, 1,2, 1,2, 1,2, 1,2)
+X I 1,2 * 5 #X is tuple containing (1,10)
 
-X,y : (1,2) (X is 1 and y is 2 (the same happens for XN s 2,2 )
+X,y I (1,2) #X is 1 and y is 2 (the same happens for X,y I 1,2 )
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Elements from u list can be accessed in the following way
-Pyihonlx
+Elements from a lis’r can be accessed in The following way
+Python 3.x
 
-X Z [‘A', 'B‘, 2, 3, ‘C']
+X I ['A'I ‘Bl! 2/ 3I lcll
 
-x[U] ~
+X[O] #Result is A
 
-Mil] 71f.‘ ,
+X[—l] #Result is C
 
-x[—2] ~ ,
+X[—2] #Result is 3
 
-x[z3] 7: L '7', ':', 7
+X[:3] #Result is ['A’, ’B’, 2]
 
-mm H » ' '
+X[3:] #Result is [3, 'C’]
 
-x[l:3] , ,~~ ':', Z
+X[l:3] #Result is ['B’, 2]
 
-x[l:*3] 71H. ,
+X[l:—3] #Result is ['B’]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Elements from u tuple can be accessed in Ihe same way
-Pythonlx
+Elements from a Tuple can be accessed in The some way
+Python 3.x
 
-x Z ('A’, ‘B', Z, 3, ‘C'l
+X: ('A'! 'B'! 2! 3I 'c')
 
-XHJ] I‘ T
+X[O] #Result is A
 
-x[*1] :i» . \
+x[—l] #Result is C
 
-x[-Z] <1 ; W, ~,
+X[—2] #Result is 3
 
-X[l:3] I‘ if L "5', Z‘
+X[:3] #Result is ('A’, ’B’, 2)
 
-x[l:*3] 7:» . rm
+X[3:] #Result is (3, 'C’)
+
+X[1:3] #Result is ('B’, 2)
+
+X[1:—3] #Result is ('B’)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-ivple and lisl keywords can also be used m convert q tuple m q lm and vice-verso.
-Py'h0n3.x
+tuple anol list keywords can also be used to convert a tuple to a list anol vice-versa.
+Python3.x
 
-X = (‘an ‘B’, 2, 3, 'c')
+X I (IAI, th, 2, 3, vct)
 
-y:list(x)
+y I list (x) #y I ['A’, ’B’, 2, 3, 'c']
 
-x = [‘A', 'E', 2, 3, ‘C‘]
+X = ['A'I ‘B'I 2! 3I 'C‘]
 
-y:cuple1x)
+y = tuple (x) #y I ('A’, ’B’, 2, 3, 'c'>
 
-Both lists and mples can be concatenuled, but not wiIh each other.
-Py'h0n3.x
+Both lists and tuples can be concatenated, but not with each other.
 
-x = (‘AH Z) X = [‘A', 2] X = ('A‘, 2)
-Y Z (‘5" 3) y : VB’, 3] y : ['B', 3]
-z:x+y z:x+y Z:X+y
+Python3.x
+
+X = (‘AU 2) X = ['A', 2] X = (‘AU 2)
+y = ('B', 3) y = ['B', 3] y = ['B', 3]
+z=x+y Z=X+y Z=X+y
+#2: ('A’,2, 'B’, 3) #Z:[’A’,2, 'B’, 3] #lllError!!!
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-Tuples are also used lo return multiple values from q funclion.
-The following example computes both the sum and product of a sequence of numbers
+Tuples are also used to return multiple values from a function.
+The following example computes both the sum anol product of a sequence of numbers
 Python 3.x
-def ComputesumAndProduct(*llstiofinumbersl :
-S : O
-P = l
-for 1 in list_of_numbezs:
-s +: i
-P ‘Z i
-return (s, p)
-suma,produs = ComputeSumAndProduct(1,2,3,4,5)
+def ComputeSumAndProduct(*list_of_numbers):
+s = O
+p = l
+for i in list_of_numbers:
+s += i
+p *= i
+return (s,p)
+suma,produs = ComputeSumAndProduct(l,2,3,4,5)
+#suma :15, produs I 120
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-luple and lisl can also be organized in mmrixes:
+iuple and lisi can also be organized in matrixes:
 
-Pylhonlx
+Python3.x
 
-X=‘(17213,r (4,576))
+X I ([1,2,3], (4,5,6)) #matrix subcomponents don't have to be of the
+#same type
 
-x = 1[l,2,3], (4,5,6H ‘matrix subcomponents don’t have to be of the
-#sanp rype
+#a matrix does not have to have the same number of elements on each
 
-X= l ((1123), (4,5,6'), ((7,8), (9,10,11, 12H)
+#dimension
 
-#9 matnx noes not have to hamA fhP SamE lumuer 0‘ Elemerts on each
-
-#dlmcnslcn
-
-#me same rules from tuples apply to 115:5 as well
-
-x= [[1,2,3]v [4,5,6]1
-
-X=[[17213]y (4,576)]
+#the same rules from tuples apply to lists as well
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Bolh Iuplu and lisls can be enumerated wilh u for keyword:
-Python a.‘
-Ovipui
-{0121111 [l,2,3,4,5]z 1
-tint (1)
-P 2
-Pym" 3.x 3
-for 1 in (1,2,3,4,5>; 5
-print (1)
-Lists and luples have u special keyword (Ien) that can be used to find out the size of
-a llsl lu-le:
+Both tuples dnd lists can be enumerated with d for keyword:
 Python 3.x
-X = [1,2,3,4,51 WW“
-print (1en(X) , len (y))
+Output
+for i in [l,2,3,4,5]:
+. . i
+pr1nt(l)
+2
+Python 3.x j
+for i in (1,2,3,4,5): 5
+print(i)
+Lists and tuples have d special keyword (len) that can be used to find out the size of
+d list tule:
+Python 3.x
+X = [1,213,415] Output3.x
+print (len(x), len(y))
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-One can also use the enumerate keyword to enumerate u list and get the index of
-
-the item at the some time:
-
-Pylhon 3.x
-
-£0: index,name in enumerate t ["Draqos", "Mlhal", "Nlcu", “Vla0"]) =
-prlnt("1ndex:’éd :> is"%lindex,nam&l)
-
+One can also use the enumerate keyword to enumerate a list and get the index of
+the item at the same time:
+Python 3.x
+for index,name in enumerate(["Dragos","Mihai","Nicu","Vlad"]):
+print("Index:%d => %s"%(index,name))
 Or use an external variable: l
-
-Python 3.x Oulpul
-
-index e 0 lndeX:O :> Dragns
-
-for name in ["DranS", "Minei", "N;cu", "Vlad"]) z —v lndex=l => Mlhal
-print("Index:¥d :> as"% lindex,namel) lndexﬂ :> Ntw
-index += 1 lndex:3 :> Vlad
+Python 3.x Output
+index I O |ndex:0 => Dragos
+for name in ["Dragos", "Mihai", "Nicu", "Vlad"]) : _ |ndex=l => Mihqi
+print ("Index:%d :> %s"% (index, name) ) |ndex=2 => Nicu
+index += l lndex:3 => Vlad
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-enumerule functions also allows u second parameter lo specify the index base
-(default is 0 9 iust like in C-like languages)‘
-Pyllmn 3.x
-£0: index,name in enumerate < ["Dragos“, "Mlhai", "Nlcu", "Vlad"] , a);
-print("1nnex:“nd :> %s“% (index, namei)
-In this example, the index base will be 2:
-'r Dingosiineiirsinnnieiwiii have index 2 Oquul
-r Minni (the second name) wiil have index a indenz :> Drcgos
-'r And so on index=3 => MIhuI
-\ndexvﬁ :> Nicu
-index:5 :> Viad
+enumerate functions also allows a second parameter to specify the index base
+(default is O 9 iust like in C-like languages).
+Python 3.x
+for index, name in enumerate( ["Dragos", "Mihai", "Nicu", "Vlad"] , e) :
+print("IndeX:%d :> %s"%(index,name))
+ln this example, the index base will be 2: l
+> Dragos (the first name) will have index 2 Output
+> Mihai (the second name) will have index 3 |ndex:2 => Dragos
+> And so on lndex:3 => Mihai
+lndex:4 => Nicu
+lndex:5 => Vlad
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-l LISTS AND FUNUIONAI. PROGRAMMING
 A list can also be build using functional programming.
-‘1' A list of numbers from i to 9
-Pytlmn 3.x
-'i' A list of all divisor of 23 smaller than 100
-Pythun 3.x
-4‘ A list of all square values for number from 'l to 5
+‘9 A list of numbers from l to 9
 Python 3.x
+X I [i for i in range(1,10)] #X I [1,2,3,4,5,6,7,8,9]
+‘9 A list of all divisor of 23 smaller than lOO
+Python 3.x
+X I [i for i in range(1,100) if i % 23 II O] #X I [23, 46, 69, 92]
+‘9 A list of all square values for number from l to 5
+Python 3.x
+X I [i*i for i in range (1, 6)] #X I [1, 4, 9, l6, 25]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-A lisl can also be build using functional programming.
-‘i' A lisI of pairs of numbers from i to 10 "IGI summed up produce a number Ohm
+A list can also be build using functional programming.
+‘9 A list of pairs of numbers from l to lO that summed up produce a number that
 divides with 7
-Pym" 3.x
-X:[ [x, y] £0: x in :ange11,1o) for y in :anqe(l,10) if buy) “67:01
-‘F A lisr of ruples of numbers from 1 to 10 rhur summed up produce u number rhcl
+Python3.x
+X:[[X, y] for X in range(l,10) for y in range(l,10) if (x+y)%7::O]
+#X: [[1, 6], [2, 5], [3, 4], [4, 3], [5, 2], l5, 9], l6, ll,
+it l6, 8], l7, 7], l8, 6], [9, 5]]
+‘9 A list of tuples of numbers from l to lO that summed up produce a number that
 divides with 7
-Python 34X
-X:[ (x, y) for x in zanqeil,10) for y in tanqﬁﬂ, 10) if 1x+yi g7::0]
+Python3.x
+x=[(x, y) for X in range(1,lO) for y in range(l,10) if (X+y)%7==0]
+#X: [(1, 6), (2, 5), (3, 4), <4, 3), (5, 2), (5, 9), (6, l),
+it (6, 8), (7, 7), (8, 6), (9, 5)]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-A llsi can also be build using functional programming,
-‘1' A list of prime numbers that a smaller than 100
+A list can also be build using functional programming.
+‘9 A list of prime numbers that a smaller than lOO
 
-Pylhon 3.x
-Using \‘undional programming in Python drastically reduces the size of code‘ However,
-depending on how large the expression is Io build c lisr, functional programming may
-not be advisable if ‘he program purpose is readability‘
+Python 3.x
+
+x=[x for X in range(2,lOO) if len([y for y in range(2,x//2+l) if x % y==O])==O]
+
+#X I [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53,
+
+59, 61, 67, 71, 73, 79, 83, 89, 97]
+
+Using functional programming in Python drastically reduces the size of code. However,
+depending on how large the expression is to build a list, functional programming may
+not be advisable if the program purpose is readability.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:17**************
-Lists supporl u set of funclions Ihut can be used to modify and access elemenls and
-modify the list of elemenis. Some of lhese funclioncliﬁes can also be achieve by using
+Lists support a set of functions that can be used to modify and access elements and
+modify the list of elements. Some of these functionalities can also be achieve by using
 some operators.
-‘1' Add a new elemem in Qhe list (either use the member function(me|hod) append or
-the operator +=). To add lists or iuples use exiend method
-Pthon 3.x
-x = [1 , 2 , 3] r ,
-x.append(4) , , ,
-X+:[5] , , , ,
-x+: [ 6, 7] , , , , , v
-x+:(s,9,10) , , , , v v , , ,
-x[len1x)z] Z [ll] , , , , , , , , v ,
-X.eXtend([12,13]) , , , , , v , ', , v v ,
-X‘5Xtend(114,l5)) , , , , , , , , , , , , ,
+g. Add a new element in the list (either use the member function(method) append or
+the operator +=). To add lists or tuples use extend method
+Python 3.x
+X I [1,2,3] #X I [1, 2, 3]
+X.append(4) #x I [1, 2, 3, 4]
+X+=[5] #X I [1, 2, 3, 4, 5]
+X+I[6,7] #X I [1, 2, 3, 4, 5, 6, 7]
+X+=(8,9,10) #X I [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+X[len(X):] I [11] #X I [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+X.extend([12,13]) #X I [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+X.extend((14,15)) #X I [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+ll 14,15]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Lists supper! a set of funcﬁons that can be used to modify and access elemems and
-modify the list of elements. Some of Ihese functionali'ies can also be achieved by
-using some operclcrs.
-ez~ Insen c new elemem m the lisﬁ using member function(me0hod] inseﬂ
-
-Pyllwn 3.x
-
-x : [1, 2, 3] , ,
-
-x.inset€(l, "A") , "A", ,
-
-x.inSert(-1,"B") , " h , "a",
-
-xeinsett(1en(Xl ,"C") , ' ", , " 'H , "C"
+Lists support a set of functions that can be used to moolity anol access elements ancl
+modify the list of elements. Some of these tunctionalities can also be achieved by
+using some operators.
+‘9 lnsert a new element in the list using member tunction(methool) insert
+Python 3.x
+X I [1,2,3] #X I [1, 2, 3]
+X.insert(1,"A") #X I [1, "A", 2, 3]
+X.insert(—l,"B") #x I [1, "A", 2, "B", 3]
+X.insert(len(x),"C") #x I [1, "A", 2, "B", 3, "C"]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Lists supper! d set of funcﬁons that CGI'I be used to modify and access elemems and
-modify the list of elements. Some of Ihese functionali'ies can also be achieve by using
+Lists support a set of functions that can be used to moolity anol access elements ancl
+modify the list of elements. Some of these functionalities can also be achieve by using
 some operators.
-ez~ Insen d new element or mumple elements can be done using [1] operator‘ Similarly
+‘9 Insert a new element or multiple elements can be clone using [:] operator. Similarly
 
-[1 operclﬁcr CCII’! be used to change the value of one elemem
+[] operator can be useol to change the value of one element
 
-Pylhon 3.x
+Python 3.x
 
-X: [112,314,51 , , , v
+X= [1,2,3,4,5] #X I [1, 2, 3, 4, 5]
 
-x [2] = 20 , , Q, ,
+X[2] = 20 #X I [1, 2, Q, 4, 5]
 
-“3:1 Z ["A“,"B","C"] , V V HA”, "EH, “CH
+X|:3:] = ["AI'IHBHIHCH] #X : [1, 2, 20, [IA/I, I/B/II I/C/I]
 
-x[:4] : [10] E’ " " "
-
-H113] Z [.anynlzq [x y Hz”
+X|::l_:3] = ['Xlllylllzll #X : [10’ [Ix/I, My!!! I/z/I]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Lists supper! a set of functions mm can be used w modify and access elements and
-modify rhe list of elemen's. Some of Ihese functionali'ies can also be achieve by using
+Lists support a set of functions that can be used to moolity anol access elements ancl
+modify the list of elements. Some of these functionalities can also be achieve by using
 some operators.
-‘F Remove On element in the list -) using member function(method] remove‘ This
-method removes the ﬁrs‘ element with u given value
-_ Python 3.x
-x : [1 I 2 , 3] , ,
-x . remaveﬂ) ,
-)utemoveﬂoo) H ‘
+‘3 Remove an element in the list 9 using member tunction(methocl) remove. This
+method removes the first element with a given value
+, Python 3.x
+X I [1,2,3] #X I [1, 2, 3]
+X.remove(l) #x I [2, 3]
+X.remove(lOO) #lll ERROR ll! — lOO is not a value from X
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-lisvs supper’ u set of functions vhm :un be used ve modify and access elemems and modify Ihe list of
-elemems. Some of these functionaliﬂes can also be achieve by using some opermols.
-¢1~ To remove an elemem from u specific peemen me del keyword can be used‘
-Pylhull 3.x
-X: [1,2,3,4,51 , , n ,
-del X [2] , , , ,
-del x [-1] , ,
-del x [01 ,
-del x [10001 ' ‘ ‘ ‘ ~ '
-X: [112,314,51 , , , v
-del x [4 1 1 , , ,
-die]. x [ :2] ' ,
-X: [112,314,551 , , , v
-del x [2 1 41 , ,
+Lists support a set of functions that can be used to modify and access elements and modify the list of
+elements. Some of these functionalities can also be achieve by using some operators.
+‘9 To remove an element from a specific position the del keyword can be used.
+Python 3.x
+X I [1,2,3,4,5] #X I [1, 2, 3, 4, 5]
+del X[2] #X I [1, 2, 4, 5]
+del X[—1] #X I [1, 2, 4]
+del X[0] #X I [2, 41
+del X[1000] #lll ERROR ll! — 1000 is not a valid index
+X I [1,2,3,4,5] #X I [1, 2, 3, 4, 5]
+del X[4:] #X I [1, 2, 3, 4]
+del X[:2] #X I [3, 4]
+X I [1,2,3,4,5] #X I [1, 2, 3, 4, 5]
+del X[2:4] #X I [1, 2, 5]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Lisrs supper! e ser of funcﬁons mer can be used re modify and access elemerus and
-modify the list of elements. Some of Ihese functionali'ies can also be achieve by using
+Lists support a set of functions that can be used to modify and access elements and
+modify the list of elements. Some of these functionalities can also be achieve by using
 some operators.
 
-‘F To pop method can be used m remove an element from a desire position Gn return
-1r. This method ccln be use without clny parameter (and in this cclse n refers re me
-last elemem)
+‘9 To pop method can be used to remove an element from a desire position an return
+it. This method can be use without any parameter (and in this case it refers to the
+last element)
 
-Python 34X
+Python 3.x
 
-x: [1,2,3r4r5] r r r r
-y:X-P°P12i r r r
+X I [l,2,3,4,5] #X I [1, 2, 3, 4, 5]
 
-y Z x,POP10D r r
+y I X-P°P(2) #X I [1, 2, 4, 5] y I 3
 
-y : x.POp1>l) r
+y I X.pop(O) #X I [2, 4, 5] y I 1
 
-y = X.pOPU
+y I X-p0p<—1) #X I [2, 4] y I 5
 
-y : x,pop11000) “ ‘
+y I X-POP() #X I [2] y I 4
+
+y I X.pop(1000) it! I! ERROR ll! — lOOO is not a valid index
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-Lists support q set Qt functions that can be used to modify and access elements and
-modify the list of elements, Some of these functionalities can also be achieve by using
+Lists support a set of functions that can be used to modify and access elements and
+modify the list of elements. Some of these functionalities can also be achieve by using
 some operators.
-t2~ To clear the entire list the del command can be used
-Python as!
-x= [1,23,41,51 ' t w t t
-del X [ :1
-t2~ Python Six also has a method clear that can be used to clear an entire list
-Py'hcm 3.x
-x= [172,374,51 t t t t
-x , clearll '
+‘9 To clear the entire list the del command can be used
+Python 3.x
+X I [l,2,3,4,5] #X I [1, 2, 3, 4, 5]
+del X[ z] #X I ll
+‘z' Python 3.x also has a method clear that can be used to clear an entire list
+Python 3.x
+X I [1,2,3,4,5] #X I [1, 2, 3, 4, 5]
+x.clear() #X I [l
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-Be aware that using the operator (=) does not make u copy but only a reference of
-a lisL
-
+Be aware that using the operator (=) does not make a copy but only a reference of
+a list.
 Python 3.x
-
-x = [1,2,3]
-
-y : x
-
-y.append(10)
-
-#X : [\,7,3,10]
-
-#y : [1,2,3,;0]
-
-If you want to make a copy of a lisl, use Ihe list keyword:
+X = [1,2, 3]
+y I X
+y.append(lO)
+#y I [l,2,3,lO]
+If you want to make a copy of a list, use the list keyword:
 Python 3.x
-
-x = [1,2,3]
-
-y : list (x)
-
+X I [1, 2, 3]
+y I list (X)
 y.append(10)
-
-#x I [1, 7, 3]
-
-#y : {1,2,},10]
+#X = [1,2, 3]
+#y I [1,2,3, 10]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Lisis suppen e set of funcﬁcns me: can be used to modify and access elemems and
-modify ihe iisi of eiemems. Some of iiiese funcﬁoncli'ies can also be achieve by using
+Lists support a set of functions that can be used to modify and access elements and
+modify the list of elements. Some of these tunctionalities can also be achieve by using
 some operators.
-‘:~ Python ax also has a method copy iiiei can be used to create q shallow copy of
+g. Python 3.x also has a method copy that can be used to create a shallow copy of
 a list
 
-Py'hqll a.‘
+Python 3.x
 
-x = [1, 2, 3] i , i
+X I [1,2,3] #X I [1, 2, 3]
 
-b = X>C°PYU i , i , i
+b = X.copy() #X I [1, 2, 3] b I [1, 2, 3]
 
-b +: [4] i i i i , i i
-‘F The o-ermor i can also be use to achieve the same result
+b +I [4] #X I [1, 2, 3] b I [1, 2, 3, 4]
+‘9 The oerator : can also be use to achieve the same result
 
-Pynieii 34x
+Python 3.x
 
-X : [1, 2, 31 i , ,
+X I [1,2,3] #X I [1, 2, 3]
 
-b I x[:] i , , i‘ i i
-
-b +: [4] i i i i i y,
+bIX[:] #XI [1, 2, 3] bI [1, 2, 3]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Us“ supper? u se' of functions mm can be used m modify and access element and modify the
-lisl of elemems, Some of these functionalities can also be achieve by using some operators.
-'2' Use index method to find ouv vhe posilion of a specific element in a list
+Lists support a set of functions that can be used to modify and access elements and modify the
+list of elements. Some of these functionalities can also be achieve by using some operators.
+‘9 Use index method to find out the position of a specific element in a list
 
-Pyihon 3,1
+Python 3.x
 
-X , [UNI..B"'..C"'..D"] ,7 ,1 H,”
+X = ['IA'IIHBHIHC",I'DH] #X : [I/A/II l/B/II l/c/II [ID/l, [IE/l]
 
-y : X,1ndex("c"i 7 ,
+y = X.index("C") #y I 2
 
-y 7 X.index("¥") H 7,,,,~ H 7 , ~,: v,,,: ,i ,,,i
-~17 The operuvor in can be used w check if cm elemem exisis in ihe lisi
+y = X.index("Y") #lll ERROR 1!! — "Y" is not part of list X
+‘9 The operator in can be used to check if an element exists in the list
 
-Pyihon 34x
+Python 3.x
 
-X , ["A“,"E","C","D"] , , ,4,’ ,, v, U
+X : ["A","B","C","D":| #X : [I/A/II l/B/II IIc/I, [ID/I, [IE/I]
 
-y="C“inx 1,,
+y I "C" in X #y I True
 
-y:"Y"inx 777*. 77
+y I "Y" in X #y I False
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Lists suppoﬂ u se' of functions mm can be used ta modify and access element and modify the
-lisl of elemems, Some of these functionalities can also be achieve by using some operators.
-'2' Use ccum method w find euv how many elements of c: specific value exists in a lisr
-Pylhan 3.x
-X I [172,372,573I172i4i2] V * I", if, T ‘My’, >7,’
-y:x,count(2) s ,3, ,3, ,3, ,3
-y : x,counc10> : , "
-‘1' The Ieverse method can be used Io reverse vhe elemenis order from a lisv
-Pym" 3.x
-X: [1,2,3] , 7,7,
-x,tevetse (D ’/ ‘//r
+Lists support a set of functions that can be used to modify and access elements and modify the
+list of elements. Some of these functionalities can also be achieve by using some operators.
+‘9 Use count method to find out how many elements of a specific value exists in a list
+
+Python 3.x
+
+X I [l,2,3,2,5,3,1,2,4,2] #X I[1,2,3,2,5,3,1,2,4,2]
+
+y I x.count(2) #y I 4 [l,2,3,g,5,3,1,g,4,g]
+
+y I X.count(O) #y I O
+‘9 The reverse method can be used to reverse the elements order from a list
+
+Python 3.x
+
+X I [1,2,3] #X I [1,2,3]
+
+x.reverse () #x I [3,2,1]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Lists support u set of functions that can be used to modify and access elements and
-modify the list of elements. Same of these functionalities can also be achieve by using
+Lists support a set of functions that can be used to modify anol access elements anol
+modify the list of elements. Some of these functionalities can also be achieve by using
 some operators.
-'1‘ Use sort method to sort elements from the list
-sort (WWW, revers'QZFalxel
-Python 3.x t )
-x = [2,1,4,3,5]
-x.!o:t(l lx l ,2,<,,i,
-x.sort(reverse:Truet ‘/ i l2, l, H n
-X.50:C(key= lambda i: 1%3) \\ i l'Jt MU,
-X.SO!C(key = lambda i: i%3,reverse=Truel ‘Y i l ,/, t t ‘
+‘9 Use sort method to sort elements from the list
+sort (keyINone, reverseIFalse)
+Python 3.x ( )
+X = [2,1,4,3,5]
+X.Sort() #X I [l,2,3,4,5]
+X.sort(reverse=True) #X I [5,4,3,2,1]
+X.sort(key = lambda i: i%3) #X I [3,4,1,2,5]
+X.sort(key = lambda i: i%3,reverse=True) #X = [5,2,4,l,3]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Python hos severol build-in functions design to work with list (iterators). These functions
-rely heavily an lambda expressions:
-‘1' Use map to create a new list where each element is obtained based on the
-lambda expression provided‘
-map r mum», iterableflemenly, [lterubleflemervliﬂu iterableflementJ)
+Python has several build-in functions design to work with list (iterators). These functions
+rely heavily on lambda expressions:
+‘z' Use map to create a new list where each element is obtained based on the
+lambda expression provided.
+map ( function, iterableEIement7, [iterableEIement2,... iterableEIementn] )
 Python 3.x
-x : [1,23,41,51
-y = liltlmapllalnbda element: element’elemeﬂt, X)l '7 i r l, M r /' l
-x : [1 , 2 r 3]
-Y : [4 r 5 t 6]
-z = liltlmapllalnbda e1,eZ: el+62,x,y)) " / M
+X I [1,2,3,4,5]
+y I list(map (lambda element: element*element,x)) #y I [1, 4, 9, 16, 25]
+X I [l , 2 , 3]
+y I [4 , 5, 6]
+z I list(map(lambda e1,e2: e1+e2,x,y)) #2 I [5, 7, 9]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Pylhon has several build-in funclions design Io work willl list (kennels). These functions rely heavily on
+Python has several build-in functions design to work with list (iterators). These functions rely heavily on
 lambda expressions:
-‘1- may function returns an iieruble obie'c in Pyihorl 3.x
+‘9 map function returns an iterable obietc in Python 3.x
 Python
-X = [1 , 2, 31
-y : map(1ambda element: element*elementl x)
-4' v0 creme a llsi from D" ilemble obiecv, use Ihe lisl keyword
-Pyvhon
-X Z [1 , 2, 31
-Y Z [4 , 5 l 6, 7]
-z : listlmapuambda e1,e2: el+e2,x,y)) , , a
+X = [1 , 2 , 3]
+y = map (lambda element: element*element, X)
+#y I iterable object 9Python 3 . X
+‘9 to create a list from an iterable obiect, use the list keyword
+Python
+X = [1 , 2 , 3]
+Y = [4 I 5 I 6, 7]
+z = list(map(lambda el,e2: e1+e2,X,y)) #2 I [5, 7, 9] 9 Python 3.X
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
-Python has several build-in functions design to work with list (iterators). These functions
-rely heavily on lambda expressions:
-‘1' Use filter to create a new list where each element is ﬁltered based on the lambda
+Python hols several build-in functions design to work with list (iterators). These functions
+rely heavily on lolmbdo expressions:
+‘t. Use filter to creote o new list where eoch element is filtered bolsed on the lolmbdol
 expression provided.
-
-Filler 1 mm", iiembleflement)
-
-Python 1x
-
-X I [l,2,3,4,5]
-
-y : list(filterilalnbda element: element%2::0,xii s e /, i
+Filter ( function, itercrbleElement )
+Python 3.x
+y I list(filter(lambda element: element%2::O,X)) #y I [2,4]
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:32**************
-Python has several build-in functions design 00 work with list (iﬁeratorsl. These functions
-rely heavily on lambda expressions:
-~1~ Both ﬁner and map can also be used to create a lis! (usually in coniuncvion with
-range keyword]
+Python hols several builol-in functions design to work with list (iterators). These functions
+rely heolvily on lambda expressions:
+'i‘ Both filter and map con olso be used to creolte o list (usuollly in coniunction with
+range keyword)
 Python 3.x
-X I listhllapdanbda x: x"X, :anqe(lrl[)) H
-x = list(filtar(lan\bd.a x: x%7==1,zanga(l, 100)) )
+x = list(map(lambda x: x*x, range(l,lO)))
+#X I [1, 4, 9, 16, 25, 36, 49, 64, 81]
+x = list(filter(lambda X: X%7==l,range(l,lOO)))
+#X I [1, 8, 15, 22, 29, 36, 43, 50, 57, 64, 71, 78, 85, 92, 99]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Python has several build-in functions design lo work with list [iterators]. These functions
+Python has several build-in functions design to work with list (iterators). These functions
 rely heavily on lambda expressions:
-‘I’ Use min and max functions to find out the biggest/smallest element from an itercible
+‘9 Use min and max functions to find out the biggest/smallest element from an iterable
 list based on the lambda expression provided.
-max (rterobresremenr, [key]) inin (itemhlenemenh [keyjl
-max (eh, elz, [key]) min (eh, ell, [key])
-Python 34x
-x I [1,2,3,4,5]
-y = max lx) \- e a
-y=max 11,3,2,7,9,3,5) 1, e a
-y:max lx,key:lalnbdai: 1%3) ‘,7;
-~Z' If you want to use o k_ey for mGX and/or min function, be sure thot you odded with
-the parameter name decoration: key I <function>, and not 'ygl the keyifunction or o
+max (iterabIeElement, [key] ) min (iterabIeElement, [key] )
+max (ell, el2, [key] ) min (el1, el2, [key] )
+Python 3.x
+y = max (X) #y I 5
+y=max (X,key= lambda i: i % 3) #y: 2
+‘9 If you want to use a key for max and/or min function, be sure that you added with
+the parameter name decoration: key I <function>, and not '|ust the key_function or a
 lambda.
 
 ***************Ending Page***************
@@ -635,93 +635,84 @@ lambda.
 ***************page number:34**************
 Python has several build-in functions design to work with list (iterators). These functions
 rely heavily on lambda expressions:
-‘1' Use sum to add all elements from on iteroble obiect. Elements from the iterable
-
+‘9 Use sum to add all elements from an iterable oloiect. Elements from the iterable
 obiects should allow the possibility of addition with other elements.
-
-sum llielubleElemem, [rlrrrtVellreD
-~Z' siaﬂl/ulue represent the value from where to stert summing the elements. Deteult is 0
-
-Pylherr a.‘
-
-X : [1,2,3,4,5]
-
-y Z sum 1X) "_
-
-y:sumlx,li)0) :‘7 Tl‘,l'l
-
-X : l1,2,"3",4,51
-
-yIsumlx) l Iflﬁil'l ml ll l,l l
+sum (iterableElement, [startVaIue])
+‘z' startVaIue represent the value from where to start summing the elements. Default is O
+Python 3.x
+X = [1,2,3,4,5]
+y = sum (X) #y I 15
+y = sum (X,100) #y I 115 (100+15)
+X = [1,2, "3”, 4,5]
+y = sum (X) #ERROR9 Can’ t add int and string
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
-mile" has several build-In functions design Io work wiIh IIsI liiemlers). These functions rely heuvlly on
-lambda expressions:
-~:~ Use soriid to son the elemeni from a list (iiemble obiesi). The key in mis cuss reprasanls a compare
-function be'ween Iwo elements a‘ the iveruble ob'eci.
-soiled ('llerubleElemem, [key],[rever:e])
-4' The reverse ummelel if no‘ seciﬁed ls considered lo be False
-Py'hﬂll 3.x
-x = l2,1,4,3,51
-y=eorted(xl *1’ l
-y : sorted (x,zeverse:True) i i F, a i, l
-y::ozted (X,key:lambda i! m3) ‘s ~,l,l,;,al
-y : sorted (X,key : lambda i: i%3,reverse:True) e '~l
-+ Jus' like i" me precedem case, you mun use Ihe optional pcrame'er with lheir name
+Python hols several build-in functions design to work with list (iterators). These functions rely heavily on
+lolmlodo expressions:
+‘9 Use sorted to sort the element from o list (iteroble obiect). The key in this cose represents o compare
+function between two elements of the iterolble ob'ect.
+
+sorted (iterololeElement, [key],[reverse])
+
+‘9 The reverse orolmeter if not secified is considered to be Folse
+Python 3.x
+X = [2,114,315]
+y I sorted (x) #y I [1,2,3,4,5]
+y I sorted (X,reverse:True) #y I [5,4,3,2,1]
+y I sorted (X,key I lambda i: i%3) #y I [3,1,4,2,5]
+y I sorted (X,key I lambda i: i%3,reverse:True) #y I [2,5,l,4,3]
+
+‘9 Just like in the precedent cose, you must use the optionol porometer with their nome
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:36**************
-Python has several build-in functions design 00 work with lisﬁ [Hermon]. These functions
+Python has several build-in functions design to work with list (iterators). These functions
 rely heavily on lambda expressions:
-‘1' Use Ieversed to reverse the element from u list (iterable obiect).
-
-Python 34x
-
-y : list (zevezseCHXl) , , , ,
-~:' Use any and all la check if al laasl one or all elements from a lisO (iterclble obiects)
-
-can be evaluated 00 Irue,
-
-Pyﬂmn 3.x
-
-X : [2,1,0,3,5]
-
-y Z anylx) l ‘
-
-y I all (x) ,
+‘t. Use reversed to reverse the element from a list (iterable obiect).
+Python 3.x
+X I [2,1,4,3,5l
+y I list (reversed(x)) #y I [5,3,4,l,2]
+‘t. Use any and all to check if at least one or all elements from a list (iterable obiects)
+can be evaluated to true.
+Python 3.x
+X = [2,l,O,3,5l
+y = any(X) #y I True, all numbers except O are evaluated to True
+y = all(X) #y I False, O is evaluated to False
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:37**************
-Python has several build-in functions design 00 work with lisi (iﬁerutorsl. These functions
+Python has several builol-in functions design to work with list (iterators). These functions
 rely heavily on lambda expressions:
-‘1' Use zip to group 2 or more iterable abiects into one iterable obiea
-Python 34x
-x : [1, 2, 3]
+‘t. Use zip to group 2 or more iterable obiects into one iterable obiect
+Python 3.x
+X = [l , 2 , 3]
 y = [10,20,301
-z : liSCHiphhyH ‘ , , r v ‘ r ‘
-‘1' Use zip with * character to unzip such a lists The unzip variables are Ouples
-Python 34X
-X = [(1,2) , (3,4) , (5,6)]
-a,b:zip(~x> ‘ , , , ‘ , ,
+z = list(zip(X,y)) #2 I [(1,10) , (2,20) , (3,30)]
+‘9 Use zip with * character to unzip such a list. The unzip variables are tuples
+Python 3.x
+a,b I zip(*X) #a I (1,3,5) and b I (2,4,6)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:38**************
-l BUILT-IN FUNUIUNS FUR LIST
-Python has several build-in functions design to work with list [iterators]. These functions
-rely heavily on lambda expressions:
-‘1' Use del to delete a list or a tuple
-Pym" 3.x
+| BUILT-IN FUNCTIONS FDR LIST
+Python hols several builol-in functions design to work with list (iterators). These functions
+rely heolvily on lombdo expressions:
+‘t. Use del to delete o list or ol tuple
+Python 3.x
 del X
-print, (x) ‘ ‘ ‘ ‘
+print (X) #lllERROR!!! x no longer exists
 
 ***************Ending Page***************
 

@@ -6,48 +6,50 @@ Instructiuni de salt
 
 ***************Beginning Page***************
 ***************page number:2**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Compoﬂament general
-~ modiﬁcé valoarea registrului contor
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Comportament gﬁneral
+- modiﬁca valoarea ragistrului contor
 program
-i deci adresa urmz'iloarei instrucliuni care va ﬁ
-executati
-' categorii
-i salt necondigionat - intotdeauna
-i salt condigionat - doar in anumite situaﬂi
-—@\
+— deci admsa urmatoarai instructiuni care va f1
+6X€cutata
+' catﬁgorii
+— salt necondigionat - intotdeauna
+— salt condigionat - doar in anumite situagii
+61
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Salt necondiyionat
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Salt nacondltlonat
 
-' sintaxé
-j mp a dre sé
-' exprimarea adresei - prin etichete
+' sintaxa
+jmp adresé
+' exprimaraa adrasai - prin 6tich6te
 
-i similar limbajului C (instructiunea goto)
+— similar limbajului C (instrucgiunea goto)
 
-i se pot face salturi din blocuri de cod iasm in
+— se pot face salturi din blocuri de cod _asm in
 
-blocuﬂ de cod C §i invers
-—@1
+blocuri de cod C §i invars
+
+—62
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
-Salturi conditionate
-' se testeazé 0 condigie 5i se face saltul doar
-in cazul in care condigia este adevératé
-i sau doar daci este {211le
-' in caz contrar execugia continui cu
-instrucgiunea urmﬁtoare
-- cc condigii putem testa?
-i indicatorii de condiyii (luagi individual)
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Salturi conditionate:
+' s6 tﬁstaazé 0 condigie §i $6 facﬁ saltul doar
+in cazul in cam condiyia 6st6 adﬁvératé
+— sau doar dacé estﬁ falsé
+- in caZ contrar 6X66u§ia continué cu
+instrucgiunaa urmétoare
+' ce condigii putem tersta?
+— indicatorii de condigii (luagi individual)
 — sau combinagii ale acestora
 63
 
@@ -56,49 +58,57 @@ i indicatorii de condiyii (luagi individual)
 
 ***************Beginning Page***************
 ***************page number:5**************
-Arllilectura calcullloarelor 5i sistelne do operare - ASM
-Pentru 1ndlcat0r1 1nd1v1dua11
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Pentru 1ndlcat0r1 1nd1V1dua11
 indicator testat salt pt. valoarea 1 salt pt. valoarea 0
-' Tn toate cazurile trebuie precizaté adresa de
+' in mate cazurile: tmbui6 pmcizaté adresa de
 salt
-—~
+—64
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Cond1§11 compuse
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Cond11111 compuse
+
 - limbajul C - teste pe baza operatorilor
-relationali
-<, <:, ::, 1:, >, >:
-- nu este suﬁcienté testarea unui singur
+
+relayionali
+
+<9 <2’ :2’ !:’ >9 >:
+
+' nu este suﬁeienté testarea unui singur
+
 indicator
-— dar relagiile pot ﬁ determinate veriﬁcind togi
-indicatorii
-—@5
+
+— dar relagiile pot ﬁ determinate veriﬁeénd togi
+
+indieatorii
+65
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Comparare
-- sintaxﬁ
-cmp opl , op2
-~ realizeazé intern o scédcrc
-i nu scrie rezultatul nicéieri
-i insi seleazé indicatorii de condigii
-- instrucgiunea trebuie urmatﬁ dc un salt care
-testeazi 0 anumité relagie intre opl §i op2
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Comparare:
+' sintaxé
+cmp opl,op2
+- maliznazé intern 0 scédere
+— nu scrie rﬁzultatul nicéieri
+— insé seteazé indicatorii dﬁ condigii
+' instrucgiunea trebuie urmaté de un salt care
+testeazé 0 anumité r61a§ieintr6 cpl §i opZ
 66
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Arllilectura calcullloarelor 5i sistelne do operare - ASM
-Salturl care te steaza relagn
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Saltun cam tezsteraza r61a1111
 67
 
 ***************Ending Page***************
@@ -106,117 +116,129 @@ Salturl care te steaza relagn
 
 ***************Beginning Page***************
 ***************page number:9**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
-Structuri de control
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Structun d6 ccmtrol
 
-- in limbajul C nu so recomandé utilizarea
-instrucgiunii goto
+- in limbajul C nu $6 recomandé utilizama
+instrucgiunii g o t o
 
-' in schimb, se folosesc stmcturi de control
+- in schimb, se f010$6sc structuri de control
 
-' dar implementarea acestora 1a nivelul
-procesorului se face tot prin instrucgiuni dc
+' dar implﬁmentama acestora 1a niv6lul
+procasorului s6 face: tot prin instrucgiuni de
 salt
 
-—os
+68
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Stnlctura If (1)
-' implementare - salt condigionat pe condigie
-inversé celei din limbajul C
-- motivagie
-i in limbajul C, se executi 0 secvengz'l de cod
-dacﬁ 0 condigie este adevératé
-i in limbajul de asamblare, instrucgiunile de salt
-pot evita execugia unei scavenge de cod
-—oa
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Structura If (1)
+- implﬁnwntam — salt condigionat p6 condigie
+inverrsé 0616i din limbajul C
+- motivaﬁe:
+— in limbajul C, se executé 0 secvenyé de cod
+dacé 0 condigie esta adavératé
+— in limbajul de asamblare, instrucgiunilﬁ de salt
+pot evita execugia un€i S€cv6n§e de cod
+69
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Arhilectun calcullloarelor 5| sineme a: open" - ASM
-Exemplu
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Ex6mplu
 ' cod C ' cod ASM
-int 61X; cmp x,5
-// tip cu semn j le maimare
-. . 4 mov a, 2
+int a,X; cmp X,5
+Uﬂpcusmnn jl€ maimare
+... mov a,2
 if(x>5) maimare:
-a:2 ;
-7|]
+a=2;
+70
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
-Stnlctura If (2)
-' dacé avem 5i 0 ramuré else, trebuie
-utilizatc doué instructiuni dc salt
-~ a doua instructiune se asiguré c5, la
-terminarea execupiei instrucpiunilor din
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Structura If (2)
+
+' dacéi avam §i 0 ramuré e l se, trnbuie
+utilizatn doué instrucyiuni de salt
+
+- a dnua instructiunﬁ se asiguré (:51, la
+tnrminarea nxecuyiei instrucgiunilor din
 prima ramuré, nu vor ﬁ executate $i
-instrucyiunile din a doua ramuré
+instrucyiunile din a dnua ramuré
 — salt necondigionat
-—1.
+
+71
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-- codC ' codASM
-if(x>5) cmp x,5
-x——; jle nu
-else dec x
-x++; jmp afara
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Ex6mplu
+' cod C ' cod ASM
+if(X>5) cmp X,5
+X——; jl€ nu
+else d€c X
+X++; jmp afara
 nu:
-inc x
+inc X
+afara:
+__________________________________7T
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Structura Whlle
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Structura Wh116
 ' doué instructiuni de salt
-i prima pentru a decide dacé se executé 0 noué
-iteratie sau se péréseste bucla
-. saltul - pe condilia inversé celei din codul C
-i a doua pentru a relua execuyia dc 1a inceput
-~ la ﬁnalul corpului buclci
-' salt necondiﬂonat
+— prima pentru a decide dacé s6 executé 0 noué
+itaratié sau s6 pérésagte bucla
+' saltul - p6 condiyia invﬁrsé celei din codul C
+— a doua pantru a relua execuyia de 1a inceput
+- la ﬁnalul corpului buclei
+' salt necondiyionat
 73
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-- codC ' cod ASM
-while(x<10) bucla:
-x++; cmp x,5
-jqe afara
-inc x
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Ex6mplu
+' cod C ' cod ASM
+while(x<lO) bucla:
+X++; cmp X,5
+jg€ afara
+inc X
 jmp bucla
 afara:
+—74
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Arhilectura calcullloarelor 5i sixteme a: open“ - ASM
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
 Structura For
 
-' similaré structurii While
-' instrucﬁuni auxiliare - delimiteazé clar
+' similaré structurii Whil6
+- instrucgiuni auxiliare - d61imiteaz€1 clar
 
-i initializarea variabilelor
+— initializarea variabilelor
 
-i actualizarea valorilor variabilelor pentru iteraﬂa
+— actualizarea valorilor variabilﬁlor pﬁntru iteratia
 
 urmétoare
 75
@@ -226,47 +248,48 @@ urmétoare
 
 ***************Beginning Page***************
 ***************page number:17**************
-Arhilectun calcullloarelor 5| sineme a: open" - ASM
-Exemplu
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Ex6mplu
 ' cod C ' cod ASM
-for (1:0; i<:5; i++) mov i, O
-s+:3; bucla: cmp i,5
+for(i=O;i<=5;i++) mov i,O
+s+=3; bucla: cmp i,5
 
 jg afara
-add 5,3
+add 3,3
 inc i
 jmp bucla
 afara:
 
-_______________________________¥
+__________________________________7?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Structura Do-While
-' testul de continuare/ie$ire - la ﬁnal
-' se testeazé aceea$i conditie ca in limbajul C
-i in ambele limbaje, condigia adevératé duce 1a
-reluarea buclei
-—11
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Structura D0-Wh116
+' tﬁstul de continuam/iegire - la ﬁnal
+' se t6st6az€1 aceﬁa$i conditiﬁ ca in limbajul C
+— in ambele limbaje, condigia adevératéi duce 1a
+raluarea buclei
+77
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Arhilectun calcullloarelor 5| sineme a: open" - ASM
-Exemplu
-' codC ' cod ASM
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Ex6mplu
+' cod C ' cod ASM
 do { bucla:
-s+:i; mov eax, s
-i++; add eax, i
-} while (i<=5); mov s,eax
+s+=i; mov eax,s
+i++; add eax,i
+} while(i<=5); mov s,eax
 inc i
 cmp i,5
 jle bucla
-—78
+__________________________________7?
 
 ***************Ending Page***************
 

@@ -1,596 +1,681 @@
 ***************Beginning Page***************
 ***************page number:1**************
-n udndnh m1
+26 noiembrie 2021
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-g PM... .. ..\...
-. mm... .1. m...
-. 5....-
-. m"...- 5......“ a mu...
-. 1......“ um... mm.
-- 1..."...- a... mm... V m...- ........|
-. ‘1.....mun...p..u k mm...
-. “mam... .... mm... l 1(le
-q 11..."; ......... ............| .1... "mm... a..."
+a Fluxuri in re'gele
+o Drumuri de cre§tere
+0 Sectiuni
+o Teorema drumului de cregtere
+o Teorema ﬂuxului intreg
+o Teorema ﬂux maxim — sec'giune miniméi
+o Algoritmul lui Ford 8a Fulkerson
+o Algoritmul lui Edmonds & Karp
+e Exercitii pentru seminarul din séptéména viitoare
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-n. p ... a... .. a In“, .mn =1 “EM. c .4 . Z ..., .1
-ml- | m P‘ I E m]. um I m-m- mm M nun l
-.... .. m 1min! “mm. mm.) .“ﬂ p, min I. “mm.
-mm w . .- ... m 1...,“ “Mm-l mam-1.1m p
-MW
-/\/\—¢/\/\/\/—<
+Fie P un drum In E — graful suport a1 digrafului G — §1' e : 'ui'vj o
+muchie a 1u1' P, e G E(P). Dace"! e coresponde arcu1u1' 'ui'uj atunci e
+este un arc inainte (forward sau direct) a1 1u1' P, altfel (e corespunde
+arcului 'Uj 'ui) e este un arc inapoi (backward sau invers) a1 1u1' P.
+
+G
+
+6
+
+forward backward
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-n. n Z 1mm‘ {1 n up: g 1 .... mm n u“ Hm. (In a "hi"
-1. a.“ 11m. .1. am. p 1.. a "m1 m: v-y E sm
-. ml \1 m- “. m m4, in...“ 1,, < I”,
-. dul ,1 m l “:11:an llunn 1, > n
-D“: p m. m. Am... m R mam A: ﬂux-“l z. “m. mumm»
-“mm . mulul :1 E am m.
-i r. 11,‘ a.“ mmmmmmw
-w *{ M ., m. .K m a P
-(“p.mum nndmllh i drumulul v w. q»; Z “1.51m;
+Fie R : (G, s, t, c) o re§ea §1' a: un ﬂux in R. Un A-drum (in R relativ
+1a ﬁuxul as) este un drum P in G astfel fncét V'Zj E E(P):
+0 dacéi z'j este un arc direct, atunci xi]- < clj,
+0 dacéi 'Lj este a arc invers, atunci {Dji > 0.
+Dacia’ P este un A-drum in R relativ 1a ﬂuxul a3, atunci capacitatea
+rezidualé a arcului z'j E E(P) este
+TU .) _ Cij — (Dij, dacé z'j este un arc direct a1 lui P
+j — mji, daci 'Lj este un arc invers a1 1u1' P
+Capacitatea rezidualé a drumului P este 'r(P) : r1283) r(e).
+ee
+—
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
+***************page number:5**************
+Considerém re'geaua de mai jos , unde, pe ﬁecare arc, prima eticheté este
+capacitatea iar a doua este ﬁuxul.
+2 4
+21
+3, 3,2
+1 6
+s t
+2’ 21
+3 22 5
+P : 1, 12, 2, 24, 4, 45, 5, 56, 6 este un A-drum de 1a s 1a t cu arcele forward
+12 (51312 I 1 < 612 I 3), 24 ($24 I 1 < 624 I 2), 56 ((1256 I1 < C56 I 2),
+§i arcul backward 45 (x45 : 1 > 0). Capacitatea rexidualé a 1ui P:
+'r(P) : min {2, 1, 1, 1} : 1.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
-***************page number:5**************
-nun-mm "km n. milJnl ‘ unﬂl. De 5mm. Dxima “Kn-m“.
-mum-m m l m‘ mu mum
-
-P 1,111.1“,45‘ 5,55‘ a m! unA m». a. I“ la l m m1! M...‘
-l?(l>n:l<cu:3)24(nx:l<Ln:?]\55(lh:l<cn:?]\
-i m1 hm...‘ ‘s (m Z 1 > n) aim.“ "mun .1“; F
-,[PFMWJMZ 1
-
-***************Ending Page***************
-
-***************Beginning Page***************
 ***************page number:6**************
-Pxnhhma 5mm mam’ mum-i n- clllhxl
+Problema ﬂuxului maxim - Drumuri de cre§tere
 
-m: uhhvllﬂlxllx mam“: (GJJ, :1 I“
-.... MM a! 1. .1. ,
+U11 relativ 1a ﬂuxul a: in reyeaua R : (G, s, t, c) este
 
-Luna 1
+un A-drum de 1a s 1a t.
+
+Lema 1
+Algoritmica grafurilor — Cursul 8 26 noiembrie 2021 6/41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
-mmmw ‘1., MM.‘ m. m‘ [nu-Km...“ [.1 m m.“
-m. .1. 1- ammun. [i] 1m" a. 1 m. .th- mm
-z‘ “mum . 1 m1
-Mn , E m1 \ (1.2) m": mm m: m 1., p in'dmm cu h .1
-l a .- ‘k Mm mm...“ m: mum-1,...
-a) 1. i 1x ..m. 4m.
-21; 24:23, if)“: 4
-ZZ’:-*Zlu+ln+Ylpli1<n*'lPl:ZlJ-*):1u:“
-h) h mu uc an“ n 1k uc IvII
-ZIFZHEZ Z 1,72“,th
-Z Z x‘. 21.,+1-+r[?]~n. 01:21, Elﬁn
+Demonstragie. Din deﬁnitia lui r(P), constréngerile (i) sunt satisfi-
+cute de m1. Constréngerile (ii) - veriﬁcate de a: - nu sunt afectate pentru
+$1 in vreun nod z' ¢ V(P).
+Pentru z' E V(P) \ {5, t} existé exact doué arce in P incidente cu i, e.
+g. lz' §i ikz. Avem urmétoarele doué cazuri posibile:
+a) lz' §i 2k sunt arce directe:
+j j 15H 175k
+I Ziliji — 21313‘ +1811‘ +T’(P) — 23m — 7"(P) I 23311‘ — 25313‘ I 0.
+1751 175k j j
+b) lz' este arc direct §i 1k arc invers:
+j j Jihk j
+: Z $14 —Z$¢j +$1¢+T(P)+$k¢ — T(P) I 21:15 —Z£I;¢j : 0.
+Jihk j j j
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-=1 huh-"Hum". imam";
-a] a i I: m. I"... “an n .1.
-u(1‘]mm a- "(111mm “mu n- ,- m1 u a“. P
-.‘mmm
-“(“1:2’;’24:;H’ZY<4+4:
-:2‘ waqplqmﬂm
-"(91:21,? 2'11:le )Im 1%:
-:Zn» an, (1H ywnqmum u
+c) lz' arc invers §i 1k arc direct: similar cu b).
+d) lz' §i ikz arce inverse: similar cu a).
+11(scl) diferé de 0(a) datoritﬁ ﬁuxului de pe arcul lt din P:
+lt arc direct:
+11(121) : ijlt — Ewtlj : 2:2]; — Z$tj+$11i :
+j j 1751 j
+: Z mﬁ — Z 1875]‘ + m” + r(P) : 0(a) + r(P).
+17H j
+lt arc invers:
+11(wl) : ijlt — thlj : 2fo — thj — :zztll :
+j j j 1751
+: ijt — Extj — ($t1— 7‘(P)) : 'u(a:) + r(P). U
+j 1751
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-mm “mm a. mai m‘ am 1* Z 1MP)“. ulnar! .41‘) Z
-u(1]+1[P]:i+l:l-lu
-- Lulu. a. m. m HIM u mm- mmnm ﬂu mum u (In:
-“m. "um:
-. D. “an-1... m: v m- un 4mm a. mm‘ um, le] > n 1,
-m n 1m) > m] "mm: c: a.“ m“: u: am, .k mm
-va. v h um; 1‘ 2hr“: 1 nu m m: ﬂux a» ‘ulnar: m, m:
+Pentru exemplul de mai sus, ﬂuxul $1 I a: ® T(P) de valoare 11(131) :
+0(a) + T(P) : 3 + 1 I 4 este:
+2 4
+2 2
+3‘ 32
+l G
+s t
+12 22
+3 22 5
+
+o Lema de mai sus explicé §i numele drumurilor de cregtere §i capac-
+itatea rezidualéi.
+
+o Din deﬁnitie, dacé P este un drum de cre§tere, atunci r(P) > 0 §i
+11(ac ® r(P)) > v(a:). Urmeazé c5 dacé existé un drum de cre§tere
+relativ 1a ﬂuxul at, atunci a: nu este un ﬂux de valoare maximéi.
+
 —
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:10**************
-thhma “ml-i m...’ mm...
-
-PAIR:(G‘|‘(‘:]u-:(u D “Mupmllmn.
-
-MUGJMESWET [5,1]....
-45,11 _ g;
-
-1.0.“. 1
+Problema ﬂuxului maxim - Sectiuni
+Fie R : (G,s, t, c) o reyea. O in R este o partiyie (S, T) a
+lui V(G) cu s E S §i t E T. (S, T) este
+C(S, T) I Z Z Ci]:
+165162"
+Lema 2
+Algoritmica grafurilor — Cursul 8 26 noiembrie 2021 10/41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
+-
+
+_
+
 —
--(¥~ ;=~)+.E.;...(;~ 2*)-
+
+—
+
+S T
+Demonstraﬁe.
+v(:z:) : (23:51 — 2x13) + 0 :
+j j
+j j zesﬂis j j
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-—
-Dun-‘manic (wmimm).
-: EEK!" fab-EEK." "n1:
-ngglwm u
-"“i- “'"m .41) g {(51)
+Demonstraﬁe (continuare).
+I Z (Z $15 — Z $11‘) I Z 2(901'1 — $11‘) I
+iES j j 1'65 j
+I Z 2(111'1' — $11‘) + Z 20%‘ — $11) I
+iESjES iES'jET
+I 0+ Z 201:1] — $11). U
+iESjET
+Daci a: este un ﬂux in R = (G, s, t, c) §i (S, T) este 0 sec'giune in aceasté
+retea, atunC1 ‘008) g C(S, T).
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-uh) Z z in,“ 7 1,12" Z‘ 27:” 7 1,1?
-
-"é" Z): {-1 Z (rm) u
-Din z IIII un In: In R ll [FT] I“ a “(lulu mid lam 11m ’
-{Km“munﬂumjumlll“gamma hm.
-u mu an W, mm ,, R 7 ,
-m.‘ m‘ T; “qu 1,. n, m 45‘ T; ; m] Z 45,11, .M
-[w] ,m n my...“ A, mm" mm n. R
-
+Demonstratie. Din Lema 2
+rijécv' 11120
+11(90) I Z 2W1 — $11) é Z 2(61'1‘ — $11) é
+iESjET iESjET
+$1420
+< Z Z Ci)‘ I C(S, T). U
+iESjGT
+Dacé E este un flux in R §i (3T) este o sectiune astfel incét ME) :
+43?), atunci, Va: flux in R, avem 11(50) g QR?) : 11(5), i. e., E este
+un ﬂux de valoare maximéi in R.
+Similar, V(S, T) sectiune in R, avem C(S, T) 2 11(5) : JET), adicé,
+(3T) este o sectiune de capacitate minimé in R.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-un nu z m m nu M "ion: mum m: ,. my .m m m“
-m .le d: uﬁnnc mm n 1 in n
-mummnw. w nu: v m. 1m m.» n. m»... "hm h z‘
-um 1 a rm m- m. m m n ﬂu "1w- mi.‘ m. mm
-“=“ F“ l 1m a“ m n m mun-h... c: m. mm m 5- can."
-“mun 1 an m.
+Un flux :z; este un flux de valoare maximé dacé §i numai dacé nu existé
+un drum de cregtere relativ 1a a: in R.
+Demonstratie. ":>" Dacé P este un drum de cre§tere relativ 1a x,
+atunci ac ® 'r(P) este un flux in R de valoare strict mai mare.
+"<:" Fie a: un flux in R cu proprietatea c5 nu existé drum de cre§tere
+relativ 1a a; in R. Fie
 
-5:0 .E “vuummmmmmq
-Evin! 1 i s (mu: .m Mm a. Imm- n a. 1; . l: .1 1- a 1 s
-[m mum“ “mm-h. ht] Anlllllnlmi T Z v\s, [5‘ T]
-mu a mam h n.
+S:{z':1;€ V§iE|P un A-drumianelasla'll}.
+Evident s 6 S (existé un A-drum de lungime 0 de 1a s 1a s) §i t ¢ S
+(nu existé vreun A-drum de 1a s 1a t). Astfel, luénd T : V \ S, (S, T)
+este o sectiune in R.
 
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-mmmmnw (mm-“m; “E s "v, E T m,
+Demonstraﬁe (continuare). V1; G S’ §i Vj G T avem:
 
-. m ., E l‘ m...“ 1_ - ll
+o dacéi 'L'j G E, atunci :an : cij §i
 
-. nluﬂEE‘n-d§:n
-(uni: Ltnmnl a. 1. . I. 1 M. n m... 1. - A mm a. 1. . I.
-1‘ ..||.| y E s mum.) “mm =1 4,; Z Z )3(,_ 7 1,, Z
-Z): =., - cl-i‘ r1‘ l. I‘ X m- - n.“ s. mm’- mulml u-i
-:5:- a- m. m1 u
+o dacé jz' E E, atunci osjl- : O
+(altfel A-drumul de 1a s 1a i poate ﬁ extins 1a un A-drum de 1a s 1a
+j, astfelj E S - contradictie). Urmeazé céi 1/(a3) : Z EMU — mji) :
 
+zESjET
+Z Z cZ-j : c(S, T), i. e., a: este un ﬂux de valoare maximéi (vezi
+ZESJET
+remarca de mai sus). U
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-(YA-mm.“ mum": mnvgl 11mm“ Sham. .x-n R “m mire?)
-mm mm un ﬂux mm‘ 1‘ d1 mm mm] (mm 1. E '1 1
-Emmi“. nun-mm “mam; aumﬂm
+(Teorema ﬂuxului intreg) Dacé toate capacitéi'gile din R sunt intregi
+atunci existé un ﬂux intreg, a3, de valoare maximéi (toate mij E Zi).
+Demonstratie. Considerém urmétorul algoritm:
 
-1“ ‘V n‘ ‘ ‘7 n.
+$0 <— 0; "L P 0;
 
-ml" (JP, 1m m 4. m“... mam h 1-1.“,
+while (EIPZ- un drum de cregtere relativ 1a xi) do
 
-11m z‘I1(F.)u++‘
+$¢+1 <- xi ® r(P¢); 1+ +;
 
-.m‘ “a:
-s: whim/Hm c: '1' in dnix [mm-m. hm.“ m. m. mm.“ =1
-ammu- (m Mm“. h. rm)‘ m: m‘. “mm. m. m";
-i 1- m- mm‘ lhni rm] m- Mr! u mm 1-" m- mug]
+end while
+Si observém c5 "xi are doar componente intregi" este un invariant a1
+algoritmului (din deﬁni'gia lui r(PZ-), dacé toate capacitétile sunt intregi
+§i xi este intreg, atunci T‘(PZ') este intreg §i astfel :nH'l este intreg).
 
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-numn-m Acunllmlnld ui- mm m m". “.51.. wink. m
+Demonstragie (continuare). Mai mult, in ﬁecare iteratie While, val-
 
-um “mm mm.- u’!!- (n m m.“ n‘ mm mum] .. m.“-
+oarea ﬂuxului curent cregte (cu cel pu'gin 1), astfel algoritmul se opre§te
 
-m m m» 4(1)‘ v\(-)) E 1mm- m.
+in cel mult C({S}, V \ {5}) E 2+ itera'gii While.
 
-u“ mi “in: dmmuli a. ‘m..- um“ 1. auu m1‘ mm‘ an. m
+Nu mai existé drumuri de cre§tere relativ 1a fluxul ﬁnal, astfel, din Teo-
 
-m. 1, mm n. .1. mm. mm: u
+rema 1, ﬁuxul este de valoare maximé. U
 
-Aignilmul du uui m u vpmn 1. ma m“ Clulcnlhlu lnnl mm
+Algoritmul de mai sus se opre§te §i cénd toate capacitétile sunt numere
 
-nhulnh
+rationale.
+—
+
+***************Ending Page***************
+
+***************Beginning Page***************
+***************page number:18**************
+(Teorema ﬂux maxim — secgiune minimé) Valoarea maximé a unui
+flux in reteaua R : (G, s, t, c) este egalé cu capacitatea minimé a unei
+sectiuni in R.
+Linia demonstragiei. Dacé descriem un algoritm care, plecénd cu
+un flux initial $0 (e.g., x0 : 0), construie§te intr-un numér ﬁnit de
+pa§i un ﬂux a: féré drumuri de cre§tere, atunci sectiunea consideraté in
+demonstratia Teoremei 1 satisface, impreunéi cu :n, cerin'ga teoremei.
+Pentru capacité'gi rationale, algoritmul considerat in demonstratia Teo-
+remei 2 satisface aceasté conditie. Pentru capacitéti arbitrare reale vom
+prezenta mai térziu un astfel de algoritm datorat 1ui Edmonds §i Karp
+(1972).
 —
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
-***************page number:18**************
-thlm- an.“ ml...’ hm. le mm r mi... mu...-
-nmm. I
-
-wr H, “L. “M mm...’ Mm mummy . “mm ,7,
-Lulu MM.“ ‘Ln Dan! Mum nu am“, u“. puma m
-1m m mp“ 1“ (-1‘ 1“ Z n], mum-n. m“ m“ h.‘ a-
-m m. m z m an“. u mm". “m mm. mnnduni h
-nmnlh'ifn 1km... 1 mm“ mm: m z. mil“: "mm.
-mm ulmnlh “mum llynnnnd mnndnn m “mm-h- m
-mi 1 mm“ u...“ cunﬂlh! Pm... mum. “hm... nil- "m
-pumm- \lxnu u» um! du mm- mm up | “m. ml- ., kmy
-u-v-b
-
-***************Ending Page***************
-
-***************Beginning Page***************
 ***************page number:19**************
-. o “mu-m‘.- mm a “Bx-mi a. mai .u. mull} 1., a ‘m. cl
-m“: u. m 4. n1“... mm: |. a- . Wm mun-mm 4.,
-dlmnnlh'iha mm... 1 u“ a“ .1. valniu mm: “In; hm
-4m.“ mm“ I: it.“ .n. “my: mm: . m. mum. a-
-mmmm rm“: in“. 1m paﬁinp mm
+o O demonstratie scurté a teoremei de mai sus consté in a aréta cé
+existé un flux de valoare maximé §i de a aplica constructia din
+demonstratia Teoremei 1. Un ﬂux de valoare maximé existé intot-
+deauna observénd c5 acesta este solu'gia optimé a unei probleme de
+programare liniaré (peste un politop nevid).
 
-. annnanh “Mm: a ‘linxlmi II m- m; n. hum: I:
-mum. tuhnux "chum: mm: m" m- mum Pl cm
-munimli \nluml luxunlm m- inﬂun:
+o Importan'ga algoritmicé a Teoremei 3 este daté de faptul céi
+mul'gimea tuturor sec'giunilor dintr-o re'gea este ﬁnité, pe cénd
+mul'gimea tuturor ﬂuxurilor este inﬁnité.
 
-—,
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Mimiimul mm... u nichmn . nun-um m. m.- p...“- . “m
-mil "m" a. um“ mun I. lml (In I cl-a - m-i nan
-Mm... a- um... um: x m. a- nlnlu mm...-
-r.n:(uavg-,1‘)“q..|.x...l...1..n
-mm. m. “a I‘ (m m \m “MM! [ehsﬂq'u “mm
-:11“! un A mm n: h , 1i ,, P, m: I, Z \ an: mu: mmma ha
-J ,1! m.‘ mm‘ r: L (mmﬂm) Imam mum; mum ,7‘ m
-l, :qu
-hum . .n. man-i l. .m] cm.»- mm." mm.“ mun-1
-.r...“ p... mm... (um...) mm“ a”. urn-m-
+Algoritmul intre'gine 0 etichetare a nodurilor din re'gea pentru a deter-
+
+mina drumuri de cre§tere relativ 1a fluxul curent ac. Cénd nu mai existé
+
+drumuri de cre§tere, fluxul w este de valoare maximé.
+
+Fie R : (G : (V, E),s, t, c) o re'gea §i a: un ﬂux in R.
+
+Eticheta unui nod j, care are trei componente (el, e2, e3), semniﬁcé:
+
+existé un A-drum de 1a s 1a j, P, unde e1 : i este nodul dinaintea lui
+
+j pe acest drum, e2 6 {direct, invers} reprezinté directia arcului ij, iar
+
+e3 : 'I‘(P).
+
+Initial s este etichetat (-, -, oo). Celelalte noduri primesc eventual
+
+etichete prin vizitarea (scanarea) nodurilor deja etichetate:
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Mum". mm
-m u E v‘ “mm-m] .ln
-a! [-1 E s i 1., < =.,1 um.
-mm...“ m l Z [L Mnmmuqqm‘ {v 7 1U»,
-um n
-“mum-1).“...
-“mu-I, |:n . Z Mm.‘ mum ‘my
-mu n
-mm m.
-Swan“; www.mm nib-Mu: ..~. mum.“ a. mm.“
-cum I» mum m “an l ... mm .. pm. “..m m
-m... a. mm P‘ um" h hm u...“ 1, mm
+procedure scan(z')
+for (j 6 V, neetichetat) d0
+if (Zj E E §i {Bij < Cij) then
+eticheteazéj cu e : (i, direct, min{e3[i], C/L'j — xZ-j});
+end if
+if (jz' 6 E §i {Djl' > O) then
+eticheteazéj cu e : (i, invers, min{e3[z'], $j¢});
+end if
+end for
+Semniﬁca'gia componentelor etichetelor este intre'ginutéi de procedura
+scan.
+Cénd, in procedura scan, nodul t este etichetat, se poate detecta un
+drum de cre§tere P, relativ 1a fluxul curent ac, astfel:
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-V[P) .m “mm-m = a n-m- m I‘ mm m. p m n gin“
+7"(P) este componenta e3 a etichetei 1ui t, nodurile 1ui P pot ﬁ gésite
 
-m 0(n] m IXDlnnlua pm; www.m- a “mm-m n mndilnlui
+in (9(n) prin explorarea primei componente a etichetelor, §i modiﬁcarea
 
-1 a q») .. pm. [an m my.“ mm. "Wm, m...‘ . am {m
+ac ® 'r(P) se poate face in timpul acestei exploréri folosind a doua com-
 
-mm: a Inchillnx
+ponenté a etichetelor.
 
-mm mul m‘ .- pm.“- :u n m: mam’: (a! 1. .1
+Pentru noul ﬂux, se pornegte cu o noué etichetare (de 1a s).
 
-1m: tum m"; mm.“ u Inn m.“ 1. mu , m. = mm“
+Dacé toate noduri etichetate au fost scanate §i nodul t nu a primit
 
-aim; mm: cl ﬂuxul tum“ m. mm“. “mm a. um...‘ hi
+eticheti, urmeazé cé ﬂuxul curent nu admite drumuri de cre§tere, deci
 
-mu a. vﬂulxu mum! mu s mu mulhmu mum mmnlu II
+este de valoare maximal Dacé S este multimea nodurilor etichetate §i
 
-T Z v \s‘ “m. (5‘ T] .n- u mm. d! nuiuhk mm: m R
+T : V \ S, atunci (S, T) este o sectiune de capacitate minimé in R.
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-pnr-‘l m m. n.“ inn-1 = Z (1,; (- L 1 Z n;
-m1 'l. .wl:
-whil- [a mam uimunl ‘I “mu-1 an
-“a, . m. .n- mnml i —IunIA‘
-m-m.
-u [l . h.‘ mm“) m.“
-maﬂllkl mm p. din an o: mm".
-I‘... ‘a... nun-1., q.) k l‘ ‘my
-m1 n
-“a nhil-
-s»h IE v‘, m- mannl)‘
-r - v \ s‘
-1 um un m“ .m vniulln "mm. is‘ r) um n mam dc
-"wk." milliml
+porne§te cu un ﬂux ini'gial a: : (mu) (e. g., :r: : 0)
+while (El noduri etichetate §i nescanate ) do
+alege z' un nod etichetat §i nescanat;
+scan(1;);
+if (t a fost etichetat) then
+modiﬁcé ﬂuxul pe drum dat de etichete;
+§terge toate etichetele; e(s) <— (-, -, oo);
+end if
+end while
+S k {i : 2' E VJ este etichetat};
+T <- V \ S;
+a: este un ﬂux de valoare maximﬁ, (S, T) este 0 sectiune de
+capacitate minimé.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-mum. “mu mi...’ lllmllm-l u m l m...“
-
-< W1‘ mm .‘ W anmuuluu iamm muntuclnﬂ m
-m“ 1". (m :\E\1.,..,.q..=1.m\ Wm “awn-“um m“;
-n“: mu “mum m mm, m mm. m mun u m."
-[V m “1m; “mm; mm) Ant-I “mm! in “mm-1.1..“
-W, mm;
-
-n“: u m. .m mm.“ =1 Mm, mam”. p. m ma v <
-[n 7 11L! (m... I... .m mm“. =1 my“. ((-1 v \ my]. a.“
-“mum am cnmplun'ilhll \imv C(an)
-
-hm‘
-
-s yum] n 11mm.“ I: M I. “mm Mn. “mam “mu
-k...“ "mu! M “mm-mmnm-mmﬂ. m "mm in-
-m dim-m l “1mm. m. an an maul =1 Mm a- m". m
-5mm mm. mm. d! mum. (‘a M a- dim-mm]. Mk.)
+Problema ﬂuxului maxim - Algoritmul lui Ford 8z Fulkerson
+Fiecare cre§tere a ﬁuxului curent necesita cel
+mult 2m (m : |E]) inspectii ale arcelor pentru etichetarea altor noduri.
+Daca toate capacita'gile sunt intregi, sunt necesare cel mult 'u cregteri
+('u ﬁind valoarea ﬂuxului maxim). Astfel algoritmul are complexitatea
+timp (9(m'u).
+Daca U este un majorant a1 tuturor capacitatilor pe arce, atunci v g
+(n — 1)U (acesta este un majorant a1 sectiunii ({5}, V \ {s})), deci
+algoritmul are complexitatea timp (9(nm U)
+Remarca
+E posibil ca algoritmul sa nu se termine pentru capacita'gi irationale.
+Aceasta situa'gie nu apare in implementarile practice, dar neajunsul aces-
+tei descrieri a algoritmului este dat de faptul ca numarul de cre§teri ale
+ﬂuxului curent depinde de capacitati (§i nu de dimensiunile re'gelei).
+Algoritmica grafurilor - Cursul s 26 noiembrie 2021 24 / 41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-n“: mun. =1‘! m. allmllmll a- m.‘ .n. mm...“ Immulﬂl n-
-mnn Ham?» H I-n- P. : (mm-mm." 1- P= Z
-[.‘.>,>,|.‘n‘ﬂ‘q‘ lh-i an." “i... . and... .. I“ m 1‘ ‘i
-.1...|m1...=...u m “in, -- =. -|. I," m.“
+MJ M,0 1 1
+s t 1
+1
+1
+111,0 ILLO 1
+h
+P1 P2
+Dacé operatia alege din algoritmul de mai sus determiné drumurile de
+cregtere P1,P2,P1,P2,...,, unde P1 : (s,sa,a,ab,b,bt,t) §i P2 :
+(s,sb, b, ba, a, at,t), atunci ﬁecare cre§tere a ﬂuxului se face cu 1, §i
+algoritmul necesité 2M cre§teri, ceea ce este prea mult.
 —
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:26**************
-Ann! Mun-\- =1. =1.w..m..1..- m a mm. a“: an... mm“
-mama-1n "m. mam .m .. 1m mm... [Dhnr (um), m
-mm» L m", “mu
-u“ rnl m.“ mm |hv|m \ln mm,» uhhv 1i hm 1 1. n ~z| ....
-1.1m .1, ummmwmmmamm mm mm]! a! mm!
-"1mm z
-Pi 1 u am» Illuu n m- 1' (k ; 11mm- a. am"
+Aceste deﬁciente ale algoritmului pot ﬁ evitate dacé alegerea nodurilor
+etichetate in vederea scanérii nu se face aleatoriu (Dinic (1970), Ed-
+monds & Karp (1972)).
+U11 cel mai scurt drum de cregtere relativ 1a ﬁuxul a: in R este un
+drum de cregtere de lungime minimé printre toate drumun'le de cre§tere
+relativ 1a a3.
+Fie x un ﬂux in reteaua R. Fie wk (k 2 1) secventa de fluxuri:
 
-1H ‘ t. o rm)‘ P. M =1 u... “m an.“ a. Bllun mhnv I.
+m1 <- m;
 
+mk+1 <— wk ® r(Pk), Pk un cel mai scurt drum de cregtere relativ 1a
+
+k.
+w I
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-11....- . .m. n m...- -='-u m- m.‘ n- v. E v i u E w
-1,‘ Z I‘... mm . ‘a 4 n- a. 1. I I“ mm.- 1. i‘
-1,- . hm... mini . m... A a...“ a- 1. X I. l "m. |. ,-
-v, r v :1Vk 11¢ m,
-,3 ‘ﬁx-‘,1- ‘H,-
-umunm-m. n...“-
+Pentru a aréta cé aceasté secven'géi este ﬁnité, ﬁe Vi E V §i Vic E N*:
+of : lungimea minimﬁ a unui A-drum de 1a s 1a z' relativ 1a wk.
+Tik : lungimea minimé a unui A-drum de 1a i 1a t relativ 1a wk.
+Vi 6 V §i Vic E N* avem
+af+1 2 01,-“ §i Tik+1 2 Til“.
+Demonstraﬁe. Omiséi. I
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Mnﬂllnna 1“; summ- k Kira . =1.w..m..1..n...m h mm“
-
-u“: P m- u- drum a. m... m" Ii nu a“
-l 1., a‘ m. mm...“ "min ,(F) .m m p m. .m m
-lisp») m. 411:4“ 1“,va“mm-ymnnmﬂn.
-ﬁ. ‘=1 m. =-Wi.~.= {Fl “.1. mum “1 [PI in.“ awn-1
-F. \, .m a...‘ .1. p. .m [.1 m. m. 4mm a. m“... P. "m"
-1. 1- hum-1|... n m. w; * r,- ’ ,g +1;
+(Edmonds 85 Karp, 1972) Dacﬁ a: : x1 este un ﬂux arbitrar in reteaua
+R, atunci secven'ga de ﬂuxuri $1,132, . . ., obtinuté din m1 prin cregteri
+succesive cu drumuri de cre§tere de lungime minimé, are ce1 mult mn / 2
+termeni (in cel mult mn/Z cre§teri succesive se obtine un ﬂux x cu
+proprietatea c5 nu existé drum de cre§tere relativ 1a m).
+Demonstragie. Dacé P este un drum de cregtere relativ 1a un ﬂux
+a: in R, cu capacitatea rezidualé 7‘(P), un arc critic in P este un arc
+e € E(P) cu r(e) : 1"(P). in :r: ® 1"(P), ﬂuxul de pe arce critice devine
+ﬁe egal cu capacitatea (pe arcele directe), sau nul (pe arcele inverse).
+Fie ij un arc critic de pe un cel mai scurt drum de cre§tere Pk relativ
+1a ask. Lungimea 1ui Pk este (If + TZ-k : 011-“ + T11“
+—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-um.“- u m. . uni: m P. ‘ in 1* -* m. mai m.- n M.“ 1n mm;
+Deoarece 'Lj este a critic in Pk , in mk+1 nu mai poate ﬁ utilizat in aceea§i
 
-mq“ n m P. m p‘ (:u ‘ > k] mm “1m. m. 4mm 4. cup!"
+direc'gie ca in Pk. Fie Pl (cu l > k) primul cel mai scurt drum de cre§tere
 
-11mm: 11 1,. can luxul a- Pl m1" v. n mainnm um m1 v:
+relativ 1a acl in care fluxul de pe arcul ij va ﬁ modiﬁcat, (cénd arcul va
 
-a m.- m mm‘.- mu": um m v.1 A...» m: a.“
+ﬁ folosit in directie inversé decét in Pk). Avem doué cazuri:
 
-g m m. .n nhru t u. r‘ Mumi ,g Z ,§ + 1, m F| u n n m
+'L'j este un arc direct in Pk. Atunci 0'],-<2 : (If + 1; in Pl 'Lj va ﬁ arc
 
-mm.‘ m ,5 Z I; +1
+invers, deci all- : a]; + 1.
 
-H *\/\ \/—\/ \ ‘
+Pk : 1' "
 
-ummuniw,‘ :w:+l+7,‘ awfuw,‘ :ufwiu (an-um
+Urmeazé cé 05-1-7‘! : a; +1+Til Z Uf-i-l-i-Tik : 0;“ +Tik+2 (din Lema
 
-A) ‘m mum (a mun-[Pd z mummy +1
+4). Am obtinut cé length(Pl) 2 length(Pk) + 2.
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-,j run m. m mvln 1., r_. Mm. ,g Z ,3 +1‘ m P‘ \, vaﬂ m
+ij este un arc invers in Pk. Atunci 0f : 017-“ + 1; in Pl ij va ﬁ arc
+direct, deci a; : O'Zl- + 1.
 
-um‘ a.“ ,; Hg“ ‘
+1 J
+HbWWW\t
+Urmeazé c5 a]; + 7']; : all + 1 + 'rjl 2 (If + 1 + 'rjk : 0'lec + 'rjk + 2. Obtinem
 
-urn-DUMMY; Wynn‘ ZF}+\+17' Hymn 0mm,
+c5 length(Pl) 2 length(Pk) + 2.
 
-I: WW > WW.) q
+Astfel orice ce1 mai scurt drum de cre§tere pe care arcul z'j este critic are
 
-Mm m m, m. m. d. m." p. c... m1 ‘1 "mm .I.
+lungimea cu cel putin 2 mai mare decét lungimea drumului precedent
 
-Wm m I» m". 1 m. m. mu My"... mm. mm.
+pe care ij a fost critic. Deoarece lungimea unui drum in G este ce1 mult
 
-p. ,1 . Inna-1m: Wm 1mm. m... m G .l. m m1.
+n — 1, urmeazéi c5 un arc ﬁxat nu poate ﬁ critic de mai mult de n/2 ori
 
-n 7 1, mm: n ..., m an. M W. a m n- m. m“ a! “,1 m;
-
-[dl a lungul mmgnhn pru- dl clan-n)
+(de-a lungul intregului proces de cre§tere).
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-mm“... u ‘um-a. l nun - Illwlimnli M m1 l Pnlhnm
-mm. um. n. mp." a" z!‘ m“, m. m mm MM m mm;
-[m mm m muh Inn/l dmmnn d- um" culu m. mm
-mum,
-1- nlrm m mu un m 1 m pmpvﬂaln cl M will drumnn m
-my“. "hm 1. z
-lerni
-. Mum-‘i 1m“... ‘ .i. m... m.“
-. squammmm UQHW.‘ hp r m .\ WM H m-
-h all!“ Mum “Kn-m m. u n mu - lulu-h “5,
-uh “mm nuzlﬂilwlmu] Km.- .m; .. mm.“ n m4: a
-minim-“chum! (in-1mm“. 1‘ h llnnlnclwn a. ulmn]
+Modiﬁcarea lui Edmonds 8z Karp a algoritmului lui Ford 8: Fulkerson
+Orice drum de cre§tere are cel pu'gin un arc critic. Astfel in secven'ga
+(Pk) avem cel mult mn / 2 drumuri de cre§tere cele mai scurte.
+fn orice re§ea existé’ un ﬂux a: cu proprietatea c5 nu existi drumuri de
+cre§tere relativ 1a :zz.
+Remarci
+a Demonstratia Teoremei 4 este acum incheiaté.
+o Singura modiﬁcare din este
+in alegerea nodului etichetat care va ﬁ scanat: se folosegte reg-
+ula “primul etichetat-primul scanat" adicé, se intre'gine o coadéi a
+nodurilor etichetate (initializaté cu s, 1a ﬁecare inceput de cre§tere).
+Algoritmica grafurilor — Cursul 8 26 noiembrie 2021 31 / 41
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-1,. cunthull‘ mm mm.“ "mm
+in concluzie, avem urmitoarea teoremi. I
 
-(Edmnmkvknlll, Inn) rm". Msmm.“ M anl A “\ann
+(Edmonds-Karp, 1972) Dacé in Algoritmul lui Ford 85 Fulkerson
 
-mm; undun mmmn In 1m 1m a mm: m. mm 1m m a“
+scanarea noduri etichetate se face intr-o manieré bfs, atunci un ﬂux de
 
-mm mm: n hm, m 01mm hm!
+valoare maximi se obtine in (9(m2n) time.
 
-ammmn-u'. 5-“ mm; “um; a- a“ (um “mm q hnn
+Demonstragie. Existé (9(mn) cregteri de ﬂux (din Teorema 4), ﬁecare
 
-alumna-ﬁlm] u
+de complexitate (9(m). U
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
-Mum“! l. awn-1:.“ m.“- a. mm" a. m» m.
-“mm. .m m w.“ m m-“ a. mam uﬁnnun aquzﬂmu! “a
-mum. m: mm nlmltulxdu admin m lmnhzx ﬂu mm“
-(=1 At-l Z (11.11). Am] Z (am-m. Am] Z (11.0.
-40:141thAthtw-J
-(h) At-lZ(11.11).Alantn.=a.1<1.Aln1Zm.n.
-Aim Z (mum 4:1.) Z (1am)
+Exercigiul 1. Considerém reteaua de transport de mai jos:
+. ll
+I] 10 Jvz
+
+Determina'gi un ﬂux maxim in re'geaua de mai jos utilizénd algoritmul lui
+Edmonds-Karp pentru urmétoarele ordonﬁri ale listelor de adiacen'gﬁ:
+(a) 14(5) I ($1,334), A($1) Z ($3,952,134), 14(062) I (061,15),
+
+14(9)?) I ($1,534,15), A($4) I ($3,911)-
+(b) 14(8) I ($4,131), Aw) I ($2,$s,$4), 14(902) I (901,15),
+
+A(w3) I ($1, $4, t), AW) I ($3,911)-
+
 —
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:34**************
-mm“... z. lellnim .. n... I Z ‘a... . .1 . ....¢. 5 Z (v.5)
-
-u. .. “.1...- .. .- m. 1- l-qu n. “mm. l.- .1... "a... 1-1....
-
-l. 5d z.) r- swan“)
-
-(.1 Am... .l "1...... ....X....| . ...... n... 1.. a .... n. .....1. I. c
-
-(.1 1......1... .......- I“... m X .1... n |- “.1... m... K E L‘.
-u... [Ii -.. 5...... a. mun F .- um...- "is-“1|. 1m.
-..| m... K .1... -.. ........... 4...... m..- . 1.. up...
-
+Exercigiul 2. Considerém o retea R : (G, s, 25,; c) , unde G : (V, E)
+are n noduri §i m arce, §i functia de capacitate are doar valori intregi
+(c : E —> 2+). Fie C : max 6(6).
+eEE
+(a) Arétati céi valoarea maximé a unui flux in R este cel mult m - C.
+(b) Aréta'gi c5, pentru ﬁecare ﬂux :z: din R §i pentru ﬁecare K E 2+,
+putem gési un drum de cre§tere P cu capacitatea rezidualé, 'r(P),
+cel pu'gin K - dacé un asemenea drum existé - in (9(m).
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-lkelziliul z (Mummy.
-(=1 emu-mm “mm mm...-
-chMAxJLuwln) (
-n F $5.: 4.1.
-l F Iii/1 . _
-x P 1m“ m,
-null-{K > n (
-whﬂlll ..- ... um .1- mllln F m. 1m 2 n
-l P = I r[P]i
-K - m.
-)
-m"... x‘
-)
+Exercitiul 2 (continuare).
+(c) Consideréim urméitorul algoritm:
+SC-MAX-FLOW(R) {
+C .
+<— 1:155 C(e),
+{I} F 0;// z ﬂuxul curent;
+K <_ 21+|_10g C];
+while(K 2 1) {
+while(:r are un drum de cre§tere P cu r(P) Z K)
+:1; P :1; ® r(P);
+K <— K/Z;
+}
+return w;
+}
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-mun“... z ............m..
-. Mimi a um...“ sumxnuwm) Mm...“ .... .1... ...
-v.1..." mm. 1 m n.
-z 1......“ .1 .1... a..." humi- m. uhliurl. "am. mm:
-i u... a.’ ... n m- ... m... m) + m K
-II “may:E:..u....<.1.......m....=\..w..1li.......... 1..
-“mu... w“... i.- ..mplmm- m... 0(m11q c)
-Emu-J... a. DIynM s Z (v.21 prunnﬂ lrmnhyi ..... m... .1.
-mm...‘ Iklnu mm‘, .1 E v‘ .. mm...“ mm...“ ml.) E
-1. v.1“... .... In! 1...“... n..- .. um... m... “mm-m .7 m...»
-mm .1. um...- . manni (m... 1.1.4 mm...‘ “mm; ... s
-mm... m... a..." ..mm mm... u m... W... v m...
-p....... =- 1...» mm mm...“ .: m :zlllli mam.-
+Exercitiul 2 (continuare).
+1. Arétati céi procedura SC-MAX-FLOW(R) returneazé un ﬂux de
+valoare maximé a; in R.
+2. Aritati cé, dupé ﬁecare iteratie While exterioaré, valoarea maximé
+a unui flux in R este cel mult 'u(:r:) + m - K.
+3. Aréitati cé, V K € 2+, existé cel mult m iteratii While interioare. in
+consecinté procedura are complexitatea timp (9(m210g C’).
+Exercitiul 3. Digraful G : (V, E) reprezintéi topologia unei retele de
+procesoareFiecérui procesor, v 6 V, ii cunoa§tem incércarea, load(v) E
+R+. Folosind un ﬂux maxim intr-o anumité retea determinati o strategie
+statici de echilibrare a incﬁrcérii (static load balancing strategy) in G:
+indicati pentru ﬁecare procesor incércarea ce trebuie trimisé §i cérui
+procesor a§a incét toate procesoarele séi aibéi aceeagi incéircare.
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-mm“! ‘ m. n Z (an, =1 n m.‘ .. ls,‘ mu Z m1 m:
+Exercigiul 4. Fie R : (G,s,t,c) o re'gea §i (Si, Ti)(z' : 1,7) doué
+sectiuni de capacitate minimé in R. Arétati cé ($1 U S2, T1 O T2) §i
+($1 O $2, T1 U T2) sunt de asemenenea sectiuni de capacitate minimé.
+Exercigiul 5. Fie R : (G : (V,E),s,t,c) o retea §i c : E —> 2+,
+n: IV‘, m : |E].
 
-Mm. 4. “Wm. mm: I. n Ami‘. a (s, "an n m \-
+(a) Descrieti un algoritm de complexitate timp (9(n + m) pentru a
+determina o sec'giune de capacitate miniméi in R, avénd 1a indeménéi
+un ﬂux de valoare maximéi a:*.
 
-ls, r‘ :1‘ n u m m.- a- mmum um“. a. mm“. mam:
-
-Emmi“! 5. m. n Z (a Z mm“) n mm. = s w“
-
-v. Z ‘v ‘ m Z s
-
-(-1 mum. un “mm a. (mumm- m em. + m1 yum .
-“mam "dim" hummmmm a‘ “m hum“:
-u. m a. "m" W-m: 1-
-
-m Pulninﬂ .m am“, a. a“ m qu'u .1 um...“ hm.- .1.
-mm“ mi‘. m. m. F. u "q"... a. mm... mm:
-h n. (in. m m ml, mm a. m
+(b) Folosind un algoritm de ﬂux maxim pentru o anumité functie de
+capacitate, aréta'gi c5 se poate gési o sec'giune de capacitate miniméi
+in R, (SO, To), cu numér minim de arce.
 
 —
 
@@ -598,75 +683,83 @@ h n. (in. m m ml, mm a. m
 
 ***************Beginning Page***************
 ***************page number:38**************
-Mum“! n. m. G : [5‘ 1.5) n. nmnnn n-mmqnmm
-u n.“ 1-,.“ w. "1., m G m. Mm,- ‘m. Mm a“ s
-in! h m. m: m) v4 5; s‘ "Dun > \4 2 ﬁlm-a Wm“,
-mu.’ “Chum! mm: .1. .1 m. mm..-
+Exercigiul 6. Fie G : (S, T; E) un graf bipartit. Demonstra'gi teorema
+lui Hall (ewistﬁ, un cuplaj in G ca're satureazd toate nodur'ile din S
+dacci §i numai dacii (H) VA Q S, \NdA)! 2 IA‘) folosind teorema ﬂux
+maxim - sec'giune minima pe 0 re'gea particulara.
 
-m..mm 1. u n Z (5mm n ..\.. w. ... mn- “wann-
-mm mm.- 1- Inn Milli n will-In mm m ml- mm.
-m.‘ mm" |l p."
+Exercigiul 7. Fie R : (G,s, t, c) o re'gea care are toate capacita'gile
+intregi pozitive §i pare. Arata'gi ca exista un ﬂux maxim cu toate valorile
+intregi pozitive §i pare.
 
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-mm,“ “namiq “mundanj. 1 5(a) Mm
-inhnlhlmljunmm my >K.,m(xl<=[=Lv.sE(GJ un
-A“ w m R u m... M11...“ a m 1(1); mm], 7 5(a)
-(-1 “1mm lillllmuncullu raw ‘I “in mm."- <5‘ n m,
-mm Z 4:11 Z mm
-“Wham may”,
+Exercigiul 8. Fie R : (G, s, t, c) o re'gea astfel ca st, ts ¢ E(G) Avem
+§i o func'gie majorant m: E(G)—> IR+, m(e) g c(e),V e G E(G) Un
+flux (p in R se nume§te ﬂux legal in R dacé x(e) 2 m(e),Ve G E(G).
+(a) Arétati cé, pentru orice ﬂux legal (p §i orice st-sectiune (S, T) avem
+WP) é Z C(ij) — Z mU'i)
+iES,jET,ij6E(G) i€$,j€T,ji€E(G)
 
-m mm a. 1. n “mm a "m 7 (a LLB)‘ m.
+(b) Pornind de 1a R construim o re'geaﬁ : (ajjj), unde
 
-vii] 7 m] “my hm“ .m M." m1
+- V(§) = V(G) U {3?} (acestea sunt noduri noi);
 
-s@_mm.m.>u<mz K vim)‘
+- E(a) = E(G) U {$23, ts} U {31), v? : v E V(G)};
 
-mm m V I “CL Fm, 7 E mm, i m, ,
+- pentru orice 'u 6 V(G), E(Ev) : Z m(uv) §i E(vi) :
 
-Mm
-)3 mm!‘
-mm,
-H,q7m,17 m ., mm v t may‘ av] 7 Cw] my]
+quE(G)
+Z m('uu);
+quE(G)
+- E(st) : E(ts) : oo §i pentru orice ij E E(G), E(ij) : 0(2j) — m(2j).
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-mm“! g Lmnummxvl.
-Ami‘; n mm .m a“ hm m a m: I. mm. M m.“ m
-m m K a. "lain u : zK-mmm
+Exercitiul 8 (continuare).
+Aratati ca exista un ﬂux legal in R daca §i numai daca exista un
+flux in F de valoare M : ZeEE(G) m(e).
 
-[c1 Fulninﬂ nun-“1.5.1 mm (m. m] “Mum. W... mm“
-“mm- Fwd mum: m". i m," u. ﬂux kgil a. mm
-m:
+(c) Folosind un flux legal initial (vezi (b)) aratati cum se poate modiﬁca
+algoritmul Ford-Fulkerson pentru a obtine un flux legal de valoare
+maxima.
 
-MUM.‘ n m. R Z (6,3,1) n .4.‘ 4. “mm.
+Exercitiul 9. Fie R : (G, s, t, c) 0 retea de transport.
 
-(=1 mum. “ mm lﬁcmn m. u vuiﬂn! ﬂu: a mi“. an!‘
-u‘ T)‘ ..\. n. 6mm. m...“ m R
+(a) Descrieti un algoritm eﬁcient care sa veriﬁce daca o sectiune data,
+(S, T), este de capacitate minima in R.
 
-m mum. nu lllem a. campkxlhlu cum: or" ‘ m] (m u
-"uh. M .m a“ m z‘ m! n. m... mm: m R
+(b) Descrieti un algoritm de complexitate timp (9(n + m) care sa
+veriﬁce daca un flux dat, :n, este de valoare maxima in R.
 
-(:1 F,- ¢ s d Z. n 1» m. u. m lune; a! "Jain mixnnl m n.
-s: puma-m d ,1. .m .., E m)‘ “mum u... m
-mm‘- nn mm mom m. ﬁ m.“ w. m Wm. h.
+(c) Fie c : E —> Z+ §i :z;* este un flux intreg de valoare maximal in R.
+Si presupunem ca pe un arc, e0 E E(G), capacitatea cre§te cu 1.
+Descrieti un algoritm eﬁcient care sa determine un ﬂux maxim in
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-Emmuul lu Ii x n- ll: hull Hr u "Ill lull R Z (Gm L =1‘
-m |{x]-v|+v.+- I"IIﬂII~E""VX-ﬁ‘l';‘ Ann-nu
-m... I m...‘ M... ‘w, ‘xv ..||.| .. .(X-y Z \- n :ﬁi
-if
+Exercigiul 10. Fie x un ﬂux intreg intr-o re'gea datéi R : (G, s, t, c),
+cu 'u(x) : 'ul + v2 +~~~vp, unde 'ui E N“, Vi : H, p > 1. Arétati cé
+existé p ﬁuxuri intregi x1,x2, . . . ,XP astfel ca 'U(Xi) : 'ui, W : H §i
+p ,
+X : Z X1.
+1:1
 —
 
 ***************Ending Page***************
+
+
+
+
 

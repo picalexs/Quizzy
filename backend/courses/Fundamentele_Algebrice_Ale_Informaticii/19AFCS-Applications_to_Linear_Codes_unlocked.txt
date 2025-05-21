@@ -1,16 +1,38 @@
 ***************Beginning Page***************
 ***************page number:1**************
-l
-Vector Spams
-Wham w (m; Them]
+ALGEBRAIc FOUNDATIONS
+of COMPUTER SCIENCE
+ieclures by Ferucio Laurentiu Tiplea
+
+Vector Spaces
+
+Applications to Coding Theory
+
+Prof.dr. Ferucio Laurentiu Tiplea
+
+Spring 2022
+
+Department of Computer Science
+
+“Alexandru loan Cuza" University of lagi
+
+la5i 700506, Romania
+
+e-mail: ferucio.tiplea@uaic.ro
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-—
+Outline
+Information transmission
+Error detection and correction
+Error detecting and correcting codes
+Linear codes
+Reading and exercise guide
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
@@ -20,355 +42,391 @@ Information transmission
 
 ***************Beginning Page***************
 ***************page number:4**************
-Inlmllwl mum-w-
-mm Mm m Wm.» WWW
-. “mum-1
-. Mm [seams]
-. (“mm
-mm; Mm NW m WWW WWW
-- unﬂwcnalwn Eanhmnm “mm
-. mm Arm: Mm Am, Wm uh‘:
-mumm- —_ .,..
+Information transmission
+Entities involved in information transmission:
+0 sender (encoder);
+o receiver (decoder);
+I channel.
+Examples of entities involved in information transmission:
+0 satellite station; Earth station, atmosphere;
+0 emission device, reception device, telephone cable.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science —Vector Spaces Spring 2022 2/21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-___ . j _ ~ MM
-M1." um" Mama-s awhi- WWWMM am! wrvmun
-—
+N 0| se
+information sender receiver destination
+source (encoder) (decoder)
+IVIain question: develop codes capable of error detection and correction.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 3 / 21
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Blluly mum-w chm-Ill
-Wem“ “My blur my M5
-WWW WW‘. m b: dmm m
-. nmwm Lhann$ (m uHM MK. “mm
-- "msemirmds, Wm m In
-. Wm.“ "N Mm .M ‘ M w lwwuw} vlwwd “m
-m 1, W m
-WU.“ “My bmﬁ-v Mm“ mm,“ (5541 Em: “mm,
-m“ m
-- mm m (Mg. m: ‘er-5m m m! hm mm! mmm
-‘mun mm
-. MW. m, m», m Z m." m Mme m
-mumm- —- ~-
+Binary symmetric channels
+We will use only bloc binary codes.
+Transmission channels can be classified into:
+o noiseless channels (also called perfect channels);
+o noise channels, which can be
+o symmetric — the probability that a bit is (correctly) received is the
+same for both bits;
+0 asymmetric — it is not symmetric.
+We will use only binary symmetric channels (BSC). Basic assumptions
+about them:
+o BSCs do not change the length of the binary sequence transmitted
+through them;
+o receiving order of the bits : sending order of the bits.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science —Vector Spaces Spring 2022 4/21
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-mllahlllly a; asc
-m mummy M. BS< ‘5 a m‘ number; s (.1 n "mm mm
-WWW” m m: v mm mu In WM
+Reliability of a BSC
+The reliability of a BSC is a real number p € (O, 1) which gives the
+probability that the bit b received is the bit b sent.
 p
-u 4» o
-1 7
-1 T 1
-w‘ my may W m‘ m mm 1/2 R My
-mum‘- —_ .,..
+O —> O
+1 — P
+1 — P
+1 —> 1
+p
+We may consider only BSCs with reliability 1/2 < p < 1.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 5/21
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-hymn“. ma
-m G Z m m n1 m WM W , MZ M m. Zn hZ “ZZZ,
-(bur my Hwy NEW)
-LZ. n Z woo m m m, MM m Z, Z, m‘ HZ ,Zm,
-W WM m . M W mum m Z “ZZZ
-mm. ,
-m WW m m (m Z mm
-Z
-m, Z %\
-M... 1
-"(m Z, “a "(5,1 Z 2/3
-mm“. —_
+Information rate
+Let C1 I {00,01,10,11}. With such a code, no error can be detected
+(but they may occur).
+Let C2 : {000,011,101,110} (obtained from C2 by adding the parity
+bit). With such a code, any singular error is detected.
+Definition 1
+The information ratio of a code C of length n is
+- log2|C|
+C I i.
+/r( ) n
+Example 2
+ir(C1) I 1 and ir(C2) I 2/3.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 6/21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Elm! detection and carnelian
+Error detection and correction
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-r». lam n1 m.’ mum. m “1mm
-Eu'wl' 1
-(Wm a m wwh “hm P Z 1' m" m "WWW" m. m’
-Msysa
-. m c Z w U“ A wk WWW )hvm m
-u 1w ,
-w H 701m: m, m
-W». m“ W mum Wm“ ~= mmw m mm;
-awn M mm, m
-- m (I be wmned m r wmamim my m '15me
-(WWW shuvvs ‘m
-as m' 5 5 ,
-W E X WM mm; 5K
-WM “My: m5 W“ h: Luna/mind m; mm 1 (m
-wad/Mimi m
+The effect of error detection and correction
+Example 3
+Consider a BSC with reliability p I 1 — 10’8 and transmission rate 107
+bits/sec.
+0 Let C : {0,1}11. /-\ simple computation shows that
+11 107
+TO‘; - i I 0.1 code words/sec
+with exact one undetected error will be transmitted. This means
+8640 code words/day H!
+o Let C’ be obtained from C by adding the parity bit. A simple
+computation shows that
+66 107 5.5
+W - E w TO9COde words/sec
+with undetected errors will be transmitted. This means a code
+word/2000 days !!!
+Prof.dr. F.L. Tiplea, UAIC. R0 Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 7/21
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
-mm...“ mm“ 4mm.‘ 7 Mm..." Mm dnnﬂn'
-m ( bu M. a, Mm n Am. m w E w w m Wm
-deu M mat M
-MM“ Mm MA." (Mun; 1W v < C m MM 4 m:
-Worm“ M Wm V m w dame
-Mum MM 6.1m‘ [Mm] mm V E z m mm m.
-"mmmm v w. W W WW,‘ mm, m mm ‘.
-
-w w) Wu p1‘
-m» P ‘S m (rm-"e MM." m d ‘5 .5 .M
-sum '
-m c ~= , sodwﬂeum 5 “a 1m “M MM, vmm E c
-M
-0mm nun!) Z m , p11
+Minimum distance decoding — Maximum likelihood decoding
+Let C be a code of length n. Assume that W € {O,1}” was received.
+How do we decode w?
+Minimum distance decoding (MDD): choose v € C to minimize d, the
+number of positions on which v and w disagree.
+Maximum likelihood decoding (MLD): choose v G C t0 maximize the
+probability that v was sent when w was received. This probability is
+¢P(V1W) : pn—d(1 — p)dv
+where p is the channel reliability and d is as above.
+Example 4
+Let C be a code of length 5 and p the channel reliability. If 10101 G C,
+then
+¢p(10101, 01101) I p3(1 _ p)2.
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 8/21
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:12**************
-mm .m MLD 1|! “mum
-mm... 5
-m (beznkm'lwnhn n.“ (,Mw. (a 1,» “M 1m
-n, m "mm/mm.” Wm Y. “4w (w m w‘ mum/L
-mm m",
-0.4m WM», w» a d. >4,
-m ‘5 Mm m: m mm "1.,sz mm 1/2 < p ( n
-ma
-5,1“an m p... m u
+MDD and MLD are equivalent
+Theorem 5
+Let C be a code of length n, v1, v2 € C, and W € {O,1}”, and d1 (d2)
+be the number of positions on which v1 and w (v2 and w, respective/y),
+disagree. Then,
+¢p(v1,w) g ¢p(v2, W) <=> d1 Z d2
+(it is assumed that the channel reliability satisﬁes 1/2 < p < 1).
+Proof.
+See textbook [1] page 374. U
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 9/21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Ermr detecting and correcting
-(alias
+Error detecting and correcting
+codes
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-mmll' unl'M "-1 m
-WW“ wk nduswy m m "MSW. F," Wm a Z :4
-m, mm “a m. mukwhzinun MW w
-- -. I'nn wrvm (Mm
-- “<4 hm‘. m 4,. m
-WM h mi a my‘ mmnmmmmg 1m X‘ \slwrn w
-n “Zn 1:1 D:nzndl |:1
-Ddlnlllnnli
-1.. v6 w 1r n.- Hm." mm M v‘ MM mm n».
-numbuallun v
-mum-.1
-m w E um: mm. n m mmmmmw “a w
-MM MW] - “a”, Z My, w]
-mum‘- —- m-
+Hamming weight and distance
+We will work exclusively with the vector space F2”, where F2 : Z2.
+Vector addition and scalar multiplication are given by:
+' X1"‘Xn+y1"'yn: (X1+y1)~-(Xn+yn);
+Where a,x,-,y,- € F2, x,- +y,- is the addition modulo 2, and (,Y-X,‘ is given by
+O-O:O-1:1-0:Oand 1-1:1.
+Definition 6
+Let v E {0,1}*. The Hamming weigth of v, denoted HW(v), is the
+number of ls in v.
+Definition 7
+Let v, W 6 {0,1}", for some n. The Hamming distance of v and W,
+denoted Hd(v, W), is Hd(v, W) I HW(v + w).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 10/21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Pmpuﬂln om- Himmln' “v.1
-pm I». MW‘ WWW
-mum- u
-mm»! u V “my mm“ n MDWMM
-1 u s My) s n,
-2 quomd.
-1 a 5 M, w) > n
-‘ devw):ﬂ|ﬂv:w
-5 mm» mm
-s My * w; S MWMW,
-1 Hm m Hdh/ “Mm w}
-a Minawm
-v mmwv mm wv
-mumm- —- m-
+Properties of the Hamming weight
+
+Prove the following properties!
+
+Proposition 8
+
+For any n Z l, u7 v7 W G {O,1}", and a G {0,1}, the fol/owing hold:
+l. O g HW(v) g n;
+2. HW(v) : O iffv : O,‘
+3. O g Hd(v7 W) 5 n;
+4. Hd(v7 W) I O iffv I W,‘
+5. Hd(v, W) I Hd(W7 v);
+6. HW(v + W) g HW(v) + HW(W),'
+7. Hd(v7 W) g Hd(v7 u) + Hd(u, W),'
+8. HW(av) I aHW(v);
+9. Hd(av, aW) : aHd(v, W).
+
+Prof.dr. F.L. we. UAIC, R0 Algebraic Foundations of Computer Science-Vector Spaces Spring 2022 11/21
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-m1! an,“ “a lmlnﬂnn um
-\hﬁ'imn n
-m c h: . m4: m MM M z. denalAA am ‘s
-mpmwmwnms c. v“:
-Euhul: m
-1 w m (v11: c (Wurmmuunm nwlnuﬂ) 4m '
-2 vahcwdzt: mmmummmmmmmmmm
-4((1 Z 2
-“WWW W rm 1 “a: c “I knuh n “17W mm m, < M
-‘um "mm K m m’ m1
-m “mm- —_ .,..
+Code distance and transmission error
+Definition 9
+Let C be a code. The distance of C, denoted d(C), is
+d(C) I min{Hd(v, W)|v7 W 6 C, v 75 W}.
+Example 10
+1. For the code C : {00110011,01101101,01010110}, d(C) : 4
+2. For the code C I {00110011,01101101,01010110,01010011},
+d(C) : 2
+A transmission error for a code C of length n is any non-zero vector e of
+length n (that is, e E {O,1}" 2 {O”}).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 12/21
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-elm M... M-
-DMM n
-u: < k . MM W» n
-1 £dnmnhcuvwri w :wm \fvvs€€ ‘WW V5 z
-2 ¢ ‘5 . “My M ‘I z “m Wm mm Hum/mm] wgm
-n m: but .M m; .n em! M.» Hammwgwulm :7 1 m
-mm be demnrd w c
-n...“- 12
-w z b" M MM“ n anddurawn! M
-‘ “MKMWSKW 1)"(ﬂ")wunm(¢)gdii
-2 Thmemstsarkastoneumre§w 1)"Ln") wvthWY!):d
-1A1: “W N MM by c
-m»:
-s“ MW m we; 11H?! u
-m “mm- —_ .,..
+Error detecting codes
+Definition 11
+Let C be a code of length n.
+l. C detects the error e € {O,1}” i {0”} if v + e ¢ C, for any v Q C.
+2. C is a t-detector code if C detects any error with Hamming weight
+at most t, but there exists an error with Hamming weight t + 1 that
+cannot be detected by C.
+Theorem 12
+Let C be a code of length n and distance d. Then,
+1. C detects all errors e € {0,1}” — {0”} With Hw(e) § d — 1;
+2. There exists at least one error e e {O,1}” — {0”} with Hw(e) : d
+that cannot be detected by C.
+Proof.
+See textbook [1] pages 377-378. U
+Prof.dr. F.L. Tiplea, UAIC. R0 Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 13/21
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:18**************
-elm mm. mdﬂ
-Dnﬁnilm u
-u: < k . MM W» n
-1 c (wmzh thzwwv ,5 mu" 7 w") 4
-My’, “my” w]wa/wv§lgwgf7(v}
-2 ¢ ‘5 a ‘WWW. .1 ( mnstzH gm w. WWW.“
-n MW Mm. m“ wt ‘us! m Wm Mm mm
-m ‘~- uw hrwwnad by c
-“mm n
-m r be: (nae alum n andmstmnel W
-1 ¢ MKMQMH w nwm WM’! < win/n
-z Themznmzrkistwurmz'e c w n‘ um wvlh
-Ma Z w 7 ‘m 1| I», :arvwl "mud a, z
-PM
-5* unbmh m Bus m m u
-m “mm- —_ w.
+Error correcting codes
+Definition 13
+Let C be a code of length n.
+1. C corrects the error e E {O,1}” — {0”} if
+Hd(v+ e, v) < Hd(v+ e, W), for any v 6 C si W G C i {v}.
+2. C is a t-corrector code if C corrects all errors with Hamming weight
+at most t, but there exists at least one error with Hamming weight
+t + 1 that cannot be corrected by C.
+Theorem 14
+Let C be a code of length n and distance d. Then:
+1. C corrects all errors e G {O,1}” — {0"} with Hw(e) g Md — 1)/2J;
+2. There exists at least one error e € {O,1}” — {0"} with
+Hw(e) : L(d — 1)/2] + 1 that cannot be corrected by C.
+Proof.
+See textbook [1] pages 377-378. U
+Profdr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 14/21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Linea! codes
+Linear codes
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-llmf cod.
-Mm... u
-m v. h. . m. Md m q mm A ‘m mm W» "21
-1mm h M v.‘ Mm 1 S u S n‘ a»: and a" |m k1“ m
-w, m NMKMMM A 67mm“ um F:
-w ( ‘5 in in Mamas-m 11mm], we Wu 1m 5., ‘m ¢ ‘5 .n
-[n k 4pm W '.
-Aw w H wdznn bewem/‘ed v, a m a “Wm.” . m m
-m brzmngd m. mm z 7 MAW Wm: Wm Es “(m
-c \snhﬂ = glnemml mImx a! C
+Linear codes
+Definition 15
+Let IFq be a ﬁnite field with q elements. A linear code of length n Z 1
+and rank k over IFq, Where 1 g k g n, also called an [n7 k]-code over
+qu, is a subspace of dimension k of the vector space lFZ.
+If C is an [n7 kl-code of distance d over qu, we will also say that C is an
+[n7 k7 d]-code over Fq.
+Any [n, kl-code can be specified by a basis B of cardinality k. This basis
+can be arranged into a matrix G G Mk,n(Fq) whose rows are B's vectors.
+G is called a generating matrix of C.
 
-mum‘- —- ~-
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 15/21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-EnwdllqbyIn-mk
-111 ¢ 111 n 1| 11111111, 1111 11.1. M1111 1.111
-[1 1 o o 1 1 1]
-1 1 1 1 1 1 1
-1 1 1 1 1 1 1
-1 1 1 1 1 1 1
-1111111111 11111111111111c
-116:111111111
-1111111111112~1111111111111e
-1,1:111111111
-~..1mM-—_ .,.
+Encoding by linear codes
+Let C be a [7,4]-c0de over IFZ given by the generating matrix
+1 0 0 0 1 0 1
+0 1 0 0 1 1 1
+0 0 1 0 1 1 0
+0 O O 1 0 1 1
+To encode x1 : (1,1,1,0) we compute
+XlG I (1,1,1,0,1,0,0)
+and to encode x2 : (1,0, 1,0) we compute
+x26 I (1,0,1,0,0,1,1)
+Prof.dr. F.L.Tip|ea,UAlC,RO Algebraic Foundations ofComputer Science-Vector Spaces Spring 2022 16/21
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-m-I “a. “a pm, mu nullix
-“MM. 15
-m “Hm k1 M m. F, "WNW: MM 0 u
-.MMI“ Mm M .1»qu C
-M» c‘ ‘5 in r” "7 k1 m: M, l0‘
-A mm, mm WE M (m w um I pmm mm I.”
-m Wm M “.1 M u N u m . m...“ M
-c: Miwzm
-Mn»,- n
-M Z n. A) ,§,M,im “my,” [n kl<ud< "M
-N ‘ A‘ 1.7.; WIN WNW“!
-my
-5<= xmbwk m‘ pun anon! u
+Dual code and parity check matrix
+
+Definition 16
+
+Let C be an [n7 k]-code over qu. The dual code of C, denoted Cl, is
+
+the set of all vectors that are orthogonal on C.
+
+Clearly, Cl is an [n, n i k]-code over Fq.
+
+A generator matrix for the dual code is called a parity-check matrix for
+
+the original code and vice versa. If H is such a matrix, then
+
+C I {v 6 Fngvt I O}
+
+Proposition 17
+
+If G I (lk A) is a generating matrix of an [n, k]-code, then
+
+H I (—At Inik) is a parity check matrix of the code.
+
+Proof.
+
+See textbook [1] pages 390-391. U
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 17/21
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:23**************
-Syndmlm ml".
-rm y e [-1 w ‘5 an! I». Wm. My "um, c my“ m Dr
-.u wmvs Wm WW 5 n
-Any “a: “l Mm n mm .n "Mm m...“ M v;
-my Q my“
-aw, in Hmems m W W Wmmm mm. m.
-Wm
-MW dwmmm; .5 MM
-1 {wmwxnhaivmimmenly ‘:w
-z m m muwzimmchxs Mm Mm m “a wk m:
-mm mm My A m w e m “WM M ‘Mum
-1 Return/:y'4
-~..LmM-—- m-
+Syndrome decoding
+Given y € F2, Hyt is called the syndrome of y. Therefore, C is the set of
+all vectors whose syndrome is 0.
+Any code of length n induces an equivalence relation on ng:
+u ~C v <:> v i u € C
+Clearly, all elements in the same equivalence class have the same
+syndrome.
+Syndrome decoding works as follows:
+1. Compute the syndrome of y, s I Hyt;
+2. Find the equivalence class where y belongs to and take the
+minimum-weight vector e in it. e is interpreted as the error;
+3. Return v I y — e.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science —Vector Spaces Spring 2022 18/21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:24**************
-Syndmlmdwudlnl
-111 1 11111 M11111 11111111111111 M1111
+Syndrome decoding
+Let C be the code given by the generating matrix
+1 1 1 O 0
+G I 0 O 1 1 O
 1 1 1 1 1
-1 1 1 1 1 1
-1 1 1 1 1
-1 11111 11111 M1111 111 ¢ 1
-1 1 1 1 1
-11111111111, <11 11111111111 111111111111 11 1 11 11
-1111,11 11,111,11m1111 11.111111 111 11111111 11111.1
-,11111111111111111111111111o1>11
-1111,11m111111mw 1111 11111111111111.1111
-“~me 11111, 1 111 1.111111111111111 1111111111.". 11 111
-11 1.11m” 11111:.
-~..11_111-—_ .,..
+A parity check matrix for C is
+H I 1 1 O O 0
+1 O 1 1 1
+Assume that x I (1,1,0) is encoded and the error e I (O, 1, O, 1,0)
+occurred during transmission. Therefore, the received vector is
+XG + e I (1,1,0,1,0) + (0,1,0,1,0) I (1,0,0,0,0) Iy.
+The syndrome of y is Hyt I (1,1) I s. One can check that the
+minimum-weight vector in the equivalence class corresponding to s is e.
+So, we decode y by y — e I x.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science —Vector Spaces Spring 2022 19/21
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:25**************
-Reading “a QxeKiSE guide
+Reading and exercise guide
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:26**************
-k .5 mm WNW.‘ mt M a“ In m um“ Mm m "a W“
-m1 m.‘
-(bum mew:
-1 Pup m1 1m ‘mm [1]
-—
+Reading and exercise guide
+lt is highly recommended that you do all the exercises marked in red from
+the slides.
+Course readings:
+1. Pages 368-391 from textbook [1].
+Prof_dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 20 / 21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Reference!
-m WWW“... .ﬁwmmﬂmkm MM hm
-.... “mm- —
+References
+[1] Ferucio Laurentiu Tiplea. Algebraic Foundations of Computer Science. “Alexandru loan Cuza"
+University Publishing House, lasi, Romania, second edition, 2021.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Vector Spaces Spring 2022 21 / 21
 
 ***************Ending Page***************
 

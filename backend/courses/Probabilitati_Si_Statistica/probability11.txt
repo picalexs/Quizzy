@@ -1,986 +1,1047 @@
 ***************Beginning Page***************
 ***************page number:1**************
-n m, 2022
+l7 mai 2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Shhlhd min-urn.“
-ﬁhmaru: Pmmuh'ﬂnx
-h... m m“!
-1m a! mm“
-1m.“ lam-“lax mnmu
-Emu‘ ml a- .an. |. Wm. a "mum
-vadnl u mac-m n “15m P
-1m. mums“ 1; “Wuhan
-1mm prunnmlux
-1\|\- mm..=1-m,m..=1.
-Elhhngnﬁl
+Statisticé inferentialé
+Estimarea parametrilor
+Estimarea punctualé
+Estimarea cu intervale
+Intervale de incredere pentru medie
+Teste de semniﬁcaigie
+Testarea ipotezelor statistice
+Erori, nivel de semniﬁca'gie §i putere a testului
+Nivelul de semniﬁca'gie §i valoarea P
+Teste parametrice §i neparametrice
+Testul proportiilor
+Teste unilaterale §i bilaterale
+Bibliograﬁe
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-- inf-ma “Maw: m lznPﬂl .= “is! mnzhnn "m" 1.
-D vvnnmn (mu-m1 mum u. mxm xxnhmlnlhkx n
-“in-m mm‘! a.“ ‘inhunm!
+o Statistica inferentialﬁ are scopul s5 trage concluzii relativ 1a
+o popula'gie folosind rezultate ale teoriei probabilité'gilor §i
+statistici ob'ginute din e§antionane.
 
-- "Ir!uhhlimihunlvpnhihvhﬂplw [\q-“mmmw,
-"mm m: mm“. a] n. pm“ ma." an,‘ ".7
-ilmahcunmlliuﬂmmi m. .1- mm 4mm bin-4..’
-1.“ m‘ a". mm. m WWW.“ "um-m .x pm.
-\m. mum.
+o Féréi utilizarea teoriei probabilité'gilor (legea numerelor mari,
+teorema limité centraléi §. a.) am putea considera drept sis-
+tematic un comportament care este de fapt datorat hazardu-
+lui sau, din contré, un comportament sistematic ar putea
+trece neobservat.
 
-. Example “mu-um mnmn “mm a‘ hmmm
-m. mm.“ “mm-‘m, m um a! “mum:
+0 Exemple de inferen'ge statistice: intervale de incredere pen-
+tru estimarea parametrilor sau teste de semm'ﬁcaiz'e.
 
-- mum a4 Ink!!!“ in h hm “11mm! mmmm
+o Tehnicile de inferen'géi au 1a bazii distribu'gﬁle egantioanelor.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-. Dumm- uln “mm pwvnm- m- n lllcunﬂlllll m
-Mud“ a. m n. Pllllm um. .= .um =.\ m.“ mliii.
-mum m in, Bilimllh =- -»
+o Distributia unei anumite populatii poate ﬁ necunoscuté in
+intregime; de aceea ne putem dori s5 aﬁém cel putin media,
+dispersia sau al'gi parametri ai ei.
 
-. m“; “Mm. ii “a Wnnmi m a mm‘. Inlninﬂ
-“mm Emm- a.“ "in-m
+o Ace§ti parametri ai unei populatii pot ﬁ estimati folosind
+statistici calculate din egantion.
 
-- lxmidunlﬁvun “Hum... Mm" MM“. “PL
+o Existé doué tipuri de estimare: estimare punctualﬁ, §i esti-
+ma're cu intervals .
 
-Dzﬂnixinn |
+Deﬁnition 1
 
-mamm- mm.“ . mm; puma.“ m“ m 41'
-lumunlvn 1mm numln a: mm mum: Wm :zmnm
-:umlpwllnml, duzmnnl .. MM! “I Inmmllvu
+Estimarea punctualﬁ a unui parametru constd in de-
+termina'rea unui numdr, de obicei valoa'rea unei statistici
+corespunziitoa're, desemnat 5a estimeze acel paramet'ru.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Dunninnn 1
+Deﬁnition 2
 
-“nu...” H. .m "mm . my“ mum“. m.“ In
-mm”...- Mm mlnvnl .1. mm 1am Jun! mama
-mm. m 1mm...
+Estimarea cu un interval a unui parametru consta in
+determinarea unui inte'r'ual ale ca'rui limite sunt statistici
+calculate din e§anti0ane.
 
-"MM .m Incrulnﬂl u ,y m: mum. :2va ‘um
-“.1. (A: “mam; m my." “mm-m "Mm
+Nivelul de incredere (1 — a) este proportia acelor inter-
+vale ( ale incredere) care contin parametrul estimat.
 
-m. mm: .k Inunlmn m: ‘m mm: m: m un
-mm“ mm a. mum" (mum;
+Un interval de incredere este un inte'r'ual ca're a're un
+anumit nivelul de increde're (prescris)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-. Empl- .1. "6mm, “mm. m. “a. a- “1m;- a.
-mmmumm» .1‘ I“ amp; “mud i mum“
-1.“ .
+o Exemple de estimatori punctuali sunt media de selectie in,
+dispersia esantionului $2, sau deviatia standard a esantionu-
+lui s.
 
-. m“ m. yanmnxu m Wm am m. m1‘, "mm,
-puma; m.‘ Dﬂﬂuhﬁl m‘. a mam‘: w.“ mm. a.
-um.‘ m“; m
+0 Pentru un parametru dat putem avea mai multi estimatori
+punctuali: media populatie poate ﬁ estimata prin media de
+selectie, mediana, mod.
 
-. s! m “m Immml mm" 115m dn “mm: mm“
-nlm' mmnuali
+0 Se pot ridica anumite intrebari legate de calitatea estimato-
+rilor punctuali.
 
-- cn nu m“ mu un "mum: (1- ‘ mammal V um m
-m hm- m, mmbupmmmw) .“mimqmb
-annular] m mm cu pmmmul mmw
+o cat de exact este un estimator (i.e., increderea) - este in
+mod frecvent mai mare (supra- estimator) sau mai mic (sub-
+estimator) in raport cu parametrul estimat?
 
-. um In“ mm huh-“Muhnimm mum-m
+o Din acest punct de vedere se prefera estimatorii nedeplasatz'.
 
-. c". m. mmmm m, “mm yum“ [mm c: a
-mam]: “mu-:7 null: m! “mum
+o Care este variabilitatea unui estimator punctual (vazut ca 0
+variabila aleatoare) - aceasta este acuratetea.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-. D..X.mM.-»....m.‘..¢. "ml... ....,=/,. m
-m m m. m... quhnld m .m m; m: .m mm
-imn m; a! "m.
+o De exemplu dispersia mediei de selectie, care este a2/n: cu
+cét este mai mare e§antionu1 cu atét mai micé este variabil-
+itatea mediei de selectie.
 
-nmnmnn 1
+Deﬁnition 3
 
-m ' .m Mm: “mm n1 “up-1mm, z W. Gm
-m m mm, WWW“ u I. Z l.(1) .m mm." pm
-tun! .1 M l
+Fie 6 an anumit paramet'ru al unei populatii, :1; u'ri esan-
+tion al acestei populatii si én : 614$) un estimator punc-
+tual al lui 6.
 
-a, m mm.“ Wm“... Mm, Z | “1.”,
-m. M,“ 1mm “1mm
+é” este 0 statisticﬁ nedeplasaté daca H6771] : 0. Altfel é”
+este numita statistica’ deplasaté.
 
-‘In mm." mm...“ m My." mm. M Hr
-"m H Mm: mu...“ minimum
+Un estimator nedeplasat cu dispersie minima, daca ea:-
+
+istai, se numeste statisticé eﬁcienté.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-. ﬁ- r .1 mm. mm N MW... =1. m "M .l.
-mm. m M. M‘
-. Mb.“ c... M...“ mm M,“ .m “m: m
-X
-. m“ m.“ W.“ m. .i plum x‘ mu. M,’
-.u...
-1)”) Z.‘ mm. liming;
-N .-1 I ‘ N m
-- Pun“ l lhiml u n fmunm inhuman d! ﬁlmlninn! n
+o Fie 79 o popula'gie formaté din N indivizi ale céror valori ale
+atributului sunt a1, a2, . . . , aN.
+0 Variabila care reprezinté atributul popula'giei este notaté cu
+X.
+o Pentru aceasté popula'gie, deci §i pentru X, media §i disper-
+sia sunt
+1 N 1 N
+F Z aZ- : ,u, respectiv F 2(ai — ,u,)2 : a2.
+1:1 1:1
+o Pentru a estima ,u §i a2folosim e§antioane de dimensiune n.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-. P-mx 1m "um m 1W Z [A'KIH .131)‘ m-
-
-n- .1.qu ....
-
-is! Z 1 ﬁlm
-
-mmimm- c. X
-Mum“. .
-mm, m“ w. .v. m mm "at: mm. ,1.
-“11",. mm is‘. Mm mm. a. Mm.“
-n, ,. Mm. “mm.” "M. .m mum
+o Pentru un egantion dat, 113(k) I (331(k), x2“), . . . , x51“), media
+de selec'gie este
+1 TL
+a? I i g my»
+n .
+1:1
+o Fiecare 512]“) este o valoare a unei variabile aleatoare cu aceea§i
+distributie ca X.
+Deﬁnition 4
+Variabila aleatoare care are drept 'ualom' toate medz'z'le de
+selecﬁ'ie posibz'le, ﬁg“), pentru e§antioane de dimensz'une
+n, se nume§te distributia mediei de selectie.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-. s. m. “Mm. “um lumkn
-Tm...“ ‘ 1
-um n Mm.- mum 4. lam 2-‘ m u n "1/"
-25.1 ' u‘ vmal r I;
-1,. pm, “m Mm mm n1. 1.“ n r2 m, mm“...
-mm, d: “112m “1. Wm“ . .
-i- ~ "WWI/n)
+o Se poate demonstra urmétorul rezultat
+Theorem 1.1
+Media §z' dispersia mediez' de select/Le, in, sunt ,u §102/n:
+U2
+[Elﬁn] : ,u,, VArﬁn] : I.
+in plus, pent'ru 'ualo'ri mari ale lui 'n, (2 30), distribuiz'a
+medie'l; de selectie este normald, i. e.
+in ~ N(,u,,a2/n).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-. Wm“, m. "6mm al m... mm‘. = mum...
-[u] m mi du 11mm 1"
+o Bineinteles, un estimator a1 mediei adevarate a populatiei
+(,u) este media de selectie, in.
 
-. \m “mm: mm mm.“ ﬂaw“... a Pup-um (#1
-.n dIIFlIIIi “mmlw |= u mm: mm“:
+o Un estimator pentru adevarata dispersie a populatiei (02)
+este dispersia esantionului 52 - o statistica nedeplasata.
 
-. m“ am“. llandald . “1.1a a. lkcﬁ!‘ ,m, .m
-“mm m. . 'ﬁ Mn: m..." mm,“ . mmlkn
-[lhn “mm m, an“ mlin' szun
+o Pentru deviatia standard a mediei de selectie, a/ﬂ, un
+estimator este s/ﬂ numita eroarea standard a mediei
+(the standard error of the mean - SEM).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-. ".1 "mm n. m Mm. =1 mnii wunmi m... n
-m-m cu "mum" m. can"
-i 1
-Pm flaw-u z ~ vam < F a
-V , , ‘
-$1.4m W) k?“
-" > ,ia
-,(Mq ﬁy, ‘1
-.1," k ﬁuq.“ ﬁbé
-. ‘um-nimmmmnmm.
-(wk Wm.” W)
+0 Un estimator de tip interval a1 mediei populatiei poate ﬁ
+obtinut cu inegalitatea lui Ceba§evz
+1 i 1 1
+P(|:r:n — E[mn]| 2 k - 1/ Var[:z:n]) g E ¢>
+1 a 1
+1 a 1
+1 a 1 a 1
+o Astfel o estimare cu un interval a 1ui ,u, este
+i U 1 a
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-D:ﬁni\inn 5
+Deﬁnition 5
 
-m. Mm: a. mm“ mm “mm-pm | m u n1
+Un interval de incredere pent'ru un paramet'r'u, 6 cu (1 —a)
 
-mull a: mm"! “1. up... m Wm‘ n dam! 12mm“
+n'wel de incredere este deﬁmt cu ajutorul a aloud statistic/L
 
-L n v Ill/=1“
+L §i U astfel ca
 
-Flﬂélé UIZIZJM
+P(L§0< U):(>)1—a.
 
-- L n v "m 4- m nun-1- mum in (Hm um, um
-nannizi mm mm. "mim. in ail-m! "1.1..
+o L §i U sunt de fapt variabile aleatoare ale céror valori sunt
+statistici: pentru diferite egantioane au diferite valori.
 
-. r:- m" Mm 4. mm... m. n mumm- m".
-:vmlpn a. 1. m. l. n nvﬂ. was,“ m [can a“ a r
-(n mama")
+o De obicei nivelul de incredere este o probabilitate mare,
+aproape de 1, cum ar ﬁ 0.90, 0.95,sau 0.99 (care dau a E
+{0.10, 0.05, 0.01}).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-mm! ﬂu 11mm“ [l n10 damn |l can-hm un mhrvil
-d. W." m.“ m. u
+o s5 presupunem ca avem un e§antion de dimensiune n §i un
+nivel de incredere (1 — a) §i dorim sa construim un interval
+de incredere pentru media ,u,.
 
-. WMW."W.1".M.M..m..mm
+o Stim ca media de selectie, in, urmeaza o distributie normala
 
-N (w g)
+2
+a
+N i .
+o Pr1n standard1zare var1ab11a Z : nil‘ este d1str1bu1ta
+U/ﬂ
+N (0, 1).
 
-. Pm, “mm. mm. z i .... mm.“
-"(IL >1
-
-. cm. n W. .M W. mm .....1 c. n
-h m.“ m. 1,. m. .. a. M...“ 2.‘ mm“
-MM
+0 Gatam o valoare z*, numita 'ualoare cm'tz'cci, astfel ca o vari-
+abila normal standard sa acopere sub graﬁc o arie de (1 — a)
+pe intervalul centrat in medie §i de lungime 2z* deviatii
+standard.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-. w. z. "In, ,1‘ m... M .... m.‘ m m“
-P( I"§Z';I'):l n
-. n.h.~,i.¢.,.1m., .1. 1“. .‘
-pm m Wampum "/1
-. Mm m .m Z m g a), M. a. "Wm m1.
-mm
-mm“ n. W.“ an Mu... mm m...
-(R, mm. m m)
-. can: c. m “mm. Wm ma‘ "in d
+o Fie Z : N (0, 1), valoarea criticé este aleasé a§a incét
+P(—z* §Z§z*):l—oz.
+
+o Deﬁnitii echivalente ale lui z*:
+
+P(Z g —z*) : 01/2 sau P(Z 2 2*) : 01/2.
+
+o Notém cu <I>(a) : P(Z g a), functia de repartitie normalﬁ
+standard.
+
+o Astfel 2* : —<I>*1(a/2) - valoare care poate ﬁ gésité in tabele
+sau aproximaté in pachetele de prelucrare statisticé uzuale
+(R, MiniTab, SPSS etc).
+
+o Odaté ce am determinat valoarea criticéi, §tim cé
+
+f — l1‘
+P(—z*<UT;\/ﬁ<z*> :1-a.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-. Mm...
+o Echivalent,
 
-w “ ﬁ
-. A... mm... mm
-1...“... .1
-v. mm... a. hm... ... mulul a. hm... u .1
-Mm...“ mm...........-.... m my... MM...
-m:
-.0... .~ .... “1...... mm m...“ ... ../= um n.1,,
-M... my... .... m. pm... . Wm... mm...
-mm... .. Mm... .31.. M "Wu"... M. M.
-n... d. m... (.01.,
+i U i a
+
+P<mn—z*ﬂ<a<xn+z*ﬂ> :1—a.
+o Am demonstrat astfel
+Theorem 1.2
+Un interval ale incredere cu ni'uelul ale incredere (1 — a)
+pentru pentru media unei populalii cu dispersia cunoscuta
+este
+(a: —z*i 5 +z*U)
+Tl ﬂl Tl W 2
+
+unde z* este 'ualoarea criticd asociata cu 01/ 2. Mai malt,
+acest interval este exact pentr'u, 0 populaiie distribuita
+normal §i apromimati'u altfel, canal e§anti0nul este suﬁ-
+cient de mare (n Z 30).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-*W nu mun“ a/z r
-1mm ‘m 1m
-M n n75 1m
-ms mg 1575
-. .-L mm. . mm m mu
-ﬁ n , 7
-- mumunummm-mmwmnm“.mrﬁ
-. Bunmﬂwm. “um-Mm.‘ in.“ .,, ﬂuid
-mum- m. l-ntmndndimunnmu ,- 1 UT’) 1.. pm
-m: a...“ mm. m“ n mm.“ [am V. ... m.
-mm)
-. P. mm I, v. m“. mm. mlnvalnlul L.“ m".
-mammal!) mm‘ m: cu m. um. a.‘ mm 5 nlvnuic
+Nivel de incredere z*
+90% 1.645
+95% 0.025 1.960
+99% 0.005 2.576
+z* U se nume te eroarea mar malé
+O i .
+ﬂ § 9
+o Lungimea unui interval de incredere pentru medie este 2z* %.
+o Dacé dorim o lungime anume pentru acest interval, w, atunci
+2 * 2 A
+ne trebuie un e§antion de dimensiune n : (2);)’ In prac-
+ticé aceasté valoare poate ﬁ nerealisté (dacé n este prea
+mare).
+o Pe misuré ce n cre§te lungimea intervalului (sau eroarea
+marginalé) scade, ceea ce este util, dar poate ﬁ nepractic.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-. s: 1.. mm.“ a i .n. “mm nudud . m." 4!
+o S5 ne amintim ca % este deviatia standard a mediei de
+n
+selectie. Un interval de incredere poate ﬁ vazut astfel
+estimatedMea/n j: z*Sthe'uofMean
 
-..\.q.. uﬂ mm a. mm.’- m... n m... mm
-:mmnlzﬂlun * I'Stlﬂzwlllmn
-
-. mm,“ "n m... mm.“ .m ml...‘ “mm
-... mum}: m: u h- an‘ "mm-1. m. um,
-n m5. .- n “41.1. s.“..§=.m..=w.m@ um.“
-mum... mm.1=m..v.¢..~.nm, Z n nun w
-s: . mm. m. “mud-1mm. a. vu'a mm m4’
-mm M... . mm...“ ,
-5M:
-i1:h3ﬂ5.u: nun l:ﬂﬂﬂ5‘z':1§7i‘z'l :n um
-
-’ ﬁ
-
-mm“, a! mm... ... [n ml,“ as“)
+o Exemplu. Un anumit medicament este analizat masurandu-
+i-se substanta activa de trei ori, rezultatele sunt 0.8403,
+0.8636, §i 0.8447 g/l. Se §tie ca aceasta concentratie urmeaza
+urmeaza o lege normala cu deviatia standard a : 0.0068 g/l.
+S5 se determine un interval de incredere de 99% pentru ade-
+varata medie a concentratiei, ,u,.
+Solut'ie:
+f3 I 0.8495, a I 0.01, 11/2 I 0.005, z* I 2.576, fﬁ I 0.0101
+Intervalul de incredere este (0.8394, 0.8596).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-I S: nl mmnm (l iIIUICI dud dun-Iii FWD-Ami I‘. nu
-mm, m. Mm. 4. mm. 4. M.‘ u 7 ,1 Y.“
-mm. kulaﬁi u. -~.
+o Si ne amintim ca atunci cénd dispersia populatiei, 02, este
+cunoscuta, un interval de incredere de nivel (1 — a) pentru
+media populatiei 11,, este
 
-2.. I'LJ,+|'L ‘
-( ﬁ ﬁ)
+i * a i * a
+(an-z ﬁJn-kz W)’
 
-. m dim-3 .m mm‘: m. um Mm. I.
-humux i1 mm... “Mm i m... a. um- mm
-“Mum, 5m
+o Daca dispersia este necunoscuta, atunci putem folosi ca es-
+timator a1 deviattiei standard a mediei de slectie eroarea
+standard a mediei: ssh/H.
 
-. mwmmmm
+o Obtinem o noua statistica
 
-Liv
-T Z i
--, ﬁ
-mm“ mm nniniu \ n M Sm.“
+$11 _ ,u'
+T — 5W
+cunoscuta drept statistica t a lui Student.
 
-. Am... m...“ m. “Mm mm: w MM! m
-M m (H) W, A, mm “H; V M mm.
-mu: .1 1.5. m,“
+o Aceasta deoarece noua statistica urmeaza o distributie Stu-
+dent cu (n — 1) grade de libertate, t(n — 1) - daca populatia
+urmeaza o lege normalé.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-. n. 1 m.’ 11, rm“ ennui, r, m“ mum 4. 1-
+o Fie T : t(n — 1), valoarea criticé, 25*, pentru nivelul de in-
 
-“1.1. u n1 .. =1‘. anhl mm
+credere (1 — a) se alege astfel incét
 
-PH‘ g T < m Z Hm < 71') :u/z m m > 1'] :D
-Mum“ 1
-u“ mm A: mm". m "MM A: mm". n 7 a)
-lullm "mm mmu m.» mm, "mm. m My“.
-"mum I.“
+P(—t* g T <17‘): 1—a,P(T g —t*) : 01/2 sau P(T 2 25*) : a
+Proposition 1
+Un interval de incredere cu ni'uelul de incredere (1 — oz)
+pentr'u, pentr'u, media unez' populaﬁz' normale cu dispersia
+necunoscutﬁ, este
 
-n vi‘ n v;
-(’ ﬁ ' * w)
+i s 1 s
 
-m. |~ m; "hm "M mm“ m m
+unde t* este valoarea criticd asocz'atii cu 01/2.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Ezlmﬂlu
-. 1...’... m; m... mnnn m...‘- mm... c mm...-
-1...“ .1. mm...- h...w...¢. .... 1...... a...“ a"...
-m...‘- ...... mum"... 15.. mm... i... h mum...“-
-cu... ma... mu “.1. . n sun n: mm. ma... .
-................ .n. us: (s. I... a min: m...“ . a...
-mm. 10":th
-. mum...“ i “in-".1 .- Bin-1.x! .1. m m... A“...
-m... i \lllmw' “an. mun u m...- mm.
-51mm:
-. Dam “1......
-i1" 5.... u... an“: urns‘
-. 4m... ﬁ 7mm.
-- Inkrvllﬂ .1. 1......" m. [mammals mini)
+Exemplu.
+
+o Tntr-un ora§ exista 10000 locuinte inchiriate. O companie
+locala de imobiliare intreprinde un studiu asupra acestor
+locuinige: sunt intervievati 250 chiria§i a1e§i 1a intamplare.
+Chiria medie este gasita a ﬁ 568$, iar deviatia standard a
+e§antionu1ui este 385$. (Se §tie ca chiria urmeaza o dis-
+tributie normala.)
+
+o Determina'gi a un interval de incredere de 95% pentru chiria
+medie a tuturor celor 10000 de locuin'ge inchiriate
+
+Soluﬁe.
+o Datele colectate
+5250 : 568, s : 385, a : 0.05, 01/2 : 0.025,
+* * S
+t _ 1.9695,t W _ 48.0535
+o Intervalul de incredere este (519.9465, 616.0535).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-1 th'u mun-m dn M.- l m.- m mm mm I.“
-mun-um “mm-d. [-1 we“ :5 nlanidinh'mn mm
-um m Alwllnnhn Numlxnl um u am an mun" n
-mmmw "mam." m. Ans, a“ mm.‘ “mm .
-mm“. mu 4 1 m Elm-mum: a 1m mun a. u
-n1." a! m mm Immlml m,“ a! .m n- wininu
-il mm pllmiluiw a. ": mm 15 a: m a". m; [Pm
-"WM cl mum 1- mm...‘ mm: u !!y “mu!
+l. Pentru un sondaj de opinie se alege un egantion aleator sim-
+plu de 400 de persoane de cel putin 25 de ani dintr-un anumit
+ora§ din Appalachia. Numarul total de ani de §colarizare al
+membrilor e§antionului este 4635, iar deviatia standard a
+e§antionu1ui este 4.1 ani. Determinati a un interval de in-
+credere de 95% pentru numarul mediu de ani de §colarizare
+al tuturor persoanelor de cel putin 25 de ani din ora§. (Pre-
+supunem ca perioada de §colarizare urmeaza o lege normala.)
 
-n anlni m. um m u (mm "mm mum u “1w
-15mm a! “n.1,, din m. Pm... am.“ will“: .m 1,.’
-mm a: lundm i w,»- M Inhmghnli mun u ‘may,
-“um-m. vmim\n\i|i\=mmhm.|n--.al nzvﬂui
-“my; “mam . .FMMHM. lmd 5mm: Dnlnnmixv
-unintlxvﬂdnhxmimudl w-a “mmvlmhﬂ mm“ n m.
-1m. m it.‘ m. [Pulupnnlm I: "lulu! m. lam-1n
-nlmnu! u M55 norm!!!)
+II. Primaria unui ora§ vrea sa cunoasca venitul mediu a1 celor
+25000 de familii din orag. Pentru aceasta angajeaza un in-
+stitut de sondare a opiniei care interogheaza 1000 de familii
+alese aleator. Venitul total a1 acestor familii este de 62396714$,
+deviatia standard a e§antionului ﬁind 53000$. Determinati
+un interval de incredere de 99% pentru venitul mediu al unei
+familii din acest ora§. (Presupunem ca venitul unei familii
+urmeaza o lege normala.)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-m u “mm-m- m :unun mm“ m vldnn um mm“
-m din!" mm mm. “m .1“. mm w.“ m“ .
-5.1",“an .n. 4. n z am {u I. “up. mm.‘ i w’
-‘mm a. u m Dnnnnmah "1mm. a. hand-n a-
-m v 25% pm... mm mad]: . lludmplnx mm. m
-vuiﬁﬁ [Pmumm (a mm m, mam “mu: a
-1... mm“;
+III. O universitate are 30000 studenti; in vederea unui sondaj,
+900 dintre ace§ti studenti sunt a1e§i aleator. Vérsta medie a
+egantionului este de 22.3 ani cu o devia'gie standard a e§an-
+tionului de 4.5 ani. Determina'gi intervale de incredere de
+90% §i 95% pentru vérsta medie a studentilor acestei uni-
+versitéti. (Presupunem cé vérsta unui student urmeazé o
+lege normalé.)
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-. a.» mm»: 1.... I» a...“ .,‘ ...\. .m... .l. n... m.)
-"mm..." mm .1...‘ .n mum-m1 1.... m... 5......
-m"... a...“ “.1...
+o Decizii trebuie luate in ﬁecare zi; unele dintre ele sunt mai
+semniﬁcative decét altele, dar mecanismul luérii unei decizii
+urmeazé acelagi §ablon.
 
-- A"... a... n. mai m.“- ﬂ......;.. i “mi. .: .1‘...
-m M... .1. .1. ban ..,...\./....Y.Bm\..mum...hm...
-m
+0 Avem doué sau mai multe alternative §i trebuie sé alegem
+una dintre ele pe baza evidentei/convingerilor/contextu1ui/informz
+etc.
 
-- u. k. “m... .. lemniﬂiih: m"... m mm; Dihm
-m mlihi “pm.- .. mm... luaﬂlululmdmlnrmlhi
-nanni:
+0 Un test statistic de semniﬁcatie urmeazéi un acelagi patern
+cu exceptia faptului c5 decizia este luaté folosind informatia
+statisticé.
 
-. klillilmnmni n :- hmpul m...- w... .. m (ma.
-“1...... nanniu' i .- h... “m... .. m 1.. “an.
+0 Aceasta inseamnéi (:5 in timpul acestui proces se vor calcula
+anumite statistici §i pe baza acestora se vor lua deciziile.
 
-. PM... h. m. a... .. . m...“ . “up. I... ... m.
-n...“ m. .. am...“- i .1 “mu... a“: \Pulzu
-1.‘... .. ..
+o Primul pas este acela de a identiﬁca o situatie care are un
+anumit grad de incertitudine §i sé formulém doué z'poteze
+legate de ea.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-11mm“ n
+Deﬁnition 6
 
-mm". "mum... mum!” ,m m. w“. w. m
+Testarea ipotezelor statistice este un proces pr'm care
 
-A. m . mm 1,. mu M mm! W.“ m“
+se i0, 0 decizz'e (se alege) int're aloud ipoteze opuse.
 
-1mm!» mm.” .m jumnlnz m M In mm m.’
+Ipotezele statistice sunt formulate in a§a fel incdt intot-
 
-4mm m a." .k “z- 1m mv “.11..” min/‘mt!
+deauna una din ele este falsé iar cealaltd ade'uiimtﬁ.
 
-UM mm mm" 1m 1mm wanna .1 .- pm nrdln
+Una dintre z'poteze este testatii sperdnd cd se poate ardta
 
-=1: “a! mm mm: m m 1a m mum. m n ‘m
+cii este put'm probabil ca ea 5d’ ﬁe ade'udimté, ceea ce im-
 
-IMInPlul {A mzm wnun m: mm“ “Mm
+plied faptul cﬁ, cealaltd z'potezd este probabil adevd'ratci.
 
-. cm m: mm- m‘ m“- Wm mun Wm nL
-mm;
+0 Cele doué ipoteze sunt numite z'poteza nuld’ §i 'Lpoteza al-
+ternati'uci.
 
-- Ill: nu mum 1mm: n man-a hum cl mm.-
-“u .i. hm
+o Un test statistic incearcé sa dovedeascéi faptul 05 ipoteza
+nuléi este falséi.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Dzﬂnixinn 1
+Deﬁnition 7
 
-Mm. mm, an, ml ‘Winn mmwm m .m {z
+Ipoteza nulé, H0, este ipoteza status-quo-ului in ceea ce
+prive§te populagﬁz'a; formal este 0 aﬁrmagﬁz'e legatd de popu-
+lagﬁz'e: spre ememplu cd are 0 anumz'td med/Le sau dispersz'e,
+sau 0 anumita? distribuﬁe etc.
 
-Wmmwmm lbw-max m: , Mmmh: mm mm
+Ipoteza alternativé, Ha, este 'Ilpoteza de cerceta're, §1l
+susﬁ'me un lucru dife'rit despre obz'ectul ipotezez' nule.
 
-1w my. =1».sz m! m .1 mm“ mm.- m ﬁvplmz,
+o Ipoteza nulﬁ este punctul de plecare a1 studiului gi, in mod
+conservator, sus'gine (:5 "nu existé nici o diferen'gé" sau céi
+“nimic nu se intémplé" (are tendin'ga de a se opune oricéirei
+schimbéri).
 
-m .1 mm.“ sumaum 1k
-
-luvmu anmdvn, "A, m; Wm d: “mm, a‘
-
-nulmz w. Iunu m,“ an," nmnm Wm nuk
-
-. lynx-i mu Ill mm! 1- um.‘ =1 man-hi n.1,. M
-mum“, "-4".- n “W ml]: m. n min-nu“ m c!
-“mmk M u Mum (u- unmnh u l I. uuunn "a".
-mum.)
-
-. lairun mm. m w... .nmm w. lulu! 4. . .m.
-inn-n “u i nhlxd n mun‘! mm ml m “1: M
-In," mm
+0 intr-un anumit fel ipoteza alternativé are rolul de a ataca
+ipoteza nulé §i observé 0 diferenté acolo unde cea nulé nu
+gése§te nimic.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-. a .......... .1. 1....1... 1m... mmwlﬁ 1....- .1. 1. 1....
-....11..1..11.....1... 11...... .1. m... .1111... “1.11-1.11...
-.....1 ............
+o O companie de produse lactate cumpéiré lapte de 1a mai
+mul'gi distribuitori. Existé un dubiu asupra calitéi'gii laptelui
+astfel cumpérat.
 
-. 11............ 4. 11.... .1....1.. ........q . 1... 1......1.
-... ....... 1.. i 1. we i .....1........... . 7 .1 11.1.1:
-u... .. m... .....1..... .............. .- v.5... m...
+o Temperatura de inghe'g a laptelui urmeazéi o lege normaléi
+cu media ,uo : —0.545°C §i devia'gia standard a : 0.00806’.
+Dacéi se adaugé apé in lapte temperatura de inghet cre§te.
 
-. s. 1......1. ............ .1. 1...... .1....1... 1...... ......
-1...... mi...- 1111...... .. 1. .1... ....... .11....1....... i ..
-“1...... . “mm... 1...... .1. 1. Z mass-c an.
-....... . .1“... .. .1..............1 ..1....1 .... 1.. 1.1.1.1 s...
-.1. .1... . -.1.... .1....... 1......1...
+o Se misoaré temperatura de inghe'g a laptelui pentru cinci
+loturi diferite primite de 1a unul dintre distribuitori §i se
+determinii o temperaturﬁ medie de f5 : —O.538°C. Este
+aceasta o dovadé ca distribuitorul adaugé apé in lapte? Sau
+este doar o valoare datoraté hazardului?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-. Ipm-a n. 1mm .m am.‘ “1:. q. a... I: mi.
-mum," m- u Z w:
+o Ipoteza de lucru, adicé ipoteza nulé, este aceea cé media
+populatiei este ,u : #0.
 
-. lpm-ad-cucnarm .¢.==mkmn.n.iuv=‘ mum-1;.
-mum‘. .m m- mm u > u“
+o Ipoteza de cercetare, adicé ipoteza alternativé, este c5 media
+populatiei este mai mare: ,u, > ,uo.
 
-. mm 1i inn-a mum“: n mm... m. .. pm. h,’
-m1. m. m mm. mm. m. “m pm. n ,4 > W
+0 Relativ 1a ipoteza alternativé o intrebare care se poate for-
+mula ester in conditii obi§nuite care sunt §anse1e ca ,u > ,uo?
 
-- m x variahlh mm.“ We»: \lmpurlmm a. mm =
-1mm x "(AIEAEJDDDBW
+o Fie X variabila aleatoare asociaté temperaturii de inghe'g a
+laptelui; X : N(—O.545, (0.008)2).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-. Axlnm
-x l r1545) [um (“545)
-PX>7DEIK :p i7 i7 Z
-I 1 L nuns/J5 > nuns/J5
-x x ms!
-Z F i > “15655121!
-K mm
-. Am.“ prnhhlllhil m. m , 1mm“) ml z
-"(Ml
-. m“amm:il-mmnmmlummnm m >
-‘ mm“) N n m“ Mm m mumm- n n75, mm
-Wm a diluxunh nhluxvlﬂ 1., mm. m damn“! m.
-mm" mm. imm-
+o Arunci
+X — —0.545 —0.538 — —0.545
+P(X > —0.538) : P Q > % :
+0.008/ﬁ 0.008/\/§
+X — —0.545
+: P é > 1.95655948 .
+0.008/\/5
+
+o Aceasté probabilitate este P(Z > 1.95655948), unde Z :
+N (0, 1).
+
+o Pentru o variabiléi aleatoare normalé standard avem P(Z >
+1.95655948) ~ 0.0250. Astfel, cu probabilitate 0.025, putem
+spune cé diferen'ga observatéi in e§antion se datoreazé unei
+variatii aleatoare a§teptate.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-. nan‘ “mp-1.1m cl IPnkn “n m. “Mum. Klnm cl
-n mm mun-:1 nap-ml mum un ‘mm an": mull
-“mum mm» a\wdlﬂunlm (nit-um; m- m
-Mum
+o Daci, presupunénd cé ipoteza nulé este adevératé, gésim cé
+o anumité statisticé obtinuté dintr-un e§antion diferé mult
+de rezultatul a§teptat, atunci spunem c5 diferenta este sem-
+mﬁcati'ud.
 
-. I. mm (=- wm a 1mm’ .1 "Wm Wm Mm
+o in acest caz putem ﬁ tentati s5 respingem ipoteza nuld.
 
-- rm mm. M Mn: "Mm" n. x-ulhml mm»
-1n cunﬂlhin lvnhnul m‘ mm um“. cl M. mu (n
-“Wm Wm m1
+0 Dacé statistica nu diferé semniﬁcativ de rezultatul a§teptat
+in conditiile ipotezei nule, atunci spunem cé am e§uat in
+reapingerea ipotezei nule.
 
-. 1mm wmmmm Oynminﬂcixunlpmmh In";
-iﬂclm did mun-mm“, china-maiﬂnnv a! "an".
-“mam: m cnndllnh Ipwtu- “1:
+0 Testarea 'Lpotezelor este o proceduréi care ne permite $5 ver-
+iﬁcém dacé anumite statistici diferé semniﬁcativ de valoarea
+a§teptaté in conditiile ipotezei nule.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-- Did-inn an: d- i mlpnp n.“ mm mum mmm
-mm! .= a! "Emu "Aﬁnzmz 4m» mm "MM 4,
-“WWW a mm {a ~ ‘9 m» mm: “mm.
-a.“ ipsnn ‘um-"=1
+o Dacé decizia este de a respinge H0, atunci concluzia testului
+trebuie s5 ﬁe: "Ewistd suﬁciente do'uezi pentru ni'uelul de
+semniﬁcagﬁie oz pentr'u, ca ” (g1 aici urmeazé aﬁrma'giile
+din ipoteza alternativé).
 
-. nu: m... .n. a. a n.‘ "my Hm am. mm.“ \..V
-mm mm u n. w“ mm Mm»! 4m» PM
-muzhd d! “mum: a pm,“ (a ~ (‘a in m.“
-limb)“ m mm.- .n-mwn.
+o Dacé decizia este de a nu respinge H0, atunci concluzia tes-
+tului trebuie $5 ﬁe: "Nu existﬁ suﬁcz'ente do'uezz' pentru
+ni'uelul de semm'ﬁcaﬁe a pentr'u, ca ” (g1 aici urmeazé
+aﬁrmatiile din ipoteza alternativé).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-. M.“ MK... u...“ m... p. h... M mum“
-M A ....... M. ... m, m. W. “an. m.
-
-. EX...‘ m. W. a! m mm m w... “m an
-"mm n “0..., m. ... Mm .., .| a“... w
-.W. a...“ cm m,“ a M.‘ .n. M: .. .r h.
-hump"...
-
-- “Mime: rpm-m "n
-m:- I»:
-.. mm». cm.
-
-Danna xulvllgu [hi-11mm] (iduvlnwnnm)
-
-mm”. —m..ﬂ.upu
-mm. (dummy...) (“mm
+0 Evident 05 decizia aceasta, luaté pe baza unor probabilitéti,
+poate ﬁ gre§itz“1. Acesta este locul unde pot apérea erorile.
+o Existé doué tipuri de erori: primul tip apare atunci cénd
+respingem o ipotezéi care este adeviraté, iar a1 doilea tip
+apare atunci cénd accepté o ipotezé care este falsé §i ar tre-
+bui respinsé.
+validitatea ipotezei H0
+-— m
+se Eroare de tip I Corect
+Decizia (adevérat pozitiv)
+asupra H0 nu se Corect Eroare de tip II
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-mu“ m-nm
-Mm» (New)
-51.1.2‘. x
-X 1 V
-vnh' ' \
-“Ml ‘ ‘ ‘y
-\ ‘ 1 ;
-B
+Type I error Type II error
+(false positive) (false negative)
+f '1 ‘Y0'li’|i'e hot-
+‘ g ., , pregnant ‘v
+- A
+pregnant , . ~ , '
+; ‘q ‘ . V a" .
+‘ =1.
+Figure: Erori de tip I §i II.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-- s! himuu a 1m autumn lnanncunulcni "mm-Mm
-“Wm man‘ m mm a! m: a m. hiplzmirh\ I.
-“ mm ﬁ m M.- mm.- culnx am hpun a. an‘;
-mi. um.“- m “mum u dun u (my... Gm.“ 1.
-nn m1 mnvlnihl mum, m Gaul 1m"
+0 Se bénuie cé un detergent foarte cunoscut este mai bun deceit
+detergentul véndut sub marca de casé a unui hipermarket §i
+se dore§te s5 se testeze calitatea celor doué tipuri de deter-
+gent, deoarece un cumpérétor va dori s5 cumpere calitate 1a
+un pre'g convenabil. Formulati cele douéi ipoteze.
 
-. 5mm “Dani-11ml cunulcm m. m. m an‘ an»
-In...“ 4. m: “mm-mm,“ m. mnkvvnl mm. m.
-.. hum-ma. mm: i emu.‘ m. inﬁll ‘hum:
-n.,. “m mm! 1mm damn“: mm culu am \wnn a. ‘mum
+0 Bﬁnuiala, "Detergentul cunoscut este mai bun decét deter-
+gentul de casé a1 hipermarketului," este motivul pentru care
+se intreprinde testul §i devine, deci, ipotezé alternative.
 
-n. ‘Dunlunul cm.“- --. m. bun an“ "min “
+HO : "Nu existé nicio diferenté intre cele doué tipuri de detergen
+Ha : "Detergentul cunoscut este mai bun deceit celélalt."
 
-. 'lum m. cmmrm h “1mm a4 = xlvmgu mun-mu.
-m mm mmmm “mm .m n. a .m “my m.“
-“u [mu um, human)
+o Testul este conceput in speran'ga de a respinge ipoteza nulé,
+dar pentru consumator speran'ga este de a nu respinge ipoteza
+nulé (din ratiuni bugetare).
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:35**************
-ﬁn ..~. mum“ u, .n. m.‘
+H0 este adevératé H0 este falséi
 
-.. Em“ \\= um! 1 Uni-k mm.
+SE Eroare de tipul I Decizie corecté
 
-mm “nu-mu suulu- mu:
-Nu m.“ dimmql mm...“ mm. . ... h...
-cmmh: mun-1M Cnnduxil Dﬂl'wlmul
-mm u... m mm.“ uni-Bun
-Mum ant-WK“. Mm. Chm-W...‘
-m m will": mm. m m "mum m.
+respinge Situatia realé: Situatia realé:
+Nu existé. diferen§2i Detergentul cunoscut e mai bun.
+Concluzie: Detergentul Concluzie: Detergentul
+cunoscut e mai bun. cunoscut e mai bun.
+Actiune: C1ientu1p15te§te Actiune: C1ientu1p15te§te
+mult cu acelea§i rezultate. mult cu rezultate bune.
 
-m“. nmnum“ ixuuadlﬂpulll
+nu se Decizie corectﬁ Eroare de tipul II
 
-".r-l- sun-1m.“ sun-u- mu.
-Iw m.“ Mun‘: Mm.“ mm“ . m. m...
-culmk. Nun-ll cum“! um.“
-“mp nimm‘!
-Am“... mmulplnun mum: simulnlmm
-w.“ m ,n-m. ....-,.. W. m nun.“ Q.
+respinge Situatia realé: Situatia realé:
+Nu existé. diferenﬁai. Detergentul cunoscut e mai bun.
+Concluzie: Nu existé Concluzie: Nu existé
+diferenigﬁ. diferenté.
+Actiune: Clientul p15te§te Actiune: Clientul p15te§te
+pu'gin cu rezultate similare. pu§in cu rezultate slabe.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-. Am 4...... “u mun»... mun... mu... |. nhmnlu
-wand...“ .1...“u .... .... mi...
+o Am descris cele patru tipuri de rezultate posibile §i actiunile
+corespunzétoare pentru un test statistic.
 
-. 5...... .1. up. ma] -.. -.. Um...“ mam“ u .1...
-“a... .1. . m... ...dﬂ- .. a- .1...-........ we...“
-mums-m: m... M... a... Mum... “mm-m.
-m... m...»
+o Situatia de fapt (realé) nu este cunoscuté inainte de a lua
+decizia, de a trage concluziile §i de a intreprinde actiunea.
+Adevérul despre ipoteza nulé, H0, poate réméne necunoscut
+pentru totdeauna.
 
-- mm...» M... nun ... ....... n .... m... m .. .. n...
-mu“! .. “npnnummu ummun“. .. 1mm n... a. . m...
-... m... m. m .. uni hunl Gm... i... m... up...)
+o Rezultatul unei erori de tipul II este adesea ceea ce se nu-
+me§te o "oportunitate pierduté"; se pierde §ansa de a utiliza
+un produs care are o mai buné calitate (In cazul expus).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-. Mull m: cm .1 I; m... mm n mm".- nunll
-m“.
+o Regula dupé care se ia decizia trebuie sa minimizeze erorile
+descrise.
 
-. m: yin‘! linen w. nlnlnlnll n 4m- mu pl bin
-nnni \u: mum: (‘mm mm. a- "min-1 a»
-mum“ yummy “mm-mm “WWW mm
-a “my-‘hm 1i Wm mm.“
+o Exisé patru factori care influenteazé o decizie luaté pe baza
+unui test statistic (ignorénd metoda de egantionare): di-
+mens'iunea efectului, dimensiunea e§cmtionului, m'velul
+de semm'ﬁcat'ie §i puterea testulm'.
 
-111mm,. s
+Deﬁnition 8
 
-Dinwniimwn el'n-tnlni m: mﬂgmludmm MM,“ d1’
-1mm“: m "mm-m mum (M nil)
+Dimensiunea efectului este magnitudinea dife'rentei de-
+scopem'te in e§antionul aleator (dacii ezm'std).
 
-mm.“ (In nexnniﬁA-Mie, n, m mum“
+Nivelul de semniﬁcatie, a, este probabilitatea
 
-(“mm-m) mmml y: m Mu lmmlm m:
+(conditionatii) mamz'md’ pe care ne-o asumdm drept
 
-m a! 1m .1 mm a. m1 I
-Fulnmn ‘mum, “I: 1 mmlu mmmm“ a: m“ n
-mm a! mm n
+misc de face 0 eroa're de tipul I.
+
+Puterea testului, este 1 minus probabilitatea de a face 0
+
+eroare de tipul II.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-- mm. "mums-"\“mam mm mamn q...’
-mum‘ um! "mm-:- “mum nu m nlnlnli mum-u
+0 Nivelul de semniﬁca'gie este speciﬁcat de obicei inaintea e§an-
+tionérii, astfel rezultatele testului nu vor inﬂuenta e§antionarea.
 
-- n- m“. mm a. “mam.- ..k n n5 m. n m‘ a- mm’
-pm n n5 (m 5%. null 4. “11.1.qu m. Mm mm
-n n...“ dn hm l mm. nn a: m mu s ‘m- a.“ m
-n. a “limp lpulna nnli nun .. m. mum“:
+o De obicei nivelul de semniﬁca'gie este 0.05 sau 0.01; de exem-
+plu 0.05 (sau 5% nivel de semniﬁcatie) este utilizat pentru
+o regula de luare a deciziei care d5 cel mult 5 §anse din 100
+de a respinge ipoteza nulé cénd ea este adevératé.
 
-- Puhuu mnnm an! Fnhlmhhlaa ca mm ﬁ 4mm.“ u
-Mm“: m“. (M um: :u mm.‘ n "mm; My
-I“ nu mum
+o Puterea testului este probabilitatea ca testul sé detecteze 0
+diferen'gé atunci cénd existé cu adevérat o asemenea difer-
+enté de detectat.
 
-. nu: “m. mum“ m! mm “um Wham-i a- .
-m- n "m a. mm (“mum-“mm “Mm--
-n 5.1mm: “um cm M mill vnulli] m. mm
+o Dacé puterea testului este mare, atunci probabilitatea de a
+face o eroare de tipul II (probabilitatea ca testul s5 detecteze
+o diferenté atunci cénd nu existﬁ vreuna) este scizuté.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-. an“: m: mm" d- i “mm ‘m \cll 4- "mp--
-mﬂmd mm: n winnnu mm.“ Mum Mm p
-
-Dinitinn a
-
-Vulumn p m: wannmhmu a: a mm un mm u:
-
-mm h 111 a. mm.” (mm; n "Mm: mm
-
-a.“ Wm. cam: Wm r ml "ﬁnd" Mm my
-
-m" HI:
-
-. Munmlliynlnlﬂlxulllylu AmcikulalPIX > may N
-n mu. u...“ .n. "luau: p i l-lului
-
-- Dull 5%mun-mmpnmmm-c; inn-mm
-"we. mm-a m
+o Existé doué moduri de a desf5§ura un test de semniﬁca'gie:
+folosind scorul §i 'ualoarea criticd sau folosind 'ualoarea P.
+Deﬁnition 9
+Valoarea P este probabilitatea de a obi'me un 'rezultat cel
+put'm la fel de neobi§nuit (emtrem) ca Tezultatul obgﬁmut
+din e§antion. Cdnd 'ualoarea P este "micé" putem resp-
+z'nge H0.
+o Revenim 1a primul exemplu. Am calculat P(X > —O.538) ~
+0.0250; aceasta este valoarea P a testului.
+o Dacé 2.5% este consideraté o probabilitate micé, atunci putem
+respinge ipoteza nulé.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-. an: M 15% M m- 4. a|un| 4. m; “m m. my
-ianm Ill:
+o Dacé insé 2.5% nu este de ajuns de micé, atunci nu resp-
+ingem H0.
 
-. m mm!“ ms < 5-1.‘ mm, m Eli ml a. "mu.
-m m mm: n m “mm-u n.
+o De exemplu 2.5% < 5%, astfel, cu 5% nivel de semniﬁcaigie
+H0 este respinsé §i este acceptaté Ha.
 
-- an m mire] “Humans-Mm“ n. ‘mm-am...
-“u “mm hm‘ Inmxu M “m nmim du "mu
-m. “m a my“ w.‘ Hum“; n.
+o Cu 1% nivel de semniﬁcatie incercarea de a respinge ipoteza
+nulé e§ueazé, datele noastre nu sunt suﬁcient de semniﬁca-
+tive pentru a accepta ipoteza alternativé, Ha.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Mum“ m
-sﬂmn mm.“ “I: mm,“ n “mp-“.4, Wm F,
-"1...." mm» ,1 .k M m‘ mum mm.
-a. “Mm” ovum mm“; 41M. a; "MW
-mm,“ a." M "M
-. mum-mm.“
-‘finiuiliﬂsmiyrlSQﬂ’! ‘
-’ w/ﬁ ’ ‘mini/‘E ’ m“ ‘
-. . uhlcnrdmllulm
-. Wm. um. Mm m W.‘ d- .miﬂn“. 1,.’
-Wm“. mm.
-plzﬂqzlikwhrzm “M an)
+Deﬁnition 10
+Scorul testulm' este statistica ce corespunde 'ualom'z' P;
+valoarea critici, pe de altd part6, coresponde ni'ueluluz'
+de semniﬁcagfie. Concluzz'a testului depmde de 'rezultatul
+comparcirii celor douﬁ, 'ualo'r'li.
+o Calculéim statistica
+i _ _ . _ _ . 4
+Z : M : w :1'95655948_
+a/ﬂ 0.008/ﬁ
+o z este scorul testului.
+o Valoarea criticé, z*, pentru 1% nivel de semniﬁca'gie in-
+depline§te conditia
+P(Z > 2*) : 1 — a : 0.99 :> z* : 2.32, unde Z : N(O,1).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-. an m, m1 a- “mam.- I < 1'. a‘. u“ .m pm. n
-mum:
+o Cu 1% nivel de semniﬁca'gie z < z*, deci H0 nu poate ﬁ
+respinsé
 
-- an'u s'a m1 a! “Mann "luau: “nu ‘a - m’
-mini! mm n
+o Pentru 5% nivel de semniﬁcatie, valoarea criticﬁ, 2*, se cal-
+culeazé astfel ca
 
-m .m 1 .1 ﬂli§=z' m‘
+P(Z > z*) : 1 — a : 0.95 2 z* : 1.64,
 
-- Cush.'.1¢...,..,..sm." > 12 m. u, mum-mm.
-mum»: n.
+o Cu 5% nivel de semniﬁcatie z > 2*, deci H0 poate ﬁ respinsé;
+acceptém Ha.
 
-. Ann “mph mu mm,“ dllzxihniv!!! a. llmuiﬂuhl
-mnclumh mmm pm n mm-
+o Acest exemplu araté cé pentru diferite nivele de semniﬁcaigie
+concluziile testului pot ﬁ diferite.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-. I» lxulﬂlilul “mm m w-lm- (a mm,- mm: a
-mam“ “mu:
+o in exemplul anterior am presupus c5 populatia urmeazé o
+distributie normalé.
 
-- cmnnu m- Mu! a. m dililblﬁnhhi mm a m.
-mm. “m. imam“ [.1 m. in“)
+o Céteodaté este diﬁcil de aﬂat dacé populatia urmeazé 0 dis-
+tributie anume (normalé cel mai adesea).
 
-. Mn" h Glhlhlllli mm» mm 4m mun 4- mu
-a- “mm! “Immu- ‘i nlDinmﬂlim
+0 Relativ 1a distribu'gia popula'giei avem douéi tipuri de teste
+de semniﬁcatie: parametrice §i neparametrice.
 
-nmnmnn u
+Deﬁnition 11
 
-m. mu yurunmnh‘ Funpunz m Wm“ mm...‘
+Un test parametric presupune ca’ populaﬁa urmeazd
 
-I Wm.“ nulnﬂuhz n mlmnzi “mm pmmm’
+0 anumitd’ distributie §i infereazd’ asupm parametrilor
 
-nczlzx aumbum
+acele'é distribuﬁi.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-. “lulu“PIXIEMXICBInhllllmildﬂllhlllllwidllnblhul
-dun an}!!! Win-“am vﬂnulaﬁi
-- DluhIc-klllllyinmnnnwunpun ummmu-a
-n mmmui- mm“ (Uni "m. mm“: <= m! and
-a. un m- “pi-mm)
-D:ﬁni\inn n
-m. m.‘ xlﬂvlnmntric mm» ,- dinrihudlmrhnc m
-pmmmpm .. mu! I! lmlml In,“ n “m
-dulnhulm N anmzlnl m (main, Mm"; M mm
-{umIIUAF
+o Testele neparametrice infereazé mai degrabé asupra distributiei
+decét asupra parametrilor populatiei.
+o De obicei testele parametrice presupun c5 populatia urmeazé
+o distributie normalé. (Unii autori consideré c5 orice altfel
+de test este neparametric).
+Deﬁnition 12
+Un test neparametric numz't §z' distribution-free sau
+parameter-free se bazeazii pe pugﬁz'ne fapte - de obz'cez'
+distributia §1L parametm'i siiz' (media, dispers'z'e) nu sunt
+cunoscuti.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:45**************
-- un.din‘..<!1m.m.|.m. mum...“ mun».ipmmum
-Km bmmmnl v‘ whim.“ mm“,
+o Una dintre cele mai utilizate inferen'ge este cea asupra paramet'ru-
+Zuz' binomial p, probabilitatea succesului.
 
-. I» m“- .mv. n Inn-In! a“. can: n- .1 “nah-u!“
-m. “m .. “um-"n :xml m. m: mum. mu.’
-mm mu cunﬂlhl a4 bu! l m munmmi mum]:
+o In multe situatii ne intereseazé doar ceea ce se "realizeazé"
+sau "nu se realizeazé"; existé doar doué rezultate posibile -
+aceasta este condi'gia de bazéi a unui experiment binomial.
 
-. vaﬂm'ha mmvmbl nimxn mm“! m. in n mm.“
-"mm! mm a cunndlnkl vmhmmnu lnnnhn.
+o Proportia indivizilor dintr-o populatie care au o anumitﬁ
+tréséturé poate ﬁ consideraté probabilitatea succesului.
 
-. Empl- “mm; mum-11m m! 1m»; . ‘ﬂu-m1“!
-w. mm: (1| un mm mm“, i lnllnial n.- m1
-1...: 1. lnmini m.“ . .mﬂmului a “wan m! 1..
-Mm...“ n hm. n:
+o Exemple: proportia indivizilor care fumeazé, a cetétenilor
+care voteazé cu un anumit politician, a §0feri10r care accel-
+ereazéi 1a lumina galbenéi a semaforului, a tinerilor care i§i
+intemeiazé o familie etc.
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:46**************
-I Du: X BUMP] [11an a. mum)‘ lhmcl panmum
-u: Ma‘ : null F]
-- Pmnu n > 2n i m: a 5‘ F’ wan A anmn'um: :14 n mp
-mm. mm“.
+o Dacé X : B(n, p) (numﬁrul de success), atunci parametrii
+
+popula'giei sunt
+# I 1110,62 I nP(1 — P)-
+
+o Dacé dimensiunea egantionului este n §i a: este numérul de
+succese din e§antion, atunci frecvenga sau probabilitatea
+binomialé a e§anti0nului este
+
+:r:
+I — i
+P — n'
+
+o Pentru 'n, Z 20 §i np 2 5, p’ poate ﬁ aproximaté cu o dis-
+
+tribu'gie normalé.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-I Finlnulm lul I’ luni
-‘ z x‘ , , m x 1
-u»1:‘T:»‘um:%:%
-. m u 1
-F' N " (" FTP)
-. mu mam. Inf-nu: “mm: n dimﬁnhu mm“
-Imam ,
-z : A
-v F ‘ ’ P YI
-. Am... .i n mm“ .ml mm; (“a- p’ Z 1, n)
+0 Parametrii lui p’ sunt
+E X D2 X p 1 - p
+W I [ 1:10pm z [21: < )_
+n n n
+0 Deci 1
+plN N (10,“ —P)>_
+n
+o Astfel urmétoarea statisticé urmeazé 0 distributie normalé
+standard I
+_ P — P
+z _ —.
+\/p(1 — p)/n
+o Aceasta va ﬁ statistica sau scorul testului (unde p’ : a: / n).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-. mfg-m m» m“. nan»- 4-1 a.“ “gm 7W!‘ m: mu.
-.m..ms aduli .u .m mm.“- li u mum-n: s: m
-mum c: .. ‘I.’ m "um mm. 4. mun n. may
-pm... I mu m F n nu mm n. . P < val‘ m-
-F mm“ wunnﬂia mnnnw m. .u ‘mm-m mm
-mum
+o Conform unui sondaj Harris din din august 2008, 68% dintre
+americanii adulti au un abonament 1a o bibliotecé. Si pre-
+supunem cé se alege un e§antion aleator de 1000 de adulti
+pentru a testa H0 : p : 0.68 versus Ha : p < 0.68, unde
+p reprezintéi propor'gia adultilor care au intr-adevér abona-
+ment.
 
-- as! a". u. mun hind"... .u 1m “mm-m mum-c:
-mm- a Z n m
-. Mum. "1mm nanmu] (“mu "mini
-h Ayllcih \cnul mam mum P
-c mm‘; mm: Mn...“ mm“ dim: (m "an".
-ullxzi]
+o 651 din cei 1000 de indivizi au un abonament 1a o bibliotecé.
+Folosi'gi a : 0.01.
+
+a. Calcula'gi valoarea statisticii (scorul) testului.
+
+b. Aplicati testul folosind valoarea P.
+
+c. Aplicati testul folosind abordarea clasicé (cu valoarea
+criticé).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-I, #1: 7 um w “ms
-' \mfp m ’ wW-m mun ’
-. an um... p
-P m 1 Ilia] m < n65) nun!
-. c“ m Z 1% W Mumm- an, m». M lun\ "mm
-um 91mm mm
-- an ulna": amt:
-‘~71 1mm < z‘):nnl)
-. Dininm - r .~ nu pm... x-ngl Ila‘ M1! m mm “.57
-m.‘ 4! "Emma mm a mm ram-a “mm
+I _ _
+z I p p I 0.651 0.68 z _1'965
+\/p(1 — p)/n N/0.68 * 0.32/1000
+o Cu valoarea P:
+P : P(Z < ZIHo) : P(Z < —1.965) : 0.0246
+o Cu a : 1% nu putem respinge H0, datele nu sunt semniﬁca-
+tive pentru aceasta.
+o Cu valoarea criticé:
+z* : -2.326, (P(Z < z*) I 0.01).
+0 Deoarece z 7i z* nu putem respinge H0, datele nu sunt suﬁ-
+cient de semniﬁcative pentru a accepta ipoteza alternativé.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-. mm mm “51..., m a Z in
+o Reluém acum exercitiul cu a : 5%.
 
-- CnP mu P Z n um < n us‘ duclPllluln “my lvulun
-“n n .= mm“. 11.. mic: lamu! I: mpm. mm“!
-w. n “mum 1i mun-:1 .m m- ,,.,= m“ n n
+o Cu P-value: P : 0.0246 < 0.05, deci putem respinge ipoteza
+nulé §i s5 acceptém Ha, adicé faptul c5 proportia adultilor
+care au abonament 1a bibliotecé este mai mic decét 0.68.
 
-- an "1.1m mm 1- ; 1544 ,. . m cub-innit: ull
-um- l l-Dmll
+o Cu valoarea criticé: z* : —1.644 > z cea ce inseamné c5 H0
+poate ﬁ respinsé.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-1 u Emu-mm mm‘: u lrmrm u an i a. 5m! w. m.-
-"m Pmmmmnn n. a in.“ m. ... w s“
-mm“, m lummluﬁv nnmlxd mlxu dm mm“ ale
-nun-.1 mm, .m ...\ "a..." mum“, mm .
-mm “m mm
+I. O monedé este aruncaté de 10000 de ori §i de 5167 ori apare
+stema. Probabilitatea de a apéirea stema este 0.5? Sau
+dimpotrivé, este semniﬁcativ numérul mare de aparitii ale
+stemei? Aplicati un test statistic corespunzétor pentru a
+réspunde acestor intrebéri.
 
-n mm um m um...‘ X and “m in“! d- 5M1 w.
+II. Rezolvati din nou exerci'giul I cénd stema apare de 5067 ori.
 
-m |. 2W9‘ Mm imm- am usA Mi, .. mm u 51%
-m... amni- mmi ‘mm-n \. Imam pm.“ a .7
-mm“. 1W .m m. u Mum .m mm, m m 4.
-ml" .1". mm.‘ n .5: cl 11 mm :culn: "mm cl
-mm“: 1. Mm PM: a "Wm." s- ,m. m‘.
-mm... a u. “m m; mil n m: m, m: mm mi
-n. h m Dump PM“ n n5 m m Ewan“.
+111. in 2009, intr-un articol din USA Today se aﬁrma c5 58%
+dintre adultii americani accelereazéi 1a lumina galbené a se-
+maforului. Intr-un ora§ se desfégoaré un sondaj cu 150 de
+adulti a1e§i aleator; se aﬁéi céi 71 dintre ace§tia recunosc cé
+accelereazé 1a lumina galbené a semaforului. Se poate trage
+concluzia c5 in acest 0ra§ existé o raté mai micé decét aceea
+de 1a nivel national? Folositi 0.05 nivel de semniﬁcatie.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-- mm: m. Ilﬂuri a. IBM-u ahlnullvl Rm" 1. “mm
+o Exista trei tipuri de ipoteze alternative relativ 1a probabili-
 
-hm mm: P
-u. puma. wn-“n. n1»
+tatea binomiala p.
+Haip<po,Harp>posauHaip¢Po-
 
-- PM‘. m: .. m...‘ um... “mun Mum“. m
-[“ux|n4.nilnd"). m i \m mu mm! mum: WIMP
-.m m Wmuw]
+o Primele doua se numesc ipoteze alternative unilaterale sau
+("one-tailed"), iar a treia este ipoteza alternativa bilater-
+ala sau "two-tailed").
 
-- mm imam an “\- mn-mmm-n: I: “mum:
-1., m mm
+o Pentru ﬁecare din aceste cazuri valoarea critica se calculeaza
+in mod diferit.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
-—
-. p-m an 1! Z p“ m n. p ~ p“ “mutual m
-mm“: in mum , “gm lmL
-"hm , - m > n‘
-"lawman 1'>n‘ a 1 m , 1-1:“:1 m \ 1-)
-hi .~ mm“ n1
-. P-m ﬂu F H m n. F / m umlnlzmi m
-mm“: in MW “I. m;
-“him p . m < n‘
-"hum-“an 1'<n‘ a 1 F[Z<z‘):m:l m » f)
-1., n 1- Z wmln]
+o Pentru H0 : p : p0 and Ha : p > p0 - unilateral sa'a
+aslmetr'lc la dreapta - Ttght tall.
+valoarea P: P(Z > z),
+valoarea criticéi z* > 0, a. i. P(Z > 2*) I a : 1—P(Z < —z*).
+in R z* : qnorm(1— a).
+o Pentru H0 : p : p0 and Ha : p < p0 - unilateral sau
+astmetrtc la stanga — left tall.
+valoarea P: P(Z < z),
+valoarea criticéi z* < 0, a. i. P(Z < 2*) I a : 1—P(Z > —z*).
+in R z* : qnorm(oz).
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:54**************
-—
-"hm m, “Mk A,‘
-“WWW. ,lzmmurm,
+o Pentru H0 : p : p0 and Ha : p 5i p0 - bilateral sa'u, simetric
+- two-tailed.
+valoarea P: P(Z > \ZI) + P(Z < —|z\),
+valoarea criticé z* > 0, a. i. P(Z < —]z*\) : a/2 :
+:1— P(Z > |z*]).
+in R z* : —qn0rm(a/2) : qnorm(l — a/2).
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:55**************
-my,“
+Sfélr§it
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:56**************
-u Prndmin, n ‘ R Fulani, R PM", smuuu, w w "hr
-m. h um“, m Mm m1
+@ Freedman, D., R. Pisani, R. Purves, Statistics, W. W. Nor-
+ton 8z Company, 4th edition, 2007.
 
-D Jun-m R. P Kny, Ekmlmnry Sinuhu‘ EXDDlI/Cilll
-an.” hm.“ um .mm 1m
+ﬁ Johnson, R., P. Kuby, Elementary Statistics, Brooks/ Cole,
+Cengage Learning, 11th edition, 2012.
 
-a Shh‘ 1 ‘ 11.»..mm Mum Sm‘.- mi‘, m!
+@ Shao, J ., Mathematical Statistics, Springer Verlag, 1998.
 
-a 5m.» M R‘ 1. 1 swan-nu. 7‘an m mum. ,1
-51mm Schlum‘| Duﬂnn 5m‘ McGnv H111‘ m m
-\inn. ml
+ﬁ Spiegel, M. R., L. J. Stephens, Theory and Problems of
+Statistics, Schaum’s Outline Series, McGraW Hill, 3rd edi-
+tion, 1999.
 
-B m, Hmmnmu :u/Ilnll/lll/m
+ﬁ http://effectsizefaq.com/20lO/05/31/
+i-always-get-confused-about-type-i-and-ii-errors-can-you-show-me-somethin
 
 ***************Ending Page***************
 

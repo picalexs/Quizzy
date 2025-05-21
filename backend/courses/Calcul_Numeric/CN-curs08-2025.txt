@@ -3,40 +3,43 @@
 Calcul Numeric
 Cursul 8
 2025
-4m Igmzl
+Anca Ignat
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Valori 5i vectori proprii
+Valori §i vectori proprii
 (eigenvalues, eigenvectors)
-Definilie
+Deﬁnitie
 
-Fic A e Rm, Numirul complex 11 E C sc numc$tc valoare
-proprie a matricei A dacé existﬁ un vector u e C” , u ¢ 0
+Fie A G Rm. Numérul complex Z E (C se numeete valoare
+proprie a matricei A dacé exist'Zl un vector u e C" , u ¢ 0
 astfel ca:
 
-Au=1u
-Vecloml u se numeste vectar propriu asociat valorii proprii
-2..
-Pentru existenla vectorului u aé 0 este necesar $i suﬁcient ca
-matricca (11,. *A) sé ﬁc singulari , adicé detmln *A)=0‘
-|
+Au=lu
+Veetorul u se numegte vector propriu asoeiat valorii proprii
+,1.
+Pentru existenta vectorului u i 0 este necesar 5i suﬁeient ca
+matricea (Mn — A) s51 ﬁe singularé , adicé detblln — A)=0.
+1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Polinomul de grad n:
-pA(1)=det(11,.-A)
-se numeste polinom caracteristic a1 malricei A.
-Prupozitia l
+Polinomul d6 grad n:
+pA (/1) = det(un - A)
+se nume§te polinom caracteristic a1 matricei A.
+Propozitia 1
 
-Fic ridécinilc polinomului caractcristic 24, 112, ..., A”
-distincte, L- ¢ 14 pentru ls i<js n si ul,u2,.‘.,u” vectorii
-proprii corcspunzitori, Amnci ul,u2,...,un sunt liniar
-independengi‘ (demonstralia se face prin inducgie)
+Fie rédécinile: polinomului caracteristic 2.1, 2.2, ..., in
+distincte, 2i 7'5 I11‘ Pﬁntru 1 é i < j é n 5i u1,u2,...,un v6ct0rii
+proprii corespunzétori. Atunci u1,u2,...,un sunt liniar
+independenti. (demonstrayia s6 face prin inductie)
+
+2
 
 ***************Ending Page***************
 
@@ -44,35 +47,36 @@ independengi‘ (demonstralia se face prin inducgie)
 ***************page number:4**************
 Propozitia 2
 
-Pie valorile proprii )4 ale matricei A e Rm distincte‘
-Arunci existi 0 matrice nesingulari T astfel ca:
+Fi6 valorile proprii l,- ale matricei A E Rm distincte.
+Atunci existé 0 matricﬁ nesingularé T astfel ca:
 
-T"AT=diag[/1|,A2,...,AH]I
-Demonstralie. Fie u‘,u2,...,un vectorii proprii ai matricei A‘
-Considcr'im matricca T alc circi coloanc sunt vcctorii proprii
-lli , T:[ul uz uH]. Deoarece vectorii proprii sunt liniar
-independengi conform propozigiei l rezulté oi matricea T este
-ncsingularé, Vom avca:
-,41‘=[AulAu2 Au”]=[i.‘u, 1qu ...Anu"] = T*diag[}., 12 min]
-inmultind 1a stinga cu T‘ obtinem concluzia propozitiei 2.
-x
+T_1AT = diag[/11,2.2,...,2.n]_
+Demonstratie. Fie u1,u2,...,un vectorii proprii ai matricai A.
+Considerém matricea T ale cérei coloane sunt vactorii proprii
+ui , T : [u1 u2 un]. Deoamce vectorii proprii sunt liniar
+independenyi conform propoziyiei l rezulté (:51 matricea T este
+nesingularéi. Vom avea:
+AT = [Au1 Au2 Aun]=[/11u1 12112 .../inun] = T=I=diag[/11 12 .../1n]
+inmulyind 1a sténga cu T1 obtinem concluzia propoziyiei 2.
+3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Definiﬂe
-Matricele A 5i B sum asemenea (notalie A~B) daci $i numai
-dacz'l existﬁ 0 matrice nesingulari T (det Tat 0) astfel ca:
+Deﬁnitie
+Matricele A §i B sunt asemenea (notayie A~B) dacé $i numai
+dacé existé 0 matrice nesingularé T (det T ¢ 0) astfel ca:
 
-A=T B T "
+A=T B T '1
 Propozitia 3
-A~ B => 1n(1)=pn(i~)-
-Dcmonstraﬁc,
-p.4(1)= det(1.1"— A) = det(ﬁ,1n - TBT" ) = det(,1TT" - TBT")
-= det(T(/1,I” - B)T" ) = det(T)det(lIn - B)del(T" ) = 175(1)
-Propozitia 3 ne spune cz'i matricele asemenea au acela$i
-polinom caracteristic si acelea§i valori proprii.
+A~B :> pA(/l)=pB(l).
+Demonstratia
+pA (A) = detMIn - A) = det(un - TBT-1)= det(lTT_1 - TBT-l)
+= det(T(un - B)T-1) = det(T)det(lIn - B)det(T-1) = 113(1)
+Propozitia 3 ne spune 051 matricele asememea au acela§i
+polinom caracteristic 5i acel6a§i valori proprii.
 4
 
 ***************Ending Page***************
@@ -80,172 +84,185 @@ polinom caracteristic si acelea§i valori proprii.
 ***************Beginning Page***************
 ***************page number:6**************
 Teorema lui Gershgorin
-Fie A e Rm’ 5i A e C 0 valcare proprie oarecare a matricei A‘
-Alunci:
+Fi6 A e RM" 5i 2, e C 0 valoare proprie oarecare a matricei A.
+Atunci:
 n
-a!" e {l,2,...,n} astfel meat ‘A — aim ‘ s ri“ , rm, = Z‘ainj‘.
+Ell0 e {1,2,...,n} astfel 1ncat ‘A — aiol.0 ‘ S rl.0 , rl.0 = Z‘ai0j‘.
 
-j=l
+j=1
 
-M.
-(Valoarea proprie A se aﬂi in cercul din planul complex de
-centru 11in‘.n si razﬁ ri" .)
+jiio
+(Valoarea proprie 2, se aﬂé in cercul din planul complex de
+centru aiol.0 $1 raza rl.0 .)
 
 5
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Demonstraiie. Fie A e C 0 valoare proprie a matricei A si
-u i 0 un vector propriu asociat valorii proprii Z , Au = ﬂu.
+Demonstrayie. Fie 2, e C 0 valoare propriﬁ a matricei A 5i
+u 7E 0 un vector propriu asociat valorii proprii l , Au = Au.
 Avem:
-,. n
-2,14‘. = aﬁu‘. + Zaijui ¢> (/1 —ai,.)u‘. = Zaijuj, l =1,...,n.
-‘=1 '=|
-Fie i0 astfelca‘14!.0‘=Huuno = maxﬂuk \;k = l,...,n} > 0 ( u a! 0).
-Vom avea:
-'l u. “ u. ll ‘
-‘l-ah. ‘= 2a.. .4 $2M .‘USr. ,nnénd seama aims l.
-a n a! ‘n1 ‘a
-i=1 "in i=l ‘"1 ‘ ‘"i ‘
-jam [sin “ "
+n n
+lui = aiiul. + Zaijuj <:> (/1 —ail.)ul. = Zaijuj, l = 1,...,n.
+j=1 i=1
+j¢i j¢i
+Fle 10 astfel ca ‘uio ‘ = ‘\un = max{|uk|;k = 1,...,n} > 0( u i 0).
+Vom av6a:
+n ",- n ‘"1" - A ~ ‘"j‘
+‘A —al.0i0 ‘ = 261in — S Z‘ai0j‘— S rl.0 , tlnand seama ca— S 1.
+i=1 "i0 i=1 ‘Ell-0‘ ‘"11, ‘
+jiio jSi0
 6
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Observaﬁe. Presupunem 05 matricea A are n vectori proprii
-liniar independenti u‘,u2,u.,u” asociati valorilor proprii 2,1,
-1,1, ..., 11,. Fie U = [ul uz u":| . Datorité independengei
-vectorilor u" rezultz'i cé matricea U este nesingularé si avem:
-A=diag[1.,1v-~J..] U"AU=A.
-Considerﬁm malricea penurbalé:
-A(s) = A + sB.
-U"A(e)l/ =A+sU"BU =A+sC‘
-A(£) ~ U"A(s) U: au aceleasi valori proprii 2,..(8)
-\A(s)—l,. —£c,.,\ S 82h" 2 \l(s)—l,\ = 0(6).
-j=l
-j$i
+Observatie. Presupunem c5 matricea A are n vectori proprii
+liniar independenyi ul, u2 ,. .., u” asociati valorilor proprii 111,
+22, ..., in Fie U =|:u1 u2 u":| . Datorité independenyei
+vectorilor uk rezulté c5 matricea U este n€singularé 5i avem:
+A=diag[ll,12,...,ln] U_1AU=A.
+Considerém matricea pﬂrturbaté:
+A(e) = A + 8B.
+U_1A(e)U = A + gU-IBU = A + 8C _
+A(e) ~ U _1A(8) U :> au aceleagi valori proprii libs‘)
+\l(e)—/1i—scii\£ 82kg.‘ :> \l(a)—li\ = (9(8).
+5-2}
+7
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
 Metoda puterii pentru matrice simetrice
+
 Propozitie
-Fie A e RM", A = AT. Amnci toate valorile proprii ale
+
+Fi6 A e Rm, A = AT . Atunci toate: valorile proprii ale
 matricei A sunt numere reale.
-Dcmonstraﬂc, Pic A e C 5i u e C" , u a! 0 , Au = Au.
+Demonstratie. Fie l e C $i u e C” , u i 0, Au = Au.
 Considerém produsul scalar:
-(Au,u)c,, = l(u,u)cu = lHuHi .
-(Au,u)c, =(u,ATu)CM = (u,Au)cn = (Au,u)c,, :(Au,u)cn e 1R
-A = L1", u)” e 1R
-2 .
-HM“;
-X
+
+(Amn =1<mu>w =1HuHi
+(Au,u)c,, = (u,ATu)Cn = (u,Au)(C,, = (Au,u)C,, :> (Au,u)(c,, e R
+A
+M2
+8
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
 Propozitie
-Fie A e Rm, A = A7. Arunci exisli 0 bazé ortonormaté de
-vectori proprii ai matricei A, {u', u2,..., 14"} :
-("i’“j)w = 6"’ ={(1) :2: LE:
-Echivalent, putem scrie ca existi vectori proprii {141, u2,..., 14"}
-asociagi valorilor proprii reale {11, 12”“, in} atfel ca:
-AU= UA a UTAU=A
-cu A = diaglll,ll,...,lnl 5i U= [ul uZ 14"] matricc onogonalé‘
-g
+Pie: A e Rm”, A = AT . Atunci existé 0 b21251 ortonormaté de
+vectori proprii ai matricei A, {u1, u2,..., an} :
+,- . 1 dacé i = j
+(u,u’)n=5ij= w _
+R 0 daca l i j
+Echival6nt, putem scrie ca existéi vectori proprii {u1, u2,..., u”}
+asociagi valorilor proprii male {21, 22,”, in} atf6l ca:
+AU= UA <=> UTAU=A
+cu A = diag[ll,lz,...,ln] 5i U = [u1 u2 u"] matrice ortogonalé.
+9
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Deﬁniﬂe
-Se numeste coeﬁcient Rayleigh a1 vectorului "61R" pentru
-matricea A unnitoarea mirime scalari:
-r(u) _ uTAu (Amidw (Au,u)w
-_ f = i = i2
-u u (mu)... IIMHZ
-Se veriﬁcé usor cé daczi ll E 1R" este vector propriu a1 matricei
-A asociat valorii proprii i. atunci r(u)=}..
-Fic A e RM", A = AT. Matricca arc valori proprii rcalc 1.1,
-25..., in. Presupunem in plus 05:
-|111|>|11¢|2m|3~n|20
-m
+Deﬁnitie
+Se nume§te coeﬁcient Rayleigh a1 vectorului ll E R” pentru
+matricea A urmétoarea mérime scalaré:
+l’(ll) _ UTAH (Auau)Rn (Auau)Rn
+
+u u (u,u)Rn llullz
+Se veriﬁcé ugor 021 dacé u E R” este vector propriu a1 matricei
+A asociat valorii proprii A atunci r(u)= 11.
+Fie A e Rm", A = AT . Matricaa ara valori proprii reale l1,
+112,.” Zn. Presupun6m in plus 651:
+
+I11 |>|12 I 2 IA" I Z 0
+
+10
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
 Metoda puterii este un algoritm care aproximeazé valoarea
-proprie de modul maxim l; $i un vector propriu asociat.
-Se p0rne$le de la un vector nenul de normé euclidiané 1,
-"(0)6111", ||um||2=l 5i sc construic$tc urmétorul $ir dc
-vectori de nonné euclidiani 1:
+proprie de modul maxim Z1 5i un vector propriu asociat.
+Se pornegte de 1a un vector nenul de norrné euclidiané 1,
+u(0)eR”, ||u(0)||2=1 $i se construieete urmﬁtorul $ir de
+vectori de normé euclidiané 1:
 
-l 1
+1 1
 
-14"”, 14"‘: (a) Au‘"', um = m Aumvm
-IIA" H1 H A" II;
-l _
-u“I =iwn Au'k 1),...
+um), um) = W Auw), um = T Au(1),...,
+llAu ||2 llAu ||2
+1 _
 
-ll A" ll;
-In anumite condiyii acest $ir converge 1a un vector propriu
-asociat valorii proprii 111, iar cocﬁcienlii Rayleigh
-corcspunzétori converg cétrc )1.
+|| A" ||2
+In anumite conditii acest $ir converge 1a un vector propriu
+asociat valorii proprii 111, iar coeﬁcientii Rayleigh
+corespunzétori converg cétre A 1.
 
-u
+11
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Teoremz'l
-Fie A e lR'm', A = AT 0 matrice simelrici pentru care valorile
-proprii indcplincsc condigia:
-l1. \>le2'"|1,.|20_
+Teoremﬁ
+Fie A e Rm”, A = AT 0 matrice simetricé pentru care valorile
+preprii indaplinesc conditia:
+I21 |>|/12 I Z '2'” I Z 0.
 
-Daci um) E R”, || um) ||2= 1 , (u‘“],u‘)w at 0 (ul vector propriu
-asociat lui l1) atunci:
+v 0 n .
+Daca u( ) E R , || um) ||2= 1 , (u(0),u1)R,, i 0 (ul vector propnu
+asociat lui/11) atunci:
 
-um = WAMW) —) ul (vector propnu asomat lul 11)
-
-|| A u H1
-Mum) _) l,
+1
+k k 0 1 . . .
+u‘ ) = WA u( ) —> u (vector propnu as0c1atlu1/11)
+|| u H2
+r(u(k)) —> 2,,
 12
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Demonstraiie. Fie {u', u1,..., u”) vectori proprii asociagi
-valorilor proprii {111, lz,..., 1.1,} care formeazi 0 bazi
-ortonormati in 111"‘ Avem:
-um) =a|u' +azuZ+---+anu" , ai e IR
-Deoarece (u“'),ul)Rn $0 rezulté 05 a, a! 0‘ Din construciia
-sirului u“) dcduccm 05. cxisti 0 constanté Ck astfcl ca:
-n
+Demonstrayie. Fie {£11, u2,..., an} vectori proprii asociayi
+valorilor proprii {21, 22,“, in} care formaazé 0 bazé
+ortonormaté in R”. Avem:
+l 2
+um) =a1u +a2u +---+anu" , at. ER
+Deoamce (u(0),u1)R,, $0 rezulté (:51 a1 5i 0. Din constructia
+$iru1ui uﬂ‘) deducem 0'21 exist'Zl 0 constanté ck astfel ca:
+13
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:15**************
-um =cAAkuw) =
-=1:kA"(alu‘+a1uZ +~~+a"u")=
-k A L
-
-=cklf u‘u' +uz[%] u2 +---+a" [2”] u"
-Din aceasté ultimé relaxie, din faptul cé A; esle valoare proprie
-dominant?! 5i 111 i 0 deducem cé pentru k suﬁcient de mare
-vectorul uﬂ" se aliniazi dupé vectorul propriu u':
-
-14”‘) w ckAq'kaI u'
+uu‘) = ckAku(0) =
+k 1 2 n
+=ckA (alu +a2u +---+anu )=
+=ck (al/llku1 + azzﬂpzku2 + ---+ ‘ll/Jun):
+,1 k A k
+=ck/11k alu1 +a2 —2 u2 +---+an —” u”
+11 11
+Din acﬁasté ultimé relatie, din faptul 051 Z1 este valoare proprie
+dominantéi $i a1 7E 0 deducem 051 pentru k suﬁcient d6 mare
+vectorul uﬂ‘) se aliniazé dupé V6ct0rul propriu ul :
+um z ck/llka1 u1
 14
 
 ***************Ending Page***************
@@ -253,278 +270,303 @@ vectorul uﬂ" se aliniazi dupé vectorul propriu u':
 ***************Beginning Page***************
 ***************page number:16**************
 Metoda puterii
-New" , ||u‘"' ||z=1:
-k=0;
+
+w") e R" , || w") ||2= 1;
+k = 0;
 do
-a k++;
-o w=AuM-H;
-c u“) = LW;
-IIWIIZ
-a 1k =r(u("')=(Au”‘),u‘k))w;
-while(|| Au“" -Aku“’ \|>e si k 5 km»);
-vs
+
+ok++;
+
+<> w = AuUH);
+
+1
+
+O u(k) = —W ;
+
+<> 2k = r(u(k)) = (Au(k),u(k))R,,;
+while(|| Au“) - lkuu‘) ||>g gi k s km);
+
+15
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
 Metoda iteratiei inverse
-Considerém o matrice simetrici A e 111"“, A = AT $i y e 1R
-un numér real care nu esle valoare proprie a matricei A. Vom
+Considerém 0 matrice simetricé A e Rm”, A = AT 5i ,u e R
+un numér real care nu este valoare proprie a matricei A. Vom
 folosi metoda puterii pentru a aproxima valoarea proprie a
-matricei A care este cea mai apropiaté de p 5i un vector
-propriu asociat‘
-p at valoare proprie —> det(A —,uI,|)¢ 0 —> El (A —,ul,,)’l
-Fie {11, 15..., An} valorile proprii reale ale matricei A,
-m
+matricei A care este cea mai apropiaté de ,u 5i un vﬁctor
+propriu asociat.
+,u i valoare proprié: —> det (A — ,uIn) i 0 —) El (A — ,uIn )-1
+Fia {21, 22,”, in} valoril6 proprii reale 2116 matricei A.
+16
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Valorile proprii ale matricei (A-pln)" sum:
+Valorile proprii ale matricei (A-pIan sunt:
 {; ; ;}
-
-(11 -/l)’(11 w)’ WA” -/l)
-MatriceleA 5i (A-[llni' au aceia$i vectori proprii. Sz'i
-presupunem cé ll este valoarea proprie cea mai apropiali de p
-(5i singura)‘ Atunci:
-
+(ll-u)’(12—m’ Win-u)
+Matricele A 5i (A-plnfl au acaiagi vectori proprii. Sé
+prasupunem 051 21 6ste valcaraa proprie cea mai apropiaté d6 ,u
+(gi singura). Atunci:
 1 1
-i > i V j ¢ I
-lip/1| |1,—/1|
+— > — ‘v’ j i I
+Ill-Ill Iii-HI
 17
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Aceasté relatie sugereazé ideea aplicérii metodei puterii
-matricei (A - Illn)-I pentru a aproxima valoarea proprie
-(11- [4)" 5i a unui vector propriu asociat. Algoritmul duce 1a
-aproximarea valorii proprii cea mai apropiaté de [4, 1| si a
-unui vector propriu asociat acestei autovalori, u"
-1x
+Aceasté relayie sugereazé ideea aplicérii metodei puterii
+matricei (A - ,uIn)'1 pentru a aproxima valoarea proprie
+(ZI— ,u)'1 $i a unui vector propriu asociat. Algoritmul duce la
+aproximarea valorii proprii cea mai apropiaté d6: ,u, 111 $i a
+unui vector propriu asociat acestei autovalori, uI.
+18
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Metoda iteraciei inverse
-um 61R" , Hum’ “2:1;
+Metoda iteratiei inverse
+
+w") e R" , || u“) ||2= 1;
 k = 0;
-do
+d0
 
-c k + +;
+ok++;
 
-c Se rezolvi sistemul (A — pl" )w = u'H';
+o Se rezolvé sistemul (A — ,uIn)w = uUH);
 
 1
-a 14”‘) = w ;
-H W H1
+O “(In = —W ;
+|| W H2
 
-c 2k = r(u("')=(Au("',u”‘))R";
+o 1k = r(u(k)) = (Au(k),u(k))Rn;
 
-while(|| Au"" Wm“) “>8 5i k s km“);
-w
+while (|| Aug‘) — lkuu‘) ||>£ §i k s kmax);
+19
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
 Forma superioarﬁ Hessenberg
-Spunem 05 0 manice H e RM" este infarmd superioarﬁ
-Hessenberg dacé:
-hi] =0,i=1,...,n,j=1,...,i—2
-O matrice in formz'i Hessenberg araté astfel:
+Spunem cé 0 matrice H e Rm" este informii superioarii
+Hessenberg dac'Zl:
+hi]. = 0,i= 1,...,n ,j= 1,...,i—2
+O matrice in formé Hessenberg arat'Zl astfel:
 20
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-h" hu hu"'h|n-| h“.
-hzl hzz hzs"'hzn-\ hM
-H: 0 hll hH-"hbkl th
-0 0 humhmm hm”
-0 0 0 "vhnnil hllﬂ
-Ne intereseazi un algoritm care $51 transforme 0 matrice
-pétraticé A oarecare intro matrice Hessenberg superioaré H
-care s5 aibé acelea$i valori proprii:
+h11 h12 h13 "'hln-l hln
+
+h21 h22 h23 "'h2n_1 h2n
+
+0 h h ---h h
+
+H = 32 33 3n-1 3n
+
+0 0 h43 "'h4n-1 h4n
+
+0 0 0 ---h,m_l hnn
+Ne intereseazé un algoritm care sé transfornw 0 matrice
+pétraticé A oarecare intr-o matrice Hessenberg superioaré H
+care $51 aibé acelaagi valori proprii:
+
 21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-A —> H :13. H ~ A , H : PA 13" , 1-’ matrice nesingulari
-Algoritmul este o adaptare a algorilmului lui Housholder si se
-desiiwari in (n-2) pa$i, folosind matricile de reﬂexie pentru
+A —> H a.i. H ~ A , H = 13A 13-1 , 13 matrice nesingularé
+Algoritmul este 0 adaptare a algoritmului lui Housholder $i se
+desfé$0ar5 in (n-2) pa§i, fclosind matricile de reﬂexie pentru
 a transforma matricea.
-Pas l
+Pasl
 
-se efectueazi operatiile A=P1 A P1 (matricea P1 se alege
+se 6fectueaz€1 operatiik A=P1 A P1 (matricea P1 se alega
 
-astfcl innit coloana l sé ﬁc transformati in fonni superior
+astfel incét coloana 1 s5 ﬁe transformaté in formé sup6ri0r
 
-Hesscnbcrg)
+Hessenben'g)
+
+22
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Pas 2
-A : PZAPZ = 1;<1'.A""">12
-(P1 lransformi coloana 2 in formé superior Hessenberg
-féré si schimbe coloana l)
-Pas r
-A = RAP, = 11(11_1"'1’1Ai"i'1’1"'1’,_.)1’v
-(5e transfonné ccloana r in form?! superior Hessenberg
-ﬁré 551 schimbc primclc (r-I) coloanc)
-21
+Pas2
+A = 12/112 = IzmAim'ﬁPz
+(P2 transformé coloana 2 in forrné superior H€ssenberg
+féré s51 schirnbe coloana 1)
+Pasr
+A = 11/11: = 11(111 ---P1A"""’P1 ---1:_1>1:
+(se transformé coloana r in formé superior Hessenberg
+féréi $51 schimbe primele (r-I) coloane)
+23
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Pasu] r (r=l,2,...,n-2)
+La intrama in pasul r matricea A are primele (r-I) colcane
+in formé superior Hessenberg. La iegirea din pasul r matricea
+A va avaa primela r coloane in forrn'Zl superior Hessﬁnberg:
 
-La intrarca in pasul r matricca A arc primclc (r-I) coloanc
-in formé superior Hessenberg, La iesirea din pasul r matricea
-A va avea primele r coloane in formzi superior Hessenberg:
-
-Aim = R AinIrPr 7 Ail: ~ Ainir
-_ T _
-R - I“ —2v'(v') , v’ E R" , ||v' ll;-l
-Vectorul v’ se alege astfel ca matriceﬂ AM sﬁ aibi colcana r
-in formi superior Hessenberg si s5 nu schimbe primele (r-I)
-coloane ale matricii Aimr .
+Aies = I)!” AintrR' 9 Aies ~ Aintr
+_ r r T r n r _
+I: —I,,—2v (v), v GR, ||v ||2—1
+Vectorul vr se alege astfel ca matricea Aies s21 aibé coloana r
+in forrné sup6ri0r Hessenberg $i s51 nu schimbe prirnele (r-I)
+coloane ale matricii Aim,» .
 24
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Calculul matricii P,
-l
-P I I” — E uuT
-ﬂ = 0'- k' “My
-k2 =a=afm +---+a,.zr +---+a,fr = 2a,?r 2 k =i\/;
-i:r+1
-scmn k = —semn am,
+Calculul matricii Pr
+1
+P : In — E uuT
+ﬂ = o- _ k. ar+lr
+2 2 2 2 2
+k = 0' =ar+1r +---+al.r +---+anr = 2% :> k =i\/o'
+i=r+1
+semn k = —semn arm
 25
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
-(l
-(l
-awn-k
+0
+0
+ar+lr_k
 
-uz: 1
-an
-a»,
+“I: 1
+air
+anr
 
-ﬂ=0—) r=r+l (P=I")
+ﬂ=0—) r=r+l (P=In)
 
-25
+26
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:28**************
-Algoritmul de trecere de 1a malriceaA la matricea P,A este
-urmitorul:
-Ae]. pentruj=l,...,r—1
-(11AM, = (a|,,a2,,...,a",k,0,...,0)r pentruj=r
-7,- -_
-ALU-fll pentru]—r+l,..‘,n
-ﬂ
-7i =(Aei’u)n" = 2 uiaii
-|=r+l
-u’. =0, i=l,...,r, u,+l =uy+lr —k, ui =air , i=r+2,...,n
+Algoritmul d€ trecere de la matricﬁa A 1a matricea PrA este
+urmétorul:
+Aej pentruj=1,...,r—l
+(RA)ej = (awazy,..,arr,k,0,...,0)T pentruj= r
+Ae —&u entru '=r+1 n
+,- ﬂ P J 9-“,
+7]. =(Aej,u)R,, = z uiaij
+i=r+1
+ul. = 0, i=1,...,r , up+1 =ar+1r —k , ul. =air , i= r+2,...,n
 27
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Vom descrie in continuare cum se efectueazé operatia
-A:=AP, til-é a face inmulﬂre matricialé (matricea A este cea
-obginuté mai sus avénd primele r coloane in form?! superior
+Vern deserie in continuare cum se efeetueazé operayia
+A:=APr ﬁré a face inmultire matrieialé (matrieea A este eea
+obyinuté mai sus avénd primele r eeloane in formé superior
 Hessenberg).
 
-Vom arata Ci aceasté operatic nu schimbé forma superior
-Hessenberg obginuti‘ Vom pune in evidengé transformirile
-liniilor matricii A, Pcntru i=1,...,n avcm:
+Vom arata 05 aeeasté operayie nu sehirnbé forrna superior
+Hessenberg obyinuté. Vom pune in evidenté transformérile
+liniilor matrieii A. Pentru i=1,...,n avem:
 
-l
-1 . . , . _. 1 T
-ei (AP) = noua lune 1 a matncn AP = (ei A)(I” — ﬁuu )=
-T 1 1 T 1 7,- 1
-=2‘. A_E(ei A)uu =ei A-Fu
-undo
-_ 1' _
-7; — (e,- A)“ — air-Hur-H + ' " + “mun
-2x
+T . - . - -- T 1 T
+
+ei (AP) = noua 11n1e l a matrren AP = (el. A)(In — E uu ) =
+T 1 T T T 7,- T
+=ei A—E(ei A)uu =ei A-Fu
+unde
+— T —
+yi _ (ei A)” _ air+1ur+1 + . . . + ainun
+28
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Elementele liniei ise schimbé astfel:
-"i,- =aﬂ-ﬁui ,j =r+l,...,n, l =l,...,n
-Operaﬂa A::APr nu modiﬁci primele r coloane ale matricii
-A, ele réménénd in fonné superior Hessenberg‘
+Elementele liniei i se schimbé astfel:
+
+— 7i '— 1 '— 1
+aij—aij_zuj ’J—r+ 90.0,”, l_ 9...,”
+Op6ra§ia A:=APr nu modiﬁcé primela r colcane ale matricii
+A, ele réménénd in formé superior Hessenberg.
+
 29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Algorirmul d1: abrinere afarmei superiar Hessenberg
-f0rr= l,...,n—2
-/ / construcyia matricii P, — constanta ,6 5i vcctorul u
+Algoritmul de obfinere a formei superior Hessenberg
+forr = 1,...,n—2
+/ / construcyia matricii Pr — constanta ,B §i vectorul u
 
-'0' = z afr;
+. 0' = Z aizr;
 
-i:r+l
-0if(a'Ss)brcak; //r=r+1<—>P, =In
-o k = Jg;
-0if(a,+|,. >0 )k=—k;
-.ﬂ=a'_k ar-Hr;
-‘um =amr —k;ui =air ,i=r+2,‘..,n;
+i=r+1
+0if(o'$£)break; //r=r+1<—)Pr =In
+0 k = J3;
+0if(ar+1r >0 )k=—k;
+.ﬂ=o-—kar+lr;
+0 u’,+1 = arm —k; ul. = air ,i= r+ 2,...,n;
 
-:4»
+3O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-//A=P,*A
-//transf0rmarea coloanelor j = r +1, ,n
-0 forj=r+l,...,n
-r=(7,-/ﬂ)= (A8,,u)/ﬂ=(z map/l9;
-i:r+l
-for i=r+l,...,n
-aij=aijiy=lui;
-// transformarea coloanei r a matricii A
-0am, =k; aiy=0, i=r+2,..‘,n;
-u
+//A=P,,*A
+/ / transformarea coloanelor j=r+1,...,n
+0 f0rj=r+1,...,n
+y=<yj/ﬂ)= (Aej,u)/ﬂ=(2 “ﬂip/m
+i=r+1
+for i=r+1,...,n
+aij=aij—7*ui;
+/ / transformarea coloanei r a matricii A
+0am}, =k; air =0, i=r+2,...,n;
+31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-//A=A*R
-//transfom1arealiniilor i=1,...,n
-0 fori=l,...,n
-y=(y./ﬂ)= <<eZA)u)/ﬂ:(2 u,a.)/ﬂ;
-i:r+l
-for j=r+l,...,n
-aii=a|i’7*uj;
+//A=A*Pr
+//transf0rmarealinii10r i =1,...,n
+0 f0ri=1,...,n
+7=(7,-/ﬂ)= ((efA)u)/ﬂ=(2 ujaijwﬂ;
+j=r+1
+for j=r+1,...,n
+aij=aij—7*uj;
+32
 
 ***************Ending Page***************
 
@@ -532,283 +574,300 @@ aii=a|i’7*uj;
 ***************page number:34**************
 Algoritmul QR de aproximare a valorilor proprii ale
 unei matrice oarecare
-Prezenlém in continuare cel mai folosit algoritm de
-aproximare a valorilor proprii pentru matrice pitratice
-oarecare,
 
-Spunem cé 0 matrice S elRmeste in farmé Schur realﬁ
-dacz'a matricea S este in formé superior Hessenberg 3i in plus
+Prezentém in continuare eel mai folosit algoritm de
+apmximare a valoriler proprii p6ntru matrice pétratiw
+oarecara
+
+Spunem 651 0 matrice S e Rmmeste in formii Schur realii
+dacé matricea S este in formé sup6ri0r Hessenberg $i in plus
 este bloc-diagonalé:
 
-n
+33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Sn S12 S1,,
-S= 0 s22 Szp
-0 0 S 1-1’
-blocurile SH sunt astfel ca:
-- S“. e 1R - este valoare proprie realé
-- Sh. e RM - este bloc corespunzétor valorilor proprii
-complexe
+S11 S12 Slp
+S = 0 522 52p
+0 0 spp
+blecurile Si,- sunt astfel ca:
+- S ii e R - este valoare proprie realé
+- Sit. e RM - este bloc corespunzétor valorilor proprii
+complexes
 Valorile proprii corespunzétoare blocului
-b
-SH = [a )e RM sunt ridécinile ecualiei:
-c d
-14
+a b
+Si’. =£ (1)6 RM sunt rédécinile ecuagiei:
+c
+34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-‘1-11 _b ‘41-10(14) - bc = 12—(a+d)1 +ad-bc=0
-- c ,1, - d
-Se presupune cé aceasti ecualie de gardul 2 are rédz'icini
-complexe‘
-Algaritmul QR de aproximare a valon'lor proprii
-construie$te un sir de matrice A'“ eR""”, matrice asemenea
-cu matricea A, AU" ~ A, Vk, §ir care converge 1a o man-ice in
-formi Schur reali, AU‘I —> S,k —>w. Matricea limité S este
-asemenea cu matricea A, valorile proprii ale matricei S ﬁind
-user de calculat.
-15
+Z - a — b 2
+=(l-a)(/1-d) - bc = l —(a+d)/1 +ad-bc=0
+-c l-d
+
+Se presupune (:51 aceasté ecuatie de gardul 2 are rédécini
+complexe.
+
+Algoritmul QR de aproximare a valorilor proprii
+construieste un sir de matrice AU‘) e Rm", matrice asmnenea
+cu matricea A, AU‘) ~ A, Vk, $ir care converge 1a 0 matrice in
+formé Schur realé, AU‘) —> S,k —> oo. Matricea limité S este
+asemanea cu matricea A, valorile proprii ale matricei S ﬁind
+u$0r de calculat.
+
+35
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-$irul A“) se construie$te astfel:
-Am) := A , Aw) = Q0Ro (descomp QR calc, pentru matricea Aw’)
-Am := RﬂQ“ , AU’ = QIRI (descomp. QR calc. pentru matricea Am)
-Am == R12.
-A"" = QkRk (descomp. QR calc.pemru matricea AU”) ,
-Am“ == 1:ka ,k = 0,1,2,...
-Malricele Qk sunt matrice ortogonale (Q3 = QZ) iar matricele
-RA sunt superior triunghiulare.
-m
+Sirul AU‘) se construiegte astfel:
+
+Aw) := A , Am) = QOR0 (descomp. QR calc. pentru matricea Am)
+A“) := ROQ0 , A“) = QlR1 (descomp. QR calc. pentru matricea Am)
+A") == RIQI
+
+AU‘) = QkRk (descomp. QR calc. pentru matricea AU”) ,
+
+A<k+1> == 12ka ,k = 0,1,2,...
+Matricel6 Qk sunt matrice ortogonale (Q;1 = QkT ) iar matricele
+Rk sunt superior triunghiulare.
+
+36
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Matricele AU‘) $i Am” sum asemenea:
-r m _ _ 1 1k)
-Qk * IA —QkRk =19 —QkA
-UH) _ _ T U‘) k l k
-A -Rka-QkA Qk :A‘+)~A(’,\1k
-Matricele $irului construit sunt toate asemenea prin urmare au
-aceleagi valori proprii anume cele ale matricei iniliale A=Am':
-A=Aml ~A'" ~---~A“’ ~~~~S
-Dacia matricea A“) este in formé superioaré Hessenberg,
-atunci descompunerea QR realizaté cu algoritmul lui Givens
-17
+Matricele AU‘) §i Am”) sunt as6m6n6a:
+T (k) _ _ T (k)
+Qk * IA —QkRk =>Rk _QkA
+(k+1) _ _ T (k) (k+1) (k)
+
+A -Rka-QkA Qk :>A ~A ,Vk
+Matri6616 girului construit sunt toate asemenea prin urmare au
+a6616a§i valori proprii anume 6616 ale matri66i initiale A= A”):
+
+A=A(0)~A(1)~"'~A(k)~'"~S
+D2165. matricea AU‘) 6st6 in formé superioaré Hess6nb6rg,
+atunci descompunema QR r6alizat51 6u algoritmul lui Givens
+37
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:39**************
 se simpliﬁcé. Reamintim algoritmul lui Givens:
-11.419?“)"'13,".(9M)""RMHWMH)"'R1..(9\,.)"'R11(9n)A = R
-Dace'l matricea A este in forme'l Hessenberg in algoritmul lui
-Givens, din cele $ inmulpiri cu matrice de rotatie
-rimén doar(n-1):
-eriln(0nilrr)“iRpp+l(9pp+l)NDR13(913 )R12(012) A = R"
-1x
+Rn—1n(6n—1n ). . . an (gpn) O . . Rpp+1(6pp+1 ) . - . R1n(61n). - . R12 (612) A = R
+Dacé matricea A 6ste in formé Hessenberg in algoritmul lui
+leﬁns, d1n cele Mn?) inmulpn cu matnce de f0ta§1€
+rémén doar (n-I):
+Rn-ln (en-1n ) ' ' ' Rpp+l (6pp+l ) ' ' ' R23 (623 )R12 (612) A = R '
+38
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
 Problema care se pune este dacé pornind cu 0 matrice in
-formé Hessenberg, toate matricele $imlui rémén in forms‘:
+formé Hessenberg, toate matricale girului rémén in formé
 Hessenberg:
-A“) (in form?! Hcsscnbcrg) = H = QR (cu Givens) 2 ‘Z
-A‘My = I? = RQ = QTAWQ = QTHQ i cstc tot in formé Hcsscnbcrg ‘T
+AU‘) (in formé Hessanberg) = H = QR (cu Givans) :> ?
+Aw“) = H = RQ = QTA(")Q = QT HQ — 6st6 tot in formé H6ssenberg ‘?
 Avem:
 
-fl = QIHQ = R RL(011)"'R:+|(0r,+1 )... R:;ln(0niln)
+H = QTHQ = R R1T2 (912)‘ ' 'Rr];+1 (6w+1)' ' 'RnT—1n(6n-1n)
 
-w
+39
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
 Notém cu:
-i T
-
-pentm care avem:
-
-E‘ =cr“ +srl.z ,Vl ~ + r,I =0,1~= 2,..,,n 3 i‘ =0,t.= 3,...,n
-
-rn=—srn+crn ,Vl rn=0,l=3,...,n rn=0,l=3,...,n
-deci coloana 1 se Iransformi in form?! Hessenberg iar coloana
-2 réméne in formi superior triunghiularé.
-La pasulp avcm:
-
+— _ T
+R - R R12 (612)
+pentru care avem:
+ril=cri1+sri2 ,Vl Vil=0,l=2,...,l’l 13.1:0,l=3,...,n
+_ O + O 3 _ O
+l’i2=—Sl’l-1+Ci‘i2 ,Vl 42:0,l=3,...,n ri2=0,l=3,...,n
+deci coloana 1 s6 transformé in formé Hess6nberg iar coloana
+2 réméne in formé superior triunghiularé.
+La pasul p avem:
 40
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:42**************
-(R R11;(Hll).nR:*lp(0pilp)) RZP+1(0PP+I)= R Rlp+l(0pp+l) = R ’
-ie= R R,’z(19,,)---R;lp(9p,,p)
-
-matricea R are pn'mele (11-1) coloane in formé Hessenberg iar
-reslul coloanelor sunt in fOI'n'Li superior triunghiularé‘ Vom
-arata cé la acest pas matricea R va avea primelep coloane in
-formé Hessenberg iar restul coloanelor in formé superior
+T T T ~ T _
+(R R12 (612). . . Rp—1p(6p—lp)) Rpp+1(6pp+l) = R Rpp+1(6pp+1) = R 9
+~ T T
+R = R R12(612)---Rp_1p(6?p_1p)
+matricea R are primele (12-1) coloane in formé Hessenberg iar
+restul coloanelor sunt in f0rm_€1 superior triunghiularé. Vom
+arata 651 la acest pas matricea R va avea primele p coloane in
+formé Hﬁssenberg iar restul coloanelor in formé superior
 triunghiularé.
 
 41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Operaﬂa R1: 1-? R5,," (6141+!) presupune doar schimbarea
-elementelor coloanelorp si 11+]:
-i=6?~ +sF Vi r'.=0 i=p+l...n
-1 s , , ,
-l!’ ‘P ~ 'I'+~ - + ~'P I 5
-rM =—sr,.,,+crir+‘ ,Vl ﬁp+1=0~1=11+2~~~an
-7i, = 0, i= p+2,...,n
-7.1M = 0, i= 11+ 2,...,n
+Op6ra§ia R z: R RZPHWPPH) presupune doar schimbarea
+elemﬁmtelor coloanelor p 5i p+1z
+171.1)=crip+$riw1 ,Vi lgp=0,i=p+1,...,n
+_ ~ ~ Q + ~ o 3
+'Qp+1=_s"lp+c",p+1 ,Vl ripH=0, l=p+2,...,n
+Fip = 0, i= p+ 2,...,n
+Fip+l = 0, i= p+ 2,...,n
 42
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Observém din relagia de mai sus 051 in matricea I? coloana p
-are formé Hessenberg iar coloana p+1 rimine in formi
-supen'or triunghiulari (celelalte elemenle din matrice nu se
-modiﬁci),
+Observéni din inlayia de mai sus (:5 in matricea I? coloana p
+are formé Hessenberg iar coloana p+1 réinéna in formé
+superior triunghiularé (calelalte elemente din matrice nu se
+modiﬁcé).
 
-Prin urmare dupé pasul n-l matricea FI=A“‘+" este in
-formi superioaré Hessenberg. Algoritmul QR de aproximare
-a valorilor proprii folosind descompunerea Givens péstreazi
+Prin urmare dup'Zl pasul n-1 matricaa H =A(k+1) este in
+formé superioaré Hessenberg. Algoritmul QR de aproximare
+a valorilor proprii folosind descompunerea Givens péstreazé
 forma Hessenberg.
 
-41
+43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Alguritmul QR pentru valoriproprii
-//se aduce matricea A la forma Hessenberg
-' A I Q A Q’;
-0 k = 0;
-0 While ( A a! forma Schur realé)
-0 A = QR; / / sc calculcazé cu algoritmul Givens
-o A = RQ sau QTAQ;
-[o k = k + l;
+Algoritmul QR pentru valoriproprii
+/ / se aduce matricea A la forma Hessenbﬁrg
+'A=QAQ5
+0k=m
+0 While ( A i forma Schur malé )
+0 A = QR; / / se calculeazé cu algoritmul Givens
+0 A = RQ sau QTAQ;
+0k=k+h
 44
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-in practicﬁ se presupune cﬁ matricea A este in formﬁ
-Hessenherg neredusi, adici:
-aii_l #0 Vi=2,...,n
+In practicé se presupuna 021 matricea A este in formii
+Hessenberg neredusz'l, adicé:
+ail;1 #0 V1 =2,...,n
 
-Daci matricca nu cstc in formé ncrcdusi, problcma so
-dccuplcazz'i:
+Dacé matricaa nu 6ste in formé n6redusé, problema se
+decupleazé:
 
-A A
+A11 A12 I7
 
-A=|: H n] p ,p=n—lsaun—2
-A21 A22 n _17
-P "-17
+A= , p=n—1saun—2
+A21 A22 n-p
+P "-1)
 45
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
 Algoritmului QR cu deplasare (“shift”) simplﬁ
-Algorilmul cu deplasare simpli este urmélonll:
-0 A = Q A QT; / / aducerea la forma Hessenberg neredusé
-o k = 0;
-o While ( A aﬁ fonna Schur realé)
-0 A — d,‘ In = QR; / / se calc. cu alg. Givens
-0 A := RQ+11‘ In;
-0 k = k + 1;
-dk e 1R sunt constamele de deplasare.
+Algoritmul cu deplasare: simplé esta urmétorul:
+0 A = Q A QT ; / / aducerea la forma Hessenberg nemdusé
+. While ( A ¢ forma Schur realé )
+0 A — dk In = QR; / / se calc. cu alg. Givens
+0A := RQ+dk In;
+0k=k+h
+d k e R sunt constantérlé de deplasare.
 46
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Dacﬁ A - d1" I QR (AW) 5i Z = RQ + d In (MW), se pune
-problema dacé cele doué matrice sunt asemenea (A ~ 2)
-($irul de matrice construit cu pasul QR cu deplasare simplé au
-aceleasi valori proprii)‘
+Dacé A - dIn = QR (AW) 5i Z : RQ + d In (A(k+1)), se pune
+prleema dacé cele doué matrica sunt asemenea (A ~ A)
+(5iru1 de matrice: construit cu pasul QR cu deplasare simplé au
+aceleagi valori proprii).
 
-3 = QTQRQHI QTQ=QT(QR+11 I”)Q= QTAQ => 71 ~ A
-Varianta cu deplasare se efeotueazé pentru a accelera
-convergenta algoritmului. Dacia 21, lbw, A” sum valorile
-proprii ale matricei A ordonate astfel ca:
+AT= QTQRQ+dQTQ=QT(QR+dIn)Q=QTAQ =>AT~A
+Varianta cu deplasare se efectueazé pentru a accelera
+convergenta algoritmului. Dacé l1, 22””, in sunt valorile
+proprii ale matricei A 0rd0nate astfel ca:
 
-‘,1, —d\2\/12—d\2-~2\An—d\
-41
+‘Al -d\z\12 —d\2---2\ln -d\
+47
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Rapidilatea cu care at)“, —> 0 , k —> no este daté de rata de
-. . A +1 —d k .
+Rapiditatea cu care a221, —) 0 , k —> oo este daté de rata de
+k
+. . lp+1 — d v
+conwrgenya a €pr68161 — . Daca se alege d z 2,”
+2p — d
 
-convergent; a expres1e1 ‘ﬁ‘ ‘ Daca se alege d #11,.
-convergenya am” —> 0 este rapidé‘ Avem urmétorul rezultat:
+convergenta af: )1” —> 0 este rapidé. Avam unnétorul rezultat:
 
-Teoremé
+Teoremii
 
-Fie 11 0 valoare proprie a unei matrice Hessenberg nereduse
-H‘ Dacia H = RQ+d I", cu H —d I" = QR descompunerea
-QR a matricei H —d I" = QR‘ Atunci:
+Fie d 0 valoare proprie a unei matrice Hessenberg nereduse
+H. Dacé H = RQ+d In, cu H—d In = QR descompunerea
+QR a matricei H — d In = QR. Atunci:
 
-in..-‘ = 0 , in" = d
-4x
+inn-1 = 0 9 inn =d
+48
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Algoritmul QR cu deplasare simplé gﬁseste valoarea proprie d
-intr-un singur pas. Euristic s-a constatat cé la ﬁecare pas, cea
-mai buni aproximare a unei valori proprii esle at‘) .
+Algoritmul QR cu deplasare simplé gésagte valoarea proprie d
+intr-un singur pas. Euristic s-a constatat 6'21 la ﬁecarﬁ: pas, 06a
+mai buné aproximare a unei valori proprii este ‘12?.
 dk = a“)
-Algaritmul QR cu deplasare simpld
-o A = Q A QT; / / aducerea la f0m1a Hessenberg neredusé
-0 k = 0;
-o whi1e( A ¢ forma Schur realé)
-0 A — an” I" = QR; / / se calc. cu algoritmul Givens
-OA:= RQ+aM In;
-0 k = k + l;
+Algoritmul QR cu deplasare simple?
+0 A : Q A QT ; / / aduceraa la forma Hessenberg nearedusé
+0 While ( A i forma Schur realé )
+0 A — an” I n = QR; / / se calc. cu algoritmul Givens
+0 A := RQ+ an” In;
+0k=k+h
 49
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-Algoritmului QR cu deplasare (“shift”) dublé
-in cazul cénd valorile proprii a1, az corespunzimare
+Algoritmului QR cu deplasare (“shift”) dublﬁ
+In cazul cénd valorile proprii a1, a2 coraspunzétoare
 blocului:
 a a
-IIP F"
-G = , p = n — 1
-an‘) an"
-sunt complcxc, apa2 e C, abordarca cu dcplasarc simplﬁ nu
-mai asiguré accelerarea convergenlei.
+PP P"
+G= ,p=n—1
+anp ann
+sunt complﬁxe, 611,612 e C, abordarea cu deplasare simplé nu
+mai asiguré accelerarea convergentei.
 50
 
 ***************Ending Page***************
@@ -816,56 +875,58 @@ mai asiguré accelerarea convergenlei.
 ***************Beginning Page***************
 ***************page number:52**************
 Avem:
-deK/l I; - G) = (/1 —“1)(}~ — a2)= (l — "WW- - an”) - "Maw =
-= 2,2 — (aI + 112)}, + a"!2 = 12 — (an, + “MM + appam —a,,,,a,.,,
-al + az = a” + an” I trace(G) , all!2 I appamI _",,,.a”,, I det G
+det(l I2 — G) = (l — a1)(/1 — a2) = (l — app)(/1 — an") — apnanp =
+= 12 — (a1 + a2 )1 + alaz2 = 12 — (app + an” )1 + appann — apnanp
+a1 + a2 = app + an” I trace(G) , alaz2 I appann — apnanp I det G
 
-Algoritmul QR cu deplasare dubli consté in trecerea de 1a
-matricea A =A”‘) la matricea A2 = AW” realizénd doi pasi cu
-deplasare simplé :
+Algoritmul QR cu deplasare dublé consté in trecerea de la
+matricea A = AU‘) la matricea A 2 = Am“) realizénd doi pa$i cu
+deplasare simpléi :
 
 51
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-A 9A1(deplasare simplé a1), A’ 9A1(dep1asare simplé a1)
-A —a|I“ = Q|R|
-A‘ = R|Q| +a‘I“
-AI — all" = QZR2
-A2 = RZQ2 + all“
+A 9A1 (d6plasar6 simplé a1), A1 9A2 (deplasare simplé a2)
+A — all” = QlR1
+A1 : RlQ1 + all"
+A1 — azln = QZR2
+A2 I RZQ2 + azln
 Fie matricea :
-M ;= (Q‘Q1)(RZR|)= Q‘(Q2R1)R‘ = Q‘ (/1‘ —uz I”)R, =
-I Q,(Q1'AQ.—a2 1,.)R. I Q.Q.TAQ,R.—%Q1R1=
-:(A-a2 1,.)Q|R|=(A—a2 I”)(A—al 1")
+M == (Q1Q2)(R2R1) = Q1(Q2R2)R1 = Q1(A1 - a2 In)R1 I
+= Q1(Q1TAQ1—¢12 In)R1 = QIQKAQIRI — aleRl =
+=(A-tlz In)Q1R1 = (A-a2 In)(A—a1 In)
+52
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-M=(Q.Qz)(R1R.)= (A-azln)(A-a.1n)=
-= A2 —(al +aZ)A+alaz I"
-Avem urmétoarele relalii de asemz'mare:
+M = (Q1Q2)(R2R1) = (A _a2 In)(A_al In):
+= A2 — (a1 + a2)A + ala2 In
+Avem unnétoamle relagii de aseménare:
 T
-A ~ A. = Q|TAQ1~ A; = QZTA\Q2 = QIQITAQQZ =(Q.Q1) A(Q1Qz)
+A ~ A1= QZAQ1~ A2 = Q§A1Q2= QZQIAQ1Q2=(Q1Q2) A(Q1Q2)
 T
-A2 = (Q1Qz) A(Q|Qz)=QTAQ ’ Q1: Qle
-Malricea Q care asiguri Irecerea de 1a matricea A 1a matricea
-A; este matricea crtogonalé din descompunerea QR a matricii
-M =(A —a2 In)(A —aI In). Pasul QR cu deplasare dublé se
-face unnﬁnd ctapclc:
-51
+A2 =(Q1Q2) A(Q1Q2)= QTAQ , Q == QIQZ
+Matricea Q care asiguré trecerea de 1a matricaa A 1a matricea
+A2 6ste matric6a ortogonalé din d6scon1punerea QR a matricii
+M = (A —a2 In)(A —a1 In). Pasul QR cu deplasare dublé se
+face unnénd 6tapele:
+53
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:55**************
-l) se calculeazé matricea M = A2 — s A + qI,I cu
-s = a|+az = a,.,,+a1m , q = am; = a”, am, - apna“, ;
-2) se calculeazé descompunerea QR a matricei M;
-3) A2:=QTAQ.
+1) se calculeazé matricea M = A2 — s A + qIn cu
+S = a1+a2 = app-Fan" , q = 611612 = app an” - apnanp ;
+2) se calculeazﬁ descompunerea QR a matricei M;
+3) A 2:=QTAQ.
 54
 
 ***************Ending Page***************
@@ -873,54 +934,59 @@ s = a|+az = a,.,,+a1m , q = am; = a”, am, - apna“, ;
 ***************Beginning Page***************
 ***************page number:56**************
 Vectori proprii
-Considerim douz'i matrice asemeneaA 5i B:
-A ~ B Q A = PBP" , P matricc ncsingularé
-Slim cé cele doué matrice au acelasi polinom caracteristic,
-pA(/1) E [15(1), deci au acelea§i valori propn'i. Ne intereseazi
-care este legétura intre vectorii proprii asociagi aceleiagi valori
-proprii. Fic u vcctor propriu asociat valorii proprii A pcntru
-matricea A $i w vector propriu asociat valorii proprii A pentru
-matricea B. Care este relatia intre u si w?
+Considerém doué matrica asemenea A $i B:
+A ~ B <:> A = PBP_1 , P matrice nesingularé
+Stim 05 cele doué matrice au acelagi polinom caracteristic,
+12AM) E pB (Z), deci au aceleagi valori proprii. Ne intereswzé
+care este legétura intre v6ct0rii proprii asociayi aC6leia§i valori
+proprii. Fie u vactor propriu asociat valorii proprii 2. pentru
+matricea A 5i w vector propriu asociat valorii proprii l pentru
+matricea B. Cam este relayia intre u 5i w?
 55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-Au=/1u,Bw=/1w, A=PBP'l => PBP"u=/1u =>
-BP'1u =11 P'1u :> w = P"u , u = Pw
-Dacia se aplicé algoritmul QR unei man-ice simetrice, forma
-Schur real?! 1a care se ajunge esle o matrice diagonali:
-S = A = diaglll, 112, ..., 11"]
-Legitura dintre matricea simetrici inigialé A 5i matricea
-diagonalzi cstc dc forma:
-S =A = diaglll, 2,1, ..., 2...] = UTA U
-unde U este 0 matrice ortogonalz'i, coloanele matricei U ﬁind
-vectori proprii asociali valorilor proprii reale A], 2,1, ..., A” .
-Matricea U se poale calcula aslfel:
+Au=lu,Bw=lw, A=PBP_1 :> PBP_1u=/1u :>
+BP_1u =2 P_1u :> w = P_1u , u = Pw
+Dacé se aplicé algoritmul QR unei matrice simetrice, forma
+Schur realé 1a care se ajunge este 0 matrice diagonalé:
+S = A = diagl/h, 12, ..., in]
+Legétura dintre matricea simetricé initialé A $i matricea
+diagonalé este de forma:
+S =/l = diagllb 12, ..., in] = UTA U
+unde U este 0 matrice ortogonalé, coloanele matricei U ﬁind
+vectori proprii asociagi valorilor proprii male 11, 12, ..., Zn .
+Matricea U se poate calcula astfel:
 56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-Algoritmul QR pentru matrice simetrice (valuri +vectoriproprii)
-51
+Algoritmul QR pentru matrice simetrice (valori +vect0ripr0prii)
+57
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-//se aduce matricea A la forma Hessenberg
-' A = Q A QT;
-° U =5 T;
-o k = 0;
-o while( A =2 matrice diagonalé)
-o A = QR; / / se calculeazé cu algoritmu] Givens
-[0 A = RQ sau Q'AQ;
-o U = UQ;
-o k = k + l;
-5x
+/ / se aduce matricea A la forma Hessenberg
+‘AIQAQQ
+'U=QT;
+
+0k=m
+0 while ( A ¢ matrice diagonalé )
+
+0 A = QR; / / se calculeazé cu algoritmul Givens
+
+‘~ A = RQ sau QTAQ;
+' U = UQ;
+0k=k+h
+58
 
 ***************Ending Page***************
 
@@ -930,172 +996,174 @@ o k = k + l;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-ﬂé/Qmm x441=1a zeE/aeﬂuw
-$61 W um 9&b. d4 maZu'q' WK
-M4 aha/£14524. r?‘ [M MM an aaiafr
-l (
-A NA '74 ~—‘> 5
-5 W A fwz SM Ami: (Mm
-W ‘L4 ‘1* 5 M A?“ ‘L
-[MA/Jauﬂ W‘ all 44*‘)
-WM 9/5 ’
-Amt-,4 - AemMQiMWQ/Ma 67R»
-a m 71‘ Q 0m,
-60);; a, ca, [I
-AZ MQJW“ Qﬁa Min/7435077)
-AMIQIQ/ 1> ﬂR)P_‘@Q(
-Aik): (‘Pk Ric MWQ @(a raw/47m},
-5) WM) :EAQA g; 01/) -/~
-scanner: w|m um
+TWfW/W-aﬁww 0Q
+74€12°1X°L 74M=Z£¢ 166/0641",qu
+§@ M M 3.1a dz main/'4 WWWQ
+Momma 746M MMMWM
+M'W') , Awe/2"“ , 74M=74~
+m) (Q ‘
+
+/”f NA 1,4 ____.> 5 _ -
+~MW26 MWfL '
+MMﬂ W‘ a!‘ “a” *4“)
+
+AJ[0)=/} 2 46 55'8£E‘20%0)0ZQW0 QR,
+
+a 7W‘ 77,‘ '=‘ Q9/90-
+
+AK My? WW“ Ma MM”
+
+Aw z we, 11> f) WM,
+
+74%): QR 'QQ MW“ 0/6 a‘ MM.
+
+T»? 74/4?!) i/QQQ,Q *Q: 91/) __1_
+
+Scanned with CW1?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-2 5 3 "_ _ 1g. i _
-r4 [1, 4] dull/U. 16-14, 211L442 9L)
-ﬁlMQVTN/L/HW4_ Q)? 4 014M‘ 77! m
-au-éa “+44
-Z}; 21A- {jg/“11¢ -54+?c_i
-VV: kW
-K/fli). K,
-= >3
-42,=—34+L1c=0)9 4 Zia‘, f/L)
-czmi/ J
-4: i- 1 (=2
-3/5 4/5 r3 q a
-3
-:7 Q0: “I; 9/3"] £95 a]
-g) _ 5 5 3/; 4/5]:
-A] : &4“_[0 0.721%‘ 3/5-
-:F 4] mm a fem‘
-0 0 5J4)‘ M’
-A Wu%w 47¢ Mm an WMQ
-lwﬁ/wn MW 7m
-1I: 4(7): ¥ I 721145210 ‘ a
-Scanned Wlth Uimségner
+:aa ~____2_3,7’\_2__
+74 [1/ 4] NULL Md-iﬂq 2i; 2/2 91)
+*ﬁmemfumwx Q4 QWM' 77(M
+—-/) c -3/1+9¢ —%4+?¢
+k12=Qo - R1,
+” \ =4 c=3
+/ZAI:-3/J+L1C=O},)4 f; if}?
+z 1 i - - (31%;!
+<2 +A=f
+315* 4/6‘ '
+F 5‘
+"9 QOILH/y 3/3"] Rf!» a]
+g)_ \ _ 5 EJJ 3/5‘ ﬂy]:
+/} - X0 ale-[0 0 ‘(WY 3/5, .
+0 0 50M; M“
+“Iva-WY! ,/ . J
+0 _ (ﬁg/W47” m - ‘
+2-1” 6202'? ,le-QALIUV "a
+SCHnnGd With CamScanner
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:63**************
-a -/ _ 1
-,4=% :- ,_/ pu/ZH>=/;;;_r/=a>ds
--’/ p a‘ —'/ a 2-1‘
-w” WM M 6., WM
-HM‘
-PLfiA;R/ AQWWWM
-QT
-P4=I_é_u,u_1_ ) ﬁ=T~AG0
-0‘; ajw QZMZ =25
-‘é,:—mn[ﬂﬂ)/F =45‘
-l2; > 26‘- (5)540
-ark (X)
-u=(gu z 0
-‘151 q
-J’ M 0 32,
-MuT=/a)($ 04) ' 0 o 4;
-‘I 91 0 [,5
-I 0 0 [q a Z'L ~5/z70—%—
-P: _L p 0 0 a 1 0
-‘ (0° (I Z) Z10 (3'2 o (5 ~4/f0 3/;
--3-
-Scanned Wllh Damscanner
+3 0 “f /1-3 6/ Q
+Avg/a 5- jj yum-74%” 2’¢"5‘/=a-5j~"
+4 a ?1 ~9 a 2-7’
+14/174 WW4 47/5 6” WM
+QT .
+P4=Iﬂﬁ~MMT ) ﬁzgtimo f
+F; af+ claim; =25 ‘ _
+p I. 26w (~6)~5=4O ‘ ‘
+aH-k, . 5’ ‘ '
+M = [5w z 0 . . ‘
+6, ‘ 61f 0 2w, ‘ 1
+auT=(0)(80¢r)7“0 ‘0 0 _
+LT - 92 0 {6- ‘I
+P1 | {1-, (a 0 0 -‘ 0 f 0‘
+‘ <00 4 6;} 40 (32 0 (é JAY 0 3/3‘
+_.3___
+Scanned With CamScanner
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:64**************
-M‘ 11>- » w: a v 'I ~y 0 ,6-
-4 (D 4 a (055 _ p 9-5‘
-41/50 9/5 ‘Y ﬂ; A ﬂ p :-
-2>Q2r14>v=f§lﬁpﬂ= '50-:
-a J",
-ﬂ 05‘
-"5 0 <5 0/6‘ p -
-u) 7/5“
-A’/eol?a=(0 55>(p 4 o a
-0 057 ‘7/3’ p 3/;
-__ 1 0 1
-“I 0 3
-‘,v — Cf/ mg ‘Ira/Zn)
-l/ MW“ A M’ 4/4’
-Wain‘: ﬁ‘
-a ) /1—¥- 0 ‘I
-Mfllﬂﬂa):/lf 1'5 ‘3 =[7l-5')3
-)6‘ 0 14
-_%.
-Scanned Wllh Damsoanner
+P-A'; ~515- o “1/: 3 0 "I -5- 0 “5"
+‘ 0 1f 0 0 5 5 Q 0 5- 5-.
+__ .___. 7‘ H
+913:)’ 2 429:2”? /€71/'-"0*5‘
+ﬂ JHJ"
+6 c0 5‘
+(I) “'5- 0 “.5- “J/OF 0 —i/5-
+0 0 9 w; v 3/;
+____ 3L 0 7 I ; -
+‘"4! 5' '5 .- -- ‘
+“LL 0 '3 - -
+l/Mzéhw W a? ﬁG/w Mai” M’
+-.. a) _ 2.)} 0 "/
+MULP/i )‘j 4/ 14 —2 ___ [72_5-)3 ‘
+9‘ 0 1-5
+e -—¢-
+Scanned Wlth CamScanner
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:65**************
-4%‘!“2 1m w. “9M “W”
-Io 9 _/
-A’/ﬂ {L 5]
-‘I 0 ;c
-< _ 3 a -1
-74-42531 = 14-?L=[/; Z Z]
-7411);,4- - WW4 152/6 w W
-' GWMMM
-_ 3 0 " L 4/1/41le
-A-n (a 5 5}?!‘2 [37:23:65
-Q 0 a ‘a:
-= 1 ,7] 1 z 1 f a
-Vy ill/Z 4214215 @ngzrgyji
-41124:”? 2) l/ﬂajl/dlj//%)£ZZZF -)
-‘1 9 .. /,s"
-éleJF >) @6592’: Z
-A-
-Panl
-/&az‘+/’L;zjl: [50‘) l Mjémf/whmalmwz
-a wz(
-mniéim Uimgchle'r
+40 0 —/ '
+A"; 0 (2. 5‘ ‘
+1,, 0 $1 ‘ '
+_ __ 3 0 '-!
+ﬁ __ _. 2 0 5- f
+74-6153-L ,_ 74 71l- £0‘ 0 {OK
+, %/o);74 _ W4 Qﬁ au 41%?”5'44
+/? 42%
+‘ __ ,5 0 __( 1 L 3‘ ll/aza (3
+A»?5L*(p 5 fv=fz Z ‘OJ/r: 0:}
+\ 9 0 0 .
+azézﬂzf @RZMZZZZ 0,;ZQ/Zzgjigiji
+W‘ ,3 _
+L’ 2’ . ‘I 5 1 3/5
+4” ~15‘ >> Ru" ﬁg: é;
+Pawl 0 M ‘
+/’QLQZ(1‘/€azjl= [5) - 46 WW Mat
+a euj
+0 3)
+:7’ :5” » 7; __ \
+an ‘"9".
+Scanned With CamScanner
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:66**************
-L 0 a. z. o z
-41 Z K) a M»; kwhff
-422 =5 ’-=
-3 [j g)
--/
-ﬂ'A/ A0211‘ @2le 43923:- (05)
-A? WW WM M“ w 1”!‘
-WW m2‘ {r fgﬂfFéf "7'
-I 0 ﬁ Z117‘
-—/ 3/5‘
-‘7 40: ((05)) (a >) : ‘2
-9/9-
-215 = [/_5l))ﬁ7)) =5‘
-0 a
-_ 3/ o ‘lg/s‘
-@3323=(5-l +g /oﬁ_ A 5 = a4
-a 5 7/; 0 12/“.
-5 4%- "4/:-
-42/5 3/;
-Scanned Wllh U __g_
+2. 0 2: O 2-
+w K) " /”‘“fz‘i*”§//’ ‘2L?
+/2 =5‘ 1..
+22 -' /
+£1153 z 3 ﬂ/
+/ 4(524'f/249Z1L/2532; 05 .
+'MKF/“3L=§ (7
+QM Z/Z ) 0 f5 £37‘
+(/4) 5/; ) 3 .
+'5? /Z 7-‘ 5 ) 0 , 1' """
+-/ 0 H ;.. '
+/Z@25=[/5))/4))=9 ' *'
+3 —/ I 3/5‘ ‘ 0 “[4115-
+iﬁj = 5‘ +—E~ /0 -1 5 2 0 '
+0 j 7/5‘ _ 0 ' 42/25
+462’ 434L920?‘ i
+Q“ = (1%‘) *(w) "5‘?
+42/26 3/5‘
+_.6__
+Scanned With CamScanner
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-5 0 4’; /3/5 0 "4/7
-R1=(055>Q=[0/0)
-o O 4/5 9/; 0 3/5"
-,qit mg + M
-= 5 o ~31; 9/5 0 "4/; 'lno
-0 5 5- p 4 o H10”
-0 0 ‘7/5" 7/; o 5/5‘ ‘P a“
-‘ 55L 0 '91“
-' 4 {Z 3
-M’! P 71-7‘?
-ﬁg,
-Scanned Wltn UamScanner
+5- 0 -a/; 5'5,- 0 "W5-
+R1= 0 5' 5‘ Q _-:. 0 I a
+0 O 4/5 9/5‘ 0 3/5‘
+AC’): QM? + $12
+: b‘ 0 w; "'9/5‘ 0 ~9/5- 'r o O
+0 5 5- 0 4 0 + 7’ 0 (4:
+0 0 ‘I/j' 9/5‘ 0 3/5‘ w 01
+3.52, o "9'35
+' 4 f2, 8 A
+0.6‘! 0 71-95’
+-9’,
+Scanned With CamScanner
 
 ***************Ending Page***************
 

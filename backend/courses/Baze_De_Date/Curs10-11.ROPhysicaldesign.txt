@@ -1,100 +1,94 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\L\ 1/ BAZE DE DATE
-Implementarea constringerilor
+\L/ BAZE DE DATE
+\L/
+lmplementarea constrﬁngerilor
 Declan§atoare (Triggers)
 Tabele virtuale (Views)
-Mlhuelu Elena Ereubz'm
-v m 202072021
+Mihaela Elena Breabén
+© FII 2020-2021
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Proiectarea Bazelor de date Relagionale
+Proiectarea Bazelor de date Relajcionale
 Metodologie
-Speciﬁcayii
-\
-. independent de
-DmgmmeflAwML) ‘i considereme
-ﬁzize
-3, Mcdehre \ogicé
-Normallzzn'e
-Schem. rela iennla i’
-‘ er
-4.Modelarel\1icé V Speciﬁc dezvokaturului
-Ca\ibrnre/opt'\|uizare r SGBDR
-p 2
+l. Analiza cerintelor
+Specificatii
+2. Modelarea conceptualé
+Diagrame E/A (UML) indePendem de
+i conSIderente
+ﬁzice
+3. Modelare logicé
+Normalizare
+Schem relationalé
+‘
+4. Modelare fizicé > Specific dezvoltatorului
+Calibrare/optimizare SGBDR
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Conyinut
-> Constringeri de integritate
-r Declan§atoare
+Conﬁnut
+> Constrﬁngeri de integritate
+> Declan§atoare
 > Tabele virtuale
-
-p a
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Constréngeri de integritate (statice)
+Constréngéri d6 integritate (statim)
 (1)
-r Restriqioneazi stirile posibile ale bazei de date
-v Pentru a eHmina posibilitatea incroducerii eronate de valori la opemyia de inserare
-v Pentru a satisface corecticudmea la accuahzare/gtergere
-> Forgeazé consistent;
-> Transmit sistemului informagii utile stocirii,proces§rii interoginlor
-r Tipuri
+b Restricgioneazii stérile posibile ale bazei de date
+> Pentru a elimina posibilitatea introducerii eronate de valori Ia operatia de inserare
+> Pentru a satisface corectitudinea Ia actualizare/5tergere
+> Forgeazé consistenga
+> Transmit sistemului informagii utile stocérii, procesérii interogirilor
+> Tipuri
 > Non-null
-v Chei
-v lntegritate relerenqali
-> Bazate pe atribut 5i bazate pe tuplu
-v Asemiunigenerale
-} 4
+> Chei
+> lntegritate referen'gialé
+> Bazate pe atribut §i bazate pe tuplu
+> Asergiunigenerale
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Constréngeri de integritate
-
-(2)
-
+Constréngéri de integritate
 > Declarare
-> Odati cu schema (comanda CREATE)
-> Dupé crearea schemei (comanda ALTER)
-
-> Realizare
-r Veriﬁcare la ﬁecare comandé de modiﬁcare a datelor
-> Veriﬁcare la ﬁnal de tranzacgie
-
-p s
+> Odatﬁ cu schema (comanda CREATE)
+> Dupﬁ crearea schemei (comanda ALTER)
+b Realizare
+> Verificare Ia fiecare comandé de modificar'e a datelor
+> Verificare Ia final de tranzacgie
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Constréngeri dc integritate peste 1 variabilé
+Constréngeri de integritate peste 1 variabilé
 
 Implementare inline
 
-CREATE TABLE label (
+CREATE TABLE tabel (
 
-Gl tip not null. -- accepti doar valori nenule
+al tip not null, -- accepté cloar valori nenule
 
-aZ tip unique, --cheie candidat lormaté dintr-un singur atrlbut
+aZ tip unique, --cheie candidat formaté dintr-un singur atribut
 
-a3 tip primary key, -- cheie primari formati dintr-un smgur atribut. implicit {not null,
+a3 tip primary key, -- cheie primaré formaté dintr-un singur atribut, implicit {not null,
 unique}
 
-a4 tip references tabelZ (bl), »cheie strélné formaté dintr-un slngur atribuc
+a4 tip references tabeIZ (bl), --cheie stréinﬁ formaté dintr-un singur atribut
 
-05 tip check (COndlﬂe) -- condigla e 0 eXpresie booleana formulati peste atributul aS:
-(a5<l l and 25>4), (a5 between 5 and IO), (35 in (5,6,7,B,9,|O))...
+05 tip check (conditie) -- conditia e o expresie booleana formulaté peste atributul a5:
+(a5<| | and a5>4), (a5 between 5 and l0), (a5 in (5,6,7,8,9,|O))...
 
 )
 
@@ -103,29 +97,29 @@ a4 tip references tabelZ (bl), »cheie strélné formaté dintr-un slngur atribu
 
 ***************Beginning Page***************
 ***************page number:7**************
-Constréngeri dc integritate peste n variabile
+Constréngeri de integritate peste n variabile
 
 Implementare out-of-line
 
 CREATE TABLE tabel (
 
-a! tip,
+al tip,
 
-aZ tip.
+aZ tip,
 
 a3 tip,
 
 a4 tip,
 
-primary key (al,aZ),--cheie primari formati din 2 (sau mai multe)
+primary key (al,aZ), --cheie primaré formaté din 2 (sau mai multe)
 atribute
 
-unique(aZ,a3),-- cheie candida: formaté din 2 (sau mai multe) atribute
+unique(aZ,a3), -- cheie candidat formati din 2 (sau mai multe) atribute
 
-check (condiﬂe),-- expresie booleani peste variabxle dedarate anterior:
-((a|+a3)/2>=5)
+check (conditie), -- expresie booleanii peste variabile declarate anterior:
+((a l +a3)/2>=5)
 
-foreign key (03,04) references tabeIZ(bI,bZ) -- cheie strémi multi-atribur.
+foreign key (03,04) references tabeIZ(bI,b2) -- cheie stréiné multi-atribut
 
 )
 
@@ -133,347 +127,352 @@ foreign key (03,04) references tabeIZ(bI,bZ) -- cheie strémi multi-atribur.
 
 ***************Beginning Page***************
 ***************page number:8**************
-Integritate referentialé
-Deﬁnipii
-,Mfsa/V/er't \\ cangidat// \universitate
-nun. ummm MI-
+Int6gritat6 r6f6r6n§ialé
+D6fini§ii
+m Mrsitate
+ummu u -M um
 V V V V
 V V V V
 V V V V
 V V V V
-> Integritate referengialé de Ia R.A Ia SB:
-> ﬁecare valoare din coloana A a tabelului R trebuie s5 apari Tn
+> Integritate referengtiald de Ia R.A la S.B:
+> ﬁecare valoare din coloana A a tabelului R trebuie s5 aparéi Tn
 coloana B a tabelului S
-v A se nume§te cheie stréiné
-> B trebuie $5 ﬁe cheie primare'l pencru S sau micar declarat unic
+> A se nume§te cheie stréini
+> B trebuie $5 fie cheie primaré pentru S sau micar declarat unic
 > sunt permise chei striine multi-atribut
-p a
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Intsgritate referentialé
+Integritaté r6feren§ialé
 Realizare
-r Comenzi ce pot genera Tncélcarea restricgiilor:
-> inseriri in R
+> Comenzi ce pot genera incélcarea restrictjilor:
+> inserﬁri in R
 > §tergeri in S
-> actualiziri pe RA sau S.B
-> Acgiuni speciale:
-r Ia gcergere din S:
-ON DELETE RESTRICT (ImthU | SET NULL| CASCADE
-v la actualiziri pe S.B:
-ON UPDATE RESTRICT (\mplmc) | SET NULL | CASCADE
-p 9
+> actualiziri pe R.A sau S.B
+b Act,iuni speciale:
+> la §tergere din S:
+ON DELETE RESTRICT (implicit) | SET NULL | CASCADE
+> la actualizéri pe S.B:
+ON UPDATE RESTRICT (implicit) | SET NULL | CASCADE
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Integrltate referentlalé
-oul sau. gdina?
-VC'REATEIABVLVE chicken (ch \NT PRIMARY KEY‘ V V , V V ' ' ' ' V V
-""elD LNT REFERENQESmeimI "
-CREATE TABLE egg1elD TRTERLMRRV k'EYY L V V
-VVV,L~~"b|'D INT REFERENCES midk'eﬂmb»; L , V 77
-cREATE TABLE eggielD TNT PRIMARY KEK cTD INT):
-ALTER TABLE 0mm ADD CONSTRAINT chickenREFegg
-FORETGN KEY 1elD) REFERENCES egg(e\D)
-DEFERRABLE INITIALLY DEFERRED; a T T
+Integritate referentialé
+oul sau gciina?
+CR ‘ A 'LE chicken (ch INT PRIMARY KEY,
+CREATE TABLE egg(eID INT ' -' W ‘ ' ‘ '
+CREATE TABLE egg(eID INT PRIMARY KEY, cID INT);
+ALTER TABLE chicken ADD CONSTRAINT chickenREFegg
+FOREIGN KEY (eID) REFERENCES egg(eID)
+DEFERRABLE INITIALLY DEFERRED;
 ALTER TABLE egg ADD CONSTRAINT eggREFchicken
-FORETGN KEY ‘CID, REFERENCES cmckenktlD)
-DEFERRABLE INITIALLY DEFERRED LT T ~
-INSERT ‘NTO 899 VALU53(Z U; venﬁcarea conwéngeru se efecmealé
-COMMTT; Imedlat dupi ﬁecare Inserarel
-Dar problema gtergerii (abeTelcr!
-p lo
+FOREIGN KEY (ch) REFERENCES chicken(cID)
+DEFERRABLE INITIALLY DEFERRED‘
+Cum rezolva'ci problema inserérii clacé
+INSERT INTO 999 YALUESIZ, I); verificarea constr'ﬁngerii se efectueazé
+COMMIT; imediat dupé fiecare inserare?
+Dar problema §tergerii tabelelor?
+IO
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
 Asertiuni
 create assertion Key
 check ((select count(distinct A) from T) =
-(select count(*) fromT)));
+(select count(*) from T)));
 create assertion Referentiallntegrity
 check (not exists (select * from Candidat
-where alD not in (select alD from Student)»;
-n
+where alD not in (select alD from Student)));
+ll
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Constrzingeri de integritate
+Constréngari d6 int6gritate
 Abateri de la standardul SQL
-
-r Postgres. SQLite, Oracle, MySQL(innodb) implementeazi 5i valideazi toate
-constringerile anterioare
-
-> SLandardul SQL permite utilizarea de interogiri in clauza check Tnsi nici un SGBD nu
-Ie suporti
-
-r Nici un SGBD nu a implementat aserﬁunile din standardul SQL,func§ionalitatea lor
-ﬁind {urnizati de declangatoare
-
-p I2
+> Postgres, SQLite, Oracle, MySQL(innodb) implementeazé 5i valideazi toate
+constrﬁngerile anterioare
+> Standardul SQL permite utilizarea de interogéri Tn clauza check Tnsé nici un SGBD nu
+le suportﬁ
+> Nici un SGBD nu a implementat aser'giunile din standardul SQL,func'gionalitatea lor
+fiind furnizaté de declan§atoare
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-. . . D EM O . . ‘
-(ﬁ5ierul constrﬁngen.sq!)
-| a
+. . . DEMO. . .
+(fi§ieru| constréngerisql)
+I3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Declan§atoare
-
-(constrangeri dinamice)
-
-> Monitorizeazz'a schimbérile in baza de date, veriﬁcz'a anumite condigii §i inigiazé
-acgiuni
-
-> Reguli evenimenc-condigie-acgiune
-> Introduc elemente din logica aplicagiei Tn SGBD
-> Forgeazﬁ constrﬁngeri care nu pot ﬁ exprimate altfel
-> Sunt expresive
-> Po: Tntreprinde aqiuni de reparare
-> implementarea variaﬁ Tn funcgie de SGBD. exemplele de aici urméresc standardul SQL
-
-p l4
+D661an§at0are
+(constrangﬁri dinamicﬁ)
+b Monitorizeazii schimbérile Tn baza de date, verificé anumite condit,ii §i ini'giazﬁ
+actjuni
+b Reguli eveniment-condigie-ac'giune
+lntroduc elemente din logica aplica'giei Tn SGBD
+Forgeazé constréngeri care nu pot fi exprimate altfel
+Sunt expresive
+Pot Tntreprinde ac'giuni de reparare
+implementarea variazﬁ Tn funcgie de SGBD, exemplele de aici urméresc standardul SQL
+I4
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Declangatoare
+Declan§atoare
 Implementare
-Create Trigger nume
-BefqrelAfterjlnsrgad Of evem'mente
-vanabTIe-re eren late]
-For Each Row W acuune se executé p\ hecare Mme mmfcmé [Up row vs maternem)
-When ( condfrie )1 W EH u condwe WHERE dm SQL
-actfune W in siandardm SOL e n comandé SQL in SGBD'uH Dome n bhnc procedura‘
-r evenimente:
-> INSERT ON tabel
-> DELETE ON tube!
-> UPDATE [OF al,aZ,...] ON label
-r variabiIe-referen;iote (dupi declarzre pot ﬁ utilizate in condirie §i uqiune):
-> OLD TABLE AS var
-> NEW TABLE As var
-> OLD ROW AS var’ pcntru cv DELETE, UPDATE '1 dear Perm declansmm detip
-> NEyv ROWAS var; Denim ev. IN§ERI UPDATE l linie/row
-> ls
+Create Trigger nume _
+Befqre|After|lnstead Of even/mente
+[ var/ab/le-referentlate]
+[ For Each ROW] -- actiune se executa pt fiecare linie modificata (tip row vs. statement)
+[When ( conditie ) ] -- ca o conditie WHERE din SQL
+actiune -- Tn standardul SQL e 0 comanda SQL, Tn SGBD-uri poate fi bloc procedural
+> evenimente:
+b INSERT ON tabel
+b DELETE ON tabel
+> UPDATE [OF aI,aZ,...] ON tabel
+> variabiIe-referentiate (dupa declarare pot ﬁ utilizate Tn conditie §i actiune):
+b OLD TABLE AS var
+b NEW TABLE AS var
+> OLD ROW AS var — pentru ev. DELETE, UPDATE doar pentru declansatoare de tip
+____-r-__NEYY-BQYYA§Y95199WFY-__'_'§'§EBEHBPATE I/ow
+y |5
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Declan§atoare
-Exemplu (1)
-> integritate referentialé de la R.A la S.B cu etergere in cascadé
+Declansatoare
+EXemplulll
+b integritate referentiala de la R.A la S.B cu stergere in cascada
 Create Trigger Cascade Create Trigger Cascade
-After Delete On S After Delete 0n S
-Referencing Old Row As 0 Referencing Old Table As 0T
-For Each Row TerEzcn'Rnw-l
+After Delete On S After Delete On S
+Referencing Old Row As 0 Referencing Old Table As OT
+For Each Row TForEacerch
 Delete From R Where A = O.B Delete From R Where
-A in (select B from 01)
-p lé
+A in (select B from OT)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-Declangatoare
-Problems potengiale
-> mai multe declan§atoare activate in ace|a§i timp: care se executi primul?
-r acgiunea declan§atoru|ui activeazﬁ alte declan§atoare:in|5nguire sau auto-
-declangare ce poace duce la ciclare
-n
+D6clan§atoar6
+Probleme potentiale:
+b mai multe declan§atoare activate in ace|a§i timp: care se executi primul?
+> actjunea declan§atoru|ui activeazé alte declan§atoarezin|5n§uire sau auto-
+declan§are ce poate duce la ciclare
+I7
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:18**************
-Declangatoare
+Déclansatoare
 Abateri de la standardul SQL
 
 > Postgres
-> cel mai @um de standard
-> imp\emenleazé row+stalement,old/new+rowltable
-> simaXa sulen? abaten de la standard
+> cel mai apropiat de standard
+> implementeaza row+statement, old/new+row/tab|e
+> sintaxa sufera abateri de la standard
 
-> SQLke
-, dozr up raw (4m chi/new table)
-> se executi ‘\mediAL dupi mammal ﬁecirm Hnii [ahalere comportamentaﬁ de ‘a standard)
+b SQLite
+> doar tip row (fara old/new table)
+> se executa imediat, dupa modificarea fiecarei linii (abatere comportamentala de la standard)
 
 > MySQL
-> doar Up row (ma (Md/new table)
-> 5e executi imedlal. dupi modiﬁczrea ﬁecirm Hnii [abatere comportamenm\5 de m standard)
-> permits deﬂnirea unui singur declangalor / evenimenl asaciat unui label
+> doar tip row (fara old/new table)
+> se executa imediat, dupa modificarea fiecarei linii (abatere comportamentala de la standard)
+> permite definirea unui singur declansator / eveniment asociat unui tabel
 
 > Oracle
-> imp\emem.ea15 standarduk ruw+statemem cu modiﬁcéri u§oare de sintaxé
-, Lipul instead-of e permis numal pL.view-ur|
-> permits insemrea de blocuri procedurale
-> introduce restricgii pentru a eviu ciclarea
-, zprnﬁmdzte I; labomwr
+> implementeaza standardul: row+statement cu modificari usoare de sintaxa
+> tipul instead-of e permis numai pt. view-uri
+> permite inserarea de blocuri procedurale
+> introduce restrictii pentru a evita ciclarea
+> aprofundate la laborator
 
-p ls
+y l8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-. . . DEMO. H
-(ﬁ§ierul dec/ansataare.sql)
-w
+. . . DEMO. . .
+(fi§ieru| declansatoare.sql)
+I9
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-View-uri — Tabele virtuale
-m
-—‘ \‘ "—,— Cele :2 reguli ale ma Codd
-AJ.':£ ‘ WWW-
-—!|— 1w
-4!’. ‘z BMW Wigwam
-> 10
+— — — —
+—‘ ‘I _'_,— Cele l2 regulr ale lui Codd
+Conceptual level 2. Guaranteed Access Rule
+3. Comprehensive Data Sub-language Rule
+4. View Update Rule
+I! 5. High Level Insert, Update and Delete
+— —
+I ‘ -. ' ysical Data lndepen-e -
+—.— - L°9i°a' Data '"dependenc
+Internal level 8. Integrity Independence
+9. Non Subversion Rule
+I, 10. Systematic Treatment of Null Values
+— — . .
+.i 11.Database Descrlptron Rule
+0 12.Distribution Independence
+physical storage
+20
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Motivatie
+Motivatiﬁ:
 
-> acces modular Ia baza de date
+b acces modular la baza de date
 
-> ascunderea unor date fagi de unii utilizatori
+b ascunderea unor date fa'gé de unii utilizatori
 
-r u§urarea formulirii unor interogiri
+> u§urarea formulérii unor interogéiri
 
-> aplicagiile reale tind s5 utilizeze foarte multe view-uri
-1‘
+b aplica'giile reale tind séi utilizeze foarte multe view-uri
+2|
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Definite 5i utilizare
+Deﬁnire §i utilizare
 
-> Un view este Tn esengi o interogare stocati formulati peste tabele sau alte view-uri
+> Un view este in esen'cé o interogare stocaté formulaté peste tabele sau alte view-uri
 
-> Schema view-ului este cea a rezultatului interogirii
+> Schema view-ului este cea a rezultatului interogérii
 
-> Conceptual, un view este interogat Ia fel ca orice tabel
+> Conceptual, un view este interogat la fel ca orice tabel
 
-> Tn realitate, interogarea unui view este rescrisé prin inserarea interogirii ce deﬁne§te
-view-ul urmati de un proces de optimizare speciﬁc ﬁecirui SGBD
+> in realitate, interogarea unui view este rescrisz'l prin inserarea interogérii ce define§te
+view-ul urmatéi de un proces de optimizare specific fiecéirui SGBD
 
-> Sincaxa
+> Sintaxa
 
-Create View numeView [a1,aZ,...] As <frazé_selec!>
-11
+Create View numeView [a1,a2,...] As <frazé_select>
+22
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
 Modiﬁcarea view-urilor
-r View-urile sunt in general utilizate doar Tn interogéri Tnsé pentru utilizatorii externi
-ele sunt tabele: trebuie 55 poati suporta comenzi de manipulare/modiﬁcare a dacelor
-> Solugia: modiﬁcéri asupra view-ului trebuie s5 ﬁe rescrise in comenzi de modiﬁcare a
-datelor Tn tabelele de bazi
-de oblcei este p05\bl|
-uneori exisci mai mulce variance
+b View-urile sunt Tn general utilizate doar Tn interogéri Tnsé pentru utilizatorii externi
+ele sunt tabeleztrebuie $5 poaté suporta comenzi de manipulare/modificare a datelor
+> Solu'gia: modificz'u'i asupra view-ului trebuie sz'l fie rescrise Tn comenzi de modificare a
+datelor Tn tabelele de bazz'l
+de obicei este posibil
+uneori existé mai multe variante
 > Exemplu
-R(A,B),V(A)=R[A], Insert intoV vahmsB)
-R(N),V(A)=avg(N), updateV 5&[A27
-13
+R(A,B),V(A)=R[A], Insert intoV values(3)
+R(N),V(A)=avg(N), updateV set A=7
+23
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-Modiﬁcarea view-urilor
+Modificarea view-urilor
 Abordéri
-r creatorul view-ului rescrie mate comenzile de modiﬁcare posibile cu ajutorul
+> creatorul view-ului rescrie toate comenzile de modificare posibile cu ajutorul
 declan§atorului de tip INSTEAD OF
-> acoperi mate cazurile
-> garanteazi corecutudineal
-> standardul SQL prevede existenga de view-uri inerent accualizabile (updacable views)
-daci:
-> view-ul e crean cu comanda select ﬁré clauza DISTINCT pe o singuri tabeléT
-> acribuceIe me care M fac parte din deﬁnigia view-qui pot n NULL sau iau valoare default
-> subInterogérile nu fa: referire IaT
-> nu exIsté clauza GROUP BY sau aIti formi de agregzre
-p 24
+acoperé toate cazurile
+garanteazé corectitudinea?
+> standardul SQL prevede existenta de view-uri inerent actualizabile (updatable views)
+dacé:
+view-uI e creat cu comanda select fﬁri clauza DISTINCT pe o singurﬁ tabelﬁT
+atributele din T care nu fac parte din definitia view-qui pot fi NULL sau iau valoare default
+subinterogirile nu fac referire IaT
+nu existé clauza GROUP BY sau alté formé de agregare
+24
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-View-uri materializate
-Creaﬁe Materialized View V [a1,a2,...] As <frazéiselect>
-> are Ioc crearea unui nou tabelV cu schema data‘: de rezultatul interogérii
-> tuplele rezultat al interogirii sunt inserate TnV
-> incerogirile asupra luiV se execuci ca pe orice alt tabel
-r Avantaje:
-> speciﬁce view-urilcr virtuale + cre§te vireza incerogérilor
-r Dezavantaie:
-> V poate avea dunenium foarte man
-> once mod\ﬁcare asupra tabelelor de bazé necesmé refacerea \uiV
-> problema modiﬂcirh cabelelor de bazé la modiﬁcarea view-thi rimﬁne
-p 25
+Vi€W-L11‘i mat6rializat6
+Create Materialized View V[a1,a2,...] As <frazé_select>
+> are loc crearea unui nou tabelV cu schema daté de rezultatul interogérii
+> tuplele rezultat al interogz'lrii sunt inserate TnV
+> interogérile asupra luiV se executi ca pe orice alt tabel
+> Avantaje:
+specifice view-urilor virtuale + cre§te viteza interogérilor
+> Dezavantaje:
+V poate avea dimeniuni foarte mari
+orice modificare asupra tabelelor de bazé necesiti refacerea luiV
+problema modificirii tabelelor de bazi Ia modificarea view-ului rimﬁne
+25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:26**************
-Cum alegem ce materializém
+Cum al6g6m (:6 mat6rializém
 
 > dimensiunea datelor
 
-> complexitatea interogirii
+> complexitatea interogérii
 
-> numirul de interogiri asupra view-ului
+> numérul de interogz'lri asupra view-ului
 
-> numirul de modiﬁciri asupra tabelelor de bazé ce afecteazé view-ul §i posibilitatea
-actualizirii incrementale a view-ului
+> numérul de modificéri asupra tabelelor de bazé ce afecteazé view-ul §i posibilitatea
+actualizérii incrementale a view-ului
 
-> punem Tn balangi cimpul necesar execugiei interogirilor §i timpul necesar actualizirii
+> punem Tn balantj timpul necesar execugiei interogérilor §i timpul necesar actualizérii
 view-ului
-16
+26
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:27**************
-,..DEMO‘ H
-(ﬁ5ierul viewssql)
-11
+. . . DEMO. ..
+(fi§ieru| views.sql)
+27
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:28**************
 Bibliograﬁe
-> Hector Garcia-MolinaJeff UllmanJenniferWidom: Database Systems:The
+> Hector Garcia-Molina,jeff Ullman,jenniferWidom: Database Systems:The
 Complete Book (2nd edition), Prentice Hall; (june l5, 2008)
 > Oracle:
-http://ducs.oracle.com/cd/BZ8359_0I Iservenl I I lb283 I 0/generu!005.htm
-Imp://www.omclerbnse.com/mtIsles/9i/Mum!ingTableExceptrons.php
-hug.//wvm/.dbaromcle.c0m/L avovdmv mutating Lab/e erronhlm
-18
+http://docs.oracle.com/cd/BZ8359_0I/server.I I I/b283l 0/general005.htm
+http://www.oracle-base.com/articles/9i/MutatingTabIeExceptionsphp
+http://www.dba-oracle.com/t avoiding mutating table error.htm
+28
 
 ***************Ending Page***************
 

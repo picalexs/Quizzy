@@ -3,83 +3,84 @@
 Calcul Numeric
 Cursurile 10 5i 11
 2025
-4m Igmzl
+Anca Ignat
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
 Interpolare Newton pe noduri echidistante
-Pp. 05 nodurile de interpolare sum echidistante:
-x‘. =xn +ih , i=0,1,...,n
+Pp. 651 nodurile de interpolate sunt echidistante:
+xi = x0 + ih , i= 0,1,...,n
 in relagia de mai sus ﬁe se d5 h distanga intre 2 noduri
-succesive, ﬁe se precizeazé primul §i ultimul nod, x0 $1 x" iar
+succesive, ﬁe se precizeazé primul §i ultimul n0d, x0 §i xn iar
 h se calculeazé:
-h = (xv _ X")
-n ,
-[x x :l _ f(x[+l)_f(xi) _ yi+l “.V;
-f, ‘+l _ _
-' f (Xi-H - Xi) h
-|
+n .
+x. — x. . — .
+(xi+1 _ xi) h
+1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Se introduce notiunea de diferenté ﬁnitz'l de ordinul 1:
-Af(X)= f(X+h)—f(X)
+Se introduce notiunea de diferentii finitii de ordinul 1:
+Af(X)= f(X+h)—f(x)
 
-Pomind de la aceasté deﬁnitie se pot introduce gi diferente
+Pornind de 1a aceasté deﬁnitie se pot introduce §i diferente
 
 ﬁnite de ordin superior:
 
-A’f(x) = A(Af(x)) = A(f(x+ h)- f(X)) =
+A2f(X) = A(A1’(X))= A(f(x + h) — f (X)) =
 
-= f(x+ 2h)—2f(x+h)+f(x)
+= f(x+2h)—2f(x+h)+ f(x)
 
 §i in general se pot introduce recursiv diferentele ﬁnite de
 
-urdin k:
+ordin k:
 
-Akf(X) = MAM/(>0) = Ak_'f(X+ h)—AHf(X)_
-Prin inductie dupﬁ k, se poate deduce formula de calcul a
-diferentelor ﬁnite de ordin k folosind doar valorile functieif:
+Akf(X) = A(Ak_1f(1¢)) = Ak_lf(x + h) — AH/(X)
+Prin inductie dupéi k, se poate deduce formula de calcul a
+diferentelor ﬁnite de ordin k folosind doar valorile functiei f:
+2
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-h
-Mm = Z(-1)**‘Cif(x+ih>
-i=0 _
-Observagie: Daci funcﬁa f este polinom de grad m atunci
-Af(x) cstc polinom dc grad m-I, A1f(x) cstc polinom dc
-grad m-2, $.a.m‘d. Prin urmare:
-Akf(x)z 0 , pentru k > m , f — polinom de grad m.
-Legitura intre diferengele divizate 5i cele ﬁnite:
-f(X.-+ )—f(Xi) Af(X,‘)
-[xisxm], = l =
-(le — x.) h
-[xi+l,xi+2]/ _|:xi’xi+l]/ AZ/(xi)
-[xnxnnxm], = — = i2
-(x1.+2 — x‘) 2h
-1
+k
+Akﬂx) = 2H)” Ci; f<x + ih)
+i=0 .
+Observagie: Daca funcria f este polinom de grad m atunci
+Af (x) este polinom de grad m-1 , A2 f (x) este polinom de
+grad m-2, $.a.rn.d. Prin urmare:
+Ak f (x) E 0 , pentru k > m , f — polinom de grad m.
+Legatura intre diferengele divizate gi cele ﬁnite:
+. — . A .
+[xpxmj = foal) /(x,) = f(x,)
+f (xi+1 _ xi) h
+[xi+19xi+2:|f _|:xi’xi+1:|f A2f(xi)
+[xi9xi+l9xi+2:|f = — = —2
+(xi+2 _ xi) 2h
+3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Prin inducgie se poate arita urmz'itoarea legéturé intre
-diferengele divizate de ordin k $i cele ﬁnite:
-AAf(X,~)
-[xi5xi+l""’xi+k:lj =le'
+Prin inducgie se poate aréta urmétoarea legéturé intra
+difarengele divizate de ordin k gi cele ﬁnita:
+Akf(X,-)
+[xi9xi+l9"'9xi+k:|f = W
 Polinoame de interpolare pe noduri echidistante
 
-I.,<x>= yo +[x.,,x.],(x—x<.)+[x..,x.,x,], <x-x0>(x—x‘)+---+
+ln(x)= y0 +|:x0,x1:|f (x — x0) +|:x0,x1,x2:|f (x — x0)(x — x1) + ---+
 
-+[xn,x‘,...,x,( 1/ (x-x0)(x—x|)---(x—xH)+---+
++|:x0,x1,...,xk:|f (x — x0)(x — x1)---(x — xk_1)+ ---+
 
-+[x»,x.,-.-,x,,],(x-xo>(x—x.)---<x—xn_.)
++|:x0,x1,...,xn:|f (x — x0)(x — x1)---(x — xn_1)
 
 4
 
@@ -87,59 +88,63 @@ I.,<x>= yo +[x.,,x.],(x—x<.)+[x..,x.,x,], <x-x0>(x—x‘)+---+
 
 ***************Beginning Page***************
 ***************page number:6**************
-Consideré c5 punctul de interpolare este de forma:
-Tc = x0 + t h
-§i inlocuim diferengele divizate cu diferenge ﬁnite in forma
-Newton a polinomului de interpolare:
-(i-xQ-“(Tc-xH) = (x0 +th-x0)---(x,I +th-xo —(k—1)h)=
-= h*t(t—1)---(t—k+ l)
-s
+Consideré (:51 punctul de interpolara este de forma:
+Tc = x0 + th
+§i inlocuim difarenyele divizate cu diferenge ﬁnite in forma
+Newton a polinomului d6 interpolarﬁ:
+(27- x0)---(2?— xk_1) = (x0 + th- x0)---(x0 + th- x0 — (k —1)h) =
+= hkt(t—1)---(t—k + 1)
+5
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-—l
-1m = I,.<xo+rh) = y0+Af<xn>1+A*/'<xo>%+m+
-_| _ 1
-+A*f(xo)im ) If’, k+ )+~~+
-,, tt—l~--t—n+l
-+A fm) ( ) ,f. >
-Aceastz'i relatie poartzi numele dc formula lui Newton
-progresivz'l pe noduri echidistante.
-n
+_ t t — 1
+ln(x) = ln(x0 +th) = y0 +Af(x0)t+A2f(x0)%+ ---+
+_ 1 _ k 1
+_|_ Akf(x0)W+m+
+n tt-1---t—n+1
+
++ A f(x0)( ) "a )
+Aceasté ralagie poarté numelﬁ: de formula lui Newton
+progresivii pe noduri echidistante.
+
+6
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Considerﬁm polinomul de interpolare Lagrange pe nodurile in
-ordine inversi {x",x"_|,...,x,,}:
-l”(x)= y,. +[xvxn4 1f <x- xn)+[x.,,x,,i.,xH], <x- xmx- an)‘
+Considerém polinomul de interpolate Lagrange: pe nodurile in
+ordine inversé {xn , xn_1 , ..., x0 }:
+In (x)= yn +|:xn , xn_1:|f (x — x”) +|:xn , xn_1 , xn_2 :lf (x — xn )(x — xn_1)-
++ --+|:xn,xn_1,...,x0:|f (x — xn)(x — xn_1)---(x — x0)
+Dacé punctul de interpolate este de forma:
+7c = xn + th
 
-+ ---+[x..,x.._.,-..,x¢], (x-xn)<x—x.,_l)---(x—xo)
-Dacﬁ punctul de interpolate este de forma:
-
-E = x” + th
-
-analog ca mai sus obgine formula lui Newton regresivi pe
+analog ca mai sus obyine formula lui Newton regresivﬁ pe
 noduri echidistante:
+
+7
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-IO? i
-n )=
-1,,(x
-"+th)—
-—y
-"+Af(X )l
-H +A2
-+A‘ f
-f(x t (xn m
-+A~f ) l+1)"-(t+ 2 )+m+
-(mimn k! k4)
+16¢
+n )=l
+n(x
+n+th)=
+yn+Af(x )
+n_1t+
++A" A2f
+ﬂx t (x t(
+H ( n_2)’—+1
++Anf ) t+1)"'(t+ 2 )+m+
+(xofuﬂldlhl)
 )---(t+n +m+
 n! —1)
 
@@ -149,55 +154,61 @@ n! —1)
 ***************page number:10**************
 Schema lui Aitken pentru diferente ﬁnite
 
-Pentm formulele lui Newton progresive/regresive, avem
-nevoie de calculul urmitoarelor diferenye ﬁnite:
-Af(x0), Azf(xu), m, Akf(x0), W,A"f(x0) - pcntru formula
+Pentru formulele lui Newton pregresive/regresive, avem
+nevoie de calculul urmétoarelor diferente ﬁnite:
+Af(x0), A2f(x0), ..., Akf(x0), ...,A"f(x0) - pentru formula
 
-progresivi
-MUCH), Azf(x.,i1)» A706,“), A"f(xo) - Pemru
-formula regresivi
-Mctoda dc calcul a accstor difcrcnyc ﬁnite cstc similré
-schemei Aitken pentru disferentele divizate.
-g
+progresivé
+Af<xn_1),A2/(x,,_2), Ak/(xn_k), A"/(x0) mentﬂl
+formula regresivé
+Metoda de caleul a acestor diferente ﬁnite este similré
+schemei Aitken pentru dieferentele divizate.
+9
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Pas] Pask Pasn
-.VU
-.v. Afm)
-y1 Aﬂx.)
-yk Aﬂxm) A‘ ﬁx“)
-yH MUN-1) Akf(x,.-k-.)
-y" Af(x”_.) A7024) A706»)
+Pasl Pask Pasn
+yo
+yl Af(x0)
+yz Aﬂxl)
+yk Af(xk_1) Akfm)
+yn_1 Af(xn_2) Akf(xn_k_1)
+yn Af(xn_1) Akf(xn_k) A"f(xn)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Funcgii spline
+Functii spline
 Fie nodurile:
-x’. e[a,b] ,i= 0,1,...,n ,
+xi e [a,b] , i = 0,1,...,n ,
 cu
-a=xlI <xl <xz <---<x”_l <x" =b
-Se consideri funcgia continui polinomialé pe porgiuni:
-S(x) = Pi(x) pentru x e [xﬂxml Vi = 0,...,n —l
-u
+a=x0<x1<x2<---<xn_l<xn=b
+Se consideré funcgia continué polinomialé pe porlziuni:
+S(x) = Pi(x) pentru x e [xi,xl.+1] Vi = 0,...,n — 1
+11
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-P006), XEIXWXJ,
-P10‘), XEIXHXZI,
-S(X)= PA-X), xelxvxll,
+P006), x€[X0,x1],
 
-PHD’) , X E IXH , X,,_l I,
+P106), XEDCUXZ],
 
-P.._.(X), xelxwxnl-
-Pi(x), i=0,...,n sum polinoama O asemenea funcgie poarti
-numele defuncﬁe spline.
+P x , xe x ,x ,
+
+SW: 2(_) [2 31
+
+Pn_2(x) a x E [xn_29xn_1]9
+
+Pn_1(x) , x e [xn_1,xn] .
+Pi(x), i=0,...,n sunt polinoame. O asemenea func§i6 poarté
+numale de funcﬁe spline.
 
 12
 
@@ -205,37 +216,38 @@ numele defuncﬁe spline.
 
 ***************Beginning Page***************
 ***************page number:14**************
-Functii spline liniare continue
-Deﬁnitie
-Funcgia S(x) deﬁniti mai sus se nume$te fungtie spline
+Funcgii spline liniare continue
+Definigie
+Funcgia S(x) deﬁnité mai sus se numegte funqtie spline
 
-liniard continmi dace'l polinoamele Pi (x) , i = 0,...,n — 1 sunt
-polinoame de gradul I §i S(x) GCIEJII, adicé:
+liniarii continua’ dacé polinoamele Pl. (x) , i = 0,. ..,n — 1 sunt
+polinoame de gradul 1 gi S(x) eC[a,b], adicé:
 
-IimS(x)= limS(x),i= l,...,n— l.
+limS(x)= limS(x), i = 1,...,n—1.
 
-X-H, X-H,
+x—)xl- x—)xl-
 
-X“, X»,
-Fie funcgia f : |a,b]—>]R pentru care se cunosc valorile:
+x<xi x>xi
+Fie funcgia f : [a,b] —> R p6ntru cam se cunosc valorila:
 
-y,- = f(x,-)~i=0,...,n-
-n
+yi = f(xi),i= 0,...,n.
+13
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Funcgia spline liniaré de interpolare S pentru funqia f
-indeplinesle condigiile de interpolate:
-S(x,.)=y,. ,i=0,...,n.
+Funcgia spline liniaré de interpolam S pentru functia f
+indﬁplinegte condigiile de intarpolare:
+S(xl.)= yl. , i = 0,...,n.
 
-Tinénd seamé c5 polinoamele Pix) sum polinoame de gradul
-1 5i S(x) este continui vom avea condigiile:
+Iinénd s6am€1 c5 polinoamele Pi(x) sunt polinoame: d6 gradul
+1 §i S(x) este continué vom avea condigiile:
 
-PJXJ= yi ,
+R(xi) = yi 9
 
-Pl.(xi+l ) = yM, i= 0,...,n — 1,
+Pl.(xl.+1) = yi+1, i = 0,...,n — 1,
 
 Pl.(x) — polinom de gradul 1.
 
@@ -245,92 +257,91 @@ Pl.(x) — polinom de gradul 1.
 
 ***************Beginning Page***************
 ***************page number:16**************
-Din aceste condigii rezullé:
-EMFMYH. +My~i=0»~,n—1
-xi+l _xi xm _xi
-S(xk)=1’k_.(xk)=11(xk)=yk ,k=1,~-~,n—1,
-S(x.,)= 1:,(x0)=y., ,S(xn)= Iii.(xn)=yn-
+Din aceste condigii rezulté:
+13(X)=ﬂyi+l+myi,i= 0,...,n—1
+xi+1 — xi xi+1 — xi
+S(xk)= Pk_1(xk) = Pk(xk) = yk ,k = 1,...,n—1,
+S(x0)= P0(x0)= yo ,S(xn)= Pn_1(xn)= y”.
 15
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Funcgii spline cubice de clasé C2
-Se consideri sistemul de noduri distincte din inlervalul [a,b]:
-A={a=xu<xl <"‘<x,._1 <x” =b}
+Funcgii spline cubice de clasﬁ C2
+Se consideré sistemul de noduri distincte din intervalul [a,b]:
+A={a=x0<x1 <---<xn_1 <xn =b}
 
-Funcgia S(x) asociaté divizirii A care indepline$te condigiile :
+Funcgia S(x) asociaté divizérii A care indeplinegte condigiile :
 
-Sm e 01pm],
+S(x) e C2[a,b] ,
 
-polinoamele Pi(x) au gradul 3 , i = 0,. .. , n — l,
-se nume$teﬁmciie spline cubicé.
+polinoamele Pl.(x) au gradul 3 , i = 0,...,n — 1,
+se numegte funcyie spline cubicii.
 
-m
+16
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Dalé ﬁind o functief :[a,b]—> 1R cu valorile:
-y; = /'(x..), i= 0,...,n,
-sc considcré functia splint: cubici S(x) dc intcrpolarc cc
+Daté ﬁind 0 funcgie f : [a,b] —> R cu valorile:
+yi = f(x,.), i= 0,...,n,
+se consideré funcgia spline cubicé S(x) de interpolare w
 satisface
-S(x,.)= y,- ,i=0,...,n.
-Pcntru dctcrminarca funclici spline cubicc dc interpolarc
-observém 05 polinoamele:
-Pi(x)=aix3 +ﬁixz +y,.x+b',. ,xe[x[,x,+‘],i=0,..‘,n—l,
+S(xl.) = yl. , i = 0,...,n.
+Pentru determinarea funcgiei spline cubice de interpolate
+0bs6rv2'1m 651 polinoamele:
+R(x) = aix3 +,Bix2 + 7ix+ 5,. , x e [xi,xi+1] , i = 0,...,n —1,
 17
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-implicé determinarea a celor 4n necunoscule
-{al.,ﬂ,.,7,,6i ;i= 0,...,n—l} pentru care se impun:
-n + l conditii din relatiile de interpolare S(xi) = y’. ,i= 0,...,n,
-3(n — 1) condilii de continuitate pentru S(x),S’(x) $i S"(x)
-in nudurile x‘. , i = 1,...,n — 1 ,
-in total 4n-2 condiiii.
-
-Se pot avea in vedere pentru adéugarea a douﬁ condiﬁi
-
-suplimentarea urméloarele abordiri :
-
-I ﬁxarea pamelor in extremiligile intervalului [a,bl. Se
-prcsupunc oi funcgia f cstc dcrivabilé 5i sc cunosc valorilc
-f’(u),f’(b), Se impun conditiile:
-
-S'(Xo) = P0716“) = f'('1) , S'(x,.)= 111W") = f'(b);
-m
+implicé determinarea a celor 4n necunoscute
+{ai,,8i,yi,5i ;i= 0,...,n —1}pentru care se impun:
+n + 1 condigii din relayiile de interpolare S(xl.) = yi , i = 0,. . ., n,
+3(n - 1) condigii de continuitate pentru S(x), S'(x) gi s"(x)
+in nodurile xi , i = 1,...,n—1 ,
+in total 4n-2 condigii.
+Se pot avea in vedere pentru adéugama a doué condilzii
+suplimentama urmétoarele abordéri :
+0 ﬁxama pantelor in extremitégile intervalului [a,b]. Se
+presupune 051 funcgia f este derivabilé 5i se cunosc valorile
+f ’(a), f ’(b). Se impun condigiile:
+S'm) = P.;(x0) = f'w) , Sm) = P;_1(x,,) = fun;
+18
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-0 pericdicitatea primelor doué derivale:
-f'(a) = f'(b) (5'06") = 110%) = PL-(xn) = 51%))’
-f”(a) = f”(b) (5"(X0) = 11;?on P,.'§.(X,,) = 5"(X,.));
-0 anularea derivatei secunde in capetele intervalului:
-f”(ll) = f"(b) = 0
-(S"(xo)= P0”(x0) = 0,5”(xn) = Pl‘ (x“)= 0).
-Funcgiilc spline care indcplincsc accstc condigii sc numcsc
-funcgii spline cubice normale.
-0 derivata de ordinul a1 treilea a funciiei S este continua‘: in
-punctele x; 5i x,” . Aceasta inseamni oi polinoamele Pa,
-P1 respecliv Pn-Z, Pn-l coincid. Acest tip de funcgie spline
-se numegte ,,n0t i a i knot“ gi este utilizat in MATLAB.
+0 periodicitatea primelor doué derivate:
+f '(a) = f '(b) (S'(X0) = P0'(x0) = P,,'_1(X,,) = S'(X,,) ),
+f "(61) = f "(11) (5”(x0) = 1%"(xo)= P,,"_1(X,,) = S"(X,,)) ;
+0 anularea derivatei s6cund6 in capetele intervalului:
+f "(61) = f "(b) = 0
+(S"(x0) = P0"(x0) = 0 , S"(xn) = Pn"_1(xn) = 0).
+Funcgiile spline care indeplinesc aceste condigii se numesc
+funqtii spline cubice normale.
+0 derivata de ordinul a1 treilea a funcgiei S este continué in
+punctele x1 §i xn-1 . Aceasta inseamné (:51 polinoamele P0,
+P1 respectiv PM, Pn-1 coincid. Acest tip de funclzie spline
+se num6§t6 ,,n0t — a — knot” §i est6 utilizat in MATLAB.
 19
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Ne vom ocupa in continuare de determinarea funcliei spline
-de interpolare in cazul in care cunoastem prima derivatz'i a
-funcyiei fin capetele intervalului de interpolare: f '(a), f '(b)‘
-Recapitulénd, vom avea urmétoarele condigii :
+Ne vom ocupa in continuare de determinarea funcyiei spline:
+de interpolare in cazul in care cunoagtem prima derivaté a
+funcyiei f in capetele intervalului d6 interpolare: f '(a), f '(b) .
+Recapitulﬁnd, vom avea urmétoarele conditii :
 
 20
 
@@ -338,250 +349,260 @@ Recapitulénd, vom avea urmétoarele condigii :
 
 ***************Beginning Page***************
 ***************page number:22**************
-PKXI) = yi , i = (Lu-JP], Pn-AXH) = .V“ _ interpolarc ,
+Pi(xi) = yi , i = 0,...,n—1, Pn_1(xn) = y” — interpolare ,
 
-PH(x,.)= Pl.(x,) ,i: l,...,n— l,—c0ntinuitatea functiei S,
+Pi_1(xi) = Pl. (xi) , i = 1,. . . ,n — 1, — continuitatea funcyiei S,
 
-Pi'_| (xi ) = Pi'(xi) , i = 1,. . ‘,n — 1, — continuitatea primei derivatei,
+Pi'_l (xi) = Pl.'(xl.) , i = 1,. . . , n — 1, — continuitatea primei derivatei,
 
-P1. (xi ) = ﬁ”(x,) ,i = 1,. . .,n — l, — continuitatea derivatei secunde,
+Pi'_'1(xi) = Pl."(xi) , i = 1,. . . ,n — 1, — continuitatea derivatei secunde,
 
-FAX”) = 14(1), I’:_|(X,,)= f'(b)-
+PJ(XO) = f '(a), P,,'_1(x,,) = f '(b)-
 Vom nota:
 
-S”(x,) = a‘. ,i= 0,...n.
-Tinénd seama de faptul Ci funclia S ”EC[a,b/ este 0 funclie
-liniaré pe ﬁecare din intervalele [xi, Xi+l] rezulti cé:
+S”(xi) = at. , i = 0,...n.
+Tinénd seama de faptul (:51 funcgia S ”€C[a,b] est€ 0 funciie
+liniaré pe ﬁecare din intervalele [xi, xi+1] rezulté c5:
 21
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-,, x-xi x,- —x
-S (x)=Tam+“Ta,,xe[xi,xi+,],
-hi=xi+l—x,. ,i=0,...,n—l
-iardin
-S'(x)= IS”(x)dx, S(x)= I S'(x)dx
-rezultz'i:
+,, x-xi xi+ —x
+S (x) = h—iai+l + Z—iai , x e [xi,xi+1] ,
+hi = xi+1 —xl. , i=0,...,n—1
+iar din
+S'(x) = I S"(x)dx, S(x) = I S'(x)dx
+rezulté:
 2 2
-x-x. X. —.X
-S, =< .) Y_( > ‘H,’
-(x) 2hi al-H 2h; al I 3
-xelxi,xl.+‘],b,.61R,i=0,...n—1,
+ﬁx): mam _wai + bi,
+211,. 2h,-
+xe [xi,xi+1],bi e R,i= 0,...n-1,
+22
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-(X'—X.)3 (x. —x)3
-S(x) = i‘am + #11,. +bix+ci ,
-611,. 611,.
-xe [xi,x[+‘],bi,ci elR,i=0,...n-l,
+(x-xy (x _xf
+S(x)= —'azl.+1 +Lai +bix+ci ,
+6hl. 6hl.
+x e [xi,xl.+1] ,bi,cl. e RJ = 0,...n-1,
 3 3
-mhwam +@ai+b.-x+cﬂ
-6hi 6h‘.
-bi,c,. eR,i=0,...n-l,
-21
+I)i(x)=mai+l +Mai +bix+ci ,
+611i 6h,-
+bi,ci e R,i= 0,...n-1,
+23
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-Vom calcula functia spline pentru cazul:
-s'(ﬂ)= PUTXU) = 1"(11),
-S'U') = 11_1(Xn)= f'(b )»
-Impunénd candigiile de interpolate $i de continuilate vom
-obgine:
-h.2
-w.» = gm- +11»,- +c,- =y,-,
-h?
-Pi(xi+1)= zlai+|+bixi+1+ci= yi-H 1 i: 0"""_l'
+V0m calcula funcyia spline pentru cazul:
+S'(a) = P0'(x0) = f'(ll )3
+S'(b) = Pn'_1(xn) = f '(b )-
+Impunﬁnd condiyiila de interpolate 5i de continuitate vom
+obtine:
+hZ
+Pi(xl.) = zial. + bixl. + cl. = yl. ,
+hZ
+Pi(xi+1) = Zia,“ + bixi+l + ci = yi+1 > i: 09"” _ 1'
 24
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Din aceste relalii calculém b‘. 5i ci in functicdc ai , am, yi ,ym:
-yi _yi hi
-bi = Hhi _€(ai+l —a,.),
-ci =w—g'(xmai —x,a|.+l),i=0,...n—l.
-i
+Din acest€ relayii calculém bl. 5i cl. in func§i@ da a l. , a H1, yl. , yiH:
+y.+1 — y. h.
+b. = % — —‘ a. — a. ,
+l hi 6 ( 1+1 l)
+c. = M—Z(x 1a. —x.a. 1),i= 0,...n-1.
+l hi 6 l+ l l l+
 Avem:
 2 2
-Who-fwd, _@ao+,,o
-2h0 2h0
-2 Z
-1:le = Man _ ma + a.-.
-2hnil 2hnil
+x — x x — x
+2/10 2h0
+2 2
+x — x x — x
+Pn'—1(x) = ( "-1) an _ ( n ) an-l + bn-l
+2hn_1 2hn_1
 25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Din condiﬂa S'(a) = P0'(xn) = f’(a) avem
+Din condiyia S '(a) = P0'(x0) = f '(a ) av6m
 
-Po'(xn) = —%"ao +b0 = —L::“an —hT5“a‘ +111;qu = f'(a)
+PO'(x0) = —%a0 +1)0 = —2—Z°a0 —%a1 + n+3‘, = f'(a)
 
-2I|0110+hnal =6[%—f'(u)] (1)
+2h0 a0 +h0 a1= 6£%- {'01)} (1)
 0
 
-Din condiﬁa S'(b) = Pn'q(x”) = f'(b ) avem
-P,,'_, (xn ) = %a + bH = %an_‘ + %a“ + % = f'(b)
+Din condiyia S'(b) = Pn'_1(xn) = f '(b ) avem
+114x”) = h?“ + bn_1= h?“ + h?“ + —"y"h__y = f'(b)
 
-hm 11H +2h,,_, a“ = {mm - %] (2)
+hn_1+2hn_1an = {run - yh'—y"] <2)
 
-"--
+,H
 26
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Din condilia de continuitate a primei derivate a funcgiei spline
-cubice Pi'_|(xi) = Pi'(x|.) , i = l,...,n — l, linind seama de:
-Z 1
-1311(x)= w” _(xiiai_l +,,i_l,
-2hi-I 2hi-l
+Din condiyia de continuitate a primei derivate a funcyiﬁi spline
+cubiw Pl.'_1(xl.) = Pi'( xi) , i = 1,...,n — 1, yinénd seama de:
 2 2
-I 2h‘- l+| 2h‘ v v’
-rezultz'l, utilizénd formulele penlru bu si bi deduse mai sus:
-21
+x-x. x-x
+I)i'—1(x) =( H) ai _( l ) ai-l + bi-l’
+2hi—1 2hi—1
+2 2
+x-x. x —x
+Pi'(x) =( I) ai+1 _( 1+1 ) ai + bi’
+2hl. 2hl.
+rezulté, utilizénd formulele pentru bi.1 5i b,- d€duse mai sus:
+27
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-h, y.—y. h.
-R’ x. =L‘av+‘i"'—i a.—a. =
-.4.) 2. hi" 6(. H)
-hv y. —yv h‘
-R'x‘ =—i'a.+M—i' a‘ —a,
-.(.> 2. h.- 6(.+1 .)
-sau
-hHaH +2(h,_‘ +h,) ugh,“ =6[M-@], i=1,...,n—1.
-hl' hi-l
+h. y.—y. h.
+P.’ x_ =L1a_+l—l—1_L1 a._a. =
+l—1( l) 2 l hi_1 6 ( l 1-1)
+h. y. —y. h.
+P.'x. =——’a.+M——’ a. —a.
+l( l) 2 l hi 6( 1+1 l)
+$311
+hi_1ai_1 +2(h,._1 +111.) at. +111. am =6(yi+l_yi-yi_yi1), i=l,...,n—1.
+hi hi-l
 (3)
-2N
+28
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Sistemul liniar format din ecuayiile (1), (3), (2) cu
-nccunoscutclc {atI , a|,---,u"} arc forma:
-Ha = f,Cl1 H e anxmm 7f e Rm
+Sist€mul liniar format din ecuayiile (1), (3), (2) cu
+necunoscutele {a0 , a1,---,an} are forma:
+Ha = f , Cu H E R(n+1)><(n+l) , f E Rn+l
 29
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-2h‘, a” +ho a‘ = {M - ['01)]
-h"
-h;,|a,',1+ 2(h;,1+ hi)“; + hium = 6 M _ w
-hi hi-I
-i = 1,. . . ,n —l
-hp. “H + 1hr‘ a” = {fun — yhi]
+ho
+hi-lai—1 + 2(hi_1 + hi)“; + hiai+1 = 6 M _ w
+hi hi-l
+i = 1,. . . ,n — 1
+h'H a"—1 + 2hn-1 an = 6(f'(b) _ ynlzynl]
 n-l
-w
+30
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-2/10 h0 0 0 0 o 0
-hu 20.0w") h‘ o o o o
-H: 0 h‘ 2(h‘+h,) I120 o 0
-0 u 0 0 hm 1thuiz+hmn hm.
-u 0 0 0 0 h,,_, 2h”,
-u
+2110 h0 0 0 0 0 0
+h0 2(h0+h1) hl 0 0 0 0
+H: 0 hl 2(h1+h2) hz 0 0 0
+0 0 0 0 hn—2 2( hn—2+hn—l) hn—1
+0 0 0 0 0 hm 2hn_1
+31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-6[y. —yn _ f'(a)]
-hﬂ
-Y- 1_.V‘ .V>_.V>| -
-= 6 ¥—% 1=1 n-l
-f [ hi hi-l ] ’ ’
-y —y i
-6 1 b _ n n 1
-[f( ) hn-l
-Matricea H are diagonala dominant?! atét pe linii c511 5i pe
-coloane, este simetricz'i 5i pozitiv deﬁniti prin urmare pulem
-utiliza metoda Gauss-Seidel sau 0 metodé de relaxare pentru
-rezolvarea sistemului Ha:f.
-12
+y _y r
+6£10 _ f ((1))
+h0
+f= 6 —yi+1_y" -—yi_yi—1 i=1,...,n—1
+hi hi-l
+hn-l
+Matricea H are diagonala dOminanté atét pe linii cét $i pe
+coloane, 6ste simetricé $i pozitiv deﬁnité prin unnare putem
+utiliza metoda Gauss-Seidel sau 0 metod'Zl de mlaxare pentru
+rezolvarea sistemului Ha=f
+32
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Interpolare in sensul celor mai mici pz'ltrate
-x x“ x, x; xn-I x”
-f yu y: y; y,” yn
-f(x,') :yi , i=0,...,n
-f(x) z S/(x; a0, 111, ..., um)
-S/(x; a0, 11,, an.) = aux" + a,,..1x"'" + + “IX + a0
-Coeﬁciengii Ila, a’, ..., a," se gisesc rezolvénd problema de
+Interpolare in sensul celor mai mici pétrate
+f yo y1 yz yn-1 yn
+f(x,-) = y,- , i=0,...,n
+Sf(x; a0, a1, ..., am) = amxm + am-1xm'1 + + a1x + a0
+Coeﬁciengii a0, a1, ..., am se gasesc rezolvénd problema de
 minimizare in sensul celor mai mici pétrate:
-n
+33
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
 n 2
-mln{ 2(5)(x,;a,,,a‘,...,am)—yr) ;a0,a‘,...,am 61R} (LSP)
-r=l|
-g:]R"'“->IR+ ,
-n 2
-gwwamam) = Z(S,(x,;a.,,al....,am)—n)
-n r=ﬂ k 2
-gwwmwmm) = 2(amxl" +---+akx, +---+u.x, +an—y,)
-r=ﬂ
-8g "
+m1n{ 2(Sf(xr;a0,a1,...,am)—yr) ;a0,a1,...,am e R} (LSP)
+r=0
+ngm+l—)R+ ,
+" 2
+g(a0,a1,...,am) = 2(Sf(xr;a0,a1,...,am)—yr)
+=0
+I’! r k 2
+m
+g(a0,a1,...,am) = 2(amxr + ---+aer + ---+a1xr +a0—yr)
+r=0
+6g _ n m k k
+a7(aﬂ,cll,...,am)- 22(amxr +---+aer +---+a1xr +a0—yr)xr
 k r=0
-:4
+34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Solugia problemei de minimizare a problemei (LSP) este
-obﬁnutz'l rezolvénd sistemul de ecuaﬁi liniare, de dimensiune
+Solugia problemei de minimizare a problemei (LSP) 6ste
+obginuté rezolvénd sistemul de ecuagii liniare, de dimensiune
 (m+1):
-@g
-7(au,al,...,am)=0 , k = 0,1,...,m
-“k
+6g
+6—(a0,a1,...,am)=0 , k = 0,1,...,m
+ak
 n n
-2(amxl“ + --~+akxf + ---+a,xr +ao )xf = Zyrxf , k = 0,...,m
-r=ﬂ r=0
-n n I, n n
-k [(+1 k-Hn-l k-Hn k
-“EX, HEX, +---+a”.i.ZX, HMZX, =Zym 7
-r=0 ,=o r=n r=0 r=0
-k = 0, ...,m
-:5
+2(amxl'," +---+akxf + ---+a1xr +61!0 )xf = Zyrxf , k = 0,...,m
+r=0 r=0
+n n n n n
+k k+1 k+m-1 k+m k
+‘10sz +a12xr +---+am_12xr +am2xr =2)’er ,
+r=0 r=0 r=0 r=0 r=0
+k = 0,...,m
+35
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Constantele {110, a1, ..., am} sum solugia sistemului liniar:
+Constantele {£10, a1, ..., am} sunt solugia sistﬁmului liniar:
 Ba = z ,
-l I
-B E 1W" W" ’ , B = (11”): F" , z E 11W“) z = (zA )1"
+( +1)><( +1) _ ( +1) _
+BER'” m ,B-(bkj)Z',j:0,zERm z-(zk),':'=0
 n n
-In» ' k .
-bAj=2x, J , zk=2y,x, , k,]=0,...,m
-r:0 7:1!
-m
+k+ ' k .
+bkj=2xr J , zk=2yrxr , k,]=0,...,m
+r=0 r=0
+36
 
 ***************Ending Page***************
 
@@ -589,58 +610,54 @@ m
 ***************page number:38**************
 Rezolvarea ecuatiilor neliniare
 
-Pie f:[a,h]—>]R 0 functie continua‘: pe intervalul [a,b]
-astfel caﬂa)ﬂb) < 0. in aceste condilii, existi x*e(a,b) astfel
-ca f(x*):0. in eels ce urmeazi ne propunem s5 aproximim
-solulia x* a ecualiei neliniaref(x):0‘
+Fie f : [a,b] —> R 0 functie continue“! pe intervalul [a,b]
+astfal ca f(a)f(b) < 0. in aceste conditii, axisté x*e(a,b) astfel
+ca f(x*)=0. in cele ce urmeazé n6 propunem s51 aproximém
+solutia x* a ecualjei neliniare f(x)=0.
 
-Metoda bisectiei (a injumétéﬁrii inlervalului)
-Pp‘f(u)f(b) < 0!!! Pentru a aproxima solutia x“ céutaté, vom
-construi un sir de intervals {[ak ,bk];k 2 0} ce satsifac:
-
-17
+Metoda bisectiei (a injumiitiitirii intervalului)
+Pp. f(a)f(b) < 0!!! Pentru a aproxima solugia x* céutatéi, vom
+construi un gir de intervale {[ak,bk];k 2 0} ce satsifac:
+37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-x’ 6|:ak ,bk]
-[ak+l’bk+l:lc [ak’bk]
-b fa
-hk-H fair-H = I‘ 2 k
+x* e[ak,bk:|
+[ak+l9bk+l:lc [ak’bk:|
+bk _ ak
+bk+1 _ ak+1 = 2
 Pentru primul interval vom considera:
-an=a , b0=b , k=0.
-Considerz'im punctul c de mijloc a1 intervalului [a/.,b1.]:
+a0=a , b0=b , k=0.
+Considerém punctul c de mijloc a1 intervalului [ak,bk]:
 a +b
-L’: k k
+C = k k
 2
-Avem urmétoarele 3 variante:
-1x
+Avem unnétoarele 3 variante:
+38
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-l. f(c)=0 - soluiia céutatzi este x“=c, algoritrnul se opre$te;
-2. f(ak)f(c) < 0 ~> solugia se g5se$te in intervalul (tn-,0),
-continue'un procedeul cu intervalul [ak+1 =11,‘ , bk+I = c];
-3. f(hk)f(c) < 0 ~> soluyia se géseste in intervalul x*6(c,bk)
-procedeul continué cu intervalul la,‘+I =c , b,‘+I = hkl‘
-w
+1. f(c)=0 - soluyia céutaté este x*=c, algoritmul se opregte;
+2. f(ak)f(c) < 0 —> solutia se gése$te in intervalul (ak,c),
+continuém precedwl cu intervalul [ak+1 = ak , bk+1 = c];
+3. f(bk)f(c) < 0 —> soluyia se gésﬁgte in intﬁrvalul x*e(c,bk)
+procedeul continué cu intervalul [ak+1 = c , bk+1 = bk].
+39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Dal 19> 0 existi un interval [upbi] astfel ca x' e (upbz) si
-i b — a . 4 A
-b7‘ — a’; < s (k >l|1gz i)‘ Pentru ssuﬁment de mlc amt
-8
-
-aZ cét §i b2 pot ﬁ considerate aproximiri ale solulgiei x*
-
-. 4 4 _ 4 . 4
-(aZ z x prm llpsa lar b2 z x prm adaos).
+Dat 8> 0 existé un interval [apbz] astfel ea x* e (apbz) 5i
+b; — a; < a (E > log2 bid). Pentru a suﬁeient de mic atét
+a]; eét $i bz pot ﬁ considerate aproximéri ale solutiei x*
+(a; z x* prin lipsé iar b; z x*prin adaos).
 
 40
 
@@ -650,117 +667,124 @@ aZ cét §i b2 pot ﬁ considerate aproximiri ale solulgiei x*
 ***************page number:42**************
 Metoda tangentei (Newton-Raphson)
 
-Vom presupune ci funclia f e C' [11,12] este derivabilé pe
-[a,b] cu derivata continué in acest interval 5i satisface relagia
-f(a)ﬂb) < 0. Pemru a aproxima solulia x* a ecua§i€i f(x)=0
-vom construi un $ir {ngR care 551 conveargi la xi
-xk —>x',pentruk —>00. Primul element din 5ir, x0,
-considerém cé este dat. Urmétorul element din $ir se
-constmieste ca ﬁind punctul de intersecyie a1 tangentei la
-graﬁcul funcﬁeifin punctul (x0, f(Xr/)) cu ﬂxa absciselor.
-Procedeul se repeté cu x1 pentru a-l obtjine pe x2, $vavm.d.
+Vom presupune (:5 funcyia f e C1[a,b] este derivabilé pe
+[a,b] cu derivata continué in acest interval 5i satisfacm relayia
+f(a)f(b) < 0. Pentru a aproxima solutia x* a ecuayiei f(x)=0
+vom construi un gir {xk}gR care s51 conveargé la xi
+xk —) x*,pentruk —) oo. Primul element din $i1", x0,
+considerém (:51 este dat. Urmétorul element din gir se
+construie$te ca ﬁind punctul de intersecgie a1 tangentei 1a
+graﬁcul funcyiei f in punctul ( x0 , f(x0) ) cu axa absciselor.
+Procedeul se repeté cu x1 pentru a-l obtine pe x2, $.a.m.d.
 
-A!
+41
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-xl = Ox m tangenta la graficul funcyiei f in punctul (x0, f(xo))
-x1 = Ox n tangenta la graﬁcul functiei f in punctul (x‘,f(x‘))
-xk+1 = Oxn tangenta la graficul fey‘ f in pl. (xk,f(x,‘ )) , k = 0,1,2,
-Ecuayia tangentei la graﬁcul funcyiei f intnun punct (a, f(a))
-este urmétoarea (pemru 0 funclie derivabilé):
-y = f(u) + f’(a)(x—a)
-4:
+x1 = Ox n tangenta la graficul functiei f in punctul (x0, f (x0))
+x2 = Ox m tangenta la graficul funcgiei f in punctul (x1, f (x1))
+xk+1 = Ox m tangenta la graficul fcig. f in pt. (xk, f (xk)) , k = 0,1,2,
+Ecuayia tangentei la graﬁcul funcyiei f intr-un punct (a, f(a))
+este urmétoarea (pentru 0 functiﬁ derivabilé):
+y = f(a)+ f'(¢l)(X—¢l)
+42
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Pentru a calcula n+1 din Xk vom considera ecuatja tangemei:
+Pentru a calcula xk+1 din xk vom considera ecuayia tangenmi:
 
-y= f(xk)+ f'(xk)(X-Xk)
-unde luémy : 0. Avem:
+y= f(xk)+ f'(xk)(x— Xk)
+unde luém y = 0. Avem:
 
-XM =xk -@ , k =0,1,2,... ,xo dat
+x,‘+1 = xk - M , k = 0,1,2,... ,xo dat
 f (Xk)
-Formula dc mai sus poatc ﬁ folosité doar dacé la ﬁccarc pas
-f'(xA ) aé 0, Daci la un pas avcm f'(xk)= 0 putcm calcula
-citcva iteragiixk (k 2 E) folosind f'(xh),
-41
+Formula de mai sus poate ﬁ folositéi doar dac'Zl la ﬁ6care pas
+f '(xk) i 0. Dacé la un pas avem f '(xk) = 0 putem calcula
+céteva iteratii xk (k 2 k) folosind f'(x£_1).
+43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Teoremﬁ de convergenti
-Pie f E cZ [a,b], cu f(a)f(b) < 0, f'(x) ¢ 0 5i f”(x) == 0
-Vx e [Lb], Daci alegem
-x _ {a pentru fun/"(11) > 0
-" _ b pentru f(b)f"(b) > 0
-atunci $irul {x‘ ; k 2 0} construit cu metoda tangentei este
-monoton, mérginil 5i convergent la unica solugie x* a ecualiei
-f(x)=0. Ordinul dc convorgcmi cstc mai marc dccit 2,
+Teoremii de convergent?!
+Fie f e C2 [a,b], cu f(a)f(b) < 0, f'(x)¢ 0 5i f"(x)¢ 0
+Vx e [a,b]. Dacé alegem
+a pentru f(a)f"(a) > 0
+x =
+0 b pentru f(b)f"(b) > 0
+atunci $iru1 {xk; k 2 0} construit cu metoda tangentei este
+monoton, mérginit $i convergent la unica solugie x* a ecuayiei
+f(x)=0. Ordinul de convergenté este mai mare deceit 2.
 44
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-Metoda falsei poziﬁi (a coardei)
+Metoda falsei pozitii (a coardei)
 
-Presupunem oi funclia f este continuz'x, f E C[a,b] 5i
-satisface relagiaf(a)f(b) < 0‘ Vom construi un §ir {xk} g 1R
-care sz'i conveargé 1a solulia céutati x*,
-xk —> x', pentru k —> 00, Considerim date primul clcmcnt din
-sir, x0 5i un alt punct i‘ Procedeul de consnuire a $in|lui este
-unnitorul:
+Pmsupunem 051 functia f este continué, f e C [a,b] 5i
+satisface relaija f (a) f (b) < 0. Vom construi un gir {xk} g R
+care sé convaargﬁ la soluyia céutaté xi
+xk —) x*, pentru k —) oo. C0nsider5m date primul element din
+$ir, x0 5i un alt punct 5c. Prowdeul de construire a girului este
+urmétorul:
 
 45
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-xl = Ox n dreapta ce uneste punctele (i, 1(3)) , (x0, f(xn))
-xz = Oxn dreapta ce une$tepunctele (§,f(i)), (x|,f(xl))
-x“, =Oxn drcapta ccuncstc pt. (3,11%), (xﬂf(xk)) , k = 0,1,2,..
-Ecuaﬂa dreplei ce Irece prin punctele (a, f(a)) cu (b, f(b))
-este:
-y — nu) = x — a
-f(“)-f(b) ﬂ-b_
+x1 = Ox m dreapta ce une$te punctele (55, f (22)) , (x0, f (x0))
+x2 = ()x m dreapta ce une$te punctele (Sc', f (22)) , (x1, f (x1))
+ka = Ox m dreapta ce une$te pt. (52, f(2”c)), (xk, f(xk)) , k = 0,1,2,..
+Ecuagia dreptai ce trece prin punctele (a, f(a)) cu (b, f(b))
+estex
+
+Y——f(a) = x_—a
+
+f(¢l)—f(b) a—b_
+
 46
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Pentru a-l obline pe xM din xk avem:
-y—f<xk)_ = x-x: cu y=0
-foo-11x) X‘ -X
-x = x _ fmxxk —§> = imp-mm)
-* rum/(i) row-M) ’
-k = 0,1,2,..., xmfc *date
+Pentru a-l Qbyine pe xk+1 din xk av6m:
+y_f(xk)~ =x_xf C11 y=0
+f(xk)_f(x) xk_x
+x =x _ f(xk)(xk —_)2) = if(xk)_xkf(i)
+" f<xk)— f0?) f<xk)— f0?) ’
+k = 0,1,2,..., x0, 5c’ — date
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:49**************
-Teoremé de convergenti
-Fie f e C1[a,b], cu f(a)f(b)< 0, f'(x)== 0 5i
+Teoremﬁ de convergentﬁ
+Fie f E 62 [a,b], cu f(a)f(b) < 0, f'(x)¢ 0 5i
 
-f"(x)¢ 0 Vx e [a,b]‘ Daci alegem:
+f"(x) i 0 Vx e [a,b]. Dacé alagem:
 
-i = a $i x" = b pentru f(a)f"(a) > 0
+i=6! $i x0 =b pentru f(a)f"(a)>0
 
-i=b 5i xn :u pcntru f(b)f"(b)>0
-amnci $irul {xk;k 2 0} construit cu mctoda falsci pozitii cstc
-monoton, mérginit deci convergent la unica solugie x' a
-ecualieif(x)=0‘
+i=b §i x0 :a pentru f(b)f"(b)>0
+atunci $irul {xk; k 2 0} construit cu metoda falsei pozitii este
+monoton, marginit deci convergent 1a unica solutie x* a
+ecuagiei f(x)=0.
 
-4x
+48
 
 ***************Ending Page***************
 
@@ -768,57 +792,60 @@ ecualieif(x)=0‘
 ***************page number:50**************
 Metoda secantei
 
-Presupunem 05 funcyia f esle continui, f E C [a,b] 5i
-satisface relaliaf(a)f(b) < 0. Vom construi un sir {xk} g 1R
-care sz'i conveargz'l la solugia céutati x’:
-xk —> x',pentru k —>oo. Considerim date primele doué
-elements din sir, xo $1 x1.
+Presupunem 05 funcyia f este continua, f e C [a,b] 5i
+satisface relatia f (a) f (b) < 0. Vom construi un $ir {xk} g R
+care s51 conveargé la solutia céutaté xi
+xk —> x*, pentru k —> oo. Considerém date primeﬂe douéi
+elemente din $ir, x0 5i x1.
 
-Procedeul de construire a sirului este urmétorul:
+Pr0c6deul d€ construire a girului este urmétorul:
 
 49
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-x1 = 0x n dreapta ce une$te punctele (x9, f(xo)),(x, , f(x, )) ,
-x3 =Oxn dreapta ce unegte punctele (x‘,f(xl)),(xz,f(xz)),
-xM =Oxndreapta ceune$te pct’ (xk_‘,f(x,(_,)),(xk,f(xk)) ,
-k =1,2,m
-Obﬂnem elementul Xk+l din XL $ixk-1 aslfel:
-y-fm) = x-xk cu y=0
-f(xk)— f(XH) Xk — XH
-so
+x2 = Ox m dreapta ce unegte punctele (x0, f (x0)),(x1, f (x1)) ,
+x3 = Ox m dreapta ce unegte punctele (x1, f (x1)),(x2, f (x2)) ,
+xk+1 = Ox m dreapta ce une$te pct. (xk_1, f(xk_1)), (xk, f(xk)) ,
+k = 1,2,...
+
+Obtinern elementul xk+1 din xk 5i xk-1 astfel:
+
+M = m w y = 0
+
+f(xk) _ f(xk—1) xk _ xk-l
+
+50
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-ka = Xk _ f(xk)(xk _xk—l) =
-f(Xk)—f(Xk_|)
-z xk-lf(xh)_xkf(xk—l)
-fum- fm.) ’
-k =1,2,... ,xo,x,da1i
+_ f(xk)(xk _xk_1) _
+xk+1 _xk_ _
+f(xk)_f(xk_1)
+f(xk)_f(xk_1) ,
+k=1,2,... ,x0,x1dal;i
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-Teoremé de convergenti
+Teoremﬁ de convergentﬁ
+Fie x* 0 solugie a 6cu§iei f(x)=0. Pp. 05
+f e 02 [.6 - r,x* + r], f'(x) ¢ 0 §i f"(x) ¢ 0
+Vx e [f — r, x* + r]. Atunci existé
+0 < r0 _< r pentru care, dacé x0, x1 e [x* — r0,x* + r0] atunci
+xk e [x* —r0,x* + r0],‘v’k 2 2 5i xk —> x*,pentru k —> oo.
 
-Fie x* 0 solulie a ecuﬂei f(x):0. Pp. c5
+. 1 + 5
+Ordlnul de convergenyé €ste q = TI z 1.61803.
 
-fecz|:x'-r,x"+r], f'(x)¢0 5i f"(x)==0
-
-Vx e [x‘ — r,x’ + r1Arunciexisté
-
-0 < r0 _<r pentru care, dacé xu, xl e lx' —ru,x' +ru] atunci
-
-xkelx'—ru,X'+ro],Vk22 5i xk —>x',pentruk—>oo‘
-. l
-
-Ordmul de convergenlé este q = +76 z 1.61803,
+52
 
 ***************Ending Page***************
 
@@ -826,125 +853,124 @@ Ordmul de convergenlé este q = +76 z 1.61803,
 ***************page number:54**************
 Metoda lui Laguerre
 Fie polinomul:
-p(x)= an(x—xl)(x—x2)---(x—x") , a0 #0
-Metoda lui Laguerre propune construirea unui §ir de numere
-care sé conveargé 1a una din rédécinile polinomului p.
-Considerzim derivata polinomuluip:
-51
+p(x) = a0(x— x1)(x— x2)---(x— xn) , a0 at 0
+Metoda lui Laguerre propune construirea unui sir de numere
+care $51 conveargé 1a una din rédécinile polinornului p.
+Considerém derivata polinomului p:
+53
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-1 l l
-p'(x>=p(x>[i+i+~~+i]
-x-xl x-x2 x-xn
+1 1 1
+p'(x)=p(x)[—+—+~~+—]
+x-x1 x-x2 x-xn
 Avem:
-ln|p(x)|=ln\ao|+ln|x—xl|+ln|x—x2|+-~+ln|x—x"|
-v
-1m‘p(x)‘=;+;+...+;=m=m)
-dx x-xl x-x2 X-X" p(x)
+ln|p(x)|=ln|a0|+ln|x—xl|+ln|x—x2|+---+ln|x—xn|
+1 1 1 '
+iln|p(x)|=—+—+---+—=w=G(x)
+dx x-x1 x-x2 x-xn p(x)
 54
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-—iln| (am-i1 +il +m+i1 —
-‘1x2 p <x-x.)* (x-xz)’ (x-xn)’
+d2 1 1 1
+——21n|p(x)|=—2+—2+-~+—2=
+dx (x-xl) (x—x2) (x-xn)
 2
 ' x — x " x
-=[m )1 11(1)}: < )=H(x)
-[poo]
-Fie x1 rédécina pe care vrem s-o aproximim $i yk valoarea
-aproximativi curcnti, Notém cu a = yk — X1 $i faccm
-presupunerea 02': yk se aﬂé la acceea$i distanyi de toate
-celelalte rédécini, adicz'a:
-yA —x,. :b Vi=2,...,nl
+:[m )] p(2)p ( )=H(x)
+[P(x)]
+Fie x1 rédécina pe cam vrem s-o aproximém $i yk valoama
+aproximativé curenté. Notém cu a = yk - x1 §i facmn
+presupunerea 051 yk se aﬂé la acceea$i distanté de toate
+celelalte rédécini, adicéz
+yk —xl. :b Vi: 2,...,n_
 55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
 Prin urmare avem:
-p'(yk) 1 n —l
-G(.v )= i = i + i
-k My‘) a b
+'( 1 n — 1
+Gm) = P_yk) = _ + _
+11(yk) a b
 2
-11'(y) —P(y )p"(y) l n-l
-HWA ) = % = T+ T
-[mm] a
-Rczolvim accst sistcm in raport cu a 5i obgincm:
+11'(y ) — 11(y )p"(y) 1 n -1
+HUG‘) = M = _2 _|_ 7
+[11m )1 a
+Rezolvém a06st sistem in raport cu a 5i obljnem:
 n
-a =i
-max[6<yk>i J(n—1>(nu(yk)—61(yk))]
+a = —
+max[G(yk) i N/(n — 1)(nH(yk) — G’<yk))]
 56
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-Semnul la numitor este ales astfel ca expresia sz'l aibé.
-magnitudine maximé. Daci Linem cont de expresiile pentm G
-si H obtinem pentru a urmétoarea formulz'i:
-a = n Pm)
-2
-max[p'(y‘)i \/<n—1>’[p'<yk)] —n<n-1>p(mp"(yk)]
-
-Urmitorul clement din $ir va ﬁ:
-
-51
+Semnul 1a numitor esté: alas astfel ca expresia s51 aibé
+magnitudine maximal D2105 tinem cont de expresiile pentru G
+§i H obyinem pentru a urmétoarea formulé:
+a = n 11(yk )2
+maX[P'(yk) i \/(" — 1)2 [P '(yk)] — "(n — 1)P(yk)11"(yk)]
+Urmétorul element din gir va ﬁ:
+57
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:59**************
 n
-ym =yk —a =yk “i1
-max[G(yk)i\/<n—1)(nH<yk)—G (yk))]
 
-y“. I y‘ —+
+yk+1 =yk _a =yk _—2
 
-max[p'<yk>iJ(n—1)’[p‘<y‘)] —n(n—1)p(y.)p"(y.)]
-Procedeul se opreste cind a devine suﬁcient dc mic‘ Metoda
-lui Laguerre se poate apl‘ 5i ptr‘ aprox. rid‘ complexe $i de
-asemenea pentru polinoame cu coeﬁcienti complec3i, Pentru
-ridécini simple mctoda lui Lagucrrc arc ordinul dc
-convergenyi 3.
+maX[G(yk>i\/(n—1)(nH(yk)—G 00)]
+yk+1 :yk _ np(yk)2
 
-5x
+maX[P'(yk)i\/(n—1)2[11'(yk)] —n(n—1)p(yk)11"(yk)]
+Pr0c6deul se 0pre$te cénd a devine suﬁcient de mic. Metoda
+lui Laguerre s6 poate apl. gi ptr. aprox. réd. complexe §i de
+asem6nea pentru polinoame cu coeﬁcienti complecgi. Pentru
+rédécini simple metoda lui Laguerre are ordinul de
+convergenté 3.
+58
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Sisteme de ecuaﬁi neliniare
-
-Considerz'i sistemul neliniar:
-
-f‘(x,,x2,...,x“)=0 f, x1
-lf2(xl’xvmsxn)=0 Q F(X)= 0, F = [f2] ‘X = [X2]
-
-fn(x‘,xz,...,xn)=0 f" x"
-Fic matricca jacobiané asociaté funclici F (prcsupuncm cé
-funcyiilc ﬁ sunt difcrcngiabilc):
-
+Sisteme de ecuatii neliniare
+C0nsider51 sistemul neliniar:
+f1(x1,x2,...,xn)=0 f1 x1
+x,x,...,xn =0 x
+f2“ 2 ) Q F<X>=0, F= .fz ,X= .2
+fn(x1,x2,...,xn)=0 fn xn
+Fie: matricea jacobiané asociaté functiei F (presupunem c'Zl
+funcyiil6 fi sunt difemnﬁabile):
 59
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-l i i
-8x, 6x, 8x"
-i i 6L
-VF(X)= 8x‘ 0x2 8x" (x|,x1,...,xn)
-‘L i L
-6x1 fixz 8x"
-Pentru a gési sclulia X” a sistemului de ecuagii neliniare
-F(X)= 0 se c0nstruie5te un §ir de vectori X“) e 1R" astfel:
-60
+i i i
+6x1 6x2 6x”
+6L i 5L
+VF(X)= 6x1 6x2 axn (x1,x2,...,xn)
+‘L ‘L 5L
+6x1 6x2 6x”
+Pentru a gési solutia X* a sistemului de ecuagii neliniare
+F (X)= 0 se construiegte un $ir de vectori X (k ) e R" astfel:
+6O
 
 ***************Ending Page***************
 
@@ -952,24 +978,25 @@ F(X)= 0 se c0nstruie5te un §ir de vectori X“) e 1R" astfel:
 ***************page number:62**************
 X (0) — dat
 
-Xum =Xuo _|:VF(XM)):|_‘ 1:06“):qu +AU",
+X<k+1> = X“) - [VF(X(")):|_1 F(X(")) = X“) + A“),
 
-A"" = _[VF(X""):|_I F(X‘“) E R" , k = 0,1,...
-Vecloml de corecﬁe A“) poate ﬁ calculat 5i ca solugie a
-sistemului liniar:
+AU‘) = —|:VF(X(k)):|_1F(X(k))E 1R” , k = 0,1,...
+Vectorul de corecyie AU‘) poate ﬁ calculat 5i ca solutie a
+sistamului liniar:
 
-VF(X“’)A=- F(X‘”)
-unde matricea sistemului este matricea jacobiané calculati in
-punctul X“) iar vectorul termenilor liberi este (— F(X(“)).
-m
+VF(X("))A=— F(X("))
+unde matricea sistemului este matricea jacobiané calculaté in
+punctul X (k) iar v6ct0rul tﬁnnenilor liberi 6ste (— F (X (k ) )).
+61
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:63**************
 Metoda descrisé mai sus poarté numele de metoda Newton.
-Pentru n=1 metoda Newton este chiar meloda tangentei
-descrisé anterior.
+Pentru n=1 metoda Newton esté: chiar metoda tangentei
+descrisé antﬁrior.
 
 62
 
@@ -977,134 +1004,134 @@ descrisé anterior.
 
 ***************Beginning Page***************
 ***************page number:64**************
-Optimizare numericz'i
-min{f(x); xelR" } , leR" —)]R
+Optimizare numerica
+min { f(x); xeR" } , sz” —>IR
 
-Un punct x* e 1R" se numegte puncl de minim global pentru
-funcliaf dacz'i f(x*) s f(x) Vx e JR'K
+Un punct x* e R" se nume$te punct de minim global pentru
+funcyia f daca f (x*) S f (x) Vx e R".
 
-Un puncl x*e 1R" se numeste punct de minim local pentru
-funcyiaf daci existé 0 vecinétate Va punctului x* pentru
+Un punct x* e R” so numegte punct dc minim local pentru
+functia f daca exista o vecinatate V a punctului x* pentru
 care f(x*) S f(x) Vx e V.
 
-Un punct x*e 1R” se nume$te punct de minim strict local
-pemm funclia f dacé existi o vecinétate V a punctului x*
-pentni care f(x*) < f(x) Vx e V, x :ﬁ x*.
+Un punct x* e R" so numegte punct dc minim strict local
+pentru functia f daca exista o vecinatate V a punctului x*
+pentru care f(x*) < f(x) Vx e V, x at x*.
 
-V = S(x*,r) = {x e 1R”; Hx- x*H S r}.
-m
+V = S(x*,r) = {x e R"; Hx- x*H S r}.
+63
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-Dacé funcgia f e ("(112") se nume$te gradient al funclieif
+Dacé funcyia f e C1(]R") s6 numegte gradient a1 funcyiei f
 in punctul x vectorul:
-1.
-Bf 6f 6f
-V x = i,i,~~~,i ‘
-f( ) [ﬁxl 8x2 6x”
-Dacé funcﬁa feCzﬂR") se nume$te matrice hessiam'l a
-funclgieif in punclul x matricea:
-61
-vzfm= ifm
-Bxﬁxj _ _
-“FINN”
+T
+6 6 6
+6x1 6x2 6x”
+Dacé funcyia f EC 2(11%") se nume$te matrice hessianii a
+funcyiei f in punctulx matricea:
+62
+vzfm = [4m]
+axiﬁxj _ _
+l,J=1,...,n
 64
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-all 8i 3i
-8x]2 (x) axlﬁxz (X) axlax" (x)
-i all i
-v’f(x)= axzﬁx, (x) ax; (x) szax" (x)
-i azif @l
-6xn8x‘ (x) 6xn8x1(x) 6x; (x)
+6x12 (x) 6x16x2 (x) 8x16xn (x)
+V2 f (x)= 6x26x1 (x) 6x; (x) ﬁxzaxn (x)
+axnaxl (x) axlﬁx2 (x) 8x: (x)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:67**************
 Teorema lui Taylor
-Daci funcﬂa f e C‘ (111") este continuu diferengiabili atunci
-exist?! t e (0,1) astfel ca:
-f(x+P)= f(x) + Vf(x+ 11')T1'- (1)
-Dacé f e C 2(112") este de doué ori continuu diferengiabilé
-atunci exist?! t e (0,1) astfel ca:
-l
-f(x+ I')= f0‘) + Vf(X)TP+5pTVZf(X+lp)P- (2)
-ﬁﬁ
+Dacé funcyia f e C1(R”) este continuu diferentiabilé atunci
+existé t e (0,1) astfel ca:
+f(X+ P)= f(X) + Vf(X+ 1P)TP- (1)
+Dacé. f e C 2(11%") este: de douéi ori continuu diferentiabilé
+atunci existé t e (0,1) astfel ca:
+1
+f(x+P)= f(X) + Vf(x)TP+EPTV2f(x'|-1P)P- (2)
+66
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-Teorema l (condigii necesare de optim de ordinul intéi)
-Fie f e C‘(]R") 5i x* e 1R" un punct de minim local pentruf
-Alunci Vf(x*) = 0i
-Un punct x* pemm care Vf(x*) = 0 se nume$te punct
-stationar. Teorema de mai sus spune cé orice punct de minim
-local trebuie sé ﬁe punct stalionar.
+Teorema 1 (condiyii necasare de optim de ordinul intéi)
+Fie f e C1(]R”) 5i x* e R” un punct de minim local pentru f.
+Atunci Vf(x*) = 0.
+Un punct x * pentru care Vf(x*) = 0 se numegte punct
+stationar. Teorema de mai sus spune cé orice punct d6 minim
+local trebuie sé ﬁe punct stationar.
 
 67
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-Teorema 2 (condiiii necesare de optim de ordinul a1 doilea)
-Fie f e CZUR") §i x* e 1R" un punct de minim local pentruf
-Arunci Vf(x*) = 0 5i matricea hessiané sz(x*) este pozitiv
-semideﬁnilé.
-O matrice A e Rm este politiv semideﬁnitﬁ dacé
-(Ax,x)w 2 0 Vxe IR"
-si este pozitiv deﬁniti dacé
-(Ax,x)w > 0 Vx e 1R“, x :ﬁ 0.
-rm
+Teorema 2 (condigii newsare de optim de ordinul a1 doilea)
+Fie f e C 2(Rn) 5i x* e R" un punct de minim local pantru f.
+Atunci Vf(x*) = 0 5i matricea hessiané V2 f (x*) este pozitiv
+semideﬁnité.
+O matrice A e Rm este pozitiv semideﬁnitii dacé
+(Ax,x)R,, Z 0 Vxe 1R"
+5i este pozitiv deﬁnitii dacé
+(Ax,x)R,, > 0 vX E 1R", x ¢ 0.
+68
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-Teorema 3 (condiiii suﬁciente de ordinul a] doilea)
+Teorema 3 (condigii suﬁciente de ordinul a1 doilw)
 
-Fie f e CZUR") §i x* e 1R" un punct pentru care Vf(x*) = 0
+Fie f e C 2(Rn) 5i x* e R" un punct pentru cam Vf(x*) = 0
 
-5i matricea hessiani V2f(x*) este pozitiv deﬁniti. Arunci x*
+§i matricea hessiané V2 f (x*) este pozitiv deﬁnité. Atunci x *
 
-este punct de minim strict local pemmf
+este punct de minim strict local pantru f.
 
-O funcliefse numeste cunvexﬁ dacé:
+O functie f s6 numegte convex?! dacé:
 
-f(ax. +(1—a)x,)S~f<x.)+(1-a)f(xz> ,Vxnxz e 1R",va 610,11.
-ﬁg
+f(a x1 + (l—a)x2) S af(x1)+(1—a)f(x2) ,‘v’x1,x2 e R",Va e [0,1].
+69
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:71**************
 Teorema
 
-Dacﬁfesle funciie convexﬁ orice punct de minim local esle
-punct de minim global‘ Daci in plus f e C'(lR") amnci orice
-punct stationar este punct de minim global.
+Daoa f oste funcyio convexa orioe punct do minim local este
+punot do minim global. Daoa in plus f e C 1(11%") atunoi orioo
+punot stationar oste punct do minim global.
 
-Metode de descrestere
-Sc numcstc directie de descregtere a functici f in punctul x
-un vectord e 1R" pentru care
-f(x+rza')$ f(x) , Vae [0,5).
-70
+Metode de descregtere
+Se numegte directie de descregtere a funclgiei f in punctul x
+un vectord e R” pontru care
+f(x+ad)s f(x) , Vae [0,ﬁ).
+7O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-Teoremi
-Fie feC‘(]R“). Un vector d este direclie de descre$tere
-pentmf in x daci $i numai dacé:
-Vf(x)rd=(d,Vf(x))R,, < o‘
+Teoremﬁ
+Fie f eC1(R”). Un vector d este direcyiﬁ de descr€$tere
+pentru f in x dacé §inu1nai dacé:
+Vf(x)Td=(d,Vf(x))R,, < 0.
 71
 
 ***************Ending Page***************
@@ -1112,15 +1139,15 @@ Vf(x)rd=(d,Vf(x))R,, < o‘
 
 ***************Beginning Page***************
 ***************page number:73**************
-Algoritm dc descreﬂere
-l. alege x e 1R"
-2‘ do
-- giseste 0 direcgie de descre$tere d a luifinx
-— giseste é > 0 astfel ca
-f(x+0'nl) = min{f(x+ad); a e (0,5)}
-(ajustarca pasului i linc search)
-— x = x+ a'ui
-while (nu am gésit solutia)
+Algoritm de descreﬂere
+1. alege x e R”
+2. d0
+- gésegte 0 diracigie de descregtere d a lui f in x
+- gésegte 5: > 0 astfel ca
+f(x+0”zd) = min{f(x+ad); a e (0,5)}
+(ajustama pasului — lin6 search)
+- x = x + 55d
+While (nu am gésit solutia)
 72
 
 ***************Ending Page***************
@@ -1128,297 +1155,351 @@ while (nu am gésit solutia)
 ***************Beginning Page***************
 ***************page number:74**************
 Ajustarea pasului (line search)
-Trebuie rezolvalé o problemi de minimizare unidimensionali
-mill{g(ll);11 E{[1,0]}
+Trabuie rezolvaté 0 pmblemé de minimizara unidimensionalé
+min{g(a) ; a e [b,c]}
 Metoda Newton
-Pie llk aproximarea curentz'i a solutiei problemei de
+Fie ak aproximarea curenté a solutiei problemei de
 minimizare de mai sus. Vom folosi dezvoltarea in serie
-Taylor a funcliei g
-I l
-g(11)= g(11‘)+ {(11001 — a‘ ) + 55/01‘ )(a “102 + 53mm )(11 —"k )3
-71
+Taylor a functiei g
+I 1 I! 1 I"
+g(a) = g(ak)+g (ak)(a_ak)+5g (ak)(a_ak)2 +5g (bk)(a—ak)3
+73
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
-qw) = g<ak>+g'(m(a—nk)+%g"(m(a my
-Pcntru a z a‘putcm considcra cé funclia q aproximcazz'l
+qw) = g<ak)+ g'wkxa —ak)+ gamma —ak)2
+Pentru a z ak putem considera 051 functia q aproximeazé
 
-functia g _ ‘1(a) H 5'01) Si
+funCtia g , ‘1(a) z gm) Si
 
-min{g(a) ; a E [c,b]} = min{q(a) ; a E [c,b]}.
-Construim elementul ak+1 ca ﬁind solugia problemei:
+min{g(a) ; a e [c,b]} = min{q(a) ; a e [c,b]}.
+Construim elementul ak+1 ca ﬁind soluyia problemei:
 
-q(ﬂk+.)= min{q(a) ; a e {6,111}
-am] este solulia ecuaﬂei
-I
-q'(11)= 0 © q'(a) = g'(ak)+ g"(ak)(a—ak) =-
-2: (ak)
-14
+q(ak+1) = min{q(a) ; a E {6,111}
+ak+1 6ste solutia ecuatiei
+q'(a) = 0 (I) q'(a) = g'(ak)+ g"(ak)(a - ak) =-
+g (wk)
+74
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:76**************
 Metoda secantei
-Dacﬁ in relaliile de mai sus se face unnitoarea aproximare:
-' a — ' a
-gnaw“ 1H k) g( H)
-aA _ ak-l
-obginem unnitoarea metodi de aproximare, numité 5i metoda
-sccantci:
-_ I ak _ a‘*l
-“Ml _ “k _$' “Oi, ,
-g (“Al-g (11H)
+Dacé in ralatiile de mai sus se face urmétoarea aproximam:
+g '(ak ) _ g'(ak_1)
+g"(ak) z —
+ak _ ak-l
+obginem urmétoarea metodéi de aproximare, numité 5i metoda
+secantei:
+_ r ak _ ak-l
+g (61k) _ g (“k-1)
 75
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-Aproximare spline cubic?!
-
-Vom folosi pentru a construi ah” pe llk-I , llk , ﬂak-1), gmk),
-g’(ak.1), g’(ak)‘ Aproximém funclia g cu un polinom de grad 3
-gm) z 41(41): anal + c|a2 + cza + 03
-
-Functia q (rcspcctiv constantclc Ci) so calculcazzi ai
-q(ak_,)=g(ﬂk_.) , q(ak)=g(ak)
-q’(“k’|)=g’(“k4) ~ q’(“k)=g'(llh)
-
-7s
+Aproximare spline cubicii
+Vom folosi pentru a construi ak+1 pe ak.1 , ak , g(ak.1), g(ak),
+g’(ak.1), g’(ak). Aproximém funcyia g cu un polinom de grad 3
+g(a) z q(a) = 00a3 + cla2 + 02a + c3
+Functia q (respectiv constantele ci) se calculwzé ai
+q(ak_1)=g(ak_1) , q(ak)=g(ak)
+q'(ak_1)=g'(ak_1) , q'(ak)=g'(ak)
+76
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-am este punctul de minim a1 funcgiei q
-g‘(a,‘)+uz—uI
-a+ =a —(a —a_) i
-k I k k Al [g'(llk)—g'(a‘,,)+2u2
-u. = 5,“th 5"(110-3 mad-mam)
-“A _ak—l
-"2 = \ "'1 —g’(ﬂ‘_,)g‘(llk)
+ak+1 6ste punctul de minim a1 funcgiei q
+g'(azk)+u2 —u1
+a = a — a —a —
+" ( " k‘1)[g'(ak)—g'wk_1)+2uz
+8w )—g(¢l _ )
+“1 = g'(ak_1)+g'(ak)_3M
+ak _ak—1
+“2 = \/u12 _g'(ak_1)g'(ak)
 77
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-Ajustarea inexact?! a pasului
-f(x+dd);min(f(x+ad); ae(0,ﬁ))
-- nu se obline 0'2 optimal
-— pentru reducerea timpului de calcul optimizarea se 0pre$te
-inaintc dc a ajungc la soluyic, in funclic dc anumitc
-critcrii/tcstc dc oprirc
-7x
+Ajustarea inexactﬁ a pasului
+f(x+5zd) E min{f(x+ad); a e (0,6)}
+- nu se obgine 0'2 optimal
+- pentru reducerea timpului de calcul optimizarea se 0pre$te
+inainte d6 a ajunge 1a soluyie, in funcyie de anumite
+criterii/teste d6 oprire
+78
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
 Regula lui Armijo
-3(a) = f(Xk +adk) , 5701) = 3(0)+ 6a 5"(0) , 6 E (0,1)
-E este acceptabil dupé regula lui Armijo dacé
-(l) 3(5) 5 HE)
-(2) 8(617) 2 QUE)
-w
+g(a) = f(xk + adk) 9 5(a) = g(0) + 8a g'(0) , 8 E (0,1)
+H este acceptabil dupé regula lui Annijo dacé
+(1) 3(5) 3 5(5)
+(2) 1,4667 ) Z 5(65)
+79
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:81**************
 k = 0;
-se alege a‘I
-whiIB (ﬂak) > 1,7010)
-
-. a“. =lak
-
+se alege a!0
+while ( gmk) > 501k) )
+1
+' ak+1 = —ak
 0'
-- k = k +1
-0'=2 sau 10 , s=0.2
-m
+'k=k+1
+o'=2 sau 10 , 8:0.2
+80
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:82**************
 Testul Goldstein
-Dal a e (0, 2),ﬁ este considerat acceptabil dacz'l:
-8(5) 5 5(5) 5i 3(5) > 3(0)+(1—£)g'(0)
-x“. = xk + Erik
-E este acceptat daci
-8 5 rum-m» S 1-5
-an(xk )dk
-m
+Dat a e (0,2),67 6ste considerat acceptabil dacé:
+8(5) 3 57(5) 8i 3(5) > g(0)+ (1 — 8)g'(0)
+xk+1 = xk + ‘de
+5 este acceptat dacé
+g s M S 1 _ g
+an(xk)dk
+81
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:83**************
-TestulWolfe
-
-ae(0,2)
-
-51 g(ﬁ)S§(5)=g(0)+86/§'(0)
-{(5) 2 (1-8)g'(0)
+Testul Wolfe
+8 e (0,2)
+5 = 51(5) s 5(5)=g(0) + 85 g'(0)
+5(5) Z (1-8)g'(0)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
-k.
+d)
+\\\
+\\\
+‘ \
+\\\
+\\ '
+\\
+o:
+acceptable range
+(a) Armijo rule
+¢
+\
+\\\\\
+\ \\
+\ \
+. \ \\
+\ \\
+\ \
+\
+\\
+a
+acceptable range
+(b) Goldstein test
+¢
+\\\
+\
+\\
+\
+\
+\
+\
+\\
+\
+\\
+a
+’ acceptable range
+_ (c) Wolfe test
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:85**************
 Metoda pantei maxime
 
-min{ f(x);xe]R" } , f:IR"->]R
-x0 dat , xm = xk +ak dn , k = 0,1,...
-dk direcgie de descresterea lui f in xk
-a. > 0m. +11. d.>= min/(x. +11 do: mom;
-dk direcﬁe de descre$lere dacé:
+min{ f(x);xeR”} , f:R”—>R
+x0 dat , xk+1 = xk +ak dk , k = 0,1,...
+d k dirac§i€ de d€scre$tere a lui f in xk
+ak > 0 f(xk +ak dk) = min{f(xk +0: dk); a e [0,5]}
+dk direcgig de descregtem dacé:
 
-Vf(x,\) Tdk < 0.
+Vf(xk)Tdk < 0.
 
-m
+84
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:86**************
-Metoda pantei maxime:
-dk = —Vf(x,()
-Cazul pz'itratic:
-1 1 1 l
+Metoda pantﬁi maxime:
+d k = —Vf(xk)
+Cazul pétratic:
+1 T T 1
 
-f(x) = Ex Ax- x b = 5(Ax,x)Rn — (b,x)Rn
+f(x) = 5x Ax — x b = 5(Ax,x)R,, — (b,x)R,,
 
-b e 1R" , A e Rm" simctricé 5i pozitiv dcﬁnitﬁ
-A pozitiv deﬁniti —> del A #- 0, feste strict ccnvexé
+b e R" , A e Rm simetricé $i pozitiv deﬁnité
+A pozitiv deﬁnité —> det A 7E 0, f este strict convexé
 
-Vf(x) = Ax-b , V2f(x)= A
-x5
+Vf(x) = Ax-b , V2f(x) = A
+85
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:87**************
-f(x*)= min{f(x); x e 1R”} x*punct unic de minim Q
-x * solugia sistemului liniar Ax = b , x* = Ai'b
-g(x) = Ax- b
-xk-H =xk “akgk a g,‘ = Axk —b
-a,‘ = argmin{f(x,\ —a gk); a e [0,5])
-m
+f(x*)= min{f(x); x e Rn} x *punct unic de minim <:>
+x * solutia sistemului liniar Ax = b , x* = A_1b
+g(x) = Ax — b
+xk+1 = xk _akgk 9 gk = Axk _b
+ak = argmin{f(xk —a gk); a e {Oil}
+86
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:88**************
-1m —agk>= gm —agk)’A(xk —agk)—(xk —agk>’b =
-=%(gIAgk)a’—(gZ/1Xk —gfb)a+ f(xk)=
-=%(gZAgk)a’—(ngk)a+ fm)
-f(xk —agk) ecuagie de gr‘ 2 in a, coeﬁ lui a1,gZAgk > 0
-m
+1
+f(xk —agk)=5(xk —agk)TA(xk —agk)—(xk —agk)Tb=
+1
+= 5(gZAgk)a2—(gZ/1xk 15b)“ + f(xk)=
+1
+= 5(gZAgk)a2—(ngk)a + f(xk)
+f(xk —agk) 6cua§ie de gr. 2 in a, coef. lui a2,gZAgk > 0
+T
+amin = ak = ng gk
+gkAgk
+87
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:89**************
-Metoda pantei maxime pemru funcgionale pétralice:
-x" — dal
-g'g
-xk+1 = xk _[ngg;] gk , k = 0,1,...
-gk = Axk —b
-m
+Metoda pant6i maxime pentru funcgionak pétratice:
+x0 — dat
+ng
+xk+1 = xk “($155. , k = 0,1,...
+g k = Axk _ b
+88
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:90**************
-E(x)=%(x—x*)TA(x—x*)=f(x)+%x*r Ax*
-V50‘) =Vf(x)= g(x)
-Sirul constmil cu metoda pantei maxime satisface:
+1
+E(x) = %(x— x*)TA(x— x*) = f(x)+ 5x” Ax*
+VE(X) = Vf(X) = g(x)
+Sirul construit cu metoda pantei maxime satisface:
 T 2
-(gA gk)
-E(x+ )= l—i_ EU‘)
-k' [ (gZAgngI/l 'gA)] k
-
-2w
+gk gk)
+E<x+>= (—_ E(x)
+k1 l (gZAgngZ/l 2Q] k
+89
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:91**************
 Inegalitatea lui Kantorovich
-A e RM", A = A1, A > 0 poziliv deﬁnité
+A e RM”, A = AT , A > 0 pozitiv deﬁnité
 2
-(XTX) > 40C
-(xTAx)(xTA"x) _ (c + C)’
-c, C » cea mai mica $i cea mai mare valoare proprie a lui A.
-90
+(x TX ) > 40C
+(xTAx)(xTA-1x) _ (c + 6f
+c, C - cea mai mica $i cea mai mare valoare proprie a lui A.
+9O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:92**************
-Teoremé
+Teoremﬁ
+Cazul pétratic: Pentru oricn iteragie initialé x0, $irul construit cu
+metoda pantni maxime convnrge la x* unicul punct d6 minim a1
+funcyiei f. Avem:
 
-Cazul pétratic: Pentru orice iteralie initial?! x", §irul construit cu
-metoda pantei maxime converge la x* unicul punct de minim a]
-funciieif Avem:
+C c 2
 
-z
-Emﬂﬂﬁ) Em)
-Cazul general: leR" —>]R, feCzﬂR"), fare un punct de
-minim local x*. Presupunem c5 F(x*) = sz(x*) are c > 0 cea
-mai micé valoare proprie 5i C > 0 cea mai mare valoare propriei
-Dacé $irul {xk} constmit cu metoda pantei maxime converge la
-x* (la ﬁecare pas A=sz(xk) , b=Vf(Xk)), Xk —)x*
-w
+E (x )S — E (x )
+k+1 L C + c) k
+
+Cazul general: f :R” —)]R, f EC2(R”), fare un punct de
+minim local x *. Presupunem 051 F (x*) = V2 f (x*) are c > 0 cea
+mai micé valoara proprie 5i C > 0 caa mai mare valoam proprie.
+Dacé sirul {xk} construit cu metoda pantei maxime converge: 1a
+x* (1a ﬁecare pas A =V2f(xk) , b =Vf(xk)), Xk —) x*
+
+91
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:93**************
-atunci f(xk ) —) f(x*) converge liniar cu 0 raté dc convorgcugé S
+atunci f (xk) —) f (x*) converge liniar cu 0 raté de convergenté 5
 
-C — c 1
+C — c 2
 
-C + c I
+C + c '
 
 Metoda Newton
-xk - punctul curent de aproximare
-. 1
-f(X) = j(xk)+Vf(x‘ )T(X- Xk)+ 2(X- Xklrvzﬂx‘ )(X- X‘ ) = g(y)
-g i functionalé pitraticé, y = x — xk ,
+xk - punctul eurent de aproximare
+1
+f(x) z f(xk)+vf(xk)T(x_ xk)+ 505- xk)Tv2f(xk)(x_ xk) = g0’)
+g — funetionalé pétratieé, y = x — xk,
 92
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:94**************
-g(y) = %y'Ay — y'b + v
-A =sz(Xk) , b=—Vf(xk) ~ f= f(Xk)
-y*= arg min{g(y); ye 1R") este unica solugie a sistemului
-1mm Ay = b , y* = A"b = -[vzf(xk )1" Vf(xk)
+1
+
+g(y) = 5 .vTAy — yTb + c
+
+A=V2f(xk) 9 b=_vf(xk) 9 C: f(xk)
+y* = arg min{ g( y); y e Rn} 6ste unica sclugie a sistemului
+liniar Ay = b , y* = A-lb = —|:V2f(xk):|_1Vf(xk)
 Metoda Newton
-x“. = xk {Wm )1" vfm) , k = 0,1,... , x“ 4m
-91
+
+2 —1
+xk+1 = xk - [v f(xk):| Vf(xk) , k = 0,1,... , x0 - dat
+93
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:95**************
-Teoremﬁ
-Fie f e C3(]R") care are un punct de minim local x* astfel ca
-matricea V2f(x*)>0 este pozitiv deﬁniti‘ Dacé punctul de
-inceput xD este suﬁciem de aproape de x*, ||x—x*||S r,
-atunci sirul {xk} general cu metoda lui Newton converge la
-x* $i ordinul de convergenlé este cel puLin 2.
+Teoremii
+Fie f e C3 (Rn) care are un punet de minim leeal x* astfel ea
+matrieea V2 f (x*)>0 este pozitiv deﬁnité. Daeé punctul de
+ineeput x0 este suﬁeient de aproape de x*, || x—x*||$ r,
+atunei girul {xk} generat cu metoda lui Newton converge la
+x * $i ordinul de convergengé este eel putin 2.
 
 94
 
@@ -1426,17 +1507,17 @@ x* $i ordinul de convergenlé este cel puLin 2.
 
 ***************Beginning Page***************
 ***************page number:96**************
-Metoda gradienﬁlor conjugati (a directiilor conjugate)
-A e RM" , A = AT , A > 0 pozitiv deﬁnite"!
-. 1 r r n
-mm{f(x)=ix Ax-x b; xelR}
+Metoda gradientilor conjugaﬁ (a directiilor conjugate)
+A e Rm" , A = AT , A > 0 pozitiv deﬁnité
+. 1 T T n
+m1n{f(x)=5x Ax-x b; xeR}
 
-Deﬁnitie
-Pentru o matrice A e RM", A = ATsimetrici, doi vectori
-11.,11Z e 1R” se numesc A-ortogonali sau conjugati in raport
-cu A daci:
+Definitie
+Pentru 0 matrice A e Rm", A = ATsimetricé, doi vectori
+‘11,612 e 1R" se numesc A-0rt0g0nali sau conjugati in raport
+cu A dacé:
 
-111M, = (AMJRI. Adv/111.)“, =(Adndz)m~ = 0
+leAdz =(Ad2,d1)R,, =(d2,Ad1)R,, =(Ad1,d2)R,, = 0
 95
 
 ***************Ending Page***************
@@ -1444,270 +1525,293 @@ cu A daci:
 
 ***************Beginning Page***************
 ***************page number:97**************
-A = 0m 2 Vd,,dz suntA — onogonali
-A = 1,, :> ortogonalitate clasici (‘1141an = 0
-Vectorii {01",dI ,...,dk} se numesc A-orlogonali sau
-A-conjugali dacé:
-diTAdj =(Aaj,d,.)R, = 0 , Vi aﬁ j, i,j= 0,1,...,k
-us
+A = 0an :> Valve!2 sunt A — ortogonali
+A = In :> ortogonalitate clasicii ((11,612 )R” = 0
+Vectorii {d0,d1,...,dk} se numesc A-ortogonali sau
+A-conjugati (121051:
+diTAdj =(Adj,di)Rn = 0 , Viij , i,j= 0,1,...,k
+96
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:98**************
-Propoziﬁe
-Fie A e 111"“ , A = A’ , A > 0, 5i {dn,dl,...,dk} direqii
-A-conjugate, d; ¢ 0 , Vi = 0,..‘,k. Atunci vectorii
-{d0,d‘,‘..,d,(} sum liniar independengi.
-A6111“ , A=AT , A>0
-2 {do,d,,...,d”,,}
-_ .4 4 bazz'i in 1R"
-{d0,dl,...,dn_l} - d1recluA-conjugate
-x* = argmin{f(x); x e 1R"} <2 x*solu1ia sist. Ax = b
+Propozitie
+Fie A e Rm" , A = AT , A > 0, §i {d0,d1,...,dk} direcyii
+A-conjugate, di i 0 , Vi = 0,...,k. Atunci vectorii
+{do , d1 , . . . , d k } sunt liniar independengi.
+AeRnx" , A=AT , A>0
+3 {d0,d1,...,dn_1}
+_ .. _ bazé in IR”
+{d0,d1,...,dn_1} - d1rec§11A-conjugate
+x* = arg min{f(x); x e 1R"} <:> x * solugia sist. Ax = b
 97
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:99**************
-x* = 010do + (1,11l + - - - + osz”,l
-[Ax*,di] = diTAx* = aidiTAd,
-=1, Rn
-‘1in _ (Ed.- )R"
-a‘ = dedi _ Mandi)!“
-'H (b‘di)n" d.
-9x
+x* = 050d0 + alal1 + ---+ an_1dn_1
+(Axadi) = dex* = aidiTAdi
+=b Rn
+df b (b,d,-)Rn
+05,- = T— = —
+dl. Adi (Adi,di)R,,
+n-l
+(Mi) ,,
+* = R d.
+98
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-Considerﬁm procesul iterativ
+Considerém procesul itﬁrativ
 
-x" e 1R" — dat
+x0 e 1R” — dat
 
-xk-H = xA +akdk , k = 0,1,2,...,n—l
+xk+1 = xk + akdk , k = 0,1,2,...,n —1
 
 T
-3k dA
-a = —i g = Ax —Iz
-k d1 Ad,‘ ’ ‘ k
-are proprietatea Ci x” = x*.
-xk = xn + 110% + 011dl +~-~+ ak-ldA-l
-X* = X0 +13%» +ﬂﬂi| +"-+/3n_.lin_,
+gk dk
+ak=— T , gk=Axk—b
+d k Ad k
+are proprietatﬁa 051 x” = x *.
+xk = x0 + 050d0 + 051a!1 + ---+ ak_1dk_1
+x* = x0 + ﬂodo + ﬂldl + ' ° ' + ﬁn-ldn—l
 99
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:101**************
-de(x —x ) diTA(x*—x )
-ai = 1 k n v ﬂi = 1 0
-d‘. Ad‘. d, Ad‘.
-dkrA(xk —x0)= 0
-X* -Xk = (ﬂu - and" +~--+ (ﬂH — 11k.‘ M-‘ +ﬂkdk + "'+ 5,._|dn_|
+a _ diTA(xk _ x0) ﬂ _ diTA(x*—x0)
+" dedl. ’ " ‘If/1d,.
+dkTA(xk — x0) = 0
+x * _xk = (ﬂu _ a0 )do + ' ' ' + (ﬂk—1 _ ak-1)dk—l + ﬂkdk + ' ' ' + ﬁn-ldIH
 Corolar
-ngdi = 0 Vi < k
-mu
+ggdl. = 0 Vi < k
+100
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:102**************
-Algoritmul gradientilor conjugaﬁ
-x0 eIR" , g0 =Ax,,—b
-do =_go =b-Axu
-(l __ gird!‘
+Algoritmul gradientilor conjugati
+xoeR" , g0=Ax0—b
+d0 =—g0 =b—Ax0
+a __ glfdk
 
-I< _ r
+k _ T
 
-ll‘ Ad‘
+dk Adk
 
-xk+1 = Xk + akdk
-gm! = Ax“! _b sau gm =gk + akAdk
-ﬂ = ng-HAdA
+xk+1 = xk + akdk
+gk+1 = Axk+1 _ b sau gk+1 = gk + akAdk
 
-* 41A,!‘
-dim = “gm + ﬁnd‘
+" 4,1‘ Adk
+dk+1 = _gk+1 + ﬂkdk
 
-IUI
+101
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:103**************
-ynyz ,...,yp ER”
-span{y‘,yz,...,y,,}={y=a|yI +---+apyp ER"; a‘. eR,i=1,...,p}
-= subspaﬂul gcncrat dc vcctoriiy|,y2 ,...,yp
+y1,y2 ,...,yp e R"
+span{y1,y2 ,...,yp} = {y = azly1 + ---+apyp e IR”; at. e R,i = 1,...,p}
+I subspagiul generat de vectorii yl, y2 , ..., y p
 Teoremﬁ
-Presupunem cé x‘ ¢ x* . Avem urmétoarele relagii:
-(l) gfgi=0 Vi=0,l,...,k—l
-(2) Span{gn,g.,---,gk} = Span{gwAgw--»A‘gn}
-(3) span{do,d|,...,dk } = span{gn,Agn,...,A"go}
-(4) dZAdi=0 Vi=0,1,...,k—1
-Sirul xk —> x* in eel mull n pa$i‘
-m1
+Presupunem (:51 xk i x * . Avﬁm unnétoarele relagii:
+(1) ngi=0 Vi=0,1,...,k—1
+(2) Span{g0,g1,-~,gk} = Span{g0,Ag0,---,Akgo}
+(3) span{d0,d1, ...,dk} = span{g0,Ag0,...,Akg0}
+(4) dkTAdi =0 Vi=0,1,...,k—1
+Sirul xk —) x * in C61 mult n pagi.
+102
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:104**************
-K(g0,k) = span{gn,Agn,...,A"gu} - se nume$te subspaﬁu
-Krylov de grad k pemru g".
-m
+K(g0,k) = span{g0,Ag0,...,Akg0} - sa numagte subspatiu
+Krylov de grad k pentru g0.
+103
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:105**************
-Forma practici a metodei gradienyilor conjugayi
-x‘, e IR" —dal, k = 0
-g“ = AXO —b, 4n = 1“
-while (gk == 0)
+Forma practice‘! a metodei gradienﬁlor conjugati
+x0 eR”-dat, k=0
+g0 = Axo _b’ d0 = _go
+while (gk ¢ 0)
 _ g1 gk
-a’ _ d'Ad
-A k
-m = x‘ + “uh
-gm = 1:. Milk/411*
-_ KZHKM
-.5‘ — 1
-g,_ g,‘
-11M = 1m‘ +19%
-k = k +1;
-m4
+ak _ dTAd
+k k
+xk+1 = xk + akdk
+gk+l = gk + akAdk
+_ gZ+lgk+l
+16k _ T
+gk gk
+dk+1 = _gk+1 +ﬂkdk
+k = k + 1;
+104
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:106**************
-Teoremé
-Dacia matricea A are doar r valori proprii distincte,
-algoritmul gradienyilor conjugaﬂ calculeazi soluyia x* in cel
-mull r iteragii‘
 Teoremﬁ
-Daci A,‘ 5,12 SH-Sﬁ," sum valonle proprn ale matncel A
+
+Dacé matricea A am doar r valori proprii distincte,
+algoritmul gradienigilor cenjugayi calcul6az€1 soluyia x* in cel
+mult r itératii.
+
+Teoremﬁ
+Dacé ll S22 S-“S/ln sunt valorile proprii ale matricei A
 atunci:
+
 2
-1- —A
-||Xk+.—X*\|§5[l"‘i |\Xo-X*|l§
-n-k +11
-|| X“. — X* H§= 2501+‘)
-Z
-A. —A
-E(x )S $ E(x ).
-m 1H +1. u
-ms
+,1 —/1
+
+x _x* 2S # x _x* 2
+ll k+1 llA (IRMA) ll 0 HA
+ll xk+1 - 16* ||Z= 2E(xk+1)
+
+2
+A —l
+
+E x S $ E x .
+
+( M) [lHJPll] ( 0)
+
+105
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:107**************
-Metodele gradienﬁlor conjugaﬁ neliniare
-l
+Metodele gradientilor conjugaﬁ neliniare
+1
 
-ﬁx) = f(xk)+Vf(xA )(x- xk)+ 5(x- x‘ >’V’f(xk>(x — x»
+f(X) z f(xk)+ Vf(xk)(x _ Xk)+ 5(36- xk)TV2f(xk)(x— xk)
 
-s" <-> -Vf(XA)
+g k (_) _ Vf(xk)
 
-A evzfm)
-Varianta pcntru functii oarccarc a motodci gradicnlilor
-conjugaﬁ:
+A <+ vzﬂxk)
+Varianta pentru funcyii oarecare a m6t0dei gradientilor
+conjugati:
 
-mo
+106
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:108**************
-x" eR"-dat, k=0
-go =Vf(xn)9 do =1?"
-while(gk #0)
-A =[V’f<xk)]
-a =_gli
-k dkTAdk
-xk+l = xk + akdk
-gm =V.f(xk+l)
+x0 eR"-dat, k=0
+g0 =Vf(x0)a d0 = _g0
+while(gk i 0)
+A = [v2 f(xk )1
+06 _ _ ggdk
+" _ dTAd
+k k
+xk+1 = xk + akdk
+gk+1 = V.f(xk+l)
 T
-gk-HAdk
-ﬂ =i
-“ dZAdk
-dkH =_gk+l +ﬂkdk
-k=k+b
-w
+g + Ad
+'6" = jTlAdk
+k k
+dk+1 = _gk+l + ﬂkdk
+k=k+h
+107
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:109**************
 Metoda Fletcher-Reeves
-ak se calculeazé folosind meloda ajustirii pasului
-1
-_ gmgm
+ak se calculeazé folosind metoda ajustérii pasului
+_ glf+lgk+l
 ﬂk _ T
 
-3k g1.
+g k g k
 
-xU e 1R" — dat ,
+x0 e 1R” — dat ,
 
-g» = Wm), d» = 1'“ , k = 0
-m
+g0 =Vf(x0)a d0 =_g0 a k=0
+108
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:110**************
-while (gk aﬁ 0)
-ak = min{f(x,k +rzd‘); a e [0,6»
+while (gk ¢ 0)
+ak = min{f(xk + adk); a e [0,6)}
 (exact sau inexact cu testul lui Wolfe)
-xM = x‘ + akdk
-g“. = WWW)
-ﬁf" = Q
-gl. gA
-11M = 1“. +12’ “dk
-k = k +1;
-In‘;
+xk+1 = xk + akdk
+gk+1 = Vf(xk+1)
+FR _ ng+1gk
+ﬂk _ T
+gk gk
+dk+1 = _gk+1 + ﬂkFde
+k=k+h
+109
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:111**************
-Se pune problema dacé dksunt direcyii de descrestere?
-dk = _gk + ﬁk-ldk—l
-gl'd‘ = 11m + Aqgldh.
-Dacia se folose$te ajustarea pasului exacté:
-aH este punct de minim local pentm fpe direcgia dH prin
-11mm £1qu = 0 (8k = Vf(xk ))-
-2 gfdk = —g[gk = — H gk ||§< 0 2 dk direcyie de descrestere
-m
+Se pune problema dacé d k sunt direcgii de descregtera?
+dk = _gk + 16k—1dk-1
+4‘;de = _glfgk + ﬁk-lggdkA
+Dacé se folosegte ajustarea pasului exacté:
+05H este punct de minim local pentru f pe directia alk_1 prin
+111mm gidk_1 = 0 (gk = Wm».
+:> gde = —g,fgk = — || gk ||§< 0 :> dk directie de descre$tere
+110
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:112**************
-Dacﬁ se folosesle ajustarea pasului inexacté am pulea avea
-gde >0 (dk direcyie de creslerell) dar folosind lestul lui
-Wolfe deducem:
-rm + akdk) s f<xk>+ wkgldk
-Wm‘ +akdk)’dk Is (bangldn
-ae[0,%] :> gkrdk<0
-|||
+Dacé se folosegte ajustarea pasului inexacté am putea avea
+gde >0 (dk directie de cregtere!!) dar folosind t€stu1 lui
+Wolfa daducem:
+
+f(xk +akdk)S f(xk)+£akg,fdk
+
+lvf(xk +akdk)Tdk I S (1-5) I $5?de
+
+1
+86(061 :> ggdk<0
+111
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:113**************
-Metoda Polak-Ribiére
+Metoda Polak-Ribiere
 
-- variantz'i a metodei F1elchenReeves
+- varianté a metedei Fletcher-Reeves
 
-ﬁn = 1:1.‘er gk)
+PR _ gZ+1(gk+l _gk)
 
-k gkrgk
-Daci se face ajustarea pasului inexacté cu testul lui Wolfe nu
-putem deduce cé dk sunt direcfii de descrestere‘
-Se folose$te ﬂ: = max{,6:k,0} 5i un test Wolfe adaptat
-pemm a obfine dk direclii de descrestere.
-m
+ﬂk _ T
+g k g k
+Daeé se face ajustarea pasului inexaeté eu testul lui Wolfe nu
+putem deduce e51 d k sunt direetgii de deseregtere.
+Se foloseete ,8; = maX{,BIfR,0} 5i un test Wolfe adaptat
+pentru a obfine d k direefii de desereetere.
+112
 
 ***************Ending Page***************
 
@@ -1715,76 +1819,81 @@ m
 ***************page number:114**************
 Varianta Hestenes-Stiefel
 T
-"s _ gmg“. —gk)
-ﬂk _ Td
-(gm —gk) k
-m
+HS _ gk+1(gk+l _gk)
+ﬂk _ T
+(gk+1 _ gk) dk
+113
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:115**************
 Preconditionare
-Se considerﬁ norma:
-|| X HA= \I(AX,X)R,.
-Evaluarea erorii in metoda pantei maxime:
+Se consideré nonna:
+ll X HA: \/(Axax)Rn
+Evaluarea erorii in metoda pantei maximﬁ:
 k(A) 1 k
-|| X“) — X' IIA s i H Xw' — X' IIA
-k(A) +1
-k(A) = Z — numarul de condmonare spectral
-0 < Al s 1.2 S - - - s A.” valorile proprii ale matricii A
-||4
+ll X“) -X* llA 3 — ll xm) -x* llA
+k(A) + 1
+l - . .
+k(A) = I” — numarul de condltlonare spectral
+1
+0 < ll é 12 é é in valorile proprii ale matricii A
+114
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:116**************
-Avem convergenli rapidé daci numirul de conditionare
-spectralé a1 matricei A este apropiat de 1 (k(A)ZI
+Avem convergenyé rapidé dacé numérul de conditionare
+spectral’; a1 matricei A este apropiat de 1 (k(A)21
 intotdeauna).
-ldeea precondilionérii este de a transforma sistemul Ax:b
-astfel incit si imhunitélim proprietélile spectrale‘
-Ax=b 1+ Ax=5 , cu k(Z)<<k(A)
-us
+Ideea preconditionérii este de a transforma sistemul Ax=b
+astfel incﬁt $51 imbunétéyim proprietétile spectrale.
+Ax=b z> 2x=13 , cu k(;l)<<k(A)
+115
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:117**************
-Precondifiunare
-Ax = b —> M"Ax = M"b ( la stings)
-—> AM"y=b ,x=M"y(ladreapla)
-_> M;‘AM;‘y = Mf'b , x = Mg‘ y (split), M = MIM2
-cu M matﬂce nesingularé , M “z” A. Matricea M sau M"
-poarti numele de matrice dz precondifinnare‘
-m,
+Precondifionare
+Ax = b —) M _1Ax = M _1b (la stéinga)
+—> AM_1y=b , x=M_1y(ladreapta)
+-> MflAM;1 y = Mflb , x = M; y (split), M = MIMZ
+cu M matrice nesingularé , M “z” A. Matricea M sau M'I
+poarté numele d6 matrice de precondilionare.
+116
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:118**************
-Cum trebuie s51 alegem matricea M?
-- sistemul preconditionat (Zx=5) sé ﬁe u$0r de rezolvat
-(convorgcnté rapidé)
-- matricea dc preconditionare si ﬁe economic de construit
-3i aplicat i ietratiile s5 nu ﬁe costisitor de construit
-||7
+Cum trebuie s51 alegem matrieea M?
+- sistemul preeondiﬁonat (Zx=l;) sé ﬁe u$0r de rezolvat
+(convergemé rapidé)
+- matrieea de precondigienare s5 ﬁe eeonemie de eonstruit
+5i aplieat — ietrayiile $21 nu ﬁe costisitor de construit
+117
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:119**************
-Mutricea dc precondiﬂanare Jucubi
-M = diﬂglﬂ" , any-Ham]
-Matrice de precandiﬁunure SSOR
-M =(D+L)D" (D+L)' (A=L+D+LT)
-1 1 1 " 1 T
-M(w) = i[i1)+ 1.][i0] [in + L) ,w e (0,2)
-2 — a2 w w w
-Pentru w - optimal, in anumite cazuri:
-k<M<wu,,. r‘ A) = 0<\/k(A))
-(600," » foarte costisitor de calculat)
-m
+Matricea de precondiﬁonare Jacobi
+M = diag[a11,a22,...,ann]
+Matrice de precondijionare SSOR
+M=(D+L)D_1(D+L)T (A=L+D+LT)
+1 1 1 ‘1 1 T
+M(a)) = —(—D + L)(—D] (—D + L] , a) e (0,2)
+2 — a) a) a) a)
+Pentru a) - optimal, in anumite cazuri:
+k(1\4(wo,,t)_1 A) = 0(\/k(A))
+(wopt - foarte costisitor de calculat)
+118
 
 ***************Ending Page***************
 

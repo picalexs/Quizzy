@@ -1,951 +1,1316 @@
 ***************Beginning Page***************
 ***************page number:1**************
 OOP (C++): Testing
-OM MM WWW znzmnez
+Dorel Lucanu
+Faculty of Computer Science
+Alexandru loan Cuza University, |a§i, Romania
+dlucanu@info.uaic.ro
+Object Oriented Programming 2021/2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-0 CMaka
+ﬂ CMake
 
-O um Yesww mm Guﬂqle Yssl
-Q ml quws
+Q Unit Testing with Google Test
+Q Test Fixtures
 
-Q Yesl¢rwen dmmﬂmer“ nun)
-G mo Z A small Can Smdy
+Q Test-driven development (TDD)
+Q TDD = A Simple Case Study
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-lmwduemn
-- mm \essnnwe \esm mm use awn \eslm hamewem
-. mmmmwmws um \iGngla Tan
-hnzys. //q1(h\m.c:w/qucursr qrcﬂensszy
-. usuama a HmHBiYIng mm“ mused wgmwm
-huﬂd amumuhm mm
-- We m CMake‘ anus: mum may
-htzxvs: //:'naxe m/
+lntroduotion
+
+' In this lesson we learn how to use a unit-testing framework.
+
+0 The framework we use is Google Test
+https://github.com/google/googletest/
+
+' Usually, a unit-testing framework is used together with a
+build automation tool.
+
+. We use CMake, a cross platform builder:
+https://cmake.org/
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Wan
-0 CMeke
+Plan
+ﬂ CMake
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Bnel Descnpmn
+Brief Description
 
-- A CMukzrhaud hmkﬁyﬂem ‘5 uvﬂumzed u asel m
-mgmwel \UQWSI lavgels
+. A CMake-based buildsystem is organized as a set 0f
+high-level logical targets.
 
-- Em xargMcurvesporvdno iVI SXEGHHNQ‘ ova “mm 01 \5
-ncustnm laYﬂthal wmmns custnm mmmnﬂs
+¢ Each target corresponds to an executable, or a library, or is
+a custom target that contains custom commands.
 
-. Devznﬂenmeshnween “met: m mum“ m m:
-qewerawm syskm mam” {he maevowenemlo"
-mm “m Vuvlﬁgenzlannn whenchﬂﬂqzs av: mane
+. Dependencies between targets are expressed in the
+generation system t0 determine the order of generation
+and the rules for regeneration when changes are made.
 
-- mm wmmmvﬂs-me wmtzn m CMak: um.“ m
-mmen m OMaksLlslsm Mesov w the make
-axmvsmn
+~ CMake commands are written in CMake Language and
+included in CMakeLists.txt files or with the .cmake
+extension.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Flesmnoes
+Resources
 
-. Ammmdumm
-hum/m“. ony/CmakeHaelP/vKJO/nmnual/
-cnake 1 m1
+0 An introduction:
+https://cmake.org/cmake/help/v3.ZO/manual/
+cmake.l.html
 
-- Mmmcwm
-hLLp:.//cmake an:kmaKe/helP/lnesL/manAal/
-cnake'buxldlyxnen.7.html
+. Detailed description:
+https://cmake.org/cmake/help/latest/manual/
+cmake—buildsystem.7.html
 
-- cMakeLBnguBmmnucnbedm
-hrws'l/make, orq/tmake/h¢lvllatesvManaal/
-cnake'lahquaqe ‘mun
+. CMake Language is described in
+https://cmake.org/cmake/help/latest/manual/
+cmake—language.7.html
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Flrst Example: Fokiev Slnmlurs
-mum» mmmm 9(an usm mm.
-L- swim
-Ecmums.m
-mm . WP
+First Example: Folder Structure
+This is the most simple example using CMake.
+Li exO_cmake
+ECMakeLists . txt
+main.cpp
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-First Example: CMaksLisIstl
-~ cmk' MW.“ mm" "Wm
-makvgummumnquuidVVSYSION aim
-v W "m vi w mum
-mgmmy
-y D. mum mm" Mm“
-~ Ennqlﬂ'ml mm“ A! km D.“
-,WMKUXUWDW u)
-
-' m in :xemliame (arqu
-aduxkcutahk mum BMW
+Flrst Example: CMakeLlsts.txt
+# CMake minimum version required
+cmake_minimum_required(VERSION 3.16)
+# the name of the project
+project(ex0)
+# C++ minimum version required
+# GoogleTest requires at least C++1l
+set (CMAKE_CXX_STANDARD l4)
+# add an executable target
+add_executable(ex0_main main.cpp)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Fwsi Exampb: mampp
-m mm» ¢
-mum << ‘mun, “Hw- << 5m and“
-v
+First Example: main.cpp
+#include <iostream>
+int main() {
+stdzzcout << "Hello, World!" << stdzzendl;
+return O;
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Fxrsl Examws; Demo with CLmn
+First Example: Demo with CLion
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-First Example: Command lme buﬂdmg
-w. mm m, mmwm
-(a mime,“ H g“ [a m “We Mm
-{m in. 7m,“ H [Mm-p1 m we Wm- mm
-MUM H m. WIZZZTLLE“
+First Example: Command line building
+We work with a copy exO_cmake_cmd
+cd exO_cmake_cmd // go to the example folder
+cmake —H. —Bbuild // create the scripts in the "build" folder
+cd build
+cmake ibuild . // the building process
+ls
+CMakeCache.txt Makefile eXO_main
+CMakeFiles cmake_install.cmake
+./ex0_main // run the generated binary
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-‘mm Example: FokievSlnmlurs
-m‘; mamm- . M m- m.’ mum-
-human
-ELEM“ h
-LBAAneanmaly a
-Ewe cw
+Third Example: Folder Structure
+Let’s elaborate a bit the folder structure.
+l: awake
+CMakeLiSts . txt
+includes
+LE Date.h
+lib
+LE libex2_library.a
+src
+E Date . opp
+main.cpp
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Tmm Example: New ocmmands m
-CMakeUsls.M
-amﬂmnmmm. mm“ m mum. m,
-.ih;,.l,iliijifly sn'nn mm.“ w»
-("IQZZJJRXLZZZM Hum.“ m»
-mwhmmnmM,“ mum" mum-m
+Thlrd Example: New commands In
+CMakeUstsixt
+
+add_executable(ex2_date src/main.cpp src/Date.cpp)
+# for additional headers available for including
+# from the sources of all targets
+include_directories(includes)
+# add a library target
+add_library(ex2_library STATIC src/Date.cpp)
+# linking the library
+find_library(EX2_LIBRARY ex2_library lib)
+target_link_libraries(ex2_main LINK_PUBLIC ${EX2_LIBRARY})
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Third Exampm Belem
-//...
-cm. m: <
-Private:
-m yen;
-m mm;
-m may;
-Mm:
-Wm “mam,” “m, m mm, m my”
-mm luwwuv
-“my went);
-“my me-n;
-mm m; “Mm-mm yl-rh
-mm m “WW-m an
-v‘
-//
+Third Example: Date.h
+//. ..
+class Date {
+private:
+int year;
+int month;
+int day;
+public:
+void setToday(int aYear, int aMonth, int aDay);
+string to_string();
+string today();
+string tomorrow();
+private:
+static bool isLeapYear(int year);
+static int daysNo(Date& d);
+};
+//. ..
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:15**************
-Third Examp\e: Demo wim chn
-Cnmmlnl
-“nihmmmgumy “hum” um
-:axqet,hnk,hbxane>AexZJvlahv LUKJUBLXC qumm
-Cwyﬂblxzjbmynlmm annular-m m mm»
-Urwmlmm
-Hminbnrylixznulur ethhnry hm
-#mwjmjrbmmMUM “NUMWL “mumm-
-m
+Third Example: Demo with CLion
+
+Comment
+find_library(EX2_LIBRZ-\RY ex2_library lib)
+target_link_libraries (ex2_main LINK_PUBLIC ${EX2_LIBRARY
+Copy libex2_|ibrary.a from Release/Debug into folder /|ib
+Uncomment
+#find_library(EX2_LIBRARY ex2_library lib)
+#target_link_libraries(ex2_main LINK_PUBLIC ${EX2_LIBRAR
+build
+
+cl 51 , E i: eqe
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Wan
-g UmrTemug W Gougle Test
+Plan
+Q Unit Testing with Google Test
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Tssiing Framswavks Iro 0H
+Testing Frameworks fro C++
 
-- BuuﬂTsﬂUbli'Yhupaz/Nw boon Gig/aw
-minim/“Wm:/d.,c/hm/mdex.hm
+' BOOStTéStUbﬁﬂyhttps://www.boost.org/doc/
+libs/l_66_O/libs/test/doc/html/index.html
 
-. mume/cppum wurcetcrqmnez/doc/
-cvs/cppmumkmk.ym
+° CppUnHhttp://cppunit.sourceforge.net/doc/
+cvs/cppunit_cookbook.html
 
-- CUTE (Ow UMI Yesﬂw Elsie!)
-hup,//mum,m/
+' CUTE (C++ Unit Testing Easier)
+http://cute—test.com/
 
-. Gnome 0.. mm meeum
-hwy/WM cam/mm/mqmwmy
-"mu/WWW,“
+¢ Google C++ Mocking Framework
+https://github.com/google/googletest/tree/
+master/googlemock
 
-- GaugleTmhrwv/hznhub mm/WQW/
-yawn?“hm/mmnwmtm
+° GOOweibSthttps://github.com/google/
+googletest/tree/master/googletest
 
-- menummw FHMQMXK'NCH
-hupsﬂ/Mnmmm {OWENS/“mm
-mmaqssvaapx
+' Microsoft Unit Testing Framework for C++
+https://msdn.microsoft.com/en-us/library/
+hh598953.aspx
+
+. I I I
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-o" Gucgm Tesl
-m". Snows Ins! WW
+On Google Test
+From Google Test primer:
 
-o Yest: ‘mum bemuevememnml mm
+ﬂ Tests should be independent and repeatable.
 
-Q Teﬂs mum m Mn mm!” m vancI {he WW m
-m: ‘em m:
+9 Tests should be well organized and reflect the structure of
+the tested code.
 
-o Tsﬂs mama be volume and lemme
+Q Tests should be portable and reusable.
 
-o When mm ML may mama was as mum WNW
-mm ms Mumem as Mm
+Q When tests fail, they should provide as much information
+about the problem as possible.
 
-o mmmqmwmmd ‘mm m1 WM m
-WWW shaves and m m ms a" lhe \esl
-cum-m
+6 The testing framework should liberate test writers from
+housekeeping chores and let them focus on the test
+content.
 
-Q 19$ 5mm be Vast
+(5 Tests should be fast.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-um Testing Termmcklgy
+Unit Testing Terminology
 
-Asserlm “mm “mm .v mum“ MMS (-5
+Assertion A statement that checks if a condition holds (is
 
-Ma
-Tesl mum" D1 News Ila‘ M“ we mm
+true).
+Test A collection 0f assertions that check the behaviour
 
-ul . W. m cm
+of a piece of code.
 
-Yes‘ ewe WM was! mm wle Mm [EM I've
-mm, m m: m
+Test suite A group of test. The test suite should reflect the
+structure of the code.
 
-Ten mm A woﬂeilsmlas
+Test program A set of test suites.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Advantages m usmg uml lesling (UT)
+Advantages of using unit testing (UT)
 
-- m helps mm W5 m my smhes
+. UT helps to fix bugs in early stahes.
 
-. mm vn “mam m. m was ‘mug
+' UT helps t0 understand better the code testimg.
 
-. mm m mm.“ m. m. mmmnalmy mum he
-vakled by a um ands
+' UT helps to understand better what functionality should be
+provided by a unit code.
 
-. m almwsmxnl m! “mm, mchwnhuul WW
-the my nnestobe mm
+' UT allows t0 test some parts of the code without waiting
+the other ones to be finished.
 
-- mam ‘Q 1W lheooae
+. UT helps to reuse the code.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Um! leslmg mym
-/”\\
-( 5;; \
-if’ / \J/ \
-/ \
-‘ m ‘
-E “mum J
-\ / /\
-'*'\// \\/
-\ ‘fim \
-\" /
-\,/
+Unit testing myth
+Less More
+stable code presure
+Less
+productive
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-The slmclme 01 a Gnome x851
-TES'Kﬂnsziunmmn, 1.5mm] K
-mu my
-»
+The structure of a Google test
+TEST<TestSuiteName, TestName) {
+... test body ...
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Six Sleps m FoHow
-. Step! mm me Wm
-. Slap z mmwm Gnnqle Yes! proyem
-. sum a m m- mum-mum me 9mm
-. Slept Adams
-. Slap 5 Cnmpmamaﬁlai mm lencunlgumunn
-mlnvmalmn
-. Slap s M 3m execute m 91mm!
+Six Steps to Follow
+' Step 1: Initialize the project
+0 Step 2: Incorporate the Google Test project
+0 Step 3: Add the source files to the project
+. Step 4: Add tests
+. Step 5: Complete the files with the test configuration
+information
+' Step 6: Build and execute the project
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Firsl Exampb with tests: Folder
-Simclurs
-Tmnnm "mlmmnh nlmDh M1 CM.“
-b exam“
-(“mummu
-“Hum . cw
-mm . w»
+First Example with tests: Folder
+Structure
+This is the most simple example using CMake.
+[ileXO_cmake
+CMakeLists.txt
+hello_test.cpp
+main.cpp
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-First Examme with lasts: New
-Commands in CMakeLisIs.M
+Flrst Example WIth tests: New
+- |
+Commands In CMakeLlsts.txt
+
+# fetch Google Test
+include(FetchContent)
+FetchContent_Declare(
+
+googletest
+
+URL https://qithub_com/google/googletest/archive/refs/tagS/release*l.10.0.Zip
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(qtestiforceisharedicrt ON CACHE BOOL "" FORCE)
+FetchContentiMekeAvailable(googletest)
+enableitestingU
+# add an executable test target
+addiexecutable(
+
+ex0_test
+
+hello_test.cpp
+)
+# link the Google Test library
+target_link_librarie5(
+
+ex0_test
+
+gtest_main
+)
+# enable CMake's test runner to discover the tests included in the binary,
+# using the GoogleTest CMake module
+include(GoogleTest)
+gtestidiscoveritests(eintest)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Fwsl Examp\e wilh lests: henaJesmpp
+First Example with tests: he||o_test.cpp
 
-mm“. <quzz/qvusc m
-// hmmn“ :0“ um “settler-5
-mmmﬂm, “Manama” ‘
+#include <gtest/gtest.h>
+// Demonstrate some basic assertions.
+TEST(HelloTest, BasicAssertions) {
 
-// mm m mm, m m m a...)
+// Expect two strings not to be equal.
 
-EXPZE'LS'KRIIRK'me', 'yauu'h
+EXPECT_STRNE("mine", "yours");
 
-// mm 9mm,
+// Expect equality.
 
-:xserll-Hz ‘ 1. u;
-1
+EXPECT_EQ(2 + 2, 4);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Fwst Example wmh lssls: Demo wmh
-cm"
+First Example with tests: Demo with
+CLion
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Firs! Example wim tests: Command
-lme mum
+First Example with tests: Command
+llne bwldlng
+We work with a copy eincmakeicmd
+cd exOAcmakeicmd // go to the example folder
+cmake *H. *Bbuild // create the scripts in the "build" folder
+cd build
+cmake ibuild . // the building process
+ls
+CMakeCache.txt cmakeiinstall.cmake
+CMakeFiles exO_main
+CTestTestfile.cmake hello_test
+Makefile hello_test[1]_include.cmake
+ideps helloitest[l]itests.cmake
+bin lib
+./he1lo_test // run the generated tests
+[::::::::::] Running 1 test from 1 test suite.
+[iiiiiii] Global test environment setiup.
+[iiiiiii] 1 test from HelloTest
+[ RUN ] He1loTest.BasicAssertions
+[ OK ] HelloTest.BasicAssertions (O ms)
+[iiiiiii] 1 test from HelloTest (O ms total)
+[iiiiiii] Global test environment tearidown
+[==========] 1 test from 1 test suite ran. (O ms total)
+[ PASSED ] l test.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:29**************
-Second Exampm with lssB: Folder
-Simclurs
-‘my I». M w. “mum cm
-h “Wu-My".
-M3 mm y.
-bumnrhbrary a
-M3 ‘um-“P
-h‘: “mm
+Second Example with tests: Folder
+Structure
+This is the most simple example using CMake.
+E: exl_cmake_with_tests
+CMakeLists.txt
+includes
+k5 fnctns.h
+lib
+k5 libexl_library.a
+src
+l5 fm . opp
+tests
+k5 testl.cpp
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Sscnnd Examms with tests: Speciﬁc
-commands in cmmumm
+# add an executable target
+
+add_executable(exl_main src/main.cpp)
+add_executable(exl_fnctns src/main.cpp src/fnctns.cpp)
+
+# add a library target
+
+add_library(exl_library STATIC src/fnctns.cpp)
+
+# linking the library
+
+findilibrary(EXliLIBRARY exlilibrary lib)
+target_link_libraries(exl_main LINK_PUBLIC $EX1_LIBRARY)
+# fetch Google Test
+
+enableitestinq ()
+
+# add an executable test target
+add_executable(exl_testl tests/testl.cpp src/fnctns.cpp)
+# link the Google Test library
+target_link_libraries(exl_testl gtest_main)
+
+# enable CMake’s test runner to discover the tests
+gtest_discover_tests(ex1_testl)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Sscnnd Example with tests: ‘@511 .cpp
+Second Example WIth tests: test1.cpp
+
+#include <gtest/qtest.h>
+
+#include "../includes/fnctns.h"
+
+#include <climits>
+
+// Tests for inc2
+
+TEST<ExlTest, BasicAssertionsIncZ) {
+EXPECLEQ (5, inc2 (3) );
+ASSERT_TRUE(inc2(7) > 7),-
+
+}
+
+// Tests for sqr
+
+TEST(Ex1Test, BasicAssertionsSqr) (
+EXPECT_EQ(9, sqr(3));
+ASSERT_TRUE(sqr(—5) > 0),-
+
+}
+
+// Tests for combinations of the two
+
+TEST(ExlTest, CombinedAssertions) {
+EXPECT_EQ(inc2(2), sqr(2));
+ASSERT_TRUE (sqr (7) > inc2 (7) );
+ASSERT_TRUE(inc2(1) > sqr(1));
+
+)
+
+// Tests for boundary cases
+
+TEST<ExlTest, BondaryAssertions) (
+ASSERTiTRUECLnCZ (INTiMAX) > INTiMAX);
+ASSERT_TRUE(sqr(INT_MAX/5) > INT_MAX/5);
+
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Seound Example wmn lssls: Demo wmn
-CLmn
+Second Example with tests: Demo with
+CLion
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Second Example with lss's: Command
-"__ ‘___ lmebuﬂdmg
+Second Example WIth tests: Command
+I - -
+llne bwldlng
+
+We work with a copy ex1icmakeiwilitestsicmd
+cd exl_cmake_with_tests_cmd // go to the example folder
+cmake *H. *Bbuild // create the scripts in the "build" folder
+cd build
+cmake ebuild . // the building process
+./eXl_test1
+[==========] Running 4 tests from l test suite.
+[———————] Global test environment set-up.
+[———————] 4 tests from ExlTest
+[ RUN ] ExlTest.BasicAssertionsIncZ
+[ OK ] ExlTest.BasicAssertionsIncZ (O ms)
+[ RUN ] ExlTest.BasicAssertionsSqr
+[ OK ] ExlTest.BasicAssertionsSqr (O ms)
+[ RUN ] ExlTest.CombinedAssertions
+[ OK ] ExlTest.CombinedAssertions (O ms)
+[ RUN ] ExlTest.BondaryAssertions
+.../examples/exl_cmake_with_tests_cmd/tests/testl.cppz30: Failure
+Value of: incZ(INT_MAX) > INT_MAX
+
+Actual: false
+Expected: true
+[ FAILED ] ExlTest.BondaryAssertions (O ms)
+[terrier] 4 tests from EXlTest (0 ms total)
+[terrier] Global test environment tearedown
+[==========] 4 tests from l test suite ran. (O ms totah
+[ PASSED ] 3 tests.
+[ FAILED ] 1 test, listed below:
+[ FAILED ] ExlTest.BondaryAssertions
+
+l FAILED TEST
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Wan
-Q Tesl meas
+Plan
+Q Test Fixtures
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-What ls a Tesl qure
-- lews lhe “5E n! lhe ME nhwcl mMWuInhan w- "mu-w:
-‘ails
-- u \s recnmmended 1m mm masses
-- Yheslepstu MW m
-o Dew: mam-m.- mm Yen
-a \rvsmzmedass,smz Myuhyms w“ mm, use
-o u Hecasxum W ademmlwrvnruaurm sewn
-Mm m prewar: I"! amen: my cam w A mm.
-mmukemownlesvmwuu SelupU‘ Mm 5M!“ u mm
-mm "we"
-a u mm», wme lduvuclwavTe-EYDUWWU mncnnnw
-we: up IN! rewumrs mm w SEWUIK)
-0 u new», M". meﬁhudl m www.mm
+What ls a Test Fixture
+0 Allows the use of the same object configuration for multiple
+tests
+. lt is recommended for testing classes
+¢ The steps to follow are:
+
+ﬂ Derive a class from :: testing :: Test.
+
+Q Inside the class, state any objects you intend to use.
+
+Q lf necessary, write a default constructor or a SetUp()
+function to prepare the objects for each test. A common
+mistake is to write SetUp() as Setup(), with a small u - don’t
+let this happen.
+
+0 If necessary, write a destructor or TearDown() function to
+free up the resources allocated in SetUp().
+
+6 lf necessary, define methods to allow test sharing.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Further lmn
-mm. uqmu».“In/mm@mmm/bm/
-master/qauqktestMacs/FAQ m
+Further Info
+https://github.com/google/googletest/blob/
+master/googletest/docs/FAQ.md
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-TEST F() Macro
-- \l mun be de whewevws have 'lcsl Hxluveﬁype
-uhlzcts
-- lemrﬂak
-mummimjms, mum,
-. W My .v
-\
-- me msmavametew M be {he me ohm w hm-
-dis:
-. ynu “Mums a lesﬂmmedas: Mme “5m n m a
-TES'LFU
+TEST_F() Macro
+' it must be used whenever we have "test fixture" type
+objects
+. template:
+TEST_F(test_case_name, test_name) {
+... test body ...
+l
+. the first parameter must be the name of the "test fixture"
+class
+' you must first define a test fixture class before using it in a
+TEST_F()
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-How TEST F1) Works
+How TEST_F() Works
 
-Fovem mum-um mum m Gunqmﬁslm“
+For each test defined with TEST_F(), Google Test will:
 
-o cvealennew msﬂwmre‘al MW
+Q create a new “test fixture” at runtime
 
-q W." wwn Sewn u
+9 initialize with SetUp ()
 
-O run me \exl
+9 run the test
 
-o m "\va w cum"; Yuvnwmn
+Q free memory by calling TearDown()
 
-O dame 'lrs‘ Mm
-Km." mm"...m.m.=s~i anﬂww- “WM
-mans. m1 Guam. M .M-mmim. I,“ ‘ll-"Mmmm
-We nH.
-W‘; m. dues m‘ reuse w. m, WM rm‘ luv mm m
-“WW "mews! mmmmmw- m "mum mher
-m
+6 delete "test fixture".
+Keep in mind that different tests in the same test have different test
+objects, and Google Test always deletes one test item before creating
+the next one.
+Google Test does not reuse the same "fixture test" for multiple tests.
+Any changes that a test makes to the "test fixture" do not affect other
+tests.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-‘mm Example: Fmdevsuucmrs
-1m mum. a m m- mu slmwun
-how.“
-ED.“ h
-M3“mum.q..
-hymn,‘ (y?
+Third Example: Folder Structure
+
+Let’s elaborate a bit the folder structure.
+e ex2_cmake
+
+CMakeLists .tXt
+
+includes
+
+LE Date.h
+
+lib
+
+[E libex2_library.a
+
+src
+
+E Datacpp
+
+main.cpp
+tests
+{E DateTest.cpp
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Thwd Example: New commands m
-CMakeLisls.M
-.iulluiiiiiilﬂlliii Slum,‘ (w mm.“ m,’
-@325,ZUTZjnZZLZlZZ, mum“,
+Thlrd Example: New commands In
+CMakeLlsts.txt
+# fetch Google Test
+# add an executable test target
+add_executable(ex2_testl tests/DateTest.cpp src/Date.cpp)
+# link the Google Test library
+target_link_libraries(ex2_testl gtest_main)
+# enable CMake’s test runner to discover the tests included in
+gtest_discover_tests(ex2_testl)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-‘mm Example: DaleTesmpp
+Thlrd Example. DateTest.cpp
+#include "gtest/gtest.h"
+#include "Date.h"
+class DateTest : public testingzzTest {
+protected: // You should make the members protected s.t. they can be
+// accessed from sub-classes.
+// virtual void SetUp() will be called before each test is run. You
+// should define it if you need to initialize the variables.
+// Otherwise, this can be skipped.
+virtual void SetUp() i
+dli.setToday(2021, 5, 10);
+d2_.setToday(2020, 2, 28);
+d3_.setToday(2020, 12, 31);
+l
+// virtual void TearDown() will be called after each test is run.
+// You should define it if there is cleanup work to do. Otherwise,
+// you don’t have to provide it.
+//
+// virtual void TearDown() {
+// i
+// Declares the variables your tests want to use.
+Date dli, 012,, d3l;
+};
+// When you have a test fixture, you define a test using TESTiF
+// instead of TEST.
+// Tests for today().
+TEST_F(DateTest, Today) (
+ASSERT_STREQ("10.542021", dl_.today().c_str()); U 51 i E E (\QIx
+l l / \
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-Whm Happen When a Test .5 Execuled
-Fuvthe mm“ Game Test bums . mm WM. M
-w“ n m we" llve Wm slepsile WW“
+What Happen When a Test is Executed
 
-- n SeIUD 0 vvmmuesﬂ
+For the Today test, Google Test builds a DateTest object (Iet’s
+call it t1). Then the following steps are performed.
 
-. Thehrsl lssl (DehnHCowslmuov) \s mvwverﬂ
+0 t1 .SetUp () initializes t1.
 
-- u TealDuer U deans up anathema! hum]
+0 The first test (DefaultConstructor) is run over t1.
 
-- n \saeslmveﬂ
-m 1mm mi m "mm mm my." Dav-Tummam m
-m case the Yomnuw le§\
+0 t1.TearDown () cleans up after the test (if any).
+
+. t1 is destroyed.
+The above steps are repeated with another DateTest object, in
+this case the Tomorrow test.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:43**************
-Third Examp\s; Demo with CLmn
+Third Example: Demo with CLion
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Third Example wim lss's: Command
-lme mum
+Thlrd Example WIth tests: Command
+llne bwldlng
+We work with a copy ex2_cmake_wit_tests_cmd
+cd ex2_cmake_with_tests_cmd // go to the example folder
+cmake *H. *Bbuild // create the scripts in the "build" folder
+cd build
+cmake ibuild . // the building process
+./eX2_testl
+[==========] Running 2 tests from l test suite.
+[———————] Global test environment set-up.
+[———————] 2 tests from DateTest
+[ RUN ] DateTest.Today
+[ OK ] DateTest.Today (0 ms)
+[ RUN ] DateTest.Tomorrow
+[ OK ] DateTest.Tomorrow (O ms)
+[ﬂeeeee] 2 tests from DateTest (0 ms total)
+[terrier] Global test environment tearidown
+[IIIIIIIIII] 2 tests from 1 test suite ran‘ (O ms totah
+[ PASSED ] 2 tests.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Wan
-O ml dnvnn ammumem mm)
+Plan
+Q Test-driven development (TDD)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-A sums: D\a\og
-WWmmWﬂmmcmwmM.
-memmn
-Hui": Onlcan whilmctcnlwmﬁw WWW, "=me
-m we umwmmmmm lestm m
-mm m mnmxsimvg bysamphng SL1 m
-mm proceed’ n-E me m MW m manly‘ ‘5
-m Emmi» m bass pmpaimulvxm in mduclwa
-my m 5mm mm: yumsz". nvmhev
-pauple‘ as MW pussmis lhal ms mm
-wnvksncevlzm numbev mhmn an WM m
-We“ M .Wsm u" mm
-mmra Tesﬂng shnws ‘he WWI-w‘ mm mm m
-bun;
+A Giants’s Dialog
+From SOFTWARE ENGINEERING TECHNIQUES Report on a
+conference sponsored by the NATO SCIENCE COMMITTEE Rome,
+Italy, 27th to 31st October 1969:
+Hoare: One can construct convincing proofs quite readily
+of the ultimate futility of exhaustive testing of a
+program and even of testing by sampling. So how
+can one proceed? The role of testing, in theory, is
+to establish the base propositions of an inductive
+proof. You should convince yourself, or other
+people, as firmly as possible that it the program
+works a certain number of times on specified data,
+then it will always work on any data.
+Dijkstra: Testing shows the presence, not the absence of
+bugs.
+httpi//hOmepages.cs.ncl.ac.uk/brian.randell/NATO/natol969.PDF
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:47**************
 On TDD
-‘One ohm WIVYIIYY Isaw-s “mm ‘a mn \s )onmpvwed
-‘emmmw wm ‘$5.1m 60% aw. lewerbﬂgs m
-pwdmlmrl Thus I5 my 1mm 0%an u‘: hks a gum
-wgmmw m Wm “may
-(Em: Email‘ mu Changed My may
+“One of the primary reasons l switched to TDD is for improved
+test coverage, which leads to 40%-80% fewer bugs in
+production. This is my favorite benefit of TDD. lt’s like a giant
+weight lifting off your shoulders.”
+(Eric Elliott, TDD Changed My Life)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Tesl'dnven devekzpmsm (TDD)
-mum"
-Mdmdmwmm-m m We .1. mi...“ m "M
-m“Wm.vQWWmm mg [mm m [MW a,
-my mm,“ m" k." memo“ a‘ mam-mag]
-has" be sumncnydescnlud w mewhwnq w ~11 Ms:
-- wmeu 'smvve mmmmw New” WW
-4 m ‘new vmmgnwmm becluselhu mum-mm,
-Mm
-4 Wemmug»~mn._m..mﬂmm .WM. I.“
-m
-- 'reranmv‘mncmeum\ ‘immmms 1m mm, mm
-. ma mmmm-WMWW
+Test-driven development (TDD):
+Definition
+“Test-driven development” refers to a style of programming in which
+three activities are tightly interwoven: coding, testing (in the form of
+writing unit tests) and design (in the form of refactoring).
+lt can be succinctly described by the following set of rules:
+¢ write a “single” unit test describing an aspect of the program
+~ run the test, which should fail because the program lacks that
+feature
+' write “just enough” code, the simplest possible, to make the test
+pass
+' "refactor” the code until it conforms to the simplicity criteria
+° repeat, “accumulating” unit tests over time
+https://www,agilealliance.org/
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-TDD: Expected Beneﬁts
+TDD: Expected Benefits
 
-- many leans vewrl wmmam veduchans m mm mm a!
-mm m a mndema mamas m 1mm dnwbpmsnl eﬂml
+. many teams report significant reductions in defect rates, at
+the cost of a moderate increase in initial development effort
 
-- o-E same team: \m w won 0m \hsse WM“! m
-mnmman MINDY a voduclwn m oﬂunm pvqemi‘ um
-Phases
+. the same teams tend to report that these overheads are
+more than offset by a reduction in effort in projects’ final
+phases
 
-- aHIvuugh émpmci‘ lewiwh haiso liHaﬂed w comm“
-m‘ mm Drizmlmnzm vewmrml m ‘mm
-\mpmved deﬂgn “am-s; m we we‘ and mare “new
-1 mgherdlgvee m “mm-mmm‘ qumy w
-mslance ""pr m mains ul wheswn m muphng
+v although empirical research has so far failed to confirm
+this, veteran practitioners report that TDD leads to
+improved design qualities in the code, and more generally
+a higher degree of “internal” or technical quality, for
+instance improving the metrics of cohesion and coupling
+
+https://www.agilealliance.org/
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-TDD Common Pmlzus v2
-Ww mdeual mum mum
-. hrgemwm m" lest: "mew
-- mung \oo many lesls a‘ we
-. Wm mmm Meton ‘awe uvcnalll gamed
-- WNW WY "W @515, mv mslance umnm asssmons
-. wmmg misinlmwa‘ cm. m \mmma Emmi
+TDD: Common Pitfalls 1/2
+
+Typical individual mistakes include:
+
+¢ forgetting to run tests frequently
+
+' writing too many tests at once
+
+' writing tests that are too large or coarse-grained
+
+0 writing overly trivial tests, for instance omitting assertions
+
+0 writing tests for trivial code, for instance accessors
+https://wwwvagilealliance.org/
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-TDD Common Pmlzus 2/2
-wam‘ mm“: rmsmkes Wm
-
-- pimzl “WWW umy a lewdmmpev: an mamam um
-mu
-
-- pow Mimleﬂiﬂee m live w wleimuslcummomy
-\eanvwm a lestsuﬂzvnlh aummmlwzw W mnmwhm:
-
-- abandurvsd ‘as! sane u a seldom m "My-W)’
-lumeﬂmesu a vzsuh m puny mmmenam:_ mmzhmzs .5
-a resuho! [m- KMHDVEY
+TDD: Common Pitfalls 2/2
+Typical individual mistakes include:
+v partial adoption — only a few developers on the team use
+TDD
+0 poor maintenance of the test suite — most commonly
+leading to a test suite with a prohibitively long running time
+' abandoned test suite (i.e. seldom or never run) —
+sometimes as a result of poor maintenance, sometimes as
+a result of team turnover
+https://www.agllealliance.org/
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-TDD: Signs m Use
+TDD: Signs of Use
 
-- was wemge' \s a comm" ippwﬂih ‘o ewdendng ‘he
-m mTDD_wml= man cwvevlﬂzdues "Mum,
-apprwvluls use w mu‘ “mm hsbw 20% ‘5 WY m
-\ndmah dlﬁuuvun m a mm mail-IYMTDD
+0 “code coverage” is a common approach to evidencing the
+use of TDD; while high coverage does not guarantee
+appropriate use of TDD, coverage below 80% is likely to
+indicate deficiencies in a team’s mastery of TDD
 
-- Mm mm‘ lousshumdshuw mal leilcudels we“
-m :achhml mam m ‘5mm m m muqmy
-campalame amounts
+0 version control logs should show that test code is checked
+in each time product code is checked in, in roughly
+comparable amounts
+
+https://www.agllealliance.org/
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-$le Levels: Begmner
-- awe In Mm W. has‘ wmnuwnlmvmz muesmmdmv
-¢ude
-- m m meme summer" m "wk: , mm lest Pass
+Skill Levels: Beginner
+¢ able to write a unit test prior to writing the corresponding
+code
+¢ able to write code sufficient to make a failing test pass
+https://www.agilealliance.org/
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-SkHI Lea/ms lmevmemale
+Skill Levels: Intermediate
 
-~ pracﬂoes leswvlvsn hug 1-m- when a ddscl \s mm‘
-WM ausl almsmq m- nmcx halnvlcmvlcnnn
+. practices “test driven bug fixing”: when a defect is found,
+writes a test exposing the defect before correction
 
-- m m dlcnmpuu z cummuml qurim lulu" m 1
-sequence ul W13‘ uml lesls \obewvnlen
+' able to decompose a compound program feature into a
+sequence of several unit tests to be written
 
-- knaWsandcan namea numbere! rams w wmde v»
-wmmg mum Hm \ns'zncl ‘when “1mg alacmswl
-Ema-‘m hmwmeuesum me mum lermmamw
-cm’)
+0 knows and can name a number of tactics to guide the
+writing of tests (for instance “when testing a recursive
+algorithm, first write a test for the recursion terminating
+case”)
 
-- :Ne m hmmnunsuiame awmamsimm mm um!
-mu vwmmwwmwsmm mm toms
+' able to factor out reusable elements from existing unit
+tests, yielding situation-specific testing tools
+
+https://www.agllealliancelorg/
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-SkiH Levels: Advanced
-- awe m "mm" 'Inadmﬁﬂ' ul pIaNIEﬂ umﬂesls m
-mizwicowc Veiiuves land w Wm u as necesivvl
-- awe In ‘lestdrwe nvunﬂy “v deswn palm-“S
-6ng nnemsd. lunmmlvzl mam dnvs
-- mew leswrwe avsnﬂynﬂenhmmmnmams
-cumpuunmv. usaumsnzcsi. pnmivnmﬂzxa m“
+Skill Levels: Advanced
+
+. able to formulate a “roadmap” of planned unit tests for a
+macroscopic features (and to revise it as necessary)
+
+. able to “test drive” a variety of design paradigms:
+object-oriented, functional, event-drive
+
+. able to “test drive” a variety of technical domains:
+computation, user interfaces, persistent data access. . .
+
+https://wwwvagilealliance.org/
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-Wan
-G mo Z A 5mm Can Smdy
+Plan
+6 TDD = A Simple Case Study
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:57**************
-First Slep vs
-. me wwm
-In meme-“am me WWI Wm" dMsur Lgedl 09mm
-may: mg“ mum are mun 12m. uthe wgm mm
-\megevlhawmdeseaah =1 lhe mum rm example‘ me w
-“mm 12M
-O m Mm" already we; us a lssL mm we Include x“
-mm. mmm unmeixcn
-mmmm; PWUW \
-mm)“, chBJZHF
-v
-.mmama gm-nmmsixcnm 1m CMakame
-0 ma m /svc/myvsnswn Mhe Dvmmype mam
-\n' qnlﬂw a, w N,
+First Step 1/3
+o From Wikipedia:
+In mathematics, the greatest common divisor (god) of two or
+more integers, which are not all zero, is the largest positive
+integer that divides each of the integers. For example, the gcd
+of 8 and 12 is 4.
+Q The definition already gives us a test, which we include in
+the file ./tests/gcd-unittest.cc
+TEST<chTest, Positive) {
+EXPECT_EQ(4, gcd(8, 12));
+l
+9 add the file gcd-unittest.cc in ./tests/CI\/lakeList.txt
+9 add in ./src/myfsttstprj.h the prototype of ch:
+int gcd(int a, int b);
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-First Slep 2/3
-o m m lhe src' We. {he MM! m wm Mime me
-emPlYGCDﬂmuwn
-mm a, m b» \
-// WWW
-\
-Onerhemegwwm Wmmmumw MM
-wwwmm m w unumsmm)
-O mam bmanes
-o ‘mm-WW
+First Step 2/3
+9 add to the ./src/ folder the gcd.cc file in which we write the
+empty GCD function:
+int gcd(int a, int b) {
+// nothing
+}
+6 add the file gcd.cc in ./src/CMakeList.txt and comment
+isprime_unittest.cc (for optimisation)
+6 build the binaries
+0 Ignore the warning
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-First Slap 2/3
-0 mm m1,
-T322122_ICZ',“1,,,““ “i???” “, , ,
-, m, , We,‘ PM“:
-, mm, , Wm mm. m m,
-,WWWW, , M m, mm, ,, m. mm,
-$55.7‘, m3, ,m. , M ,, m. m,»
-, mm, Hm, “mum,
-, mm , anmm.
+Flrst Step 2/3
+
+Q test (gcd-step1):
+Running main() from gtest_main.cc
+[==========] Running l test from l test case.
+[——————————] Global test environment set-up.
+[——————————] l test from chTest
+[ RUN ] chTest.Positive
+.../myfsttstprj/tests/gcd_unittest.ccz88: Failure
+Expected equality of these values:
+
+4
+
+gcd(8,12)
+
+Which is: l
+
+[ FAILED ] chTest.Positive (O ms)
+[——————————] l test from chTest (O ms total)
+[iiiiiiiiii] Global test environment tearedown
+[::::::::::] l test from l test case ran. (l ms total)
+[ PASSED ] O tests.
+[ FAILED ] l test, listed below:
+[ FAILED ] chTest.Positive
+
+l FAILED TEST
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Fvst Rsﬁnemem v3
-O mm 2min BWMYWI.
-m gndhnn a, m m ¢
-Mule i. ‘Z m
-n (a , M
-a Z a V m
-em,
-b Z b V a‘
-{ch/n. a,
-»
+First Refinement 1/3
+‘I add the Euclid algorithm:
+int gcd(int a, int b) {
+while (a != b)
+if (a > b)
+a = a — b;
+else
+b = b — a;
+return a;
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-First Relinsmsm 2/3
-o 1.111 .111 1.11M
-7222:2323‘; ‘“ “5???” “1 1 1
-liiitiiiiii} $221 252 222$?“ “W
-1 1111 1 Wm 11.1w.
-1 11 1 We" 11.1111. 11 1.1
-1-----__---1 1 11.1 m. 1 11.1 11 m. 111111
-1 17151111 1 1 11.1
+Flrst Reﬁnement 2/3
+
+Q build and test (gcd-step2):
+Running main() from gtest_main.cc
+
+[==========] Running 1 test from l test case.
+[——————————] Global test environment set-up.
+[iiiiiiiiii] 1 test from chTest
+
+[ RUN ] chTest.Positive
+
+[ OK ] chTest.Positive (O ms)
+
+[iiiiiiiiii] 1 test from chTest (O ms total)
+[——————————] Global test environment tear-down
+[==========] l test from l test case ran. (O ms total)
+[ PASSED ] l test.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-First Relinsmsm 3/3
-'memmmmm
-“MM, PM“, ,
-[WU/w, WW“,
-until/JG, mum,»
-:xarc'rJ/Ju, qmumllh,
-:xstc'rlml, qmulJUv,
-,
-Ohm-m“
-MW MU m. mepm W
-,W..-W-W, MM, 1 M W , m, nae,
-,WWWW, mm M WWW “Wu,
-,WWWW, , m, m scan‘:
-, R,»- , Wm mm“
-, 0,, , W.“ Panuve ,D m,
-,WWWW, , I." m m1." ,n m mun
-,W, m», I." envlmnmenl "mm
-,W-W-W, , z." m , M can m. ,0 m. W,»
-, rusiv , , m,
+Flrst Reﬁnement 3/3
+Q add more positive tests (god-step2):
+TEST(chTest, Positive) {
+EXPECT_EQ (4, ch(8, 12));
+EXPECT_EQ (7, gcd(28, 21));
+EXPECT_EQ(1, gcd(23,31));
+EXPECT_EQ (1, gcd(48, 17) );
+}
+6 build and test:
+Running main() from gtest_main.cc
+[==========] Running 1 test from 1 test case.
+[——————————] Global test environment set-up.
+[iiiiiiiiii] 1 test from chTest
+[ RUN ] chTest.Positive
+[ OK ] chTest.Positive (O ms)
+[iiiiiiiiii] 1 test from chTest (O ms total)
+[——————————] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (O ms total)
+[ PASSED ] l test .
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-Second Relinsmsm V3
-.aﬂmmmm
->
-‘ammwmm
-WMMMWMW.“
+Second Refinement 1/3
+ﬂ add trivial tests
+TEST(chTest, Trivial) {
+EXPECT_EQ(18, gcd(l8,0));
+EXPECT_EQ (24, gcd (O, 24) );
+EXPECT_EQ(19, gcd(l9,l9));
+EXPECT_EQ(O, gcd(0,0)); // undefined
+}
+9 build and generate (gcd-step3)
+Running main() from gtest_main.cc
+[==========] Running 2 tests from l test case.
+[——————————] Global test environment set-up.
+[——————————] 2 tests from chTest
+[ RUN ] chTest.Positive
+[ OK ] chTest.Positive (O ms)
+[ RUN ] chTest.Trivial
+AC
+Oooops! The execution does not terminate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-Second Relinemsm 2/3
-.uwnmblmmmmzmnmmwﬂﬂlln]mmwm
-cmmwm
-
-‘Mﬁmnlhgm a» ¢
-n k. > b,
-0M
-maﬁa“? n ¢
-J ‘a -- “1%:115:
+Second Refinement 2/3
+Q proceed by elimination and see that gcd(18,0) is the problem
+a analyze the problem:
+int gcd(int a, int b) l
+while (a != b)
+if (a > b)
+a I a i b; // if b I: O, a is not modified!!!
+else
+b : b — a;
+return a;
+l
+Q fix it:
+int gcd(int a, int b) {
+if (b :: O) return a;
+if (a I: O) return b;
+while (a != b)
+if (a > b)
+a I a — b;
+else
+b : b — a;
+return a;
+l
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-Second Relinsmsm 3/3
-0 mm .m nun n mum
+Second Refinement 3/3
+6 build and test it (gcd-step4):
 
-Mm, mam“ 2mm GlistJniAn 1:1:
-‘$1:qu lumvnvq 2 “m [m 1 m: cm.
-‘7777777774 mm, m! WWW.“ “my.
-[W1 z m" rm Ccd'hs!
-l mm \ @mmhmm
-l o! | Gmmhmm w m»
-l m y GedTISanvz-l
-l Q‘ \ 6:61:51 1mm w m»
-,W‘ z mu mm ch'luz m m mm
-1W‘ man) mt mmmm (“Him
-v----------\ 1 ml, tram 1 m‘ cm m u m m
-\ mm \ 1 mu
+Running main() from gtest_main.cc
+[==========] Running 2 tests from l test case.
+[——————————] Global test environment set—up.
+[eeeeeeeeee] 2 tests from chTest
+[ RUN ] chTest.Positive
+[ OK ] chTest.Positive (O ms)
+[ RUN ] chTest.Trivial
+[ OK ] chTest.Trivial (O ms)
+[——————————] 2 tests from chTest (O ms total)
+[——————————] Global test environment tear-down
+[==========] 2 tests from l test case ran. (l ms tot
+[ PASSED ] 2 tests.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-Tmm Relinsmsm v3
-.mn-wmm
-“mum, Meganve» ,
-:xnc'KJ/Jm, mm, run,
-“WU/w, mm, 31m
-“mm”, qam'zm 71H),
-»
-Onasmwmukimhm
-mm; "mu 1w!‘ wwm cc
-\----------1 mm; a usu (ram \ I." m.
-WJM.“ M m4 mm.
-W\anulimﬂnlinnlmmnﬂliﬂim
+Third Refinement 1/3
+a add negative tests
+TEST(chTest, Negative) {
+EXPECT_EQ (6, gcd(l8, —12));
+EXPECT_EQ(4, gcd(*28, 32));
+EXPECT_EQ (1, gcd(—29, —37) );
+}
+Q build and generate (gcd-step5)
+Running main() from gtest_main.cc
+[::::::::::] Running 3 tests from l test case.
+.../gcd_unittest.cc:104: Failure
+Expected equality of these values:
+6
+gcd(l8, *12)
+Which is: —2147483638
+AC
+Oooops! The execution does not terminate again
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-mm Relinemem 2/3
-Mmﬂmmm
--. \ “mm: \1m.m.‘.=n...‘mm.m\vem.m
-.M,n.“.1Mmm.“mummmmlwmm-L
-“mm. ﬁvmw Wm, mm...“ “Emu
-o Wmnmmmmmm“ MM
-mm ., h, (
-nu, , P h - r»,
-Ma M - U
+Third Refinement 2/3
+Back to the documentation:
+"d | a if and only if d | —a. Thus, the fact that a number is negative does not
+change its list of positive divisors relative to its positive counterpart. .. .
+Therefore, gcd(a, b) = gcd(|a|, |b|) for any integers a and b, at least one of
+which is nonzero."
+Q include the case when the numbers are negative:
+int gcd(int a, int b) {
+if (b == O) return a;
+if (a :: O) return b;
+if(a < 0) a = fa;
+if(b < 0) b = —b;
+while (a I: b)
+if (a > b)
+a : a — b;
+else
+b I b i a;
+return a;
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-1mm Rsllnsmam 3/3
+Thlrd Reﬁnement 3/3
 
-0 m “1 m, ,- IBM
+a build and test it (gcd-step6):
 
-Mm, "W, ‘m mu." W
+Running main() from gtest_main.cc
 
-,---------_, Mm, 3 W,“ m. , W,‘ WW
+[==========] Running 3 tests from l test case.
 
-,WWW, m“, W“ WWW", W“,
+[——————————] Global test environment set-up.
 
-,WWWW, 3 W." m. MM
+[——————————] 3 tests from chTest
 
-, mm , MM PM“:
+[ RUN ] chTest.Positive
 
-, ox , MM PM,“ w m,
+[ OK ] chTest.Positive (0 ms)
 
-, mm , MM mm,
+[ RUN ] chTest.Trivial
 
-, ox , MM {nun ,., M,
+[ OK ] chTest.Trivial (O ms)
 
-, mm , MM “mauve
+[ RUN ] chTest.Negative
 
-, ox , MM New," w m.»
+[ OK ] chTest.Negative (O ms)
 
-,W, 3 ml. m. Mm, 4n .. mm,
+[——————————] 3 tests from chTest (O ms total)
 
-,WW, Gm, M envlmnllgnn WWW
+[iiiiiiiiii] Global test environment tearedown
 
-,----------, a w. m. , M m. m w m. m»,
+[::::::::::] 3 tests from l test case ran. (O ms total)
 
-, vusw , 1 u.“
+[ PASSED ] 3 tests.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-Condusmn
+Conclusion
 
-- ma hhelvvymnmmllwm mmmmumnenl “mm
-V'vaﬂiﬂvimm
+0 TDD, like any other software development concept or method,
+requires practice.
 
-4 we "we 1w uieYDD thsulsevYDthwﬂl!
+. The more you use TDD, the easier TDD becomes.
 
-. DMHuMlm mmwmgm
+' Don’t forget to keep the tests simple.
 
-- Ynelnl; much mum.“ niyw umemannnuniym
-mum
+' The tests, which are simple, are easy to understand and easy to
+maintain.
 
-- w; ‘new w. 66W‘: Mud. Cwum‘ muse.
-$45le Numtand Mmmlvumwﬂinnnnnﬂwimmile the
-vim, m m
+' Tools like Google Test, Google Mock, CppUnit, JustCode,
+JustMock, NUnit and Ninject are important and help facilitate the
+practice of TDD.
 
-. Bulmswoﬂ mkmwlhﬂ m M Vaclmeam “me
-m.‘ We: heme m M m we‘:
+¢ But it is good to know that TDD is a practice and a philosophy
+that goes beyond the use of tools.
 
-. EMMWM mmnm hammvhsmﬂuonanl 1mm“:
-“Qwud Mu mm wnhdwn m m mum ﬂwdwe!
+¢ Experience with tools and frameworks is important, the skills
+acquired will inspire confidence in the application developer.
 
-4 Emmwad lwkrwwmaﬂ»! we‘! mm Mum»! "mm
-‘Mm
+' But it is good to know that the tools should not be the center of
+attention.
 
-. 5mm" musl WWW me numvsmm'
+' Equal time must be given to the idea of "test first".
 
 ***************Ending Page***************
 

@@ -1,652 +1,674 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\I\I\I\I\I\I\I\
-I Qﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ \
-I \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ§ﬂ\ﬂ\ﬂ \
-I\I\I\I\I\I\I\l
-PROGRAMMING IN PYTHON ‘ ifﬂfif'w“
+\/\/\/\/\/\/\I\
+1W
+‘W
+1W
+‘ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\
+I\I\I\I\l\l\l\l
+PROGRAMMING IN PYTHON | gjujjffmgos
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
 Classes exists in Python but have a different understanding about their functionality than
-the wcly classes are deﬁned in C-like languages. Classes ccln be deﬁned using a special
+the way classes are defined in C-like languages. Classes can be defined using a special
 keyword: class
 Python 3.x
-class <rlame>:
-<statelllent1>
-<statelllentn>
+class <name>z
+<statementl>
+<statementn>
 Where statementi is usually a declaration of a method or data member.
-Documentation for Python classes can be found on;
-O Python 3: https:Z[docsgythorlsorg[filwtoriullclassesshtml
+Documentation for Python classes can be found on:
+O Python 3: htth:[ [docs.|gython.org[3Ztutorial1classes.html
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Classes have a special keyword (self) that resembles the keyword llris from c-like languages.
-Whenever you relererree a alata memlser [variable ltrar belongs re a clclss) within the class
-definition the self keyword must be used‘
-Constructors can be defined by creating a “Aiﬂi|A“ func'ion, “AinilA” funetian must have lhe
-first parameter self‘
+Classes have a special keyword (self) that resembles the keyword this from c-like languages.
+Whenever you reference a data member (variable that belongs to a class) within the class
+definition the self keyword must be used.
+Constructors can be defined by creating a “_init_” function. “_init_” function must have the
+first parameter self.
 Python 3.x
 class Point:
-def ilnltiwelf):
+def _init_ (self) :
 
-selfsx I O
+self.x I O
 
-self s y e 0
-p e Point (l om“,
-Class Point lras two members (X and y]
+self.y I O
+p I P01nt () Output
+Class Point has two members (x and y)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-For u fundion deﬁned wiihin (I class to be u meihcd of ahm class it has to have the ﬁrst
+For 0| function defined within 0| c|0|ss to be 0| method of thc|t c|0|ss it h0|s to hc|ve the first
 parameter self.
-Pyvhon 3.x
+Python 3.x
 class Point:
-an AmitAu-u):
-selﬂx : O
-"15.3; = 0
-dif GetXLiIlfD z
-retuxn sel£.x
-p : Point ()
-print (p. GetX[)) amp.“
+def __init__(self):
+self.x = O
+self.y = O
+def GetX(self):
+return self.x
+p = Point()
+I . X
+print (p Get ()) Output
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Defining c: function within u class wiihcut having the ﬁm parameter self means that mm
-function is u sauﬁc function for ohm clclss.
+Defining a function within a class without having the first parameter self means that that
+function is a static function for that class.
 Python 3.x Python 3.x
 class Point: class Point:
-def ilnitiuelﬂz def ilﬂlfi1ﬂelfli
-selflx : 0 self.x : 0
-se1£.y = 0 sel£.y = 0
-def GetY()= def GetYU:
-return sel£.y print(”Test”)
-p : PointH Polnt.GeLY()
-print (P.65tl/U)
-0MP"!
-26w n. nnm
+def___ini:__(self): def___inic__(self):
+self.x I O self.X I O
+self.y I O self.y I O
+def GetY(): def GetY():
+return self.y print(”Test”)
+p I Point() Point.GetY()
+print (p.GetY())
+Output
+(GetY is static)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-A dam member can also be deﬁned diredly in Ihe class definiﬁon. However, if muicible
-ebieei are used me behavior is different (similar in iemis of behavior to c eieiie
-Pynioii 3.x Py'hcﬂ 3i‘
+A dotol member con o||so be defined directly in the closs definition. However, if mutolble
+obiect ore used the behavior is different (similor in terms of behovior to o stoltic
+Python 3.x Python 3.x
 class Point: class Point:
-
-x Z 0 numbers Z [1,2,3]
-
-y : 0 def AddNumber(self,n) ;
-
-se1£.numbers += [n]
-pl = Pen-mi) p1 = POlntH
-p2 : Pointi) p2 : PointU
-plix Z 10 pliAddNumbenA)
-p2.x : 20 00",", plAddNumberiS)
-print 1p1.x,p2.x) 10 2n print (p1_numbEXS) OUIFIII
-n,2,3,4,51
+x I O numbers I [1,2,3]
+y I O def AddNUmber(self,n):
+self.numbers +: [n]
+p1 I Point() pl I Point()
+p2 I Point() p2 I Point()
+p1.x I 10 pl.AddNUmber(4)
+p2 . x I 2O Output p2 . AddNumber(5)
+print (pl.X,p2.X) 1020 print (p1.numbers) ouwmf
+- print (p2 . numbers)
+[1, 2, 3, 4, 5]
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
-To avoid problems with muiuble obiects i0 is beﬁer 00 defined them in u constructor
-(_init_] function:
-Pym" 3.x
-C185! Point:
-def i1n'tf1self):
-self.nurnbcrs : [1,2,3]
-def AddNumber1salf,n) 1
-self.numbers +: [n]
-p1 Z Point‘)
-p2 : PointU
-p1.AddNu.-nbcr(4)
-p2 ,Addrvumber (5)
-print (pl-numbers) °“'P“'
-print (pznumbezs)
-[1, 2, 3,5]
+To ovoid problems with mutolble obiects it is better to defined them in o constructor
+(_init_) function:
+Python 3.x
+class Point:
+def __init__(self):
+self.numbers = [1,2,3]
+def AddNUmber<self,n):
+self.numbers += [n]
+p1 = Point()
+p2 = Point()
+p1.AddNUmber(4)
+p2.AddNUmber(5)
+print (pl . numbers) Output
+print (p2 . numbers)
+H,L3,M
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:8**************
-It is not required for two instances of the some class lo have lhe some members. A class
-instance is more like a diclionary where each key represent either a member function or
-a dam member
-Pylhon a"
-class Pomc:
-def ilnltiwelfl:
-selfsx Z O
-Belf.y : 0
-p1 e Point 0
-p2 : PointU
-pl.z : 10
-prlnt (lenplyydilsz) 0MP".
+It is not required tor two instances of the same class to have the same members. A class
+instance is more like a dictionary where each key represent either a member function or
+a data member
+Python 3.x
+class Point:
+def _init_(self) :
+
+self.x = O
+
+self.y = O
+p1 I Point()
+p2 I Point()
+p1 . z = 10
+print (pl.x,pl.y,pl.z) Output
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-It is not required for two instances of the same class m have ihe same members. A class
-instance is more like u dictionary where eclch key represeni eiiher a member fundion or
+|t is not required for two instances of the same class to have the same members. A class
+instance is more like a dictionary where each key represent either a member function or
 a data member
-Pyinnn 3.x
+Python 3.x
 class Point:
-def . 1m: iselfi;
-self.x : 0
-selfiy e 0
-p1 : PomL ()
-P2 ’ P091“) Error during rurif'irié. “pr doesnofhu/e a
-Pl'z * ~0 dam membev “1"(0niv "p|"|ins(1 dam
+def _init_(self) :
+self.x = O
+self.y = O
+p1 = Point()
+p2 Z Point U Error during runtine. “p2" does not have a
+p1 T Z = 10 data member “z” (only “pi ” has a data
+prlnt (p1 'X’p1 “M member “Z”)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-It is not required for two instances of the some class to have the some members. A class
+It is not required tor two instances of the same class to have the same members. A class
 instance is more like a dictionary where each key represent either a member function or
-c1 data member
+a data member
 Python 3.x
 class Point:
-def . inl: (self):
-self.x : O
-selfry e 0
-pl : PointU
-p2 = Point 0
-pl , z = 10
-print ("X" in dirlplll
-print ("z" in dizlpll) Output
-print ("2" in dirlp2tt
+def __init__(self):
+self.X = O
+self.y = O
+p1 = Point()
+p2 = Point()
+p1.z = 10
+print ("X" in dir(p1))
+print ("2" in dir (p1) > Quip"t
+print ("2" in dir(p2))
 True
-@155
+False
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-We een write en equivalent tepiesentetien of the funcﬁonclify done by classes by using
-dicﬁoncries:
-Pytnen 3.x Pyti-en 3.x ldidionuly iepiesentetien)
-class Point: def PointClassiinitiiobj):
-def ilnlti(sel£): obj ["x"] = 0
-self.x = 0 obj["y"] : o
-self.y : o
-p1 = Point‘) Palnt = ( "_1nit_":PointClass_1nit_ )
-p2 = POintU pl : dict(Poim:)
-pl.z : 10 pl["i1niti“] (pl)
-p2 = dict<Point)
-p2 ["iiniti'ﬁ tpzt
-pl["z"1 = 10
+We can write an equivalent representation of the functionality olone by classes by using
+dictionaries:
+Python 3.x Python 3.x (dictionary representation)
+class Point: def PointClass__init__(obj):
+def___inic__(self): Obj["X"] z 0
+self.X I O Obj["y"] I O
+self.y I O
+p1 I Point() Point = { "__init__":PointClass__init__ }
+p2 I Point() pl = dict(Point)
+pl.z I 10 pl["__init__"](pl)
+p2 = dict(Point)
+P2["__init__"](P2)
+pl["z"] = 10
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-We can write an equivalent representation of the functianality dune by classes by using
+We can write an equivalent representation of the functionality olone by classes by using
 dictionaries:
-Mm a.‘ PyHIon 3.x ldidionuly Ieplesenkﬂicn)
-class Paint: def PointClassiinitiiobji:
-def ilnlti(self)t cbj["x"] e o
-"15X e 0 obj["y"] I o
-ee1£.y e o
-|—P01nt = i " mi: ":PointClass_1nit_ i
-p : 1c Point
-PZ["iln;ti“]1P2)
-pli"z"1= 10
+Python 3.x Python 3.x (dictionary representation)
+class Point: def PointClass_init_(obj) :
+def___inic__(self): Obj["X"] z 0
+self.X I O Obj["y"] I O
+self.y I O
+l— Point = { " init ":PointClass_init_ }
+pl.z I 10 pl["__init__"](P1)
+p = olct(Polnt)
+P2["__init__"](p2)
+pl["z"] = 10
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-We can wrne en equivalent representation of the funcﬂonqlity dune by classes by using
-dicﬁonuries:
-mm a.‘ PyHIon 3.x ldidionuly Ieplesenklﬁcn)
-class Pelnt: def PointClassiinitiiobj):
-def ilnlti(self): obj ["X"] Z 0
-selﬂx Z O obj["y"] Z D
-ee1£.y : 0
-.1 = Point Pelnt = ( "_1nit_":PointClass_1nit_ )
-|_ pl : dict(Point)
-PZ[" nut “11P2)
-P1["Z"] = 10
+We can write an equivalent representation of the functionality olone by classes by using
+dictionaries:
+Python 3.x Python 3.x (dictionary representation)
+class Point: def PointClass__init__(obj):
+def _init_(self) = obj ["X"] z 0
+self.X I O Obj["y"] I O
+self.y I O
+01 I Point Point = { "__init__":PointClass__init__ }
+l_ p1 = di¢t<P<>int>
+M 1i" init "1<1>
+p2 = dict(Point)
+p1["Z"] = 10
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-We can wrne en equivalent representation of the funcﬂonqlity dune by classes by using
-dicﬁonuries:
-nyhon 3.x PyHIon 3.x ldidionuly Ieplesenklﬁcn)
-class Pelnt: def PointClassiinitiiobj):
-def ilnlti(self): obj ["X"] Z 0
-self‘); Z O Obj["¥"] I D
-ee1£.y : 0
-p1 = Point‘) Paint = ( "_1nit_":PointClass_1nit_ )
-I2 : Point pl : dict(Point)
-|_L p1 [LMJ “11>
-p2 : dict(P01nt)
--2[" 1n;t “11pm
+We can write an equivalent representation of the functionality olone by classes by using
+dictionaries:
+Python 3.x Python 3.x (dictionary representation)
+class Point: def PointClass__init__(obj):
+def _init_(self) = obj ["X"] z 0
+self.X I O Obj["y"] I O
+self.y I O
+pl I Point() Point = { "__init__":PointClass__init__ }
+02 I Point() pl = dict(Point)
+|_‘ p1["_init_"1 <p1>
+p2 = dict(Point)
+-2[" init "1(p2)
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:15**************
-What hclppens if e class has some obiects deﬁned diredly in class a
+What happens if a class has some obiects defined directly in class ?
 
-mm a.‘ Py'hon 3.x (dizliunary Iepresenluliun)
+Python 3.x Python 3.x (dictionary representation)
 
-class Test: numbersivector : [1,2, 3]
-numbers : [1,2, 3] def TestClassiAddNumber(obj,n)1
-def AddNumberlself,nlz Obj ["ru'rlbers"]+:[n]
+class Test: numbers_vector I [1,2,3]
+numbers I [1,2,3] def TestClass_AddNumber(obj,n):
+def AddNumber(self,n): obj["numbers"]+:[n]
 
-Belf.nl,mbers +: [n]
+self.numbers += [n]
 
-p1 = TestU TestClass = l
+pl I Test() TestClass = {
 
-p2 : Testll "AddNumber":TestClassiAddNumber,
+p2 I Test() "AddNumber":TestClass_AddNumber,
 
-pl .AddNumbc: l 4) "numbers" :numbersivector
+pl.AddNUmber(4) "numbers":numbers_vector
 
-p2,AaaNumber15) l
+p2.AddNUmber(5) l
 
-As both p1.numbers and p2.numbers refer p1 = dict(TestClassl
+As looth pl.numbers and p2.numbers refer p1 = dict<T€8tClass)
 
-to the same vector (numbers_vec'or) they p2 : di¢t(TestClass)
+to the same vector (numbers_vector) they p2 = dict (T€Stc1ass)
 
-will bell. modify llle some object thus p1["AddNumber--1 (1,1,4,
+will booth moolify_the same oloiect thus p1 ["AddNumber"] (p1, 4)
 
-creating the illusion of a slalic variable. p2[lqud|guﬁberll] (p2, 5,
+creatmg the |llus|on of a stat|c varlable. p2 ["AddNumbgrn] (p2, 5)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-What happens if q class has some obiects deﬁned diredly in class a
-mm a.‘ Py'hon 3.x (dizliunury Iepresenluliun)
-class Test: numbersivector : [1,2, 3]
-numbers : [l,2, 3] def TestClassiAddNumberlob],n)1
-def AddNumberlselfﬂ-llz Obj ["K‘u‘ﬂbers"]+:[n]
-Belf.nl,mbers +: [n]
-|— memes = <
-p2 : Testll "AddNumber":TestClassiAddNumber,
-p1.AddNumbczlAl) "numbers" :numbersivector
-p2 ,AddNumber l 5) l
-As both p1.numbers and p2.numbers re e |_
-to the same vector (numbers_vec!or) they p2 : di¢t(TestClass)
-will bell. modify llle some object thus p1["AddNunber--1 (1,1,4,
-creating the illusion of a srmic variable. pzpltddmﬁbetu] (p2, 5,
+What happens if a class has some obiects defined directly in class ?
+Python 3.x Python 3.x (dictionary representation)
+class Test: numbers_vector I [1,2,3]
+numbers I [1,2,3] def TestClass_AddNumber(obj,n):
+def AddNumber<self,n): obj["numbers"]+:[n]
+self.numbers += [n]
+lpl I Test() TestClass I {
+p2 I Test() "AddNumber":TestClass_AddNumber,
+pl.AddNUmber(4) "numbers":numbers_vector
+p2.AddNUmber(5) }
+As looth pl.numbers and p2.numbers re "I p1 = dict(TestClass)
+to the same vector (numbers_vector) they p2 = dict (TestClass)
+will lo.oth modifyothe same oloiect thus p1 ["AddNumber"] (p1, 4)
+creatlng the |llu5|on of a statlc varlable. p2 ["AddNumber"] (p2, 5)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-What happens if q class has some obiects deﬁned diredly in class a
-mm a.‘ Py'hon 3.x (dizliunury Ieplesenluliun)
-class Test: numbersivector : [1,2, 3]
-numbers : [1,2, 3] def TestClassiAddNumberwb],n)1
-def AddNumber1self,n)z Obj ["K‘u‘ﬂbers"]+:[n]
-Belf.m,mbers +: [n]
-1 = Test TestClass = (
-| p2 Z Test H "AddNumber":TestClassiAddNumber,
-p1.AddNumbcz44) "numbers" :numbersivector
-p2 .AddNumber15) 1
-As both p1.numbers and p2.numbe efer .1 = dict TestClass
-to the same vector (numbers_vec!or) the | p2 : dict<TestClass>
-will b'oﬁh meeify'me some eeieet thus p1["AddNunber..] (111,4)
-crecmng the l||US|O|1 of a smnc vurluble. p2["l\ddl\'unbet"] (p2, 5,
+What happens if a class has some obiects defined directly in class ?
+Python 3.x Python 3.x (dictionary representation)
+class Test: numbers_vector I [1,2,3]
+numbers I [1,2,3] def TestClass_AddNumber(obj,n):
+def AddNumber<self,n): obj["numbers"]+:[n]
+self.numbers += [n]
+.1 I Test TestClass I {
+
+l— "AddNumber" :TestClass_AddNumber,
+pl.AddNUmber(4) "numbers":numbers_vector
+p2 .AddNumber < 5) }
+
+As looth pl.numbers and p2.number eter .1 = dict TestClass
+
+to the same vector (numbers_vector) they |_
+will looth modify the same oloiect thus p1 ["AddNumber"] (p1, 4)
+creating the illusion of a static variable. p2 ["AddNumber"] (p2, 5)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-What happens if q class has some obiects deﬁned diredly in class a
-mm a.‘ Py'hon 3.x (dizliuncry Iepresenluliun)
-class Test: numbersivector : [1,2, 3]
-numbers : [l,2, 3] def TestClassiAddNumberwb],n)1
-def AddNumber1self,n)z Obj ["K‘u‘“bers"]+:[n]
-Belf.m,mbers +: [n]
-p1 = TestU TestClass = (
-2 : Test "AddNumber":TestClassiAddNumber,
-|— "numbers" :numbersivector
-r
-As both p1.numbers and p2.nu -ers refer p1 = dict(TestClass)
-to the same vector (numbers_vec!or -ey .2 : dict Testclaes
-will boﬁh modify the some object thus |_
-creating the illusion of a srmic variable. p2["l\ddl\'unbez"] (p2, 5,
+What happens if a class has some obiects defined directly in class ?
+Python 3.x Python 3.x (dictionary representation)
+class Test: numbers_vector I [1,2,3]
+numbers I [1,2,3] def TestClass_AddNumber(obj,n):
+def AddNumber<self,n): obj["numbers"]+:[n]
+self.numbers += [n]
+pl I Test() TestClass I {
+.2 I Test "AddNumber":TestClass_AddNumber,
+l— "numbers" :numbers_vector
+}
+As looth pl.numbers and p2.nu ers refer p1 = dict(TestClass)
+to the same vector (numbers_vector ey 2 = dict TestClass
+will looth modify the same oloiect thus |_
+creating the illusion of a static variable. p2 ["AddNumber"] (p2, 5)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-What happens if q class has some obiects deﬁned diredly in class a
-mm a.‘ Py'hcn 3.x (dizliunury Ieplesenluliun)
-class Test: numbersivector : [1,2, 3]
-numbers : [1,2, 3] def TestClassiAddNumberwb],n)1
-def AddNumber1self,n)z Obj ["K‘u‘ﬂbers"]+:[n]
-Belf.m,mbers +: [n]
-p1 = TestU TestClass = (
-p2 : TestH "AddNumber":TestClassiAddNumber,
-1 .AddNumbc: 4 "numbers" :numbersivector
-|—‘ 1
-A: both p'l.numbers and p umbers refer p1 e dictwesmass,
-to the same vector (numbers_v » ~r) they p2 : di¢t(TestClass)
-will be". modify the some obiectthu 1 nmwumer" ,1 4
-Creating the illusion Of G SHJIIC Yuriﬂble. |_
+What happens if a class has some obiects defined directly in class ?
+Python 3.x Python 3.x (dictionary representation)
+class Test: numbers_vector I [1,2,3]
+numbers I [1,2,3] def TestClass_AddNumber(obj,n):
+def AddNumber<self,n): obj["numbers"]+:[n]
+self.numbers += [n]
+pl I Test() TestClass I {
+p2 I Test() "AddNumber":TestClass_AddNumber,
+ol.AddNUmber 4 "numbers":numbers_vector
+l—. }
+As looth pl.numbers and p.umbers refer p1 = dict(TestClass)
+to the same vector (numbers_ve r) they p2 = dict (TestClass)
+will looth modify the same oloiect thus ,1 ["AddNumber"] (1 4)
+creating the illusion of a static variable. l_
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-You can also delete c: member of u class instance by using the keyword del‘
-Pym" 3.‘
-class Pomt:
-def ilnltf1self):
+You cdn ollso delete d member of ol cldss instance by using the keyword del.
+Python 3.x
+class Point:
+def _init_ (self) :
 
-selfex Z 0
+self.x I O
 
-selfey : n
-p i PolntH
-Print (P~X,P.y)
-p.x : 10
-Print (Penny)
-del p_x u“ .e nu lung-2r c membel er P. Code mu
-prlnt ® producé a runﬁne errorv
+self.y I O
+p I Point()
+print (p.X,p.y)
+p.x I lO
+print (p.X,p.y)
+del p . x “x” is no longer o member of p. Code will
+print @I produce or runtine error.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-If a class member is like a dictionary — what does this means in terms of POO concepts:
-Au method overloading is NOT possible (it would mean io have multiple functions with
-the same key in a dictionary)‘ You can however create one method with a lot of
+It a class member is like a dictionary — what does this means in terms of POO concepts:
+A. method overloading is NOT possible (it would mean to have multiple functions with
+the same key in a dictionary). You can however create one method with a lot of
 
-parameters with default values that can be used in the same way‘
+parameters with default values that can be used in the same way.
 
-B. There are no private/protected attributes for data members in Python. This is not
+B. There are no private/protected attributes tor data members in Python. This is not
 directly related to the similarity to a dictionary, but it is easier this way as all keys
-from a dictionary are accessible‘
+from a dictionary are accessible.
 
-Cu CAST-ing does not work in the some way as expectedu Up-cast / Down-cost ore
-usuolly done with specialized tunotions that create a new abiect
+C. CAST-ing does not work in the same way as expected. Up-cast / Down-cast are
+usually done with specialized functions that create a new obiect
 
-D4 Polymorphism is implicit {basically all you need ta have is some classes with same
+D. Polymorphism is implicit (basically all you need to have is some classes with some
 functions with the same name). Even if this supersedes the concept of polymorphism,
-you don‘t actually need to have classes that are derived from the same class to
+you don’t actually need to have classes that are derived from the same class to
 simulate a polymorphism mechanism.
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:22**************
-Jusl like normal variables in Pylhcn, dew members can also have lheir lype changed
-dynamically‘
-Python 1X
+Just like normal variables in Python, data members can also have ’rheir Type changed
+dynamically.
+Python 3.x
 class MyClass:
-x = l!)
-y : 20
-m = MyclassU
-print lm.x,“:>",type(m.§l)
-m.x = "a string“
-print (In.x,“:>"ytype(n\.§l)
-Olllpul
-10 :> @1355 'int‘)
-a stxinq :> @1555 1:1»
+X = lO
+y = 20
+m = MyClass()
+print (m.x,"=>",type(m.§))
+m.x = "a string"
+print (m.x,"=>",type(m.§))
+Output
+10 => <class 'int'>
+a string => <class 'str'>
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-The same can be applied for class methods — however in this case there are some
-restrictions related to the self keyword.
-Python 1X
-class Myclass:
-x Z 10
-y : 2o
-def Test (self,value):
-return ((Self,x+self.y) /2 == value)
-def MyFunction(sel£,\/l,v2) :
-zecum at! (vl+v2)+" e "at-Juan“) +", "at-.zueliiy)
-m : MyClasSU
-print (m.1'est115t,m.y'est(16)t
-m,Test = mtg/Function Output
-a e 10,20
+The some com be applied tor closs methods — however in this cose there olre some
+restrictions reloted to the self keyword.
+Python 3.x
+class MyClass:
+X = lO
+y = 20
+def Test(self,value):
+return ((self.x+self.y)/2 == value)
+def MyFunction(self,vl,v2):
+return str(v1+v2)+" — "+str(self.x)+","+str(self.y)
+m = MyClass()
+print (m.Test(15),m.Test(l6))
+m.Test = m.MyFunction Output
+3 - 10,20
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-The some can be applied for class methods - however in this case there are some
-restrictions releved to the self keyword,
+The some con be dpplied for clolss methods — however in this colse there olre some
+restrictions reloted to the self keyword.
 Python 3.x
 class MyClass:
-X : 17,
-y r 23
-def Test(self,va1ue):
-return ((Sclf.x+sclf.y)/2 :: value)
-def MyFunctloanelf,\/L, -
-return st!(v14v Punﬁme error because"MyFunrn'en'isq Ily)
-r“ * MyClass H memod 'hm needs m be bound m on
-Pm nt (m, T‘ Mm " omen “mantel
-m.Tcst I®yFunctlcm
-print (m. r-s , 1)
+X I lO
+y I 20
+def Test(self,value):
+return ((self.x+self.y)/2 I: value)
+def MyFunction(self,vl, -
+return Str (V1+V Runtime error becouse “MyFunction” is o I f - Y)
+m I MYClaSS () method thot needs to be bound to on
+print (m. T‘ , rm ’ ' obiect instance!
+m. Test —@ yFunction
+print (m. - ’,2))
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-The same can be applied for class methods — however in this case there are some
-restrictions related to the self keyword.
-Python 1X
-class Myclass:
-x Z 10
-y : 2o
-def Test (self,value):
-return ((Self,x+self.y) /2 == value)
-def MyFunction(sel£,\/l,v2) :
-zecum at! (vl+v2)+" e "at-Juan“) +", "at-.zueliiy)
-m : MyClasSU
-print (m.1'est115t,m.y'est(16)t
-m, Test = MyClasst) ,MyFunctiun Output
-a e 10,20
+The some com be applied tor closs methods — however in this cose there olre some
+restrictions reloted to the self keyword.
+Python 3.x
+class MyClass:
+X = lO
+y = 20
+def Test(self,value):
+return ((self.x+self.y)/2 == value)
+def MyFunction(self,vl,v2):
+return str(v1+v2)+" — "+str(self.x)+","+str(self.y)
+m = MyClass()
+print (m.Test(15),m.Test(l6))
+m.Test = MyClass().Mnynction Ounnn
+3 - 10,20
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-The some can be applied for class methods — however in this case there are some
-restrictions related to the self keyword.
-Python 1X
+The some com be applied tor closs methods — however in this cose there olre some
+restrictions reloted to the self keyword.
+Python 3.x
 class MyClass:
-x : 10
-y : 20
-def Test(sel£,value):
-return (tself,x+se1f.y) /2 == value)
-def MyFunction(sel£,\/l,v2) :
-zecum st!(vl+v2)+" e "wt-Juan“) +", 'wauuelLy)
-m : MyClasSU
-m2 : MyClassO
-print (mmesttlsnmrTQs-ctlﬁn Output
-m.Tesr : m2.MyFunct10n hue False
+X = lO
+y = 20
+def Test(self,value):
+return ((self.x+self.y)/2 == value)
+def MyFunction(self,vl,v2):
+return str(v1+v2)+" — "+str(self.x)+","+str(self.y)
+m = MyClass()
+m2 = MyClass()
+print (m.Test(15),m.Test(l6)) Output
+m. Test I m2.MyFunction True False
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Methods are bound lo lhe sell obiect of the class they were initialized in. Even if you
-associate u melhod lrein a different class lo a new method, ine self will belong ie the
-ori -inul class.
-Pyllimi 1x
+MeThods are bound To The self obiecT of The class They were iniTialized in. Even if you
+associaTe a meThod from a differenT class To a new meThod, The self will belong To The
+oriinal class.
+PyThon 3.x
 class MyClass:
 X = 10
 def Test(self,value):
-return ((selfimseltiy) /2 Z value)
-def MyFunct10n(self,v1,v2) :
-return stt(vl+v2l+" - "+st:(sel£.x)
-m = Mycleesll
-m2 : MyClassll
-m2ix Z 100
-m'TeSt Z mziMYFUMHO” inJesinemellyreiersie cuipni
-print (ni.I'e5tll,2l) mlMyFundinn 3 7 100
-pent innynncmmn
+return ((self.x+self.y)/2 == value)
+def MyFunction(self,vl,v2):
+return str(vl+v2)+" — "+str(self.x)
+m = MyClass()
+m2 = MyClass()
+m2.x = 100
+m. Test = m2 .MyFunction I m.TesT acTually refers To OquuT
+print (m. Test (1’ 2)) m2.MyFuncTion 3 - 100
+print (m.MyFunction (1, 2))
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-A method from another class can also be used, but it will refer to the self from the original class‘
-Pyrhon 3.‘
+A method from another class can also be used, but it will refer to the self from the original class.
+Python 3.x
 class MyClass:
-x : 10
-y Z 20
-def Te$l lself,value):
-return (l5elf.x+self.y) /2 W value)
-class AnotherC' ass:
-def MyFunctlon(selE,vl,v2l:
-return st! (Vl+v2l+" 7 "+str (selilx) +", "+str (selfly)
-m : MyClaSS (l
-print (m. TestLSl ,m. Testlle
-m,’i‘e$t i Mathew] ass (J ‘Mymmvt icw The code will proflucs a rumime error
-punt (“L TQM ‘ 1 V 2i) became me self ollietl From Anoll'iercluss
-does. "or li0\9 "x" and “7" members.
+X = lO
+y = 20
+def Test(self,value):
+return ((self.x+self.y)/2 == value)
+class AnotherClass:
+def MyFunction(self,vl,v2):
+return str(vl+v2)+" — "+str(self.x)+","+str(self.y)
+m = MyClass()
+print (m.Test(l5),m.Test(l6))
+m. Test = AnotherClass () .MyFunction The code will produce a runtime error
+print (m. Test (l I 2) ) because the self obiect from AnotherClass
+does not have “x” and “y” members.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:29**************
-Normal functions can also be used. However, in this case, the self obiecl will not be send
-when culling them and it will nol be accessible.
-Pyllwon 1X
-class Myclass:
+Normal functions coln ollso be used. However, in this colse, the self obiect will not be send
+when calling them olnol it will not be olccessible.
+Python 3.x
+class MyClass:
 
-x Z 10
+X = lO
 
-y : 2o
+y = 20
 
-def Test (self,value):
+def Test(self,value):
 
-return ((Self,x+self.y) /2 == value)
+return ((self.x+self.y)/2 == value)
 
-def MyFunction(sel£,\/l,v2) :
+def MyFunction(self,vl,v2):
 
-return at! (vl+v2l
-m : Myclassll
-print (m.1'est115l,m.y'est(16)l
-m, Test = MyFunctlon Oulpul
+return str(v1+v2)
+m = MyClass()
+print (m.Test(15),m.Test(l6))
+m.Test = MyFunction Output
 
-a
+3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Similarly a class meihod can be associated (linked) to a normal variable and used as
-such. Ii will be able lo use lhe self clnd ii will be elfeeled if self members are changed.
-Pyvlion 3d
-class Mycless=
-X e 10
-def MyFunctlon (self, v1,v2):
-return st: (Vl+le+" i self.x:"+stt (sel£.X)
-m = MyClassll
-fnc : m.MyFunc[10n
-print (fnc(l5,35l)
-m,x : 123
-print (fnc(15,35l)
-Ouipui
-SD 7 self_x: 123
+Similarly a class method can be associated (linked) to a normal variable and used as
+such. It will be able to use the self and it will be affected if self members are changed.
+Python 3.x
+class MyClass:
+X = lO
+def MyFunction(self,v1,v2):
+return str(v1+v2)+" — self.x:"+str(self.x)
+m = MyClass()
+fnc = m.MyFunction
+print (fnc(l5,35))
+m.x = 123
+print (fnc(l5,35))
+Output
+50 - self.x: 123
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
-self obiect is assign during the construction of on obiect. This means that o function can
-be defined outside the class and used within the cluss it it is set during the construction
+self obiecT is assign during The construction of an obiecT. This means ThaT a TuncTion can
+be defined ouTside The class and used wiThin The class if iT is seT during The consTrucTion
 phase.
-Python 3.x
-def MyFunctlon(sel£,vl,v2) :
-return 5tr(vl+v2)+" — X : "+stx(self.x)
+PyThon 3.x
+def MyFunction(self,vl,v2):
+return str(vl+v2)+" — X = "+str(self.x)
 class MyClass:
-x : 10
-Test Z MyFunction
-m : MyClassU
-m2 Z MyClassU Output
-print (mtTest11,2)) 307x:15
-print (m2 . TestUO, 20H
+X = 10
+Test = MVFUnction
+m = MyClass()
+m2 = MyClass () Ouipui
+print (m.Test(l,2)) 30- Xz=15
+print (m2.Test(lO,20))
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:32**************
-This type of cssignmem can not be done wilhin the constructor method (finili), il musl
-be done through dired declaration in the alass body,
-Pylhon 1X
-def MvFunctlon(selE,vl,\/2l:
+This type of assignment can not be done within the constructor method (_init_), it must
+be done Through direct declaration in the class body.
+Python 3.x
+def MyFunction(self,vl,v2):
 
-return st! (Vl+v2)+" s >< Z "an (salrlxl
+return str(vl+v2)+" — X = "+str(self.x)
 class MyClass:
 
->< , 10
+X = lO
 
-def ilnltilself):
+def __init__(self):
 
-sel£_Test Z MyFunctlon
+self.Test :.MyFunction
 
-m : Myclass ll
-m2 a MyClass ll
-m2“ , 15 The code alll produce n rum'lme EHQI
-print (m_ Test ( ;, 2n because MyFlmcIlon ls HOV bmmd Io (my self
-print (m2.ras:(1u,20)l (1' "ll: Poll"
+m I MyClass()
+m2 I MyClass()
+m2 X I 15 The code will produce a runtime error
+print (m Test (l 2) ) because MyFunction is not bound to any self
+print (m2 . Test (10, 20)) O" ‘his P°inl
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
-The some error will appear if we try m link a method from u class using iv's instance with
-c non-class function,
-PM" 1X
-def MyFunctlon(self,vl,\/2):
-return st! (Vl+v2)+" 7 >< Z "an (Seler)
+The s0|me error will c|ppe0|r it we try to link 0| method from 0| cl0|ss using it’s instance with
+0| non-cldss function.
+Python 3.x
+def MyFunction(self,vl,v2):
+return str(vl+v2)+" — X = "+str(self.x)
 class MyClass:
->< i 10
-m Z MyCLasS (b
-m. Tesl : Mymnvrmn
-print ("h Tesﬂl, 2H The code mu produce n Mme enol
-because MyFuncﬁon ‘v; not bum r0 (my self
-at ﬂu: po'mi
+X = lO
+m I MyClass()
+m.Test :.MyFunction
+print (m. Test (l I 2) ) The code will produce 0| runtime error
+bec0|use MyFunction is not bound to 0|ny self
+0|t this point
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:34**************
-A class C0" be Used like u container Of dew (u surf 0f name dictionary)‘ W5 Closest
-resemblance i5 f0 G SNUCI in C-like languages. For 'his 0n empty CIGSS need TO be CreGOe
-(using keyword pd“)
-Pyrhun 3.x
-C185! Pelnt:
+A class can be used like a container of data (a sort of name dictionary). lt’s closest
+resemblance is to a struct in C-like languages. For this an empty class need to be create
+(using keyword pass)
+Python 3.x
+class Point:
 pass
-p : PointU
-p.x : 100
-p‘ y : 200
-pjd : PointU
-pi3d‘X : 10
-p_3d‘y : 20 °""""
-, y Z 100 200
-prlnt ("P Z “,P‘x,p‘y)
-print ("30: “,pi3d,x,pi3d.y,pi3d.z)
+p I Point()
+10.x I lOO
+p. y I 200
+p_3d I Point()
+p_3d.x I lO
+p_3d.y I 20 Output
+—, ' 3D: 10 20 30
+print ("P I ",p.x,p.y)
+print ("BDI ",p_3d.x,p_3d.y,p_3d.z)
 
 ***************Ending Page***************
+
 

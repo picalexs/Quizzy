@@ -6,22 +6,21 @@ Practicé SGBD
 
 ***************Beginning Page***************
 ***************page number:2**************
-http://use-the-index-|uke.com/
+http://use-the-index-Iuke.com/
 SQL \
 PERFORMANCE
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-te
-| d e d a
-| u m u
-ta ' V0
-a n ,
-Pe Ffo rm
-Don ‘t ask a 084 to help you move furniture.
-They've been known to drop tab/es...
+Performanta - Volumul de date
+00,”
+The , aS/faDB
+V I/e been kjoto he/p Yo
+W” to drag move fUr
+tab/es“ nitUre_
 
 ***************Ending Page***************
 
@@ -29,31 +28,32 @@ They've been known to drop tab/es...
 ***************page number:4**************
 Volumul de date
 
-' O interogare devine mai lenté cu cét sunt mai
-multe date in baza de date
+' O interogare devine mai lenta cu cat sunt mai
+multe date Tn baza de date
 
-- Cét de mare este impactul asupra
-performangei dacé volumul datelor se
-dubleazé ?
+' Cat de mare este impactul asupra
+performantei daca volumul datelor se
+dubleaza ?
 
-' Cum putem Tmbunététi ?
+' Cum putem Tmbunatati ?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
 Volumul de date
 
-' lnterogarea analizaté:
+' lnterogarea analizata:
 
 SELECT count (*) FROM scale_data
 WHERE section = ? AND id2 = ?
 
-~ Section are rolul de a controla volumul de
-date. Cu cét este mai mare section, cu atét
+' Section are rolul de a controla volumul de
+date. Cu cat este mai mare section, cu atat
 este mai mare volumul de date returnat.
 
-' Considerém doi indec5i: indexl 5i index2
+' Consideram doi indec$iz index1$i index2
 
 ***************Ending Page***************
 
@@ -62,36 +62,38 @@ este mai mare volumul de date returnat.
 Volumul de date
 ' lnterogarea analizaté:
 SELECT count (*) FROM scale_data
-WHERE section = ? AND id2 = ?
+WHERE section = '? AND id2 = '?
 ' Section mic —index1$iapoi indexZ
-0710 Feﬂcrmance 0'10
-E DVDS 0'08 E
-g 0'06 DVDS g
-i 0.04 m4 Q
-a a
-g 0'02 002 g
-ac K
-0'00 last Maw DUO
-0029: 00555
+0-10 Perfurmance 0-10
+E 0-00 0-00 E
+E 0-00 0-00 E
+E 0.04 0.04 E
+0 0
+g 0.02 0.02 g
+EL’ EC
+III-CID Iii-CID
+fast slnw
+0.0295 [1.0555 6
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
 Volumul de date
 ' Scalabilitatea indicé dependenta performantei
 Tn functie de factori precum volumul de
-informaﬂi.
-‘72 Scalability by Data Volume slaw i last -~- 172
-I; 1.0 1.0 g
-E 0.8 0.8 g
-a; 0.6 0.6 a;
-é 0.4 0.4 g
-E 0.2 0.2 2
-1 cc
-0.0 '* 0.0
-O 20 40 60 80 100
-Data volume [senlmn]
+informatii.
+1-2 Ecalahility by Data volume ‘Elﬂw — fﬂﬂt —-— _ 1-2
+E 1-0 1-0 E
+E IlB llB g
+g 0-5: r16 EH
+g [1-4 r14 g
+E 0-2 0-2 E
+EL’ II
+0-0 0-0
+u 2:: m1 an an mu
+Data. volume [secti-un]
 
 ***************Ending Page***************
 
@@ -99,23 +101,26 @@ Data volume [senlmn]
 ***************page number:8**************
 Volumul de date
 
-- indexl — timp dublu fate": de cel initial
+' indexl — timp dublu fata de cel initial
 
-' index2 — trimp x20 fate“: de cel inijcial
+' indexZ — trimp x20 fata de cel initial
 
-‘72 Scalability by Data Volume slaw i last -~- 172
-I; 1.0 1.0 g
-E o.a u g
-E 0.6 0.3 E
-é 0.4 0.4 §
-.2 0.2 0.2 g
+1E Eaalahility by Data ‘ifaluma ‘slaw — faﬂt —-— _ 1E
+g 1-D 1a g
+E Ila llB E
+g aa ila 5g
+E 0-4 r14 E
+E aa 0-2 a
+EL’ EL’
 
-0.0 '* 0.0
+an [Li]
 
-O 20 40 GO 80 100
-Dela volume [senliun]
+a a: an aa aa iaa
+Data. valuma [aaatian]
+8
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
@@ -124,68 +129,70 @@ Volumul de date
 ' Réspunsul unei interogéri depinde de mai
 multi factori. Volumul de date e unul dintre ei.
 
-' Dacé o interogare merge bine in faza de test,
-nu e neapérat ca ea sé functioneze bine 5i in
+' Dacé o interogare merge bine Tn faza de test,
+nu e neapérat ca ea sé functioneze bine $i Tn
 productie.
 
 ' Care este motivul pentru care apare diferenta
-dintreindex1§i indexZ ?
+dintreindex1$i indexZ ?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
 Ambele par Identlce ca executle:
-| Id | Operation | Name | Rows | Cost I
-| 0 | SELECT STATEMENT | | 1 | 972 |
+| Id | Operation | Name | Rows | Cost |
+| G | SELECT STATEMENT | | 1 | 972 |
 | 1 | SORT AGGREGATE | | 1 | |
-|* 2 | INDEX RANGE SCANI scALE_SLON | 3000 | 972 |
+|* 2 | INDEX RANGE SGAN| scALE_SLON | SGGG | 972 |
 | Id Operation | Name | Rows | Cost |
-| 0 | SELECT STATEMENT | | 1 | 13 l
-| 1 | SORT AGGREGATE | | 1 | I
-|* 2 | INDEX RANGE SCANI SCALE_FAST | 300a | 13 l
-Tr
+| e | SELECT STATENENT | | 1 | 13 |
+| 1 | SORT AGGREGATE | | 1 | |
+|* 2 | INDEX RANGE SGAN| scALE_FAST | SGGG | 13 |
+10
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
 Volumul de date
 
-' Ce influengeazé un index ?
->> table acces
-3> scanarea unui interval mare
+' Ce influenteazéi un index ?
+> table acces
+> scanarea unui interval mare
 
-~ Nici unul din planuri nu indicé acces pe baza
+' Nici unul din planuri nu indicéi acces pe baza
 indexului (TABLE ACCES BY INDEX ROW ID)
 
-~ Unul din intervale este mai mare atunci cand e
-parcurs.... trebuie 55 avem acces la "predicate
-information” ca sé vedem de ce:
+' Unul din intervale este mai mare atunci cand e
+parcurs.... trebuie séi avem acces Ia "predicate
+information" ca séi vedem de ce:
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-| Id | Operation | Name | Rows | Cost |
-| a | SELECT STATEMENT | | 1 | 972 |
-| 1| SORT AGGREGATE | | 1| |
-|* z | INDEX RANGE SCANI scALE_sz | 3009 | 972 |
+| Id | Operation | Name | Hows | CoSt |
+| G | SELECT STATEMENT | | 1 | 972 |
+| 1 | SGRT AGGREGATE | | 1 | |
+|* 2 | INDEX RANGE SGAR| SGALE_SLow | SGGG | 972 |
 Predicate Information (identified by operation id):
-2 - access("SECTION"=T0_NUMBER(:A))
-filter("ID2"=T0_NUMBER( = 5))
-17
+2 — acoeSS("SECTION"=T0_NUMBEH(:A))
+filter("IDZ"=T0_HUHBER(:B))
+12
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-| Id Operation | Name | Rows | Cost |
-| e | SELECT STATEMENT | | 1 | 13 |
-| 1| SORT AGGREGATE | | 1| l
-|* 2 | INDEX RANGE SCANI SCALE_FAST | saee | 13 |
+| Id Operation | Name | Hows | Coat |
+| G | SELECT STATENENT | | 1 | 13 |
+| 1 | SGRT AGGREGATE | | 1 | |
+|* 2 | INDEX RANGE SGAN| SGALE_FAST | SGGG | 13 |
 Predicate Information (identified by operation id):
-2 - access("SECTION"=TO_NUMBER(:A) AND "ID2"=T0_NUMBER(:B))
+2 - access("SEGTIGN"=TG_NUNSER(:A) ANo "Ioz"=To_NUNSER(:S))
 13
 
 ***************Ending Page***************
@@ -198,161 +205,167 @@ avénd planurile de executie ?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
 Volumul de date
 ' Puteti spune cum a fost construit indexul
 avénd planurile de executie ?
-' CREATE INDEX scale_slow 0N
+' CREATE INDEX scale_slow ON
 scale_data (section, idl , id2) ;
 ' CREATE INDEX scale_fast ON
-scale_data (section , id2 , idl) ,-
+scale_data (section, id2 , idl) ;
 Campul idl este adaugat doar pentru a pastra
-aceeasi dimensiune (sa nu se creada ca indexw
-sculejaste mai rapid pentru ca are mai putine
-campuri in el). 1g
+aceeasi dimensiune (sa nu se creada ca indexul
+scale_fast e mai rapid pentru ca are mai putine
+campuri in el). 15
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Inca rcarea SlStemU|Ul
-' Faptul ca am definit un index pe care il
+lncarcarea SlStemU|Ul
+' Faptul ca am definit un index pe care TI
 considerém bun pentru interogérile noastre
-nu il face sé fie neapérat folosit de Q0.
-. 5QL Server Management Studio-
-oar ca un mnlnp
-j; M95 Z‘ Emma:
-Query 1: Query cost. (:elaczve to the batch): 100%
-DECLARE Bee: numezlc; DECLRRE Ele numerlc; SELECT cuuntlﬁv
+nu TI face sé fie neapérat folosit de Q0.
+' SQL Server Management Studio-
+oar ca un tooltlp
+_';'-;| Messages 2'“ Execution plan |
+Query 1: Query CD51; (relative tn the batch]: llIlElE's
+DECLARE @sec numeric: DECLARE EiEiE numeric: SELECT cauntﬁ]...
++
+l6
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Incércarea sistemului
+lncarcarea SlStemU|Ul
 
-- De regulé, Tmpreuné cu numérul de
-anegistréri, cre§te $i numérul de acceséri.
+' De regulé, Tmpreuné cu numérul de
+anegistréri, cre$te $i numérul de acceséri.
 
-- Numirul de accesari este alt parametru ce
-intré in calculul scalabilitéjtii.
+' Numérul de accesari este alt parametru ce
+intré Tn calculul scalabilitétii.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Incarcarea SlStemU|Ul
-- Dacé initial era doar o singuré accesare,
-considerénd ace|a$i scenariu dar cu 1—25
-interogéri concurente, timpul de raspuns
-cre$te:
-slaw if’ last i
-w an ’__ ’V,,-4 an a
-E 25 ,1” ‘ zs E
-E 20 <>,-'ﬁ-J 20 g
-'3? 15 /'" 15 '5;
-é In z/ m §
-an’; 5 [/f’ 5 é”:
-U .——__ D
-D 5 1D 15 20 15
-Load [ooncmrenl queries] \
+lncarcarea SlStGmU|Ul
+' Dacéi initial era doar o singuréi accesare,
+considerénd ace|a$i scenariu dar cu 1-25
+interogéiri concurente, timpul de raspuns
+cre$tez
+_5l|::|w ——— faat — _
+‘F 3E! #_H_ EFF-P“ BU E
+E 25 If! 5 25 E
+E EH ,FJPH’ E“ E
+E 15 I?!’ 15 E
+E 1n {if "3* E
+El _———— U‘
+El 5 1l'_'|I 15 Elli 25
+Luaﬁ [mncurrent queries] 18
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Incércarea sistemului
+lncércarea sistemului
 
-- Asta Tnseamné cé 5i dacé avem toata baza de
-date din productie 5i testém totul pe ea, tot
-sunt 5anse ca Tn realitate, din cauza numérului
+' Asta Tnseamné c5 $i dacé avem toata baza de
+date din productie $i testém totul pe ea, tot
+sunt $anse ca Tn realitate, din cauza numérului
 mare de interogéri, sé meargé mult mai greu.
 
-' Notii: atentia daté planului de executie este
+' Noté: atentia daté planului de executie este
 mai importanté decét benchamarkuri
-su perficiale (gen SOL Server Management Studio).
+SU perficia Ie (gen SQL Server Management Studio).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Incércarea sistemului
+lncércarea sistemului
 
 ' Ne-am putea a$tepta ca hardwareul mai puternic
-din producgie 55 ducé mai bine sistemul. In fapt,
+din productie $5 ducé mai bine sistemul. In fapt,
 Tn faza de development nu existé deloc latenté —
 ceea ce nu se Tntémplé Tn productie (unde accesul
-poate fi intérziat din cauza regelei).
+poate fi Tntérziat din cauza retelei).
 
-' httgzz[b|og.fatalmind.com[2009[12(221latency-
-security-vs-gerformance[
+' httgzﬂblogfata|mind.com[2009[12[22[|atency-
+security-vs-Qerformancez
 
-' httgzz[amesgo|ick.com[2010[10[27[we-are-
-exgeriencing—too-much-Ioad—lets-add-a-new-
+' httgzmamesgolick.com[2010[10[27[we-are-
+exgeriencing-too-much-Ioad-Iets-add-a-new-
 server..htm|
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
 Timpi de raspuns + throughput
 
-~ Hardware mai performant nu este mai rapid
+' Hardware mai performant nu este mai rapid
 doar poate duce mai multa incarcare.
 
 ' Procesoarele single-core vs procesoarele
-multi-core (cénd e vorba de un singur task).
+multi-core (cand e vorba de un singur task).
 
-~ Scalarea pe orizontala (adaugarea de
-procesoare) are acelagzi efect.
+' Scalarea pe orizontala (adaugarea de
+procesoare) are ace|a$i efect.
 
-- Pentru a imbunatéti timpul de réspuns este
-necesar un arbore eficient (chiar 5i in NoSQL).
+' Pentru a Tmbunatati timpul de raspuns este
+necesar un arbore eficient (chiar 5i Tn NoSQL).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-T|mp| de réspuns
+Timpl de réspuns
 
-' lndexarea corecté fac céutarea intr-un B-tree in
+' Indexa rea corectéi fac céiuta rea intr-un B-tree in
 timp logaritmic.
 
-' Sistemele bazate pe NoSQL par sé ﬁ rezolvat
-problema performantei prin scalare pe orizontalé
-i
+' Sistemele bazate pe NoSQL par sé fi rezolvat
+problema performantei prin scalare pe orizontaléi
+[
 
 ].
 
-' Aceasté scalabilitate este totu§i limitaté la
-operatiile de scriere Tntr-un model denumit
+' Aceastéi scalabilitate este totu§i limitatéi la
+operatiile de scriere intr-un model denumit
 "eventual consistency” [Consistency / Availability
 / Partition tolerance = CAP theorem]
-httgﬂenwikiQediaorngikiZCAP theorem
+httgﬂen.WikigediaorgZWikiZCAP theorem
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
 Timpi de réspuns
 
-- Mai mult hardware de obicei nu
-Tmbunététegne sistemul.
+' IVIai mult hardware de obicei nu
+Tmbunététe$te sistemul.
 
 ' Latency al HDD [problema apare cand datele
-sunt culese din locagii diferite ale HDDului — de
+sunt culese din locatii diferite ale HDDqui — de
 exemplu Tn cadrul unei operatii JOIN]. SSD?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-"Facts"
+“Facts”
 ' Performance has two dimensions: response
 
 time and throughput.
-' More hardware will typical/y not improve
+' More hardware will typically not improve
 
 query response time.
 ' Proper indexing is the best way to improve
@@ -363,6 +376,7 @@ I
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
 Join
@@ -371,42 +385,43 @@ Join
 
 ***************Beginning Page***************
 ***************page number:26**************
-Join
-An SQL query walks into u bur and sees two tables.
-He walks up t0 them and asks 'Can Ijoin you?’
-— Saurce: Unknown
-' Join-u! transform?! datele dintr-un model
-normalizat intr»unu| denormalizat care
-serveste unui anumit scop.
-' Sensibil la latente ale discului (si fragmentare).
+Jom
+An SQL query walks into o bor and sees two tables.
+He walks up to them and asks ’Con I join you?’
+— Source: Unknown
+' Join-ultransformé datele dintr-un model
+normalizat Tntr-unul denormalizat care
+serve$te unui anumit scop.
+' Sensibil Ia latente ale discului (5i fragmentare).
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
 Join
 
-' Reducerea timpilor = indexarea corecta ©
+' Reducerea timpilor = indexarea corecta @
 
-~ Toyi algoritmii dejoin proceseazé doar doué
+' Toti algoritmii de join proceseazé doar doué
 tabele simultan (apoi rezultatul cu a treia, etc).
 
 ' Rezultatele de la un join sunt pasate Tn
-urmétoarea operatie join féré a ﬁ stocate.
+urmétoarea operatie join féré a fi stocate.
 
 ' Ordinea Tn care se efectueazé JOIN-ul
-inﬂuenteazé viteza de réspuns.[10, 30, 5, 60]
+influenteazé viteza de réspuns.[10, 30, 5, 60]
 
-' QO incearcé toate permutérile de JOIN.
+' Q0 Tncearcé toate permutérile de JOIN.
 
 ' Cu cét sunt mai multe tabele, cu atét mai multe
-planuri de evaluatA [céte ?]
+planuri de evaluat. [céte ?]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Join
+Jom
 
 ' Cu cét sunt mai multe tabele, cu atét mai
 multe planuri de evaluat = n!
@@ -414,17 +429,18 @@ multe planuri de evaluat = n!
 ' Nu este 0 problemé cénd sunt utilizati
 parametri dinamici [De ce ?]
 
-- Nested Loups
+' Nested Loops
 
-- HashJoins
+' HashJoins
 
-' Mergedloins
+' MergedJoins
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Join — Nested Loops (anti patern) ..$
+Join — Nested Loops (anti patern) f
 
 ' Ca si cum ar fi doué interogéri: cea exterioaré
 pentru a obtine o serie de rezultate dintr-o
@@ -433,7 +449,7 @@ obtinut si apoi informatia corespondenté din
 cea de-a doua tabelé.
 
 ' Se pot folosi Nested Selects pentru a simula
-algoritmul de nested loops [latenta retelei,
+algoritmul de nested loops [Iatenta retelei,
 usurinta implementérii, Object-relational
 mapping (N+1 selects)].
 
@@ -444,141 +460,135 @@ mapping (N+1 selects)].
 Studiu de caz...
 select scholarship from
 fg join students on
-fg. lnamea=students . lname
-where 'Fg.lnamea like 'A%','
-' Care credeti c5 va ﬁ tabela interioaré 5i care
+fg.lnamea=students.lname
+where fg.lnamea like 'A%';
+' Care credeti c5 va fi tabela interioaré si care
 cea exterioaré ?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
 Studiu de caz...
-
-select scholarship ‘From
+select scholarship from
 fg join students on
-'Fg. lnamea=students . lname
-where fg. lnamea like 'A%';
-
+fg.lnamea=students.lname
+where fg.lnamea like 'A%';
 ' fg — cea exterioaré pentru c5 "speré" ca dupé
-filtrare sé aibé putine rénduri (cu lname like
-'A%’)
-
-~ students — cea interioaré
+filtrare sé aibé putine rénduri (cu Iname like
+' students — cea interioaré
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Ce alege sa faca cand nu sunt Indec§| ?
+I Uf U A o 0 p
+Ce a ege sa aca cand nu sunt IndecSl .
 | Id | Operation | Name | Rows | Bytes | Cost (%CPU)|
-| a | SELECT STATEMENT | | 283 | 8773 | 13458 (1)|
-|* 1| HASH JOIN_ | | zss| s773| A: (1)|
-|* 2 | TABLE ACCESS EULL| STUDENTS | 27 | 594 | s (a)|
-|* 3 | TABLE ACCESS FULLI FG | 54A | 4896 | 13452 (1)|
+| 8 | SELECT STATEMENT | | 283 | 8773 | 13458 (1)|
+|* 1 | HASH JOIN_ | | 283 | 8773 | 1 : (1)|
+|* 2 | TABLE ACCESS FULL| STUDENTS | 27 | 594 | 5 (8)|
+|* 3 | TABLE ACCESS FULLI FG | 544 | 4896 | 13452 (1)|
 Predicate Information (identified by operation id):
-
-1 - aCCESS("FG"."LNAMEA"="STUDENTS"."LNAME“)
-
-2 - filter‘("STUDENTS"."LNAME" LIKE AX')
-
-3 - filter‘("FG"."LNAMEA" LIKE HA5‘)
+1 - access("FG"."LNAMEA"="STUDENTS"."LNAME")
+2 - filter("STUDENTS"."LNAME" LIKE 'A%')
+3 - filter("FG"."LNAMEA" LIKE 'A%')
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
 Putem forta tipul joinului:
-select /* hint */sch01ar‘ship 'FPom
+select /* hint */sch01arship from
 fg join students on
-'Fg. lnamea=students . 1name
-where fg.lnamea like 'A%';
+fg.1namea=students.lname
+where fg.1namea like 'A%';
 ' Hint:
-+ USE_NL(students fg) — nested loops
++ USE_N L(students fg) - nested loops
 + use_hash — hash joins
 + use_merge(fg,students) para||e|(fg, 4)
-para||e|(students, 4) — merge joins
+para||e|(students, 4) — merge joins 33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-. . u
+Nested loops fortat (iese mai rau):
 
-Nested loops fortat (lese mal rau):
-| Id | Operation | Name | Rows | Bytes | Cost (%cpu)|
-| a | SELECT STATEMENT | | 283 | 8773 | 15375 (1)|
-| 1 | NESTED LO0PS_| | 283 | 8773 | 15375 (1)|
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)|
+| 8 | SELECT STATEMENT | | 283 | 8773 | 15375 (1)|
+| 1 | NESTED LO0PS_ | | 283 | 8773 | 15375 (1) |
 |* 2 | TABLE ACCESS FULLI FG | 544 | 4896 | 13452 (1)|
-|* 3 | TABLE ACCESS FULLI STUDENTS | 1 | 22 | 4 (0)|
+|* 3 | TABLE ACCESS FULL| STUDENTS | 1 | 22 | 4 (8)|
 Predicate Information (identified by operation id):
-\
+|
 
-Z > ‘Filter("FG"1"LNAMEA" LIKE 'A%')
+2 - filter("FG"."LNAMEA" LIKE 'A%')
 
-3 > ‘Filter("STUDENTS"."LNAME" LIKE 'AX' AND
+3 - filter("STUDENTS"."LNAME" LIKE 'A%' AND
 
-"FG" A "LNAMEA":"STUDENTS" . " LNAME")
-INTERESANT: ﬁllrul LIKE ’A%' a fest pus paste ngnamea — putegi observe cum il
-aplicé Si Tn students (cénd ii cauli pe cei care se “potrivesc”) v
+"FG"."LNAMEA"="STUDENTS"."LNAME")
+INTERESANT: filtrul LIKE ’A%' a fost pus peste fg.lnamea — puteti observa cum il
+aplica si in students (cand ii cauta pe cei care se “potrivesc”) 34
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
 Cum ati construi indecsii ?
 
 ' $tiind cum functioneazé nested loops, indexul
-firesc este in tabela din LOOP-ul interior, pe
+firesc este Tn tabela din LOOP-ul interior, pe
 cémpul peste care se face join-ul.
 
 ' Din cauzé c5 students era tabela interioaré, sé
-facem indexul peste students.lname:
+facem indexul peste students.|name:
 
-create index idx_students_lname on
+create index idx_students_1name on
 students(1name);
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-| Id \ Operation | Name | Rows \ Bytes | cost (X
-| e \ sELEcT STATEMENT | | 2&3 \ s77:
-| 1 \ NESTED LOOPS | | \
-| z \ NEsTEn LOOPS | | 2:3 \ x173 | 1454a
-I‘ 2 \ TABLE AccEss FULL | F6 | 544 \ 4895 | 13452
-I‘ A \ INDEX RANGE scAN | IDX_STUDENTS_LNAI‘IE | 1 \ | 1
-| 5 \ TABLE AccEss av INDEX RoNInl STUDENTS | 1 \ 22 | z
-Predicate Information (identiﬁed by operation id):
-
-3 » filter("F6"."LNAMEA“ LIKE 'AX')
-
-4 e access("FG"."LNAHEA“="STUDENTS"."LNAHE")
-
-filter("sTquNTs"ﬁLNAME" LIKE 'AX‘)
-Se ioloseste indexul ca sa gaseasca sludentii — si se vede ca se face access pe
-criteriul de join; filtrul este pests like“. [custul tutusi e 14.5k @1 ,
+| Id | Operation | Name | Rows | Bytes | Cost (%
+| 8 | SELECT STATEMENT | | 283 | 8773 14548
+| 1 | NESTED LOOPS | | |
+| 2 | NESTED LOOPS | | 283 | 8773 | 14548
+|* 3 | TABLE ACCESS FULL | FG | 544 | 4896 | 13452
+|* 4 | INDEX RANGE SCAN | IDx_STUDENTS_LNAME | 1 | | 1
+| 5 | TABLE ACCESS BY INDEX RONID| STUDENTS | 1 | 22 | 2
+Predicate Information (identified by operation id):
+3 - filter("FG"."LNAMEA" LIKE 'A%')
+4 - acceSS("FG"."LNAMEA"="STUDENTS"."LNAME")
+filter("STUDENTS"."LNAME" LIKE 'A%')
+Se foloseste indexul ca sa gaseasca studentii — si se vede ca se face access pe
+criteriul de join; filtrul este peste like... [costul totusi e 14.5k ® ] 36
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-| Id \ Operation | | Rows T Bytes | Cost (n
-| a \ sELEcT STATEMENT | | 253 I 8772 | 14545
-| 1\ NEsTED LOOPS | I |
-| 2 \ NEsTED LOOPS | - 8173 | 1454a
-I‘ s \ TABLE ACCESS FULL | F6 ml use | 131152
-I‘ A \ INDEX RANGE scAN | IDX_S UDENTS_LNAI‘|E | 1
-| s \ TABLE AccEss av INDEX Rowml STUDENTS | 1 \ 22 | 2
-Predicate Information (identiﬁed by operation id): Estlmare
-a » filter‘("FG"I"LNAMEA" LIKE 'AX')
-A r access("FG“."LNAHEA“="STUDENTS“."
+| Id | Operation | e | Rows | Bytes | Cost (%
+| o | SELECT STATEMENT | | 283 | 8773 | 14540
+| 1 | NESTED LOOPS | | |
+| 2 | NESTED LOOPS | - 8773 | 14548
+|* 3 | TABLE ACCESS FULL | FG 4896 | 13452
+|* 4 | INDEX RANGE SCAN | IDX_S UDENTS_LNAME | 1
+| 5 | TABLE ACCESS BY INDEX RowID| STUDENTS | 1 | 22 | 2
+Predicate Information (identified by operation id): EStlmare
+3 - filter("FG"."LNAMEA" LIKE 'A%')
+4 - access("FG"."LNAMEA"="STUDENTS"."
 filter("STUDENTS"."LNAME" LIKE '
-SQL> select count(*) from fg where lnamea like ‘A96’;
+SQL> select count(*) from fg where lnamea like 'A%';
 COUNT(*)
-_ _ _ _ _ _ _ _ _ _ \n fapt \rar ajuta foarte mult ca din cele
-, SM linii dinfgsa aiungarapid lace\e
-133594 Realltate 133k pg cars \e dureste.
+_ _ _ _ _ _ _ _ _ _ In fapt I-ar ajuta foarte mult ca din cele
+_ 5M linii din fg sa ajunga rapid Ia cele
+133504 Reahtate 133k pe care Ie doreste.
 
 ***************Ending Page***************
 
@@ -587,14 +597,14 @@ _ _ _ _ _ _ _ _ _ _ \n fapt \rar ajuta foarte mult ca din cele
 Atunci cénd avem nested loops:
 
 ' lndexati criteriul dupé care se face joinul din
-tabela interioaré. Dacé vet,i indexa 5i ceva in
+tabela interioaré. Dacé veti indexa 5i ceva Tn
 tabela exterioaré (pentru a face mai rapid
-accesul la liniile dorite, va fi perfect).
+accesul Ia liniile dorite, va fi perfect).
 
-' Tn cazul de faté ar fi interesant $5 facem acces
-acolo unde este lnamea.
+' Tn cazul de fate ar fi interesant sé facem acces
+acolo unde este Inamea.
 
-' Se poate schimba ordinea tabelelor la faza
+' Se poate schimba ordinea tabelelor Ia faza
 asta... cea interioaré sé deviné exterioaré...
 
 ***************Ending Page***************
@@ -602,107 +612,111 @@ asta... cea interioaré sé deviné exterioaré...
 
 ***************Beginning Page***************
 ***************page number:39**************
-Sé-l ajutém a5adar....
+Sé-I ajutém a§adar....
 create index idx_join_fg
-on fg(lnamea);
+on fg(1namea);
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-| Id | Operation | Name | Rows | Bytes | Cost (X
-| D | SELEcT STATEMENT | | zsz | s77;
-| 1 | NESTED LooPS | | 282 | 277a c
-| 2 | TABLE ACCESS av INDEX ROHIDI STUDENTS | 27 | 554 | A
-|~ 3 | INDEX RANGE SCAN | IDX_STUDENTS_LANME | s | | 2
-I‘ A | INDEx RANGE scAN | IDXilﬂlNiFG | 19 | 5a | 32
-Predicate Information (identiﬁed by operatiun id):
-a - a:cess(“STUDENTS"."LNAME" LIKE 'AX‘)
-filter-("STUDENTS"."LNAME" LIKE 'Ax')
-4 - aeeessUSTUDENTS'U"LNANE":~EG"."LNANEA")
-ﬁlter("FG"I"LNAMEA" LIKE 'AX')
+| Id | Operation | Name | Rows | Bytes | CoSt (%
+| 8 | SELECT STATEMENT | | 283 | 8773 1825
+| 1 | NESTED LOOPS | | 283 | 8773 1825
+| 2 | TABLE ACCESS BY INDEX RDNID| STUDENTS | 27 | 594 | 4
+|* 3 | INDEX RANGE SCAN | IDX_STUDENTS_LANME | 9 | | 2
+|* 4 | INDEX RANGE SCAN | IDX_JOIN_FG | 18 | 98 | 38
+Predicate Information (identified by operation id):
+3 - acceSS("STUDENTS"."LNAME" LIKE 'A%')
+filter("STUDENTS"."LNAME" LIKE 'A%')
+4 - acceSS("STUDENTS"."LNAME"="FG"."LNAMEA")
+filter("FG"."LNAMEA" LIKE 'A%')
+40
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
 Atunci cénd avem nested loops:
 
-' Dacé veti indexa criteriul exterior (dinafara
-joinului), aveti sanse sé scédeti foarte mult
+' Dacéi veti indexa criteriul exterior (dinafara
+joinului), aveti §anse sé scédeti foarte mult
 timpul operatiei join.
 
-' HOWEVER, cénd sunt utilizatejoinurile de
+' HOWEVER, cénd sunt utilizate joinurile de
 tipul nested loops, intotdeauna puneti index
-pe criteriul de selectie din tabela interioaré
+pe criteriul de selectie din tabela interioaréi
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
 Join — Cu doctrine putem vedea ce se
-intémpla de fapt la nivel de cereri BD:
+intémpla de fapt Ia nivel de cereri BD:
 Doctrine
-Only on source code levelidon’t forget to disable this for
-production. Consider building your own conﬁgurable logger.
-Hugger‘ = new \Doctrine\DBAL\Logging\EchoSqlLogger;
-$config->setSQLLogger‘($logger);
+Only on source code level—don’t forget to dissble this for
+production- Consider building your own conﬁgurable logger-
+$1ogger = new \DoctrineRDBAL\LoggingREchoSqlLogger;
+$config->set5QLLogger($logger);
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Join — Ce fac unii "programatori"...
-$qb = $em->createQueryBui1derO_;
-$qb->se1ect('e')
+Joln — Ce fac un|| "programatorl"...
+$qb = $em->creeteQuePyBuildeP();
+$qb-eselect('e')
 
-—>'Fr-om('E|||ployees', 'e')
-->where("upper(e.last_name) like :1ast_name")
-->setPara|||eter('1ast_name'_. ‘WIN%')_;
-$r = $qb—>getQuery()—>getResult();
-foreach ($r as Mow) {
-// process Employee
-Foreach ($row->get5ales() a5 $sale) {
-// process Sale ‘For- Employee
-}
-}
+—>Frem('Empleyees', 'e')
+—>where("upper(e.1est_nsme) like :1est_nsme")
+->setFePemeteP(‘lest_neme', ‘WIN%');
+$P = $qb->getQuePy()->getHesult();
+Fereech ($P ss $Pew) {
+if process Employee
+Fereech ($Pew—}get5eles() es $sele) {
+if process Sale Fer Employee
+1'
+1'
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-. A A v A
-Jom — Ce se mtampla In spate...
-Doctrine 2.0.5 generates N+1 select queries:
-SELECT e9_.employee_id AS employee_id9 —— MDRE COLUMNS
-FROM employees e9_
-WHERE UPPER(eB_.1ast_name) LIKE ?
-SELECT t8.Sale_id AS SALE_ID1 -- MORE COLUMNS
-FROM sales t8
-WHERE t9.subsidiar-y_id = ?
-AND t9.e|nplcyee_id = ?
-SELECT t9.Sale_id AS SALE_ID1 -- MORE COLUMNS
-FROM sales t8
-WHERE t9.subsidiar'y_id = ?
-AND t9.employee_id = ?
+Joln — Ce se Intampla In spate...
+Deeirine 2-0-5 generates N+1 select queries:
+SELECT eB_.empluyee_id AS employee_idO —— MORE COLUMNS
+FROM employees eO_
+NHEHE UPPER(eB_.1ast_name) LIKE P
+SELECT tO.SalE_id MS SMLE_IO1 —— MORE COLUMNS
+FROM sales tB
+NHEHE tB.subsidiaPy_id = P
+ANO tB.empluyee_id = P
+SELECT tB.5F.|le_id MS SMLE_IO1 —— MORE COLUMNS
+FROM sales tB
+NHERE tB.subsidiaPy_id = P
+ANO tB.empluyee_id = P
+44
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:45**************
 PRO TIP
 
-' Dacé aveti de fécut nested loops, nu o faceti in
-aplicatia PHP /Java / orice altceva... F5ceti-o
-direct in serverul de baze de date:
+' Daca aveti de facut nested loops, nu o faceti Tn
+aplicatia PHP / Java / orice altceva... Faceti-o
+direct Tn serverul de baze de date:
 
-—Tn BD nu avem latenta din retea;
+-Tn BD nu avem latenta din retea;
 
 - Tn BD nu sunt transferate datele intermediare
-(care sunt piped in BD);
+(care sunt piped Tn BD);
 
-- ORM-urile de obicei nu fac JOlNurile Tn BD ®
-(ci le fac prin nested loops Tn interiorul app).
+- ORIVI-urile de obicei nu fac JOINuriIe Tn BD ®
+(ci |e fac prin nested loops Tn interiorul app).
 
 ***************Ending Page***************
 
@@ -714,33 +728,34 @@ Join — nested selects
 pentru a-mi da direct toate informatiile
 (denormalizare)
 
-' Totu§i eagerfetching nu este bun atunci cénd
+' Totu$i eagerfetching nu este bun atunci cénd
 este nevoie doar de informatii dintr-o tabelé.
 
-' O conﬁgurare staticé (in genul celor eager) nu
-este mereu o solutie buné.
+' O configurare staticé (Tn genul celor eager) nu
+este mereu 0 solutie buné.
 
-' Cele mai multe ORM permit SQLjoins:
+' Cele mai multe ORIVI permit SQLjoins:
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-$qb = $em->createQueryBuilder()_;
-$qb->se1ect('e,s')
-->Frum('Emp10yees', 'e')
-->1eftJoin('e.sa1es', 's')
-->where("upper(e.1a5t_na|||e) like :last_name")
-->setFarameter('last_name', 'WINX');
-$r‘ = $qh->getQuery()->getResult()_;
-Doctrine 2.0.5 generates the following SQL statement:
-SELECT e8_.empluyee_id AS employee_id8
-—— MORE COLUMNS
-FROM employees eB_
-LEFT JOIN sales 51_
-0N e9_.5ubsidiary_id = 51_.5ub5idiary_id
-AND e9_.e|||plnyee_id = 51_.e|||ployee_id
-WHERE UFFER(eB_.last_name) LIKE ? 7,7
+$qb = $em—>cPesteQueryBuilder();
+$qb-sse1eet('e,s')
+—§frem('Empleyees', 'e')
+-}1eFtJein{'e.ss1es', 's'}
+—>where("upper(e.1sst_nsme) like :1sst_nsme")
+—>sethPsmeter('1sst_nsme', ‘WIﬂﬁ'J;
+$r = $qb—>getQuery()—>getHesult();
+Deetrine 21.1-5 generates the fellewitlg SQL statement:
+SELECT eB_.empleyee_id AS employee_idﬂ
+—— MORE CDLUMNS
+FRUM employees eB_
+LEFT JDIN sales s1_
+DH eB_.subsidisPy_id = s1_.subsidisry_id
+AND eE_.empleyee_id = s1_.empleyee_id
+WHERE UPPER(eB_.1sst_nsme) LIKE P M
 
 ***************Ending Page***************
 
@@ -748,71 +763,78 @@ WHERE UFFER(eB_.last_name) LIKE ? 7,7
 ***************page number:48**************
 Join — nested selects
 
-' Sunt bune dacé suntintoarse un numér mic de
+' Sunt bune dacé sunt Tntoarse un numér mic de
 anegistréri.
 
-' httg:f[blogfatalmind.com[2009[12(221latenc
-y»securityvs-gerformanceZ
+' httgzﬂblogfata|mind.com[2009[121221|atenc
+y-security-vs-QerformanceZ
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Join- Hashjoin .f‘
-J“
-WV"
-' Evité traversarea multiplé a B-tree din cadrul
-inner—querry (din nested loops) construind céte
+MR1.
+Jom — Hash Jom j:
+SQLS er
+\7"
+' Evitéi traversarea multipla a B-tree din cadrul
+inner-querry (din nested loops) construind céte
 un hash pentru inregistrérile candidat.
-' Dacé una din tabele este foarte mare, cealalté
-este incércaté Tn memorie, pe baza ei se
-construie$te un hash avénd ca 5i chei cémpurile
-utilizate Tn join 5i ca valori restul réndului.
-' Hashjoin Tmbunététit dacé sunt selectate mai
+' Dacéi una din tabele este foarte mare, cealaltéi
+este incéircatéi in memorie, pe baza ei se
+construieste un hash avénd ca si chei cémpurile
+utilizate in join si ca valori restul réndului.
+' Hash join imbunététit dacé sunt selectate mai
 putine coloane.
-' A se indexa predicatele independente din where
-pentru a Tmbunététi eficienta.
+' A se indexa predicatele independente din Where
+pentru a imbunététi eficienta.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Avénd indecsii construiti anterior
-\ Id | operation | Name | Ruws \ Bytes | Cost (9“
-\ a | sELEcT STATEMENT | | 2a: \ 5772 | 127
-V 1 | NASH JOIN | | 2a: \ 5772 | 127
-\ z | TABLE ACCESS Bv INDEX Rowml STUDENTS | 27 \ 594 | 4
-V z | lNDEX RANGE SCAN | IDX_STUDENTS_LAM1E | s \ | z
-V A | INDEX RANGE scAN | IDX_JOIN_FG | 544 \ 4896 | 122
-Predicate Information (identified by operation in):
-1 e access("STUDENTS"."LNAME"="FG"."LNAMEA")
-s e acce55("STUDENTS"."LNAME" LIKE 'AX')
-filter("STUDENTS“."LNAME" LIKE 'AX')
-4 e access("FG"."LNAMEA" LIKE 'AX')
-filter("Fs"."LNANEA" LIKE 'AX')
-Am putea crede Ca amb'u indecsi panicipa "putemic" la realizarea JOlNemui...
-De lap! daca scapam de |DX_STUDENTS_LANME [sorry for mm...
+A I I I I I I
+Avand Indecsn construltl anterlor...
+I
+| Id | Operation | Name | Rows | Bytes | Cost (%(
+| 8 | SELECT STATEMENT | | 283 | 8773 | 127
+|* 1 | HASH JOIN | | 283 | 8773 | 127
+| 2 | TABLE ACCESS BY INDEX RDNIDI STUDENTS | 27 | 594 | 4
+|* 3 | INDEX RANGE SCAN | IDX_STUDENTS_LANME | 9 | | 2
+|* 4 | INDEX RANGE SCAN | IDX_JOIN_FG | 544 | 4896 | 122
+Predicate Information (identified by operation id):
+1 - acceSS("STUDENTS"."LNAME"="FG"."LNAMEA")
+3 - acceSS("STUDENTS"."LNAME" LIKE 'A%')
+filter("STUDENTS"."LNAME" LIKE 'A%')
+4 - acceSS("FG"."LNAMEA" LIKE 'A%')
+filter("FG"."LNAMEA" LIKE 'A%')
+Am putea crede ca ambii indecsi participa "puternic" Ia realizarea JOIN-ului...
+De fapt daca scapam de IDX_STUDENTS_LANI\/|E (sorry for typo)...
+50
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-| Id | Operation | Name | Rows | Bytes | Cost (XCPU)|
-| a | SELECT STATEMENT | | zaal avval 128 (1)|
-I‘ 1 | HASH JOIN | | 283 | 8773 | 128 (1)|
-I‘ 2 | TABLE ACCESS FULLI STUDENTS | 27 | 594 | 5 (a)|
-I‘ 3 | INDEX RANGE SCAN | IDX_JOIN_FG | 544 | 4895 | 122 (a)|
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)|
+| 8 | SELECT STATEMENT | | 283 | 8773 | 128 (1)|
+|* 1 | HASH JOIN | | 283 | 8773 | 128 (1)|
+|* 2 | TABLE ACCESS FULLI STUDENTS | 27 | 594 | 5 (8)|
+|* 3 | INDEX RANGE SCAN | IDX_JOIN_FG | 544 | 4896 | 122 (8)|
 Predicate Information (identified by operation id):
 
-1 - aCCESS("STUDENTS"."LNAME":"FG"."LNAMEA")
+1 — access("STUDENTS" . "LNAME"="FG" . "LNAMEA")
 
-Z - Filter‘("STUDENTS"."LNAME" LIKE 'AX')
+2 - filter‘("STUDENTS" . "LNAME" LIKE 'A%')
 
-3 - access("FG"."LNAMEA" LIKE 'A%')
+3 — access("FG"."LNAMEA" LIKE 'A%')
 
-Eiltel-("FG"."LNAMEA" LIKE 'A%')
-Cdsm a Crescut doar m (era 127 S‘ aCum este 128). Deci de fapt eficienta vme dm
-\ndexarea Condiliilor dinafara joiﬂului.
+filter("FG"."LNAMEA" LIKE 'A%')
+Costul a crescut doar cu (era 127 Si acum este 128). Deci de fapt eficienta vine din
+Indexarea conditiilor dinafara joinului.
+51
 
 ***************Ending Page***************
 
@@ -820,81 +842,87 @@ Cdsm a Crescut doar m (era 127 S‘ aCum este 128). Deci de fapt eficienta vme d
 ***************page number:52**************
 Join — Hash join
 
-' lndexarea predicatelor utilizate in join nu
+' lndexarea predicatelor utilizate ‘in join nu
 imbunététesc eficienta hash join !!!
 
-- Un index ce ar putea fi utilizat este peste
-fg.|name (care este Tn clauza where)
+' Un index ce ar putea fi utilizat este peste
+fg.|name (care este Tn clauza Where)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
 Join — Hash join
 
 ° Ordinea conditiilor din join nu influenteazé
-viteza deoarece oricum QO va Tncérca in
-memorie tabela mai mica“! 5i Ti va face hash-ul
-(la nested loops ar fi influentat).
+viteza deoarece oricum Q0 va Tncérca Tn
+memorie tabela mai micé 5i Ti va face hash-ul
+(Ia nested loops ar fi influentat).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-Azphglw
-Jom — Sort Merge J‘
-' Combiné doué tabele preluénd date fie mvm
-dintr-unul, fie din celélalt, fie din ambele. "V"
-~ Aceia§i indec5i ca 5i la hash-join (adicé doar
-pentru conditiile separate, nu 5i pentru cele
+AppliE-Etﬁ-
+Join — Sort Merge 59
+' Combina doua tabele preluand date fie mvm
+dintr-unul, fie din celalalt, fie din ambele. SQLSJW
+' Aceia$i indec$i ca 5i Ia hash-join (adica doar
+pentru conditiile separate, nu $i pentru cele
 din join).
-' Ordinea joinurilor nu conteazé.
-- Algoritm foarte util pentru outer joins (Tn care
-sunt Tntoarse anegistrérile care fac match Tn
+' Ordinea joinurilor nu conteaza.
+' Algoritm foarte util pentru outerjoins (in care
+sunt intoarse inregistrarile care fac match in
 ambele tabele) dar 5i pt L/R joins. .
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-\ Id \ Operation | Name | Rows | Bytes | Cost (XCPUM
-\ e \ SELECT STATEMENT | | 25; | s77; | 125 (1)\
-\ 1 \ MERGE JOIN | | zs; | 577; | 125 (1)\
-h z \ INDEX RANGE SCAN | IDX_JOIN_FG | 544 | 489$ | 122 (e)\
-h z \ SORT JOIN | | z7| 594| s (17M
-h 4 \ TABLE ACCESS FULLI STUDENTS | 27 | 594 | 5 (e)\
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)|
+| 8 | SELECT STATEMENT | | 283 | 8773 | 128 (1)|
+| 1 | MERGE JOIN | | 283 | 8773 | 128 (1)|
+|* 2 | INDEX RANGE SCAN | IDX_JOIN_FG | 544 | 4896 | 122 (8)|
+|* 3 | SORT JOIN | | 27 | 594 | 6 (17)|
+|* 4 | TABLE ACCESS FULLI STUDENTS | 27 | 594 | 5 (8)|
 Predicate Information (identified by operation id):
-2 e access("FG"/'LNAMEA" LIKE 'A%')
-filter("FG"4"LNAMEA" LIKE 'A%')
-3 — GCCESS("FG"."LNAMEA"="STUDENTS"."LNAME")
-filter("FG" . "LNAMEA"="STUDENTS" L "LNAME")
-4 - filter‘("STUDENTS"."LNAME" LIKE 'AX')
+2 — acceSS("FG"."LNAMEA" LIKE 'A%')
+filter("FG"."LNAMEA" LIKE 'A%')
+3 - acceSS("FG"."LNAMEA"="STUDENTS"."LNAME")
+filter("FG"."LNAMEA"="STUDENTS"."LNAME")
+4 - filter("STUDENTS"."LNAME" LIKE 'A%')
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-- u u u . . .
-5| aga ar arata fara n|c| un Index:
-| Id | Operation | Name | Rows | Bytes | Cost (XCPUH Ti
-| a | SELECT STATEMENT | | 283 | 8773 | 13459 (1)| 99
-| 1 | MERGE JOIN | | 283 | 8773 | 13459 (1)| 99
-| 2 | SORT JOIN | | 27 | 594 | s (17)| 99
-I‘ 3 | TABLE ACCESS FULLI STUDENTS | 27 | 594 | 5 (9)| 99
-I‘ 4 | SORT JOIN | | 544 | 489s | 13453 (1)| 99
-|‘ 5 | TABLE ACCESS FULL| FG | 544 | 4896 | 13452 (1H 99
+5i aSa ar aréta fara nici un index
+
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)| Ti
+| O | SELECT STATEMENT | | 283 | 8773 | 13459 (1)| 88
+| 1 | MERGE JOIN | | 283 | 8773 | 13459 (1)| 88
+| 2 | SORT JOIN | | 27 | 594 | 6 (17)| 88
+|* 3 | TABLE ACCESS FULLI STUDENTS | 27 | 594 | 5 (O)| OO
+|* 4 | SORT JOIN | | 544 | 4896 | 13453 (1)| OO
+|* 5 | TABLE ACCESS FULL| FG | 544 | 4896 | 13452 (1)| 88
 Predicate Information (identified by operation id):
-3 - filter‘("STUDENTS"."LNAME" LIKE 'AX')
-4 - aCCESS("FG" ."LNAMEA":"STUDENTS" ."LNAME")
-filter‘("FG" . "LNAMEA":"STUDENTS" . "LNAME")
-5 - filter‘("FG"."LNAMEA" LIKE 'AX')
+
+3 - filter("STUDENTS"."LNAME" LIKE 'A%')
+
+4 - access("FG"."LNAMEA"="STUDENTS"."LNAME")
+
+filter("FG"."LNAMEA"="STUDENTS"."LNAME")
+5 - filter("FG"."LNAMEA" LIKE 'A%')
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:57**************
 Join — Sort Merge
-FULL OUTER JOIN using sort-merge
+FULL UUTEH JOIN u§ing smrt-rrerge
 
 ***************Ending Page***************
 
@@ -904,78 +932,80 @@ FULL OUTER JOIN using sort-merge
 
 ' Pentru:
 
-select /*+ use_mer‘ge(fg,students)
-paralle1(fg, 4) parallel(students,
+select /*+ use_mehge(tg,students)
+parallel(fg, 4) parallel(students,
 4) */ scholarship from
-fg full outer‘ join students
-on fg.lnamea=students.1name
+fg full outer join students
+on tg.lnamea=students.lname
 where fg.lnamea like 'A%';
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-| 1d | Operation | Name | Rows | Bytes | cost (Xcvu)| Time
-| 0 | SELECT STAYEMENT | | 1505 | 20357 | 26917 (1)| 00:05
-| 1 | VIEw | | 1559 | 20357 | 25917 (1)| 00:05
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)| Time
+| 9 | SELECT STATEMENT | | 1569 | 29397 | 26917 (1)| 99:95
+| 1 | VIEN | | 1569 | 29397 | 26917 (1)| 99:95
 | 2 | UNION-ALL | | | | |
-| 5 | MERGE JOIN OUTER | | 544 | 15054 | 22459 (1)| 00:02
-| 4 | soar JOIN | | 54A | 4555 | 13452 (1)| 00:02
-I‘ 5 | TABLE ACCESS FULLI F6 | 544 | 4896 | 12452 (1)| 00:02
-|' e | son 1qu | | 27 | 594 | 5 (17)| 00:00
-I‘ 7 | TABLE ACCESS FULLI STUDENTS | 27 | 59A | 5 (0)| 00:00
-I‘ 8 | FILTER | | | | |
-I‘ e | HASH JOIN ANTI | | 1025 | 31775 | 1345a (1)| 00:02
-| 10 | TABLE ACCESS FULLI STUDENTS | 1025 | 22550 | 5 (0)| 00:00
-| 11 | TABLE ACCESS FULLI F6 | 4842K| 41ml 13429 (1)| 00:02
-Predicate Information (identiﬁed by operation id):
+| 3 | MERGE JOIN OUTER | | 544 | 16964 | 13459 (1)| 99:92
+| 4 | SORT JOIN | | 544 | 4996 | 13453 (1)| 99:92
+|* 5 | TABLE ACCESS FULLI FG | 544 | 4996 | 13452 (1)| 99 92
+|* 6 | SORT JOIN | | 27 | 594 | 6 (17)| 99:99
+|* 7 | TABLE ACCESS FULL| STUDENTS | 27 | 594 | 5 (9)| 99:99
+|* 8 I FILTER | | | | |
+|* 9 | HASH JOIN ANTI | | 1925 | 31775 | 13459 (1)| 99:92
+| 19 | TABLE ACCESS FULL| STUDENTS | 1925 | 22559 | 5 (9)| 99:99
+| 11 | TABLE ACCESS FULL| F6 | 4942K| 41M| 13439 (1)| 99:92
+Predicate Information (identified by operation id):
 
-5 - filter("Ec"."LmMEA" LIKE 'AX')
+5 - filter("FG"."LNAMEA" LIKE 'A%')
 
-s - access("F6"."LNAMEA"="STUDENTS"."LNAME"(+))
+6 - acceSS("FG"."LNAMEA"="STUDENTS"."LNAME"(+))
 
-filter("FG"."LNAMEA":"STUDENTS"."LNAHE"(¢))
+filter("FG"."LNAMEA"="STUDENTS"."LNAME"(+))
 
-7 - filter("5TunENTs"."LNAME"(+) LIKE 'AX')
+7 - filter("STUDENTS"."LNAME"(+) LIKE 'A%')
 
-a - filter‘(N\/LL LIKE 'AX')
+9 - filter(NULL LIKE 'A%')
 
-0 - access("FG"."LNAMEA":"STUDENTS"."LNAHE")
+9 - access("FG"."LNAMEA"="STUDENTS"."LNAME")
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-| Id | Operation | Name | Rows | Bytes \ Cast (xcvu)| Time
-| a | SELECT STATEMENT | | 1559 | 29397 \ 21a; (1)| 901a
-| 1 | VIEu | | 1559 | 20257 \ 2153 (1)| Bezw
-| z | UNION-ALL | | | \ |
-| z | MERGE 1qu OUTER | | 544 | 16564 \ 127 (1)| aezw
-|~ 4 | INDEX RANGE sun | quz | 544 | use \ 121 (a)| emu
-P s | SORT 1qu | | 27 | 524 \ s (za)| 06on
-| 5 | mm A((ESS av mm mm STUDENTS | 27 | 554 \ 4 (an aezw
-P 7 | INDEX RANGE 5cm | IDXl | s | \ 2 (a)| aeza
-I‘ s | FILTER | | | \ |
-| a | NESTED LOOPS ANTI | | ms | 31715 \ zoss (a)| eeza
-| 10 | TABLE AccEss FULL | STUDENTS | 1825 | 22559 \ 5 (e)| eezw
-|~ 11 | INDEX RANGE scan | IDXl | 1 | s \ z (a)| 0mm
-Predicate annrmatinn (identiﬁed by operation id):
-n ("FG" "LNAMEA" LIKE ‘M'J Aidaums‘
-- access . .
-filter("|=s","L~AnEA~ LIKE '11‘) “dew? ‘
-5 E access("FG","LNN'IEA"="STUDENTS","LNN'IE"(§)) ‘amPur'IE m"
-filter(“FG“ ,"LNAMEA"=“sTqu~Ts" ,"LMAME"(+)) criteriul dejom
-7 ~ a:cesS("STUDENTS","LNAME"(¢) LIKE 'AX‘) (dafdefapt
-ﬁlter(“SYUDENTS"I"LNAME“(+) LIKE 'AK‘) , .
-a - HRH-(NULL LIKE 'AK') mama“)? A%
-11 - access("FG"."LNAMEA'="STUDENTS‘."LNAME") “EWIOSIIWL
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)| Time
+| 0 | SELECT STATEMENT | | 1569 | 20397 | 2183 (1)| 00:0
+| 1 | VIEN | | 1569 | 20397 | 2183 (1)| 00:01
+| 2 | UNION-ALL | | | | |
+| 3 | MERGE JOIN OUTER | | 544 | 16864 | 127 (1)| 00:01
+|* 4 | INDEX RANGE SCAN | IDX2 | 544 | 4896 | 122 (0)| 00:01
+|* 5 | SORT JOIN | | 27 | 594 | 5 (20)| 00:01
+| 6 | TABLE ACCESS BY INDEX RONID| STUDENTS | 27 | 594 | 4 (0)| 00:01
+|* 7 | INDEX RANGE SCAN | IDX1 | 9 | | 2 (0)| 00:01
+|* 8 | FILTER | | | | |
+| 9 | NESTED LOOPS ANTI | | 1025 | 31775 | 2055 (0)| 00:01
+| 10 | TABLE ACCESS FULL | STUDENTS | 1025 | 22550 | 5 (0)| 00:01
+|* 11 | INDEX RANGE SCAN | IDX2 | 1 | 9 | 2 (0)| 00:01
+Predicate Information (identified by operation id):
+Aiciau fost
+4 - acceSS("FG"."LNAMEA" LIKE 'A%') . d t
+filter("FG"."LNAMEA" LIKE 'A%') m exae _
+5 - acceSS("FG"."LNAMEA"="STUDENTS"."LNAME"(+)) campurlle din
+filter( "FG" . "LNAMEA"="STUDENTS" . "LNAME" (+)) criteriul de join
+7 - acceSS("STUDENTS"."LNAME"(+) LIKE 'A%') (darde fapt
+filter("STUDENTS"."LNAME"(+) LIKE 'A%') - , o,
+8 - filter(NULL LIKE 'A%') Inameal'k? A‘)
+11 - access("FG"."LNAMEA"="STUDENTS"."LNAME") ece'fOIOS't---)-
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:61**************
 Join — Sort Merge
-' Destul de greoi de utilizat din cauzé cé ambele
+' Destul de greoi de utilizat din cauzé c5 ambele
 tabele trebuie sé fie sortate dupé cémpul
 utilizat Tn join.
 I
@@ -988,15 +1018,16 @@ Clustering Data
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
 Clustering Data
 ' Un cluster = serie de obiecte (de obicei de
 aceea$i naturé) ce apar Tmpreuné.
-' Un cluster de calculatoare este o grupare de
-calculatoare care “se ajuté" simultan.
+' Un cluster de calculatoare este 0 grupare de
+calculatoare care "se ajuté" simultan.
 ' Utilizate pentru
-- a rezolva o problema complexa (high
+- a rezolva 0 problema complexa (high
 performance clusters)
 - a mari disponibilitatea (fai/over cluster)
 
@@ -1006,54 +1037,53 @@ performance clusters)
 ***************page number:64**************
 Clustering Data
 
-- Tn cazul calculatoarelor mai existé un tip de
+' Tn cazul calculatoarelor mai exista un tip de
 cluster: Data Cluster
 
-' Clustering data = a§ezarea datelor ce au
-probabilitatea imediaté de acces unele langa
-altele (de exemplu atunci cénd defragmentam
+' Clustering data = asezarea datelor ce au
+probabilitatea imediata de acces unele Ianga
+altele (de exemplu atunci cand defragmentam
 HDD-ul, facem acest tip de clusterizare).
 
-' Computer cluster este destul de Tntélnit 5i
-Tntre cele doua se face confuzie ("Let's use a
-cluster to improve DB performance”) g
+' Computer cluster este destul de intalnit si
+intre cele doua se face confuzie ("Let's use a
+cluster to improve DB performance" ) g
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-Clustering Data
+CI usterl ng Data
 
-1. Cel mai simplu tip de cluster este réndul:
-bazele de date stocheazé toate coloanele
-dintr-un rénd in acelasi block (DB block) dacé
+1. Cel mai simplu tip de cluster este randulz
+bazele de date stocheaza toate coloanele
+dintr-un rand in acelasi block (DB block) daca
 e posibil.
 
 Column Stores
 
 Column oriented databases, or column-stores, organize tab/es in
 a columned way. This model is beneficial when accessing
-many rows but only afew columns—a pattern that is very
-common in data warehouses (OLAPL
+many rows but only a few columns—a pattern that is very
+common in data warehouses (OLAP).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
 Clusterlng Data
-
-2. Indec§ii construiesc clustere de rénduri —
-frunzele B-tree-ului stocheazé coloanele
-intr-o maniera ordonaté (valorile consecutive
-sunt puse unele léngé altele).
-
-\e Dutem meme mal Imme dmlro dam.
-
-' Indecgii construiesc clustere de rénduri cu
-
-valori similare = second power ofindexing.
+2. lndec$ii construiesc clustere de randuri —
+frunzele B-tree-ului stocheaza coloanele
+'intr-o maniera ordonata (valorile consecutive
+sunt puse unele Ianga altele).
+Si cum de obicei avem nevoie de valori apropiate,
+Ie putem prelua mai multe dintr-o data.
+' lndec§ii construiesc clustere de randuri cu
+valori similare = second power of indexing.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:67**************
@@ -1061,12 +1091,12 @@ Clustering Data- Index Filter Predicates
 
 Used Intentionally
 
-' Cénd apare “Indexfi/tef’ de multe ori
+' Cénd apare "Indexfi/ter" de multe ori
 Tnseamné c5 indexul nu a fost construit corect
-5i c5 probabil existé o varianté mai eﬁcienté (in
+5i c5 probabil existé o varianté mai eficienté (Tn
 care ceea ce este filtrat este folosit de index).
 
-' lndexfi/tering poate fi folosit 5i Tntr-un scop
+' Index filtering poate fi folosit 5i Tntr-un scop
 bun: pentru gruparea datelor ce sunt accesate
 consecutiv.
 
@@ -1076,25 +1106,26 @@ consecutiv.
 ***************page number:68**************
 Clustering Data- Index Filter Predicates
 Used Intentionally
-' Clauzele WHERE ce nu pot fi utilizate ca 5i
+' Clauzele WHERE ce nu pot fi utilizate ca $i
 predicate de acces sunt cele mai bune pentru
 aceasté tehnicé:
 SELECT lnameA, fnameA, dobA FROM fg
 WHERE valueA = ?
-AND UPPER(1nameA) LIKE ‘%ACK%‘ ,-
-lndexul e inutil indiferent dacé e dupé lnameA sau dupe“)
+AND UPPER(lnameA) LIKE '%ACK%' ,-
+Indexul e inutil indiferent dacé e dupé lnameA sau dupé
 upper (lnameA) . Dupa ce indexém ?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-No Index...
-\ Id | Operation | Name | Rows | Bytes | Cost (XCPU)| Time
-\ a | SELECT STATEMENT | | 2421 | 113K| 12454 (1)| ea e2:42
-\* 1 | TABLE ACCESS FULLI FG | 2421 | 113K| 12454 (1)| ee:e2:42
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)| Time
+| 9 | SELECT STATEMENT | | 2421 | 113K| 13454 (1)| 99:92:42
+|* 1 | TABLE ACCESS FULL| FG | 2421 | 113K| 13454 (1)| 99:92:42
 Predicate Information (identified by operation id):
-1 - filter‘("VALUEA"=9 AND UPPER("LNAMEA") LIKE 'XACKX')
+
+1 - ‘FilteP("VALUEA"=9 AND UPPER("LNAMEA") LIKE '%ACK%')
 
 ***************Ending Page***************
 
@@ -1104,32 +1135,33 @@ Clustering Data- Index Filter Predicates
 
 Used Intentionally
 
-' Tabb/e acces nu este neapérat o povaré dacé
-inregistrérile ar fi stocate grupat in acelagi
-block 5i BD ar putea 55 le returneze intr-o
-singuré operatie de tip read.
+' Tabb/e acces nu este neapéirat 0 povaréi dacéi
+inregistréirile ar fi stocate grupat in ace|a$i
+block 5i BD ar putea sé Ie returneze intr-o
+singuréi operatie de tip read.
 
-' Dacé réndurile sunt dispersate, BD va trebui sé
-citeascé din ﬁecare block in parte.
+' Dacéi réndurile sunt dispersate, BD va trebui séi
+citeascéi din fiecare block in parte.
 
-' Eficienta depinde de distributia fizicé a datelor.
+' Eficienta depinde de distributia fizicéi a datelor.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-Index on fg(va|ueA)
-| Id | Operation | Name \ Rows | Bytes | Cost (ch
-| a | SELECT STATEMENT | \ 2421| 113K| 2:17 <
-|* 1 | TABLE ACCESS av INDEX Rowml F6 \ 2421 | 11s|<| 2217 <
-|* z | INDEX RANGE 5cm | IDX_VALUEA \ 19359 | | 1439 <
+| Id | Operation | Name | Rows | Bytes | CoSt (%CF
+| e | SELECT STATEMENT | | 2421 | 113K| 2317 <
+|* 1 | TABLE ACCESS BY INDEX RONID| FG | 2421 | 113K| 2317 <
+|* 2 | INDEX RANGE SCAN | IDX_VALUEA | 19369 | | 1439 <
 Predicate Information (identified by operation id):
 
-1 r filter‘(UPPER("LNAMEA") LIKE 'XACKX')
+1 - filter(UPPER("LNAMEA") LIKE '%ACK%')
 
-2 r access("VALUEA"=9)
+2 — acceSS("VALUEA"=9)
 
-Avantajul este ca le gaseste pe toate cu valuarea 9 “dintr-un foc",
+Avantajul este ca Ie gaseste pe toate cu valoarea 9 "dintr-un foc”.
+71
 
 ***************Ending Page***************
 
@@ -1139,38 +1171,39 @@ Clustering Data- Index Filter Predicates
 
 Used Intentionally
 
-~ Corelatia dintre ordinea din index 5i cea din
-tabelé se nume$te index clustering factor.
+' Corelatia dintre ordinea din index si cea din
+ta beléi se numeste index clustering factor.
 
 (nr blocuri < ICF < nr rénduri)
 
-' ICF = dacé am un numér de rénduri ce pot fi
+' ICF = dacéi am un numéir de rénduri ce pot fi
 stocate in nr blocuri, atunci putem sa le citim
-din nr randuri accesari la HDD (dacé nu gésim
-niciodaté doué consecutive in acela§i bloc) sau
-din nr blocuri (dacé la o citire toate sunt
-preluate corect 5i in ordinea dorité).
+din nr randuri accesari la HDD (dacéi nu géisim
+niciodatéi douéi consecutive in acelasi bloc) sau
+din nr blocuri (dacéi la o citire toate sunt
+preluate corect si in ordinea dorité).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-Clustering Data- Index Filter Predicates
+Clustering Data- lndex Filter Predicates
 
 Used Intentionally
 
-~ Corela'gia dintre ordinea din index 5i cea din
-tabelé se nume$te index clustering factor.
+' Corelatia dintre ordinea din index si cea din
+ta beléi se numeste index clustering factor.
 
 (nr blocuri < ICF < nr rénduri)
 
-' Este posibilé imbunététirea eficientei re-
-aranjénd réndurile din tabel (ce 5e intémplé
+' Este posibiléi imbunétéitirea eficientei re-
+aranjénd réndurile din tabel (ce se intémplé
 dacé avem doi indecsi diferiti ?)
 
-' Chiar dacé am face ordonarea dupé un singur
-index, 5i a§a e complicat pentru c5 BD nu
-permite decét un acces rudimentar la aceasté
+' Chiar dacéi am face ordonarea dupéi un singur
+index, si asa e complicat pentru c5 BD nu
+permite decét un acces rudimentar Ia aceastéi
 ordine (row sequencing).
 
 ***************Ending Page***************
@@ -1182,26 +1215,31 @@ Clustering Data- Index Filter Predicates
 Used Intentionally
 
 ' Aici apare partea cu clusterizarea: utilizarea
-unui index din doué coloane pentru a ﬁ
-stocate Tntr-o ordine bine deﬁnité.
+unui index din douéi coloane pentru a fi
+stocate intr-o ordine bine definité.
 
 ' Se va extinde indexul pentru a acoperi chiar 5i
 coloana "neindexabilé":
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
 Index on fg(va|ueA, Upper(|nameA))
-\ m | Operation | Name \ Rows | Bytes | Cost (u
-\ a | sELEcT sTATEMENT | \ 31157 | 1725M 109
-\ 1 | TABLE AccEss av INDEX mel F6 \ 31157 | 1735K| 109
-P 2 | INDEX RANGE scAN | Inx_VALUEA_UPPLNAMEA \ as: | | 64
-Predicate Infurmatiorl (identified by uperatinn id):
 
-z - a:cess("VALUEA"=9)
-filter(UPPER("LNAMEA") LIKE 'XACKX')
-De ce este mal blne a$a ?
+| Id | Operation | Name | Rows | Bytes | Cost (%(
+| o | SELECT STATEMENT | | 31187 | 1735K| 189
+
+| 1 | TABLE ACCESS BY INDEX RONIDI FG | 31187 | 1735K| 189
+
+|* 2 | INDEX RANGE SCAN | IDX_VALUEA_UPPLNAMEA | 968 | | 64
+Predicate Information (identified by operation id):
+
+2 — access("VALUEA"=9)
+filter(UPPER("LNAMEA") LIKE '%ACK%')
+De ce este mal blne aSa ?
+75
 
 ***************Ending Page***************
 
@@ -1209,9 +1247,9 @@ De ce este mal blne a$a ?
 ***************page number:76**************
 Clustering Data- Index Filter Predicates
 Used Intentionally
-~ Se observé cé filtrul este direct aplicat in pasul 2.
-~ De data aceasta pasul 2 returneazé doar 968
-rénduri (in cazul anterior erau 19369).
+' Se observa ca filtrul este direct aplicat in pasul 2.
+' De data aceasta pasul 2 returneaza doar 968
+randuri (in cazul anterior erau 19369).
 
 ***************Ending Page***************
 
@@ -1222,7 +1260,7 @@ Clustering Data- Index Filter Predicates
 
 Used Intentionally
 
-' Aceasté abordare ignore“: relevanta ordinii
+' Aceasté abordare ignoré relevanta ordinii
 coloanelor. De obicei, partea ce va fi filtraté
 este bine sé fie pusé ultima (pentru ca indexul
 sé meargé corect pe primele coloane — adicé
@@ -1236,27 +1274,27 @@ sé facé acces).
 ***************page number:78**************
 Clustering Data- Index-Only Scan
 
-- Una dintre cele mai puternice metode de
-“tuning”.
+' Una dintre cele mai puternice metode de
+"tuning".
 
-' Nu numai cé evité evaluarea clauzei where dar
+' Nu numai c5 evité evaluarea clauzei where dar
 evité accesarea tabelei atunci cénd coloanele
-selectate se gésesc chiar in index.
+selectate se gésesc chiar Tn index.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-Clusterlng Data- Index-Only Scan
-create index idx_0nly_scan on fg(lnameA,
+create index idx_only_scan on fg(lnameA,
 fnameA, dobA);
 select fnameA, lnameA, dobA from fg where
-lnameA = ‘Jackson';
-\ Id \ Operation \ Name \ Rows | Bytes | Cost (xcpu)
-\ e \ SELECT STATEMENT \ \ 5A4 | 19040 | 11a (e)|
-\* 1 \ INDEX RANGE SCAN‘ IDX_0NLV_SCAN \ 5A4 | 19040 | 11a (e)|
+lnameA = 'Jackson';
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)|
+| 0 | SELECT STATEMENT | | 544 | 1904a | 110 (0)|
+|* 1 | INDEX RANGE SCANI IDX_0NLY_SCAN | 544 | 19940 | 11a (0)|
 Predicate Information (identified by operation id):
-1 r access("LNAMEA":'Jackson')
+1 — access("LNAMEA"='Jackson‘)
 
 ***************Ending Page***************
 
@@ -1265,38 +1303,38 @@ Predicate Information (identified by operation id):
 Clustering Data- Index-Only Scan
 
 ' lndexul acoperé Tntreaga interogare $i din
-acest motiv se mai numegte "covering index”
-(poate ﬁ identiﬁcat prin faptul c5 nu este
+acest motiv se mai nume$te "covering index"
+(poate fi identificat prin faptul c5 nu este
 accesaté deloc tabela ci doar indexul).
 
-~ Numérul mare de linii selectate poate avea un
+' Numérul mare de linii selectate poate avea un
 impact negativ asupra eficientei (mai ales dacé
-nu suntin ace|a$i cluster- de exemplu dacé a5
+nu sunt Tn ace|a$i cluster — de exemplu dacé a5
 céuta 5i dupé un anumit dob ar putea merge
 mai greu decét dacé a5 céuta numai dupé
-Inamea 5i fnamea). \
+Inamea 5i fnamea). 80
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:81**************
-plan for select fnameA, 1mm, no!» mm r! um" 1mm = ‘Jackson’ and fnimea='Mkhiel';
-| m \ Operatiun \ Name | Hows | Bytes \ Cast (xmm Time \
-| e \ mm smmw \ | 484 | 15940 \ a (ml 02:80:51 \
-|‘ 1 \ mnex mm: sum Inx_oNLv_scAu | 1m | 15940 \ z (a)| 55:89:91 \
-Predicat! Iﬂfcrmatiﬂn (identifiad by operation id):
-
-1 r access(“LNAMEA"='Jackson‘ AND "FNMEA"='Hichael‘)
-plan for select fnimel, 1nameA, dnbA from f5 where 1na|||eA = ‘Jackson' and dobA=sysdate;
-| m | Operation | Name | Rows | Bytes | Cost (xcwun Time |
-| a | SELECY STATEMENT | | Ax‘ | 159w | 11a (e)| aewuwz |
-I‘ 1 | mnzx RANGE scANl lux_ouLv_scAu | nu | 159w l ua (6)l 86:65:02 |
+plan for select fnameA, 1nameA, dobA from fg where 1nameA = 'Jackson' and fnamea='Michael';
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)| Time |
+| 0 | SELECT STATEMENT | | 404 | 16940 | 3 (0)| 00:00:01 |
+|* 1 | INDEX RANGE scANl IDX_0NLY_SCAN | 404 | 16940 | 3 (0)| 00:00:01 |
 Predicate Information (identified by operation id):
 
-1 - access('LNAMEA'='Jackson‘ mu "nonn"=svsrms@|)
+1 — access("LNAMEA"='Jackson‘ AND "FNAMEA"='Michae1')
+plan for select fnameA, 1nameA, dobA from fg where 1nameA = 'Jackson' and dobA=sysdate;
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)| Time |
+| 0 | SELECT STATEMENT | | 404 | 16940 | 110 (0)| 00:00:02 |
+|* 1 | INDEX RANGE scAN| IDX_0NLY_SCAN | 404 | 16940 | 110 (0)| 00 00:02 |
+Predicate Information (identified by operation id):
 
-rim“ ‘DOBA"=SYSDATE@1)
-“v
+1 — access("LNAMEA"='Jackson‘ AND "DOBA"=SYSDATE@!)
+
+filter("DOBA"=SYSDATE@!)
 
 ***************Ending Page***************
 
@@ -1306,52 +1344,54 @@ Clustering Data- Index-Only Scan
 
 ' Index-only este 0 strategie agresivé.
 
-- Nu proiectaﬁ indexul in acest scop pentru ca“:
-e ca 5i cum at,i copia tabela cu bucétile care vé
-intereseazé — ocupé spatiu §i timp pentru
-operatii insert/edit/delete (reechilibrarea B-
+- Nu proiectati indexul ‘in acest scop pentru c5
+e ca 5i cum ati copia tabela cu bucétile care v5
+intereseazé — ocupé spatiu 5i timp pentru
+operatii insert/edit/de/ete (reechilibra rea B-
 tree).
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:83**************
 Clustering Data- Index-Only Scan
 
-- Index-only scan poate cauza suprize neplécute
+' Index-only scan poate cauza suprize neplécute
 
 select fnameA, lnameA, dobA from fg
 where lnameA = 'Jackson' AND valueA
 between 4 and 10;
 
-' Ce se intémplé ?
+' Ce se Tntémplé ?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
-|* 1 | TABLE access av INDEX maul F6 | 121 | ssas | 229 (a)|
-I‘ 2 | INDEX RANGE SCAN | IDXAJOINAFG | 19359 | | 38 (B)|
+|* 1 | TABLE ACCESS BY INDEX RONIDI FG | 121 | 5888 | 239 (8)|
+|* 2 | INDEX RANGE SCAN | IDX_JOIN_FG | 19369 | | 38 (8)|
 Predicate Information (identified by operation id):
-1 - filter("VALUEA">=4 AND "VALUEA"<=19)
-Z - BCCBSS(“LNAMEA"='JBCKSOH')
-' Din cauza ca“: se face acces in tabelé, costul a
-crescut. Accesarea oricérei coloane care nu
+1 - filter("VALUEA">=4 AND "VALUEA"<=18)
+2 — acceSS("LNAMEA"='Jackson‘)
+' Din cauza Ca se face acces Tn tabela, costul a
+CFESCUt. Accesarea oricarei coloane care nu
 este Tn index va avea acest efect.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:85**************
 Clustering Data- Index-Only Scan
 
-' Scrie'gi comentarii cénd folositi selecturi de
-tipul Index-Only scan pentru a vé asigura c5 nu
-adéugati din gre§ea|a noi predicate ce vor
-Tmpiedica accesul in stilul index-only scan.
+' Scrieti comentarii cand folositi selecturi de
+tipul Index-Only scan pentru a va asigura ca nu
+adaugati din greseala noi predicate ce vor
+Tmpiedica accesul Tn stilul index-only scan.
 
-' Scrieti comentarii cénd doriti sé facegi
-selecturi cu index only scan (in php/java/etc)
+' Scrieti comentarii cand doriti sa faceti
+selecturi cu index only scan (Tn php/java/etc)
 
 ***************Ending Page***************
 
@@ -1359,31 +1399,32 @@ selecturi cu index only scan (in php/java/etc)
 ***************page number:86**************
 Clustering Data- Index-Only Scan
 
-' Alté problemé poate sé aparé de la FBI.
+' Alté problemé poate sé aparé de Ia FBI.
 
-' UPPER(fnameA) nu poate fi folosit in Index
-Only Scan dacé 5e dore§te selectarea coloanei
+' UPPER(fnameA) nu poate fi folosit Tn Index
+Only Scan dacé se dore§te selectarea coloanei
 fnameA (pentru c5 indexul tine minte valoarea
-funcgiei §i nu valoarea coloanei) —Tncerca’;i $5
-indexati valoarea original?! dacé §ti§i c5 o veti
+functiei §i nu valoarea coloanei) —Tncerca’§i sé
+indexati valoarea originalé dacé §ti’§i c5 0 veti
 folosi tot pe ea.
 
-~ Nu se va aplica o functie pe un cémp din
+' Nu se va aplica 0 functie pe un cémp din
 index.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:87**************
 Clustering Data- Index-Only Scan
 
-' Mereu selectati doar coloanele de care avegi
-nevoie. Dacé selectati de genul "select * ...” in
+' IVIereu selectati doar coloanele de care aveti
+nevoie. Dacé selectati de genul "select * ..." Tn
 nici un caz nu veti folosi Index-Only Scan.
 
-' Existé anumite limitéri in ceea ce prive§te
+' Existé anumite limitéri Tn ceea ce prive§te
 dimensiunea indexului (deci nu puteti pune
-tot in index pentru a face numai Index-only
+tot Tn index pentru a face numai Index-only
 Scan):
 
 ***************Ending Page***************
@@ -1392,52 +1433,54 @@ Scan):
 ***************page number:88**************
 Limitations of Index-Only Scan
 
-~ The maximum index key length depends on the
-block size and the index storage parameters (E
-of the database block size minus some overhead).
+' The maximum index key length depends on the
+block size and the index storage parameters (M
+ofthe database block size minus some overhead).
 A B-tree index is limited to 32 columns.
 
-' When using Oracle llg with all defaults in place
+' When using Oracle 11g with all defaults in place
 (8k blocks), the maximum index key length is
 6398 bytes. Exceeding this limit causes the error
 message "ORA-01450: maximum key length
-(6398) exceeded."
+(6398) exceeded.”
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:89**************
 Clustering Data- Index-Only Scan
 
-- lnterogérile care nu selecteazé nici 0 coloané
+' lnterogérile care nu selecteazé nici 0 coloané
 din tabel sunt executate cu Index-Only scans.
-Putegi gési un exemplu ?
+Puteti gési un exemplu ?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:90**************
 Clustering: Index-Organized Tables
-- Index-Only Scan executé interogarea SQL doar
+' Index-Only Scan executé interogarea SQL doar
 folosind informatiile redundante existente Tn
 
 index.
-' Dacé am pune toate informatiile in index, de
+' Dacé am pune toate informatiile Tn index, de
 ce am mai avea nevoie de tabela originalé ?
 ' Tntr-adevér, existé aceasta abordare: index-
-organized tub/es (IOT) sau clustered index.
+organized tab/es (IOT) sau clustered index.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:91**************
 Clustering: Index-Organized Tables
-- Avantaje:
-- nu se mai folosegte tabelul 5i se poate
-renunga la el;
-- orice acces intr-un IOT este un index-only
+' Avantaje:
+- nu se mai folose§te tabelul §i se poate
+renunta Ia el;
+- orice acces Tntr-un IOT este un index-only
 scan.
-' Ambele avantaje "suné bine” dar sunt greu de
+' Ambele avantaje "suné bine" dar sunt greu de
 obtinut Tn practicé.
 
 ***************Ending Page***************
@@ -1446,42 +1489,42 @@ obtinut Tn practicé.
 ***************page number:92**************
 Clustering: Index-Organized Tables
 
-' Problema: cénd se dore§te un nou index pe
+' Problema: cand se dore§te un nou index pe
 aceea§i tabela: noul index va pointa prin
 intermediul unei chei catre informatia logica
 din indexul original (§i va face index unique
 scan dupa aceasta cheie).
 
-~ Accesarea unui IOT dupa un al doilea index
-este foarte ineficienté.
+' Accesarea unui IOT dupa un al doilea index
+este foarte ineficienta.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:93**************
-Secondary Index Index—Or-ganized Table
+Secondary Index Index-Organized Table
 (Clustered Index)
-| d z "d r ” ‘9 <0 ‘v
-n ex ese a e ,
-p ,y 18° Q <9;
-,4 w ‘5’ Q w
-‘3* <$q <9 a‘?
-71
-4 7 7? i5453:?9EZ°i9F19?i?3
-;‘ 29119512qu 7775* 75l2614.sslzalI-as-2s
-19111951293 4§ /
-1957-2611-8541” - ,5 N
-1 - 3
-1???? g A
-705725 171119512? a] _ ,
-297117-7957- zqi 21 \ as
-
-'2 1911-95-2‘? 59 8~§7i§4275979572911135€3
-
-i é as¥14iz.4sizaa7-os-zs
-i
-
-—> INDEX RANGE SCAN - -> INDEX UNIQUE SCAN 9*
+I d d 49 <<, <0
+n ex este ” ate”
+p .qp ﬁve? {3:33
+4 <01 ~53‘ j} <01‘
+‘ e- Eiq Q?‘ e-
+‘? <0 <<, ‘a
+T1
+4 I, ??.i?ﬁi.3.:?_5!i.2.@_a_3:??:?_3_
+2911-95-29155 555; “312514.9912311-95-23
+I zall-es-zai 45 /
+-as-2e _ 1
+_____é I“11-95-23,?3 35: 1 _
+19.5123? 'B' .
+£545 211'95'2315? — - 4
+1191.4:251215 12 \ BE
+1611-6544556 3 ﬁiiFﬁE.-=::?_9.E.Z.B_¥l:@?:??t
+i BB 114 l 2.4elZEET-es-25
+ea
+w‘
+—1- INnEx RANGE SCAN — —:|- INDEX UNIQUE SCAN 93
 
 ***************Ending Page***************
 
@@ -1489,13 +1532,14 @@ i
 ***************page number:94**************
 Clustering: Index-Organized Tables
 
-- Al doilea index péstreazé clustering keys
-pentru fiecare lnregistrare.
+' Al doilea index péstreazé clustering keys
+pentru fiecare anegistrare.
 
-' Am putea de exemplu sé interogém doar lD—
-urile (5i accesul arﬁ de tipul index-scan only):
+' Am putea de exemplu sé interogém doar ID-
+urile (si accesul ar fi de tipul index-scan only):
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:95**************
@@ -1505,11 +1549,11 @@ Clustering: Index-Organized Tables
 un al doilea index.
 
 ' Clustering key este de obicei mai lung decét
-ROWID (deci 5i indec§ii secundari vor ocupa
+ROWID (deci §i indec§ii secundari vor ocupa
 mai mult spatiu).
 
 ' Concluzia: DOAR tabelele ce folosesc un singur
-index sunt cel mai bine s’?! fie implementate ca
+index sunt cel mai bine sé fie implementate ca
 un IOT.
 
 ***************Ending Page***************
@@ -1517,17 +1561,18 @@ un IOT.
 ***************Beginning Page***************
 ***************page number:96**************
 Clustering: Index-Organized Tables
-CREATE TABLE (
-id NUMBER NOT NULL PRIMARY KEY,
+CREATE TABLE [
+id NUMBER MDT NULL l1"llIl'-'l|||l'ull"lIF HEY,
 [...]
-) ORGANIZATION INDEX;
-' I
+J URGANIIATIUN INDEX;
+96-
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:97**************
-lndec§ii Tn sortare
+lndec§ii '|‘n sortare
 (ORDER BY)
 
 ***************Ending Page***************
@@ -1536,16 +1581,17 @@ lndec§ii Tn sortare
 ***************page number:98**************
 Sorta rea
 
-' Sortarea este o acgiune anevoioasa pentru
-bazele de date, in principal pentru cé toate
-anegistrérile trebuie aduse intr-un bufferin
+' Sortarea este o actiune anevoioasa pentru
+bazele de date, in principal pentru c5 toate
+inregistrérile trebuie aduse intr-un buffer in
 care sé se facé sortarea.
 
-' Indec5ii retin informatiile intr-o manieré
-ordonatz'! — deci putem utiliza un index pentru
-a u§ura munca operatiilor de tip "order by”.
+' lndec§ii retin informatiile ‘intr-o manieréi
+ordonatéi — deci putem utiliza un index pentru
+a u§ura munca operatiilor de tip "order by".
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:99**************
@@ -1554,38 +1600,40 @@ Sorta rea
 ' Un INDEX RANGE SCAN care Tntoarce multe
 rénduri poate fi ineficient — pentru c5 timpul
 necesar pentru row acces ar putea fi mai mare
-decét dacé s-ar face FULL TABLE SCAN 5i apoi
+decét dacé s-ar face FULL TABLE SCAN §i apoi
 s-ar sorta rezultatele.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-Sorta rea
+So rta rea
 
-- Un index construit dupa criteriul ce este utilizat in
-clauza ORDER BY va evita operatia de sortare 5i va
-putea Tntoarce foarte rapid inregistrérile dintr-un
+' Un index construit dupa criteriul ce este utilizat in
+clauza ORDER BY va evita operatia de sortare si va
+putea Tntoa rce foa rte rapid in registré rile dintr-un
 anumit interval.
 
-' Indexul face ca operagiile de tip ORDER BY sé ﬁe
-executate intr-o maniera pipelined = 3"i power of
-index‘
+' Indexul face ca operatiile de tip ORDER BY sé fie
+executate Tntr-o maniera pipelined = 3rd power of
+index.
 
 ' Pipelining negates the need to build huge collections by piping rows
-out of thefunction as they are created, saving memory and allowing
+out of the function as they are created, saving memory and allowing
 subsequent processing to start before all the rows are generated.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:101**************
-lndexarea pentru ORDER BY {f
-' lnterogérile SQL cu o clauza ORDER BY nu “if”
+lndexarea pentru ORDER BY gar
+PDSVQL
+' lnterogérile SQL cu 0 clauza ORDER BY nu “QT
 trebuie sé sorteze rezultatul dacé indexul deja
 oferé aceasté ordine:
-select lnameA, fnameA, dobA
-from Fg
+select 1nameA, fnameA, dobA
+from fg
 order by dobA;
 
 ***************Ending Page***************
@@ -1594,14 +1642,15 @@ order by dobA;
 ***************page number:102**************
 lndexarea pentru ORDER BY
 Féré index:
-| Id | Operation | Name | Rows | Bytes |TempSpc| Cost (76
-| a | SELECT STATEMENT | | 5182K| 135ml | 52994
-| 1| SORT ORDER BY | | 5192K| 136M| 195ml 52994
-| 2 | TABLE ACCESS FULLI FG | 5182K| 136M| | 13342
+| Id | Operation | Name | Rows | Bytes |TempSpc| Cost (%
+| 0 | SELECT STATEMENT | | 5102K| 136M| | 52994
+| 1 | SORT ORDER BY | | 5192K| 136M| 195M| 52994
+| 2 | TABLE ACCESS FULL| FG | 5102K| 136M| | 13342
 Observati c5 de fapt sortarea face costul sé
-"saré”...
+”saré”u.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:103**************
@@ -1609,28 +1658,30 @@ lndexarea pentru ORDER BY
 ' Pentru a scapa de sortare, ar trebui ca indexul
 sa fie construit peste criteriul de ordonare:
 
-create index idx_dch on fg(dobA);
-‘EA"‘BLQLQQLK"'H"'"11;";‘RAJ‘;"Yak;‘ér'ngéééﬂéélliéébﬁ
-"'1;"'ééLéQéhlERééR'""'H""éléik‘H£54‘""""'§i§§1"ll§‘
-‘ 1 ‘ SORT ORDER BV ‘ ‘ 5102K‘ 125M‘ 195M‘ 5299A (1)‘
-‘ 2 ‘ TABLE ACCESS FULL‘ FG ‘ 5102K‘ 125M‘ ‘ 12242 (1)‘
+create index idx_dobA on fg(dobA);
+| Id | Operation | Name | Rows | Bytes |TempSpc| COST-EACRQST
+| e | SELECT STATEMENT | | 5102K| lsSRi_______i_S;SSA___Ei;i
+| 1 | SORT ORDER BY | | 5102K| 136ml 195m| 52994 (1)|
+| 2 | TABLE ACCESS FULL| FG | 5102K| 136M| | 13342 (1)|
 
-NU FOLOSESTE INDEXUL DE CE?
+NU FOLOSESTE INDEXUL... DE CE?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:104**************
 lndexarea pentru ORDER BY
-- Doua posibilitégi: interogém doar dob (ca sé
-nu mai facé table access) sau introducem in
+' Doua posibilitéti: interogém doar dob (ca sé
+nu mai facé table access) sau introducem Tn
 index si InameA, fnameA.
 create index idx_dobA on
-fg(dobA, lnameA, fnameA) ;
-I"I]'ééiééé'ébléhéllﬁ'"nm"Y'éléékimléérlilélééw
-| 1 | INDEX FULL SCAN | IDX_DOBA | 5102K| 136ml 26489
+fg (deA, lnameA, fnameA) ;
+| Id | Operation | Name | Rows | Bytes | Cost (%t
+| e | SELECT STATEMENT | | 5162K| 136ml 26489
+| 1 | INDEX FULL SCAN | IDX_DOBA | 51ezK| 136ml 26489
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:105**************
@@ -1639,27 +1690,27 @@ lndexarea pentru ORDER BY
 ' Sé Tncercém acum un index peste doué
 cémpuri: valueA & dobA.
 
-create index idx_vala_doba on fg(valuea,
-doba) i
+create index idx;vala_doba on fg(valuea,
+doba);
 
 Cum va fi executat urmatorul select:
 
 select valuea, doba from fg where
 valuea=9 order by doba;
 
-'p
+?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:106**************
-| Id | Operation | Name | Rows | Bytes | Cost (XCPU)|
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)|
 | e | SELECT STATEMENT | | 784K| 8424K| 2413 (1)|
-It 1 | INDEX RANGE SCANI IDXivALAiDOBA | 784K| 8424K| 2413 (1)|
+|* 1 | INDEX RANGE SCANI IDX_VALA_DOBA | 784K| 8424K| 2413 (1)|
 Predicate Information (identified by operation id):
-1 a access("VALUEA":9)
+1 — access("VALUEA"=9)
 
-Se face access dupa VALUEA si apoi se citeste
+Se face access dupa VALU EA si apoi se citeste
 
 lndexul pentru ca datele sunt deja sortate
 
@@ -1667,28 +1718,35 @@ Dupa cémpul dob.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:107**************
 lndexarea pentru ORDER BY
 VALUEA DOBA
-L A! ‘i
-9 a a?‘ l Scanned
+
+A!’ “i
+7 i? Q
+8% E? i
+9 a a?‘ J Scanned
+
 index range
-m- I?‘
+
+10. I?‘
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:108**************
 Llsta dubla Inlantulta
-' Dacé frunzele nu ar fi dublu inlénguite, atunci
-nu am putea ca, utilizénd acelasi index $5
-cerem datele Tn ordine descrescétoare 5i sé nu
-aparé sortare... sé vedem dacé apare sort:
-|~ 1 | INDEX RANGE 5cm DESCENDINGI IDX_VALA_DOBA | 784K| 8424K] 2413
+' Daca frunzele nu ar fi dublu inlantuite, atunci
+nu am putea ca, utilizand ace|a§i index sa
+cerem datele Tn ordine descrescatoare §i sa nu
+apara sortare... sa vedem daca apare sort:
+|* 1 | INDEX RANGE SCAN DESCENDINGI IDX_VALA_DOBA | 784K| 8424K| 2413
 Predicate Information (identified by operation id):
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:109**************
@@ -1704,54 +1762,65 @@ IN (8,9) order by doba;
 ***************Beginning Page***************
 ***************page number:110**************
 lndexarea pentru ORDER BY
+
 VALUEA DOBA
-L A! i
+
+L A! ‘Q
+7i i? i
+8i E? i
+
 Scanned
-' index range
-1° I?‘
+' indexrange
+
+10- I?‘
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:111**************
-| a | SELECT STATEMENT | \ 152le 15M| \ maze (1
-| 1 | sow ORDER av | \ 1522M 15ml 19m 10929 (1
-|~ 2 | INDEX FAST FULL SCANI IDX_VALA_DOBA \ 152m 15M| \ 4274 (1
+| Id | Operation | Name | Rows | Bytes |TempSpc| Cost (%CPU
+| 9 | SELECT STATEMENT | | 1522K| 15M| | 19929 (1
+| 1 | SORT ORDER BY | | 1522K| 15M| 29M| 19929 (1
+|* 2 | INDEX FAST FULL SCANI IDX_VALA_DOBA | 1522K| 15M| | 4274 (1
 Predicate Information (identified by operation id):
 
-2 - filter‘("VALUEA"=8 OR "VALUEA"=9)
+2 - filter("VALUEA"=8 0R "VALUEA"=9)
 
-Utilizeazé indexul pentru a gési exact liniile ce trebuie
+Utilizeaza indexul pentru a gasi exact liniile ce trebuie
 
-intoarse dar acestea vor fi reordonate.
+Tntoarse dar acestea vor fi reordonate.
 
-(pentru c5 in index nu sunt a§ezate dupe“: doba).
+(pentru ca Tn index nu sunt aSezate dupa doba).
 
-m
+111
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:112**************
-A a
+A B
 
-1 a CREATE lNDEX exemplu ON tabel(A,B);
+1 a CREATE INDEX exemplu ON tabel(A,B);
+
 1 b
 
-1 c SELECT * FROM tabel
+1 C SELECT * FROM tabel
 
-1 d WHERE A >1 AND A<4
+1 cl WHERE A >1 AND A<4
 
-2 a ORDER BY A,B,'
+1 a ORDER BY A,B;
 
-2 b
+z b
 
-i s Merge pe index pana gaseste inceputul
+2 . .
+
+2 s Merge pe Index pana gaseste Inceputul
 3 a intervalului unde A>1 si A<4, ajunge la
-a b cuplul (La) dupa care continua pe lista
-3 C dublu inlantuita pana ajunge Ia (3,01).
+a I} cuplul (2,a) dupa care continua pe lista
+3 C dublu inlantuita pana ajunge la (3,d).
 
-a d
+a {I
 
 4 a
 
@@ -1759,100 +1828,110 @@ a d
 
 4 c
 
-4 d
+4 {I
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:113**************
-A1 Ba CREATE lNDEX exemplu ON tabel(A,E);
+A B
 
-i 2 SELECT * FROM tabel
+1 a CREATE INDEX exemplu ON tabel(A,B);
 
-1 d WHERE A >1 AND A<4
+1 I}
 
-2 a ORDER BY A,B desc;
+1 C SELECT * FROM tabel
 
-2 b
+1 {I WHERE A >1 AND A<4
 
-i s Merge pe index pana gaseste inceputul
+P- H ORDER BY A, B desc;
+
+z I}
+
+z . .
+
+2 s Merge pe Index pana gaseste Inceputul
 3 a intervalului unde A>1 si A<4, ajunge la
-a b cuplul (2,21). In continuare, daca ar merge
-3 C pe Iista dublu inlantuita nu ar putea
+a I} cuplul (2,a). In continuare, daca ar merge
+3 C pe lista dublu inlantuita nu ar putea
 
-3' d furniza coloana B in ordine
+3 d furniza coloana B in ordine
 
-4 a descrescatoare‘
+4 a
 
-4 b
+descrescatoare.
+
+a b
 
 4 c
 
-4 d
+4 {I
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:114**************
-A B A B
-1 d CREATE mum exemplu ON tabel(A,B 4 a
-1 c Cdesc); 4 b
-1 b 4 c
-1 a Sau? 4 d
-2 d 3 a
-2 c CREATE lNDEX 3 b
-2 b desc,B); exemplu ON tabelm » 3 c
-2 a 3 d
-3 d 2 a
-3 c 2 b
-3 b 2 c
-3 a SELECT * FROM tabel 2 d
-3 ‘z WHERE A >1 AND A<4 i Z
-4 b ORDER BY A,B desc; 1 c
-4 a 1 d
+A H- A B
+1 {I CREATE INDEX exemplu ON tabel(A,B 4 E
+1 C ﬁ desc) ; 4 I}
+1 I} 4 c
+1 5 Sau? 4 {I
+I! {I 3 a
+1 1: l 3 I}
+P. I} iiiiEE)fNDEX exemp u ON tabel(A » 3 C
+E a 3 {I
+3 {I 2' a
+3 1: 1 I}
+3 I} 1 E
+3 a SELECT * FROM tabel 1 d
+I i WHERE A >1 AND A<4 1 z
+4 b ORDER BY A,B desc; 1 C
+11 5 1 {I 114
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:115**************
-A B A B
-1 d CREATE 1NDE>< exemplu ON tabel (A,B 4 a
-1 c h desc); 4 b
-1 b 4 c
-1 a Sau ? 4 d
-2 d 3 a
-2 c 3 b
+A E A H-
+1 d CREATE INDEX exemplu ON tabel(A,B 4 E
+1 C ﬁ desc) ; 4 I}
+1 I} 4 c
+1 5 Sau ? 4 {I
+I! {I 3 a
+E c 3 I}
 
-CREATE 1NDE>< exemplu ON tabel (A
-2 b desc, B) ; » 3 c
-2 a 3 d
-3 d 2 a
-3 c Cand cmterim de ordonare este invers feta de 2 b
-3 b ordinea exxslenta in index, acesta lindexul] este 2 c
+CREATE INDEX exemplu ON tabel(A
+2 b desc, B) ; » 3 C
+E a 3 {I
+3 {I 2' a
+3 c Cand criteriul de ordonare este invers fata de 1 I}
+3 I} ordinea existenta in index, acesta (indexul) este I! 1:
 parcurs in sens invers...
-3 a 2 d
-4 d 1 a
+3 5 1 {I
+4 {I 1 H
 4 c 1 b
-4 b 1 C
-4 a 1 d v
+4 I} 1 C
+4 ‘a 1 {I 115
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:116**************
 lndexarea pentru ORDER BY
-' Dacé BD folose§te o operatie de sortare chiar
-cénd v5 a§tepta§i la o executie pipelined,
+' Dacé BD folose§te 0 operatie de sortare chiar
+cénd v5 a§teptati Ia 0 executie pipe/ined,
 motivul este unul din urmétoarele doué:
-— QO consider?! c5 executia este optimé in
-acest fel.
-— Ordinea indec§ilor nu corespunde clauzei
-"ORDER BY”
-' Putep sé v5 day seams de monv Mosmd unfu/I IHdEX deﬁnition in
-dauza Unis/by
+- Q0 consideré c5 executia este optimé in
+acestfeL
+- Ordinea indec§i|or nu corespunde clauzei
+"ORDER BY"
+' Puteti sé vé dati seama de motiv folosind unfu/l index definition in
+clauza order by.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:117**************
@@ -1862,62 +1941,63 @@ lndexarea pentru ORDER BY
 
 ***************Beginning Page***************
 ***************page number:118**************
-V
+:7
 
-ASC/DESC/NULL FIRST,LAST "3?‘
-' BD pot citi indec§ii in ambele directii. M;
-- lndec§ii sunt folositi §i dacé ORDER BY trebuie
+ASC/ D ESC/ N U LL FIRST, LAST Z;
+' BD pot citi indec§ii Tn ambele directii. my:
+' lndec§ii sunt folositi §i dacé ORDER BY trebuie
 
-sé Tntoarcé rezultatul in ordine inversé.
+sé Tntoarcé rezultatul Tn ordine inversé.
 ' Modificatorii ASC/DESC pot schimba executia
 
-de tip pipedline Tntnuna in care trebuie fécuté
+de tip pipedline Tntr-una Tn care trebuie fécuté
 
 sortarea.
-' Avem indexul peste fg (valuea,doba)
+' Avem indexul peste fg (valuea ,doba)
 ' dobA poate fi NULL...
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:119**************
-ASC/DESC/NULL FIRST,LAST
-select valuea, dobe from fg where valuea
+ASC/ D ESC/ N U LL FIRST, LAST
+select valuea, doba from fg where valuea
 between 8 and 9 order by valuea,doba;
 
-' Tn acest caz, planul de execugie araté astfel:
-\ Id \ Operation \ Name \ Rows \ Bytes \ Cost (xcpuﬂ
-\ a \ SELECT STATEMENT \ \ 152m 15m 4ses (m
-\ 1 \ INLIST ITERATUR \ \ \ \ \
-H z \ INDEX RANGE SCAN‘ IDXiVALAiDUBA \ 152m 15m 4ses (1)\
+' In acest caz, planul de executie arata astfel:
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)|
+| 0 | SELECT STATEMENT | | 1522K| 15M| 4598 (1)|
+| 1 | INLIST ITERATOR | | | | |
+|* 2 | INDEX RANGE SCANI IDX_VALA_DOBA | 1522K| 15m| 4598 (1)|
 Predicate Information (identified by operation id):
 
-2 r acceSS("VALUEA":B 0R "VALUEA":9)
+2 - access("VALUEA"=8 0R "VALUEA"=9)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:120**************
 VALUEA DOBA
-a_ A!’ ‘i
 8
-g Scanned
-? index mnge
+i Scanned
+'?€ index range
 10- I?‘
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:121**************
-ASC/DESC/NULL FIRST, LAST
-select valuee, doba from fg where valuea
+ASC/ DESC/ NULL FIRST, LAST
+select valuea, doba from fg where valuea
 between 8 and 9 order by valuea desc,doba
 desc;
-' In acest caz, planul de executie araté astfel:
-[ 1| INLIST ITERATOR | | | |
-h 2 | INDEX RANGE SCAN osscsnumcl IDXivALAiDOBA | 1522K| 15ml Asea
-Predicate Information (identiﬁed by operation id):
-2 - access("VALUEA“=B UR waver-=9)
+' In acest caz, planul de executie arata astfel:
+| 1 | INLIST ITERATOR | | | |
+|* 2 | INDEX RANGE SCAN DESCENDINGI IDX_VALA_DOBA | 1522K| 15M| 4508
+Predicate Information (identified by operation id):
+2 - access("VALUEA"=8 0R "VALUEA"=9)
 
 ***************Ending Page***************
 
@@ -1925,47 +2005,46 @@ Predicate Information (identiﬁed by operation id):
 ***************page number:122**************
 VALUEA DOBA
 L A!’ ‘i
-8 i i
-i E Scanned
-'? index range
-10.?‘
+8 ‘
+i Scanned
+'fg index range
+10 I?‘
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:123**************
-ASC/DESC/N U LL FIRST, LAST
-
+ASC/ DESC/ NULL FIRST, LAST
 select valuea, doba from fg where valuea
 between 8 and 9 order by valuea asc,doba
 desc;
-
-' In acest caz, planul de execugie araté astfel:
-I};'1'5§;};£§LAWW""'i1A.}?NNNN['QQ']1;};HQégYELLIQE
-TQYQm STATEMENT"""i'NNNNNNN["555]N"iéMmeiéééém
-\ 1 | sow ORDER av | | 1522K] 15m 29m 10529
-P 2 | INDEX FAST FULL scANI IDX_VALA_DDEA | 1522K] 15m \ 4214
+' In acest caz, planul de executle arata astfel:
+| Id | Operation | Name | Rows | Bytes |TempSpc| Cost (%C
+| 9 | SELECT STATEMENT | | 1522K| 15M| | 19929
+| 1 | SORT ORDER BY | | 1522K| 15M| 29M| 19929
+|* 2 | INDEX FAST FULL SCANI IDX_VALA_DOBA | 1522K| 15M| | 4274
 Predicate Information (identified by operation id):
-
-Z - filter-("VALUEA":B OR "VALUEA":9)
+2 - filter("VALUEA"=8 0R "VALUEA"=9)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:124**************
-5 35?‘?
-i 5?‘? m’:
-3 3?‘? a]
+i 5?‘?
+i E?€ TE Impossible
+a iii ET index jump
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:125**************
 ASC/DESC/N U LL FIRST, LAST
 
 ' Este crucial ca indexul sé fie EXACT
-— Tn aceea§i ordine cu ce se cere Tn ORDER BY
-— in ordine inverse“: fag?! de ce se cere in clauza
+- Tn aceea§i ordine cu ce se cere Tn ORDER BY
+- Tn ordine inversé faté de ce se cere Tn clauza
 ORDER BY!
 
 ***************Ending Page***************
@@ -1974,23 +2053,24 @@ ORDER BY!
 ***************page number:126**************
 ASC/DESC/N U LL FIRST, LAST
 
-~ Pentru cazuri ca cel precedent, cele mai multe
-BD oferé posibilitatea de a crea indecsi Tntr-o
+' Pentru cazuri ca cel precedent, cele mai multe
+BD oferé posibilitatea de a crea indec§i Tntr-o
 anumité ordine.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:127**************
-ASC/DESC/NULL FIRST, LAST
-create index idx vala doba on E" amalesg
-fg(value§ des; ,doba asc) ; Hf“ P9 aces“-
+ASC/DESC/N U LL FIRST, LAST
+create index idx;vale_doba on ‘Fum“3555
+fg(valuea desc ,doba asc); 'Hmmemmﬂa
 SAU
-create index idx_vala_doba on
+create index idx;vale_doba on
 fg(valuea asc, doba desc);
-' [MySQL ignora ASC/DESC din definitia indec§i|or1
+' [IVIySQL ignora ASC/DESC din definitia indec§i|0r]
 ®
-' Noua definigie nu afecteazé céutarea in clauza
+' Noua definitie nu afecteazé céutarea Tn clauza
 WHERE.
 
 ***************Ending Page***************
@@ -2003,101 +2083,103 @@ order by valuea desc, doba asc;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:129**************
-ASC/DESC/N U LL FIRST, LAST
+ASC/ D ESC/ N U LL FIRST, LAST
 ' Dupa crearea noului index, se va evita
 sortarea (din nou):
-| Id | Operation | Name | Rows | Bytes | Cost (XCPU)|
-| e | SELECT STATEMENT | | 1522K| 15ml 76 (e)|
-It 1 | INDEX RANGE SCANI IDXJALAJOBA | 1522K| 15ml 76 (e)|
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)|
+| 0 | SELECT STATEMENT | | 1522K| 15m| 76 (e)|
+|* 1 | INDEX RANGE SCANI IDX_VALA_DOBA | 1522K| 15M| 76 (0)|
 Predicate Information (identified by operation id):
-1 a access(SVS_OP_DESCEND("VALUEA")>=HEXTDRAw(‘BEFSFF') AND
-SVS_OP_DESCEND("VALUEA")<:HEXTDRAW('3EF6FF') )
-Filter‘(SVS_OP_UNDESCEND(SVS_DP_DESCEND("VALUEA"))>:8 AND
-SVS_OP_UNDESCEND(SVS_DP_DESCEND("VALUEA"))<:9)
+1 - access(SYS_0P_DESCEND("VALUEA")>=HEXTORAN('3EF5FF') AND
+SYS_0P_DESCEND("VALUEA")<=HEXTORAN('3EF6FF') )
+filter(SYS_0P_UNDESCEND(SYS_0P_DESCEND("VALUEA"))>=8 AND
+SYS_0P_UNDESCEND(SYS_0P_DESCEND("VALUEA"))<=9)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:130**************
-ASC/DESC/NULL Fl RST, LAST
+ASC/ D ESC/ N U LL FIRST, LAST
 
-- ASC/DESC sunt utilizate pentru a inversa
+' ASC/DESC sunt utilizate pentru a inversa
 ordinea anumitor coloane. Nu este nevoie sé
-le sortam pe toate DESC. De ce ?
+Ie sortam pe toate DESC. De ce ?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:131**************
 ASC/DESC/N U LL FIRST, LAST
 
-~ lnafaré de ASC/DESC, SQL permite inca doi
+' lnafara de ASC/DESC, SQL permite Tnca doi
 modificatori pentru ORDER BY (NULL FIRST sau
 NULL LAST).
 
 ' Problema apare din cauza ca nu se poate
-specifica ordinea pentru NULL (in index).
+specifica ordinea pentru NULL (Tn index).
 
-' Nu este implementaté nici de SQL server 2012
-5i nici de MySQL 5.6.
+' Nu este implementata nici de SQL server 2012
+§i nici de |V|ySQL 5.6.
 
 ' Oracle SQL suporta sortarea NULL-urilor
 Tnainte sa fie introdus Tn standard dar nu
-permite indexarea lor nici macar in llg.
+permite indexarea Ior nici macarTn llg.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:132**************
-ASC/DESC/NULL Fl RST, LAST
+ASC/DESC/N U LL FIRST, LAST
 
-- Oracle nu va permite pipeline atunci cand se
+' Oracle nu va permite pipeline atunci cand se
 va face sortare cu NULLS FIRST.
 
-' PostgreSQL suporta (din ver 8.3) modiﬁcatori
-NULLS atét Tn ORDER BY cét §i Tn deﬁnirea
-indec§ilor.
+' PostgreSQL suporta (din ver 8.3) modificatori
+NULLS atét Tn ORDER BY cét §i Tn definirea
+indec§i|or.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:133**************
-ASC/DESC/NULL FIRST, LAST
-\1 x
-:9 e”
-v Q, k ‘ Q, 051'
-é,” :94? 9a‘ a
-<> é‘ o <z° <0 a)
+ASC/ D ESC/ N U LL FIRST, LAST
+a 3a 5}
+Q3» £30’ a“? 0&9 O? 6;?
+Q é‘ O Q ‘To ‘To
 Read index backwards
-Order by ASC/DESC
+Order by ASUDESc
 Index ASC/DESC
-Order by NULLS FIRST/ LAST
-Default NULLS order
-Index NULLS FIRST/ LAST
-idea de maid individual: demonstragi c5 Gracie indexeazé default NULL \a Erma. m I
+Order by NULLS FIRST} LAST
+Default NULLS erder
+Index NULLS FIRST} LAST
+ldee de studiu individual: demonstrati ca Oracle indexeaza default NULL la sfér§it. 133 I
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:134**************
-lndec§ii in grupare
+lndec§ii '|‘n grupare
 (GROUP BY)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:135**************
-lndexarea GROUP BY ‘7
-° BD SQL folosesc doi algoritmi diferiti: “WI”
-1) algoritm Hash care face agregare de oW
-anegistréri Tntr-o tabela hash. Dupé ce toate
-inputurile au fost procesate, se returneazé
-tabela hash (nu 5i in MySQL 5.6)
-2) sort/group: Tntéi sorteazé datele dupé cheile
-de grupare a.i. ele sa fie consecutive dupé
-care le face agregare.
+lndexarea GROUP BY I;
+' BD SQL folosesc doi algoritmi diferiti: MVQ
+1) algoritm Hash care face agregare de WT
+anegistrari Tntr-o tabela hash. Dupa ce toate
+inputurile au fost procesate, se returneaza
+tabela hash (nu si in IVIySQL 5.6)
+2) sort/group: Tntai sorteaza datele dupa cheile
+de grupare a.i. ele sa fie consecutive dupa
+care |e face agregare.
 
 ***************Ending Page***************
 
@@ -2106,27 +2188,28 @@ care le face agregare.
 lndexarea GROUP BY
 
 ' Ambii algoritmi au pa§i intermediari
-(construire de hashuri / sortarea) 5i din acest
+(construire de hashuri / sortarea) §i din acest
 motiv nu pot fi executati Tn maniera pipe/ined.
 
 ' Totu§i, algoritmul sort/group (al doilea) poate
 utiliza un index pentru a evita sortarea, Tn
 acest fel dénd posibilitatea de efectuare a
-pipeline chiar 5i Tn cadrul grupérilor.
+pipeline chiar §i Tn cadrul grupérilor.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:137**************
 lndexarea GROUP BY
 
-~ Pentru a se produce un piped/med group by,
-trebuie s?! fie indeplinite aceleagi conditii ca 5i
-Tn cazul lui order by.
+' Pentru a se produce un piped/ined group by,
+trebuie sé fie indeplinite acelea§i conditii ca §i
+Tn cazul Iui order by.
 
 ' Aceea§i observatie pentru NULLS FIRST/LAST.
 ' Existé baze de date care nu pot procesa corect
-ASC/DESC indexarea pentru a face pipelined
+ASC/DESC indexarea pentru a face pipe/ined
 group by [In PostgreSQL trebuie adaugat un
 order by pentru a face un NULLS LAST ce va fi
 
@@ -2139,16 +2222,17 @@ folosit in group by].
 lndexarea GROUP BY
 
 ' Pentru a returna liniile Tn ordine inversé,
-indexul putea fi parcurs invers (in cazul ORDER
+indexul putea fi parcurs invers (Tn cazul ORDER
 BY).
 
-' Tn Oracle nu se poate citi un index in ordine
+' Tn Oracle nu se poate citi un index Tn ordine
 inversé pentru a se executa un piped group by
 dacé este urmat de un order by.
 
 I
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:139**************
@@ -2160,24 +2244,25 @@ Primele n anegistréri
 ***************page number:140**************
 Rezultate partiale
 
-~ Uneori nu sunt necesare toate liniile unei
+' Uneori nu sunt necesare toate liniile unei
 interogari SQL ci doar primele n (céteva) linii
 [fie pentru 0 afi§are paginaté fie pentru un
-"scroll infinit”].
+"scroll infinit"].
 
-' Asta ar putea crea probleme de performangé
+' Asta ar putea crea probleme de performanté
 dacé toate inregistrérile trebuie sortate pentru
 a fi returnate doar primele n. Din acest motiv,
-un "pipelined ordered by” este o optimiza re
+un "pipelined ordered by" este 0 optimiza re
 puternicé.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:141**************
 Rezultate partiale
 
-- Un pipe/ined ORDER BY nu este atat de
+' Un pipe/ined ORDER BY nu este atat de
 important din cauza ca poate sa returneze
 randurile sortate, ci mai degraba pentru ca
 poate sa returneze primele n randuri fara sa
@@ -2195,60 +2280,61 @@ inregistrari, Q0 nu isi da seama ca se doresc
 numai acele n.
 
 ' Q0 ar trebui sa stie daca in final aplicatia va
-prelua toate inregistrarile — atunci unful/ scan
+prelua toate inregistrarile — atunci un full scan
 urmat de sortare ar fi cea mai buna solutie.
 Chiar si asa, un piped order by ar aduce un +.
 
-~ Tip: spune-i BD cand nu ai nevoie de toate
-inregistrarile - fetch first.
+' Tip: spune-i BD cand nu ai nevoie de toate
+inregistrari/e - fetch first.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:143**************
 Primele n inregistrari
-° fetch first — in SQL:2008, disponibil in IBM
-DB2, PostgreSQL, SQL Server 2012, Oracle 12c.
-SELECT val FROM rownumiorderitest
+' fetch first — in SQL:2008, disponibil in IBIVI
+DBZ, PostgreSQL, SQL Server 2012, Oracle 12c.
+SELECT val FROM rownum_order_test
 ORDER BY val DESC
-FETCH FIRST 5 ROWS ONLY;
+FETCH FIRST 5 Rows ONLY;
 [Oracle 12c]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:144**************
-Primele n inregistrari
-' In Oracle 11g...
+Prlmele I’) lnreglstrarl
+' In Oracle llg...
 ' Sa consideram urmatoarea interogare Oracle:
 SELECT * FROM (
 SELECT *
-FROM fg WHERE valuea:9
+FROM fg WHERE valueaI9
 ORDER BY dOba DESC )
-WHERE :ovmum <= 10;
+WHERE rownum <= 10;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:145**************
-Prlmele n lnreglstrarl
-Ska dat seama ca trebme sa numere dear 1o
+Si-a dat seama ca trebuie sa numere doar 10.
 
-\ Id [ Operation V | Rows | Bytes |Temp5pc| Cost (x
-\ e [ SELECT STATEMENT | | 1e | 9e | | 15721
-\* 1 [ COUNT STOPKEV | | | |
-\ 2 [ VIEW | | 7BAK| 5892K| | 15721
-\* a [ SORT ORDER av STOPKEVI | 784K| BAZAKI 15M| 15721
-\* 4 [ TABLE ACCESS FULL | F6 | 7B4K| B424K| | 13352
+| Id | Operation - | Rows | Bytes |TempSpc| Cost (%+
+| 8 | SELECT STATEMENT | | 18 | 98 | | 16781
+|* 1 | COUNT STOPKEY | | | | |
+| 2 | VIEW | | 784K| 6892K| | 16781
+|* 3 | SORT ORDER BY STOPKEYI | 784K| 8424K| 15ml 16781
+|* 4 | TABLE ACCESS FULL | F6 | 784K| 8424K| | 13352
 Predicate Information (identified by operation id):
 
-1 - filter(ROWNUM<=10)
+1 - filter(R0wNUM<=16)
 
-a - filcer<RowNum<=1e)
+3 - filter(R0wNUM<=10)
 
 4 - filter("VALUEA"=9)
 
-1m
+145
 
 ***************Ending Page***************
 
@@ -2257,78 +2343,77 @@ a - filcer<RowNum<=1e)
 Primele n inregistrari
 
 ' BD poate optimiza interogarea doar daca stie
-de la inceput ce rezultat partial este asteptat.
+de |a inceput ce rezultat partial este asteptat.
 
-° Va prefera sa utilizeze un pipe/ined order by:
+' Va prefera sa utilizeze un pipelined order by:
 
 ' Utilizarea unei sintaxe corecte este numai
 jumatate dinjob.
 
 ' Pentru ca sa poata numara doar primele 10
 inregistrari, trebuie ca neaparat sa aiba un
-order by care 5a poata fi piped (altfel ar trebui
+order by ca re sa poata fi piped (altfel ar trebui
 sa sorteze tot).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:147**************
-Prlmele n |nreg|strar|
-
-create index idx_doba on fg(valuea,doba);
-\ Id \ Operation \ Name \ Rows | Bytes | Cost (XCPU)| Tim
-\ e \ SELECT STATEMENT \ \ 10 | 90 | 2 (e)| ee:
-P 1 \ COUNT STOPKEV \ \ | | |
-\ 2 \ VIEw \ \ 10 | 90 | 2 (e)| ee:
-\* 2 \ INDEX RANGE SCAN‘ IDX_DOBA \ 10 | 110 | 2 (e)| ee:
+anele n |nreg|strar|
+create index idx_doba on fg(va|uea,doba);
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)| Tim
+| 0 | SELECT STATEMENT | | 1e | 99 | 3 (e)| ea:
+|* 1 | COUNT STOPKEY | | | | |
+| 2 | VIEN | | 1e | 99 | 3 (e)| ea:
+|* 3 | INDEX RANGE SCANI IDX_DOBA | 1e | 110 | 3 (0)| 00:
 Predicate Information (identified by operation id):
-
-1 - filter(RUwNUM<=10)
-
-3 - access("VALUEA"=9)
+1 - filter(R0wNUM<=10)
+3 — access("VALUEA"=9)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:148**************
-Daca ar fl nev0|t sa la toate
+Daca ar fl nevolt sa la toate
 
-lnreglstrarlle (5| nu doar prlmele 10):
-| Id | Operation | Name | Rows | Bytes | Cost (940ml Time
-| a | SELECT STATEMENTI | 784K| E424K| 241s (1)| aazaa
-|* 1| mosx RANGE scnu| IDX_DOBA| 784K| E424K| 241s (1)| aa:aa
-Predicate InFul-matiun (identiﬁed by operation id):
+|nreg|strar||e (5| nu doar prlmele 10):
+| Id | Operation | Name | Rows | Bytes | Cost (%CPU)| Time
+| 0 | SELECT STATEMENT | | 784K| 8424K| 2413 (1)| 00:00
+|* 1 | INDEX RANGE SCANI IDX_DOBA | 784K| 8424K| 2413 (1)| 00:00
+Predicate Information (identified by operation id):
 
-1 - access("VALUEA"=9)
-
-Deci e clar cé in cazul precedent, a “5tiut” sé se upreascé dupé primele 10
-Asta din cauzé c5 Tn timp ce face pipe, Ie §i numéré.
+1 — access("VALUEA"=9)
+Deci e clar ca Tn cazul precedent, a "gtiut" sa se opreasca dupa primele 10
+Asta din cauza ca Tn timp ce face pipe, Ie §i numara.
+148
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:149**************
-Primele n inregistra ri
+Prlmele I7 lnreglstrarl
 
-http://Mogfatalmind.com/ZUlO/OE/ZQ/ﬁndxng'the'best'match'with'a'top'n'query/
+http://blog.fataImind.com/2010/O9/29/finding-the-best-match-with-a-top-n-query/
 
-' Avantajul nu este numai Tn performanga
-imediaté ci §i in scalabilitatea mérité. Féré
-pipelined execution, timpul cre§te direct
+' Avantajul nu este numai Tn performanta
+imediaté ci §i Tn scalabilitatea mérité. Féré
+pipe/ined execution, timpul cre§te direct
 proportional cu dimensiunea tabelei (cénd
 sunt piped, timpul este aproape identic).
 
-7 TQM Scam.“ ———mme,.a..m i New.“ 4 7
-E 6' '6 E
-§ 5 f- 3
-g A a 2
-3 3 2
-3 2 2 8
-é 1 1 é
+? Top-N Scaiability _rnaterialized— —PiPE-‘|I'I"IE‘EI f If
+E '5" _.5 ‘E
+‘5' 5" --5 i
+.2 4 4 .2.
+g 3 3 §
+é 2 2 5-:
+g 1-- ‘1 '3'?
 
-° 2‘ '0 ~ so so ‘00° I
+D ‘20* ‘ _ 1m‘ e'o so 1000149 I
 
-Daia-Vomme
+Data-volume
 
 ***************Ending Page***************
 
@@ -2338,27 +2423,28 @@ Paginarea rezultatelor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:151**************
-Pagmarea rezultatelor
+Paginarea rezultatelor
 ' Ce se Tntémplé dupé ce s-au Tntors primele n
 rezultate ?
 ' Avem nevoie de rezultatele [n+1 .. 2n] (pentru
 urmétoarea paginé).
 ' Existé doué metode:
-- offset method (numara \mllle as m lﬂCEpul, Nlrezza dupe row
-number 5‘ face mscard Ia ce e m pm
-- $88k method (czula umma mtrare dm ngma precedema 5| prela
-randunle urmatoarel
+- offset method (numara liniile de Ia inceput, filtreaza dupa row
+number si face discard Ia ce e in plus)
+- 566k method (cauta ultima intrare din pagina precedenta si preia
+randurile urmatoare)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:152**************
 Paginarea rezultatelor - offset
-' Metoda offset utilizeaza un cuvant special
+' IVIetoda offset utilizeaza un cuvant special
 “offset” — SQL Server standard ca si extensie
-pentru fetch first.l
+pentru fetch firstl
 SELECT * FROM sales
 ORDER BY sale_date DESC
 OFFSET 10 ROWS
@@ -2370,7 +2456,7 @@ FETCH NEXT 10 ROWS ONLY;
 ***************Beginning Page***************
 ***************page number:153**************
 Paginarea rezultatelor - offset
-° Tn Oracle e pugin mai complicat...
+' Tn Oracle e putin mai complicat...
 SELECT * FROM
 (SELECT tmp.*, rownum rn FROM
 (SELECT *
@@ -2383,37 +2469,37 @@ WHERE rn > 10;
 
 ***************Beginning Page***************
 ***************page number:154**************
-l 1d | Operation | Name l Rows l Bytes l Cost (
-| a | SELECT STATEMENT | | 2a | 244a | 4
-|* 1| erw | | 2a| 244a| a
-|* z | coum' STOPKEV | | | |
-| 3 | VIEw | | za | 21m | 4
-| A | TABLE ACCESS sv INDEX ROHID | FG | 7MK| 47ml 4
-I‘ 5 | INDEX RANGE SCAN DESCENDINGI IDX_DOBA | 29 | | 2
+| Id | Operation | Name | Rows | Bytes | Cost (
+| 0 | SELECT STATEMENT | | 20 | 244a | 4
+|* 1 | VIEN | | 20 | 244a | 4
+|* 2 | COUNT STOPKEY | | | |
+| 3 | VIEN | | 20 | 2189 | 4
+| 4 | TABLE ACCESS BY INDEX RONID | FG | 784K| 47M| 4
+|* 5 | INDEX RANGE SCAN DESCENDINGI IDX_DOBA | 20 | | 3
 Predicate Information (identified by operation id):
 
-1 - ﬁlter‘("RN">10)
+1 - filter("RN">10)
 
-z - filter(R0wNUM<=28)
+2 - filter(R0wNUM<=20)
 
-5 r access(“VALUEA"=9)
+5 — acceSS("VALUEA"=9)
 
-Va trebui sé ia 20 de rénduri 5i sé arunce primele 10.
+Va trebui Sé ia 20 de rénduri Si Sé arunce primele 10.
 
-Pe pagina n va Iua n*10 rénduri si va arunca (n-1)*10‘
+Pe pagina n va lua n*10 rénduri Siva arunca (n-1)*10.
 
-®
-W
+154
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:155**************
 Paginarea rezultatelor - offset
 ' Doué dezavantaje:
 
-- pagina se shifteazﬁ cénd sunt adéugate
-inregistrari noi (pentru cé o numéré 5i pe
+- pagina se shifteazd cénd sunt adéugate
+anegistrari noi (pentru c5 o numéré 5i pe
 cea nou adéugaté);
 
 - timpul de réspuns este mare cénd se
@@ -2425,9 +2511,9 @@ acceseazé paginile cu numér mare.
 ***************page number:156**************
 Paginarea rezultatelor - seek
 
-' Metoda seek utilizeaza valoarile din pagina
-anterioaré ca punct de plecare §i evité ambele
-dezavantaje ale metodei offset‘
+' IVIetoda seek utilizeaza valoarile din pagina
+anterioaré ca punct de plecare si evité ambele
+dezavantaje ale metodei offset.
 
 ' Cauté anegistrérile care urmeazé ultimei
 anegistréri de pe pagina anterioaré (utilizénd
@@ -2435,21 +2521,22 @@ un simplu WHERE).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:157**************
-Paginarea rezultatelor - seek
-' Presupunénd c2“: se pune o singuré note": pe zi
+Paglnarea rezultatelor - seek
+' Presupunénd c5 se pune o singuré noté pe zi
 (deci data ar fi cheie unicé):
-P : ummm smeidate de pe
+? = Ultimul sa|e_date de pe
 pagina precedenta
 
-SELECT * FROM fg'
+SELECT * FROM fg
 
-WHERE doba < ?
+WHERE dcba < ?
 
 ORDER BY doba
 
-masc mwcn 1":st 10 ROWS ONLY;
+DESC FETCH FIRST 10 ROWS ONLY;
 
 ***************Ending Page***************
 
@@ -2457,142 +2544,146 @@ masc mwcn 1":st 10 ROWS ONLY;
 ***************page number:158**************
 Paginarea rezultatelor - seek
 
-~ Problema este ca dacé nu avem o cheie unicé
-la sfér§it de paginé, se poate intémpla s’?! nu
-§tim de unde incepem pagina urmétoare.
+' Problema este ca dacé nu avem 0 cheie unicé
+Ia sfér§it de paginé, se poate Tntémpla sé nu
+§tim de unde Tncepem pagina urmétoare.
 
-- Trebuie ca order by sé fie determinisﬁ‘ altfel
-se poate Tntémpla ca o noua": executie sé facé
-un shuf'fle a anegistrérilor (din cauzé c5 QO se
-hotérégte sé execute altfel interogarea 5i
+' Trebuie ca order by sé fie determinist* altfel
+se poate Tntémpla ca o noué executie sé facé
+un shuffle a anegistrérilor (din cauzé c5 Q0 se
+hotéré§te sé execute altfel interogarea §i
 atunci putem sé ne trezim c5 s-a facut "swap"
 Tntre ultima anegistrare de pe pagina
-anterioaré 5i prima de pe noua paginé).
+anterioaré §i prima de pe noua paginé).
+
+*De exemplu nu ordonati dupa rownum care este o psudocoloana ce este construita de fiecare data la un nou apel.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:159**************
 Paginarea rezultatelor - seek
 
 ' Pentru a ne asigura c5 ORDER BY este mereu
-determinist, am putea sé—| extindem
-(adéugénd coloane) péné ajungem la unicate
+determinist, am putea sé-I extindem
+(adéugénd coloane) péné ajungem Ia unicate
 (sau dacé nu se poate, se adaugé un cémp
-unic) —vezi "cheie candidat” de la BD.
+unic) — vezi "cheie candidat" de Ia BD.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:160**************
 Scalabilitate offset vs seek
-
-12 Paging Methods Oﬂsel — Seek — 1-2
-g 1‘ ~1 g
-E 0.8 ‘ 0.5 ‘g
-g 0.5 0.6 g
-g 0,4 0,4 é
-"Z “Z umuammmmmmud“ 3'2 a?
-
-0 20 40 Page 60 60 100
+1_2_F’-=11¢;:|ir"|g Methods M1“ 1'2
+E 0.3 0.5 E
+E 0.6 as E
+u: _ _ u:
+1' D “IIMAMMLAHIMLLMD I
+0 20 4n an so 100
+Page
+160
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:161**************
-Functii Window -> paginare I?‘
-
-' Metoda flexibila, conform standardului. "9""
-
-' Numai SQL server 5i Oracle le utilizeazé pentru
-un pipe/ined n-querry
-
+“I?
+Functii Window -> paginare :53?
+' IVIetoda flexibila, conform standardului. “7"”
+' Numai SQL server 5i Oracle Ie utilizeazé pentru
+un pipelined n-querry
 ' PostgreSQL nu se opre§te din scanat dupé ce a
 preluat primele n linii ®
-
-- IVIySQL nu are deloc implementaté o astfel de
+' |\/|ySQL nu are deloc implementaté 0 astfel de
 functie ®
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:162**************
-ruwnum cu
-Functii Window -> paginare “MM
-crnenulde
-onion-are
+Functii Window -> paginare va'Pri'?dUpa
+crlterlulde
+ordonare
+
 SELECT * FROM (
-SELECT fg.* , ROW_NUMBER() OVER
+
+SELECT fg.* , ROW;NUMBER() OVER
 (ORDER BY doba DESC ,
 id DESC) rn
 FROM fg) tmp
-WHERE rn between 11 and 20
+WHERE rn between ll and 20
 ORDER BY doba DESC, id DESC;
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:163**************
 Functii Window -> paginare
 
-' ROW_NUMBER enumeré réndurile in funcgie
+' ROW_NU|V|BER enumeré réndurile Tn functie
 de ordinea de sortare definité Tn clauza over.
 
-' Ultimul where folose§te valoarea lui rn pentru
-a prelua doarinregistrérile 11»20.
+' Ultimul where folose§te valoarea Iui rn pentru
+a prelua doaranegistrérile 11-20.
 
-' BD Oracle recunoa§te condigia de oprire §i
-utilizeazé indecgii SALE_DATE si SALE_ID
+' BD Oracle recunoa§te conditia de oprire §i
+utilizeazé indec§ii SALE_DATE si SALE_ID
 pentru a produce un comportament pipe/ined
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:164**************
-De§| coslul calculat
+De§i costul calculat
 . . . - este mare, timpul
-Functu Wlndow -> paglnare exemieiemdeo
-secunde !
-Id \ Operation [ Name | Rows | Bytes | l .t (
-6 \ SELECT STATEMENT [ | 5162K| 592M| 67625
-" l \ VIEW [ | 5102K| 592M| 67625
-" 2 \ WINDOW NOSORT STOPKEV [ | 5162K| 311M| 67635
-3 \ TABLE ACCESS BV INDEX ROWIM FG | 5162K| 311M| 67635
-4 \ INDEX FULL SCAN DESCENDINGI IDXiDOBA | 5162K| | 17673
+Fu nctll WI ndow -> pagl na re 6666 6660
+secunde!
+Id | Operation | Name | Rows | Bytes | \ t (
+O | SELECT STATEMENT | | 5162K| 593m| 67635
+* 1 | VIEN | | 5102K| 593M| 67635
+* 2 | NINDON NOSORT STOPKEY | | 5162K| 311M| 67635
+3 | TABLE ACCESS BY INDEX RONID| FG | 5162K| 311m| 67635
+4 | INDEX FULL SCAN DESCENDINGI IDx_DOBA | 5102K| | 17673
 'redicate Information (identified by operation id):
-1 - filter'("RN">:11 AND "RN"<=ZG)
-z - filter-(ROVLNUMBERO OVER ( ORDER BY INTERNALiFUNCTIOM"DOBA") DESC
-,INTERNALiFUNCTIOM"ID") DESC )<=2e)
+1 - filter("RN">=11 AND "RN"<=20)
+2 - filter(RON_NUMBER() OVER ( ORDER BY INTERNAL_FUNCTION("DOBA") DESC
+,INTERNAL_FUNCTION("ID") DESC )<=20)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:165**************
-Operaue de up NOSORT = plpehned
-1d [ operation Ceseopreﬂecandseawnge\ao 0W5 | Bytes | Cost (
-...................... anumnavmcare1nopkew .....................
-e [ SELECT STATEMEN 51e2K| 593M| 67635
-* 1 \ VIEw | | 51e2K| 593M| 67635
-* 2 \ WINDOW NOSORT STOPKEV | | 51e2K| 311M| 67635
-a \ TABLE ACCESS BV INDEX ROWIDI FG | 5162K| 311M| 67635
-4 \ INDEX FULL SCAN DESCENDINGI IDXiDOBA | 5162K| | 17673
-'redicate Information (identified by operation id):
-1 - filter("RN">=11 AND "RN"(:ZG)
-2 - filter(ROwiNUMBER() OVER ( ORDER BY INTERNALiFUNCTION("DOBA") DESC
-,INTERNALiFUNCTION("ID") DESC )<=20)
-m
+Operatie de tip NOSORT = pipelined
+Id | Operation Ce 59 OPFESte cand 59 ajunge '30 ows | Bytes | Cost (
+.______________________ anumitavaloare(stopkey) _____________________
+O | SELECT STATEMEN 5162K| 593m| 67635
+* 1 | VIEN | | 5102K| 593M| 67635
+* 2 | NINDON NOSORT STOPKEY | | 5162K| 311M| 67635
+3 | TABLE ACCESS BY INDEX RONID| F6 | 5162K| 311m| 67635
+4 | INDEX FULL SCAN DESCENDINGI IDX_DOBA | 5102K| | 17673
+‘Pedicate Information (identified by operation id):
+1 - filter("RN">=11 AND "RN"<=20)
+2 - filteP(R0w_NUMBER() OVER ( ORDER BY INTERNAL_FUNCTION("DOBA") DESC
+,INTERNAL_FUNCTION("ID") DESC )<=20)
+165
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:166**************
 Functii Window -> paginare
-- Ce le face pe functiile window sé fie
+' Ce Ie face pe functiile window sé fie
 importante nu este neapérat paginarea ci mai
 degrabé calculele analitice.
 I
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:167**************
@@ -2604,27 +2695,28 @@ Insert, Update, Delete
 ***************page number:168**************
 Insert, Update, Delete
 
-- Insert + Update + Delete = DML (Data
+' Insert + Update + Delete = DIVIL (Data
 Manipulation Language)
 
 ' Performanta acestor comenzi este influentata
-(negativ) de prezenta indec§i|or.
+(negativ) de prezenta indec§ilor.
 
-' lndexul = date redundante. Cénd sunt
-executate comenzile sus mentionate, indecgii
-trebuie refacuti 5i ei.
+' lndexul = date redundante. Cand sunt
+executate comenzile sus mentionate, indec§ii
+trebuie refacuti §i ei.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:169**************
 Insert
 
-' lnsertul este influengat in primul rénd de
-numérul indec§ilor.
+' lnsertul este influentat Tn primul rénd de
+numérul indec§i|or.
 
-' lnsertul nu are cum 55 beneﬁcieze de pe urma
-indec§i|or deoarece nu are o clauza “where”.
+' lnsertul nu are cum sé beneficieze de pe urma
+indec§i|or deoarece nu are 0 clauza "where".
 
 ***************Ending Page***************
 
@@ -2632,24 +2724,25 @@ indec§i|or deoarece nu are o clauza “where”.
 ***************page number:170**************
 Insert
 
-- lnserarea unui rand intr-o tabela presupune:
+' lnserarea unui rand intr-o tabela presupune:
 - gasirea unei locatii pentru stocare [in
 tabelele fara indecsi, se cauta un block care
-are suﬁcient spatiu si este adaugat acolo]
-— daca exista indecsi peste tabela, BD trebuie
+are suficient spatiu si este adaugat acolo]
+- daca exista indecsi peste tabela, BD trebuie
 sa se asigure ca noua inregistrare apare in
-indecsi (va adauga cate o intrare in fiecare)
+indecsi (va adauga cate 0 intrare in fiecare)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:171**************
 Insert
-— adaugarea in index este mai costisitoare
+- adaugarea in index este mai costisitoare
 pentru ca arborele trebuie rebalansat. Din
 cauza existentei arborelui, inregistrarea nu
 poate fi scrisa in orice block; ea apartine unei
-anumite frunze din B-tree. Pentru a ajunge la
+anumite frunze din B-tree. Pentru a ajunge Ia
 locatie trebuie traversat arborele
 
 ***************Ending Page***************
@@ -2657,34 +2750,37 @@ locatie trebuie traversat arborele
 ***************Beginning Page***************
 ***************page number:172**************
 Insert
-— dupa indentificarea frunzei BD confirma daca
+- dupa indentificarea frunzei BD confirma daca
 mai exista spatiu in nodul respectiv. Daca nu
 mai exista, nodul este impartit in doua si
 distribuie intrarile intre vechiul si noul nod
 (aici apar referinte noi si in nodul superior
-care la randu-i poate fi impartit). Daca toate
-nodurile pana la radacina sunt impartite,
+care Ia randu-i poate fi impartit). Daca toate
+nodurile pana Ia radacina sunt impartite,
 arborelui i se mai adauga un nivel.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:173**************
 Insert
-- Timpul unui insert in functie de numarul de
+' Timpul unui insert in functie de numarul de
 indecsi:
-071° Insert Scalablllty 071°
-'LT IT
-Hg“ one 0.0a g
-o o
-g ovos ovoe g
-.5 0,04 i 0.04 §
-= 8 3
-E 0.027 o‘ 0.02 g
-W l LLI
-0'00 ovoo
-u 1 2 3 4 s
+mu _lnsert Scaiahlllty £110
+‘E’ 'E'
+5; nus nus 5
+i} ﬂi'
+E {we we g
+{I'll
+E 0.114 EB’ um E‘
+a E a
+g 111:2 -- is --u.u2 g
+LLI l LLI
+um: nun
+u 1 2 3 4 5
 Indexes
+173
 
 ***************Ending Page***************
 
@@ -2692,7 +2788,7 @@ Indexes
 ***************page number:174**************
 Insert
 
-- Primul index face cea mai mare diferenta
+' Primul index face cea mai mare diferenta
 
 ' Considerand ca intr-o tabela s-ar face numai
 inserturi, e mai bine fara indecsi.
@@ -2703,13 +2799,16 @@ cand incarcam cantitati mari de date (indecsii
 nu trebuie refacuti in timpul incarcarii ci
 numai o singura data la final).
 
+174
+
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:175**************
 Insert
-' Cum s-ar proceda in cadrul unei “index
-organized table" sau "clustered index” ?
+' Cum s-ar proceda in cadrul unei "index
+organized table" sau "clustered index" ?
 
 ***************Ending Page***************
 
@@ -2717,7 +2816,7 @@ organized table" sau "clustered index” ?
 ***************page number:176**************
 Delete
 
-- Delete are 0 clauza “where” care o face sa
+' Delete are 0 clauza "where" care 0 face sa
 beneficieze de pe urma indecsilor.
 Funtioneaza ca un select urmat de stergerea
 datelor.
@@ -2727,23 +2826,27 @@ inserarea unui rand.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:177**************
 Delete
 ' Eficienta operatiei delete este reprezentata in
 tabelul:
-0.12 Delete ScalabIIIty 0.12
-3 0.10’ 70.10 3
-.E i".
-E 0.00 0.00 E
-‘é 0.0a 0.05 ‘é
-'5 0.04 0.04 ‘g
+Delete Sealebilit
+0.12 y e12
+E n.1e- 0.10 E
+e. e
+iD , _ ﬂi
+.E ens one .E
+g one nee 3;
+PD .ﬁ
+e 0.04 0.04 =5
 U U
-2 0.02 0.02 3
-\H UJ
-0.00 0.00
-1 2 3 4 5
-Indexes 7-,
+E 0.02 0.02 E
+LLI LLI
+0.00 nee
+1 2 a 4 5
+Indexes 177
 
 ***************Ending Page***************
 
@@ -2752,15 +2855,16 @@ Indexes 7-,
 Delete
 
 ' Daca nu exista index, BD trebuie sa faca full
-table scan pentru a cauta inregistrarea.
+tab/e scan pentru a cauta inregistrarea.
 
 ' Are sens sa stergem fara "where" atunci cand
 sunt sterse foarte multe randuri.
 
-° Operatiile delete si update au un execution
+' Operatiile delete si update au un execution
 plan (incercati acasa).
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:179**************
@@ -2768,9 +2872,9 @@ Update
 
 ' O operatie de tip Update trebuie sa realoce
 indexul (sa stearga vechea pozitie si sa realoce
-informatia in alta pozitie)4
+informatia in alta pozitie).
 
-' Update (la fel ca insert si delete) depinde de
+' Update (Ia fel ca insert si delete) depinde de
 numarul indecsilor peste tabela.
 
 ' Daca updateul nu modifica campurile din
@@ -2782,41 +2886,41 @@ nu trebuie refacuti).
 ***************Beginning Page***************
 ***************page number:180**************
 Update
-
-020 update scalabmly 0'20
-3. all columns — 6‘
-.2 0-15 onecolumn — Q15 g
-Q 0
-.E é
-‘E ol1o 0410 E
-O O
-‘3 "5
+t cal ili
+020 updae s ab ty 0'20
+'E‘ all cnlumns _ 'E'
+III ﬂJ
+.E. 0-15 nneculumn — 0'15 E.
+m a:
+.E E
+‘E 0.10 0.10 ‘E
+D D
+‘*5 ‘E
 u 0.05 0.05
-2 §
-Lu Lu
-
-0.00 0.00
-
+a i
+LU LLI
+0.00- 0.00
 1 2 3 4 5
 Index Count
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:181**************
-U pdate
+Update
 
 ' Daca este afectat un singur index (prin afectat se
 intelege ca trebuie sa fie re-aranjat), timpul
 ramane acelasi chiar daca sunt mai multi indecsi
 peste tabela.
 
-- Cand se scrie comanda update, trebuie avut grija
-sa ﬁe modificate doar acele coloane care trebuie
-modiﬁcate 5i nu toate coloanele (utilizand valori
+' Cand se scrie comanda update, trebuie avut grija
+sa fie modificate doar acele coloane care trebuie
+modificate si nu toate coloanele (utilizand valori
 vechi in update).
 
-Ganditwa ‘a un cal cand \nsert sau delete nu afecteaza indexul paste 0 tabela.
+Ganditi-va la un caz cand insert sau delete nu afecteaza indexul peste o tabela.
 Raspuns:
 I
 
@@ -2826,80 +2930,83 @@ I
 ***************page number:182**************
 Bibliografie (online)
 
-- httg:[Zuse-the-index-luke.com[
+' httg:[[use-the-index-Iuke.com[
 (puteti cumpara si cartea in format PDF — dar
 nu contine altceva decat ceea ce este pe site)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:183**************
 Joins — INNER JOIN
 
-- httg:Z(WWW.codepr0'ect.com[Articles[33052[
-Visual-Regresentation-of—SQL-Joins
+' httg:Z[www.codegroiectcom[ArticlesZ33OSZZ
+VisuaI-Regresentation-of-SQL-Joins
 
-' Cel mai simplu tip dejoin, interogarea va
+' Cel mai simplu tip de join, interogarea va
 returna toate inregistrarile din A care au
 inregistrari pereche in tabela B.
 
 SELECT <select_list>
 FROM Table_A A
 INNER JOIN Table_B B
-0N A.Key = B.Key
+ON A.Key = B.Key
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:184**************
-Joins — LEFT JOIN
+Joms — LEFT JOIN
 
 ' Returneaza inregistrarile din tabela A
 indiferent daca au un match in tabela B. Daca
-in tabela B sunt inregistrari care fac match, le
+in tabela B sunt inregistrari care fac match, Ie
 va potrivi.
 
 SELECT <select_list>
 FROM Table_A A
 LEFT JOIN Table_B B
-on A.Key = B.Key
+ON A.Key = B.Key
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:185**************
-Joins — RIGHT JOIN
+Joms — RIGHT JOIN
 ' Returneaza inregistrarile din tabela B
 indiferent daca au un match in tabela A. Daca
-in tabela A sunt inregistrari care fac match, le
+in tabela A sunt inregistrari care fac match, Ie
 va potrivi.
 SELECT <select_list>
 FROM Table_A A
 RIGHT JOIN Table_B B
-ON Aery = B.Key
+ON A.Key = B.Key
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:186**************
-Joins — OUTER JOIN
-- Va intoarce inregistrarile care se potrivesc in
+Joms — OUTER JOIN
+' Va intoarce inregistrarile care se potrivesc in
 ambele tabele (A si B).
 SELECT <select_list>
 FROM Table_A A
-FULL OUTER JOIN Table_B E
-ON A.Key = B.Key .
+FULL OUTER JOIN Table_B B
+0N A.Key = B.Key .
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:187**************
 Joins — LEFT EXCLUDING JOIN
-- Va intoarce inregistrarile din A care nu au un
+' Va intoarce inregistrarile din A care nu au un
 match in B.
 SELECT <select_list>
-FROM Tab1e_A A
-LEFT JOIN Table_B B 0N A.Key = B.Key
+FROM Table_A A
+LEFT JOIN Table_B B ON A.Key = B.Key
 WHERE B.Key IS NULL .
 
 ***************Ending Page***************
@@ -2907,51 +3014,55 @@ WHERE B.Key IS NULL .
 ***************Beginning Page***************
 ***************page number:188**************
 Joins — RIGHT EXCLUDING JOIN
-- Va intoarce inregistrarile din B care nu au un
+' Va intoarce inregistrarile din B care nu au un
+
 match in A.
 SELECT <select_list>
-FROM Tab1e_A A
+
+FROM Table_A A
+
 RIGHT JOIN Table_B B
+
 ON A.Key = B.Key
+
 WHERE B.Key IS NULL
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:189**************
 Joins — OUTER EXCLUDING JOIN
-
 ' Va intoarce inregistrarile din A si din B care nu
 se potrivesc.
-
 SELECT <select_list>
 FROM Table_A A FULL OUTER JOIN Table_B B
 ON A.Key = B.Key
-WHERE A.Key IS NULL on B.Key IS NULL
+WHERE A.Key IS NULL OR B.Key IS NULL
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:190**************
-5mm mm m» sum (Mm ‘up
-mom MM A mm MM A
-Llih'yom hm n mm 10m mm n
-0N Mm : n 1w on A.K=y : B m
-5mm Qmmjm)
-mm um A
-mm: Tom 1|»ch n
-ON AJ<=v : {3.sz
-5mm “Who scmcl “duh”
-mm MM A mm T .m ~
-LUTJUIN hm a mm 10m hum! u
-ox AK“: B K“ ON my: R n,
-wnmnm mm”. WHhRnAKm/lSNULI.
-5mm “who
-5|‘.ch Mm)» m“ 1mm A
-mm TnMvA \ mmm.“ 10m 1'1th H
-ml. ovum 10m 1 mm B 0N AM : 5.1m
-(“WIFE-(n- “1.4mm ISNUIL
-w Mnﬂkmﬂm OMB-(~15 WLL
+SEIECT 'Ks-elecLljs-t} SELECT {ﬁlecLlisth
+FROM TableA 1i FROM Tabch A
+LEFTJDIN TableB B RIGHTJOIN Tablcﬂ B
+ON Aliey = Elie}: ON ELKcy = Elie}:
+SELECT ﬂselchlzistI-‘I-
+FROM TabIcA A
+INNER JOIN Tabla-B B
+ON Elie)! = BJCcy
+SELECT {selectjist} ‘SELECT {selectjistb-
+FRDI's-I TahlﬁA A FROM Tabltﬁ. A
+LEFT JUI-N Tahch B RIGHT JOIN Tabch B
+UN 11.qu = 13.va 0N LKL'}; = B,K¢y
+WHERE Bliey IS NUTJ. WHERE iKey IS NULL
+SELECT ﬁst-lectjist}
+SELECT ‘ﬁsclltctJ-iat} FRDNI Tahluﬁ. A
+FROM TableA A FULL OUTERJDIN TableB B
+FULL OUTER JOIN Tableﬂ B ON Arley = Elie};
+0H Alﬁe? = Elie}; WHERE AKey [S NUEEO
+@1 CL. Muffatt, 2003 DR B-Kﬁir' l5 NULL
 
 ***************Ending Page***************
 

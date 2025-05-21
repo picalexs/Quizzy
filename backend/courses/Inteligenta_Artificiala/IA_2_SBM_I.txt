@@ -1,340 +1,363 @@
 ***************Beginning Page***************
 ***************page number:1**************
-.
-Art1ﬁc1a1 Intelhgence
-3rd your, lst semester
+I
+Artlﬁelal Intelhgenee
+3rd year, lst semester
 State based models for decision problems
-Week 2; models and uninformed search siraiegies
+Week 2: models and uninformed search strategies
 “Intelligence is what you use when you don't know what
-to do" Jean Piaget
+to do” Jean Piaget
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-, i
+H n
 We aim to develop rational AI systems:
 o we deﬁne a problem and goals (instances)
-o the AI reaches the goals (solves the instances)
-o the AI outputs the result (unexplainable AI) or
+0 the AI reaches the goals (solves the instances)
+0 the AI outputs the result (unexplainable AI) or
 the solution (explainable AI)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Q
+n
+
 First approach: state-based models
 
-a in what way should I change the
+o in What way should I change the
 
-current stale ofthe problem in 0rder . ‘ 1/ '1 "R ;‘. \\__ ‘
-to get closer or reach the goal? ‘jg l ‘ ‘L- [£4 L. L 1*
-O compute a solution (algorithm j f <
-- sequence of steps) starting from an 4 it Ell s g
-initial state and ending in the goal slate ,- i
-0 mostly covered by search strategies, II?‘-
-reasoning systems, Al for games
+current state of the problem in order g , i_ 1 I . _ _ v ,
+
+to get closer or reach the goal‘? 21/3 ‘L’ t: h ' :fyn A i ' 2
+' g/ e I: :J , e A
+
+0 compute a solution (algorithm 7 i] It! ITJ LALQ
+
+- sequence of steps) starting from an 4 ‘Ii
+
+initial state and ending in the goal state P- V _ ' , ‘
+
+0 mostly covered by search strategies, “r
+
+reasoning systems, AI for games t
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-y .
+FF I
 Solving problems
 
 Problem: We have two numbers, A and B. Which is
 larger?
 
-Instance: AI‘), 13:?
+Instance: A:?, 13:?
 
 A solution should produce the correct answer for all
 possible instances
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-f x
-Q
-What‘s the Problem wilh problcms”
-r : set of problems that can be solved/checked m Polynomial time by a deterministic TM
-NP : sel ofprnhlems that can be solved m Pnlynomlal time by a Non-detznmnlsllc TM,
-Checking a NP solution ie a P problem.
-NP-complete = subset ofNP with llie properly \hal any prbblem m NP can be reduced lb a
-NP-ebmplere pmhlem m polynomial lime.
-NPrhard : sel ofproblems Wllh the properly that any problem iii NP can be reduced to a
-NP-hard problem m pnlynomial time.
-PZNP v
+I
+What’s the Problem With problems?
+
+P I set of problems that can be solved/checked in Polynomial time by a deterministic TM.
+
+NP I set of problems that can be solved in Polynomial time by a Non-deterministic TM.
+Checking a NP solution is a P problem.
+
+NP-complete I subset of NP With the property that any problem in NP can be reduced to a
+NP-complete problem in polynomial time.
+
+NP-hard I set of problems with the property that any problem in NP can be reduced to a
+NP-hard problem in polynomial time.
+
+PINP ‘.7
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-.
-Lct the computCr solve our problems! Or not,"
+I
+Let the computer solve our problems! Or not...
 
 Solvable NP-hard problems: QSAT: is a logical proposition using
 quantiﬁed (existential 3 or universal V) variables satisﬁable?
-Unsclvable NPihard prcblems: Turing Halting problem: given an
-algorithm and an input, determine whether the algorithm execution
+Unsolvable NP-hard problems: Turing Halting problem: given an
+algorithm and an input, determine Whether the algorithm execution
 
-for that input will eventually halt.
+for that input Will eventually halt.
 
-The rest can be solved by a camputer.
+The rest can be solved by a computer.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-.
-Stop lunklng inf solutlunsl
+a
+Stop looking for solutions!
 
-Don‘t think about solutions, think about problems.
+Don’t think about solutions, think about problems.
 
 Solving problems requires effort, describing problems requires
 intelligence.
 
-“lfl had only one hour to save the world, l would spend ﬁfty-ﬁve
+“If I had only one hour to save the world, I would spend ﬁfty-ﬁve
 minutes deﬁning the problem, and only ﬁve minutes ﬁnding the
-solutionr" A.Einstein
+solution.” A.Einstein
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-.
-Let’s ﬁnd a N P-complete problem and a computer able to solve it
+a
+Let’s ﬁnd a NP-complete problem and a computer able to solve it
 Problem: ﬁnding a path in a graph
 Describing a model - reducing a problem
 
-- describe a state
+' describe a state
 
-- identify special states and the problem space
+' identify special states and the problem space
 
-- describe the transitions and validate them
+' describe the transitions and validate them
 
-- specify a search strategy
+' specify a search strategy
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Q
+a
 Generalized Hanoi Towers
 
 We have n towers with m distinct
-sized pieces placed on one of the
-towers, Considering that you can
+
+sized pieces placed on one of the a
+
+towers. Considering that you can
+
 only move one piece at a time
-and that no piece can be placed
-on top ofa smaller piece, ﬁnd a
+
+and that no piece can be placed '
+on top of a smaller piece, ﬁnd a M
 sequence of movements that
+
 place all pieces on a different
-tower
+
+tower.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Q
+a
 Choosing a representation for a
 
 state
 
-State: all data required t0
+State: all data required to i - a
+continue looking for a solution ‘ , ' 
 
-continue looking for a solution
-
-No ambiguity
-
+No amblguity f ii; ‘ \ _ g; ‘I _ V.
 Expressive enough to include all
 
 required data
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Q
-(ughgosing a representation for a state
+I
+cWigwiiiji;sing a representation for a state
 Compact enough to be easy to store and perform changes on it
 A list of towers pieces are placed, in the order of piece size size
-(3, 3, 3, 3, l, l, 2, 2)
-ls this good enough?
+(3, 3, 3, 3, 1, 1, 2, 2)
+Is this good enough?
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:12**************
-Q
-(ughggsing a representation for a state
+I
+cWigwiiiji;sing a representation for a state
 Compact enough to be easy to store and perform changes on it
-A list of towers where pieces are placed, in the order of piece size,
-with the number of towers added at the beginning
-(3, 3, 3, 3, 3, l, l, 2, 2)
-(n,tl,12,m,1m), 151511
+A list of towers Where pieces are placed, in the order of piece size,
+With the number of towers added at the beginning
+(3, 3, 3, 3, 3, 1, 1, 2, 2)
+(n, t1, t2,...,tm), lStiSn
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-l e A
+‘is ‘
+Ch00s1ng a representation for a . , _: 4R0 > ‘ '
+state 1s the most important and \ ~.. ,3f= 4 ' 1*
+difﬁcult step 9*." ‘ I‘ 1 * ‘ .
+N0 ambiguity - '
 
-Choosing a representation for a , _
-l v _ I‘, )
+Compact ,7 is r \
 
-state ls the most Important and p r‘ at ~ 4
+Expressive ,
 
-' ' 0 -
-dlfﬁcult step J‘ I _ _,
+Includes all required data 7.x
 
-‘$3
-
-N0 ambiguity -
-Compact
-Expressive
-Includes all required dala
-There is no generally heel represenlalion
+There is no generally best representation ‘**;\i.u\
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-f x
-Q
+Yiﬁtéi
+I
 Special states
-1111111115111“;1,1,1,1,1,1,1,1)
-State Inhialize (int n, im m)
-i
-Re1um(n,1, 1, 1, 1);
-1 ‘—\,/—/
-111
-There can be more \han one 111111111 me. There has 11> be 111 lean one 111111111 stale.
+Initial state (3, 1, 1, 1, 1, 1, 1, 1, 1)
+State Initialize (int n, int In)
+{
+
+Return (n, 1, 1, 1, ..., 1 ;
+}
+
+rn
+
+There can be more than one initial state. There has t0 be at least one initial state.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-f x
-
-l
+Y}?
+I
 Special states
-Final slams) (n n‘ n‘ n‘ n‘ n‘ n‘ n‘ n)
+Final state(s) (n, n, n, n, n, n, n, n, n)
 Boolean IsFinal (State s)
-i
+{
 
-lfs : (k, k, k, k] \hen return Krue;
+If s = (k, k, k, ..., k) then return true;
 
-%\H
-m+1
+m+l
 
-else remm false;
-l
-There can be more man one ﬁnal slalev There has w be at least one ﬁnal slalev
+else return false;
+‘r
+There can be more than one ﬁnal state. There has to be at least one ﬁnal state.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-' x
-Q
+YR?
+.
 Problem space: all possible states
-fin\/”i“ i/V\\/ (Vin \
-K Flnal slate
-_ \\
-, lnlilal stale /
-Finite space (limited variabilily in chosen stale representation and only valid slates are
+Final state
+Initial state
+Finite space (limited variability in chosen state representation and only valid states are
 included)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-f ~
-Q
-Whal is lhe problem now‘!
-How almollll is ll to solve? f ,7 I’
-\/ Y
-ﬁz , \
+if???
 
-Problem space has m dimensions K Final svale \l
-How many states are within \he space’! 7// /
+a
+What is the problem now?
 
-, , l , /// \
-How can you move Wlmm llle / - l
-problem space? lnmal stale
-§lm0rf§ Am
-Complexity ofthe solulion is given by \he problem. NOT by \he way in which you solve il
+How difﬁcult is it to solve?
+
+Problem space has m dimensions Final state
+
+How many states are Within the space? /
+
+How can you move Within the '
+
+problem space? Initial state
+
+Simon’s Ant
+
+Complexity of the solution is given by the problem, NOT by the way in which you solve it
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:18**************
-i ,
-
-Q
+a
 Transitions
+
 Only one possible way to change current state: move one piece to
 another tower.
 
-(n,t|1,tlz,...,tlm) —> (11,121, 122,...,t2m), whcrc t1. :12‘ for all ISiSm,
-cxccpt exactly one i I k
+(n, tn’ t12,...,t1m) —> (n, t21, t22,...,t2m), where t1i = t2i for all lﬁiﬁm,
+except exactly one i I k
+
 State Transition (State s, piece, tower)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-.
+YEW
+
+a
 Valid transitions
 
 l. No smaller piece is placed atop piece k
 
 2. No smaller piece ends up below piece k
 
-l. t|1* t]k , for all 15i<k
+l. t1i =|= t1k , for all l§i<k
 
-2. t2‘ i t2k , for all 15i<k
+2. t2i =l= t2k , for all l§1<k
 
 Boolean Validate (State s, piece, tower)
 
-Implement transitions and validation separately, it‘s good practice!
+Implement transitions and validation separately, it’s good practice!
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-.
+I
 Search strategy
 Void strategy(State s)
-i
-While (lisFinal(s))
-i
+{
+While (!isFinal(s))
+{
 - piece, tower;
-If(Validatc (s, piece, tower»
+If (Validate (s, piece, tower))
 s I Transiti0n(s, piece, tower);
 }
-i
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Q
-W'SmeaiZh strategies
-o Uninforrned — no distinction between states
+n
+COMSearcch strategies
+0 Uninformed - no distinction between states
 o Random
 o BFS and Uniform Cost
-o DF S and Iterative Deepening
-o Baektraeking
+o DFS and Iterative Deepening
+o Backtracking
 o Bidirectional
-0 Informed — heuristics to help distinguish between states
+0 Informed - heuristics to help distinguish between states
 o Greedy best-ﬁrst
-o llillelimbing and Simulated Annealing
+o Hillclimbing and Simulated Annealing
 o Beam
 o A* and IDA*
 
@@ -342,66 +365,73 @@ o A* and IDA*
 
 ***************Beginning Page***************
 ***************page number:22**************
-'\
+Y???
+
 I
-Breadth F irst Search and Uniform
+Breadth First Search and Uniform
+
 Cost
-0 Visitsiaiesiniheorduofdislanc: i7 /,\ ,i
-(number oftransitions) from the inilial Kirk/ ‘w y \
-state / 77777 '\
-v , / \ \
-0 Explorasalllmmcrllal: nelghbols v [777777\ ‘ ‘
-, , 4 / / ,W i
-(accesslblssiales)unulnomom / ‘J ,/ ,7 7 \ \ /»
-neighborsorﬁnalsmte found. 1 t t x H; A J J ‘\
-. Hasmmemoriseeach generatedslale: \7 \ \\777/ / /‘\ f
-very castly, i \\ 7/ // \ 1/
-0 Mighxvmnhesamestawmullipletimrs. \ 7 /"
-- Findsshonestpath(opt|mumsolution) *\ k fr,’
-. Uniform cast: ifoplions have different " " \\” /
-costs, Bxplnrs cheaper paths ﬁlsl
+
+o Visit states in the order of distance
+(number of transitions) from the initial
+state.
+
+o Explores all immediate neighbors
+(accessible states) until no more
+neighbors or ﬁnal state found.
+
+0 Has to memorise each generated state:
+very costly.
+
+o Might visit the same state multiple times.
+
+0 Finds shortest path (optimum solution)
+
+0 Uniform cost: if options have different
+costs, explore cheaper paths ﬁrst
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:23**************
-r .
+an
 I
 Depth First Search and Iterative
 Deepening Search
-o Visit one immediate neighbor oflhe
-current stale until final state is fniind, /i t\ i' y i \t
-renirri tn previniis unexplored neighbor if //" \4 ' l \
-no more neighbours available for eni-ieni ‘x’ ‘ ‘
-states /l ft
-0 Has m memorise each generated slate: i , \ i
-very ensily. \g a j
-e Might visit the saine state ninlilple tinies. P \‘ ,/
-o Might not ﬁnish (lfloops are present in \ ,P '
-the prnhlein spaee) \ K ,t /
-a le. Explore only up to an inereasing \s 7/‘\ / ’
-depth (distance from initial state) e no \' '
-more infiniie paths
+0 Visit one immediate neighbor of the
+current state until ﬁnal state is found,
+return to previous unexplored neighbor if
+no more neighbours available for current
+state.
+0 Has to memorise each generated state:
+very costly.
+o Might visit the same state multiple times.
+0 Might not ﬁnish (if loops are present in
+the problem space)
+0 IDS: Explore only up to an increasing
+depth (distance from initial state) - no
+more inﬁnite paths
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:24**************
-Q
-Random vs DF S
+n
+Random vs DFS
 
-0 The same, if random rcmcmbcrs visited neighbours
+0 The same, if random remembers visited neighbours
 
-Backtracking vs DF S
+Backtraeking vs DFS
 
-o NOT the same
+0 NOT the same
 
-n Backtracking sets an order for the neighbor states
+0 Baoktracking sets an order for the neighbor states
 
 0 How do you order states?
 
-I Backtracking doesn‘t need to memorize visited states!
+o Backtraoking doesn't need to memorize visited states!
 
 0 Backtracking can avoid loops WITHOUT storing visited states
 
@@ -409,49 +439,47 @@ I Backtracking doesn‘t need to memorize visited states!
 
 ***************Beginning Page***************
 ***************page number:25**************
-u
-Q
+‘M:
+.
 Bidirectional Search
-0 Siam exploring fmmboih m iniiial and i7 1 h
-ﬁnal sme simultaneously ,ﬁq’ 5/ y \
-o Has to memorise each generated slale‘ / /,,_\ '\\
-bm they should um be thal many l i " ‘ ‘ W \
-o Finds shortest paih (optimum solution) / y/ffgé/ A
-u What are the reverse transitions? ‘ \Kélj/‘J i
-\7 \:/ \ /
-i i /
-\ /
-\ i f»; /
-\~/\\7 77 /
+o Starts exploring from both the initial and
+ﬁnal state simultaneously
+0 Has to memorise each generated state,
+but they should not be that many
+0 Finds shortest path (optimum solution)
+o What are the reverse transitions?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:26**************
-f x
-
-Q
+Yer
 
 Comparison
 
-Complexky ohhs solution is given by ‘he pmbmn, NOT by ‘he My in which you 50m n
-Cnlsrlon BFS DFS IDS merscnonal BKT Random
-ETC N° N‘ ND N° N‘ N‘
-ODWnum Ves No ‘(is Yes ND N0
-AH ‘(as N0 Vss Yes ‘(as N0
+Complexity of the solution is given by the problem, NOT by the way in which you solve it
+Criterion BFS DFS IDS Bidirectional BKT Random
+ETC NO NA NO NO NA NA
+Optimum Yes No Yes Yes No No
+All Yes No Yes Yes Yes No
 
-N : mmge numberofaccsssibls siaies
+N I average number of accessible states
 
-0 : length of the optimum solullon
+O = length of the optimum solution
 
-A : length ofthe average 501mm
+A I length of the average solution
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-References (for search strategies)
-Uninformcd Search Algorithms
+a
+R€ferences (for search strategi6s)
+
+Uninforrned Search Algorithms
+
 Stanford Programming Abstractions
 
 ***************Ending Page***************

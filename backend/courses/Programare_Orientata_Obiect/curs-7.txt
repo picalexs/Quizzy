@@ -1,20 +1,22 @@
 ***************Beginning Page***************
 ***************page number:1**************
-‘\ Gavnlut Dragos
+Gavrilut Dragos
+0 O P Course 7
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-> Standard Template Library (STL)
-b Sequence containers
-> Adaptors
-S U m ma f'y > Associative containers
-> l/O Streams
-> String;
-k > Initialization lists
+b Standard Template Library (STL)
+> Sequence containers
+b Adaptors
+SU m m a ['y b Associative containers
+b l/O Streams
+b Strings
+\ b Initialization lists
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
@@ -27,263 +29,276 @@ Standard Template
 ***************page number:4**************
 STL (Standard Template Library)
 > A set of templates that contains:
-> Containers (class templates that may contain other classes) ‘l
-> Iterator; (pointer used for template iteration) ‘l
-> Algorithms (lunctions that can he called for a container) ‘l
-> Adaptors ‘l
-> Allocators ‘l
-> Others ‘
-> To use an STL template, we have to include the header(s) where that
-template is defined‘
-> STL object can be initialized in the following way: (“vectardnv x") if we
-use “using namespace std;", or using their full scope definition
-("stdz :vector<int> x”) otherwise‘
-> There may be various implementation of STL objects. As these
-implementation are compiler specific, their performance varies frmn on
+> Containers (class templates that may contain other classes)
+> lterators (pointer used for template iteration)
+> Algorithms (functions that can be called for a container)
+> Adaptors
+> Allocators
+> Others
+b To use an STL template, we have to include the header(s) where that
+template is defined.
+b STL object can be initialized in the following way: (“vector<int> x”) if we
+use “using namespace stdg”, or using their full scope definition
+(“stdz :vector<int> x”) otherwise.
+b There may be various implementation of STL objects. As these
+implementation are compiler specific, their performance varies fr on
 compiler to another.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
 STL-Containere
-
-> Sequencecontainers
+b Sequence containers
 > vector
+> Array
 > list
-> 10rward_lis! E
+> forward_list
 > deque
-> Adaptors ‘stack, queue, priorityiqueue)
-
-> Assuclaﬂve containers
+> Adaptors (stack, queue, priority_queue)
+> Associative containers
 > Ordered: set, multiset, map, multimap
-> Un-ordered: unorderediset, unorderedimap, unorderedimultiset, ,
-
-unorderedimultlmap
+> Un-ordered: unordered_set, unordered_map, unordered_multiset,
+unordered_multimap
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-E Sequence
+Sequence
 > containers
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
 STL - Vector
-> Vector = an unidimensional array for objects I
-> Constructors: r
-APPIPP j
-vaAd mesnlvasﬂl
-( vlclwv<YYFl> v;
-vacluv<vil> vlsxxayi
-l______________________________________________
-> Memory allocation / resizing is done dynamically
-> Every object added in a vector is actually a copy of the original one
+b Vector = an unidimensional array for objects
+b Constructors:
+APP-CPP
+I‘ l-ll‘ l- ‘ d;
+void main(void)
+{
+vector<Type> v;
+vector<Type> v(Size);
+}—
+> Memory allocation / resizing is clone dynamically
+b Every object added in a vector is actually a copy of the original one
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-STL - Vector
-b Insertion in a vector is done using the following Commands: pushjatk, insert l‘
-> For deletion, we can use: pop_back, erase or clear r
-> For reallocation: the resize and reserve methods ‘
-> For access to elements: the index operator and the “at” method ‘
+b Insertion in a vector is done using the following commands: push_back, insert
+b For deletion, we can use: pop_back, erase or clear
+b For reallocation: the resize and reserve methods
+b For access to elements: the index operator and the “at” method
 APP-CPD
-um, mum! 5m;
-IlMlude (vector)
-void "mm-1)
-r
-"(u-mum v;
-“wthmwwwxun;
-m x - vm;
-m y : mm);
+using namespace std;
+#include <vector>
+void main(void)
+{
+vector<int> v;
+v.push_back(1);v.push_back(2);
+int x = v[1];
+int y = v.at(0);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-APP-CPP ‘
-usan; nileante 3K1;
-linclud: <v‘<‘»r> ‘
-c1m 1n.!.=r
-{ ‘
-an‘ v=1u¢1
-Fuhlic:
-Int-III‘) = v:1~-¢»> ()
-Intaprllllt v} : V-luelv) U
-1n!!‘!r(<n.,! Integer ‘V, = Vi!“a(v.vi!ua) 1»
-mu SeiUnK V) {VIM . v1 ) ‘
-int 5:“) ( "turn Vilull )
->
-V,‘¢ m.1n(~n1¢>
-1
-v=<‘=.<1n‘=.-.> v;
-Int-[Ir 15);
-v-uusniblzkll);
-Lnﬂﬁ;
-prmfm-mvlnl-mnx um» mum»;
-i________________________________-------
+APP-CPD
+using namespace std;
+#include <vector>
+class Integer
+{
+int Value;
+public:
+Integer() : Value(0) {}
+Integer(int v) : Value(v) {}
+Integer(const Integer &v) : Value(v.Value) {}
+void Set(int v) { Value = v; }
+int Get() { return Value; }
+};
+void main(void)
+{
+vect0r<Integer> v;
+Integer 1(5);
+v.push_back(i);
+i.Set(6);
+printf("i=%d,v[9]=%d\n", i.Get(), v[0].Get());
+}—
 After execution: i=6,v[0]=5
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Example: 4
-APP-CPP ‘
-(1-55 1"‘lllr
-4 4
-
-m: Velma;
-mm:
-lntqaﬂ) = vnuqﬂ) 4 arim(‘[7lb] “mm mm“, ms); 1 ‘
-mumm v) = v-mm 4 vrsnrﬂ'ﬂv] v-m mrﬂdhn', 0|!va )
-Intuuﬁmnst [mun M = “hwy-m1 4 mmvwl (any rmr m.“ (mum;
-ms, u, mam); > 4
-mum 419"er 4W.“ lnt=|=|i n 4 Vill: Z Him; Brim(“["9] w: mum“,
-ms, n, LVﬂul); return was; 1
-vnld snun v) 4 v11“ . v; )
-m mu 4 rm". v.1“; 4
-.‘r;
-Wu nay-(Wm
-4
-vlnnrctﬂtulr) v;
-[mun 1(5);
-hr (m w - u; w < s; cm) ,,
-1.5!:(1060 . u-y;
-v.9u5h_hl(k(l)i
+Example:
+APP-CPD
+class Integer
+{
+int Value;
+public:
+Integer() : Value(0) { printf("[%p] Default ct0r\n", this); }
+Integer(int v) : Value(v) { printf("[%p] Value ctor(%d)\n", this,v); }
+Integer(c0nst Integer &v) : Value(v.Value) { printf("[%p] Copy ctor from (%p,%d)\n",
+this, &v, v.Value); }
+Integer& operator= (const Integer& i) { Value = i.Value; printf("[%p] op= (%p,%d)\n",
+this, &i, i.Value); return *this; }
+void Set(int v) { Value = v; }
+int Get() { return Value; }
+};
+void main(void)
+{
+vector<Integer> v;
+Integer i(5);
+for (int tr = 0; tr < 5; tr++)
+{
+i.Set(1000 + tr);
+v.push_back(i);
+}
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-STL - Vecto r
+STL - Vector
 
-Exampte:
+Example:
 
-E—
+M—
 
-- [OOBBFCBO] Value ctor(5)
+- [OO98FC90] Value ctor(5)
 
-lr=0 [UOD3A688] Copy ctor from (OU98FC9U,1000)
+tr=0 [OOD3A688] Copy ctor from (0098FC90,1000)
 
-tr=1 [0003A6C8] Copy ctor (rom (00D3A688,1000)
-[ootmecc] Copy ctor from 10098FC90,1IJO1)
+tr=1 [OOD3A6C8] Copy ctor from (OOD3A688,1000)
+[OOD3A6CC] Copy ctor from (0098FC90,1001)
 
-tr=2 [UOD3A710] Copy ctor from (OUD3A6C8,1000)
-[0003A714] Copy ctor from (00D3A6CC,1001)
-[0003:0151 Copy ctor from (OD9BFC9IJ,1OUZ)
+tr=2 [OOD3A710] Copy ctor from (OOD3A6C8,1000)
+[OOD3A714] Copy ctor from (OOD3A6CC,1001)
+[OOD3A718] Copy ctor from (0098FC90,1002)
 
-tr=3 [OODBAGBB] Copy ctor from (ODD3A710,1UOD)
-[OODBA68C] Copy ctor (rom (00D3A7I4,1001)
-[0003,1590] Copy ctor from (OOD3A71B,1DOZ)
-[00D3A694] Copy ctor from (0098FC9U,1003)
+tr=3 [OOD3A688] Copy ctor from (OOD3A710,1000)
+[OOD3A68C] Copy ctor from (OOD3A714,1001)
+[OOD3A690] Copy ctor from (OOD3A718,1002)
+[OOD3A694] Copy ctor from (0098FC90,1003)
 
-tr:4 [UODBAéDB] Copy ctor ‘rum (00D3A688,1000)
-E60D3A6E8] Copy ctor from (0098FC90,1004)
+tr=4 [OOD3A6D8] Copy ctor from (OOD3A688,1000)
+[OOD3A6E8] Copy ctor from (0098FC90,1004)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
 STL - Vector
-v.2ush backm
-k
+v.9ush backgi)
+
+v *
+
+\
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
 STL - Vector
-v.2ush backm
-> Allocate space for
-
-m m count+1 elements ‘a
-k
+v.9ush backgi)
+b Allocate space for
+c0unt+1 elements
+v
+\
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
 STL - Vector
-v.2ush backm
-> Allocate space for
-
-count+1 elements ‘x
-mama] mm c ,M h f a
-- - > Opy ovet e ‘m x‘
-V |tem[1] ltem[1] count elements in the
-m5. ltem[2] new allocated space 1
-Copy-ctor/Move»
+v.9ush backgi)
+b Allocate space for
+c0unt+1 elements
+ltem[0] |tem[0] C / h f
+- - ’ °py MW“ e "St
+V ’ ltem[1] ltem[1] count elements in the
+ltem[2] ltem[2] new allocated space
+i - ltem[0]
+Copy-ctor/Move-
 ctor
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
 STL - Vector
-> Allocate space for ‘E
-i t 1 l t ‘
-‘m. ltem[0] coun + e emen s ‘I
-m ‘u It "\[1] > Copy/Move the ﬁrst 1
-v e count elements in the 1
-@‘ ltem[2] new allocated space g
-v
-m > Free the space used by I
-k the current elements
+v.gush backgi)
+b Allocate space for
+— count 1 elements
+‘m ltem[0] +
+v m“ ltem[1] > Copy/Move the first
+‘ count elements in the
+m ltem[2] new allocated space
+v _ .
+> Free the space used by
+i ltem[0] the current elements
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
 STL - Vector
-v.2ush backm
-> Allocate space for
-count+1 elements ‘x
-ltem[0] a‘
-It "\[1] > Copy/Move the first g
-v e count elements in the
-|tem[2] new allocated space
-m > Free the space used by 3
-i mm the current elements
-> Copy/Move the new
-Copy/Move Cm, item into the extra
+v.push backgi)
+b Allocate space for
+c0unt+1 elements
+|tem[0] C / h f
+- > opy Move t e irst
+v ” ' ' a a 7 ltem[1] count elements in the
+ltem[2] new allocated space
+ltem[3] > Free the space used by
+i _ ltem[0] i the current elements
+b Copy/Move the new
+Copy / Move ctor Item Into the extra
 allocated space
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
 Test case:
-APP-1 ‘PP
-mm.- lmmiLsni 1m
-(1-ii x"‘l|lr
-4
-m valueszrKELsnE];
-9mm
-tutu-r0 < mm: }
-{mun-(mt "my ( 5mm“); )
-magnum“ mug" m 4 (nvamKUnz'lleluas); )
-Intueu operawr- (must {menu a) 4 (cpyFMﬂint'H-Values); mm ‘this; >
-vein 5mm mm
-(
-m (m n . a; n < “:56;me nu)
-valuesltr] . m“;
->
-vein anyfmumc’ 115a)
-(
-m (m n . a; n < “:56;me nu)
-‘um-um] . mum]; '
->
-vein Sl'ﬂwnst mm" m
-(
-(npyFmﬂlm'lvwnuls);
->
-h
+APP'1-CPP
+#de'Fine INTEGER_SIZE 1000
+class Integer
+{
+int Values[INTEGER_SIZE];
+public:
+Integer() { Set(0); }
+Integer(int value) { Set(value); }
+Integer(const Integer &v) { CopyFrom((int*)v.Values); }
+Integer& operator: (const Integer& i) { CopyFrom((int*)i.Values); return *this; }
+void Set(int value)
+{
+for (int tr = 0; tr < INTEGER_SIZE; tr++)
+Values[tr] = value;
+}
+void CopyFrom(int* lista)
+{
+for (int tr = 0; tr < INTEGER_SIZE; tr++)
+Values[tr] = lista[tr];
+}
+void Set(const Integer &v)
+{
+CopyFrom((int*)v.Values);
+}
+};
 
 ***************Ending Page***************
 
@@ -291,45 +306,50 @@ h
 ***************page number:18**************
 Test case:
 Vec-1.cpp Vec-2.cpp
-ma numb/aid) void .mmm
-< 1
-vzztw'd'ntzgzr: v; “HUMMER” v,
-integer 1; mew u
-m um tr Z a; tr < manna; "w VMQMQW);
-( For (m v - a; v < 359999; tr»)
-1.5mm; 1
-“Putnam; ‘ saw».
-) vvyushibackﬂbi
-1 )
-)—
-Plr-1,cpp
-‘m “mum; Ptr-chp
-INS" w Z m Inwserhuuuuulx vmd mnVIKvu1¢7
-1m." x; < ,
-m (m 1r Z a, 1r < mm, "H; Inmgar "v . n!» Inmgar'UBBBBB];
-{ fur (1n! tr Z a; tr < ‘BBBBB; tr¢¢l
-1,5elklr); <
-qwmum; vm] Z nrw mqmm;
-) 1
-) ]—
+void main(void) void main(void)
+{ {
+vector<Integer> v; vector<Integer> v;
+Integer i; Integer i;
+For (int tr = 0; tr < 100000; tr++) v.reserve(100000);
+{ for (int tr = 0; tr < 100000; tr++)
+i.Set(tr); {
+v.push_back(i); i.Set(tr);
+} v.push_back(i);
+} }
+}
+Ptr-1.cpp
+void main(void) Ptr-2.cpp
+{
+Integer *v = new Integer[100000]; VOid main(void)
+Integer i; {
+for (int tr = 9; tr < 199999; tr++) Integer **v = new Integer*[100000];
+{ for (int tr = 0; tr < 100000; tr++)
+i.Set(tr); {
+v[tp]_5et(i); v[tr] = new Integer(tr);
+} }
+} }
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
 STL - Vector
 The study was conducted in the following way:
-> Each of the 4 applications was executed for 1D time‘ Execution time was
-measured in milliseconds,
+b Each of the 4 applications was executed for 10 time. Execution time was
+measured in milliseconds.
 > Execution time was divided into two times: time needed to initialize the
-container and the time needed to add the data into the container,
-APP-1 ‘CPP
-mu mums)
-Intellr 1; ‘
-> All of these tests were conducted using the following speciﬁcations:
+container and the time needed to add the data into the container.
+APP'1-¢PP
+void main(void)
+{
+Integer i;
+{
+}—
+> All of these tests were conducted using the following specifications:
 > OS: Windows 8.1 Pro
-> Compiler: cLexe [15.00.21005.1 (or we]
-> Hardware: Dell Latitude 7440 - l7 - 4600U, 1,70 GHI, 8 GB RAM
+> Compiler: cl.exe [18.00.21005.1 for x86]
+> Hardware: Dell Latitude 7440 - i7 - 4600U, 2.70 GHz, 8 GB RAM
 
 ***************Ending Page***************
 
@@ -337,939 +357,990 @@ Intellr 1; ‘
 ***************page number:20**************
 STL - Vector
 Results:
-Vec- Illit 0 O 0 O O 0 O O 0 O
-1 Set 1985 1921 1937 1912 1921 1953 1937 1938 1912 1912
-Vec- lnit 140 125 157 115 109 110 11o 109 110 11o
-Z Set 531 515 515 516 516 515 531 516 515 500
-Ptr- Illit 406 359 360 375 359 360 359 359 359 360
-‘ Set 4B5 485 468 469 485 468 469 485 469 484
-Ptr- lﬂit 0 0 D O O D O O D O
-Z Set 411 453 453 437 375 391 390 375 375 375
-v Vec-1,Vec-2,Ptr-1,Ptr~2 -) the 4 methods previously described
-> “lnit” -) the Series of times recorded when we Initialize the Container
-b “Set” -) the series of times needed to add the data in in cuntaine[,,,~
-> T1 4. T10 -) resuit times I
+Vec- lnit 0 0 0 0 0 0 0 0 0 0
+1 Set 1985 1922 1937 1922 1922 1953 1937 1938 1922 1922
+Vec- Init 140 125 157 125 109 110 110 109 110 110
+2 Set 531 515 515 516 516 515 531 516 515 500
+Ptr- Init 406 359 360 375 359 360 359 359 359 360
+1 Set 485 485 468 469 485 468 469 485 469 484
+Ptr- lnit 0 0 0 0 0 0 0 0 0 0
+2 Set 422 453 453 437 375 391 390 375 375 375
+b Vec-1,Vec-2,Ptr-1,Ptr-2 9 the 4 methods previously described
+b “lnit” 9 the series of times recorded when we initialize the container
+b “Set” 9 the series of times needed to add the data in in container
+b T1 .. T10 9 result times
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-STL - Vector
 Results:
-Average execution time i
-1m 1
-1m 1‘
-um 1‘
-11w ‘r
-mm r
-m i
-m
-um
-1w
-“ veer Vec'Z m4 Pm
+Average execution time
 
-m n on; M n
-.5!‘ ms 517 m, 1 uu a
+2000
 
-> Vec-1,Vec-2,Ptr-1,Ptr-Z -) the 4 methods previously described 77/
+1800
 
-v “lnit” -) the series of times recorded when we initialize the contains’?
+1600
 
-b "Set" -) the series of times needed to add the data in in coritairier
+1400
+
+1200
+
+1000
+
+800
+
+600
+
+400
+
+200
+
+° Vec-1 Vec-Z Ptr-1 Ptr-2
+I Init 0 120.5 365.6 O
+I Set 1936 517 476.7 404.6
+Ilnit ISet
+
+b Vec-1,Vec-2,Ptr-1,Ptr-2 9 the 4 methods previously described
+b “Init” 9 the series of times recorded when we initialize the contai r
+b “Set” 9 the series of times needed to add the data in in con ner
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-STL - Vector 1
 APP'1-CPP
-ma mum-n t
-"ammo v;
-> Let's consider the following code: r" 3:55;;(393 < ""i "W l
-> If we run this code on g++ clang ) wiﬂsfl'ileu: m, “hated: “w, “mo. V-<IW<“YO)3
-and cl.exe (Microsoft) ) r
-> The results show that the r1;
-allocation strategy is m
-different depending on the u
-compiler, w
-y Clang/GH prelers powers M \
-of 2‘ .- ’
-n
-c-‘“e:-:zz::::=i=asmmazxzsczzmcazeeg
-_=t _m/w.
+void main(void) {
+vector<int> v;
+b Let’s consider the following code: *°'" (“t t" = 93 t? < 10005 tr“) {
+v.push_back(0),
+. pr'ntf("Elem: %4d, Allocated: %4d\n", .s' e(), .capac't ());
+b If we run this code on g++, clang } 1 V 12 V 1 y
+and cl.exe (Microsoft) }
+I
+b The results show that the 128
+allocation strategy is 112
+different depending on the 96
+compiler. 80
+b Clang/G++ prefers powers 64 \
+of 2. 48 ’
+32
+16
+0 ‘PRO \OCbN OO VNC) \OON co who \OON OO who
+—CL —GCC/Clang
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-> To iterate through all oi the elements stored in a vector we can use iterators‘ An
+b To iterate through all of the elements stored in a vector we can use iterators. An
 iterator is a special object (similar to a pointer)
-APP-cw
-mo mole-1m
-l
-vector-(Int) v;
-v.push_b¥k(‘l); v-wsh_bxk(1); mpusthke); v.wsh_bxk(l); v.wsh_hxk(5); ‘
-veexortlnn: :lxeraxor m x
-it e mum); ‘x
-eon. (k < imam x
-l a
-prlmﬂ'lw '. (IM)('|z))l l
-lwr x
-> lleraturs work by overloading the following operators:
-operator» , operator-- (to go forward/backwards within the container)
-Pointer related operators ioperator») to gain access to an element from the container
+APP-CPD
+void main(void)
+{
+vector<int> v;
+v.push_back(1); v.push_back(2); v.push_back(3); v.push_back(4); v.push_back(5);
+vector<int>zziterator it;
+it = v.begin();
+while (it < v.end())
+{
+printf("%d ", (int)(*it));
+it++;
+}
+}—
+b lterators work by overloading the following operators:
+o operator++ , operator-- (to go forward/ backwards within the container)
+o Pointer related operators (operator->) to gain access to an element from th container
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-ST L - Vec t0 r
-> In this example access to elements is done via operator—)
-v veztor template also provides two methods: front and bark that allows
-access to the first and last elements stored,
-APP-cw
-dass mm»
-i
-Fublxc:
-m v.1“;
-"mun 1 mum 0 x
-mmum my z vii-mm) 0 l
-52m mum-1) ‘a
-l ‘a
-vecmrmunher: v; 1 ,
-v.push_hatk(Num!rl1771 v.nush_hatkluumerl2))z VJIASLBRHNIAMEFBUI
-v.push_hicklNunﬁ:l‘M))I v.vush_hackll4um:rl$)); a‘
-venurmunbennxurlmr l - “tum;
-,rlmmmn A-wﬂua);
-mmumnn u . new“):
-pmmm w, v.frm|ll)~valu=, v.n==kl>.v=1u=>;
-)
-> This example will print on the screen: 1 3 1 5
+> In this example access to elements is done via operatoré
+b vector template also provides two methods: front and back that allows
+access to the first and last elements stored.
+APP-CPD
+class Number
+{
+public:
+int Value;
+Number() : Value(0) {}
+Number(int val) : Value(val) {}
+};
+void main(void)
+{
+vector<Number> v;
+v.push_back(Number(1)); v.push_back(Number(2)); v.push_back(Number(3));
+v.push_back(Number(4)); v.push_back(Number(5));
+vector<Number>zziterator i = v.begin();
+printf("%d\n", i->Va1ue);
+printf("%d\n", (i + 2)—>Value);
+printf("%d %d", v.fr0nt().Value, v.back().Value);
+}
+b This example will print on the screen: 1 3 1 5
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-STL - Vector
-> vector template also provides a special iterator {called reversejtemtor)
-that allows iterating/moving through the elements of the vector in the
+b vector template also provides a special iterator (called reverse_iterator)
+that allows iterating/ moving through the elements of the vector in the
 reverse order.
-APMPP
-(his um.’
-r
-m4 minivan!) r‘
-v-nush_hack(l|umel‘(l))i v.nush_hack(l|um(1)); v-Iiush_hacklllumll‘(3)); x
-v.push_hack(l4umerll)l; vJushJacklliumrlii); ‘x
-"(WWW mm“, n; ;
-m (n - whenlil); n r- hum; a»;
-nr1n1ﬂ14 ~, 11-min); ‘
-vectormumern:reverseJKeram‘ m;
-m (m e LINEN); m r: “mm; m”)
-vmmm: ". m-wn-m;
-l—
-b This example will print: “1 2 3 4 5 5 4 3 21"
+
+APP-CPD
+class Number
+{
+void main(void)
+{
+vector<Number> v;
+v.push_back(NumbeP(1)); v.push_back(Number(2)); v.push_back(Number(3));
+v.push_back(Number(4)); v.push_back(Number(5));
+vector<Number>zziterator it;
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+vect0P<NumbeP>z:Peverse_iterator Pit;
+for (Pit = v.rbegin(); Pit != v.rend(); rit++)
+printf("%d ", Pit->Va1ue);
+}
+> This example will print: “12 3 4 5 5 4 3 2 1”
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:26**************
-> Inserting elements in a vector: i
-APP-cup l
-a.“ m,» i
-l i
-m MM“) i
-( v=mr<mmh=r> v;
-
-v.9ush7hick01mhll11”; inlshihickUﬂlilthUnS mannincklnumrlln;
-“Wilhullmulm; “Wilhullimwlsn;
-ummmmnmim i . “who;
-v.ins=r't(i ¢ I, nubv'lxlh;
-um); (1 ( mmdll)
-( mml"xa,", mm“);
-in;
-I
-> Thi's example will prim: 1,2,1 3,4,5
+b Inserting elements in a vector:
+APP-CPP
+class Number
+{
+void main(void)
+{
+vecton<Number> v;
+v.push_back(Number(1)); v.push_back(Number(2)); v.push_back(Number(3));
+v.push_back(Number(4)); v.push_back(Number(5));
+vecton<Number>zzitenaton i = v.begin();
+v.insent(i + 2, Numben(10));
+while (i < v.end())
+{
+pnintf("%d,", i->Value);
+i++;
+}
+}
+> This example will print: 1,2,1 ,3,4,5
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-> Deleting an element from the vector: ( wernseﬁteratar) ) I
-APP-cup t
-:hss m"
-
-( t
-m "MW t
-(
-v=mr<nmh=r> v;
-v.9ush7hick01mhll11”; “wet-Jukmm-run; vJuanackmma-NSH;
-v.m.,h.(tt~mwtm; v.m.,h.(ttmmem
-ummmmmm, , . Mum);
-Vaughn);
-v.=ras=(i¢3);
-unil- (i t v.lnd())
-(
-printﬂ'Xdl'. !->Vll||e);
-1M;
+b Deleting an element from the vector: ( v.erase(iterator) )
+APP-CPP
+class Number
+{
+void main(void)
+{
+vector<Number> v;
+v.push_back(Number(1)); v.push_back(Number(2)); v.push_back(Number(3));
+v.push_back(Number(4)); v.push_back(Number(5));
+vector<Number>zziterator i = v.begin();
+v.erase(i+2);
+v.erase(i+3);
+while (i < v.end())
+{
+printf("%d,", i->Value);
+i++;
 }
-'—
+}—
 > This example will print: 1,2,4
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-STL - Vector
+b This code compiles. However, keep in mind that after an element is deleted, an
+iterator can be invalid. As a general rule, don’t REUSE an interator after it was
+deleted like in the next example: “v.erase(i+ 1)”
 
-> This code compiles‘ However, keep in mind that after an element i5 deleted, an
-iterator can be invalid‘ As a general mle, don't REUSE an interator alter it was
-deleted like in the next example: "mmmim"
-
-APMPP
-
-chss um.’
-
-t
-
-vet-1 numb/aid) t‘
-
-‘ "(mt-m» t; ‘t
-v.|:ush_hack(l|umer(l)); v-Izush_hacklllum(1))i ~.|=tet_t.ettttmrtm; x
-v.push_ha:k(l4umer(l)); v.push_hacktuumrts)); ‘x
-vecmrmumenzzneramr t e memo: x
-um- 1 ;
-mm (1 < “my; ‘
-i mmtmm Hm“);
-
-w;
-t
-)—
-> During the execution, an exception will be triggered on "\Lemseﬁﬂ)”
+APP-CPD
+class Number
+{
+void main(void)
+{
+vector<Number> v;
+v.push_back(NumbeP(1)); v.push_back(Number(2)); v.push_back(Number(3));
+v.push_back(Number(4)); v.push_back(Number(5));
+vector<Number>zziterator i = v.begin();
+v.erase(i);
+v.erase(i+1);
+while (i < v.end())
+{
+printf("%d,", i->Va1ue);
+i++;
+}
+}—
+b During the execution, an exception will be triggered on “v.erase(i+ 1)”
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-> To ﬁx the previous problem, we don't re-use an iterator when we delete an
+b To fix the previous problem, we don’t re-use an iterator when we delete an
+element. Instead, we compute an iterator in place (using v.begin() to do
+this).
 
-element. Instead, we compute an iterator in place (using \cbeginO to do
-
-this)‘
-
-APMPP
-
-(his um.’
-
-r
-
-m4 numb/aid) L
-
-‘ x
-“(tam-m» v; ‘a
-v.|zush_hack(l|umer(1)); v.|zush_hack(l|um(1)); v.|:ush_hack(l|umer(3)); x
-v.push_haek(l4umer(l)); v.push_hack(uumr(s)); ‘x
-vLerasﬂvaeDnOﬁ \
-wannabmmm; L
-vector<Numer>::1ter-tur 1 - when“);
-at!!! u < “mm i
-r "
-
-mmmam Hm“);
-w;
-
-y
-
-)
-
-> ﬁrs coﬂe compiles aria works correcE y.
+APP-CPD
+class Number
+{
+void main(void)
+{
+vector<Number> v;
+v.push_back(Number(1)); v.push_back(Number(2)); v.push_back(Number(3));
+v.push_back(Number(4)); v.push_back(Number(5));
+v.erase(v.begin());
+v.erase(v.begin()+1);
+vector<Number>zziterator i = v.begin();
+while (i < v.end())
+{
+printf("%d,", i->Va1ue);
+i++;
+}
+}
+P I HIS Can compiles and WOI'RS correctly.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-STL - Vector
-> other operators that are overwritten are relationship operators I), < , !:, .4.)
-> Two vectors are considered to be equals if they have the same number of elements
-and elements with the same index in those two vectors are equal‘
-APP~¢PP
-<1.” mm"
-l
-mm mum-n l
-i a
-vecrumumll‘) v1; l
-veetmdlumen v2; z
-m 1m n e n; n < n; n») ‘i
-‘ i...,u,i_h.mimmm;
-VLFIASVLDIckUthEFHFI); E
-if m e: v2)
-mmlm 1; "in with v2");
-11;!
-prsnrfﬁﬂ As “(femur m“ wy;
-)
-> This example will not compile as Number does not have an operntnr== deﬁned l
+> Other operators that are overwritten are relationship operators (>, < , !=, ...)
+b Two vectors are_considered to be equals if they have the same number of elements
+and elements With the same index in those two vectors are equal.
+APP-CPD
+class Number
+{
+};
+void main(void)
+{
+vector<Number> v1;
+vector<Number> v2;
+for (int tr = 0; tr < 10; tr++)
+{
+v1.push_back(NumbeP(tP));
+v2.push_back(NumbeP(tP));
+}
+if (v1 == v2)
+printf("V1 is equal with V2");
+else
+printf("V2 is different than V2");
+}
+b This example will not compile as Number does not have an operator = defined !
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-> Make sure that you define aperator== as const. vector iemplate requires a ‘
-const OPEIEIGI== t0 work, ‘
-> This code will not compile. ‘
-APMPP I
-(his mm. \
-( ‘
-bun] agar-(m-(znnsl mm" m; ( return v.1“! .. “mu; y
-n
-void nimble“)
-(
-"(mm-m.» n;
-“(ml-(Human n;
-m (m u - n; u < 1|; w“:
-(
-nyusnjickﬂlumnvhﬂli
-V1_I!IASI7BICKUIIAMIF(¢F));
-if (v: n v2)
-Frinﬂ’!!! As em! mm v2‘);
-.15. ,,
-antﬂ'Vz 1s different (hm V2");
-)
+b Make sure that you define operator== as const. vector template requires a
+const operator== to work.
+b This code will not compile.
+APP-CPD
+class Number
+{
+bool operator==(const Number &n1) { return Value == n1.Value; }
+};
+void main(void)
+{
+vector<Number> v1;
+vector<Number> v2;
+for (int tr = 0; tr < 10; tr++)
+{
+v1.push_back(Number(tr));
+v2.push_back(Number(tr));
+}
+if (v1 == v2)
+printf("V1 is equal with V2");
+else
+printf("V2 is different than V2");
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-> Now this code compiles and work as expected.
-> You can also replace operat0r== with a friend function with the following
-syntax: “m1 mm mm": (cans! um" a "1, must Number a "1);"
-APP~¢PP
-ch55 um"
-(
-m1 “Mm-(m! M" In!)-{ mm v.1“! .. nLV-lue; , ‘
-mu "mu/m) 1
-c x
-"(mm-m.» n; i
-vulnrmwrhen n; \
-m (m u - I; u ( 1|; u“:
-nip-immmm-mm; 1
-nJ-isnjnuum-m'n;
-i
-u m .. m
-FrinKﬂ’!!! As equal mm v2‘);
-.15-
-vmmm n different m“ v2");
-)
+b Now this code compiles and work as expected.
+b You can also replace operator== with a friend function with the following
+syntax: “bool friend operator== (const Number & n1, const Number & n2);“
+APP-CPD
+class Number
+{
+bool operator==(const Number &n1)-{ return Value == n1.Value; }
+};
+void main(void)
+{
+vector<Number> v1;
+vector<Number> v2;
+for (int tr = 0; tr < 10; tr++)
+{
+v1.push_back(Number(tr));
+v2.push_back(Number(tr));
+}
+if (v1 == v2)
+printf("V1 is equal with V2");
+else
+printf("V2 is different than V2");
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-STL - Vector
-> For < and > compare operations, vector template uses the following
-algorithm (see the pseudo-code below) to decide if a vector is bigger/smaller
-than another one‘
-mm”. {miner mm» is. vemr in pp. pp
-5m - mmvmm. v1.51“) we mum“,
-m (H; 1611:; a”) 4
-u mm < mm qum v1;
-mm m 15 Mn" m" w; vemrunt) v1; ‘
-m u x
-m m “mu-(km); l
-u (‘11.51" < v1.51") vz-pusmmzs); vZ-PHSLBIKKKZQ); l
-rm". wt is win-r my. v2‘; x
-m 1r u m < m i
-mm w: is m mu" my. v2’; mmmmm; i‘
-m rumm- )
-> One important observation here is that operator) is not needed {only I
-operator< is needed to decide),
-> The previous code will print “v2<v1 " (even if “v2” has two elements, and
-“v1 " only one),
+b For < and > compare operations, vector template uses the following
+algorithm (see the pseudo-code below) to decide if a vector is bigger/ smaller
+than another one.
+
+Pseudocode
+. APP-CPD
+Function IsSmaller (Vector v1, Vector v2)
+Size = MINIM(v1.Size, v2.Size) void main(void)
+for (i=9; i<Size; i++) {
+if (v1[i] < v2[i]) vector<int> v1;
+return "v1 is smaller than v2"; vector<int> V23
+end if
+end for v1.push_back(10);
+if (v1,size < v2,size) v2.push_back(5); v2.push_back(20);
+return "v1 is smaller than v2";
+end if if (v2 < v1)
+return "v1 is NOT smaller than v2"; printf("v2<v1");
+End Function }
+
+b One important observation here is that operator> is not needed (only
+operator< is needed to decide).
+
+b The previous code will print “v2<v1 ” (even if “v2” has two elements,
+“v1 ” only one).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-> Let's analyze the following example: ‘
-APMPP ‘
-a»: mm» ‘
-(
-law] wnnwﬂnmsl Hum-v in!) csmsl ( "tum Vzlun < nLVﬂlAI; ) ‘
-)i l
-m mum“; l
-l l
-vectmmunhen v1:
-vlcloKNumn) n;
-v1.push_hack(r4umlr(lll; v1.nush_hack(r4umar(1n; v1.nush_hack(r4umar(3n;
-v2~llush_hack(r4umer(1771 “JUSLWMMWW V2.|JUSh_hi¢l<(NMhEr(l771
-‘f (n < m
-prnmﬂmﬂ‘);
-else ,
-printﬂWvV'DK");
->—
-> This code compiles and upon execution prints “OK” 0n the Screen as v1,[2]=3
-and vZ[Z]=4, and 3<4
+b Let’s analyze the following example:
+APP-CPD
+class Number
+{
+bool operator<(const Number &n1) const { return Value < n1.Value; }
+};
+void main(void)
+{
+vector<Number> v1;
+vector<Number> v2;
+v1.push_back(Number(1)); v1.push_back(Number(2)); v1.push_back(Number(3));
+v2.push_back(Number(1)); v2.push_back(Number(2)); v2.push_back(Number(4));
+if (v1 < v2)
+printf("OK");
+else
+printf("NOT-OK");
+}—
+b This code compiles and upon execution prints “OK” on the screen as v1 =3
+and v2[2]=4, and 3<4
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-> This code will not compile as aperator< is not defined.
-APMPP
-a»: mm»
-(
-m1 w-mw>(mn mm.’ m1) (mist ( mm m“- < mm“; )
-);
-in“ milllvnid)
-i
-vecmRNunl-ien v1: ‘
-"stadium-n n; i
-v1.|zush_hack(r4umll‘(ln; vl-nush_hack(r4umer(1n; u.m._h.<n~ummn; l
-v2.|aush_hack(Numer(1771 v2~push_hack(Numer(277: v2.push_hack(r4umer(lyyz i
-if (n > m
-nr1n1f(‘m'); 1
-u“
-mmuwv'wn
-)—
-> veztcr template requires 0peral0r< t0 be defined in class Number. Similarly,
-operated: is not needed, only operat0r== is‘
+b This code will not compile as operator< is not defined.
+APP-CPD
+class Number
+{
+bool operator>(const Number &n1) const { return Value < n1.Value; }
+};
+void main(void)
+{
+vector<Number> v1;
+vector<Number> v2;
+v1.push_back(Number(1)); v1.push_back(Number(2)); v1.push_back(Number(3));
+v2.push_back(Number(1)); v2.push_back(Number(2)); v2.push_back(Number(4));
+if (v1 > v2)
+printf("OK");
+else
+printf("NOT-OK");
+}—
+b vector template requires operator< to be defined in class Number. Sim‘ rly,
+operator!= is not needed, only operator== is.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-> You can also copy the values from one vector into another. 3
-APMPP 3
-dass Hume!‘ ‘
-( l
-wan nun-(wan) r
-i venmdlunhen v11 ‘
-
-"(mm-m.» n;
-v1.|zush_hack(l|umlr(ln; v1.|:ush_hack(llumer(1n; v1.|:ush_hack(l|umer(3n;
-fur (1n! 1 - B; 1 < H.311“); 1»)
-prunﬂm ~, mum“);
-l ,,
-> This code compiles and prints 1 Z 3
+b You can also copy the values from one vector into another.
+APP-CPD
+class Number
+{
+}; ...
+void main(void)
+{
+vector<Number> v1;
+vector<Number> v2;
+v1.push_back(Number(1)); v1.push_back(Number(2)); v1.push_back(Number(3));
+for (int i = 0; i < v2.size(); i++)
+printf("%d ", v2[i].Value);
+}
+> This code compiles and prints 1 2 3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-STL - Vector
-> The following methods from template vector can be used to obtain different
+b The following methods from template vector can be used to obtain different
 information:
-> sizel) —> the amount of elements stored in the vector
-> capacityl) —> the pre-allocated space in the vector
-> mauizeu —> maximum number of elements that can be stored in the vector
-> emptyu —> returns “true” if the current vector has no elements ‘
-t dataO -> provides direct access (a pointer) te all of the elements m the vector.
-APP-CPI’ ‘r
-<1.” Hume!‘ t ); g
-ma mutant
-vectmdlumen v; "
-mausnjnklllumnrlllli v-vusnjnkWum-rﬂlli
-mum ~. mum”;
-prinlﬂ'ld ~, “new;
-mum-n a v.:anaeﬂy())l
-Hunter 'n e v.4:li1);
-pnntfl"lid 14]"v "DJ-VII“, llll]-\II]IAI);
-)
+> size() 9 the amount of elements stored in the vector
+> capacity() 9 the pre-allocated space in the vector
+> max_size() 9 maximum number of elements that can be stored in the vector
+> empty() 9 returns “true” if the current vector has no elements
+> data() 9 provides direct access (a pointer) to all of the elements in the vector.
+APP-CPP
+class Number { ... };
+void main(void)
+{
+vector<Number> v;
+v.push_back(Number(9)); v.push_back(Number(1));
+printf("%d ", v.max_size());
+pnintf("%d ", v.size());
+pnintf("%d ", v.capacity());
+Number *n = v.data();
+pnintf("[%d %d]", n[0].Va1ue, n[1].Va1ue);
+}
+é
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-STL - Deq ue
-> The "deque" template is very similar to “vertor”.
+STL - Deque
+b The “deque” template is very similar to “vector”.
 > The main different is that elements don't have consecutive memory
-addresses‘ That is why the “data” method is not available for a deque. This
-also goes [or the “reserve” and “capacity” methods‘
-> But deque has new methods (pusthont and poeront]
-> The rest of the methods behave just like the ones in the “vector” class l
-k > In order to use a deque: “#include <deques"
+addresses. That is why the “data” method is not available for a deque. This
+also goes for the “reserve” and “capacity” methods.
+b But deque has new methods (push _front and pop _front)
+b The rest of the methods behave just like the ones in the “vector” class
+I b ln order to use a deque: “#include <deque>”
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:39**************
 STL - Deq ue
-This is an illustrative picture that shows the difference between vector and I‘
-deque. It should be NOTED that this is but am illustrative picture and does not j‘
-reflect how the algorithms actually work‘ I
-rt Object 1 1 ptr m Object 1 Object 4 1
-Object z ‘ ' ptr to Object 2 \ — 1
-Object 3 ptr to Object 3 g‘ — I
-ma- mowm ‘mm- *
-Object 2
+This is an illustrative picture that shows the difference between vector and
+deque. It should be NOTED that this is but am illustrative picture and does not
+reflect how the algorithms actually work.
+Object 1 ptr to Object 1 Object 4
+Ob' Ob'
+J Object 2 J ptr to Object 2 b —
+Object 3 ptr to Object 3 'v* —
+Object 4 ptr to Object 4 Object 3
+Object 5 ptr to Object 5 Object 1
+Object 5 r
+Object 2 I
 Vector Deque —
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Let's retest the previous algon'thm r this time we will use deque as well,
-Vec-1.cpp Vec-Z.cpp
-mu MAW/aid) vnld “Iv-mm
-t 4
-vactwdntlllw v; vuterdntuem v;
-Integer 1; lmc=|=r a;
-m (m n- . n w < mm; ‘my ‘(Juan/100m);
-( m (m u - a; u t am; m.)
-1.5mm; 4
-v_pu§n,n.ck(1;; 1.5mm; ‘
-) “mmmkm; x
-) ) ‘x
-— ) \
-Deq-l .Cpp E
-mu "mum;
-“tn-“mun” v;
-Integer x;
-m (m u . .1 u < sum: Ir»)
-(
-1.5-lltr);
-v.9u5h7blckll);
-)
-1
+Let’s retest the previous algorithm - this time we will use deque as well.
+Vec-1.cpp Vec-2.cpp
+void main(void) void main(void)
+{ {
+vector<Integer> v; vector<Integer> v;
+Integer i; Integer i;
+for (int tr = 0; tr < 100000; tr++) v.reserve(100000);
+{ for (int tr = 0; tr < 100000; tr++)
+i.Set(tr); {
+v.push_back(i); i.Set(tr);
+} v.push_back(i);
+} }
+}—
+Deq-1.cpp
+void main(void)
+{
+deque<Integer> v;
+Integer i;
+for (int tr = 0; tr < 100000; tr++)
+{
+i.Set(tr);
+v.push_back(i);
+}
+}—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-STL - Deq ue
+STL - Deque
 Results:
-EE-I-I-I-I-I-
-Vec- lnit l7 U D O 0 D O 0 D l7
-1 Set 1955 1911 1937 1911 1911 1953 1937 1938 1911 1911
-VEC- ll'llt 140 115 157 115 109 110 110 109 11D 110
-Z SE! 531 515 515 516 516 515 531 516 515 500
-Deq lnit 0 0 D l7 0 0 3509 0 0 0
-.1 Set 6B7 657 656 640 656 640 656 641 641 640
-> Vec-1 and Vect-Z 9 two methods using vector
-> Deq-1 9 same algorithm using deque '
-> “lnit” 9 the series of times recorded when we initialize the container
-b “Set” 9 the series of times needed to add the data in in container,,~~
-> T1 ., T10 9 result times
+Vec- lnit 0 0 0 0 0 0 0 0 0 0
+1 Set 1985 1922 1937 1922 1922 1953 1937 1938 1922 1922
+Vec- Init 140 125 157 125 109 110 110 109 110 110
+2 Set 531 515 515 516 516 515 531 516 515 500
+Deq lnit 0 0 0 0 0 0 3509 0 0 0
+'1 Set 687 657 656 640 656 640 656 641 641 640
+b Vec-1 and Vect-Z 9 two methods using vector
+b Deq-1 9 same algorithm using deque
+b “lnit” 9 the series of times recorded when we initialize the container
+b “Set” 9 the series of times needed to add the data in in container
+b T1 .. T10 9 result times
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-STL - Deq ue
-
+STL - Deque
 Results: Execution time
-nan ‘a
-1m ‘a
-.m a
-11w \
-1m ‘x
-m ‘a
-m x
-m
-ma
-
-" Vet-1 v=<-1 Deq-i
-mt u i205 n
-user ma w W
-.m .w
-
-b Vec-1 and Vect-Z -) two methods using vector
-
-> Deq-1 -) same algorithm using deque ﬂ/
-
-> “lnit” -) the series of times recorded when we initialize the container
-
-v “Set” -) the series of times needed to add the data in in container
+2000
+1800
+1600
+1400
+1200
+1000
+800
+600
+400
+200
+O Vec-1 Vec-2 Deq-1
+Ilnit 0 120.5 0
+ISet 1936 517 651.4
+Ilnit ISet
+b Vec-1 and Vect-Z 9 two methods using vector
+> Deq-1 9 same algorithm using deque
+b “lnit” 9 the series of times recorded when we initialize the conta' er
+> “Set” 9 the series of times needed to add the data in in con ner
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
 STL - Array
 
-> The "array" template has been introduced in the Cw11 standard.
+b The “array” template has been introduced in the C++11 standard.
 
-> It represents a fixed size vector x1‘
+> It represents a fixed size vector
 
-> It has almost the same support as the vector class (iterators, overloaded
+b lt has almost the same support as the vector class (iterators, overloaded
 operators, etc)
 
-> It doesn't have any add methods [having a fixed size, it doesn’t need them)
+b lt doesn't have any add methods (having a fixed size, it doesn't need them)
 
-> For the same reason, it doen't have any methods that can be used to erase an x
+b For the same reason, it doen't have any methods that can be used to erase an
 element
 
-> It has some methods that vector doesn not have (eg. fill)
+b lt has some methods that vector doesn not have (e.g. fill)
 
-> In order to use an array: “#include <array>"
+b ln order to use an array: “#include <array>”
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-STL - Array ‘
-> An example on how to use array template: ‘
-APPIPP
-chss mm“ ‘
-t i
-ma mihlvniﬂ) ‘
-i straw-mu» v1
-Lanai-mum;
-m (m u - a; u < 14.31110; Ir»)
-uni-(“"14 "mm-1m;
-m ("Indium-r, Swat-rater n e Lit-mi); n < “ii-:0; 1m)
-“Om-la - an;
-whiff” v.ﬂ(37.va!u:71
-> In case of array template, the size is predefined -> this means that is
-somehow equivalent to a vector template that is initialized with using
-resizeO method,
+b An example on how to use array template:
+APP-CPP
+class Number
+{
+void main(void)
+{
+array<Number,5> v;
+v.fill(Number(2));
+for (int tr = 0; tr < v.size(); tr++)
+printf("%d ", v[tr].Va1ue);
+for (array<Number, 5>::iterator it = v.begin(); it < v.end(); it++)
+it->Value = 19;
+printf("%d ", v.at(3).Va1ue);
+}
+b In case of array template, the size is predefined 9 this means that is
+somehow equivalent to a vector template that is initialized with u ' g
+resize() method.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:45**************
 STL - Array & vector
-> Both array and vector have 2 ways of accessing elements: the [] operator
+b Both array and vector have 2 ways of accessing elements: the [] operator
 and the “at” method
-> They both return an object reference and have z forms:
-, Type& operator[](slze,typei
-~ const Typeﬁ uperawr[]lsize_type) const
-C Type& at(size_type) i
-C const TypeB atlsize_type)
-C sizegype is deﬁned as size; (typedef she; sizegype»
-b There are diﬂerences between these two implementations that will be
-discussed in the next slides ,7
+> They both return an object reference and have 2 forms:
+O Type& operator[](size_type)
+O const Type& operator[](size_type) const
+O Type& at(size_type)
+O const Type& at(size_type)
+O size_type is defined as size_t (typedef size_t size_type;)
+b There are differences between these two implementations that will be
+discussed in the next slides
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-STL , Array & vector
-> Let's see how uperatar” and method “at” are deﬁned 2
-APP-CPD APP~CPD
-MW“ “MUM Ml 7mm Wimmnum y“)
-( 1F (75112 <- 305)
-,Xmo.
-Nturn (_Elen§[_Pn§])l
-)—
-,mlysls,=§§m,<,m < ,Smyl
-rum lianyuqn
-)
-mm
-mm, 7.".l,,l,r.,,l.l,lw1 H m mm
-Compile method Value of ilTERATORiDEBUGiLEVEL ,
-Release 0
-Release (isECUREiscL) 1
+STL - Array & vector
+b Let’s see how operator[] and method “at” are defined ?
+APP-CPP APP-CPD
+reference at(size_type _Pos) reference operator[](size_type _POS)
+{ {
+if (_Size <= _Pos)
+_Xran();
+return (_Elems[_Pos]);
+}—
+_Ana1ysis_assume_(_Pos < _Size);
+return (_Elems[_Pos]);
+}
+with
+#define _Ana1ysis_assume_(expr) // for release
+Compile method Value of _lTERATOR_DEBUG_LEVEL
+Release O
+Release (_SECURE_SCL) 1
 Debug 2
+/
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-STL - LlSt
+STL - List
 
-> The “list” template is a doubly-linked list ‘1
+b The “list” template is a doubly-linked list
 
-> Elements do not share a contiguous memory block ‘1
+> Elements do not share a contiguous memory block
 
-> Element access is possible only by moving through the list using iterators, The l‘
-first and last element are easier to access r
+b Element access is possible only by moving through the list using iterators. The
+first and last element are easier to access
 
-> The list iterator doesn't implement the < operator a the elements aren't
-stored in consecutive memory addresses, and so this type of Comparison r
-between these addresses is pointless‘ lt does, however, implement the ==
-operatol:
+b The list iterator doesn't implement the < operator - the elements aren't
+stored in consecutive memory addresses, and so this type of comparison
+between these addresses is pointless. It does, however, implement the ==
+operator.
 
-> The list iterator does not implement the + and - operators; only +0 and -- are
+b The list iterator does not implement the + and - operators; only ++ and -- are
 implemented
 
-> Methods used to add elements: push_back and push_front
+b Methods used to add elements: push_back and push_front
 
 > To remove elements: erase, pop_front, or pop_back can be used
 
-> It supports a series oi new methods: merge, splice (work with otherylist's)
+b It supports a series of new methods: merge, splice (work with other ' ts)
 
-> In order to use a list: “#lnclude <llst>"
+> In order to use a list: “#include <list>”
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-STL — L1 St
-> An example of using the list template
-APP-cw
-(1.5; mm { );
-um nun-(wad)
-l
-listmumcn v;
-vJulebickUlumINlnF wwmmmm-mn; “William-1mm»;
-mmnjunuu-mrun; ~.W§Umuuumrln:; l.pu§Umuu-mrls::;
-lisrmumenuinrﬂ ~ l
-m m Z “llmulmw a
-mmlm: "Y ~ v v . 2
-n - wheﬂnlyq; 3
-vAnserKlAn Numerlzln: ‘a
-m m Z v.h:|inl); it I: mm); ml)
-pnnlﬂ'id ~, “mm-m);
-i! - ~~v.hagjn(); "””
-V.:ris!(£()1
-m m Z mum); n I: mm); a»)
-mmlm: ", 1mm“);
-)
-> This code will not compile as (he list template does not have operator< and
-operatop deﬁned,
+b An example of using the list template
+APP-CPP
+class Number { ... };
+void main(void)
+{
+list<Number> v;
+v.push_back(Number(0)); v.push_back(Number(1)); v.push_back(Number(2));
+v.push_front(Number(3)); v.push_front(Number(4)); v.push_front(Number(5));
+list<Number>zziterato ° '
+for‘ (it = v.begin();*it++)
+printf("%d ", 1 — Va ue ;
+it = v.begin()+3;
+v.insert(it, Number(20));
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+it = ++v.begin();
+v.erase(it);
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+}
+b This code will not compile as the list template does not have operator and
+operator> defined.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-> An example of using the ‘is! template
-APP-CPD
-(1.5; uumer ( ); ‘
-um mum-1:
-l ‘
-listmumcn v;
-"Minimum-mu); wwme-m-mn; “Minimum-run;
-v-Dushifrunllllumerlini v-liushjrunllllumerllni V.W§Umz(uumr(s::;
-lAsRNunbenuinrﬂu m
-m m Z v.h=|inl); it x: v.:|\l“)l n»)
-mmm: ", “mm-m;
-‘I -
-vAn l w - my):
-m m Z v.h=|inl); it x: v.:|\l“)l n»)
-mmm: ", “mm-m;
-n - “Luann;
-v.2ris!l£()1 H
-m m Z mum); n x: mm); a»)
-mmm: ", 1mm“);
-> This code will not compile as (he list template does not have operatop'ﬂ'eﬁned.
+b An example of using the list template
+APP-CPP
+class Number { ... };
+void main(void)
+{
+list<Number> v;
+v.push_back(Number(0)); v.push_back(Number(1)); v.push_back(Number(2));
+v.push_front(Number(3)); v.push_front(Number(4)); v.push_front(Number(5));
+list<Number>zziterator it;
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+v.inser 1 , ‘um-er(20));
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+it = ++v.begin();
+v.erase(it);
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+}
+b This code will not compile as the list template does not have operator defined.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-STL - LISt ‘
-> An example of using the n5: template ‘
-APP-CPD
-(1.5; uumer ( ); ‘
-mm "mum:
-1 ‘
-lismmnnn v;
-vJulebickUlumINlnF wummmm-mn; vJushJackWum-NZU;
-v-IiushifrullﬂHIAMQFUIH v-uusnjrunﬂllumarll”; v.pu§njmz(uumr(s::;
-lisrmumenuinrﬂu m
-m m Z whqim); n I: “mm; ma
-mmm: ", “mm-m;
-‘I - v.hegjn();£!~~;£!~~;£!~~;
-vAnserKML “umrum:
-m m Z mum); n I: mm“); n»)
-mmm: ", “mm-m;
-n - “Luann;
-V.!ri5!(i()1 H
-m m Z mum); a I: mm“); a»)
-mmm: ", 1mm“);
-> Now the code compiles and prints: “5 4 3 011 5 4 3 10 011 5 3 71,0611“
+b An example of using the list template
+APP-CPP
+class Number { ... };
+void main(void)
+{
+list<Number> v;
+v.push_back(Number(0)); v.push_back(Number(1)); v.push_back(Number(2));
+v.push_front(Number(3)); v.push_front(Number(4)); v.push_front(Number(5));
+list<Number>zziterator it;
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+it = v.begin();it++;it++;it++;
+v.insert(it, Number(20));
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+it = ++v.begin();
+v.erase(it);
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+}
+b Now the code compiles and prints: “5 4 3 0 1 2 5 4 3 20 0 1 2 5 3 2 1 2“
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:51**************
-STL - Forward LlSt
-> The "forwardJist” template is a single linked list container, It has been
+STL - Forward List
+
+b The “forward_list” template is a single linked list container. It has been
 added in the C++11 standard
-> It respects almcvst the same logic as in the case of the doubly linked list,
-> The iterator doesn't overload the -- operator, only ++ (the list is
+
+> It respects almost the same logic as in the case of the doubly linked list.
+
+b The iterator doesn't overload the -- operator, only ++ (the list is
 unidirectional)
-> Sorne methods that list has are no longer iound here: push_back and l
-popiback
-k > In order to use a forward_list: “#include <farward_list>“
+
+b Some methods that list has are no longer found here: push_back and
+pop_back
+
+b ln order to use a forward_list: “#include <forward_list>”
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-STL - Forward LlSt ‘
-> An example of using the fnrwurdJist template ‘
-APP-CPD
-(1.5; um" ( ); ‘
-m.‘ mum-1:
-i :mrummm» v; ‘
-LmUmuum-mn; v_mnﬂmwm-m>n vJushJ'rmqumﬂﬂlli
-(Mu-I'thlolumen:durum‘ 1!; ‘
-m (n - mew-u; n 1- mm); n»)
-pmmm ~, iwvn“);
-n - “mm;
-‘!“; ‘!‘~;
-vAnserLafnrun mnberaa»:
-m m Z whqinﬁx n 1: mun“); n»)
-pnntﬂ'id ~, 1mm“);
-n . “Luann;
-v.2rise_iﬂel‘(ﬂ)1 "
-m m Z VJEIXIIU; n 1: mun“); a»)
-pnntﬂ'id ~, 1mm“);
-> Now the code compiles and prints: “2 1 0 1 1 0 20 Z 1 10"
+b An example of using the forward_list template
+APP-CPP
+class Number { ... };
+void main(void)
+{
+forward_list<Number> v;
+v.push_front(Number(0)); v.push_front(Number(1)); v.push_front(Number(2));
+forward_list<Number>::iterator it;
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+it = v.begin();
+it++; it++;
+v.insert_after(it, Number(20));
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+it = ++v.begin();
+v.erase_after(it);
+for (it = v.begin(); it != v.end(); it++)
+printf("%d ", it->Va1ue);
+}
+b Now the code compiles and prints: “2 1 0 2 1 0 20 2 1 20“
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
 STL
-mam-———“
-Access operatorl] operatorl] operatorl] ‘frontU .frontU
-‘at() ‘at() ‘am .back()
-Jronq) ‘fronto .front()
+
+Access operator[] operator[] operator[] .front() .front()
+.at() .at() .at() .back()
+.front() .front() .front()
 .back() .back() .back()
-.data() ‘dataO
-lterators ,beginU ‘beginU ,begim) .begin() ‘begino
-.endO ‘end() .endU vend() .end1)
-Reverse ‘rbegino ‘rbegino .rbegim) .rbegin()
-Iterator ,rendO ‘rend() .rendU ‘rendU
-Information ,emptyU ‘emptyU .empty1) .ernpty() .empty()
-.si1e() .size() .size1) .size(] .max_size()
-,max,size() ‘maxisizeo ,maxisizeo .max,size(]
+.data() .data()
+
+lterators .begin() .begin() .begin() .begin() .begin()
+.end() .end() .end() .end() .end()
+
+Reverse .rbegin () .rbegin () .rbegi n () .rbegin ()
+
+Iterator .rend() .rend() .rend() .rend()
+
+Information .empty() .empty() .empty() .empty() .empty()
+.size() .size() .size() .size() .max_size()
+.max_size() .max_size() .max_size() .max_size()
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-mm-——-——
-Size/ .resizel) .resizei) .resize() .resizei)
-Capacity .reserveO
-
-.capacityo
-Add .push_back() .pusthackO .push_back() .push_front0
-.insertO .push_fr0nt1) .push_front() .inserLafterU
-.insertU ‘inserto
-Delete .clear() .clear() .clearU .clear()
-.erase() .erase() .erase(| .popjronq)
+Size/ .resize() .resize() .resize() .resize()
+Capacity .reserve()
+.capacity()
+Add .push_back() .push_back() .push_back() .push_front()
+.insert() .push_front() .push_front() .insert_after()
+.insert() .insert()
+Delete .clear() .clear() .clear() .clear()
+.erase() .erase() .erase() .pop_front()
 .pop_back() .pop_back() .pop_back() .erase_after()
--P0P_fl'°nt() .pop_front1)
+.pop_front() .pop_front()
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-‘ > Adaptors
-\
+m’ Adaptors
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
 STL - Adaptors
-> Adaptors are not containers - in the sense that they do not have an
+b Adaptors are not containers - in the sense that they do not have an
 implementation that can store, they use an existing container that have this
 feature for storage
 > Adaptors only work if the container that they use implement some specific
 functions
-> Adaptors do NOT have iterators, but they can use iterators from the container
+b Adaptors do NOT have iterators, but they can use iterators from the container
 that they use internally
-> Adaptors:
-. stack
-~ queue
-e priority_queue
+b Adaptors:
+O stack
+O queue
+o priority_queue
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:57**************
 STL - Stack
-> This adaptor implements a stack (LIFO , Last In First Out)
-> To use : M“include <stack>“
-> The deiault container is “deque” (in this example “s” uses deque while “sZ”
+b This adaptor implements a stack (LIFO - Last In First Out)
+b To use : “#include <stack>”
+b The default container is “deque” (in this example “s” uses deque while “sZ”
 uses vector)
-APP~¢PP
-Wm mum-1) ‘
-( ‘x
-s!.(k<1n1> s; l
-“mum “mum S-PushBI); l‘
-sticktinl, vectwtint» n; ‘i
-sum-u»); sl-Dushllb); ‘La-15mm; x
-> Has the following methods: pushI pop, top, empty, size I
-> It alsu implements a method called “_Get_c0ntainer" that can be used to
-create iterators based on the container that is being used internally,
+APP-CPP
+void main(void)
+{
+stack<int> s;
+s.push(10); s.push(20); s.push(39);
+stack<int, vector<int>> 52;
+52.push(10); 52.push(20); 52.push(30);
+}
+> Has the following methods: push, pop, top, empty, size
+> It also implements a method called “_Get_container” that can be used
+create iterators based on the container that is being used internally.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
 STL - Queue
-> This adaptor implements a queue (FIFO r First In First Out)
-> To use : “ﬁnclude <queue>“
-> The deiault container is “deque” (in this example “s” uses deque while “sZ”
+b This adaptor implements a queue (FIFO - First In First Out)
+b To use : “#include <queue>”
+b The default container is “deque” (in this example “s” uses deque while “sZ”
 uses list)
-APP~¢PP
-Wm mum“) i
-( ‘i
-lueue<1nl> s; r
-“mum “mum S-PushBI); x‘
-mud-n, llama» $2; l‘
-sum-u»); ‘La-1mm; gamma»); i
-> Has the following methods: pushI pop, back, empty, size I
-> It alsu implements a method called “_Get_c0ntainer" that can be used to
-create iterators based on the container that is being used internally,
+APP-CPP
+void main(void)
+{
+queue<int> s;
+s.push(10); s.push(20); s.push(39);
+queue<int, list<int>> 52;
+52.push(10); 52.push(20); 52.push(30);
+}
+> Has the following methods: push, pop, back, empty, size
+> It also implements a method called “_Get_container” that can be used
+create iterators based on the container that is being used internally.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-STL , Priority Queue
-> This i5 a queue where each elements has a priority. All elements are sorted out based
-on their priority (so that the element with the highest priority is extracted first),
-> To use: “#include <queue>"
-> The default container i5 “vertor”
-APMPP
-vam nah-item
-‘ amen-"mm s; i
-s.pu§h(lbl; s-pusnli); S-Dusnllb); S-puslilli); l
-amt (5.0.2!le -- mae, i‘
-l aitnmmi n slept”; l
-s-FWU? i
-> This code prints: “20 15 10 5"
-> Has the iouowing methods: push, pap, top, empty, size
-> It also implements a method called "_Get_container" that can be used to create
-iterators based on the container that is being used internallyt
+STL - Priority Queue
+> This is a queue where each elements has a priority. All elements are sorted out based
+on their priority (so that the element with the highest priority is extracted first).
+b To use : “#include <queue>”
+> The default container is “vector”
+APP-CPD
+void main(void)
+{
+priority_queue<int> s;
+s.push(19); s.push(5); s.push(20); s.push(15);
+while (s.empty() == false)
+{
+printf("%d ", s.top());
+S-popO;
+}
+}—
+> This code prints: “20 15 10 5”
+> Has the following methods: push, pop, top, empty, size
+> It also implements a method called “_Get_container” that can be used t create
+iterators based on the container that is being used internally.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-STL e Priority Queue
-> A priority_queue can be initialized with a class that has to implement
-“operatoro”. This operator is used to compare two elements (it should return
-tme if the first one is smaller than the second one)‘
-APP-cup
-n.” (MD-mule
-‘ m Mam;
-mm:
-mplrdmuléﬂnt v) = mammv) t) i
-m) npermro (must m u, must m m must x‘
-‘ return m x wavsm) < m x Mil“); ‘E
-2 x
-); ‘a
-void mum“) L
-( prwicmwmim vencrdmm culﬂirmll1=> 5(Cmnarmu1=(3)); ‘1
-5.9mm); win-ls); 5mm»); “Mm;
-while (Slam -- mm
-( mmww -. S.WP())£
-szFOi
-2
-)—
-> This example prints: "5 20 10 15”
+b A priority_queue can be initialized with a class that has to implement
+“operator()”. This operator is used to compare two elements (it should return
+true if the first one is smaller than the second one).
+
+APP-CPD
+class CompaneModule
+{
+int modValue;
+public:
+CompaneModule(int v) : modValue(v) {}
+bool openaton() (const int& v1, const int& v2) const
+{
+return (v1 % modValue) < (v2 % modValue);
+}
+};
+void main(void)
+{
+pnionity_queue<int, vector<int>, CompaneModule> s(CompareModule(3));
+s.push(10); s.push(5); s.push(29); s.push(15);
+while (s.empty() == false)
+{
+printf("%d ", s.top());
+S-p0p();
+}
+}
+> This example prints: “5 20 10 15” ;
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:61**************
 STL - Adaptors
--——M
-push Container, pushiback Containen pushiback Containen pushiback
-pop Container. popihack Containen popjrnnt Containen popiback
-top Container. back Container. front
-back Containenback
+-——EE—
+push Container.push_back Container.push_back Container.push_back
+pop Container.pop_back Container.pop_front Container.pop_back
+top Container.back Container.front
+back Container.back
 
-size Containensize Containen size Containen size
-empty Containerempty Containen empty Containen empty
+size Container.size Container.size Container.size
+empty Container.empty Container.empty Container.empty
 stack YES YES YES
 
 queue YES YES
@@ -1285,182 +1356,210 @@ Associative
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-STL (assoc1at1ve conta1 ners - pal r)
-> "pair" is a template that contains two values (two different types)
-> For use “winclude <ut111ty>“
-> Two objects of type pair can be compared because the I operator is
+STL (associative contai ners - pai r)
+b “pair” is a template that contains two values (two different types)
+b For use “#include <utility>”
+b Two objects of type pair can be compared because the = operator is
 overloaded
-> It's internally used by associative containers ‘
+b lt’s internally used by associative containers
 > The declaration of pair template:
-APP~CPP l
-t-wht- (ch55 v1, (his m a
-mm pnr
-r
-v1 farsri
-v2 second;
+APP-CPP
+template <class T1, class T2>
+struct pair
+{
+T1 first;
+T2 second;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-STL (assocratlve contar ners - map)
-> Map is a Container that store pairs of the form: key/value; the access t0 the
+STL (associative contai ners - map)
+
+b Map is a container that store pairs of the form: key/value; the access to the
 value field can be done using the key
-b For use “winclude <map>”
-> The key field is constant: after a key/value pair is added into a map, the key
-cannot be modiﬁed - only the value can be modified, Other pairs can be
-added and existing pairs can be deleted‘ a‘
-> The declaration of Inap template: ‘i
-APP~¢PP ‘I
-(anal-u < (1.5; my, (1.5; v.1“, (1.5; tam-re . 115mm > <1.“ DID ‘
-i ,,
+
+b For use “#include <map>”
+
+b The key field is constant: after a key/value pair is added into a map, the key
+cannot be modified - only the value can be modified. Other pairs can be
+added and existing pairs can be deleted.
+
+b The declaration of map template:
+
+APP-CPP
+template < class Key, class Value, class Compare = less<Key> > class map
+{
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:65**************
 > An example of using map:
-APP~CPP
-vain m.1n<vu1n>
-<
-mmmt Kw‘. inn mm;
-Gradeﬁl“PnPeszu‘l Z w;
-Grad:5["1un:s<u“l Z a,
-aranasF'nann“! - v;
-wmmmmn grin: . mm, EradeS["Innas<kl“l)?
-Primmm" B1 Wm Z mm‘, Gradessneﬂl;
-mipqnnst my‘. 1m>==1terwtnr m
-m m Z mmmqho, a: ‘Z Gradcsxmﬂ), it“)
-ppm““man-mn“, 1(->ﬂrs(, 1(.>;E<m.¢>;
-A! . mm.mnmmm“);
-6r:ﬂ=s.=ris=(it)i
-1m X Z arms [my-“ml; Output
-prinmuumw; grad: Z m (Fmv-u Grad:s["lun:s<u“ln<)
-) printﬂwumbar uf pairs - xnvl“, mmmqm Masai-5 grade Z q
-Number of paws : 3
-Grades[Pupesm]:m
-Gradesﬂonescuk‘?
-GradES[Marm]:7
-lonescu's grade : 0 (x:0)
-Number m pairs Z 3
+APP-CPD
+void main(void)
+{
+map<c0nst char*, int> Grades;
+Grades[“Popescu"] = 10;
+Grades[“Ionescu"] = 9;
+Grades[“Marin"] = 7;
+printf(“Ionescu’s grade = %d\n", Grades[“Ionescu"]);
+printf(“Number of pairs = %d\n", Grades.size());
+map<c0nst char*, int>:ziterat0r it;
+for (it = Grades.begin(); it != Grades.end(); it++)
+printf("Grades[%s]=%d\n", it—>first, it—>sec0nd);
+it = Grades.find(“Ionescu");
+Grades.erase(it);
+int x = Grades [“I0nescu"]; Output
+printf(“I0nescu’s grade = %d (x=%d)\n", Grades[“Ionescu"],X)
+printf("Number of pairs = %d\n", Grades.size()); lonescu’s grade = 9
+} .
+Number of palrs = 3
+Grades[Popescu]=1O
+Grades[l0nescu]=9
+Grades[Marin]=7
+lonescu’s grade = 0 (x=0)
+Number of pairs = 3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-STL (assoc1at1ve contamers - map)
-> An example of using map:
-APFWFF'
-m, WW)
-( mucous: char’, inn Gram;
-Gran=s[“Pva=sm‘l Z 10;
-Frimiﬂnmhzr oi pair: : “\n’, Gradsaixﬂn;
-for (it : iridujqinﬂ; it i: Gridas.arli(); it") ‘
-Prsnrﬂ'analsuspmw', “mm, “Oman”; 3
+STL (associative containers map)
+> An example of usmg map:
+APP-CPP
+void main(void)
+{
+map<const char*, int> Grades;
+Grades[“Popescu"] = 10;
+Grades[“Ionescu"] = 9;
+Grades[“Marin"] = 7;
+printf(“Ionescu’s grade = %d\n", Grades[“Ionescu"]);
+printf(“Number of pairs = %d\n", Grades.size());
+map<const char*, int>::iterator it;
+for (it = Grades.begin(); it != Grades.end(); it++)
+printf("Grades[%s]=%d\n", it—>first, it—>second);
+it = Grades.find(“Ionescu");
+Grades.erase it '
+prln one \ ;raoe = a. (x=%d)\n", Grades[“Ionescu"],x);
+printf("Number o = %d\n", Grades.size());
+} i
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-STL (associative contai ners - map)
+STL (associative containers - map)
 > The methods supported by the map container:
-Assignment (opei'atnr= )
-Accessing and inserting values 1nperatorl] and at, Insert methods)
-Deletion 1Qrase, clear methnds)
-Search Into ii map mna mmhod)
-Iteratovs {heglm end, rbegln, rend, :begin, cend, “begin, crend (the last 4 from
-cﬂm P
-lnfOrmatiOnS 15in, empty, makslle)
+Assignment (operator= )
+Accessing and inserting values (operator[] and at, insert methods)
+Deletion (erase, clear methods)
+Search into a map (find method)
+lterators (begin, end, rbegin, rend, cbegin, cend, crbegin, crend (the last 4 from
+C++11))
+\ Informations (size, empty, max_size)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-STL (assoclatlve conta1 ners - map)
-> Accessing elements {[1 operator and at, ﬁnd methods):
+> Accessing elements ([] operator and at, find methods):
 APP-CPD
-void m21ﬂ(vnld)
-(
-miu<<uns¢ (sir“ ,“¢> ﬁrings;
-Grid:5[“PaD:S€u“] Z 1n;
-pr1n1f("ﬁradz Z ld\n“, Grad25|“70925(u“])r
-l______________________________________________
+void main(void)
+{
+map<const char*, int> Grades;
+Grades["Popescu"] = 19;
+printf(“Grade = %d\n", Grades["Popescu"]);
+}
+APP-CPD
+void main(void)
+{
+map<const char*, int> Grades;
+Grades["Popescu"] = 19;
+printf(“Grade= %d\n", Grades.at("Popescu"));
+}
 APP-CPP
-vain ms1n<vs1n>
-<
-mip<zbn$t zhsr', inky Grades
-6r:d:£l“PnP:szu“l Z 1B
-prirIt((“Grad:: raw‘, Grad:s.R("PuD:s<u"))?
-1
-prp
-vuid mainKvuid)
-(
-map<<nnst <har‘, 1n!) GrantS
-Grad:$['PuP:szu'l Z 1e; ,
-Printf(‘$rad:: 1¢\"". Grades.find("PuP:x<u")'>s:<un¢7i
-1
+void main(void)
+{
+map<const char*, int> Grades;
+Grades["Popescu"] = 10;
+printf(“Grade= %d\n", Grades.find("Popescu")->second);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-Accessing elemems {[1 operator and at, find methods]:
-wm malﬂvuld?
-<
-mneq mew 1 Z 1e,
-pH“U(“(-rade , m" ‘ WM Popesm 17,
-)—
-App.cpp1“lnne§cu" key does not exist)
-vnkn main(vnin)
-<
-mum Popﬁzu 1 Z w.
-anﬂ'mrme: 1mm‘, uranes.m!("mnes<u‘))l
->—
-Appxpp (“lonescu" key does not exist)
-vulq ma1"(vu1ﬁ)
-<
-mm WW 1 Z ID,
-anf("nran== MM . mmjwvmmm >V>§=<W>.
->
+Accessing elements ([] operator and at, find methods):
+void main(void)
+{
+map<const char*, int> Grades;
+Grades["Popescu"] = 10;
+printf(“Grade = %d\n", Grades["Popescu"]);
+}
+App.cpp (“lonescu” key does not exist)
+void main(void)
+{
+map<const char*, int> Grades;
+Grades["Popescu"] = 10;
+printf(“Grade= %d\n", Grades.at(“Ionescu"));
+}
+App.cpp (“lonescu” key does not exist)
+void main(void)
+{
+map<const char*, int> Grades;
+Grades["Popescu"] = 10;
+printf(“Grade= %d\n", Grades.¥ind(“Ionescu")->second);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-STL(assoc1at1ve contamers - map) ‘
-> Checking whether an element exlsts m a map can be done using find and ‘
+> Checking Whether an element exists in a map can be done using find and
 count methods:
-APP-cup
-vain mainKvuidi
-<
-Grade5[“PnPeszu"l Z w;
-a‘ (Grad:s.ﬂnd("1un:s<u")aGradqudUi
-mmmumm m; m1! mu 1" m! gum 115w);
-‘—
+APP-CPP
+void main(void)
+{
+map<const char*, int> Grades;
+Grades["Popescu"] = 10;
+if (Grades.find("Ionescu")==Grades.cend())
+printf("Ionescu does not exist in the grades listl");
+}
 APP-CPD
-vula malnzvulav
-(
-mawcunsl m», in!) Grams;
-mmwnpmm Z an;
-1‘ (emunmr leesnl‘ we)
-Vrzrlﬂ(“1un:xcu dun nwt :xnt 1n m was 11mm
-1
+void main(void)
+{
+map<const char*, int> Grades;
+Grades["Popescu"] = 10;
+if (Grades.count("Ionescu")==0)
+printf("Ionescu does not exist in the grades listl");
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-STL(assoc1ative containers - map)
-> The elements from a map containers are stored into a red-black tree ‘a
-> This represents a compromise between the access/insertion time and the
+STL (associative containers - map)
+
+b The elements from a map containers are stored into a red-black tree
+
+b This represents a compromise between the access/ insertion time and the
 amount of allocated memory for the container
-> Depending on what we are interested in, a map container is not always the it‘
-best solution (etg. if the number of insertions is much bigger than the number
+
+b Depending on what we are interested in, a map container is not always the
+best solution (e.g. if the number of insertions is much bigger than the number
 of reads, there are containers that are more efficient)
-> We do the following experiment a the same algorithm is written using a map
+
+b We do the following experiment - the same algorithm is written using a map
 and a simple vector and we evaluate the insertion time
+
 > The experiment is repeated ten times for each algorithm and the execution
 times are measured in milliseconds
 
@@ -1468,219 +1567,253 @@ times are measured in milliseconds
 
 ***************Beginning Page***************
 ***************page number:72**************
-STL (assoc1at1ve conta1 ners - map)
+STL (associative containers - map)
 > The two algorithms:
-Map-1.:pp
-vnld “mum
-( swim. my mu
-a» (m v Z a; v < 1mm; w’)
-1mm] - m
-’—
-Map-Z.cpp ‘
-m WM“) ‘i
-( mt rm: - n91 mum]; ‘i
-m (m tr Z a; tr < 1m; cw) x
-“mm - tr; x
-> Even if it is obvious that App-Z is more eificient, the hash collisions must be ‘
-considered‘ For the above case, there are no hash collisions because the keys
+Map-1.cpp
+void main(void)
+{
+map<int, int> Test;
+For (int tr = 0; tr < 1000000; tr++)
+Test[tr] = tr;
+}—
+Map-2.cpp
+void main(void)
+{ int *Test = new int[1000000];
+for (int tr = 0; tr < 1000000; tr++)
+Test[tr] = tr;
+}—
+b Even if it is obvious that App-2 is more efficient, the hash collisions must be
+considered. For the above case, there are no hash collisions because the keys
 are integers.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-STL (assoclatlve contamers - map)
-> Results:
-III-I-II-I“
-Mlp~1 20156 20625 20672 20453 199211954719219 19516 1956319344 19901
-Map-1 0 16 0 0 16 o 15 o 16 o 6.3
-\
-‘1
-> The specifications of the system: \\
-6 os: Windows 8.1 Pro \
-~:~ Compiler: cl.exe [1a.00.z1005.1 for x86] \
-- Hardware: Dell Latitude 7440 '17 460W, 2.70 6H1, a cs RAM
+STL (assoCiative containers - map)
+
+b Results:
+III-I-I-I-I-
+Map-1 20156 20625 20672 20453 19922 19547 19219 19516 19563 19344 19901
+Map-2 0 16 0 0 16 0 15 0 16 0 6.3
+
+b The specifications of the system:
+
+‘z. OS: Windows 8.1 Pro
+‘t. Compiler: cl.exe [18.00.21005.1 for x86]
+‘z. Hardware: Dell Latitude 7440 —i7 —4600U, 2.70 GHZ, 8 GB RAM
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-STL (assoc1at1ve conta1 ners - multlmap)
-> “multimap” is a container similar to maps The difierence is that a key can
+STL (associative contai ners - multimap)
+b “multimap” is a container similar to map. The difference is that a key can
 contain more values.
-b For use “winclude <map>”
-> Accessing elements: the [] operator and the at method can not be used
-anymore,
-> The declaration ot multimap template:
-APP~CPP l
-tnmvhtn < chss Kly» chss Vilul, chss (www- : llss<Kly> > (lass mlnrup ‘l
-( /~
+b For use “#include <map>”
+b Accessing elements: the [] operator and the at method can not be used
+anymore.
+b The declaration of multimap template:
+APP-CPP
+template < class Key, class Value, class Compare = less<Key> > class multimap
+{
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
-STL (assoclatlve contamers - multlmap)
-> An example of using mummap:
-APP~CPP
-VD,“ m.1n(vu1n>
-(
-@5me Hm‘, m mm;
-Gradesdnsertlpalrnnnst m». mwmw‘. 1877:
-Gradcsdnscrﬂpaincunst my», in!>(“lun:s<u“, a»,
-Gradasdnsarﬂpairuuns! m», 1n!>(“1unes<u“, 1));
-GraﬂaansarqpaAraunsl m“, mvmm“, a»;
-mummmm m». 1m>==1terwtnr m
-‘ur m Z Grad:s.b:gin(); it ‘Z Grad:s.:nd(), it“)
-( Prlhlf(“XS Hahn“, Al->ﬂrsl,A{->s!<nﬂﬂ)‘,
-1 1 Output
+> An example of using multimap:
+APP-CPD
+void main(void)
+{
+multimap<c0nst char*, int> Grades;
+Grades.insert(pair<const char*, int>("I0nescu", 10));
+Grades.insert(pair<const char*, int>("I0nescu", 8));
+Grades.insert(pair<const char*, int>("I0nescu", 7));
+Grades.insert(pair<const char*, int>("P0pescu", 9));
+multimap<c0nst char*, int>:ziterat0r it;
+for (it = Grades.begin(); it != Grades.end(); it++)
+{
+printf("%s [%d]\n", it—>first,it—>sec0nd);
+} } Output
 lonescu [10]
-lonescu [a]
-lunescu [7]
+lonescu [8]
+lonescu [7]
 Popescu [9]
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:76**************
-STL (assoclatlve conta1 ners - multlmap)
-> An example of using mummap:
-APP~CPP
-M mmmn»
-(
-MMMMWWQN “w, mvpmm“, g»;
-mum-mm (awn Momma» m
-k . Mammy,
-prinﬂ(“is»in\n“. “mm. WWW";
-Output
-it Z W“.“upwmmmiw,
-pnnzf(“xs->xn\n“, 1mm“, Mm“); mescuum
-it : Griﬂrslupprrihwnnﬁt'Mil-st); P0pescu~9
-1 mmmwmn“. 1mm“. “Qatar-67; Georgescu- .3
+S | L ( ' t' t ' lt' )
+> An example of using multimap:
+
+APP-CPD
+
+void main(void)
+
+{
+multimap<const char*, int> Grades;
+Grades.insert(pair<const char*, int>("Ionescu", 10));
+Grades.insert(pair<const char*, int>("Ionescu", 8));
+Grades.insert(pair<const char*, int>("Ionescu", 7));
+Grades.insert(pair<const char*, int>("Popescu", 9));
+Grades.insert(pair<const char*, int>("Popescu", 6));
+Grades.insert(pair<const char*, int>("Georgescu", 8));
+multimap<c0nst char*, int>::iterat0r it;
+it = Grades.begin();
+printf("%s->%d\n", it—>first, it—>second);
+
+_ Output
+
+it = Grades.upper_bound(it—>f1rst);
+print-F("%s->%d\n", it—>fir‘st, it—>second); lonescu->1O
+it = Grades.upper‘_bound(it—>-Fir‘st); PODeSCU->9
+print-F("%s->%d\n", it—>fir‘st, it—>second); Georgescu->8
+
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-STL (assoclatlve conta1 ners - multlmap)
-> An example of using mummap:
-APP~CPP
-Wm mar-(wan)
-(
-MMMWMQM “W, Ann(“>uvas<u“, g»,
-mum-Wm W, WWW” 1!;
-m m . Grammy“); k ‘. Grammy, n . mm.u,w,mm.mm>>
-<
-mmwm-m: k:y: inn‘. ‘warm; Output
-) um“? key: \unescu
-1
-Umque key: Papescu
-Umque kev: Georgescu '
+STL( ' t' ta'ners m lt'map)
+> An example of using multimap:
+APP-CPD
+void main(void)
+{
+multimap<c0nst char*, int> Grades;
+Grades.insert(pair<const char*, int>("I0nescu", 10));
+Grades.insert(pair<const char*, int>("I0nescu", 8));
+Grades.insert(pair<const char*, int>("I0nescu", 7));
+Grades.insert(pair<const char*, int>("P0pescu", 9));
+Grades.insert(pair<const char*, int>("P0pescu", 6));
+Grades.insert(pair<const char*, int>("Ge0Pgescu", 8));
+multimap<c0nst char*, int>:ziterat0r it;
+for (it = Grades.begin(); it != Grades.end(); it = Grades.upper_b0und(it—>first))
+{
+printf(“Unique key: %s\n", it—>fir'st); Output
+} } Unique key: lonescu
+Unique key: Popescu
+Unique key: Georgescu
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-> An example of using mummap:
-APP~CPP
-vain m.1n<vu1n>
-<
-memmt my‘, inn mm.
-Gradadnartlpnrnnnst mp. inbl 1W5”. 1877:
-Gradudnsvﬂpainmnst KW», 1nt>(“lun:s<u“, a»,
-GradEansarqpaiNmnst m», 1nn(“1unas<u“, m;
-GranaansarqpaAraunsl m», “Dvmmm, s»;
-6Piﬂ=$dn$=rﬂpiir<zunst my‘, 1nt>(“Pup:s:u“. 5));
-Gradadnartlpnrnnnst mp. 1m>L‘G:urg:szu‘. m;
-mullimiwcuns! m», innzzimrazur n;
-n . Granasmagirﬂ);
-m“ (it ‘Z arin=s.=nn(>>
-<
-rang! - arenas.EqualjangEUz-ersz);
-Dummy; mm; Alwﬂrsi);
-1Br (it Z r.nx=.1irst; it ‘Z rang:.$=:bnﬂi at..>
-mum ‘1a. ‘. Kimmy-av. OUtF'Ut
-1 WM" ‘" >’ Imescu’; grades: ‘0.8.7
-1 Popescu's glades:9.6
-Georgescu’§ gradesﬂ
+S | L ( ' t' t ' lt' )
+> An example of using multimap:
+Appﬁpp
+void main(void)
+{
+multimap<const char*, int> Grades;
+Grades.insert(pair<const char*, int>("I0nescu", 10));
+Grades.insert(pair<const char*, int>("I0nescu", 8));
+Grades.insert(pair<const char*, int>("I0nescu", 7));
+Grades.insert(pair<const char*, int>("P0pescu", 9));
+Grades.insert(pair<const char*, int>("P0pescu", 6));
+Grades.insert(pair<const char*, int>("Ge0rgescu", 8));
+multimap<c0nst char*, int>::iterat0r it;
+it = Grades.begin();
+while (it != Grades.end())
+{
+pair <multimap<const char*, int>::iterat0r, multimap<c0nst char*, int>::iterat0r> range;
+range = Grades.equal_range(it—>first);
+printf("%s’s grades: ", it—>first);
+for (it = range.first; it != range.sec0nd; it++)
+print-F("%d,", it—>second); OUtpLIt
+rintf "\n" ;
+} p ( ) Ionescu’s grades: 10,8,7
+} Popescu’s grades:9,6
+Georgescu’s grades:8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-STL (assoclatlve conta1 ners - multlmap)
-> An example of using mummap:
-APP~CPP
-vain m.1n<vu1n>
-<
-whimwmmt :har‘, int) 6mm
-Gradesdnsertlpalﬂznnst m». 1M ‘Xunesnﬂ. mm
-Gradudnsvﬂpainmnst my», in!>(“lun:scu“, a»,
-Gradasdnsarﬂpairuuns! m», 1n(>(“1unes<u“, 1));
-GranaansarqpaAraunsl m“, An!>(“>uvas<u“, 9));
-emudnwmmﬂmn :har‘, hwvmw“, 5));
-Gradesdnsertlpalﬂznnst m». 1M ‘Geariesnﬂ. an:
-Mum-Wm.“ m», innzzkaramr 11,111;
-A! . mm.mavmmm
-m Z Gradesmpprrihuunﬂﬁt'vﬁrsﬂi
-Output
-Print‘(“PuD:s<u’s mm. w,
-2mm m \- nu) Popescu's grades: 9,6
-prinﬂ(“!ﬂ.“. it'vsrwnﬂli
-1t“;
-1
-]—
+S|L( ' t' t ' lt'map)
+> An example of using multimap:
+
+APP-CPD
+
+void main(void)
+
+{
+multimap<c0nst char*, int> Grades;
+Grades.insert(pair<const char*, int>("I0nescu", 10));
+Grades.insert(pair<const char*, int>("I0nescu", 8));
+Grades.insert(pair<const char*, int>("I0nescu", 7));
+Grades.insert(pair<const char*, int>("P0pescu", 9));
+Grades.insert(pair<const char*, int>("P0pescu", 6));
+Grades.insert(pair<const char*, int>("Ge0Pgescu", 8));
+multimap<c0nst char*, int>:ziterat0r it,it2;
+it = Grades.find("Popescu");
+it2 = Grades.upper_b0und(it—>first);
+
+_ Output
+pr1ntf(“Popescu’s grades: ");
+“{“hile (it l: it2) P0pescu’s grades: 9,6
+printf("%d,", it—>sec0nd);
+it++;
+
+}
+
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-STL (assoclatlve conta1 ners - multlmap)
-> An example of using mummap:
-APP~CPP
-vuid m.1n<vu1n>
-<
-whimpmmst Hm‘, int) mm;
-Gradesdnser'tlpalmznnst m». 1M>L‘Xunesnl‘. 1577:
-Gradcsdnsﬂﬂphiruunst KW», int>(“1un:s<u“, m,
-Gradeanserqpairuuns! m", movlmm“, m;
-GranaansarqpaArauns! m", mmmmm, a»;
-6riﬂ=$dn$=rﬂpiir<zunst Hm‘, int>(“Pup:s:u“. 5));
-Gradesdnser'tlpalmznnst m». 1m>1‘6eurgeszu‘. s77:
-mullimiwcunsl m", innzziurazur 1mm
-m m . Granasmagirﬂ); k \. Granasmmﬂ); n . mm.uppﬂjmum-mrﬂ»
-< printﬂ“%s m 1a iraduw‘. 1mm“. Gramnmuwmmn
-1
-) Output
-lonescu has 3 grades ,
-Popescu has Z grades
+> An example of using multimap:
+APP-CPD
+void main(void)
+{
+multimap<c0nst char*, int> Grades;
+Grades.insert(pair<const char*, int>("I0nescu", 10));
+Grades.insert(pair<const char*, int>("I0nescu", 8));
+Grades.insert(pair<const char*, int>("I0nescu", 7));
+Grades.insert(pair<const char*, int>("P0pescu", 9));
+Grades.insert(pair<const char*, int>("P0pescu", 6));
+Grades.insert(pair<const char*, int>("Ge0rgescu", 8));
+multimap<c0nst char*, int>:ziterat0r it,it2;
+for (it = Grades.begin(); it != Grades.end(); it = Grades.upper_b0und(it—>first))
+{
+printf("%s has %d grades\n", it—>first, Grades.count(it—>first));
+}
+} Output
+lonescu has 3 grades
+Popescu has 2 grades
 Georgescu has 1 grades
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:81**************
-STL (assoclatlve contamers - multlmap)
-> An example of using mummap:
-APP~CPP
-vain m.1n<vu1n>
-<
-memmr Hm‘, inn mm;
-Gradesdnser'tlpalrunnst mp. mmwwg mm
-Gradudnsvﬂpiiruunst mar‘, int>(“lun:s<u“, a»,
-GradEansarqpaiNmnst m", 1n(>(“1unas(u“y m;
-GraﬂaansarqpaArauns! m", Ann(“PnDas<u“, 9));
-Gradesdnserﬂpiinwnst Hm‘, “bppmmu 5));
-Gradesdnser'tlpalrunnst mp. mwmmw‘. s77:
-mullimiwcunsl m», innzzizarazur 1mm
-A! . mm.mnwmmm“);
-it“;
-em=s.=m=zm=
-m m Z m¢=;.b=gin(>, a: ‘Z Gm=;.=m:>, kn)
-( Oquul /
-“mums mm“, koﬂrsl, At-namnﬂ)?
-) > lonescu [10]
+> An example of using multimap:
+APP-CPD
+void main(void)
+{
+multimap<c0nst char*, int> Grades;
+Grades.insert(pair<const char*, int>("I0nescu", 10));
+Grades.insert(pair<const char*, int>("I0nescu", 8));
+Grades.insert(pair<const char*, int>("I0nescu", 7));
+Grades.insert(pair<const char*, int>("P0pescu", 9));
+Grades.insert(pair<const char*, int>("P0pescu", 6));
+Grades.insert(pair<const char*, int>("Ge0Pgescu", 8));
+multimap<c0nst char*, int>:ziterat0r it,it2;
+it = Grades.find("Ionescu");
+it++;
+Grades.erase(it);
+for (it = Grades.begin(); it != Grades.end(); it++)
+{ Output
+printf("%s [%d]\n", it—>first, it—>sec0nd);
+} lonescu [10]
+}
 lonescu [7]
 Popescu [9]
 Popescu [6]
@@ -1690,248 +1823,269 @@ Georgescu [8]
 
 ***************Beginning Page***************
 ***************page number:82**************
-STL (assoclatlve conta1 ners - multlmap)
-> An example of using mummap:
-APP~CPP
-Wm mar-(wan)
-(
-mm.“m<,m<<m “w, Anu(“>uvas<u“, g»,
-1f (Grains.f1nd(“1unas<u“) \- arenas (andO)
-prmlﬂﬁmscu manswu“);
-1f (Grad:s.f1nd(“Mar-v|“7 Z: Granazcr-YIUV
-WWW!" m; W “WW,
-) Output /
+> An example of using multimap:
+APP-CPD
+void main(void)
+{
+multimap<c0nst char*, int> Grades;
+Grades.insert(pair<const char*, int>("I0nescu", 10));
+Grades.insert(pair<const char*, int>("I0nescu", 8));
+Grades.insert(pair<const char*, int>("I0nescu", 7));
+Grades.insert(pair<const char*, int>("P0pescu", 9));
+Grades.insert(pair<const char*, int>("P0pescu", 6));
+Grades.insert(pair<const char*, int>("Ge0Pgescu", 8));
+if (Grades.find("Ionescu") != Grades.cend())
+printf("Ionescu exists!\n");
+if (Grades.find("Marin") == Grades.cend())
+printf("Marin DOES NOT exist!\n");
+}—Em!—
 Ionescu exists!
-Marin DOES NOT eXiSt‘.
+Marin DOES NOT exist!
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:83**************
-STL (associative containers - multimap)
+STL (associative containers - multi map)
+
 > The methods supported by the multimap container:
-Assignment (uperater= 1
-insertion (insert)
+Assignment (operator= )
+Insertion (insert)
 Deletion (erase, clear methods)
-Accessing elements (find method]
-Iterator: (begin, end, rbegln, rend, :be-gln, send, :rbegln, (rend
-lniorrnatiens (size, empty, max_slze methods)
-Special methods (upper_hound and lower_bound e to access the intervals in witch
-there are elements with the same key; equal_range ~ to obtain an interval for all the
-elements stered ier a ke'y)
+Accessing elements (find method)
+lterators (begin, end, rbegin, rend, cbegin, cend, crbegin, crend (the last 4 from
+C++11))
+
+\ Informations (size, empty, max_size methods)
+
+Special methods (upper_bound and lower_bound - to access the intervals in witch
+there are elements with the same key; equal_range - to obtain an interval for all the
+elements stored for a key)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
-STL(assoc1at1ve contamers - set)
-
-> “set” is a container that store unique elements ‘E
-
-> For use “winclude <set>"
-
-> The declaration o‘ set template:
-
-l
-k 22mm“ l class w class cw." - mm“) , ‘1m an
+STL (assoclatwe c0nta1 ners - set)
+b “set” is a container that store unique elements
+> For use “#include <set>”
+b The declaration of set template:
+APP-CPD
+template < class Key, class Compare = less<Key> > class set
+{
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:85**************
-STL (assoc1at1ve conta1 ners - set)
+STL (assocnatwe conta1 ners - set)
 > An example of using set:
-APP~KPP
-m, MW.”
-( any“) s;
-s.ins=rt(1ﬂ)3
-sdnseﬁui);
-“mm”;
-ansuﬂsn);
-satantmxzaratar m
-m m - mum); a: 1- 5.17.40; a“) ‘
-mnm'n -, at); 3
+APP-CPP
+void main(v0id)
+{
+set<int> s;
+s.insert(10);
+s.insert(20);
+s.insert(5);
+s.insert(10);
+set<int>zziterator it;
+for (it = s.begin(); it != s.end(); it++)
+printf("%d ", *it);
+}—
 Output
-5 10 20 ‘
+5 1O 20
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:86**************
-STL (assoclatlve conta1 ners - set)
 > An example of using set:
-APP~CPP
-m“ “Wm (
-m1 “Mum km M 11mm, (m M “mam (m
-< return Llemalue / 287 < (rlgm'value / 207i
-); 1
-vuiﬂ miinuiﬂ)
-(
-5mm, “mm” 5;
-5.1mm“);
-xmmm;
-“mm
-s.1ns:rﬂw7i
-5mm, mwmmmm it,
-Ompul
-m m . may“); k \. mm; n»)
-) WWW ‘in; 1o 20 ,
+APP-CPD
+struct Comparator {
+bool 0perat0r() (const int& leftValue, const int& rightValue) const
+{
+return (leftValue / 20) < (rightValue / 20);
+}
+};
+void main(void)
+{
+set<int, C0mparat0r> s;
+s.insert(10);
+s.insert(20);
+s.insert(5);
+s.insert(10);
+set<int, Comparator>zziterator it;
+Output
+for (it = s.begin(); it != s.end(); it++)
+printf("%d *it); 1O 20
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:87**************
-STL (assoclatlve conta1 ners - set)
+STL (associative containers - set)
+
 > The elements from a “set” follows a specific order.
-> This brings a performance penalty.
-Set-chp
-void Emma)
-l
-seninv s;
-m (m v e n, v < 1mm, (M)
-5 “mum.
-)—
-> Let's remake the previous experiment:
--I-mu-i-II
-Map-1 ZU156 20615 10672 20453 19921 19547 19219 19516 1956319344
-Map-Z D 16 O O 16 D 15 O 16 O
-Set-1 15375 15469 16407 16563 16359 15750 16094 16615 171131 15906
+
+b This brings a performance penalty.
+
+Set-1.cpp
+void main(void)
+{
+set<int> s;
+for (int tr = 0; tr < 1000000; tr++)
+s.insert(tr);
+}—
+
+b Let’s remake the previous experiment:
+------------
+Map-1 20156 20625 20672 20453 19922 19547 19219 19516 1956319344
+Map-2 0 16 0 0 16 0 15 0 16 0
+Set-1 15375 15469 16407 16563 16359 15750 16094 16625 1703215906
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:88**************
-STL (associative contai ners - set)
+STL (associative containers - set)
 > The methods supported by the set container:
-Assignment (opei'atnr= )
+Assignment (operator= )
 Insertion (insert method)
-Deletion 1erase, clear methnds)
-Accessing elements (ﬁnd method)
-Iteratovs {heglm end, rbegln, rend, :begin, cend, “begin, crend (the last 4 from
-cﬂm P
-\ lnfOrmatiOnS 15in, empty, makslle methods)
+Deletion (erase, clear methods)
+Accessing elements (find method)
+lterators (begin, end, rbegin, rend, cbegin, cend, crbegin, crend (the last 4 from
+C++11))
+\ Informations (size, empty, max_size methods)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:89**************
-STL (assoclatlve contamers - multlset)
-
-> “multiset” is similar with set, but duplicate elements are allowed ‘E
-
-> For use “winclude <set>"
-
-> The declaration o‘ multiset template:
-
-l
-k 22mm“ ( class w class cw." - mmw , ‘1m mlnsu
+STL (associative containers - multiset)
+b “multiset” is similar with set, but duplicate elements are allowed
+> For use “#include <set>”
+b The declaration of multiset template:
+APP-CPD
+template < class Key, class Compare = less<Key> > class multiset
+{
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:90**************
-STL (assoc1at1ve conta1 ners - multlset)
+STL (assocnatwe contan ners - multlset)
 > An example of using multiset:
-APP~=PP
-M mm“)
-( mummy.» s;
-s.ins=rt(1ﬂ)3
-sdnseﬁui);
-“mm”;
-5.,"Smw
-mmmm 1mm” m
-m m - mum); a: 1- 5.17.40; a“) ‘
-mnm'n -, at); 3
+APP-CPP
+void main(v0id)
+{
+multiset<int> s;
+s.insert(10);
+s.insert(20);
+s.insert(5);
+s.insert(10);
+multiset<int>zziterator it;
+for (it = s.begin(); it != s.end(); it++)
+printf("%d ", *it);
+}—
 Output
-5 10 10 20 ‘
+5 1O 1O 20
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:91**************
 STL (associative containers - multiset)
+
 > The methods supported by the multiset container:
-Assignment (dperater= 1
-insertion (insert)
+Assignment (operator= )
+Insertion (insert)
 Deletion (erase, clear methods)
-Accessing elements (ﬁnd method]
-Iterator: (begin, end, rbegln, rend, :be-gln, cend, :rbegln, crend
-lniorrnatiens (size, empty, max_slze methods)
-Special methods (npper_l>dund and lower_bound e [0 access the intervals in witch
-there are elements with the same key; equal_range ~ to obtain an interval that
-includes all the elemems which have a speciﬁc key}
+Accessing elements (find method)
+lterators (begin, end, rbegin, rend, cbegin, cend, crbegin, crend (the last 4 from
+C++11))
+
+\ Informations (size, empty, max_size methods)
+
+Special methods (upper_bound and lower_bound - to access the intervals in witch
+there are elements with the same key; equal_range - to obtain an interval that
+includes all the elements which have a specific key)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:92**************
-STL (assoc1at1ve conta1 ners -
-
+STL (assoclatwe contalners -
 unordered_map)
+b The elements from an unordered_map container are stored into a hash-table
+b Introduced in C++11
+> For use “#include <unordered_map>”
+b Supports the same methods as map plus methods for the control of buckets.
+> The declaration of unordered_map template:
 
-> The elements from an unordered_map container are stored into a hash-table
+APP-CPP
 
-> Introduced in C++11
+template < class Key, class Value, class Hash, class Equal > class unordered_map
 
-> For use “winclude <unordered_map>"
-
-> Supports the same methods as map plus methods for the control of buckets‘
-
-> The declaration of unordered_map template: r
-APP~CPP
-“Mm < chss Key, chss v.1“, chss m», chss w.‘ > chss “Manet-P ‘
+{
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:93**************
 STL (associative containers -
-unordered_map) 1
-> How hash tables works: m-
-1
-Hash function(transforms ‘
+unordered_map)
+b How hash tables works:
+Hash functi0n(transforms
 a string into a index)
-k
+\
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:94**************
-STL (assoc1at1ve contamers -
+STL (assoCiative containers -
 unordered_map)
-IE5-
-» How hash tables works. 0 NULL
+> How hash tables works. 0 NULL
 1 NULL
-We consvder the 2 NULL
-foUowwg hashing 3 NULL
-Yunctmn:
+We consider the 2 NULL
+following hashing 3 NULL
+function:
 HashFunction 5 NULL
-G int lenrunniankanst (mr' 51 6 NULL /"
-EDI’ escu . ‘ ,
-_ $130:in u 7 NULL
-‘ u“;- ('57; a NULL
-Em m 1 m 9 NULL
-7— 10 NULL
+- int HashFunction(const char* s) 6 NULL
+Georgescu int sum = a;
+while ((*s) != a) 7 NULL
+{
+sum.+= (*s); 8 NULL
+} ’° 9 NULL
+return sum A 12;
+}— 1O NULL
 11 NULL
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:95**************
 STL (associative containers -
 unordered_map)
-> How hash tables works: gm-
+b How hash tables works: 0 NULL
 1 NULL
-Popescu z NULL
+Popescu 2 NULL
 3 Popescu
-|:| Hash (“Popescu”) 4 NULL \
-= 3 5 NULL \i
-- 6 NULL \i
-Georgescu
-7 NULL \
-B NULL
+‘:l Hash (“Popescu”) 4 NULL
+= 3 5 NULL
+6 NULL
+7 NULL
+8 NULL
 9 NULL
-10 NULL
+1O NULL
 11 NULL
 
 ***************Ending Page***************
@@ -1940,184 +2094,195 @@ B NULL
 ***************page number:96**************
 STL (associative containers -
 unordered_map)
-> How hash tables works: gm-
+b How hash tables works: 0 NULL
 1 NULL
+2 NULL
 3 Popescu
-E Hash ("lonescu"b I 4 NULL ‘i
+- , , , , , , . Hash (“lonescu”) = V 4 NULL
 6 5 NULL
-- 6 Ionescu ‘i
-Georgescu ‘
-7 NULL i
-B NULL
+6 lonescu
+7 NULL
+8 NULL
 9 NULL
-10 NULL
+1O NULL
 11 NULL
+/
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:97**************
 STL (associative containers -
 unordered_map)
-> How hash tables works: 0
+b How hash tables works: 0 NULL
 1 NULL
+2 NULL
 3 Popescu
-|:| Hash(“Georgescu"| 4 NULL ‘i
-Z 8 5 NULL
-6 Ionescu ‘i
-Georgescu ‘
-7 NULL i
-B Georgescu
+:l . Hash(“Georgescu”) 4 NULL
+= 8 5 NULL
+6 lonescu
+Georgescu
+7 NULL
+8 Georgescu
 9 NULL
-10 NULL
+1O NULL
 11 NULL
+/
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:98**************
-STL (associative containers -
-
+STL (assomative containers -
 unordered_map)
-
-> Consider the following code:
-
-Umap-chp
-1
-vesxhrhr,
-)—
-
-b Let's remake the previous experiment:
---"--m
+b Consider the following code:
+Umap-1.cpp
+void main(void)
+{
+unordered_map<int,int> Test;
+for (int tr = 0; tr < 1000000; tr++)
+Test[tr]=tr;
+}—
+b Let’s remake the previous experiment:
+------------
 Map-1 20156 20625 20672 20453 19922 19547 19219 195161956319344
-Map-2 0 16 0 U 16 0 15 0 16 U ,
+Map-2 0 16 0 0 16 0 15 0 16 0
 Set-1 15375 15469 16407 16563 16359 15750 16094 166251703215906
-Umap»1 14891 15984 15578 15063 15251] 15224 15704 149531526515186
+Umap-1 14891 15984 15578 15063 15250 15234 15704 149531526515186
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:99**************
-STL (assoclatlve contamers -
-
+STL (assouative containers -
 unordered_map)
-
-> Consider the following code:
-
-Umap-Z.cpp
-t mmwtmmmmmn
-)
-
-b Let's remake the previous experiment :
--IIm--H
+b Consider the following code:
+Umap-2.cpp
+void main(void)
+{ unordered_map<int,int> Test;
+Test.reserve(1999999);
+for (int tr = 9; tr < 1999999; tn++)
+Test[tr]=tr;
+}—
+b Let’s remake the previous experiment :
+------------
 Map-1 20156 20625 20672 20453 19922 19547 19219 195161956319344
-Map-1 0 16 0 0 16 0 15 0 16 0
+Map-2 0 16 0 0 16 0 15 0 16 0
 Set-1 15375 15469 16407 16563 16359 15750 16094 166251703215906
-Umap»1 14891 15984 15578 15063 15250 15234 15704 149531526515186
-Umap-Z 9594 9703 10610 9090 10672 9922 10047 9984 9703 993B
+Umap-1 14891 15984 15578 15063 15250 15234 15704 149531526515186
+Umap-2 9594 9703 10610 9890 10672 9922 10047 9984 9703 9938
+////
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-STL (assoc1at1ve conta1 ners -
+STL (associative containers -
 unordered_set)
-> “unordered_set“ is similar with the set container, but the elements are not
+b “unordered_set” is similar with the set container, but the elements are not
 sorted
-> Introduced in C++l1
-> For use “#include <unordered_set>"
-> Supports the same methods as set plus methods for the control of buckets ‘
-> The declaration ot unordered_set template:
-APP~CPP
-unghu < chss m, chss m», chss w.‘ > chss unwinraanu ‘
-)—
+> Introduced in C++11
+> For use “#include <unordered_set>”
+b Supports the same methods as set plus methods for the control of buckets
+> The declaration of unordered_set template:
+APP-CPP
+template < class Key, class Hash, class Equal > class unordered_set
+{
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:101**************
-STL (assoclatlve contamers -
+STL (associative containers -
 unordered_set)
-> COnSldEI' the following code:
-User-Lepp
-(
-)—
-> Let's remake the prekus expenmem:
--I--iI--W
+b Consider the following code:
+void main(void)
+{ unordered_set<int> s;
+for (igtiﬁge:t0ipgg < 1000000; tr++)
+}—
+b Let’s remake the previous experiment:
+------------
 Map-1 20156 20625 20672 20453 19922 19547 19219 195161956319344
-Map-2 D 16 0 0 16 0 15 0 16 0
+Map-2 0 16 0 0 16 0 15 0 16 0
 Set-1 15375 15469 16407 16563 16359 15750 16094 166251703215906
-Umap-114891 15984 15578 15063 15250 15234 15704 149531526515186
-Umap»2 9594 9703 10610 9890 10672 9922 10047 9984 9703 9938
-Uset-1 12140 11625 12047 11904 12109 12078 11609 115701178211672
+Umap-1 14891 15984 15578 15063 15250 15234 15704 149531526515186
+Umap-Z 9594 9703 10610 9890 10672 9922 10047 9984 9703 9938
+Uset-1 12140 11625 12047 11984 12109 12078 11609 115781178211672
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:102**************
-STL (assoclatlve contamers -
-
+STL (assouatwe contamers -
 unordered_set)
-
-> And the vanant with reserve:
-User-Lepp
-(
-)
-------ﬂ!%
+b And the variant with reserve:
+Uset-2.cpp
+void main(void)
+{ unordered_set<int> s;
+s.reserve(1000000);
+for (int tr = 0; tr < 1000000; tr++)
+s.insert(tr);
+}—
+------------
 Map-1 20156 20625 20672 20453 19922 19547 19219 19516 19563 19344
-Map-Z 0 16 0 0 16 0 15 0 16 0
+Map-2 0 16 0 0 16 0 15 0 16 0
 Set-1 15375 15469 16407 16563 16359 15750 16094 16625 17032 15906
-Umap-114891 15984 1557B 15063 15250 15234 15704 14953 15265 15186
-Umap~2 9594 9703 10610 9890 10672 9922 10047 9984 9703 993B
-Uset-1 12140 11625 12047 11984 12109 1207B 11609 11578 11782 11672
-Uset-Z 6516 6328 6575 6844 6812 6453 6453 6531 6500 6515
+Umap-114891 15984 15578 15063 15250 15234 15704 14953 15265 15186
+Umap-2 9594 9703 10610 989010672 992210047 9984 9703 9938
+Uset-1 12140 11625 12047 11984 12109 12078 11609 11578 11782 11672
+Uset-2 6516 6328 6875 6844 6812 6453 6453 6531 6500 6515
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:103**************
-STL (assoc1at1ve containers)
-> Besides the presented containers, two other associative containers exists: ‘l
-> unorderedimultimap
-> unorderedimultlset ‘E
-> Similar with multimap/multiset (the diiference is that hash tables are used, ‘3
-not sorted trees) ‘a
+STL (associative containers)
+b Besides the presented containers, two other associative containers exists:
+> unordered_multimap
+> unordered_multiset
+b Similar with multimap/multiset (the difference is that hash tables are used,
+not sorted trees)
 > When choosing between map and unordered_map (set and unordered_set,
-m), the amount of available memory and the execution times (insertion,
-deletion, access of elements, m) must be considered‘
+...), the amount of available memory and the execution times (insertion,
+deletion, access of elements, ...) must be considered.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:104**************
-l l/O Streams
+“> l/C) Streams
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:105**************
-STL 005)
-iosibase
+STL (IOS)
+ios_base
 ios clog
-cm istream — iostream _ ostream mm E1‘
-vistream lstnngstream ostrmgslream oisneam
-(stream stringstream ,7
+o istream - iostream _ ostream r cout
+cerr
+ifstream istringstream ostringstream ofstream
+fstream stringstream
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:106**************
-> From the previous presented classes, the most used are istream, ostream and ‘a
-iostream,
+b From the previous presented classes, the most used are istream, ostream and
+iostream.
 
-> These classes allows the |/0 access to miscellaneous streams (most well-
-known is the file system) ‘a
+> These classes allows the l/O access to miscellaneous streams (most well-
+known is the file system)
 
-> Another use is represented by the cin and cout objects, which can be used to
-write to! read from the terminal
+b Another use is represented by the cin and cout objects, which can be used to
+write to/ read from the terminal
 
-> Two operators are overloaded for these classes loperator» and operator“),
+b Two operators are overloaded for these classes (operator>> and operator<<),
 representing the input from stream and the output to stream, respectively
 
 > Besides the two operators, manipulators were also added to these classes
@@ -2125,371 +2290,388 @@ representing the input from stream and the output to stream, respectively
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:107**************
-STL (IOS , manipulators)
+STL (IOS - manipulators)
 
-endl Adds a line terminator (“\n" , “\ﬂn", etc) and ﬂush
+endl Adds a line terminator (“\n” , “\r\n”, etc) and flush
 
-ends Adds ‘\U' (NULL)
+ends Adds ‘\O’ (NULL)
 
-flush Clears the stream‘s intern cache
+flush Clears the stream’s intern cache
 
 dec The numbers will be written in the base 10.
 
 hex The numbers will be written in the base 16.
 
-oct The numbers will be written in the base 84 \
+oct The numbers will be written in the base 8.
 
-ws Extracts and discards whitespace characters {until a non-
+ws Extracts and discards whitespace characters (until a non-
 whitespace character is found) from input
 
 showpoint Shows the decimal point
 
 noshowpoint Doesn't show the decimal point
 
-showpos Add the “+" character in front 0f the positive numbers
+showpos Add the “+” character in front of the positive numbers
 
-ndshowpos Does not add the “+“ character in front of the positive numbers
+noshowpos Does not add the “+” character in front of the positive numbers
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:108**************
-STL (IOS , manipulators)
+STL (IOS - manipulators)
 
-boolalpha Bool values will be written using “true” and "false"
-noboolalpha Bool values will be written using 1 and U
+boolalpha Bool values will be written using “true” and ”false”
+noboolalpha Bool values will be written using 1 and O
 
-scientific Scientific notation for float/double numbers
+scientific Scientific notation for float/ double numbers
 
-fixed Floating-point values will be written using ﬁxed-point notation
-lelt Left alignment
+fixed Floating-point values will be written using fixed-point notation
+left Left alignment
 
 right Right alignment
 
 setfill(char) Sets the fill character
 
-setprecisionln) Sets the precision for real numbers
+setprecision(n) Sets the precision for real numbers
 
-setbaselb) Sets the base
+setbase(b) Sets the base
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:109**************
-> Strings
+‘\ > Strings
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:110**************
-STL (ba51c_str1ng)
 > Template that provides the most used operations over strings
-> The declaration:
-APPJPP
-template (class Chivutcﬂypc, ms; trans Z chargransdllannuYyPﬂ»
-(1m “signing
-i
+b The declaration:
+APP-CPD
+template <c1ass CharacterType, class traits = char_traits<CharacterType>>
+class basic_string
+{
+i.-
 > The most common objects that implements this template are string and
 wstring
-APP-cop
-tyvmd “ﬂurry-mm» mm;
-typed“ baskistrirlgmcharin “string?
-> Other Objects introduced CH1 based 0n this template:
+Apncpp
+typedef basic_string<char> string;
+typedef basic_string<wchar_t> wstring;
+b Other objects introduced Cx11 based on this template:
 APP-CPP
-"we wmjtmgmme,» new“.
-typedé Daslcistnﬂitcharilib msmm
+typedef basic_string<char16_t> u16string;
+typedef basic_string<char32_t> u325tring;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:111**************
-> “char,traits" is a template that provides a list of operations aver the strings
-(not necessarily characters of type char) used by hasic_string for some
+> “char_traits” is a template that provides a list of operations over the strings
+(not necessarily characters of type char) used by basic_string for some
 operations
-> The main methods of charitraits are:
-Deﬁnition Functionality
-mm bwl w (tw- nt ﬂyv- <27 Petumstruullcl lsequalwlthel
-mm bani n (awe t1, In»! =1) Returns true Ir =1 u lower than c2
-sutlc mu mm (ms! (we s); ktumstheslnnflﬂrilll
-53:3 void issiII‘ (mm (“mun wrist mm WWW‘ {dumﬁulm
-sutk m (er-u ((nnxt {Upl' n. camp-mmnrinns; IEWMH im “Loim -=z L
-cans! nm- in, she; n1; Illﬂ-l rm < =1
-sutk cons! mum- mm tasting)!!!‘ 1. MUM“anmmmlmme‘ “Naming
-m5; (“Lam Q; "“"‘"*“"""
+b The main methods of char_traits are:
+Definition Functionality
+static bool eq (CType c1, CType c2) Returns true if C1 iS equal with CZ
+static bool 1t (CType c1, CType c2) Returns true if c1 is lower than c2
+static size_t length (const CType* s); Returns the size Of a string
+335:3: void assign (CType& character, const CType& Assignment (character= value)
+static int compare (const CType* sl, Compares two strings; returns1 if s1 > $2, 0 if s1 = $2
+const CType* st2, size_t n); and -1 if 51 < 52
+Static ‘50"ch Char-Up“ ﬁnd (2335:”;pr s’ Returns a pointer to the first character equal with c
+cons; char_type& c); from the string s
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:112**************
-STL (ba51c_str1 ng)
-> The main methods 0| charitraits are:
-Definition Funcliunality
-mm (“new m (amp/we’ an,
-cum! ("gum- m. m the carnentvfa sum] between two mum
-mu n z
-mm mww ‘°”“'ZZZ;§’Z§L'§“;- m Couinllle:mteutufaslrilvgfmmnnelucalimto
-mu m1’ w ' ‘"m'"
-mm muwe mu Returns I value m :or r umuy -1 l
-> “char_traits“ has specializations for <char>, <wchar> which are using elficient
-functions like memcpy, memmove, etc. l
-> For normal use of strings, a charitraits object is not needed. However, it is A
-useful (or the cases where we want a particular behavior (some comparisons
-or assignments to be made differently r elgl case insensitive)
+> The main methods of char_traits are:
+Definition Functionality
+static char_type* move (char_type* dest,
+const char_type* src, Moves the content of a string between two locations
+size_t n);
+Static Char-type* COpy(ChaP—type* deSt’ Copies the content of a string from one location to
+const char_type* src,
+size_t n); another
+static int_type eof() Returns a value for EOF ( usually -1 )
+> “char_traits” has specializations for <char>, <wchar> which are using efficient
+functions like memcpy, memmove, etc.
+> For normal use of strings, a char_traits object is not needed. However, it is
+useful for the cases where we want a particular behavior (some comparisons
+or assignments to be made differently - e.g. case insensitive)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:113**************
-v “basic,string" supports various forms of initialization:
+> “basic_string” supports various forms of initialization:
 
-APP~CPP
+APP-CPD
 
-vain main(vuidi
+void main(void)
 
-<
+{
 
-Sm"; Sqwbmwm“);
+string sl(“Tomorrow");
 
-5m»; 51m“ x'n KB ‘7;
+string 52(sl+" I’11 go ")3
 
-string 53m, 3, 3),
+string 53(51, 3, 3);
 
-string “(WWW 1111 gu (u my (Wynn, 11>;
+string s4("Tomorrow I’11 go to my cousin.", 13);
 
-mm SSWJWSUWB»;
+string 55(s4.substr(9,10));
 
-Sm"; 35m. w);
+string 56(10, '1');
 
-pr;nu("x;\nx;\nx;\nx;\nx;\nxs\n“, “Kym,
-“£51m,
-53.17501),
-smastﬂh
-55.t75ﬂ‘(7- Output
-mkwm,
+printf("%s\n%s\n%s\n%s\n%s\n%s\n", sl.c_str(),
+52.c_str(),
+s3.c_str(),
+s4.c_str(),
+55.c_str(), Output
+s6.c_str());
 
-) ‘lbmorrow
-Tomorrow i'Ll go
-arr
-Tomorrow I'll
-I’ll go m
-H1i1ii1i1
+} Tomorrow
+Tomorrow l’ll go
+orr
+Tomorrow I’11
+I’11 go to
+1111111111
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:114**************
 STL (basic_string)
-> Methods/operators supported by (he objecxs denved (mm the basicisrring template:
-Assignment (operamr= 1
-Append (operatun: and append, push Jzack memods]
-Charactels insertion (inseﬂ method)
-Access to characters (operatorﬂ and at , from (c“1 1) , back (on 1) methods)
-Substrlngs (substr methodj
-Replace (replace method]
-Charactels deletion (erase, clear, and pop_back (CHM) memuds) ,
-Search (ﬁnd, rﬁnd, ﬁnd_lirst_ol, find_last_0f, lindJirsLnOLol, find_la§t._n0Lv/f /'
-methods) '
-Comparations (operamn , ppermr< ,ppermr== , apermrl= , operator» ,
-uperator<= and compare method)
-lcteraiojrs (begin,end,rbegin,rend,cbegln,cend,crbegln,crend (the Last (our from
-H1 1
-Information: (size, length, empty, max_§ize, capacity methods)
+
+> Methods/ operators supported by the objects derived from the basic_string template:
+Assignment (operator= )
+Append (operator+= and append, push_back methods)
+Characters insertion (insert method)
+Access to characters (operator[] and at , front (C++11) , back (C++11) methods)
+Substrings (substr method)
+Replace (replace method)
+Characters deletion (erase, clear, and pop_back (C++11) methods)
+Search (find, rfind, find_first_of, find_last_of, find_first_not_of, find_last_not_of
+methods)
+Comparations (operator> , operator< , operator== , operatorl= , operator>= ,
+operator<= and compare method)
+lterators (begin,end,rbegin,rend,cbegin,cend,crbegin,crend (the last four from
+C++11))
+lnformations (size, length, empty, max_size, capacity methods)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:115**************
-STL (ba51c_str1 ng)
 > An example of working with String objects:
-APP~CPP
-vuid m.1n<vu1n>
-<
-Sm"; 3,;
-51 "NW";
-printH'Sil: Z raw‘, 51.1:ngth())?
-51-51,“ “'51;
-prAn{f(“51 . “w, sa.nan())?
-s!.=l‘i5=(1. A);
-prlnth“Sl Z 15w. “awn:
-51.375"va L");
-Sump“), L“);
-prAn{f(“51 . xsw‘, “gum;
-simzphcﬂsingirﬂh ‘mum; . 1, muss“);
-1 pmntffm Z 15w‘. inﬁrm; Output
-Size 1 3
-51 : New How
-51 : New
-s1 : FLDiW
-5| : ‘23456uiw
+APP-CPD
+void main(void)
+{
+string sl;
+sl += "Now";
+printf("Size = %d\n", sl.1ength());
+sl = sl + " " + sl;
+printf("51 = %s\n", sl.data());
+sl.erase(2, 4);
+printf("51 = %s\n", sl.c_str());
+sl.insert(1, "_")3
+sl.insert(3, "__")3
+printf("51 = %s\n", sl.c_str());
+sl.rep1ace(sl.begin(), sl.begin() + 2, "123456");
+printf("51 = %s\n", sl.c_str'()); output
+}
+Size = 3
+S1 = Now Now
+S1 = Now
+S1 = N_o_w
+S1 = 1234560_W
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:116**************
-> Some example of using char_!raits (a string with ignore case ):
-APP~CPP
-struzt xlnﬂrlc-SE = Dubliz (n-r,‘r-1‘§‘<»-r) 4
-static >501 llithar =,, char =21 4
-raturn (unw=r(:1)) 1: <uaa=r<==));
+> Some example of using char_traits (a string with ignore case ):
+APP-CPD
+struct IgnoreCase : public char_traits<char> {
+static bool eq(char c1, char c2) {
+return (upper(c1)) == (upper(c2));
 }
-stitiK haul 1¢<<nir <1, (nip <2) (
-} rlturn (unplr(<111 < (uvvar(<2));
-Stitii int :ﬂmnar:(:anst char’ $1, censt char’ :1, Silg_§ n) (
-uni}: (">a)
-(
-("Ir <1 . uDPArK'sill
-char =1 - “FFQIK-sz);
-1e (:1 < =2) raturn V‘;
-1: (‘1 > ‘1) r=turn '1;
-51.’; 51.’; "'7;
-)
-rnurn a;
-)
-n '
-vaid l-1n<va1¢1
-(
-has!:_strln|<:har, I'nar!(as:> 51(“Sa1ut’);
-hasic>strin|<char, IlﬂuraCasa> SZ(“SA1“C“); ,
-1: <51 Z: 5:)
-Frintf(‘51ruri ‘1-1! 1-1;
-)
+static bool lt(char c1, char c2) {
+return (upper(c1)) < (upper(c2));
+}
+static int c0mpare(c0nst char* sl, const char* 52, size_t n) {
+while (n>0)
+{
+char c1 = upper(*sl);
+char c2 = upper(*sZ);
+if (c1 < c2) return —1;
+if (c1 > c2) return —1;
+sl++; sZ++; n--;
+}
+return 0;
+}
+};
+void main(v0id)
+{
+basic_string<char, IgnoreCase> sl("Salut");
+basic_string<char, IgnoreCase> 52("sAlUt");
+if (sl == $2)
+printf("Siruri egale !");
+}
+-----________________________________________________________________:,__________
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:117**************
-> Initialization lists
+‘\ > Initialization lists
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:118**************
-Initialization lists
-> Initialization lists work with STL as well:
-APPIPP
-"no maeswce m;
-Mia. (MW,
-MM. an»
-an." Smdem
-‘ W (w - a." l
-in GM; i
-Mi “no ‘i
-murmur-ll‘) 5 I ( 'Pm', ‘tn' )i ‘
-vechSwdenm er - ( ( 'Wiﬂl', w )- ( 'lwscu', s ) )z
-) "News! char“. [an sil - ( ( "Pwesw'. W )- ( "lmescu'. 9 ) )i
-> The code complies 0k and all objects are initialized properly.
+b Initialization lists work with STL as well:
+APP-CPD
+using namespace std;
+#include <vector>
+#include <map>
+struct Student
+{
+const char * Name;
+int Grade;
+};
+void main()
+{
+vecton<int> v = { 1, 2, 3 };
+vecton<stning> s = { "P00", "C++" };
+vecton<Student> st = { { "Popescu", 10 }, { "Ionescu", 9 } };
+map<const chan*, int> st2 = { { "Popescu", 10 }, { "Ionescu", 9 } };
+}
+> The code complies ok and all objects are initialized properly. :
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:119**************
-Initialization lists
-> Initialization lists work with STL as well:
-APPIPP
-um “mm mi
-mm (MW,
-MM. l...»
-M“ Wm
-( i
-mi (w . in; i
-1m Wu i
-)i i‘
-Mi lah\() ‘i ,
-‘ vector-(ﬂit) v - i l, 1. 3 );
-veclomsludeﬂ!) s! - l l 'Popescu', w ). ( ‘Maw. a ) )i
-napumsx char'. hm n1 1 ( ( ‘PMsw'. W )- ( ‘Imesw'. 9 ) )i
-)
+b Initialization lists work with STL as well:
+APP-CPD
+using namespace std;
+#include <vector>
+#include <map>
+struct Student
+{
+const char * Name;
+int Grade;
+};
+void main()
+{
+vector<int> v = { 1, 2, 3 };
+vector<string> s = { "P00", "C++" };
+vector<Student> st = { { "Popescu", 10 }, { "Ionescu", 9 } };
+map<const char*, int> st2 = { { "Popescu", 10 }, { "Ionescu", 9 } };
+map<const char*, int> st3 = { { "Popescu", 10 }, { "Popescu", 9 } };
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:120**************
-Initialization lists
-> STL also provide a Special Container (called stdliinitialileLIiSt that can be
+b STL also provide a special container (called std::initializer_list that can be
 used to pass a initialization list to a function).
-APP-CPD
-“5w lulublce m;
-"Mme <Mllhll1gr_llsn
-m 54-(std::lmtnhxer_hstunt) a) ‘
-‘ m “it . a; l
-swulnllhluerJIsRMH:ltermr It; x
-For (u - mum); i: l- “no; u») ‘x
-mink e um; x
-Mum min“; 1
-M4 um) i
-‘ vim-Si. . W, “(-11;
->
-> This code will compile and will print to the screen the value 154
+APP-CPP
+using namespace std;
+#include <initializer_list>
+int Sum(std::initializer_list<int> a)
+{
+int result = 9;
+std::initializer_list<int>::iterator it;
+for (it = a.begin(); it != a.end(); it++)
+result += (*it);
+return result;
+}
+void main()
+{
+print-F("Sum = %d\n", Sum(—));
+}
+b This code will compile and will print to the screen the value 15. :
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:121**************
-b If std::initiali1er_list is used in a Constructor the following expression for
+b If std::initializer_list is used in a constructor the following expression for
 initializing an object can be used:
-APP-cup
-uslﬂl unable! m;
-mum (Mkhnmyw
-(his nan
-i
-1M vim;
-Mm:
-ha!i(s(d::iniiiilherJhRiM) a)
-i
-m m1.‘ . a;
-m: :mnulmr-Juuum: “mm” n;
-m (I! . z-MMO; (u I. “mm u (lMexdﬂ); lumlnﬂex”)
-Yuma - (-m:
-) ,
-);
-m4 "mo
-(
-nan am 1. 1. a. 4. s m
-Datidl:(l,1, 3.‘. s);
-)
+APP-CPD
+using namespace std;
+#include <initializer_list>
+class Data
+{
+int v[19];
+public:
+Data(std::initializer_list<int> a)
+{
+int index = 9;
+std::initializer_list<int>::iterator it;
+for (it = a.begin(); (it != a.end()) && (index<10); it++,index++)
+v[index] = (*it);
+}
+};
+void main()
+{
+Data d1({ 1, 2, 3, 4, 5 });
+Data d2 = { 1, 2, 3, 4, 5 };
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:122**************
 Initialization lists
-> Let's consider the following code:
-APP-cw
-‘deﬁne mummim) X
-vow Iaan ( W,SilEINHK-(Drllw7('ie5l')i)i )
-> This code will work 0k, and the compiler will print “Test” to the screen. Now let's
-consider the (allowing one: ‘
-APP-cw ‘l
-mm»: mynmmlx) x ‘l
-valid "mo r w,smmu=(— ); ) ‘l
-> In this case the code will riot comﬂile. When analyzing a MACRO the compiler does
-not interpret in an! wagrthe “{“ c aracter. This means that irom the compiler
-point of view, DO, OM HING macro has received 3 parameters:
-> vezturdnt) >41
+b Let’s consider the following code:
+APP-CPD
+#define D0_SOMETHING(X) x
+void main() { D0_SOMETHING(printf("Test")3); }
+> This code will work ok, and the compiler will print “Test” to the screen. Now let’s
+consider the following one:
+APP-CPP
+#define D0_SOMETHING(X) x
+void main() { D0_SOMETHING(— ); }
+> In this case the code will not compile. When analyzing a MACRO the compiler does
+not interpret in any way the “{“ character. This means that from the compiler
+point of view, D0_SOMETHING macro has received 3 parameters:
+> vector‘<int> x{1
 > 2
-> a)
+> 3}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:123**************
-Imtlahzatlon hsts
-> In this cases the solution is t0 Change the macro from:
-APP-cw
-mm“ “Lg-Emma) X
+Initialization lists
+b In this cases the solution is to change the macro from:
+APP-CPP
+#define D0_SOMETHING(X) x
 to
-APP-cw ‘
-mm- no_smiml»6(-) _vums_ ‘a
-vuln "m0 ( nwsmm vector-(Int) X“, z, a); >; 2 ‘a
-> This code will compile and run correctly “
+APP-CPP
+#de-Fine D0_SOMETHING(...) _VA_ARGS_
+void main() { D0_SOMETHING( vector<int> x{1, 2, 3}; )5 }
+I b This code will compile and run correctly.
 
 ***************Ending Page***************
 
-***************Beginning Page***************
-***************page number:124**************
-y my
 
-***************Ending Page***************
-
+ 

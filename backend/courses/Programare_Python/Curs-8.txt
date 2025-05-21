@@ -1,538 +1,532 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\I\I\I\I\I\I\I\
-I Qﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ \
-I \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ§ﬂ\ﬂ\ﬂ \
-I\I\I\I\I\I\I\l
-PROGRAMMING IN PYTHON ‘ ifﬂffw‘
+\/\/\/\/\/\/\I\
+1W
+‘W
+1W
+‘ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\
+I\I\I\I\l\l\l\l
+PROGRAMMING IN PYTHON | fjujjymgos
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Regular expression are implemented in Python in library "re".
+Regular expression are implemented in Python in library “re”.
 Usual usage:
-c Regular expression (slring form] is compiled imo u b'lrlclry lorm (usually an uuromulul
-a The blnury form is used for the following:
-o 01mm. slung mulchas u regular prrasslcn
-~:¢ Checks if a mum“; lrm a swing can l1! ‘ldenliﬁed us'lng a legulur axprmsion
-~:~ Wm rubu-W hum a my bum on u vegulur expressicm
+o Regular expression (string form) is compiled into a binary form (usually an automata)
+o The binary form is used for the following:
+‘9 Checks if a string matches a regular expression
+‘9 Checks if a sub-string from a string can be identified using a regular expression
+‘9 Replace substrings from a string based on a regular expression
 Documentation:
-r; Pylhon 3:hllpsrZZdocs.91Ihorl.org[31librar11rehlml
+O Python 3: https:[ [docs.python.org Z 3 Z libra ryg re.html
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-‘ REGULAR EXPRESSIONS SUPPORT
-Reguler expression special ehereeiers (here is e sirriple sei of special characters)
-mm- —m—
-. All oiioroeiers except new line \o neeiiriol eheroners o,1,2,3,iii9
-A Morelies or Ihe siori of Ihe sirirrg \D All excepv decimal characters
-s Muiches ul Ihe erid of ilie siririg \s Spoee, lab, riew lirie lCR/LF) shorocrers
-* >:o repeiiiierrls) \s All exeepi shoroeiers oesiorioied by \s
-a 0 or l occurrence \w Word characters u-z, A-Z, 0-9 and i
-+ >:l repeiiiiorilsl \W All excepv elreroerers designeied by \w
-(x) Muiches <x> iirrres \ Escape chcvcmer
-(m) Muiches beiweeri <><> and <y> iirries [Am] Nor speciﬁed group oi shoresvers
-[1 Group of characters 1m) Grouping
-l Or eondiiioii [1 inierrol for a group of elioreeiers.
+| REGULAR EXPRESSIONS SUPPORT
+Regular expression special characters (here is a simple set of special characters)
+MM —m
+. All characters except new line \d Decimal characters 0,1 ,2,3,...9
+A Matches at the start of the string \D All except decimal characters
+$ Matches at the end of the string \s Space, tab, new line (CR/LF) characters
+* >=O repetition(s) \S All except characters designated by \s
+? O or l occurrence \w Word characters a-z, A-Z, 0-9 and _
++ >=l repetition(s) \W All except characters designated by \w
+{x} Matches <x> times \ Escape character
+{x,y} Matches between <x> and <y> times [Am] Not specified group of characters
+[] Group of characters (...) Grouping
+I Or condition [ ..-..] ‘-’ interval for a group of characters.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
 Usage:
-o use re.compi|e ireouioLexpressionjiringjluqs) ve compile u regular expression imo iis binary form
-o Use me “makh” nreihod of ine resuiied obiect io check if a siring mu'ches ihe regular expression
-Pyiiron 3.x
-impoxt re OWP"
-s e re.cornpr7ei"07[0*9](8)")
-if r.matcb ("0740123456") t
-print ("Match")
-o The same resoli eon be achieved by using ihe “mukH' function from me re module dTrecIly
-Pylhon 3.x
-impoxt re
-if resmaKCh("O7 [0,9] i8 i "0140123456'W:
-phlnt ("Match")
+O use re.compile (regular_expression_string,flags) to compile a regular expression into its binary form
+o Use the “match” method of the resulted obiect to check if a string matches the regular expression
+Python 3.x
+1mport re Output
+r = re-compile<"07i0—91{8}")
+if r.match("0740123456"):
+print("Match")
+o The same result can be achieved by using the “match” function from the re module directly
+Python 3.x
+import re
+if re .match ("O7 [0-9] {8} ", "0740123456"):
+print("Match")
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-‘ REGULAR EXPRESSIONS SUPPORT
-m:_—
-\w+\s+\w+ “Guvrllm Dragos", "Guvrilut Drugos Teodor"
-A\w+\5+\w+$ “comm Dingos"
-[0-9](1,3)\.[O-9]{1,3)\4[0-9](I,3}\.[O-9](1,3} “1 92.1 68.0.1 "999.999299999"
-(lo-910 ,3}\l)(3)[0-9]('l ,3} “1921 68.0.1 "wwwvswwv"
-Alulu-91) l ([1 allow]; l ll [0-9](2)l| l2l0»41l0- Will only muich IP addresses
-9])l[25[°-5]l)\-l{3}(([0-9])|([l-9][Q-9]]|(1[0-
-VKQN l [2[0-4][°-9]] l 175l0-5111$
-[12]\d(12) CNP {bur will not vandals 'he correclness of Ihe
-
-blvth duie
-
-OX[0790JAVF]+ A hex number
-(if \Vhen l elsel while \cominue l break) A speclcl keyword
+| REGULAR EXPRESSIONS SUPPORT
+D—
+\w+\s+\w+ “Gavrilut Dragos”, “Gavrilut Dragos Teodor”
+A\w+\s+\w+$ “Gavrilut Dragos”
+[O-9]{l ,3}\.[O-9]{l ,3}\.[O-9]{l ,3}\.[O-9]{l ,3} "192168.01", “999.999.999.999”
+([O-9]{l ,3}\.){3}[O-9]{l ,3} “192168.01”, “999.999.999.999”
+A((([()-9]) | ([l -9][O-9]) | (l [O-9]{2}) | (2[O-4][O- Will only match lP addresses
+9]) l (25lo-5lll\-l{3}ll[o-9]l l ([l '9][O-91l l (l [O-
+9]{2}) l (2lo-4llo-9ll l (25lo-5]))$
+[l2]\d{12} CNP (but will no’r validate the correctness of ’rhe
+birth dare
+Ox[O-9a-fA-F]+ A hex number
+(if I Then | else | while | continue | break) A special keyword
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-rematch starts the matching from the beginning at the string and stops once the
-matching ends and net when the string ends except for rhe case where regular
-expression pattern is using the “3" characters
-Pythen a.‘
-ultpclzt re ow".
-if re.marcﬂi"\d+",“123 usu“): Mm"
-print ("Match") NO Match
-if re.matcﬂi"\d+", “Prlce is 123 usn"):
-pun: ("Match")
-i£ nets re.matCh("\d+$"r"123 usu"):
-pzlnt (“no Match")
+re.maTch sTngs The mchhing from The beginning of The sTring and sTops once The
+mochhing ends and noT when The sTring ends excepT for The case where regular
+expression pgTTern is using The “$" chargcTer:
+PyThon 3.x
+import re OquuT
+if re.match ("\d+", "123 USD"): MOTCh
+print ("Match") NO MoTch
+if re.match("\d+","Price is 123 USD"):
+print ("Match")
+if not re.match("\d+$","123 USD"):
+print ("NO Match")
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-If you want to check if a regular expression pattern is matching a puri of a string,
-the "search" method can be used:
-Python 1x
+If you wolnt to check if d regular expression polttern is matching d port of d string,
+the “search” method coln be used:
+
+Python 3.x
+
 import re
-if reisearcﬁ ("\d+“, "Price is 123 USD"): °”"""
-punt w-Found-w M-
-The sume can be achieved using a compiled obiect:
-Python six
+
+if re.search("\d+","Price is 123 USD"): Ouﬂun
+The some con be achieved using d compiled obiect:
+
+Python 3.x
+
 import re
-r : re.compll<>(“\d+")
-if risearchi'wrlce lS 123 USD"):
+
+r I re.compile(“\d+")
+
+if r.search("Price is 123 USD"):
+
 print ("Found")
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-search method stops after the ﬁrst match is achieved.
-The cbiect returned by the search or match method is called a match obiect. A match
-obiect is always evaluated to true. If the search does not ﬁnd any match, None is
+search method stops after the first match is achieved.
+The obiect returned by the search or match method is called a match obiect. A match
+obiect is always evaluated to true. lf the search does not find any match, None is
 returned and will be evaluated to false. A match obiect has several members:
-. qreupllhdex) —) returns the substrlng that matches that speclflc group. If index ls o, the substrlng refers
-ta the ehtire string thut was matched by the regular expression
-o lustindox —) returns the index of the last obiect that was matched by the regular expression. To create a
-group withih the regular expresilﬂrl, one must use l...].
-Python 1x
+O group(index) 9 returns the substring that matches that specific group. lf index is O, the substring refers
+to the entire string that was matched by the regular expression
+o lastindex 9 returns the index of the last obiect that was matched by the regular expression. To create a
+group within the regular expression, one must use (...).
+Python 3.x
 import re
-result = ze.search ("\d+", “Prlce 15 123 usu") °"'P"'
-print (reSult.group(D)l
+result I re . search ("\d+" , "Price is 123 USD") OUlPUl
+print (result . group(0))
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-In case of some operators (like * or +) they can be preceded by ‘P. This will specify a
-NON-greedy behavior.
-Python u
+In cose of some operators (like * or +) They com be preceded by ?. This will specify o|
+NON-greedy beholvior.
+Python 3.x
 import re
-result I IE‘SEEZC21(""(\d+)ﬂ, "File size lf 12345 bytes")
+result = re.search(".*(\d+)", "File size if 12345 bytes")
 if result:
-print (result.qxoup(l))
-result : re.search(".*? “an “File $129 if 12345 bytes")
-is result:
-prlnt (resultgvcupﬂn 0mm"
-s
+print (result.group(l))
+result = re.search(".*?(\d+)", "File size if 12345 bytes")
+if result:
+print (result . group(l)) Output
+5
 12345
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-In CGSe Of Same Operqfurs (like * or +) they can be preceded by I’. This will specify a
-NON-greedy behavior.
-Python u
+In cose of some operators (like * or +) They com be preceded by ?. This will specify o|
+NON-greedy beholvior.
+Python 3.x
 import re
-result Z Ie‘SEaZCh("-’ (\d+)ﬂ, "Flle size lf 12345 bytes")
+result = re.search(".*(\d+)", "File size if 12345 bytes")
 if result:
-print (resulc.qmup(l))
-result : re.search(@ \dH ", “Flle $129 1f 12345 bytes")
-is result:
-prlnt (result,g'cup11)) Output
-. 5
-12345
+print (result.group(l))
+result = re.search(‘lii@whﬁ", "File size if 12345 bytes")
+if result:
+print (result . group(l)) Output
+5
+‘ 12345
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-(-4.) is usually used to delimit specific sequences of sub-string within ‘he regular
-expression puNern:
-Python ad
+(...) is usually used to delimit specific sequences of sub-string within the regular
+expression pattern:
+Python 3.x
 import re
-result I IE‘SEEZC)I("‘\C1+,[A\d]*(\d+)","PIiCe 15 123 USD apIQX llO EUR“)
+result = re.search("(\d+)[A\d]*(\d+)","Price is 123 USD aprox llO EUR")
 if result:
-print (result.lastlndcxi
-for 1 in range(O,Iesult‘last1nciex+l)z
-print (1, ":>--, resungzoupUH can,“
+print (result.lastindex)
+for i in range(O,result.lastindex+l):
+print (i, "=>", result. group (i) ) Output
 2
-0 :>123 usn, uplox. 11o
-1 => 12:
-2 :> 1 10
+O => 123 USD, oprox. 110
+1 => 123
+2 => 1 10
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-(-) i5 USUGHY used f0 delimit specific Sequences of Sub-string Within ‘he regular
-expression chern:
-Pyihon aex
+(...) is usually used to delimit specific sequences of sub-string within the regulolr
+expression pattern:
+Python 3.x
 import re
-result e re‘seazch("®[”\d]*(\d+)","Price 15 @051: aprox 110 EUR“)
+result = re. search ("@PWd] * (\d+) ", "Price is @ USD aprox llO EUR")
 if result:
-print (result.lastlndcxi
-for 1 in unqe(0,:eeu1elesmndemnz
-print (1, ":>", resungzoupUH Ovlpm
+print (result.lastindex)
+for i in range(O,result.lastindex+l):
+print (i, "=>", result. group (i) ) Output
 2
-0 :>123 usn, uplox. 11o
+O => 123 USD, olprox. 110
 1 => 123
-2 :> 1 10
+2 => 1 10
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-(.4.) is usually used to delimit specific sequences of sub-string within me regular
-expression chern:
-Pyihon a‘!
+(...) is usually used to delimit specific sequences of sub-string within the regulolr
+expression pattern:
+Python 3.x
 import re
-result e reiseazCIi("1\d+HA\d] @","Pnee 15 123 Us]: apromeUR“)
+result = re.search(" (\ol+) [A\d] ®", "Price is 123 USD aprox ® EUR")
 if result:
-print (result.lastlndcxi
-for 1 in range (O, result‘ lastlncieadl):
-print (1, ":>", resultegzoupiin Quip“.
+print (result.lastindex)
+for i in range(O,result.lastindex+l):
+print (i, "=>", result. group (i) ) Output
 2
-0 :>123 usn, uplox. 110
-'l => 123
-2 :> T TO
+O => 123 USD, olprox. 110
+1 => 123
+2 => 1 10
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-(-4.) is usually used to delimit specific sequences of sub-string within ‘he regular
-expression chern:
-Python arr
+(...) is usually used to delimit specific sequences of sub-string within the regulolr
+expression pattern:
+Python 3.x
 import re
-result Z [elseazth("1(\d+) . mm) l”\d]*(\d+b",
-“Color from pixel 20, 30 1.5 123")
-if result: OW“.
-print (IesultJaSEindeX)
-for 1 in range(O,result.lasLlndex+liz 4
-print (l, "=>", resultlgroupdn 0 :> 203°‘; 123
+result = re.search("((\d+),(\d+))[A\d]*(\d+)",
+"Color from pixel 20,30 is 123")
+:Lf result‘: . Output
+print (result.lastindex)
+for i in range (O, result . lastindex+l) : 4
+print (i, "=>", result. group (i) ) O :> 20'30 is 123
 1 => 20,30
-2 :> 20
-3 => 30
-4 :> 123
+2 => 20
+3 => 3O
+4 => 123
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-(.4.) is usually used to delimit specific sequences of sub-string within ihe regular
-expression puiiern:
-Python arr
+(...) is usually used to delimit specific sequences of sub-string within the regulolr
+expression pattern:
+Python 3.x
 import re
-result r rerseazclﬂ‘ w [”\d t (1+)
-“Co - - pixel w ls 123")
-if result: OW“.
-print (resultlasrl'ndexa
-for 1 in range(O,result.lasLlndex+liz 4
-print (l, "=>", resultrgroupdn 0 => 20,30 is 123
+result = re. search ("w [A\d * 01+) "I
+"Co o 0' pixel w is 123")
+:Lf result‘: . Output
+print (result.lastindex)
+for i in range (O, result . lastindex+l) : 4
+print (i, "=>", result. group (i) ) O :> 20'30 is 123
 1 => 20,30
-2 :> 20
-a => ao
-4 :> 123
+2 => 20
+3 => 3O
+4 => 123
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-(-4.) is usually used to delimit specific sequences of sub-string within ‘he regular
-expression puNern:
-Python arr
+(...) is usually used to delimit specific sequences of sub-string within the regulolr
+expression pattern:
+Python 3.x
 import re
-result Z [elseaZCh("1® (\d+) > [m1 <\d+>
-“Co - £er pixel @ 30 1.5 123")
-if result: OW“.
-print (resultlasrl'ndexa
-for 1 in range(0,result.lasLlndex+liz 4
-print (l, -l=>--, resultgmumin o :> 20,30is123
+result = re. search (" (@I (\d+)) [A\d * (\d+) ",
+"Co - from pixel w 3O is 123")
+if result:
+. . Output
+print (result.lastindex)
+for i in range (O, result . lastindex+l) : 4
+print (i, "=>", result. group (i) ) O :> 20'30 is 123
 1 => 20,30
-2 :> 20
-a => ao
-4 :> 12:
+2 => 2O
+3 => 3O
+4 => 123
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:17**************
-(-4.) is usually used to delimit specific sequences of sub-string within ‘he regular
-expression chern:
-Python arr
+(...) is usually used to delimit specific sequences of sub-string within the regulolr
+expression pattern:
+Python 3.x
 import re
-result Z [elseazthw 1 (\d+) ,w [A\d]*< -+>
-“Color tr pixel 20 Q ls 123")
-if result: OW“.
-print (resultlasrr'ndexa
-for 1 in range(0,result.lasLlndex+liz 4
-print (l, "=>", resultlgroupdn 0 :> 203°‘; 123
+result = re.search (" ( (\ol+) ,@) [A\d] *( 0+) ",
+"Color fro pixel 20 w is 123")
+if result:
+. . Output
+print (result.lastindex)
+for i in range (O, result . lastindex+l) : 4
+print (i, "=>", result. group (i) ) O :> 20'30 is 123
 1 => 20,30
-2 :> 20
-a => 30
-4 :> 123
+2 => 2O
+3 => 3O
+4 => 123
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-search stops after the first match. To find all substring that match c specific regular
-expression from e string, use findull method.
+search stops after the first match. To tinol all substring that match a specific regular
+expression from a string, use findall method.
 
-Python alx
+Python 3.x
 
 import re
 
-result e [Elflndall("\d+",“C0101: from pixel 20, 30 lS 123")
+result = re.findall("\d+","Color from pixel 20,30 is 123")
 
 if result:
 
-prlnt (result) OW“.
-['20‘, ‘30', ‘1231
+prlnt (result) Output
+F20z'302'1231
 
-The result is u vector containing all substrings that matched the regular expression.
+The result is a vector containing all substrings that matched the regular expression.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-search stops after the first match. Ta find all substring that match q specific regular
-expression from c string, use findull method.
-Using groups (.v.) is also allowed (in this case they will be converted to a tuple in each
+search stops after the first match. To find all substring that match a specific regular
+expression from a string, use findall method.
+Using groups (...) is also allowed (in this case they will be converted to a tuple in each
 list element.
 Python 3.x
 import re
-result : re, Fir'dai l l" (\d) (\d+) ", "Color from plxel 20,30 1.5 123")
+result I re.findall("(\d)(\d+)","Color from pixel 20,30 is 123")
 if result:
 print (result)
-Output
-“'2'. '0'). 1'3‘. ‘0'1, m '. '21)]
+()utput
+[l'2', '0'), ('3', '0'), ('1', '23')]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-search stops after the first match. Ta find all substring that match q specific regular
-
-expression from c string, use findull method.
-
-Using groups (.v.) is also allowed (in this case they will be converted to a tuple in each
-
+search stops after the first match. To find all substring that match a specific regular
+expression from a string, use findall method.
+Using groups (...) is also allowed (in this case they will be converted to a tuple in each
 list element.
-
 Python 3.x
-
 import re
-
-result : re, Fir'dal l ﬂw (\d+) ", "Color from p1xel@,30 1.5 123")
-
+result I re.findall ("w (\d+) ", "Color from pixel Ql,30 is 123")
 if result:
-
-print: (result)
-
-Oupvt
-[(9'0').l's'.'o'1,l‘l'.'2a’;1
+print (result)
+Output
+[l Q '0'), ('3', '0'), ('1', '23')]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-search stops after the first match. Ta tind all substring that match q specific regular
-
-expression from c string, use findull method.
-
-Using groups (.v.) is also allowed (in this case they will be converted to a tuple in each
-
+search stops after the first match. To find all substring that match a specific regular
+expression from a string, use findall method.
+Using groups (...) is also allowed (in this case they will be converted to a tuple in each
 list element.
-
 Python 3.x
-
 import re
-
-result : re, Firdal l l" (\d)®","c<>10z from plxel (D 30 1.5 123")
-
+result I re. findall (" (\d) ®", "Color from pixel ‘Q, 30 is 123")
 if result:
-
-print: (result)
-
-Ovipvt
-“'2'.®.l'3'.'0'1,r1'.'23‘11
+print (result)
+Output
+[l'2',@, ('3', '0'), ('1', '23')]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-split method can be used to split a String using a regular expression.
+split method c0|n be used to split 0| string using 0| regular expression.
 
-The result is a vector with all elements that substrings that were obtained after the split
-occurred‘
+The result is 0| vector with 0|ll elements th0|t substrings th0|t were obt0|ined 0|fter the split
+occurred.
 
-Pyilwn 3.x
+Python 3.x
 
 import re
 
-result : re, 5p]1t(“[ae1.0u]+","COl<>r from plxel 20, 30 1.5 123")
+result = re.split("[aeiou]+","Color from pixel 20,30 is 123")
 
 print (result)
 
-Oulpul
-IIII “III IIIIHIHI HIIII
+Output
+
+['C', 'l', 'r fr', 'm p', Ix', 'l 20,30 ', 's 123']
+IIII “III IIIIEIEI IIIII
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-Groups ccln also be used. In this case the split is done after each group 0th matches.
+Groups can also be used. In this case the split is done after each group that matches.
 Python 3.x
-
 import re
-
-print ire.spllt("\d\d",“Color from plxel 20,30 lS 123">|
-Elemenls
-
-'Colorflom pixel' ‘is’ '3'
-
+print (re.split("\d\d","Color from pixel 20,30 is 123"))
+Elements
+'Color from pixel ' ',' ' is ' '3'
 Python 3.x
-
 import re
-
-print {reisplit("(\d) (\d)",“Color from pixel 20,30 is 123");
-Elemenls
-
-'Colorfrom pixel' '2' 'o' '3' '0' 'is' '1' '2' ‘3'
+print (re.split("(\d)(\d)","Color from pixel 20,30 is 123"))
+Elements
+'Color from pixel ' '2' '0' ',' '3' 'O' ' is ' 'l' '2' '3'
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-‘ REGULAR EXPRESSIONS SUPPORT
-Groups can also be used. In this case the split is done after each group ‘hat matches‘
-Pthon 3.x
-prlnt (ressplit1"\d\d+", "Colo: from pixel 20, 30 ls 123"))
-Oulpul
-.HIHIIIIIIHEIHIH. I I...
+| REGULAR EXPRESSIONS SUPPORT
+Groups can also be used. In this case the split is done after each group that matches.
+Python 3.x
+print (re.split("\d\d+","Color from pixel 20,30 is 123"))
+Output
+IHIHIIIIIIIHMIIIHI I III
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-‘ REGULAR EXPRESSIONS SUPPORT
-Groups can also be used. In this case the split is done after each group Ohm matches.
+| REGULAR EXPRESSIONS SUPPORT
+Groups com also be used. ln this case the split is done after each group that matches.
 Python 3.x
-prim: (révSPlit1"\d\d+", "1234E-"H print (Ie.split("\d“, "12345"))
-Ouvpm
-mn—mn—
-Pyllmn 3.x
-print 1re.spllt(“(\d)", "12345"))
-Oulpuv
+print (re.split("\d\d+", "12345")) print (re.split("\d", "12345"))
+Output
+Python 3.x
+print (re.split("(\d)", "12345"))
+Output
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Groups can also be used. In this case the split is done after each group that matches‘
+Groups can also be used. In this case the split is done after each group that matches.
 "If capturing parentheses are used in pattern, then the text of all groups in the pattern are
-also returned as part of the resulting list."
-hﬂgs:[ [docspithomorg Z 3 Z libra r! Z reshtmlﬁressplit
+also returned as part of the resulting list.”
+httgs:[ [docsquthomorg Z 3 Z library Z re.html#re.sglit
 
 Python 3.x
 
 import re
 
-print (tenSplltPl (\d\d+) "ch01 from pixel 20, 30 is 123");
+print (re.split("(\d\d+)", "Color from pixel 20,30 is 123"))
 
 Output
 
-['Color from pixel‘, '29‘, ‘,', '36‘, ' is ‘, ‘123', "]
+['Color from pixel ', ‘20', ',', ‘30', ' is ', ‘123', "]
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-splil method also allow Hugs and to specify how many times a split can be performed‘
-The full format is 5pm (puHern, sfring, mclxsplif=0, f1qgs=0)
+splil method also allow flags onol To specify how molny Times a split con be performed.
+The full format is splif (paHern, sfring, moxsplifIO, flagsIO)
 
-Pylhon 3.x
+Python 3.x
 
 import re
 
-s : "Today I'm havlnq a python course"
+s = "Today I'm having a python course"
 
-prlnt (re4split1" [”a—z‘]+“, s)»
+print (re.split("[“a—z']+", s))
 
-print (re4split1"[”a*z’]+", s, 2n
+print (re.split("[Aa—z']+", s, 2))
 
-print (re‘$plit1"["aiz‘]+“, s, flags : rerNoREczassy)
+print (re.split("[Aa—z']+", s, flags I re.IGNORECASE))
 
-print (re.spllt1" [”a—z‘]+“, s, 2, flags : re.IGNORECASE))
+print (re.split("[Aa—z']+", s, 2, flags I re.IGNORECASE))
 
-prlnt (reusplitw[Aaiz'AiZ]+", sH
+print (re.split("[Aa—z'A—Z]+", 3))
 
-oulpul
+()uipui
 
-[", 'odcy', ‘“",m 'huving', ‘a’, ‘pymon', 'course'] ['Toduy', "Fm", 'huving u pyvhon course]
+[", 'odoly', "'m", 'holving', '0', 'pyfhon', 'course'] ['Todoy', "I'm", 'holving o python course']
 
-[", 'oduy', '“m having a pthon mmq ['Toduy', "rm", ‘having’, ‘u’, 'py'hon‘, ‘course'1
-['Today', "I'm", 'hqving', 'u', ‘pyvhon', 'course']
+[", 'odoly', "'m having o python course"] ['Todoy', "I'm", 'holving', 'a', 'pyfhon', 'course']
+['Todoy', "I'm", 'hoving', '0', 'python', 'course']
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-‘ REGULAR EXPRESSIONS SUPPORT
-Regexp can also be used to replace u matched string with another string using the
-meihod sub.
-formai is sub (pcﬂern, replace, sfring, covnf=0, flags=0)
-o panem is a regular expression i0 search for
-c Nplncl is either u string or a function
-e string is me siiing where you are going to search iiie puﬂeni
-<> CGIIII' represems how many iime me replacement can occun if missing or o means for all marches,
-O flags represenis some flags [like re.lGNORECASE)
-Pyihon 3.x
-s : "Today I ‘m havlnq a python course“
-print (ressub (“hav1ng\s+a\s+\w+\s+course", "not [10an anything", 5))
-Oulpul
+| REGULAR EXPRESSIONS SUPPORT
+Regexp can also be used to replace a matched string with another string using the
+method sub.
+format is sub (pattern, replace, string, countIO, flags=0)
+o pattern is a regular expression to search for
+0 replace is either a string or a function
+0 string is the string where you are going to search the pattern
+o count represents how many time the replacement can occur. If missing or O means for all matches.
+o flags represents some flags (like re.lGNORECASE)
+Python 3.x
+s = "Today I'm having a python course"
+print (re.sub("having\s+a\s+\w+\s+course", "not doing anything", s))
+Output
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Regexp can also be used i0 repluce 0 mulch with another string using the method sub.
-format is sub (pallern, replace, srring, couni=0, flcgs=0)
-If replace parameter is a string, there is u special operator (\<number>) that if found
-within the replacement string will be replace with the group from the match search [for
-excm-le 3 will be re-lcced with .--rou(3)).
+Regexp can also be used to replace a match with another string using the method sub.
+format is sub (pattern, replace, string, countIO, flagsIO)
+If replace parameter is a string, there is a special operator (\<number>) that if found
+within the replacement string will be replace with the group from the match search (for
+example 3 will be replaced with .group(3)).
 Python 3.x
 import re
-s : "Today I ‘m having a python course"
-print (leisubl"having\:+a\:+l\w+l\:+course",
+s = "Today I'm having a python course"
+print (re.sub("having\s+a\s+(\w+)\s+course",
 
-r"n0t doing the \l Course",
+r"not doing the \1 course",
 
-s) l
+S) >
 
 Output
 
@@ -540,175 +534,180 @@ Output
 
 ***************Beginning Page***************
 ***************page number:30**************
-Regexp can ulsc be used t0 replace 0 match with another string using the method sub‘
-format is sub (pattern, replace, string, caunt=0, {1095:0)
-If replace parameter is a string, there is a special operator (\<number>) that if found
-within the replacement string will be replace with the group from the match search [tor
+Regexp can also be used to replace a match with another string using the method sub.
+format is sub (pattern, replace, string, countIO, flags=O)
+lf replace parameter is a string, there is a special operator (\<number>) that if found
+within the replacement string will be replace with the group from the match search (for
 example \3 will be replaced with .group(3)).
 Python 3.x
 import re
-5 = "Today I'm having a pytho course"
-pnnc trersub ("havmq\s+a\s ®\s+c0urse", You can also use
+s I "Today I'm having a python course"
+print (re . sub ( "having\s+a\s ®\s+course" , You can also use
 with the same
-effect. In this case
-r"n0t doing the @course",
-s) )
+effect. ln this case
+r"not doing the Q course",
+S) )
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
-Regexp curt also be used t0 replace a match with another string using the method sub‘
-format is sub (pattern, replace, string, count=0, {1095:0)
-If replace parameter is a function it receives the match obiectt Usually that function will
-use .group[0) method to get the string that was matched and convert it to the
+Regexp can also be used to replace a match with another string using the method sub.
+format is sub (pattern, replace, string, countIO, flags=O)
+lf replace parameter is a function it receives the match obiect. Usually that function will
+use .group(O) method to get the string that was matched and convert it to the
 replacement value.
 Python 3.x
-import: re
+import re
 Output
 
-‘hf “MEMTQHGX (s) ‘ File size is Ox3039 bytes
+def ConvertToHeX (S_) ; File size is 0x303‘? bytes
 
-return hexlxntls,group10) )l
-s Z "File slze is 12345 bytes“
-prlnt trersub ("\d+“, ConvertToI-Iex, st)
+return hex(1nt(s.group(0)))
+s I "File size is 12345 bytes"
+print (re.sub("\d+",ConvertToHeX, s))
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:32**************
-Python regular expressions supports extensions. The form of the extension is (1'...)
-<2 (?P<nume>...) will sev me name ei a group V0 u given airing. In case oi‘ u muich, mm group can be
+Python regular expressions supports extensions. The form of the extension is (?...)
+o (?P<name>...) will set the name of a group to a given string. In case of a match, that group can be
 accessed based on its name.
 
-Pyihon 3.x
+Python 3.x
 
 import re
 
-s = "File size if 12345 bytes“
+s = "File size if 12345 bytes"
 
-result = re. SSEZCh(" 17P<file size>\d+) ", s)
+result = re.search("(?P<file size>\d+)",s)
 
 if result:
 
-print ("size is ", result.gzoupC'flleislze“I)
-Ouipui
-Size ix 12345
+print ("Size is ", result.group("file_size"))
+Output
+Size is 12345
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Python regular expressions supports extensions. The form of the extension is (?..,)
-a (?P<name>...) ->The match obiec' also has a gmupdm method mm relwns u dicvionary with all
-Vhe keys and strings 'hnl‘ makh Ihe specified regular expression
-Fyihon 3.x
+Python regular expressions supports extensions. The form of the extension is (?...)
+o (?P<name>...) 9The match obiect also has a groupdict method that returns a dictionary with all
+the keys and strings that match the specified regular expression
+Python 3.x
 import re
-s = "File conflg > txt was create on 2016*10*ZO and has 12345 bytes"
-result : re. search("Flle\s+1?P<na|l\e>[a-Z\.]+)\S . " (?F<date>\di4 ) -\di2)-
-\di2)) i *\s (?P<size>\d+i "I 5i
-. — Resuli
-15 result:
-print (result_groupdlcti)) {
-'date' 1 '2616-10-29‘,
-'name‘ : ‘configvtxt ' ,
-‘Sile' I '12345'
+s = "File config.txt was create on 2016-10-20 and has 12345 bytes"
+result = re.search("File\s+(?P<name>[a—z\.1+)\s.*(?P<date>\d{4}—\d{2}—
+\d{2}).*\s(?P<size>\d+)",s)
+. — Result
+1f result:
+print (result.groupdict()) {
+'date' : '2916-19-29',
+'name' : 'config.txt',
+'size' : '12345‘
 }
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Pylhon regular expressions supports extensions. The form of the extension is (1'...)
-Q (1m...) ignore case will be applied ‘or vile OIIVVGI" black muich
+Python regulolr expressions supports extensions. The form of the extension is (?...)
+o (?i)(...) ignore case will be applied for the current block moltch
 
-o (mi...) (do!) will mulch everyihirlg
+O (?s)(...) “." (olot) will moltch everything
 
-Pyihorl ax
+Python 3.x
 
 import re
 
 s = "12345abc54321"
 
-result = re. searCM" 12) ( [1,3,2] H ) "i S)
+result = re.search("(2£)([A-Z]+))",s)
 
 if result:
 
-print (result.gloup(1)l
+print (result . group (1))
+Output
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
-Python regular expressions supports extensions. The form of the extension is (1'...)
-o l1=...) will nlolell me previous expression only if nexv expression is (mis is culled look ahead
-osserlion]
-o (1!...) similarly, will moieh enly if me nexi expression will nol maich
-Pylhon 3.x
+Python regulolr expressions supports extensions. The form of the extension is (?...)
+o (?=...) will moltch the previous expression only it next expression is (this is called look oheod
+assertion)
+o (?!...) similolrly, will moltch only it the next expression will not moltch
+Python 3.x
 import re
-s I "Python Course“
-result = Ie.searc!1(" (Python) \s+ (?=Cou:se) “,s)
+s I "Python Course"
+result I re.search("(Python)\s+(?=Course)",s)
 if result:
-pzint (Iesult.groupll)i
-olnpul
+print (result . group(l))
+Output
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:36**************
-Python regular expressions supports extensions. The form of the extension is (1'...)
-<2 ms...) represents a cummem / irlierrrwnen mm Curl be added in me regular expression re reflecl
-the purpose of u speciﬁc group
-Pyihon 3.x
+Python regular expressions supports extensions. The form of the extension is (?...)
+o (?#...) represents a comment / information that can be added in the regular expression to reflect
+the purpose of a specific group
+Python 3.x
 import re
-s : "Size is 1234 bytes"
-result = Ie.sean:!1(" (?# ﬁle size) (\dH ", 5|
+s I "Size is 1234 bytes"
+result I re.search("(?# file size)(\d+)",s)
 if result:
-pzint ("Size is ", zesult.group(l))
-Ouipui
+print ("Size is ", result. group(l))
+Output
 Size is 1234
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:37**************
-Python hes a way to iterate through u string applying different regulur expression. Because
+Python has a way to iterate through a string applying different regular expression. Because
 of this, a tokenizer can be built for different languages. Use method finditer for this.
 Python 3.x
 import re
-number e " (?P<nu|nbez>\d+) H 0-”va
-operation : " (?P<operat:ion>[+\-\*\/] l " ‘IO => number
-brake: = " (?P<bzaket>[\ (\l ] i " :> space
-space : " (?P<spaea>\s) " * => operation
-other : " (?P<othez>.)" :>spdce
-r Z re.complle(number+" i "+operation+" i "+braket+ [:> byekei
-" i "+space+" i "+otheh) 250 => number
-expr = "10 » (2506)“ +:>opemtion
-for matchobj in r. f1 ltd! teﬂexpri: 3 => number
-key : matchobj . lastqrnup )=> braket
-punt (matchobj . group(key) +" :> "+key)
+number I " (?P<number>\d+) " Output
+operation I " (?P<operation>[+\—\*\/] ) " 10 :> number
+braket I " (?P<braket>[\ (\) ] ) " :> space
+space I " (?P<space>\s) " * => operation
+other = " (?P<other>. ) " :> space
+r I re . compile (number+" | "+operation+" | "+braket+ (:> braket
+" | "+space+" | "+other) 250 :> number
+eXpr I "lO * (250+3) " + => operation
+for matchobj in r. finditer(expr) : 3 :> number
+key = matchobj . lastgroup )=> braket
+print (matchobj .group(key)+" :> "+key)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:38**************
 Recommendations:
 
-l‘ it the sorne regular expression is used rnuiiipie tinies using it in the compile torrn will
-improve the pertorrnonce ot the script
+l. If The same regular expression is used multiple Times using iT in The compile form will
+improve The performance of The scripT
 
-2. Even it Pyihon recognizes some escape sequences (such as \d or \w) it is better to
-eiiher use a raw string r".." er ta duplicaie the escape characier
-I Instead of “\d" 9 use r‘ \d' or “\\a‘
+2. Even if PyThon recognizes some escape sequences (such as \cl or \w) iT is beTTer To
+eiTher use a raw sTring r"..." or To cluplicaTe The escape characTer
+El lnsTead of “\d” 9 use r”\d” or “\\d”
 
-3i Regular expression need memory‘ If on you need is to search o snbsiring within
-onotirer substring or periorrn simple string operotion, don‘t use reguior expression for
-thiss
+3. Regular expression need memory. If all you need is To search a subsTring wiThin
+anoTher subsTring or perform simple sTring operaTion, don’T use regular expression for
+This.
 
-A. If you are trying to use the regular expression in a portable way, don't use some
-features like (?P:ncme] 9 other languages ar regular expression engines might nat
-support this,
+4. IT you are Trying To use The regular expression in a porTable way, don’T use some
+TeaTures like (@PIname) 9 oTher languages or regular expression engines mighT noT
+supporT This.
 
 ***************Ending Page***************
 

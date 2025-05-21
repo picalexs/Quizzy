@@ -2,115 +2,129 @@
 ***************page number:1**************
 Lenuta Alboaie
 adria@info.uaic.ro
+Retele de calculatoare — http://www.info.uaic.ro/~computernetworks
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Cupnns
+Cuprlns
 ' Nivelul Retea
-' Protocolul IPv4
-- Problematica
-~ Caracterizare
+' Protocolul va4
+' Problematica
+' Caracterizare
 ' Subretele
 ' Retele Private
-' ICMP
+' ICIVIP
 ' Rezolutia adreselor
-' IPv6 — imagine generala
-' Detalii _> Curs Viitor
+' va6-imagine generala
+' Detalii -> Curs Viitor
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Prellmlnaru
+Prellmlnarll
 ' Situatia initiala
-r lnainle de Internet dear "name din aceeasi relea Puleau cormmica
-inlre ele
-E . _ [El
-i ' _ -_l
-- :
-2 " .QJ
-El .
-n
-Figure: Retele individuale
+- lnainte de Internet doar nodurile din aceeasi retea puteau comunica
+intre ele
+e > i . f‘ @
+h , 5 -,_-
+2. ‘ g
+; 5 i
+Ii!
+a
+Figura: Retele individuale
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
 Prellmlnarll
-~ Probleme
+' Probleme
 — Cum se pot transporta pachete intr-un mediu eterogen?
-' Eterogenitate I I
-' La nivelurile inferioare: cum 3677: /"~"~
-se poate face interconectarea ‘\
-unuinumar mare de retele =‘/
-independente? "
+. Eterogenitate
+' La nivelurile inferioare: cum \wa 7- j
+. w ‘-—-</5>J@
+se poate face mterconectarea \ gr
+unui numar mare de retele Lg /
+independente? Q
 ' La nivelurile superioare: cum
 se poate oferi suport pentru
-0 mare varietate de aplicatii?
-- Scalare: cum s~ar putea suporra un numar mare de noduri si
+o mare varietate de aplicatii?
+' Scalare: cum s-ar putea suporta un numar mare de noduri si
 aplicatii intr-un astfel de sistem de retele interconectate?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
 Solutia
 ' lP-lnternet Protocol
-NetworkLayer
-'. . _ [i Gateways
-E ‘ - ‘I
-_ I;
-E ' 2
-a :
-E]
-n
+Network Layer
+E- . Ii] Gateways
+El . 1 g E IE!
+Ia ~' IE
+
+i E
+
+Ii]
+
+E
+
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-' Protocolul IP este utilizat de sisteme autonome (A5 —Autonomous
+' Protocolul lP este utilizat de sisteme autonome (AS —Aut0n0m0us
 Systems) in vederea interconectarii
-u.“ m MM A Enwenn m
-r: m A v s W “M
-/ —i» \ "‘
-1 \\
-\\ ,i r
-W‘ a Ile V,,,/ F\gura:
-A _ mm lmemelul -
-9"‘ \ Ooleclie de
-/ m
-\7 k relele
-‘ \\ MM / imemonemale
-a l M
-A C w :
-w Em w mm
-u“ W m“ M‘ W u" Mm. MW“, 1m!
-MM "mm",
+Leased lines Leased A European backbone ‘
+to Asia A U.S. backbone transatlantic
+A line
+> - <. )
+
+\\_
+
+Regional C IP router w F‘ '
+
+ne National lgura.
+
+\ ‘I network lnternetul -
+f‘ r 5"“ colectle de
+network §
+‘( retele
+\\ Tum, interconectate
+\D 8 Host
+A (gig? I I a
+tP Ethernet IP Ethernet
+LAN IP token ring LAN LAN
+[Computer Networks, 2003
+Andrew S. Tanenbaum]
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
 Nivelul Retea
 
-- Rol: ofera servicii neorientate-conexiune
-pentru a transporta datagrame de la sursa
+' Rolz ofera servicii neorientate-conexiune
+pentru a transporta datagrame de Ia sursa
 la destinatie; sursa si destinatia pot fi in
 retele diferite
 
-- Fiecare datagrama este independenta de
+' Fiecare datagrama este independenta de
 celelalte
 
 ' Nu se garanteaza trimiterea corecta a
 datagramelor (pierdere, multiplicare,...)
 
-- +...Curs viitor
+' +...Curs viitor
 
 —
 
@@ -122,122 +136,132 @@ N lvelul Retea
 Datagram definition
 
 - In Internet standards RFC 1594 a Datagram is
-defined as “A w ‘1 W11 i. 'r', independent
-entity of "r"? carrying w'." :I"; I: If w: In
-to be ' ~ r i from the source to the
+defined as “A 2117-‘:1»=ii;"-I*~¢(T, independent
+entity of this“ carrying :uwl'firziorii; In." ‘.‘117P'ifflii
+to be r v z‘: from the source to the
 destination computer without reliance on
 earlier exchanges between this source and
 destination computer and the transporting
-network."
-
-Regele de calculatoare — hnp://www.iniu.uainn/"computemetworks
+network.”
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
 Protocolul IP
-' Datagra ma IPv4
-.— ,2 M, —.
-WWW
--—_I
-_||—|
-w—_
-cum: (0 DI more WOIGE)
+- Datagrama va4
+-I|-—- 32 E-iIIE -—|I-
+|_|_|_|_]_|_|_|_|_|_J_I_I_I_I_I_I_I_I_I_LI_I_I_I_I_LI_I_I_I_I_I
+I_
+_| I—E
+Dpllms {Cl ur mum words}
+[Computer Networks, 2003
+Andrew S. Tanenbaum]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
 Protocolul IP
-' Datagrama IPv4 m
-. ‘ LA_A_A_A_A_A_A_‘_A_I_A_A_A_A_LI_A_A_A_A_A_A_A_A_A_A_A_A_A_/
-va'°"'e ‘fzua'e, ale mini-——-
-campulul Versmn —EmE-IEI-_
-——lm-
-Sunti ——-
-(RFC 791) M W‘ ’
-(6 pent,“ pmmmlul ﬂ-
-|Pv6 (RFC 1883)) Figure: Dalagrama IPv4
-Speciﬂca lungimea Speciﬁca
-amelului dimensiunea
-datagramei intregului pachel
+- Datagra ma IPv4 m
+' |_l_l_l_l_l_l_l_|_l_l_Ll_l_l_l_|_Ll_l_l_l_l_l_l_l_l_l_l_l_l_l_|
+' Valorlle uzuale ale
+. , I-——-I
+campulul VerSIon m—l—|
+, ———|-
+Sunt- —_-
+_ 4_ protocolul IP —_-
+D lions-{D urrnura wards}
+(RFC 791) —
+D
+(6 pentru protocolul ata
+IPv6 (RFC 1883)) Figura: Datagrama IPv4
+Specifica lungimea Specifica
+antetului dimensiunea
+datagramei intregului pachet
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:11**************
-Protocolul IP
-- Datagramava4
-7m—
-' Campul Type of ‘
-SEN/CE ermite aldei mnml_
-p‘ g m-IBa-mm-
-sa wmumce —-=-m=m—
-subretelei (m, =—
+' Datagrama IPv4
+—I—-32Bi|;s—l-
+' Campul Type of ‘ I
+“we peTm'te game‘ ——-IIE
+53 comunlce —-M_
+subretelei (e.g. ——
 .
-routere) ce tlp de WMWMMH V
-” Figura: Dabagrama IPv4
-° ‘Ii-WI
-I)‘ %E=
-Figura: Campul Type of Sen/roe
-WWW
+routere) ce tlp de
+. _ Dpllonsin urmmawnms}
+servmu doreste
+w Figura: Datagrama IPv4
+'1‘
+FREBEIEIIJE DELAT W ml." mm
+M Rm ﬂ Hum-l D l-h-n'd B Pia-mi @051
+whmumm
+Figura: Campul Type of Service
+1H Hnimﬁnnlml
+ilii-umi'mﬁnun-r
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
 Protocolul IP
-. Datagrama |pv4 Figura: Dalagrama IPv4
-*mg
-. Campul Identification WM
-permitegazdei
-destinatie sa identifice WWW
-apartenenta Ia o MM,“
-datagrama a noului wmwﬂm w;
-“gm PM“ _
-- Flagurile:
-' DF (Dan’t Fragment) — indica ruterelor sa nu fragmenteze
+o Datagrama IPv4 Figura: Datagrama IPv4
+- - “—§ Tet-W"
+permlte gazdel —il'§l Herr-M5“
+destinatie sa identifice
+apartenenta ‘a ° “
+datagrama a nOUIUI Dpliuns-{Durmurewarm} T
+fragment primit %-
+_ Data
+' Flagurlle:
+' DF (Don't Fragment) — indica ruterelor sa nu fragmenteze
 datagrama
-- MF (More Fragments) — semnalizeaza ca pachetul este un
-fragment, urmat de altele; ultimul fragment are acest bit 0
+' MF (More Fragments) — semnalizeaza ca pachetul este un
+fragment, urmat de altele; ultimul fragment are acest bit O
 ' Campul Fragment 0ffset- locul fragmentului in datagrama
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Protocolul lP
+Protocolul IP
 ' Datagrama lP
-- Fragmentarea datagramelor:
+° Fragmentarea datagramelor:
 
-- Fiecare fragment (pachet) are aceeasi structura ca
+~ Fiecare fragment (pachet) are aceeasi structura ca
 datagrama IP
 
-- Reasamblarea datagramelor se face Ia destinatar
+' Reasamblarea datagramelor se face Ia destinatar
 
-- Daca un fragment al unei datagrame e pierdut, acea
-datagrama e distrusa (5e trimite Ia expeditor un mesaj
+' Daca un fragment al unei datagrame e pierdut, acea
+datagrama e distrusa (se trimite la expeditor un mesaj
 ICMP — Internet Control Message Protocol)
 
-' Mecanismul de fragmentare a fost folosit pentru unele
-atacuri —]‘irewall piercing (un fragment "special" e
+' IVIecanismul de fragmentare a fost folosit pentru unele
+atacuri —firewall piercing (un fragment "special" e
 considerat ca fiind parte a unei conexiuni deja stabilite,
-astfel incat ii va fi permis accesul via ﬁrewall)
+astfel incat ii va fi permis accesul via firewall)
+
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Protocolul lP
+Protocolul IP
 ' Datagrama lP
-- Filtrarea datagramelor:
+° Filtrarea datagramelor:
 
-' Se realizeaza de un ﬁrewall: ofera accesul din
+° Se realizeaza de un firewall: ofera accesul din
 exterior in reteaua interna, conform unor politici
 de acces, doar pentru anumite tipuri de pachete
-(utilizate de anumite protocoaIe/servicii)
+(utilizate ole anumite protocoale/servicii)
 
 ' Preintimpina o serie de atacuri vizind
 securitatea
@@ -248,23 +272,24 @@ gateway
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Protocolul lP
+Protocolul IP
 ' Rolul si arhitectura unui proxy:
 
 — Acces indirect Ia alte retele (Internet) pentru gazdele
-dintr»o retea locala via proxy
+dintr-o retea locala via proxy
 
 — Proxy-ul poate fi software sau hardware
 
-— Rol de poarta (gateway), defirewall sau de server de
+— Rol de poarta (gateway), de firewall sau de server de
 cache
 
 — Proxy-ul ofera partajarea unei conexiuni Internet
 
 — Utilizat Ia imbunatatirea performantei (e.g., caching,
-controlul fluxului), ﬁltrarea cererilor, asigurarea
+controlul fluxului), filtrarea cererilor, asigurarea
 anonimitatii
 
 —
@@ -273,103 +298,106 @@ anonimitatii
 
 ***************Beginning Page***************
 ***************page number:16**************
-Protocolul IP
-
-' Datagrama IPv4 7m—
-- Campul TTL (Time m WWW
-Live) specifica durata
-de viata a pachetului; —n:m-
-"umal'lﬂ @5138
-decrementat de V Wlmlﬂwvmmmﬂ V
-
+- Datagrama IPv4 _
+-I—3-25|1;s—|-
+l l_|_l_l_l_l_l_l_|_l_l_l_l_l_;l_]_l_l_l_l_l_l_l_|_l_l_l_l_l_l_l_[
+° Campul TTL (Time t0 I
+We) SPQC'f'ca durata —||—|
+de viata a pachetului;
+numarul EStE
+decrementat de Dmmwmm}
 care trece pachetul
-
-Figura: Dalagrama IPv4
-—
+Figura: Datagrama IPv4
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
 Protocolul IP
-. Datagrama |pv4 m Figura:DalagramalP\/4
-I Campul Protocol L‘—‘—‘—‘—‘—‘—“‘—‘—‘—‘—‘—‘—‘-‘—‘—‘—‘—‘—‘—‘—‘—‘—‘—‘—‘—
+o Datagrama IPv4 325m; Figura: Datagrama IPv4
+. Campul Protocol a
 specifica protocolul
-(de nivel superior) WWW
-caruia ii este destinata SIT?“
-informatia inclusa in , wmwmm, ‘o
-datag'ama:
-I 1 ICMP (Internet Control Message Protocol)
-I 2 IGMP (Internet Group Message Protocol)
+(de nivel superior) ——adm WWW“
+caruia ii este destinata *
+informatia inclusa in Dmimwmm} i
+datagrama: T T
+Data
+I 1 ICIVIP (Internet Control Message Protocol)
+I 2 IGIVIP (Internet Group Message Protocol)
 I 6 TCP (Transmission Control Protocol)
 I 17 UDP (User Datagram Protocol)
-- etc.(RFC 1700)
+I etc.(RFC 1700)
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Protocolul lP
-. Datagrama |pv4 _ W, FigurazDatagramalPVVA
-LA_A_A_A_A_A_‘_A_A—A_‘_A_A_A_A_A—A_A~
-- Campul Header l ‘ ‘
-checksum {@051th 2M WW
-pentru detectarea mam
-erorllor; daca l
-apare o eroare \ '
+Protocolul IP
+o Datagrama IPv4 32m Figura: Datagrama IPv4
+l l l I . I I I . I | . I I '
+' Campul Header I
+ch ecksum folosit I "‘ ‘ WWW
+pentru detecta rea ——5wm
+e r0 ri I O r; d a ca Desﬁnatiun addreas i
+t Upliona [El ur mare wards}
+apare o eroare Y T
 Data
-datagrama este
-distrusa Header Checksum (1e bits)
-, ' are checked by the Header Checksum at
-7 Checking is needed because IP header fields
-\ w ' ‘ when m: pztkel (s mm um a router
-1=.|., TTL, Flap, Frilmenlitlnn, etc.)
+datagra ma este
+diStrusa Header Checksum (16 bits)
+— w": are checked by the Header Checksum at
+— Checking is needed because lP header fields
+rrnf' civil'i'w when the packet is sent out a router
+(e.g., TTL, Flags, Fragmentation, etc.)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
-PrOtOCOIUI IP Figura: Datagrama IPv4
-. D at a g ra m a |pv4 L.,QJAM,QuaiiMiAAQMAMJ
-Ian-I“
-' Campul Opt/OHS “IE_
-_.:Im-
-Opun LB um m?
-Secumate Memiiea- m! a! secmta este dmglama
-Dililzre 5mm De ban sum [enRL min mm calea mmnleia de paw-iii
-source mining!
-Diliiarei ﬂnloxirrmiin De hm Simi (englv mm o iisn a rv'erzlorcar: "U webuie 5am
-Lime smme mixing)
-lmregislreizi we: lengl record mine) Face lieure rum sa~si adauge iﬂNSi IP
-Amplem iie mp (engi. llmeﬂamp) Fan: ‘incur! mm 5H- adaugn aim; Si o amprema a! {Imp
+P rOtOCOI u I I P Figura: Datagrama IPv4
+— EEBitS—l-
+|_|_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_I_Ll_l_l_l_l_l
+' Datagra ma IPv4
+-—u-_
+- Campul Options _—IIE
+X Dpllonsiﬂ urrnnra words}
+Descriere
+Securitate Mentioneaza cat de secreta este datagrama
+Dirijare stricta pe baza sursei (engl. strict lndica calea completa de parcurs
+source routing)
+Dirijarea aproximativa pe baza sursei (engl. lndica o lista a ruterelor care nu trebuie sarite
+Loose source routing)
+lntregistreaza calea (engl. record route) Face fiecare ruter sa-si adauge adresa lP
+Amprenta de timp (engl. timestamp) Face fiecare ruter sa-si adauge adresa si o amprenta de timp
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:20**************
 Protocolul IP
-' Datagrama IPv4 m
-
-LA_A_A_A_A_A_A_‘_A_I_A_A_A_A_A_LI_A_A_A_A_A_A_A_A_A_A_A_A_A_I
-
-' camp“'_5°””e mu—l_
-adress 5| “lea-mu-
-Desrmurwn adress —_
-indica adresa
-
-Figura: Datagrama \Pv4
+- Datagramava4 m
+|_|_|_|_J_I_I_I_I_I_J_I_I_I_LI_I_I_I_I_LI_I_I_|_I_LI_I_I_I_I_I
+' CampulSource L T d I W
+adress si _—IIE
+Destination adress —_
+- -
+Indlca adresa
+. . , , _ Dpllonsin urmmawnms}
+sursel 5| destlnatlel
+Figura: Datagrama IPv4
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
 Protocolul IP
-~ Adrese IPv4
+' Adrese IPv4
 
 ' Fiecare adresa IP include un identificator de
-retea (NetID) si un identificator de gazda
+retea (NetlD) si un identificator de gazda
 (HostlD)
 
 ' Fiecare interfata de retea are 0 adresa IPv4
@@ -387,31 +415,38 @@ adrese: A,B,C,D,E
 ***************Beginning Page***************
 ***************page number:22**************
 Protocolul IP
-' Adrese IPv4
-fan-.4
-“Wm”
-—
+' Ad rese l Pv4
+~0— a Bus —
+l_1_LJ_Ll_LLLLI_l_I_I_J_I_Ll_I_l_1_1_l_LLI_1_l_LI_l_1_I 38098 O‘ .105‘
+6'3” addresses
+1.0.0.0 to
+128.0.0.0 t0
+192.0.0.0 to
+C 22325555255
+[Computer Networks, 2003
+Andrew S. Tanenbaum]
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
 Protocolul IP
-' Adrese IPv4
+- Adrese IPv4
 
-' Clasa A: 128 retele posibile, 214gazde/retea
+' Clasa A: 128 retele posibile, 224 gazde/retea
 
-- Clasa B: 214 retele posibile, 216 gazde/retea
+' Clasa B: 214 retele posibile, 216 gazde/retea
 
-- Clasa C: peste 2 milioane de retele, 255 gazde/retea
+' Clasa C: peste 2 milioane de retele, 255 gazde/retea
 
-- Identificatorul de retea (NetlD) este asignat de o
+' Identificatorul de retea (NetlD) este asignat de 0
 autoritate centrala (NIC — Network Information Center)
 
-- Identificatorul de gazda (HostlD) este asignat local de
+' Identificatorul de gazda (HostlD) este asignat local de
 administratorul retelei
 
-' Exemplu: 85.122.23.145 — Clasa A (conventie d2 notatie
+' Exemplu: 85.122.23.145 — Clasa A (conventie de notatie
 in zecimal)
 0101 0101 0111 1010 0001 0111 1001 0001
 
@@ -424,91 +459,98 @@ in zecimal)
 ***************Beginning Page***************
 ***************page number:24**************
 Protocolul IP
-' Adrese IPv4
+- Adrese IPv4
 
-' O interfata (placa) de retea are asignata o unica adresa IP
+' O interfata (placa) de retea are asignata 0 unica adresa IP
 
-- O gazda poate avea mai multe placi de retea, deci mai multe
-adrese IP
+' O gazda poate avea mai multe placi de retea, deci mai multe
+adrese lP
 
-' Gazdele unei aceleiasi retele vnr avea acelasi identificator de
+' Gazdele unei aceleiasi retele vor avea acelasi identificator de
 retea (acelasi NetlD)
 
-- Adresele de broadcast au HostlD cu toti bitii 1
+' Adresele de broadcast au HostlD cu toti bitii 1
 
-~ Adresa lP care are HostlD cu toti bitii 0 se numeste adresa
+' Adresa IP care are HostlD cu toti bitii 0 se numeste adresa
 retelei — refera intreaga retea
 
-- Exemplu: adresa 85.122130 (adresa network a masinilor
-8512213145 5i 85122131
-- 127.0,01 — adresa de loopbuck (loco/host)
+' Exemplu: adresa 85.122.23.0 (adresa network a masinilor
+85.122.23.145 si 85.122.23.1
+' 127.0.0.1 — ad resa de loopback (loca/host)
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
 Protocolul IP
 ' Adrese IPv4
-- Din spatiul de adrese ce pot fi alocate efectiv sunt rezervate
+' Din spatiul de adrese ce pot fi alocate efectiv sunt rezervate
 urmatoarele (RFC 1918):
-- 00.0.0 — 0.255.255.255
-' 100100 — 1012551551255 (adrese private)
-- 127.0.010 — 127.255.2551255 (pentru Inopbuck)
-- 17216.0.0 - 17231155155 (adrese private)
-~ 192.168101] - 192168255155 (adrese private)
-- Adrese private: adrese care nu sunt accesibile spre exterior
-(lnternetul "rea|"), ci doar in intranetul organizatiei
+' 0.0.0.0 — 0.255.255.255
+' 10.0.0.0 — 10.255.255.255 (adrese private)
+' 127.0.0.0 — 127.255.255.255 (pentru loopback)
+' 172.16.0.0 - 172.31.255.255 (adrese private)
+' 192.168.00 - 192.168.255.255 (adrese private)
+' Adrese private: adrese care nu sunt accesibile spre exterior
+(lnternetul ”rea|"), ci cloar in intranetul organizatiei
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Cl D R
-- Aspecte:
-- Cresterea exponentiala a numarului de gazde
-~ Nu toate masinile gazda ofera resurse accesibile de pe
+CID R
+' Aspecte:
+' Cresterea exponentiala a numarului de gazde
+' Nu toate masinile gazda ofera resurse accesibile de pe
 Internet
-- Multe adrese IP neutilizate
-' CIDR(C|assless Inter-Domain Routing)
+' |\/|u|te adrese IP neutilizate
+' CIDR(C|ass|ess Inter-Domain Routing)
 — Metoda de alocare eficienta a adreselor IP si rutare
-— lnlocuieste impartirea in clase A,B,C
+— Inlocuieste impartirea in clase A,B,C
 — Asigura scalabilitate, deoarece retelelor Ii se poate asigna
 dimensiuni potrivite
-— Foloseste VLSM (Variable-Length Subnet Masking)
-' Eg. 123.234.10056/24 sau 2001:db8::/32 (CIDR notation)
+— Foloseste VLS/VI (Variable-Length Subnet Masking)
+' E.g. 123.234.100.56/24 sau 2001:db8::/32 (CIDR notation)
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Number Resources
-WWW». Mm.‘wmmmmmml Wm‘ “mm “ms “mum,
-Mmmmuasysmmmmnmuse“10vmuuﬂqimnmumum
-Mm», “mm W n.mmpmmmmmﬂgmMM, Wm" 4W,“ MW.
-um» W msmmauydnwwédon v “WM; m mun-m woslmmmuvﬂy m mu" WWW
-Mmﬂmmmmm mm.“mmmmmm"WWW 1v) 11/07
-WWW/MM“WWW ‘as’: WWW.“ ‘zs “W, Mm “(m/mm“,
-n W." M WNW‘ Q Wm» W m. WW 7 .
-' “ g‘ ‘ " - lnternetAsslgned
-WWWMmmmmemm." WWW mm.’ WWW"Mm“
-Mmmmmemm“m ‘Wm “mmn/demm a m‘mmmmmw “mm?”
-MW mm MW (Mm, or m may WWW Rngmnm hm. Wm, mm Authontv
-V , é hnps://www.fana.org
-MM "mm"
-1
-AW Adi/WWW
-W (MWWMW
-I ‘ (“WWW
-V uzmr \A'Hrvmmnmmnimmr
-(“WWW
-MEN MM! M! mum
-(Mum/ma
-mw WWW andvvsscs\slosworepomsnW/mlmonmandmsscsm WWWWW mew
-mas“WWWWWW,“dmmmmmmﬂmebmm WWW
-mum mmcWmnvmsuvomuummn WWW “WNW mum"mom-mm.“
+|ana.org/numbers
+N umber Resou rces
+We are responsible for global coordination of the Internet Protocol addressing systems, as well as the
+Autonomous System Numbers used for routing Internet traffic.
+Currently there are two types of Internet Protocol (IPJ addresses in active use: 1P version 4 (IPv4) and 1P version 6
+{IPv6}. IPv4 was initially deployed on 1 January 1983 and is still the most commonly used version. IPv4 addresses
+are 32-bit numbers often expressed as 4 octets in “dotted decimal" notation {for example, 192112.53)-
+Deployment of the IPv6 protocol began in 19399.1on addresses are 128-bit numbers and are conventionally
+expressed using hexadecimal strings [for example, 2001:0db8:532:oe33::29). o I -
+nternet ASSIgned
+Both IPv4 and IPv6 addresses are generally assigned in a hierarchical manner. Users are assigned 1P addresses N U m berS
+by Internet service providers {ISPsL IS Ps obtain allocations of IP addresses from a local Internet registry (LIR) or
+National Internet Registry (NIRJ, or from their appropriate Regional Internet Registry{RlR}-: Authoﬂty
+_ — https://www.|ana.org
+' f1’ _ AFRINIC Africa Region
+Fm- ,4
+so, R, " . 1 APNIC AsialPacific Region
+AFRINIC ' H'NIL
+u" ARIN Canada, USA, and some
+"' ~ ' I Caribbean Islands
+_ .1-
+’ LACNIC Latin America and some
+Caribbean Islands
+RIPE NCC Europe, the Middle East, and
+Central Asia
+Our primary role forlP addresses is to allocate pools of unallocated addresses to the Rle according to their
+needs as described by global policy and to document protocol assignments made by the IETF. when an RIR
+requires more 1P addresses for allocation or assignment within its region, we make an additional allocation to
+the RIR. We do not make allocations directly to ISPs or end users except in specific circumstances, such as
+allocations of multicast addresses or other protocol speciﬁc needs.
 
 ***************Ending Page***************
 
@@ -517,69 +559,70 @@ mum mmcWmnvmsuvomuummn WWW “WNW mum"mom-mm.“
 Protocolul IP
 ' Subretele folosind masti de retea
 ' A aparut ca solutie pentru problema epuizarii spatiului de
-adrese IP
-- Simplifica rutarea
-' Subretelele nu pot fi detectate ca Subretele din exterior
-My w
-III-III. ,g, IIIIIIII
-M cs
-IIIIIIII IIIIIIII
-Ewan E5
-IIIIIIII .IIIIIII
-FM. m
-IIIIIIII ® .IIIIIII
-Mm PM“:
-\Ellmmﬂl
-Figura: Releaua unui campus
+adrese lP
+' Simplifica rutarea
+' Subretelele nu pot fi detectate ca subretele din exterior
+Hauler FE
+III IIII E IIIIIIII
+Art GS
+III III. IIIIIIII
+English EE
+III IIII IIIIIIII
+French Main l'u'lalh
+III IIII IIIIIIII
+Music Physics
+KElharnat
+Figura: Reteaua unui campus
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
 Protocolul IP
 ' Subretele folosind masti de retea
-~ Divizarea in subretele se va face via masca de retea (netmusk): bitii
-NetlD sunt 1, bitii HostlD sunt 0
-~ Identificatorul subretelei (SubneUD) este utilizat in general sa
+° Divizarea in subretele se va face via masca de retea (netmask): bitii
+NetlD sunt 1, bitii HostlD sunt O
+° ldentificatorul subretelei (SubnetlD) este utilizat in general sa
 grupeze calculatoarele pe baza topologiei fizice
-~i :2 Blls 4-
-MMMM
-Sm. N—w-m
-msAk 1n1n1n‘nunnnnnunnunnnnn
-Figura. O cale de a crea o subretea dinlr-o retea de clasa B
+-— 32mm —-
+|_1_L|_I_J_;I_J_J_;Ll_l_l_l_|_l_l_l_l_l_l_l_|_l_l_;l_l_l_L_|
+5m. ﬂ—%“
+mask1111111111111111111111D'UDD-DEI-DDDIEI
+Figura. O cale de a crea o subretea dintr-o retea de clasa B
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:30**************
 Protocolul IP
-‘ Suhretele folosind masti de retea
+' Subretele folosind masti de retea
 ' Exemplu:
-i Fie adresa IP216040.6.7
+— Fie adresa IP: 160.0.6.7
 10100000 00000000 00000110 00000111
-— Masca de retea: 255.255.2520
+— IVlasca de retea: 255.255.252.0
 11111111 11111111 11111100 00000000
-i Adresa de reteagﬁQOAD
+— Adresa de retea:‘160.0.4.0
 10100000 00000000 00000100 00000000
-Adresa retelei = masca de retea AND adresa IP
+Adresa retelei = masca de retea AND adresa lP
 ' Masti de subretea implicite:
-- 255.000 Clasa A
-‘ 25525500 ClaSi B
-- 25525515540 Clasa C
+' 255.0.0.0 Clasa A
+' 255.255.0.0 Clasa B
+' 255.255.255.0 Clasa C
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
 Protocolul IP
 123.234.100.56/24 represents
 - IPv4 address ( bits) 123.234.100.56
-- Subnet mask with 24 ones
+~ Subnet mask with 24 ones
 =11111111.11111111.11111111.00000000
 = 255. 255.255 . 0
-- Subnet size = 2‘ ‘Z4’ = 2a = 256 IPv4 addrs.
+~ Subnet size = 2( '24) = 28 = 256 IPv4 addrs.
 in this subnet
 - Routing prefix 123.234.1000 can be
 obtained from 123.234.100.56
@@ -590,20 +633,21 @@ and 255.255.2550
 ***************Beginning Page***************
 ***************page number:32**************
 Protocolul IP
-~ Conventii de notare (CIDR notativn): x.x.x.x/m inseamna ca se aplica o masca
+' Conventii de notare (CIDR notation): x.x.x.x/m inseamna ca se aplica 0 masca
 de m biti adresei IP precizata de x.x.x.x
 ' Notatie inventata de P.Karn, in 1980
-- Exemplu:
-- 10.00.0/12 — se aplica o masca de 12 biti adresei 10.0.0.0, selectinduVse
-valorile posibile in ultimii 20 de biﬂ (=32'12J de adresa
-‘ Blocul IPv4 160.0.6.7/22 sml 16006.7/25542552520 reprezinta adresele
-IPv4 din subnetul de dimensiune : 23141: 2m adrese IPv4 in aces! subnet
-' Blocul IPv6 2001:db8::/48 reprezinta adresele IPv5 de \a
-20011273101010.0100 la 2001.'db8:0;ffff:fﬁfzﬁffﬂfﬁf'ffﬁ
-' 85.122.15.0/20 i se apHca o masca de 20 biti adresei 85.122160
+' Exemplu:
+' 10.0.0.0/12 — se aplica 0 masca de 12 biti adresei 10.0.0.0, selectindu-se
+valorile posibile in ultimii 20 de biti (=32-12) de adresa
+' Blocul IPv4 160.0.6.7/22 sau 160.0.6.7/255.255.252.0 reprezinta adresele
+IPv4 din subnetul de dimensiune = 232'”: 210 adrese IPv4 in acest subnet
+' Blocul IPv6 2001:db8::/48 reprezinta adresele IPv6 de Ia
+2001 :db8:0:0:0:0:0:0 la 2001:db8:0:ffff.ffff:ffff.ffff:ffff
+' 85.122.16.0/20 — se aplica 0 masca de 20 biti adresei 85.122.16.0
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
@@ -614,7 +658,7 @@ Retele private
 pe Internet
 ' NAT (Network Address Translation) — RFC 3022, 4008
 ' Se reutilizeaza adresele private (RFC 1918)
-- Se bazeaza pe inlocuirea adresei private cu adresa IP
+' Se bazeaza pe inlocuirea adresei private cu adresa IP
 neprivata (IP masquerading)
 —
 
@@ -622,90 +666,93 @@ neprivata (IP masquerading)
 
 ***************Beginning Page***************
 ***************page number:34**************
-Retele prlvate
-' Functionalitate: - Ruterele in mod
+' Functlonalltate: ' Ruterele in mod
 normal ignora
-datagramele continind
-Pukalbvhwe _
-0mm lﬂﬂihﬁaﬂ adrese prlvate => pot
-£2357‘? fi folosite adrese IP
-z m __ private in cadrul
-5- I] - . intranet-ului
-WMPMY, B q \ organizatiei
-M’ a w mm \SF‘: - Accesul spre exterior
-Wm.“ m mulel (lnternetul "real") se
-Sm‘ ‘\mmwwwwwmﬁes realizeaza via o poarta
+h datagramele continind
+Bumpany' Packet Palate _ _
+um "aﬂﬁlﬂhﬂﬂ adrese prlvate -> pot
+;1 i, I:"E"'ﬂ""'3!‘.E'IIF'J fl folosite adrese IP
+.__ I translanun _ _
+El @ _ 9353.42.12! prlvate In cadrul
+- II | I mtranet-ulul
+Gmmh E \ organlzatlel
+"'“TE' \ EHFG mm mm |5P'5 - Accesul spre exterior
+Wham" ""3 mm“ (Internetul ”rea|”) se
+E n u
+“WK kmndwmmpwmmim reallzeaza Vla o poarta
 (mediating gateway)
 ce rescrie adresele IP
 Figura: Functionare NAT sursa/destinatie
-KMWMHMHM
-MM "mm!
+[Computer Networks, 2003
+AndrewS.Tanenbaum]
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
 Nivelul Retea
 ' Protocoale
-' ICMP (RFC 792)
+' |C|\/|P(RFC 792)
 ' ARP (RFC 826)
-- RARP (RFC 903)
+' RARP (RFC 903)
 ' BOOTP (RFC 951,1048,1084)
 ' DHCP
-' Dela IPv4la IPv6
+' Delava4|a|Pv6
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-~ ICMP — Internet Control Message Protocol
+- ICMP - Internet Control Message Protocol
 
-~ Utilizat pentru schimbul de mesaje de control
+' Utilizat pentru schimbul de mesaje de control
 
 ' Foloseste IP
 
-' Mesajele ICMP sunt procesate de software-ul IF‘, nu de
+' IVIesajele ICMP sunt procesate de software-ul IP, nu de
 procesele utilizatorului
 
-' Tipuri de mesaje :
+' Tipuri de mesaje:
 Tipul mesajului Descriere
-m (RFC 792D httBil/WWW.iana.DVE/assignmenlS/mmv'ﬂirimelevs
+etc (RFC 792) http://www.iana.org/assignments/icmp-parameters
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:37**************
 Protocolul ICMP
 ' Utilizat de:
-- comanda ping (Packet Internet Gropher)
-' comanda traceroute
-- Se trimite un pachet cu ‘I'I'L=1 (1 hop)
-- Primul router ignora pachetul si trimite inapoi un mesa]
-ICMP de tip "time-to-Iive exceeded"
-- Se trimite un pachet cu TI'L=2 (2 hop-uri)
-- AI doilea router ignora pachetul 5i trimite inapoi un
-mesa] “time-tu-Iive exceeded"
-- Se repeta pina cind se primeste raspuns de Ia destinatie
-sau sia ajuns la numarul maxim de hopiuri
+° comanda ping (Packet Internet Gropher)
+° comanda traceroute
+' Se trimite un pachet cu TTL=1 (1 hop)
+' Primul router ignora pachetul si trimite inapoi un mesaj
+ICMP de tip "time-to-live exceeded”
+' Se trimite un pachet cu TTL=2 (2 hop-uri)
+' AI doilea router ignora pachetul si trimite inapoi un
+mesaj "time-to-live exceeded"
+' Se repeta pina cind se primeste raspuns de la destinatie
+sau s-a ajuns la numarul maxim de hop-uri
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Rezolutia adreselor
-- Adrese IP <-> adrese hardware (fizice)
-~ Procesul de a gasi adresa hardware a unei gazde stiind adresa IP se
+Rezol utia ad reselor
+' Adrese lP <-> adrese hardware (fizice)
+' Procesul de a gasi adresa hardware a unei gazde stiind adresa IP se
 numeste rezolutia adresei (address resolution) — protocolul ARP
 (RFC 826)
-' ARP — protocol de tip broadcast (ﬁecare masina primeste
+' ARP — protocol de tip broadcast (fiecare masina primeste
 cererea de trimitere a adresei fizice, raspunde doar cea in cauza)
 ' Procesul de a gasi adresa IP pe baza adresei hardware se numeste
-rezolutia inversa a adresei (reverse address resulut/un) — se utiliza
+rezolutia inversa a adresei (reverse address resolution) — se utiliza
 protocolul RARP (RFC 903)
 ' E.g. utilizat la boot-are de statiile de lucru fara disc
-' BOOTF (RFC 951,1048,1084)
-~ DHCP [Dynamic Host Conﬁguration Protocol) RFC 2131,2132
+- BOOTP (RFC 951,1048,1084)
+' DHCP (Dynamic Host Configuration Protocol) RFC 2131,2132
 —
 
 ***************Ending Page***************
@@ -717,13 +764,13 @@ IPv6
 ' Context:
 — Probleme de adresabilitate via IPv4 clasic:
 ' Cresterea exponentiala a numarului de gazde
-(eg. IoT)
+(e.g. loT)
 ' Aparitia unor tabele de rutare de mari
 dimensiuni
-~ Configuratii tot mai complexe, utilizatori tot mai
+' Configuratii tot mai complexe, utilizatori tot mai
 multi
-~ Imposibilitatea asigurarii calitatii serviciilor
-(QoS)
+' Imposibilitatea asigurarii calitatii serviciilor
+(Q05)
 — Presiuni din partea operatorilor de telefonie
 mobila
 —
@@ -739,46 +786,42 @@ IPv6
 — Simplificarea protocolului
 — Suport pentru gazde mobile
 — Compatibilitatea cu vechiul IP
-— Suport pentru evolutiile viitoare ale Internebului
+— Suport pentru evolutiile viitoare ale Internet-ului
 ° RFC 2460, 2553
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-va6
-
-03"”,9
-“ mm, '2
-f IPv6?
-~ LAUNCH $
-
-60"!“ | \\\\\\\\\
-
-' 6 lunie 2012
-—
+| Pv 6
+"‘T' s w o R L D 2 I
+L H '
+\. a,’ ‘s ‘
+' 6 l u n i e 2 O 1 2
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
 | Pv6
-- Aspecte:
-— Adresele IPv6 au lungime de 16 octeti . 2m adrese
-- Natalie: s grupuri de 15 mm: 4 hexadecimal digits], delimitate de
-' Exemplu:ZOO1:Odb8:OOOO:OOOOIDOOO:OOOO:1428:5731)
-- Zerourile in fata unui grup de 4 cifre pot ﬁ omise
-- Daca unul sau ma? multe din grupurile de 4 cifre este 0000, zerourile
-pot fi omise si imocuite (o singura data) cu “:2”
+' Aspecte:
+— Adresele IPv6 au lungime de 16 octeti - 2128 adrese
+— Notatie: 8 grupuri de 16 biti(= 4 hexadecimal digits), delimitate de ”:”
+- Exemplu: 2001:0db8:0000:0000:0000:0000:1428:57ab
+' Zerourile in fata unui grup de 4 cifre pot fi omise
+' Daca unul sau mai multe din grupurile de 4 cifre este 0000, zerourile
+pot fi omise si inlocuite (0 singura data) cu ”::"
 — Exemplu: 2001:db8::1428:57ab
-— Pentru pastrarea Compatibilitaﬂi: adresele IP publice sum considerate ur\
-subset al Spatiului de adrese IPv6
-— Adresele IPv4 in IPv6 pot fi scrise astfel:
-10.0.0.1 -> ::10.D.D.1 sau D:O:O:D:O:D:ADO:1
+— Pentru pastrarea compatibilitatii: adresele lP publice sunt considerate un
+subset al spatiului de adrese IPv6
+— Adresele va4 in IPv6 pot fi scrise astfel:
+10.0.0.1 -> ::10.0.0.1 sau 0:0:0:0:0:0:A00:1
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
@@ -786,37 +829,30 @@ IPv6
 - IPv6 Address Length: 128 bits
 - 8 groups of 16 bits (= 4 hexadecimal digits)
 - 8 groups x 4 hexadecimal digits x 4 bits/hexadecimal
-- Zac1:05b8:123e:000010000:0000:03a0:c234
--1:2:3:4:5:6:7:8 groups
-Ian-1 - "In Ilnuy = Hun
-
-- ONO Y 0:0 - woo - 0-K
-
-. 0w‘ .0“ - IN! '01?
-
-. (mm-9.1 - 1010-0“
-
-- oouum - who.“
-
-- (MOO-0x4 - HOG-On,
-
-- Owl-015 ' "0| ~0|d
-
-' OilOvOlb ' ‘"0va
-
-' 0""0l7 ' lHl-Oﬂ
+- Zaci:05b8:123e:0000:0000:0000:03a0:c234
+- 1:2:3:4:5:6:7:8 groups
+Ulnar-1 — mu Molly = Hem
+-oooo-o..o - 1000-018
+. 0001 ~0n - 1001 -019
+' 0010-012 ' ‘010-010
+- 001: =01) - iOIi 'Onb
+- 01009014 ' 110° "01’-
+. 0101- 015 - 110i - Ond
+- 0110'010 ' "10'0"
+' 0111:017 ' “ii-01f
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:44**************
 IPv6
-' |CMPv6
+' |C|\/|Pv6
 — Ofera functiile ICMP (raportarea transmiterii datelor,
-erorilor, etc‘) plus:
-- Descoperirea vecinilor (Neighbor Discovery Protocol —
+erorilor, etc.) plus:
+' Descoperirea vecinilor (Neighbor Discovery Protocol —
 NDP) - lnlocuieste ARP
-- Descoperirea ascultatorilor multicast (Multicast
+' Descoperirea ascultatorilor multicast (Multicast
 Listener Discovery) — inlocuieste IGMP (Internet
 Group Management Protocol)
 — Detalii in RFC 4443
@@ -826,18 +862,19 @@ Group Management Protocol)
 
 ***************Beginning Page***************
 ***************page number:45**************
-va6
+IPv6
 ' ...continuare -> Curs optional
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:46**************
 Rezumat
 ' Nivelul Retea
 
-' Protocolul IPv4
+' Protocolul |Pv4
 
 ' Problematica
 
@@ -845,7 +882,7 @@ Rezumat
 
 ' Subretele
 ' Retele Private
-' ICMP
+' ICIVIP
 ' Rezolutia adreselor
 ' IPv6 — imagine generala
 
@@ -853,9 +890,13 @@ Rezumat
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-é
+f’ - W\\'\
+/' ' \\
+k1 \
+\
 
 ***************Ending Page***************
 

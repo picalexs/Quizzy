@@ -1,60 +1,63 @@
 ***************Beginning Page***************
 ***************page number:1**************
-‘\ Gavnlut Dragos
-O O P Course s
+Gavrilut Dragos
+0 O P Course 6
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
 > Casts
-> Macrcvs
-b Macros vs Inline
+b Macros
+> Macros vs lnline
 > Literals
-Summary b Templates
+summary b Templates
 > Function templates
 > Class templates
-> Template specialization
+b Template specialization
 > Compile-time assertion checking
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-> Casts
+‘\ > Casts
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
 Casts
-> Assuming that a class A is derived from a class B, than it is possible for i
-an object of type A to be converted to an object of type B. E
-> This is a normal behavior (obviously A contains every member defined
-in B). E
-> The conversion rules are as follows: l
-- It will always be possible to convert a class to any of the classes that it
+b Assuming that a class A is derived from a class B, than it is possible for
+an object of type A to be converted to an object of type B.
+b This is a normal behavior (obviously A contains every member defined
+in B).
+> The conversion rules are as follows:
+‘z. lt will always be possible to convert a class to any of the classes that it
 inherits
-4. It is not possible to convert from a base class to one of the classes that
+‘a lt is not possible to convert from a base class to one of the classes that
 inherits it without an explicit cast
-~:~ If the cast operator is overwritten, none of the above rules apply,
+‘z. If the cast operator is overwritten, none of the above rules apply.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
 Casts
-> Let's consider the followin code: OHS“ Field/Va’
-APP-CPD 100000 c‘
-2:223:01; :::::: :z; 1?‘ 1°°°°“ "' D
-m“ = z mm A, pm“ I ( Wm“ m <1, <1; )1 —
-vnd mnllhmxd) (
-3: 3 ; 3; “1 300000 c.al
-L‘ 300004 c.a2 ‘
-> ssuming t e pointer “c” points to t e o set — I
-300000, what do we need to do to obtain a 300008 c0a3 3
-pointer to an object of type B’ Z 300012 c.b1 L
-300016 C.bZ ‘
+b Let’s consider the following code: Offset FiEId/ Var
+App_ cpp 1 00000 C* t
+class A { public: int a1, a2, a3; }; 100004 b*
+class B { public: int b1, b2; };
+class C : public A, public B { public: int c1, c2; }; —
+void main(void) {
+5* E, Z 231.“ c‘) 300000 c.a1 f
+lf 300004 c.a2
+b ssuming t e pointer “c” points to t e o set —
+300000, what do we need to do to obtain a 300008 c.a3
+pointer to an object of type B* ? 300012 C-b1
+300016 c.b2
 300020 c.c3
 300024 c.c4
 
@@ -63,2379 +66,2498 @@ pointer to an object of type B’ Z 300012 c.b1 L
 ***************Beginning Page***************
 ***************page number:6**************
 Casts
-> Let's consider the lollowin code: Offset HEM/Var
-Appxpp 100000 c“
-(1m A ( Mm: m ,1, ,1, =1; >; 100004 b‘
-Um . ‘ MM m m‘ m‘ >0 i
-ms; c = mm A‘ Mm a 4 WM“: m n‘ a; >1 —
-vum numb/01d) l
-:2 § i 2:: ‘O 300000 c.a1
-—’ h h ‘f —300004 c.aZ
-> Assummg t e painter “c” poinlsto t e u set —
-300000, what do we need to do to obtam a 300008 c0a3
-pointer to an object of type B’?
-> The simples way is m add 1+12| w the offset a ,
-where “c” variable points. Tins wilt position 300020 (£3
-the new pointer w a Locatiun 0r a B type 300024 c c4
+
+> Let’s consider the following code: Offset Field/ Var
+App. cpp 1 00000 C*
+class A { public: int a1, a2, a3; }; 100004 b* \
+class B { public: int b1, b2; };
+class C : public A, public B { public: int c1, c2; }; —
+void main(void) { D
+
+if‘) 300000 c.a1 4_
+
+}— 300004 c.a2
+
+b Assuming the pointer “c” points to the offset —
+300000, what do we need to do to obtain a 300008 c.a3
+pointer to an object of type B* ?
+
+b The simples way is to add (+12) to the offset a
+where “c” variable points. This will position 300020 ¢,¢3
+the. new pomter to a location of a B type 300024 c.c4
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
 Casts
 class A void main(void)
-{ { ‘1
-public: s b; 1‘
-
-int a1,a2,a3; A* a = ab;
-)J } E
-Elass szublic A ;Bb;
-public = It?" ﬁlbl
-)Imt b1,bZ; ;A' a : ﬁb;
-
+{ {
+public: B b;
+int a1,a2,a3; A* a = &b;
+}; }
+glass szublic A ;B b;
+public: lei‘ ES’; [b]
+int b1,b2; Ci '-
+}, ;A a = &b;
 ’ lea eax,[b]
-
-muv dword ptr [a],eax
+mov dword ptr [a],eax
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Casts
-i i I - m
-public: C c; I“ ‘ix-M r ‘
-int a1,a2,a3; A* a; n Z J?" M" "‘ “1"” ‘
-); 5* b; in‘ “mm I
-E mlﬂsv I
-class B m in: mm} 1
-7 ) W w; D v a P’ e ,w ‘
-int b1,b2; 7mm,‘ my)‘: m mp 1mm ‘
-)' “W12? idmwmmraéh
-class C:public A,B '—H
-{
-public:
-int c1 ,cZ;
-); I,
+class A void main(void) Disasm
+{ { a = &C;
+public: C c; lea eaxic]
+. mov dword ptr [a],eax
+mt a1,a2,a3; A* a; b = &c;
+}. B>|< b‘ lea eax,[c]
+’ " test eax,eax
+je NULL_CAST
+class B * “W
+’ add ecx,9Ch
+{ b = 81C; mov dword ptr‘ [ebp-194h],ecx
+public ; } jmp GOOD_CAST
+. _ NULL_CAST:
+Int b1,b2, mov dword ptr‘ [ebp-104h],@
+}; GOOD_CAST:
+mov edx,dwor‘d ptr‘ [ebp-194h]
+. mov dword ptr‘ [b],edx
+class CIpUbllC A,B —
+public: '
+int c1 ,c2;
+};
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Casts ‘
-public: C cs 1'1" ,}I,*“',‘,. .
-int a1,a2,a3; A“ a; n Z m, V ‘
-)1 B‘ b’ test will . ‘Z *
-je my“ slzeuflAl
-class B a Z Q1 1e: e:X,[¢]
-{ b 81C’ add “>980: (acn 1 11)
-Imv mm n- !b 4w- .101 1
-PM“ Mu: wig" P 1 ‘
-int b1,b2; 'W' Mm ptr [mp-mmm
-)' mils} “mm m [mp-1am]
-class Czpublic A)‘; w
-{
-public: '
-int c1,c2;
-);
+class A void main(void) Disasm
+{ { a = &C;
+public: C c; lea eaxic]
+. mov dword ptr [a],eax
+mt a1,a2,a3; A* a; b = &c;
+}. B>|< b lea eax,[c] 12 =
+’ ’ test eax,eax .
+je NULL_CAST SlZGOf(A)
+class B a = &C’ lea ecx,[c]
+’ add ecx,0Ch (0ch = 12)
+{ mov dword ptr [ebP-194h],ecx
+pUblic’ imp
+. _ NULL_CAST:
+Int b1ib2! mov dword ptr [ebp-104h],0
+}; GOOD_CAST:
+mov edx,dword ptr [ebp-194h]
+_ mov dword ptr [b],edx
+class CIpUbllC A,B — /
+public:
+int c1 ,c2;
+};
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Casts
-class A void main(void) Disasm
-{ { :2- (c-yb; d d [v1 12:
-public: L' <; ‘W “I” P" J
-
-4 "1qu
-
-mt a1 ,a2,a3; A a, 3;: ennmm w [>1 svzeoﬂm
-). R. h. sub “hm. (urn - 12)
-
-' '1 mv duorﬂ w [ebD-ﬂﬁhheax
-
-t‘ u, jmp mum
-class B a Z 3p MlLl_nsn
-{ h 8 ' mav duordnn[ehp1wh]-0
-, [; unmask
-
-public: m eckm'mrd w [lhpdlm]
-
-int b1,b2; Imv mm ptr [c2],!cx
-);
+class A void main(void) Disasm \
+{ { c2 = (C*)b; 12 _
+public: C c; Qmp dwm pt" [hm . _
+. 1 2 3. A* _ 3e NULL_CAST SlZGOf(A)
+Int a ,a ,a , a, mov eax,dword ptr' [b]
+}; B>l< b; sub eax,0Ch (6([Ih = 12) 1
+mov dword ptr ebp-119h ,eax
+(1* c2 ; jmp GOOD_CAST
+ClaSS B = - NULL_CAST:
+a &C’ mov dword ptr [ebp-116h],6
+{ b = &c 3 GOOD_CAST:
+public; mov ecx,dword ptr' [ebp-119h]
+};
 class Czpublic A,B
 {
 public:
-
-int c1,c2; '
-);
+int c1 ,c2;
+};
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Casts
-> Let's anal ze the inllowin- Iroram: I
-APMPP I
-class A i Mm: m .1, .1, .1; >;
-class a i mm: m m. hz: >1 i
-ms; c z pnvil: At pnvil: s 4 pm“; m qt ‘z; )1 i
-void m21ﬂ(vuld) i
-i
-< (t
-m i Z m
-i <2:
-> This type of cast can be performed only if the inheritance is public‘
-> In this example, there ls a Clear translation from “A'” l0 “C'”, but, 35A IS
-inherit using private access modiﬁer, this cast is nut allowed.
+b Let’s analyze the following program:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B { oublic: int b1. b2: };
+class C : private A, private B { public: int c1, c2; };
+void main(void)
+{
+C c;
+}—
+b This type of cast can be performed only if the inheritance is public.
+b In this example, there is a clear translation from “A*” to “C*”, but, as A is
+inherit using private access modifier, this cast is not allowed.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Whenever we discuss about conversvon between classes that Share an
-mheritance relatvonshw, there are tWO nutvons that Heed t0 be mentvuned:
-“may B downcast C Inherits B lnheritsA
-Lets assume that We have the fottowmg dasses: tugs M mm m a, aZ, a3, I»
-(lat; B WM): u M1“ m n1, n2‘ u
-We have the Ionawmg termmotogy: m“ < mm a ( MM“ w rl, n. :>.
-maxim; : From child to parent ¢i convert to base
-n - gm‘: Enbjcn, ~ Always possible and safe
-‘i
+Whenever we discuss about conversion between classes that share an
+inheritance relationship, there are two notions that need to be mentioned:
+d n —. . . .
+upcast & OW cast C inherits B inherits A
+Let’s assume that we have the following classes: class A { public: int a1, a2, a3; };
+class B : public A { public: int b1, b2; };
+We have the following terminology: class C = Public B f Public int c1, c2; B
+void mainO { : From child to parent ¢> convert to base
+C object; .
+A * base = &object; ' Always posSible and safe
+}
 and
-void mm < : From parent to chitd
-A mm, , - - - .
-I ‘ an“ Z (mummo, Requires EXPlICIt cast or dynarmc cast
-y ~ Unsafe 1!!
+void main() { : From parent to child
+A object; . - . . ,
+C * child = (c*)(&object); Requires explicit cast or dynamic cast
+} - Unsafe ll!
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Upcasting produces an interesting secondary effect catlcd abject slicing
-Tr... t t
-m .1. .1. .3.
-nun: value) ant/aim!» plume), tub/am!) Q
-)r
-5mm B M... . t
-wt m, o2, - .
-BUM vain!) R(valu:'valu=). tub/aim). bib/aim) U DoSomelhmg has ONE parameter Of tYPEA
-)r
-vmll DuSumeUuYYgUl ubleck) (
-Wet .1... .14., .Her. , m... .1, m... .1, m... ..>,
-)
-van! numb/uni) (
-531335333);wa DoSnmelhing is called wrtrr a parameter pr type a
-)
-This codc wrlt epmpite and Wm print on trre scrccn: a1 zsez 25,53 25. chc
-an mstanee of B can atways be casted w vts base class, you can slice from an
-object pr type B yetues yr and v2 and you wrtl obtam an object of type A (hat
-can ne send to mnetren DoSomethmg.
+Upcasting produces an interesting secondary effect called object slicing
+structA{—
+int a1, a2, a3;
+A(int value) : a1(va1ue), a2(va1ue), a3(value) {}
+};
+struct B : public A {
+int b1, b2; °
+B(int value): A(value*value), b1(value), b2(value) {} Dosomethlng has one parameter Of type A
+};
+void DoSomething(A object) {
+printf("a1=%d, a2=%d, a3=%d\n", object.a1, object.a2, object.a3);
+}
+void main(void) {
+B b_object(5); ' ' '
+Bogomethingmobject); DoSomething is called With a parameter of type B
+}
+This code will compile and will print on the screen: a1=25,a2=25,a3=25. Since
+an instance of B can always be casted to its base class, you can slice from an
+object of type B values v1 and v2 and you will obtain an object of type A that
+can ne send to function DoSomething.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Upcastmg produccs an mtcn (an B: m :ing
-? —
-m H. H. u‘
-.(m mm Wm» mm
-)y
-5W. B Mm A (
-W m, n2.
-“(m Wm Mumvvmn. bu
-M
-vmd nusumsumvgln ubjsnk) (
-WW Md, am, 3km
-)
-vum mqumd) (
-B WW5»
-MEMWLDVQDM»
->
-Tm nodc Wm mmpm and ‘A , 25 chc
-(all DnSamethlng
-an Instance m B can atways b‘ e from an
-object of type B values w and v‘ 4 4 J‘ type A mm
-can ne send m functvon DoSomethmg.
+Upcasting produces an inten can B: :B :mg
+struct A {
+int a1, a2, a3;
+A(int value) : a1(va1ue), a2(valL
+};
+struct B : public A {
+int b1, b2;
+B(int value): A(value*value), b1(
+};
+void DoSomething(A object) {
+pnintf("a1=%d, a2=%d, a3=%d\n"
+}
+void main(void) {
+B b_object(5);
+DoSomething(b_object);
+}
+This code will compile and V\ . 25. Since
+. call DoSomething
+an instance of B can always bl e from an
+object of type B values v1 and v,_ -_ ,, ,, so ,7 ,- ul typeAthat
+can ne send to function DoSomething.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-b Ucastin- deueeS an interestin- Seconda effect called Obi“ slicin-
-APP-cw
-mm A l
-m i1, n, n; l 1‘ w *
-‘(m v.1“) = luv-m), mum), 12m)“ r " “1 W”
-Mans! M m) . mm» < l
-n
-strusc'tlh; 9:211‘ A l all a: :I
-nun! 9min Annuvvnuab mum), m “gmgmmb 9mm;
-h
-ma wmmanm mm» ( ,,
-Frimf(“n:xn, ‘14.1, as:m\n“, whicncml
-1 , /
-was mammal l
-a Labjutﬁ);
-} wmmamuhjm»; cull humming
-> However, if we add a copy'constructor to class A, it would be used,
+> Upcasting produces an interesting secondary effect called object slicing
+APP-CPP
+struct A {
+int a1, a2, a3; - ,
+A(int value) : a1(value), a2(value), a3(valu B b—ObJeCt(5)’
+A(const A& obj) : A(obj.a1) { }
+};
+struct B : public A { C811 B: tB
+int b1,b2; DS ‘th' b b' t _
+B(int value): A(value*value), b1(value), b2( O cnne 111g( -—O :]eC )’
+};
+void DoSomething(A object) {
+printf("a1=%d, a2=%d, a3=%d\n", object.a1
+}
+void main(void) {
+B b_object(5); ‘
+} 0050mething(b_0bject)s call DoSomething
+b However, if we add a copy-constructor to class A, it would be used.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Upcast / downcast
-b Ucastin Induces an interestin- seconda effect called DbICt slicin-
-APP-cw
-mm A t
-int i1, i1, a);
-‘(m um) = “(v-m), mum), nah/nun) n a momma);
-anst It! m) . mum < i
-22"“ I = um‘ A t
-m m, n; call am
-y Bun: ulna): ‘mm-v.1“), mm“), mm“ A Urnw Z rump”;
-vém mainbwiﬂ) (
-I “mam; /
-A Labial: - whim;
-) “11 AMA
-> However, if we add a copy-constructor to class A, it would he used‘ This way
+> Upcasting produces an interesting secondary effect called object slicing
+APP-CPP
+struct A {
+int a1, a2, a3;
+A(int value) : a1(value), a2(value), a3(value) {} B b object(5);
+A(const A& obj) : A(obj.a1) { } '-
+};
+struct B : public A {
+int b1, b2; call B::B
+B(int value): A(value*value), b1(value), b2(value A a object = b object;
+}; _ _
+void main(void) {
+B b_object(5);
+A a_0bject = b_object;
+} call A::A
+b However, if we add a copy-constructor to class A, it would be used. This way
 of creating a object from another object that inherits it, is another usage of
-objezt slitting‘
+object slicing.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Casts
-> Let's anal e the followin- code: ‘a
-APP-CPD I
-chss A { puhhc: 1n! u, a2, I3; ); 2
-class I i public: Ant h!‘ b1; h ‘
-m“ c 1 Wm: A, Wm: I c Dllhlicz m <1, <1; n ‘
-mm mllllvnlﬂ} I
-1 ‘
-c ‘1
--~ h Z m
-’—
-> What happens when we convert (cast) Etc to B‘?
+b Let’s analyze the following code:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B { public: int b1, b2; };
+class C : public A, public B { public: int c1, c2; };
+void main(void)
+{
+C c;
+B* b = &c;
+}—
+> What happens when we convert (cast) &c to B* ?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Casts 1
-> Let's anal 1e the (ullowin- code: 1
-APP-CPD I
-(1m ‘ ( Mm: m =1, =1, =1; >; \
-class l ( Mm: 1m m‘ m; >; ‘
-class c z puhht A‘ mm a ¢ FNMA‘: m ‘L a; >1 1
-void mzlﬂ(vuld) I
-( lea emu] \
-if; 7 ‘ v (m Hum
-) ' “ je nuuiun
-1“ E£>l,[[]
-add anew
-mov dwurd pt!‘ [ebp'HFEh],eo:
-> What happens wh- imp nuns
-NULL cnsn ,
-mov award ply‘ [:hp'HFElv],B
-nuns: '
-mov mmmm an‘ [swam]
-mm ‘mm pt!‘ [b],édl
+Casts
+b Let’s analyze the following code:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B { public: int b1, b2; };
+class C : public A, public B { public: int c1, c2; };
+void main(void)
+{ lea eax,[c]
+E*CG-&C‘ test eax,eax
+} ’ je NULL_CAST
+lea ecx,[c]
+add ecx,9Ch
+mov dword ptr [ebp-9F8h],ecx
+b What happens Wh- J'mp DONE
+NULL CAST:
+mov dword ptr [ebp-6F8h],9
+DONE:
+mov edx,dword ptr [ebp-9F8h]
+mov dword ptr [b],edx
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
 Casts
-> Let's anal e the Iollowin- code: I
-APP-CPD r
-(his r r Mm: m .1, .1, =1; ); ‘
-a»; I r pm“: m n1‘ m n ‘
-m“ c 1 Wm: A, Wm: I c Dllnici m <1, <1; 1; r
-mm mnlllvnxd) r
-{ r
-c ‘1
-|~ n Z m
-)—
-> But - what if we DO NOT WANT to change the address “b” points to when the
-cast is performed Z What if we want “b” to point to the exact same address as
-“8c” 2
+b Let’s analyze the following code:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B { public: int b1, b2; };
+class C : public A, public B { public: int c1, c2; };
+void main(void)
+{
+C c;
+B* b = &c;
+}—
+> But — what if we DO NOT WANT to change the address “b” points to when the
+cast is performed ? What if we want “b” to point to the exact same address as
+(6&c” ?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
 Casts
-> Let's anal e the Iollowin Code:
-APP~¢PP
-(his A r Izllhhc: m .1, .1, =1; n
-a“; I t mu“ m n1‘ m r;
-class c 1 pm“ A, Dllhlic I t Dllhlic: m <1, <1; n
-wad mnlllwnd)
-r ~ r
-) ‘x
-> But - what if we DO NOT WANT to change the address “b” points to when the A
-cast is performed Z What if we want “b” to point to the exact same address as
-“8c” ?
-> One solution is to use a double cast (ﬁrst cast “ﬁr” to a void‘, and then cast
-that void‘ to a B‘ b
+b Let’s analyze the following code:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B { public: int b1, b2; };
+class C : public A, public B { public: int c1, c2; };
+void main(void)
+{ .
+> But — what if we DO NOT WANT to change the address “b” points to when the
+cast is performed ? What if we want “b” to point to the exact same address as
+“&c” ‘2
+b One solution is to use a double cast (first cast “&c” to a void*, and the ast
+that void* to a B* )
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
 Casts
-
-> Let's anal e the Iollowin- code: I
-APMPP r
-d... . r mm. m .1, .1, .1; );
-a... a t mm: m u. m n ‘
-<1... < 1 public A, pum< I t Dllhlic: int <1, <1; n r
-wad "mum; r
+b Let’s analyze the following code:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B { public: int b1, b2; };
+class C : public A, public B { public: int c1, c2; };
+void main(void)
 { .
-,
-
-> But - what if we DO NOT WANT to change the address “b” points to when the
-cast is performed Z What if we want “b” to point to the exact same address as
-“8c” 2 ,,
-
-> Another solution is to use reinterpreticast keyword from C» to do this!"
+}
+> But — what if we DO NOT WANT to change the address “b” points to when the
+cast is performed ? What if we want “b” to point to the exact same address as
+(6&c” ‘Z
+b Another solution is to use reinterpret_cast keyword from C++ to do thi .
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Casts
-> C‘+ has Several ways l keywords that can be use t0 specify how a cast should
+b C++ has several ways / keywords that can be use to specify how a cast should
 behave:
-> smtic_cast
-> reinterprel_cnsl
-> dynamic_msl
-> canst_cnst X
-> All of them have the following syntax:
-static_:ast (type to cast w (expression) ‘
-cnnst_cast <type to cast to> (expression)
-dynamic_cast (type m cast to) (expression)
-reinterpret_cast (type m cast a» (expression)
+
+> static_cast
+> reinterpret_cast
+> dynamic_cast
+> const_cast
+
+b All of them have the following syntax:
+static_cast <type to cast t0> (expression)
+const_cast <type to cast to> (expression)
+dynamic_cast <type to cast to> (expression)
+reinterpret_cast <type to cast to> (expression)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-re1nterpret_cast
+rei nterpret_cast
 
-> reinterpret_cust is the simplest cast mechanism that translates in Changing
-the type of a pointer, while maintaining the same address where it points tot
-reinterpreLcast <tip*> (ptr) Q ((tip‘) ( (v0id*) ptr))
+b reinterpret_cast is the simplest cast mechanism that translates in changing
+the type of a pointer, while maintaining the same address where it points to.
+
+reinterpret_cast <tip*> (ptr) ¢$ ((tip*)((void*) ptr))
 
 > This is the fastest cast possible (it guarantees very few assembly instructions
-that will be used for pointer type translation),
+that will be used for pointer type translation).
 
-> However, it has a downside as it allows casts between pointers of , l‘
-incompatible types‘ The result may obtain a pointer with a data that has a
-weird memory alignment, invalid pointers, etc. "
+b However, it has a downside as it allows casts between pointers of
+incompatible types. The result may obtain a pointer with a data that has
+weird memory alignment, invalid pointers, etc.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-re1nterpret_cast I‘
-> Let's anal ze the (ullowin- Iroram: I
-APMPP ‘
-d.” ‘ { Mn“ m .., .1, .1; n
-Um . ‘ Mm: m m. n1: n ‘
-class C z anvil: A‘ anvil: l ( DUNK: ml ‘L c2; )1 ‘
-Wm mmvnm) ‘
+b Let’s analyze the following program:
+
+APP-CPD
+
+class A { public: int a1, a2, a3; };
+
+class B { public: int b1. b2: };
+
+class C : private A, private B { public: int c1, c2; };
+
+void main(void)
+
 {
-I n
-)—
-> This code val not compile. Wmle there vs a valid conversion from a pointer of type
-C' m a pmmer 01 type A‘ due tn the Inheritance, as (Lass A ls unhem m a prvvals
-way, the conversion icasl] vs not possvble‘
+
+C c;
+}—
+
+> This code will not compile. While there is a valid conversion from a pointer of type
+C* to a pointer of type A* due to the inheritance, as class A is inherit in a private
+way, the conversion (cast) is not possible.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-re1nterpret_cast
-> Let's analyze the following program:
-APP~¢PP
-(his A r mm; m .1, .1, =1; y;
-dass u - v ~an ml n2; )1
-wad mnlllwndl
-r ~ x
-—> x
-> This code will compile‘ lt is important to understand the reinterpret_cnst is L
-not bounded by class type or access modiﬁer type‘ L
-> However, the only reason this code works is that “A” class fields (a1,aZ and
-a3) are the first ﬁelds in an instance 0i type C (if we Want t0 Obtain a pointer
-to B in this manner, we will only obtain a B‘ pointer that overlaps over the
+rei nterpret_cast
+b Let’s analyze the following program:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B { IA’ ' ' int b1, b2; };
+class C :“A, private B { public: int c1, c2; };
+void main(void)
+{ .
+}
+> This code will compile. lt is important to understand the reinterpret_cast is
+not bounded by class type or access modifier type.
+b However, the only reason this code works is that “A” class fields (a1 ,a2 and
+a3) are the first fields in an instance of type C (if we want to obtain a point
+to B in this manner, we will only obtain a B* pointer that overlaps over t
 offset of local variable c).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-rcmlcrprcticasl can not DC uscd with constant valucs or wvth variable of
-basvc type‘ The fenewrrrg expression Wm not cerrrpne.
-int x = reinterpreticast <mt>11000);
-int y =1Qg; WK rzur- ‘KKKrrrKKKrKKrrKKKrr mm rmKrK Km ‘,rrr‘ re ‘aw
-. . "KKK; [:n'ulr'ﬁwn 15 K and “mm rrrrrerrrrK Krmrrr tan be
-Int X Z remerweuast <mt>(v); “Kr-KKK W .rrKrrKrKrK, r. Kr =K=KrK .K, KKKKK 1K K
-Mrv'mnrztyle {an ’
-remlerprelicasl can however, copy me vame of a pormer L0 a varrame {even
-\f that varvable ls not large enough w hum the enure pomter value).
-int x = relnterpreticaskint>(“test"); mov dwurd ptr [x],205858h
-char >< = reinterpreticaskchar>(“tesl"h; muv eax, 205858h “KKKKKK MK
-mOV byte Ptr [Xlral KISSEZIIEZELKQS“KKKKKK
-In thvs case exzossss vs eemuy the address/offset where the smug “test” vs
-Located in memory.
+reinterpret_cast can not be used with constant values or with variable of
+basic type. The following expression will not compile.
+int x = reinterpret_cast <int>(1000);
+int y = 100 error C2449: ‘reinterpret_cast': cannot convert From 'int' to ‘int’
+. _ . , . _ note: Conversion is a valid standard conversion, which can be
+Int X _ reinterpret_cast <1nt>(Y)’ performed implicitly or by use of static_cast, C-style cast or
+function-style cast
+reinterpret_cast can however, copy the value of a pointer to a variable (even
+if that variable is not large enough to hold the entire pointer value).
+int x = reinterpret_cast<int>(“test”); mov dword ptr [x],205858h
+char x = reinterpret_cast<char>(“test”); mov eax, 205858h warning C4392:
+‘reinterpret_cast' :
+mov byte ptr [X]’al truncation from 'const
+char *' to 'char'
+In this case 0x205858 is actually the address/offset where the string “test” is
+located in memory.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
-The same Logic goes for mm data tprS (float / double). Just hkc m thc casc
-
-oi im, they can not be casted in mrs way.
-
-"06“ = re‘"‘e’P’eLca5‘<ﬂ°a‘>(11‘)? ($127‘; new Y i ‘2m Wad ‘Mr be
-double x = reinterpret_ca5[<double>(1.Zl; :5;§§'§;1:j§:1§;111 "r m‘ W "' “"11"” “We ‘1*’ “r
-rermerpreeease can however be uscd with rcfcrcnccs to change rherr values.
-
-ThrS rndudes references 0‘ a dufferenl type thaL the actual value‘
-
-int number = 10; mov dwurd plr [number],20
-
-reinterpreticastdnt &>(number) I 20;
-
-Int number : 10; mov byte ptr [numbeﬂlﬂ
-
-remterpreticaskchar &>(number) = 20;
+The same logic goes for float data types (float / double). Just like in the case
+of int, they can not be casted in this way.
+error C2449: ‘reinterpret_cast': cannot convert from rfloat‘ to
+— ' - ‘+1 t’
+ﬂoat X _ relnterpret_ca5t<ﬂoat>(1'Zf)’ note-N:1 Conversion is a valid standard conversion, which can be
+double X = reinterpret CHSt<C|OUbl€><1 2). performed implicitly or by use o-F static_cast, C-style cast or
+_ ' ’ function-style cast
+reinterpret_cast can however be used with references to change their values.
+This includes references of a different type that the actual value.
+int number = 10; mov dword ptr [number],20
+reinterpret_cast<int &>(number) = 20;
+int number = 10; mov byte ptr [number],20
+reinterpret_cast<char &>(number) = 20;
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:28**************
-re1nterpret_cast
-> reinterprel_cast can also be used for direci~ memory access t0 the actual Code
-(in other words, it can be used to convert n pointer to a function, to a pointer
-to a data type].
-APP-(PP
-m michnum: x‘ m y)
-( return x . y;
-i x
-Wm nv-(vm) l
-‘ m- . . “mnmimmm (MM); ‘a
-i a
-> In this example, "a" pointes l0 the actual machine Code that was generated
-for the addition instruction‘
-> This is widely used by obfuscator or pieces of code that modify the behavior
-of a program during the runtime‘
+rei nterpret_cast
+> reinterpret_cast can also be used for direct memory access to the actual code
+(in other words, it can be used to convert o pointer to a function, to a pointer
+to a data type).
+APP-CPP
+int addition(int x, int y)
+{ return x + y;
+}
+void main(void)
+{ char* a = reinterpret_cast<char*> (addition);
+}
+b ln this example, “a” pointes to the actual machine code that was generated
+for the addition instruction.
+> This is widely used by obfuscator or pieces of code that modify the beh ior
+of a program during the runtime.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
 static_cast
-> static_cast implies a conversion where: ‘E
+b static_cast implies a conversion where:
 > Values can be truncated upon assignment
-> In case oi inheritance, the address where a pointer points to can he changed ‘g
-> It can also be used with initialization lists l‘
-> It does not check in any way the type oi the object (RTI'I field from vfptr ‘
-pointer}
-> It is in particular useful if we want to identify a function with a specific set of
-parameters (especially if we have multiple instances oi that
-functions/method and calling it might produce an ambiguity)‘
+> ln case of inheritance, the address where a pointer points to can be changed
+b It can also be used with initialization lists
+> It does not check in any way the type of the object (RTTI field from vfptr
+pointer)
+b lt is in particular useful if we want to identify a function with a specific set of
+parameters (especially if we have multiple instances of that
+functions/method and calling it might produce an ambiguity).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
 stat1c_cast
-> static_cast can he used with constants. m this case, the conversion and
-asstgnment are often done m the pre'compiling phase.
+b static_cast can be used with constants. In this case, the conversion and
+assignment are often done in the pre-compiling phase.
 int x = static_cast<int>(1000); mov dword ptr [x],1000
-char x = static,cast<char>(1000); mov byte ptr [x],Z32 1232:1000 ,6
+char x = static_cast<char>(1000); mov byte ptr [x],232 (232=1000 %
 256)
-I char x = static_cast<char>(3.75); mov byte ptr[x1,3 (3 = int(3.75) )
+I char x = static_cast<char>(3.75); mov byte ptr [x],3 (3 = int(3.75) )
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-> Let's anal ze theﬂallowin- Iroram: I
-APMPP ‘
-(1m s { We)“: m .1, .1, .1; );
-class a t Mm: m has m; x ‘
-ma rmmvuxd) I
-{ _ > arm c2440: ‘staticilasﬁ: cannot camert tram ‘a ~‘ w ‘a ~-
-note: TvaS [minted m are “Wm-m1 (om-Ersirm remlires
-> mneerweww, mule mt or Fumwmzy» ‘last
-> This code wilt not compile, as there vs NO possible conversion from a pomter '
+b Let’s analyze the following program:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B { public: int b1, b2; };
+void main(void)
+{ = . error C2449: 'static_cast': cannot convert from 'B *' to ‘A *’
+note: Types pointed to are unrelated; conversion requires
+} reinterpret_cast, C-style cast or Function-style cast
+b This code will not compile, as there is NO possible conversion from a pointer /
 of type B to a pointer of type A
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-> Let's anal ze memuowin- Iroram: I
-APMPP ‘
-class ‘ { Mm: m .1, .1, .1; );
-class l \
-
-4 ‘
-mm‘ \
-) uperamr v o ( mm m m; > ‘
-vgxd mix"(vuxﬂ)
-1
-E b, Error cum ‘mngmu mm chPrt Frnm 'a " m ‘A ~'
-r a - Sinks!!!“ WM); "m: mm pull“!!! (e are unrelated; Lunverilon r'equlres
-> velntamreticait, (istvle cast m hmitimvstyle (est
-Y
-> This code will not compile, even if we add a cast operator‘ The reason is the
-same, we try w cunverl a 5* m an A‘ (the cast operator requires an object,
-not a pointer H!).
+b Let’s analyze the following program:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B
+{
+public:
+operator A* () { return new A(); }
+};
+void main(void)
+{
+B b; error C2446: 'static_cast': cannot convert from ‘B *' to ‘A *’
+A* a = statiC_Cast<A *>(&b); note: Types pointed to are unrelated; conversion requires /
+} reinterpret_cast, C-style cast or function-style cast
+V
+b This code will not compile, even if we add a cast operator. The reason is the
+same, we try to convert a B* to an A* (the cast operator requires an object
+not a pointer lll).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-stat1c_cast g
-> Let's anal e the Iollowin- ro-ram: I
-APMPP ,
-<1... 1 { mm. 1... .1, .1, .1; );
-a... I l
-( l
-public: l
-1.1 .1, .1; l
-~ 19...... 1- u i I'llurn I... m; )
-351.1 mum-1)
-t
-l n;
-1- . . snug...“ ~-
-l
-> Now the code works and a pointer of type A‘ is obtained by calling the zast
+b Let’s analyze the following program:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B
+{
+public:
+int b1, b2;
+operator A* () { return new A(); }
+};
+void main(void)
+{
+B b;
+A* a = static_cast<A *-
+}
+> Now the code works and a pointer of type A* is obtained by calling the cast
 operator overload from class B.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-> Let's anal ze memuowin- Iroram: I
-APMPP ‘
-An! .ea4;“1 X, char y)
-‘
-return X ' y;
-)
-in! ldd((hzr x, in! y) ‘
+b Let’s analyze the following program:
+APP-CPD
+int Add(int x, char y)
 {
-re¢urn X ‘ y‘
->
-Iaidmaiﬂvnd) error c2655: ‘Adﬂ‘: 2 overloads have simila: canversions
-Hate: could be '3'“ Add1:(§har‘,1nt:\‘ \
-, note: or '1nt Add¢‘n¢,<ner1
-. , . not h 1e \r n' tn makch <he 3r mvn\ 1 st ‘z c. ‘nx
-> Thus code wm not compne e W ‘ y‘ E g“ 1 m 1 l ,,
+return x + y;
+}
+int Add(char x, int y)
+{
+return x + y;
+}
+\{Ioid main(void) error C2666: ‘Add’: 2 overloads have similar conversions
+note: could be lint Add(char,1nt):
+} note: or int Add(int,char)
+. . . note: while tr in to match the ar ument list ' int, int '
+b This code Will not compile y g g ( )
 due to the ambiguity between two functions.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-stat1c_cast
-> Let's anal e the Iollowin- ro-ram: I
-APMPP i
-m Mm“ X, (m y)
-i i
-mm. X ~ y; i
-, i
-m mam-r x, m y) i
-{
-return X . y;
-)
-vom mum-n
-‘
+static cast
+b Let’s analyze the following program:
+int Add(int X, char y)
+{ return x + y;
+int Add(char x, int y)
+{ return x + y;
+ioid main(void)
 i
-> Now the code compiles‘ By using the static_cast we can tell the compiler
 witch one of the two Add function it should use !
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-dynam1c_cast
+dynamic_cast
 
-> dynamic_zust works by safely convert a pointer/reference of some type into ‘a
-a pointer/reference of a different type, provided there is an inhen'tance
-relationship between those two types‘ ;
+b dynamic_cast works by safely convert a pointer/ reference of some type into
+a pointer/ reference of a different type, provided there is an inheritance
+relationship between those two types.
 
-> In this case , the RTI'I from the vfptr pointer is used and the evaluation is
-done at the runtime, This means that casting using dynamic_cast is generally
-slower than other type of casts‘ However, if the cast is done, we are certain r
-that we have obtained a pointer to a valid pointer/reference
+> In this case , the RTTI from the vfptr pointer is used and the evaluation is
+done at the runtime. This means that casting using dynamic_cast is generally
+slower than other type of casts. However, if the cast is done, we are certain
+that we have obtained a pointer to a valid pointer/ reference
 
-> This also implies that R'l'l'l ﬁeld must be present -) dynamic_cast works on
-classes that have at least one virtual method‘
+b This also implies that RTTI field must be present -) dynamic_cast works on
+classes that have at least one virtual method.
 
-> dynamir:_cast also works if there is a clear translation/cast between classes
+b dynamic_cast also works if there is a clear translation/ cast between classes
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-dynam1c_cast
-> Let's anal e the Iollowin- I-roram:
-APPIPP
-class A ( public: m =1‘ =1‘ =1; )1
-(1:5; I
-t
-publiz:
-a“: n1‘ n2;
-iii‘; c = public A, vuhlzc I c vuhlxc: int <1, <1; >; l
-ml mnnlvmd) x
-t x
-c <; a
-, l
-> This code will compile - but keep in mind that this is a safe (clear) translation A
+dynamic_cast
+b Let’s anal ze the followin n-roram:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B
+{
+public:
+int b1, b2;
+glass C : public A, public B { public: int c1, c2; };
+void main(void)
+{
+C c;
+}
+> This code will compile - but keep in mind that this is a safe (clear) translation
 as we will always be able to obtain an object of type B from an object of
-type c (that inherits B),
+type C (that inherits B).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-dynamic_cast ‘
-> Let's anal ze the iollowin- code: I
-APMPP l
-‘his A( M1,‘; m all izl is; >1
-ms; x i
-l l
-mm: l
-l“! nil n1; l
-1i.” t z Mm A. Mm s l mm m! n. <1; );
-void mixﬂlvoxd)
-i
-a h;
-c w Z dynamicjist<V>ﬂhll
-)—
-> This code will not compile. While there is a possible conversion from B“ to C’,
-it’s not a safe one‘ The only case such a conversion will be safe, is if that B’
-was obtained from a “C” object and [hen remasted back tn a “C”. As this
-can be validated only for classes that have Virtual methods lpalymorphiq,,
-types), the compiler will Issue an errcn
+Let’s analyze the following code:
+class A { public: int a1, a2, a3; };
+class B
+{
+public:
+int b1, b2;
+};
+class C : public A, public B { public: int c1, c2; };
+void main(void)
+{
+error‘ C2683: 'dynamic_cast': 'B' is not a polymorphic type
+C *c = dynamic-ca5t<c*>(&b)5 note: see declaration of 'B'
+}
+This code will not compile. While there is a possible conversion from B* to C*,
+it’s not a safe one. The only case such a conversion will be safe, is if that B*
+was obtained from a “C” object and then re-casted back to a “C*”. As this
+can be validated only for classes that have virtual methods (polymorphic
+types), the compiler will issue an error.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-dynamic_cast
-> Let's anal e the lollowl'ri Code:
-APPIPP
-class A ( public: m =1‘ =1‘ =1; )1
-(1:5; I
-t
-publiz:
-i
-3.55 c = mm A, mm - i Mm m d, m >; i
-wan milllvnid} i‘
-i i
-I h: l
-c ‘c Z dymmﬁmcwm; i
-> This code will compile.
-> However, “c” will be nullptr (as we can not obtain a valid C object from a B
-object), This is very useful as it allows the programmer to check the result of
+b Let’s anal ze the followin code:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B
+{
+public:
+int b1 b2‘
+virtual void f() {};
+};
+class C : public A, public B { public: int c1, c2; };
+void main(void)
+{
+B b;
+C *c = dynamic_cast<C*>(&b);
+}
+b This code will compile.
+b However, “c” will be nullptr (as we can not obtain a valid C object from
+object). This is very useful as it allows the programmer to check the r ult of
 the cast and have different actions based on it.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-dynam1c_cast
-> Let's anal e the lollowl'n Code:
-APPIPP
-class A ( public: m =1‘ =1‘ =1; )1
-(1:5; I
-t
-publiz:
-an‘ n1‘ n2;
-mum Wm m 0; l
-3.55 c = mm A, mm - l Mm m d, m >; ‘a
-wan "mum; l‘
-l -m l‘
-< m . WMJBRPW;
-> Now, the code compiles and the value of “cl” point to object ".c"
-> In reality, b‘ is a pointer to the B part of object “c” (this means that we can
-safely convert it to a C')
+b Let’s anal ze the followin code:
+APP-CPD
+class A { public: int a1, a2, a3; };
+class B
+{
+public:
+int b1, b2;
+virtual void f() {};
+};
+class C : public A, public B { public: int c1, c2; };
+void main(void)
+{
+B *b = B* &c'
+C *c2 = dynamic_cast<C*>(b);
+}
+b Now, the code compiles and the value of “c2” point to object “c”.
+b In reality, b* is a pointer to the B part of object “c” (this means that we c
+safely convert it to a C*)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-dynam1c_cast
-> Let's anal e the Iollowin Code:
-APPIPP
-class A(
-public: int i1, i1, is;
-vlrlull "01¢ r11; t);
-n
-<!=ss I i
-plum m u‘ n; i
-mm: vom m 0; l
-ii“, t = Wm l. Mm l ( M1,“ m d. <2; y; l
-van ammo l l
-t <1 l
-A q 1 (mu; ‘x
-I ~a - dynlmciclskl'ﬂl); ml
-> This code also compiles.
-> While there is no relationship between A and B , since local variable “a”
-points to an object of type C , that contains a “B” component, this conversion
+b Let’s anal ze the followin code:
+APP-CPD
+class A {
+public: int a1, a2, a3;
+virtual void f2() {};
+};
+class B {
+public: int b1, b2;
+virtual void f() {};
+};
+class C : public A, public B { public: int c1, c2; };
+void main(void) {
+C c;
+A *a = (A*)&c;
+B *b = dynamic_cast<B*>(a);
+}
+b This code also compiles.
+b While there is no relationship between A and B , since local variable “a”
+points to an object of type C , that contains a “B” component, this co ersion
 is possible.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-con st_cast
+const_cast
 
-> const_:ast is used to change “const” characteristics for an object, It can be
+b const_cast is used to change “const” characteristics for an object. lt can be
 used only on data of the same type (it will not convert from a type to
-another), it will just remove the “const” characteristic of one object. 3‘
+another), it will just remove the “const” characteristic of one object.
 
-> lt is also important to mention that this type of cast can produce undefined
-behavior depending on the way it is used 1!!
+> It is also important to mention that this type of cast can produce undefined
+behavior depending on the way it is used !!!
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-C O n St_C a S t
-> Let's anal e the Iollowin Code:
-APMPP
-Mn mum-1)
-l mt X - m;
-(ans! 1n! - Fir . IX;
-i
-mmrw, n; 1
-) x
-> This code will compile and will convert pt! const pointer to a non-constant ,7
-pointer that can be used to change the value o! “x” ‘
-> As a result, the program will print “ZOO” on the screen‘
-> It is important that the variable/memory zone where “ptr” pointer points to
-is NOT located 0n a READ-ONLY memory page (0r simple put, it Should be a
-constant pointer obtained from a non-constant variable)‘
+const_cast
+b Let’s anal ze the followin code:
+APP-CPD
+void main(void)
+{
+int x = 100;
+const int * ptr = &x;
+*non_const_pointer = 200;
+printf("%d", x);
+}
+b This code will compile and will convert ptr const pointer to a non-constant
+pointer that can be used to change the value of “x”
+> As a result, the program will print “200” on the screen.
+b lt is important that the variable/ memory zone where “ptr” pointer points
+is NOT located on a READ-ONLY memory page (or simple put, it should a
+constant pointer obtained from a non-constant variable).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-C O n St_C a S t
-> Let's anal e the Iollowin Code:
-APMPP
-Mn mum-1)
-l (mt a." - m - 1“ n--;
-Ilsm_csm5leilll:lll] e '='; l
-mmms", Mimi 1mm); l
-) ‘x
-> This code will compile but it will most likely produce a run-time error. ,7
-> In this case, “CH exam" is located in a section of the executable that is
-constant (does not have the write permission for the memory page where it is "
-located]. As a result, event if we convert the const pointer to a non'const
-pointer, when we try t0 modify it, it will crash l
+b Let’s anal ze the followin code:
+APP-CPD
+void main(void)
+{
+const char * txt = "C++ exam";
+non_const_pointer[0] = 'c';
+printf("%s", non_const_pointer);
+}
+b This code will compile but it will most likely produce a run-time error.
+> In this case, “C++ exam” is located in a section of the executable that is
+constant (does not have the write permission for the memory page where it is
+located). As a result, event if we convert the const pointer to a non-const
+pointer, when we try to modify it, it will crash !
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-const_cast 1‘
-
-> Let's anal e the lollowim code: ‘a
-APPIPP ‘I
-void minlvoiﬂ) l
-‘ 4,. l x - 1M; ‘l
-
-> This code will not compile, as “x” is defined as const, and const variables can
-not be changed l
+c0nst_cast
+b Let’s anal ze the followin code:
+APP-CPD
+void main(void)
+{
+const int x = 100;
+}
+b This code will not compile, as “x” is defined as const, and const variables can
+not be changed !
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-C O n St_C a S t
-> Let's anal e the Iollowin Code:
-APPIPP
-mu minlvoid)
-l .
-l i
-v Now , this code will compile (using the const_cast we can remove the const
-attribute of “x”) allowing one to change “x” value‘
-> The behavior of the program is however , undeﬁned —) in this context ‘
-undefined means that the actual value of “x” may not be 200 ll! ‘
+const_cast
+
+b Let’s anal ze the followin code:
+APP-CPD
+void main(void)
+{ ' _ '9
+}
+
+b Now , this code will compile (using the const_cast we can remove the const
+attribute of “x”) allowing one to change “x” value.
+
+b The behavior of the program is however , undefined 9 in this context
+undefined means that the actual value of “x” may not be 200 ll!
+
 > A runtime error will not happen because “x” is actually located on the stack
-(this means that it is located 0n a memory page with the WRITE flag set).
+(this means that it is located on a memory page with the WRITE flag set)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-const cast I
-> Let sanal Ze the Vullowm- code. (oust 1M b, Z mu; 1‘
-App4cpp mov dwmd pt?‘ [11,54n 1
-m4 “mm.” wmfgasum-wml1 : we; 1
-t mow mm pfr [XLHC'sh ‘
-(uni! m X Z m; pmnxﬂ_"$;:g"l 1/, 1
-~<m§um<m~><m> - m; "m “win ;
-wrinmwx Xv; PM 54" I
-) pm mush , “4.1"
-till Printf
-b m P5“;
+i ° . n
+b Let s anal ze the followm code. const int X = 199;
+APP~CPP _
+void maimvoid) *(const_cast<1nt*>(&x)) = 200;
+{
+const int x = 100; pPint'F("%d", X);
+*(const_cast<1nt*>(&x)) = 200;
+} Il%dll
+printf
+b
 Caz 1: Debug mode, no optimizations
-> Since “x” IS deﬁned as constant, the (umpuer assumes 1th whenever “x” 1s use u ,
-can replace us value wvlh me mnstanl‘ Thus mean, that me fouuwing Instruction 1
-“printf("%d", m” 15 actually translated by the (Dmpuer mm: , "
-“printf( "94a" 1416);”
+> Since “x” is defined as constant, the compiler assumes that whenever “x” is use it
+can replace its value with the constant. This mean, that the following instruction :
+“printf( "%d", x);” is actually translated by the compiler into:
+“pr'intf( "%d", 100) ;”
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-c0nst_cast
-(oust 1m x = 1am;
-'(const_cast(int'>(lx)) - zen;
-puma-'14", x);
-> Let's anal e the lollowirl Code:
-APMPP "*d"
-mu mnlvm) Pm“
-l m.“ mt X Z m;
-qmnulmqn-nm: - m;
-r I
-v In this case, we force the campiler to use the value of “x” through a ll‘
-const_cast -) as a result value ZOO is printed‘
-> However, keep in mind that this is not a normal usage of “x” ‘
+_ const int x = 199;
+*(const_cast<int*>(&x)) = 296;
+printf("%d", x);
+b Let’s anal ze the followin code:
+App.cpp ..%d..
+void main(void) print-F
+{
+const int x = 100;
+*(const_cast<int*>(&x)) = 200;
+printf("%d", *(const_cast<int*>(&x))) ;
+}
+b In this case, we force the compiler to use the value of “x” through a
+const_cast -) as a result value 200 is printed.
+b However, keep in mind that this is not a normal usage of “x”
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-C O n St_C a S t
-> Let's anal e the followin code:
-APPIPP
-class rest
-t
-Fuhlxn:
-(nus! 1n! x;
-rls!(£n! vaiu!) I xlvaiu!) i l
-mu setunt value) t ‘(twsgcistdntvllxn - value; ) ‘
-3514 milﬂlvolﬂ) i
-r a
-res! mu); a
-nrtnm-n a mt); “
-Lsclill'); x
-mntrm: ", m); ‘
-> This is however, a dmerent caset Even if “x" is a constant, every instance of class
-Test can have a diiferent value for “x”, This means, that the compiler will not use
+b Let’s analyze the following code:
+APP-CPD
+class Test
+{
+public:
+const int x;
+Test(int value) : x(value) { }
+void Set(int value) { *(const_cast<int*>(&x)) = value; }
+};
+void main(void)
+{
+Test t(100);
+printf("%d ", t.x);
+t.Set(200);
+printf("%d ", t.x);
+}—
+
+b This is however, a different case. Even if “x” is a constant, every instance of cl
+Test can have a different value for “x”. This means, that the compiler will use
 the value used to construct “x”, but rather the content of memory that
-corresponds t0 “X”. As a results, this code Will print first 100 and theﬂ 200.
+corresponds to “x”. As a results, this code will print first 100 and th 200.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-> Macros
+‘\ > Macros
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:51**************
 Macros
 
-> Macros are methods that can be used to modify ipre>process) the code in
-C/C“ before compiling a‘
+> Macros are methods that can be used to modify (pre-process) the code in
+C/C++ before compiling
 
-> They are defined using the following sintax: ‘E
-#deﬁne <maCro> <value> E
+b They are defined using the following sintax:
+
+#define <macro> <value>
 
 > Once defined a macro cand be removed from the definition list using the
-following sintax: ‘
+following sintax:
 #undef macro
 
-> Macros work before the compile time in a preprocessor phase‘
+> Macros work before the compile time in a preprocessor phase.
 
-> One simple way of understanding them is to think that you are within an
-editor and you are applying a replace command (search for a text and ,
-replace it with another text)‘
+b One simple way of understanding them is to think that you are within an
+editor and you are applying a replace command (search for a text and
+replace it with another text).
 
-> In reality macros a far more complex (in terms of how the replacement is
-done, and what king of things can be replaced by them)‘
+b ln reality macros a far more complex (in terms of how the replacement is
+done, and what king of things can be replaced by them).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-Mac ros
-> Examples (simple macros)
-APP-CPD
-mm- IVFFELSXXE 1w
-m» amu[m|rrzn_suz];
+Macros
+b Examples (simple macros)
+APP-WP
+#de'Fine BUFFER_SIZE 1624
+char Buffer[BUFFER_SIZE];
 > After the preprocessor phase the code will look like this:
-APP-cup a
-a." “mama; l
+APP-CPD
+I char Buffer[1024];
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-Mac ros
-> Macros work sequentially (are applied immediately after they are defined].
-Also, during the preprocessur phase, there is no notion of identifiers, so
-there can be a vanabte and a macro that have the same name‘
-APMPP
-void mitn<ana>
-‘ m m“ Z m;
-t"! (Emu;
-lamp Z vzlua,
-Idefjne value ZEE
-temp Z value;
->—
-> After prepwcessw phase the Code will [00k a5 follows:
-APP-WP
-vokd "mm-1) ,
-t
-m yam Z m;
-m temp;
-temp - "m;
-{mp . 1m,
-)—
+b Macros work sequentially (are applied immediately after they are defined).
+Also, during the preprocessor phase, there is no notion of identifiers, so
+there can be a variable and a macro that have the same name.
+
+APP-CPP
+void main(void)
+{
+int value = 199;
+int temp;
+temp = value;
+#define value 200
+temp = value;
+}—
+b After preprocessor phase the code will look as follows:
+APP-CPP
+void main(void)
+{
+int value = 199;
+int temp;
+temp = value;
+temp = 299;
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-Mac ros
-> Macros can be written on more than on line. To do this, the speciat character ‘\' is
-used at the end uf each Line.
-Important —) arter this character there shouldn't be any other characters (except
+b Macros can be written on more than on line. To do this, the special character ‘\’ is
+used at the end of each line.
+Important 9 after this character there shouldn’t be any other characters (except
 EOL).
 APP-CPP
-Nde(1ne PRINY\
-x‘ (value > 10") Drxnt‘(“ﬁreiter‘ >1 \
-11;! Drxn!‘("5ma\\er\“)r
-"are mi1ﬂ(vnld)
-‘ m mu Z 1w;
-mm,
-l______________________________________________
-> After preprocessor phase the code wrll lock as follows:
-APP-CPP ,
-void mum“)
-1
-m vim 1 m.
-1r mm > m) wmnmmwm;
-.15. mmvmuﬂvm
-)
+#define PRINT\
+if (value > 199) printf(“Greaterl"); \
+else printf(“Smaller!");
+void main(void)
+{
+int value = 199;
+PRINT;
+}—
+b After preprocessor phase the code will look as follows:
+APP-CPD
+void main(void)
+{
+int value = 199;
+if (value > 199) printf(“Greater!");
+else printf(“Smaller!");;
+}
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:55**************
-Mac ros
-> Macros can be deﬁned using another macro, In this case the usage o! #undef
+b Macros can be defined using another macro. In this case the usage of #undef
 and #define can change the value of a macro during preprocessor phase .
-APPIPP
-[define “mun: vm/E
-mm. VALUE nu
-my rewllllFFELsﬂE];
-mm. VALUE 2w
-cm vwzl-urrsuxzs]; ‘x
-> After preprocessor phase the code will look as follows:
-APP-CPD
-aw momma; ‘
-(w rmlUMl];
+Apncpp
+#define BUFFER_SIZE VALUE
+#define VALUE 1024
+char Temp[BUFFER_SIZE];
+#undef VALUE
+#de'Fine VALUE 2048
+char Temp2[BUFFER_SIZE];
+b After preprocessor phase the code will look as follows:
+APP-CPP
+char Temp[1924];
+char Temp2[2948];
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-Mac ros
-> Macros can be defined to look like a function.
-APP~CPP
-Inefinennﬂxw) ((mwﬁm . m)
-vula ma)"(vu)¢)
-(
-m v1, v1?
-v, Z m,
-v1 Z m;
-m v3 Z Wm. m;
-1—
-> After preprocesso! phase the code will look as fullows:
-APPIPP
-void mmm)
-(
-m v1, v1, ,
-u 1 1w.
-v2 1 2m:
-) m v3 1 ((vmm) v (m = (m);
+b Macros can be defined to look like a function.
+APP-CPP
+#define MAX<X,y> <<X>><y>P<X> = <y>>
+void main(void)
+{
+int v1, v2;
+v1 = 199;
+v2 = 299;
+int v3 = MAX(v1, v2);
+}—
+b After preprocessor phase the code will look as follows:
+APP-CPP
+void main(void)
+{
+int v1, v2;
+v1 = 199;
+v2 = 299;
+int v3 = ((v1)>(v2) ? (v1) : (v2));
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-> Macros that are defined to Look Like a (unction can have a variabke number of
-
-parameters if the speciﬁer is used.
-
+b Macros that are defined to look like a function can have a variable number of
+parameters if the specifier ‘...’ is used.
 APP-CPD
-
-adafina PR1NY(furma(,...) \
-<\
-
-Printv<“\nvrint Vi1u=§-“>= \
-Pr,nt§4§=rmwt. ‘ivAiARGSA,7; \
-
-1
-
-vain m.1n<vu1n>
-
-<
-int v‘. v1;
-n Z we;
-v2 Z zen;
-vR1~Y(“xn,xn“, v1, m;
-
-1
-
-> After prepwcessw phase the Code will Look as follows:
-
-APMPP
-
-Maid mainkvnld) '
-
-1
-‘"1 v1, v2;
-V1 Z lea,
-V1 - ZEE; ,
-,r;n1¢4“\npr;n1 valueii“)£ '
-,r,n¢¢4“~4‘~4“‘ v1‘ v1);
-
-)
+#define PRINT(foPmat,...) \
+{ \
+pnintf("\nPnint valueSI"); \
+pnintf(fonmat, __VA_ARGS__); \
+}
+void main(void)
+{
+int v1, v2;
+v1 = 190;
+v2 = 299;
+PRINT("%d,%d", v1, v2);
+}
+b After preprocessor phase the code will look as follows:
+APP-CPD
+void main(void)
+{
+int v1, v2;
+v1 = 160;
+v2 = 260;
+printf("\nPrint valuesz");
+printf("%d,%d", v1, v2);
+}
+—
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-> Macros can use the special character 'ﬁ“ to change a parameter into its
-correspunding string:
+b Macros can use the special character ‘#’ to change a parameter into its
+corresponding string:
 APP-CPD
-adafina (M1IK<{DH¢1(1DH» ( \
-u (\(mmuunn < mmwm (“MUM 1;‘ mm “mam “mum, mum»);
-h
-vuid mainKvuiﬂ)
-(
-m v1, v15
-v, Z we:
-v1 Z we;
-(Minn > m;
-)—
-> After preprocessor phase the Code will [00k as follows:
-APMPP
-Maid mainkvnid) '
-1
-‘"1 v], v2;
-V1 Z lea,
-V1 - m1;
-u (Manny) ( "1mm" mam“ ‘u mm MM!“ curretlly“, "v1 > my; >; '
->
+#define CHECK(condition) { \
+if (!(condition)) { pnintf(“The condition '%s' wasn’t evaluated correctly", #condition);
+};
+void main(void)
+{
+int v1, v2;
+v1 = 190;
+v2 = 290;
+CHECK(vl > v2);
+}—
+b After preprocessor phase the code will look as follows:
+APP-CPD
+void main(void)
+{
+int v1, v2;
+v1 = 160;
+v2 = 260;
+if (!(v1>v2)) { printf(“The condition '%s' wasn’t evaluated correctly", “v1 > v2”); };
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-> Macros can use the special character 'ﬁ“ to change a parameter into its
-correspunding string:
+b Macros can use the special character ‘#’ to change a parameter into its
+corresponding string:
 APP-CPD
-anefine (N[(K(cundiliu") \
-r; (\(cunniliun)) < Dr1n{f(”rha cunniljun ‘Xs‘ wash’! avalualad <5rra<l1y“, Iﬁundiliun)
-h
-vuid mainKvuid)
-r
-m v1, v15
-v, Z we:
-v1 Z 2m!-
-mmn > m;
-l______________________________________________
-> After preprocessor phase the Code will Look a5 follows:
-APMPP
-vnAd malnkvnid) '
-1
-xn! v], v2;
-V1 Z lea,
-V1 - ZEE; ,
-r¢ Arkvi>v1)) r nr1n1f4"rhe (undrtrnn ‘iir w=;“'1 evaluated curretlly“, "v1 > "1» , . '
->
+#define CHECK(condition) \
+if (!(condition)) { pnintf(“The condition '%s' wasn’t evaluated correctly", #condition);
+};
+void main(void)
+{
+int v1, v2;
+v1 = 190;
+v2 = 299;
+CHECK(vl > v2);
+}—
+b After preprocessor phase the code will look as follows:
+APP-CPD
+void main(void)
+{
+int v1, v2;
+v1 = 160;
+v2 = 260;
+if (!(v1>v2)) { printf(“The condition '%s' wasn’t evaluated correctly", “v1 > v2” , ,
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-> Macros can use this sequence o! characters "#8" to concatenate parameters:
-APP-cw
-mam: sumo/9:7 \
-w: mywutm v1, w: m t return v1 ‘ v2; 1
-SUMUnl);
-wow»);
-sumo-arm
-void mainKvuidF
-t
-m x Z mum”, 15>;
-*—
-> After preprocessor phase the code wtll look as follows:
-APPIPP
-,“¢ =¢¢_,“¢4,“¢ "at ,“¢ "1: 1 re¢urn V, t "1‘ >
-4mm: magma-1M1; no 4mm: v1) 4 return n ‘ m > '
-(her add7(har((har v1, (her v2) 1 rltur" v1 ‘ v2, )
-Mata malﬂlvujd)
-m X Z mat-“(wt u); '
-)
+b Macros can use this sequence of characters “##” to concatenate parameters:
+Apprpp
+#define SUM(type) \
+type add_##type(type v1, type v2) { return v1 + v2; }
+SUM(int);
+SUM(doub1e);
+SUM(char);
+void main(void)
+{
+int x = add_int(10, 20);
+}
+b After preprocessor phase the code will look as follows:
+APP-CPD
+int add_int(int v1, int v2) { return v1 + v2; }
+double add_doub1e(doub1e v1, double v2) { return v1 + v2; }
+char add_char(char v1, char v2) { return v1 + v2; }
+void main(void)
+{
+int x = add_int(10, 20);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-Macros don't suppork overloading m there are two macors wvth me same
-name. the last one wru rchacc the omer, a warning Wm be Issued m thc
-compiler and men me code wru be compvledlv
-The muewmg code won’t compvle because SUM needs 2 parameters (only me
-second macros is used}
-"1""! 5W“! 3*" warvnng c4005: sum" New renemmerr
-“MW WM'MJ m“ "Bee: SEE LIFEVJDIAS dehvutmn er ‘sew-v
-f“ “mm” warning mew: MI emmgh argumenfs r'er
-) er~r~er (2059: syntax er~r~er~: ‘;'
-The following code is empire-d and works properly
-(
-“We WW w,
-we X e Mr, 2):
-“We WWW We
-X e 5W0, 1, z),
->
+Macros don’t support overloading (if there are two macors with the same
+name, the last one will replace the other, a warning will be issued in the
+compiler and then the code will be compiled).
+The following code won’t compile because SUM needs 3 parameters (only the
+second macros is used)
+#deﬁne SUM(a’b) a+b warning C4905: 'SUM': macro rede-Finition
+#define SUM(a,b,c) a+b+c . . . . . .
+note: see prev1ous definition of SUM
+void main(void) _
+{ warning C4663: not enough arguments For
+int x = SUM(1, 2); function-like macro invocation ‘SUM’
+} error C2959: syntax error: '3'
+The following code is compiled and works properly
+void main(void)
+{
+#define SUM(a,b) a+b
+int x = SUM(1, 2);
+#define SUM(a,b,c) a+b+c
+x = sum(1, 2, 3);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-Mac ros
-
-> Use round brackets! Macros don't analyse the expression; they just do a text
-replace —> the results may be different than expected.
+b Use round brackets! Macros don’t analyse the expression; they just do a text
+replace 9 the results may be different than expected.
 Incorrect Correct
-“mu Ian/(m0 x/y mm urvum (mum
-vnld mum“) um mum“:
-‘ intxﬂuvmemhs); j imx:nxv(noln,s¢s);
-2
-
-> After precompilation the code will look as follows: ‘3
-Incorrect Correct ‘r
-rm run-(wad) m4 mum-1) ‘3
-{ m X Z n . 1» / s . s; ) m X Z ((1. . 1») 1 (s . 5)); r
+#define DIV(x,y) x/y #define DIV(x,y) ((x)/(y))
+void main(void) void main(void)
+{ {
+int x = DIV(19 + 19, 5 + 5),- int x = DIV(19 + 19, 5 + 5);
+} }
+b After precompilation the code will look as follows:
+Incorrect Correct
+void main(void) void main(void)
+{ {
+int x = 10 + 19 / 5 + 5; int x = ((19 + 10) / (5 + 5));
+} }
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-> Be careM when they are used in a loop‘ Whenever possible use ‘(‘ and‘}‘ to
+b Be careful when they are used in a loop. Whenever possible use ‘{‘ and‘}’ to
 make a complex instruction easier to understand!
 Incorrect Correct
-"an"! mwwr \ mam! "mum; \
-pnnm“x-xn“,x>:pnnd(“v-xd“,y); r mun“X-m“,x>;»mm“v-m“,y>; r
-win msanrwm rm mmrvm)
-< <
-intx:1B,y:zB; “Hump”;
-1r (x>y) How)
-mm (x, w; mm u, y);
-r >
-> After preprocessor phase the code wrll look as follows:
-Incorrect CONECI
-M “mummy wok-1 munch!)
-1 r
-mtx:1»,y: 2»; 1M1: m. y: 2»; ,
-1r (x>y) why)
-mun“X-w,Xxmmnw-mxy); (pmmﬂ"x-Xa",x)iprlmﬂ'W-deli)
-> >
+#define PRINT(x,y) \ #define PRINT(x,y) \
+pnintf("X=%d",x);pnintf("Y=%d",y); { pnintf("X=%d",x);pnintf("Y=%d",y); }
+void main(void) void main(void)
+{ {
+int x = 19, y = 29; int x = 10, y = 20;
+if (x > y) it (x > y)
+PRINT (x, y); PRINT (x, y);
+} }
+b After preprocessor phase the code will look as follows:
+Incorrect Correct
+void main(void) void main(void)
+{ {
+int x = 19, y = 29; int x = 10, y = 20;
+if (X > y) if (X > y)
+printf("X=%d",x);printf("Y=%d",y)3 {printf("X=%d",x)3printf("Y=%d",y);}
+} }
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-> Pay attention to operators and functions that modify the parameter of the
-macro. Because of the substitution sume calls wilt be made more than one time.
+b Pay attention to operators and functions that modify the parameter of the
+macro. Because of the substitution some calls will be made more than one time.
 Incorrect (res will be 3) Correct
-"an"! segmiMrEsuIQXIW \ ‘mm “(luvs-115m) n
-rzsuk - mmmmym m u - w, \
-win "Winn/win} m ¢_1 Z mt t
-< result Z ((tJMtJJNtJmL2)»: \
-m X Z 2, y Z 1; )
-m m; void numb/old)
-“mums, X», y); r
-r m X Z 1‘ y Z 1‘
-I": rZS;
-§=Z7m1n<r=§, Kr’, yr,
-)
-> After preprocessor phase the Code will look as follows:
+#define set_min(result,x,y) \ #define set_min(result,x,y) {\
+result = ((x)>(y)?(X)I(y)); int t_1 = (x); \
+void main(void) int t_2 = (y); \
+{ result = ((t_1)>(t_2)?(t_1):(t_2)); \
+int x = 2, y = 1; }
+int res; void main(void)
+set_min(res, x++, y); {
+} int x = 2, y = 1;
+int res;
+set_min(res, x++, y);
+}
+b After preprocessor phase the code will look as follows:
 Incorrect Correct
-vnxd mum-1) ma mimwvld) '
-1 r
-1HUZ1,YZ1; MXZz.YZ1;
-m res; m res;
-mm Z um mp MM)‘ t m t_l Z m‘ m ¢_2 Z mt
-> new“ Z (MJJMLIJTMJ):MJJJ; >
-)
+void main(void) void main(void)
+{ {
+int x = 2, y = 1; int x = 2, y = 1;
+int res; int res;
+result = ((x++ >(y)?:x++]:(y)); { int t_1 = (x); int t_2 = (y);
+} result = ((t_1)>(t_2)?(t_1):(t_2)); }
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-Mac ros
+Macros
 
-> There is a list of macros that are predefined for any C/C++ compiler:
-iFlLEi The current file in which the macro will be substituted
-iLlNEi The line in the current file in which the macro will be
+b There is a list of macros that are predefined for any C/C++ compiler:
+_F|LE_ The current file in which the macro will be substituted
+_LINE_ The line in the current file in which the macro will be
 
 substituted
 
 _DATE_ The date when the code was compiled
-iTlMEi The time when the code was compiled
-iSTDLVERSIONi Compiler version(Cx98, Cx03,Cx13,..,)
-icplusplus It is deﬁned if a C++ compiler is used
+_TIME_ The time when the code was compiled
+_STDC_VERS|ON_ Compiler version(Cx98, Cx03,Cx13,...)
+_cplusplus lt is defined if a C++ compiler is used
 _COUNTER_ A unique identifier (0..n) used for indexing
 
-> Besides these, each compiler deﬁnes it's own specific macros<for compiler
-version, linkage options, etcl
+b Besides these, each compiler defines it’s own specific macros(for compiler
+version, linkage options, etc)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-Mac ros ‘
-> The usage of _COUNTER_ is very helpml if we want m create unique ‘
-indexes in uur program:
+b The usage of _COUNTER_ is very helpful if we want to create unique
+indexes in our program:
 APP-CPD
-( 1m x : iCWNYERi;
-l
-> After precumpilation the code will luck as follows:
-APMPP
-vnm mixll(vnx|1)
-l
->—
+void main(void)
+{ int x = _COUNTER_;
+int y = _COUNTER_;
+int z = _COUNTER_;
+int t = _COUNTER_;
+}
+b After precompilation the code will look as follows:
+APP-CPD
+void main(void)
+{
+int x = O;
+int y = 1;
+int z = 2;
+int t = 3;
+}—
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-l Macros vs lnline
+‘\ > Macros vs lnline
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-Macro vs lnllne
-> Let's anal e the Iollowin- code: I
-APPXCPP I
-Anx ram": xX Anx y) 3
-‘ XXXXXX X > y P X = y;
-)
-XXX X.xn(; X
-(
-in! X, y;
-X - Xinnlu;
-y . X.X¢(>;
-,XXXXv(-xn-. ~.X(X. X::;
-XXXXXX I:
-)
+Macro vs Inline
+b Let’s anal ze the followin code:
+APP-CPD
+int Max(int x, int y)
+{
+return x > y ? x : y;
+}
+int main()
+{
+int x, y;
+x = rand();
+y = rand<>;
+printf("%d", Max(x, y));
+return 0;
+}—
 > OBSERVATION: This code is compiled without any compiler optimizations !
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-Macro vs lnllne
-> Let's anal ze theiullowin- code: "W gamma w m l
-pm w. z
-APPLPP m» e:>1,mm ,m [>1] ‘
-in. ml,“ X‘ m y; pm w z
-12mm K > y 1 K 1y, (all "EX z
-> add efl'ni i‘
-m mm pm w. i
-l m X y, push um»: szrsng w i
-K Z and), (an prim
-v - randl):
-mﬂmwx mxlxl m;
-r¢‘~r“ u;
->—
-> In this case , Max iuncucn will be called, With "x" and “y” being pushed on
+Macro vs Inline
+b Let’s anal ze the followin code :
+APP-CPD
+int Max(int x, int y)
+{ return x > y ? x : y;
+int main()
+{
+int x, y;
+x = rand();
+= rand '
+re urn 6;
+}—
+> In this case , Max function will be called, with “x” and “y” being pushed 0n
 the stack.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-Macro vs lnllne
-> So how can we o-timize this program: ‘E
-APPIPP ‘1
-m ram“ Xv m y) 1
-‘ "mnymy; a
-) X
-m mun z
-{ ‘
-m X, y;
-x - "will;
-I y . r.n¢(>;
-prxnrﬂ'id", Hm!‘ 177;
-) return I:
+b So how can we otimize this program:
+APP-CPD
+int Max(int x, int y)
+{
+return x > y ? x : y;
+}
+int main()
+{
+int x, y;
+x = rand();
+y = rand();
+printf("%d", Max(x, y));
+return 0;
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-Macro vs lnhne
-> 50 how can we otimize this pro-ram 1
-App.cpp App.cpp (with macros]
-m me-X Xl m y)
-( men» XXX<XX1X X X » X ‘I
-rllurn X > y P X = y;
-) m mm)
-m mun i
-l m XX y:
-m X, y; X Z XXX-:0; l
-X - man; y - "will; l
-y . mm; urinzfl'id", XXX (X. m; l
-umwrw. mu. m; ruurn n; l
-mm n; ) i
-> If we replace Max function with Max macro, then the replacement is done in
-the pure-execution phase. As a result, the piece of code that pushes variable
+b So how can we otimize this proram :
+App.cpp App.cpp (with macros)
+int Max(int x, int y)
+{ #define Max(x,y) x > y ? x : y
+return x > y ? x : y;
+} int main()
+int main() {
+{ int x, y;
+int X, y; x = rand();
+x = rand(); y = rand();
+y = rand(); printf("%d", Max (x, y));
+printf("%d", Max(x, y)); return 0;
+return 0; }
+}—
+b If we replace Max function with Max macro, then the replacement is done in
+the pre-execution phase. As a result, the piece of code that pushes variabl
 on the stack and Max function assembly stubs are no longer required.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-Macro vs Inhne
-11: X_IS_SMALLER
-Jun Emur
-x_15_su|.|.i|l:
-b SD how Can we ontimize this proram :
-APMPP APMPI Em}!
-m mum X; m y)
-( m“; m
-rlturn X > y r X = y;
-1n mm
-1“ mainl) { I u printf
-( m X‘ y;
-m x, y; x 1 mm); i
-“mm; Z .i -
-y - mm; I
-“mm-ma mm m; v ,
-mm m ) ‘
-i — 1,
-> In this case, the replacement modifies the code from print!
+jle X_IS_SMALLER
+jmp END_IF
+X_IS_SMALLER:
+b So how can we otimize this proram :
+APP~CPP APP-CPI: END_IF
+int Max(int x, int y)
+{ #de-Fine Ma
+return x > y ? x : y;
+} int main() _
+int main() { pr1nt-F
+{ int x, y;
+int x, y; x = rand();
+x = rand(); = rand '
+y = rand(); printf("%d", Max (x, y));
+printf("%d", Max(x, y)); re urn a;
+return 0; }
+}—
+b In this case, the replacement modifies the code from printf
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-Macro vs lnhne
-> So how can we ontimize this proram :
-APPIPP APPJIPP (inline)
-m mum X; m y) Mr m menK x‘ m y)
-‘ "mnnyrny; ‘ "mnwynm
-) )
-m mm m mm:
-r r
-m x, y; m x, y; ‘r
-x - mm; x - "Mu; a
-y . mm; y - mm; ‘x
-pmwrw, mu, m; pumrw, 144x (x, y»; r‘
-mm n; mm n; x
-> Another snlutinn is to use inline specifien This speciﬁer tells the compiler
-that we recommend to insert the code of Max function directly in the code of
-caller 18.24 in this case main function,‘
+b So how can we otimize this proram :
+App.cpp App.cpp (inline)
+int Max(int x, int y) inline int Max(int x, int y)
+{ {
+return x > y ? x : y; return x > y P x : y;
+} }
+int main() int main()
+{ {
+int X’ 3/3 int x, y;
+x = rand(); X = rand();
+y = rand(); y = rand();
+printf("%d", Max(x, y)); printf("%d", Max (x, y));
+return 0; return 0;
+}— }—
+b Another solution is to use inline specifier. This specifier tells the compiler
+that we recommend to insert the code of Max function directly in the cod f
+caller (e.g. in this case main function).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-Macro vs lnline
 Debug mode
-(no optimizations]
-> SD how can we ontimize this proram :
-APMPP APPIPP (inline)
-m hixltnr Xl m y) Wt m mxlin! Xl m y)
-‘ "munynw; ‘ mummynm
-) t
-m mill) m Mm
-t t
-m x, y; m x, y;
-X Z "mu; x 1 "mu;
-y - "um; > - ‘
-mmrwl mm m; ‘a
-mm n; mm n; z
-l l
-> Another solution is to use inline specifien This specifier tells the compiler
-that we recommend to insert the code of Max function directly in the code of
-caller 18.24 in this case main function,‘
+(no optimizations)
+b So how can we otimize this proram :
+App.cpp App.cpp (inline)
+int Max(int x, int y) inline int Max(int x, int y)
+{ {
+return x > y ? x : y; return x > y ? x : y;
+} }
+int main() int main()
+{ {
+int X’ 3/3 int x, y;
+x = rand(); x = rand();
+y = rand(); = --- '
+return 0; return 0;
+} }
+b Another solution is to use inline specifier. This specifier tells the compiler
+that we recommend to insert the code of Max function directly in the cod f
+caller (e.g. in this case main function).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
-cmn mm“ sm 7 X
-enmedi X Xv,‘ 7 ‘1 plogram:
-push 23>: i
-push offsat smng ‘w
-£511 _ XXX Maxhnr X, XXX y) Max
-(
-rum" X , y > MW X s y > X y,
-> >
-XXL mam XXL Xswo
-< printf
-XXX X. y, XXX X. y,
-X = W = ra"d(7>
-V ".1
-cmovg I ompare and e i1 reater pmef(“¥d“, (X, m‘
-*4 »'—
-Another solutvon vs m use inline specvﬁeh Thvs specviver Lells {he compvler
-that We recommend to msert the (Ode of Max functvon directly w the code of
-caller fag. m ms case main funcuon].
-If We use optimizations “x” and “y” are used as reystels and the whole
-process vs optvmvzed.
+cmp edi,eax // edi = x
+eax,edi // eaX = y program I
+push eax —
+push offset string "%d"
+call int Max(int x, int y) Max
+{
+netunnx>y? returnx>y?x:y;
+} }
+int main() int main()
+{ printf
+int x, y; int x, y;
+x = hand ' = Pand();
+= nd '
+cmovg = ompare and e if reater printf<"%d", (x, y»;
+re urn a;
+}— }—
+Another solution is to use inline specifier. This specifier tells the compiler
+that we recommend to insert the code of Max function directly in the code of
+caller (e.g. in this case main function).
+If we use optimizations “x” and “y” are used as registers and the Whole
+process is optimized.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:76**************
-Macro vs lnline
-P Not all 'UHCUOHS can be used with inline seciﬁer
-APPIPP
-mm: m Karim/(1n! my.‘ um)
-‘ mt m. - o;
-m i; 11m: <- X; hunt“, sum .- 11m);
-ruurn sum;
-l r
-mt "mu ‘a
-i a
-1n! x; a
-X - mm: \
-mmim", nmmmxsn; ‘x
-"m". n;
-> If this code is compiled using optimization, the compiler will integrate
-lterativ function in main {mainly because Iterativ function does not contain
-any recursive functionalities r in this case).
+b Not all functions can be used with inline secifier
+APP-CPD
+inline int Iterativ(int x,int limit)
+{
+int sum = 0;
+for (g limit <= x; limit++, sum += limit);
+return sum;
+}
+int main()
+{
+int x;
+x = rand();
+printf("%d", Iterativ(x,x-5));
+return 0;
+}—
+b If this code is compiled using optimization, the compiler will integrate
+Iterativ function in main (mainly because Iterativ function does not conta'
+any recursive functionalities - in this case).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-P Not all functions can be used with inline seciﬁer
-
-APPIPP
-
-mm m “min/u“ mm mm
-
-c
-1f u -- mm
-
-ruurn 11m;
-E15!
-mum X ‘ leeursAvUAJAmUI) ‘
-
-1m "mu
-
-{ a
-‘HK x; a
-X - mm: \
-pmmm", lccuvsivﬂm'Sn; ‘x
-mu". n;
-
-> If we run this code with uptimization the compiler is not able tn inline the
+b Not all functions can be used with inline s ecifier
+APP-CPD
+inline int Recursiv(int x,int limit)
+{
+if (x == limit)
+return limit;
+else
+return x + Recursiv(x-1,1imit);}
+int main()
+{
+int x;
+x = rand();
+printf("%d", Recursiv(x,x-5));
+return 0;
+}—
+b If we run this code with optimization the compiler is not able to inline the
 code from Recursiv function:
-> www- ms WWW M! m, mum-u ,1. mm. m Mil /Mk\nx\vd4| W /z< .1" m, m, m WIND‘ m wm- m
-wmwm-Mmr m'umwni' mwwwmm m Hum/511w w mm mrwwev m Imnlfo'ieoexev
-w Izmsmngltub Kb mmwm
-> (\mwmm.
+> /permissive- /GS /GL lanalyze- /W3 /Gy /Zc:wchar_t /Zi /Gm- /02 /sdl /Fd"Release\vc141.pdb“ /Zc:inline /fp:precise /D "WIN32" / ' DEBUG" /D
+“_CONSOLE" / D “_UN|CODE" / D "UNICODE" /err0rReport:prompt /WX- /Zc:forSc0pe /Gd /Oy- /Oi /MD /FC /Fa"Release\" /EHsc /n go /Fo"Release\"
+/ Fp"Release\Testhp.pch" /diagnostics:classic
+b cl.exe 9 19.16.27030.1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-Macro vs lnline
+Macro vs Inline
 
-> Using MACROS guarantees inline replacement. 0n the other hand, debugging ‘E
-is really tricky, especially if the MACRO is complex in nature {multiple lines).
+b Using MACROS guarantees inline replacement. On the other hand, debugging
+is really tricky, especially if the MACRO is complex in nature (multiple lines).
 
-> Using inline specifier DOES NOT GUARANTEES that inline replacement is going x‘.
+b Using inline specifier DOES NOT GUARANTEES that inline replacement is going
 to happen (it should be seen more as a suggestion for the compiler). On the
 other hand, debugging is easier and without any bit issues.
 
-> In case of inline , this is used on in release mode {or to be more exact, if the
-optimizations are enabled (-01, -OZ, i at the compiler level‘
+> ln case of inline , this is used on in release mode (or to be more exact, if the
+optimizations are enabled (-O1, -OZ, ) at the compiler level.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-Macro vs lnline
-> Class methods (if deﬁned in the definition 0f the Class) are usually Considered
-inline as well,
+Macro vs Inline
+b Class methods (if defined in the definition of the class) are usually considered
+inline as well.
 APP-CPP
-¢1iss rest
-t
-in! x; 1/ Privl!
-puhiicz
-vain SetXlint v=1u:7 l
-) v ‘a
-n ’ r
+class Test
+{
+int x; // privat
+public:
+void SetX(int value)
+x = value;
+}; ’
 > There is one exception - when the class is exported (in this case the code
 from the header file is usually compiled and linked in the component that
-imports the library). In many cases, the Optimization translates into direct
-access the data memben
+imports the library). ln many cases, the optimization translates into dire
+access the data member.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-Volati le spec1f1er
-> Let's anal e the lollowin- code:
-APP~¢PP
-m mm u
-t
-1m x - "mo;
-mummy n;
-return m
-)
-> If we Compile the Code in the release mode (or more exactly, if Optimizations
-are in place) the compiler might decide that local variable “x” is not 1
-necessary (elg. we ca translate the entire code into “printﬂ“%d”,rand())”) ‘1
-> The solution , if we want to avoid this behavior is to use volatile speciﬁer’
-APPACPP
-m mm ‘
-{ mum m X - Mao;
-“miner, x);
-) mum n;
+Volatile specifier
+> Let’s anal ze the followin code:
+APP-CPD
+int main() u
+{
+int x = rand();
+printf("%d", X);
+return 9;
+}
+> If we compile the code in the release mode (or more exactly, if optimizations
+are in place) the compiler might decide that local variable “x” is not
+necessary (e.g. we ca translate the entire code into “printf(“%d”,rand())”)
+> The solution - if we want to avoid this behavior is to use volatile specifier.
+int main()
+{
+volatile int x = rand();
+printf("%d", x);
+return 9;
+}
+— print-F
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:81**************
-> Literals
+‘\ > Literals
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:82**************
-L1 tera ls
-> Literals are a way of providing a special meaning to numbers by
+Literals
+b Literals are a way of providing a special meaning to numbers by
 preceding them with a predefined string.
-> Literals can be defined in the following way:
-> Where:
-,, <return-type> can be any kind of type l
-a; <literalgname> has to be a name (form out of characters, underline, m) “
-parameter_type has to be one of the following: const char ', unsigned
-long long int, long double, char, wchar_t, char8_t, char16_t, char3Z_t)
-The underline is not required, However, compilers issue an warning if not
+b Literals can be defined in the following way:
+b Where:
+O <return-type> can be any kind of type
+O <literal_name> has to be a name (form out of characters, underline, ...)
+O parameter_type has to be one of the following: const char *, unsigned
+long long int, long double, char, wchar_t, char8_t, char16_t, char32_t
+O The underline is not required. However, compilers issue an warn‘ if not
 used !
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:83**************
-L1 tera ls
-> Let's analyze the following code:
-APP-WP
-m arm-nu" ,mmm a." - x)
-( In! vﬂue - 0:
-Ihik (l'x) 1: I)
-‘ "in . "M - 3 l (-1) _ -=-; a
-mm “M; l
-1 a
-vnld "lele “
-> What we did in this case was to explain the compiler how to interpret
+> Let’s analyze the following code:
+APP-CPD
+int operator"" _baza_3(const char * x)
+{
+int value = 0;
+while ((*x) != 0)
+{
+value = value * 3 + (*x) - ‘9';
+x++;
+}
+return value;
+}
+void main(void)
+{
+int x = 121102_baza_3;
+}
+> What we did in this case was to explain the compiler how to interpr
 if a number is follower by _baza_3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
-L1 tera ls
-> Let's analyze the following code:
-APP-cw
-m mm“ @1me a." - x)
-l In! vﬂue - 0:
-while (l'x) 1: I)
-‘ "it. . "n. - 3 t (-1) _ -,-; a
-mm “M; z
-1 a
-vma "tr-(Wm)
+Literals
+> Let’s analyze the following code:
+APP-CPD
+int operator"" _baza_3(const char * x)
+{
+int value = 0;
+while ((*x) != 0)
+{ value = value * 3 + (*x) — ‘6';
+} x++,
+return value;
+} -=II::::::[:::::::::::::::::::::::::::::::::::::::::::::::::]
+void main(void)
+{
+int x = 121102_baza_3;
+}—
 > Since we define the literal _baza_3 as one that works with strings,
-the compiler will translate 121102 (a number) into “121102” (a string)
+the compiler will translate 121102 (a number) into “121102” (a ring)
 that can be send to the literal conversion function.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:85**************
 Literals
-> Let's analyze the following code:
-APP-CPD
-m Mum-- rel-(mum W W m x)
-( return (“monuuuum
-and nmlvnd) ‘
-‘ m x . m; l
-> This code will compile and run just like the previous one. XX‘
-> However, the compiler will throw an warning: “warning C4455: ‘operator
-""Mega': literal suffix identifiers that d0 nut start with an underscore are
+> Let’s analyze the following code:
+Appmpp
+int operator"" Mega(unsigned long long int x)
+{ return ((int)x)*1024*1024;
+soid main(void)
+{
+int x = 3Mega;
+}—
+> This code will compile and run just like the previous one.
+b However, the compiler will throw an warning: “warning C4455: ‘operator
+""Mega': literal suffix identifiers that do not start with an underscore are
 reserved”
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:86**************
-Literals ‘
-> Let's analyze the following co. --
-error (slam; ‘Werner “"Jlega‘: declaratlrm of 1mm
-App.cpp “Der-atm- has in invahd Parameter 1m
-m 09mm“ mum X, error czsaa “mm lateral >ufﬂ>1 ‘fl-legs’, mm! operator
-( * ur 1mm uperatm template ‘operator “Ll-legs‘ not mm:
-mm ((intbxb'mm'mm, note: Literal npemm- must have a paranietel 1m of the (mi
-) ‘unsigned lung 1w‘;- or‘ ‘(mist am- ~‘
-vuld malﬂlvmlﬂ
-(
-m X . Um;
-l—
-> This code will not compile, as we did not use a valid parameter for '
-(he defined literal‘
+> Let’s analyze the following co ' \
+error C3684: ‘operator ""_Mega': declaration of literal
+App,Cpp operator has an invalid parameter list
+int Operator.... Mega(int X) error C3688: invalid literal su-F-Fix '_Mega'; literal operator
+{ _ or literal operator template ‘operator ""_Mega' not -Found
+return ((int)x)*1024*1024; note: Literal operator must have a parameter list of the form
+} _ _ _ ‘unsigned long long‘ or 'const char *'
+v01d ma1n(v01d)
+{
+int x = 3_Mega;
+}—
+> This code will not compile, as we did not use a valid parameter for /
+the defined literal.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:87**************
-Literals
-> Let's analyze the following code: ‘i
-APP-cop ‘
-m ﬂparator“ ,wammum In": In": m x) i
-( return (innx, ‘i
-l i
-void miiﬂlvuidl
-(
-unsigned 1m 1m m a,
-’—
+> Let’s analyze the following code:
+APP-CPD
+int operator"" _to_int(unsigned long long int x)
+{
+return (int)x;
+}
+void main(void)
+{
+unsigned long long int a;
 > This code will not compile, as the compiler will consider a_to_int a
-new identifier that was not defined yet‘ ,
-> This translates, that we can use this with constant numbers or
-constant string (but not with variables)‘
+new identifier that was not defined yet.
+b This translates, that we can use this with constant numbers or
+constant string (but not with variables).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:88**************
-L1 tera ls
-> Let's analyze the following code:
-APP-CPD
-M “mm-- erjmmm W 1w.- m n
-( prlntf('h::ma1:Xd\n'. (mm:
-3..“ “Wm-- ,MMWM... M. M. m x)
-( prlntﬂ'nu: law, (mum my);
-in“ ninlvviﬂ) l
-‘ mm“; 1
-15a Jrlntjtex;
-> A literal does not have to return a value. In this case we used literals
+Literals
+> Let’s analyze the following code:
+void openator"" _print_dec(unsigned long long int x)
+{ printf("Decimal: %d\n", (int)x);
+ioid operator"" _print_hex(unsigned long long int x)
+{ printf("Hex: 0X%X\n", (unsigned int)x);
+ioid main(void)
+{ 150_pnint_dec;
+150_print_hex;
+}
+
+b A literal does not have to return a value. ln this case we used literals
 to print the value of a number (as a decimal value and as a
 hexadecimal value).
-> This code will print 150 and 0x96 on the screen‘
+
+> This code will print 150 and 0x96 on the screen.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:89**************
-L1 tera ls
-> Let's analyze the folluwing cude:
-APP-cw
-( char ' tn - new! :har[sz ¢ a];
-tnkz] 1 I;
-for (sing: w: : 0; w: < sx; an")
-muz - wt - l] - 51"[Wl];
-> returntxt; w the length 0F "(H test today”
-van mnnlvnd)
-( Mil‘ ’ ‘m - ‘M H5! MWLMQNH -/
-prlnﬂCXsVl‘. ten):
-deletelltem
-2 ,
-> In particular for literals that have a const char ‘ parameter (a pointer), the
-size of the data the pointer points to can also be send if a secondary
-parameter is added. The secondary parameter must be a size_t.
+> Let’s analyze the following code:
+APP-CPD
+char* operator"" _reverse(const char *sir, size_t sz)
+{
+char * txt = new chan[sz + 1];
+txt[sz] = 9;
+for (size_t poz = 0; poz < sz; poz++)
+txt[sz - poz - 1] = SiP[pOZ]3
+} PetUPn txt; <i> the length of “c++ test today”
+void main(void)
+{
+char‘ * text = "c++ test today"_r'ever'se; /
+printf("%s\n", text);
+delete[]text; '
+}
+b ln particular for literals that have a const char * parameter (a point , the
+size of the data the pointer points to can also be send if a seco ary
+parameter is added. The secondary parameter must be a si _t.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:90**************
-l Templates
+“> Templates
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:91**************
-Templates
-> Macros bring great power to the code written in 610+ ‘x
-> Templates can be considered to be derived from the notion of macros 9
+Tem plates
+
+b Macros bring great power to the code written in C/C++
+
+b Templates can be considered to be derived from the notion of macros 9
 adapted for functions and classes
-> The goal is to deﬁne a model of a function or class in which the types of data i‘
-we work with can be modified at the precompilation stage {similar to macros)
-> For this there is a key word “template”
+
+b The goal is to define a model of a function or class in which the types of data
+we work with can be modified at the precompilation stage (similar to macros)
+
+b For this there is a key word “template”
+
 > Just like macros, the usage of templates generates extra code at compilation
-(code that is specific (or the data types for which the templates are made
-hr)‘ However, the code is faster and efficient‘
+(code that is specific for the data types for which the templates are made
+for). However, the code is faster and efficient.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:92**************
-Templates
-> The templates deﬁned iri c++ are of two types: ‘i
-r, For classes ‘i
-~t~ For iunctions I‘
-> Templates work just like a macro e through substitution E‘
-v The difference is that the template substitution for classes isn’t dune where ‘
-the ﬁrst instance of that class is used, but separately, so that other instances
+Tem plates
+b The templates defined in C++ are of two types:
+‘z. For classes
+‘a For functions
+> Templates work just like a macro - through substitution
+> The difference is that the template substitution for classes isn’t done where
+the first instance of that class is used, but separately, so that other instances
 that use the same type of data to be able to use the same substituted
 template
 > Important: Because the substitution is made during precompilation, the
-templates must be stored in the files that are exported (rorn a library (filesh)
-otherwise the cumpilerﬁn case it is tried the creation of a class from a
-template exported from a library) will not be able to do this‘
+templates must be stored in the files that are exported from a library (files.h)
+otherwise the compiler(in case it is tried the creation of a class from a
+template exported from a library) will not be able to do this.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:93**************
-Tem plates
-> Templates for a function are defined as folluws:
-APMPP
-inﬂat- <chss Y>
-Returnjylil mmwmlp-rmm;
-u
-“Min nyvename I>
-Inuvnilyvl functionjimlﬁinmuvs) x
-v Alleast one of the "Return_type" or “parameters” must contain a member of
-type T,
-APP-cw
-w-Ilm (cliss Y>
-r 5m" um,“ "mm
+b Templates for a function are defined as follows:
+APP-CPD
+template <c1ass T>
+Return_type function_name(parameters)
+or
+template <typename T>
+Return_type function_name(parameters)
+b Atleast one of the “Return_type” or “parameters” must contain a member of
+type T.
+APP-CPD
+template <c1ass T>
+T Sum(T value_1,T value_2)
+{
+return value_1 + value_2;
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:94**************
-> Function templates
+‘\ > Function templates
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:95**************
-Templates
-
-> A simple example: I
-APP-WP r
-“mn- (ch55 v> 1
-v Sum" mug, v um}: ‘
-i mm MM . MM; ‘
-vum mum-n ‘
-i awn: X . Wm w;
-
-> The code compiles correctly —> x receives the value 3,75
+b A simple example:
+APP-CPD
+template <class T>
+T Sum(T value_l, T value_2)
+{
+return value_l + value_2;
+}
+void main(void)
+{
+double x = Sum(1.25, 2.5);
+}
+> The code compiles correctly 9 x receives the value 3.75
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:96**************
-> Asimple example:
-A .c
-pp Pp error (1m; ‘Sum’: rm matUung averluaded funttmn mum
-$33333;ij ‘; "M n Em,» (2752: w sum'rJP: template parametel w- 1; amhigunus
-{ *’ * note: See deflaratlrm 0r ‘Sum’
-mm “he; t mug}; rmte: mm he ‘dmlhle‘
-> note: or ‘we
-Wm “1mm; error (2734: ‘r swmngw: muld not deduze twang argument m
-r ‘r‘ From ‘double'
-M1. X Z
->
-> The Code will not Compile r 1 i5 Converted to int, 2.5 t0 double, but the Sum /
-function should receive two parameters of the same type. '
-> The compiler can't decide which type to use —> ambiguous code
+b A simple example: \
+APP-CPD , , _ .
+error C2672: Sum : no matchlng overloaded functlon found
+template <c1ass T> _ I I, I I - -
+‘TSumﬂ'vahm 1,1.Vahm 2) error C2782. T Sum(T,T) . template parameter T 15 amb1guous
+{ _ _ note: see declaration of 'Sum'
+return value_1 + value_2; note; could be 'double'
+} note: or 'int'
+voﬂimaﬂﬂvoﬂb error C2784: ‘T Sum(T,T)': could not deduce template argument for
+{ 'T' from 'double'
+double X =
+}
+b The code will not compile - 1 is converted to int, 2.5 to double, but the Sum /
+function should receive two parameters of the same type.
+b The compiler can’t decide which type to use 9 ambiguous code
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:97**************
 Tem plates
-> A Simple example:
-APMPP
-t-mvht- (ch55 v>
-v Mu mug, v mum
-i mm MM . MM;
-void mun-m: l
-r x
-m x . sumllt 2n x
-mm .1 - Sumllét 1.4); l
-) l
-> In this case —> x receives the value 3 and the called function will substitute A
-class T with int, and d receives 3.9 (in this case the substitution will be made "
-with double)‘
-> In the Compiled Code there will be two Sum functionsklne with parameters 0f
-type in! and the other one with parameters of type double)
+b A simple example:
+APP-CPD
+template <class T>
+T Sum(T value_l, T value_2)
+{ return value_l + value_2;
+}
+void main(void)
+{
+int x = Sum(l, 2);
+double d = Sum(1.5, 2.4);
+}
+> In this case 9 x receives the value 3 and the called function will substitute
+class T with int, and d receives 3.9 (in this case the substitution will be made
+with double).
+b In the compiled code there will be two Sum functions(one with parame rs of
+type int and the other one with parameters of type double)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:98**************
-> Be careful how you put the parameters!!!
-A .c
-pp Pp emmur (1272: ‘Sum‘: no matching avelloaded Function found
-;=g:;@§;;;“j;j;l error (1752: ‘r Sumtint,int'7'1 (uuld not deduce mum
-{ ' argument Fm‘ ‘r'
-mm mu t y); note’ see dedaraucm of ‘Sum‘
-> emmum (2571: cum‘; no matching overloaded Function Found
-Wm WWW) emmur c2732: ‘r Sumtintdnty‘: could not deduie template
-m amgumemt rum ‘r'
-m X Z Sumut 1); note: see dezlar'atirm 0r ‘Sum‘
-duuhle a Z SumklmSt 1,0);
-)
-> The Code above Cerft be complied —> not because the return value is
-drfferent, but because the compiler can't deduce what type to use for class '
-Tiwhat return value is obtained)
+b Be careful how you put the parameters!!!
+APP-CPD , . ._ . .
+error C2672. Sum . no matching overloaded function found
+tewﬂjle<Ch§s1v error C2783: 'T Sum(int,int)': could not deduce template
+T Sum(1nt x, 1nt y) I -
+{ argument for T
+reuwn n§(X+-yn note: see declaration of 'Sum'
+} error C2672: 'Sum': no matching overloaded function found
+voﬂimahﬂvoﬂb error C2783: 'T Sum(int,int)': could not deduce template
+{ argument for 'T'
+intX =SWM1,2); note: see declaration of 'Sum'
+double d = Sum(1.5, 2.4);
+}
+b The code above can’t be compiled 9 not because the return value is
+different, but because the compiler can’t deduce what type to use for class
+T(what return value is obtained)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:99**************
 Tem plates
-
-> Be careful how you put the parameters!!! I
-APP-WP l
-t-mvht- (ch55 v> ‘1
-v Sumlxnt x, m y:
-{ mm. mu . yn ‘
-) I
-vum mum-n
-t
-
-m x - Sumdllvlh 2n
-
-) Mm .1 - smmuvus 1.4);
-
+b Be careful how you put the parameters!!!
+APP-CPD
+template <class T>
+T Sum(int x, int y)
+{
+return (T)(x + y);
+}
+void main(void)
+{
+int x = Sum<int>(1, 2);
+double d = Sum<double>(1.5, 2.4);
+}
 > In this case the code can be compiled (we use <> to specify the type we want
-
 to use in the template).
-> X will be 3 and d will also be 3 [1,5 and 2A are converted to int]
+b X will be 3 and d will also be 3 (1.5 and 2.4 are converted to int)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-Templates
-> Templates can be made for mure types I
-APP-WP l
-“mn- (ch55 u, (his u, (his m l
-u Sum": ,, vs y: ‘
-( l
-mm (um ‘ y); ‘
-) I
-vum mum-n
+b Templates can be made for more types
+APP-CPD
+template <class T1, class T2, class T3>
+T1 Sum(T2 x, T3 y)
 {
-m x - sum-mm 1);
-mm .1 - sumxnndwhlevdwhlousv 1.4):
-y
+return (T1)(x + y);
+}
+void main(void)
+{
+int x = Sum<int>(1, 2);
+double d = Sum<int,double,double>(1.5, 2.4);
+}
 > In the first case (Sum<int>) the compiler converts to Sum<int,int,int> (which
 will match the parameters)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:101**************
 Tem plates
-> Templates can be made for mure types
-APMPP
-t-mvht- (ch55 u, (his u, (his m
-v: mm x, vs y:
-{ mm (um ‘ m
-)
-void mum-n l
-‘ m X . WMMM My; l
-) mm .1 - swumwnmwnoum 1.4); l
-> In the ﬁrst case (Sum<int>) the compiler converts to Sum<int,int,int> (which
-will match the parameters) "
-> The compiler tries to deduce the type based on the parameters, I‘! it is not
-Specified. The return type must be Specified because the Compiler can't
-deduce it from the paramters,
+b Templates can be made for more types
+APP-CPD
+template <class T1, class T2, class T3>
+T1 Sum(T2 x, T3 y)
+{ return (T1)(x + y);
+}
+void main(void)
+{ int x = Sum<int,char>(1, 10.5);
+double d = Sum<int,double,double>(1.5, 2.4);
+}
+> In the first case (Sum<int>) the compiler converts to Sum<int,int,int> (which
+will match the parameters)
+b The compiler tries to deduce the type based on the parameters, if it is not
+specified. The return type must be specified because the compiler can’
+deduce it from the paramters.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:102**************
 Tem plates
-> Function templates cand receive parameters with default~ values
-APMPP
-“mn- (ch55 u, (his v2, (his m
-v: mm x, v; y - msn
-{ ruurn (um . m
-)
-void mum-n l
-> “X” receives the value 15 1101-5 9 the default value for y).
-> The use of default parameters requires the existance of a constructor for the
-type of the used class, Expressions like “T3 y I 10” are not valid unless type
-T3 accepts equality {Dr has an explicit assignment Operator) with int.
+b Function templates cand receive parameters with default values
+APP-CPD
+template <class T1, class T2, class T3>
+T1 Sum(T2 x, T3 y = T3(5))
+{
+return (T1)(x + y);
+}
+void main(void)
+{
+int x = Sum<int, char, int>(10);
+}—
+> “x” receives the value 15 (10+5 9 the default value for y).
+b The use of default parameters requires the existance of a constructor for the
+type of the used class. Expressions like “T3 y = 10” are not valid unless typ
+T3 accepts equality (or has an explicit assignment operator) with int.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:103**************
-> Class templates
+‘\ > Class templates
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:104**************
-Templates
-
-> Class templates are defined as follows: I
-APP-WP l
-musl- (CIISS r> ‘l
-ms; lm-ss l ‘
-Tm... (QM-m. r> ‘
-(his Myths! {
-
-> The T variable can be used to deﬁne class members, parameters within
-
-methods and local variables within methods‘
+Tem plates
+b Class templates are defined as follows:
+APP-CPD
+template <class T>
+class MyClass {
+:Zmplate <typename T>
+class MyClass {
+> The T variable can be used to define class members, parameters within
+methods and local variables within methods.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:105**************
-> Class templates are defined as follows: I
-APMPP l
-mm. “his Y>
-chss suck ‘
-{ l
-
-Y usillli]; ‘
-m cwnn l
-M1“:
-suckl) : (mull!) O
-m, mm um) { mumps] . "M; s
-l W, l return usil>><wlwh )
-)1
-wm mnlllvnd)
-(
-5mm“, s;
-sJusnll); SJushlZ); sJushlZ);
-prAnKﬂW'ﬂ $~Pw())z
-> The code above prints “3"
+b Class templates are defined as follows:
+APP-CPD
+template <class T>
+class Stack
+{
+T List[100];
+int count;
+public:
+Stack() : count(0) {}
+void Push(T value) { List[count++] = value; }
+T Pop() { return List[--count]; }
+};
+void main(void)
+{
+Stack<int> s;
+s.Push(1); s.Push(2); s.Push(3);
+printf("%d", s.POp())3
+}
+b The code above prints “3”
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:106**************
-> Be careful what types you use for (unctinns when using templates in a class:
-APMPP
-lzmplalz (class v>
-(11;; Slzck
-t
-v t,t¢|1ee1;
-xnt ‘aunt;
-Wm“:
-Slzck (nun! a t)
-“Sawﬂy ‘ mm umfgzzgpy - “We; > ‘:v-Mvr c1554 ‘wind statmnmmuwu s)‘;
->1 ‘ (annut (unvert argument 1 fram ‘int' to ‘T a
-vmd mawbmxd) \uth
-l [
-Stitk<1nt> S;
-LEAN‘); “mm; “mm; “1"
-prtntt< :4 t §,vuu<>>; ]
-J______________________________________________
-> The code above can't be compited. The Pop (unction is correct, but the Push
-function must receive a reference—> s.Push(1) doesn't give 1t a reference!!!
+b Be careful what types you use for functions when using templates in a class:
+APP-CPD
+template <c1ass T>
+class Stack
+{
+T List[100];
+int count;
+public:
+Stack E2 : countEQE {}
+.‘d { List[count++] = value; } , I - - .. I.
+“POPO { return List[—-count]; } err'or' C2664. v01d Stack<1nt>..ll>ush€T &).' .
+}’. cannot conver't argument 1 fr'om 1nt to T &
+void main(void) \Mith
+{
+Stack<int> s; [ T-” t
+s.Push(1); s.Push(Z); s.Push(3); -1n l
+pnintf("%d", s.Pop()); 1
+}
+b The code above can’t be compiled. The Pop function is correct, but the P
+function must receive a referenceé s.Push(1) doesn’t give it a refer ce!!!
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:107**************
-> Be careful what types yeu use for functions when using templates in a class: I
-APMPP l
-mm. ml ,, ‘
-a“; n.“
-
-{ l
-Y usillli]; ‘
-m cwnn l
-
-nu“:
-sunkl) : (mull!) O
-mu mm Mun l “gimme . um; l
-I! Pauly { ruurn usrl>><wnrh )
-
-35m mum-n
-
-(
-
-) mmvw HMO);
-
-> The code can he compiled and prints "3".
+b Be careful what types you use for functions when using templates in a class:
+APP-CPD
+template <class T>
+class Stack
+{
+T List[100];
+int count;
+public:
+Stack() : count(0) {}
+void Push(T &value) { List[count++] = value; }
+T& Pop() { return List[--count]; }
+};
+void main(void)
+{
+Stack<int> s-
+s.Push tr '
+printf("%d", s.Pop());
+}
+> The code can be compiled and prints “3”.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:108**************
 Tem plates
-> The same as function templates, class templates can use multiple types
-APMPP
-t-mvht- (ch55 mm“ m
-cllSS v.1’
-t
-v1 KEY;
-v2 Value;
+b The same as function templates, class templates can use multiple types
+APP-CPD
+template <class T1,class T2>
+class Pain
+{
+T1 Key;
+T2 Value;
 public:
-Fur u = mmm, vnuaﬂlln 0 L
-void SelKeylcnns! v1 ti; t Key - v; ) z
-mu Sawﬂuekuls! n w {Vihﬂ . v; l l
-3514 mi1ﬂ(v01¢) t L
-Pnrmmls! m», um u; L
-mummy." grade") ; x
-) lien/ﬂush”: i
-b “Pair() z Kelel (l), Value(TZ())" —) calls the default constructor fur Key and
-Value {for “p” Key will be nullptr and Value will be 0),
-> It is important that both T1 and T2 have a default constructor: T1 () implies
-creating an object using its delault constructon
+Pair () : Key(T1()), Value(T2()) {}
+void SetKey(const T1 &v) { Key = v; }
+void SetValue(const T2 &v) { Value = v; }
+};
+void main(void) {
+Pair<const char*, int> p;
+p.SetKey(“exam grade");
+p.SetValue(10);
+}—
+b “Pair() : Key(T1()), Value(T2())” 9 calls the default constructor for Key and
+Value (for “p” Key will be nullptr and Value will be 0).
+> lt is important that both T1 and T2 have a default constructor: T1 () ' plies
+creating an object using its default constructor.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:109**************
-> The same as function templates, Class templates can use more types
-APMPP
-t-mvht- (this mm“ m
-czljj v.1’
-t
-v1 KEY;
-v2 Value;
+b The same as function templates, class templates can use more types
+APP-CPD
+template <class T1,class T2>
+class Pair
+{
+T1 Key;
+T2 Value;
 public:
-mm = mum), VllullYlln 0 ‘x
-Pairlcmls! n M, m.“ m m = “may, vuuqn) 0 x
-van sum/mm n w l Key - v; > x
-m4 setvaluelconst v2 m (Vllue - v1 ) \
-n l‘
-void mum-n x
-mum“ mm aw Dl":xam_|rade‘t1l); \
-> An explicit constructor can also be used in a class that uses a template, In the
-example above the constructor receives a string (const char "b and a number.
+Pair() : Key(T1()), Value(T2()) {}
+Pair(const T1 &vl, const T2& v2) : Key(vl), Value(v2) {}
+void SetKey(const T1 &v) { Key = v; }
+void SetValue(const T2 &v) { Value = v; }
+};
+void main(void)
+{
+Pair<const char*, int> p(“exam_grade",10);
+}
+b An explicit constructor can also be used in a class that uses a template. | e
+example above the constructor receives a string (const char *) and a mber.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:110**************
-> A more complex example: ‘
-Awqw ‘
-mm. “hss v>
-cuss Suck ‘
+b A more complex example:
+
+APP-CPD
+
+template <class T>
+
+class Stack
+
 {
-WM Pushﬂ‘ value) ( LAsKIcwnKH] - (‘v/ﬂue); ) ‘
-Yl Pow) ( "turn Lisll'1mml]; )
-)i
-“Mm (um 1w.» n,
-<1.“ m
-(
-);
-WM numb/aid)
-( "
-S!lck<P-1r<cun§lcll"h,1nl>> s;
-3mm“ Banana! mm mmuumn my:
-5.Pl|5h(||en Parana“ chart “MUMJHIMK 9));
-s_|=usn(m FilKnmsl char‘, mutklurmn", ll);
-)
+void Push(T* value) { List[count++] = (*value); }
+T& Pop() { return List[--count]; }
+
+};
+
+template <class T1,class T2>
+
+class Pair
+
+{
+
+};
+
+void main(void)
+
+{
+Stack<Pair<const char*, int>> s;
+s.Push(new Pair<const char*, int>(“asm_grade", 10));
+s.Push(new Pair<const char*, int>(“oop_grade", 9));
+s.Push(new Pair<const char*, int>("c#_grade", 8));
+
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:111**************
-> Macros can be used lugheter with templates: I
-AWCPP ‘
-Mnfxn- F(k,v) n-w Pansmsl an", Ink)“, v)
+b Macros can be used togheter with templates:
 
-Mame Suck msuckdnnmns! chlr', m» ‘
-<1.“ Mm ‘
-(
-“Mm m, mu.“ n,
-<1.“ P.“
-(
-m4 mum-1)
-5..“ 5;
-s.»ushw-.m_,,.w, my);
-sJusMIV'WLIHﬂK 977:
-s.Push(P("cl_[rade"v ll):
-)
+APP-CPD
+
+#define P(k,v) new Pair<const char*, int>(k, v)
+
+#define Stack MyStack<Pair<const char*, int>>
+
+template <class T>
+
+class MyStack
+
+{
+
+};
+
+template <class T1,class T2>
+
+class Pair
+
+{
+
+};
+
+void main(void)
+
+{
+Stack s;
+s.Push(P("asm_grade", 10));
+s.Push(P(“oop_grade", 9));
+s.Push(P("c#_grade", 8));
+
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:112**************
-Te m plates
-> Class templates can alsp accept parameters without a typelconstant)
-APP-CPI’
-t
-v lxsllsxze ;
-in! (nunl;
-publAc:
-slsekl) z cuunlll) c) l
-"Q14 Fush(cwnsl v1 vilﬂl) t tlstlequntssl - (vezu-x; ) E
-v: Paul) ( return l1§!|--(nun!]; t l
-:éid mainlvoiﬂ) l
-‘ Slims, m s;
-S!l(k<1n!, lue> ,1; ~~"' ‘
-fur (‘he [r - I; [r < s; !r.~: ,~
-s.vushl(r)1
-)
-> In this scenan'o, “s” will have 10 elements and “52" 100 elements
-> TWO different Classes will be createdlone with 10 and one with 100 elements)
+b Class templates can also accept parameters without a type(c0nstant)
+APP-CPP
+C ass 8C
+{
+T List[Size ;
+int count;
+public:
+Stack() : count(0) {}
+void Push(const T& value) { List[count++] = (value); }
+T& Pop() { return List[——count]; }
+};
+void main(void)
+{
+Stack<int, 19> s;
+Stack<int, 199> 52;
+for (int tr = 9; tr < 5; tr++)
+s.Push(tr);
+}—
+b In this scenario, “s” will have 10 elements and “52” 100 elements
+> Two different classes will be created(one with 10 and one with 100 ements)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:113**************
-Templates ‘
-> Class templates can also accept parameters without a typelconstant) I
-APP-CPP l
-Kerwin: mess v m
-class Stack t
-‘ l
-v lxstlsxze ;
-m em“; l
-puhltc:
-stackl) z emu») 0
-wm PusMcmlst u mu) t ListlcwnU-t] - (mu-u; )
-n Pam) ( return tum-mum; t
-:an mnlvem
-‘ snemnt, 10> s;
-Sllzk<1nl> ,1;
-m (m u . e; u < s; u“; ,,
-s.vushl(r)1
-)
-> In this scenan'o, “s” will have 10 elements and “52" 100 elements‘ In thecase
-of sZ the default value ior Size will be used.
+b Class templates can also accept parameters without a type(c0nstant)
+APP-CPD
+template <class T
+class Stack
+{
+T List[Size ;
+int count;
+public:
+Stack() : count(0) {}
+void Push(const T& value) { List[count++] = (value); }
+T& Pop() { return List[--count]; }
+};
+void main(void)
+{
+Stack<int, 19> s;
+Stack<int> 52;
+for (int tr = 9; tr < 5; tr++)
+s.Push(tr);
+}—
+b In this scenario, “s” will have 10 elements and “52” 100 elements. In the se
+of sZ the default value for Size will be used.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:114**************
-Templates ‘
-> Class templates can accept default values for types I
-APP-CPP l
-‘
-2 ss c ‘
-v mum]; l
-m em“; l
-Duhlsc:
-Slackl) z emu») l)
-ma Fuslllcmlsl u lam) l usllemml - (mu-u; )
-n Ml; l “ml. l1§!|--(m|l!]; l
-:an minlvoiﬂ)
-‘ .
-"
-> In this scenan'o “s” will be a ll'st of 100 doubles and sZ (because we didnyf;
-Speciiy the type) will be a list 0i ints.
+b Class templates can accept default values for types
+APP-CPP
+C ass 8C
+{
+T List[100];
+int count;
+public:
+Stack() : count(0) {}
+void Push(const T& value) { List[count++] = (value); }
+T& Pop() { return List[--count]; }
+};
+void main(void)
+{
+. k '0 01'> S}
+}—
+b In this scenario “s” will be a list of 100 doubles and 52 (because we didn’
+specify the type) will be a list of ints.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:115**************
-> Ctass templates can accept defautt vatues for types
+b Class templates can accept default values for types
 APP-CPD
-t
-m t1§lllﬂﬂ],
-‘mt eemmt;
-M1,‘, emmm [2955 '5tat'k‘: use of t1“ template
-“if? Q ‘nu-M2 (>1 u V 1 r'enulref template argument list
-i‘; my; $3335,“ Lj;;?2(gm§§i;""""'1 ' "a "6' > We see derlaration mt we‘
->t emmm c2123: @2' unknown >512
-we mummy emmm £2511 'Stack‘: no apprupr!ate difault
-4 .. v 5 constructor avallable
-' note: see metlemetwm m; 'steou
-> ,
-> The above code can't be compiled e evem w the type T is by default int
-> It must be Speciﬁed that when a variable 0i type Stack ls made, that valiable
-(“52"| ism fact a temptateiwe must use <>|
+C ass 8C
+{
+T List[100];
+int count;
+pmnic: error C2955: 'Stack': use of class template
+5t?d“) =c°wﬁ(9){} _ requires template argument list
+void Push(const T& value) { List[count++] = (value); } . d 1 t. ‘F 'St k'
+T& P0p() { return List[—-count],' } nOte' SEE EC ara lOn O 25C
+}; error C2133: '52‘: unknown Size
+v0ﬁ1maﬂﬂvonn error C2512: 'Stack': no appropriate default
+{ constructor available
+t-HCk< b1> S; - | |
+note: see declaration of Stack
+}—
+b The above code can’t be compiled - even if the type T is by default int
+> It must be specified that when a variable of type Stack is made, that va 'ble
+(“sZ”) is in fact a template(we must use <>)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:116**************
-> Classes can use methods with templates I
-APMPP t
-=1iss anllll
-{ r
-
-1n! value; r
-pub!$<:
-lntel£r() 1 valu!(l) ()
-t-me1it- <=1iss r>
-void SatvilullY v; t ~11“! . (1n12v; v
-)
-vesu mesnrvesnv
-( ink-III 1;
-1.5!!Vi1ua<f]uit>ln_5f);
-1.51!va!ue<dnuh!e>(1.1);
-3.5:!Va!ue<char)('a');
-) N
-
-> In the scenario above, Integer has 3 methods (with float, double and chap
-
+b Classes can use methods with templates
+APP-CPD
+class Integer
+{
+int value;
+public:
+Integer() : value(0) {}
+template <class T>
+void SetValue(T v) { value = (int)v; }
+};
+void main(void)
+{
+Integer i;
+i.SetValue<float>(0.5f);
+i.SetValue<double>(1.2);
+i.SetValue<char>(‘a‘);
+}
+b In the scenario above, Integer has 3 methods (with float, double and char
 parameter)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:117**************
-Tem plates
 b Classes can use methods with templates
-APMPP
-(1:5; Xntlllv
-t
-1n! valuli
-Pub!$<:
-mam) 1 mum 0
-t-mvht- (ch55 v> i
-void Satvﬂu!" v; t in“! - mm; y x‘
-); i
-mu MAI-(van i l
-intellr a; l
-“mm-(mm; l
-Lsetvnual'l'); x
-> Specifying the type in the template is not mandatory,
+APP-CPD
+class Integer
+{
+int value;
+public:
+Integer() : value(0) {}
+template <class T>
+void SetValue(T v) { value = (int)v; }
+};
+void main(void) {
+Integer i;
+i.SetValue(0.5f);
+i.SetValue(‘a‘);
+}
+b Specifying the type in the template is not mandatory.
 b In this scenario, Integer has two method:
-> one with a ﬂoat parameter—) deduced by the compiler from alsf
-> one with a char parameter —) deduced by the compiler from ‘a’
+> one with a float parameteré deduced by the compiler from 0.5f
+> one with a char parameter 9 deduced by the compiler from ‘a’
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:118**************
-> Classes that use templates cand also have static members: l
-APMPP l
-“Mme”; Y>
-cuss Ilumer ‘
-{ l
-l mm l
-
-am“; l
-sun: 1m (all;
-
-)i
-
-m Humerdnnzztwn! - 1|;
-
-m Mmmmmn . 2»:
-
-1m Mamsmml e so;
-
-ma mama
-
-i
-Numerdnn "a; ,,
-Mum-Ran» n2;
-Manama” n3;
-mmmaam niann ultwnn lawman);
+b Classes that use templates cand also have static members:
+APP-CPD
+template<class T>
+class Number
+{
+T Value;
+public:
+static int Count;
+};
+int Number<int>zzCount = 10;
+int Number<char>zzCount = 20;
+int Number<double>zzCount = 30;
+void main(void)
+{
+Number<int> n1;
+Number<char> n2;
+Number<double> n3;
+printf("%d,%d,%d", n1.Count, n2.Count, n3.Count);
+}
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:119**************
-> Classes that use templates cand also have static members: l
-APMPP l
-“Mme”; Y>
-cuss Ilumer ‘
-{ l
-l mm l
-
-am“; l
-sun: v ml;
-
-)i
-
-m Humerdnnzztwn! - 1|;
-
-a" Mmmmmn . c.»
-
-m1. M..<m1.>=ml e so;
-
-ma mama
-
-i
-Numerdnn "a; ,,
-Mum-Ran» n2;
-Manama” n3;
-Punrflﬁndklﬂfx niann ultwnn lawman);
+b Classes that use templates cand also have static members:
+APP-CPD
+template<class T>
+class Number
+{
+T Value;
+public:
+static T Count;
+};
+int Number<int>zzCount = 10;
+char Number<char>zzCount = ‘a’;
+double Number<double>zzCount = 30;
+void main(void)
+{
+Number<int> n1;
+Number<char> n2;
+Number<double> n3;
+printf("%d,%c,%lf", n1.Count, n2.Count, n3.Count);
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:120**************
-> Classes that use templates can also have (riend functions: ‘
-APP-CPP \
-(@lﬂeulass n
-(his Mr
-( l
-v mu;
-m Imam; l
-Mm:
-mm ma "mm-km) m;
-);
-"m YulOlmer-(nunlm n) ‘
-(
-“st - my
->
-vnld "mm-mm» m
-t
-(.mm . a;
-)
-ml mum-1)
-l
-liner-(dun I“;
-mrtdmnle) n1;
-mum):
-1mm); ,
+b Classes that use templates can also have friend functions:
+APP-CPD
+template<class T>
+class Number
+{
+T Value;
+int IntValue;
+public:
+friend void Test(Number<T> &t);
+};
+void Test(Number<double> &t)
+{
+t.Value = 1.23;
+}
+void Test(Number<char> &t)
+{
+t.Value = 0;
+}
+void main(void)
+{
+Number<char> n1;
+Number<double> n2;
+Test(n1);
+Test(n2);
+%_
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:121**************
-> Classes that use templates can also have (riend functions: ‘
-APP-CW \
-(ewlateulass n l
-(his Mr
-( l
-v mu;
-m Imam; l
-Mm; ‘
-mm ma "mm-km) m l
-l
-t.v.nu- . 5; ‘
-)_ >
-vnld mum)
-l
-much») n1:
-maul» n1;
-1mm);
-mum;
-)—
+b Classes that use templates can also have friend functions:
+APP-CPD
+template<class T>
+class Number
+{
+T Value;
+int IntValue;
+public:
+friend void Test(NumbeP<T> &t)
+{
+t.Value = 5;
+}
+};
+void main(void)
+{
+Number<char> n1;
+Number<double> n2;
+Test(n1);
+Test(n2);
+}—
 
 ***************Ending Page***************
 
@@ -2446,234 +2568,251 @@ Template
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:123**************
-Templates
-> Templates have a series of limitations: ‘i
-> The biggest limitation is that a method lrom a class that uses a template has ‘i
-exactly the same behaviour lthe only thing that differs is the type oi the a
-parameters) ‘i
-> For example, ii we deﬁne a iunctiun Sum with two parameters x and y, in which ‘i
-we return my, then we can't change this to another operatiun (e.g. il x si y are of i
-type char return x‘y instead Xey)
-> This limitation can be overcome if we use specialized templates
+Tem plates
+b Templates have a series of limitations:
+> The biggest limitation is that a method from a class that uses a template has
+exactly the same behaviour (the only thing that differs is the type of the
+parameters)
+> For example, if we define a function Sum with two parameters x and y, in which
+we return x+y, then we can’t change this to another operation (e.g. if x si y are of
+type char return x*y instead x+y)
+b This limitation can be overcome if we use specialized templates
 > Specialized templates represent a way in which for a class we define a
-method that overwrites the initial code 1mm the template with a more
-specific one for parameters of a certain typet
+method that overwrites the initial code from the template with a more
+specific one for parameters of a certain type.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:124**************
-Templates 1
-> An example: ‘i
-APMPP i
-“mn- (ch55 v>
-a“; mm" ‘
-{ i
-1 mm ‘
-pm“; i
-"Q14 s-liv x) ( Vilul Z x; y;
-m sun ( mm (“m-1.1!; >
-i;
-mu minivan”
-( Hum-Kink) n1;
-n1.§a!(5);
-“mum” n1;
-n2.se!('7');
-prAnKﬂWIkIL "Haw "new "2.5mm
-> The code runs r but pn'nts “n1:5, n2:55” even though we initialized n2 with
-‘7’ —) and we expected to print “n2 = 7"
+b An example:
+APP-CPD
+template <class T>
+class Number
+{
+T value;
+public:
+void Set(T t) { value = t; };
+int Get() { return (int)va1ue; }
+};
+void main(void)
+{
+Number<int> n1;
+n1.Set(5);
+Number<char> n2;
+n2.Set(‘7‘);
+printf("n1=%d, n2=%d", n1.Get(), n2.Get());
+}
+b The code runs - but prints “n1=5, n2=55” even though we initialized n2 w'
+‘7’ 9 and we expected to print “n2 = 7”
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:125**************
-Tem plates
-b Another example:
-APP-cop
-‘emulate <¢1=ss v,
-‘lass Numhcr
-(
-v vlluli
+> Another example:
+APP-CPD
+template <c1ass T>
+class Number
+{
+T value;
 public:
-Vnid s¢‘(r :7 ( v.1“; - r; >
-int icl1) < rclurﬂ 1inl)vilu=l >
-11m¢1.11 <>
-:1.” mm, <<m> Ternpme
-mm?" v.1“; 3pcc|alvzc~d m
-ma summ- z) ( mu! - 1-1‘; ); char
-An! @11(; { rQIHFn (‘"1:V;1u!; > '
-(
-Numhar<1nl> “1;
-n1‘S!!(5)i
-Number<¢hir> “z;
-n2.s=l1'7')x
-printf("nl:ld, "1:14", “1_§-¢(>, “2.5-m(>>:
-v
-> The code runs properly and prints n1:5, n2:7
+void Set(T t) { value = t; };
+int Get() { return (int)value; }
+template <>
+class Number <char>
+{ Template
+. fha" value; specialized for
+public.
+void Set(char t) { value = t-‘0'; }; Char
+int Get() { return (int)value; }
+void main(void)
+{
+Number<int> n1;
+n1.Set(5);
+Number<char> n2;
+n2.Set('7');
+printf("n1=%d, n2=%d", n1.Get(), n2.Get());
+}
+> The code runs properly and prints n1=5, n2=7
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:126**************
-> Specialiled templates work fur functions the same way:
-Awqw
-mm m n
-1n! tunvmrﬂullvlﬂ vzlul) l “(urn (nub/nut, )
-mm. o
-m (unverﬂnlnkthinkthir value) 4 return ("Mun-w w 7: >
-Wm mmomm)
-{ Template specvahled
-m , Z [mnwﬂmlvu,5,;
-m y Z Wmmmmm ¢ >1 m char
-)
-> The code runs r x will be 1 and y will be 4
+b Specialized templates work for functions the same way:
+APP-CPD
+template <c1ass T>
+int ConvertToInt(T value) { return (int)value; }
+template <>
+int ConvertToInt<char>(char value) { return (int)(value—'9'); }
+void main(void) _ _
+{ Template specialized
+int x = ConvertToInt<doub1e>(1.5);
+int y = ConvertToInt<char>('4'); for Char
+}
+b The code runs - x will be 1 and y will be 4
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:127**************
-Compile-time
+Compi le-ti me
 > assertion checking
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:128**************
-Compile-time assertion check] ng
-> Templates are a really powerful tool. However, sometimes, one might need t0
-add some constrains. Let's analyxe the following example:
-APP-cup
-mum- AW m" 5h!)
-(1.5! Sllck
-l v EkﬂKEISREli
-mm: 1
-5mm l l
-> l
-); r‘
-ma mum-1)
-> How can we enforce some limits for template parameter size ? [e4g, we do
-nol~ want Size t0 be Smaller than Z 0r bigger then 100)
+Com pi le-ti me assertion checki ng
+b Templates are a really powerful tool. However, sometimes, one might need to
+add some constrains. Let’s analyze the following example:
+APP-CPP
+template <typename T,int size>
+class Stack
+{
+T E1ements[size];
+public:
+Stack() {
+}
+};
+void main(void)
+{
+Stack<float,299> a;
+}
+b How can we enforce some limits for template parameter size ? (e.g. we do
+not want size to be smaller than 2 or bigger then 100)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:129**************
-Compile-time assertion check] ng
-P C*+11 standard provides a keyword SKUCiCJISSErt that can produce an
+Com pi le-time assertion checking
+
+b C++11 standard provides a keyword static_assert that can produce an
 evaluation of an expression during the compile phase and throw a compile
 error:
+
 > Format:
-static_assert condition condition ‘
+
+static_assert condition condition
+
 > Example:
-static_assert ( a>10, “'a‘ variable should be smaller or equal to 10“ );
-This code will lail in the compile phase if “a” can be evaluated it that time a
-(this usually means that “a” is a Constant) and if its value is bigger than 10.
-> Usually, static_assert is used within different class methods (e.g.
-constructor) to check the parameters or with templates to provide some
-constraints‘
+static_assert ( a>10, “’a’ variable should be smaller or equal to 10” );
+This code will fail in the compile phase if “a” can be evaluated at that time
+(this usually means that “a” is a constant) and if its value is bigger than 10.
+
+b Usually, static_assert is used within different class methods (e.g.
+constructor) to check the parameters or with templates to provide s e
+constraints.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:130**************
-> The previous code can be modify in the (allowing way:
+b The previous code can be modify in the following way:
 APP-CPD
-(amplala ((YDEHIMQ 1,1"! 511¢>
-(1,5; Slaﬁk
-<
-v [kmcntﬂsncli
-mm.
-Sla<k<> (
-“Mum” (Sm > 1, “5m m m“ must ha biggar m" w);
-“mum” (Sm < we “5m m 5nd must >= Wu» my. we“ -
-1
-1;,“ Mum”) note: Mule convplling (lass template member‘ functlun
-< ‘Stackdloafdnm: 15ml (may
-mwnmﬁw a; we‘ see remem to funninn mm» instannatmn
-1 'Stazkkﬂoatﬂﬁu‘ 1 =s¢au<mmr bemg (wrunléd
-> Now the code nu Longer ﬂute: sea reference m (1555 template instantlallon
-. 'StackafloatJBm‘ balm; cumplled
-complies and shows the
-fulluwing error: I,
+template <typename T,int size>
+class Stack
+{
+T Elements[size];
+public:
+Stack() {
+static_assert (size > 1, "Size for Stack must be bigger than 1");
+static_assert (size < 100 "Size for Stack must be smaller than 190" '
+}
+ioﬂimahﬂvoﬂﬁ note: while compiling class template member Function
+{ 'Stack<Float,290>::Stack(void)'
+gwcksﬁnah299>a; note: see reference to Function template instantiation
+} 'Stack<float,290>::Stack(void)' being compiled
+> NOW the code no longer note: see reference to class template instantiation
+. 'Stack<float,290>' being compiled
+compiles and shows the
+following error:
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:131**************
-Complle-tlme assertlon checklng l
-> lrl particular for templates, static_asserl can also be used to allow only a I
-couple of types to be used in a template. ‘
-> ThIS is however, a Z-step process. Flrst we deflrle a template that can tell us ‘
-lf a type is equal (the same] with another type. l
-APMPP ‘
-(ewlautlylilllﬁme u, lylilllﬁmz m
-strut! YYPetMvzre
-t emit (em peel equal e meet
-n
-giggigggggfegm Speclalized template for template
-t TypeCompare that has both parameters
-mm: cw“ hwl equal e We; ,7
->; of the same type
-> The trick here is to use a specialiled template where the value of a stetit
-constant variable lS changed.
+Com pi le-time assertion checking
+b In particular for templates, static_assert can also be used to allow only a
+couple of types to be used in a template.
+b This is however, a 2-step process. First we define a template that can tell us
+if a type is equal (the same) with another type.
+APP-CPD
+template<typename T1, typename T2>
+struct TypeCompare
+{ static const bool equal = false;
+};
+§$251$t$;;ggjgggie1;m Specialized template for template
+{ _ TypeCompare that has both parameters
+stat1c const bool equal = true;
+}; of the same type
+b The trick here is to use a specialized template where the value of a st 'c
+constant variable is changed.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:132**************
-The prevvous code can be Matty W the tettewvhg Way:
-template <Iypﬁﬂamc 1,1ht $11e>
-t1.55 5t.tt
-t
+The previous code can be modify in the following way:
+template <typename T,int size>
+class Stack
+{
 
-v Elsmsnkitnzs].
-Pub)“
+T E1ements[size];
+public:
 
-S!a(k() t
+Stack() {
 
-t sntk the be Mu mm t .e mu
+( "Stack can onl be used with t ne int" '
 
->
-1;,“ mum”) nets: while campiling (leis template member‘ tunetmt
-< ‘Stacklfloatdﬁiw::$far\(vmd,\‘
+}
+};- - - note: while compiling class template member function
+v01d main(v01d)
+{ 'Stack<float,299>::Stack(void)'
 
-gutkt/Anatgﬂﬂv i, notei see eeteeenee (u ﬂmcKluvv template anslanuatluvv
-> stethneetgtm-:;stee|<wtuu)‘ being whpnea
+StaX<ﬁDHb299>83 note: see reference to function template instantiation
+} 'Stack<float,209>::Stack(void)' being compiled
 
-rwte: see hetehehte to class template initaﬁtlatlim
+note: see reference to class template instantiation
 
-|hth15 (age the (Oltgwwg ‘Stacktfloat,2%>‘ hem; camplled
-happen: When Typelomparedloamnb vs catted. the compner chases the ﬁrst (more
-generic form! of the temptate that has the vatue of equal false,
-If we woutd have create a var usmg Stack<int,200> then TypeCompareﬂnMnb would
-have seteeteu the specvahzed temptete that has the value of equal
+In this case the following 'Stack<float,206>' being compiled
+happen: When TypeCompare<float,int> is called, the compiler choses the first (more
+generic form) of the template that has the value of equal false.
+If we would have create a var using Stack<int,200> then TypeCompare<int,int> would
+have selected the specialized template that has the value of equal
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:133**************
-Complle-tlme assertlon checking
-> Let's analyze the (allowing code: I
-APP-CPD t
-vain m.1n<vu1n> ‘
-t
-m X e mm; \
-stmgssmtx \: w. "x mm m be w \"7: ‘
-1 ‘
-Wm- [2131' ‘mum am not Mum tn a (Unstnnt
-mt! m usage .1;
-> Keep in mind that stutic_ussert only works w|th constant value (egt values that can
-be deduce during the compile phase). In this case, the value of "x" is a random one
-(as a result, the Compiler can nut evaluate if “X” i5 O or not and an ermr will be I,
-reportedlt
+b Let’s analyze the following code:
+Appxpp
+void main(v0id)
+{
+int x = rand();
+static_assert(x != 0, "X should not be 0 !");
+}
+error C2131: expression did not evaluate to a constant
+note: failure was caused by a read of a variable outside its lifetime
+note: see usage of 'x'
+
+b Keep in mind that static_assert only works with constant value (e.g. values that can
+be deduce during the compile phase). ln this case, the value of “x” is a random one
+(as a result, the compiler can not evaluate if “x” is 0 or not and an error will be
+reported).
 
 ***************Ending Page***************
 
-***************Beginning Page***************
-***************page number:134**************
-y my
 
-***************Ending Page***************
-
+ 

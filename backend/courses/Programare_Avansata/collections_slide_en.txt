@@ -1,6 +1,6 @@
 ***************Beginning Page***************
 ***************page number:1**************
-gig) Java“
+g) Java
 Advanced Programming
 Java Collections
 Framework
@@ -11,63 +11,63 @@ Framework
 ***************page number:2**************
 Collections
 
-~ A collection is an object that groups multiple
+- A collection is an object that groups multiple
 elements into a single unit.
 
-~ Vectors, Lists, Stacks, Sets, Dictionaries, Trees,
+' Vectors, Lists, Stacks, Sets, Dictionaries, Trees,
 Tables, etc.
 
 - Promotes software reuse
 
-~ Reduces programming effort
+- Reduces programming effort
 
 - Increases program speed and quality
 
-- Benefits from polymorphic algorithms
+~ Benefits from polymorphic algorithms
 
-~ Uses generics
+- Uses generics
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
 Collections Framework
-
 - Interface List
-~ Abstract class AbstraftList
-I A_rrayLi_st
-- Concrete implementation “32:32:”
+- Abstract class AbstractList
+I arrathst
+- Concrete implementation Llskedhst
+ector
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
 The Core Collection Interfaces
-onnecnon Map
-
-EFL \ﬁ maue Deque smum
-
-SortedSet _ _ _
+I Emllauttnn | Map
+El; g Imam | [)9tu | Enﬂuﬂap
+| Eurtadﬁat _ _ _
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-lnteﬂaga Hash Array Tree Linked Ha5h+Linked
+lnterfata Hash Array Tree Linked Hash+Linked
 
-Set Has-‘521 megs“ ankedHashSe:
-List knyydt Ll'vkeuLlst
+Set HashSet TreeSet LinkedHashSet
+List ArrayList LinkedList
 
-Vestal
-Queue Lnkeuust,
+Vector
+Queue LinkedList,
 
-ArrayB‘onknq ConturzentLJn
+ArrayBlocking ConcurrentLin
 
-QueLe Game“
-Deque Arraylieque Linkeolleque
-yap Hns'vMap TresMap hnke/iHnshMap
+Queue kedQueue
+Deque ArrayDeque LinkedDeque
+Map HashMap TreeMap LinkedHashMap
 
-Haswranlv
+Hashtable
 I I I
 
 ***************Ending Page***************
@@ -75,13 +75,13 @@ I I I
 ***************Beginning Page***************
 ***************page number:6**************
 The Collection interface
-- A collection represents a group of ob'ects (elements)
+- A collection represents a group of obiects (elements)
 - Some collections are indexed, others are not.
 - Some collections allow duplicate elements, others do not.
 - Some are ordered and others unordered.
 - Some are thread-safe, others are not.
-- All collections are iterab/e: Iterator pattern
-i public interface Collection<E> extends Iterable<E>
+- All collections are iterable: Iterator pattern
+— public interface Collection<E> extends Iterable<E>
 - Dedicated subinterfaces: List, Set, Queue, etc.
 - Many (indirect) implementing classes.
 
@@ -91,108 +91,107 @@ i public interface Collection<E> extends Iterable<E>
 ***************Beginning Page***************
 ***************page number:7**************
 Common operatlons
-PUbllC interface Collect10n<E> extends Iterable<E> (
-1n: size()7
-boolean ismptyo:
-boolean containsﬂlbject o);
-Iterator<E> iteratorl)7
-ObjectH tonnnaym
-<T> T[] tonzzay(T[] a):
-default <T> T[] toArzay(IntFunctlon<T[]> generator) (
-return toAnay(qene:acor,apply(0) >;
+public interface Collection<E> extends Iterable<E> {
+int size();
+boolean isEmpty();
+boolean contains(Object o);
+Iterator<E> iterator();
+Object[] toArray();
+<T> T[] toArray(T[] a);
+default <T> T[] toArray(IntFunction<T[]> generator) {
+return toArray(generator.apply(0));
 }
-boolean adeE e)?
-boolean removewbject o);
-boolean containsAll(Collect10n<?> c); > Inclusion
-boolean addAll(Collectlon<? extends 15> c); ~ Union
-boolean removeA111CollecLiz>n<7> C); > Difference
-boolean zetainAll1Collect1cn<ﬂ>> c); ~ Intersection
-VOld clearU;
-)
+boolean add(E e);
+boolean remove(Object o);
+boolean containsAll(Collection<?> c); e Inclusion
+boolean addAll(Collection<? extends E> c); e Union
+boolean removeAll(Collection<?> c); e Difference
+boolean retainAll(Collection<?> c); e Intersection
+void clear();
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Lists: ArrayList, LinkedList
+Lists: ArrayList, LmkedLlst
 
-- Alist is an indexed collection (sequence).
+- Alist is an indexed collection (seguence).
 
 - Each element has a position (integer), starting
 
-from 0. Just like an array.
+from O. Just like an array.
 
-~ Duplicates are allowed.
+- Duplicates are allowed.
 
 - A list can be implemented in various ways
-—
-—
+-—
+-—-
 
 Bad practice:
 
 Using implementations as reference types:
-A-Hsa-yList<Strinq> llSt : new ArrayList<>l);
+AfrayList<String> list = new ArrayList<>();
 Using raw generics:
 
-List list : new Arralesttjr
+List list = new ArrayList();
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
 Using a List
-
-T\st<5tr\nq> list : new ArrayT.'st<>();
-LlSt,add1"B")i
-l1st,add("b")r
-sysrem.m1t.pnnnln4l;sri; // ha, b];
-asserL lisLsizef) Z: 27 Toenableassenions
-assert llSt_gBt(O) .equals ("a"); use \he JVM oplion ea
-assert llSt‘geC(l) .equels ("b"); java -ea MyApp
-assert llst.ind.ex0£("a") Z o;
-
+List<String> list I new ArrayList<>();
+list.add("a");
+list.add("b");
+System.out.println(list); // [a, b];
+assgrt liSt'Size() I: 2; To enable assertions
+assert list.get(O).equals("a"); US$theJan0pﬁ0n'ea
+assert list.get(l).equals("b"); java-GGIMYAPP
+assert list.index0f("a") I: O;
 indexOf, contains use the
-llsLxemoveF'b") 7 equals method of the elements!
-assert Illst.c0ntains("b")7
-assert MsncontainE-("a");
+list . remove ("b") ,- equals method of the elements!
+assert !list.contains("b");
+assert list.contains("a");
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-- ArrayList<E> implements List<E>
-private static final int DEFAULTiCAPACITY e 10;
-Objectl] elementData;
-private int sue,-
-
-~ LinkedList<E> implements List<E>
-int size e 0;
-
-Node<E> iii-st;
-Node<E> last; private static class Node<E> 1
+~ ArrayList<E> implements List<E>
+private static final int DEFAULT_CAPACITY I lO;
+Object[] elementData;
+private int size;
+- LinkedList<E> implements List<E>
+int size I O;
+Node<E> first;
+Node<E> last; private static class Node<E> {
 E item;
-Node<E> next;
-Node<E> piev;
-1
+Node<E> neXt;
+Node<E> prev;
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
 The importance of equals
 - Methods like: contains, indexOf, remove, etc.
 rely on the equals method:
-public boo/ean contains(0bject o)
+public boo/ean contains( Object o)
 returns true if this list contains the specified
 element. More formally, returns true if and only if
 this list contains at least one element e such that
 —
-' Source code (in ArrayList, approximative):
-for (1m 1 : c, n : S1190? 1 < n,- 1w) l
-1f (o._(element3atd[l]l) l
-:eturr true;
+- Source code (in ArrayList, approximative):
+for (int i I O, n I size(); i < n; i++) {
+if (o.-(elementData[i])) {
+return true;
 l
-Lelurn [(11397
+l
+return false;
 
 ***************Ending Page***************
 
@@ -200,70 +199,70 @@ Lelurn [(11397
 ***************page number:12**************
 Iteratlng Over a Llst
 - As an indexed collections
-[or (ML ‘:0, n:1i5t.size(); l < n; 3++ > [
-System.out.prlntlr( li=t_get(i) J;
-)
+for (int iIO, nzlist.size(); i < n; i++ ) {
+System.out.println( list.get(i) );
+}
 - Iterator and Enumeration
-to: (Iterater it = listtlistIteratotO; it.hasNext(); ) K
-System.out.pr1r:ln(it.next()H
-1t .removeU?
-)
+for (Iterator it = list.listIterat0r(); it.hasNext(); ) {
+System.out.println(it.next());
+it.remove();
+}
 - for-each
-Lisl<$tuqent> SLLdean : new ArzayLl51<>Ui
-for (Student student : students) (
-stLdentAetGradeHO)?
-)
+List<Student> students = new ArrayList<>();
+£5; (Student student : students) {
+student.setGrade(lO);
+}
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-qum class mum (
-Private final ZUUC m N Z 1007mm,-
-Puhhc md mmumqnuq.» luv.) ;
-Jung U Z SystemJHUXEntTlmeb/lllllsU,'
-for hm ‘ Z u; \ < N,- Wm
-hsmddm;
-1
-long L2 Z System‘currenLh/wemnhs(y;
-Svstem.ou(.pr1nt1n("Addt -' ‘ ([2 Z (1H;
-»
-public ma mmummncwn 1m) |
-Jung U Z SYSZZNJMZHUMZMUUSz»,- get Sms AQZQMS
-for (mt ‘ Z u; \ < N,- Wm
-mum)’: ---
-1
-long [2 Z System‘cunenu‘)mer¢u)115(y;
-Svﬁlem.ou(.pr)nt1r\("Getz -' Z ([1 Z Um . v v
-» m: Chooslng a cerlam
-Pub)“ vnld talﬂmmllLlst<Inther> 115:1 l implementation depends on (he
-Jung U Z 5ystem.curxentT1meMlL\Ls ,- .
-,0, hm ‘ Z U; \ < NF 1w ‘ nature ofthe problem bemg solved.
-mkmqum;
-1
-long L2 Z System‘currenLh/wemnhs(y;
-Mm.“.pUnUm-kamQVZ = -' . “2 Z (1H;
->
-public void {wemumqmﬂb hat) x
-tesllxddUlst); testGEtUlst): thZMVZUHU;
-v
-publxc mm vmd maJnIGtzlng “qsm (
-mum EPP Z new TestLlstH;
-spp.!un'leltl (nu ArzgyLilt<>ID :
-“Ema-mm" Link-ﬁlilt<>());
->
+I I I 7
+ArrayLlst or LinkedList.
+public class TestList {
+private final static int N I lOO_OOO;
+public void testAdd(List<Integer> list) {
+long tl I System.currentTimeMillis();
+for (int i I O; i < N; i++) {
+}
+long t2 I System.currentTimeMillis();
+}
+public void testGet(List<Integer> list) {
+long tl I System.currentTimeMillis (); get 3 m8 w mS
+for (int i I O; i < N; i++) {
+list.get(i);
+}
+long t2 I System.currentTimeMillis();
+System.out.println("Get: " + (t2 — tl)); _ _ .
+} Conclusmn: Choosmg a certaln
+public void testRemove (List<Integer> list) { implementation depends on the
+long tl I System.currentTimeMillis(); t fth bl b . I d
+for (int i = 0,- i < N; i++) { na UFEO e pro em elng sove .
+list.remove(0);
+}
+long t2 I System.currentTimeMillis();
+System.out.println("Remove : " + (t2 — tl));
+}
+public void runTests(List<Integer> list) {
+testAdd(list); testGet(list); testRemove(list);
+}
+public static void main(String args[]) {
+TestList app I new TestList();
+app.runTests(new ArrayList<>());
+app.runTests(new LinkedList<>());
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-The Set Interface
+The Set interface
 - A collection that contains no duplicate elements (models
 the mathematical set abstraction).
 More formally, sets contain no pair of elements e1 and e2
 such that e1.equals(e2), and at most one null element.
-' Sets are not indexed! We use iterators or for-each in order
+- Sets are not indexed! We use iterators or for-each in order
 to traverse the set.
 - A set can be implemented in various ways
 —
@@ -271,18 +270,19 @@ to traverse the set.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-e HaShSet<E> implements Set<E>
-HashMap<E,0bject> map?
-Uses the hashCoda of an Object.
+~ HashSet<E> implements Set<E>
+HashMap<E,Object> map;
+Uses the hashCode of an Object.
 This class offers constant time performance for the basic operations
 (add, remove, contains and size), assuming the hash function disperses
 the elements properly among the buckets.
 
 - TreeSet<E> implements Set<E>
 private NavigableMap<E,Object> m; //a specialized SortedMap
-The elements are soned using their natural ordering, or by a Comparator
+The elements are sorted using their natural ordering, or by a Comparator
 provided at set creation time
 This implementation provides guaranteed log(n) time cost for the basic
 operations (add, remove and contains).
@@ -292,81 +292,84 @@ operations (add, remove and contains).
 ***************Beginning Page***************
 ***************page number:16**************
 Using a Set
-Set<5tnng> Set : new HashSet<>Ur
-sot.add("b"); Sct.add("d")7 Sct.add("a"];
-Systemmucynnclnwec)r // [5, b]
-
-No guarantees about order.
-assert set.sile() Z: 2;
-WWW. 4 " n v
-set.rernove("b“l ,- indexOf, contains use the
-assert SCK.COntainS("a")F equals method of the elements.
-for(String s : set) l
-System.out.pzlntln(s);
+Set<String> set I new HashSet<>();
+set.add("b"); set.add("a"); set.add("a");
+System.out.println(set); // [a, b]
+N0 guarantees about order.
+assert set.size() I: 2;
+WW. . H H ,
+set.remove ("b") ,- indexOf, contains use the
+assert set_contains ("a") ; equals method of the elements.
+for(String s : set) {
+System.out.println(s);
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-publlt class Tesnset 1 y
-111111 [[anc 1m 1| : wagon;
-[mm VON! LesLAdd(ColleccuaKIx-Aceqez) collection) 1
-lung [1 : Systcm.cuxxcntT)mchlllsU;
-m 11m 1 : n; 1 < N,- 1"] 1
-collecrlon.ndd(n;
->
-lung [2 : SySLem.turXeanlmeM11113U,-
-System,ou(.pz1n[1n("Addz n 1 ‘[2 [ [111;
-1
-pubhc vmd LechLereteLCeUectiolK'!) collection) l
-lung [1 : Systcm.cuxxcntT)mchlllsU; Iterate 51 ms 12 ms
-m (Ghject ob] = collectxon) 1
-objnmmgm //a<> something
->
-s stem,ou(. [1n[1n<"1[[[3[[[ H 1 ‘[2 7 (1n: .
-1 y P Memory low hlgh
-pubhc vmd LescCovvtev"sltoilectlalK'b celleczion) 1
-lung [1 : Systcm.cuxxcntT)mchlllsU;
-for mt i Z n; 1 < Nr 1m 1 Concluslon: Chooslngaceﬂaln
-> C°Uec“°"'°°““‘“s <11; implementation depends on the
-1an [2 : SyiLemJurxenl'InneMﬂhSU,- nature ofthe problem being solved.
-System,ou(.pzlntlnC'CQnIAAnS: n 1 ([1 [ (m;
-1
-pubhc voui runTests[Collecnan<1nnegez> collection) 1
-[cscAdd(cuUccc1\>m; [cst]:cra(c(collcc(1un7; (cslﬁuntalnskollccixum;
-1
-[mm mm W111 mmsmnq [[qsuv 1
-Tense: SPF : new TestSetH;
-JPP. [measmu krunylt<>U 1:
-app.xnnTests(nn-1 nuns-[001;
+A ' H h 7
+ITGYLISZ‘ OF 88 Set.
+public class TestSet {
+final static int N = lOO_OOO;
+public void testAdd(Collection<Integer> collection) {
+long tl I System.currentTimeMillis();
+for (int i = O; i < N; i++) {
+COlleCtion.add(i); ---
+}
+long t2 = System.currentTimeMillis();
+}
+public void testIterate(Collection<?> collection) {
+long tl = System.currentTimeMillis(); iterate 51 ms 12 ms
+for (Object obj : collection) {
+obj.toString(); //do something
+}
+System.out.println("Iteratez " + (t2 — tl)); _
+} Memory low hlgh
+public void testContains(Collection<?> collection) {
+long tl I System.currentTimeMillis();
+for (i111; i = O; i < N; i(+)+> { Conclusmn: Choosmg a certaln
+co ection.contains i ; - -
+} Implementatlon depends on the
+long t2 = System.currentTimeMillis <>,- nature of the problem being solved.
+System.out.println("Containsz " + (t2 — tl));
+}
+public void runTests(Collection<Integer> collection) {
+testAdd(collection); testIterate(collection); testContains(collection);
+}
+public static void main(String args[]) {
+TestSet app I new TestSet();
+app.runTests(new ArrayList<>());
+app.runTests(new HashSet<>());
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:18**************
-The Queue Interface
+The Queue interface
 - A queue is a first-in-first-out (FIFO) linear collection;
-It has a head and a tail.
-~ Provides additional insertion, extraction, and
+lt has a head and a tail.
+- Provides additional insertion, extraction, and
 inspection operations.
 add, remove, element (throw exceptions)
 offer, poll, peek (return special values)
-- Example
-Queue<$t:1nq> q : new LinkedList<>();
-q.o££e:("a"lr // sane as q.add
-q.offer("b"i; // adds elemevzs at the tail
-assert q.peek() .equals("a"l; //reZJrns the head
-assert q.poll().equals("a"li //ret_\rns and removes
-assert q.peek() .equals("b"l;
+~ Example
+Queue<String> q I new LinkedList<>();
+q.offer("a"); // same as q.add
+q offer("b"); // adds elements at the tail
+assert q.peek().equals("a"); //returns the head
+assert q.poll().equals("a"); //returns and removes
+assert q.peek().equals("b");
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
 The PriorityQueue class
 
-- A queue based on a priority heap. The elements ofthe
+- A queue based on a priority heap. The elements of the
 priority queue are ordered according to their natural
 ordering, or by a Comparator. The head of the queue
 is the least element with respect to the ordering.
@@ -376,11 +379,11 @@ enqueing and dequeing methods, linear time for the
 remove and contains methods; and constant time for
 the retrieval methods (peek, element, size).
 
-- Example:
+' Example:
 
-PriorityQueue<Inteqer> pQueLe Z rew PricrityQueue<>(J;
-pO\.eJe.ad:tl31 .- pOLeJe-Jdizll 1.- POLEJFJ.:JI}IH7];
-assert pQJeue.peek() .equalS (t);
+PriorityQueue<Integer> pQueue I new PriorityQueue<>();
+pQueue.add(3); pQueue.add(l); pQueue.add(2);
+assert pQueue.peek().equals(l);
 
 ***************Ending Page***************
 
@@ -393,187 +396,186 @@ stack of objects. Obsolete, just like Vector.
 
 - Deque is a linear collection that supports element
 insertion and removal — ("double ended
-queue").
+queue“.
 
 - Deques can be used to implement LIFO collections:
-Deque<1nteqer> stack : new ArrayDeque<>();
-stacklpushtl); //sarre as addFirst
-stacklpushU);
-assert stackpeekFirstU .equals (Z); //same as peek
-assert sta(:k.peekLast() .eqoalsﬂ);
+Deque<Integer> stack = new ArrayDeque<>();
+stack.push(1); //same as addFirst
+stack.push(2);
+assert stack.peekFirst().equals(2); //same as peek
+assert stack.peekLast().equals(l);
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
 The Map interface
 - An object that maps keys to values.
 - lt is similar to describing a dictionary.
-~ public interface MaP<K, v> t 1
+~ public interface Map<K, V> { }
 - A map cannot contain duplicate keys; each key can map to at
 most one value.
-- Example: Map<COuntry, chy>
-m m
-Romania ~> Bucharest
-France —~ Paris
-- Implementations:
-—
-—
+- Example: Map<Country, City>
+@y Value
+Romania —> Bucharest
+France —> Paris
+' Implementations:
+——
+—-
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
 Using a Map
-Map<5tr1ng, Strlng> map 1 new HashMap<>();
-map.pu€("RQmanla“, "Eucharest")?
-map.puu"nance", "Parls");
-System.out.pnncln1map);
-//Ron\anla:Euchazest, FIBHCEZPBIlS)
-assert map.get("France") .equals("Parls");
-assert map.containsKay4"Romania")r
-for15trlng country : matheySetU) (
+Map<String, String> map I new HashMap<>();
+map.put("Romania", "Bucharest");
+map.put("France", "Paris");
+System.out.println(map);
+//Romania:Bucharest, FranceIParis}
+assert map.get("France").equals("Paris");
+assert map.containsKey("Romania");
+for(String country : map.keySet()) {
 
-System.cupprlntlmmapget(country))i
-)
+System.out.println(map.get(country));
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
 Under the Hood
 - HashMap can achieve an average time complexity of 0(1) for
-the put and get operations and space complexity of 0(n).
-- Instead of iterating over all its elements, HashMap attempts to
+the put and get operations and space complexity of O(n).
+~ Instead of iterating over all its elements, HashMap attempts to
 calculate the position of a value based on its key.
-° HashMap stores elements in so-called buckets and the number
+- HashMap stores elements in so-called buckets and the number
 of buckets is called capacity.
 Node<K,V>[] table;
-Set<Map.Entiry<K,V>> entrySet;
+Set<Map.Entry<K,V>> entrySet;
 - The index in the table array is computed using the hashCode
-method of the key object‘
-- Inside a bucket, values are stored either in a list (for less than 8
+method of the key object.
+' Inside a bucket, values are stored either in a list (for less than 8
 elements) or in a balanced tree. The data structure changes
-dynamically. The performance of iterating: O(log lbucketl).
+dynamically. The performance of iterating: O(log |bucket|).
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
 HasMap.get
-final Node<K,V> gemodeunt hash, Object key) 4
-Node<K,V>[] tab; Node<K,V> first, e; int n; K k;
-1f ((tab : table) !: null u (n : tab.length) > 0 u
-(first = tabﬂn - 1) r. haahl) a: null) <
-lf (flrst.hash :: hash m // always check flrst node
-((k : flrstlkey) :: key
-H (key z: nLll w key.equals(k))))
-returr ﬁrst;
-lf ((e : fll'st.next) l: rull) l
-1f (flrst lrStanCPOf TreeNodP)
-return 1(TreeNode<K,‘/>)first>,qetTreeNodelhash, key);
-do 1
-\r (smas) :: lush $5
-((k : e.<ey) :: key
-H (key 1: n_\ll && key.eq\;al$(k))))
-retJrn e;
-luhile we : e.next) 1: rull);
-)
+final Node<K,V> getNode(int hash, Object key) {
+Node<K,V>[1 tab; Node<K,V> first, e; int n; K k;
+if ((tab I table) I: null && (n I tab.length) > O &&
+(first = tab[(n — 1) & hash]) l= null) {
+if (first.hash I: hash && // always check first node
+((k I first.key) I: key
+|| (key != null && key.equals(k))))
+return first;
+if ((e I first.next) !: null) {
+if (first instanceof TreeNode)
+return ((TreeNode<K,V>)first).getTreeNode(hash, key);
+do {
+if (e.hash I: hash &&
+((k I e.key) I: key
+|| (key !: null && key.equals(k))))
+return e;
+} while ((e I e.neXt) !: null);
 }
-Iétutn null;
-)
+}
+return null;
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-hashCode and equals
-public Class Player 1
-private 3:11-43 name;
-//
-@Ovekrlde
-public int hashCodeO 4
-\"L hash i ';
-hash , er ' hash > ObjectslzashcodeLLhismeme)r //c><ampic
-rctuln hash;
-)
-@OverILde
-public hanlean equal!(0bjecc obj) (
-1f (thls Z: om) tsturn true;
-\r (091 W nun) return T5158;
-‘v mom msmnceo‘ waver)» rsLurn ‘else;
-Player oLhcz 7 [Piayun om,-
-rutuLn Objects.equals(tunhndmu, othunnnuu)?
-)
-// When a hashCode()oomparison returnsfalse,
-the equals() memod must also return false.
+hash Code and equals
+public class Player {
+private String name;
+// ...
+@Override
+public int hashCode() {
+int hash = 7;
+hash I 67 * hash + Objects.hashCode(this.name); //example
+return hash;
+}
+@Override
+public boolean equals(0bject obj) {
+if (this I: obj) return true;
+if (obj == null) return false;
+if (!(obj instanceof Player)) return false;
+Player other = (Player) obj;
+return Objects.equals(this.name, other.name);
+}
+// . . . When a hashCode() comparison returns false,
+l the equals() method must also return false.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:26**************
 Assume there is another property Integer id;
-public boulean equals (Object obj) (
-
-if 4Lh13 W ODJ) {CLUIn LLUC7
-
-1f {on} :: null) rcturn falsc;
-
-1f H [obj lustanceof Flay/51)) return false;
-
-flayer pars i (Player) other;
-
-Leturn Object5.equalsltwls.,d, ot"er.,d\;
-Map<l>\ayer, SLrinq> map 7 new Hash‘dap<>(y;
-map.puL(ncw Piajux UNUSSJ") , "YSG");
-mcp.put(ncw Pldycrl"Runcldu")y "Mdncucstcr Urutcd");
-System.out.prl“tlnlmap};
-
-(Messi=Manchester Unked)
+public boolean equals(0bject obj) {
+if (this == obj) return true;
+if (obj == null) return false;
+if (!(obj instanceof Player)) return false;
+Player pers = (Player) other;
+return Objects.equals(this.id, other.id);
+}
+Map<Player, String> map = new HashMap<>();
+map.put(new Player("Messi"), "PSG");
+map.put(new Player("Ronaldo"), "Manchester United");
+System.out.println(map);
+{Messi=Manchester United}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:27**************
 Polymorphlc Algorlthms
-java.uti1.Collections
+java.util.Collections
 ' sort
-' Shuffle
-~ binarySearch
-~ reverse
+' shuffle
+' binarySearch
+' reverse
 ' fill
-- copy
-~ min
-~ max i
-~ swap
-' enumeration L0
-- unmodifiableCollectionType
-Llst<StI1ng> ,IrmutablelLSt : Collectlons.unmndlflableLJst(llsty;
-Jmmutaulellst . add ("Oops. . . ? 1 ">; What DesignPattem?
-~ synchroniZedCollectionType
+' COPY
+' min
+' max ‘
+' swap Q
+' enumeration
+' unmodifiableCollectionType
+List<String> immutablelist = Collections.unmodifiableList(list);
+immutablelist . add < "Oops. . .? ! ") ,- What DesignPattern?
+' synchronizedCollectionType
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:28**************
 - The explicit type can be replaced by the reserved type name
-var for local variable declarations that have initializers.
-string sir I "Helm"; ﬁ> —
+var for W.
+String str = "Hello"; é> _
 
-~ Explicit vs. Implicit, Verbosity vs. Readability
+- Explicit vs. Implicit, Verbosity vs. Readability
 
-- Examples
-var strlngiest 7 LJst.uf["a", "b", "c"l,'
-var permit,“ : new Arrszlst<Persﬁn>UP
-for(vaz person 1 personLlst) i i
-var company"oFmp'ovees i new Has‘b'lap<SLi/1nq, List<§tr\“q>>l);
-lor lvaz ectvy; commanchl-“wcicveee. e“LYvSeLll) ‘
+' Examples
+var stringList = List.of("a", "b", "6");
+var personList = new ArrayList<Person>();
+for(var person : personList) { }
+var companyToEmployees = new HashMap<String, List<String>>();
+for (var entry: companyToEmployees. entrySet()) {
 
-val employees i anLy.ceLValuu(l;
+var employees = entry.getValue();
 l
-var itemﬁueue : new PrlorltyQLieue<>Hf // PriorityQueue<Ubject\
-W
+var itemQueue = new PriorityQueue<>(); // PriorityQueue<Object>
+vaf—x—=—ﬂa%%¢
 
 ***************Ending Page***************
 

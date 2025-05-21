@@ -1,115 +1,115 @@
 ***************Beginning Page***************
 ***************page number:1**************
-lngineria Programérii
-Cursu|12 - 17-18 mai
+I I V I I
+lngmerla Programaru
+Cursu|12 — 17-18 mai
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Outl | ne
+Outline
 > Recap — Software testing
 > Non-functional software testing
-t Security
-= Performance
-t. Usability
-= Internationalization
+O Security
+O Performance
+O Usability
+o Internationalization
 > SOLID Refactoring
-= Degradation of code
-Q Designing with classes
-t Designing with packages
-‘ I
+o Degradation of code
+O Designing with classes
+o Designing with packages
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
 Recap
 > Software quality assurance
 > Functional software testing
-t Automatic testing
-= Manual testing
-‘ ’
+O Automatic testing
+o Manual testing
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Non Functional Software Testing
+Non Functlonal Software Testing
 
 > Verifies that the software functions properly even
 when it receives invalid or unexpected inputs
 
 > Methods:
 
-c Performance testing or Load Testing checks to see if the
+o Performance testing or Load Testing checks to see if the
 software can handle large quantities of data or users
 (software scalability).
 
-= Usability testing checks if the user interface is easy to use
+O Usability testing checks if the user interface is easy to use
 and understand.
 
-t Security testing is essential for software which processes
+O Security testing is essential for software which processes
 confidential data and to prevent system intrusion by
 hackers.
 
-t Internationalization and localization is needed to test these
+o Internationalization and localization is needed to test these
 aspects of software, for which a pseudo localization method
 
 I can be used.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Software Performance Testi ng
+Software Performance Testl ng
 > Types
 
-O load testing i can be the expected concurrent number
+O load testing — can be the expected concurrent number
 of users on the application (database is monitored)
 
-= stress testing — is used to break the application (2 ><
+O stress testing — is used to break the application (2 x
 users, extreme load) (application's robustness)
 
-a endurance testing - ifthe application can sustain the
+O endurance testing — if the application can sustain the
 continuous expected load (for memory leaks)
 
-Q spike testing — spiking the number of users and
+O spike testing — spiking the number of users and
 understanding the behavior of the application whether
 it will go down or will it be able to handle dramatic
-changes in load
-
-‘ ‘
+changesinload
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
 Performance Testing Analysis
-X e ‘f ,
-v QA Analyst /
-k Performance
-g Testing i
+I‘ If); ., J r
+¥ QA Analyst /
+‘“ k Performance
+g Testing 6
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-UsabIlIty testIng
+Usability testing
 > A technique used to evaluate a product by testing it
-on users
+Ol'l USEl'S
 > Usability testing focuses on measuring a human-
-made product's capaCIty to meet Its Intended
+made product's capacity to meet |ts Intended
 purpose.
-> Examples of products that. commonly benefit from
-usabI Ity IQSIIH? are web s|tes or web aplpllcatlons,
-computer Inter aces, documents, or deVIces
+> Examples of products that commonly benefit from
+usabl |ty testin? are web sites or web ap_pl|cat|ons,
+computer |nter aces, documents, or deVIces
 > Goals
-Z Performance e How much time, steps?
-c Accuracy e How many mistakes did people make?
-t Recall e How much does the person remember afterwards
-or after periods of noneuse?
-» Emotiona/respanse — How does theéaerson feel about the
+O Performance — How much time, steps?
+o Accuracy — How many mistakes did people make?
+<> Recall — How much does the person remember afterwards
+or after periods of non-use?
+o Emotional response — How does thecperson feel about the
 tasks completed? ls the person confi ent, stressed? Would
 er recommend this system to a friend?
 
@@ -118,60 +118,60 @@ er recommend this system to a friend?
 ***************Beginning Page***************
 ***************page number:8**************
 Usability testing steps
-Site l a
+Site i b
 Build
-w Prototype
+F“ Prototype
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Security testi ng
-r The Process to determine that an Information
+Secu r|ty testl ng
 
+> The Process to determine that an Information
 System protects data and maintains functionality as
-
 intended.
 
-r The six basic security concepts that need to be
+> The six basic security concepts that need to be
 covered by security testing are:
 
-= Conﬁdentiality,
+O Confidentiality,
 
-s Integrity e information which it receives has not been
+O Integrity — information which it receives has not been
 altered in transit or by other than the originator of the
 information
 
-s Authentication — validity of a transmission, message, or
-originator,
+O Authentication — validity of a transmission, message, or
+or|g|nator,
 
-= Authorization e determining that a requester is allowed to
+O Authorization — determining that a requester is allowed to
 receive a service or perform an operation,
 
-t Availability e Assuring information and communications
+<> Availability — Assuring information and communications
 services will be ready for use when expected,
 
-c Non-repudiation — prevent the later denial that an action
+O Non-repudiation — prevent the later denial that an action
 
-ed, or a communication that took place
-g
+mniQtion that took place
+9
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
 Security logo
-cagCURyyy ‘ﬁg/ab I
-‘ t ii ‘7p, _
-m ‘g i ,0
+secuR'Tlf ~¢\
+v ‘ w pp I
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
 Internationalization and
 
-localization
+locaHzann
 
 > Means of adapting computer software to
 different languages and regional differences
@@ -189,7 +189,7 @@ locale-specific components and translating text.
 
 ***************Beginning Page***************
 ***************page number:12**************
-Measurlng software testlng
+Measuring software testlng
 
 > Usually, quality is constrained to such topics as
 correctness, completeness, security
@@ -217,7 +217,7 @@ incremental changes
 
 > Eventually, it becomes difficult to maintain,
 extend or debug
-u Rigid, Fragile, lmmobile, Viscous
+O Rigid, Fragile, lmmobile, Viscous
 
 - Design Principles and Design Patterns. Robert C.
 Martin
@@ -242,18 +242,19 @@ hard to do the right thing
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Refacto r| ng
+Refactorl ng
 
-> the process of changing a software
-system in such a way that it does not alter the
+> .. the process of changing a software
+system in such a way that it does not a/ter the
 external behavior of the code yet improves its
-internal structure." — Martin Fowler in
-Refactoring Improving The Design 0f Existing
+interna/ structure." — Martin Fowler in
+Refactoring improving The Design 0f Existing
 Code
 
-> Making code cleaner, simpler and more
+> Making code cleaner, simpler ancl more
 elegant
 
 > The refactored program must be functionally
@@ -263,20 +264,21 @@ equivalent to the initial program
 
 ***************Beginning Page***************
 ***************page number:16**************
-Refacto ring
+Refactorlng
 
-> Refactoring doesn't prevent changing
-functionality, itjust says that it's a different
+> Refactoring doesn’t prevent changing
+functionality, itjust says that it’s a different
 activity from rearranging code
 
 > It is easier to improve code quality if you
-don't also change its functionality
+don’t also change its functionality
 
 > Refactoring is not rewriting
-= refactoring does not change functionality
-Q rewriting does change it
+o refactoring does not change functionality
+O rewriting does change it
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
@@ -286,7 +288,7 @@ Why to Refactor?
 extend
 > Simpler to use design patterns
 > Improves performance and usability of code
-‘ ,7
+x w
 
 ***************Ending Page***************
 
@@ -311,15 +313,16 @@ When is Refactoring Necessary?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
 How to Refactor
 > Prepare a set of automatic tests for the
 program to be refactored
 > Change the code in small iterations
-~ Test for each iteration to ensure semantic
+O Test for each iteration to ensure semantic
 equivalence
-= If any test fails, undo the change and try a different
+o If any test fails, undo the change and try a different
 one
 > After numerous iterations the cumulated
 changes will be large
@@ -328,36 +331,33 @@ changes will be large
 
 ***************Beginning Page***************
 ***************page number:20**************
-Refactormg Techniques
-
+Refactorlng Techn lques
 > lncrease abstraction
-=' Encapsulate Field i force code to access the field
+O Encapsulate Field — force code to access the field
 with getter and setter methods
-Q Generalize Type - create more general types to
+O Generalize Type — create more general types to
 allow for more code sharing
-= Replace type a checking code with State/Strategy
-Q Replace conditional with polymorphism
-
+O Replace type — checking code with State/Strategy
+O Replace conditional with polymorphism
 > Split code into more logical pieces
-Q Extract Method, to turn part of a larger method into
+O Extract Method, to turn part of a larger method into
 a new method.
-Q Extract Class moves part of the code from an
+O Extract Class moves part of the code from an
 existing class into a new class.
-
-‘ I“
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Refactormg Technlques
+Refactorlng Techniques
 > Improving names and location of code
-6 Move Method or Move Field e move to a more
+O Move Method or Move Field — move to a more
 appropriate Class or source file
-= Rename Method or Rename Field — changing the
+O Rename Method or Rename Field — changing the
 name into a more representative new one
-a Pull Up — in OOP, move to a superclass
-5 Push Down e in OOP, move to a subclass
+O Pull Up — in OOP, move to a superclass
+O Push Down — in OOP, move to a subclass
 
 ***************Ending Page***************
 
@@ -378,20 +378,21 @@ OOD principles for classes
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
 The Single Responsibility Principle
-> A class shou/d have one, and an/y one, reason to
+> A class should have one, and only one, reason to
 change.
 > A responsibility to is “a reason for change."
 > Each responsibility is an axis of change.
 interface Modem
-{
-public void dial(String pno);
-public void hangupO;
+l
+public void clial(String pno);
+public void hangup();
 public void send(char c);
 public char recv();
-l
+}
 
 ***************Ending Page***************
 
@@ -404,7 +405,7 @@ O If the implementations for the communication and
 connection management change independently,
 separately
 
-Q If the implementations only change together, do not
+O If the implementations only change together, do not
 separate
 
 > Corollary: An axis of change is only an axis of
@@ -415,16 +416,16 @@ change if the changes actually occur.
 
 ***************Beginning Page***************
 ***************page number:25**************
-The Open Closed Principle
+The Open Closed Princlple
 
-> You should be able to extend a class ’
+> You should be able to extend a class’
 behavior Without modifying it.
 
 > Software entities (classes, modules, functions,
 etc.) should be open for extension, but closed
 for modification.
 
-> The primary mechanisms behind the Open’
+> The primary mechanisms behind the Open-
 Closed principle are abstraction and
 polymorphism.
 
@@ -435,12 +436,12 @@ polymorphism.
 The Liskov Substitution Principle
 
 > Derived classes must be substitutable for
-the/‘r base classes.
+their base classes.
 
 > Makes applications more maintainable,
-reusable and robust
+reusable ancl robust
 
-> If there is a function which does not conform
+> lf there is a function which does not conform
 to the LSP, then that function uses a reference
 to a base class, but must know about all the
 derivatives of that base class.
@@ -450,59 +451,59 @@ principle
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-The Llskov Substltutlon PrinCIple
+The LlSkOV Substitutlon Principle
 public class Rectangle
-l
+{
 public void SetWidth(double W) {itsWidth:w;}
-public void SetHeight(double h) lilsHeight:wI}
-public double GetHelghtO consr {return iisHeight;}
-public double GetWidthO cons! (return itsWidrh1}
+public void SetHeight(double h) {itsHeight=w;}
+public double GetHeight() const {return itsHeight;}
+public double GetWidth() const {return itsWidth;}
 protected double itsWidth;
 protected double itsHeight;
 }’ public class Square extends Rectangle
-l
-public void SefWidth(double w) lsuper.SelWidrh(w);
-super.5etHeighK(W)i)
-public void SetHelght(double l1) {superuSelWidchX
-super.SetHeight(h)l}
-‘ n
+{
+public void SetWidth(double W) {super.SetWidth(w);
+super.SetHeight(w);}
+public void SetHeight(double h) {super.SetWidth(h);
+super.SetHeight(h);}
+x 27
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-The Llskov Substltutlon PrinCIple
+The Liskov Su bstltutlon Pr| nc| ple
 public class Test
-l
-public static vuid “Rectangle r, float a)
-l
+{
+public static void f(Rectangle r, float a)
+{
 r.SetWidth(a);
-l
-l
+}
+}
 public class Main
-l
-public static void maintStrlng argsll)
-l
-Square square = new Square(),
-square.SetWidth(10);
-Test test : new Testl);
-testﬂsquare);
-//a( this point the square is not a mathematical square
+{
+public static void main(String args[])
+{
+Square square = new Square();
+square.SetWidth(i O);
+Test test = new Test();
+test.f(square);
+//at this point the square is not a mathematical square
 //because its height is different from its length
-‘ m
+28
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
 The Interface Segregation Principle
-
-> C/l'ents snou/d not be forced to depend upon
+> Clients should not be forced to depend upon
 interfaces that they do not use.
-
-> Make fine grained interfaces that are client
+> Make ﬁne grained interfaces that are c/ient
 speciﬁc.
 
 ***************Ending Page***************
@@ -513,25 +514,26 @@ The Dependency Inversion
 Principle
 > What is it that makes a design bad?
 
-, most software eventually degrades to the point
+o most software eventually degrades to the point
 where someone will declare the design to be
 unsound
 
-= Because of the lack of a good working definition
+O Because of the lack of a good working definition
 of “bad” design.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
 The Dependency Inversion
 Principle
 > The Definition of a “Bad Design"
-, lt is hard to change because every change affects
+o It is hard to change because every change affects
 too many other parts of the system. (Rigidity)
-a When you make a change, unexpected parts of
+O When you make a change, unexpected parts of
 the system break. (Fragility)
-It is hard to reuse in another application because
+O It is hard to reuse in another application because
 it cannot be separated from the current
 application. (lmmobility)
 
@@ -553,9 +555,10 @@ abstractions.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Object-Oriented De5|gn
+Object-Orlented Desrgn
 
 > The most common types of programming are
 Structured Programming and Object Oriented
@@ -565,20 +568,20 @@ Programming
 does not have the external appearance of both
 structured programming and object oriented
 programming
-= Do not have goto
-» class based and do not support functions or variables
+O Do not have goto
+O class based and do not support functions or variables
+
 that are not within a class
 
 > Programs may look structured and object
-oriented, but looks can be deceiving
 
-‘ B
+oriented, but looks can be deceiving
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Organization of Classes
+Organlzatlon of Classes
 
 > As software applications grow in size and
 complexity they require some kind of high
@@ -587,30 +590,35 @@ level organization.
 > The class is too finely grained to be used as
 an organizational unit for large applications.
 
-> Something “larger” than a class is needed =>
+> Something “larger” than a class is needed :>
 packages.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-00D principles for deliverables
+OOD principles for deliverables
 > Cohesion
+
 O The Release Reuse Equivalency Principle
-Q The Common Closure Principle
-= The Common Reuse Principle
+
+O The Common Closure Principle
+
+O The Common Reuse Principle
 > Coupling
-~ Acyclic Dependencies Principle
-a The Stable Dependencies Principle
-a The Stable Abstractions Principle
-‘ “
+
+O Acyclic Dependencies Principle
+
+O The Stable Dependencies Principle
+
+O The Stable Abstractions Principle
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:36**************
-Designing With Packages
+Designing WIth Packages
 
 > What are the best partitioning criteria?
 
@@ -622,30 +630,31 @@ their use?
 down)? Or should classes be designed before
 packages (Bottom up)?
 
-> How are packages physically represented? ln the
+> How are packages physically represented? In the
 programming language? In the development
 environment?
 
-v Once created, how will we use these packages?
+| > Once created, how will we use these packages?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-The Reuse/Release Equivalence
-PrinCIple
+The Reuse/Release Equlvalence
+Prlnclple
 > Code copying vs. code reuse
-> l reuse code if, and only if, l never need to
+> | reuse code if, and only if, | never need to
 look at the source code. The author is
 responsible for maintenance
-= lam the customer
-O When the libraries that I am reusing are changed by
-the author, l need to be notified
-t. l may decide to use the old version of the library for
+O lam the customer
+O When the libraries that | am reusing are changed by
+the author, | need to be notified
+o | may decide to use the old version of the library for
 a time
-= l will need the author to make regular releases of
+o lwill need the author to make regular releases of
 the library
-a l can reuse nothing that is not also released
+o | can reuse nothing that is not also released
 
 ***************Ending Page***************
 
@@ -662,17 +671,18 @@ This granule is the package.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
 The Common Reuse Principle
 
-> The classes lh a package are reused together.
-lf you reuse one of the classes lh a package,
-you reuse them all.
+> The classes in a package are reused together.
+If you reuse one 0f the classes in a package,
+you reuse them a//.
 
 > Which classes should be placed into a
 package?
-a Classes that tend to be reused together belong in
+O Classes that tend to be reused together belong in
 
 the same package.
 
@@ -686,11 +696,12 @@ that need to be distributed.
 ***************page number:40**************
 The Common Reuse Principle
 
-> l want to make sure that when l depend upon
+> l want to make sure that when | depend upon
 a package, l depend upon every class in that
-package or l am wasting effort.
+package or | am wasting effort.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
@@ -701,7 +712,7 @@ together against the same kinds of changes.
 A change that affects a package affects all the
 classes in that package.
 
-> lf two classes are so tightly bound, either
+> If two classes are so tightly bound, either
 physically or conceptually, such that they
 almost always change together; then they
 belong in the same package.
@@ -724,9 +735,10 @@ source files.
 releasable packages
 
 > You must manage the dependency structure
-of the packages
+0f the packages
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
@@ -741,16 +753,31 @@ structure.
 
 ***************Beginning Page***************
 ***************page number:44**************
-The Acvclic Dependencies Principle
+The Acvclic Denendencies Princinle
 -
-MA 1mm»-
+rid-hﬁih
+‘I?!’ I’:
+‘I: at‘ H -
+‘an I‘; a it in‘
+‘xxxxk I‘: -
+- i-Fi'FFH'IFH'i-F-li
+‘£-
+\ 44
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-The Acyclic Dependencies Principle
-I >-
+The Acycllc Dependencles Prmuple
+{II-5*‘... i
+ii’), 1:.’ i
+‘It: :1" ‘I - i
+‘\x'.‘ I.‘ ‘1h I: it’: -i
+\‘\‘\ ‘.11 - i
+- "I..."-.'-"-'--.------.-'L-I----I
+-
+\ 45
 
 ***************Ending Page***************
 
@@ -758,15 +785,16 @@ I >-
 ***************page number:46**************
 The Acyclic Dependencies Principle
 > Breaking the Cycle
-e Apply the Dependency Inversion Principle (DIP).
+O Apply the Dependency Inversion Principle (DIP).
 Create an abstract base class
-= Create a new package that both MyDialogs and
-MyAppIication depend upon. Move the class(es) that
+O Create a new package that both MyDialogs and
+MyApplication depend upon. Move the class(es) that
 they both depend upon into that new package.
 > The package structure cannot be designed
 from the top down.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:47**************
@@ -778,15 +806,14 @@ Stability
 module
 
 > Stability can be achieved through
-a Independence
-~ Responsibility
+olndependence
+O Responsibility
 
 > The most stable classes are Independent and
 Responsible. They have no reason to change,
 and lots of reasons not to change.
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:48**************
@@ -804,32 +831,39 @@ modules that are more stable
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Stability Metrics
+Stability Metrlcs
 
-> Ca: Afferent Couplings : The number of
+> Ca : Afferent Couplings : The number of
 classes outside this package that depend
-upon classes within this package.
+upon classes Within this package.
 
 > Ce: Efferent Couplings : The number of
 classes inside this package that depend upon
 classes outside this package.
 
-> l : Instability: (Ce/(Ca+Ce)) |:O maximally
-stable package. l=l maximally instable
+> l : Instability : (Ce/(Ca+Ce)) |:O maximally
+stable package. |:l maximally instable
 package.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Stability Metrics
+Stablllty Metrlcs
 - - -
-E
-I
+Eli El Elil
+1| [25:3
+1, #3:?
+ifii
+-' I,‘ I-
+-Eﬂ E- Elil
+\ 5°
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:51**************
@@ -842,8 +876,8 @@ design model of the system should be placed
 into stable packages
 
 > How can a package which is maximally stable
-(l=0) be flexible enough to withstand change?
-Q classes that are flexible enough to be extended
+(IIO) be flexible enough to withstand change?
+O classes that are flexible enough to be extended
 
 without requiring modification :> abstract classes
 
@@ -854,36 +888,32 @@ without requiring modification :> abstract classes
 The Stable Abstractions Principle
 
 > Packages that are maximally stable should be
-maximally abstract. Instable packages should
+maximally abstract. lnstable packages should
 be concrete. The abstraction of a package
 should be in proportion to its stability.
 
 > Abstraction (A) is the measure of abstractness
-in a package. A = AC/TC
+in a package. A I AC/TC
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
 Mam Sequence
-
-1 0-1l-----------;---~.
-o K '
-Qifeo i
-@.,.% z
-0,’ v
-Abstraction w . I
-"91, i
-
-0
-o‘, I
-p .
-fag v
-6/ '
-
-IO” 0'" I (1.0)
-Instability 1
-5,
+Org/j :
++990 I
+(ff/)0 I
+Abstraction t9” . |
+0&0 :
+/) |
+('0 l
+@0 -
+l
+(49/00 :
+00 0" I (10)
+Instability l
+\ 53
 
 ***************Ending Page***************
 
@@ -891,9 +921,9 @@ Instability 1
 ***************page number:54**************
 Design Patterns — Why?
 
-> lf a problem occurs over and over again, a
+> If a problem occurs over and over again, a
 solution to that problem has been used
-effectively (solution = pattern)
+effectively (solution I pattern)
 
 > When you make a design, you should know the
 names of some common solutions. Learning
@@ -902,6 +932,7 @@ communicate each other effectively
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
 Design Patterns — Definitions
@@ -909,19 +940,20 @@ Design Patterns — Definitions
 > “Design patterns capture solutions that have
 developed and evolved over time" (GOF — Gang-0f-
 Four (because of the four authors who wrote it),
-Design Patterns.‘ Elements ofReusab/e Object-
-On'ented Software)
+Design Patterns." Elements 0f Reusable Object-
+Or/‘ented Software)
 
-> In software engineering (or computer science), a
+> ln software engineering (or computer science), a
 design pattern is a general repeatable solution to a
 commonly occurring problem in software design
 
-> The design patterns are languageeindependent
+> The design patterns are language-independent
+strategies for solving common object-oriented
 
-trategies for solving common objecteoriented
-blems
+oMems
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:56**************
@@ -931,36 +963,44 @@ it might be hard to find the one that addresses a
 particular design problem
 > Approaches to finding the design pattern that's
 right for your problem:
-l. Consider how design patterns solve design problems
-2. Scan lntent sections
+i. Consider how design patterns solve design prob/ems
+2. Scan intent sections
 3. Study relationships between patterns
 4. Study patterns of like purpose (comparison)
 5. Examine a cause of redesign
-‘isider What should be variable in your design
+‘is/der What should be variable in your design
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:57**************
 How to Use a Design Pattern?
-1. Read the pattern once through for an overview
-2v Go back and study the Structure, Participants,
+
+i. Read the pattern once through for an overview
+
+2. Go hack and study the Structure, Participants,
 and Collaborations sections
-s‘ Look at the Sample Code section to see a
+
+3. Look at the Sample Code section to see a
 concrete example
+
 4. Choose names for pattern participants that are
 meaningful in the application context
-s. Define the classes
-6, Define application-speciﬁc names for operations
+
+5. Deﬁne the classes
+
+6. Deﬁne application-specific names for operations
 in the pattern
-Hient the operations to carry out the
-' ' and collaborations in the patter/27
+
+‘gent the operations to carry out the
+' ' and collaborations in the patter/z.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:58**************
-Bibliography
+Blbllography
 
 > Robert C. Martin, Engineering Notebook
 columns for The C++ Report
@@ -969,7 +1009,7 @@ columns for The C++ Report
 C. Martin.
 
 > Erich Gamma, Richard Helm, Ralph Johnson,
-and John Vlissides: Design Patterns: Elements
+and John Vlissides: Design Patterns.‘ Elements
 0f Reusable Object-Oriented Software
 (GangOfFour)
 

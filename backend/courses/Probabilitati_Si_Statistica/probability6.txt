@@ -1,915 +1,1032 @@
 ***************Beginning Page***************
 ***************page number:1**************
-u mm 2m
+29 martie 2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Plaza: mm.‘
-mm“ mm. 4mm
-“mm-u
-thamlnlhlu m. mm n i1! numnlw a n m
-mm; a. m"
-Cmywkimmwl y- m-u 1W i mwuw um”.
-nmm “mm Randnm "m
-Hanﬂnm mm m in!“ mum.
-m. mm. mm ammm :4 mnuxlunn
-5mm.
-Emmgnvl!
+Procese aleatoare
+Lan'guri Markov discrete
+Introducere
+Probabilitatile unui drum §i ale tranzitiilor in n pa§i
+Tipuri de stari
+Comportamentul pe termen lung a lanturilor Markov
+Drumuri aleatoare - Random walks
+Random walks in grafuri neorientate
+Un algoritm pentru detectarea s-t conexiunii
+Exerci'gii
+Bibliography
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Ann capital ml mm “mm-“i m we“. 1m miinu
-in mun! mm ll. pmn\- (a. h m “am-1 “ma
-m nmiluﬂlamﬁnallnhnl “mm “mm”. mum.
-mum...‘ “mm” [| .‘ M vilinllalmlmplan] 11:ka
-lnilnlplacl "mm: m 1m mad-1 mlumih': 1| 1mm “m
-n...“ mm!“ m. mm": m \Imp i Blvﬂnm n “mm
-ﬂu vilwl “ml-=-
-5” mm!“ .m W" “mi-r: m.- a [nhm mm . m7
-.1.-
+Acest capitol este dedicat introducerii unei notiuni larg utilizate
+in diverse ramuri ale stiiintei (de 1a ﬁzica statistica, trecand
+prin inteligenta artiﬁciala pana 1a §tiinte1e economice): procesele
+aleatoare sau stochasttce (i.e., care variaza 1a intamplare). Infor-
+mal un proces stochastic este un model matematic a1 unui exper-
+iment probabilistic care evolueaza in timp §i produce o secventa
+de valori numerice.
+Spre exemplu un proces stochastic poate ﬁ folosit pentru a mod-
+ela:
 
-’ mam pan-mm “i mm. |= and.
+- variatia preturilor unei actiuni 1a bursa;
 
-V um». m-w! m "a. .1. m “m Emma‘
+- pozi'giile succesive pe radar ale unui avion comercial;
 
-V mum 1mm, a. Inclxclxu l mama lmnm m 4!
+- variatia nivelului de incarcare a traﬁcului intr-un nod de
 
-mm»; u:
+comunicatii etc.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-1mm.“ ‘
-m. mm. “Mum m. I Inmxb: n mm. nlznzunv!
-my)“ m“... nut: m. unym m thhhmlz
+Deﬁnition 1
+Un proces stochastic este o famtlte de variabtle aleatoare
+(X(t))i€I, deﬁnite peste un spatt'u, cu probabtlttate.
 
-. mm.- miihﬂ: X, :Xm n “mm-“n...
-M pi. =1 wnulnlmi a“: mulhmn m1. “will l-
-... dim“: M m. m in. m ..,. pm, “mm
-mm 1., ml E. m.“ m mm". I: v g w
+o Fiecare variabilﬁ Xi : X (z) : Q —> 1R reprezinté o stare sau
+un pas al procesului; dacé multimea care le indexeazé, I,
+este discreté atunci avem de-a face cu un proces stochastic
+dtscret. in cele ce urmeazé vom presupune c5 ‘I l g lN*l.
 
-. Mn,“ a. w.“ mm"
+o Exemple de procese aleatoare:
 
-1 Wm .1, n» sun?! m-iu "Mm". duv w.
-.|m h .m "m, u: Ac...“ .m Wm 5mm
-w,“ Mm [a "mm mm: a “m mm“)
+1. Procese de tz'p sostre: mesaje receptionate, clienti care
+ajung la un server etc. Acestea sunt procese Bernoulli sau
+procese Poisson (0 varianté continual a celor Bernoulli).
 
-2 Pvnuunu 1m" “mm lulHXPmm-hgmhihnm
-m. Imlulantlmn iln “mam. mm.
-mu n mm‘ mm“: (“Mn-m) 4! I. n mm
-vm 1.. mum
+2. Procese sau lanturt Markov: sunt experimente probabilis-
+tice care evolueazé in timp §i in care o stare viitoare depinde
+intr-o anumitéi misuré (probabilistic) de ceea ce s-a intém-
+plat in trecut.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-. v.1 1:14 Man-u: m. 1m mm =1 m, Mm mm“ 4.
-mum mm “mm mind
+o Un lant Markov este un proces a1 cﬁrui viitor depinde de
+trecut intr-o anumitéi misuréi.
 
-- mm mlh =1 “um.” mm "nu-mi m- mum
-Pm: m-mm mm: Vamuhn‘ nuns nln u mm:
-mm, my nmuimmiu an! 1,. mi‘ n. m. lama-i A:
-Pincus m clxnr In" m m 1m Mu mm a. "Jan
+o Efectul acesta a1 trecutului asupra viitorului este modelat
+prin intermediul stﬁrilor procesului; aceste stéri se schimbﬁ
+conform unor probabilitétgi date. in plus, ne vom limita 1a
+procese ale céror stéri pot lua un numér ﬁnit de valori.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Drﬂnitinn z
-
-(1) m 1m erknv dim-u cu a mm“: mm n Jun
-.m w. pm. mm...“ pm.“ 1m...‘ m mm.
-mm" x. n 1 s 1mm‘ ‘h, {m nu ympn
-mam nan n Pm mam
-
-»(x..,1.\x,1~‘x,11.,‘ 1.1“)1
-1 nxm 1 ﬁx" 1 1.)
-
-I") m 1...“. Mm." u nmm: unlllgml 1m nlurmul']
-
-M
-rum, 1 l, x" : 1|) : Pm 1 w. . 1 |.) 1 pm
-vn>:,..‘.,15
+Deﬁnition 2
+(i) Un lani; Markov discret cu 0 multime ﬁnitli de stci'ri
+este un proces stochastic (Xn)n;1 format din variabile
+aleatoare Xn : Q —> S : {$1,52,...,sm} care au propri-
+etatea numz'té a luz' Markov:
+P{Xn+1 : s|X1 : siUXZ : 5¢2,...,Xn : 51”} :
+: P{Xn+1 : s\Xn : sin}
+(ii) Un lant; Markov se nume§te omogen (sa'u, stationar)
+dacii
+P{Xn+1 I SJ'IXn : 81'} I P{Xn I SjIXn_1 : 81'} I pij,
+Vn 2 2,5i,5j E S.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-- I.“ c.1- =- mm“ m. (Du-"1m a“. hm; Marl" m7
-n“. damn: U |:n an hum}! mm 4- Ilin
+o in cele ce urmeaza vorn considera doar languri Markov omo-
+gene, discrete §i cu un numér ﬁnit de stari.
 
-. s m. mm! “mm. m p. mmmmr a! “MN,
-miinm [nrmﬂl :u m“. whim“. r Z (m, ,,, m
-I! numlll! mam a! mum thhkﬂrl = mm.“
+o S este spatiul starilor, iar pZ-J- probabilitziﬁle de tranzipie,
+matricea formata cu aceste probabilita'gi P : (Pijhém'ém
+se numegte matricea de tranzz'ﬁz'e probabilistii a lan'gului.
 
-u“ mm .1. Ill‘ Manny .5 mm,“ min
+Un astfel de lan'g Markov se identiﬁcé prin:
 
-V "mm “mm s : (1,‘ n. ‘In!
+- spa'giul starilor S : {51152,---;$m}
 
-V |. pmbahﬂnlhk ,L. .1- mm an.“ n.“ m .ni
+- §i probabilita'gile pZ-j de trecere dintr-o stare in alta.
 
-. m. hm Maﬂu' m“ a "um-u“ ymnnn mm; u
-"mMdem “an-.1. m. nan mm, m 1,.’
-m mm m. m “. ymimw. mum-nu." 4.
-mm.-
+o Un lan'g Markov poate ﬁ reprezentat printr-un digraf al
+tmnzzﬂz'lor probabiliste: nodurile sunt stéri posibile, iar in-
+tre acestea avem arce cu probabilita'gile corespunzatoare de
+tranzitie.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Buzmlm Ali: mun .m m. “mum; a! mm mun;
-mumuw m lam! Imam: n a. 1m“ m \n'ml. a. mm
-h .. m manna mmmmm mm m“, mm“ m! m
-ulml cu mm“, mm plubihﬂlhhi n n n mum m um:
-h 1., mum,“ mm... .n. n4, .u mum“ c. n .=
-“w; la . m mm; .m DI! rm Mm “mm: Ah:-
-um 1. n m mum “m mama“ c: n u rim“: h
-m: m MM“ mm". .m n 1mm m .= l. la ,, m
-m “mum nnniinlxu mu n a.
-Ann! m. 1m‘ amalln Mm," u mun m m: n55 Bnihxll n
+Exemplu. Alice urmeazé un curs séptéménal de "Teoria proba-
+bilitétilor“, in ﬁecare séptéméné ea ﬁe réméne in urrné, ﬁe ajunge
+1a zi cu materia corespunzétoare. Dacé intr-o séptéméné este in
+urméi cu materia, atunci probabilitatea ca ea sé réméné in urmé
+§i in séptéména urmétoare este 0.4, iar probabilitatea ca ea s5
+ajungé 1a zi cu materia este 0.6. Dacé intr-o séptéméné Alice
+este 1a zi cu materia, atunci probabilitatea ca ea s5 réméné in
+urmé in séptéména urmétoare este 0.2, iar cea ca $51 ﬁe 1a zi §i
+in séptiména urméitoare este 0.8.
 
-Ahcullinculniknilln mimmilmunnﬂ memlhlu
-a- “mm. m
+Avem un lant omogen Markov §i discret cu doué stéri posibile: $1
+- Alice e 1a zi cu materia §i $2 - ea a rémas in urmé. Probabilitétile
+de tranzitie sunt
 
-PHZUIJH :n Lyn :nu“: nu
+P11 I O3,1012 I 02,1021 I (16,1022 I 0-4 J.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-sum. u uni: u m: Pl a 1M mam: cm a “mm h
-a“... Mm“ n. m mm h “up u. Mimi‘. n 1‘ 1.
-4mm. cu vmhmhhmn a 911mm Du In: mmmm n A
-mix-“mm a. minim: “m. ...mi. mi pm“. .l in: w.
-imam! am,“ m pnnpll 1 {l m Diﬂ an,“ “Hymn unul
-nun-{mm m. h.“ mm. wummm ci mm .. gm“.
-m1 Mm 11mm mm 1 i m (n! n mm.“ hung!)
-s.=.,\.1.n\umm m‘ .m V M4,“! dhm- mmmq,“
-a“ “mm! mm- um
-m : ,_,_ : 1‘
-11.: ={ :1‘ 7:’ q‘ “‘ ' ‘)' .vm... ‘ 1m l
+Exemplu. O albina se migca pe o linie dreapta cate o unitate in
+ﬁecare interval de timp astfel: 1a stanga cu probabilitate 0.3, 1a
+dreapta cu probabilitate 0.3 §i ramane pe 10c cu probabilitate 0.4
+independent de migcarile facute anterior. Doi paianjeni se aﬂa pe
+aceasta dreapta in pozi'giile 1 §i m. Daca albina ajunge intr-unul
+din aceste puncte procesul se incheie.
+Construim un lant Markov presupunand ca albina se gase§te in-
+itial intr-un punct intre 1 §i m (pe o coordonata intreaga).
+Starile lantului sunt 1, 2, . . . , m - pozi'giile albinei. Probabilita'gile
+de tranzi'gie nenule sunt:
+
+P11 I pmm I 1,
+p15 :{ 82: jdicij G {Z — 1’Z+ 1}’ ,pentru 1L 2m J.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-- n» an 1m Nirlav mm dnummi ylwhihhhhi m-
-um‘! a. uni "mm. =1. hum“; hlulmﬂ 1mm 41
-mm"
+o Dat un lant Markov putem determina probabilitatea unei
+secven'ge de stéri viitoare ale lantului folosind formula de
+'anulgﬁz're.
 
-vmwmnn 1
-1m w. an; um“ um“. mm
-Pm“, ‘1:14,. ‘xn:~):P(X‘:~m-,»u ,_ ,
-Plan’:
-PUP‘, 11:1“ ‘Xn Z ».) :P(x, :5. J Pm: MK. :1
-PM» Z -. mama: -.‘ .XH :u J:
-Jun d. 1-1:.‘ »_., L V.‘
-“MY-And [mm a4 1mm“,- l1 an l I.“ Mnknv mm l m
-[uh mm: nmnahman m... mm“ Mun-mi pm“.
-nmnl. x,
+Proposition 1
+Dat un lam; Markov (X¢)¢eN*, a'uem
+P{X1 I $11,952 I Sig, - - - , Xn I Sin} I P(X1 I 5i1)'pi1i2'pi2ia" ---P¢ni1@
+proof:
+P{X]_ I 51'1,X2 I $12,. . .,Xn I Sin} I P(X]_ I Si1)'P(X2 I si2\X1 I 5
+..-P{Xn : sin\X1 : sian : sig, . . .,Xno1 : 5in_1} :
+I P(X1 I $11) - P1112 'Pm's ' - - - ' Purim,
+utilizénd formula de inmultire §i cea a lui Markov. Pentru a cal-
+cula aceasté probabilitate trebuie cunoscutéi distribu'gia pasului
+initial. X1.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
-. 1......1..........Z.... m... 1......“ “a... .... ..........
-mm... Mm“...- ..=.. m...“ m ‘m... .1. m...
-.........
+o In multe probleme asociate lanturilor Markov este necesar s5
+cunoagtem distribu'gia unei stéri viitoare in func'gie de starea
+curenté.
 
-Mum... x
-mm......u. Mum... ... v. w... m
-4:1 Z m, ., Z w. Z .,)
+Deﬁnition 3
+Probabilitétile tranzigiilor in n pa§i sunt
+rig”) : P{Xn+1 : sj|X1 : si}.
 
-. n...................=... .5"! ....................... m." p...
-m... .. 4"... 4.... m... up... -.. ,. (Mn...
-m. m. mm...» 1mm 4"! Z RX...‘ Z mx. Z 1.)!
-A“... .............=.. .. W. “1.... Mm... Zu.............
-.1. n... ...
+o Datorité omogenitétii rZ-(jn) este probabilitatea ca dupé n pa§i
+starea séi deviné sj, dacé starea initialéi este sl- (indiferent
+care este momentul ini'gial: Us”) : P{Xn+k : sj|Xk : s¢})
+Aceste probabilitéti se pot calcula folosind ecua'gia recursivé
+de mai jos.
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:12**************
-PmpnliLinu z
-
-(mum mm" mem; mun-Mm bunnynlnv
-
-m n m m i “mm. MM “mm-m 1mm“ m
-
-M.“
-
-vi." Z 2 yff'" Fm lem n z 2.1 s u: < m. m: "I." Z 11.,
-
-mu’: “hm “mm “Mm” a mama" m...
-
-HXM Z=,-x, Z»): Ema Z-. x, Z=,)
-qx. ,Z., x. Zahx, Zn:
-
-Z 254x, Z “m Z ﬂux“ Z >1\X..Z m: Z'L" “ v.
-
+Proposition 2
+(Ecuaﬁa Chapman-Kolmogorov) Probabilitdgﬁz'le tmnzz'ﬁz'lor
+'Zn n pa§i pot ﬁ calculate folosz'nd urmiitoarea formuld re-
+cursive?
+m 1 1
+r5171) : Z: rZ-(S_ )‘pkj, pent'ru n 2 2,1 g 1L,j g m, unde rig) : p15.
+k:1
+proof: Aplicém varianta conditionaté a probabilitétii totale:
+m
+P{Xn+1 z $j‘X1 I 81'} z Z P{Xn z sk\X1 z 5i}-
+16:1
+'P{Xn+l I Slen I 5k, X1 I $1} I
+: Z P{Xn : sk|X1 : s¢}-P{Xn+1 z sj|Xn : 5k} : Z rikn -pkj.
+16:1 k:l
 I
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-. MM. pm.“ a. m. m 1.1m.“ w Mam“...
-4;! WM". mm] .. m...“ MENUWMMWV
-a‘ mum h. n M
-. D". m‘ Chummwm ., w... mm m7
-Innﬂ mulml (l linn uwnnnm mu Hm“ cl unmhnl
-puma“ 1
-um“ mmnmw a mm m n w, m: p", W.
-P ..,. mm“ MMMN." a! “w.
-‘En-mm Mum.“ mnznnnamnm- in 111mm-
-“mi... MM“; .. .m “mm.” a. ,1. M.
-hm. ... ,
+o Matricea pétraticé de ordin m formaté cu probabilitétile
+'r'Z-(J-n) (pentru un n ﬁxat) se nume§te matricea probabilitciﬁlor
+de tranzzjie in n pa§i.
+
+o Din ecuatia Chapman-Kolmogorov se poate obtine urmé-
+torul rezultat (a cérui demonstratie este lésaté ca exercitiu).
+
+Proposition 3
+
+M atricea probabilitdt'élor de tranzitie in n pa§i este P", unde
+P este matricea probabilitdgfilor de tranzzfie.
+
+Aceste matrici de tranzitie sunt matricz' stochastice: au elemente
+care reprezinté probabilitéti §i suma elementelor de pe ﬁecare
+linie este 1.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-. s“. m... mun" h m. Embanm. 4:1 mu
-m... n 7, m, Mm. 4...."m1m, \
-mm Mum, “uh. my!“ n. mun Mm a-
-..." .u. m. ... mm“ ,mh..1..=m .. .m.\..
-nu M ,, m m ,7 n15: m
-P“ Wm Us“
-- n15.“ ms
-s- un“ I, mm u- .,....“;. m n m. m. h n mm.
-:nnlmﬂl‘ m-l u mm mlhali ll mum! [mlnanulu lum cm:
-mm] l
+o Sunt anumite situatii in care probabilitétile rZ-(jn) converg
+pentru n —> +00, idiferent de starea initialé z'.
+Exemplu (continuare) Reluéim exemplul cu lan'gul Markov de
+mai sus care are matricea probabilité'gilor de tranzi'gie
+P I 0.8 0.2 ,P2 I 0.76 0.24 ,P3 I 0.752 0.248 ,
+0.6 0.4 0.72 0.28 0.744 0.256
+P10 I 0.7500 0.2502
+’ 0.7508 0.2505 '
+
+Se observéi céi matricea de tranzi'gie in n pa§i tinde 1a o matrice
+constanté, féré ca starea initialé sé conteze (coloanele sunt con-
+stante). J.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-@“mm ,mlmm; Muh- .X....»M m .1“... , m a, p.’
-mm
-1n n n n 1n I. n n
-P’ n: M n: n ,“7 um: nunm nnmn nan
-, n H M H- ’ um nnnm nnmu nun
-n n n 1n n n n 1n
-chum i m m.‘ a. d (mm; .6.“ M. n. “Mm
-Pluhlhzh'ﬂh u mm u: ,. m m" alum a. mimhul.
-\im 4?‘:1‘ hm “Sku-
-,..., gym/l hm '51:“
+Exemplu (continuare) Reluém exemplul cu albina §i cei doi pa-
+ianjeni.
+1.0 0 0 0 1.0 0 0 0
+P _ 0.3 0.4 0.3 0 P20 _ 0.669 0.0004 0.0004 0.329
+_ 0 0.3 0.4 0.3 ’ _ 0.329 0.0004 0.0004 0.669
+O O 0 1.0 O O O 1.0
+Observém §i in acest caz c5 (aparent) existé limite ale anumitor
+probabilitéi'gi de tranzi'gie in n pa§i care depind de starea ini'gialé:
+' (n) _ ' (n) _
+ngrfoo 7"11 — 1, ngrfoo 7"21 — 2/3,
+- (n) _ - (n) _
+ngriloo T31 — 1/3,n1~1>1i100 T41 — 0'
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-. Chm". ,1. m. n m a; “W “in... m.“ p.
+o Clasiﬁcarea pe care o vom da stérilor prive§te frecventa pe
+temen lung cu care ele sunt vizitate.
 
 Deﬁnition 4
 
-(1) D m A, I.” “cumin M mm .. M m.» M
-Mn, a! m, n Z 1‘ mill m 4;! > n, h “,1
-""4le nlnlav an: mm “(mink dm nmn l.
+(i) O stare sj~ este accesibilﬁ dz'n starea 51' dacd ew'zlstﬁ, un
 
-m D .. “Mummmnm. Mum m. .w.
-"mu m .,
+v ~ T7,
+numar de pa§z, n 2 1, astfel ca 'rZ-(j ) > 0; ﬁe A(sZ-)
+multimea stdm'lo'r care sunt accesz'bz'le d'm sta'rea si.
 
-b“) 0 .1 mm.“ “mm, M M m .mm
+(ii) O stare si este numita? recurentﬁ daca", pentru orice stare
+sj ca're este accesibilﬁ, din 51-, 51- este de asemenea acce-
+sz'bz'ld din sj.
+
+(iii) O stare se nume§te tranzitorie dacd nu este recurentd.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-- s: Ohm". a m.“ ., .n. antlllﬁi din S, a“: m.“
+o Si observéim c5 starea sj este accesibilé din si dacéi existé
 
-m. [I 4- Illn 1. A.“ J» mm mun
-pup". ‘p. Mn‘
+un §ir de stéri $11, siz, . . . , Sinil astfel incét
+piilapiﬂw ' ' '1p'L'nilj~ > 01
+altfel spus un drum din starea sl- in starea sj este posibil.
 
-.nm m. .m m a“. m... -, m m.“ ., .n. mm
+o Starea sl- este recurenté dacé §i numai dacé V Sj 6 A(sZ-)
+:> sZ- 6 A($j). Dacé incepem in starea recurenté 51-, atunci
+probabilitatea de a reveni in starea sZ- in viitor este strict
+pozitivéi (1a fel ca §i probabilitatea ca starea si sé ﬁe vizitaté
+in viitor de o inﬁnitate de ori).
 
-- Slim .. m.‘ mm: m: i numii m: v ., r Am
-§ ., E My um inzlﬂlm m m.- "mm: -.. am.
-Dlnhihzhnhl a. l mm m mm 1. m mm m- nnn
-Wm“ [hill mamm.1.m.m.m. A, .= n- "in"
-m mm a. D minnmu d- an)
-
-. Mi. mm a.“ -. m! "mm “m. 4M Z AM],
-pm... m. .l. E m.) puma 4., 1‘, Ilmlnlm m A(:,)
+o Mai mult, dacé si este recurenté, atunci A(s¢) : A(sj),
+pentru orice 5]‘ G 14(53): plecénd din si réménem in A(si).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Dtﬂnlﬂnn 5
-um -. 1m u “m mm“, Mann mm; “m. “(11011:
-a". 4.15mi“! n cm mm.“
+Deﬁnition 5
+Dace? $1‘ este 0 sta're recurentei, atunci toate stdrile accesibz'le
+din 51- formeazﬁ, 0 clasé recurenté.
 
-- Slpwﬂlﬂlmnnﬂntu Mlulillﬁﬂxlxclhu] cm. mm.-
-..m Eli-k 4. Inhnﬂmﬂ "m" h nrmlwm'n "lap. (m.
-mm. Alumni-“Xv! mummmmmumm .. a
-., .1“: 4m Z ‘(.9
+0 Se poate demonstra cu ugurin'gé (exerci'giu): clasele recurente
+sunt clasele de echivalenté relativ 1a urmétoarea relatie (care
+este una de echivalenté pe multimea stérilor recurente): sz- ~
+SJ" dacé 14(51') : A(SJ').
 
-Theatem 1.1
-v" 1m 11mm pm. ﬁ mm»... Mann m m ma.
-{1m mm“ l. w. numlr (,> n) n m" mum‘
+Theorem 3.1
+Un langﬁ Markov poate ﬁ descompus intr-una sau maz' multe
+clase recurente §i un numdr (2 O) de stdm' tmnzz'tom'z'.
 
-. vmnmu nNm-iﬂu .1. nanm In.» mum c: mliéu
+o Urmétoarele proprietéti ale stérilor sunt lésate ca exercitiu.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
-PmpnxiLiuu 4
-awn-mm". m. mu; mm". nmngl'l mum |\ m n mumm-
-ﬁmllllnln Alwm
-m D m" alumni! 1m mum am mm :11!an m
-m“ 1- .1» mm 11m m my‘ mm w nu .1,
-.1“. M" an”! m” m mm mm.»
-(n) o m" mm". nu “I: Mum!“ ‘an mu a m"
-mum
-[m] ‘MM “m "mum l.“ 11:1an m mm .1 .m.
-my,“
-. Dllmhidilldilllnmrlnllnulleud: mnlnh m... ‘1a..
-innnlh Mm "my: mum cm mm a mu“ 1. a. m-
+Proposition 4
+Considerdm un lan; Markov omogen, discret §i cu 0 multime
+ﬁnitd de std'ri. Atunci
+(i) O stare recurentii este accesibilii din toate stdrile din
+clasa sa §i, posibil, din alte stdri tmnzitorii, dar nu §i
+din stdri aﬂate int'r-o altd clasd recu'rentd.
+(ii) O stare tmnzitorie nu este accesibild din nici 0 stare
+recurentd.
+(iii) DintT-o stare tranzito'rie este accesibild cel puﬁin 0 stare
+Tecurentii.
+o Deﬁni'gia daté clasei recurente nu exclude existen'ga unei clase
+formate dintr-o singuréi stare in care intré o buclé §i din care
+nu mai iese nici un arc.
 
 ***************Ending Page***************
 
- ***************Beginning Page***************
+***************Beginning Page***************
+***************page number:20**************
+o Rezultatele anterioare ne permit argumentarea unor propri-
+eté'gi ale acestor procese §i vizualizarea evolu'giei acestora:
+
+(i) dacé am intrat (sau chiar am inceput) intr-o stare recurenté,
+atunci nu mai pérésim clasa acesteia §i toate stérile din
+aceasté clasé vor ﬁ vizitate de o inﬁnitate de ori.
+
+(ii) dacé starea initialé este una tranzitorie atunci vom merge
+printr-un numér ﬁnit de stéri tranzitorii §i apoi vom intra,
+intr-o clasé recurenté, féré s5 o mai pérésim.
+
+Deﬁnition 6
+
+O clasd Tecurentd se nume§te periodici dacii stdm'le care
+
+0 compu'n, pot ﬁ partiﬁz'onate in k Z 2 submulﬁmi
+
+C1, C2, . . . , Ck, astfel incdt tranziﬁile nu pot a'uea loc decdt
+
+de la 0 submultime la alta, in ordinea datﬁ, §1L circular:
+
+V$¢€Ch,pij>0:>8j€{cl’ dacahzk.
+Ch+1, altfel
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
 ***************page number:21**************
-. summmﬂ ,. I“ m. M a M “ma-=1."
-m W. n ; 1 mm .= m... [.1 PM". .1 .m. uni-l
-mm 4,"! Z n 1n m in.“ mm m an...“ m: m. a
-M mm. m. "mm:-
+o Se observa ca daca s,- face parte dintr-o clasa periodica, pen-
+tru orice n Z 1 trebuie sa existe cel pu'gin o stare sj, astfel
+incat T5171) : 0. ln felul acesta avem un criteriu dupa care 0
+clasa recurenta este neperiodica:
 
-. R .... “Md m .i.“ m. n Z 1 a -. E a‘ ant-l c.
-v5;! > n‘ Fm ., é R
+o R este neperiodica daca exista un n 2 1 §i s,- E R, astfel ca
+r5”) > 0, pentru orice Sj E R.
 
-. P...“ M...“ hum. hm. “in”. n. "1......" m
-m, m... mmmﬂmﬂnmn. m‘, mm.“
-m. an murm- ,;-x Wm n In...‘ m
+o Pentru modelele bazate pe lan'guri Markov ne intereseaza cel
+mai adesea comportamentul pe termen lung, adica probabil-
+itatile de tranzitie r2”), pentru n foarte mare.
 
-. Wm m. m K...“ .mn. my, n. m. 4;! mu"...
-inhuman“ a. mm him.“ ~
+o Vom deﬁni in aceasta sectiune conditii in care r2”) converge
+independent de starea ini'giala si.
 
-. m m.“ m. d.“ mm‘ m.“ hm...“ mm,
-thahzlnlih duel nxml. PM minds an mm inmu: [a
-d“: um.“ M ,1“... A pm“; v“. w..uw.m c,
-mm m mlgullcluimurmﬂplnl. mm‘ mm.“
-.m. “mm;
+o Daca exista doua clase recurente, atunci limitele acestor
+probabilita'gi, daca exista, pot depinde de starea ini'giala (0
+clasa recurenta nu poate ﬁ parasita). Vom presupunem ca
+lantul are o singura clasa recurenta plus, eventual, alte cateva
+stari tranzitorii.
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:22**************
-M. m q; mm...“ w...“ a.“ m ,m.
-..=.,.1..X., ..... ., .: a,“ an,‘ ‘ r...
-v;4mm,mm.:i1‘.im,¢.,x.,:.,,
-1).»an 1
-A. 1., WM a: Mm .n .m MM m mm
-um. mm, Mm, a, Z my‘ Z xwi. m "m,
-MW MM, W," m .m ., mm m ~ (1,, ..,.
-Mm h MM" m m. h h. uh mm mm 4.
-Mm" m i, ,
-. s. n... um. d mm, m. M mm. cu m. m,
-M n- .mi ma. a! m .u. ..,.,. m.
+Notém cu qu probabilitatea ca, plecénd din starea 51-, prima
+tranzi'gie in starea sj $5 aparé dupé t pagi:
+
+qu : P(Xt : sj and, for s : 1, t — 1,XS 75 sj|X0 : 51-).
+Deﬁnition 7
+Fie ZZ-j timpul de ajungere in starea sj plecdnd din 51-; media
+acestez' 'uam'abﬂe aleatoare, hij : E[ZZ-j] : Z tqu, este numz'tii
+
+t>1
+timpul med'm de ajungere 'Z'n, starea sj plecdnd din si. (Zil~ este
+timpul de intoarce're in starea si, iar hii este timpul medz'u de
+intoa'rcere in 51-.)
+0 Se poate observa (:5 pentru un lan'g Markov cu un numér
+ﬁnit de stéri mediile de mai sus sunt ﬁnite.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-gm“. WM“. m, In‘ um. m m .m, <.,,.,),
-mm cl am n \Rcum m a (In Z l) u mu .1, m :1 [P11 Z l]
-m, M m. ma m, a! “a mm m m.“ din m. .m
-vI-m
-,i", , L n W
-. A“... m- m. mm 1,. m. in. ,r' .m m"... In.’
-um“; , m! M . Mm, m- m“: Mn.
-ms.“ .r “m. G mm |: M mm: d... mm.
-. u,m=.m..u..~ (mm, mm“) mm“ mm".
-m m mmm. m m l. m. .u “m a m.
-Mm,
+Exemplu. Considerém un lant Markov cu doué stéri {$1, $2},
+astfel c5 din s1 trecem in $2 (p12 : 1) §i din $2 in $1 (P21 I 1).
+Deci, dupé un numéir par de pa§i revenim in starea din care am
+plecat:
+(n) 1, n par
+r-- : ,
+“ { 0, n 1mpar J.
+
+o Acesta este un exemplu in care §iru1 r51”) nu converge (os-
+cileazé) §i sigura clasé a lantului este periodicé. Pentru con-
+vergen'gé ar trebui ca lan'gul sé nu con'ginéi clase periodice.
+
+o Urmétorul rezultat (central a1 cursului) precizeazé conditiile
+in care convergenta are 10c §i limita nu depinde de starea
+ini'gialé.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Thznnm 4..
-6,.an .m M um" nmngl'l mum |\ m n MW
-ﬁml a: m um 1mm mm u mm clan! vacuum!
-m m “mm, r,- mmﬂ m" mum}, m“
-Mm‘ m" ., n 1mm Mum n mnmm ,1. BMW
-("BMW 1, m “mm! mum
-[,1 _15m_v;~! Z n, pm m“ \ p 1
-(n) [WM M. 1mm: .nlszullu
-Emmsx,‘ 7:17"
-g .. Z 1
-m; mm‘ ”
+Theorem 4.1
+Considerém un lan; Markov omogen, discret §z' cu 0 multime
+ﬁnite‘); de stdm'. Dacd lanﬁul conﬁne 0 singurd’ clasé recurentii
+ca're este neperiodicd (§i, eventual, stci'ri tranzitorii), atunci
+ﬁecﬁ/rei std'ri sj 'Zz' putem asocia 0 probabilitate de ech'lllz'bru
+(stationarﬁi) 1rj cu urmétoarele proprietﬁﬂ:
+(i) 11m 11W) : 1rj, pentr'u, orice '1' §z' j.
+n~>+oo Z]
+(ii) (7U)1§jgm sunt solutiile sistemulu'll
+m
+Zﬁkpkj I 7U, .7 :11m
+1:1
+m
+2 111:1
+1:1
+v . . . 1 v
+(111) 1r]~ = 0, daca sj este tranzztome §1 1r]~ I F > O, daca sj
+J]
+este 'recurentd.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-. mnmmnun X, lumen! n “mum ﬂu ynhihxhhlu
-w- .mml mum :limyihuLin Minn.“ V M.“ m
-m an", m: x, in mm “mp.
+o Probabilité'gile 1rj formeazi o distribu'gie de probabilitate
+pe spatiul stérilor: distribugia sta§i0nar5 - numité ast-
+fel deoarece, dacé X1 are aceasté distributie
 
-Pm Z an Z 1,.n g 1 < m. Hm.
-PUK:*1,]’ EFKX11kht1i' mewmw g m
-“.1:- ma m1“, .l .m: c: “x. z .,) L 1:, v1 \j , g
-
-)I 1.“ : w : m
-.. mu mm“ 1|: "1.5mm. (mu-in“ . m‘...
-Chivmmknlmﬂgnwv n i m'mnh- mm“. {n Marni
-a- mi .u.)
-21, Z 1 um “(u-u“ a“ “nu-m."
+P{X1 : sj} : 1rj,V1 <3‘ g m, atunci
+m 77L
+P{X2 I $1} I Z P{X1 I 76}ij I Z'n'kpkj I 1U,V1 éj é m
+k:1 k:l
+§i, in mod similar, se aratéi c5 P{Xn : sj} : 1g, V1 gj g
+m. m
+Z 1%ij I W173’: W
+k:1
+se numesc ecuatiile de echilibru (consecin'géi a ecua'giei
+Chapman-Kolmogorov §i a existentei limitelor din teorema
+de mai sus).
+m
+Z Wk I 1 este ecua'gia de normalizare.
+k:1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
 —
-[:2 :2]
+Ewemplu Considerém un lant Markov ﬁnit §i omogen, cu doué
+stéri §i probabilitétile de tranziigie
+
+0.8 0.2
+P z l 0.6 0.4 1 '
+
+Soluﬁe: Ecua'giile de echilibru sunt
+
+7T1 I 7711011 + #21021 §i1r2 I 1r1P12 + 7T2P22,
+adicé
+
+1r1 : 0.871'1 + 0.671'2 §i1r2 : 0.21r1 + 0.41r2.
+Aceste douéi ecua'gii sunt echivalente améndoué cu ecua'gia
+
+7T1 I 371'2.
+Folosind §i ecua'gia de normalizare 7T1 + 1r2 I 1, obtinem
+7T1 I 0.75,7r2 I 0.25 of.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-@“mm un Wm, “ml-m“ m dnul mm“ rm mu In
-Mun. ‘ma KM mug. n. an! h hum‘ m aw. n“:
-mm n duluumhu“ m- nan-mm‘ mm null-much!)
-n Ida-1h‘ a“: .m m; m“. wuillnml mum-“n u
-Iiumhlula Slwunpnnlmddl ﬂlciludiﬂchndymhnluhm
-hm! .= .l elm-um"! “1! am 1m“. mm n. wuhalnhnn
-, E (m 1), map-mm 4. m’. an: a“. m. WWW“.
-“Emma
-5m“ Shun .. m ‘my; m. .. in Wm...‘ .. 5m.‘ \
-“mm-1|“. ‘i n71 Malncn: mh-mnnm dn humus mu
-
-[ n n 1 1
-
-P: n 17p ,
-x p p nl
+Ememplu. Un profesor "absent" are doué umbrele pe care 1e
+folosegte atunci cénd merge de acasé 1a birou sau invers. Dacé
+ploué §i dacé o umbrelé este 1a dispozitie, atunci profesorul 0 ia §i
+o folosegte; dacé nu ploué, atunci profesorul uité intotdeauna sé
+ia umbrela. S51 presupunem c5 de ﬁecare daté cénd profesorul tre-
+buie s51 se deplaseze intre cele doué loca'gii plouéi cu probabilitate
+p 6 (0, 1), independent de ﬁecare datéi. Care sunt probabilitéi'gile
+de echilibru?
+Soluﬁe: Starea 51': in locatia unde se aﬁé profesorul se gésesc z'
+umbrele, i : W. Matricea probabilitétilor de tranzitie ester
+0 0 1
+P I 0 1 — p p
+1 — p p 0
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-s- um": I: hm, a "w": M mm“: m. ... m.’
-name!‘ m. u palm um ‘mm. a! m; .... , ncuihlu 4.,
-mm...“
-"Zn Imago F]m+!m;lm:vm+pn
-...nhm...\m1<w.m m m‘ a- mummy Mm
-71 y 7 1 i 1
-W] ,nx’! ﬁnk] Fa
+Se observéi 05 lan'gul are o singuréi clasé recurenté care este nepe-
+riodicé, deci se poate aplica teorema de mai sus §i ecua'giile de
+echilibru sunt
+7r0 I (1— P)7T2,7T1 I (1— P)7T1 +P7T2 §i 7r2 I 7r0 +P7T1-
+rezolvénd sistemul (impreuné cu ecua'gia de normalizare) ob'ginem
+1 — p 1 1
+1r : iﬂr : iﬂr : i
+0 3—p 1 3—p 2 3—p*
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-- u“ m". mm"... mam mu mm 5n! nlnrimll
-.i. .m w mm; .1. hn\ Mm" MD.“ h any.‘ up“
-mm m z; : (m a! u gu! (my Mnnuntﬂ n mm.
+o Un drum aleator sau random walk intr-un graf neorientat
+este un tip special de lan'g Markov folosit 1a analiza algorit-
+milor. Fie G : (V, E) un graf (ﬁnit) neorientat §i conex.
 
-Deﬁniﬁnn s
+Deﬁnition 8
 
-m. mm,“ Mm m a m w. 1m; um.” a-ﬁmz paw
-u mm” M mum" m “Mummzl mm mum mm
-9M1 (Mum mm 1mm 1mm) um 11mm“ u m m
-Mm ., m m 4, Z 4|:[l1] mm“ m.“ pmMuanm m
-“mm an mwgn r: mm m, p 4: H ml: m mm 1,
-A“ 1/4.
+Un random walk in G este un langﬁ Markov deﬁnz't print?"-
+o sec'uengﬁd de ml§cdrl ale unel partlcule intre nod'um'le unul
+graf (acestea sunt stdrlle lanlulmi) Dacd partlcula se afld in
+nodal sl- care a're dZ- : dg($i) veclnl, atuncl probabllitatea ca
+partlcula sa meargd pe muchla sisj §'l sd se mute in nodal sj
+este 1/ dz‘.
 
-- s lmd mun 4mm mm ("mm mlmmpllnlﬂuz
-m n mu: cl“: "mum (a! [.11
+o G ﬁind conex drumul aleator (random walk)corespunzétor
+are o singurﬁ clasé recurenté (de ce?).
 
-. my“; Mum.“ pmhimhln u nM-l mm“ mm
-mm .1“. s h: mm. “m. m. a ﬂlyainl mm,»
-Ilkw drumulln mm m c
+o Digraful tranzitiilor probabiliste se obtine orienténd ﬁecare
+muchie a lui G in ambele sensuri. Fie G digraful corespun-
+zétor drumului aleator in G.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-1......“ 1 |
+Lemma 1.1
 
-u. m... mm... my"... m...“ c, .... n...’
+Un random walk intr-un gmf conea: neorz'entat, G, este nepe-
 
-M... nu .. numm Ind G .... .I. mum!
+Medic dacii §z' numaz' dacii G nu este bipartit.
 
-pm... L... m. -.. w...“ an: .. m... .1... ... w...“
+proof: Un graf este bipartit daca §i numai daca nu contine cir-
 
-m... my... 5...... .. .. <2 w... .- m... .1. 1. w... m
+cuite impare. Evident ca in G exista un drum de 1a orice nod
 
-.. .1 m... a. 1......“ z n... G -.. hm... m... m... ....
+1a e1 insu§i de lungime 2. Daca G este bipartit atunci avem un
 
-m... m pm... .. w...“ z D... G ... ... h...“
+random walk periodic cu perioada 2. Daca G nu este bipartit
 
-m... .ma... ... ....... .m... .. m... M... m. ... an..."
+atunci con'gine un circuit impar §i exista noduri care au drumuri
 
-m... m... .. ... ....... I
-. .1. mm. "1. M... Wm...‘ mm... m. ... ...
+impare pana 1a ele insele. I
+o Un random walk intr-un graf conex neorientat care nu este
 
-m...“ mum: cundqn!‘ .... 1..."... . .
+bipartit satisface conditiile din Teorema 4.1.
 
-11..."... . .
+Theorem 1.1
 
-m. G ... 9m] “my”... m... m .... .-. mum! m.
+Fie G un g'raf neo'rientat, conea: ca're nu este bipartit. Prob-
 
-mm. 4. mum“. mm... MW... G m... 1,:
+albilitdtzt'llle de ech'lllz'bru are drumului aleato'r in G aunt: 1r¢ :
 
-i , i‘... . v
+K : T2,“,VSZ' E V.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-"H.111 v- p Z 1,”) “1.1m pmhammipim 11.11.1111, .1.
-11111.11. 111111,. (1.111.111.1111 11.111111“; 11.111.11.11 m“: a.’
-11.1.11 Mm .1 .1 1.1 “1.1: “=1. mini. 1=.. (1,)“,
-.111“ 111111111111 111111-11 .1. “1.111111 K Z KP, 111.1 1111,.’
-1i 1 .1
-“:ZMZMGZZ ﬁ
-1 Z
+proof: Fie P : (p15) matricea probabilité'gilor de tranzitie ale
+lan'gului Markov corespunzéitor. Distributia stationaré existﬁ da-
+torité Teoremei 4.1 §i nu existé stéri tranzitorii. Fie (“ﬁst-EV
+aceasté distributie. Ecuatiile de echilibru, 1r : 1rP, sunt echiva-
+lente cu d 1 d
+i j
+~‘>‘1'€1\]G($j)2,.El‘dZ 21E‘
+. . V v v 1 . .
+D1n teorema C1tata rezulta ca 1g : F’ pentru once j. (Deoarece
+21
 
-1111. 1m...“ 1.1111 1.1.111: Z1, Z f1 m1“ m, (11.1.1.1.
-g 1. Zzs 111111.111 cl Z X. Z 1 cm lnuacuapidamp
-31am) ' I
-11me 1 1
-Dull Z 5,111,111“. < 1151
+Z dl- : 2\E\ urmeazé c5 Z m : 1 care este ecuatia de nor-
+siGV SiEV
+malizare.) I
+Lemma 1.2
+Dace? 51'51' G E, atunci hZ-J- < 2\E\.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-pm“ mum ». Mm m M
-m.:z'"§:):‘ )3 whiz )3 "r:
-
-Viz 2 aw: z v Ha‘ 7
-
-d‘ "Mam-u iﬂwml-l
-
-l H L
-
-. ,
-
-:i z (Hug? z (H's-J
-
-'1- ,pmm m i 1 [mu
-Dunn-uh. le “Tam-mm Z (Hr-m.
-nhﬁnlm I: h, < z 1pm“: M. A, E milk“! I
+proof: Calculém hm‘ intr-un mod diferit:
+i 1 i
+hﬁIthZ-i- :Zt Z M131 I EX Z #1131:
+t>1 t>1 sjENg($Z-) Z t>1 SjgNGQi)
+_i[ til t_1t*1_|_
+—d. Z Z ‘111' +2 Z ( )qﬁ —
+Z 1191 Sig/CK“) t>1 SJ'ENGW) J
+1 i
+I; Z 2 q; 1+2 2 w; I
+Z t>1 SJ'ENGW) 1321 sjeNG($i)
+1 1
+I? Z 1+thji :5 Z (1+hji).
+Z sJ-ENg(s,-) t>1 Z SjENg($i)
+1 2 E .
+Deoarece hZ-Z- : i. : ldl, avem 2\E\ : 2 (1 + hji) §1
+7” Z SJ-ENGwi)
+obtinem c5 hJ-i < 2\E], pentru orice $3‘ E NG(si). I
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:33**************
-Dmnnnmu a
-11mm.‘ m mm." rm u...» n gmlhlm a (mum);
-m: “1 M mu?! lw mum Manny “Mm MW
-memm A: my: w. mm". Wu mum“, mm
-un m ..
-1.1mm 1 a
-MW .1, Wm m M G Z [m] l.“ m ma m
-1n: m»: m)
-pm’: mm m. m.‘ mm T .| lni a i w “m.
-“mm-m“. T' mum,“ J." lccvlnhdlvmhni
-“Mb. m a... mm. ,1.“ a.“ m.‘ ._ (a. “mm
-mm.“ Mun-m m "mm h a mm‘... q“)
-mm m.“ m‘. mm" w". tum mm. n. m pm"
-.m .m mm,“ mm my“, a. mm.
-
-(Mm) ( y n,“ < Mum < W
+Deﬁnition 9
+Timpul de acoperire - cover time al grafuluz' G (cover(G))
+este cel maz' mare timp medi'u, necesar vizitiim'z' tut'umor
+nodurilor grafului de cdt're un random walk ca're pleacd dint?"-
+un nod 51-.
+Lemma 1.3
+Timpul de acope'rz're al lui G : (V,E) este cel mult 4mn
+(n I |V|,m z |E|)-
+proof: Alegem un arbore partial T a1 lui G §i un parcurs eu-
+1erian inchis a1 lui 'f”. Fie 51-1, 51-2, . . . , sign secventa de vizitare a
+nodurilor prin acest parcurs plecénd din nodul $11 (de exemplu
+secven'ga nodurilor prin care trecem 1a o parcurgere dfs).
+Timpul mediu necesar trecerii prin toate nodurile in acest parcurs
+este un majorant pentru timpul de acoperire:
+2nil
+co'uer(G) g Y‘ hi’i+1 < 2m(2n — 2) < 4mm.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-. s: Innmuum I: a...» m y.‘ mm“. G Z (v11
-(w ME m1 n an: nndnn 1‘; r v
+0 Si presupunem cé avem un graf neorientat G : (V,E)
+(1V1: n, IE] : m) §i doué noduri 5,25 € V.
 
-- quhllm me a! mkmi“ 1m 4m, n. m la z m c‘ m.
-M mm“ drum mm
+o Problem este de a determina un drum de 1a s 1a t in G, daca
+un asemenea drum existéi.
 
-. Sunni mm. m.“ wnhkm: ml]: .- “a. ulllia a
-pm.“- n11 m 4;, Cnmyknﬁluihmp a “my”
-mp; .n. q". + n1, mm; ilﬂimzil m." m. Dbl]
-(‘mm- pm. mam: mm. mm.)
+o Solutii pentru aceasté problemé existé: se poate utiliza o
+parcurgere bfs sau dfs. Complexitatea timp a acestor par-
+curgeri este C’)(m + n), spa'giul adi'gional necesar este Q(n)
+(trebuie 'ginute minte nodurile vizitate).
 
-- Pmnum 1m mm". MM.“ mam-m») numb-m.
-m sum; mp 4. mm.
+o Prezentém un algoritm aleator (sau mndomz'zat) care folose§te
+doar @(log n) bi'gi de memorie.
 
-. mmmﬂmm-m WM m. mm ‘In 1,. z; 9-1,.’
-m. mm‘ n mum m mm Inch M drum a! Ia A 1. ¢
-u mm m- min dn I a um
+o Algoritmul prezentat va parcurge un random walk in G pen-
+tru suﬁcient de mul'gi pa§i astfel incét un drum de 1a s 1a t
+s5 aibé §anse mari de a ﬁ gésit.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-um .1 "mm whim" .,
-mam-“z w“ z m “I pun
-m...“ 'zzulilm drum"
-mu... “M “a m m"
-. “mum! m.“ nuiha mm“ lamina spun] m; I.
-numimhll um 1mm (“I Inn“ m‘! wuduuulnunui um
-m: am») hni
-- Vnm w-lmn- =1 pm: n‘ cm“ “mm: m." m
-wmin mm. . Mi iPEci "mum. “km.
-“mm. z 1
-Mum.‘ a m m um m vilpun: mun {u anhl
-mu “z m... 1/: g‘ ml,“ 4W {ma ntuynzm mm,“
-mu mnl ‘m m» {m a: 1m w- Inmmu m mnl
+start a random walk from s;
+if( drumul atz'nge t in 4n3 pa§i)
+return "emistd un drum”;
+
+return "nu ezm'stii un drum”
+
+o Algoritmul retine pozitia curenté folosind (9(10g n) biti §i
+numérul de pa§i fécuti (cel mult 4n3) care de asemenea nece-
+sitﬁ (9(10g n) biti.
+
+o Vom presupune c5 graful nu contine componente conexe bi-
+partite pentru a putea aplica rezultatele anterioare.
+
+Theorem 2.1
+
+Algoritmul de mad sus oferd un rdspuns corect cu probabil-
+z'tate cel putz'n 1/2 §z' gre§e§te doar cdnd returneazii mesajul
+"nu ezm'std un drum” ccind de fapt un asemenea drum em'std’.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-,m. M M ...= m 4.1. . 1. t, NEDMEHMM.“
-s“.....,.,.,..,.t=.xv..=.... “mm C m .M m...
-mm. an .h l. z, ‘M m.“ mm mum] a. x. , h
-:‘ Em, .n. mm. .1. "m, a. .m." =1 mm...
-nun-m clxu cnlhnu .1 n I‘ G" can mu m mun lmn a in‘
-D". .n...1..i...hi “W mm... c. m.“ .1..." .i
-m m, mu. d. ".1 m ....
+proof: Dacéi nu existé drum de 1a s 1a t, algoritmul returneazﬁ
+un réspuns corect.
 
-\ 1 ‘ ’ . ’ g 7 2
-m ,M 1< m mm, x m , um) x mm ,2
-m.» “mm m“. m m.h.>,m. M c.‘ m 1/2 -
+S5 presupunem céi existé un s-t drum in G. Fie X timpul necesar
+ajungerii de 1a s 1a t; timpul mediu necesar ajungerii de 1a s 1a
+t, E[X], este mérginit de timpul de acoperire a1 componentei
+conexe care contine s §i t, G’, care este cel mult 4mn < 2n3.
+Din inegalitatea lui Markov probabilitatea ca drumul aleator séi
+aibé mai mult de 4n3 pa§i este
+
+P(X g 4n3) < P(X > 8nm) g P(X > 2E[X]) g 213$] z g.
+Astfel, algoritmul gre§e§te cu probabilitate de cel mult 1/2. I
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-. mwnuukm 1.1mm! Hum‘ u‘ w,“
-. Iluuvl: u‘ 15‘ in‘ u
+0 Lanturi Markov: 1, 2, 3, 5, 6, 9, 10, 16, 18, 19, 21
+0 Rezervé: 11, 15, 20, 22
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-smgn
+Sfér§it
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-1. u mm: um .1. i mm mmmm mun-mm
-“mm-m e- min. ..k mm. n. m a! “mi vm m
-mm cl in“ hp a- mm m: mum m 75% dlnhl
-mm mm . “mm-"mm cl m“: dual m: mm.
-a. mm. “Xn|uxv\l“ p “mm-v Dlilnnmiphnwl Malmv n
-nlniuz mmlh‘ ﬁlglm'ul annimiiuiwnhamhxlmn a. mm“
-z Mm. “mm: an mm." m. mnmm: m m.“ m.
-ml mm wan-humm- m. l new u \- u n Pluinn I. m
-mm: m- n 5, .u mmnmm a! a ‘m. .1. h n .. Mm:
-h m mum m- n 1 mum mum] m “an m.
+1. O metoda naiva de a prezice starea vremii este urmatoarea:
+starea meteo de maine este aceeagi cu cea de astazi. Vom pre-
+supune ca acest tip de predictie este adevarat in 75% dintre
+cazuri. Pentru a simpliﬁca prespunem ca exista doar doua tipuri
+de vreme: "insorita" §i "ploioasa". Determinati lantul Markov a1
+starilor meteo, digraful de tranzigie §i probabilitaigile de echilibru.
+2. Metoda anterioara de prezicere este modiﬁcata in cazul unui
+ora§ insorit: probabilitatea de a trece de 1a o zi ploioasa 1a una
+insorita este 0.5, iar probabilitatea de a trece de 1a o zi insorita
+1a una ploioasa este 0.1. Reluati exercitiul in acest caz.
 
-a. pm“. dlgm'ul a. ‘En-1,. awn.“ “in”. m": an:
-m- mun: um "mm- {l m- mun- nan mum-
+3. Desena'gi digraful de tranzitgie a1 unui lan'g Markov care sa aiba
+mai multe clase recurente §i mai multe stari tranzitorii.
 
-4. um“. dlgm'ul a. ‘En-1.. awn.“ “in”. m": im
-n m: mum: Dlnudxl p dun: “In mm,-
+4. Desena'gi digraful de tranzitie a1 unui lan'g Markov care sa aiba
+o clasa recurenta periodica §i doua stari tranzitorii.
 
-n. Dun-mininmnrnadl mm.‘ luau] 1m Markup-name
-m mm; z
+5. Determinati matricea de tranzitie a unui lant Markov periodic
+cu perioada 3.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-n. Dl-nih dlgm'ul a. ‘En-1.. awn.“ Markvv Gm: an:
-m: m.- "mm mm“- 9 u In.‘ \llMllunl
-1-. r. mm.- .Mn "mm. =1. m; 1m‘ Mam“ um“
-|. Mm 4.5m mm...‘ uhjvl ., mum“. ., a.“ .,
-m- ammal an -. (n mam m .. "1:1 Adm: d a...“
-"lap. ..~. m 4. mun-,4; m: m.
+6. Desenati digraful de tranzitie a1 unui lant Markov care sa aiba
+doua clase recurente neperiodice §i o stare tranzitorie.
+7. Pe mul'gime starilor recurente ale unui lan'g Markov omogen
+§i discret deﬁnim urmatoarea rela'gie: si comum'cd’ cu sj daca sj
+este accesibila din si (§i notam cu si <—> 5]‘). Aratati ca aceasta
+relatie este una de echivalenta, adica este
 
-| vellum! mm uncu.‘ 1. U 1.‘
+1. reﬂexivci: pentru orice 1-, 51- H 51-;
 
-z mam “amu,‘“mm,..,,,,m.m.=..,,,
+2. simetm'cd: daca si H 5]‘, atunci SJ‘ 4+ si, pentru orice z', j;
 
-3 "My; am 1.01,,1N1hn-IMIPH. mm
+3. tmnzitz'vé: daca sZ- <—> sj §i sj H sk, atunci $1 H 5k pentru
 
-“at! m k
+orice 2', j, k.
 
-5- u mim- n X n _ um: mm “Mn-mm: mm
-Ann-“.1.” p. a“... 1.1;- ..n 1 l. .m lkmnnlw p. ﬂlnu
-(Main: m. 1 Amay a Mm,“ mpg“: a mu. 1m‘
-Markuv cumnrimadunlnlﬂiudnhlu mm.“ um mm:
+8*. O matrice n >< n se nume§te dublu stochasticd daca suma
+elementelor pe ﬁecare linie este 1 §i suma elementelor pe ﬁecare
+coloana este 1. Aratati ca distributia stationara a unui 1an’§
+Markov cu matricea de tranzi'gie dublu stochastica este uniforma.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-n. u’. mi.“ a: M. m- M n 515ml‘ “a. m um.-
-Dig!‘ 1i un mnmm\ m a: un \m mm urmllwnl nu w“-
-n am m“ m W, m mm nmhahﬂihk Din, bu: a:
-1m m Mm m “I... .“m “mm-A un u 5 Mu! m
-mum.“ n s n m.“ m “In: m. :cluill wuhahﬂitnl n :5
-Cnnllluﬂi u 1m‘ mm" :nx-DmuMnx a unmim- mm
-minim u “mum m name: (1mm 12301! w ﬁ
-“Mm M m n 1.1.. mﬂm, mzmu, mm", w")
+9. Un profesor d5 teste care pot ﬁ diﬁcile, medii sau u§oare.
+Dacé, 1a un moment dat, d5 un test diﬁcil, urmﬁtorul test poate
+ﬁ doar mediu sau u§or, cu aceagi probabilitate. Dacéi, insé d5
+un test mediu sau u§or, atunci urmétorul test va ﬁ diﬁcil cu
+probabilitate 0.5 §i mediu sau u§or cu aceea§i probabilitate 0.25.
+Construiti un lant Markov corespunzétor §i determinati prob-
+abilitétile de echilibru ale stérilor. (Indica;z'e.- stdrile var ﬁ:
+ultimul test dat a fost diﬁcz'l, mediu, 'respectz'v u§or.)
 
-m v. Inn-n m m mm- \1- m“ 4! mm m: du
-c-m- n m. a! Mum‘ h .n mu“ m‘... a mm- an.
-m mm im- mn AnU u mam 11w" .l- "mum
-h an" 1m: n. M din!" “min. mm mm- I. mam
-mp mm“ a. “up. a ulnnl 1.1.‘ um"
+10. Un muzeu are in custodie trei pénze de Renoir, doué de
+Cézanne §i una de Monet, dar are spa'giu pentru a expune doar
+una dintre aceste pénze. Astfel cé tabloul expus este schimbat
+in ﬁecare luné cu unul dintre celelalte cinci aleator §i uniform.
+Gési'gi matricea de tranzi'gie a acestul lan'g Markov.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-u mm; .mqm “man m Mum. mm. um
-ml mm mm um m mm u umfnrm mm \iblwnnlu
-m. .n mum: [mm d- =.\ mm]
-n u" upmarm pnih m1- m um" - n mm“ mn-
-m.‘ a. mm n mm“. m.- m u mm“. mm, n. m
-m," .l. Mum“; .. m.“ mm mmmm m:
-n .. “Mmmm-mn lmnuldnulnvlldllwﬂvmmﬂll.
-:nwnhamman n a m ‘is “1‘Mu-nmmﬂmmmm.
-n 2 mm .1 cu mm. m“ Mn.“ .1 cu mm. mm (cu
-mum.“ n41nu m m mm. mlﬂn [n u) m: a .. m
-mum m m dupi u illwvmuin nlmuul n n cu mm
-m, mm. m m" (u nmharﬂim- n 1, n 11-chlw n ‘
-(i) mum- an 1m mum‘ dump mum n- mum 51
-“m cl “in: u mm d“: mm‘; HIPlnnﬂlcl
-[h] mnmmp pmhamlnipk 6. mmmm n. mum
+11. Reface'gi exerci'giul anterior in urmétoarele condi'gii: urmé-
+torul tablou expus este ales aleator §i uniform dintre tablourile
+unui alt pictor (diferit de cel curent).
+12. Un hipermarket poate vinde in ﬁecare zi o cantitate foarte
+mare de bunuri, o cantitate medie sau o cantitate micé; in anu-
+mite zile hipermarketul se inchide pentru reaprovizionare. Dacé
+o zi are vénzéri foarte mari atunci a doua zi va ﬁ de aprovizionare,
+cu probabilitate 0.8 sau va ﬁ o zi cu vénzéri mici, cu probabilitate
+0.2. Dupé o zi cu vénzéri medii urmeazé o zi cu vanzéri mari (cu
+probabilitate 0.4) sau una cu vénzéri medii (0.6). Dupé o zi cu
+vénzéri mici sau dupa o aprovizionare urmeazé o zi cu vénzéri
+mici, medii sau mari cu probabilitate 0.3, 0.3, respectiv 0.4.
+(a) Construiti un lan'g Markov, desena'gi digraful de tranzitie §i
+arétati c5 existé o singuré clasé recurenté, neperiodicé.
+(b) Determina'gi probabilité'gile de echilibru ale stérilor.
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:43**************
-11-. mum ELEM-Q mm m: mm n m.‘ m1! in"
-p m, n‘)! h llzcaxl 1m. m. cll pluhihxhhh y E (mu,
-m“... a". m: n m: “awn-“n. In m: m n m a. mm“
-mm‘ a. nu limm Mum, m wwhihlhtik (1 7 ,1 Sml‘!
-mm. .1. mm". c... mi mummn. a! “Mm W
-m, n Z :|1
+13*. (Difuzia Ehrenfest) intr-o urné avem n bile, unele albe
+§i unele negre. La ﬁecare pas, ﬁe, cu probabilitate p E (0,1),
+scoatem din urné o bilé §i 0 inlocuim in urné cu o bilé de cealalté
+culoare, ﬁe nu facem nimic, cu probabilitate (1 — p). Scrieti
+ecuatiile de echilibru. Care sunt probabilitﬁtile de echilibru pen-
+tru n : 3?
 
-(1mm Jam. 1. w ﬁ Mumlmnh M. n15!‘ K ‘g ,.1
-w. u“ uni-n: “Mn-uni m. “um: “M m... up
-mu: cu m 1m (m 1mm!) w Kahuna mama»! dn m: on
-h mm at!!!‘ nu m MD...“ (u nmhaﬂnan p ("n-n"
-u an m mm»: m m. m: (“mm “mm! up 1m
-hm. “him. m a". .n. mhhﬂm... n n mm: u‘: .=
-n- Mal-ill mu un "An! mn- Mymw (11mm: mm
-.. ulllmn uu mlum n 1mm‘, mm gm. mm
-.mul n mm“ 1. 1
+(Indicagﬁz'e: starea s, 'ua ﬁ: 'Zn urnd suntz' bile albe, O g 2' g n.)
+14*. Un profesor superstitios care lucreazé intr-o clédire cir-
+cularé cu m u§i (m impar), nu folose§te niciodaté de douﬁ ori
+1a rénd aceea§i ugé. E1 folosegte cu probabilitate p (respectiv
+(1 — p)) u§a aléituratéi in sens orar (respectiv antiorar) u§ii uti-
+lizate ultima oaré. Care este probabilitatea ca o anumité u§é si
+ﬁe utilizaté intr-un viitor foarte indepﬁrtat? (Indicaﬁz'e: starea
+5,‘: ultima u§d utilizata? a fast u§a i; trebuie gcisite probabz'l-
+itciiz'le de echil'ib'ru 7n.)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-\5 unmmmknnun: mun-ammmu (mum; p.
-.m luvnn a“ mm a“ I: \m mm- Mum! Cnndihdl m.
-n. m um: l: m‘- mm. i.- “ m“ Mm.‘ a. ...m
-ﬂu mm. Bimini-hum: m. m" lwnmnlull mmm
-m...“ . mac-"1..., m mummpw m. F Z
-(m m- "mum mm“
+15. Un controler trateazé cererile de citire scriere (read-write) pe
+un suport de memorie de 1a trei procese diferite. Conditiile sunt
+de a§a naturé céi ﬁecare proces are un numér nelimitat de astfel
+de cereri. Dupé satisfacerea unei cereri a procesului j controlerul
+trateazé 0 cerere a procesului j cu probabilitate pij, unde P z
+(p15) este urmétoarea matrice
 
-n1 u n5
+0.1 0.4 0.5
 
-DZ n2 n5
+0.3 0.2 0.5
 
-n1 n2 n1
-Pmmm m lain/ann- mmu m“; m mm“.
-m Madam: null“ mun! n m 1m mm cu m. Inn n
+0.7 0.2 0.1
+Presupunem (:5 o scriere/citire dureazéi un ace1a§i timp constant.
+(a) Modela'gi aceasté situa'gie ca un lan'g Markov cu trei stéri §i
 
-hm‘; rhgniul mu-mnm
+desena'gi digraful corespunzétor.
 
-(b) BIA-maul: mammal. “mm, m mm :11"!
+(b) Determina'gi probabilitéi'gile de echilibru, dacé acestea existé.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-m 1,. dlmnul a. ms "- m. mm din-nu! m. 1m Mukuv
-mm“ i mm
-(m (ﬂy ‘H \m in
-\41/ \“L ,fmij/
-(i) mummy mm. n. "my. mun-mm...‘ d“...
-"Mm i mu mm.“
-(n) “a: m.“ n .qm d“: "mm “mini-1 Mm
-up vnhnhhllhlu a- mm i1. mm"
+16. in desenul de mai jos este trasat digraful unui lant Markov
+discret §i omogen.
+h 02 0.3
+e a a a
+0.3
+
+(a) Determina'gi matricea de tranzitie corespunzétoare, clasele
+
+recurente §i stérile tranzitorii.
+(b) Dacﬁ existé o singuré claséi recurentéi neperiodicé, determi-
+
+nati probabilitétile de echilibru ale stérilor.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-.1 1. m... .. .... |.. -........-es..........1..m....v
-m... - ....!..
-Ky
-\w ‘7 “.11.”
-‘1\ w /"
-
-l.) mm...“ mm... .1. ......\.. ....-...........‘ d...-
-
-..m...“ 9' In... mm...
-m n... m... . a...“ d... "m... .-......'.=‘ M"...
-
-..\. mum...“ .. .M... .1. Mn...
+17. in desenul de mai jos este trasat digraful unui lan'g Markov
+discret §i omogen.
+0.2
+AG 1 1
+Q a a a
+\ 0.3 W
+0.3
+(a) Determina'gi matricea de tranzi'gie corespunzéitoare, clasele
+recurente §i stérile tranzitorii.
+(b) Dacé existé o singuréi claséi recurentéi neperiodicé, determi-
+na'gi probabilitéi'gile de echilibru ale stérilor.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-u s. mu 1m Mixlm umﬂgun cu pm m" i clxm mince
-a- ‘mm. l... mm.“
-n 1 n n
-M n M n
-P: n 1 n n
-n: n n n1
-m Dalunlh mum u mmm
-m Dnnmmah a“!!! W. I. 1min ‘mum;
-1c) Exmi m (11.: yawn-:1
-n Mm‘, mi mm“ um mum a. ‘mm. a.
-mun.
-n n2 HE n:
-n: nu n n2
-u LH HE n
-n n: n1 n
+18. Se d5 un lan'g Markov omogen cu patru stéri a cérui matrice
+de tranzi'gie este urmétoarea:
+0 1 0 0
+P I 0.4 O 0.6 0
+O 1 O 0
+0.3 0 0 0.7
+(a) Desenati digraful de tranzitie.
+(b) Determinati clasele recurente §i stérile tranzitorii.
+(c) Existé vreo clasé periodicé?
+19. Rezolvati ace1a§i exercitiu pentru matricea de tranzitie de
+mai jos:
+0 0.2 0.6 0.2
+0.2 0.6 0 0.2
+0 0.4 0.6 0
+0 0.3 0.7 0
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-ZII In dun-ml d: mai In: nu mm dinlul unul hm Muknv
-m. v m5.
-\ H) ‘\“j ‘\
-“mmhmmmnh.
+20. in desenul de mai jos este trasat digraful unui lant Markov
+discret §i omogen.
+0.2
+0.5
+Q 0-3 0.6
+H 05 Q Q
+V W
+0.4
+(a) Determinati matricea de tranzitie corespunzétoare, clasele
+recurente §i stérile tranzitorii.
+(b) Dacé existé o singuré clasé recurentﬁ neperiodicé, scrieti sis-
+temul de ecua'gii care conduc 1a determinarea probabilitéi'gilor
+de echilibru ale stérilor.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-21 un nun-m hm: In am" i m‘ am m m a!“
-Biz: mm: dun m- m: a v, mm m m mm", cu
-vwhahﬂim! n 15 m. w mi. “In: I. m mum.“ n :5 v.
-“m. 4m n m: m: MD .. Mm: n m, m “mm
-mu, m pxnhaﬁhutu n z M v. nudi: an»: n m wuhamlum
-n: u mm m. n m: Dad .m um“ MM “M mm“
-n‘ m umliailn "mm u (x! m nmhlhhmu n 15 I“ M vi
-mu an“ v.1 1m‘ Marin: .- w.“ Mn. mnmn a m.-
-|:n numilul ﬂu m! nu m“. mm u “mm n.
-[i7 nmmmm. nan-1...Mmmmmimm,"
-4,. g, mm‘. ‘Ii-.1. mm“. v mm: mmm
-m Dan! nin: dilnbnﬁa “mm: n-im mm“! a. mm"
-m. znndntl 1. dgm-mmilﬂ umhahzmlphx a- ‘(ml-hm
-n. um,
+21. Un student invaté in ﬁecare zi una, doué ore sau deloc.
+Dacéi studiazé doua ore intr-o zi, atunci in ziua urmétoare, cu
+probabilitate 0.75 nu va studia deloc §i cu probabilitate 0.25 va
+studia doar o oréi. Dacéi intr-o zi studiazé o oré, in ziua urmé-
+toare, cu probabilitate 0.3 nu va studia deloc §i cu probabilitate
+0.3 va studia doar o orﬁ. Dacﬁ nu invaté deloc intr-o anumité
+zi, In urmétoarea va invéta o oréi cu probabilitate 0.75 sau nu va
+invé'ga deloc. Un lan'g Markov se poate deﬁni identiﬁcénd o stare
+cu numérul de ore de studiu dintr-o anumitéi zi.
+(a) Desena'gi digraful de tranzitie, determina'gi matricea de tranz-
+itie §i indicati clasele recurente §i stérile tranzitorii.
+(b) Dacé existéi distributia sta'gionaré scrie'gi sistemul de ecua'gii
+care conduce 1a determinarea probabilitétilor de echilibru
+ale stérilor.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-22 a “1.x;- .1. in: mm "- In alm- hm: m .n ‘in a.
-‘mm-- 4- mud. u Imlpﬂhi m a. mm“ my: n
-m“. a- “um, mm: m ‘m.- 15d! m a. Mwnll
-m .1. my...“ Dun: n lXDu-‘u [Mnyaizl “mm... a.
-= awn a mm,‘ 4- mlw: um a. dnul an mi m" an‘
-K... n a “- m n- mm Dun: n mum. n mm“:
-Mun! lnlnmuiunl m n- 1mm: s» pom dmm un 1m
-Mark" .dmmml a n... :u Illul Irpnlﬂi mum mm.“
-m:
-[i7 Duh-mama“ dignlul a! ‘mu-u.‘ mm“. a! \mmi- I.
-.m.\m=..1. mm. v Mink hinninnv
-m Daciniﬁdlunhlﬂiallﬂimarl 11mm“) “mi-“ml
-a. unzip: m. :unﬂnzl in “mm. mummy“, a.
-nun“ m "an",
+22. O galerie de arté moderné are in ﬁecare luné un alt tip de
+expozi'gie: de picturéi, de sculpturé sau de fotograﬁe. Dupé o
+expunere de tablouri urmeazé cu §anse egale una de fotograﬁi
+sau de sculpturi. Dupéi o expozi'gie fotograﬁcé probabilitatea de
+a avea o expozitie de sculpturé este de doué ori mai mare decét
+aceea de a avea una de picturé. Dupé o expozitie de sculpturé
+urmeazé Intotdeauna una de picturé. Se poate deﬁni un lan'g
+Markov identiﬁcénd 0 stare cu tipul expozi'giei dintr-o anumitéi
+luné.
+(a) Determina'gi digraful de tranzitie, matricea de tranzitie §i
+indicati clasele recurente §i stérile tranzitorii.
+(b) Dacé existé distributia sta'gionaréi (justiﬁca'gi) scrieti sistemul
+de ecua'gii care conduce 1a determinarea probabilitétilor de
+echilibru ale stérilor.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:51**************
-IE Hun-hLD v.1 N 'n-mm mmmmmm Pmbnhl
-w‘ mm 5mm‘ m1
+ﬁ Bertsekas, D. P., J. N. Tsitsiklis, Introduction to Probabil-
+ity, Athena Scietiﬁc, 2002.
 
-D 6mm.‘ n‘ Bum)! Pmmnzm swmgn vmq‘ m
-vm, m1
+ﬁ Gordon, H., Discrete Probability, Springer Verlag, New
+York, 1997.
 
-a lawn.‘ 1 I.‘ mummy m Mm. M Cm,“
-5m‘ m" Mum. m
+a Johnosn, J. L., Probability and Statistics for Computer
+Science, Wiley lnterscience, 2008.
 
-a mm“. s‘ “w, m lellum .1, mum st.’
-Mum-l 0mm 5m... man-rm", was
+ﬁ Lipschutz, S., Theory and Problems of Probability, Sca-
+haum’s Outline Series, McGraw-Hill, 1965.
 
-a “...!mmx‘ u ‘ E Hum. mm“, m Cmmg
-nmwd 41,,an m1 thnhluhz may,“ em
-m5! mum“, p... znns
+ﬁ Mitzenmacher, M., E. Upfal, Probability and Computing:
+Randomized Algorithms and Probabilistic Analysis, Cam-
+bridge University Press, 2005.
 
-IE Roll‘ s M ‘ A 5w: Cunn: umMllﬂW|Pllnhcqun|
-5m dihum m!
+@ Ross, S. M., A First Course in Probability , Prentice Hall,
+5th edition, 1998.
 
 ***************Ending Page***************
+
+
 
 ***************Beginning Page***************
 ***************page number:52**************
-IE sums. c J‘ A Cums: \n Pmmmzy ma summ-
-anhnr! p...‘ mm
+Q Stone, C. J., A Course tn Probability and Statistics,
+Duxbury Press, 1996.
 
 ***************Ending Page***************
+
+
 

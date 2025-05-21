@@ -1,842 +1,1023 @@
 ***************Beginning Page***************
 ***************page number:1**************
-so 2021/2022
+SD 2021/2022
+<E|> <ﬁ>4IE>4IE> IE OQO
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-(mm
-Aw...‘ MM...“
-—-— M w-w- m
+Conjui n ut
+Algoritmi. lntroducere
+El r51 ' _= IE J) Q0
+Cm 1 5D 2021/2022 2/ 55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-ExemphJ
-> “mmdgnmm D 1 1 1 15.5.11 21 s4‘
+Exemplu
+> o secventé de numere: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+El r51 i E :5 QQG
+CHM 5D 2021/2022 3/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Exempm
-> “mg-Mum” D 1 1 2 151.12 1| 34'
-> mm “Wm
-q‘ “HZD
-deﬁnmamammmd a: 1‘ .MZ‘
-arm‘ mm
+Exemplu
+> o secvenfa’ de numere: O, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+> secventa Fibonacci
+O, if n : 0
+definitia matematicé': Fn : 1, if n : 1
+Fnil —|— Fnig, if I7 > 1
+Curs 1 SD 2021/2022 3/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-axe-“pm
-> “Knmdgnum D 112 2,111.12 1| a»
-> WW “WK.
-n‘ “11:0
-Mnmimmm: a’ ‘ M71
-r” v» 1‘ \ln)!
-> WWW:
-in! Hint ..1 <
-u 1" i m "turn n
-gm u (n :1, mum 1,
-m.
-velum mm + m4»,
-)
+Exemplu
+> o secventé’ de numere: O, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+> secventa Fibonacci
+O, ifn:0
+definitia matematicé’: Fn : 1, if n I 1
+Fnil —|— Fnig, if I7 > 1
+> implemetare C
+int F( int n) {
+if (n I 0) return O;
+else if (n I 1) return 1;
+else
+return F(n—1)+ F(n—2);
+}
+Curs 1 SD 2021/2022 3/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Mgovium eumologle
-:f. ~1 ;:
-Wm“ .h" M “MW mm m. m.
-all: d: akehd (“a 83V)
-v mmd! imam idunivezv Tnmukwn i‘ wui'w" Wml'dw
+Algoritmi: etimologie
+i HIUBWK'I'IQL'IQ‘ i
+‘ ‘If > 14x I 3' ‘a’ . .
+‘ ‘#2:! ‘ 'H P04 -
+' 5% "<11 1+3 ;
+’ 12 0 - ' ’
+. . n91 uuxauuen ;
+: {5* Aanhmeamu ¢
+Muhammad ibn Musa al-Khwarizmi - matematician persan; a scris prima
+carte de algebré (cca. 830).
+V metode pentru adunarea, Tnmultirea 5i Tmpértirea numerelor.
+El r51 i E :5 QQQ
+Cursl SD2021/2022 4/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Mgomrm dedmme
-> m m: a ddmm: standard M". Wm de Ekovum
-> (mm! nmm
+Algoritmi: definitie
 
-A m 0v Humming! mnmchovs m "m?! be followed m . 1m
-m m’ m“ mm”, rlgmn m . mpm M” m m
-(ﬂex/me in “My w i marksman! whim Y
+> Nu exista o definitie standard pentru notiunea de algoritm.
 
-> 5mm m1 6mm; ms umim h, [mm 5mm,
+P Cambridge Dictionary:
+“A set of mathematical instructions that must be fol/owed in a fixed
+order, and that, especially if given to a computer, will help to
+calculate an answer to a mathematical problem.”
 
-An ,Wmm w welfovdered :0”an ofunambquuus m
-.Mm mm” “mm, m, M." mum Mm i
-WV! “mm w a Mme WW ofnme -
+V Schneider and Gersting 1995 (Invitation for Computer Science):
+“An algorithm is a well-ordered collection of unambiguous and
+effectively computable operations that when executed produces a
+result and halts in a finite amount of time. ”
 
-> Gem-"g and Schnmder 2012 nmmn Iw mm” 5mm W
-mum)
+> Gersting and Schneider 2012 (Invitation for Computer Science, 6nd
+edition):
+“An algorithm is ordered sequence of instructions that is guaranteed
+to solve a specific problem. ”
 
-‘An #MM m “M WM vfmmm m: ,5 “Wm
-ta 59M a saw/K Mm
+Cm 1 SD 2021/2022 5/ 55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Mgontrm dedmme
-> WW“
-
-m mathemancsand wmwﬂwm an mum v; a m by w
-WM WWW.“ “mum m m r." “kn/m" .1“.
-9'0ng indiuwmnedrezlom": Anzllvvvrhmnime/Yecme
-MM mm a; i M... 1,; a! MUM/led MM“; I.”
-(Mm/mm; a Amman Stamng m. a" mm! “mm mu! mm
-“Wimp!” thummnmnsdsznbeammpuntm m, Wm
-mum chedx vagh a Fm: mm 0/ Wei/deﬁned 1m"
-sum WWW MW, "ampul" and WWW”; mr
-mm mt. ne "mm rm “up” m m M 5 M
-neéuiaﬂly WWW; some “mm”, MW as Vdmmllad
-Hymn“ WWW.“ mm "W w
+Algoritmi: definitie
+> Wikipedia:
+“In mathematics and computer science, an algorithm is a step-by-step
+procedure for calculations. Algorithms are used for calculation, data
+processing, and automated reasoning. An algorithm is an effective
+method expressed as a finite list of well-defined instructions for
+calculating a function. Starting from an initial state and initial input
+(perhaps empty), the instructions describe a computation that, when
+executed, proceeds through a finite number of well-defined successive
+states, eventually producing “output” and terminating at a final
+ending state. The transition from one state to the next is not
+necessarily deterministic; some algorithms, known as randomized
+algorithms, incorporate random input. ”
+Curs 1 SD 2021/2022 6/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Mgontrm model de calcul‘ pmMEma remlvad
-> awmmm y Wm“ azcswva/Isuwa in w Aware
-m My‘! in mm‘ .1! M m.‘ a: (M
-u" mm .1. Gk.“ m ‘Wm m»
-> mm V m“. a! mum“, am,
-> mum“:
-m.’ “m. MW m“ “e W5.“
-Mm’ “m um k mm.“ m,“ “e 1.1m
-WWW". M mm we a.“ M mum“ we
-Mum. mm. “Wm
-> .m mm mm. 5; mm M mm m1 W mm mm
-5: mu». ., mm
-o WWW“! we m Mm vePIeIeMaﬁ 4e Q neladve
-‘mp-n. mm, M. WM “Wm- dmm. dank" a! m“
-‘\mlanrl) \ar WM desclwea ‘my dc w,» 0”“an
+Algoritmi: model de calcul, problema rezolvata’
+Toate definitiile au ceva Tn comun:
+V dateIe/informatia $i procesarea acestora/acesteia Tn pa$i. Acestea
+sunt descrise Tn general de un model de calcul.
+Un model de calcul este format din:
+P memorie - modul de reprezentare a datelor.
+> instructiuni
+sintaxé - descrie sintactic pa$ii de procesare;
+semantica“ - descrie pa$ii de procesare realizati de executia unei
+instructiuni; Tn general este data de o relatie de tranzitie peste
+configuratii (sistem tranzitional).
+> un algoritm trebuie 55 produca un rezultat, adica un algoritm trebuie
+sa rezolve o problema.
+O problema’ este Tn general reprezentata de o pereche
+(input, output), uncle input reprezinta descrierea datelor de intrare
+(instanta) iar output descrierea datelor de ie$ire (rezultatul).
+Cm 1 SD 2021/2022 7/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Mguntrm 5. Slruttuvl de daze
-> Mnmm mm: A! mm" = mam
-> 5mm: .1. M mm: a: = law/mm“ Mm“
+Algoritmi $i Structuri de date
+P Algoritm: metodﬁ de rezolvare a unei probleme.
+> Structuré de date: metodé de a péstra/reprezenta informatia.
+CHM SD2021/2022 8/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Mgontrm 5i Slrunun de daze
+Algoritmi si Structuri de date
 
-> mm,“ mm: A! mm = mum
+P Algoritm: metoda de rezolvare a unei probleme.
 
-> 5mm: d: M mm; a: = Dam/Npmmﬁ Wm“
+> Structura de date: metoda de a pastra/reprezenta informatia.
 
-Allonmms ¢ Dara Strmtwes Z Wm i Mm“; Wm.»
-
-rm” m [m Hm m: m My.“ MM," i deP'vI'immev m1;
-Md W ‘5 when“ he MM w cad: or m; w strum/res M
-“mm Bidﬂmgrimmers WWW m m1. 50.14%an
-wwvy mm data structure m m" Mammmw i m; Tan/aids
+Algorithms + Data Structures : Programs. — Niklaus Wirth
+I will, in fact, claim that the difference between a bad programmer and a
+good one is Whether he considers his code or his data structures more
+important. Bad programmers worry about the code. Good programmers
+worry about data structures and their relationships. — Linus Torvalds
+Cm 1 SD 2021/2022 8/ 55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Mguntrm prupnelép
-> in,“ (mm) V m m.‘ M! mm a. m Mm 4m
-> Mp... (1:3va 7 “MW mm WWW
-> mime r pcﬂlm was mime “MW-A um“! M nun-{1mm
-a, w
-> “mm... r =\mm| S. mm: w Mm Hm mm
-ueﬂnu once Mme‘ WM d Mgwmm‘ rezuwl mum dad
+Algoritmi: proprietéti
+
+> input (intrare) — zero sau mai multe entitﬁti de date furnizate din
+exterior.
+
+V output (ie$ire) — algoritmul produce informatie.
+
+> terminare — pentru orice intrare, algoritmul executé un numﬁr finit
+de pasi.
+
+V corectitudine — algoritmul se terminé’ 5i produce ie$irea corecté
+pentru orice intrare; spunem c5 algoritmul rezolvﬁ problema daté.
+
+Cm 1 SD2021/2022 9/55
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
-Mgontrm may“:
-> u" “mm m." a Mm“; M "M mm.‘ a! "m! a:
-“W km“ 4:1 mm 5‘ mp [a uwme]
-> Avem "we 46 algwlml eﬂcwmv mm
-- mmeumm Wmﬂdwm Wm mm m
-> ‘quhhmv WM m». vmwwmwm m.‘ W m,-
-mm=LCPU m” m m1
-> "WWW,"
+Algoritmi: eficienjcé
+> Un algoritm trebuie 55 foloseasci un volum rezonabil de resurse de
+calcul: [spatiu de] memorie 5i timp [de executie].
+
+> Avem nevoie de algoritmi eficienti pentru:
+F a salva timpi de a5teptare, spatiu de depozitare, consum energie, etc.;
+P scalabilitate: putem rezolva probleme de dimensiuni mari cu acelea$i
+
+resurse (CPU, memorie, disc, etc);
+F solutii optimizate.
+Cm 1 5D 2021/2022 10/55
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:14**************
-Mgontrm may“:
-m 3515!.
-in?
-g w i M A
-1 A“ ‘
-z 2w
-“m b >5 m A; m
-W, Mn. awn“ "W F (MW,
-MM. WAMM “HMWMHM Wmm WM“. M
-WMMW = Mm km" WWW.»
+Algoritmi: eflcienjca
+60 f
+— Ruby J‘
+— Scheme /
+— Python 5
+A _ C °
+w 40
+E — Java ‘
+3
+§ — C-gcc /
+‘g ‘
+E 20 ,
+0 ' ‘-
+20 25 3O 35 4O 45 50
+n
+Figura: Executia algoritmului recursiv F (Fibonacci).
+Observatie: Comportamentul este diferit Tn functie de tipul implementérii; totu$i diferentele nu
+sunt atét de substantiale :> Problema e algoritmul! (complexitate exponentialé)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Prmenarea Mgmimmer
-WWW ,\M...@ = thkmdw WW! “mm-E‘! m»
-> Mm: MW‘
-> mum“ Wm. MW
-> mm... (‘m .1." m hm m! M.“ 5‘ i MM... .1!
-conﬂmme a wM-eu
-> mm “mm. 5‘ i mm. 1\M...u\m
-> lmnkmemvea ilmmm
-> (aw'mzave 5‘ New“;
+Proiectarea algoritmilor
+Rezolvarea algoritmicé a problemelor presupune urmétoarele etape:
+V definirea problemei
+V abstractizeazé detaliile irelevante;
+V identificarea clasei din care face parte problema 5i a unui algoritm de
+constructie a solutiei;
+V analiza corectitudinii $i a eﬁcientei algoritmului;
+V implementarea algoritmului;
+V (optimizare 5i generalizare).
+Curs 1 SD 2021/2022 12/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Descrierea a\gnmm|lor
-> Mm» hmlziuulmv
-> ‘Mm
-> mm. mm“! 0mm m.“ \amw1aku‘ Khmdv) Vunzlu
-mm m1
-. memm ummn “MM Mum [:5
-Mm" WW; Mm“ \w-(i) Am. m“ m W
-mm‘ Wm‘ m M my: 0 mm: mm pm Mi.
-> mil-21ml
-> Wm, mm mm 70mm‘! i W...” .1! Mmm
-hmhiM mm‘
-. "WM-ms “Mm WWW" WW1 MW
-MM“
+Descrierea algoritmilor
+> informal: limbaj natural.
+V formal:
+
+V notatie matematica (masini Turing, lambda-calcul (Church), functii
+recursive, etc.);
+
+F limbaje de programare: de nivel inalt, de nivel jos, declarative (e.g.,
+programare functionala, programare logica). Acesta poate fi si un
+model informal daca nu exista o semnatica formalé pentru Iimbaj.
+
+V semiformal:
+
+V pseudo-cod: combina notatia formala a Iimbajelor de programare cu
+limbajul natural;
+
+F notatie grafica: scheme logice, automate (state machines), diagrame
+de activitati.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-(WM
-mm mm“
-—-— W “m m
+Continut
+Limbaj algoritmic
+El r51 ' _= :E @QG
+Cm 1 SDZO21/2022 14/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-mm} algmimnc
-AM mm a! .m hm», gm
-> mm szm 1 n m demels
-> upndv Mm i km “mm
-> ahman in dmw nmmlm mm.‘ Gd! we mm.“
-“mm: i. W Dc demule a: ‘WWW
-> ‘m mode‘ do mm am»: uenlm anahza wmplwdw ﬂgonlmlw
-in W,‘ cmpkxnnn n...»
+Limbaj algoritmic
+Avem nevoie de un limbaj care este
+V simplu: pentru a ﬁ u$or de Tnteles;
+> expresiv: pentru a descrie algoritmi;
+P abstract, Tn descrierea algoritmului accentul cade pe géndirea
+algoritmicé' 5i nu pe detaliile de implementare;
+> un model de calcul adecvat pentru analiza complexitéjcii algoritmilor,
+Tn special complexitatea timp.
+CUM 9920210022 15/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Vavmhdé
-. NW
-. Mm:
-> mm ‘a, ., a“, W W‘, meme,
-> mm z mm
+Variabilé
+> Nume
+> Adresé
+> Atribute (tip de date asociat valorilor memorate)
+- adr
+> lnstantﬁ a variabilei
+cl 51 i E :2 @va
+Cm 1 SD2021/2022 16/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Modem d2 caku‘
-ﬁ:
-1-511
-(1» <FJ
-;§' 1-‘
+Modelul de calcul
+V Memoria: structuré liniarﬁ de celule
+> variabile
+---
+a r
+o ®
+> pointeri
+-—-
+adr
+o ®
+dz» E
+U 51 i E :2 0&0
+Cursl SD2021/2022 17/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-(WM
-mun a am
-—-— W “m w»
+Continut
+Algoritmi. Introducere
+Limbaj algoritmic
+Tipuri de date
+Tablouri 5i structuri
+E1 ﬁ ' _= :E ‘)‘KO
+Cursl 5D 2021/2022 18/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-w as daze
-> Damenm (WW; 4e 0!»qu
-> Oven!“
-> (mm- .1! W. 4! .1“!
-> lem .1. “mm-m
-> 1W .1. WWW. a: MM
-- mm. M “Mm
-> rm dc w .1! MM
-- mvmmmm mm MW
+Tip de date
+> Domeniu (colectia de obiecte)
+> Operatii
+> Categorii de tipuri de date:
+> Tipuri de date elementare
+P Tipuri de date structurate de nivel jos
+P operatiile la nivel de componenta
+V Tipuri de date de nivel Tnalt
+> operatiile implementate de algoritmi utilizator
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-mun a! daze demenmre
-> Mummy
-> my‘ “mm”
-> "Wm 7 ,
-v Numuueak
-- m,“ "Wm-"wk
-- awn!“ v‘
-> Vzhﬂ Wm
-> W m w
-> wen!“ “a w M w
+Tipuri de date elementare
+> Numere Tntregi
+P valori: numere Tntregi
+P operatii: +, -,
+> Numere reale
+P valori: numere rationale
+F operatii: +, -,
+> Valori booleene
+V valori: true, false
+> operatii: and, or, not, xor
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-mun a! date demenmre
-. Cinder:
-> m .' h
-> mm i
-> hm
-> m ,m .1, mm mm m. UP. mm, NULL
-> “Wm i
-> www.4- w
-<, i 3’, 1
-(IHL'TH'T>—-:lw
+Tipuri de date elementare
+
+> Caractere
+F valori: 'a', 'b',
+P operatii: —
+
+> Pointeri
+> valori: adrese de variabile apartinénd altui tip, valoarea NULL
+F operatii: —
+P referire indirecta: *p
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
-Txpun de daze dememare
-> one.“ pm. "m m,‘
-> mm M .> n 1/“ M
-> "MW. .2, M “he” 1» DZ‘,
-. ‘.mmwm)
-
-W!" “ :m MW m law-m
-y—y—ﬁy—(—n.+ b 1w o mm. 1am
-:l:l
+Tipuri de date elementare
+> Operatori pentru numere Tntregi:
+P aritmetici: a+b, a-b, a*b, a/b, a%b
+> relationali: a::b, a!:b, a<b, a<:b, a>b, a>:b
+operatie . t|mp(operat|e)- .
+0(1) O(max(/oga,/ogb))
+Curs 1 SD 2021/2022 22/55
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:26**************
-\nstmclmm
-> Wm
-> (“puma”) (msuunmm)
-> mam“! n "7.5.
-> ‘MM WWII!» in:
-> walmmmwww m...
-— W Wm» M
+Instructiuni
+> Expresii
+> Compuse (bloc): {instructiuni}
+> Conditionale: if if-else
+V Iterative: while repeat for
+> Tntreruperea secventei: return
+Cursl SD2021/2022 23/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-\nsmqium
-> Ambulrel
-> Sim. < w»; >~< aware >
-> 5mm.
-> Mum < W » w mm MU. MM, m bah;
-> m m. mm" m w.“ z“. .e m. mm, WW
-> m Wm om m hymn“; cw < W >»
+Instrucjuunl
+> Atribuirea
+P Sintaxa: < variabi/a ><—< expresie >
+> Sematica:
+P se evalueazi < expresie > 5i rezultatul obtinut se memoreazé Tn locatia
+desemnaté de < variabila >
+P este singura instructiune cu ajutorul céreia se poate modiﬁca continutul
+memoriei
+F cost uniform 0(1), cost logaritmic O(/og < expresie >)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Ambmrea
-EM,“
-> 1.“in .1. amhuw!
-®—<E>—|£|
-(1W
-> on»: Mm W 7M
-K11~<E*‘l_l‘°°
-<5qu
-— M sum m
+Atribuirea
+Exemplu:
+> lnainte de atribuire:
+o int
+> Dupé' atribuirea u <- —v * u:
+o ¢
+o int
+cl 51 i E :2 0&0
+Cursl 9920210022 25/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-\nslmqium
-> mum a" mm mm“
-> Slum-
-. < vambduamtu >+< um: )
-> 5......“
-v .mlm r w > w mm WM MM, . my.
-.( h m. Mm < mmm \
-> [MW .Vm
-| , .1 .
+Instrucjuunl
+V Atribuirea Tn cazul pointerilor
+P Sintaxa:
+>i< < variabi/aipointer ><—< expresie >
+> Sematica:
+P se evalueazé < expresie > 5i rezultatul obtinut se memoreazé Tn locatia
+de Ia adresa stocatﬁ Tn < variabilaipointer >
+V Exemplu: *p <— 10
+adr
+m
+V \ /
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-\nslmqium
-> u
-. 5m.
-n \ Emu, ) m...
-< Wu 7 “MM. .
-A1:
-n < m > um.
-mm,“ < Hm > 1m .1 W m mm. Wm dun!
-mm
-. Mm.
-- 5! mm“ < mm > M mmnm s" m numserwml
-< mm.’ WWW. > \adxl rummd m. Mm W g
-mu < mm’ WWW, > w m WWW a»
-Wm:
+Instrucjuunl
+> if
+P Sintaxa:
+if < expresie > then
+< secventa — instructiunil >
+else
+< secventa — instructiunig >
+if < expresie > then
+< secventa — instructiunil >
+Observatie: < expresie > este 0 expresie cu rezultat boolean dupé
+evaluare
+P Semantica:
+
+P Se evalueazé < expresie >. Dacé rezultatul este true, atunci se executé
+< secventa — instructiunil > iar dacé rezultatul este false, atunci se
+executé < secventa i instructiunig > dupi care instructiunea if se
+termini
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-\nslmcmmea ‘I
-> (m Mm 0(1) m Inglnlrm: 0m
-> 5mm cakulmu‘ WNW 1 6w: Mm
-n a < mu-
-m
-my"? b
-i! b< a lhln
-MM n
-— W WU.» 2n <.
+Instructiunea if
+P cost uniform 0(1), cost logaritmic 0(1)
+V Exemplu: calcululul minimului a douﬁ numere:
+if a < b then
+min <— a
+else
+min <— b
+sau
+min <- a
+if b < a then
+min <— b
+Cursl SD2021/2022 28/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-\nsuuqium
+Instrucjuunl
 > while
-. 5m.
-m. ( am > m
-> 5mm.
-> 5mm, < mm
-
-MUM szww m mu m WW m.
-Mum ‘In, WNW.‘ New",
+> Sintaxa:
+while < expresie > do
+< secventa — instructiuni >
+P Semantica:
+P Se evalueazé < expresie >
+> Dacé rezultatul este true atunci se executé < secventa — instruct/uni >
+dupé care se reia procesul Tncepénd cu pasul 1. Daci rezultatul este
+false atunci executia instructiunii while se terminé.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Exempm while
-> m miv m k m‘ hm 1' >: n Mm .m A .m
-k » u
-“MM - 1
-m: WU“ < n m,
-k k h + 1
-amen} e npteJai ~ 7
+Exemplu while
+V cel mai mic k astfel Tncﬁt 7k >2 n pentru un n dat
+
+k + 0
+
+sapteJaik <— 1
+
+while sapteJaLk < n do
+k <— k + l
+sapteJaik <— sapte2/a2k >|< 7
+
+Curs 1 SD 2021/2022 30/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-\nslmclmm
-> rellem
-> Slum-
-""3‘ u m t \
-MMWE
-> Sunvmu
-lmlmque:
-repeli
-s
-Mm.
-‘Wm: enema uvamva mm
+Instructiuni
+> repeat
+> Sintaxa:
+repeat
+< secventa — instruct/uni >
+until < expresie >;
+P Semantica:
+lnstructiunea:
+repeat
+S
+until e;
+simuleazé' executia urmétorului program:
 5
-mum,“
-s
-— M Wm» M
+while not e do
+S
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Exempm repeal
-v m my m A mm m‘ 1* >: n pm.“ .m n an
+Exemplu repeat
+> cel mai mic k astfel Tncét 7k >: n pentru un n dat
 
-k » u
+k <— 0
 
-9pr <> 1
+sapteJaik <— 1
 
-mun
-k P k + 1
-mien) h upttJai . 1
+repeat
+k e k + 1
+sapte2/a2k H sapte,la,k >x< 7
 
-mu upteJiJr >= m
+until sapteilaik >: n;
 
-— m Wm R n
+Curs 1 SD 2021/2022 32/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-\nsmqium
-> 1w
-> 5mm.
+Instructiuni
+> for
+V Sintaxa:
 
-i.- \ mm M mm“ > m < Mama > m
-< W" 7 WWW", \
+for < variabi/a ><—< expresiel > to < expresieg > do
+< secventa i instructiuni >
 
-i.- < mm, >~< um > mm < W » m-
-< Wu 7 "mm, >
+sau
 
-Disemym < Mi”. > 5M mm: 4. “pm
+for < variabi/a ><—< expresiel > downto < expresieg > do
+< secventa i instructiuni >
 
-\ "pm > 5‘ ( up,“ > W My. I“ whim“ duP:
+Observatie: < variabi/a > este 0 variabilé’ de tip Tntreg, iar
 
-mm
+< expresiel > 5i < expresieg > sunt expresii cu rezultat Tntreg dupé
+
+evaluare
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-\nstmclmm
-> n-
-> Sumalma
-
-we,‘ mum
-s
-
-.1. “WM: cu
-
-WA‘
-
-MPH;
-
-ml:v\:nmpdn
-s
-W N1
-
-— mm» 14 n
+Instructiuni
+> for
+> Semantica:
+for i <— e1 to e2 do
+S
+este echivalentﬁ cu:
+i <— e1
+temp <— e2
+while i <= temp do
+S
+i <— i + 1
+El 5' i E :5 QQCV
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-\nstmclmm
-> n-
-> Sumalma
-
-MHHMMHB
-s
-
-.1. “WM: cu
-
-WA‘
-
-MPH;
-
-mlwzmm
-s
-W71
-
-— mm» 1. n
+Instructiuni
+> for
+P Semantica:
+for i <— e1 downto e2 do
+S
+este echivalentﬁ cu:
+i <— e1
+temp <— e2
+while i >= temp do
+S
+i <— i — 1
+El 5' i E :5 0Q‘?
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:39**************
-Suhpregrame
-> mum an: modular ur- nmuam wnwve .m numil .1: mm
-> u" mm‘ a" ‘WW Mm! gm mun“. m m. Mm“
-> Sump“
-> mm"
-> Furl!“
+Subprograme
+V Limbajul este modular: un program conﬁne un numér de module
+> Un modul Tn limbajul prezentat este identificat cu un subprogram
+V Subprograme:
+V Proceduri
+P Functii
+CHM SD2021/2022 36/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Suhpmgrame
-> qudm
-. Sinlw
-meiun WM [hm mmwmw
-heir‘
-.m
-. M NUMEUuu'Favan-mucmﬂ)
-. mimimvwmm m mum mm“ a mum”
-W mum-M WWW” mm.” 1M2‘:
+Su bprogra me
+> Proceduri:
+> Sintaxa:
+Procedure nume (lista-parametri-forma/i)
+begin
+secventa-instructiuni
+end
+> Apel: NUME(lista-parametri-actuali)
+P interfajca Tntre 0 proceduré 5i modulul care 0 apeleazé se realizeazﬁ doar
+prin intermediul parametrilor $i a variabilelor globale
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Pmmdun
-> new“
-mm..- SWAP W)
-helln
-x v y
-ye M
-m
-And
-5mm b)
-5mm ‘1
-— WW ,- n
+Proceduri
+> Exemplu:
+
+Procedure SWAP (x,y)
+
+begin
+aux <— x
+X <— y
+y e aux
+
+end
+
+Apel:
+
+SWAP(a, b)
+
+SWAP(b, c)
+
+Curs 1 SD 2021/2022 38/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-Suhpmgrame
-> 1mm
-> Shun
-Fun-n M» (1..“ WW... 1m”
-hem
-.m
-. m mumwmnmm
-mm 1W Wm Wm mm; Mm mm ubmul}
-W mm. < W >
+Subprograme
+> Functii:
+> Sintaxa:
+Function nume (lista-parametri-forma/i)
+begin
+secventa-instructiuni
+end
+secventa-instructiuni conﬁne mﬁcar 0 instructiune return < eXpr >
+V Apel: NU|\/|E(|ista-parametri-actuali)
+utilizat Tntr-o expresie: valoarea Tntoarsﬁ de functie este cea objdnuté
+prin evaluarea < expr >
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-mm
-> gum
-Funclim mam.)
-hum
-MPH
-u y > W mm
-W‘ y
-w 1 > m") m
-mp'z
-mm M,
-m4
-Aw
-Mali. h I;
-PM», b‘ K) > 5
+Functii
+V Exemplu:
+Function max3(x,y,z)
+begin
+temp <— x
+if y > temp then
+temp <— y
+if z > temp then
+temp <- z
+return temp
+end
+Apel:
+max3(a, b, c)
+2*max3(a, b, c) > 5
+Curs 1 SD 2021/2022 40/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-(WM
-WM 5‘ Wm."
-—-— W “m w
+Continut
+Tablouri 5i structuri
+El 5' ' _= IE @QG
+Cm 1 SDZO21/2022 41/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-nmmm
-
-> mum mm a vanzhde mmme mmwﬂenmle “ma-Am
-
-> You: Maw-W‘. mm. 1mm UP
-
-> Cnmpnnmtd: M dermis“: <.. amend mom
-
-> WM‘! M mm Mm a Vlwumu mm. 5mm:
-
-1mm Mme“ me Wlimimi) mm
-
-> mm.“ pm n
-- mem. (“-me
-- WWW.\=(14%‘me
-
-— W mm» 1x n
+Tablouri
+V Ansamblu omogen de variabile numite componentele tabloului
+V Toate componentele apartin aceluia$i tip
+V Componentele sunt identificate cu ajutorul indicilor
+V Tablourile sunt utilizate pentru a reprezenta multimi, secvente
+(ordinea elementelor este importanté’), matrici
+V Tablourile pot fi:
+V unidimensionale (1-dimensi0nale)
+V bidimensionale (2-dimensionale)
+Cm 1 9920210022 42/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-Tzkﬂmm ummmensionzle
-6 (ND IIIII
-4% am
-® 4m
-A
+Tablouri unidimensionale
+cl 51 2 E :2 QQG
+Curs 1 SD 2021/2022 43/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-Tnkﬂmm ummmensmme
-> Memo": m Q we": com-pd a ‘can
-> 0mm .1! mm“ 7 udmn mm‘
-> 0mm k my: W. mum-m wmwmmdor
-hm‘!
-1, H m“ 1.4.,
-4.1?»
-1w Wow n’ 1 a
-5M‘ 4,] \ em
-— W Wm n <.
+Tablouri unidimensionale
+> Memoria este 0 secventé contigué de locatii
+> Ordinea de memorare — ordinea indicilor
+> Operatiile se realizeazi prin intermediul componentelor
+Exemple:
+fori<—0ton—1do
+a[i] + 0
+fori<—0ton—1d0
+c[i] <- a[i] + b[i]
+Cm 1 9920210022 44/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Tahhun
-(WWW
-W.“ nmﬂﬁpvahl)
-mm-
-m-——
-M. m M Hm a‘ Mm". n W "M. 4n] 4n 711
+Tablouri
+Costul operatiilor:
+operatie It|mp(operat|e) . .
+0(1) 0(i + 1029,)
+0(1) O(i + logv)
+unde a este un tablou de dimensiune n, cu valorile a[O], ..., a[n — 1]
+Curs 1 SD 2021/2022 45/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Tzlﬂnuri hidwenslanale
+Tablouri bidimensionale
+W IIIIII
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Tzhhuri hidwensinnak
-@_< mp 3|
-@1 m
-@011 mt
-Gm! m!
+Tablouri bidimensionale
+W III-II
+‘o
+‘@
+‘o
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:51**************
-Tabhuri hidxmensmnale
-6 w IIIIII
-@1 4m
-@1 ‘m
-@1 4m
-@1 0
+Tablouri bidimensionale
+Curs 1 SD 2021/2022 46/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-nmmm hidxmensmnale
-> Mama»: mm; .1! mxvﬂnﬂw
-> (mm-m M mm.“ cu lluwm‘ a z mdm
-> Wm mmuvevﬂnnw ‘ m4)
-> .\ Mu mdma .v, man (n ‘ "7 u
-> nmmkkwmvnnzme
-1pm] BID“ 4M4] in m 1p 11 4| "4| .im'
-1n] awn] Am'ln'l]
-> Omnea a: memwave a wmpenemchv 05!: m ¢= ordmcz
-luxzﬁlnhzi 1 WU‘,
-— W mm» “ n
+Tablouri bidimensionale
+V Memorie contigué de mxn locatii
+V Componentele sunt identiﬁcate cu ajutorul a 2 indici:
+P primul indice are valori {0, 1, . . . , m — 1}
+V al doilea indice are valori {0, 1, . . . , n — 1}
+> variabilele componente :
+a[0,0],a[0,1],. . . ,a[0, n i 1],a[1,0],a[1,1],. . . ,a[1, n i 1], . . . , a[m i
+1,0],a[m— 1,1],...,a[m— 1,n— 1]
+> Ordinea de memorare a componentelor este daté de ordinea
+lexicograﬁcﬁ a indicilor
+Curs 1 SD 2021/2022 47/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-Tahhun hidxmensmnale
-> c" mm d: u mm, un a». 2-dlmenmal We n www a
-.m “Mm. MMWHﬂ in m 5m mm“: m m. “W.
-l-mmermona‘
-. "m! .iumJMm mum]. JWAHUHM
-“[1], .quun'u
+Tablouri bidimensionale
+V Cu analogia de Ia matrici, un tablou 2-dimensional poate ﬁ privit ca
+un tablou l-dimensional Tn care fiecare componenté este un tablou
+l-dimensional.
+> Notatie: a[0][0],a[0][1], . . . ,a[0][n — 1], . . . , a[m — 1][0], a[m —
+1][1], . . . , a[m — 1][n — 1]
+H——
+E@
+t®
+Curs 1 SD 2021/2022 48/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-Tnbhun bldxmensmnzle
-. em». a. um 17mm“ S. mm: W mm.‘
-camvnnmtdu
-h. , P n w m 7 1 a“
-in“ My“,
-4, A kn
-[or ‘ >nmp~1an
-4..” * KIM/1+ =|._k| , m A
+Tablouri bidimensionale
+P Operatiile cu tablori 2-dimensionale se realizeazé’ prin intermediul
+componentelor
+fori<—0tom—1d0
+forj + 0 to n-l do
+CliJ] <— 0
+forkeOtop-l do
+C[i,j] <— CUJ] + 8U, k] * b[/<,j]
+Curs 1 SD 2021/2022 49/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-$irur| a: undue
-> Pm h mm“ n mm “MM umdlmeﬂiwm‘: :u ekmenw ¢< up
-> Cansumm wdecanzlevsencleaﬂ mm ~
-> Oven!“ Cwnzﬂeﬂam‘ Mm} cu i
+Siruri de caractere
+
+V Pot ﬁ considerate ca ﬁind tablouri unidimensionale cu elemente de tip
+caracter
+
+P Constantele $ir de caracter se noteazé’ utilizénd “ "1
+“Sir-de-caractere"
+
+> Operatii: Concatenarea, notaté' cu +:
+“un sir" + “alt sir" I “un siralt sir"
+
+Cursl 9920210022 5O/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-Strucnm
+Structurl
 
-> Snunun m...» new." .1! mm We 6mm."
+V Structura: ansamblu eterogen de variabile numite cémpuri.
 
-> 5mm": m M mm v m" (Amp 2.1 wwwl mm v mm
-"v
+> Structura are un nume 5i ﬁecare cémp are propriul nume 5i propriul
+tip.
 
-> Emrwk a 5mm DcMIu = Wm“ nunm a" my. am m:
-mm" X g y‘ a 5mm: WW a npvuenla a 92min! we“
-m “m (awn me, ﬁrst; m’:
+> Exemple: o structurﬁ pentru a reprezenta puncte Tn plan are doué
+cémpuri: x 5i y; o structuré pentru a reprezenta o persoané poate
+avea trei cémpuri: nume, vﬁrsté, adresé;
 
-> "Wk MW ,\ W am»
-mm, may
-nerswm mm‘ perwzrva Wm {lemma mm smda
-M P m WM ‘a Mm p’ > Mu
+> Numele complet al unui cémp:
+punctx, punct.y
+persoananume, persoana.varsta, persoana.adresa.strada
+dacﬁ p este pointer la persoana: p- > varsta
 
-— W mm» u n
+Cursl 9920210022 51/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-51mm
-> Mm". mm 15mm, mm: :‘emznulesum mmvmm
-mdmn mum“ in shuﬂuvi
-, a ,» an 1 1 \
--.1..~ M.
-u.» l‘
-— W WU.» \zﬂ
+Structurl
+> Memoria alocaté este o zoné contigué; elementele sunt memorate Tn
+ordinea declarérii Tn structuré
+Cm 1 9920210022 52/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-51mm 5‘ pmnlen
-(lid/Flu"
-<3>—<~u> 4
-:Ei>—<7>—l
-GEE-H “T. ~
-@M/
+Structuri si pointeri
+GED ® III
+(EB o
+emu @
+(EB o
+KI 5' 2 E :2 vwmv
+Curs 1 SD 2021/2022 53/55
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-Strucnm
-
-(mm “>va
-51 0m Wm.)
-5 x(>v 0(1) lwvsvl
+Structuri
+Costul operatiilor:
+operatie Itlmp(operat|e) . .
+0(1) Wags»
+0(1) ovogv)
+Curs 1 SD 2021/2022 54/55
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Exenma mi a\gemm
-“MM, a 22¢,“ i :
+Executla unul algorltm
+
+O x<—O — —
+
+1 [H1 - 0
+
+2 1<6 1 0
+
+x<—0 3 X<~X>k10+i 1 0
+
+[51 4 i<—i+2 1 1
+
+. . 5 3<6 3 1
+WhIIEI<6dO _ 6 x<—x*10+i 3 1
+X<—X>l<10+l 7 i<—i+2 3 13
+
+;<_,'+2 8 5<6 5 13
+
+9 x<—x*lO+i 5 l3
+
+10 fei+2 5 135
+
+11 7<6 7 135
+
+12 7 135
+
+Curs 1 SD 2021/2022 55/55
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:61**************
-Exenma mi a\gemm
-mm a MW mm
-“Mm a 29W.‘ z :
+Executla unul algorltm
+P Calcul: succesiunea de pa$i elementari determinati de executia
+instructiunilor ce compun algoritmul.
+> Configuratie: starea memoriei + instructiunea curenté;
+
+-—-II
+
+O x <- O — —
+
+1 [e 1 — 0
+
+2 1 < 6 1 0
+
+x <— O 3 X <~ X >1 10 + i 1 0
+
+i + 1 4 i<— i+2 1 1
+
+. . 5 3 < 6 3 1
+
+WhIIEI<6dO _ 6 x<—x*10+i 3 1
+
+X<—X>l<10+l 7 i<—i+2 3 13
+
+,- <_ ,-+ 2 8 5 < 6 5 13
+
+9 x <- x * lO +i 5 l3
+
+10 ie i+ 2 5 135
+
+11 7 < 6 7 135
+
+12 7 135
+
+Cm 1 5D 2021/2022 55/ 55
 
 ***************Ending Page***************
+
+
 
 ***************Beginning Page***************
 ***************page number:62**************
-Exenma mi a\gemm
-mam a MW mm
-. 1" Wm‘ a. m. 1m QM .1,‘ a. W“ a: MW
-“Mm a 29mg.‘ z :
+Executla unul algorltm
+P Calcul: succesiunea de pa$i elementari determinati de executia
+instructiunilor ce compun algoritmul.
+> Configuratie: starea memoriei + instructiunea curenté;
+> In exemplul de mai jos calculul este dat de secventa de conﬁguratii
+(COI—>C1 I—>~--I—> C12).
+-—-II
+O x <- O — —
+1 I‘? 1 — 0
+2 1 < 6 1 0
+x <— O 3 X <~ X >1 10 + i 1 0
+i + 1 4 i<— i+2 1 1
+. . 5 3 < 6 3 1
+WhIIEI<6dO _ 6 x<—x>1<10+i 3 1
+X<—X>l<10+l 7 i<—i+2 3 13
+,-<_ ,-+ 2 8 5 < 6 5 13
+9 x <- x * lO +i 5 l3
+10 ie i+2 5 135
+11 7 < 6 7 135
+12 7 135
+Cm 1 9920210022 55/55
 
 ***************Ending Page***************
+
+
 

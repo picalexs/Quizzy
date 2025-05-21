@@ -1,563 +1,679 @@
 ***************Beginning Page***************
 ***************page number:1**************
-so man/m2
+SD 2021/2022
+<E|> <ﬁ>4IE>4IE> IE OQO
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-(WM
-thkm (Mm
-—-— W “1-w- W
+Conjunut
+Problema céutérii
+El 5' ' _= IE @QG
+Cm 9 5D 2021/2022 2/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Pmblema dudnl
-> Aspenw‘ sun:
-> 1/ MW WM s; u
-> “WWW”
-> 1m,» n v
-> MM‘ dmannz
-> Min-Mm,‘
-> ‘mm 5 .5 u
-> M M.»
-> “Win-Mm’:
-- ‘m, 5 .F u
-- ‘M mu
-— W W‘ m M
+Problema céutérii
+> Aspectul static:
+P U multime univers, 5 Q U
+V operatia de céutare:
+> lnstanté: a G U
+P Intrebare: a G 5?
+V Aspectul dinamic:
+V operatia de inserare
+P Intrare: S7 x6 U
+P legire: 5U {X}
+F operatia de $tergere
+> Intrare: 5, X€ U
+P |e$ire: $\{x}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Cautave in hsm hnizre V :cmwexmale
-mummm 0h] 0U) 17(1)
+Céutare Tn liste liniare - complexitate
+Lista liniaré
+Lista liniaré ordonaté
+Curs 9 SD 2021/2022 4 /43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-(WM
-Umzle bum!
-—-— W ww- w
+Conjunut
+Problema céutérii
+Céutare binaré
+Arbori binari de céutare
+Arbori de céutare echilibrati
+E1 ﬁ ' _= :E ‘)‘RG
+W59 5D 2021/2022 5/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-can“ hm: aspect mu:
-> Mumme: Wm an: {oral onion“! ms»
-> Suuzwn a: m mm
-> ‘mm ‘p H]
-> ‘Ink 0W1]
+Cautare binara: aspect static
+P Multimea univers este total ordonata’: (U, g)
+P Structura de date utilizata’:
+P tabloul s[0..n — 1]
+P s[O] < < s[n— 1]
+cl 51 i E :2 va
+CUM SD 2021/2022 6/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-can!“ hmaré aspect sum
-Funninn “(5m HAL“;
-may.
-hawk‘
-m‘ w v12
-wink AW Z a am < q) a»
-u 1i < EM; m"
-u m4
-m
-p‘ mu
-Mum) 7
-nmknm
-due
-vtlum 71
-m
+Céutare binaré: aspect static
+Function poz(s[0..n — l], n7 a)
+begin
+p <— O; q <— n — 1
+m <— (p + q)/2
+while (s[m]! : a and p < q) do
+if (a < s[m]) then
+q <— m — l
+else
+p H m + 1
+m <— (P + <1)/2
+if (s[m] : a) then
+return m
+else
+return —1
+end
+Curs 9 SD 2021/2022 7 /43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Avhmeh hmzv asoclal céumm hmave
-Thu)
-1
-a
+Arborele binar asociat céutarii binare
+
+T(P,q)
+
+T : T(O, n — 1)
+
+n : 6
+
+2
+0
+1 3 5
+r51 i E :5 QQQ
+
+Curs 9 SD 2021/2022 8 /43
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-(mm
-Am" hmw a! chm!
-—-— M w-w- W
+Conjunut
+Arbori binari de cﬁutare
+El 5' ' _= :E ‘)QG
+CHM 5D 2021/2022 9/43
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-(5mm hmaré aspect dinmmc
-Mm s W: cpmu- .1: mmm T" m.» 4M“ / 5mm)
-Mme he...’ a= an“.
-> 1.. m m6 v m: manna“ o ﬁlm .m. .7 Mum mm
-m...“
-> WW memaleM 5mm» dvv mu: m- v Wm mm m m:
-mum a“. v
-> WM, m. v m m.‘ m; Mt “We mum m suhavbnrel:
-am mum ‘m v
+Céutare binaré: aspect dinamic
+Multimea S suferé’ operatii de actualizare Tn timp (inserare / $tergere).
+Arbore binar de cﬁutare:
+V in orice nod v este memoraté 0 valoare dintr-o multime total
+ordonati.
+> Valorile memorate Tn subarborele din sténga lui v sunt mai mici decét
+valoarea din v.
+> Valoarea din v este mai mici decét valorile memorate Tn subarborele
+din dreapta lui v.
+CHM SD2021/2022 10/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Avhon bmarl d: duum
+Arbori binari de c5utare
+V Arborele binar de céutare asociat unei multimi de chei nu este unic.
 9 0
-o o o a
-o e s o
-o
-3
+0 0 0 Q
+0 6 6 Q
+9
+9
+
+cl 51 2 E :2 QQCV
+Curs 9 SD 2021/2022 11/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Mm mm" de (5mm sonare
-> vawm WM
-Funninn m4m4v. mm“; N
-w"
-u (V Z: NULL)mgn .1
-Mm a
-“Md-MN Q 5w “mm ,
-vmhnﬂlv) w
-‘M \nwimdv4dw man) ‘, M k.‘ m ,, _, h‘
-> (Wmm W 0!",
+Arbori binari de céutare: sortare
+> Parcurgere Tn inordine
+Function inordine(v7 viziteaza) w
+begin /
+if (v I: NULL) then Q @
+return
+else ® ®
+inordine(v —> stg, viziteaza)
+viziteaza(v) ®
+inordine v —> drp, viziteaza
+m ( > @@@@@@@
+V Complexitatea timp: O(n)
+Curs 9 SD 2021/2022 12/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Mm hm" a! (1mm can“
-Funalvn 9010‘ x)
-hqin
-pm
-m. 1,‘ Z Mun m, Q V,” Z X; .1“
-u (x < P mum...
-P F P q m
-m
-V a 4,
-Mum: P P
-“a
-> Camwaﬂhna W om‘ mum,
-— M WU.» ., .1
+Arbori binari de céutare: céutare
+Function poz(t,x)
+begin
+p <— t
+while (p! : NULL and p —> val! I X) d0
+if (x < p —> val) then
+p + p —> stg
+else
+p e p —> drp
+return p
+end
+> Complexitatea timp: O(h), h Tnéltime
+Curs 9 SD 2021/2022 13/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Predecesar,'5ucceser
-m‘ \39 ‘50/ JKKWJ ‘JD
+Predecesor/Succesor
+P Modiﬁcé’ operatia de céutare: dacé valoarea c§utat§ x nu se gése$te
+Tn arbore, atunci returneazé:
+P fie cea mai mare valoare < x (predecesor),
+V ﬁe cea mai micé valoare > x (succesor).
+® v @
+\
+GD ® ®®
+\
+predecesorul lui 18
+succesorul lui 18
+CHM 5D 2021/2022 14/43
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
 Succesor
-Funmm Mm“;
-hell"
-n1: a 4W‘ Z NULL] 0..‘
-,/'|mn(! Q my,
-p » r Q a»
-m: (p A n4‘ Z ~ou m
-p ‘ P , mg
-mm ,
-a”
-a F , 4 M
-ml. [N Z NULL “41:: p Q 4m; an
-: b ,
-W75" ‘ “"d
-and
-— M WU.» ., .1
+Function succesor( t )
+begin
+if (t —> drp! : NULL) then
+/*min(t —> drp)*/
+p <— t —> drp
+while (p —> stg! I NULL) d0
+p e p —> stg
+return p
+else
+p <- t —> pred
+while (p! : NULL and t I: p —> drp) d0
+t <— p
+p k p —> pred
+return p
+end
+Curs 9 SD 2021/2022 15/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Arhun hman de duure myerare
-swam a; dunk]
-A
-“({6} SQ
-o as:
-Camﬂluwiunmv om mum“ “MM
+Arbori binari de céutare: inserare
+V Se cauté Tn arbore locul Tn care va ﬁ inserat noul element (similar
+operatiei de céutare).
+> Se adaugé nodul cu noua informatie, iar subarborele sténg, respectiv
+drept fiind NULL.
+Complexitate timp: O(h), h Tnéltimea arborelui.
+Curs 9 SD 2021/2022 16/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Mm hmari de mm myenre
-Wm. mylrmeCn/mq: x)
-m».
-51px mm, mu.
-ncwh)‘ h m - i‘ H Q, - Nl/LL‘ I Q a,» v M/ll
-.4‘.
-, k r
-"m! 1w 7 NULLMQ
-M1 ~ ,,
-w MPAWMMHAM
-elk
-n (Upummmwpdw
-m p L NULL
-.1 (M, Q “1-: X, n."
-u 1x < My My; um.
-mm x G r.“ “W M m m» -/
-ell: 1.1M: x L. M Mm m lm wed; 'w
-m
+Arbori binari de céutare: inserare
+Procedure insArbBinCautare(t, x)
+begin
+if (t I: NULL) then
+new(t); t —> val <— x; t —> stg k NULL; t —> drp H NULL
+else
+p <— t
+while (p! I NULL) do
+predp <— p
+if (x < p—> val) then pk p—>stg;
+else
+if (x > p—> val) then p+p—> drp;
+else p <— NULL;
+if (predp —> val! : x) then
+if (x < predp —> val) then
+/* adaugi x ca fiu sténga al lui predp */
+else /* adaugé x ca fiu dreapta al lui predp */ ;
+end
+Curs 9 SD 2021/2022 17/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Mm hmari de mum elwmnare
-y Gm: xi" “MM d»: w 555m! znmn S. dun"! Gm‘!
-> can.‘ 1 "m P save “Wm: x m. m w,
-> cm‘ 2 "MM my. rmmla w! mum-‘Mu,
-> can‘ a mam pm memunzixzuambu a‘
-- Determml m“- a are mm» m m.‘ m ulnar: y m m:
-a“ ‘ [mm dm P u m". 5‘ W (“ma I. mam: m ,.
-Ma
-- mums “WW ,, ,,
-- 5wvlcq(a?nnzu\ 1w 2
-(nmﬂluwiui W am "mm
-— W mm» 1.“
+Arbori binari de céutare: eliminare
+
+Se cauté’ x Tn arborele t; dacé’ Tl gése$te atunci se disting cazurile:
+V Cazul 1: nodul p care memoreazé x nu are fii;
+> Cazul 2: nodul p care memoreazé x are un singur ﬁu;
+> cazul 3: nodul p care memoreazi X are ambii ﬁi.
+
+P Determiné nodul q care memoreazﬁ cea mai mare valoare y mai micﬁ
+decét X (coboaré din p Ia stinga 5i apoi coboarﬁ Ia dreapta cét se
+poate).
+
+P lnterschimbé valorile din p 5i q.
+
+V Sterge q ca Tn cazul 1 sau 2.
+
+Complexitatea timp: O(h), h Tnéltime.
+Cum-9 9920210022 18/43
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-Avhnn hman de duuve ehmmzve
-@ __ a
-61 0 ®
-ﬁe a» w a @
-x‘
+Arbori binari de céutare: eliminare
+> Cazul 2. Exemplu.
+,w /@
 ®
+cl 51 2 E :2 QQO
+Curs 9 SD 2021/2022 19/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Mm hman de (5mm elxmmzre
-> mu‘ 1m 2
-mum“ ,0“QO m p;
-m».
-w 1, Z: r) "m.
-v , dew‘: M m ~/
-/- mu‘ m =\ \m my.“ vzdaunl -/
-$1
-u 1p >5’; ﬁ mom
-/- mlmmmm PIMPPHPch4 a,» -/
-m
-,/'mlv<wn1em Mp v! P U. P ms w’
-.d
-— W Wm n A,
+Arbori binari de céutare: eliminare
+> cazul l sau 2
+Procedure elimCazlsau2( t, predp, p)
+begin
+if (p z: t) then
+/* t devine vid sau */
+/* unicul fiu al lui t devine radacina */
+else
+if (p —> stg I: NULL) then
+/* inlocuieste in predp pe p cu p —> drp */
+else
+/* inlocuieste in predp pe p cu p —> stg */
+end
+Curs 9 SD 2021/2022 20/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Avbnn bmarl d9 dutzve ehmmzve
-i3 ®
-0 6 Q
-® ‘:9 @ G3 ® Q
-é a ®
+Arbori binari de céutare: eliminare
+> Cazul 3. Exemplu.
+w /@
+®
+ea 0% a» ea em
+
+é é» @
+cl 51 2 E :2 QQG
+Curs 9 SD 2021/2022 21/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Mm 1mm de (inure elxmmm
-mm”. Z/Wmsmcmmp, x!
-hell"
-511;‘: mu m".
-p Z r, My Z Mm
-mm. 1,‘ Z NULL m, Z m Z x] .1»
-9'!de p
-I: (-quu-MUZFZW
-ZIZ I Z I Z w
-.10»: mu mu-
-u 1, Z M ZZ NULL urn Z a,» ZZ MILL] n...
-mummy,‘ WP‘ P)
-.l-
-a Z p ~ m‘ ww-z ~ a
-Zn“. (q Z 4,,‘ Z mm; an
-mququZw
-p Z n1 Z u Z vzl
-thqumzu wldi v)
-and
-— W Wm n Z.
+Arbori binari de céutare: eliminare
+Procedure elimArbBinCautare(t, x)
+begin
+if (t! : NULL) then
+p <- t; predp <— NULL
+while (p! : NULL and p —> val! I x) do
+predp <— p
+if (x < p—> val) then p<— p—>stg;
+else p <— p —> drp;
+if (p! Z NULL) then
+if (p —> stg I: NULL or p —> drp z: NULL) then
+elimCazlsau2(t, predp, p)
+else
+q <— p —> stg; predq <— p
+while (q —> drp! : NULL) do
+predq H q; q <— q —> drp
+p —> val e q —> val
+elimCazlsau2(t, predq, q)
+end
+Curs 9 SD 2021/2022 22/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Mm m" a! duuve anahz!
-mum“ W
-> c=,..\£,\....‘..¢m~m 0w) mm.
-v (WWW om”)
+Arbori binari de céutare: analizé
+Complexitatea timp
+P Cazul cel mai nefavorabil: O(n), n elemente
+> Cazul mediu: O(Iogn)
+El r51 i E :5 {JQCV
+Curs 9 SD 2021/2022 23/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Degeneravea (Eutém hinare Tn céutave lmlar}
-w Mm D m!" - mmhgso
-Q;
-m a a g‘ *3’
-a mums) w \Mmiaz)
-w
-m Q
-as
+Degenerarea cﬁutérii binare Tn céutare liniarﬁ
+w elimina(10) w e111nina(0) ® eliInina(50)
+6? ‘2*
+w em em ®
+a; insereaza(35) ® insereaza(32)
+@
+w ‘ED
+@
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-(mm
-Avhan .1! mm, mm
-—-— M Mm W
+Continut
+Arbori de c5utare echilibrati
+El r51 ' _= IE ‘)QG
+Cm 9 SD 2021/2022 25/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Mm de mam echdihrap
-> Arbw AVL 1%“me m um 1952)
-> Arhw my "hm (aw m1 MchgN 1912p
-> "m “my. [am 10127
-> Artur‘ 5D‘1y(5\eiwr m1 Tauan 1985]
-> Trap; (Swill m1 Mm may
-— W Wm H A
+Arbori de céutare echilibrati
+> Arbori AVL (Adelson-Velsii and Landis, 1962)
+> Arbori B/2-3-4 arbori (Bayer and IVIcCreight, 1972)
+> arbori ro$u-negru (Bayer, 1972)
+> Arbori Splay (Sleator and Tarjan, 1985)
+> Treaps (Seidel and Aragon, 1996)
+Curs 9 SD 2021/2022 26/43
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:27**************
-Mm de mam echdihrap
-> c an: a»: d: m“ mum dad
-WW .m m" m n vim 4m a hm 5 mu ( mrmlm'}
-> c m: d”: .1! m“ “mm ommuw a“:
-em! auwvm nemm augnyule 4: mm.‘ mm W m
-1mm,‘ m m.“ mm Ia: pm .1," (‘m a
-— W Wm n l.
+Arbori de céutare echilibrati
+V C este clasé de arbori echilibrati dacé
+pentru orice arbore t cu n vérfuri din C: h(t) g clog n, c constanté.
+V C este clasé de arbori echilibrati O(|og n)-stabi|§ dacé
+existi algoritmi pentru operatiile de céutare, inserare, gtergere Tn
+O(|og n), iar arborii rezultati fac parte din clasa C.
+CHM’ SD2021/2022 27/43
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Arbor‘ AVL
-(G Addson'Velslui‘ E M Lanchs 1952)
-. u" Wm m a W. rm M Wm WWW W,
-W. W v
-\n[v~;:‘p7n(v44m)\il
-> Mv v Its] *va v HIP) x "mum: (new d. xhiHh-am
-> WW
-, Q a
-6 a , a
-> w...
-om ,W WWW" W WW W my W",
+Arbori AVL
+(G. Adelson-Velskii, EM. Landis 1962)
+> Un arbore binar de cﬁutare t este un arbore AVL-echilibrat daci
+pentru orice vérf v,
+‘h(v —> stg) — h(v —> drp)] g 1
+> h(v —> stg) — h(v —> drp) se nume$te factor de echilibrare.
+P Exemplu:
+2 h=2, f=1
+l O
+O O
+> Lema
+Daca t este AVL-echilibrat cu n noduri interne atunci h(t) I 6(Iog n).
+Demonstratie. La curs.
+Curs 9 SD 2021/2022 28/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Mm AVL
-> Tmml
-(hrs: mm Avmm-W .5“ nu“. "1 mm
-> Ngonlmul ¢= mievare/slemere
-> “WW MW u bow“ 1mm“ Hm]
-> s‘ mm’: 1W‘ a‘ ‘a an“: h ~1de adiunlmmimra
-\le wan
-> SQ pm“ Ammm “mun sum» m M», ,Q vmmhud
-MMMMW m m mmmk muhnnhp/dreuu
-mum.“ mm‘ "u
-— W mm» 2141
+Arbori AVL
+P Teoremé
+Clasa arborilor AVL-echilibrati este O(log n) stabilé.
+P Algoritmul de inserare/5tergere
+P Nodurile au memorate 5i factorii de echilibrare (*1,0,1).
+P Se memoreazz“: drumul de la rédéciné Ia nodul adéugat/5ters Tntr-o
+stivé (O(|og n)).
+P Se parcurge drumul memorat Tn stivé Tn sens invers 5i se reechilibeazé
+nodurile dezechilibrate cu una dintre operatiile: rotatie sténga/dreapta
+simplé/dublé (O(|0g n)).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Rouw
-m M, W“
-1/ \x . \y
-ﬁ/ \ \ m § \
-M. M, M
-1/ /'\\
-\t A K x
-/~ A >\ K /\
-/E /C /A ,/a /c‘~1/D\
-5W W m.“ W W, WW m W M
+Rotatii
+Rotatie dreapta simplé’
+Y X
+/ \
+Rotatie dreapta dublé
+X
+/ —’ Z
+Similar pentru rotatie sténga simplé, respectiv rotatie sténga dubli.
+Curs 9 SD 2021/2022 30/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Romp: slinga mpls
-° 2".
-A “ "A "
-A A "A
-— Ma ‘ in“ u/u
+Rotatie stﬁnga simplé’
+inserand Tn subarborele C,
+nodul x nu mai satisface proprietatea
+inserare
+4|»
+h
+cl 51 i E :5 Q Q O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Rouﬁe slinga mpls (can!)
-m
-M...
-V V \
-m. $2‘. (\‘\\
-“ A\ "/A \ V
-a ,/C "A M "A
+Rotatie stﬁnga simplé’ (cont)
+nodul x nu mai satisface proprietatea
+rotatie "
+@E inserare sténga
+4P 4p.
+A “A o “A
+A h A n+1 hA h+1
+\:| 51 i E i5 v’) Q "v
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Romp: slinga mpls (can!)
-km
+Rotatie stﬁnga simplé’ (cont)
+inserandin subarborele C,
+rotatie
+(98 inserare sténga
+—> 4’
+A “A 0 “A o
+hA h+1 hA h+1
+—D-
+h+1
+h Ah
+cl a] , E :5 @qcv
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Romp: sling: mpu
-pm.“ mnnénrvgﬂx)
-hugln
-
-y F X Q .1’,
-
-l q dvp ~ y ~ n5
-
-y Q w ~ X
-
-my" y
-m
-
-> Cummwmea IWD om
+Rotatie stﬁnga simplé
+Procedure rotatieStanga(x)
+begin
+y <— x —> drp
+x —> drp <— y —> stg
+y —> stg <— x
+return y
+end
+> Complexitatea timp: 0(1)
+Curs 9 SD 2021/2022 34/43
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
-Rouﬁe ml:
-ml
-Q “4}
-IL?
-— w ‘ w“ m.
+Rotatie dublé’
+inserﬁnd Tn z,
+se distruge proprietatea Tn x
+inserare
+0 .
+A ' h
+h+1
+A h
+h sau
+A
+El r51 i E i5 QQG
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:36**************
-Roenie am: (mm)
-Kym “ml
-I mlbwnlﬂ
-1m. .m w
-a a ‘1 ~4' , \ ‘o'-
-15 ,¢\ M M
+Rotatie dublé’ (cont)
+inserﬁnd Tn z,
+se distruge proprietatea Tn x
+0 rotatie clublé
+inserare stg-olrp
+@5 A h = h
+g n+1 1
+h hA a
+h sau h sau
+A h-l h-l
+cl 51 i E :2 Q ‘1va
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Roenie am: (mm)
-5.5m:
+Rotatie dublé’ (cont)
+inserﬁnd Tn z,
+se distruge proprietatea Tn x
+o rotatie clublé.
+inserare stg-drp 5‘; _',-*'
+A B “A n+1 “A; +1
+h sau h sa
+A
+“j A X A
+A U 51 , E :5 QQCV
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-\nsemre mm.“
-pm”. WWW! x/
-hum
-Wm. X‘ 7 NULL .1“
-‘.mﬂmxmm “,1 -,
-umx >n51>2 \ m vdvpl/lhln
-u W a 5;‘ _ my Z nu Q w ‘ my) mu-
-wmwmpm A
-ll,‘
-ruranérarwn 1 Q w) wraneﬂrwptah‘ X1
-m
-11 rm a a») Z 1 + m Q ‘min-1..
-Ir 1w ~ a» ~ aw) 2 m A 4w a 1kg” mg.
-mummu'ilr x>
-=1"
-mmmDvewraU x a w) manesnngﬂh n
-X v X J m4
-m
+Inserare: algoritm
+Procedure echi/ibrare( t, x )
+begin
+while (x! : NULL) do
+/* actualizeaza inaltimea h(x) */
+if (h(x —> stg) Z 2 + h(x —> drp)) then
+if (h(x —> stg —> stg) Z h(x —> stg —> drp)) then
+rotatieDreapta(t, x)
+else
+rotatieStanga(t, X —> stg); rotatieDreapta(t, x)
+else
+if (h(x —> drp) Z 2 + h(x —> stg)) then
+if (h(x —> drp —> drp) Z h(x —> drp —> stg)) then
+rota tieStanga( t, x)
+else
+rotatieDreapta(t,x —> drp); rotatieStanga(t,x)
+x <— X —> pred
+end
+Curs 9 SD 2021/2022 38/43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Exempm msevare
-‘ “w ‘4
-7‘ Z , 5"
+Exemplu: Inserare
+: 3 factnrul de echilihru
+h max(1.0)+1 inserareBJ
+1 0 1 2
+0
+cl 51 i E :2 A“
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Exempm insevave (can!)
-“0 ‘.
-5 \s
-'
-'1‘ e
+Exemplu: inserare (cont)
+i 3 IBCIEI'IIUBBBTIIU
+h_max(l,0]+l inserare 8, 7
+l U l 2
+O
+rolalie sim pla 26
+dreapla
+l
+cl 51 i E :2 ‘11;
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-Exempm insevave(cam)
-e u...“ agar‘
-‘a o
-o o
-MW‘ 0 ‘ a.” G
-q ° h v o MT“ o
-o e o o o
+Exemplu: inserare (cont)
+n=max{1,0]+1 e We‘? [[gﬁgﬁggm
+\
+°o 2
+0 0 0 0
+o e o eo
+Wimwg, 6 mu 4
+M’ 9
+3 1
+0 0 0 o e
+o e e 2 0 0 0
+l e o o
+0
+Curs 9 SD 2021/2022 41/43
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:42**************
-Exempm insevave(cam)
-
-o w.“ ‘,qu
-‘a o
-
-e ‘o o_
-
-"mm *o 3.... o
-0 0”“ o Q
-
-e o on a"
-
-o o
+Exemplu: inserare (cont)
+n=max{1,[1]+1 e W83 PW]
+l 0 l 2
+0 9 0
+0 0 0 0
+o e o eo
+0 o 0 e 0 e
+0 Q
+cl 51 2 E :2 @va
+Curs 9 SD 2021/2022 42/43
 
 ***************Ending Page***************
+
+
 
 ***************Beginning Page***************
 ***************page number:43**************
-Avanlaje/dezavama 1e Me arhonlor AVL
-> MM:
-> Mum“; mm, a: (My. mm 5‘ Mm 6“ 04mm
-> mum-m.
-> 5M Mm“, m“ mm WW. WWW .1,
-mm
-. am,“ a: Mm». m mm"
-> 5w Wm,- ma :vem ﬁe rezhzal m2‘ mm mun 3‘ m. Wm
-my“ 5‘ my.“
-> mm in mmw Dan MW
+Avantaje/dezavantaje ale arborilor AVL
+> Avantaje:
+P Complexitatea operatiilor de cautare, inserare 5i stergere este O(log n).
+> Dezavantaje:
+> Spatiu suplimentar pentru memorarea Tnéltimii / factorului de
+echilibrare.
+P Operatiile de re-echilibrare sunt costisitoare.
+> Sunt preferati cénd avem de realizat mai multe cautari 5i mai putine
+inseréri 5i stergeri.
+> Aplicatii Tn Data Analysis, Data Mining
 
 ***************Ending Page***************
+
 

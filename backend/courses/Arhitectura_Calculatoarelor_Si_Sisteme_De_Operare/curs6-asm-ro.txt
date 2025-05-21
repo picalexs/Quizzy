@@ -1,372 +1,379 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Instrucgiuni de lucru in
-virgulﬁ mobile“!
+Instructiuni de lucru in
+virgulii mobilii
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
-Unitatea de virgulé mobilé
-' Floating Point Unit — FPU
-- inigial - separaté dc procesor
-i inclusi in procesor incepénd cu Intel 486
-' lucreazé intern cu operanzi in precizie
-extinsé (80 de bigi)
-- orice operand dc tip float sau double
-este convertit la aceasté. reprezentare
-—|z@
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Unitatea de virgulé mobiléi
+' Floating Point Unit - FPU
+- initial - separaté de procesor
+— inelusé in procesor ineepénd eu Intel 486
+' luereazé intern eu operanzi in preeizie
+extinsé (80 de biti)
+' oriee operand de tip float sau double
+este convertit la aeeastéi reprezentare
+—126
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Re gigtrii interni (l)
-
-' 8 regigtri pe 80 de bigi
-
-i denumiri: ST(O) ST(7)
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+R6gi§trii interni (1)
+' 8 r6gi§tri p6 80 de bigi
+— denumiri: ST(0) ST(7)
 ' sunt organizagi intr-o stivé
-
-i ST(0) este intotdeauna vérful stivei
-
-i referit §i ca ST
-' orice operatic dc scriere in stivi schimbﬁ
-
-ordinea (§i numele) regi§trilor
-
-— fostul ST(O) devine ST(1) etc,
-
-117
+— ST(O) este intotdeauna vérful stivei
+— referit §i ca ST
+' Qrice operagie de scriere in stivé schimbé
+ordinea (§i numele) regi§tri10r
+— fostul ST(0) d6vine ST(1) etc.
+127
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Regigtrii interni (2)
-- la orice instructiune, ST(0) este unul dintre
-operanzi
-— sau singurul, 1a operagiile unare
-' celﬁlalt operand poate ﬁ, dupé caz
-i 0 localie d6 memorie (valoare intreagﬁ sau in
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+R6gi§trii interni (2)
+- 1a oricﬁ instrucgiunﬁ, ST(O) ﬁste unul dintre
+opﬁranzi
+— sau singurul, 1a oparayiile unare
+' cﬁlélalt 0p€rand poatﬁ ﬁ, dupé caz
+— 0 locagie d6 memorie (valoara intreagﬁ sau in
 virgulé mobilé)
-i un alt registru ST(i)
-i niciodati 0 constants?!
-118
+— un alt registru ST(i)
+— niciodaté 0 constanté
+128
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Regigtrii interni (3)
-- introduccrea in stivé - prin instrucgiuni dc
-incircare a unor valori
-— locayii de memorie
-i uncle constants predeﬁnite
-~ scoaterea din stivé
-i multe instrucgiuni de procesare au §i 0 varianté
-care eliminé ST(0) din stivé
-i numele acestor instrucyiuni se termini cu "p"
-119
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+R6gi§trii interni (3)
+- introducen'ea in stivé - prin instrucgiuni de
+incércare a unor valori
+— locagii de mamorie
+— unale constanta predaﬁnite
+' scoatﬁrea din stivé
+— multe instrucgiuni de procesare au §i 0 varianté
+care diminé ST(0) din stivé
+— num616 ac€st0r instrucgiuni se terminé cu "p"
+129
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:6**************
-Arhilectura calcullloarelor 5i sixteme a: open“ - ASM
-Incércare din memorie
-~ sintaxa
-f l d a dre s a
-f i l d a dres a
-- introduce in stivﬁ operandul, care este
-i in primul caz - o variabilé in virgulé mobilé
-(float, double)
-i in a1 doilea caz - 0 variabilé intreagi (short
-int, int)
-—|3u
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Incarcare: dln memone:
+' sintaxa
+fld adresa
+fild adresa
+' introduce in stivé operandul, care 6st6
+— in primul caz - 0 variabilé in virgulé mobilé
+(float,double)
+— in a1 d0i16a caz - 0 variabilé intmagé (short
+int,int)
+—130
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Exermpler
+
 float f;
 int i;
 _asm {
+
 fld f
+
 fild i
-fld dword ptr [ebp+8]
+
+fld dword ptr [€bp+8]
+}
+
+m
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Incﬁrcare constanté predeﬁnité
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Incéircam constantéi pmdezﬁnité
 ' sintaxa
-fl d z
-f l d l
+fldz
+fldl
 fldpi
-- introduc in stivﬁ, respectiv, valorile O, 1, TE
-- existé $i alte constante (logaritmice)
-—131
+~ introduc in stivé, respectiv, valori16 O, 1, 1t
+' 6Xist51 §i alte constante (logaritmice)
+—132
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Arhileclurl calcullloarelor 5i sixleme a: openre - ASM
-Scriere in memorie
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Scriezre in m€m0ri€
 
-~ sintaxa
-f s t a d re sa
-f s t p a dre s a
+' sintaxa
+fst adresa
+fstp adresa
 
-— scriere ST(O) intr-o variabilé in virgulé mobili
-f i s t a dre s a
-f i s tp a dre s a
+— scriere ST(O) intr-o variabiléi in virgulé mobilé
+fist adresa
+fistp adresa
 
-i scriere ST(0) intr-o variabilé intreagé
+— scriem ST(0) intr-o variabilé intraagﬁ
 
-—\33
+—133
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Arhileclurl calcullloarelor 5i sineme a: 0pm“ - ASM
-Exemple
-float f;
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Exezmplez
+f l O a t f ;
 int i;
-fa sm f s tp f ;
-i copiazz'l ST(0) in f §i il eliminé din stivi
-i foslul ST(l) devine ST(0) etc.
-iasm fist i;
-— copiazé ST(0) in i, pistréndu-l pe stivé
-—\31
+_asm fstp f;
+— copiazéi ST(()) in f §i i1 eliminﬁ din stivé
+— fostul ST(1) devine ST(O) etc.
+_asm fist i;
+— copiazé ST(O) in i, péstréndu-l pe stivé
+—134
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:11**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Interschirnbare regigtri
-
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Interschimbare r6gi§tri
 ' sintaxa
-
-f xch st (i)
-
-~ i este 0 valoare constanti intre l §i 7
-
-' schimbé intre ele valorile regigtrilor ST(0) §i
-
+fxch st(i)
+' i 6st6 0 valoam constantii intm 1 §i 7
+' schimbé intre: ele valorile: r6gi§trilor ST(O) gi
 ST(i)
-—|35
+—135
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
-Adunare ( l)
-' unul dintre operanzi este intotdeauna ST(O)
-i dc obicei 5i destinagia rezultatului
-~ celilalt poate ﬁ
-i locayie de memorie (virgulé mobilé sau intreg)
-i all registru din stiva FPU
-- in ultimul caz, rezultatul poate ﬁ scris in
-celélalt registru, in 100 de ST(0)
-— eventual cu eliminarea ST(O) din stivi
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Adunare ( 1 )
+' unul dintm operanzi aste intotdeauna ST(O)
+— de obicﬁi §i destinagia rezultatului
+' celélalt poatﬁ ﬁ
+— locagie de mamorie (virgulé mobilé sau intreg)
+— alt ragistru din stiva FPU
+~ in ultimul caz, mzultatul poate ﬁ scris in
+cerlélalt registru, in loc d6 ST(O)
+— 6v6ntual cu eliminarea ST(O) din stivé
 136
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Arhilectura calcullloarelor 5i sixteme a: open“ - ASM
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
 Adunare (2)
-- sintaxa
-fadd adresa //virgulé mobilé
+' sintaxa
+fadd adresa //Virguléi mobiléi
 fiadd adresa //intreg
-fadd st (O) , st (i) //ST(0):ST(0)+ST(i)
-fadd st (i) , 511(0) //ST(i):ST(i)+ST(0)
-faddp st (i) , st (O) //cu scoatere ST(0)
-din stivﬁ
+fadd st (O) , st (i) //ST(O)=ST(O)+ST(i)
+fadd st (i) , st (O) //ST(i)=ST(i)+ST(O)
+faddp st (i) , st (O) //cu scoatare ST(O)
+din stivéi
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
-Scédere ( l)
-- similar cu adunarea
-- ST(0) este de obicei descﬁzutul §irezu1tatu1
-' celélalt operand
-i locatie de memorie (virgulé mobili sau intreg)
-— all registru din stiva FPU
-- in ultimul caz, celﬁlalt registru poate ﬁ
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Scéd6re (1 )
+' similar cu adunama
+' ST(O) 6st6 d6 0bic§i descézutul §i rezultatul
+' cﬁlélalt opﬁrand
+— locagie de mamorie (virgulé mobilé sau intreg)
+— alt ragistru din stiva FPU
+' in ultimul caz, cerlélalt ragistru poate ﬁ
 descézutul §i destinagia rezultatului
-i eventual cu eliminarea ST(0) din stivi
-—m
+— 6v6ntual cu eliminarea ST(O) din stivé
+—138
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
-Arhilectura calcullloarelor 5i sixteme a: open“ - ASM
-Scédere (2)
-- sintaxa
-fsub adresa //virgulé mobilé
-fisub adresa //intreg
-fsub st (O) , st (i) //ST(0):ST(0)-ST(i)
-fsub st (i) , st (O) //ST(i):ST(i)-ST(0)
-fsubp st (i) , st (O) //cu scoatere ST(0)
-din stivﬁ
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Scéd6re (2)
+' sintaxa
+f sub adresa //Virguléi mobiléi
+fi sub adresa //intreg
+fsub st (O) , st (i) //ST(O)=ST(O)-ST(i)
+fsub st (i) , st (O) //ST(i)=ST(i)-ST(O)
+fsubp st (i) , st (O) //cu scoatare ST(O)
+din stivéi
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:16**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Scédere inversé (1)
-~ ordinca operanzilor este invers fagé dc
-operagia de scédere obignuité
-i se scade primul operand din al doilea
-i dar rczultatul cstc scris tot in primul operand
-—uu
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Scadere: 1nv6rsa (1)
+' Ordinaa opﬁranzilor este invﬁrs fagé de
+0p6ra§ia d6 scédﬁm 0bi§nuit€1
+— s6 scada primul operand din a1 doilea
+— dar rezultatul €ste scris tot in primul 0p6rand
+140
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Scédere inversé (2)
-- sintaxa
-f subr adresa //virgul?1 mobilé
-f i subr adresa //intreg
-fsubr st (O) , st (i) //ST(0):ST(i)-ST(0)
-fsubr st (i) , s t (O ) //ST(i):ST(0)-ST(i)
-fsubrp st (i) , st (O ) //scoate ST(0) din
-stivé
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Scédera inverrséi (2)
+' sintaxa
+f subr adresa //virgu1éi mobilé
+fisubr adr€sa //intreg
+fsubr st (O) , st (i) //ST(O)=ST(i)-ST(O)
+fsubr st (i) , st (O ) //ST(i):ST(O)-ST(i)
+fsubrp st (i) , st (O ) //scoate ST(O) din
+stivéi
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Arhilectura calcullloarelor 5i sixteme a: open“ - ASM
-Inmul'gire
-- similar cu adunarea
-fmul adresa //virgulé mobilé
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Inmulgire:
+' similar cu adunarﬁa
+fmul adresa //Virguléi mobiléi
 fimul adresa //intreg
-fmul st (O) , st (i) //ST(0):ST(0)*ST(i)
-fmul st (i) , 511(0) //ST(i):ST(i)*ST(O)
-fmulp st (i) , st (O) //cu scoatere ST(0)
-din stivﬁ
+fmul st (O) , st (i) //ST(O):ST(O)*ST(i)
+fmul st (i) , st (O) //ST(i):ST(i)*ST(O)
+fmulp st (i) , st (O) //cu scoatare ST(O)
+din stivéi
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Arhilectllra calcullloarelor 5i sixteme a: upmn - ASM
-impérgire ( 1)
-- impﬁrgire in virgulﬁ mobilé
-- ST(0) - dc obicei deimpérgitul 5i rezultatul
-' celélalt operand
-i locatie de memorie (virgulé mobili sau Tntreg)
-— all registru din stiva FPU
-- in ultimul caz, celﬁlalt registru poate ﬁ
-deimpéryitul §i destinagia rczultatului
-i eventual cu eliminarea ST(0) din stivi
-—m
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+imp érgim (1 )
+- impérgim in virgulé mobilé
+' ST(O) - d6 obicei ddmpérﬁtul gi rezultatul
+' cﬁlélalt opﬁrand
+— locagie de mamorie (virgulé mobilé sau intrag)
+— alt ragistru din stiva FPU
+' in ultimul caz, celélalt ragistru poate ﬁ
+deimpérgitul §i d6stina§ia rezultatului
+— 6v6ntual cu eliminarea ST(O) din stivé
+—M3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Arhilectura calcullloarelor 5i sixteme a: open“ - ASM
-Impér'gire (2)
-- sintaxa
-fdiv adresa //virgulé mobilé
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Impérgire: (2)
+' sintaxa
+f div adresa //Virguléi mobiléi
 fidiv adresa //intreg
-fdiv st (O) , st (i) //ST(0):ST(0)/ST(i)
-fdiv st (i) , st (O) //ST(i):ST(i)/ST(0)
-fdivp st (i) , st (O) //cu scoatere ST(0)
-din stivﬁ
+fdiv st (O) , st (i) //ST(O)=ST(O)/ST(i)
+fdiv st (i) , st (O) //ST(i)=ST(i)/ST(O)
+fdivp st (i) , st (O) //cu scoatare ST(O)
+din stivéi
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:21**************
-Arhilectura calcullloarelor 5i sixteme a: upmn - ASM
-Impargire inversé ( l)
-~ similar cu scaderea inversa
-' a1 doilea operand este deimpérﬁtul, iar
-primul este impérgitorul
-' dar rezultatul este scris tot in primul
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Imparpre: 1nv6rsa (1)
+' similar cu scaderaa inversa
+' a1 doilaa operand este deimparritul, iar
+primul 6ste imparritorul
+' dar rezultatul 6st6 scris tot in primul
 operand
-—us
+145
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:22**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Impﬁr'gire inversé (2)
-- sintaxa
-fdivr adresa //virgulé mobilé
-fidivr adresa //intreg
-fdivr st (O) , st (i)//ST(0):ST(i)/ST(0)
-fdivr st (i) , st (O ) //ST(i):ST(0)/ST(i)
-fdivrp st (i) , st (O)//scoate ST(0) din
-stivé
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Impérgire invezrsé (2)
+' sintaxa
+fdivr adresa //virgu1éi mobilé
+fidivr adr€sa //intreg
+fdivr st (O) , st (i) //ST(O):ST(i)/ST(O)
+fdivr st (i) , st (O ) //ST(i)=ST(O)/ST(i)
+fdivrp st (i) , st (O ) //scoate ST(O) din
+stivéi
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-Arhileclura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Diverse operagii unare
-' ST(0) 6ste singurul operand (implicit)
-i 5i dcstinaﬁa rczultatului
+Arhitectura calculatoarelor §i sisteme de operare - ASM
+Diverse opﬁralzii unare:
+' ST(O) 6ste singurul oparand (implicit)
+— §i destinayia rezultatului
 fabs
-— calculeazé valoarea absoluté a ST(O)
+— calculeazéi valoama absoluté a ST(0)
 fchs
-i schimbi semnul valorii din ST(O)
+— schimbé semnul valorii din ST(O)
 fsqrt
-i caculeazé rédécina pitrati din ST(0)
-N7
+— caculeazé rédécina pétraté din ST(O)
+147
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:24**************
-Arhilectura calcullloarelor 5i sixteme a: 0pm“ - ASM
-Compara'gii
-~ compari ST(0) cu alt registru din stiva FPU
-i ST(0) este primul termen al comparayiei
-' seteazé indicatorii de condigii
+Arhitectura calculatoarelor 5i sisteme de operare - ASM
+Comparagii
+' comparé ST(O) cu alt mgistru din stiva FPU
+— ST(O) 6ste primul ternmn a1 comparagiai
+' seteazé indicatorii d6 condigii
 ' sintaxa
-fcomi st (O) , st (i)
-fcomip st (O) , st (i)
-i in a doua variantﬁ, ST(0) este scos din stivé
-—ux
+fcomi st(O),st(i)
+fcomip st(O),st(i)
+— in a doua varianté, ST(O) ﬁste scos din stivé
+—148
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Arllilectura calcullloarelor 5i sisteme do 0pm“ - ASM
+Arhitectura calculatoarelor §i sisteme de operare - ASM
 Valorile indicatorilor de condigii
-SW) > STU) u.-
-ST(0) < 5T0) u-
-ST(0> I STU) --
+ST<<>> > 8T0) I.“
+ST<<>> < ST<i> I.-
+ST(0> I ST<i> —-
 
 ***************Ending Page***************
 

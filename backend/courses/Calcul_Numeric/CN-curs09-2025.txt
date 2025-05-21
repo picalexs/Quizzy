@@ -3,7 +3,7 @@
 Calcul Numeric
 Cursul 9
 2025
-Ann: Igmzl
+Anca Ignat
 
 ***************Ending Page***************
 
@@ -11,60 +11,60 @@ Ann: Igmzl
 ***************page number:2**************
 Descompunerea dupﬁ valori singulare
 (Singular Value Decomposition)
-Teoremz'l
-Fie A e R'M'K Atunci existé 0 matrice ortogonali pitraticé de
-dimensiune m, UeR'mW, o matrice ortogonalé pétraticz'a de
-dimensiune n, V e Rm’ $i constantele pozitive:
-m 2 a; 2 2 cr, >0, r_< min{m,n} ai
-D 0
-r - a
-A=U2V’, EeRM ,2= ,
-0(m’r)><r Ounirbqniry (I)
-D e Rm, D = diag|:o",...,a',:|
-|
+Teoremﬁ
+Fie A e Rm”. Atunci existé o matrice ortogonalé pétraticé do
+dimonsiune m, U e Rmx'", o matrice ortogonalé pétratioé do
+dimensiune n, V e Rm" 5i oonstantele pozitive:
+0'1 2 0'2 Z 2 o-r >0, r _< min{m,n} ai
+T D 0r><(n—r)
+A=UZV , ZeRmx" ,2: ,
+0(m—r)><r 0(m-r)><(n—r) (1)
+D e RM, D = diag|:o'1,...,o'r:|
+1
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Constanta r este chiar rangul matricei A, r I rang(A).
-Constantele o7, 0'2, , m poam'i numele de valnri singulare
+Constanta r este chiar rangul matricei A, r = rang(A).
+Constantelﬁ 0'1, 0'2, , o'r poarté numele d6 valori singulare
 ale matricei A.
-Folosind relalia (1) avem:
-A’ =(UEVT)T = VETU',
-AA’ I UEVTVETUT I UEETUT I UAW UT ,
-DZ 0!X(l!|—r]
-A," = 22' = e 111m”
-01m-rer 0(m-er-V)
-1
+Folosind relayia (1) avem:
+AT = (UZVT)T = VZTUT,
+AAT :UZVTVZTUT :UZZTUT :UAm UT ,
+1f 0
+0(m-r)xr 0(m—r)><(m—r)
+2
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-ATA = VETUTUEVT = VETEV' = VA" V’ ,
-DZ 0r><(n—r)
-A” = 212‘. = e Rm‘
-0M4», 0(nir]><(nir]
-Tinémd cont de ortogonalilatea matricelor U 5i V, putem
-rescrie relaliile de mai sus astfel:
-(AA')U= UAm ,Am =diag|:a'lz,a'21,.‘.,0'f,0,...,0:| E 1R""“"
-(ATA) V = V A” ,A” =diag[af,a;,...,af,0,...,0]e 112"“
-1
+ATA I VZTUTUZVT I VZTZVT I VA" VT ,
+112 0
+An =ZTZ=|: r><(n—r) :|€Rn><n
+0(n—r)><r 0(n—r)><(n—r)
+1" inénd cont de ortogonalitawa matricelor U 5i V, putem
+rescrie relayiile de mai sus astfel:
+(AAT) U= UAm ,Am = diag[af,a§,...,af,0,...,0] E Rm
+(ATA) V = V A” ,An = diag[af,aj,...,a§,0,...,0] e Rm
+3
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Din aceste relagii deducem 051 a:,a':,...,o'f sunt valorile
-proprii strict pozitive ale matricelor AA’ si/sau ATA iar
-matricele U $i V sunt matrice ale céror coloane sum vectorii
-proprii asociati (cei ce formeazz'i baze ononormate)
-Matricele AAT si ATA sunt matrice simetrice:
+Din acaste relayii daducem 051 012,022,“,0'3 sunt valorile
+proprii strict pozitiv6 ale matricelor AAT gi/sau ATA iar
+matriceﬂe: U $i V sunt matrice ale céror coloane sunt vectorii
+proprii asociati (cei ce formeazé baze: ortonormate).
+Matricele AAT §i ATA sunt matrice simetrice:
 
 T T T T
-(AAT) =(AT) AT=AAT , (ATA) =A'(A’) =ATA
-5i au toate valorile proprii nenegative:
+(AAT) =(AT) AT=AAT , (ATA) =AT(AT) =ATA
+$i au toate valorik: proprii nenegative:
 
 4
 
@@ -72,813 +72,850 @@ T T T T
 
 ***************Beginning Page***************
 ***************page number:6**************
-(AAT)u = Au 2 (AATu,u) = (1,11,14):
-(Armm HM’
-A. = i = if 2 0
-(M) M2
-
-Putem folosi descompunerea dupi valori singulare pemm a
-deﬁni pseudo-inversa unei matrice oarecare A e Rm" (mém)
-
-A = UEV’ , A" =7 (U2V’)" = (V’)" 2;‘U-‘ = V>:;‘U’
-Réméne de deﬁnit matricea 2;‘, Urmﬁnd acest ra§ionament
-se deﬁneste pseudainversa Mnnre-Penrose a unei matrice
+(AAT)u = Au :> (AATu,u) = (lam) :>
+2
+(ATu,ATu,) HATuH
+l = — = —22 Z 0
+("9") M2
+Putem folosi descompunerea dupé valori singulare pentru a
+deﬁni pseudo-inversa unei matrice 0ar€care A e Rm” (nim).
+A = UEVT , A-l =? (UZVTT = (VT)_1 2311-1 = V2;1UT
+Rémﬁne de deﬁnit matricea 2;‘. Urménd acest rationament
+se deﬁne$te pseudoinversa Moore-Penrose a unei matrice
+5
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-A e RM" astfel:
-I I T I I DA 01mm’)
-A =VEU ,A elRm", E = elRm'",
-0(n-v)xr Owl-rMm-r)
-l l
-D" e 1R’X',D" = diag|:i,...,i:|.
-al gr
-Pseudoinversa deﬁniti 1nai sus satisface unnitoarele
-proprietigi:
-(A')' =4 , VAERM ;(A1~)':(Al)" VAERM
-AA'A=A , A'AA'=A'
-b
+A e Rm” astfel:
+
+lrl 0
+AI = VZIUT ’ AI E Rnxm , 21 =|: r><(m—r) :|€ Rnxm ,
+
+0(n—r)xr O(n—r)x(m—r)
+D‘1 e R’X”,D_1 = diag[i,...,i].
+
+0-1 o-r
+Pseudoinversa deﬁnité mai sus satisface urméitoarele
+propriﬁtéyi:
+I I m><n T I I T m><n
+(A) =A ,VAeR ; (A) :(A) ,VAER
+AAIA = A , AIAAI = AI
+6
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-Exislé o proprietme care nu mai este salisfécuté de
-psudoinversﬁ de$i esle respectati de inversa clasici:
-A I
-3A,B 8.14 (AB) #301‘.
-Descompunerea dupé valori singulare poate ﬁ utilizati $i
-pentru rezolvarea sistemelor liniare cu matrice oarecare
-("1%")
-Ax=b , AeR"""' , beIR”I , x:=A'beIR’K
+Existé 0 proprietate care nu mai este satisfécuté de:
+psudoinversé de$i 6ste respectaté de invﬁrsa clasicé:
+EIA,B a.i. (A3)’ ¢BIAI.
+Derscompunerea dupz'l valori singulare poate ﬁ utilizaté $i
+pﬁntru mzolvarea sistemelor liniare cu matrice oarecare:
+("HE")
+Ax=b , AeRmX” ,beR'" , x:=AIbe]R".
 7
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Problema celor mai mici pitrate
-AeR""‘",be]R"' , Ax=b,xe]R" (1)
-auxl +auxz +"'+a|,,x,, =bl
-allxl + azzxz + "'+ “21.x” = b2
-aux! + ainZ + + ainxn : bi
-umlxl + amzxz + amnx" = b,"
-X
+Problema celor mai mici pz'ltrate
+AeRmx”,beRm , Ax=b,xeR" (1)
+aux1 +alzx2 + ---+ alnxn = b1
+aux1 + aux2 + ---+ aann = b2
+ailxl + ai2x2 + ' ' ' + ainxn = bi
+amlxl + am2x2 . 0 . + amnxn = bm
+8
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Sistemul are soluyii clasice daci:
+Sistemul are solugii clasice dacé:
 rangA = rang [A | b]
 
-0 m < n - 0 inﬁnitatc dc solugii
-o m 2 n
+¢ m < n - 0 inﬁnitate de solutii
+¢ m Z n
 
-» dacz'i rangA = rang [A | b] solulii clasice
+- dacé rangA = rang [A | b] soluyii clasice
 
-- daci rang A ¢ rang [A | b] solugii in sensul celor mai
+- dacéi rang A 5b rang [A | b] solutii in sensul calor mai
 
 mici pétrate
-q
+9
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:11**************
-Vectorul reziduu:
-r(x)=b—Ax e 1R”
+V€ct0ru1 rﬁziduu:
+r(x)=b—Ax e Rm
+Vectorul x e 1R" se nume$te solujie in sensul celor mai
 
-Vcctorul x e 1R" sc numcstc solupie in sensu! celor mui
-micipdtratz pcntru sistcmul (1) dacé cstc solutia urmétoarci
-problems de optimizare:
+micipiitrate pentru sistemul (1) dacé este soluyia urmétoarei
+probleme de optimizare:
 
-min{ Hr(x)H: = Hb — Axni; x e 111"} (LSP)
-l 4 0
-A: 2 S 6R3“ , b= 0 , m=3,n=2
-3 6 l
-\n
+. 2 2 n
+
+mln{Hr(x)H2 = H1; - AxHZ; x G R } (LSP)
+1 4 0
+A= 2 5 ER3X2 , b= 0 ,m=3,n=2
+3 6 1
+10
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:12**************
-rangA =2¢rang [A |b] =3
+rangA =2 qérang [A | b] =3
 Sistemul:
-x‘ + 4xz = 0
+x1 + 4x2 = 0
 
-2xI + 5x2 =0 (2)
+2x1 + 5x2 = 0 (2)
 
-3xl + 6x2 =1
-nu are soluyie clasici (nu existé xz, x2 care sé satisfaci toate
-cele 3 ecuaﬂi simultan). Vectorul reziduu are formal
+3x1 + 6x2 =1
+nu are solu§i6 clasicéi (nu existé x1, x2 care sé satisfacéi toate:
+(36:16: 3 ecuayii simultan). Vectorul reziduu are forma:
 
-u
+11
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-0 1 4 —xI — 4x2
-r(x)=b— Ax = 0 — 2 5 [x'] = —2xI —5,\c2
+0 1 4 —x1 — 4x2
 x
-
-1 3 6 2 1-3x, —6x2
-Solulia in sensul celor mai mici pﬁtrate a acestui sistem este
-deﬁnilé ca solugia problemei de optimizare:
-min{(—x, —4x1)z +(—2x| -5xz)Z +(1-3x, -6x,)1; xnxz e 1R}
-
-min{l—6xl — 12x2 + 64xlx2 + 14x12+ 77x5; xI ,x2 e R}
-\2
+r(x)=b—Ax= 0 — 2 5 [ I] = —2x1 —5x2
+x
+1 3 6 2 1-3x1—6x2
+Solutia in sensul celor mai mici pétrate a acestui sist6m este
+deﬁnité ca solugia problenmi de optimizam:
+min{(—x1 — 4x2)2 + (-2x1 — 5x2)2 + (1 — 3x1 — 6x2)2; x1,x2 e R}
+min{1 - 6x1 - 12x2 + 64x1x2 + 14x12 + 77x22; x1,x2 e 1R}
+12
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Aceasté problemé de minimizare are solulia:
-13 2 1
-x1= E’ x2=— 5, || rm “i=3
-5i este solugia in sensul celor mai mici pitrate a sistemului (2)‘
-range(A)={ y e 1R”;y= u,Al +a2A2 +---+a"A", a’. e IR, i =l,n}
-A =|:Al A2 ---A":| , A’ e 1R" sunt coloanele matricii A
-n
+Aceasté problemé de minimizare are: solugia:
+13 2 2 1
+x = — , x =— — , r x =—
+1 18 2 9 ll ( )||2 6
+§i 6ste soluyia in S€IIS111 celor mai mici pétrate a sistemului (2).
+range(A) ={ y e Rm;y = a1A1+a2A2 + ---+anA”, al. e R, i=1,n}
+A = [A1 A2 ---A”:| , Ai e Rm sunt coloanele matriciiA
+13
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Teoremi
-Fie A e Rm" (m 2 n), b e 1R”. Un vector x e 1R" minimizeazz'i
-norma euclidiani a vectorului reziduu |\r(x)||2=||b-Ax|\z,
-rezolvénd problema (LSP), daci 5i numai dacé:
-r(x) J_ range(A) <:> A'r(x)=0
-sau echivalent:
-ATAX = A'b (3)
-Sislemul (3) poartﬁ numele de sistemul de ecuaﬂi normale.
-u
+Teoremﬁ
+Fie A e Rm" (m 2 n), b e Rm. Un vector x e R" minimizeazé
+nonna euclidiané a vectorului reziduu ||r(x)||2=||b-Ax||2,
+rezolvﬁnd problema (LSP), dacé 5i numai dacé:
+r(x) J_ range(A) <:> ATr(x)=0
+sau 6chivalent:
+AT Ax = AT b (3)
+Sistemul (3) poarté numele de sistemul de ecuagii normale.
+14
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-Este un sistem pétratic de dimensiune n, matricea sistemului
-ATAER'M' este simetricé. Sistemul de ecualii normals (3)
-este nesingular dacé 5i numai dacé. rangA = n, in acest caz
-solugia x a sistcmului (3) cstc unici‘
-detA'AaﬁO crangA=n
+Este un sistﬁm pétratic d6 dimensiune: n, matricea sistemului
+ATAE RM” esta simetricé. Sistamul de écuatii normale (3)
+este nesingular dacé 5i numai dacé rangA = n, in acest caz
+soluyia x a sistemului (3) este unicé.
+detATA¢ 0 <:> rangA = n
 1 4
-, 14 32 ,. 3
-A= 2 5 , A A= , A b=
+T 14 32 T 3
 32 77 6
 3 6
-14xl +32):z =3 13 2
-2 x, =i , xz=— i
-32x‘ + 77xz = 6 18 9
-\s
+14x1 + 32x2 = 3 13 2
+:> x1=— , x2=— —
+32x1 +77x2 =6 18 9
+15
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
 Pseudo-inversa matricei A
-Presupunem cé A are rang A : n. Alunci pseudo-inversa
-poate ﬁ deﬁnitz'x ca:
-+ T 4 T >< + I
-A =(A A) A QR” (A =A ?)
-14 32 " 1 2 3
-A" = ""
+Pmsupunem 051 A are rang A = n. Atunci pseudo-inversa
+poate ﬁ deﬁnité ca:
++ T _1 T X + I
+A =(A A) A GR'H" (A =A ?)
+14 32 ‘1 1 2 3
+A+ = *
 32 77 4 5 6
-m
+16
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-Rezolvarea in sensul celor mai mici pﬁtrate a unui sistem
-de ecuaﬁi liniare nepitratic
-l) Folosind factorizarea Cholesky (descompunere LU)
-pentru matrice simetrice:
-ATA = LLT, L e RM" matrice inferior triunghiularﬁ
-0 Sc calculcaze'l matricca ATA 5i vcctorul ATb;
-0 Se calculeazi factorizarea Cholesky a matricei ATA=LLT;
-I Se rezolvi sistemul inferior triunghiular Ly=A7b pentru y;
-I Se rezclvi sistemul superior triunghiular LTx= y pentru x;
-P
+Rezolvarea in sensul celor mai mici pz'ltrate a unui sistem
+de ecuatii liniare nepﬁtratic
+1) Folosind factorizarea Cholesky (descompunﬂe LU)
+p6ntru matrice simetrice:
+AT A = LLT, L e Rm” matrice inferior triunghiularﬁ
+0 Se calculeazé matricea ATA 5i V€Ct0f111ATb;
+¢ Se calculeazé factorizarea Ch016sky a matricei ATA=LLT;
+0 Se rezolvé sistemul inferior triunghiular Ly= AT b pentru y;
+0 Se rezolvé sistemul superior triunghiular LTx= y pentru x;
+17
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-2) Se calculeazi descompunerea QR (cu algoritmul lui
+2) Se: calculeazé dﬁscompunerea QR (cu algoritmul lui
 Householder adaptat) pentru matricea A:
-A = QR , Q e RM" matrice orlogonalé , R e Rm",
-I? E RIIXIA i l l I I y
-R = , R —matrlce superlor munghlulara
-Om-m"
-0 Se calculeazé factorizarea QR modiﬁcati a matricei A;
-0 Se calculeazé vectorul QT!) ;
-\x
+A = QR , Q e Rmx'" matrice ortogonalii , R e Rm”,
+R E Rm — . . . . V
+R = 0 , R —matr1ce superlor trlunghlulara
+(m-n)><n
+¢ Se calculeazé factorizarea QR modiﬁcatéi a matricei A;
+0 Se calculeazé vectorul QT b ;
+18
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-. Se rezolvi sisternul sup. triunghiular Rx =(Q1b)i=l,n;
-3) Se foloseste desc. dupﬁ valori singulare a matricei A
-A = UEVT, 2e Rm" ,U e RM" , V e Rm
-I Se calculeazé SVD pentru matricea A=UXV[;
-0 Se calculeazé vectorul U112;
-0 Se rezolvé sistemul diagonal 2w = UTb pemru w;
-0 Solugia este x: Vw;
-w
+0 Se rezolvé sisternul sup. triunghiular Ex = (QTb);1 ;
+3) S€ f010se$te desc. dupé valori singulam a matricei A
+A=UZVT, ZeRmX” ,UeRmX'" , VeRnx”
+¢ S€ calculeazé SVD péntru matricea A=UZVT;
+0 Se calculeazé vectorul UT b;
+t Se rezolvé sisternul diagonal 27w = UT b pentru w;
+0 Soluyia este: x=Vw;
+19
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-1), 2) sau 3) 7 —) se recomandé 2)
-lnterpolare numericﬁ
+1), 2) sau 3) 7 9 s6 mcomandé 2)
+Interpolare numericﬁ
 
-Presupunem 051 despre o ﬁlnclie f cunoastem dear valorile
-inlr-un numir ﬁnit de puncte, Pomind de la aceste date, dorim
-sé aproximém funclia f intr-un alt punct‘
+Pmsupunem 6'21 despre 0 functie f cun0a$tem doar valorile
+intr-un numér ﬁnit de puncte. Pornind de la aceste date, dorim
+sé aproximém funcyia f intr-un alt punct.
 
-X x0 XI X2 ... Xn-l Xn
+x x0 x1 x2 xn-1 xn
 
-f yo y: yz y,,.1 y"
-in tabelul de mai susf(x‘-) =y,- , i=0,l,...,n 5i xi¢x,- , [#j.
+f yo y1 yz yn-1 yn
+in tabelul d6 mai susf(x,-) = yi , i=0,1,...,n 5i xi¢xj , i¢ j.
 
-:n
+20
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Dal un punct x,=‘ Xi, i=0,l,...,n dorim s5 aproximz'im f(x)
-cunoscind cele (n+1) perechi (x;,y,-), i:0,...,n. Punctele x,-
-se numesc nnduri de interpolare.
+Dat un punct x¢ xi, i=0,1,...,n dorim s51 aproximém [(x)
+cunoscénd cele (n+1) pemchi (xi,y,-), i=0,...,n. Punctele x,-
+sa numasc noduri de interpolare.
 
 Polinomul de interpolare Lagrange
 
-Notim cu 17,. mullimca polinoamclor dc grad ccl mult n‘
-Dimensiunea acestui spatiu este n+1, baza uzualé ﬁind daté
-dc polinoamele I, x, x2,..., x‘" Vom considera 0 211151 bazé in
-acest spagiu‘ Se considerz': polinoamelepi:
+Notém cu 1L mulgimea polinoamelor de grad (:61 mult n.
+Dimensiunea acestui spagiu este: n+1, baza uzualé ﬁind daté
+de polinoamele 1, x, x2,..., x”. Vom considera 0 alté bazéi in
+acest spagiu. Se consideré polinoamek pi:
 
-{0 pentru j #i _ _
-piel'ln astfelcapi(xj)= _ _,j=0,...,n,l=0,...,n
-1 pentru j=l
-2|
+0 pentru j ii _ .
+pieHn astfelcapi(xj)= _ .,]=0,...,n,l=0,...,n
+1 pentru J = l
+21
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:23**************
-Din relagia p.- (x,- )=0, Vj ¢ i 5i faptul c5 p.- este de grad n
-rezulté cz'i xu, x1,...,xi-1, x,-+;,...,x,, sunt cele n rédécini ale
+Din relagia p,- ( xj )=0, \7’ j ¢i 5i faptul 05 p,- este: de grad n
+rezulté cé x0, x1,...,x,-.1, x,-+1,...,xn sunt cele n rédécini ale
 polinomului pi.
 Avem:
-11,-(X)= f,(x—xn)"'(X—X,-_|)(X—xi+|)"'(x—x,.),
-ci elR,i=0,...,n
+pi(x) = ci(x _ x0)"'(x _ xi_1)(x _ xi+1)"'(x _ x"),
+cl. e R,i= 0,...,n
 
-Constanta (.‘i SC dctcrminﬁ din rclatia pi(Xi) = I :
-pi(x[)= l = ci(xi _xo)"'(xi _xi—l)(xi _x:+l)"'(xi _ x“) 3
-c _ l
+Constanta ci se determiné din relatia p,- (xi) = 1:
+pi(xi) = 1 = ci(xi _ x0)"'(xi _ xi-1)(xi _ xi+1)"'(xi _ xn) :>
+c _ 1
 
-' (xi _xn)"'(xi _xi’|)(xi _xr+|)“‘(xi _x“)
+l (xi _ x0)"'(xi _ xi—1)(xi _ xi+1)"'(xi _ xn)
+
+22
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Polinoamele [Ii au fol-ma:
-(X—X)~"(X-x.~_)(X-X.- )'"(X-x,.) " x—x-
-I'.-(x)= n=rhiq
-(xi _ x0)"'(xi _ xi-l)(xi _ xi+|)"'(xi _ x") {=9 xi _ xi
-m
-i = 0,...,n
+Polinoamele p,- au forma:
+(x-x)---(x—xi_ )(x-xl. )---(x—xn) ” x-x.
+pi (x) = 0 1 +1 = H( J )
+(xi _ x0)"'(xi _ xi-1)(xi _ xi+1)"'(xi _ xn) i=9 xi _ xj
+jil
+i = 0,. . . ,n
 Propozitie
-Polinoamclc pa, p1,..., p’. formcazé o bazé in III,
-Demonstratie: Vom aréta cé cele n+1 polinoame sunt liniar
-independente:
-:1
+Polinoamela p0, p1,..., p” form6azé 0 bazé in 11,.
+Damonstratie: V0111 aréta C51 cele n+1 polinoanw sunt liniar
+independenté:
+23
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-q(x)=llop0(x)+a|11|(x)+---+ll,,p,,(x)=0,Vx
-:>ao=a|=---=an=0
-Vom face pe rénd x =xu, x =x|,..., x = x" in polinomul q:
-X=xn q(xn)=a»ﬂﬂ(xn)+a.p.(xn)+'"+"npn(xn)=
-:aul+a,0+---+an0=au=0 :>au=0
-x=xl q(x,):0 :> al=0
-x=xk q(xk)=a“m(xk)+'"+akm(xk)+'"+llnl'..(xk)=
-:a90+---+uAl+---+un0=a‘=0:>ak=0
-1»
+q(x)=a0p0(x)+a1p1(x)+---+anpn(x)=0,‘v’x
+:>a0=a1=---=an=0
+Vom face pe rénd x=x0,x=x1,...,x=xn in polinomulq:
+x=x0 q(x0)=a0p0(x0)+alpl(x0)+---+anpn(x0)=
+=a01+a10+~~+an0=a0=0 :>a0=0
+x=x1 q(x1):() 2 a1=0
+x=xk q(xk)=a0p0(xk)+---+akpk(xk)+---+anpn(xk)=
+:a00+---+ak1+---+an0=ak=0:>ak=0
+24
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-x=xu q(x")=0 3 an =0
+x=xn q(xn):0 :> an =0
 
-Toate constamele a,- sunt nule deci polinoamele
-{pi;i= 0,...,n} formeazé 0 bazi in 17”.
-Pentru a aproxima functiafpomind de 1a tabelul de mai sus,
-vom construi un polinom In EIZ, ai s5 satisfacé condiyiile de
+Toate constantele a,- sunt nule daci polinoamale
+{pig i = 0,...,n}f0rmeaz51 0 bazé in 17”.
+P6ntru a aproxima funcyia f pornind de la tabelul de mai sus,
+vom construi un polinom In 617,, ai $51 satisfacé condifiile de
 interpolare:
 
-I“ el'I" , l"(x‘.)=y|. , Vi=0,...,n (l)
-
 Odaté construit acest polinom, vom aproxima f(x) prin
-MXL f(X)~ 1.,(X)
+MX), f (X) z 1,,(X)
 
-:5
+25
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Vom scrie polinomul l,. in raport cu noua bazé
-{pi;i= 0,...,n}, deci existi constantele reale a0, a1,...,an
+Vom scrie polinomul In in raport cu noua bazé
+{125i = 0,. ..,n}, deci axisté constantele reale a0, a1,...,an
 astfel ca:
 
-n
-
-Iﬂ<x>=2ami<x>
+1,,(x) = Zaipmx)
 
 i=0
-Constantele a‘ se determiné astfel:
-yk =Mn)="01,080+"-+"kl'k(xk)+‘"+ll,,l'n(xk)=
+Constantele ak se determiné astfel:
+yk = ln(xk)=a0p0(xk)+---+akpk(xk)+---+anpn(xk) =
 
-=au0+~~+akl+~~~+an0=aA 2 ak =yh
+=a00+~~+ak1+~~~+an0= ak :> ak =yk
 
-Prin urmare un polinom de grad n care indeplinesc condiliile
-de interpolare (1) este:
+Prin urmare un polinom de grad n care indeplinesc conditiik:
+de interpolate (1) este:
 
-:5
+26
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-" " (X-x¢)"'(x-x.’|)(X-xi+|)'"(X-X,,)
-ln<x>= i im= .
-2y p 2y (x.- -x.,)---<x, -x.-_.)<x, —x.-+.>~~(x.- -x..>
-" " x-x.
-= yi (4) (2)
-F,
-Polinomul din formula (2) se numeste polinomul dc
+” ” (x-x0)---(x—x._1)(x—x.+1)---(x—x)
+1,,(X) = yin-(X) = yi —
+g g (xi_x0)"'(xi_xi-1)(xi_xi+1)"'(xi_xn)
+" " x — x.
+= yi (—’) (2)
+I; 1;! xi — x j
+jil
+Polinomul din formula (2) se nume$te polinomul de
 interpolare Lagrange.
-Propuziﬁe
-Polinomul l" dat de formula (2) este unicul polinom de grad
-n care indepline$te condigiile de interpolare (1)‘
+Propozitie
+Polinornul In dat de formula (2) este unicul polinom de grad
+n care indepline$t6 conditiile de interpolare (1).
+27
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Demonstralje: Presupunem cz'i mai existz'i un polinom qEII,
-care indepline$le condiliile (1):
-11511,. »q(xi)=y, , Vi=0,.--,n
+D6m0nstra§i€ Presupunemq (:51 mai existé un polinom qelYn
+cam indeplinegte condiyiila (1):
+qun , q(xi)=yi , Vi=0,...,n
 
-Fie polinomulp(x)=ln(x)-q(x) 611,.‘
+Fie p01in0mulp(x)=ln(x)-q(x) 6 17,1.
 
-p(xk)=ln(xk)—q(xk)=yk —y‘ =0,\1k=0,---,n
-Polinomul p are ca ridécini mate nodurile de intemolare‘
-Polinomul p este polinom dc grad cel mull n $i are (n+1)
-rédicini distincte (x,- ,=‘x,-,V i#j). Acest polinom nu poate ﬁ
-decét polinomul identic nul:
+p(xk) = ln(xk)_q(xk) = yk _yk = 0 9Vk = 09-“9”
+Polinomul p are ca rédécini toate nodurile: de interpolare.
+Polinomul p este polinom de grad cel mult n gi are (n+1)
+rédécini distincte: (x,- ¢xj,‘v’ i¢ j). Acest polinom nu poate ﬁ
+deceit polinomul identic nul:
 
-2x
+28
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-110:) = l,.(X)-q(><) E 0 Vx, l,,(X) = q(X) Vx
-Polinomul L, este unicul care satisface (2).
-Fic wﬂ+l polinomul dc grad (n+1) care arc ca rédicini
-nodurilc dc interpolarc:
-w,,+,(x) = (x- xﬂ)(x— x‘)~-(x — x") e HM,
-Fie a = min{x1;, x1,..., x”), b = maxﬁw, x;,..., x”).
-:v
+P(X) = ln(X) — q(x) E 0 Vx , LAX) = q(x) VX
+Polinomul In este unicul care satisface: (2).
+Fie wn+1 polinomul de grad (n+1 ) cam am ca rédécini
+nodurile d6 interpolare:
+wn+1(x) = (x- x0)(x— x1)---(x— x”) e 1-1"+1
+Fie a = min{x0, x1,..., xn}, b = maX{x0, x1,..., xn}.
+29
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
 Teorema restului (eroarea la interpolarea Lagrange)
-Fie f e 0"“ [a,b] $i i6 [a,b], i¢xi ,Vi = 0,‘..,n.
-Atunci existi un punct ye[u,b], y=y(xu,x|,...,x",f)
-(punctul y dcpindc dc nodurilc dc intcrpolarc Xi $1 dc punctul
-I?) astfcl 05. croarca la interpolarca numcrici cstc daté dc:
-m
+
+n+1 — — -
+
+Fi6 f e C [a,b] gi x e [a,b], x i xi ,Vl = 0,...,n.
+Atunci existé un punct ye[a,b], y=y(x0,x1,...,xn,§)
+(punctul y depinde de nodurile de interpolare x,- gi de punctul
+76) astfel cé 6r0area 1a interpolarea numericé este daté de:
+
+3O
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-. i i _ f‘"“’(y) i
-
-1(x)_ll,(x)—mwn+|(x) (3)
-Demonstralie: Considerim functia F:
-
-F(x) := f(x) — l"(x) — cw"+l (x)
-Constanta reali c este aleasi astfel ca F0?) = 0 adicﬁ:
-
-C=M, (“xi Vi) D w"+‘(§)¢0) (4)
-WHO‘)
-Funciiafﬁind de clasé 6"” pe inlervalul [a,b] rezultz'a cé $i
-funqia F este din C'"”/a,b]. Avem:
-n
+_ _ f ("+“(y) _
+x —l x = —w x 3
+f( ) n( ) (n+1)! n+1( ) ()
+D6m0nstra§iez Considerém functia F:
+F (x) := f (x) — ln (x) — cwn+1(x)
+Constanta realé c este aleasﬁ astfel ca F (x) = 0 adicé:
+FM, (xixi Vi) :> Wn+1(§)¢()) (4)
+wn+1 (x)
+Funcyia f ﬁind de clasé Cw” p6 intervalul [a,b] rezulté (:51 gi
+funcgia F este din C”+1[a,b]. Avem:
+31
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:33**************
-F(x,.)=f(x,.)—l,|(x,.)—cwn+|(x,.)=y,. —y,. —c0=0 ,Vi=0,...,n
-Funcgia F are (n+2) zerouri, x", x, ""’x~’ i. Aplicénd
-succesiv Teorema lui Rolle rezulti ci F' are (n+1) Zerouri,
-F” arc n zcrouri,m, Fm”) arc 1 zcro in intcrvalul [a,b]‘ Vom
-nota accasti rédﬁciné a lui Fm” cu y. Punctul y dcpindc dc
-zcrourilc iniﬁalc xu,x,,...,x",f §i1
+F(xl.)= f(xi)—ln(xi)—cwn+l(xi)=yl. —yl. —c 0= 0 ,Vi = 0,...,n
+Funcyia F are (n+2) zarouri, x0, x1,...,xn, f . Aplicénd
+succesiv Teorema lui Rolle rezulté 05 F ' are (n+1) zerouri,
+F " are n zerouri,. . ., F (n+1) are 1 zero in intervalul [a,b]. Vom
+nota aceasté rédéciné a lui Fm”) cu y. Punctul y depinde d€
+zerourile initiale x0, x1,...,xn, 2? $i:
 
-y=y(xn,x|,...,xn,§)e[a,b] 1i‘ F‘"*"(y)=0. (5)
-Derivata de ordinul (n+1) a funcyiei F se calculeazi astfel:
+y = y(x0,x1,...,xn,2?) e [a,b] ai. F("+1)(y) = 0. (5)
+Derivata d6 ordinul (n+1 ) a functiéi F se calculeazé astfel:
 
-I f‘"+‘)(x)—0—c(n+l)!= f("+n(x)—c(n+l)!
-x:
+= f(”+1)(x)—0—c(n+1)! = f("+1)(x)—c(n+1)!
+32
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
 (6)
-(derivata de ordin (n+1) a polinomului de grad n In este 0).
-Din relaliile (4), (5) 5i (6) rezulti 05:
-f‘"*"(y) ITYFI (Y) i i fH'mU’) i
-= i = i" _ l = i
-c (n+1)! W,,+.(i) =>f(x) ..(X) (n+1)! WNW)
+(derivata de ordin (n+1 ) a polinornului de grad n ln este 0).
+Din relayiile (4), (5) 5i (6) rezulta ca:
+(n+1) i —l f _ _ (n+1) _
+c: f (y) = f< ) 1‘ )2> f(x)—ln(x)= f (wwmm
+(n+1)! wn+1(x) (n+1)!
 Forma Newton a polinomului de interpolare Lagrange
-Fie lk(x, x0, x1,.‘., XIq f) polinomul de interpolare Lagrange
-pentru funcxiafpe sistemul de noduri distincte {xm x1,..., x1.)
-Propoziﬁe
-n
+Fie lk(x, x0, x1,..., xk, ﬁ polinomul de interpolate Lagrange
+pentru functia f pe sistemul de noduri distincte {x1}, x1,.. ., xk}.
+Propozitie
+33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-FiE light, X0, X1,..., XI“), f), llkl(x, XI, X2,..., XI‘, ﬂ 61L’:
-polinoamele de interpolare Lagrange pemru funclia f pe
-sistemele de noduri {xm x;,..., Xk-I} $i respectiv {xb x;,..., Xk}.
+FiE: lk.1(x, x0, x1,..., xk-1, ﬁ, lk-1(x, x1, x2,..., xk, ﬁ EIYk-l
+polinoarnale de intarpolara Lagranga pentru funcyia f pe
+sistemele d6 noduri {x0, x1,..., xk.1} gi respectiv {x1, x2,..., xk}.
 Atunci:
 
-lk(x,x|,,x|,...,xk,f)=
-= (X-XOIH(X,X,J1,--ka,f)-(X“x1.)IHUQXmXH-“Minn
+lk(x,x0,x1,...,xk,f) =
+= (x_ x0)lk_1(x9x19x29-“ax/(9])-(x-xk)lk_1(x9x09x19---9xk_19f)
 xk _ x0
 (1)
-Demonstrayie: Exercitiu‘
-Considerém urmétoarele problems de interpolare pentru f:
-1»
+D6m0nstra§i€ Exercigiu.
+Considerém urmétoarele probleme de interpolate pentru f:
+34
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-{(Xo,yn),(X.,y,),---,(xkinyH)} —> lki\(x,xn,X.,---,xH,f)
-{(xumuxwuyoy-“(xkw} —> lk<x,xo.xl,---,xk,f)
-Ne intereseazi sé gisim 0 formulz'i de trecere rapid?! de 1a
-polinomul de inlerpolare pe k noduri 1a cel care are un nod in
-plus‘ Deoarece polinomul de grad cel mull k:
-q(x)=Ik<x,x.,,x.,---,xk,f)-IA_.(x,x,.,x,,...,xA_.,/)em
-are ca ridécini punclele X0,XI,...,Xk-I (q(x,~) = yi — yi = 0,
-i=0,...,k-I) avem relayia:
+{(x0,y0),(x1,y1),...,(xk_1,yk_1)} —> lk_1(x,x0,x1,...,xk_1,f)
+{(x0,y0),(x1,y1),...,(xk,yk)} —> lk(x,x0,x1,...,xk,f)
+Ne intereseazé s51 gésim 0 formulé d6 tr6cere rapidé de 1a
+polinomul de interpolare pe k noduri 1a eel care are un nod in
+plus. Deoar6c€ polinomul de grad cel mult k:
+q(X)= lk(x9x09x19---9xk9f)_lk_1(x9x09x19---9xk_19f)E Hk
+are: ca rédécini punctde x0,x1,...,xk.1 (q(x,-) = y,- - yi = 0,
+i=0,...,k-1) avem relatia:
 
-:5
+35
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-k-I
-lk(x,xn,x.....,xk,f> =lk_.(x,xﬂ,x.,-..,xk_.,f>+ AH(x—x,-) (2)
-i=0
-in care A este dat de relaﬂa:
+k—1
+lk(x,x0,x1,...,xk,f)=lk_1(x,x0,x1,...,xk_1,f)+AH(x-xj) (2)
+j=0
+in care A este dat de relayia:
+A= lk(xk,x0,x1,...,xk,f)—lk_1(xk,x0,x1,...,xk_1,f)
 k-l
-Hm —x,)
-i=0 (3)
-15
+H(xk—xj)
+<3)
+36
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-I|—‘ ‘fl x _x-
-z .Vi n( k I)
-y i=0 [=1] ‘xi-x]
-g,
-A = A-l k _ A-l’ =
-HOW “x9 HOW _xi)
-i=0 i=0
-y "‘ y,-
-H(xn_x;) ‘=0 (xk_xi)n(xi_xi)
-j=lJ j!“
-jei
-V
+k-l k-l x _X-
+y i=0 j=0 xi_xj
+A=k_1—k—k_i—=
+H(xk—xj) H(xk—xj)
+j=0 j=0
+y k-l yi
+H(xk—xj) '_0(xk—xi)n(xi—xj)
+j=0 i=9
+J¢l
+37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-hiki' <4)
-i=0
-Hm — x,»
+A = Zk—' <4)
+‘=0 H(xi _ x1)
 i=9
-,=.
-[xk], = y‘ = rm) ,
-[xl,xz,...,xk:|f —[x0,x,,.‘.,xA_|:|/
-[xu,x|,...,xk]j =—
-xk _ x"
-numité diferenfd divizatd dz ordin k a funcfiei f pe nodurile
-{xo,xl,...,xk}y
-xx
+jil
+[xkjf = yk = f(xk) a
+[x1,x2,...,xk:|f —|:x0,x1,...,xk_1:|f
+[x09x19---9xk:|f = —
+xk _ x0
+numité diferenﬂi divizatii de ordin k a funcyiei f pe nodurile
+{x0,x1,...,xk}_
+38
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Propoziﬁe
-k I\
-.V- .V~
-‘=0 n(xl_ _xi) ,=0 "+1 1.
-1::
-pentru orice sistem de noduri {x0,xl,...,xk} 5i orice k.
-Demonstralie: Se face prin inducﬂe. Pemru k=I avem:
-x] _ x"
-[XwXJ/ = y" + y, =l: :l/ I: :I/
-‘xv-x1 x1_xu X|_xu
-Presupunem c5 relalia (8) este valabilé pemm orice k 5i
-pentru crice sistem de noduri {xo,xl,...,xk}, Pentru k+I
-folosim relayia de recurenlé $i apoi aplicém ipoteza inductivi:
-w
+Propozigie
+k k
+.Vi yi
+[x09x19"'9xk:|f=z k =Z(w (x ))y
+i=0 _ i=0 n 1 k
+H (xi x1) +
+i=9
+j-‘f-‘l
+pentru orice sistem de noduri {x0,x1,. ..,xk} gi orice k.
+Demonstrayie: Se face prin inducgie. Pentru k=1 avem:
+x1 _ x0
+[X03351 :lf = y—0 + —y1 = l:—:|f I: :lf
+360-361 361-360 361-360
+Presupunem cé relagia (8) este valabilé pentru orice k §i
+p€ntru 0ric6 sistem de noduri {x0,x1,...,xk}. Pentru k+1
+folosim relatia de recurenyé $i apoi aplicém ipoteza inductivé:
+39
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-[x0’xl""’xk+l]] =+=
-m 1|
-1 m J’.- A J’.-
-:ﬁ‘zh-i‘2~i>=
-“I a F‘ H(xi_xi) ‘=nn(xi_xl)
-r-! 1-»
-[=1 1:!
-l yr. ym
-"‘ ” Hm-Xj) HUM-X)
-j=ll j=l
-my pm
+[x1,x1,...,xk+1]f —[x0,x2,...,xk]f
+[x09x19"'9xk+1]f=—=
+xk+1_x0
+_ 1 k+1 yi k yi _
+—x _x (21m _Z k )-
+k+1 0 ﬁll-10%”) Fol-[(xi-xj)
+j=1 j=0
+j¢i j¢i
+1 yo n+1
+=ﬁ{_k—+k+l—+
+kn 0 H(x0—xj) HUM-xi)
+j=0 j=l
+j¢0 j¢k+1
 k
-y 1 1
-+z[ k V (an-x _x.—x H}:
-‘=1 H(x.—x,) , m . a
-,-=|
-1:1
-m
+y. 1 1
++Z[k—'<ﬁ-ﬁm=
+1=1 H(xi_xj) i k+1 i 0
+j=1
+j¢i
+40
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
 k
-_ y" Yul Y- _
-_ k+l + k+l +2 kn I _
-‘=1
-Hun _ xi) H (xm _ xi) l Hui _ xi)
--=» -=» ‘=0
-11's‘) éslﬂ ll‘!-
-k+l y
-= z n+1 I
-‘:0 H“; _xf)
-jsll
-j:i
-lnduclia este completi.
-4|
+yo yk+1 y i
+_ k+l + k+1 +2 k+1 _
+i=1
+H(x0—xj) H (xk+1—xj) H(xi—xj)
+j=0 j=0 j=0
+j¢0 j¢k+1 j¢i
+k+1
+— 2—y"
+_ k+1
+i=0
+H (xi _ x1)
+j=0
+j¢i
+Inducyia este completé.
+41
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
-Din deﬁnitie se observi 05 diferenga divizatzi
-[xo,x|,...,xk]f nu depinde de ordinea nodurilor
-{x0,xl,...,xk}‘
+Din deﬁniyie se obsﬁrvé 051 dif6ren§a divizaté
+[x0 , x1 ,. . . , xk 1f nu d€pinde de ordinea nodurilor
+{x0,x1,...,xk}.
+Vom nota in continuam cu lk(x) polinomul d6 interpolate
+Lagrang6 pe nodurile: {x0,x1,. ..,xk} pentru funcyiaf Avém:
 
-Vom nota in continuare cu lk(.X) polinomul de interpolate
-Lagrange pe nodurile {xo,x| ,.‘.,x‘} pentru functiaf Avem:
-1,.(X)=10(X)+[l\(X)-10(X)l+'"+[lh(X)—/.,,(X)l+"-+[l,.(X)—l,,,.(X)l=
-=y0+[xo,x‘]/(x-x“)+---+|:xn,x|,...,xk:|l(x-x0)---(x—xk_,)+-~-
-+[x",x.,-‘-.x..]f(x—x")---(x—x.._.>
-4:
+= y0 +[x0,x1:|f (x — x0)+ ---+|:x0,x1,...,xk:|f (x — x0)---(x — xk_1) +
+
++[x0,x1,...,xn:|f (x — x0)---(x — xn_1)
+42
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:44**************
-Am obtjnut forma Newtan a polinomului de interpolare
+Am obtinut forma Newton a polinomului de interpolare
 Lagrange:
-l..(x)=yu+[xwx.],(x-x")+[xu,x.,x2],(x—x0><x—x.)+‘~+
-+[xn,x.,..‘,x”],<x—x.,)---<x—a.)
-4x
+ln(x) = y0 +|:x0,x1:|f (x — x0)+|:x0,x1,x2:|f (x — x0)(x — x1) + ---+
++|:x0,x1,...,xn:|f (x- x0)---(x— xn_1)
+43
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Schema lui Aitken de calcul a diferentelor divizate
-Ne propunern si calculim diferengele divizate
-[xu,xl]f,|:xu,xl,xz]j , , [xu,xl,...,xn]j
+Schema lui Aitken de calcul a diferengelor divizate
+Ne: propunem $51 calculém diferengele: divizate
+[x0,x1:|f, [x0,x1,x2:|f , , [x0,x1,...,xn:|f
 
-necesare construirii polinomului de interpolate Lagrange in
-forma Newton‘ Procedeul folosegte deﬁnigia recursivé a
-difcrcngclor divizatc $1 sc dcsfﬁ§oar5 in n pa5i. La pasul 1 sc
+necesam construirii polinomului de int€rp01are Lagrange in
+forma Newton. Proced6ul folose§te deﬁnigia recursivé a
+diferﬁngelor divizate: §i se desfé§0aré in n pa§i. La pasul 1 se
+calculEsaZé numai difarenge divizate de ordinul 1:
 
-calculeazz'i numai diferente divizate de ordinul 1:
+[x0,x1:|f, [x1,x2:|f,..., [xn_1,xn:|f.
 
-[XM 1,, [x‘,x,:|r,..., [xn_,,x“]f
-
-4»
+44
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-in general, la pasul k se calculeazi diferenge divizate de
+in genﬁral, 1a pasul k se calculeazé difer6n11€ divizate d6
 ordin k:
-[x0’xl""’xk:|/’ [x19x2""’xk+l]f"“, [xn—l\9xn—k+l7""xn]j'
-La pasul n se calculeazi o singurz'l diferengi divizati de
-ordm n §1anume|:xu,x|,...,xn:|f
-4s
+[x0,x1,...,xk:|f, [x1,x2,...,xk+1:|f,..., [xn_k,xn_k+l,...,xn:|f.
+La pasul n se calculéazé 0 singuré diferengé divizaté de
+ordin n gi anume|:x0,x1,...,xn:|f.
+45
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:47**************
 Pasl Pask Pasn
-x0 y"
-X. .V| [ma],
-X2 .Vz [xule
-Xk yk [am], [xmxH-um],
-x" y" [X.H’x..:|/ [x,k‘,...,xn7‘:|’ [x‘|,x|...,xn:|f
-4f»
+x0 yo
+x1 Y1 [x09xl:|f
+x2 Y2 [x19x2:|f
+xk yk [xk—19xk:|f [x09x19H-9xk:lf
+xn-l yn-l [xn—2 9 xn-1:|f [xn—k—1 9 ' ' ' ’ xn-1:|f
+x” y” [xn_1,xn:|f [xn_k,...,xn_1:|f [x0,xl...,xn:|f
+46
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Notim dd[i,k]= |:x‘.,xi+|,...,xMr :If diferema divizati de ordin
-k, pe nodurile consecutive {xﬂxm ,...,xM} i=0,...,n-k,
-k=1,...,n, cu dd/i,0l=yi, i=0,...,n, Schema lui Aitken se
-implementeazz'i astfel:
-
-ddliJJ] = y,, i= 0,---,n;
-
-for k = l,...,n
-
-for i = 0,...,n—k
-ddli,k] = ddh + l,k —1]— dd[1,k — 1|
-xH-A _ xi
-r
+Notém dd[i,k]= [xi,xi+1,. . . ,ka :If diferenya divizaté de ordin
+k, pe nodurila consecutivﬁ {xi,xi+1,...,xi+k} i=0,...,n-k,
+k=1,...,n, cu dd]i,0]=y,-, i=0,...,n. Schema lui Aitken se
+implementeazé astfel:
+dd[i,0]= yi, i=0,...,n;
+f0rk=1,...,n
+f0ri=0,...,n—k
+' 1 —1 — ' —1
+dd[i,k]= dd[l+ ,k ] dd[l,k ]
+xi+k _ xi
+47
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Putem face acelea§i calcule folosind un singur vector, de
-eXemplu rescriind veclomly astfel:
-fork = l,...,n
-fori=n,...,k
-y, = J’.- _ yi-l
-xi _ ‘xi-k
-La ﬁnalul acestei secvenge de program, vectorul y va congine
-elementele:
-ya,|:x0,x,:|j, [xwx1,x2]j,...,|:x0,xl,...,xn:|j
-(yk =[x0,x|,...,xk]f, k:0,...,n).
-4x
+Putem faw acelea§i calcule folosind un singur veactor, de
+exemplu rescriind vectorul y astfel:
+fork =1,...,n
+f0ri=n,...,k
+yi = yi _ yi-l
+xi _ xi-k
+La ﬁnalul acestei secven§6 de program, v6ct0rul y va conﬁne
+elenmntelﬁ:
+y0,|:x0,xl:|f, [x0,x1,x2:|f,...,|:x0,xl,...,xn:|f
+(yk =|:x0,x1,...,xk :lf, k=0,...,n).
+4s
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-yWW/U Wau'cq“
-g'lé MM
-V *,=»/ g;-7%¢,J=£
-9% '/ ,"2 =f/12J=2_
-55:3 2/;’f’*:)=6
-Si-MWiWJ-6 ff?) / 21,?’
-MM 04 Wu: [74M;{ _
-L3(a-§ Mm ab yaniB MAM
-L3 65):?‘ 1:0,}
-fr?) 2 L3 (f)
-3
-, 2; ‘ U ‘ii
-L5 (96) (-0 lJAJﬁ/‘ﬁmqj>
-. .éw (Mm-3 ‘MG/33
-L3 (‘A - é (3%??? + 310+4M4Vﬂ-3)
-+z-(WL__-*/H> +4 Mi
-[7”) 1-03) m4)- a (3-4)
-1 {7 H243 [1-3) + (346(143/a'5)
-~ 515/1 +6» (1-3) + ‘fl @Mk-QJ)
-_1~
-Scanned WIln Damscanner
+7,4132%‘ Muem'cq”
+91¢‘ MM
+‘*"4 yﬂﬁskg
+2‘ d 0 f 3 at(‘=0 ._
+f a a z 6 xﬁ/ 2’/~f/%>;3
+%=ﬁ*l)=a
+353:3 ya ‘f/*9)=6
+L50?) M'rmm pig 7mi3 MW
+f(¥)32 L3 (it)
+. 11-?’
+(PM
+L3 (9A é tho )[_(_OF_/_3) 4‘ 3[0+'f)/0-/>/”'3> 1L
++ 2-4511“); {L3} + é G+/\%[¥ 4)
+(7’H)‘ f'f'l-3) (31%).} (3,4)
+: “"3; */*~15[**3> + (1+4§(¥'/§[?-3>
+Scanned With CagSignner
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:51**************
-La[1)="%-2{1-M2-53 + /1+0/2»/)/1-3)
-‘ 15 @-r/)-2(2-$) +5 {2+D-aK2-l) =3
-35!? J 23
-mm Vuwxm A MM‘ d1 wnfw
-ﬂay”? ; ooh/me AZ If WM
-L3 (1% s g» + [1‘. m] 1* 4*”) + Za,#/,%71H.Db4,§
-+ Ik,*¢,*z.hj[x43114,)(aha3)
-= l 1‘ [101(21/4) +[-0%/1@+/)+
-+f—m,1,?7(=~m/¥>/)
-4 .
-[haw-ad i} Z 131~
-M 1:, f7 (35'?)
-52135
-[anhm 3*] if; [14,..-,¥LLZLI.:,F£_D
-W 2* -5‘,
-L3,} = *5.
-Ham] ‘3% Li u + 21/
-Julia‘ (arm/1,4‘) (9, >5) amyapw/ﬁﬂ)
-~l— J23’ -r i‘rk~rl > ‘
-(vhﬂwh (12-5) (a3-,u>/¢,;,)/a,-zl )
-Scanned Wllh Uaagizgnner
+1.3 (2.) = ‘- 3%; - 2 (2-5 (1-53 + m mm 43/”)
+- If guy/2%) +zrﬂ/HD-a/2J) =5
+¥lzT ) s23
+Jaw-aim? ; We A’: 3-7‘- WM
+L3 (2-) = g0 + [a153,] [Iv-i3) + [*walnai'a] [Q'QQQ'QJ
+1L Emmalﬂk #1») (1 awn-a2)
+= 6 + 234,0] (111'!) +[-/101/3@+1)-%-
+7" f”/,0/'/15j(%+b'¥f¥'/>
+4. .
+[2,,%,)...)¥é] pg} l TZ————
+332,6
+[95° 14W" 21%] 2&3? M5453
+WM“ Qﬁ ~20
+[203 = A50
+[-4,0,4,3] a’? Ly“ + i...
+M‘ (2,-2,)/z,-2L) [no -%5) @“Q'a>[2,~¥z)[¥r?5>
+1'- k ‘f Jivw"—' .2» .
+(*2 ‘*~)(%'*D (12-h) (¥a-10)/¥3-*1)/ 33 4.1 )
+Scanned With Cagéggnner
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:52**************
-[-!,0,1,3'j= 4 + a ‘
-+
-{'I-nJI-I—0!<4"3j (D-f-O)/W0é"aj
-2. g 0
-1» _—‘——— + _—-——~=
-(1-1-43) {4w} (1-3) [3-(—/))[S-0)/3-/)
-_ *4”me '
-Sub/m». ‘Alike/n J: W ‘a "6 ) W
-a?" Q,‘
-1% \Iﬂm
-‘ N
-n ll
-T ‘Tl
-‘I c ‘T' Q rm
-‘Tr: rl1+§§~ “ “
-1% ‘5f || ‘Q 4* “Z
-[-3 =1 72 “n '3 C
-.~ 2 ~r ‘\ * i
-k’? i. £5 k‘ 4:, \k
-P; i ; +
-/~ Q M \7.
-“in N‘ '1‘ ‘\l
-.- \l ., [-4
-H E, c, ,g ; ,‘i F‘
-ﬁks n .q \§ i Q“ 31 i‘,
-T x“ K‘
-w \_ Q \_ n K, __| .4
+[4,0, 1, a]: 4 a
+-_-——--—-——- + +
+(4-0)(-1-17f~#-3) (o-/-o>/0-%-3) i
+
+2, g 1
+1- -——-—---————— + ___-____--—-=@
+(44-1)) {4-0) [1-3) [3-(-/))[3-0)/3-/)
+3M ‘,Mﬁem A’! M a ‘0&5 1 le
+T‘- ~9-
+QP Q“
+I ‘4 ‘Am
+I N
+n M
+M '1"
+3 O“
+q, f‘ ‘T’ Q "'3
+r_‘_., T Q ? l\ n
+
+N-q ~ 5-) ~1- m
+
+'2 6' "- N r——. ck
+
+6a “4., ,. *1 . G?
+
+." -: \- \ Qt‘ l’
+
+Q1? Q‘ 6' LQ ~25 \5
+
+W \ C + +
+r—| ~L
+p h o \J \J
+£2’ c“ ‘=3 <12 é “um i ll \ ‘
+H N
+A?‘ '1? r91 |—"I a; (d1 \9 \Q
+N [2 v j» "~ H a
+J k“ Z? Z" CI 2?
+T 6‘ f“
+(‘V \— Q \_ m L\\ __1 '4
 I
--.3_
-Scanned Wllh Damscanner
+....'5__
+Scanned with CamScanner
 
 ***************Ending Page***************
+
+
 
 ***************Beginning Page***************
 ***************page number:53**************
-L (1,-1-,~--,*0: Maw
-‘l 11-2.,
-"'1 6 (
--() ~3 — 2- 6
-‘ o a Luh) =%—") =.3
-_ 2431. -(Z~D‘L,
-4 L L110‘): (Lg-"2f; @13: 1 LNZI=L":>I—Q‘Z —'= a
-3 6 Lu (Q :(1_'){“ [14)’1: ‘I L425=@"°)'laa'lz'3)I-lz =3
-‘5'1 '5~o
-2-(»1>§-L ~[z-57Lo , _ _ ‘
-Lmam: gm) = L757?“ _, 1.11 L233: 3
-I
-J?
+F
+‘ L [z -g°,__,/;pi)= (?"%°)£1ﬁ-ré1'¢4r"13£\ " (1"%)234 (#1‘?°("'7?E:b
+a all-£9
+¥ -4 6 (
+2+1) -3 — 2,-0 A
+0 3 W Lg?! ‘"3
+_ . ~@—(43)-L42—[2—D-L,,_
+* 4 2/ Lulu): W3: 7 Lolz'Fm-f _. 3
+_ . - 2,—?L
+w 3 6 Ln (13 =(2—1)-6— [24%1: 1, Lmtlz 03 L23 f M2, =3
+%~1 2-0
+1 __ __ (2"(“433' L425 _ [21'3DLOIL 3 .3 -[..;>.3
+L0425 (Q- LB [2) " W"“ W‘ 1 -————~—Lr .= 3
+1
+Q
 l
-Scanned Wltn UamScanner
+Scanned With CamScanner
 
 ***************Ending Page***************
+
 

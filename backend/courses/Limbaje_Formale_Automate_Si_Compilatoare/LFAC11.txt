@@ -1,435 +1,444 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Limbaje formale, automate 5i
-compilatoare
+Limbaje formalﬁ, automate $i
+compilatQarer
+G
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Unititi Arbors
-Caractere . . ,
-lexlcale slnlacllc
-Cod Analllm Anahzor Anahzor
-sursé mm Samamc semantic
+Unitati Arbore
+Caractere . . .
+IeXIcaIe smtactlc
+Cod Analizor Analizor Analizor
+sursa lexical sintactic semantic
 Arbore
 sintactic
 decorat
-GENEVBIOY
-Cod ma iné de cad cm‘
-§ intermediar
-Asammare \nterpremre
+Generator
+Cod ma ina de COd COd
+S intermediar
+Asamblare lnterpretare
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-,/ /i‘ \\
-Recapitulare
-i Analiza lexicalz'l
-I Valideazé tokeni
-. Analiza sintactici
-0 Valideazé arborele sinlaclic
-0 Analiza semanticé
-0 Detecteazé mate celelalte erori
-~ Ultimul pas de analizé
+Recapitulam
+
+¢ Analiza lexicalé
+¢ Valideazé tokeni
+
+¢ Analiza sintacticé
+¢ Valideazé arborela sintactic
+
+¢ Analiza sﬁmanticé
+' Detecteazé toate celelalte erori
+' Ultimul pas d6 analizé
+
+9
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Tipuri de date
-i Veriﬁciri 5i lraduceri
-I Veriﬁcarea are in vedere compatibilitatea dc tipuri
-- Traducerea are in vedere spatiul necesar pentru
+Tipuri d6 date
+¢ Veriﬁcéri 5i traduceri
+¢ Veriﬁcarea am in vedara compatibilitatea de tipuri
+¢ Traducerea are in vedere spatiul necesar pentru
 memorarea unei variabile
-I Expresii pemru tipuri.
+¢ Expresii pentru tipuri.
+Q
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Veriﬁcarea de tipuri de date
-i Compilatorul asigneaza expresii de lip
-I Compatibiliatea este calculatz'i pe baza sistemului dc
+Variﬁcarsa d6 tipuri de dats
+. Compilatorul asignaaza expresii de tip
+¢ Compatibiliatea esta calculaté pe baza sistemului d6
 tipuri
-~ Veriﬁcarea poate ﬁ fécuté:
-dinamic, la runtime, sau
-static. la compilare
-' Un sistem este consistent dacé nu este necesaré
-veriﬁcarea dinamicé de tipuri
-I O implementare a unui limbaj este strongly typed dacé
-accepte'l doa: programs care nu au erori de tipuri
+¢ Veriﬁcarea poate ﬁ feicuté:
+dinamic, 1a runtime, sau
+static, la compilare
+0 Un sistsm 6ste consistent dacé nu 6ste necesaréi
+veriﬁcarea dinaniicé d6 tipuri
+' O implementare a unui limbaj este stmngly typed dacé
+accepté doar programe care nu au arori de tipuri
+9
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-,/ Ki‘ \\
-Reguh pentru venﬁcarea tipunlor
-i Sintezé de tipuri
-I Tipul expresiei este construit din tipurile expresiilor
-components
-~ Identiﬁcatorii trebuie declaragi inaime de folosire
-dacéfare lipul ng 5i a are tipul x
-amnei expresia ﬂu) are lipul y
-im ﬂﬂom a);
-ﬂoat pi = 3'14;
-in! rezulzaz : f(pi);
+Rerguh p6ntru V6r1ﬁcarea tipunlor
+¢ Sintezé de tipuri
+¢ Tipul exprasiei este construit din tipurile exprasiilor
+componente
+¢ Identiﬁcatorii trebuie declaragi inainta d6: folosire
+dacﬁ f are tipul X—>y §i a are tipul X
+atunci expresiaﬂa) are tipul y
+int f(ﬂoat a);
+ﬂoat pi I 3.14;
+int rezultat I f(pi);
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:7**************
-r/ K ‘ \\
-Reguh pentru venﬁcarea tlpunlor
-i Inferengé de tipuri
-I Determiné tipul unei components dc limbaj pe baza
-utilizérii acesteia
-daciﬂa) este o expresie
-numci exislé u, B =15. / are lipul “an 5i a are lipul u
-pl : 3,14; //pl are tlpul ﬂoat
-rezulm : ffpi); //f inmarce mt, decx rezulm are tipu] ml
+R6gu11 p6ntru V6r1ﬁcarea tlpunlor
+¢ Inferen§51 de tipuri
+¢ Detarminé tipul unei componemte de limbaj p6 baza
+utilizérii acestaia
+dacﬁﬂa) este 0 expresie
+atunci existé (x, B ai fare tipul (1—>B §i a are tipul 01
+pi = 3.14; //pi are tipul ﬂoat
+rezultat I f(pi); //f intoarce int, deci rezultat are tipul int
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-y/Ki‘\
-Reguli pentru veriﬁcarea tipurilor
-i Veriﬁcarea de tipuri pentru instructiuni este similari cu
+Rerguh p6ntru V6r1ﬁcarea tlpunlor
+. Veriﬁcarea de tipuri pentru instrucgiuni 6st6 similaré cu
 veriﬁcarea pentru expresii
-~ if(C) S - apelul funcgiei ifpentm parametrii C, S
-Tipul lui C esle boolean. Kipul lui S esle void
-Tipul inmrs de r/v
+¢ if (C) S - apelul funcgiei if pentru parametrii C, S
+Tipul lui C este boolean, tipul lui S este void
+Tipul intors de if?
+9
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Conversia de tipuri
-i Fie expresia a + i
-I Ca expresia 55 ﬁe validé, tipul lui a trebuie 55 ﬁe
+ConV6rs1a d6 tlpun
+¢ Fie expresia a + i
+¢ Ca expresia s51 ﬁe validé, tipul lui a trabuie s51 ﬁe
 compatibil cu cel a1 lui i
-Fie u dc tip/Inn! 5i ide tip inr
+Fie a de tip ﬂoat §i i de tip int
 Mai e posibilé operagia?
-- E necesar ca unul dintre operanzi sﬁ ﬁe convertit la
+0 E necesar ca unul dintre: operanzi sé ﬁﬁ: convertit la
 tipul celuilalt
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-y/Ki‘\
-Conversia de tipuri
-i Conversii de cregtere
-I Conserve": informaﬁa
-I Ex. char —> int
-- Conversii dc ingustare
-' Cu posibile pierderi dc informagie
-' ﬂoat A int
+Convarsia d6 tipuri
+
+. Conversii de cr6§tere
+¢ Cons6rv5 informagia
+¢ EX. char —> int
+
+' Conversii de ingustare
+' Cu posibile pierderi de informagie
+¢ ﬂoat —> int
+
+Q
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Conversia de tipuri - Exemplu
-~ (Aho el aL, 2007)
-. Reguli penlru cregterea tipun'lor sunt date in ﬁgura a)
-~ Orice tip puate ﬁ crescut citre un tip care este mai sus in
-arbor:
-. Reguli penlru inguslarea tipurilor sunt dale in ﬁgura b)
-0 U11 tip x poale ﬁ ingustat célre all tip t dacé existé un
-drum in graf de la s la t
+Convarsia d6 tipuri - Exemplu
+¢ (Aho et a1., 2007)
+¢ Raguli pantru cre§tereatipuri10r sunt date in ﬁgura a)
+¢ Orice tip poate ﬁ crescut catre un tip cam este mai sus in
+arbore
+¢ Raguli pentru ingustarea tipurilor sunt date in ﬁgura b)
+' Un tip s poate ﬁ ingustat catre alt tip tdaca axista un
+drum in graf d6 la s la t
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-ri\
-Conversia de tipuri de bazé in Java
+Conwrsia d6 tipuri de bazéi in Java
 double double
 i +
 ﬂoat ﬂoat
 | +
-long lung
-1 +
+Icing Jung
+I +
 int int
-/ \ / § \
-mm char char <-> show-t <—> byte
-} \_/
+/ \ / + \
+Sh-Q'Pﬁ char chm" H short H byte
+I V
 byte
-Q /
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-Generate de cod
-i Transfonni analiza semanticé in cod executabil
-. Limbajul trebuie lransformat diferit penlru orice sislem
-~ Generate de cod intermediar i deta$eazé partea de
-analizé §i interpretare de generarea de cod ma$in5
+G6n6rar6 d6: 00d
+¢ Transformé analiza semanticé in cod ﬁxecutabil
+¢ Limbajul trebuie transformat diferit pentru orice sistem
+¢ Genarare de cod intarmadiar — deta§6azé partea de
+analizé §i interpretare de genararea de cod maginé
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-/i\
-Generare de cod
-
-Arbm qu-zqmm chrcninhur cm!
-
-mlcrmcdmm dc mw] mlurmulmm dc mm .
-
-HIHACUC _ [mm
-
-malt w -
-Compilatoarele pot folosi multiple straturi dc
-reprezentﬁri intermediate‘
-
-Q /
+G6n6rar6 de cod
+Arbore . Repr§zevntarei . Reprémintare. Cod
+. . 1nterrned1ara de nlvel 1ntermed1ara de nlvel . V
+s1ntact10 A . tlnta
+malt 10s ’
+Compilatoarele pot folosi multiple straturi de
+rﬁpramntéri intarmediare.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Cod Intermedlar
-i Arbori sintaclici decoragi
-. Cod cu trei adrese
-~ X = y 0p z
-° Cod intermediar
-0 De nivel inalt
-apropiagi de limbaju] sursé (arbori simacxici)
-Pmrivigi pemru sarcini de nive] inn]! (ex. veriﬁcare de tip)
-0 De nivel jus
-alocarea de memorie 5i regigtri
+Cod 1nt€rm6d1ar
+¢ Arbori sintactici decoragi
+¢ Cod cu trei adrese
+¢ X I y 0p Z
+¢ Cod intermadiar
+¢ De nivel inalt
+apropiagi de limbajul surs§1(arb0ri sintactici)
+Potrivigi pentru sarcini de nivel inalt (ex. veriﬁcare de tip)
+¢ De nivel j 0s
+alocarea de memorie §i regigtri
 selecgia de instrucgiuni
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-K’ ‘\\
-Grafun acmhce onentate
-0 Gramatica de mai jos poate constwi arbori sintactici sau arbori
-aciclici orientaﬁ
-. Funcgiile Leaf§i Node vor crea noduri 110i dacé nu exist}: deja
+Grafun 216161166 (mentate
+' Gramatica d6 mai jos poate construi arbori sintactici sau arbori
+aciclici orientagi
+~ Funcgiile Leaf §i Node vor crea noduri noi dacé nu existé deja
 noduri egale
-- Daci nodul existé deja, va ﬁ returnat in locul unui nod nou
-1) E -> E, + T E mule = new NML('+‘,E1vnnde,Txnmie)
-2) E -» E, - T Emode = new NmU-Q E,md¢,T.mde)
-a) E -* T Emode = 1mm
-4) T -> ( E) T.nadn : Emmie
-5) T -» id Tmorie = new lmf(id,id.ent1y)
-5) T -+ num T.nude = new Lt'nflnum,nllm.vnl)
+' Dacé nodul existéi dej a, va ﬁ returnat in locul unui nod nou
+1) E —> E1 + T E.n0de == new Node('+', E1.n0de,T.n0de)
+2) E —> E1 — T E.n0de = new N0de(’—', E1.node,T.n0de)
+3) E —+ T E.n0de = T.n0de
+4) T —§ ( E) T.n0de = E.n0de
+5) T —+ id T. node = new Leaf (id, identry)
+6) T —+ num T. node = new Leaf (num, num.val)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
 Arbori sintactici abstracti
-v Grafuri aciclice orientate
-.a+a*(b-c)+(b-c)*d
+¢ Grafuri aciclica orientate
+-a+a*(b-c)+(b-c)*d
 / + \
-+ *
++ a:
 / \ / \
 * - d
 a / \ / \
 a / - \ b c
 b c
+Q
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
 Arbori sintactici abstracti
-v Grafuri aciclice orientate
+¢ Grafuri aciclica orientate
 .a+a*(b-c)+(b-c)*d
-/ +
-P \
-a b/ \ d
+/ + \
+P *
+a b/ \‘c d
+Q
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-/ \
-Grafun ac1chce onentate
-1) p1 : Leaf (id, emf/pa)
-2) p2 = Lea/(id, entry“) : p‘
-3) Pa = LEI/(id, WWII-b)
-4) p4 I Leajﬂd, entry-c)
-5) P5 = Node('—',m,P4)
-6) m- = Nvd¢('*’,m,ps)
-7) P1 = NMB('+'YF1,P6)
-8) P3 : Luz/(id, entryAb) : p3
-9) Pv = meﬁd‘ "mill-C) = P4
-10) P10 = NMU-Hmm) = P5
-11) p11 = Lea/(id, entryd)
-12) P12 = Nﬂli¢('*/’P5,P11)
-13) Pm = Nad¢('+',P1,mz)
-Qi/
+Grafun aC1c11c6 onentate
+1) p1 : Leaﬂicl, entry-:1)
+2) P2 = Lﬁﬂﬂid, Entry-£1} I P1
+3) p3 = Leaﬂid, entry-b)
+4) p4 = Lenﬂid, entry-c)
+5) P5 I Nﬂd€(l_r1pﬂ:p4]
+5) P6 = Nﬁdﬁﬁﬂmjpa)
+7) P’? I NﬁdEF-F'mhm)
+B} p5 I Leufﬁd, entry-b] _-: p3
+9) p9 = Leufﬁd, entry-c) = p4
+10) P10 = NMBF-Hmm) 1"" P5
+11) p11 = Lenﬂid, entry-d}
+12) P12 = Nﬂdﬁ('*'=|PE-=P11)
+13) p13 = Nﬂde(l+r1p7:p12]
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-/ /i‘\
-Grafuri aciclice orientate i reprezentare
-tabelaré
-
-I Nodurile arborelui sum reprezentate intr-un tablou
-' F iecare rind reprezinté un nod
-0 Prima celulﬁ reprezimé operatorul
-0 Fiecare nod are 0 valoare asociaté (pointer sau constanté)
-= 1 m entry
-\ I‘: f0, i
-1 m
+Grafuri aciclic6 orientate — rﬁprezentam
+tabﬁlaré
+¢ Nodurila arboralui sunt reprezentate intr-un tablou
+¢ Fiecare rand reprezinté un nod
+¢ Prima celulé reprezinté operatorul
+' Fiecare nod are 0 valoare asociatéi (pointer sau constantéi)
+DI‘ l
+\ 2-
 + 3-
 / \ 4
-i 1o s »- >
+i 10 5 ~-
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-/ Kie\
-Grafuri aciclice orientate i reprezentare
-cu tablouri
-i Nodurile sunt referite prin indicele rindului
-I lndicii nodului sau expresiei sunt numiti value number
-I in practice‘ sum folositi pointeri
-' Valorile numeric: pot ﬁ folosite pentru a construi grafuri
-aciclice orientate
+Grafuri aeieliee orientate — reprezentare
+eu tablouri
+¢ Nodurile sunt referite prin indieele réndului
+¢ Indieii nodului sau expresiei sunt numiti value number
+¢ in practieé sunt folositi pointeri
+' Valorile numeriee pot ﬁ folosite pentru a construi grafuri
+aeieliee orientate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
 Metoda value number de construcgie de
-arbori orientayi
-i Intrare: eticheta operatorului §i membrii operagiei
-. legire: Valoarea numeﬂcé pentru nodul cu signatura
-<0p, l, r>
-I Algoritm
-' Cautz'a in tablou nodul M cu eticheta op, §i ﬁii stﬁnga i
-dreapta l 5i r
-0 Dacé existé, return M
-0 Altfel, creeazé un nou nod N, cu eticheta 0p 5i ﬁii 1 5i r;
+arbori orientagi
+¢ Intrare: eticheta operatorului §i membrii operagiei
+¢ Ie§irez Valoarea numericéi pentru nodul cu signatura
+<0p, 1, r>
+¢ Algoritm
+¢ Cauté in tablou nodul M cu etieheta 0p, §i ﬁii stﬁnga —
+dreapta l §i r
+¢ Dacé existé, return M
+' Altfel, creeazé un nou nod N, cu eticheta 0p §i ﬁii 1 §i r;
 return N
+Q
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Coduri cu trei adrese
-i Reprezentat ca 0 secvengi de maxim trei elemente
-I Operator
-- Operand stinga
-~ Operand dreapta
-0 Ex: a + b * c
-ll I b * c
-l2 I a + l1
-. Poate ﬁ folosit pentru descompunerea de operagii
-aritmetice, instruqiuni de control etc.
-- Util pentru generare de cod $i optimizare
+Coduri cu trai adr6s6
+. Reprezentat ca 0 sﬁcvengé de maxim trei elemente
+¢ Operator
+¢ Operand sténga
+' Operand dreapta
+¢ EX: a + b * c
+t1 = b * c
+t2 I a + t1
+0 Poate ﬁ folosit p6ntru descompunerea d6 operayii
+aritmetice, instrucyiuni d6 control etc.
+¢ Util pentru generate de cod §i optimizare
+Q
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-Coduri cu trei adrese
-I Este 0 descriere liniaré a unui arbore sintactic sau a unui
+Codun cu tf6l adr6s6
+¢ Este 0 dﬁscriere liniaré a unui arbom sintactic sau a unui
 arbore orientat
-0 Pentru graful discutat anterior, traducerea in cod cu trei
-adrese este dati mai jos
-/ + \ 11 = b - c
-+ s= lz : a * t1
-\* \/ ‘3 I a + t2
-14 I t, * d
-/ '\ 15 =13 +14
-a b c '1
+0 Pentru graful discutat anterior, traducerw in cod cu trei
+adrese este daté mai j os
+/ + \ t1 : b _ C
+t I a * t
++ 9< 2 1
+\* / t3 I a + t2
+\ t4 I t1 * d
+/ '\ t5 I t3 + t4
+a b c d
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-Adrese §i instrucpunl
+Adrese §i instruegiuni
 
-i Codul cu trei adrese este construit pe baza a doui
-concepte: adrese §i instrucgiuni
+. Codul eu trei adrese este construit pe baza a doué
+concepte: adrese §i instruegiuni
 
-. O adresé poate ﬁ:
-0 Nume (va ﬁ inlocuit cu 0 adresé de memorie la generare)
-0 Constante (sunt necesare conversii de tip)
-0 Variabile temperate generate de compilator (folosite in
+¢ O adresé poate ﬁ:
+¢ Nume (va ﬁ inloeuit cu 0 adresé de memorie la generare)
+¢ Constante (sunt neeesare conversii de tip)
+¢ Variabile temporare generate de eompilat0r(f010sitein
 
-general penlru optimizéri)
+general pentru optimizéri)
+Q
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Instrucgiuni pentru cod cu trei adrese
+Instrucgiuni p6ntru 00d cu trei adr€s6
 
-i Atribuiri de fonna c = a 0p b
+¢ Atribuiri de forma c I a 0p b
 
-. Atribuiri de forma a I 0p b
+¢ Atribuiri de forma a I 0p b
 
-. Copiers: a I b
+¢ Copiere: a I b
 
-I Salt: goto L; insmlctiunea cu adresa L va ﬁ urmétoarea
+¢ Salt: g0t0 L; instrucgiunea cu adresa L va ﬁ urmétoarea
 executaté
 
-0 Salruri conditionale: if a goto L sau if/lese a goto L
+0 Salturi condigionale: if a goto L sau if false a goto L
 
-. Salturi condigionale: if a relap b goto L; daci a este in
-relagia relop cu b, execute? instructiunea L, dacé nu
-executi urmétoarea adresé dupe‘: instrucﬁunea curenté
+0 Salturi condigionale: if a relop b goto L; dacé a este in
+relagia relop cu b, exécuté instructiunea L, dacé nu
+executé unnétoarea adreséi dupé instrucgiunea curentii
+
+¢
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-y/Ki‘\
-Instrucgiuni pentru cod cu trei adrese
-i Apeluri de funcgii:
-I param x1
-I param x2
-0 param xn
-0 call p, n
-. Copiers indexatﬁ: a I b[i] sau a[i] I b
-0 a I b[z] modiﬁcé valoarea adresei care vine la i pozitii
+Instrucgiuni pantru 00d cu trei adr€s6
+¢ Apeluri de funcgii:
+¢ param X1
+¢ param X2
+¢ param xn
+¢ call p, n
+¢ Copiere indexaté: a = b[i] sau a[i] = b
+' a I bﬁ] modiﬁcéi valoarea adresei care vine 1a i pozigii
 dupa adresa lui b
-0 Asignare de adrese sau pointeri: aI&b, aI*b, *aIb
+¢ Asignare de adrese sau pointeri: a:&b, a=*b, *a=b
+Q
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Exemplu
-I Fie instruciiunea
-- doi:i+ l;while(a[i]<v);
-L: t1=i+1 100: t1=i+1
-i = t1 101: i = t1
-c2=i*8 102zt2=i*8
-t3=a[t21 103: t3=a[t2]
-if t3 < v goto L 104: if 1:3 < v goto 100
+EX€IIlplll
+¢ Fie instrucgiunea
+' doi:i+1;Whi16(a[i]<v);
+L1131=i+1 1002131=i+1
+i = t1 10111 = 131
+t2=i*8 1021132=i*8
+‘153:5[132] 1031t3=&[tg]
+if t3 < v goto L 104: if t3 < v goto 100
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-y//i‘\
 Bibliograﬁe
-~ LA‘ V. Aho, M‘ S. Lam, R. Sethi, and J. D‘ Ullman,
-Compilers.‘ Principles, Techniques, and Tuols, Second
-Edition, Addison-Wesley, 2007
+¢ 1. A. V. Aho, M. S. Lam, R. Sethi, and J. D. Ullman,
+Compilers: Principles, Techniques, and Tools, Second
+Edition. Addison-Wesley, 2007
 
 ***************Ending Page***************
 

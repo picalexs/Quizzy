@@ -1,13 +1,15 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Chapter 10: Virtual Memory
-—
+I
+Cha ter10' Vlrt 3| M
+p . u emory
+Operating System Concepts - 10th Edition Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-W Chapter 10: Virtual Memory
+‘633$ Chapter 10: Virtual Memory
 I Background
 I Demand Paging
 I Copy-on-Write
@@ -18,728 +20,797 @@ I Memory-Mapped Files
 I Allocating Kernel Memory
 I Other Considerations
 I Operating-System Examples
-WWW“mwm-Emm m Slammed“.mmimw
+I operating system Concepts-10"‘ Edition 102 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-‘4317i Objectwes
-I Deilne virlual memory and describe its benefits.
-I llluslrale how pages are loaded into memory using demand
+a. $ I I
+twv/ Ob jectlves
+I Define virtual memory and describe its benefits.
+I Illustrate how pages are loaded into memory using demand
 paging.
-I Apply lhe FIFO, oplimal. and LRU page-replacement
+I Apply the FIFO, optimal, and LRU page-replacement
 algorithms.
-I Describe ihe working set Di a process, and explain how it is
-related lo program locality.
-I Describe how Linux, Windows 1U, and Solaris manage virlual
+I Describe the working set of a process, and explain how it is
+related to program locality.
+I Describe how Linux, Windows 10, and Solaris manage virtual
 memory.
-I Design a viriual memory manager simulation in the C
+I Design a virtual memory manager simulation in the C
 programming language.
-0......wsy.a..c....m..WW... m “Mme-ll.ﬁne-“km
+Operating System Concepts — 10th Edition 10.3 Silberschatz, Galvin and Gaylek @262
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-r‘
-My} Background
+lay)’ Background
 I Code needs to be in memory to execute, but entire program
 rarely used
-0 Error code, unusual routines, large data structures
+' Error code, unusual routines, large data structures
 I Entire program code not needed at the same time
-I Consider the ability to execute partially»loaded program
-° Program no longer constrained by limits of physical memory
-' Each program takes less memory while running :> more
+I Consider the ability to execute partially-loaded program
+' Program no longer constrained by limits of physical memory
+' Each program takes less memory while running => more
 programs can run at the same time
-> Increased CPU utilization and throughput With no increase
+> Increased CPU utilization and throughput with no increase
 in response time or turnaround time
-0 Less l/O needed to load or swap programs into memory =>
+' Less l/O needed to load or swap programs into memory =>
 each user program runs faster
-gamma."“newsman” m Memes-vi““minim.
+Operating System Concepts — 10th Edition 10.4 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-ﬁe
-MW V| rtual memo ry
+W/ V|rtual memory
 I Virtual memory — separation of user logical memory from
 physical memory
-' Only parl of lhe program needs to be in memory for
-execunon
+' Only part of the program needs to be in memory for
+execuﬁon
 ' Logical address space can therefore be much larger than
-pnyslcal address space
+physical address space
 ' Allows address spaces to be shared by several
 processes
-° Allows lor more efﬁcient process creation
+' Allows for more efficient process creation
 ' More programs running concurrently
 ' Less l/O needed to load or swap processes
-ommsmm“WHMW ms WMMM“minimum
+AA?“
+Operating System Concepts —10th Edition 10.5 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-i‘
-5433 Virtual memory (Cont)
+£4352? Virtual memory (Cont.)
 I Virtual address space — logical view of how a process is
 stored in memory
-' Usually start at address 0, contiguous addresses until
+' Usually start at address O, contiguous addresses until
 end of space
 ' Meanwhile, physical memory organized in page frames
-' MMU musl map logical to physical
+' MMU must map logical to physical
 I Virtual memory can be implemented via:
-0 Demand paging
+. Demand paging
 ' Demand segmentation
-0am.wsYi..mc.,m.W.n-at.“ m sllhmm-mellvlnnmmlvn:®2uil
+A
+I Operating System Concepts-10th Edition 10.6 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-WVirtual Memory That is Larger Than Physical Memory
-m -
-M- - -
---—
-\ — - _
--/ -
-—‘-
-=\_
-.-
+/
+/ K" I I I
+Mi Vlrtual Memory That IS Larger Than Physmal Memory
+-
+- -
+- -‘i
+\
+= -
+\-
+- _ i
 - -
 -
-Mm
-'“" -
-awn MW,“
-vlmm ".ng
-MW
-cumminmunuwimm m1 51mm.‘ WWW-mm“
+memory
+physical backing store
+memory
+virtual
+memory
+Operating System Concepts — 10th Edition 10.7 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-t‘
-W Virtual-address Space
-I Usually design legieal address spaee ler MM i
-slack to slan at Max logical address and
-grow “dowrf whlle heap glows “up" M
-0 Maximlzes address space use
-' Unused address spade belweerl
-the Mo is hole
-r No physical memory needed
-until neap or slaek grows re a
-give" new page
-I Enables sparse address spaces wilh
-holes leﬂ ler grdwih, dynamlcally linked
-I sysierrr libraries shared via mapping into
-I Shared memory by rrrappirrg pages read’
-Wiremerrmaraadesaspaee u
-I Pages can be shared during fork ( l‘ °
-speedlrlg preeess erealien A
+» l
+@v/ V|rtual-address Space
+
+I Usually design logical address space for Max
+
+stack to start at Max logical address and
+
+grow “down” while heap grows “up” stack
+
+' Maximizes address space use
+' Unused address space between
+the two is hole
+> No physical memory needed
+until heap or stack grows to a
+given new page
+
+I Enables sparse address spaces with
+
+holes left for growth, dynamically linked
+I System libraries shared via mapping into
+
+virtual address space
+I Shared memory by mapping pages read-
+
+write into virtual address space
+I Pages can be shared during fork () , 0
+
+speeding process creation i
+
+Operating System Concepts — 10th Edition 10.8 Silberschatz, Galvin and Gagne ©201S
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-u??? Shared Library Using Virtual Memory
-slack SliCk
-u u
-I om“, Sm... Camp.“ w» mm my “mm-m W" m a“; W.
+‘if; 9‘; Shared lerary Usmg Vlrtual Memory
+mm “
+_ shared .
+m
+| Operating System Concepts — 10th Edition 10.9 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-y‘
-W Demand Paging
-I Could bring ennre process inlo memory at load lime
-I Or bring a Page \ntu memory omy when ii re needed
-. LESS VU needed, "O unneoessary V0
-I Less memory needed
+@ﬁﬁ Demand Paging
+I Could bring entire process into memory at load time
+I Or bring a page into memory only when it is needed
+. Less l/O needed, no unnecessary l/O
+' Less memory needed
 ' Faster response
 . More users
-I Simﬂsriu pagmg sysism wrm ewepping [diagram on ngnn
-I Page i5 needed Q reierence \O i!
-. invalid reference 3 EDOH
-' not-in-memory 3 bring lo memdry
-I Lazy Swapper - never snaps a page inlo memory unless page wrn he
+I Similar to paging system with swapping (diagram on right)
+I Page is needed :> reference to it
+' invalid reference 2 abort
+' not-in-memory :> bring to memory
+I Lazy swapper — never swaps a page into memory unless page will be
 needed
-0 Swapper that deals wrm pages is a pager
-mesmm “WWW. we“ M, sllhmm-u. enm .n my; mun
+' Swapper that deals with pages is a pager
+Operating system Concepts -10th Edition 10.10 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-W Demand Paging
-I Could pring ermre process inlo memory
-El load lime
-I 0r bnng e page mm memory only when / k \
-it is needed n \
-. léess l/O needed. no unnecessary l/ waver“ mpg-4 o; 1: 2] a]
-" > 4 5 r 6 7
-i Less memory needed l r WP";
-, - s
-' Fasler response i i i
-_ More users s .UJJSJ
-"'"gjl'" > we." rsjnne re
-I SimHar re paging sysrem with swapping Ai i
-(dmgram on rigm) I “1111135
-\,_7 i 7/
-‘ mam
-MW
+LL?‘ g g
+I Could bring entire process into memory
+at load time
+I Or bring a page into memory only when -
+it is needed
+. Less l/O needed, no unnecessary l/ swap out 05 15 25 35
+O program
+A 4- 5- 6- TI
+' Less memory needed
+8U 9U10U11D
+' Faster response
+. M 12D13D14D15D
+ore users
+. . . . . progBram swap in 16517-18.“
+I Slmllar to paglng system WIth swapplng
+(diagram on right) 205215225285
+main
+memory
+Operating System Concepts — 10th Edition 10.11 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-r‘
-“W Basic Concepts
-I With swapping, pager guesses which pages will be used beiore
+My’ Baslc Concepts
+I With swapping, pager guesses which pages will be used before
 swapping out again
 I Instead, pager brings in only those pages into memory
 I How to determine that set of pages?
-. Need new MMU functionaiity to implement demand paging
-I If pages needed are already memory resident
-. No difference from non demand-paging
-I If page needed and not memory resident
-' Need to detect and load the page into memory irorn storage
-t Without changing program behavior
-t Without programmer needing to change code
-ownswamcmmemam,“ M “imam-vi“member‘
+. Need new MMU functionality to implement demand paging
+I lf pages needed are already memory resident
+' No difference from non demand-paging
+I lf page needed and not memory resident
+' Need to detect and load the page into memory from storage
+> Without changing program behavior
+> Without programmer needing to change code
+Operating System Concepts-10"‘ Edition 1042 Silberschatz, Galvin and Gagn: ©2on
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-t‘
-MW Valld-lnvalld B|t
+53??!’1 I I I
+@v/ Valld-lnvalld Blt
 I With each page table entry a valid-invalid bit is associated
-(v 2 in-memory — memnry resident, i a not-in-memory)
-I Initially validiinvalid bit is set to ion all entries
-I Example ofa page table snapshot:
-Hamel lintirwtlid m
+(v :> in-memory — memory resident, i :> not-in-memory)
+I Initially valid-invalid bit is set to i on all entries
+I Example of a page table snapshot:
+Frame # valid-invalid bit
 —-
-—n
-—n
-—n
+—ll
+—II
+—II
 —i
 —II
-—lI
-Paw time
-I During MMU address translation, if valida'nvalid bit in page
-table entry is i 2 page fault
-cumin..."“mm-am M summummtg-“hm
+—II
+page table
+I During MMU address translation, if valid-invalid bit in page
+table entry is i 3 page fault
+Operating System Concepts — 10th Edition 10.13 Silberschatz, Galvin and Gagne ©201l8
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-W Page Table When Some Pages Are Not in Main Memory
-
-“-
-‘-
-
-“u MM“ *-
-
-'— um M 1- -
-
-all III ‘-
-
-u 5g s- El El D
-
-1
-
-‘H -|| 6- U E El
-
-5 II
-
-5n a: l- E E E
-
-1n II 9- IE E El
-
-WI mm» m-
-m H- El [I I]
-‘1- hackvwxwe
-“-
-"-
-“-
-Mmmw
-WmlwsYikmmmmem M “mm-mm"mg-mm"
+f W‘. '- I I
+~12 ~ Page Table When Some Pages Are Not |n Mam Memory
+0-
+1-
+0- 2-
+valid-invalid
+3n 5H 5- U U U
+2
+4- -|| 6- U
+5- In 7-
+Sul E E
+6- 8-
+6-H
+II In 9- E
+logical page table 10 -
+memory l1 l1 l1
+H-
+12-
+13 - backing store
+14-
+15-
+physical memory
+Operating System Concepts _10th Edition 10.14 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-t‘
-W Steps in Handling Page Fault
-1. If there is a reference to a page, ﬁrst reference to that page
+‘dry? Steps in Handling Page Fault
+
+1. lf there is a reference to a page, first reference to that page
+
 will trap to operating system
-' Page fault
+
+. Page fault
+
 2. Operating system looks at another table to decide:
-i Invalid reference a abort
+
+' Invalid reference :> abort
+
 ' Just not in memory
-3' Find free frame
+
+3. Find free frame
+
 4. Swap page into frame via scheduled disk operation
-5, Reset tables to indicate page now in memory
+
+5. Reset tables to indicate page now in memory
+
 Set validation bit = v
+
 6. Restart the instruction that caused the page fault
-ommwmammiem»all,“ M “imam-vimania“.
+
+A
+
+I Operating System Concepts-10th Edition 10.15 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-W Steps in Handling a Page Fault (Cont)
-I @“Eﬁigims
-Manncs ®
-® m I
-M_-“
-® - -
-.éﬁé" mm“ -
-® - ®
-"W?" = Marga”
--
-V'le
+I E» ' $5 Steps in Handling a Page Fault (Cont)
+page is 0n
+I ® backing store
+operating
+system ®
+reference
+® trap I
+.__n
+t t -t bl -
+insisugtrion page a e -
+t bring in
+restszsge = missing page
+physical
+memory A
+Operating System Concepts — 10th Edition 10.16 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-r‘
-“W Aspects of Demand Paging
+‘65v! Aspects of Demand Paging
 I Extreme case — start process with no pages in memory
-° OS seis instruction pointer ic ﬁrst instruction oi process,
+' OS sets instruction pointer to first instruction of process,
 non-memory-resident -> page fault
-° And for every other process pages on ﬁrst access
-° Pure demand paging
-I Actually, a given instruction could access muliiple pages =>
+' And for every other process pages on first access
+. Pure demand paging
+I Actually, a given instruction could access multiple pages =>
 multiple page faults
-. Consider felch and decode 0f instruction which adds 2
-numbers from memory and stores result back to memon/
-° Pam decreased because of locality of reference
+' Consider fetch and decode of instruction which adds 2
+numbers from memory and stores result back to memory
+. Pain decreased because of locality of reference
 I Hardware support needed for demand paging
-' Page table with valid / invalid hit
+' Page table with valid / invalid bit
 ' Secondary memory (swap device with swap space)
-' lnstrucnon restart
-om», m..." “We m» am u, r, sum-a W“ m sq“: W.
+. Instruction restart V
+Operating System Concepts-10th Edition 10.17 Silberschatz, Galvin and Gash: ©2622:
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:18**************
-“w Instructlon Restart
-I Consider an instruction that could access several diﬂerent
+‘691$ Instructlon Restart
+I Consider an instruction that could access several different
 
-locations
+locaﬁons
 
 ' Block move
 
-Q Auto increment/decrement location
+' Auto increment/decrement location
 
-' Restart the whole operation?
+. Restart the whole operation?
 
-v What if source and destination overlap?
+> What if source and destination overlap?
 
-0mm 5m... Cum,“ 7 m- mm um Sllhvumu. Bllvin "a m". @zuu
+Operating System Concepts — 10th Edition 10.18 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-t‘
-“W Free-Frame List
-I When a page lault occurs, the operating system must bring
-lhe desired page trom secondary storage intu main memory.
-I Most operating systems maintain a free-irame list — a pool of
-free lrames (or satisfying such requests.
-head —>.—>E7|—>|E—>|@ ~51
+k»? Free-Frame L|st
+
+I When a page fault occurs, the operating system must bring
+the desired page from secondary storage into main memory.
+
+I Most operating systems maintain a free-frame list — a pool of
+free frames for satisfying such requests.
+
+head —>. —>-—>--—> —>-
+
 I Operating system typically allocate free frames using a
-lechnique known as zaro-fill-on-demand i the content of the
-lrames zeroed-out before being allocated.
-I When a sysiem siaris up, all available memory is placed 0n
-the lree-lrame list.
-Dammit..."“mm-amt“ M WMMMmartial“
+technique known as zero-fill-on-demand — the content of the
+frames zeroed-out before being allocated.
+
+I When a system starts up, all available memory is placed on
+the free-frame list.
+
+Operating System Concepts-10th Edition 10.19 Silberschatz, Galvin and Gagne ©2022;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-t‘
-W Stages in Demand Paging — Worse Case
+4.68%? Stages in Demand Paging — Worse Case
+
 1. Trap to the operating system
-2' Save lhe user regisiers and process state
+
+2. Save the user registers and process state
+
 3. Determine that the interrupt was a page fault
-4, Check ihal lhe page reiererlce was legal and determine the
-location ol the page on the disk
-5' Issue a read from lhe disk io a lree lrame:
-1, Wait in a queue for this device until the read request is
+
+4. Check that the page reference was legal and determine the
+
+location of the page on the disk
+
+5. Issue a read from the disk to a free frame:
+
+1. Wait in a queue for this device until the read request is
+
 serviced
-2, Wait lor the device seek and/or latency time
-3 Begin ‘he tmrls'er 01 ihe page t0 a free frame
-om»,Swamamawmwdm M gimme-W“denim.
+2. Wait for the device seek and/or latency time
+3. Begin the transfer of the page to a free frame
+A
+
+I Operating System Concepts-10th Edition 10.20 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-ﬁe
-“W Stages In Demand Paglng (Cont.)
+@ﬁiﬁ Stages in Demand Paging (Cont.)
+
 6. While waiting, allocate the CPU to some other user
-7. Reoeive an interrupt from the disk l/O subsystem (l/O
+
+7. Receive an interrupt from the disk l/O subsystem (l/O
+
 completed)
-B. Save the registers and process state for the other user
+
+8. Save the registers and process state for the other user
+
 9. Determine that the interrupt was from the disk
+
 10. Correct the page table and other tables to show page is now
+
 in memory
-H. Wait for the CPU to be allocated to this process again
+
+11. Wait for the CPU to be allocated to this process again
+
 12. Restore the user registers, process state, and new page
-table, and then resume the interrupted instrumion
-Mm, m..." “We m» em“ {02¢ sllhvmh-u. W“ m m; W.
+
+table, and then resume the interrupted instruction
+
+~41
+
+I Operating System Concepts-10th Edition 10.21 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-A
-W Performance of Demand Paging
+‘ﬁlmy Performance of Demand Paging
 I Three major activities
-' Service the inlerrupl , carelul coding means just several
+' Service the interrupt — careful coding means just several
 hundred instructions needed
-' Read lhe page , lots of lime
+' Read the page — lots of time
 ' Restart the process — again just a small amount of time
-I Page Fault Rate n s p s 1
-' lip = 0 no page faults
-' if p = 1, every reference is a fault
-I Efiective Access Time (EAT)
-EAT I (1 — p) x memory access
+I Page Fault Rate O s p s 1
+. ifp = O no page faults
+' ifp = 1, every reference is a fault
+I Effective Access Time (EAT)
+EAT = (1 — p) x memory access
 + p (page fault overhead
 + swap page out
 + swap page in )
-om»,seememumiemwdm rm “imam-vi““mien.
+Operating System Concepts-10"‘ Edition 1022 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-A
-“W Demand Paging Example
+tea?’ Demand Paging Example
 I Memory access time = 200 nanoseconds
-I Average page-faull service time = 8 milliseconds
-I EAT = (1 — p) X 200 ns + p X (8 milliseconds)
-=(1e p) x 200 + p x 8000000 ns
-= 200 + p X 7,999,800 ns
-I If one access out of 1 ,000 causes a page lault, (hen p=0.001
+I Average page-fault service time = 8 milliseconds
+I EAT = (1 — p) x 200 ns + p x (8 milliseconds)
+= (1 — p) x 200 + p x 8,000,000 ns
+= 200 + p x 7,999,800 ns
+I If one access out of 1,000 causes a page fault, then p=0.001
 =>
 EAT = 8.2 microseconds.
-This is a slowdown by a factor oi 40!!
+This is a slowdown by a factor of 40!!
 I If you want performance degradation < 10 percent, i.e.
-EAT <110% X 200 n5
-=> 220 > 200 + 7,999,800 X p
-=> 20 > 7,999,800 X p
-:> p < 0.0000025
-' < one page fauil in every 400,000 memory accesses A
-wwwicmcmmicmam m, “Wm W“ m 5.01mi‘.
+EAT < 110% x 200 ns
+=> 220 > 200 + 7,999,800 x p
+=> 20 > 7,999,800 x p
+=> p < 0.0000025
+. < one page fault in every 400,000 memory accesses A)
+operating System Concepts-10"‘ Edition 1023 Silberschatz, Galvin and Gagn: ©2on
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-t‘
-a??? Demand Paging Optimizations
-I Swap space l/O lasler man me syslern l/o everi il on lne sarne device
-I Swap alleealed in larger enunks, less rnanagernenl needed lnan ﬁle
-syslern
-I Copy enlire process image la swap space al process load lirne
-I Tnen page in and pul oi swap space
-' Used in older BSD UﬂiX
-I Demand page in irprn prpgrarrr binary on disk, but discard ralner lnan paging
-pul when lreeing lrarne
-. Used in Soiaris and current BSD
-I Still need lg wrile lo swap spaee
-> Pages npl assaeialeg wrln a me (like stack and neap) - anonymous
+,1 l
+, ‘7.1% I I I I
+lay)’ Demand Paglng Optlmlzatlons
+I Swap space l/O faster than file system l/O even if on the same device
+' Swap allocated in larger chunks, less management needed than file
+system
+I Copy entire process image to swap space at process load time
+' Then page in and out of swap space
+' Used in older BSD Unix
+I Demand page in from program binary on disk, but discard rather than paging
+out when freeing frame
+' Used in Solaris and current BSD
+' Still need to write to swap space
+> Pages not associated with a file (like stack and heap) — anonymous
 memory
-> Pages modiﬁed in memory bui not yet writien back \o the ﬁle sysiem
-I Mobiie syslerrrs
-I Typicaily don'i suppprl swapping
-I lnslead, demand page lrprn ﬁle sysiern and reelarrn readecinly pages
-(such as code) A
+> Pages modified in memory but not yet written back to the file system
+I Mobile systems
+. Typically don’t support swapping
+. Instead, demand page from file system and reclaim read-only pages t ‘a
+(such as code)
+Operating System Concepts — 10th Edition 10.24 Silberschatz, Galvin and Gagne ©2015
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-A I
-“W Copy-on-erte
-I Cupy-on-Write (cowl allows oolh parenl and child processes lo initially
-snare the same pages in memory
-0 ll elmer process modiﬁes a shared page, only lherl is the page copied
-I cow allows more emerenl process crealion as only moorned pages are
+my Copy on erte
+I Copy-on-Write (COW) allows both parent and child processes to initially
+share the same pages in memory
+' lf either process modifies a shared page, only then is the page copied
+I COW allows more efficient process creation as only modified pages are
 copied
-I lﬂ general, Iree pages are EIIOCHEG irom a PODI Oi zero»fill-on-demand
+I ln general, free pages are allocated from a pool of zero-fill-on-demand
 pages
-. Pool should always have lree lrarnes lorlasldernand page execution
-> Don‘: want (o have lo lree a irarne as well as olner processing on
-page ianll
-' Why zero-em a page celere allocellng in
-I vfork ll l5 a variallon on fork ll system cell lnal has parenl suspend
-and child using oopy-on-write address space ofparent
-' Designed (O have Child call exec H
-. Very emcienl
+' Pool should always have free frames for fast demand page execution
+> Don’t want to have to free a frame as well as other processing on
+page fault
+' Why zero-out a page before allocating it?
+I vfork () is a variation on fork () system call that has parent suspend
+and child using copy-on-write address space of parent
+' Designed to have child call exec ()
+' Very efficient
+Operating System Concepts — 10th Edition 10.25 Silberschatz, Galvin and Gagne ©201'8
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-*6?!‘ Before Process 1 Modifies Page C
-physwa‘
-
-mm‘ memo», ms
-—_-—_ -
+‘A’??? Before Process 1 Modifies Page C
+physical
+DFOCESS1 memory DFOCESSQ
+— —
 —
-
-—
-—-.—_
+ﬂ— —
+=-- —
+—_—
 - -
+| Operating System Concepts — 10th Edition 10.26 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-“3% After Process 1 Modifies Page C
-Wm Mi’; We“,
-paw
-meg i
-WC :
-CupyuiuageC i
-I
+a”??? After Process 1 Modifies Page C
+physical
+DTOCGSSH memory DFOCGSS2
+= -
+=_—-=
+- ——_
+-
+| Operating System Concepts — 10th Edition 10.27 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-A
-M)?’ What Happens if There is no Free Frame?
+E??? What Happens if There is no Free Frame?
 I Used up by process pages
-I Also in demand from the kernel, l/O buffers, elc
+I Also in demand from the kernel, l/O buffers, etc
 I How much to allocate to each?
-I Page replacement’ find some page in memory, but n01
+I Page replacement — find some page in memory, but not
 really in use, page it out
-0 Algoriihm a ierrninate? swap out? replace the page?
-° Periormanee — want an algorithm which will result in
-minimum number oi page faults
+' Algorithm — terminate? swap out? replace the page?
+' Performance — want an algorithm which will result in
+minimum number of page faults
 I Same page may be brought into memory several times
-awamswamaummwan.“ “a. sllhvuzh-msulvlnands-“£82m:
+I Operating system Concepts-10"‘ Edition 1028 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-A
-“W Page Replacement
-I Prevent over-allocation o1 memory by modifying
-pagefault service routine to include page replacement
-I Use modify (dirty) bit lo reduce overhead of page
-translers e only modiﬁed pages are written to d|sk
-I Page replacement completes separalion between
-logical memory and physical memory i large vmual
+My)’ Page Replacement
+I Prevent over-allocation of memory by modifying
+page-fault service routine to include page replacement
+I Use modify (dirty) bit to reduce overhead of page
+transfers — only modified pages are written to disk
+I Page replacement completes separation between
+logical memory and physical memory — large virtual
 memory can be provided on a smaller physical
 memory
-omwsmmmmmmm nus “Wham-vi“.mqnimm
+Operating System Concepts-10th Edition 10.29 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Mfr Need For Page Replacement
-W. m...
-II M
-n -
-PM
-‘u III
-*E EE
-,
-WWW Wm.“ -= m in
-hm‘ 91ml ‘ .-
-= u
-= 1
-ma "5"?“ ,
-n I! II 5 II El
-‘II nu a II
-z u III , II
-3 n E! “WWW mm...“
-WIMM wow-w
-Mm, m,
+frame valid-invalid
+\ r -
+C 0- la-
+P —>
+1 u II
+2 BI
+3 II BI u
+logical memory page table for 0
+for process1 process1 1 .-
+2 II
+3 ?
+frame valid-invalid 4
+N i! bit
+on 5-
+1- 6-
+2- Ill 7-;
+3 E. physical memory backing store
+logical memory page table for
+for process 2 process 2
+Operating System Concepts — 10th Edition 10.30 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-ﬁe
-W Baslc Page Replacement
+“Wm
+@v/ BaSIC Page Replacement
 1. Find the location of the desired page on disk
-2' Find a tree frame:
-- ll there is a lree frame, use it
-- ll there is no tree frame, use a page replacement
+2. Find a free frame:
+- If there is a free frame, use it
+- If there is no free frame, use a page replacement
 algorithm to select a victim frame
 - Write victim frame to disk if dirty
-3, Bring the desired page intu the (newly) free frame; updale
+3. Bring the desired page into the (newly) free frame; update
 the page and frame tables
-A Continue the process by restarting the instruction that
+4. Continue the process by restarting the instruction that
 caused the trap
 Note that now there are potentially 2 page transfers for a page
-faull => increasing EAT
-Mm m..." “MW m» an“ w :1 “mt-a W“ m W‘. W.
+fault => increasing EAT
+in
+Operating System Concepts-10th Edition 10.31 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-vi); Page Replacement
-hams vahdimvalxd bn 7/’ _\~
-i \7 7/
-swap nut
-/ change vwlIm
-@to \nvmld Digs
-IIL f mm /
--- .688er
-“Hem! \
-pagetaHe new page (31 A SWP >*\\\
-deswed '\{
-Pwem
-\\V ,_
-physma‘
-mow
+‘If; $5 Page Replacement
+iixm “
+frame valid-invalid bit
+swap out
+change ViCtim
+u“ @to invalid ® page
+IIQD I
+-- reset page
+table for ..
+page table H,
+new page ® swap \
+desired I
+pagein
+physical
+memory
+Operating System Concepts — 10th Edition 10.32 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-r‘
-W Page and Frame Replacement Algorithms
+My Page and Frame Replacement Algorithms
 I Frame-allocation algorithm determines
-0 How many frames to give each process
-0 Which frames to replace
+' How many frames to give each process
+' Which frames to replace
 I Page-replacement algorithm
 . Want lowest page-fault rate on both first access and re-access
 I Evaluate algorithm by running it on a particular string of memory
-relerences (relerence string) and computing the number of page
-faults on that Slrmg
-. String is just page numbers, not full addresses
-' Repeated awess to the same page does not cause a page lault
-. Results depend on number ol frames available
-I In all our examples, the reference string ol relerenced page
-numbers i5
-7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,ll,1,7,ll,1 A
-am“.Seamamaismwm was Sllhvuzn-msulvm“acquiezuu
+references (reference string) and computing the number of page
+faults on that string
+' String is just page numbers, not full addresses
+' Repeated access to the same page does not cause a page fault
+' Results depend on number of frames available
+I In all our examples, the reference string of referenced page
+numbers is
+7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,0,1,7,0,1 V
+operating System Concepts _10m Edition 1033 Silberschatz, Galvin and Gagn: @202?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-v4‘ Graph of Page Faults Versus The Number of Frames
-.6 ------
-_ .4 I1-----
-g .2 ------
-§ w Ik‘____
-é a -“----
-i e -_!---
-E ‘ --_:—-
+W Graph of Page Faults Versus The Number of Frames
+16 ------
+m 14 Ii-----
+g 12 ------
+323,10 -L—----
+é 8 -“----
+2 6 -_-__---
+5 4 --s!__-
 2 ------
 ------
-I 2 3 A 5 6
-number 0| ﬁlms!
-Wmmﬂmmmsmm M mm.‘ “WM-Mm
+1 2 3 4 5 6
+number of frames
+Operating System Concepts — 10th Edition 10.34 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:35**************
-~
-MW Flrst-ln-Flrst-Out (FIFO) Algorlthm
-I Reference string: 7.0.1.2.0.3.0.4.Z.3.0.3.0.3.2.1.2.0.1.7.0.1
+key“? F|rst-ln-F|rst-Out (FIFO) Algorlthm
+gym i‘
+I Reference string: 7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,0,1,7,0,1
 I 3 frames (3 pages can be in memory at a time per process)
-mum,“
-7ﬂ|2n30t2303212ﬂ17ﬂl
-i E E E I I E E E i i
-I E El E1 E El E E E I I El E1
-I I ll I I D El E E E E E
-gunman
+mleranoestring
+TD1203042303212E11TD1
+E E Ll El II El El El
+I lil El lil E E E E E II ll El El
+I I II ll lil El El E E E E E E
+pagaframas
 15 page faults
-I Can vary by reference sfring: consider 12.3.4.12.5.12.3.4.5
+I Can vary by reference string: consider 1,2,3,4,1,2,5,1,2,3,4,5
 ' Adding more frames can cause more page faults!
 > Belady’s Anomaly
-I HOW t0 track ages 0f pages?
+I How to track ages of pages?
 ' Just use a FIFO queue
-omwsliumcumwm-5.1.“. W Elem-Wm.mmimw
+Operating System Concepts — 10th Edition 10.35 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-“ﬁr FIFO Illustrating Belady’s Anomaly
-
-----
-
+‘of? FIFO Illustrating Belady’s Anomaly
+III-II-
 16
-E -------
-'2-------
-é? --_‘k‘--
-a -----==
--------
--------
-1 2 3 4 5 6 7
 
-number 0| llamas
+w III-II-
+
+III-II-
+
+; --_‘k‘--
+
+E -----==
+-------
+IIW-I- I-
+
+5 7
+number of frames
+Operating System Concepts -10th Edition 10.36 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Afr Optimal Algorithm
-I Replace page that will not be used lor longest period oi time
-' 9 page faults ethis is the optimal value for this example
-I Howdoyou knowthis’?
-' Can't read the lulure
-I Used for measuring how well your algorithm perlorrns
-mmwm
-7012ﬂ3ﬂ423032|2011ﬂ1
-BEE! E E! E E i
-BEE El I! E E E
-IIII El El E H ll
-9mm
-9pageiaults
-omwshummmmwmm W “mm-WM“Mimi
+gay»? Optlmal Algorlthm
+gym f‘
+I Replace page that will not be used for longest period of time
+' 9 page faults — this is the optimal value for this example
+I How do you know this?
+' Can’t read the future
+I Used for measuring how well your algorithm performs
+I'BTBFBHGBBIFHQ
+?012t}30423t1321201?t11
+E E E E E
+I El El El El I! El El El
+I I ll ll E E E ll
+pageframee
+9page faults
+Operating System Concepts — 10th Edition 10.37 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-q}? Least Recently Used (LRU) Algorlthm
+tail’? Least Recently Used (LRU) Algorlthm
 I Use past knowledge rather than future
 I Replace page that has not been used in the most amount of time
 I Associate time of last use with each page
-lmreneastrmg
-1orzoaoezsoazrzor1or
-1 7 1 2 2i 4’) 4 'ol 1 Ir i’
-E E nl v 0 a E n
-n I] a a 2 l3 i2 v
-pagelmmes
-I 12 laults — better than FIFO but worse than OPT
+reference string
+70120804280321201701
+El
+I El El El El El El El El
+I I
+pageframes
+I 12 faults — better than FIFO but worse than OPT
 I Generally good algorithm and frequently used
-I Buthowtoimplement?
-ewe“, 5m... em,“ , m- Em“ um sllhmmu. em "a m... em
+I But how to implement?
+Operating System Concepts — 10th Edition 10.38 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-r‘
-9W‘ LRU Algorithm (Cont)
+tawny)’ LRU Algorithm (Cont.)
 I Counter implementation
 ' Every page entry has a counter; every time page is referenced
 through this entry, copy the clock into the counter
@@ -747,824 +818,889 @@ through this entry, copy the clock into the counter
 smallest value
 > Search through table needed
 I Stack implementation
-' Keep a stack oi page numbers in a double link form:
-. Page relerencedt
+' Keep a stack of page numbers in a double link form:
+' Page referenced:
 > move it to the top
-> requires 5 pointers t0 be Changed
-° But each update more expensive
-° No search tor replacement
-I LRU and OPT are cases of stack algorithms that don't have
-Belady's Anomaly A
-cumin..."mmmwm W “imam-vi““minim.
+> requires 6 pointers to be changed
+' But each update more expensive
+' No search for replacement
+I LRU and OPT are cases of stack algorithms that don’t have
+Belady’s Anomaly
+Operating System Concepts-10th Edition 10.39 Silberschatz, Galvin and Gash: ©20f§
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-W Use Of A Stack to Record Most Recent Page References
-reference suing
-4 1 n 1 1 o 1 2 1 2 7 1 2
-2 7 1 1
-a
-E
-H
-I
-stack stack
-behre alter
+Use Of A Stack to Record Most Recent Page References
+i" 1*
+reference string
+4 7 0 7 1 0 1 2 1 2 7 1 2
+2 7 i i
 a b
-Wm“, 511mm mum‘ , “1- mm mu “mm-e em m Gli'll We
+II
+II
+stack stack
+before after
+a b
+Operating System Concepts — 10th Edition 10.40 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-t‘
-W LRU Approximation Algorithms
+say}? LRU Approximation Algorithms
 I LRU needs special hardware and still slow
-I Reference b“
-' With each page associate a bit, initially 1 O
+I Reference bit
+. With each page associate a bit, initially = O
 ' When page is referenced bit set to 1
-° Replace any with relerence bit = O (if one exists)
-t We do not know lhe order, however
+' Replace any with reference bit = O (if one exists)
+> We do not know the order, however
 I Second-chance algorithm
 ' Generally FIFO, plus hardware-provided reference bit
-' Clock repiacement
-l If page to be replaced has
-t Reference bit = 0 => replace it
+' Clock replacement
+' lf page to be replaced has
+> Reference bit = O => replace it
 > reference bit = 1 then:
-a set reference bil 0, leave page in memory
-a replace next page, subject to the same rules A
-ownswumaminwat“ M “imam-vi“mania“.
+— set reference bit O, leave page in memory
+— replace next page, subject to the same rules ‘A
+operating System Concepts _10m Edition 1041 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-5W Second-Chance (clock) Page-Replacement Algorithm
-E E
-E E
-m I3 E
-E E
-E , ‘3 .
-i ‘ ‘
-E a)
-umhrqueuempmu WmMp-m
-m m
-0,.le 5m... 9mm. 7 m» Em M ﬂlhmznlu. Ban m a"... Mun
+Mk Second-Chance (clock) Page-Replacement Algorithm
+{r )4
+reference pages reference pages
+bits bits
+next
+victim Iii
+E
+circular queue of pages circular queue of pages
+(a) (b)
+Operating System Concepts _ 10m Edition 1042 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-r‘
-“5?; Enhanced Second-Chance Algorithm
+AVW '
+Qrww Enhanced Second-Chance Algonthm
 I Improve algorithm by using reference bit and modify bit (if
 available) in concert
 I Take ordered pair (reference, modify):
-' (0, 0) nelther recently used not modified — best page to
-replaoe
+' (O, O) neither recently used not modified — best page to
+replace
 ' (0, 1) not recently used but modified — not quite as good,
 must write out before replacement
-. (1, U) recently used but clean — probably wrll be used again
+' (1, O) recently used but clean — probably will be used again
 soon
-. (1, 1) recently used and modified — probably will be used
-again soon and need to wriie out before replacement
+' (1, 1) recently used and modified — probably will be used
+again soon and need to write out before replacement
 I When page replacement called for, use the clock scheme but
-use lhe four Classes replace page in lowest non-empty class
+use the four classes replace page in lowest non-empty class
 . Might need to search circular queue several times
-om", 5"..." “We m» an“ M sllhvmn-u. W“ m sq“: my.
+Operating System Concepts — 10th Edition 10.43 Silberschatz, Galvin and Gaylek @262
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-M Counting Algorithms
+‘65$? Countlng Algorlthms
+
+M i‘
 I Keep a counter of the number of references that have been
-made 10 each page
-o Not oommon
-I Least Frequently Used (LFU)Algorithm: replaces page
+made to each page
+' Not common
+I Least Frequently Used (LFU) Algorithm: replaces page
 with smallest count
-I Most Frequently Used (MFU) Algorithm: based on lhe
-argument that the page with the smallest oount was probably
-jusl brought in and has yet l0 be used
-gunmen..."“mm-am M stemmed“nee-“km
+I Most Frequently Used (MFU) Algorithm: based on the
+argument that the page with the smallest count was probably
+just brought in and has yet to be used
+
+| Operating System Concepts-10th Edition 10.44 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-ﬁe
-“W Page-Buffering Algorithms
-I Keep a pool oi lree lrames, always
+fey?’ Page-Bufferlng Algorlth ms
+I Keep a pool of free frames, always
 ' Then frame available when needed, not found at fault time
-o Read page into free frame and select victim to evict and add
+' Read page into free frame and select victim to evict and add
 to free pool
-o When convenient, evict victim
-I Possibly, keep list of modiﬁed pages
-' When backing store otherwise idle, write pages there and set
+. When convenient, evict victim
+I Possibly, keep list of modified pages
+' When backing store othen/vise idle, write pages there and set
 to non-dirty
-I Possibly, keep lree lrarne contents intact and note what is in
+I Possibly, keep free frame contents intact and note what is in
 them
-° If referenced again belore reused, no need to load contents
+' If referenced again before reused, no need to load contents
 again from disk
-° Generally useful to reduce penalty il wrong victim lrame
+. Generally useful to reduce penalty if wrong victim frame
 selected
-OMMWMMWMMP.Mm w stem-e W“ m W181“.
+Operating System Concepts — 10th Edition 10.45 Silberschatz, Galvin and Gaylek @251:
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-ﬁe
-u)?’ Applications and Page Replacement
-I All ol these algorithms have OS guessing about future page
+a rs
+@ﬁi Applications and Page Replacement
+I All of these algorithms have OS guessing about future page
 access
 I Some applications have better knowledge — i.e. databases
 I Memory intensive applications can cause double buffering
-. OS keeps copy of page in memory as l/O buffer
-i Application keeps page in memory for its own work
+' OS keeps copy of page in memory as |/O buffer
+' Application keeps page in memory for its own work
 I Operating system can give to an app direct access to the
-disk, getting out of the way pl the applications
-. Raw disk mode
+disk, getting out of the way of the applications
+' Raw disk mode
 I Bypasses buffering, locking, etc
-Damswm“midterm M “Wham-vi“minim.
+I operating System Concepts _10m Edition 1046 Silberschatz, Galvin and Gagn/e ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-t‘
-MW Allocation of Frames
-I Each process needs minimum number ol lrames
-I Example: IBM 370 i 6 pages l0 handle SS MOVE
+‘a’??? Allocation of Frames
+I Each process needs minimum number of frames
+I Example: IBM 370 — 6 pages to handle SS MOVE
 instruction:
-' instruction is 6 bytes, might Span 2 pages
+' instruction is 6 bytes, might span 2 pages
 . 2 pages to handle from
-' 2 pages to handle l0
-I Maximum of course is total lrames in the system
+' 2 pages to handle to
+I Maximum of course is total frames in the system
 I Two major allocation schemes
-. ﬁxed allocation
-Q priority allocation
-I Many variations
-cumin..."awmwm M WMMMmania“
+. fixed allocation
+' priority allocation
+I I Many variations
+A
+Operating System Concepts -1oth Edition 10.47 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-t‘
-MW leed Allocatlon
-I Equal allocation — For example, if there are 100 lrames (after
+W)’ leed Allocatlon
+I Equal allocation — For example, if there are 100 frames (after
 allocating frames for the OS) and 5 processes, give each process
 20 frames
-' Keep some as lree lrarne bufler pool
-I Proportional allocation i Allocate according to the size of process
+' Keep some as free frame buffer pool
+I Proportional allocation — Allocate according to the size of process
 ' Dynamic as degree of multiprogramming, process sizes
-change
-m: 64
-i x‘: size ofprocess p, 51:10
-i 3:2 S 52:127
-~ m= total numberofframes a‘ :%X6M
-Y _ i‘
-i A: allocation for ,g-S Xm "FQWW
-‘ 137
-0mm 5m... Cum,“ 7 m- mm tun Sllhvumu. Bllvln "a m". owl
+chan e
+g m=64
+— si: size of process pl. S1:1()
+_ 5:2 s. $21127
+— m= total number of frames a1:&><62%4
+137
+. S,-
+_ ai- allocatlon for pi-§><m 612:12_7><62%57
+137
+Operating System Concepts — 10th Edition 10.48 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-t‘
-W Global vs. Local Allocation
+‘My’ Global vs. Local Allocatlon
 I Global replacement — process selects a replacement
-frame from lhe sel of all lrames; one process can take a
-lrame lrom another
-i But then prooess execution time can vary greally
-' But greater throughput so more common
-I Local replacement i each process selects lrom only
-its own set ol allocated lrames
-i More consistent per-process performance
+frame from the set of all frames; one process can take a
+frame from another
+. But then process execution time can vary greatly
+. But greater throughput so more common
+I Local replacement — each process selects from only
+its own set of allocated frames
+' More consistent per-process performance
 ' But possibly underutilized memory
-Dramas." “We m» a...“ rm sum-a W“ m a‘; W.
+Operating System Concepts-10th Edition 10.49 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-A
-MW Reclalmmg Pages
+@v/ Recla|m|ng Pages
 I A strategy to implement global page-replacement policy
-I All memory requests are satisﬁed from the free-frame
+I All memory requests are satisfied from the free-frame
 list, rather than waiting for the list to drop to zero before
 we begin selecting pages for replacement.
 I Page replacement is triggered when the list falls below
 a certain threshold.
 I This strategy attempts to ensure there is always
 sufficient free memory to satisfy new requests.
-Dams...“c....,....i~a.i.. W Siam-mmmartial“
+in
+Operating System Concepts — 10th Edition 10.50 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:51**************
-|er Reclaiming Pages Example
-i mm
+f " Reclaimin Pa es Exam le
+kernel suspends
+reclaiming
+pages
+
+-.___________P____________§_____ maximum
+
+threshold
+>~
+'6
+E
+OJ
+E
+(I)
+E
+
+“- minimum
+
+_______..____________ “"‘""" threshold
+
+a c
+time
+kernel resumes
+reclaiming
+pages
+Operating SYStem C°'1¢eli>ts -1°“‘ Edition 10.51 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:52**************
-“ﬂy Non-Unlform Memory Access
 I So far all memory accessed equally
-I Many systems are NUMA i speed oi access 10 memory varies
+I Many systems are NUMA — speed of access to memory varies
 ' Consider system boards containing CPUs and memory,
 interconnected over a system bus
 I NUMA multiprocessing architecture
-0am, mu... CW,“ 7 m- mm m s: Sllhvuzhlu. em m m... W1
+0 1
+Operating System Concepts — 10th Edition 10.52 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-A
-“W Non-Umform Memory Access (Cont)
-I Optimal performance comes from allocating memory “close to"
-the CPU Dl'l which the thread is scheduled
-° And modifying the scheduler to schedule the thread on the
+if
+‘ﬁr’ Non-Unlform Memory Access (Cont.)
+I Optimal performance comes from allocating memory “close to”
+the CPU on which the thread is scheduled
+' And modifying the scheduler to schedule the thread on the
 same system board when possible
-° Solved by Solaris by creating lgroups
-t Structure t0 track CPU l Memory low latency groups
-t Used by scheduler and pager
+' Solved by Solaris by creating lgroups
+> Structure to track CPU / Memory low latency groups
+> Used by scheduler and pager
 > When possible schedule all threads of a process and
-allocate all memory lor that process within the lgroup
-om»,Syicmmwﬁumm was; mm.“ “MMHNNJW.
+allocate all memory for that process within the lgroup
+| Operating System Concepts-10th Edition 10.53 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-t‘
-MW Th ras hing
-I If a process does not have “enough” pages, the page»fault
+Mﬁy Thrashing
+I If a process does not have “enough” pages, the page-fault
 rate is very high
 . Page fault to get page
-i Replace existing frame
-. But quickly need replaced frame back
-i This leads to:
-t Low CPU utilization
-t Operating system thinking that it needs to increase the
+' Replace existing frame
+' But quickly need replaced frame back
+' This leads to:
+> Low CPU utilization
+> Operating system thinking that it needs to increase the
 degree of multiprogramming
-t Another prooess added to the system
-Drawn..."“mm-Em my “imam-vi“Mimi
+> Another process added to the system
+I Operating System Concepts _10m Edition 1054 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-W Thrashing (Cont.)
+/ ='\r' I
+Thrashlng (Cont.)
 I Thrashing. A process is busy swapping pages in and out
-1
-\
-l
-g l mm";
+|
+|
+|
+|
+c I
+é l thrashing
+E —>
+3
+D.
 u
-degree n1 muklbmglimmmg
-0mm 5m... mm‘. 7 “1- mm Ms sllhmmu. sum“ m any": mu
+degree of multiprogramming
+Operating System Concepts — 10th Edition 10.55 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-‘WC Demand Paging and Thrashing
-I Why does demand paging work’?
-Lecality medel
+453;“)? Demand Paging and Th rashlng
+I Why does demand paging work?
+Locality model
 ' Process migrates from one locality to another
-' Localities may overlap
-I Why does thrashing occur’?
-2 size oi locality > total memory size
-I Limit effects by using local 0r priority page replacemeni
-Wmmm BMW m» Ed...“ to s: mm.‘ W“ m W‘. my.
+. Localities may overlap
+I Why does thrashing occur?
+2 size of locality > total memory size
+I Limit effects by using local or priority page replacement
+| Operating System Concepts-10th Edition 10.56 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-My”; Locality ln A Memory-Reference Pattern
-
-" v ~ mm *f
-mllWlMWllf' ‘
-IHIIIMKWH-M-‘h-M ‘
-
-I IWI
-
-g I‘ ‘. ‘1H!’ "
-
-“1' ; m ,
-
-z-ITIFMIIJM
-WWW“
-
-hm 'IhHmmi lwmivi ml" A
+~ ‘t | A M R f P tt
+a??? Locall y n emory- e erence a ern
+lLLs I“
+34 ' i‘ ‘ ‘Us,
+M‘ :!H\‘“‘11WHHHWMHH“‘HHHW““’ W“ U“WW“WWWMWmum\HWHM‘ HMW “TM
+\ 3
+32 H ‘ ‘U H || \‘H “V ‘
+MMMIHMIII + »
+\ H M ‘ \ 1 "
+30 , ‘ \ \ H‘ ““‘
+v U ‘ ‘II M \ \ U H
+M \ u‘ WWW‘ W WWHWM \\H:\\\HH>‘|\\H\HIMWWIHHHHI'HH “‘ ,
+_fl|”m
+28
+W
+g), —WIIMI \
+(D
+‘E I—I\I|IM~
+g U L‘ a I ; 1
+E ‘ u
+W \ M NH ‘W l‘ L W}
+n \ NH ‘ ‘
+M WMW\H&i%1\11\\!u.v!*'n\y WWW “I MW 1"“ 1|? IIMIMMMW
+22 L ‘ \ \
+‘ mumWWWHum“WWII! » ‘ i
+WM Wum‘HIIIHHHHIIM J \ " L L
+g ‘ ‘H‘1111:1151:31:11?“‘ffllﬂfllll'ilWlH l‘\ ‘ ‘1111111151111WW‘IHWIILIIWMM A 1W
+0g) ‘ W‘ ‘I ‘ H ‘ “I MM>|\‘1H1H‘>W“! \erlj ‘ H h I. ‘ U WW HM“
+Q18 W"WWWNIHIWIIH“WW "WWWMHIMIHHWHIHI H “1WE|!‘HHWHW WW
+execution time —> 7
+Operating System Concepts _10th Edition 1057 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-t‘
-W Working-Set Model
-I A E working-set window E a ﬁxed number of page references
-Example: 10,000 irlslrucliorls
-I WSS, (working set of Process P) = total number of pages
-referenced irl lhe mosl recenl A (varies in lime)
+My/ Worklng-Set Model
+I A E working-set window E a fixed number of page references
+Example: 10,000 instructions
+I WSS, (working set of Process P,) = total number of pages
+referenced in the most recent A (varies in time)
 . if A too small will not encompass entire locality
-' ii A too large will encompass several localities
-. ifA = w 3 will encompass entire program
-I D= 2 WSS, =total demand frames
-' Approximatlon of locality
-ownswumumiemm.“ “m Slimmer““denim.
+' if A too large will encompass several localities
+' if A = oo :> will encompass entire program
+I D = 2 WSS, E total demand frames
+' Approximation of locality
+in
+Operating System Concepts-10th Edition 10.58 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-us}; Workmg-Set Model (Cont.)
-
-I if D > m :> Thmshing
-
-I Policy if D > m, (hen suspend or swap out one of the
-
+44;? Worklng-Set Model (Cont.)
+tic
+I if D > m :> Thrashing
+I Policy if D > m, then suspend or swap out one of the
 processes
-page Ielerence (able
-..25{5777751523412244434244uazaauauy,
-A A
-‘N '2
-wsu‘) = (1,2551) wsuzp = (14)
-
-Dummy“... Cummmn-Edm um Sllhvmnlu. a-lvm-"m-vnwm
+page reference table
+H.2615777751623412344434344413234443444.H
+A ‘ A ‘
+r1 r2
+W801) = {1 ,2,5,6,7} W802) = {3,4}
+| Operating System Concepts — 10th Edition 10.59 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-A
-W Keeping Track of the Working Set
-I Approximate with interval timer + a reierence bit
-I Example: A =10,000
-' Timer interrupts aﬂer every 5000 time units
-l Keep in memory 2 bils for each page
+@ﬁﬁ Keeping Track of the Working Set
+I Approximate with interval timer + a reference bit
+I Example: A = 10,000
+' Timer interrupts after every 5000 time units
+' Keep in memory 2 bits for each page
 ' Whenever a timer interrupts copy and sets the values of
-all reference bils lo 0
-' If one of the bits in memory = 1 Q page in working set
+all reference bits to 0
+' If one of the bits in memory = 1 :> page in working set
 I Why is this not completely accurate?
 I Improvement = 10 bits and interrupt every 1000 time units
-om»,Seamamumiemwdm W mmww“denim.
+I operating System Concepts _10m Edition 1050 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-l‘
 W Page-Fault Frequency
+14;“ ‘
 I More direct approach than WSS
-I Establish “acoeplable” page-fault frequency (PFF) rate
-and use local replacemerll policy
-' If actual rate loo low, process loses lrame
-' If actual rale loo high, process gains lrame
-g lnwnunwrm
-g mm“
-: WW
-‘ WM,
-dim-rumba!
-mm“
-numhev 0| mes
-WWW“Cummiqmm W mm.‘ smmeqﬁmm
+I Establish “acceptable” page-fault frequency (PFF) rate
+and use local replacement policy
+' If actual rate too low, process loses frame
+' If actual rate too high, process gains frame
+g increase number
+Z of frames
+is upper bound
+a
+8
+lower bound
+decrease number
+of frames
+number of frames
+Operating System Concepts — 10th Edition 10.61 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-qfr Workmg Sets and Page Fault Rates
-I Direct relationship between working set 01 a process and its
+‘6?? Worklng Sets and Page Fault Rates
+I Direct relationship between working set of a process and its
 page-fault rate
 I Working set changes over time
-I Peaks and valleys overtime
-WW m
-K
-v-u-
-llul
-m-
-o m
-Hm
-0:!le 5m... CW,“ 7 m- mm "m sllhmmu. DIM“ m a“... W1
+I Peaks and valleys over time
+working set
+1 m
+page
+fault
+rate
+0
+time
+Operating System Concepts —10th Edition 10.62 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-M Allocating Kernel Memory
-I Trealed diﬂerenlly lrorn user memory
-I Often allocaled from a free-memory pool
+ray“? Allocatlng Kernel Memory
+I Treated differently from user memory
+I Often allocated from a free-memory pool
 ' Kernel requests memory for structures of varying sizes
-i Some kernel memory needs lo be contiguous
-> Lev for devioe l/O
-0mm 5m... Cum,“ 7 in" mm m ea sllhmmu. elm“ m m". owl
+' Some kernel memory needs to be contiguous
+> |.e. for device |/O
+| Operating System Concepts —10th Edition 10.63 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-t‘
-W Bu ddy System
-I Allocates memory from a ﬁxed-size segment consisting ol several
+g?’ Buddy System
+I Allocates memory from a fixed-size segment consisting of several
 physically-contiguous pages
-I Memory allocated using power-of-Z allocator
-' Satisfies requests in units sized as power 012
-° Request rounded up to next highest power of 2
+I Memory allocated using power-of-2 allocator
+' Satisfies requests in units sized as power of 2
+' Request rounded up to next highest power of 2
 ' When smaller allocation needed than is available, current chunk split
-into two buddies cl next-lower power oi 2
+into two buddies of next-lower power of 2
 > Continue until appropriate sized chunk available
 I For example, assume 256KB chunk available, kernel requests 21 KB
-I Split into At W AR of 126KB each
+0 Split into AL and AR of 128KB each
 > One further divided into BL and BR of 64KB
-a One further into CL and CR of 32KB each — one used to
+— One further into CL and CR of 32KB each — one used to
 satisfy request
 I Advantage — quickly coalesce unused chunks into larger chunk
-I Disadvantage e fragmentation A
-amaswamammmnan,“ W mama-n“mania,”
+I Disadvantage — fragmentation
+operating System Concepts-10"‘ Edition 1054 Silberschatz, Galvin and Gagriit©20é12z\8‘Z
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-W Buddy System Allocator
-physwaﬂy conﬁgulws Wiles
-25S KB
-‘26 KB 128 m
-N ‘w
-
-54 KB M KB
-
-BL BR
-82 KB S2 KB
-‘L ca
+Wm Buddy System Allocator
+physically contiguous pages
+128 KB 128 KB
+AR
+64 KB 64 KB
+32 KB 32 KB
+C|_ CR
+Operating System Concepts — 10th Edition 10.65 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-r‘
-MW Slab Allocator
+My? Slab Allocator
 I Alternate strategy
 I Slab is one or more physically contiguous pages
 I Cache consists of one or more slabs
 I Single cache for each unique kernel data structure
-' Each cache filled with objects — instantiations 01 the data
+' Each cache filled with objects — instantiations of the data
 structure
-I When cache created, ﬁlled with objects marked as free
+I When cache created, filled with objects marked as free
 I When structures stored, objects marked as used
-I It slab is tull of used objects, next object allocated from empty
+I lf slab is full of used objects, next object allocated from empty
 slab
-' If no empty slabs, new slab allocated
-I Beneﬁts include no fragmentation, fast memory request
-satistaction
-gamma."“mm-aunt W “mum-vi““Mimi
+' lf no empty slabs, new slab allocated
+I Benefits include no fragmentation, fast memory request
+satisfaction
+Operating System Concepts-10"‘ Edition 1056 Silberschatz, Galvin and cagn: ©2on
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-up? Slab Allocation
-kerne\ ohms caches w
+W Slab Allocatlon
+tog ”‘
+kernel objtits caches slabs
+H - - - - - - —
 I |=| —
+»— —
 3-KB — —
-/,,;>— conuguous
-/ — pages
-I '-' —]
-l-l —
+objects I —
+\ \ \ \ I ] physically
+:j> contiguous
+E‘ —
+- —
 7-KB I - —
-ms - I
+objects , - -
 |=| —
-WNW““WM-W,“ W “WNW“minim.
+Operating System Concepts — 10th Edition 10.67 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-t‘
-
-“W Slab Allocator in Linux
-I For example prowess descriptor is of type struct taskistruct
+Q4»??? Slab Allocator in Linux
+I For example process descriptor is of type struct task_struct
 I Approx 1.7KB of memory
 I New task => allocate new struct from cache
-
-Q WiH use existing Iree struct taskistzuct
+' Will use existing free struct task_struct
 I Slab can be in three possible states
-
-1 Full — a" used
-
-2 Empty i all free
-
-:1. Partial — mrx o! free and used
-I Upon request, slab allocalor
-
-1. Uses free struck in partial slab
-
-2. If none, lakes one from empty slab
-
-3. If no empty slab, creale new emply slab
+1. Full — all used
+2. Empty — all free
+3. Partial — mix of free and used
+I Upon request, slab allocator
+1. Uses free struct in partial slab
+2. If none, takes one from empty slab
+3. If no empty slab, create new empty slab
+A
+operating System Concepts-10"‘ Edition 1058 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:69**************
-A
-“W Slab Allocator |n L|nux (Cont.)
-I Slab started in Solaris, now wide-spread (or both kernel mode
+if
+My)’ Slab Allocator |n L|nux (Cont.)
+I Slab started in Solaris, now wide-spread for both kernel mode
 and user memory in various OSes
-I Linux 2.2 had SLAB, now has both SLOB and SLUB allocaiors
+I Linux 2.2 had SLAB, now has both SLOB and SLUB allocators
 ' SLOB for systems with limited memory
-> Simple Lisi 01 Blocks — maintains 3 list Objects for small,
+> Simple List of Blocks — maintains 3 list objects for small,
 medium, large objects
-' SLUB is periorrnance-optimized SLAB removes per-CPU
-queues, meiadaia shared in page structure
-om»,Syiummmiimmm was mm.‘ G.W."¢=.J.W.
+' SLUB is performance-optimized SLAB removes per-CPU
+queues, metadata stored in page structure
+| Operating System Concepts-10th Edition 10.69 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-W Other Considerations
+a’??? Other ConSIderatlons
+mm "
 I Prepaging
 I Page size
 I TLB reach
 I Inverted page table
 I Program structure
-I l/O interlock and page locking
-Wm", 5m... Cum. 7 m- mm m» 51mm.‘ um m GIIIII mu
+I IIO interlock and page looking
+| Operating System Concepts-10th Edition 10.70 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-A
-“W Pre pag mg
+‘fey’ Prepaglng
 I To reduce the large number of page faults that occurs at
-process starlup
-I Prepage all or some of (he pages a process will need, before
+process startup
+I Prepage all or some of the pages a process will need, before
 they are referenced
 I But if prepaged pages are unused, l/O and memory was wasted
-I Assume s pages are prepaged and a of the pages is used
-° ls cost of s ' a save pages faults > or < than the cost of
-prepaging s ‘ (1- a) unnecessary pages?
-° a near zero a prepaging loses
-cumin..."“mm-Em mu Slammer“Muriel“
+I Assume s pages are prepaged and d of the pages is used
+' ls cost of s * a save pages faults > or < than the cost of
+prepaging s * (1- a) unnecessary pages?
+. a near zero :> prepaging loses
+Operating System Concepts — 10th Edition 10.71 Silberschatz, Galvin and Gagne @202‘;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-t‘
-MW Page Size
+$4,?’ Page Size
 I Sometimes OS designers have a choice
-0 Especially if running on custom-built CPU
+. Especially if running on custom-built CPU
 I Page size selection must take into consideration:
-i Fragmentation
+P Fragmentation
 . Page table size
-. Resolution
-' l/O overhead
-Q Number of page faults
+' Resolution
+. |/O overhead
+P Number of page faults
 ' Locality
-° TLB size and effectiveness
-I Always power 012, usually in (he range 2‘? (4,096 bytes) i0 2“
+' TLB size and effectiveness
+I Always power of 2, usually in the range 212 (4,096 bytes) to 222
 (4,194,304 bytes)
-I On average, growing overtime
-om.ws,...mcm.m.em-a.“ tun “imam-vi“Mimi
+I On average, growing over time
+operating System Concepts _10m Edition 1012 Silberschatz, Galvin and Gagn/e @201};
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-t‘
-Mgr-‘l TLB Reach
-I TLB Reach — the amounl 0f memory accessible from lhe TLB
+rem TLB Reach
+I TLB Reach — the amount of memory accessible from the TLB
 I TLB Reach = (TLB Size) X (Page Size)
-I Ideally, the working sel 0f each process ls slored in the TLB
-° Otherwise there is a high degree of page faults
+I Ideally, the working set of each process is stored in the TLB
+' Otherwise there is a high degree of page faults
 I Increase the Page Size
 . This may lead to an increase in fragmentation as not all
 applications require a large page size
 I Provide Multiple Page Sizes
-0 This allows applications that require larger page sizes the
+' This allows applications that require larger page sizes the
 opportunity to use them without an increase in fragmentation
-om.ws,...mcm.a.em-am W “imam-vi“martian“
+|
+Operating system Concepts-10th Edition 10.73 Silberschatz, Galvin and Gash: ©20f§
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-qfr Program Structure
+46?»? Program Structure
+i; ”
 I Program structure
 . int[128,128] data;
-l Each row is stored in one page
-' Program1
-for (j : 0; j <128; j++)
-for 1i I O; 1 < 128; 1++)
-datali,j] : D;
-128 x128 = 16,384 page faults
-' Program2
-for (i I 0; i < 1287 i++)
-for 13 : o; 3 < 12s; 3++>
-data[i,j] = 0;
-128 page faulls
-0mm Syn-m Cum,“ 7 “1- mm um sllhmmu. DIM“ m an". @zuu
+P Each row is stored in one page
+. Program1
+for (j = 0; j <128; j++)
+for (i I O; i < 128; i++)
+data[i,j] I O;
+128 x 128 = 16,384 page faults
+. Program 2
+for (i I O; i < 128; i++)
+for (j = O; j < 128; j++)
+data[i,j] = O;
+128 page faults
+Operating system Concepts _ 10th Edition 10_74 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
-W IIO interlock
-I IIO Interlock e Pages mus!
-eorneiiinee be locked into memory -
-I Consider IIO - Pages inei are used -
-iei cupying a file fme a device H
-musl be lucked from being selecied %- '
-'0! eviciion by s page repiacemeni H """N'
-algorilhm -
-I Pinning of pages to iock inie -
-ownniwiymm “mimi- Edm in“ sllhmmu. em m e-i-i-wn
+wt‘ |/o Interlock
+
+iLLS 1"
+I l/O Interlock — Pages must
+sometimes be locked into memory -
+I Consider l/O - Pages that are used -
+for copying a file from a device H —
+must be locked from being selected --I
+for eviction by a page replacement H
+algorithm -
+I Pinning of pages to lock into -
+
+| Operating system Concepts _ 10th Edition 10_75 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:76**************
-*4}; Operating System Examples
+Operatl ng System Examples
+. \lb i
 I Windows
 I Solaris
+| Operating System Concepts — 10th Edition 10.76 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-K‘ .
-MW W|ndows
+W)’ W| ndows
 I Uses demand paging with clustering. Clustering brings in pages
-surrounding lhe faulting page
+surrounding the faulting page
 I Processes are assigned working set minimum and working set
 maximum
 I Working set minimum is the minimum number of pages the
 process is guaranteed to have in memory
 I A process may be assigned as many pages up to its working set
 maximum
-I When the amount ol lree memory in the system falls below a
+I When the amount of free memory in the system falls below a
 threshold, automatic working set trimming is performed to
-reslore lhe amounl ol lree memory
+restore the amount of free memory
 I Working set trimming removes pages from processes that have
-pages in excess oi their working set minimum
-Op-mesyil-m “mama-mm um Sllhvumu. Bllvinlndélinlﬁzlltl
+pages in excess of their working set minimum
+Operating System Concepts-10th Edition 10.77 Silberschatz, Galvin and Gagne @202‘;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-t‘ .
-pay} Solaris
-I Maintains a list oi tree pages to assign faulting processes
-I Lotsfree , threshold parameter (amount of free memory) to
+a»? Solarls
+I Maintains a list of free pages to assign faulting processes
+I Lotsfree — threshold parameter (amount of free memory) to
 begin paging
-I Desiree e threshold parameter to increasing paging
-I Minfzee — threshold parameter to being swapping
-I Paging is performed by pageout: process
-I Pageant scans pages using modified clock algorithm
-I Seal-irate is the rate at which pages are scanned. This ranges
-from slowscan to fastscan
-I Pageant: is called more frequently depending upon the amount pi
+I Desfree — threshold parameter to increasing paging
+I Minfree — threshold parameter to being swapping
+I Paging is performed by pageout process
+I Pageout scans pages using modified clock algorithm
+I Scanrate is the rate at which pages are scanned. This ranges
+from slowscan t0 fastscan
+I Pageout is called more frequently depending upon the amount of
 free memory available
 I Priority paging gives priority to process code pages
-rep-aim syit-m Cam,“ e in" mm w n Silhvmnnu. elm-i "a em. em
+Operating System Concepts — 10th Edition 10.78 Silberschatz, Galvin and GagneA©ZJ1z£
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-x
-M4 .
-‘wy' Solarls 2 Page Scanner
-$92
-iaslscan
-E
-H10
-shmscan
-rmMrse desires ‘MSUGG
-amour“ n! Wee memory
-KW
+iffy-X Solarls 2 Page Scanner
+‘3&3 "‘
+8192
+fastscan
+2
+9
+C
+(U
+O
+U)
+100
+slowscan
+minfree desfree Iotsfree
+amount of free memory
+Operating System Concepts — 10th Edition 10.79 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-End of Chapter 10
-—
+Operating System Concepts - 10th Edition Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:81**************
-t‘
-“W Performance of Demand Paging
+has?’ Performance of Demand Paglng
 I Stages in Demand Paging (worse case)
-1 Trap to the operating system
-2 Save the user registers and process state
-3 Determine that the interrupt was a Page tault
-4 Check that the page reference was legai and determine the iocatrun 01 the page on the disk
-5 issue a read hum the dlsk to a free Irame
-1 Walt In a queue tar this devroe until the read request ls sen/med
-2 Walt (or the demos seek and/or iatency ttme
-3 Begm the trenster oi the page to a tree trams
-6 While waltlng, aliacate the CPU to some other user
-7 Receive an interrupt tmm the dlsk i/O subsystem (l/O completed)
-8 Save the reglsters and process state i0! the other user
-9 Determine that the interrupt was from the disk
-10 Currect the page table and other tables to sth Dﬂge is now in memory
-tt Wait tor the CPU to be aiiotated to this process again
-t2 Resture the user registers, pmcess state, and new page table, and then resume the
-Interrupted Instruction
+1. Trap to the operating system
+2. Save the user registers and process state
+3. Determine that the interrupt was a page fault
+4. Check that the page reference was legal and determine the location of the page on the disk
+5. Issue a read from the disk to a free frame:
+1. Wait in a queue for this device until the read request is serviced
+2. Wait for the device seek and/or latency time
+3. Begin the transfer of the page to a free frame
+6. While waiting, allocate the CPU to some other user
+7. Receive an interrupt from the disk l/O subsystem (l/O completed)
+8. Save the registers and process state for the other user
+9. Determine that the interrupt was from the disk
+10. Correct the page table and other tables to show page is now in memory
+11. Wait for the CPU to be allocated to this process again
+12. Restore the user registers, process state, and new page table, and then resume the
+interrupted instruction ,
+Operating System Concepts — 10th Edition 10.81 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:82**************
-“k; Need For Page Replacement
-a H "ems m u munnov A
-2 J V
-
-5-
-
-s-
-i val\d-\nvaHd 7 E E
-2 n ‘ 'i"
-i 2V
-Q E TV
-b‘ ‘ “We
-“£3???” WM
+valid-invalid
+2- n II -
+PC 3 ‘2'
+2- 2n
+2- II 2-
+logical memory page table 4
+for user 1 for user 1
+2-
+2-
+vahd-mvalid 7
+physical
+2n I"
+3-
+logical memory page table
+for user 2 for user 2
+Operating System Concepts -10th Edition 10.82 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:83**************
-“ﬂy Prlorlty Allocatlon
-I Use a proporlional allocation scheme using priorities ralher
+“a? y ocat o
+I Use a proportional allocation scheme using priorities rather
 than size
-I If process P, generates a page fault,
+I If process Pi generates a page fault,
 ' select for replacement one of its frames
-. select for replacement a frame from a process with lower
+' select for replacement a frame from a process with lower
 priority number
-0mm slim... Cum,“ 7 m- mm lIHJ Sllhvmhlu. elm“ "a m". mu
+| Operating System Concepts —10th Edition 10.83 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:84**************
-r‘
-~15?’ Memory Compression
-I Memory compression — rather than paging out modiﬁed frames to
-swap space, we compress several irames into a single frame, enabling
+42\W .
+t%,w Memory Compresslon
+I Memory compression — rather than paging out modified frames to
+swap space, we compress several frames into a single frame, enabling
 the system to reduce memory usage without resorting to swapping pages.
-I Consider the (allowing free-frame-list consisting 0f 6 frames
-Imertlame Ilsl
-ma —>I—>I—>l§|—>lﬁi—>@—>E
-modlfted (lame llst
-head aHﬁgﬁ E
-I Assume that this number oi tree irames ialls below a certain threshold
-that trlggers page replacement. The replacement algorithm (say, an LRU
-approximation algorithm) selects four frames — 15, 3, 35, arid 26 i0 place
-on the free-frame list. lt flrst places these irames on a modiﬁed-frame list.
-Typlcally, the modiﬁed-ﬂame list would next be written to swap space.
-maklng the irames available to the free-frame list. An alternative strategy
-ls to compress a number oi irames — say, three — and store their
-Compressed versions irl a single page frame,
-tsp-m... 5...... emu... e .l.» 5......“ tum sllhmm-u. sun. ...¢ sq“. em
+I Consider the following free-frame-list consisting of 6 frames
+free-frame list
+head —>. —>. —>|E|—>-—>--—>
+modiﬁed frame list
+head —>-—>.—>-—>
+I Assume that this number of free frames falls below a certain threshold
+that triggers page replacement. The replacement algorithm (say, an LRU
+approximation algorithm) selects four frames — 15, 3, 35, and 26 to place
+on the free-frame list. lt first places these frames on a modified-frame list.
+Typically, the modified-frame list would next be written to swap space,
+making the frames available to the free-frame list. An alternative strategy
+is to compress a number of frames — say, three — and store their
+compressed versions in a single page frame. Y ~ ,, §
+Operating System Concepts-10th Edition 10.84 Silberschatz, Galvin and Gagne @251‘;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:85**************
-q}; Memory Compresslon (Cont)
+“a? l'y p ( )
 
-I An allemalive lo paging is memory compression.
+I An alternative to paging is memory compression.
 
-I Rainer lhan paging out modiﬁed frames to swap space, we compress
-several lrames into a single lrame, enabling the system to reduce
-memory usage wilhoul resorting to swapping pages‘
+I Rather than paging out modified frames to swap space, we compress
+several frames into a single frame, enabling the system to reduce
+memory usage without resorting to swapping pages.
 
-(lee-(vimellir
-Mm _-@_.@_. @ﬁgﬁEﬁﬁﬁgﬁg
-Mm“ (lam: n“
-mu _. E
-mmm lrgmg n5:
-ma _. m
-0mm 5m... Cum,“ , m- mm Ms Sllhvumu. Bllvln m m". mu
+free-frame list
+head —>. —>@ —> —> -—> —>-—>.—>-
+modiﬁed frame list
+head —>
+compressed frame list
+head —>
+Operating System Concepts — 10th Edition 10.85 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 

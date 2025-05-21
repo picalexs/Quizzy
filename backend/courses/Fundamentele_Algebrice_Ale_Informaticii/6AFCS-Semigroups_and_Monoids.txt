@@ -1,582 +1,656 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Semigruups and Monuids
-Wm Mm kamvmu We
+ALGEBRAIC FOUNDATIONS
+of COMPUTER SCIENCE
+ieciures by Ferucio Laurentiu Tiplea
+
+Semlgroups and Monolds
+
+Prof.dr. Ferucio Laurentiu Tiplea
+
+Spring 2022
+
+Department of Computer Science
+
+“Alexandru loan Cuza" University of lasi
+
+|a$i 700506, Romania
+
+e-mail: ferucio.tiplea©uaic.ro
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-—
-WWW”
+Outline
+Definition and examples
+Word semigroups
+Cyclic semigroups
+Free semigroups and monoids
+Reading and exercise guide
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Deﬁnition and examples
+Definition and examples
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-swim-u
-Mm“. 1
-A MW, .n w ‘5 u; WW “Mm, m5 m M annual":
-M-vmvm n M 5
-M...“ z
-A MW, x; Q, m QM MM.“ w “ M MM“:
-w-mm
-mm 1
-. mam .71‘ WW Wmlvwm m»; m mm,”
-mumw/in Wm" =, =q H, “WWW” m My
-Mm mom .. mum I" Am .m v.» MUM, ..
-MW m M “WM Mm"
-. (WWW Ma bmarv WW w mm m» I»: Mum»
-Mm." 9mm Me 1, w. “ \mmauw/
-m “mm- —_ .,..
+Semigroups
+Definition 1
+A semigroup is a pair (57 o) which consists of a set S and an associative
+binary operation o on 5.
+Definition 2
+A semigroup (S, o) is called commutative if o is a commutative
+operation.
+Remark 3
+0 Associativity of a binary operation o means that the order of
+evaluation of an expression a1 o a2 o a3, without changing the order
+of the terms, is immaterial. In other words, no parenthesis is
+required for an associative operation;
+0 Commutativity ofa binary operation o means that the order of the
+operands in expressions like a1 o a2 is immaterial.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 2/31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Ennviu u lﬂlllINllp‘
-Emu“
-1 um)‘ m1‘ mm 01an (my m (mm-1
-xmlmup;
-z m > (z 1 m m 1, m 4c mmwmmysmmm
-a LnnEandr-ZZH min mm mnpmnmm
-mum!
-‘ m M z mmzm 71mm" mm“ m m».
-mm 2m! Mwhmm mudub m m MW»-
-A“ WW", m [WW I m WWW
-~..LW“—_ .,..
+Examples of semigroups
+Example 4
+1. (N,+), (Z,+), (Q,+), (R,+), and ((C,+) are (additive)
+semigroups;
+2. (N,~), (Z, -,) (Q, -,) (R, -,) and ((C,-) are (multiplicative) semigroups;
+3. Let n G Z and nZ : {n - x|x G Z}. Then, (nZ,+) and (nZ,-) are
+semigroups;
+4. Let m G Z. Then, (Zm, +) and (Zm, -,) where + and - are the
+addition and multiplication modulo m, are semigroups.
+All semigroups in Example 4 are commutative.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science-Semigroups and Monoids Spring 2022 3/31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-amm-
-mar-‘M 5
-A mm, ‘s , m W u ,1 mm. M“ M , .4. M ,n MGM
-M-vmvm n M M m n mm l € M W .m
-‘my . § M = - “M the \kvmwdcrv-w! w» W, w, M
-m.“ a
-mmvvw "Wm a l1” WM m 1mm" M
-g' W mm, m W s Z m‘ Z 6'
-m mun/of; mnumd W h e) E WWW,“ Ly ‘u “m
-mm»- 1
-A MW: W u ,1 ‘5 QM “mum w “S mva WW " ‘X
-m “mm- —_ H.
+Monoids
+Definition 5
+A monoid is a triple (M,o, e) which consists of a set M, an associative
+binary operation o on M, and an element e G M such that
+
+x o e : e o x : x7
+
+for any x G M. e is called the identity element or the unity of M.
+Remark 6
+The identity of any monoid (M7 o7 e) is unique. For, if we assume that
+e’ is an identity too, then e : e o e’ : e’.
+The identity ofa monoid (M7 o, e) is usual/y denoted by 1M or even l.
+Definition 7
+A monoid (M,o, e) is called commutative if its binary operation o is
+commutative.
+
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 4/31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Ennviu M mumm-
-sum. 1
-1 m ’ n, a * m m hﬂ] “4(2 * 01mtammulanv:
-"was
-z m, ‘n m 1140 “mm ‘nmwmmmmmm
-1 I“: + m .1 1 mmm mnnmd m M1 1 ‘5 . “mm-m
-svmﬂnun A": stumly M\Y\|n:ﬂun:lm! Wm
-m K memnm "mm
-A (Z, hummm .n mama». Mm Wm NZ.
-z. : (n) .m m muwvhnme unﬂy o! 1m; momma E n
-mumm- —_ .,..
+Examples of monoids
+Example 8
+1. (N,+,O), (Z,+,0), (Q,+,0), and (R,+,0) are commutative
+monoids;
+2. (N, ¢, 1), (Z,-,1), (Q,-,1), and (1R, ~, 1) are commutative monoids;
+3. (nZ,+,O) is a commutative monoid and (nZ, -) is a commutative
+semigroup. (nZ, -) has unity only if n : 0 or n : 1 and, in such a
+case it becomes commutative monoid;
+4. (Zm, +,0) and (Zm, -, 1) are commutative monoids. When m I 1,
+Z1 I {O} and the multiplicative unity of this monoid is 0.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science-Semigroups and Monoids Spring 2022 5/31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-sumuuzm
-1 Whywmmw A Bgs mus thn:
-. ‘54mm. A “a;
--A‘:AmdA"“:A‘A€aanll
-“a (“mm
-Hymnwammnun»
-2 \HM¢QJ\\zmanm4 Adm,“ mmm
-.wzw
-1 Fnuﬂy mmmﬂUIA a .1 MszM :Wm
-~..U..m-—_ .,..
+Some basic notations
+1. Let (5,0) be a semigroup, A, B Q S, and a G S. Define:
+o AB:{aob\a€A A b€B};
+. A1 I A and A"+1 I A”A, for all n g 1;
+o aB I {aob|b€ B};
+o a1 :aand a”+1 :a"oa, forall n2 1.
+2. If (M,o,e) is a monoid, A Q M, and a G M, we also deﬁne:
+o A0 I {e};
+o a0 : e.
+3. For any monoid (M,o, e) define SM I M i {e}.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 6/31
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-m.“
-\hﬁ'imnl
-m LMI he , MW, and 1 , m ml, Mm M s
-1 MM 1M mm “HS n) m (r
-2 MM 2 Hm Mal W5 n)|715 g
-a Vuzmkd ,n Mu‘ M (5*) ‘I! K , k4: “A , “m \Asl “um
-A m w M um m.‘ M (511 m, mm: u and m
-My Hm] Mu‘ M I; Q, “mum M1 h “Mm by (I)
-a "Ha; M m “ﬂaw nlMJrvwwwhdleLS D1 k
-‘5 m» MMM b, <1:
-M mm) WM munmds m Mm m i “my W,
-Brawl-10
-m WM,“ mu‘ m1. 17 Momma‘; n:
-M.Lm~K-—_ H.
+Ideals
+Definition 9
+Let (5,0) be a semigroup and I a non-empty subset of 5.
+1. I is called a left ideal of (5,0) if SI Q I.
+2. I is called a right ideal of (5,0) if IS g I.
+3. I is called an ideal of (5,0) ifI is a left and a right ideal of (5,0).
+4. The least (left, right) ideal of (5, 0) which includes I is called the
+(left, right) ideal of (5,0) generated by I. lt is denoted by (I).
+5. lf I : {a}, then (I) is called a (left, right) principal ideal of (5,0). lt
+is also denoted by (a).
+(Left, Right) Ideals of monoids are defined in a similar way.
+Example 10
+The principal ideal of (Z, -, 1) generated by n € Z is nZ.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science-Semigroups and Monoids Spring 2022 7/31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Sllbmlonlpl m1 'mmml
-Mm“. n
+Sub-semigroups and generators
 
-1 Ami-w (51¢) \, = WWW, a». Kw», 4s ﬂy‘
-MM (s' w S (s u)‘ ‘rs' g s “A \J Z A,
+Definition 11
 
-1 A WM (M ='1 n . m MW»: w Wm (M ., ,1 mm
-ww (‘Swen \‘M'ngo':¢\w1/md:,
+1. A semigroup (5’, o’) is a sub-semigroup of a semigroup (5,0),
+denoted (5’,0’) g (5,0), if 5’ Q S and o’ : o|5/.
 
-a m m “WW, (mom-d) =1; “mm, (mm mm
-‘mum - Mn Mm A ﬂamed w ‘5 QM m wmma
-Wm“! mm by A
+2. A monoid (M’,o’, e’) is a sub-monoid of a monoid (ll/1,07 e), denoted
+(ll/l’,o’,e’) g (M,o,e), if M’ Q M and o’ : o|M/ and e’ I e.
 
-¢ ‘Wm 0mm ‘5mm: h, ‘ m A n4 ‘I \I ‘I Mm;
-w» m! WWW WWW mm w A
+3. The least subsemigroup (monoid) of a semigroup (monoid) which
+includes a given subset A, denoted <A>, is called the sub-semigroup
+(sub-monoid) generated by A.
 
-m m A m Mm" mam) NM mic/“mm m ‘m
-“Wm m QM ‘enemas
-m “mm- —_ .,..
+4. A semigroup (monoid) is generated by a subset A of it if it coincides
+with the sub-semigroup (sub-monoid) generated by A.
+
+The set A in Definition 11(3)(4) is called a set of generators and its
+elements are called generators.
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 S / 31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Submlovupl ma drum‘
-hm n
-m ,ubww Mm“, M1 mm, 1mm WNW
-M subseA, B 'MdaimealA my meﬂknmﬂfﬁ) arm m
-MW» 1mm”!
-- ULSJ] MMWWU g s‘ M w nbumurvw
-MM a” .5 wwnumvm
-=, = a a,
-Muenzlzndah ‘anEA
-. "WW :1“ Mam“ g M m» Ihewé "WM-WM
-b, A E MM 15 ,M by mmmmmmw we “My A a!
-m W,‘
-.0.me- —_ .,..
+Sub-semigroups and closures
+Remark 12
+The sub-semigroup (sub-monoid) of a semigroup (monoid), generated
+by a subset A, is the closure of A under the operation(s) of the host
+semigroup (monoid):
+
+0 If (5, o) is a semigroup and A Q 5, then the sub-semigroup
+generated by A is the set of all products
+
+31 O . . . o an’
+wherenZ 1 anda1,...,an EA;
+
+0 lf(M, o7 e) is a monoid and A Q M, then the sub-monoid generated
+by A is obtained as above by including supplementary the unity e of
+the monoid.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 9 / 31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-EnnduoflIA-uml'mlm
-EnrwI-n
+Examples of sub-semigroups
+Example 13
 
-- m “(I mu: ﬂuid-
+° (N>+) S (Znt) S (Qﬁr) S (RH;
 
--LN*"JSL1*0!£W<\1)$(|1<H)
+o (N,+,0) S (Z,+,0) S (Q,+,0) S (R, +,0);
 
--m7s(l)s(m)s(x.1
+° (N,~) S (27 ~) S (@v) S (R, ~);
 
-- m 11g‘: ‘\st 1mm n
+' (val) S (Z, -, 1) S (Q, -, 1) S (R, -, 1);
 
-- m “Mum/<1 ‘ "Liv-1mm hm; W»: hm
+o The sub-monoid of (Z, +,0), generated by n G Z, is (nN,+,0);
 
-. WWW, WM] m, m M ‘m m m “mm
+o A semigroup (monoid) may have more than one set of generators.
 
-PM mm lz t m MM,“ w A’: n m w <7; 2)
+For instance, (Z, +,0) can be generated by {-1,1} and by {-3,2}.
 
-.0.me- —-
+Prof.dr.F.L.Tip|ea,UA|C,RO Algebraic FoundationsorComputerScience-Semigmupsand Monoids springzuzz 10/31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-um, M m imam
-mar-‘M u
-1 m wane/z MW, (mm; u m m“, M ‘k 4mm ‘r
-m MW» ("mm .5 m m X MW
-2 m ulna/m “M 1 M . WW, (mnnml) \sxh: M M
-m. WWW» (ivbmunmﬂ) “mum w i
-mm: u
-. Ll 4 n» m mm- xv
-. (z. t n1 hismenrdevm "Mn rum" um 4 mm»,
-m x
-m “mm- —_ ..,..
+Order of an element
+Definition 14
+1. The order of a semigroup (monoid) is the number of its elements if
+the semigroup (monoid) is finite, and oo, otherwise.
+2. The order of an element a of a semigroup (monoid) is the order of
+the sub-semigroup (sub-monoid) generated by a.
+Example 15
+0 (Z, +, O) has the order oo;
+o (Zm, +,O) has the order m, if m 51$ 0. For m I 0, (Zm, +,O) has the
+order oo.
+Profdr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Semigrcups and Monoids Spring 2022 11 / 31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Nnmnmnmhkml
-\hﬁ'imn n
-1 Mm“ $45‘ ‘5, hammwpmmtmngmllmupw Q]
-m mm» w “'1 \I
-. “Mk/mum mums
-2 “mm / M a M‘ m mepmim m ‘ "mm w o A)
-m "mm Wan! n ‘I
-. nnnzn-wm WWW”
-. 70):.’
-"M mm
-. WWMWWW mwmm
-. “WM hnmnmmphnm Z WWW
-. buxuv: mmnmnrpmsm Z mam".
-mumm-—- m-
+Homomorphisms
+Definition 16
+1. A function f: 5 —> S’ is a homomorphism from a semigroup (57o)
+to a semigroup (5’, o’) if
+o f(ao b): f(a) o’ f(b) , for any a,b E S.
+2. A function f: M —> M’ is a homomorphism from a monoid (Mp, e)
+to a monoid (M’,o’, e’) if
+o f(ao b): f(a) o’ f(b) , for any a,b 6 M;
+0 f(e) : e’ .
+Related concepts:
+0 injective homomorphism : monomorphism;
+o surjective homomorphism : epimorphism;
+0 bijective homomorphism I isomorphism;
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 12/31
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:15**************
-Mumhklm
-. mvamsm m a MW» (“may m meswne MM»
-(mm; “Mum”.
-. ‘scmmmsm rm i MW» {mm-.1» m m “WWW
-(mm Z WNW-m
-sum. 11
-. n. (MM m; Z 2' ‘my X e N. E ‘ mem 1m
-w,‘ n1 w m n MM
-. run =1“ Z.
-- /(l‘vl:1"':z' “my rm own ,
-MW“ / \, \"kﬂm M M “WK Yum“ v ‘i a
-"WWW M m» wwmy
-.0.me- —- m-
+Homomorphisms
+o Homomorphism from a semigroup (monoid) to the same semigroup
+(monoid) I endomorphism;
+o Isomorphism from a semigroup (monoid) to the same semigroup
+(monoid) I automorphism.
+Example 17
+0 The function f(x) I 2X, for any X € N, is a homomorphism from
+(N,+,O) to (N,-,1). Indeed,
+. f(0) I 2° I 1;
+o f(X+y) I 2X+y I 2X - 2y I f(x) - f(y), for any x,y.
+Moreover, f is injective but not surjective. Therefore, f is a
+monomorphism (but not an epimorphism).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 13/31
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:16**************
-Wnnl semigrnups
+Word semigroups
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Aim-bu
-n-ﬁmm n
-A" Mm w m m .mw m mum“ M mm m
-an,‘ ‘mm w WNW.
-Em“ 19
-m MM‘ m “MEL;
-. I‘ Z 4, b I»
-. 1!: w 2.1,
-. z, Z Wm 1m 1m“,.1..‘.m.m>
-A“ Wm .n Mums“ mm wdwmh‘:
-mum‘- —-
+Alphabet
+Definition 18
+An alphabet is any non-empty set. The elements of an alphabet are
+called letters or symbols.
+Example 19
+The following sets are alphabets:
+. Z1 : {8, b7 C};
+0 23 : {begin7 end7 if,then, else,while,do}.
+All letters of an alphabet are assumed indivisible.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 14/31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-ww-
-Mmm 1n
-u: z km mm AM Mm» ~ 2 1 W 2 ‘5 W mm
-w u‘ J» i 1 um,“ MW M v M 2 u “M m
-ml, M W z M ‘h Mm ‘5 n
-w: “my “m. m m w h, w Z m) wm w ~ ) n m .5
-W» k w M m WNW ‘5 usquy Mm by A
-mm. 21
-. Wm,“Ww‘=~.mw~z\zhm
-- mwnmmw.mm_zzzw12 :1
-. new a.‘ .n M a! Mm 2 M,
-m Z {hum .m u M m. M. no»
-m “mm- —_ .,..
+Words
+Definition 2O
+Let Z be an alphabet. A word of length k Z 1 over Z is any function
+w : {1, . . . , k} e Z. The empty function from (D into Z is called the
+empty word over Z and its length is O.
+We usually denote the word W by w I w(1) - t - W(k), if k > O, and its
+length k by lvv|. The empty word is usually denoted by A.
+Example 21
+0 W I abaa is a word of length 4 over Zl I {2, b, c};
+0 011033 is a word of length 6 over 22 I {0,1,2,3};
+0 begin end is a word of length 2 over
+Z3 I {begin,end7 if,then,e1se,while,do}.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 15/31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Wm‘! mum,
-m z k in mm W.
-. v m
-. p Z UM I‘
-. Y :Umw: I‘ w,
-Wm M m 1 My MM M» ‘m mm m my
-W p Z x
-mm 22
-Mm m v W.“ Wm.“ I mm .M mm
-M m M. W» ~ m m Z A!) h: m. 1 g ‘ S k
-mm.“- —-
+Word equality
+Let X be an alphabet. Denote:
+o X0 : {A};
+° 2+ Z Uk>l Zk'
+o 2* : U00 Z,‘ : 2+ U {A}.
+Words of length 1 are usually identified with letters. Therefore, we may
+write Zl I Z.
+Definition 22
+Two words u and v over the same alphabet Z are called equal if they
+have the same length k and u(i) : v(i), for each 1 g i g k.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 16/31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-mum-11M Mm
-nulmiwu
-mt M Mm Mbwympm 1- ‘1- Qz-M >1
-w. w‘ mwgnwm '1
-Wm
-mm, ‘n $15 \ml
-, Z
-I“ "‘m {MPVML mm‘
-Mm v w “M m WWW m WW" mm" M :-
-Enrwl- u
-- m; pm .Mm
-.x w” AZMWM
-MM.“ 9mm "M u Mm Wm m. A .4 W
-Wmsmwu V
+Concatenation of words
+Definition 23
+Let 2 be an alphabet. The binary operation - : 2* >< 2* a 2* given by
+W1 - W2 ; {ill S i S |W1l+|W2l} A):
+where
+. W1(i) if1§i§|w1|
+(W1 - W2)(I) I . ’ .
+W2(I — |W1|), otherWIse,
+for any i, is called the concatenation or catenation operation on 2*.
+Example 24
+0 abba - bbaa : abbabbaa;
+0 A-w:w-A:w,forany W.
+The concatenation operation symbol is usually omitted. That is, we write
+uv instead of u~ v.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 17/31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-wﬂ WP-
-nm 15
-Lerzbmwm" m"
-1({‘.Ju;1em4p¢~PIM€uudB|/X
-z m A) ,5 a munwd mm WI,
-1 (r A) E a mm, W WWW
-A , TQMWMWF w‘ hwy“:- a;
-mem M1? u n: the MM mnnmi w + u)
-Wm, run) Z w,
-s Ynlmupummuarmemmli" n .i mm!
-k ‘5 . m mm MW“ m [m "1mm 15 [WM m W
-2m
-mumm- —- m-
+Word semigroups
+Theorem 25
+
+Let Z be an alphabet. Then:
+
+1. (2+, -) is a semigroup generated by Z;
+
+2. (2*, -, A) is a monoid generated by Z,‘
+
+3. (2*. -7 A) is a monoid with simplification;
+
+4. l:Z* —> N given by /(w) I |w|, for any W G 2*, is a
+homomorphism from (Z*, -, A) to the additive monoid (N, +, 0).
+Moreover, l_1(0) I {A},
+
+5. The group of units of the monoid (2*, -, A) is trivial.
+
+It is a good exercise for you to prove Theorem 25 (textbook [1] page
+212).
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 18 / 31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-5mm.
-\hﬁ'imn 25
-m! bzzn mm.» V Vt:-
-1 “Wm‘WWWMVWMZWMWM w
-2 M ‘5 QM . Mm m “m “(my V w v Z M w W m w
-z “Wm-“WMMVZWWWMWW
-mm... 1v 1LIvi'n rm;
-w i y, u‘ w V DZ “@610va M “my Z uv
-‘ "M Z M m M my; , “we 1 Z {I m Mn M Z .1
-2 man MXZHMZV
-1 m > M m M am; 2 Wm . Z 1- m» m K “I
-k ‘5 . [and mm w M m WM Yhawcm 21 lmzmk m In“
-m»
-m “mm- —_ .,..
+Sub-words
+
+Definition 26
+
+Let Z be an alphabet and u, v G 2*.
+
+1. u is called a prefix or left factor of v if v I uw for some word W.
+
+2. u is called a suffix or right factor 0f v if v : wu for some word W.
+
+3. u is called a sub-word of v if v : xuy for some words x and y.
+Theorem 27 (Levi's Theorem)
+
+Let x, y, u, and v be words over Z such that xy : uv.
+
+1. lf|xl < |u|, then there exists a unique z G Z* such that u : xz.
+
+2. lf|xl I |u| then x I u andy I v.
+
+3. lf|xl > |u|, then there exists a unique z G 2* such that x : uz.
+lt is a good exercise for you to prove Theorem 27 (textbook [1] page
+212).
+
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 19/31
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-melpmc m1.’ m mn-
-mar-‘M 1|
-u) A W (z <7 WW WM!“ mmm z m . mul m <
-on z ‘5 HM .n Mm mm
-(z) m [t mmmmwmn mbwymm 5414mm-
-w
-x s“ <> y
-m
-.Pm ,ZMMKL ‘wwwermnez
-.m . / b
-‘5 HM mm.“ kxxwguumz mdeven (z <1
-‘n § W‘, w" we m Mm my,‘ \wwlrwhk WY M mm
-“mm
-m “mm- —_ .,..
+Lexicographic order on words
+Definition 28
+(1) A pair (Z, <) which consists of an alphabet Z and a total order <
+on Z is called an ordered alphabet.
+(2) Let (Z, <) be an ordered alphabet. The binary relation $(Z.<) given
+by
+X 3m Y
+ifF
+o x is a prefix of y, or
+0 xzuav, y: ubw, and a< b, forsome u,v,w€):* and a.b€Z
+with a 7e b,
+is called the direct lexicographic order on (Z. <).
+In a similar way one can define the inverse lexicographic order on ordered
+alphabets.
+Profdr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 20/31
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-Lulmulnhlc "an an mu-
+Lexicographic order on words
 
 A A
 
-n... h.
+a a
 
-nab w
+aa b
 
-I, nab
+aaa aa
 
-b m
+~- ab
 
-.1 >1
+aaaab ba
 
-,1 “on,” m
-n Wm“: “a. M M, a! \M W ‘mm
+aaab bb
 
-mumm- —- w-
+aab aaa
+
+ab aab
+
+b bbb
+
+a) b)
+
+a) Lexicographic order
+b) Lexicographic order on words of the same length.
+
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 21 / 31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Cyclic semigmups
+Cyclic semigroups
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-01* umltml'w
-
-Nb:LS_aJ \sasenulmﬂl) “1.5 g m
-
-m. w mm Mm HE M m"-
-
-mm“. 2|
-
-A mum» (mum!) um! waned“: Men: .i an! a
-
-MK sunllmul) (cydn Mm,
-
-Sqdmnml'WP a 5 Z hi‘ ‘am v, hm: 1 E s
-
-MMMWA Q M:(e:.1ﬂ_z_.\7 J». )‘wwmezé M
-“mun- —- -,.
+Cyclic semigroups
+If S I (5,0) is a semigroup and a G S, then
+_ 2 n
+(a)§_{a,a 7...,a ,...}
+If M : (ll/1,0, e) is a monoid a € M, then
+0 2
+<a)M : {eza ,a,a ,...,a”,...}
+Definition 29
+A semigroup (monoid) generated by one of its elements is called a
+cyclic semigroup (cyclic monoid).
+S cyclic semigroup :> S : {3,327 . . .,a”, . . .} for some a G S.
+M cyclic monoid :> IVI : {e : ‘90., a, a2, . . . , a”, . . .,} for some a G IVI.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 22/31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Tm n1 mu; ml'mpl
-mm... an
-m a be M mm m WW, <5‘ w» m" my m We
-MM, Mme“ u MM
-41> =~ ¢ 1- 1.1w ,. ¢ my mimewmgwuﬂgwawbya E
-mm: w,» w r 4n) o
-<1» ,Mwmw o m: > u m .m
-m w Z
-x») W‘:i"'\ﬂu2vmadv WWW"
-m ,, u ,1 , ~ q mm,” \ , mm
-w Kw 1 w -"' ‘1 a ‘(mmblwdm
-Proof
-s<= wnbwk m‘ w, m m u
-m “mm- —_ .,..
+Theorem of cyclic semigroups
+Theorem 30
+Let a be an element ofa semigroup (S7 o). Then, exact/y one of the
+fol/owing two properties is satisfied:
+(1) a” 31$ am for any n §£ m, and the semigroup generated by a is
+isomorphic with (N — {O}7 +);
+(2) there exists m > O and r > O such that .'
+(a) am I arn+r,.
+(b) am” I am+v iffu E v mod r, for any u7 v € N,‘
+(c) (a) : {a7 a2, . . . , am+’_1} has exactly m + r — 1 elements;
+(d) K(a) : {am7 . . . , am+’_1} is a cyclic subgroup of (a).
+Proof.
+See textbook [1] pages 219-220. U
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Semigrcups and Monoids Spring 2022 23/31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-A!!!" - Mu + was » i
-m mm m m Wm 11121 ‘5 QM m mm i m mm
-m ma m m k5 >1 m MW. WWW W m
-Dellnhkn :u
-A 5mm 1mm” mm mm Mm Mm M ‘. m .
-m. m
-cum Mm WWW (mm) m Wm
-mum.‘- —_ .,.
+order = index + period - 1
+The number m in Theorem 30(2) is called the index of a, and r is called
+the period of a, in (S70). The following property holds true:
+order(a) I index(a) —l— period(a) — 1
+Definition 31
+A semigroup (monoid) is called periodic if each element of it has a
+ﬁnite order.
+Clearly, finite semigroups (monoids) are periodic.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 24/31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Free semigrnups and monoids
+Free semigroups and monoids
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Fm $111,111",- m M11141
-M1111 n
-. 1111 M11411 , 111m 1,e “MM 1,111 Mammal ,1,
-numbun 7 N 7 4n) m MW 1, mm 15 1 1m (WWW
-141 11,11,117 mmdy
-n 7 1 7 1 4 7 1
-
-W: 9,11,1111mnmmﬂ111m1
-
-11.111111“ 1s
-
-A 911115111115 111111171, ‘111111.11 1,, “115,1 x g 511.1, 111M
-
-1 1 5m 11111111 1K 11111111 .1 111111; (“1111111111 11.1mm 1" Xv
-
-W11 X. 1, 1 X “1 1 21
+Free semigroups and monoids
+Remark 32
+o The monoid (N7 +, O) can be generated by {1}. Moreover, any
+number n € N — {O} can unique/y be written as a finite combination
+of 1 's under +, name/y,
+n:1+1+-'-+1.
+\_,—./
+n times
+We say that {1} free/y generates the monoid.
+Definition 33
+A semigroup (5,0) is freely generated by a subset X Q S if any element
+s E S can uniquely be written as a finite combination of elements in X,
+Sleo...oxn,
+where ><1,...,><,1 € X and n 2 1.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 25/31
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:31**************
-Fm plum
-Dsllrlliw :u
-A mama w D k1 ‘5 My my.“ I’, . 5mm X : M my =1‘;
-Indy mm w x
-mnnlnm- .15
-A szrwl'w m "Wm u é Mm.» WM; Wm m IX
-WNW,“ >, mm“. “1..
-VX Imly Mm: . WM» 1m .l u MM . m a! 1m ‘Enuums
-Dr m Wm 0mm
-Enwl- as
-. (n * n1 \szkezmnmd
-. x‘ w mm" mlh “(WWW Wm ‘5. he!
-WW» (mm/a» ‘0v w “Wm”, m x
-. v- ,‘ny u m = Iva m“
-m “mm- —_ .,..
+Free generators
+Definition 34
+A monoid (ll/1,0, e) is freely generated by a subset X Q M if (SM,o) is
+freely generated by X.
+Definition 35
+A free semigrup (free monoid) is a semigroup (monoid) which can be
+freely generated by some subset of it.
+If X freely generates a semigroup, then it is called a set of free generators
+of the semigroup (monoid).
+Example 36
+o (N,+,O) is a free monoid.
+0 X+ (X*) together with the concatenation operation is a free
+semigroup (monoid), for any non-empty set X.
+0 (Z, +,O) is not a free monoid.
+Profdr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 26/31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-r». unhnﬂlhy mp“,
-“mm 11 ‘m Inhemily mm,‘
-m a) ,5 i “Wm mywym w X M r“ W WW;
-(r .1 m W WW / x , r M (m a (WW
-“mm”. h 5 i T .M my.“ , W u “.1 Z w m
-W K K x/
-Proof
-s<= "an m Pi|< 225 u
-m mey mm m he 5“le Invmuhxsd m m Wm
-Cumilry sa
-Any ﬁx MW, WM; 6 same/pm: Mm 1 m WW
-1W1)
-Proof
-s“ WW m W m u
+The universality property
+Theorem 37 (The universality property)
+If (S, o) is a semigroup free/y generated by X, then for any semigroup
+(T, *) and any function f : X —> T, there exists a unique
+homomorphism h : 5 —> T which extends f (that is, h(x) : f(x), for
+any x € X)
+Proof.
+See textbook [1] page 225. U
+The universality property can be similarly formulated for free monoids.
+Corollary 38
+Any free semigroup (monoid) is isomorphic With a word semigroup
+(monoid).
+Proof.
+See textbook [1] page 225. U
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 27/31
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
-m. mm,- “a mnmidl
-n. WNW wpr'w .“M “m W. Mmmw M m
-MW"; <5 a) m mm»- n .1,“ W MW. M a" ms .1!
-m WM av 1; :1
-sum :9
-“hmmmwm mm m t n1 m m nmmmm
-mm, in mmmw 1m m "mm huh/91mm“
-(N 71mm 11 Fwww‘ wmwwu-Mmm
-rm Z m m m M, mwpm MM b, I ‘5
-- m) Z 1v
-. mwu): m
-. ~(2):Mun:~m mm!
-. h(3):hundl:h(l) hm ammo“
-. m w 1w W n > u
+Free semigroups and monoids
+The universality property allows us to define homomorphisms from free
+semigroups (S, o) to semigroups (T91) just by defining them on sets of
+free generators of (57 0).
+Example 39
+To define a homomorphism from (N, +7 O) to (N7 ~, 1) it is sufficient to
+consider an arbitrary function from {1} which freely generates
+(N7 +, O), to (N,-,1). For example, if we consider the function
+f(1) I 10, then the unique homomorphism induced by f is:
+o h(O) : 1;
+o h(1) I f(1) I 10;
+- h(2) : h(l + 1) : h(1) - h(1) : 102;
+. h(3) Z h(l + 1 + 1) I h(1) - h(1) - h(1) I 103;
+o h(n) : 10", for any n Z O.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 28 / 31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:34**************
-Fm nnlomlpl “a mnmidl
-NW my Sam m. Mum my m a m MW, .w "WW
-‘am-m.‘ w
-nun-W» ls ,,, [manmdud u e1; aha m ,L M11 mm“
-offmelmuats Mm,“ 5 7:’ 15M 4;,1
-lel
-rm M m: W m m mum Wm mdude s 7 sq m 7 s?»
-1M show m1: W m x Mmmmm b: i mm ,4 s 5’
-<5" r Sin u
-m “mm- —_ .,..
+Free semigroups and monoids
+
+How many sets of free generators may have a free semigroup or monoid?
+Proposition 40
+Ifa semigroup (S, o) (monoid (ll/1,0, e)) is free, then it has a unique set
+of free generates, and this set is 5 — 52 (5M — SE4).
+Proof.
+First, show that any set of generators should include S i 52 (5M i Si’).
+Then, show that any set X of generators should be a subset of S i 52
+
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 29/31
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:35**************
-Reading “a QxeKiSE guide
+Reading and exercise guide
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:36**************
-k .5 mm mmm mm W an In m WM Mm m vrd W"
-m m
-(bum mew:
-1 Pup znzs 1m ‘mm [1]
-—
+Reading and exercise guide
+lt is highly recommended that you do all the exercises marked in red from
+the slides.
+Course readings:
+1. Pages 203-235 from textbook [1].
+Prof_dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 30 / 31
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Reference!
-m WWW“... .wxrmmﬂmkm MM hm
-.... “mm- —
+[1] Ferucio Laurentiu Tiplea. Algebraic Foundations of Computer Science. “Alexandru loan Cuza"
+University Publishing House, Ia5i, Romania, second edition, 2021.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Semigroups and Monoids Spring 2022 31 / 31
 
 ***************Ending Page***************
 

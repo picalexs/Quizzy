@@ -1,1158 +1,1272 @@
 ***************Beginning Page***************
 ***************page number:1**************
-so man/m2
+SD 2021/2022
+<E|> <ﬁ>4IE>4IE> IE OQO
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-(WM
-Am"
+Continut
+Arbori
+Arbori binari (ArbBin)
+Aplicatie: reprezentarea expresiilor ca arbori
+4E1r<ﬁ>4ifb4IE> :E QQG
+CursS —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Avbnn deﬁnme vetulslvi
-Aizlhwdewdv
-‘:{mnh m» “MENU” Am"
+Arbori: definitie recursivé
+A _ /\ — arborele vid,
+— (r, {A1, - -- ,Ak}), r element 5i A17 - -- ,Ak arbori.
+El r51 i E :5 QQO
+QM 5D 2021/2022 3/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-hvbun deﬁmht vetulslvi
-Arzlhwdewdv
-‘:{mnh m» “MINA” Am"
-0
-A1“ m
-— W Mm w
+Arbori: definitie recursivé
+A _ /\ — arborele vid,
+— (r, {A1, - -- ,Ak}), r element 5i A1, - -- ,Ak arbori.
+A : A sau i i i
+cl 51 i E :2 QQG
+CHM SD2021/2022 3/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Arbor‘ deﬁmtlt retulsivi
-!\ V 20W‘: m
-‘:{MAL m» "MINA, 11an
-0
-///
-AZA s.“
-1 ,
-Didmnmuwimﬂum A $ A
-z 3 3 1
+Arbori: definitie recursivé
+A _ A — arborele vid7
+— (r, {A1, - -- ,Ak}), r element $i A1, - -- ,Ak arbori.
+A : /\ sau i i i
+l 1
+Dac5 A este ordonat (planar), atunci /\ 75 /\
+2 3 3 2
+Curs 5 SD 2021/2022 3/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Mm termmﬂngxe
-. M mm Wm M M m \
-w \ ©
-> m .MM.\.|.M.1HMM e o 5
-my pm w...“
-> subarbuv: avbemk ‘ﬁrmil mum-n o o a
-m 5. mm“ g‘
+Arbori: terminologie
+
+> rﬁdacina: nodul féré périnte.
+
+> nod intern: nod cu cel putin un fiu. Q
+
+> nod extern (frunzé'): nod féré fii. .3 \G Q
+
+> descendentii unui nod: ﬁi, nepoti, etc.
+
+> frati: toate celelalte noduri avénd .3 6 Q ‘I.
+acelasi périnte. subarbore
+
+> subarbore: arborele format dintr-un ‘D u ‘a
+nod 5i descendentii séi.
+
+CHM SD2021/2022 4/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Mm termmﬂugxe
-n,
-MW 1' Q g3?
-h Had \a :e‘ mm deﬂnax 2 Q Q
-3 r 0 0 0
+Arbori: terminologie
+> adﬁncimea uni nod x:
+A . O, X este rédécina,
+adanCIme(x) I A . V . A
+l + adanCIme(par|nte(x)), In caz contrar.
+0 — Q
+> Tnélfcimea unui arbore:
+adﬁncimea maximé' a nodurilor
+arborelui. 1 _ ‘3 G @
+> Tnéltimea unui nod: distanta de
+‘ . v ' 2 — 43 43 G GP
+la nod la cel mal departat
+descendent al séu.
+3 — 0 Q Q
+CHM SD2021/2022 5/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-(mm
-Am" hmal mm»)
-—-— W “1-w- H"
+Continut
+Arbori binari (ArbBin)
+
+cl a] - -= :5 mu»
+CHM SD2021/2022 6/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-mm almmn Arhﬁln
-0mm», m.‘ m..."
-u" mm m, e44: Q Mm‘: .1: MW <-| vwnneﬂule
-> m m4 new 1 w 15mm mp“)
-> awe m Mn“ W Wmawmkww WNW
-“mm”; ﬁnmy
-> Mm, M Mm,"
-> M. m, MM“. WI sum mu Ml Dan! wv m m M W" m
-> "mm, M m “mm Mm. “Mm
+Tipul abstract ArbBin
+OBIECTE: arbori binari.
+Un arbore binar este o colecfcie de noduri cu proprietétile:
+V orice nod are O, 1 sau 2 succesori (ﬁi, copii).
+> orice nod, excepténd unul singur — rédﬁcina — are un singur nod
+predecesor (taté, périnte).
+V rédécina nu are predecesori.
+> fii sunt ordonati: fiul sténg, fiul drept. Dacé un nod are un singur fiu,
+atunci trebuie mentionat care.
+> nodurile féré fii formeazé frontiera arborelui.
+CHM SD2021/2022 7/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Avhmi hmali exemplu
-0
-6 6
-0 0 W 0
-9 0 G 0
-0
+Arbori binari: exemplu
+G
+G G
+43 Q M GD
+43 G 6 ll
+OB
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Avhnvi hmali exemplu
-"WW A‘ 0
-My»! 4.9 e? hudllm
-0 0 W 0
-9 0 G 0
-0
+Arbori binari: exemplu
+rﬁdécina —>@
+fiu stﬁng _>@ @<— ﬁu drept
+43 Q W OD
+43 G 6 D
+G!
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Arhonhman 2mm"
-wm Q
-m » 9 /&\ @FMW
-0 0
-9 0 G 0
-0 .i mam “an:
-— M. 3mm .m
+Arbori binari: exemplu
+rﬁdécina —>@
+fiu st g @<_ ﬁu drept
+43 Q W ‘D
+43 G 6 ll
+m <_ subarbore stang
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-Mm 1mm deﬁmue rennin/i
-> Artude m1 (m: "m w. my W when m,
-> om V =5“ mm g r, 5‘ n mm.‘ m“ mm 1mm: m.
-1.» P: v c2 11:15am!‘ r. mm“ m" =| mm s\ .1 mbamo'e
-drew .\ .mm m "1m m.
-ﬁ
-\
-\
-v, I1
-— M. Wm - .1
+Arbori binari: deﬁnitie recursivé
+
+V Arborele vid (féré nici un nod) este arbore binar.
+
+V Daca v este un nod $i t1 $i t2 sunt arbori binari, atunci arborele care
+are pe v ca rﬁdéciné, t1 subarbore sténg al rédécinii $i t2 subarbore
+drept al rédécinii este arbore binar.
+
+CHM SD2021/2022 9/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Mm hman prepnedtl
-Nam"
-> n 7 mm d: mm- 4m where
-> “.7 "mm denodun “Dem:
-> n, 7 Mm de MM mm
-> Mmmﬂ mm
-h+lg "SQ'Mil, ‘mwndghg "71
-19:52" A5mSY-l
+Arbori binari: proprietifci
+Notatii:
+> n — numﬁrul de noduri din arbore.
+V ne — num‘a’ru| de noduri externe.
+V n,- — numﬁrul de noduri interne.
+> h —Tn§|timea arborelui.
+h+1§n§2h+1—1; |0g2(n+1)—1§h§n—1
+1§ne§2h; hgmgzh-l
+Curs 5 SD 2021/2022 10/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Mm hman prepnedti
-. Am MW MUM“ “mm mam
-HﬂHmiKIQMI/z
-nus W»
-~ S m 1 1' 7 1 I
-M" t,
-> MW (mm aha“ WW v" are Mule‘: au 2mm MM,
-W , m T W
-“with?!
+Arbori binari: proprietéfci
+> Arbore propriu: fiecare nod intern are exact doi fii.
+2h+1gngzh+1-1;
+|og2(n+1)—1 g hg (n-1)/2
+h + 1 g ne g 2h;
+h g n,- g 2h - 1
+ne : n,- + 1
+> Arbore complet: arbore propriu Tn care frunzele au aceeasi adéncime.
+nivelul i are 2i noduri;
+n:2h+1—1:2ne—1
+C. 51 i E :2 A“
+Cm 5 5D 2021/2022 11/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-ArbBln 7 mm“
-mmmo
-> mtnv!
-r W zvhme m l,
-r ﬁres: W rwd m m mull M M (um “W mm
-r nwl W in!“ (5.5m Mum
-r Wm,“ . a». M- M
-r NM‘. z ‘a um S 1 Minn: W m :z mm» .
-M- M M 1,. m
-— W WW ,1 .1
+ArbBin — operatii
+insereaza()
+> intrare:
+— un arbore binar t;
+— adresa unui nod cu cel mult un fiu (tatél noului nod);
+— tipul ﬁului adﬁgat (sténga, dreapta);
+— informatia e din noul nod.
+> ie$ire:
+— arborele t la care s-a adéugat un nod ce memoreazé e;
+noul nod nu are ﬁi.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-kaln mserzre - exemplu
-e/ e
-o o m o
-a o o o
-o my; X G m M. K
+ArbBin: inserare - exemplu
+G
+G G
+43 Q M Q
+43 G 6 D
+m insereazé X ca ﬁu sténg a lui K
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-kaln mserzre- exemplu
-e/ e
-o o m o
-XJ a o o o
-o my; X G m M. K
+ArbBin: inserare - exemplu
+G
+G G
+43 Q M Q
+Q 43 G 6 D
+m insereazé X ca ﬁu sténg a lui K
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-kaln mink-amp»
-//Q\\
-@T/ 1Q
-(9/ o XE)
-'9 12:: i Z 2: 3:. Z 1: f
+ArbBin: inserare - exemplu
+G
+G G
+43 G W G
+Q 43 G 6 D
+insereazé X ca ﬁu sténg a Iui K
+m insereazé Y ca fiu drept a lui L
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Abeln mgmmgxemplu
-//0
-\f/ e
-0 GI 0
-"5/ a o o
+ArbBin: inserare - exemplu
+G
+G G
+Q Q W G
+Q G G 6 0
+
+insereazé X ca fiu stﬁng a lui K
+
+m w insereazé Y ca fiu drept a lui L
+cl 51 2 E :2 0&0
+Curs 5 SD 2021/2022 13/37
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
-ﬂrszn 7 npemm
-damn!
-. mum
-V “w “a m3 n. u ,m MW ,1.”
-> M
-V mm ‘ 4m “M , QM! W 4M
-(a: a lmw!)
+ArbBin — operatii
+e1imina()
+> intrare:
+— un arbore binar t;
+— adresa unui nod féré fii 5i adresa nodului périnte.
+> ie$ire:
+— arborele t din care s-a eliminat nodul dat
+(de pe frontieré).
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:22**************
-lrbBln ellmmave V exemphl
+ArbBin: eliminare - exemplu
 G
-6 6
-0 0 W 0
-0 ‘1/ G 0
-0
-— M. “m m
+G G
+Q Q W G
+6 G G 0
+G.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-lrbBln ellmmave V exemphl
+ArbBin: eliminare - exemplu
 G
-6 6
-0 0 W 0
-0 G 0
-0
-— M. “m My
+G G
+Q Q W G
+6 G 0
+G.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-lrbBln ellmmave V exemphl
+ArbBin: eliminare - exemplu
 G
-6 6
-0 0 W 0
-0 G 0
-0
-— M. “m w
+G G
+Q Q W G
+6 G 0
+G.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-ArbBln 7 pamngerea New"
-mmummmm
-v mm
-V .1 mm mum“
-V .M. ‘ am mm. Wm“ "Wm" .n Wm
-~ m - Mm
-~ m - mm‘! mi
-~ ‘my-WWW,»
+ArbBin — parcurgerea preordine
+parcurgerePreordine()
+> intrare:
+— un arbore binar t;
+— o proceduré viziteazaO.
+> ie$ire:
+— arborele t, dar cu nodurile procesate cu viziteazaO Tn ordinea
+* (R) — rédicina
+* (S) — subarborele stﬁnga
+* (D) — subarborele dreapta
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Pzrculgele pmvdme _ e'xemphl
-9
+Parcurgere preordine - exemplu
+G
 G 6
-0 0 ‘3 G
-0 0 G 0
-GI
+Q Q m 03
+03 G G 0
+GD
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Pzrculgele pmvdme _ e'xemphl
-9
+Parcurgere preordine - exemplu
+G
 G 6
-0 0 ‘3 G
-0 0 G 0
-0 ¢
+Q Q m 03
+03 G G 0
+m C
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-Pzrculgele pmvdme _ mmpm
-9
+Parcurgere preordine - exemplu
+G
 G 6
-0 0 ‘3 G
-0 0 G 0
-0 ¢ z
+Q Q m 03
+03 G G 0
+m C E
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Pzrculgele pmvdme _ mmpm
-9
+Parcurgere preordine - exemplu
+G
 G 6
-0 0 ‘3 G
-0 0 G 0
-0 ¢ z K
+Q Q m 03
+03 G G 0
+m C E K
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-Pzrculgele pmvdme _ mmpm
-9
-G 6
-0 0 ‘3 G)
-9 0 G 0
-0 ¢ z K a
+Parcurgere preordine - exemplu
+G
+G G
+43 Q M 43
+43 G 6 0
+m C E K B
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-Pzrculgele pmvdme _ mmpm
-9
-G 6
-0 O ‘3 G)
-9 0 G 0
-0 ¢ z K a H
+Parcurgere preordine - exemplu
+G
+G G
+43 Q M 43
+43 G 6 0
+m C E K B H
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Parculgele pmvdme _ mmpm
-9
+Parcurgere preordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 ¢ z K a H A
+Q Q m 03
+03 G G 0
+m C E K B H A
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Parculgele pmvdme _ mmpm
-9
+Parcurgere preordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 ¢ z K a H A L
+Q Q m 03
+03 G G 0
+m C E K B H A L
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Parculgele pmvdme _ mmpm
-9
+Parcurgere preordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 c z K a H A L F
+Q Q m 03
+03 G G 0
+m c E K B H A L F
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Parculgele pmvdme _ mmpm
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 c z K a H A L F r;
+Parcurgere preordine - exemplu
+G
+G G
+Q Q m 03
+03 G G 0
+m c E K B H A L F G
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Parculgele pmvdme _ mmpm
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 c z K a H A L F r; M
+Parcurgere preordine - exemplu
+G
+G G
+03 Q w 03
+43 G G 0
+m c E K B H A L F G |\/|
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Parculgele pmvdme _ exemphl
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 c z K a H A L F c M D
+Parcurgere preordine - exemplu
+G
+G G
+03 Q w G
+43 G G 0
+m c E K B H A L F G |\/| D
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Parcurgere premdme V exempm
-9
-G 6
-0 0 ‘3 G
-0 0 G 0
-0 CEKBHALFCMD‘
-— W ‘ w“ W
+Parcurgere preordine - exemplu
+G
+G G
+Q 0 W G
+G G G 0
+m C E K B H A L F G |\/| D |
+cl 51 2 E :2 QQO
+Curs 5 SD 2021/2022 19/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-lrbBln 7 pamngerea inonlme
-vmnguummmo
-v mm
-r w Wm“ mum“
-r NM‘- ‘ am mm. Wmm "Wm" .n Wm
-~ m - “mm mi
-~ m - Mm
-~ wy-WMMW
+ArbBin — parcurgerea inordine
+parcurgereInordine()
+> intrare:
+— un arbore binar t;
+— o proceduré viziteazaO.
+> ie$ire:
+— arborele t, dar cu nodurile procesate cu viziteazaO Tn ordinea
+* (S) — subarborele sténga
+* (R) — r5d§cina
+* (D) — subarborele dreapta
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Pzrculgele inmdine - exemplu
-9
-G 6
-0 0 ‘3 G
-0 0 G 0
-GI
+Parcurgere inordine - exemplu
+6
+G G
+Q Q M 43
+03 G 6 0
+GD
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-Pzrculgele immline - exemplu
-9
-G 6
-0 0 ‘3 G
-0 0 G 0
-0 K
+Parcurgere inordine - exemplu
+6
+G G
+43 Q M 43
+03 G 6 0
+m K
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:42**************
-Pzrculgele immline - exemplu
-9
+Parcurgere inordine - exemplu
+G
 G 6
-0 0 ‘3 G
-0 0 G 0
-0 K H
+Q Q m 03
+03 G G 0
+m K H
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Pzrculgele inanline - exemplu
-9
-G 6
-0 0 ‘3 G)
-9 0 G 0
-0 K H a
+Parcurgere inordine - exemplu
+6
+G G
+43 Q M 43
+43 G 6 0
+m K H B
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-Pzrculgele inanline - exemplu
-9
-G 6
-0 0 ‘3 G)
-9 0 G 0
-0 K H a z
+Parcurgere inordine - exemplu
+6
+G G
+43 Q M 43
+43 G 6 0
+m K H B E
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Pzrculgele inanline - exemplu
-9
+Parcurgere inordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 K H a z l
+Q Q m 03
+03 G G 0
+m K H B E L
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-Pzrculgele inanline - exemplu
-9
+Parcurgere inordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 K H a z l A
+Q Q m 03
+03 G G 0
+m K H B E L A
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-Pzrculgele inanline - exemplu
-9
+Parcurgere inordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 K H a z l A r
+Q Q m 03
+03 G G 0
+m K H B E L A F
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Pzrculgele inanline - exemplu
-9
+Parcurgere inordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 K H a z l A r c
+Q Q m 03
+03 G G 0
+m K H B E L A F c
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-Parculgele inanline - exemplu
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 K H a z l A r c M
+Parcurgere inordine - exemplu
+G
+G G
+03 Q w 03
+43 G G 0
+m K H B E L A F c |\/|
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Parculgele inanline - exemplu
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 K H a s l A r c M r;
+Parcurgere inordine - exemplu
+G
+G G
+03 Q w 03
+43 G G 0
+m K H B E L A F c |\/| G
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-Parculgele inanline - exemplu
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 K H a s l A r c M r; \
+Parcurgere inordine - exemplu
+G
+G G
+03 Q w 03
+43 G G 0
+m K H B E L A F c |\/| G |
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-Parcurgere monlme V exemplu
-9
-G 6
-0 0 ‘3 G
-0 0 G 0
-0 KHBELAFCMG\D
-— W w“ .m
+Parcurgere inordine - exemplu
+G
+G G
+Q 0 W G
+G G G 0
+m K H B E L A F C |\/| G | D
+cl 51 2 E :2 QQO
+Curs 5 SD 2021/2022 21/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-ArbBln 7 pamngerea WWW
-Farculglzwnswnhnﬂ)
-v mm
-V .1 mm mum“
-V .M. ‘ am mm. Wm“ "Wm" .n Wm
-~ m - mm‘! mi
-~ my - WWW“.
-~ m - Mm
+ArbBin — parcurgerea postordine
+parcurgerePostordine()
+> intrare:
+— un arbore binar t;
+— o proceduré viziteazaO.
+> ie$ire:
+— arborele t, dar cu nodurile procesate cu viziteazaO Tn ordinea
+* (S) — subarborele sténga
+* (D) — subarborele dreapta
+* (R) — rédécina
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-Pzrculgele postnrdme - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 0 ‘3 G
-0 0 G 0
-GI
+Q Q m 03
+03 G G 0
+GD
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-Pzrculgele @51an - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 0 ‘3 G
-0 0 G 0
-0 H
+Q Q m 03
+03 G G 0
+m H
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-Pzrculgele @51an - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 0 ‘3 G
-9 0 G 0
-0 H a
+Q Q m 03
+03 G G 0
+m H B
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-Pzrculgele @51an - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 0 ‘3 G)
-9 0 G 0
-0 H a K
+Q Q m 03
+03 G G 0
+m H B K
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-Pzrculgele @51an - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 H a K l
+Q Q m 03
+03 G G 0
+m H B K L
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-Parculgele @51an - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 H a K l F
+Q Q m 03
+03 G G 0
+m H B K L F
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-Parculgele @51an - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 H a K l F A
+Q Q m 03
+03 G G 0
+m H B K L F A
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-Parculgele @51an - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 O ‘3 G)
-9 0 G 0
-0 H a K l F A z
+Q Q m 03
+03 G G 0
+m H B K L F A E
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-Parculgele postordme - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 O ‘3 0
-9 0 G 0
-0 H a K l F A z M
+Q Q w 03
+03 G G 0
+m H B K L F A E |\/|
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:63**************
-Parculgele postordme - exemplu
-9
+Parcurgere postordine - exemplu
+G
 G 6
-0 O ‘3 0
-9 0 G 0
-0 H a K l F A z M I
+Q Q w 03
+03 G G 0
+m H B K L F A E |\/| |
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-Parculgele postordme - exempm
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 H a K l F A z M I D
+Parcurgere postordine - exemplu
+G
+G G
+03 Q w G
+43 G G 0
+m H B K L F A E |\/| | D
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-Parculgele postordme - exempm
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 H a K l F A z M I D r;
+Parcurgere postordine - exemplu
+G
+G G
+03 Q w G
+43 G G 0
+m H B K L F A E |\/| | D G
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-Parcurgere posterdme V exemphl
-9
-G 6
-0 0 ‘3 G
-0 0 G 0
-0 HEKLFAEMIDLC
-— W ‘ w“ .m
+Parcurgere postordine - exemplu
+G
+G G
+Q 0 W G
+G G G 0
+m H B K L F A E |\/| | D G C
+cl 51 2 E :2 QQO
+Curs 5 SD 2021/2022 23/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:67**************
-lrbBln 7 pamngerea BFS (p2 Hﬁme)
-pnr:ur5¢nlf5()
-> Imme
-, amwdm: , mm‘)
-> IQ»;
-r avhwﬂu davu rad-m‘:recanwvnnnulﬁnwdms srs
-(we ‘hm: 1 ,¢ Mm
+ArbBin — parcurgerea BFS (pe létime)
+parcurgereBFS()
+> intrare:
+— un arbore binar t;
+— o proceduré viziteazaO.
+> ie$ire:
+— arborele t, dar cu nodurile procesate cu viziteazaO Tn ordinea BFS
+(pe litime / pe niveluri).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-Pzrculgele BFS _ exemphl
-9
-G 6
-0 0 ‘3 G
-0 0 G 0
-GI
+Parcurgere BFS - exemplu
+6
+G G
+Q Q M 43
+03 G 6 0
+GD
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:69**************
-Pzrculgele BFS _ exemphl
-O
-G 6
-0 0 ‘3 G
-0 0 G 0
-0 ¢
+Parcurgere BFS - exemplu
+G
+G G
+Q Q M 43
+03 G 6 0
+m C
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-Pzrculgele BFS _ exemphl
-O
-G 6
-0 0 ‘3 G
-0 0 G 0
-0 ¢ z
+Parcurgere BFS - exemplu
+G
+G G
+Q Q M 43
+03 G 6 0
+m C E
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-Pzrculgele BFS _ exemphl
-9
-G 6
-0 0 ‘3 G
-0 0 G 0
-0 ¢ z c
+Parcurgere BFS - exemplu
+G
+G G
+Q Q M 43
+03 G 6 0
+m C E G
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-Pzrculgele BFS _ exemphl
-9
-G 6
-0 0 ‘3 G)
-0 0 G 0
-0 ¢ z c K
+Parcurgere BFS - exemplu
+G
+G G
+43 Q M 43
+03 G 6 0
+m C E G K
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-Pzrculgele BFS _ exemphl
-9
-G 6
-0 O ‘3 G)
-0 0 G 0
-0 ¢ z c K A
+Parcurgere BFS - exemplu
+G
+G G
+43 Q M 43
+03 G 6 0
+m C E G K A
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-Pzrculgele BFS _ exemphl
-9
-G 6
-0 O ‘3 G)
-0 0 G 0
-0 ¢ z c K A M
+Parcurgere BFS - exemplu
+G
+G G
+43 Q M 43
+03 G 6 0
+m C E G K A M
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
-Parculgele BFS _ exemphl
-9
-G 6
-0 O ‘3 0
-0 0 G 0
-0 ¢ z c K A M D
+Parcurgere BFS - exemplu
+G
+G G
+43 Q M 43
+03 G 6 0
+m C E G K A M D
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:76**************
-Parculgele BFS _ exemphl
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 ¢ z c K A M D B
+Parcurgere BFS - exemplu
+G
+G G
+43 Q M 43
+43 G 6 0
+m C E G K A M D B
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-Parculgele BFS _ exempm
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 c z c K A M D B L
+Parcurgere BFS - exemplu
+G
+G G
+43 Q w G
+03 G 6 0
+m C E G K A M D B L
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-Parculgele BFS _ exempm
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 c z c K A M D B L F
+Parcurgere BFS - exemplu
+G
+G G
+43 Q w G
+03 G 6 0
+m C E G K A M D B L F
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-Parculgele BFS _ exempm
-9
-G 6
-0 O ‘3 0
-9 0 G 0
-0 c z c K A M D B L F \
+Parcurgere BFS - exemplu
+G
+G G
+43 Q w G
+03 G 6 0
+m C E G K A M D B L F |
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-Parcurgere BFS V exempm
-9
-G 6
-0 0 ‘3 G
-0 0 G 0
-0 CEGKAMDBLF\H
-— W w“ m
+Parcurgere BFS - exemplu
+G
+G G
+Q 0 W G
+
+G G G 0
+
+m C E G K A |\/| D B L F | H
+cl 51 2 E :2 QQG
+Curs 5 SD 2021/2022 25/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:81**************
-khBln \mplemenurea (u slmcmri inﬁmuim
-@131
-/ \
-Ell-l
-\ ,/ \
-mnn my? mun
-\
-mum unn
-mnn
+ArbBin: implementarea cu structuri Tnléntuite
+EBB
+IHII In“
+IIIII III“ IIIII EHII
+Bull IIIII IIIII IIIIII
+IIIII
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:82**************
-ArbBln structum umn nod
-an M v mm |= am d: “We v1 an: o mun-"3 u. m mm
-> Wm; - mm“ "mm; in M
-> w"; - ad's: Mm mm
-> we“, 7 1.1m M“ mm.
-— W Wm n .1
+ArbBin: structura unui nod
+Un nod v (aflat la adresa de memorie v) este o structuré cu trei cémpuri:
+> v—>inf — informatia memoraté Tn nod;
+> v—>stg — adresa ﬁului sténga;
+> v—>drp — adresa ﬁului dreapta.
+CHM 9920210022 27/37
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:83**************
-lrbBln parcutgePreonn-ABO
-Wm. mmpmmv Wm“;
+ArbBin: parcurgePreordine()
+procedure parcurgePreordine(v, viziteaza)
 begin
-n 1V Z: NULL) m.“
-rel-Am
-=45!
-wmeazﬂ"
-mmpvmnqw > g, mm.)
-Pmuvlevmrquw > 4er maul)‘
-m1
+if (v I: NULL) then
+return
+else
+viziteaza(v)
+parcurgePreordine(v— > stg, viziteaza)
+parcurgePreordine(v— > drp, viziteaza)
+end
+Curs 5 SD 2021/2022 28/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:84**************
-\mplemenuma parturgerii ars
-0
-0 0 0 G
+Implementarea parcurgerii BFS
+G
+Q Q W 03
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:85**************
-\mplemenuma parturgerii ars
-Kg
-Q Q
-Candi : Y i
+Implementarea parcurgerii BFS
+G
+Q Q W 43
+BFS :
+Coada z ( )
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:86**************
-\mplemenuma parturgerii ars
-{a
-Q Q
-Candi Z (C i
+Implementarea parcurgerii BFS
+G
+Q Q W 43
+BFS :
+Coada z (c )
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:87**************
-\mplemenurea parturgerii ars
+Implementarea parcurgerii BFS
 G
-0 0 0 G
-m : c
-cm:( z a >
+Q Q M 43
+BFS: C
+Coada:( E G )
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:88**************
-\mplemenurea parturgerii BFS
+Implementarea parcurgerii BFS
 G
-0 0 0 G
-m: c z
-coma a K A >
+Q Q W G
+BFS: C E
+Coada :( G K A )
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:89**************
-\mplemenurea parturgerii BFS
+Implementarea parcurgerii BFS
 G
-0 0 L‘) G
-m: c z a
-cum :1 K A M n >
+Q Q m G
+BFS: C E G
+Coada:( K A I\/| D )
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:90**************
-\mplemenurea parturgerii BFS
+Implementarea parcurgerii BFS
 G
-0 0 L‘) G
-m: c z a K
-cum :1 A M n >
+Q Q W 43
+BFS: C E G K
+Coada :( A IVI D )
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:91**************
-\mplemenurea parturgerii BFS
+Implementarea parcurgerii BFS
 G
-0 0 L‘) G
-m: c z a K A
-cum :1 M n >
+Q Q m G
+BFS: C E G K A
+Coada:( , IVI D )
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:92**************
-\mplemenurea parturgerii BFS
+Implementarea parcurgerii BFS
 G
-0 0 L‘) G
-m: c z a >< A M
-Cuaﬂ:( ‘ n >
+Q Q m G
+BFS: C E G K A |\/|
+Coada:( , \ D )
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:93**************
-\mp\emenmrea parcurgenl BFS
-G
-0 0 0 G
-m : c z c K A M n
-(nail Z 1 )
-— W “m w
+Implementarea parcurgerii BFS
+BFS: C E G K A M D
+Coada : ( 2 \ )
+El 5' i E :5 QQQ
+Curs 5 SD 2021/2022 29/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:94**************
-\mp\emenmrea parcurgenl BFS
-wean" Pi!(uMeBF5(L mm“;
-hqin
-w 1: 7, mm w...
-m.“
-.1”
-cm; v madavmﬂ
-Memuom n
-"m. m stermﬂCmdz) an
-“@1sz v1
-"1w .“u: NULLHM
-anxm, v >ngl
-u (v7 > m \ Z NULL) mu.
-‘Hm-“1.4mm V7 > M
-mmcmi,
-w
+Implementarea parcurgerii BFS
+procedure parcurgeBFS(t, viziteaza)
+begin
+if (t I: NULL) then
+return
+else
+Coada <— coadaVida()
+insereaza(Coada, t)
+while not esteVida(Coada) do
+citeste(Coada, v)
+viziteaza(v)
+if (v- > stg ! : NULL) then
+insereaza(Coada, v— > stg)
+if (v— > drp ! I NULL) then
+insereaza(Coada, v— > drp)
+elimina(Coada)
+end
+Curs 5 SD 2021/2022 30/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:95**************
-khBln \mplemenurea (u hste
-v um a: paw Rpm-"w Rm.‘ ummnuluuua
-Wm“ HUME“?
-
-v Avanlik no
-m) “ma- \1 m ma w Adam: IE 2
-.QMMWW.
-
-> ‘ ‘ 3916 s a
-m5 1mm m h MM we
-mm 7W0 9
+ArbBin: implementarea cu liste
+P tablou de périnjci: reprezentarea relatiei III-‘M
+“p5rinte”. 0 1 2 3 4 5 6 7 8 9
+O
+> Avantaje: Q
+- simplitate;
+- acces u$or de Ia un nod spre rédéciné; 1.3 2@
+- economie de memorie.
+. 3G 403 59 6'19
+> Inconvenlente:
+- acces diﬁcil de Ia rédécini spre
+noduri. 7% 8 m 9W
+Curs 5 SD 2021/2022 31/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:96**************
-Aszln \mplemenurea (u “wow
-> Nod-ml: m "umwnm um
-v
-> Indmml um“ m as‘: Q
-mum“, Z u 1a m
-“glimmnf,” "‘ “ :6 ‘e so m
-‘mm : 2‘|ndu(vinmvh1hl n
-dadrencfwdmv: 9W ‘BIO W"
-IIIEEEIIIIIIIRMIII
-“HUM-WWW
+ArbBin: implementarea cu tablouri
+> Nodurile sunt memorate Tntr-un tablou.
+0Q
+> lndexul unui nod este:
+- index(r§d§cin§) Z 0 1'3 2Q
+- index(x) : 2*index(p5rinte(x))+1,
+dacé x este ﬁu sténg 3G 4G 5o 6m
+- index(x) : 2*index(p5rinte(x))+2, 9 10 n 12
+dacé >< este ﬁu drept m m w
+‘III-MI...-
+O 1234567891011121314
+Curs 5 SD 2021/2022 32/37
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:97**************
-(mm
-AWcane "Pmenure: “Wink! c: m
-—-— » ~~ Mm M
+Conjunut
+Aplicafcie: reprezentarea expresiilor ca arbori
+El r51 i E :5 QQG
+CHM SD2021/2022 33/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:98**************
-Amime expresn intregx
-> wanuiqux
-V mm
-> “Emma. BMW I. m"
-, 5mm We we M m“
-V mm m.“ W um
-V MM Wm mm 5‘ Mm, amen “mm,
+Aplicatie: expresii Tntregi
+
+> Expresii Tntregi
+— definijcie;
+— exemple.
+
+> Reprezentarea expresiilor ca arbori
+— similaritéjci Tntre cele doué definitii;
+— arborele asociat unei expresii;
+— notatiile preﬁxate, inﬁxate 5i postﬁxate 5i parcurgeri ale arborilor.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:99**************
-Deﬁmp: expresnler intregl
-mm Z '2\'l\0\1|2
-<np_bln> ->\»|~l/\Z
-' | (“Kym-0)
-v (eprm') <prnn> “wimp
-> vex-m A: mm‘:
-1175.1 gm “275M w 127(5»1]1
-> “w .1! mm
-\5/0/2 km (um/2 15/9/211
-lS/‘ui at: UE/q-z sau ls/(n-zn
+Definitia expresiilor Tntregi
+<int> ::= ... -2 | —1 | O | 1 | 2 ...
+<op_bin> ::= + | - | * | / | Z
+<exr_int> ::= <int>
+| (<exp_int>)
+| <eXp_int> <op_bin> <exp_int>
+> reguli de precedenté
+12—5>|<2 este (12—5)*2 sau 12—(5*2) ?
+> reguli de asociere
+15/4/2 este (15/4)/2 sau 15/(4/2)?
+15/4 >1< 2 este (15/4) * 2 sau 15/(4 * 2)?
+Curs 5 SD 2021/2022 35/37
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:100**************
-swam reprezenute <1 arbarl
-in + 11 $ 5-(43 + 34/21 ‘ as)
-— * ~~ 5mm w"
+Expresiile reprezentate ca arbori
+—12 + l7 >|< 5-(43 + 34/21 >|< 66)
+CursS U 5' go 20232022:E 22/2?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:101**************
-Exprtsnle reprezenmte m "hm
-in + 11 $ 5-(43 + 34/21 ‘ as)
-Q
-
+Expresiile reprezentate ca arbori
+—12 + 17 >|< 5-(43 + 34/21 >|< 66)
 9 9
-O I! O
-
-H o E
-
-H
-— W 5mm m
+0 E
+CursS U 5' gD 20232022:E 2:273:
 
 ***************Ending Page***************
+
+
 
 ***************Beginning Page***************
 ***************page number:102**************
-Netame pastllxata 5| preilxzte
-a a‘
-- ‘
-0 m
-/
+Notajciile postfixate 5i prefixate
+
+V Notatia postﬁxaté se obtine prin parcurgerea postordine
+—12, 17, 5, *7 +, 43, 347 21, /, 66, *, +, —
+
+P Notatia prefixaté se obtine prin parcurgerea preordine
+—,+,—12,*,17,5,+,43,>1<,/,34,21,66
+
+Q 9
+Q E
+Curs 5 SD 2021/2022 37/37
 
 ***************Ending Page***************
+
+
 

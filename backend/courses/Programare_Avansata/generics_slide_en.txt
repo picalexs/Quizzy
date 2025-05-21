@@ -1,6 +1,6 @@
 ***************Beginning Page***************
 ***************page number:1**************
-(5g) Java"
+g) Java"
 Advanced Programming
 Generics
 Collections
@@ -10,118 +10,118 @@ Collections
 ***************Beginning Page***************
 ***************page number:2**************
 The Context
-- “Create a data structure that stores elements:
-, a stack, a linked list, a vector
-— a graph, a tree, etc. ”
+' “Create a data structure that stores elements:
+— a stack, a linked list, a vector
+— a graph, a tree, etc.”
 - What data type to use for representing the
 elements of the structure?
 Homogenous structure Heterogeneous structure
-class Stack t class Stack t
-PXIVHCE lhll] items; private Object“ items;
-public wold push m‘: item) v ...> prllc v0» p151 (Object item) t...|
-public m: peektt r t prllc Object peekﬂ t 1
-‘r t
-SLALK SLaLk Z new SLALM): Stack stack Z \ew SLanUF
-mgrwhmn WWMW;
-starrk.pushtLUDt; stalkpts t< \ev. Rena \qlen t;
-§tzruj s e t5tr1ng} >tat'k.peek;
+class Stack { class Stack {
+private int[] items; private Object[] items;
+public void push (int item) { ...} public void push (Object item) {...}
+public int peek() { m } public Object peek() { m }
+l }
+gtack stack = new Stack(); gtack stack = new Stack();
+stack.push(lOO); stack.push(lOO);
+stack.push(200); stack.push(new Rectangle());
+staekepﬁsh+LHelle—Werlé+l++ stack.push("Hello Worldl");
+String s = (String) stack.peek;
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
 Generics
-~ Generics enable types (classes and interfaces)
+- Generics enable types (classes and interfaces)
 to be parameters when defining classes,
 interfaces and methods.
-public Stack<String> ( }
-- Stronger type checks at compile time.
-Wehénew-Reeta-ng-Le-Hﬁ-r
+public Stack<String> { m }
+' Stronger type checks at compile time.
+seaekepush+new—Ree%ang%e++++
 - Elimination of casts.
-String s = ﬁtting-)- stack.peek();
+String s = +String+ stack.peek();
 - Enabling generic algorithms.
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:4**************
-Deflnlng a Generlc Type
-class ClassName<T1, T2, ..., Tn> { m )
+class ClassName<Tl, T2, ..., Tn> { m }
 or
-interface IName<T1, T2, ..., Tn> ( m )
-/M
-t A generic Version of the Stack class
+interface IName<Tl, T2, ..., Tn> { m }
+/~k*
+* A generic version of the Stack class
 * @param <E> the type of the elements
-*
-/
-public class Stack<E> (
-// E is a generic data type _
-pnvate E[] items;
-public void push(E item) ( )
-publlC E peekO ( H )
->
+*/
+public class Stack<E> {
+// E is a generic data t31199 Eis the type parameter
+private E[] items;
+public void push(E item) { ... }
+public E peek() { .. }
+}
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
 Type Parameter Naming
 Conventions
 
-° E - Element (used extensively by the Java Coltections Framework)
+' E - Element (used extensively by the Java Collections Framework)
 - K - Key
-- N - Number
-' T - Type
+' N - Number
+- T - Type
 - V - Value
-- S,U,V etc. - 2nd, 3rd, 4th types
+- S,U,V eto. - 2nd, 3rd, 4th types
 
-public class Node<T> ( )
+public class Node<T> { m }
 
-pubttc \nterface Pair<K, v> r >
+public interface Pair<K, V> { m }
 
-public class Palrlmpl<K, v> implements PalI<I<, v> <,,,)
+public class Pairlmpl<K, V> implements Pair<K, V> {...}
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:6**************
-public class — l
-private :
+public class — {
+private ;
 private
-public FairlK first, V second? l
-this.key : first;
-chlsmalue : second;
-)
-public volci setKey1K key) (
-thlsJaey = key;
-)
-public void setValueW value) l
-thlslvalue Z value;
-l
-public K getKeyU <
+public Pair(K first, V second) {
+this.key = first;
+this.value = second;
+}
+public void setKey(K key) {
+this.key = key;
+}
+public void setValue(V value) {
+this.value = value;
+}
+public K getKey() {
 return key;
-l
-publlC v getValueU (
+}
+public V getValue() {
 return value;
-> An old debate:
-y Do we wants javautilﬁai! ?
+} An old debate:
+} Do we want a java.uti/.Pair ?
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
 Instantlatlng a Generlc Type
-- Generic Invocation _
-SLack<Strinq> stack I new Stack<$trinq>();
-Pair<1nteger,5trlnq> pair :
-new Pa1r<Integer,String>(0, "ab");
-Stack<Node<Inteqer>> nodes Z new Stack<che<Integez>>H;
+' Generlc InVOcathn String is the type argument
+Stack<String> stack I new Stack<String>();
+Pair<Integer,String> pair I
+new Pair<Integer,String>(O, "ab");
+Stack<Node<Integer>> nodes I new Stack<Node<Integer>>();
 - The Diamond <>
-Stack<5trinq> stack I new Stack<>();
-Pa1r<1ntegez,5tzlng> pal: = new Paiz<>(0, "313");
-Steck<Node<Inteqer>> nodes : new Stack<>();
+Stack<String> stack = new Stack<>();
+Pair<Integer,String> pair = new Pair<>(O, "ab");
+Stack<Node<Integer>> nodes I new Stack<>();
 The compiler can determine, or infer, the type
 arguments from the context.
 
@@ -129,21 +129,21 @@ arguments from the context.
 
 ***************Beginning Page***************
 ***************page number:8**************
-Generlc Methods
+Generle Methods
 Generic methods are methods that introduce their
 own type parameters.
-public class Utll t
-publlC static <T> 1nt countNullValueS(T[] anAIray) t
-lnt count : O;
-for (T e 1 anArray)
-1f (e I: null) t
-++count7
-)
+public class Util {
+public static <T> int countNullValues(T[] anArray) {
+int count = O;
+for (T e : anArray)
+if (e == null) {
+++ccunt;
+}
 return count;
-l
-)
-UtlllcountNullValuesmew Strlnq[]t"a", null, "b"));
-Ut\llcountNull\/alues(new Tntegerﬂﬂ, ?, null, 3, null));
+}
+}
+Util.countNullValues(new String[]{"a", null, "b"});
+Util.countNullValues(new Integer[]{l, 2, null, 3, null});
 
 ***************Ending Page***************
 
@@ -151,46 +151,46 @@ Ut\llcountNull\/alues(new Tntegerﬂﬂ, ?, null, 3, null));
 ***************Beginning Page***************
 ***************page number:9**************
 Bounded Type Parameters
-class D <1‘ extend: A G B 5 C> ( /* */)
-public class che<T extends Numbez> 4
-puvaLe T L;
-prllC vold set(T c) x this.t 1 c; )
-public r qct() ( return t; y
+class D <T extends A & B & C> { /* ... */ }
+public class Node<T extends Number> {
+private T t;
+public void set(T t) { this.t I t; }
+public T get() { return t; }
 // Generic Method
-public <1! extends Integer) void inspectw uH
-System.out.prlntlr("T: " + t.qetCLasS()-QetName());
-System.out.prlntlr ("11: " \ \;.getClasS (l .gemame (l );
-)
-ppbllc sLeLic void majnlSLtingU args) 1
-che<JcLbie> node Z new Node<>();
+public <U extends Integer> void inspect(U u){
+System.out.println("T: " + t.getClass().getName());
+System.out.println("U: " + u.getClass().getName());
+}
+public static void main(String[] args) {
+Node<Double> node = new Node<>();
 node.set(12.34); //OK
-node41nspect(1234j; //OK
-WW //C0n\plle error!
-ﬁedeﬁﬁsﬁeemerW //COmpile error!
-)
-)
+node.inspect(1234); //OK
+nede¢inspeet+l2¢%%++ //compile error!
+nede¢inspeet+lseme—textﬂ++ //compile error!
+}
+}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Generlcs, Inherltance, Subtypes
-"i8 a"
+Generics, Inheritance, Subtypes
+"I'S a"
 
-I Integer extends Object
+v Integer extends Object
 
-r Integer extends Number
+v Integer extends Number
 
-. ' '
+. I '
 
-' S m" age" E‘ “"6" s ‘36* mm" o
-Given two concrete types A and B (for example, Number and Integer).
-MyClass<A> has no relationshig to MyC/ass<B>, regardless of
-whether or notAand B are related. The common parent of
-MyCIass<A> and MyC/ass<B> is Object.
+' S iaem“ Eager’ “Em S haemmw o
+Given two concrete types A and B (for example, Number and Integer),
+MyC/ass<A> has no relationship to MyC/ass<B>, regardless of
+whether or not A and B are related. The common parent of
+MyC/ass<A> and MyC/ass<B> is Object.
 
-“This ls a common misunderstand/ng wnen it comes to programming wrlh generics,
-but n IS an Important concept to learn "
+“This is a common misunderstanding when it comes to programming with generics,
+but it is an important concept to learn ”
 
 ***************Ending Page***************
 
@@ -199,55 +199,61 @@ but n IS an Important concept to learn "
 ***************page number:11**************
 - Variance refers to how subtyping between more complex
 types relates to subtyping between their components.
-class Ammot (t
-cLass Cat extends Animal t t
-Cat tom i new Catl);
+class Animal {}
+class Cat extends Animal { }
 
-AnlmalU pets. : new Anlmal[lD];
+Cat tom I new Cat();
 
-CatH cats : new CatUO];
+Animal[] pets = new Animal[lO];
 
-Lom instanceof Animal _ true
+Cat[] cats I new Cat[lO];
 
-cats instanceof AnlmBlH 4 true (covariance)
+tom instanceof Animal e true
 
-pots instanceof ZACH , false (contravarlancct
+cats instanceof Animal[] e true (covariance)
 
-List<An1mal> pets i new ArrayLlst<>H;
+pets instanceof Cat[] e false (contravariance)
 
-List<CaL> caLs : rew A:IayLisL<>()F
+List<Animal> pets I new ArrayList<>();
 
-cats instanceof List<Ar.;rr\al> 4 compile error
-(lllcqal qcncrlc type)
+List<Cat> cats I new ArrayList<>();
 
-VOld play[Llst<An1mal> pets] t t
+cats instanceof List<Animal> e compile error
+(illegal generic type)
 
-playlcats); < Compile error (\ncompatible types)
+void play(List<Animal> pets) { m }
+
+play(cats); e compile error (incompatible types)
 
 ***************Ending Page***************
+
+
 
 ***************Beginning Page***************
 ***************page number:12**************
-~ Upper bounded
-publu: doubJ; mnOlestlLisC<7 extends Number> list) (
-//1t works an Llst<1nteger>, Llst<Duuble>, Llst<NumbEI>, Etc.
-double s i 0.0;
-f0: (N_mk:er n : lLSt)
-s +: n.doublevalue();
-)
+' Upperbounded
+public double sumOfList(List<? extends Number> list) {
+//it works on List<Integer>, List<Double>, List<Number>, etc.
+double s = 0.0;
+for (Number n : list)
+s += n.doubleValue();
+return s;
+}
 - Unbounded
-pubhc Mala prerlnSLLList<Z§> list) \‘
-lo; (ODJUCL 01cm: LJSLY
-Sybte'u.oui.pr,nt[e,em + " w,-
-)
+public void printList(List<?> list) {
+for (Object elem: list)
+System.out.print(elem + " ");
+}
 - Lower bounded
-publlc ‘101d addNumbeIS1Li5t<7 super Integer> 115:1) (
-H1: works on Llst<1nceger>, List<Number>, and Llst<0bject> i
-//anythlﬂq that can hold Integer values‘
-fo“(\~‘t1:\:w<:10;\++) l
-MsL.addL\H
->
-)
+public void addNumbers(List<? super Integer> list) {
+//it works on List<Integer>, List<Number>, and List<Object> —
+//anything that can hold Integer values.
+for (int i = l; i <= lO; i++) {
+list.add(i);
+}
+}
 
 ***************Ending Page***************
+
+
 

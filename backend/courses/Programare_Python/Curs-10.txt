@@ -1,63 +1,96 @@
 ***************Beginning Page***************
 ***************page number:1**************
-\I\I\I\I\I\I\I\
-I Qﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ \
-I \ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ I
-\ ﬂ\ﬂ\ﬂ\ﬂ§ﬂ\ﬂ\ﬂ \
-I\I\I\I\I\I\I\l
-PROGRAMMING IN PYTHON ‘ ifﬂfﬂﬁw‘
+\/\/\/\/\/\/\I\
+1W
+‘W
+1W
+‘ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\ﬂ\
+I\I\I\I\l\l\l\l
+PROGRAMMING IN PYTHON | gggggqgmgos
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Sockets are implemented through socket module in Python,
+Sockets are implemented Through socket module in Python.
 
-A socket obiect in Python has the some functions as a normal socket from C/C++:
+A socket obiect in Python has the same functions as a normal socket from C/C++:
 accept, bind, close, connect, listen, recv, send,
 
-Besides this several other functions are available for domain translation, time auts, etc
-Documentation tor Python socket module can be found on:
+Besides this several other functions are available for domain translation, time outs, etc
+Documentation for Python socket module can be found on:
 
-1) Python 3; hilgyllgggqxthgnglg ngligrgq [sggkgmrml
+o Python 3: htth:[ [docs.python.org[3Zlibrarylsockethtml
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-How Io build u simple server/client in Python:
-Pyvhon 3.x (Server)
+How To build 0| simple server/client in Python:
+
+Python 3.x (Server)
+
 import socket
-s : socket.socknusockepnrgmlzl", socket.SOCKiSTREZ-\M)
-siuncﬂ1"127,0‘O,l",1234))
-S‘ll5len(li
-(connection, address) = s.accept()
-prlnt ("Connectd address:",addte$5} ;
+
+s I socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+s.bind(("127.0.0.l",1234))
+
+s.listen(1)
+
+(connection, address) I s.accept()
+
+print ("Connectd address:",address);
+
 while True:
-data I ccnnectlorhreCVUOO) ‘decodEV'UTFiﬁw
-if rmt data: break
-print("Rece1ved: “,data)
+data I connection.recv(lOO).decode("UTF-8")
+if not data: break
+print("Received: ",data)
 if "exit" in data: break
-CaneCtion.closc()
+
+connection.close()
+
 print ("Server closed")
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-How to build u simple server/client in Python:
-Pyvhon 1x {Server}
+How To build a simple server/client in Python:
+Python 3.x (Server)
 import socket
-s = socket.socketqsockecaglNET, sockeLSOCKisTREAM)
-s -biﬂd(
-:Llistelﬂl)
-(connectlon, address} = s,accept()
-print (“Connectd address z " , address); Address and pen
+s I socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s .bind <
+s.listen(l)
+(connection, address) I s.accept()
+print ("Connectd address:",address); Addnnsondpon
 while True:
-data : connection.recv(100) ‘ decode(“UTF>8")
+data I connection.recv(100).decode("UTF-8")
 if not data: break
-print1"Rece1\/ed: ",datal
+print("Received: ",data)
+if "exit" in data: break
+connection.close()
+print ("Server closed")
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
+***************page number:5**************
+How To build a simle server client in P Thon:
+Python 3.x (Server)
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(("127.0.0.l",1234))
+s . listen
+(connection, address) = s.accep .
+print ("Connectd address:",address); mamnwmrwmbér0f
+- queued connechons
+whlle True:
+data = connection.recv(100).decode("UTF-8")
+if not data: break
+print("Received: ",data)
 if "exit" in data: break
 connection.close()
 print ("Server closed")
@@ -65,185 +98,189 @@ print ("Server closed")
 ***************Ending Page***************
 
 ***************Beginning Page***************
-***************page number:5**************
-How to build u simle server client in P Ohon:
-Pyvhon 3.x (Server)
-import socket
-s : socket.socket (socket.AF’IN!-IT, SOCket.SOCK’STREI-\M)
-sibind( 1"127_O.D.l", 1234)!
-s . listen
-(connection, address) : s.accep
-print ("Connectd address:", address); '“‘“"““'“ "“""‘E_' “f
-"hu- True: queued comedians
-data = connectionireCY/UOO) .deeode("UTF—a")
-if not data: break
-pzint ("Received: “, data)
-if "exit" in data: break
-connection.close(l
-print ("Server closed“)
-
-***************Ending Page***************
-
-
-***************Beginning Page***************
 ***************page number:6**************
-How to build u simple server/client in Python:
+How To build a simple server/client in Python:
 Python 3.x (Server)
 import socket
-s : socket.socket (socketJéFiINET, SOCket.SOCKiSTREAM)
-slum?“ 1"127.0‘O.1", 1234)!
-sJisten (1b
-(connection, address) = B.accepz(|
-prlnt ("Connectd address 1 “, addreSS) ,' Number of bytes 90 read
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(("127.0.0.l",1234))
+s.listen(l)
+(connection, address) I s.accept()
+print ("Connectd address: ", addreSS) ; Number of bytes To redd
 while True:
-data = cunnectioxmrecv .- “r _
-if not data: billk
-print("Received: ",daca)
-if "exit" in data: break
-connection.close()
-print ("Server closed“)
-
-***************Ending Page***************
-
-***************Beginning Page***************
-***************page number:7**************
-How to build u simple server/client in Python:
-who" 3.x (Server)
-import socket
-s = Socketasocket(socket.AFiINET, socketﬁOCKiSTREl-WI)
-s.bind(1“127a0.0al",1234)F
-s.listen(l) ‘k _,
-(connection, address) = saacceptﬁ usu'fwse: “NZ”
-prim: ("Connectd address:",address); “f'we' ° Vim’? °°
-‘hue True: smug.Encodmgmvmscnse
-data = connection.recv1100 ,decodev'uwas" “1°” WWTF'B
+data I connection.recv . oe 00- . i
 if not data: break
 print("Received: ",data)
 if "exit" in data: break
-Ccnnection.close(l
+connection.close()
+print ("Server closed")
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
+***************page number:7**************
+How To build a simple server/client in Python:
+Python 3.x (Server)
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(("127.0.0.1",1234))
+s.listen(l) “ H
+(connection, address) = s.accept() andeaxm(UTR8)to
+print ("Connectd address:",address); cmweHchWeonoytoo
+. string. Encoding in This case
+while True: . .
+data = connection.recv(lOO ‘S d°"e Wm‘ UTF'8
+if not data: break
+print("Received: ",data)
+if "exit" in data: break
+connection.close()
 print ("Server closed")
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-How to build u simple server client in Python:
-Pyvhmn lx rcnem;
+How to build 0| simple server/client in Python:
+
+Python 3.x (Client)
+
 import socket,time
-s = socket.socket isockecAEJNE'r, sccketﬁOCKiS'i'RhlAD/l)
-s.connect1("lZ7‘0,0‘l",1234|F
+
+s I socket.socket(socket.AF_1NET, socket.SOCK_STREAM)
+
+s.connect(("127.0.0.1",1234))
+
 s.send(b"Mesaj 1")
-timesleepu)
 
-v O i If 0h
-s,send(b"Mesa;| 2") " P“ '°"" ' 59""
+time.sleep(1)
 
-. Connectd address: 1-1214o,o.1', 612651
-tlme-SlEfP<1>"eeme-Mmj 1
-S-sendﬂn amt ) Received: Mesaj 2
-S . close (h Received: exit
-Sexvex closed
+s . send (b"Mesaj 2 H) Output from the server
+
+time . Sl€€p (1) Connectd addrese: ('127 . O. 0.1 ' , 61266)
+H . H R€C€lV€d2 Mesa] 1
+
+S ' SGnd (b €Xlt ) Received: Mesaj 2
+
+s.<:lcmse() Received: exit
+
+Server closed
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-Getting current system IP
+Getting current system |P
+
 Python 3.x
+
 import socket
-prim: (socketvgethostbynamelsocket.gethostnameO ))
-Convert a host to an IP:
+
+print (socket.gethostbyname(socket.gethostname()))
+Convert o host to on IP:
+
 Python 3.x
-. Ouipu'
-prlnt (socket.gethostbynamei'ualctro'H
-Getting the name associated with an IP:
-Python 3.x 0mm
-import socket i'jadtuaictro', u,
-prlnt (socket.gethostbyaddri"85.122.16.7")i 1-55.122tnmn
+
+Output
+import socket
+. . 85.122.16.23
+
+prlnt (socket . gethostbyname( 'ualc . ro' )) —
+Getting the nolme associated with on lP:
+
+Python 3.x Output
+
+import socket (.jad_uaic_ro., [1,
+
+print (socket . gethostbyaddr("85 . 122 . l6 . 7")) ['85.122.16.7'])
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Checking if a port is open:
-Python 3.x \Cﬁem)
+Checking if o port is open:
+Python 3.x (Client)
 import socket
-ip = "121001"
+ip = "127.0.0.l"
 ports = [20, 21, 23, 25, 80, 443, 530, 8080]
-s = socketsockeﬂsocketJ-W INET, socketﬁOCK STREAM)
-. i i mmen,“ reiums
-s.sett1meout(3) m 2W1 ,w-M _
-. (m evvor code I‘ vhe
-f“ port m ports: connecticnknoi
-u s‘connecti€X((iP, Wm) == m Nib‘; Olv;euns
-print1"Port ",port,“ is open") P "
-no em».
+s = socket.socket(socket.AF INET, socket.SOCK STREAM)
+. —. — connect_ex returns
+s.settlmeout(3) #3 seconds timeout _
+. on error code It the
+for port 1n ports: t' , t
+if s . connect ex( (ip, port) ) == m 7 connec |on IS no
+. — . pOSSlble. O means
+pr1nt("Port ",port," lS open")
+no error.
 else:
-print1"Port ",pott,“ is closed")
+print("Port ",port," is closed")
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:11**************
-Python has several implementation for accessing rhe content of a URL,
+Python has several implementation for accessing the content of a URL.
 
-These modules work in a similar way as wgeI or curl uﬁliﬂes (allowing one lo
-download rhe contem of a web page).
+These modules work in a similar way as wget or curl utilities (allowing one to
+download the content of a web page).
 
-These are very useful for creating crawlers or scruppers,
+These are very useful for creating crawlers or scrappers.
 
-l) Pyrhon 3:hﬂggzugggqxvhgnglg 1 llgvgrx! rllikhlmlﬁmgg lg’ rlll§
+O Python 3: httgsq [docs.python.org[31libraryZurllib.html#module-urllib
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-The following code extracts the nume of |he dean of our faculty.
+The following code extracts The nome of The deon of our faculty.
 Python 3.x
 import urllib
 from urllib import request
-urlManagement : 'http://www.1nfo.uaic.ro/bin/Structure/Management‘
+urlManagement = 'http://www.info.uaic.ro/bin/Structure/Management'
 try:
-response = utllib.request.urlopen(urlManaqement) .readl)
-text : tesponsexiecode("utffB")
-dn : text.split1"class:strong>Decan</strong>:",l) [l] >split("</span>",l) [0]
-deaniname I dn‘spllt1"w1kllink>",l) [1]
-phlm: ("Our dean 15 = “,deaniname)
+response = urllib.request.urlopen(urlManagement).read()
+text = response.decode("utf—8")
+dn = text.split("class=strong>Decan</strong>:",1)[l].split("</span>",l)[O]
+dean_name = dn.split("wikilink>",l)[1]
+print ("Our dean is : ",dean_name)
 except Exception as e:
-prlnt ("Error e> ",e)
+print ("Error —> ",e)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-\ FTP M 0 n u L E
-Python has q module (f'plib) develop w enable working with FTP servers:
-1) Reiﬂeve and sieve We;
-O Enumeruie files from cm FTP server
-O Creme ‘Mder on We FTP Server
-O suppon 4m password protected servers
-I) Suppor' for custom FTP commands
-DQCUITIEH'QHOH
-1) Pyvhon 3: hi'gs:[ [gocsnghgmglg 1 Ubvgrx ﬂglibjnml
+| FTP M 0 DU LE
+Python has a module (ttplilo) develop to enable working with FTP servers:
+o Retrieve and store files
+O Enumerate files from an FTP server
+o Create folder on the FTP Server
+o Support for password protected servers
+o Support for custom FTP commands
+Documentation
+o Python 3: https:[ [docspvthonprg[3Zlibrar11ttplibhtml
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-The following snippet lists all direclories from hm from folder debian.
+The following snippet lists olll directories from ttp.deloio|n.org from folder debioln.
 Python 3.x
-from ftpllb import FTP
-d5: parseilinelline) : amp».
-1r llnelstartsw-lthUd'Wv! 230 mm successful,
-print (llne,rspl‘l l" “y l) [1]) disks
-try: do:
-cllent : FTP("ftpsdeblan.crq") 22:;“5
-{es : client.quln() Project
-print (res) @015
-Client.z9£rllnes(“LIST /debian/",Par5eiline) 1"‘de
-client.qu1tl)
-axcept Exceptlon as e:
+from ftplib import FTP
+def parse_line (line) : Output
+1f lln€.SltartSWIlth( d l 230 Login successful.
+print (line.rsplit(" ",l) [1]) dists
+try: doc
+client = FTP("ftp.debian.org") lndTms
+OO
+res = client.login() gnnect
+print (res) tools
+client.retrlines("LIST /debian/",parse_line) ZZZ“h5tS
+client.quit()
+except Exception as e:
 print (e)
 
 ***************Ending Page***************
@@ -251,137 +288,142 @@ print (e)
 
 ***************Beginning Page***************
 ***************page number:15**************
-The following snippet downloads u ﬁle from q FIS server.
-Pyvhon 3.x
-from ftpllb import FTP
-cdeoDownload : “RETR /debian/extrafiles“
+The following snippet downloads 0| file from a FTS server.
+Python 3.x
+from ftplib import FTP
+cdeoDownload = "RETR /debian/extrafiles"
 try:
-client : FTP("ftp.deblan4Orq“)
-res = client.log1n1)
-f : open("deblan_extrafile$","wb'w
-client.rctrbinary(cdeoDownload ,lalnbda buf: f.wr1tc(buf))
-LcloseU
-client.qu1t 0
+client = FTP("ftp.debian.org")
+res = client.login()
+f = open("debian_extrafiles","wb")
+client.retrbinary(cdeoDownload ,lambda buf: f.write(buf))
+f.close()
+client.quit()
 except Exception as e:
-print 1e)
+print (e)
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-\ FTP M 0 n u L E
+| FTP M 0 DU LE
 
-Lisr er all supported FTP commands:
+List of all supported FTP commands:
 
-FTRconnecr Connecr ro u speciﬁed hosr on q speciﬁed p0" (defuulr is 2n
+FTP.connect Connect to a specified host on a specified port (default is 21)
 
-Frmegin Specifies Ihe user Hume and password rm Hp login
+FTP.login Specifies the user name and password for ftp login
 
-FTRreIrlines Send n command to Ihe FTP server and rerrieves Ihe resulrs. The resuII is send line by line
-Io u cdedck fundiorl
+FTP.retrlines Send a command to the FTP server and retrieves the results. The result is send line by line
+to a callback function
 
-FTRsiorbinury Srcres n ﬁle in c binary made on Ihe FTP server
+FTP.storbinary Stores a file in a binary mode on the FTP server
 
-FTRrerrbirrﬂry Rerrieves u bindry file from rhe serven A callback musr be provided to wrire the bindry
-COﬂ'eﬂl.
+FTP.retrbinary Retrieves a binary file from the server. A callback must be provided to write the binary
+content.
 
-FTRrenume Rename a rile/foWer from rhe server
+FTP.rename Rename a file/folder from the server
 
-FTRdeleIe Deleres a We from Qhe server
+FTP.delete Deletes a file from the server
 
-FTerd Deleres c folder from the server.
+FTP.rmd Deletes a folder from the server.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Python has c module (smfp) develop m enable working with emails‘
+Python has a module (smtp) develop to enable working with emails.
 
-While for simple emails (a subiecQ and a vex!) the sm'p module is enough, for more
-complex emails (attachment, eIc) there is also another module (emoilmime) that can
-be use m creme an email‘
+While tor simple emails (a subiect and a text) the smtp module is enough, for more
+complex emails (attachment, etc) there is also another module (email.mime) that can
+be use to create an email.
 
-DQCUmen'qﬁOn
+Documentation
 
-I) Pyvhon 3; hngsquoesgxmgngvg anbmq [smvglibehvml
+o Python 3: https:[ [docs.python.org[3Zlibrarygsmtplibhtml
 
-o Python 3:hﬂgszl[docspifhomorg[31Hbrarylemuilmimehim‘
+o Python 3: https:[ [docs.python.org[3[librarygemaiLmimehtml
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-The following can be used to send an email.
+The following com be used To send on emolil.
 
-Pyihcnlx
+Python 3.x
 
-' -a:t smt-lib
+im-ort smtolib
 
-mall : smtplib.SMTP('smtp.gmall.com‘, 581)
-malLenioU
+mail I smtplib.SMTP('smtp.gmail.com', 587)
+mail.ehlo()
 
-mall.SL8ILLlS()
-mail.logln("<useziname>@gmall.com“, "<Password>")
-msg = MIMEText("My first email“)
+mail.starttls()
+mail.login("<user_name>@gmail.com", "<Password>")
+msg I MIMETeXt("My first email")
 
-msq[‘Subject'] : "First: emall"
+msg['Subject'] I "First email"
 
-msq[ ‘From'1 Z "<useriname>@gmall.com"
+msg['From'] I "<user_name>@gmail.com"
 
-msq[‘To‘] : "<zecip1ent small address>“
-mail.sendmall(“<from>", "<m>", msg.asist:1nq())
-mallqumo
+msg['To'] I "<recipient email address>"
+mail.sendmail("<from>", "<to>", msg.as_string())
+mail.quit()
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:19**************
-For the previous snippet w work Wm. gmnil servers you need m ‘mime “Access for
+For the previous snippet to work with gmail servers you need to activate “Access for
 less secure apps" from you google account (
-hﬂgsq {www.goog\e.com[seﬂings [securifﬂ lesssecureuggs )
-e Less secure apps
-You Wm“ WWW“ W» M mm“ mm. W M‘ MW “WM
-dcsaﬂun mm my" We
-"w —w~-Im
-w _wm
-Mm.“ 1.5. m... .W. Yum au i W
-_ Tm w m“ w.“
+httgszg [www.goog le.com Z settings Z security Z lesssecurea 99s )
+é LESS SEGLIFE apps
+Some apps and devices use less secure sign-in technology, which makes yeur acceurit mere 1iiulneralale.
+‘i'eu can turn eff access fer these apps, which we recommendj cr turn Dl'l access if you want tc use them
+despite the risks. Learn mere
+Frum: —@-gmail.ecm
+Tm —m
+abject‘ : First email
+Access fur less secure apps Tu rn eff —
+Hy first email
+I Turn en
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:20**************
-Sending multiple attachments,
+Sending multiple attachments.
 
-Pyvhon 3.x
+Python 3.x
 
-impolb smtpllb
+import smtplib
 
-from email,m1me,mult1patt import: MIMEMultlpart
+from email.mime.multipart import MIMEMultipart
 
-2mm ema;l.m1n\e.image import MIMEImage
+from email.mime.image import MIMEImage
 
-mall : smtpllb.5Mh‘?(‘smtp.gma)l.cmm', 52m
-mall.ehlA>U
+mail = smtplib.SMTP('smtp.gmail.com', 587)
+mail.ehlo()
 
-ma)].578rff15(]
+mail.starttls()
 
-mall4lugnn(“<useriname>@gmall.com", "<Passwozd>"1
-msg : MIMEMultlpaIt u
+mail.login("<user_name>@gmail.com", "<Password>")
+msg = MIMEMultipart ()
 
-msql'Subject'] : "ﬁrst émall"
+msg['Subject'] I "First email"
 
-msql'onm'] Z "<u56riname>@gmall.com"
+msg['From'] = "<user_name>@gmail.com"
 
-msql'To’] : "<rec1p1ent small addzess>"
-msg.aLlach(MIMEImage(open1"1mage.png",“rb'W .10ddf) n
-msq.attdcn‘MIMEImage1open{"1mage2_png", "mv .rgdmm
-mall.ssnd messagehnsg)
+msg['To'] I "<recipient email address>"
+msg.attach(MIMEImage(open("image.png","rb").read()))
+msg.attach(MIMEImage(open("image2.png","rb").read()))
+mail.send;message(msg)
 
-mai1.qult{)
+mail.quit()
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
@@ -389,68 +431,71 @@ Python 3.x
 
 import smtplib
 
-from emanmimemulnpazt ilIIPOXf, MIMEMultlpart
+from email.mime.multipart import MIMEMultipart
 
-5mm emallxmmedmage impozc MIMEImaqe
+from email.mime.image import MIMEImage
 
-from emall_m1me_text import MIMEText
+from email.mime.text import MIMEText
 
-mail 1 smtpllb.5mm'smp.qma1;.com', 5517
-“11.9100
+mail = smtplib.SMTP('smtp.gmail.com', 587)
+mail.ehlo()
 
-mall,sfatrflSU
+mail.starttls()
 
-mall. ‘onr"1"<useziname>(igmaiLoom", “<Password>"b
-msq : MIMEMulmpart ("mlxed"7
+mail.login("<user_name>@gmail.com", "<Password>")
+msg = MIMEMultipart ("mixed")
 
-qu['Subj|&Ct'] : "First emall"
+msg['Subject'] = "First email"
 
-msq['FIom'] Z "<_seriname>@gmall,cmm"
+msg['From'] = "<user_name>@gmail.com"
 
-m5q['TO'] Z "<remp1em email address>“
-msgstaPMMIMETextt“The body of Ens email", ‘plaln'H
-msq.dt:icfz{MIMEImage(open("1mage.png“,"r11",.xcddUH
-mall.5e11dimessng€(msg)
+msg['To'] = "<recipient email address>“
+msg.attach(MIMETeXt("The body of the email", 'plain'))
+msg.attach(MIMEImage(open("image.png","rb").read()))
+mail.send;message(msg)
 
-mall.qu1t()
+mail.quit()
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:22**************
-Python has some build in modules that can simulate a rmp server.
+Python has some build in modules that can simulate a http server.
 
 Python 3.x
 
 from http.server import HTTPServer
 
-from httplserve: import SlmpleHTTPRequestHandler
+from http.server import SimpleHTTPRequestHandler
 
-httpd = HTTPSEIVerl ( '127.0.0.1' , 5000) , SlmpleHTTPRequestHandler)
-httpd‘ serve f0f€v€f0
+httpd I HTTPServer(('127.0.0.1', 8000), SimpleHTTPRequestHandler)
+httpd.serve_forever()
 
-This script will create Cl HTTP server that listens on port BOOO. If u ﬁle named
-“index.html" exists near the python script, it's content will be server when
-
-1 27.0.0.1 =8000 is accessed from the browser.
+This script will create a HTTP server that listens on port 8000. If a file named
+“index.html” exists near the python script, it’s content will be server when
+127.0.0.l :8000 is accessed from the browser.
 
 We will discuss more about these servers after we learn about classes.
 
 ***************Ending Page***************
 
+
+
 ***************Beginning Page***************
 ***************page number:23**************
 The default behavior for such a server is to produce a directory listing for the root
-where the script is,
+where the script is.
 
-However, if within the root a index.h'ml file is iound, that file will be loaded and send to
-the c|ienL
+However, if within the root a index.html file is found, that file will be loaded and send to
+the client.
 
-These modules can also be executed automatically from the command line us follows:
+These modules can also be executed automatically from the command line as follows:
 
-c Python 3: python -m Hip-server 9000
+o Python 3: python -m http.server 9000
 
-The lasi parameter from the command line is the port number‘
+The last parameter from the command line is the port number.
 
 ***************Ending Page***************
+
 

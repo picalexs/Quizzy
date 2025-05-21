@@ -1,29 +1,31 @@
 ***************Beginning Page***************
 ***************page number:1**************
-lngineria programérii
-Curs 10 - 26-27 Aprilie
+I I V I I
+lngmerla programaru
+Curs 10 — 26-27 Aprilie
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Cu prl n s
+C u pri n s
 > Recapitulare...
-Q Design Patterns (Creational Patterns, Structural
+O Design Patterns (Creational Patterns, Structural
 Patterns, Behavioral Patterns)
 > Behavioral Patterns
-u Interpreter
-= Iterator
-= Mediator
-= Memento
-Q Observer
-a State
-Q Strategy
-= Template Method
-= Visitor
-z
+O Interpreter
+o Iterator
+o Mediator
+o Memento
+O Observer
+O State
+<> Strategy
+o Template Method
+O Visitor
+2
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
@@ -33,7 +35,7 @@ Behavioral Patterns
 > Creational Patterns
 > Structural Patterns
 > Behavioral Patterns
-‘ ’
+x 3
 
 ***************Ending Page***************
 
@@ -41,7 +43,7 @@ Behavioral Patterns
 ***************page number:4**************
 Recapitulare — CP
 
-> Abstract Factory e computer components
+> Abstract Factory — computer components
 > Builder — children meal
 
 > Factory Method — Hello <Mr/Ms>
@@ -51,6 +53,7 @@ Recapitulare — CP
 > Singleton — server log files
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:5**************
@@ -79,36 +82,27 @@ BP
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
 Behavioral Patterns
-
 > Chain of Responsibility
-
 > Command
-
 > Interpreter
-
 > Iterator
-
 > Mediator
-
 > Memento
-
 > Observer
-
 > State
-
 > Strategy
-
 > Template Method
-.l Visitor
+.I Visitor
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-lnte rpreter
+Interpreter
 
 > Intent — Given a language, define a
 representation for its grammar along with an
@@ -122,89 +116,83 @@ build an interpreter that solves the problem by
 interpreting these sentences.
 
 > For example, searching for strings that match a
-pattern is a common prob/em. Regular
+pattern 1'5 a common prob/em. Regular
 expressions are a standard language for
 
 H‘ ing patterns of strings
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
 Interpreter — Grammar
 > Suppose the following grammar defines the
 regular expressions:
-Q expression ::= literal l alternation l sequence l
-repetition l '(' expression ‘)‘
-Q alternation ::: expression '|' expression
-a sequence ::= expression '&‘ expression
-=' repetition ::: expression ‘*'
-Q literal ::= 'a' l ‘b' l ‘c' | { 'a' | 'b' | 'c' l }*
-‘ g
+O expression ::= literal | alternation | sequence |
+repetition | '(' expression ')'
+O alternation ::: expression '|' expression
+O sequence ::= expression '&' expression
+o repetition ::: expression
+o literal ::= 'a' | 'b' | 'c' | { 'a' | 'b' | 'c' | }“"~'
+x 9
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-Interpreter — Regular expressions
-m - '
-_* '
-m
-
-nllamallva!
-—°
+Interpreter — Regular expressmns
+‘q
+w —*
+altematwe2
+-
+‘ w
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Interpreter — Example -3
-£8 .f
-emf???
-
-v The “musical notes" is an “Interpreted Language". The
+lnte rprete r — Exam ple
+“MR-
+> The “musical notes" is an “Interpreted Language". The
 musicians read the notes, interpret them according to
-
 “Sa, Re, Ga, Ma..." or “Do, Re, Mi... " etc. and play the
-
 instruments, what we get in output is musical sound
-
 waves. Think of a program which can take the Sa, Re,
-
 Ga, Ma etc. and produce the sounds for the
-
 frequencies.
-
 > For Sa, the frequency is 256 Hz, similarly, for Re, it is
 288Hz and for Ga, it is 320 Hz etc...
-v We can have it at one of the two places, one is a
+> We can have it at one of the two places, one is a
 nts file, “token:value" and the other one being
-H‘ file
+“I file
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-Interpreter — Java l
-> Musica/Note5.proper1ies
-53:256
-Re:288
-55:320
-public class Noteslnterpreterl
-private No\e note;
-public void getNoteFromKeysWote note){
-Frequency freq I getFrequency(note);
-} sendNotelfreq);
-private Freguency getFrequency<Note note)l
+interpreter — Java i
+> Mus/ca/Notes. properties
+Sa=256
+Re=288
+Ga=320
+public class Noteslnterpreter{
+private Note note;
+public void getNoteFromKeys(Note note) {
+Frequency freq = getFrequency(n0te);
+} sendNote(freq);
+private Frequency getFrequency(Note note){
 // Get the requency from properties file using ResourceBundle
 // and return it.
-) return freq;
-private void sendNotelFrequency freqH
-NotesProducer producer I new NotesProducerO;
-ducer,playSound(freq);
-l1
+} return freq;
+private void sendNote(Frequency freq) {
+NotesProducer producer = new NotesProducer();
+ducer.playSound(freq);
+12
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
@@ -212,10 +200,10 @@ Interpreter — Java 2
 public class NotesProducer{
 private Frequency freq;
 public NotesProducer(){
-this.freq = freq;
-l
+this.freq I freq;
+}
 public void playSound(Frequency freq) {
-l
+}
 
 ***************Ending Page***************
 
@@ -235,7 +223,7 @@ extra classes
 
 ***************Beginning Page***************
 ***************page number:15**************
-lte rator
+Iterator
 
 > Intent — Provide a way to access the elements of
 an aggregate object sequentially
@@ -243,8 +231,8 @@ an aggregate object sequentially
 > Also Known As — Cursor
 
 > Motivation — An aggregate object such as a list
-shou/d give you a way to access its elements
-without exposing its internal structure.
+should give you a way to access its elements
+Without exposing its internal structure.
 Moreover, you might want to traverse the list in
 different ways, depending on what you want to
 
@@ -254,23 +242,24 @@ l accomplish
 
 ***************Beginning Page***************
 ***************page number:16**************
-Iterator — Structu re
-owiollemlorr) F1540
-comm ""10
-Appendﬂlam) IsDonvlJ
-melllvm) Cummml
-A A
+Iterator — Structure
 m
-vs
+Createllemtod) HIS“)
+Comm) NMO
+APPQMUW") IsDone!)
+Removedtem) Currentllemﬂ
+A A
+‘ 16
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Iterator — Applicability
+lterator — Applicability
 
-> to access an aggregate object's contents
-without exposing its internal representation
+> to access an aggregate object’s contents
+Without exposing its internal representation
 
 > to support multiple traversals of aggregate
 objects
@@ -283,57 +272,61 @@ support polymorphic iteration)
 
 ***************Beginning Page***************
 ***************page number:18**************
-Iterator — Example
+iterator — Example
+
 > For example, remote control of TV. Any
 remote control we use, either at home/hotel
-or at a friend's place, wejust pick up the TV
+or at a friend’s place, we just pick up the TV
 remote control and start pressing Up and
 Down or Forward and Back keys to iterate
 through the channels
-' ,1 ‘J p l .
-l ,9; fie ’
-i}; \‘s. e? ‘
+z“ H: 3552 \”' <;: ~ f“ i
+:1 w ,
+‘Div; \ qt \"Q @1 £1!‘ny
+
+\ 18
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-Iterator — Java l
-public interface lteratorl
+Iterator — Java i
+public interface lterator{
 public Channel nextChannel(int currentChannel);
 public Channel prevChannel(int currentChannel);
 l
-public ChannelSurfer implements lteratorl
+public ChannelSurfer implements lterator{
 public Channel nextChannel (int currentChannel){
-Channel channel : new Channel(currentChannel+l);
+Channel channel = new Channel(currentChannel+l);
 return channel;
-l
-public Channel prevChannel (int currentChanne|){
-Channel channel I new Channel(currentChannelil);
-return channel;
-‘ is
+}
+public Channel prevChannel (int currentChannel){
+Channel channel = new Channel(currentChannel-l);
+I return channel;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Iterator — Java 2
-public class RemoteControH
+Iterator —Java 2
+public class RemoteControl {
 private ChannelSurfer surfer;
 private Settings settings;
-public RemoteControl(){
+public RemoteContr0|(){
 surfer : new ChannelSurferO;
-settings : new SettingsO;
-l
-public getProgram(ChannelSurfer surfer) {
-return new Program(surfer.neXtChannel());
-}‘
+settings I new Settings();
+}
+public getProgram(Channe|Surfer surfer) {
+return new Program(surfer.nextChanne|());
+g
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Iterator — The Good, The Bad
+Iterator - The Good, The Bad
 
 > Allows the use of multiple iterators at the
 same time on the same collections
@@ -355,7 +348,7 @@ collections
 ***************page number:22**************
 Mediator
 
-> lntent — Define an object that encapsulates how
+> Intent — Define an object that encapsulates how
 a set of objects interact
 
 > Motivation — Object-oriented design encourages
@@ -367,11 +360,12 @@ knowing about every other
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
 Medlator — Structure
-A A A
-B
+l l l
+23
 
 ***************Ending Page***************
 
@@ -380,35 +374,38 @@ B
 Mediator — Applicability
 > According to (Gamma et al), the Mediator
 pattern should be used when:
-= a set of objects communicate in wellidefined but
+
+O a set of objects communicate in well-defined but
 complex ways. The resulting interdependencies are
 unstructured and difficult to understand.
-a reusing an object is difficult because it refers to and
+
+O reusing an object is difficult because it refers to and
 communicates with many other objects.
-a a behavior that's distributed between several classes
+
+O a behavior that's distributed between several classes
 should be customizable without a lot of subclassing.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-Mediator — Examples
-> A very common example can be
-airplanes interacting with the control ' “W
-tower and not among themselves “WM ‘
-i will‘
-> Another popular example is Stock “HQ i
-i‘ Ill
-exchange 1M
-'lllll‘
-> The chat application is another 7 90¢)
-example of the mediator pattern t, s if Q
+Medlator — Examples
+> A very common example can be 1.‘ W a
+airplanes interacting with the control . W
+tower ancl not among themselves “WW ‘- w-l
+> Another popular example IS Stock '~" '4; t ,,',‘f§ilii
+140.18% W-
+exchange _-.~J :gll 1.59% 9021.7
+> The chat application is another W§
+example of the mediator pattern Q3; ‘J
+amples?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Mediator — The Good, The Bad
+Mediator - The Good, The Bad
 
 > Reduces coupling
 
@@ -421,17 +418,18 @@ Mediator — The Good, The Bad
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Me me nto
+Memento
 
 > Intent — Without violating encapsulation, capture
-and externalize an object's internal state so that
+and externalize an object’s internal state so that
 the object can be restored to this state later
 
 > Also Known As — Token
 
-> Motivation — Sometimes it's necessary to record
+> Motivation — Sometimes it’s necessary to record
 the internal state of an object. This is required
 when implementing checkpoints and undo
 mechanisms that let users back out of tentative
@@ -445,31 +443,51 @@ ate information somewhere so that you can
 ***************Beginning Page***************
 ***************page number:28**************
 Memento — Structure
-_‘
-—
-HelSlaleO sue allimninrmm Memm m
+*
+getstaten; State setl'ulementoﬁmemnto ; Memento) ; 1mm
 > Memento
-= Stores internal state of the Originator object
-1 Allows the originator to restore previous state
+O Stores internal state of the Originator object
+o Allows the originator to restore previous state
 > Originator
-= Creates a memento object capturing it's internal state
-u Use the memento object to restore its previous state.
+O Creates a memento object capturing it’s internal state
+O Use the memento object to restore its previous state.
 > Caretaker
-u Responsible for keeping the memento.
-mento is opaque to the caretaker, and the
-ot operate on it. 1.;
+o Responsible for keeping the memento.
+mque to the caretaker, and the
+ot operate on it. 28
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:29**************
-> Slmple Calculator WIth Undo Operatlon
-— MWMNWM M MMMMM m.
-W
-lnﬁmMumhnn ‘M mamVvemuscakmawnmemm We!‘n\BElltulihunYuElveYikel) mm
-""“'""‘“"'°‘° '"‘ densvlumhémrﬂNumbu .m vmd
-‘ 19
+Simple Calculator with Undo Operation
+{ﬁinterfaceF-b
+‘=1’=1||'| e ace};-
+F' ' l3 l | t' T III' ' t
+F"retriI:usCalculatiunTuCareTalter retrluus a cu a ||:|r| D "Elma or backupLastCalculati-Jnlj : P‘retriI:usCalculatiunTuCareTalter
+getFirF-lllurnberi): int restoreF'retriuusEalculatiunﬁmement-zl : PretriuusCalculatiunTuCareTalter) : truid
+— getBecundHI-lmberij]: int 9Etca'¢“|ati°"HE5“'t31 int
+l l setFirstHumt-erﬁfirstllumber:int):tr|:|i|:l
+| setSe-mndHumt-enjsecundllumber:int):tr|:|i|:l
+Pretriuusllalculatipnlmp-F- PreviousllalculatiunTuEareTalter : l
+ﬁ-irealizeF-F- I Previousllalculatiunlmp-F- F'retriuusﬁalculatiunTuElriginatur l
+l----------'=C"=tre'a'l'iza>> l | Calculaturlmp-> Calculator
+i------------! : {ﬁrealizebb
+l
+_ _ Calculaturlmp
+Pretrluusllalculatmnlmp
+_ _ firstllurnberﬂnt
+flrstHurnber: Int .
+. secundhlumber: Int
+secundhlumber: Int
+_ _ _ _ _ backupLastEalculatiuni'j:PreviousllalcuIatiunTuEareTalter
+ﬁﬁcreater'} F‘retrluuslIalculatlunlmpﬁflrstﬂumher: |nt,sec|:|n|:lhluml:|er: Int) . _.
+tF'rF-lhl l:| ._ t getEalculatlnnHesulle. Int
+gEtSI “ng arc‘: |r| _- t rash:reF'retriuusEalculatiunﬁmernent-n : F'retriI:-uslIalculatiunTuCareTalter) :1r|:|i|:l
+9E EDD" “m HE" '" setFirstHumberﬁfirstHurnber:intjnruid
+setSecundHumberﬁse-aundllumber : int) : truid
+g 29
 
 ***************Ending Page***************
 
@@ -489,9 +507,12 @@ would fail and all operations would rollback and
 leave the database as if nothing has happened
 
 > This mechanism of rolling back uses the
-memento design pattern E
+memento design pattern ﬂ
+
+x
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
@@ -510,23 +531,23 @@ manage which mementos are obsolete and
 destroy them
 
 > Some dynamic programming languages
-(JavaScript, Python, etc.) cannot guarantee an
+(lavaScript, Python, etc.) cannot guarantee an
 unchangeable state for the memento
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-Observer
+0bserver
 
-> Intent — Define a oneitoimany dependency
+> lntent — Define a one-to-many dependency
 between objects so that when one object
 changes state, all its dependents are notified
 and updated automatically
 
 > Also Known As — Dependents, Publish-Subscribe
 
-> Motivation — A common sideieffect of
+> Motivation — A common side-effect of
 partitioning a system into a collection of
 cooperating classes is the need to maintain
 
@@ -534,24 +555,26 @@ I consistency between related objects
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
 Observer — Example
-Ohm"
-Imam I'~——|!I I~——!!I
-Ill-Z'IEI'IIEI
-II mmm v
-ummm '
+observers
+l_-~=.!!l lag!!! 1mm
+BEBE!!!
+"@5518! 4v
+BE'III'III'I '
 a C
-—<_
-\\\ I ///
-\ | ,
+\\\ : /,
+\ | 4/’
 \\ | //
-\\ /’
-353g? —~ change notiﬁcation
-c =_ 20%: ———-> requests. mortlicmion
-whiocl
-‘ 3,
+\\ //
+\ /
+—~ change notiﬁcation
+b = 30%
+c = 20% ———-> requests. modiﬁcation
+subject
+‘ 33
 
 ***************Ending Page***************
 
@@ -563,7 +586,7 @@ Observer — Applicability
 dependent on the other
 
 > When a change to one object requires changing
-others, and you don't know how many objects
+others, and you don’t know how many objects
 need to be changed
 
 > When an object should be able to notify other
@@ -572,15 +595,16 @@ these objects are
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-Observer — Structure
-ESE-mm m
-Anacmonsewmy
-DeucmOMerver) Ixx an o I" observers ‘ ‘
-Newly!) 07"" ~ | n->Upda!2(] ‘
-‘
-‘ ”
+Attach(0bserver) \ .
+DetacmObserver) to: all o in observers l k‘
+NOMYU O--—-- -- ] o->Update() A
+W We“ - “Wm =
+subject->Ge18tale0
+GelStaIeO °"' ' - ‘
+‘ 35
 
 ***************Ending Page***************
 
@@ -596,73 +620,74 @@ java.util.0bserver and java.util.0bservable
 > When a string is supplied from System.in, the
 method notifyObservers is then called, in order
 to notify all observers of the event's occurrence,
-in the form of an invocation oftheir ‘update’
+in the form of an invocation of their 'update'
 methods — in our example,
 ResponseHandler.update(...).
 
-> The java Swing library makes extensive use 0f
+> The ja va Swing library makes extensive use 0f
 
 I the observer pattern for event management
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Observer —Java l
+Observer — Java l
 public class EventSource extends Observable
-implements Runnablel
+implements Runnable{
 public void run(){
-trvi
-final lnputStreamReader isr I new
+trv{
+final lnputStreamReader isr : new
 lnputStreamReader( System.in );
 final BufferedReader br : new BufferedReader( isr );
 while( true ){
 final String response I br.readLine();
-setChangedO;
-notifyObservers( response ); l
-l
-l catch (IOException e) { e.printStackTrace(); l}
+setChanged();
+notifyObservers( response ); }
+}
+l catch (lOException e) { e.printStackTrace(); }}
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-Observer —Java 2
+Observer — Java 2
 public class ResponseHandler implements Observer{
 private String resp;
-public void update (observable obj, Object arg){
+public void update (Observable obj, Object arg){
 if (arg instanceof String) {
-resp = (String) arg;
-System.out.println(“\nReceived Response: "+ resp );
-l
-l
+resp I (String) arg;
+System.out.println("\nReceived Response: "+ resp );
 }
+l
+l‘
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Observer — Java 3
+Observer - Java 3
 public class MyApp{
 public static void main(String args[]){
 System.out.println("Enter Text >");
-// Create an event source — reads from stdin
+// create an event source — reads from stdin
 final EventSource evSrc = new EventSource();
 // create an observer
-final ResponseHandler respHandler : new
+final ResponseHandler respHandler I new
 ResponseHandler();
 // subscribe the observer to the event source
 evSrc.addObserver( respHandler );
 // starts the event thread
 Thread thread I new Thread(evSrc);
-thread.start(l;
-‘ 29
+I thread.start();
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Observer — The Good, The Bad
+Observer - The Good, The Bad
 
 > Can establish relations between objects (not
 classes) at runtime
@@ -674,11 +699,12 @@ random
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
 State
 
-> Intent — Allow an object to alter its behavior
+> lntent — Allow an object to alter its behavior
 when its internal state changes
 
 > Also Known As — Objects for States
@@ -693,37 +719,37 @@ depending on its current state
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:42**************
 State — Idea
 > The key idea in this pattern is to introduce an
 abstract class called TCPState to represent the
 states of the network connection.
-Onenn 0------: Open/J
-[1091.0 | 610590
-Acknnwmogeo i Ackonmcdgﬂﬂ
-i A
-Onnnn Ovenr) OWN]
-Closet) Closel) Clown
-Acknowledqel) Acknowledgel) Acknowledget)
+Openl) O------. Open”
+(llosm ) l CloseO
+Acknowledgeﬂ E Acknowledge”
+A
+Openn 000m‘) 00000
+Closel) CloseO ClOSGl)
+Acknowledgel) AcknowledgeU Acknowledgel]
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:43**************
 State — Applicability
 > Use the State pattern in either of the following
 cases:
-= An object's behavior depends on its state
-a Operations have large, multipart conditional
-statements that depend on the object's state
+o An object’s behavior depends on its state
+O Operations have large, multipart conditional
+statements that depend on the object’s state
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-State - The Good, The Bad
+State — The Good, The Bad
 
 > Simplifies the code of the objects by
 removing lots of if statements
@@ -731,16 +757,18 @@ removing lots of if statements
 > Preserves S and O (from SOLID)
 
 > Leads to large and unnecessary overhead for
-objects with few states or whose states rarely
+objects with few states or Whose states rarely
 change
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Strategy I; Hag‘ :l
+Strategy
+l w l
 
-> Intent — Define a family of algorithms,
+> lntent — Define a family of algorithms,
 encapsulate each one, and make them inter
 changeable
 
@@ -749,7 +777,7 @@ changeable
 > Motivation — Many algorithms exist for breaking
 a stream of text into lines. Hard-wiring all such
 algorithms into the classes that require them
-isn't desirable for several reasons
+isn’t desirable for several reasons
 
 ***************Ending Page***************
 
@@ -759,10 +787,10 @@ Strategy — Structure
 > With Strategy pattern, we can define classes that
 encapsulate different line breaking algorithms
 A
-W
-‘ .5
+‘ 46
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:47**************
@@ -770,51 +798,52 @@ Strategy — Example
 > In the strategy pattern algorithms can be
 selected at runtime.
 > A standard calculator that implements basic
-operations: +, —, * m H ‘EV X‘
-yaw?" ﬁ=ai**
-ﬁssill
-‘WNW it“ M'l Mai}
-._ii<ii< :i vi’
-Jill!
-illili All
-1 ii 2 i 3 r i _‘
-u i ti;i_ .7
+Operatlons: +, —’ A I. If] Calculator m
+__ _ i i
+9i
+\ ifllfiiflfl] i
+llllill;i\;l\;i i.
+lYll i ll ‘all/Ml '
+ll i’ ii Ll ‘ml
+llllleili;l=i
+l O il+l .. 47
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-Strategy — Java l
-interface Strategy (
-int executeﬂnt a, int b);
-l
-class ConcreteStrategyAdd implemems erategy§
-public int executelint a, int bil
-Systemcut.print|n("Called ConcreteStrategyA's executeO");
+Strategy — Java i
+interface Strategy{
+int execute(int a, int b);
+}
+class ConcreteStrategyAdd implements Strategy{
+public int execute(int a, int b) {
+System.out.println("Called ConcreteStrategyA's execute()");
 return (a + b);
 l}
-Class ConcreteStrategySub implements Strategy (
-public int executeﬁnt a, int b) l
-Systemout.print|n("Called ConcreteStrategyB's executeO");
-return (a - b);
-l}
-class ConcreteStrategyMul implements Strategyi
-public int executeﬂm a. int b) l
-Systemioul.primln("Called ConcreteStrategyC's executeO");
-turn a * b;
-w
+class ConcreteStrategySub implements Strategy {
+public int execute(int a, int b) {
+System.out.println("Called ConcreteStrategyB's execute()");
+return (a — b);
+}}
+class ConcreteStrategyMul implements Strategy{
+public int execute(int a, int b) {
+System.out.println("Called ConcreteStrategyC's execute()");
+eturn a * b;
+4s
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:49**************
 Strategy — Java 2
-class Context{
+class Context {
 Strategy strategy;
 public Context(Strategy strategy) {
 this.strategy = strategy;
 }
-public int execute(int a, int b){
+public int execute(int a, int b) {
 return this.strategy.execute(a, b);
 }
 }
@@ -825,22 +854,23 @@ return this.strategy.execute(a, b);
 ***************page number:50**************
 Strategy — Java 3
 
-class StrategyExamp|e{
+class StrategyExample {
 public static void main(String[] args){
 Context context;
-context : new Context(new ConcreteStrategyAddO);
-int resultA : context.execute(3,4);
-context : new Context(new ConcreteStrategySubO);
-int resultB : c0ntext.execute(3,4);
-context : new Context(new ConcreteStrategyMulO);
-int resultC : context.execute(3,4);
+context I new Context(new ConcreteStrategyAdd());
+int resuItA I context.execute(3,4);
+context I new Context(new ConcreteStrategySub());
+int resuItB I context.execute(3,4);
+context I new Context(new ConcreteStrategyMu|());
+int resuItC I context.execute(3,4);
 }
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-Strategy — The Good, The Bad
+Strategy - The Good, The Bad
 
 > Can swap algorithms at runtime
 
@@ -859,13 +889,12 @@ less code
 > Users need to understand the differences
 between implementations to use them properly
 
-‘ "
-
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-Template Method :
+Template Method ‘I I
+I
 
 > Intent — Define the skeleton of an algorithm in
 an operation, deferring some steps to
@@ -878,16 +907,17 @@ that provides Application and Document classes.
 existing documents stored in an external
 format, such as a file. A Document object
 represents the information in a document once
-it‘s read from the ﬁle
+it’s read from the file
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
 Template Method — Example
 
 > The template pattern is often referred to as the
-Hollywood Principle: "Don't call us, we'll call
+Hollywood Principle: "Don't ca/l us, we '// ca/l
 you." Using this principle, the template method
 in a parent class controls the overall process by
 calling subclass methods as required
@@ -901,39 +931,39 @@ at a given time
 ***************Beginning Page***************
 ***************page number:54**************
 Template Method — Java i
-abstract class Camel
+abstract class Game{
 protected int playersCount;
 abstract void initializeGame();
-abstract void makePlay(int player);
+abstract void makePIay(int player);
 abstract boolean endOfGameO;
 abstract void printWinner();
 final void playOneGame(int playersCount){
 this.p|ayersCount I playersCount;
-initializeGameO; intj : O;
-while (iendOfGame()){
-makePlayU);j : (j + i)% playersCount; }
-l printWinner();
+initializeGame(); intj I O;
+while (!endOfGame()){
+makePIay(j);j I (j + l)% playersCount; }
+I printWinner();
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:55**************
 Template Method — Java 2
 
-class Monopoly extends Camel
+class Monopoly extends Game {
 // Implementation of necessary concrete methods
-void initializeGameO l // ...}
-void makePlay(int player) l // ...}
-boolean endOfGame() { // ...}
+void initializeGame(){ // }
+void makePlay(int player){ // }
+boolean endOfGame(){ // }
 void printWinner(){ // ...}
 // Specific declarations for the Monopoly game.
 
 }
 
-‘is Chess extends Camel
+‘is Chess extends Game{
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:56**************
@@ -947,7 +977,7 @@ by changes to other segments
 
 > Duplicate code can be sent to a superclass
 
-> lfyou override some part of the algorithm, it
+> lf you override some part of the algorithm, it
 can lead to breaking Liskov substitution
 
 > The skeleton of the algorithm may not suit
@@ -958,10 +988,11 @@ difficult it is to manage
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-V|5|tor C58
-> Intent — Represent an operation to be performed
+V|s ltor . 11°“ (Q,
+> lntent — Represent an operation to be performed
 on the elements of an object structure. Visitor
 
 lets you define a new operation without
@@ -978,35 +1009,38 @@ I knowing the type
 
 ***************Beginning Page***************
 ***************page number:58**************
-V|5|t0r — Structure Example
 > We want to create a
-reporting module in our ——
-application to make _
+reporting module in our
+application t0 make —
 statistics about a group
-of customers .Mmmmmmmm
-' The Statisﬁcs Shou'd be mm:- mum!-
-verv detailed so all the _ _
-data ‘e'ated m1“
-customer I'T'IUSt e
-parsed m-
-» All the entltles Involved —.
-in this hierarchy must ‘
+of customers l.
+
+’ The Statisiics Shou'd be
+very detailed 50 all the — —
+customer must e
+parsed
+
+> All the entitiES involved -—+ m
+m thls hlerarchy must 1
 accept a visitor so the
-ustomerGroup,
-Order and
+CUStomerGrouD’ — —
+
+‘Order and
+
 'ects
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-V|5|t0r— Applicability
+Vlsltor— Appllcablllty
 > The visitor pattern is used when:
-, Similar operations have to be performed on
+o Similar operations have to be performed on
 objects of different types grouped in a structure
-a There are many distinct and unrelated operations
+O There are many distinct and unrelated operations
 needed to be performed
-The object structure is not likely to be changed
+O The object structure is not likely to be changed
 but is very probable to have new operations
 which have to be added
 
@@ -1014,7 +1048,7 @@ which have to be added
 
 ***************Beginning Page***************
 ***************page number:60**************
-Visitor Pattern using Reflection
+V|5|tor Pattern usmg Reflection
 
 > Reflection can be used to overcome the main
 drawback of the visitor pattern
@@ -1029,9 +1063,10 @@ compile-time
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-Visitor — The Good, The Bad
+Visitor - The Good, The Bad
 
 > A visitor can accumulate information about
 visited objects as it passes through the
@@ -1050,96 +1085,91 @@ collection, all visitors must be updated
 
 ***************Beginning Page***************
 ***************page number:62**************
-Other Types of DP i
+Other Types of DP l
 
-> Concurrency Patterns — deal with multiethreaded
+> Concurrency Patterns — deal with multi-threaded
 programming paradigm
-= Single Threaded Execution — Prevent concurrent calls
+O Single Threaded Execution — Prevent concurrent calls
 to the method from resulting in concurrent
 executions of the method
-a Scheduler — Control the order in which threads are
+O Scheduler — Control the order in which threads are
 scheduled to execute single threaded code using an
 object that explicitly sequences waiting threads
-a Producer-Consumer — Coordinate the asynchronous
+o Producer-Consumer — Coordinate the asynchronous
 
 - iroduction and consumption of information or
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
 Other Types of DP 2
-
-> Testing Patterns l
-, Black Box Testing — Ensure that software satisfies
+> Testing Patterns i
+O Black Box Testing — Ensure that software satisfies
 requirements
-a White Box Testing — Design a suite of test cases to
+O White Box Testing — Design a suite of test cases to
 exhaustively test software by testing it in all
 meaningful situations
-a Unit Testing — Test individual classes
-a Integration Testing — Test individually developed
+O Unit Testing — Test individual classes
+o Integration Testing — Test individually developed
 classes together for the first time
-= System Testing e Test a program as a whole entity
-
-‘ 5‘
+O System Testing — Test a program as a whole entity
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
 Other Types of DP 3
-
 > Testing Patterns 2
-, Regression Testing — Keep track of the outcomes of
+O Regression Testing — Keep track of the outcomes of
 testing software with a suite of tests over time
-a Acceptance Testing — ls done to ensure that
+O Acceptance Testing — ls done to ensure that
 delivered software meets the needs of the customer
 or organization that the software was developed for
-a Clean Room Testing — People designing software
-should not discuss speciﬁcations or their
+O Clean Room Testing — Pe0p|e designing software
+should not discuss specifications or their
 implementation with people designing tests for the
 software
 
-‘ 5‘
-
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:65**************
 Other Types of DP 4
 > Distributed Architecture Patterns
-, Mobile Agent — An object needs to access very large
+O Mobile Agent — An object needs to access very large
 volume of remote data :> move the object to the
 data
-= Demilitarized Zone a You don't want hackers to be
+O Demilitarized Zone — You don’t want hackers to be
 able to gain access to servers
-a Object Replication — You need to improve the
+O Object Replication — You need to improve the
 throughput or availability of a distributed
 computation
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:66**************
 Other Classes of DP
 
-> Transaction patterns e Ensure that a
+> Transaction patterns — Ensure that a
 transaction will never have any unexpected or
 inconsistent outcome. Design and implement
 transactions correctly and with a minimum of effort
 
 > Distributed computing patterns
 
-v Temporal patterns — for distributed applications
+> Temporal patterns — for distributed applications
 to function correctly, the clocks on the computers
 they run on must be synchronized. You may need
 to access pervious or future states of an object.
-The values of an object's attributes may change
+The values of an object’s attributes may change
 over time
 
 > Database patterns
-
-‘ it
 
 ***************Ending Page***************
 
@@ -1148,38 +1178,39 @@ over time
 Bibliography
 
 > Erich Gamma, Richard Helm, Ralph Johnson,
-and John Vlissides: Design Patterns: Elements
-of Reusable Object-Oriented Software
+and John Vlissides: Design Patterns.‘ Elements
+0f Reusable Object-Oriented Software
 (GangOfFour)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:68**************
-L| n ks
+Llnks
 
-v Structural Patterns: httg:[[www.oodesign.com[structurali
-QQIIEFHSZ
+> Structural Patterns: httg:[[www.oodesign.com[structural-
+|:_>atterns[
 
-v Gang-Of-Four: http:[[c2.com[cgiiwikiYGangOfFoun
-httg:[[www.urnl.org.cni(9628962BlgdeDesignPatterns.gdf
+> Gang-Of-Four: httg:[[c2.com[cgiZwiki?GangOfFour,
+httg:[[www.um|.org.cn[c%ZB%ZB[|QdeDesignPatterns.|gdf
 
 > Design Patterns Book:
-http:[[c2.com[cgi[wiki?DesignPatternsBook
+htt|:_>:[[c2.com[cgi[Wiki?DesignPatternsBook
 
-v About Design Patterns:
-httQIZ[www.'avacamg.org[designPatterni
+> About Design Patterns:
+httg:[[www.iavacamgorg[designPatternZ
 
-> Design Patterns -Java companion:
-http:i[www.gatterndepot.com[gutlSl avaPatterns.htm
+> Design Patterns —Java companion:
+httg: Z [www.patterndegot.com Z outZ8 Z IavaPatterns.htm
 
-v java Design patterns:
-http:[[www.allapplabs.comi'ava_design_patterns[ava_design_
-patternshtm
-
+> Java Design patterns:
+httg:[[www.allagplabs.com['|ava_design_|gatterns['|ava_design_
+Qatterns.htm
 verview of Design Patterns:
-w.minds rin .com ~m rand attern s no ses.htm
-' uru desi n- atterns 56
+
+w.minds rin .com ~m rand attern_s no ses.htm
+' . uru desi n— atterns 68
 
 ***************Ending Page***************
 

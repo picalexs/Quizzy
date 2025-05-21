@@ -1,7 +1,8 @@
 ***************Beginning Page***************
 ***************page number:1**************
-lngineria programérii
-Curs 13 - 24-25 mai
+I I V I I
+lngmerla programaru
+Curs 13 — 24-25 mai
 
 ***************Ending Page***************
 
@@ -10,8 +11,8 @@ Curs 13 - 24-25 mai
 Outline
 
 > Previous courses...
-5 Testing
-u SOLID Refactoring
+o Testing
+O SOLID Refactoring
 
 > Program Quality
 
@@ -20,6 +21,7 @@ u SOLID Refactoring
 > Copyright
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:3**************
@@ -44,25 +46,26 @@ hard to do the right thing
 SOLID Refactoring
 > Cohesion
 O The Release Reuse Equivalency Principle
-Q The Common Closure Principle
-= The Common Reuse Principle
+O The Common Closure Principle
+O The Common Reuse Principle
 > Coupling
-Q Acyclic Dependencies Principle
-a The Stable Dependencies Principle
-= The Stable Abstractions Principle
+O Acyclic Dependencies Principle
+o The Stable Dependencies Principle
+O The Stable Abstractions Principle
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Assessmg quality
+Assessmg quallty
 > How do we measure the quality of an item?
-, Construction quality (how well it is built, whether the
+O Construction quality (how well it is built, whether the
 raw material has flaws, etc ...)
-a Design quality (comfort, elegance...)
-= A combination between quality of design and
+O Design quality (comfort, elegance...)
+O A combination between quality of design and
 construction (sturdiness...)
-> In general, we can say that chair A is better than
+> ln general, we can say that chair A is better than
 chair B regarding some particular aspect, but it
 is usually difficult to say by how much.
 
@@ -71,27 +74,28 @@ is usually difficult to say by how much.
 ***************Beginning Page***************
 ***************page number:6**************
 Software Quality (i)
-> We do not assess construction quality (=>
+> We do not assess construction quality (:>
 unique among engineering applications)
 > All quality attributes refer to design.
 > Esthetic qualities:
-= Software is mostly invisible, and esthetics only
+O Software is mostly invisible, and esthetics only
 matter for the visible elements
-u Apart from the GUI, observable aspects software are:
-' Notations for design and writing of code
+o Apart from the GUI, observable aspects software are:
+- Notations for design and writing of code
 - Behavior of software when interacting with other
 intities.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
 Software Quality (2)
 > When discussing software quality we must:
-, Deﬁne those attributes of quality that are of interest;
-Determine a way of measuring those attributes;
-= Find a way of representing design;
-a Write speciﬁcations that will guide developers
+o Define those attributes of quality that are of interest;
+O Determine a way of measuring those attributes;
+o Find a way of representing design;
+o Write specifications that will guide developers
 (following and implementing design qualities).
 
 ***************Ending Page***************
@@ -109,49 +113,51 @@ expensive and possibly useless.
 > Usually, only the manner in which the code is written
 is taken into account (coding style, design patterns,
 adaptability, maintenance, reuse (coupling, cohesion),
-security)
 
-‘ B
+l security)
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
 Software Quality (3)
+
 > Measures the appropriateness of software to the
 environment it is used in.
+
 > Variuos aspecte taken into account are:
-7 The software is running;
-= The software performs according to specifications;
-a The software is safe;
-a The software can be adapted as requirements
+O The software is running;
+O The software performs according to specifications;
+o The software is safe;
+O The software can be adapted as requirements
 change.
-> A|| measurements regarding quality are relative!
+
+| > All measurements regarding quality are relative!
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
 Aspects of Software Quality
-> Safety S ﬁ TY
-E
-> Efficiency ‘ﬁg?
-i||i||||||||i||||||||||||1||||
-> Maintenance k
-II Usability
+> Safety
+if?“
+Eff'c'enc FIT-"f
+i“i"iii"iii
+> Maintenance flwi
+> Usability pg
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-i
-b
+d
 Safety
 > ls the software complete, correct and robust?
-Q Completeness — works for all possible inputs;
-a Consistency — always behaves as expected;
-C Robustness — behaves well in abnormal
+O Completeness — works for all possible inputs;
+O Consistency — always behaves as expected;
+O Robustness — behaves well in abnormal
 situations (eg. Lack of resources, lack of
 internet connection, etc.)
 
@@ -165,24 +171,25 @@ Efficiency
 
 resources (CPU time, network connection, etc.)
 
-v Efficiency is always less important than safety. It is
+> Efficiency is always less important than safety. It is
 
 easier to make safe software efficient than the reverse
 $ ‘
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-. 19 I}
-Maintenance
-v How easily can the design be changed or
+. a ‘$.-
+Malntenance
+> How easily can the design be changed or
 adapted?
 > Types of maintenance:
-B Corrective: error fixing;
-c Perfective: adding features that should have
+O Corrective: error fixing;
+O Perfective: adding features that should have
 been part of the product;
-Q Adaptive: updating software as requirements
+O Adaptive: updating software as requirements
 change.
 
 ***************Ending Page***************
@@ -194,14 +201,14 @@ How easily can the software be taught and used?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
 Measurable Attributes
-
-> Simplidty
-$11‘.IX1.,E‘.MLJWSTHEEI Y
-
-> Modularity ,5"???
+> Simplicity 3'Find x'%x : I
+S IMPLIC 1T Y
+> Modularity
+HQ’.
 
 ***************Ending Page***************
 
@@ -209,22 +216,62 @@ $11‘.IX1.,E‘.MLJWSTHEEI Y
 ***************page number:16**************
 > The reverse of complexity.
 > Aspects of complexity:
-Q Control flow: counts all the possible
+O Control flow: counts all the possible
 execution paths for a program
-D Information flow: measures amount of data
+O Information flow: measures amount of data
 transmitted within the program
-D Understanding: counts the number of
+O Understanding: counts the number of
 identifiers and operators
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Mod u larity
-> Can be measured by examining :
-D Cohesion: how well the components of a
-module collaborate.
-Q Coupling: interaction between modules
+I I
+C I’ X l l '
+> an emeasue ye amnng.
+I
+I
+° CO e5|0n OW WE t E COIII OHEIItS O a
+I
+HIOCIUIE collaborate.
+I I I
+I
+° COU |n Interactlon bEtWGGII IIIOClUlES
+I
+getName
+getTy-pe n
+getTexName
+Bremen-w :Order “WT'm'o-P 1'1*'geﬂ_°‘a'°—r
+— m
+Checkout 12: 3.1: getlnfo0+
+Customer orderTotal:= h _ .
+calculateTotalO 1.1.1.getPr|ce +
+2; debit‘); _l" {numberOrdered}
+1 n
+- - :Credit - -
+n §§§§QTZL get/WNW? W 3-dlsnlaar0 :Checkout
+getArdiTexName — Egg
+gamete ﬁrm
+map n getDecay-Channel
+getDecay-Group 1
+n geiPDGID
+1 map n getCOnﬁdenceLevel 2.2: commitO-Iv Processor
+getFamily pdgid .I' name 1 map getDecay-Group m
+getParticle map map getDecay-Particles
+getFraotion
+getName
+n n getNegError
+getP
+getName 1 0-1 getPUn'rt
+etS IF Ct
+getConfidenceLevel getName gget'ﬁxeNaameor
+getNegError
+_ getPosError
+getScaleFactor
+getUn'rt
+geWalue 17
 
 ***************Ending Page***************
 
@@ -233,9 +280,9 @@ Q Coupling: interaction between modules
 Why Use Metrics?
 
 > We use metrics to
-L» understand :
-D control cg; W55
-Q predict / ‘
+O understand .3. *
+O control PAMA A
+O predict / ‘ \i '
 
 ***************Ending Page***************
 
@@ -266,32 +313,33 @@ some software
 Estimation
 
 > lntuitively, estimation seem subjective
-, To inexperienced persons, it looks like predicting
+O To inexperienced persons, it looks like predicting
 the future
-= This is reinforced when estimation is incorrect and
+O This is reinforced when estimation is incorrect and
 projects are delivered late
 
 > Formal estimation processes
-Q allows the project team to reach a consensus on the
+O allows the project team to reach a consensus on the
 estimates
-= improve the accuracy
+o improve the accuracy
 
-‘ I“
+x 20
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:21**************
 Estimation
 > Successful estimations take into account the
 following
-= Work Breakdown Structure (WBS) — What are the
+o Work Breakdown Structure (WBS) — What are the
 tasks that need to be performed to finish the
 product?
-= Assumptions — how to deal with incomplete
+o Assumptions — how to deal with incomplete
 information
-a Trust — if stakeholders and engineers trust each
-other, the estimate will be more accurate
+O Trust — if stakeholders and engineers trust each
+other, the estimate Wlll be more accurate
 
 ***************Ending Page***************
 
@@ -300,49 +348,50 @@ other, the estimate will be more accurate
 Work Breakdown Structu re
 > A list of tasks that, if completed, will produce
 the final product
-Q Broken down by feature
+o Broken down by feature
 O By project phase (requirements tasks, design tasks,
 programming tasks, QA tasks, etc.)
-a Some combination of the two
-=' Should reflect the way previous projects have been
+O Some combination of the two
+O Should reflect the way previous projects have been
 developed
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Work Breakdown Structu re
-> A project should be broken down into lO , 20
+Work Breakdown Structure
+> A project should be broken down into lO — 20
 tasks
-= Regardless of the size of the project
+O Regardless of the size of the project
 O For large projects (e.g. an operating system), the
 tasks are large
-a For smaller projects, the tasks are correspondingly
+O For smaller projects, the tasks are correspondingly
 smaller
 > Create an estimate for the cost of each task
-Q Most accurate estimates are those that rely on prior
-experience
-= NO estimate is guaranteed to be accurate
-‘ 1,
+<> Most accurate estimates are those that rely on prior
+expenence
+O NO estimate is guaranteed to be accurate
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-As s u m ptio n s
+Assu m pt|ons
 > At the beginning of the development team
 members do not have all the information
-= Assumptions are needed to fill in missing things
+O Assumptions are needed to fill in missing things
 O Assumptions can also be placeholders which will be
 corrected later
-= If an assumption is proven incorrect, the timeline of
+o If an assumption is proven incorrect, the timeline of
 the project MUST be adjusted
 > For effective estimates, assumptions need to
 be written down
-= If not, the team will need to have the same
+o If not, the team will need to have the same
 discussion again
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
@@ -354,7 +403,7 @@ managers.
 
 > Stakeholders need the project completed but
 usually do not have software engineering
-experience
+expenence
 
 > Project managers must take care to make the
 estimation process as open and honest as
@@ -364,48 +413,45 @@ possible
 
 ***************Beginning Page***************
 ***************page number:26**************
-Assumptions and Trust
+Assumptlons and Trust
 > It is common for nontechnical people to
 assume that programmers pad their
 estimates
-=' They have a "rule" by which they cut off a third or
+o They have a “rule” by which they cut off a third or
 half of any estimate
-, This lack of trust causes engineers to automatically
+o This lack of trust causes engineers to automatically
 pad their estimates
 > An important part of running successful
 software projects is reaching a common
 understanding between the engineers,
-managers, and stakeholders.
-‘ 15
+| managers, and stakeholders.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
 Basic Metrics
 > KLOC: Kilo Lines Of Code
 > Effort, PM: Person — Month
-Sum > f," ‘
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:28**************
-COCOMO 2
-
-> Boehm 1995
+> Boehm l995
 
 > Takes into consideration high level development
 tools and techniques
-Prototyping
-a Modular development
-a 4GL (fourth generation language)
+O Prototyping
+o Modular development
+o 4GL (fourth generation language)
 
 > Allows for estimates from the very first stages of
 development
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:29**************
@@ -415,8 +461,7 @@ application
 > Based on the Number of Object Points (NOP)
 > Formula for computing effort:
 NOP
-PM: 1—Preuse i
-( / )PROD
+PM I (1 - firmlm
 
 ***************Ending Page***************
 
@@ -426,30 +471,31 @@ NOP
 
 > Investigate the screens and dialogs that are
 needed
-a Simple: l
-= Complex: 2
-u Very complex: 3
+O Simple: l
+O Complex: 2
+O Very complex: 3
 
 > Reports that need generated
-a Simple: 2
-= Complex: 5
-~ Very complex: 8
+O Simple: 2
+O Complex: 5
+o Very complex: 8
 
-> Each lower level module (eg. 3GL): lO
+> Each lower level module (eg. 36L): lO
 
 I > The sum of all of the above represents the NOP.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-COCOMO 2: after prototyping
+COCQMO 2: after prototyping
 > Estimate the total lines of code (ESLOC)
 > Takes into account
 
-a Requirements instability
+o Requirements instability
 
-a Possibilities of code reuse
+O Possibilities of code reuse
 
 ***************Ending Page***************
 
@@ -457,30 +503,30 @@ a Possibilities of code reuse
 ***************page number:32**************
 COCOMO 2: Influences on Costs
 > Product attributes
-, Safety, module complexity, size of user manual, size
+o Safety, module complexity, size of user manual, size
 of the required database, amount of reusable
 components
 > Platform attributes
-= Constraints referring to execution time; platform
+O Constraints referring to execution time; platform
 volatility, memory constraints
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:33**************
 COCOMO 2: Influences on Costs
 (cont.)
 > Personnel attributes
-, Analyst experience; developer experience; personnel
+O Analyst experience; developer experience; personnel
 continuity; knowledge of the domain of the problem to
 be solved with regards to analysts and developers;
 knowledge of the programming language and
 development tools
 > Project attributes
-~ Required tools; distance between development teams
+O Required tools; distance between development teams
 (eg. different countries) and quality of communication;
 Development plan compression
-‘ “
 
 ***************Ending Page***************
 
@@ -494,13 +540,14 @@ Programming (XP)
 > A method used to manage the negotiation
 between the engineering team (Development)
 and the stakeholders (Business)
-a Treats the planning process as a game
-= playing pieces are “user stories" written on cards
-Q the goal is to assign value to stories and put them
+O Treats the planning process as a game
+o playing pieces are “user stories” written on cards
+O the goal is to assign value to stories and put them
 
-into production overtime
+into production over time
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
@@ -511,9 +558,9 @@ not require a documented description of the
 scope of the project to be estimated
 
 > The Planning Game combines
-= estimation
-Q identifying the scope of the project
-u Identifying the tasks required to complete the
+O estimation
+o identifying the scope of the project
+O Identifying the tasks required to complete the
 
 software
 
@@ -521,20 +568,26 @@ software
 
 ***************Beginning Page***************
 ***************page number:36**************
-The Plannmg Game
+The Plannlng Game
 > The planning process is highly iterative. Each
 iterations looks like this:
-~ Scope is established by having Development and
+
+O Scope is established by having Development and
 Business work together to interactively write the
 stories.
-= Each story is given an estimate of l, 2, or 3 weeks.
+
+o Each story is given an estimate of i, 2, or 3 weeks.
 ~ Larger stories are split into multiple iterations
-. Business is given an opportunity to steer the project
+
+o Business is given an opportunity to steer the project
 between iterations.
-Q The estimates are created by the programmers,
+
+O The estimates are created by the programmers,
 based on the stories that are created.
-= Commitments are agreed upon
-‘ ‘a
+
+O Commitments are agreed upon
+
+x 36
 
 ***************Ending Page***************
 
@@ -543,15 +596,15 @@ based on the stories that are created.
 ***************page number:37**************
 Distributing Workforce Over Time
 > 20 PM. Are the following correct?
-6 20 people working l month
-u 4 people working 5 months
-= l person working 20 months
-v Individual productivity decreases as team size
+O 20 people working l month
+O 4 people working 5 months
+O l person working 20 months
+> Individual productivity decreases as team size
 increases
-a Communication overhead
-= On adding new members, productivity decreases
+O Communication overhead
+O On adding new members, productivity decreases
 initially
-> Adding peop/e to a team behind of schedule
+> Adding people t0 a team behind ofschedu/e
 makes that project more behind schedule.
 ‘is’ law)
 
@@ -561,14 +614,18 @@ makes that project more behind schedule.
 ***************page number:38**************
 Distributing Workforce Over Time (2)
 > For a team with P members, one can have
-between P-i and P(P—i)/2 communication
+between P—i and P(P—i)/2 communication
 channels
 > Each channel is a decrease in efficiency
-Q
-a
-I o 0 we“
+6
+i
+'nner |lll
+o
+li
+I o o —————_
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:39**************
@@ -576,17 +633,17 @@ How Not to Plan and Estimate
 
 Costs
 
-> We have 12 months to finish thejob, so it will
+> We have 12 months to finish the job, so it will
 take 12 months.
 
 > A competitor asked for $1 .OO0.000. We wil ask
-for 5900.000.
+for $900.000.
 
-> The client budget is $500000. That will be the
+> The client budget is $500.000. That will be the
 exact cost of development.
 
 > Development takes l year, but we say it will take
-10 months. A delay of 2 months is not
+lO months. A delay of 2 months is not
 
 l important...
 
@@ -606,47 +663,54 @@ Problems with Metrics
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-C o py r | g h t
+C o py r| g ht
 
-> The rights enjoyed by authors with regards to
+> The rights enjoyed by authors With regards to
 their work;
 
 > Copyright is the instrument of protection of
-authors and their work;
+authors ancl their work;
 
 > Copyright gives the creator of an original work
-exclusive right fora certain time period in
+exclusive right for a certain time period in
 relation to that work, including its publication,
-distribution and adaptation; after which time the
-work is said to enter the public domain.
+distribution and adapta tion; after which time the
+worl< is said to enter the public domain.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:42**************
-Excluswe rights
-
+Exclusive rights
 > Several exclusive rights typically attach to the
 holder of a copyright:
-= to produce copies or reproductions of the work and to
+
+O to produce copies or reproductions of the work and to
 sell those copies (mechanical rights; including,
 sometimes, electronic copies: distribution rights)
-a to create derivative works (works that adapt the
-original work)
-a to perform or display the work publicly (performance
-rights)
-Q to sell or assign these rights to others
-a to transmit or display by radio or video (broadcasting
 
-I rightS)
+O to create derivative works (works that adapt the
+original work)
+
+O to perform or display the work publicly (performance
+rights)
+
+O to sell or assign these rights to others
+
+O to transmit or display by radio or video (broadcasting
+
+I rights)
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Blbllography
+Bibliography
 
 > Extreme Programming Explained by Kent
 Beck (Addison Wesley, 2000)
@@ -657,19 +721,21 @@ Andrew Stellman and Jennifer Greene
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:44**************
-L| n ks
+Llnks
 
-> Bug Life Cycle: httQIZ [www.buzzle.com[editorialsl4i
-6*2005i681 77.2159,
-http: Z [gastationwordpressxom[2008[06!I 3 [process
--for-bug—|ife—cycle[
+> Bug Life Cycle: httg:[[www.buzzle.com[editoria|s[4—
+6-2005-68177.a5|g,
+httg:[[gastatiomwordgressxom[2008[O6[13Z|Qrocess
+—f0r—bug—|ife—cyc|e[
 
-> COCOMO: httg:[[en.wikipedia.org[wikilCOCOMO
+> COCOMO: httg:[[en.wiki|gedia.org[wiki[COﬁOMO
 
-v Cur512, Ovidiu si Adriana Gheorghies:
-httQ:Z[www.info.uaic.ro[~ogh[filesliglcursil 2.9df
+> Curs 12, Ovidiu si Adriana Gheorghies:
+httgj[www.info.uaic.ro[~ogh[filesZichurs-l 2.|Z_)C|f
 
 ***************Ending Page***************
+
 

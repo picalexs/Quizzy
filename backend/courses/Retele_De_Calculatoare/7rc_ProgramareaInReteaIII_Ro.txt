@@ -2,20 +2,21 @@
 ***************page number:1**************
 Lenuta Alboaie
 adria@info.uaic.ro
+Retele de calculatoare — http://www.info.uaic.ro/”computernetworks
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Cupﬂns
+Cuprins
 
-- Primitive I/O - discutii
+' Primitive l/O - discutii
 
-- Server concurent UDP
+' Server concurent UDP
 
 ' TCP sau UDP — aspecte
 
-- Instrumente
+' lnstrumente
 
 ' Alternative de proiectare si
 implementare al modelului
@@ -25,13 +26,14 @@ client/server TCP
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
 Primitive l/O
 ' Citire de date
 —read() / recv() / readv() / recvfrom()/ recvmsg()
-‘ Trimitere de date
-—write() /send() / writev() / sendto()/ sendmsg()
+' Trimitere de date
+—write() / send() / writev() / sendto()/ sendmsg()
 —
 
 ***************Ending Page***************
@@ -39,58 +41,58 @@ Primitive l/O
 ***************Beginning Page***************
 ***************page number:4**************
 Alte primitive | l/O
-#include <sys/uio.h>
+#include <sys/ui0.h>
 ssize_t readv (int filedes, const struct iovec *iov, int iovcnt);
 ssize_t writev (int filedes, const struct iovec *iov, int iovcnt);
 struct iovec
 {
-void ‘iovibase; /* adresa de start a buffemm */
-size_t i0v_|en; /* dunensmnea buffermw */
-);
-Mai generale decit read()/write(), ofera posibilitatea de a
-transmits date aflate in zone necontigue de memorie
-Cele 2 apeluri returneaza la execugie normala lungimea
+void *iov_base; /* adresa de start a bufferului */
+size_t iov_|en; /* dimensiunea bufferului */
+};
+|\/|ai generale decit read()/write(), ofera posibilitatea de a
+transmite date aflate in zone necontigue de memorie
+Cele 2 apeluri returneaza Ia executie normala lungimea
 transferului in octeti
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Alte prlmltlvel l/O
+Alte primitive | l/O
 #include <sys/socket.h>
 ssize_t recvmsg (int sockfd, struct msghdr *msg, int flags);
-ssizeit sendmsg (int sockfd, struct msghdr *msg, int flags);
+ssize_t sendmsg (int sockfd, struct msghdr *msg, int flags);
 Ambele functii au majoritatea optiunilor incorporate in
 structura msghrd
 Cele mai generale functii l/O; apelurile
 read/readv/recv/recvfrom pot fi inlocuite de recvmsg
 Cele 2 apeluri returneazé Ia executie normalé lungimea
-transferului Tn octeti; —1 in caz de eroare
-
-***************Ending Page***************
-
-***************Beginning Page***************
-***************page number:6**************
-Alte primitivel l/O
-
-Comparatie intre primitivele l/O:
-Function Orice Duar Unsingur Scatter/ Flag-uri Adresa
-descriptor descriptor read/write gather upﬁunale nodului
-de socket buffer read/write peer
-
-$57.1’ o O
-
-:22: o o o
-‘22$? O O O 0
-Liam: o O o O
+transferului Tn octeti; -1 in caz de eroare
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
+***************page number:6**************
+Alte primitive | l/O
+Comparatie intre primitivele l/O:
+Function Orice Doar Un singur Scatter/ Flag-uri Adresa
+descriptor descriptor read/write gather optionale nodului
+de socket buffer read/write peer
+$33; o 0
+:21: <> <> <>
+‘11$? 0 0 0 0
+2212152 0 o o o
+—
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
 ***************page number:7**************
-Server UDP | situatii
+Server UDP l situatii
 Majoritatea serverelor UDP sunt iterative
 — Server UDP care citeste cererea clientului,
 proceseaza cererea, trimite raspunsul si termina
@@ -101,53 +103,54 @@ Server UDP concurent
 - daca elaborarea raspunsului ia mult timp serverul
 poate crea (fork()) un proces copil care va rezolva
 cererea
-
-***************Ending Page***************
-
-***************Beginning Page***************
-***************page number:8**************
-Server UDP | situatii
-Server UDP concurent
-' Server UDP care schimba datagrame multiple cu un client
-
-— Problema: Doar un numar de port este cunoscut de client
-ca fiind un port "weI/known"
-
-— Solutia15erverul creaza un socket nou pentru fiecare
-client, si il ataseaza la un port “efemer”, si utilizeaza acest
-socket pentru toate raspunsurile.
-
-- Obligatoriu clientul trebuie sa preia din primul raspuns
-al serverului noul numar de port si 5a faca urmatoarele
-cereri la acel port
-
-— Exemplu: TFTP e Trivial File Transfer Protocol
-
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
+***************page number:8**************
+Server U DP l situatii
+Server UDP concurent
+' Server UDP care schimba datagrame multiple cu un client
+
+— Problema: Doar un numar de port este cunoscut de client
+ca fiind un port "wellknown"
+
+— Solutia: serverul creaza un socket nou pentru fiecare
+client, si il ataseaza la un port ”efemer”, si utilizeaza acest
+socket pentru toate raspunsurile.
+
+' Obligatoriu clientul trebuie sa preia din primul raspuns
+al serverului noul numar de port si sa faca urmatoarele
+cereri la acel port
+
+— Exemplu: TFTP - Trivial File Transfer Protocol
+
+—
+
+***************Ending Page***************
+
+
+***************Beginning Page***************
 ***************page number:9**************
-Server concurent U DP
+Server concurent UDP
 — TFTP utilizeaza UDP si portul 69
-Pasii; sucked)‘
-Server bind() la portul
-‘ (panmeh well-known 69,
-\a owe“ Pm 69 recvrmmO, forko,
-a <59 alt recvfromO, ..v
-an“
-{5&39
-Client Wm“
-"biz/1,‘q
-To sin/"sly Pasii: sockeﬂ),
-Cl‘ ale l1 9/3 Server bind() la url port
-“int .5189, sew .
-s/se ‘9/116, Er (:0le 1234, procesarea
-"6r S 07mm Purt 1134 cererii clientului,
-Schimb de
+Pasii: socket(),
+Server bind() Ia portul
+(parinte) well-known 69,
+\a 0W“ Port 69 recvfrom(), fork(),
+(\e alt recvfrom(), . ..
+‘6&6
+dawg
+Client 9N“a
+"ma/,6
+Toe 8100/78 o’ Pasii: socket(),
+(we ‘e 06,6 e/a 8e, Server bind() Ia un port
+I” 8/8e grame/ Ver (copil) 1234, procesarea
+er e 07/7” Port 1234 cererii clientului,
+e Schimb de
 datagrame cu
-clientul prin ncul
+clientul prin noul
 socket
 
 ***************Ending Page***************
@@ -155,10 +158,8 @@ socket
 ***************Beginning Page***************
 ***************page number:10**************
 TCP sau UDP - discutii
-- Client E
 Server Server UDP Client UDP
 Model server/client TCP Model client/server UDP
-—
 
 ***************Ending Page***************
 
@@ -167,35 +168,39 @@ Model server/client TCP Model client/server UDP
 ***************page number:11**************
 TCP sau UDP — discutii
 Aspecte privind utilizarea UDP:
-7 UDP suporta broadcasting si multicasting
-» UDP nu are nevoie de un mecanism de stabilire a conexiunii
+- UDP suporta broadcasting si multicasting
+- UDP nu are nevoie de un mecanism de stabilire a conexiunii
 - Minimul de timp necesar unei tranzactii UDP cerere-raspuns
 este: RRT(R0und Trip Time) + SPT (server processing time)
 Aspecte privind utilizarea TCP:
 - TCP suporta point-to-point
-» TCP este orientat conexiune
+- TCP este orientat conexiune
 - Ofera siguranta si asigura transmiterea in ordine a datelor;
-7 Ofera mecanisme de control al fluxului si control al congestiei
+- Ofera mecanisme de control al fluxului si control al congestiei
 - Minimul de timp necesar unei tranzactii TCP cerere-raspuns
-daca se creaza 0 noua conexiune este: Z *RRT + SPT
+daca se creaza o noua conexiune este: 2 *RRT + SPT
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-TCP sau UDP — discutii
-w
-/P‘/\ /'\’“\
-‘QM Q9’
--> -) -> .
-“ﬁg-‘KW
-J \
-QM Mg,’
--><--><-->
-[Mn/1W mum m
+TCP sau UDP — dlscutll
+
+u
+
+@ @
+
+CD
+‘I’
+
+ARE F-DU
+‘C3
+ﬁﬁ @Q
+[http://www.sku||box.net]
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:13**************
@@ -221,55 +226,84 @@ transfer de fisiere)
 — S-ar putea folosi UDP? 9 Reinventam TCP la nivelul
 aplicatiei!
 Exemple: HTTP (Web), FTP (File Transfer Protocol),
-Telnet, SMTP
+Telnet, SIVITP
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-lnstru m e nte
-' Multe sisteme UNIX ofera facilitatea de “system cal!
-tracing ”
-(MM,
--> strace
-Resale de calculatnare — http://www.infu.uaic.m/"computemetwwks
+I 0 0 (I
+' |\/|u|te Slsteme UNIX ofera faCIlltatea de system call
+' I)
+tracing
+" adrlaagluhuwfsﬁ
+I A test.c (Hodifi How H EuL PH H115
+F ucle= {5tdlﬂ,h}
+J.HRIJH: :5td11b.hh
+int mainﬁint argc, char* argv[]j
+char *5Lr=HLILL; q Strace
+printfﬂ h .h - :- H-.J" j;
+fgetsﬁsir, ' I, stdin};
+priﬁtfiEir];
+return I;
+wzira l, "pzagzan is iebugin"..., L?p::g:an i: iebug
+gstazégéi, {5: HDjE=E IFZEEICEEC, E: :iev=nak&i&vﬂl35. E]. -..}] = C
+mnapE HELL, éigé, PEG¥_EE;3|PEGT_EEI¥E, I;?_?EI¥;TE|IQP_EFGHTEGEE. —1. C] = Cab?
+;;:;ig, be?fibCCC, lCEE] = F EEEETQETEEE iT: be :EEIaIIEi]
+——— EISHIHZE iHiniaw :hangej] E C :C] ———
+:Eﬁiii, TEE: in saprauina é
+"TEE: in sapranina ERR"..., lCEE] = EC
+——— EIGEES? iEEgnERIaIiQR fault] E C ﬂC] ———
+——— kills: b: EIGEES? ———
+Retele de calculatoare — http://www.info.uaic.ro/”computernetworks
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-lnstru mente
-' Programs de test de dimensiuni reduse
-- \nstrumente:
-i rcpdump — majorltatea versiurvﬂor de Unix
-- Ofera informatii asupra pachetelor din retea
-~ http://www.tcpdump.0rg/
-i snoop —So|ar'\s 2.x
-i lsof
-- ldermﬂcz CE procese ELI un socket mm; la 0 adresz \P sau purl Speclhcal
-i netstat
-@mmbmm'm _ ‘a: g. _ __ ‘ =cg
-Regele de calculatoare — http://www.infumainn/"'computemetworks
+' Programe detest de dimensiuni reduse
+' lnstrumente:
+— tcpdump — majoritatea versiunilor de Unix
+' Ofera informatii asupra pachetelor din retea
+' http://www.tcpdump.org/
+— snoop — Solaris 2.x
+— lsof
+' ldentifica ce procese au un socket deschis la o adresa IP sau port specificat
+— netstat_ .
+Q thur.'|nfc:.uaic.m— PuTW _ .- . I‘;- .- l-r L '2' I El lg
+:221:21:.21:. '_222 1
+_I'-.::!1:"_'-.-'2 I:1:2::221:. 2::::-:2:22:::1:.i::-:22 |j'-.-:..-'::- 22:2-‘2:2j|
+F:2t-2 Fi.2:2r'--'—I_I_I 52:22-11} L222; .3'-.::2::2:222 F2:2"_:;':2 .3'-.::2::2:222 E-t-2t-2
+1:212: |_'; II 1:222: . i::'2.'_1.2i::!. :2 : 2:221:12: 2221:::':'.:' 2132;11; . ::!2:-: : EL-E-E'? E-EI-T 3321?.’
+221:: L'I II 1:222: . 2:22“ 2 . ‘.2222 . :2 : 2:':'.t-1:: 222 12:22:“ 21:22 L'I IE: . 2 2 :-: : 2 L IE: 2 E E-EI-CFiZIlIT-F
+221:: L'I CI 1:222: . 2:2:“2 . 2.22:2: . :2 : 2222132 E EI- . 2L . E2122 . 21:55:52 :5le 35-T;._==LIE-I-IE.II
+1:212: |_'; II 1:222: .'-.-'1:::2 : 22:5‘? 52'- }::::2::: : '_::221:: TIE-1E._I'-.‘_I'-.II
+221:: L'I II 1:222: .'--'1:::2 : IE: 5"-.1 2:222 : '_::221:: TIZ-IE._I'-.‘_3'-.II‘
+221:: L'I CI 1:222: .'-.-'1:::2 : 2551221225 22:22 : '_::221:: 35-T;._==LIE-I-IE.II I
+1: :2! 1:: |_'; II 1:222: . '-.-' 1:: :2 : IE: E '7 2‘- E }:: :2 2 : '_ 2:2 21:: I‘ I 2-1E._2'-.‘_I'-.I l"
+221:: L'I II 1:222: .'--'1:::2 : 12:2 EI-EI-EI- 2:222 : '_::221:: ZE-IE-ELIE-I-IZII 1'
+:---o-. .0.‘—"'~|n...|0-00||0‘|‘.0.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-I nstru mente
-- lnstrumente:
+lnstrumente
+' lnstrumente:
 — tcptrack
-LTIJELEEJMJEEIE ETJQJIiA-‘zli EEYMHLIEHED H; 3151 V11":
-ULZLLEEJLMEIEQE l‘iE.§H.lElH,lH:lElH EETHEILIEHEI‘ 15 3H >11‘:
-LTIJSAESAXHEEEX 54571454315“ EETHELIEHEI‘ Hz SET 11"‘:
-ULZLLEEJLMEIEIH 115.139.33.331151H FEEET I; H El -:
-LCEQSHQEEJESISSSL lTLCSJEEAHZlL'CH ESTHELIEHEI‘ 55 H El‘ .1
-ULJLLEEJLMIEIECL 118.139.39.39113H EETHELIEHED T: H El‘:
-LTLZSAESALZJEEHE EJQSSAEFJEEZE" ESTHELIEHEI‘ 1H: H El‘ .1
-LTCJLLEEJli-NEIHH ETJEIJTEAJQT EETHELIEHED 1B; H 1:‘:
-LTIJLLEEJLIJT'EEE ETJEQIZJJZZI ESTHELIEHEI‘ 15; H ii‘:
-YUTRL 53 KB/s
-Eunnectmns 1*9 nF 5 Un-aused Surtedl
+1FE+EE+1EE+11:4EEEE EH+EE+EEE+44:EE EETHELIEHEE E5 EE HEH5
+1FE+EE+1EE+11:4EEdE lEE5EE+EE+1EZEE EETHELIEHEE 15 EE HEH5
+1FE+EE+1EE+11:4EEEl E4+EF+E4E+1FiEE EETHELIEHEE E5 EEH EH5
+1?2+25+155+11545555 2155255555555555 EEEET 25 m EH5
+1255255522555555551 1FE+EE+1EE+1ﬁilEEE EETEELIEHEE 55 5 EH5
+1FE+EE+1EE+11:4EEEl ElE+EEE+EE+EExEE EETHELIEHEE F5 E EH5
+1FE+EE+1EE+1lidEEEE E45EEE+1EF+EExEE EETHELIEHEE 1E5 E EH5
+1FE+EE+1EE+11:4EE14 EH+EE+EEE+44:EE EETHELIEHEE 155 E EH5
+1?2+25+155+1154?555 EF+EE+EEE+44zEE EETHELIEHEE 155 m EH5
+Connections 1-5 0F 5 Un-aused Sorted.
 
 ***************Ending Page***************
 
@@ -282,55 +316,52 @@ client/server TCP
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
 Fire de executiel Necesitate
 ' fork() poate fi un mecanism costisitor
 — implementarile curente folosesc mecanismul copy-
-0n-write
-- IPC (lnter»Process Comunication) necesita trimiterea
+on-write
+' IPC (Inter-Process Comunication) necesita trimiterea
 informatiei intre parinte si copil dupa fork()
 —
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:20**************
 Fire de executiel Caracteristici
 ' Firele de executie (threads) sunt numite si
 lightweight processes (LWP)
-' Pot ﬁ vazute ca un program aflat in executie fara
+' Pot fi vazute ca un program aflat in executie fara
 spatiu de adresa proprie
-f
-. ﬁre de
-ﬁr de executle § {execulie{
-Procese cu un ﬁr de executie Process cu mai multe ﬁre de executie
-—
+fir de executie [ [fire de- [
+execuhe
+Procese cu un fir de executie Procese cu mai multe fire de executie
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-Procese, Flre de execut|e| Comparatu
+Procese, FIre de executIeI ComparatII
 ' Exemplu: Costurile asociate crearii si managementului
+
 proceselor (50.000) este mai mare decat in cazul firelor
 de executie(50.000)
-Platform ‘
 
-‘AMDZJGHX Omronllcnuslnode) ‘ 2.2 15] \ 0.3 13 ‘
+AMD 2.4 GHz Opteron (8cpus/node) ‘
 
-‘IBM 1,9 GH! POWERS P5-575 ‘
+IBM 1.9 GHZ POWERS p5-575
 
-‘(mus/nude) ‘ 30.7 27.5 0.5 1.1 ‘
+IBM 1.5 GHz POWER4 (8cpus/node) ‘
 
-IBM 1,5 GH! POWER. (lupus/nod!) ‘ 48 5 47 1 1 O 1 5 ‘
+INTEL 2.4 GHz Xeon (2 cpus/node) ‘ --m
 
-mm u cm mm (1 cpus/naﬂe) ‘ 1 5 20 B 0 7 u
+INTEL 1.4 GHz ltanium2 (4 cpus/node) I --m
 
-INTEL 1.4 GHIItanlumZ“ cpus/node) ‘ 1.1 222 12 u
-
-WMW...“M,W/......Wm...m
+[https://computing.||nLgov/tutorials/pthreads/1
 
 ***************Ending Page***************
 
@@ -339,30 +370,30 @@ WMW...“M,W/......Wm...m
 Fire de executiel lmplementare
 ' Pthreads (POSIX Threads) standard ce
 defineste un API pentru crearea si manipularea
-ﬁrelor de executie
+firelor de executie
 — FreeBSD
 — NetBSD
 — GNU/Linux
-— Mac OS X
+— |\/|ac OS X
 — Solaris
-' Pthread API pentru Windows — pthreads-w32
+' Pthread API pentru Windows — pthreads-W32
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Fire de executie |,Erimitiygdghazéw
-#include <pthread.h>
+Fire de executiel Prim_i_t_i_\_/_o__d__e___lc_>_§_z_g_______
+#include <pthread.h> _
 int pthread_create(
 
-pthread_t *tid, (,1)
-const pthread_aftr_t *attr,
+pthread_t *tid, ,/’:
+const pthread_aftrj *attr,
 void *(*func) (void *),
-void *a_r:g);
-Returneaza: O in caz de succes
+void *a_rg); k
+Returneaza: O in caz de suhcces
 o valoare Exxx pozitiva in caz de eroare
-Regele de calwlamare — http://wwwjMo‘uaiaro/"cnmputemetworks I
 
 ***************Ending Page***************
 
@@ -370,16 +401,17 @@ Regele de calwlamare — http://wwwjMo‘uaiaro/"cnmputemetworks I
 ***************page number:24**************
 Fire de executiel Primitive de baza
 #include <pthread.h>
-int pthreadJoin(
+int pthread_join(
 
-pthread_t *tid,
-ulm (un polmer ls un oblect)
+pthread_t *tia,
+ului (un pointer Ia un obiect)
 - Realizeaza asteptarea terminarii unui anumit thread
-Returneaza: 0 in caz de succes
-o valoare Exxx pozitiva in caz de eroare
+Returneaza: O in caz de succes
+0 valoare Exxx pozitiva in caz de eroare
 —
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:25**************
@@ -394,25 +426,26 @@ Returneaza: lD-ul thread-ului care a apelat primitiva
 ***************Beginning Page***************
 ***************page number:26**************
 Flre de executlel Prlmltlve de baza
-#include <pthread,h>
+#include <pthread.h>
 int pthread_detach(pthread_t tid);
 
-\< ldennﬁcatoml thread-ului
+\‘~ ldentificatorul thread-ului
 
-Thread'urile pot fi:
+Thread-urile pot fi:
 
-— joinublel Cind thread-ul Se termina, lD-ul Si Codul dE YESirE sum pastrate
+— joinable: cind thread-ul se termina, lD-ul si codul de iesire sunt pastrate
 
-pina cand se apeleaza plhreadJoinQ <- componament implicit
+pina cand se apeleaza pthread_join() <— comportament implicit
 
-— detached: cand thread-ul se termina mate resursele sunt eliberate
+— detached: cand thread-ul se termina toate resursele sunt eliberate
 
 Returneaza: O in caz de succes
-o valoare Exxx pozitiva in cal de eroare
+0 valoare Exxx pozitiva in caz de eroare
 
-Exempm: pthreadidetach(pthreadiself(J)1
+Exemplu: pthread_detach(pthread_se|f());
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:27**************
@@ -420,7 +453,7 @@ Fire de executiel Primitive de baza
 #include <pthread.h>
 void pthread_exit(void*status);
 - Terminarea unui thread
-Threadiurile se pot termina:
+Thread-urile se pot termina:
 
 — Functia executata de thread returneaza (Obs. Valoarea de
 return este void * si va reprezenta codul de iesire a thread-
@@ -433,10 +466,10 @@ thread-uri a apelat exit(), procesul se termina
 
 ***************Beginning Page***************
 ***************page number:28**************
-Fire de executie | Exemplu
-Exemplu de server TCP concurent care nu folosestefork()
+Fire de executie \ Exemplu
+Exemplu de server TCP concurent care nu foloseste fork()
 pentru a deservi clientii, ci foloseste thread-uri
-Obs‘ Compilarea: gcc —lpthread server.c sau
+Obs. Compilarea: gcc —lpthread server.c sau
 gcc server.c —lpthread
 —
 
@@ -449,10 +482,10 @@ Alternative de proiectare al modelului
 client/server TCP
 - Client TCP - modelul uzual
 — Aspecte:
-' Atat timp cat este blocat asteptind date de la
+' Atat timp cat este blocat asteptind date de Ia
 utilizator, nu sesizeaza evenimentele de retea
-(e.g. peer close())
-° Functioneaza in modul "stop and wait”
+(e.g. peer c/ose())
+' Functioneaza in modul "stop and wait"
 ' "batch processing”
 —
 
@@ -460,32 +493,34 @@ utilizator, nu sesizeaza evenimentele de retea
 
 ***************Beginning Page***************
 ***************page number:30**************
-Alternative de proiectare al modelului
+Alternative de proiecta re a| modelului
 client/server TCP
-' Client TCP — utilizind select()
+- Client TCP — utilizind select()
 — Clientul este notificat de evenimentele din retea in timp ce
-asteapta date de intrare de Ia utilizatnr
-dam“ EMT" Daca peer-ul trimite date, reud() returneaza o
-EOF '- “MU valoare >0;
-MA: Daca peer-ul TCP trimite FIN, socket-ul devine
-l-II "citibil” si read() intoarce O;
-w we FIN Daca peeriul trimite RST (peeriul a cazut sau a
-rebootat), socket~u| devine "citibil" si read()
+asteapta date de intrare de Ia utilizator
+datesau Sufi?“ Daca peer-ul trimite date, read() returneaza 0
+EOF '- sew‘) valoa re >0;
+O
+MAP Daca peer-ul TCP trimite FIN, socket-ul devine
+I-II "citibil" si read() intoarce O;
+RST date FIN Daca peer-ul trimite RST (peer-ul a cazut sau a
+rebootat), socket-ul devine "citibil" si read()
 Aspecte: intoarce -1;
-' Apelul write() poate fi blocant daca buffer-ul de Ia sucker-ul
+' Apelul write() poate fi blocant daca buffer-ul de Ia socket-ul
 emitator este plin
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:31**************
 Alternative de proiectare al modelului
 client/server TCP
-- Client TCP — utilizind selectO si operatii l/O
+' Client TCP — utilizind select() si operatii l/O
 neblocante
 — Aspecte:
-' Implementare complexa => cand sunt necesare
-operatii I/O neblocante se recomanda utilizare
+' lmplementare complexa => cand sunt necesare
+operatii l/O neblocante se recomanda utilizare
 de procese (fork()) sau de thread-uri (vezi slide-
 urile urmatoare)
 —
@@ -494,64 +529,66 @@ urile urmatoare)
 
 ***************Beginning Page***************
 ***************page number:32**************
-Alternative de proiectare al modelului
-client/server TCP
+Alternatlve de prolecta re al modelulul
+cllent/server TCP
 ' Client TCP — utilizind fork()
 — Mecanismul de functionare:
-
-- exista doua procese
-
-— Un pruces face managementul datelor client-server
-
+' exista doua procese
+— Un proces face managementul datelor client-server
 — Un proces face managementul datelor server-client
-
-‘W Wmmwmmmw,
-\‘ Parmte\es\ copﬂul
-partajeaza acelasl socket
+. n'liL'Ht um‘. TCP cﬂnnecliﬂn {fun-duplex]
+.~=.1d||1—||- parent l_
+JerI-z\~\\\
+thlLlut-II—- L'hﬂli k‘ \\\~
+\\\ Parintele si copilul
+partajeaza acelasi socket
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-Alternative de proiectare al modelului
+Alternative de proiecta re al modelului
 client/server TCP
-- Client TCP — utilizind pthreadO
-— Mecanisrnul de functionare:
+- Client TCP — utilizind pthread()
+— Mecanismul de functionare:
 ' exista doua fire de executie
 — Un fir de executie face managementul datelor client-
 server
 — Un fir de executie face managementul datelor
-servericlient
-cum
-Magma‘;
-1mm
+server-client
+client
+pthread_create
+stdout
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Alternatlve de pr0|ectare al modelulul
-cllent/server TCP
+Alternatlve de prolecta re al modelulul
+chent/server TCP
 ' Comparatie a timpilor de executie a clientilor TCP cu
 arhitecturile client discutate
-Tip clientTCP Timp executie
+Tip client TCP Timp executie
 (secunde)
-Modelul uzual (stop-and-waik) —
-Modelul folosind select si l/o blocante
-Modelul folusind select si l/O neblocante n
-Modelul folusind (5er
-Modelul folusind thread-uri as
-' Obs. Masuratoarea s-a realizat folosindu-se comanda time
+Modelul uzual (stop-and-wait) l-
+Modelul folosind select si l/O blocante l-
+Modelul folosind select si l/O neblocante l“
+Modelul folosind fork() l-
+Modelul folosind thread-uri l-
+’ Obs. IVIasuratoarea s-a realizat folosindu-se comanda time
 pentru implementari client/server echo
-MM W, m,
+[Unix Network Programming, R. Stevens B.
+Fenner, A. Rudoff- 2003
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
 Alternative de proiectare al modelului
 client/server TCP
-° Server TCP — iterativ
+' Server TCP — iterativ
 — Se realizeaza procesarea completa a cererii
 clientului inainte de a deservi urmatorul client
 Aspecte:
@@ -565,167 +602,171 @@ Aspecte:
 ***************page number:36**************
 Alternative de proiectare al modelului
 client/server TCP
-° Server TCP — cate un proces copil pentru fiecare client
+' Server TCP — cate un proces copil pentru fiecare client
 ' Serverul deserveste clintii in mod simultan
 ' Este des intilnit in practica
 — Exemplu de mecanism folosit pentru distribuirea
 cererilor: DNS round robin
 Aspecte:
-— Crearea fiecarui copil (fork()) pentru ﬁecare client
+— Crearea fiecarui copil (fork()) pentru fiecare client
 consuma mult timp de CPU
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Alternatlve de prolectare al modelulul
-cllent/server TCP
-' Server TCP —preforking; fara protectie pe acceptn
-i Serverul creaza un numar de process copil cand este pormt, si apoi
-acestia sunt gata sa serveasca clientil
+Alternatlve de pr0|ecta re al modelulul
+cl lent/server TCP
+' Server TCP — preforking; fara protectie pe accept()
+— Serverul creaza un numar de procese copil cand este pornit, si apoi
+acestia sunt gata sa serveasca clientii
 
-Aspects ‘ h[ :
+Aspecte ‘ { E
 
-' Data numarul d9 dienti eSle mai mare lecal numarul d9 procese COP"
-disporvibile, Clientul Va reSimti 0 "degradare" a raspunsuwi in raport cu
+' Daca numarul de clienti este mai mare ecat numarul de procese copil
+disponibile, clientul va resimti 0 "degradare" a raspunsului in raport cu
 factorul timp
 
-- Acest (imp de implementare merge pe sisteme ce an ‘11:52sz primitiva de
+' Acest timp de implementare merge pe sisteme ce au accept() primitiva de
 sistem
 
 ***************Ending Page***************
 
-
 ***************Beginning Page***************
 ***************page number:38**************
-Alternative de proiectare al modelului
+Alternative de proiecta re al modelului
 client/server TCP
-' Server TCP — preforking; cu hlocare pentru protectia uccepﬂ)
+' Server TCP — preforking; cu blocare pentru protectia accept()
 lmplementare:
 — Serverul creaza un numar de procese copil cand este pornit, si
 apoi acestia sunt gata sa serveasca clientii
-— Se foloseste un mecansim de blocare (e.g‘fcntl()) a apelului
-primitivei accepﬂ), si doar un singur proces la un moment dat
-va putea apela uccepﬂ); procesele ramase vor fi blocate pina
+— Se foloseste un mecansim de blocare (e.g.fcntl()) a apelului
+primitivei accept(), si doar un singur proces Ia un moment dat
+va putea apela accept(); procesele ramase vor fi blocate pina
 vor putea obtine accesul
 ' Exemplu: Apache (http://www.apache.org) foloseste tehnica de
 preforking
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Alternatlve de prolectare al modelulul
+Alternatlve de pr0|ecta re al modelulul
 cllent/server TCP
-- Server TCP — preforking; cu “transmiterea” socket-ului conectat
+' Server TCP — preforking; cu "transmiterea" socket-ului conectat
 lmplementare:
 
-- Serverul creaza un numar de procese copil cand este pornit, 5i
-apoi acestia sunt gata sa serveasca soketpairo
-cllentll \Q/
+' Serverul creaza un numar de procese copil cand este pornit, si
+ap0| acestla sunt gata sa serveasca . soketpair()
+clientii - /
 
-- Procesul parlnte este cel care “lg "“"
-apeleaza accept() si "transmite" .kim Wm
-socket-ul conectat Ia un copil My"
+' Procesul pa rinte este cel ca re W
 
-/
+- u - n rm 21 -———-'““W“ Pipe pin-em
+apeleaza accept() 5| transmlte
+socket-ul conectat la un copil
 
 Aspecte:
 
 Procesul parinte trebuie sa aiba evidenta actiunilor proceselor
-fii :> o complexitate mai mare a implementarii
+fii => o complexitate mai mare a implementarii
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-Alternative de proiectare al modelului
+Alternative de proiecta re al modelului
 client/server TCP
-- Server TCP — cate un thread pentru fiecare client
+' Server TCP — cate un thread pentru fiecare client
 lmplementare:
 
 Thread-ul principal este blocat la apelul lui accept() si de fiecare
 data cind este acceptat un client se creaza (pthread_create())
-un thread care i| va servi
+un thread care il va servi
 
 DEMO (Slide 28)
 Aspecte:
-Aceasta implementare este in general mai rapida deceit cea mai
+Aceasta implementare este in general mai rapida decat cea mai
 rapida versiune de server TCP preforked
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Alternative de proiectare al modelului
+Alternative de proiecta re al modelului
 client/server TCP
-- Server TCP — prethreuded; cu blocare pentru protectia accept"
+' Server TCP — prethreaded; cu blocare pentru protectia accept()
 lmplementare:
 — Serverul creaza un numar de thread-uri cand este pornit, si
 apoi acestea sunt gata sa serveasca clientii
-— Se foloseste un mecansim de blocare (e.g‘ mutex luck) a
-apelului primitivei ucceth, si doar un singur thread Ia un
-moment dat va apela uccepﬂ);
-Obs. Thread»urile nu vor fi blocate in apelul uccept()
-m
+— Se foloseste un mecansim de blocare (e.g. mutex lock) a
+apelului primitivei accept(), si doar un singur thread la un
+moment dat va apela accept();
+Obs. Thread-urile nu vor fi blocate in apelul accept()
+W
 —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-Alternative de proiectare al modelului
+Alternative de proiecta re al modelului
 client/server TCP
-' Server TCP — prethreuded; cu "transmiterea" socket-ului conectat
+' Server TCP — prethreaded; cu “transmiterea” socket-ului conectat
 lmplementare:
 Serverul creaza un numar de thread-uri cand este pornit, si apoi
 acestia sunt gata sa serveasca clientii
-Procesul parinte este cel care apeleaza urcepﬂ) si "transmite”
-socket-ul conectat la un thread disponibil
-Obs. Deoarece threadiurile si descriptorii sunt in cadrul aceluiasi
-proces ,"transmiterea" suckerului conectat inseamna de fapt ca
-thread-ul vizat 5a stie numarul descriptorului
+Procesul parinte este cel care apeleaza accept() si "transmite"
+socket-ul conectat Ia un thread disponibil
+Obs. Deoarece thread-urile si descriptorii sunt in cadrul aceluiasi
+proces ,"transmiterea" socket-ului conectat inseamna de fa pt ca
+thread-ul vizat sa stie numarul descriptorului
 —
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Alternatlve de prolectare al modelulul
-cllent/server TCPI Dlscutu
+Alternative de pr0|ecta re al modelulul
+cllent/server TCPl Discutll
 
-- Data serverul nu este foarte solicitat, varianta traditionala de server
-concurent ( unfork(] per client) este utilizabila
+° Daca serverul nu este foarte solicitat, varianta traditionala de server
+concurent ( unfork() per client) este utilizabila
 
-- Crearea unei multimi de procese copil (Eng. pool ofchildren) sau
-multimi de threadiuri (eng ponlofthreads) este mai eﬁcienta din
+° Crearea unei multimi de procese copil (eng. pool ofchildren) sau
+multimi de thread-uri (eng. pool of threads) este mai eficienta din
 punct de vedere al factorului timp; trebuie avut grija la monitorizarea
 numarului de procese libere, la cresterea sau descresterea acestui
-numar a.i. clientii 5a ﬁe serviti in mod dinamic
+numar a.i. clientii sa fie serviti in mod dinamic
 
-- Mecanismul prin care procese\e copil sau thread'urile pot apela
-nccept() este mai simplu si mai rapid decit cel in care thread-u!
-principal apeleaza acceptO si apoi “transmits” descriptorul proceselor
-cupil sau threadiurilun
+° Mecanismul prin care procesele copil sau thread-urile pot apela
+occept() este mai simplu si mai rapid decit cel in care thread-u!
+principal apeleaza occept() si apoi "transmite" descriptorul proceselor
+copil sau thread-urilor.
 
-. ApHcatiile ce folosesc thread-uri sunt in general mai rapide decat daca
+' Aplicatiile ce folosesc thread-uri sunt in general mai rapide decat daca
 utilizeaza procese, dar alegerea depinde de ce ofera SO sau de
 specificul problemei
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:44**************
 Rezumat
 
-' Primitive l/O - discutii
+' Primitive I/O - discutii
 
 ' Server concurent UDP
 
 ' TCP sau UDP — aspecte
 
-' lnstrumente
+~ Instrumente
 
 ' Alternative de proiectare si
 implementare al modelului
@@ -735,20 +776,21 @@ client/server TCP
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
 Blbllografle
 ' UNIX Network Programming: The sockets networking API, W. Richard
 Stevens, Bill Fenner, Andrew M. Rudoff
-~ The Illustrated Network: How TCP/IP Works in a Modern Network (The
+' The Illustrated Network: How TCP/IP Works in a l\/|odern Network (The
 Morgan Kaufmann Series in Networking), Walter Goralski
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:46**************
-‘*ﬁ
-Q
+\
 
 ***************Ending Page***************
 

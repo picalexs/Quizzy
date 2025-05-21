@@ -1,681 +1,669 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Comnutaﬁonal lmmductiou m Numbev
-Thenty
-
-m‘
-
-m1 .1‘ Mm WW Wu
+ALGEBRAIc FOUNDATIONS
+of COMPUTER SCIENCE
+\eciures by Ferucio Laurentiu Tiplea
+Computatlonal Introductlon to Number
+Theory
+Part |
+Prof.dr. Ferucio Laurentiu Tiplea
+Spring 2022
+Department of Computer Science
+“Alexandru loan Cuza" University of lasi
+|a$i 700506, Romania
+e-mail: feruciortipleaQuaicmo
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-—
-WW
+Outline
+Divisibility. Prime numbers
+The greatest common divisor
+Congruences
+Euler's totient function
+Reading and exercise guide
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-Divisihilily. Prime numbers
+Divisibility. Prime numbers
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-n- dlvlllnn mm
-mlmmnmm mhqeva 61mm “mm
-a w,»
-M { 7, MW.
-mm... 1m. u..-'..‘ 1mm»
-MWMWmHM-mnn mﬂmummmm
-W'MWHJQ \ “mgmm
-pm:
-s“ MW m “6151156 u
-‘n m lquzhly i Z a,‘ v m m MM lhlnvem a ‘5 and n.
-Mm a Wm m a“, u .5 “M m Wm. and , Wm
-m mzmda We Mn, Wm
-‘12:1va m Hm."
-mumm- —- ~-
+The division theorem
+The absolute value of an integer a, denoted la|, is defined by:
+‘ ‘ a7 if a Z O
+a :
+—a, otherwise.
+Theorem 1 (The Division Theorem)
+For any two integers a and b with b 75 O, there are unique integers q
+and r such that a : bq+ r andO g r < |b|.
+Proof.
+See textbook [1], page 157-158. U
+In the equality a I bq + r in the division theorem, a is called the
+dividend, b is called the divisor, q is called the quotient, and r is called
+the remainder. We usually write:
+q:a div b and r:a mod b
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 2 / 33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-thlbllhy um’-
-
-Mmm 2
-
-m hm “um v: z X 1M" >1
-
-A» ~ (EcsZKDZXL
-
-Mm“ z, mm m mm, mhnw M z
-
-w db M M Mu w rm 2 Ma r v a \. 1 dev/lxwv ,4 b w b
-
-u dwmbk b, 1 m bu . WWW,
-
-Rum 1
-
-111:0 rhmzbvlfbmadg:0
-
-Mm m4 1 7, n) xhenzanHrd = WWW,“
-mum‘- —_ .,..
+Divisibility relation
+Definition 2
+The binary relation | Q Z >< Z given by
+a|b (I) (Elc G Z)(b : ac) ,
+for any a, b € Z, is called the divisibility relation on Z.
+If a|b then we will say that a divides b, or a is a divisor/factor of b, or b
+is divisible by a, or b is a multiple of a.
+Remark 3
+lfa 7Q 0, then a|b iffb mod a : 0.
+If a|b and a §Z {*1,1,*b, b}, then a is called a proper divisor of b.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 3/33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-am pmpmh m dlvklhlllly
+Basic properties of divisibility
 
-‘am-m."
+Proposition 4
 
-m b {(5 TM
+Let a, b, c G Z. Then:
+1. 0 divides only 0,‘
+2. a divides 0 and a;
+3. 1 divides a;
+4. a|b iffaI — b;
+5. ifaIb and b|c, then aic;
+6. ifa|b + c and aib, then aic;
+7. if a|b, then ac|bc. Converse/y, ifc 75 0 and ac|bc, then a|b;
+8. ifa|b and a|c, then a|6b + *yc, for any 5,7 E Z;
+9. if a|b and b 31$ O, then |a| g \bI. Moreover, ifa is a proper divisor of
 
-1 :deavwﬁ
-
-2 zdmdrsﬂmd:
-
-z ‘dlvmrsa,
-
-A mlm b
-
-5 WW» MM:
-
-5 rfa\A+:zndi\b mm‘:
-
-1 m mmxhi: “Mm nunmxhn mm‘,
-
-a ma m1 1k, m M , 1: WWW c z
-
-s m and A é n, W m s m Mam '11 u z WWW a’
-
-b,m<nl(\l\<\b
-
-n. M 6 M M “we (n m xnlbnwk my W 155159)
-
-M.LM~K-—_ H.
+b, then 1 < |a| < |b|.
+The proof is left as an exercise (see also textbook [1], page 158-159).
+Prof.dr. F.L. Wee. um, R0 Algebraic Foundations of Cemnnnen Science - Computational Introduction to Nnnneen Theory Spring 2022 4 / 33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Pﬂma numb.“
-Dlﬁmmi
-A Mm‘ Wm n 2 z 5 curd m. w m w PWWHimIso/n
-m “a n MW,‘ mum QM» WU mwnuw
-WW.
-5/:ka
-1 1 5 1 11m wmemmvhers ‘,5 m MW.
-D-ﬁniwaﬂ
-m, in“ WM: w. m m1: i, “WWW
-WWWWW Mam» w“ ‘hmwmm
-hum; M time mm m m1 4
-Enrwlnl
-(n n:‘mm“mymmumuu a MMMM
-Mm,
+Prime numbers
+Definition 5
+A natural number n Z 2 is called prime if the only positive factors of n
+are 1 and n. A natural number n Z 2 that is not a prime is called
+composite.
+Example 6
+2, 3, 5, 7, 11 are prime numbers; 4, 6, 9 are composite.
+Definition 7
+Let a1, . . . , am € Z, Where m Z 2. We say that a17 . . ‘,am are co-prime
+or relatively prime, denoted (a1, . . . , am) I 1, if the only common
+factors of these numbers are 1 and —1.
+Example 8
+(O, 1) : 1 (O and 1 are co-prime) and (4,6,8) 75 1 (4, 6, and 8 are not
+co-prime).
+
+Profdr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 5/33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-ChilmﬂllllnnMBr-ﬂim numhln
-
-mm...-
-
-LM 1m€7,whev:m22 W u- ‘;m):lvlhmr¢»e
-
-,.. w. F z M m: 21",“ Z 1
-
-PM
-
-Secknbwkllj W use 1w u
-
-sum-m
-
-12~2 3+(417:11m;a(231y:1
-M.Lm~K-—_ .,..
+Characterization of co-prime numbers
+Theorem 9
+Let 31,. . . ,am € Z, where m Z 2. Then, (21, . . . , am) I 1 iff there are
+a1, . . .,am G Z such that 2:11 04,-a,- : 1.
+Proof.
+See textbook [1] page 159-160. U
+Example 10
+1-2+2-3+(—1)-7:1, and so (2,3,7): 1.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 6/33
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:9**************
-mizzuﬂlallnn MW numhln
+Characterization of co-prime numbers
 
-cwwu
+Corollary 11
 
-Luz), in Mmmwz m.“
+Let a1, . . . , am, b G Z, Where m Z 2. Then:
 
-1 m i7:1.fwanyv 1""th Mm
+1. if(b7 a,-) : 1, for any i, then (b,a1---am) : 1;
 
-2 m. MMWMWMHMM Irwin m
+2. if a1, . . . , am are pairwise co-prime and a,-|b, for any i, then
 
-i. mu,
+81 . . . amlb;
 
-1 m A; 1mm). In‘ mmbh I.
+3. if(b7 a1) I 1 and b\a1~--am, then b|a2 - ~ - am,‘
 
-A WWW,“ 54,. am 1w Mwwmrxuch ml m‘
+4. ifb is prime and bial . - . am, then there exists i such that b|a,-.
+Proof.
+See textbook [1] page 160-161. D
 
-lel
-
-gmmhm W mm u
-M.Lm~K-—_ H.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 7/33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-r». Inninmlnul mm."- qr IIIIIMU:
-
-I'hlmm n 1m Funﬂamunlil 1m... nlAnmm-lm)
-
-My naturilnumbvn z 2 m a! WM MW," m Aw
-Mp; p;
-
-.M k 2 1 ,, p. mdmwmmmm Wm. MAW
-
-Mirna/Ida‘ .. >n
-
-val
-
-SeelAubonkm we 151452 u
-
-My“ 1:
-
-~o 1w v12 21:16 2:11
-
-. \05:3 5 1
+The fundamental theorem of arithmetic
+Theorem 12 (The Fundamental Theorem of Arithmetic)
+Every natural number n Z 2 can be written unique/y in the form
+where k Z 1, p17 . . . , pk are distinct prime numbers written in increasing
+order, and e1, . . . , ek > O.
+Proof.
+See textbook [1] page 161-162. U
+Example 13
+- 4:229:32,12:22-3,36:22-32.
+0 105 I 3 ~ 5 - 7.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 S / 33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-n- ......... .......,.. mm...
-M... ..
-m. m .mmmy m... m
-W
-5.. m... m m. m2 u
-m... 15m» M We. m...
-Lnrvhv) : HPW .5 a pnmnmp< n“ Wm
-‘W
-.m i Z .
+The prime number theorem
+Theorem 14
+There are infinite/y many primes.
+Proof.
+See textbook [1] page 162. U
+Theorem 15 (The Prime Number Theorem)
+Let 7r(n) I l{p|p is a prime and p g n}|. Then,
+7t n
+lim Q I l.
+"*200 n
 m
-WM... q... m ... Q. m. m. ... m mm...
+I n n I
+We wrlte 7r(n) ~ If and say that 7r(n) and If are asymptotlcally
+n n n n
+equivalent.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 9/33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-V;luunfl(n)
-A W M6 w “w
-mm m1 m "r w’ m w
-*yim ‘ 25 m 122; 95512 1m 664579
-NW m», 1mm pm mus
-m, , w w”
-M“ Hm“ K mmwmn
-1w ‘ 1
-* m E'E
-> nn 1w-
-Z A 1n"
-_...U..~-—- .,.
+Values of 1r(n)
+A few values of 7r(n):
+n 101 102 103 104 105 106 107
+7r(n) 4 25 168 1229 9592 78496 664579
+How many lOO-digit primes are there?
+10100 1099
+10100 1 1099 z if i
+ﬂ ) 7“ ) 100m 10 99ln 10
+1099 1 1
+_ In 10 To _ ®
+> 0.39 - 1098
+z 4 ~ 1097
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 10/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-um mm
-NW W ‘5 10"’ Em 1,. a w mxevrslwinmmnsznd
-. W mm. Mm m w M.“ W, ‘5 5mm n no"
-- m Mm WWW‘ mvaL-mvs m m. Mm m ‘5 mm“
-n m“
-. w Wm “mm-and m h s 1n" wwndn w‘
-. W mul Mwammg m m WM m; m “My
-“MM it mmm m" HP m m"
-M hm! Mm m" w. m MS m is "mm mum
-M K'Yilwwhy w w "Wm, mm" w WWW "M
-mwmwm Wm; . ugmuy mm a“ 5m.“ Mm
-Wm. Wm say 2'““Dem-1mYwmzmszbmnwhnwnmd a!
-mm m bvuk W 1M 55L mmnw usrd m w, mu)
-"Mu-‘- —- w-
+Large numbers
+How large is 1097? Below are a few interesting estimates and
+comparisons:
+0 the number of cells in the human body is estimated at 1014;
+0 the number of neuronal connections in the human brain is estimated
+at 1014;
+o the universe is estimated to be 5- 1017 seconds old;
+o the total number of particles in the universe has been variously
+estimated at numbers from 1072 up t0 1087.
+Very large numbers often occur in fields such as mathematics, cosmology
+and cryptography. They are particularly important to cryptography where
+security of cryptosystems (ciphers) is usually based on solving problems
+which require, say, 2128 operations (which is about what would be
+required to break the 128-bit SSL commonly used in web browsers).
+Proftdrt F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 11 / 33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-TN vim‘ wlli
-m. .5 M knwm mm. Mam». WM mm m . m Wm
-\, M mm‘ m" m znmcm m M Enlvﬂhnn w m mvdun
-m a! mm
-m Uhm 5m 4m rm mu “Mm w, 5mm m“. m 1%:
-‘S 1 Wk muhnd m mm. m m. Mm
-\ \
-\ \ \ \
-\ \ \
-\
-m pm mum“ m ‘m. HP M; mama‘ W
-.....U..~- —- ~-
+The prime spiral
+There is no known formula for generating prime numbers in a row which
+is more efficient than the ancient sieve of Eratosthenes or the modern
+sieve of Atkin.
+The Ulam spiral (or prime spiral), discovered by Stanislaw Ulam in 1963,
+is a simple method of graphing the prime numbers.
+17 i i i *13
+5 i i 3
+l l l l
+19 i 2 11
+7 i i i
+The prime numbers tend to line up along diagonal lines!
+Profodr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 12/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-The greatest cummnn divisor
+The greatest common divisor
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-n- [mm nan-mm am.“
+The greatest common divisor
 
-mar-‘M 1r,
+Definition 16
 
-m» Ml mm,“ WM”: thlmneﬂznmmn
+Let a1, . . . , am € Z, not all zero, where m Z 2. The greatest common
 
-1'",than “mam” my“, ‘w -
+divisor of these numbers, denoted gcd(al, . . . , am) or (a1, . . . , am), is
 
-m \zvls‘ mlqev 4 M. M m, In m,
+the largest integer d such that d|a;, for all i.
 
-vanilim n
+Proposition 17
 
-W,‘ amszwmnm when/n21 TM
+Let 31,. . . , am E Z, not all zero, where m Z 2. Then:
 
-x w 1, mm)‘ an»
+1. (O,a1, . t .,am) : (31,...,am);
 
-2 (“Hm P'Wmedmalm =n
+2. (O, a1) : |a1|, provided that a1 75 0;
 
-1 In n) “1;.an WWMh/n
+3. (a1, a2) I (a2, a1 mod 32), provided that a2 75 0.
 
-Proof
+Proof.
 
-s<= unbwk m‘ um 15¢ u
-M.Lm~K-—_ .,..
+See textbook [1] page 164. U
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 13/33
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:17**************
-um, mun-um. mm w
+Linear combination of the gcd
 
-mm..."
+Theorem 18
 
-Lara], imézvmnum Wm”: M
+Let 31,. . . , am € Z, not all zero, Where m Z 2. Then,
+(31,...,am) :alal+-~-+amam
 
-m haw» Mm."
+for some a1, . . . ,am G Z.
 
-Msamem Mu
+Proof.
 
-pm:
+See textbook [1] page 164. U
 
-swwnbwklllvmw u
-~..LW“—_ w.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 14 / 33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-my...’ mum-1m. M n! w
-cww n
-Luz), MLMHHM Wm”: TM" Memuzlvon
-m, Z “M, Z b
-hum/unms m1 we, 1mm
-m»:
-SZMW m m. ass u
-El-VIUI: 20
-1 z‘ w Z 5 a“ 1mm; m z “we r2 17 Z 1.1‘va 5
-z h , 2, WZ M hm WM m z Mal/‘101] 1 M
-m AW a
-m “mm- —_ .,..
+Linear combination of the gcd
+Corollary 19
+Let 31,. . . , am € Z, not all zero, Where m Z 2. Then, the equation
+31X1+---+amxm:b
+has solutions in Z iff(al, . . . , am)\b.
+Proof.
+See textbook [1] page 165. U
+Example 20
+1. 2x + 3y : 5 has solutions in Z because (2,3) I 1 divides 5;
+2. 4x + 2y : 3 does not have solutions in Z because (4,2): 2 does
+not divide 3.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 15/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-r». lm Mm" mulllpk
-may-Mu
-1.“, M; WM: Yhe\aiﬂmmmnnmukwkuﬁlhesz
-Mm dzmmd mm mm’. m h
-. n w u m em’ m“ Mm m0
-- m. mu.“ my a > \1 54m m m rm in, MW
-Yhznrzm 11
-m, Dc Nwmmm m" w“ um b1
-pm:
-5<= mnbwk m‘ um 156 u
+The least common multiple
+Definition 21
+Let 31,. . . ,am € Z, Where m Z 2. The least common multiple of these
+numbers, denoted /cm(al, . . . , am) or [31, . . . , am], is
+o 0, if at least one of these numbers is 0;
+0 the smallest integer b > O such that a;|b, for all i, otherwise.
+Theorem 22
+Let a, b € N, not both zero. Then, ab I (a, b)[ai7 b].
+Proof.
+See textbook [1] page 166. U
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 16 / 33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-Thiudd-ulwhhm
-m Emma" “mm
-whnwrn‘ mMbmmdmwvimam an
-Len\b>ﬂzm
-,7, MW‘ MM,“
-m : Wm Orn~n
-M Z “My” ‘Nu/yr.
-,k, ham-M, M \1
-MM n1:)vln:b m"
-wwﬂumﬂmv: :vunw“
-~..LmM-—- m-
+The Euclidean algorithm
+The Euclidean Algorithm
+If a I 0 0r b I O, but not both zero, then (a, b) I max{|a|, |b|}.
+Let a > b > O and
+L1 Z r0671 + F1, O < r1 < r0
+r0 : r1q2 + r2, 0 < r2 < r1
+rn-2 : rn-lqn+rn> O<rn<rn—l
+rnil I rnqn+1+rn+1v rn+1:07
+where r21 : a 5i r0 : b. Then,
+('97 b) I (L17 r0) I (r0, r1) I I (rn,0) : rn
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 17/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-n- elm-l :lplﬁhm
-
-m
-
-Wm v, “Emmi, m...- Hum‘. nu)
-
-MW M, ,, W2 a» “mm m
-
-. m Mw afmmn in“ Wm’: by
-x WU b / M7 Algnmnmlmla b1 dnu m "M
-’ , Z a M b 5 Wm m mbﬂ/Mm mm
-. 1 :0 M
-
-1 a Z, m”!
-
-, we b, :M Summl Wm; u
-mumm- —_ .,..
+The Euclidean algorithm
+Algorithm 1: Computing gcd
+input : 87 b € Z not both 0; Theorem 23 (Lamé, 1844)
+output: gcd(a, b)' Let a Z b > 0 be integers. The
+b _ number of division steps performed by
+1 egmh-l b 0 d Algorithm 1 on (a, b) does not exceed
+2 w I e 75 0 5 times the number of decimal digits
+3 r :: a mod b; .
+In b.
+4 a :2 b;
+5 b :: r Proof.
+6 gcd(a, b) :2 L3‘; See textbook [1], page 168. U
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 18 / 33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-n- m-M mumm- Mm-
-m Emma 1mm m h: em mama w Mm . ‘m
-Mm.» um: m1 Wu m mm. “mm w unma-
-Eumkd MW "1"‘th
-rmmdmmmm 1mm“, b]:ua+1b m
-Mm“ m a m he mung .S Mm
--Y
-1 i Z bum, “ﬁrm
-z b : '1va wvn'mv,
-a ,. : an”: VFVFM
-M z Winn
-.....U..m.—_ -,.
+The extended Euclidean algorithm
+The Euclidean algorithm can be easily adapted to compute a linear
+combination of the gcd as well. The resulting algorithm is called the
+Extended Euclidean Algorithm.
+Given a and b there are 04 and 5 such that (a, b) I aa + [3b. The
+numbers a and 5 can be computed as follows:
+V_1 : (1, O )
+V0 : (0,1)
+1- 8 I bq1+r1 V1I V-1—CI1V0
+2- b I r1q2+r2 V2I V0-Q2V1
+3- r1 I r2613 + r3 V3 I V1 i Q3V2
+f7. rnI2 Z rnIlqn + rn Vn : VnI2 _ qn VnIl
+'1 + 1- 01-1 I rnqn+1
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 19/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-TM ullnM Euclldian .wm.
-4Algumhm z. Mm. “id m 1 ‘my mmm M w
-‘mm :abzﬁnnrbnmﬂ
-www.m(a “mu in <1“ M, b] m m
-1 m»
-1 v“ Z<| m
-, v, Zm n
-. “MW”
-. a Zim v Z, modb
-. Z Z a v Z,
-, v Z v"
-. w Z w
-. V v. Z v Z w,
-.0 my; ,1 Z m
-.. v Z v”
-mum“ —_ .,..
+The extended Euclidean algorithm
+Algorithm 2: Computing gcd and a linear combination of it
+input : a7 b € Z not both 0;
+output: gcd(a, b) and V I ((1,5) s.t. gcd(a7 b) I aa + 6b;
+1 begin
+3 V1 :: (O, 1);
+4 while b yé 0 do
+5 q::adivb,r::amodb;
+6 a :: b, b :: r;
+7 V :: V0;
+8 V0 I: V1;
+9 V1 I: V — qu
+10 gcd(a, b) :: |a|;
+11 V :: V0;
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 20/33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-um, Dian-ulna eqwllnlll
-n. mm mm ﬂlnmhm m be m w Mm m"
-Wm. m lmlav omm-R-wm
-‘m -, b , < z My. m, m m» I and A M n
-W" New inhmun m u t w Z 4 \Iw MS
-‘ Mn
-1 (WWW, ,> a.“ 1,
-, vrwlmm.“
-. ‘ U‘ :nxvﬁab)
-. , Z 1:‘
-1 1..
-- L MMCUGIHM'
-~..LWK-—- m-
+Linear Diophantine equations
+The extended Euclidean algorithm can be used to compute integer
+solutions to linear Diophantine equations:
+Algorithm 3: Computing solutions to linear Diophantine equations
+input : a7 b7 c E Z such that not both a and b are 0;
+output: integer solution to ax + by : c, if it has;
+1 begin
+2 compute gcd(a, b) :: oza + 5b;
+3 if gcd(a, b)|c then
+4 c’ :: c/gcd(a, b);
+5 x ;: ac’;
+6 y z: 6c’
+7 else
+8 L “no integer solutions”
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 21 / 33
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-congruences
+Congruences
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Wm
-
-mmmu
-
-let: b m1‘ Wamhmumvmmmm mvdermtd
-
-a:wbua:0m>dm \l my»
-
-sum-n
-
-“57an
-
-“15%,”
-
--3§2mm12
-
-.4151M4.HH1EMM
-
-mm“
-
-Umfl) ,hmzbmmwmmmqmm
-mumm-—- m-
+Congruences
+Definition 24
+Let a, b, m € Z. We say that a is congruent to b modulo m, denoted
+QEmbOI'QEmed m, if m|(a—b).
+Example 25
+o 6 E O mod 2.
+o —7 E 1 mod 2.
+0 3 5L5 2 mod 2.
+o —1121 mod —4and —1121 mod4.
+Remark 26
+lfmgéO, thenaEbmod m iffa mod mzbmod m.
+Profdr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 22/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-am pmpmh m mumm-
-‘am-m.‘ n
-m , A t A M‘ .7 = and r 1H = w “Mama! funnm MM
-“wwwmm m’.
-1 :m W WWW mam“ m,
-2 ma, mummw
-3 rhE/“Ayrzmd mm)*ezmh+l,zizimkrlv
-“E. Myandﬂil Em rm
-A A. ﬁx:qb<ind:vﬂ mmz:.b
-A: "gkwmm :1 MP. V»,
-.1 v/xgwmmnzl (hen-2,5
-a H hw.mm:,.m.:m b
-“Mamas, h Ms“. b
-51 (a: .> 3:” MM N'H WWW b
-m mm M M m‘; ‘m “mum ‘114*me
-mumm- —_ .,..
+Basic properties of congruences
+Proposition 27
+Let a, b7 c7 d7 m, m’ € Z and f : Z —> Z be a polynomial function with
+integer coefficients. Then:
+1. Em is an equivalence relation on Z,‘
+2. ifa Em b, then (a, m) : (b7 m);
+3. ifazmbsiczm d, then a-l-czmb-l-d, 8—CEmb—d,
+ac Em bd, and f(a) Em f(b),'
+4. 4.1 ifac Ema bc and c 75 O, then a Em b;
+4.2 ifac Em bc and cl I (m7 c), then a Em/d b;
+4.3 ifac Em bc and (m7 c) I 1, then a Em b;
+5. 5.1 ifa Emm/ b, then a Em b and a Em/ b;
+5.2 ifa Em b and a Em/ b, then a Ehmm/l b;
+5.3 ifa Em b, a Em/ b, and (m7 m’) : 1, then a Emm/ b.
+The proof is left as an exercise (see also textbook [1], page 172-173).
+Prof.dr. F.L. Tiplea, UAIC. RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 23/33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-n-uu- uum uﬂnllun new, m
-m z. ix m.‘ w a" Wmmms mduzeﬂ w E. W
-- [a], Mm de Yhzvdmv MW wrwﬁcvb-ny
-m Z n
-. mm n: \laxbmenmn: Wu Wm r“ h“
-"My demms .s :l
-. In, m 21 a‘ (mm 4m 11,‘) ha cucﬂy m Mm.
-Eurwl' u
-- 1. :(Wh) h:<l“\1-lllﬂ 1::“911P11IZIH
-lav-m 2!
-WeusuaV'ywmeLZWX min m.”
-‘m Hnl- w 1M lava/LY!" 21
-mum‘- —- w-
+Residue classes of integers modulo m
+Let Zm be the set of all equivalence classes induced by Em. Then:
+o [a]m : [a]2m, for any a G Z. Therefore, we may consider only
+m Z 0;
+o for any a, b € Z, if a 75 b then [a]0 75 [b]0. Therefore, ZO has as
+many elements as Z;
+0 for m Z 1, Zn, I {[O]m, . . . , [m — 11m} has exactly m elements.
+Example 28
+° Z1 : {[011}, Zz : {[0121112}, Z3 : {[0137 [113, [213}-
+Remark 29
+We usual/y write Zm I {0, 1, . . . , m — 1} instead of
+Zm : {[O]m, . . . , [m — 1]m}, for any m Z l.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 24/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-Auum- m IIIultlpllullo-I moduh m
-Mm». Inﬂmuvvl WWW gm Z m 1 m 7 n
-. a \ u [a v MW,“ Yb\na"rl1ucr=nun7
-. , b: p b)m¢4m WWW”;
-. 7, Z w 7 =1 mp4 m (my mm")
-rm my i a E gm
-szuvcvwlwm Mm I», Mm, Wm“
-. ‘ 1M m mum m4 mm,“
-- a4n:nn:a MW,
-n11 2 Mam
-. “11:0 Mm
-H H, ‘X “my wnuzn 1 7 b
-mum‘- —- ~-
+Addition and multiplication modulo m
+Define the following operations on Zm I {O,1,. .. ,m — 1}:
+o a + b : (a + b) mod m; (binary operation)
+0 a - b : (a- b) mod m; (binary operation)
+o —a : (m — a) mod m, (unary operation)
+for any a, b € Zm.
+These operations fulfill the following properties:
+0 + and - are associative and commutative;
+0 a-l-O:O+a:a, forany a;
+o a~1:1-a:a,foranya;
+0 a + (—a) : O, for any a.
+a + (—b) is usually written a — b.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 25/33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-lmm- mdulo ,.,
-- Mum ‘m mnduln m
-wk m 1M M h H7 Z n ‘m W 1 7, nah! mum
-Wm M a manic m m ‘5 mm!
-. mm“ Mn. Mm, m
-. Ewan,» .Mmbmwmm. Mm“
-‘5 5m", pelt“ M . Mum.“ M mm my
-- Luluiomimvm*0 mm-mnawmxml h'l
-. Mm’. Mm memw warw
-1 » 0
-mg yum Mmmmmhm Mu
-mumm- —- m-
+lnverses modulo m
+o Additive inverse modulo m.
+We have seen that a+ (-a) I O, for any a. —a is called the additive
+inverse of a modulo m (it is unique);
+0 Multiplicative inverse modulo m.
+0 Given a 6 Zm — {O} is there any b € Zm such that a- b I l? That
+is, does any a E Zm have a multiplicative inverse modulo m?
+0 Let us consider m : 6. There is no b E Z6 such that 2- b : 1.
+o Moreover, Z6 exhibits the following interesting property:
+2 - 3 : 0
+(the product of two non-zero numbers is zerol).
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 26/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-lmul- “duh m ".1 m! WP n1 mm
-Mam“. 1n
-1 C zm m a mnmpbcitrw mm Wm, m m, m1 1
-pm:
-Seemntwnkm m. m u
-m WWW. ‘m 0!: m" w M“ ‘S m“ m “my
-mam J ‘
-y" (I 15mm: m1 n Bah! melMuo/umum 1m w m
-m» a, W, Wm -
-e-m». u
-. 1:40»
-- 11>, "312“QO r' 414 Z; 5" :21 1'1 Z 15
-“'1 m‘ n" 11 157* 25
-mumm- —_ m.
+lnverses modulo m and the group of units
+Proposition 30
+a E Zm has a multiplicative inverse modulo m ifl‘(a7 m) I 1.
+Proof.
+See textbook [1], page 175. U
+The multiplicative inverse of a, when it exists, is unique and usually
+denoted ail.
+an I {a G ZmKa, m) I 1} is called the group of units of Zm or the
+group of units modulo m.
+Example 31
+o Z; I {O}.
+0 Z56 has 12 elements: 1’1 I 1, 3F1 I 9, 5’1 I 21, 7’1 I 15,
+11‘1 I 19, 17_1 I 23, 25_1 I 25.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 27/33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-wwxlvu mmuwumlmm
-n. mm mm ﬂlnmhm m be as“, used m MW
-manhcanvr Wm "Wm m
-—-|wm.. .- Cmvwmu mmkm M55
-W“ -m;|.w,rzm
-WUIMWM ,, i, "0:1
-my»
-1 (umlrmegﬂﬂirﬂl:ui41m
-, nwnm) m."
-l \ .1 mm.”
-> .1“
-¢ L i IMMW
-~..LW“—_ .,..
+Computing multiplicative inverses
+The extended Euclidean algorithm can be easily used to compute
+multiplicative inverses modulo m:
+Algorithm 4: Computing multiplicative inverses
+input :m Z 1 and a G Zm;
+output: a_1 modulo m, if (a, m) : 1;
+1 begin
+2 compute gcd(a7 m) :: aa + ﬁm;
+3 if gcd(a7 m) I l then
+4 l a_1 :: oz mod m
+5 else
+6 L “ail does not exist"
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 28/33
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:33**************
-Euler's lenient function
+Euler's totient function
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-elm‘- Int-hm (mm
+Euler’s totient function
 
-Eukvsmumﬂumnm “ml-m‘ Mm»
+Euler's totient function: $(m) I |Z*m| , for any m Z 1.
+Theorem 32
 
-Thimmﬂ
+1- ¢<1> : 1,-
 
-1 MHZ‘
+2. q5(p) : p — 1, for any prime p,‘
 
-z up: p 1 WWW“,
+3. ¢(ab) I ¢(a)¢(b), for any co-prime integers a7 b Z 1,-
 
-1 Blah):m(i]0[b) mwmmmugm “>1
+4. $(pe) I pe 1 p671, for any prime p and e > O,‘
 
-¢ WW]:P’*P’",Manywrmpand¢)u
+5. <15(n):(pf1 — pfl_1) - - ~ (ka — pzk_1), for any n Z 1, Where
 
-5 vi"):(»i‘*m‘"‘) “$7,741 funny/‘21 wme
-
-n: v.“ m“ ‘s w Vimrdewmpﬂsuw m
-
-PM
-
-swwwwl W mm u
-mumm-—_ .,..
+n I pfl - - - pzk is the prime decomposition of n.
+Proof.
+See textbook [1] page 176-177. U
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 29/33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-elm‘- Int-hm ("mm mmpln
-sum. 1:
-1 0m : ¢
-2 Um] Z m \31 Z n
-3 (m1 “(5 11» 16!
-Mm 1'
-. h ‘r my w Mm» am M w: ‘WWW 4r" .. MW
-- r: U hard m mm m Wm “WWW Ev 1m m»,
-(512M Mm pm 1;; 4m.“ Mm;
-- I: U hard m MM my ,r" .. w m I" W» demmmn
-m K m Mm
-m MM“- —_ -,..
+Euler’s totient function: examples
+Example 33
+1. q5(5) I 4.
+2. ¢(26) : (15(2 - 13) : 12.
+3. ¢(245) I ¢(5 - 72) : 168.
+Remark 34
+o It is easy to compute ¢(n) if the prime decomposition ofn is known.
+o lt is hard to compute the prime decomposition of large numbers
+(512-bit numbers (about 155 decimals) or larger).
+o lt is hard to compute ¢(n) if n is large and the prime decomposition
+ofn is not known.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 30 / 33
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-Eula’! mm".
-mm... 3515mm 1m]
-MM‘ m" ,.-\~»:,m¢m MMWMM m>:1
-pm:
-Seemnbonkm m. m u
-(mail-y :0 (mum Thu-am]
-mpmm, m“
-1 w E 1 mm P 1M any ‘maﬁa Mm h
-z rm,” WWW“
-val
-5!“qu m m u
-Emrwl' 11
-1159-51 m4 “mama: Mm
+Euler’s theorem
+Theorem 35 (Euler's Theorem)
+Let m Z 1. Then, 3915011) E 1 mod m, for any integer a with (a, m) : 1.
+Proof.
+See textbook [1] page 177. U
+Corollary 36 (Fermat's Theorem)
+Let p be a prime. Then:
+1. aP_1 E 1 mod p, for any integer a with p 1a;
+2. aP E a mod p, for any integer a.
+Proof.
+See textbook [1] page 177. U
+Example 37
+13594 E 1 mod 5 and 3168 E 1 mod 245.
+Prof.dr. F.L. Tiplea, UAIC, R0 Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 31 / 33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-Reading “a QxeKiSE guide
+Reading and exercise guide
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-k .5 mm Mwmmndm M W an In m WM Mm m vrd W"
-m m
-(bum mew:
-1 Pup 15141! 1m ‘mm [1]
-—
+Reading and exercise guide
+lt is highly recommended that you do all the exercises marked in red from
+the slides.
+Course readings:
+1. Pages 157-178 from textbook [1].
+Prof_dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 32 / 33
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Reference!
-m MWMW“ WWWMMMM, "mum
-MM.“- —- -,.
+[1] Ferucio Laurentiu Tiplea. Algebraic Foundations of Computer Science. “Alexandru loan Cuza"
+University Publishing House, la5i, Romania, second edition, 2021.
+Prof.dr. F.L. Tiplea, UAIC, RO Algebraic Foundations of Computer Science — Computational Introduction to Number Theory Spring 2022 33 / 33
 
 ***************Ending Page***************
 

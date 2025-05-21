@@ -1,2848 +1,3474 @@
 ***************Beginning Page***************
 ***************page number:1**************
-Logiré pcnh'u mfonmma r mm» m» (‘um
-Umvcmtatm Alcxandm loan Cum, lam
-Facultatva dc Inluxmauni
-Auul umw-rslwr 20207202!
+Logicé pentru informaticét - note de curs
+Universitatea Alexandru Ioan Cuza, Ia$i
+Facultatea de Informaticé
+Anul universitar 2020-2021
+Stefan Ciobétcé
+Andrei Arusoaie
+Rodica Condurache
+Cristian Masalagiu
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-Lwd W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-17mm WMWWWM 2 [\nlcdrmw drlmumm
+Logicé pentru informatici 2020-2021 Universitatea Alexandru 10cm Cuza
+Partea I - Logica propozitionalé 2 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-C uprms
+Cu rins
 
-1
+P
+[Elm 7
+9
+17
+27
+28
 
-WWW B
-'1
-mm \u
-w
-n
-u
-‘ 1
-WWW u
-u
-
-n
-as
-WWW lb
-w
-‘m
-n
-'n
-u
-11
-mm >4
-w
-11
-
-(
+3
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-Md W... mum Mm. WW... MM M M
-=5
-w
-w
-42
-1-1
-As
-1'»
-W "W 4»
-w u
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+35
+38
+mm 3s
+45
 51
-n
->-
-ii
-1m
-
-m
-
-m
-
-m
-m
-wh‘—\—'1, WWW 1»
-m1] n7
-mm m
-m as
-mm m
-17mm WWWWM 4 mm.“ (Mum.
+W54
+mm 67
+68
+m 69
+Parteal- Logica propozitionalé 4 Note de curs- delistat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-mm W... mum Mm. WW... mm 1m M
-u
-Wu.‘ mm u
-
-mm“ mm.» 1s
--
-w
-a;
-~
-
-17mm WMWWM ,, mum.“ ‘WWW
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+8.8 egturaintre si 73
+9'ez0ut1e1n og1capr0p0z1t10na 75
+9.1 auzecamutimiueiterai.................... 75
+9.6 omncetituine...........................82
+9.7 lemonstrarea va ioaittii si consecinte 0r semantice 0 osino rezo uti 83
+Partea I - Logica propozitionalé 5 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-Lwd W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-17mm WMWWWM ﬁ [\nlcdrmw drlmumm
+Logicé pentru informatici 2020-2021 Universitatea Alexandru 10cm Cuza
+Partea I - Logica propozitionalé 6 Note de curs - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:7**************
 Capitolul 1
-Introducere
-m Mm“
 
-1
+Int r0 ducere
+
+Dacé aritmetica este $tiinta care studiazé numerele $i operatiile cu nuineire7
+logica cstc $tiinta in care obiectul studiului cstc rcprozcntat dc propozz'tiz' si
+de operatii cu propozitii.
+
+De exemplu7 dacé in aritmeticé observém c5 suma a doué numere pare
+este un numﬁr par, in logicé am putea observa c5 disjunctia a doué propozitii
+adevérate este 0 propozitie adevératé.
+
+Logica se gaseste la intersectia ﬁlosoﬁei, matematicii si informaticii $i a
+cunoscut cea mai mare dezvoltare incepétnd cu anii 1950, datorité aplicatiilor
+numeroase in Informaticé.
+
+in acest curs, vom studia 1a nivel introductiv logica propozigﬁionald $i logica
+de 0sz'nul I.
+
+Logica propozitionalé este extrem de simplé, dar conceptele pe care 1e
+studiem7 metodele pe care le invétém si problemele pe care 1e intétlnim in
+logica propozitionalé se pot generaliza 1a alte logici mai complexe. De aseme-
+nea7 logica propozitionalé corespunde in mod intiin organizérii interne 1a nivel
+abstract a calculatoarelor, in sensul in care circuitele electronice se pot mod-
+ela ca formule din logica propozitionali. Logica propozitionalé are o teorie
+bogaté $i interesanté din punct de vedere matematic (exemple: teorema de
+compactitate7 teorema de interpolare a lui Craig). Problema satisﬁabz'litdtii
+pentru logica propozitionalﬁ are multe aplicatii in informaticé. Este deosebit
+de importanté atéit din punct de vedere teoretic (ﬁind problema canonici NP-
+completé) cét Si practic (cu aplicatii in veriﬁcarea programelor, in veriﬁcarea
+circuitelor, in optimizare combinatorialé 5a.).
+
+Logica de ordinul I este 0 extensie a logicii propozitionale $i are de aseme-
+nea aplicatii numeroase in informaticé, dar 5i in matematicé. De exemplu,
+toaté matematica pe care ati invétat-o in gimnaziu/liceu se bazeazi pe 0 asa
+numité teorie din logica de ordinul I numité ZFC (teoria ZermeloiFraenkel
+a multimilor, impreuné cu axioma alegerii i Axiom 0f Choice). in Infor-
+
+7
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-mud M... mlmmlnrl zuzuznzl "mm. Ainnmlm 1m M
-mm Wm. m 1w". (k m...‘ | .w m mm mmm. at
-“mm 1,. “(IN-(NWWk, m vcniklumnmunumahlniwlumﬂm
-“ml-Wm“, . nth-mm mm mm‘ (“cm-WIN‘ mam.”
-m1. mm) WWW“ in MM hmmkwwmmw Inhzmiunnnldr
-"WWW W. “MM m
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+maticé, aplicapii ale logicii de ordinul I apar in domeniul complexitémi de-
+scriptive, in baze de date relationale, in veriﬁcarea automaté a hardware-ului
+$1 software-ului, $.a. De asernenea, rnulte alto logici (do exemplu, logicile do or-
+din superior) au aplicatii in teoria limbajelor de prograrnare7 in fundamentele
+maternaticii, teoria tipurilor etc.
 
-Ymu 1' HQ“ WWW.“ n [\nzcdn m An m.‘ mm
+Partea I - Logica propozitionalé 8 Note de ours - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
 Capitolul 2
-Logica propozitiunalé
-informal?!
-2,1 Pwpoziﬁi
-k 1 \ 17 I Wm. WM ,m
-1 m:MWWWM H
-w
+L ' ' t ' lv
+
+oglca pr0p021910na a
+informalii
+Logica propozigfionala“ este logica pronozitiilor, conectate intre ele prin consc-
+tom' logicz' cum ar ﬁ sau, 52' $i non. In aceast capitol7 v01n trece prin bazele
+logicii propoziﬁionale.
+2.1 Propozitii
+O propozitie este 0 aﬁrrnatie care este sau adevératé, sau falsé. Iaté céteva
+exemple de propozitii:
+
+1. Port 0 cdmaga“ albastrd;
+
+2. Tu deliiz' un laptop 52' 0 tabletd, dar‘ nu un telefon intelz'gent;
+
+3. 2 —|— 2 : 4 (Doz' $2' cu doz' fac patru);
+
+4.1 + 1 : 1 (Unu plus unu este 1);
+
+5.1+1 75 1 (Una cu unu nufac 1);
+
+6. Daca 1 + 1 I 1, atunci Pdmdntul este plat;
+
+7. Toate numerals naturale sunt intregz';
+
+8. Toate numere rationale sunt intregi.
+
+Iaté céteva exemple de expresii care nu sunt propoziigii:
+
+1. R0$u $2' negru (nu este 0 aﬁrmatie);
+
+9
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-mud W". mm.“ zuzuznzl "mm. Mum 1m M
+Logica pentru informatica 2020-2021 Universitatea Alexandra I oan Cuza
 
-1 "WWW-mm
+2. 1r (nu este o aﬁrrnaﬁie);
 
-s ,>1(mm.Mndmcmdemmm m-mmmm"
+3. Ploud? (intrebare, nu aﬁrmatie);
 
-m". , 0m... u P'VDMUKI
+4. Pleacd/ (ex<:larna’gie7 nu aﬁrmapie);
 
-n MM WW rﬂr M (w. u“ a “Wm M WWW‘
+5. x > 7 (aici avern un predicat care depinde de 5r; dupa ce ﬁxarn o valoare
+pentru x, obtinem o propozipie);
 
-CHM.“ W..m...m.. MMMM m WM“ m ‘Mm
-.11 lwzezlnn "m. a “e mm’ m mm... mm. (k w.“
-d. mm m: .Mmmml (In mm.” MMMM “mm.
-M mmm“ “mammal w umdlmlnbc ‘.Mmm. MW
-mm. We] m mm. 1h! MM“ mum 111mm m, WWW
-Wm rum d D “Mme me WWW m w mm u
-mm“ .10 W. mums
-2.2 Pmpumii ntomice
+6. Aceastd aﬁrmaifz'e este falsd. (de$i este 0 aﬁrrnatie, nu este propozitie7
+deoarece nu este sau adevarata sau falsa: daca ar ﬁ adevarata, atunoi
+ar ﬁ si falsa 5i invers).
 
-1 PmL a :0",an Miami
+Gateodata nu este foarte clar daca o aﬁrrnafsie este propozitie cu adevarat7
+sau nu este foarte Clara valoarea ei de adevar. De exemplu, sunteni de acord
+ca zdpada este albd in general, dar la fel de bine se poate susfuine $i contrariul:
+de exemplu, exista Zapada neagra (pe strada in @érile subdezvoltate in timpul
+iernii)7 astfel incat valoarea de adevar a afirrnatiei zdpada este albd este pusa
+in discutie. Faptul ca o aﬁrmagie este propozigie sau nu este Inai rnult o
+problema de logica ﬁlosoﬁca.
 
-1 n “Mum”
+2.2 Propozitii atomice
+Unele propozinii sunt atomice, in sensul in care nu pot fl descornpuse in
+propozi§ii rnai rnici:
 
-u IvIZHDManKIMWmI
-2,3 Conjunccii
-We wwnmu m WM 1|.“ .M. W. m “Hm-1.. umpmm-
-RM 1M .L m m» Mm. m MW dun alum 91mm .. a“, M
-WM w" mm 1k m, M M M WM. ; h. MW w
-M “mm ., mm“. mm v ., V ,. “We a WWW
-(Mﬂweha km ; n w
+1. Port 0 cdmarsd albastrd;
 
-()zuunumemeulevinliup‘)amt!!!Mlnwmpmvenummmmue
-m mm“. WM.“ Aland Nomi M ,1. M, Mm on mmmu. M
-1m WW. .Mmmﬂ‘ ,1 mm», M. mam m “Mm. Kn
-WM... .m. mm.“ R m“ Mm m.“ WNW me hm
-mm um. WWW.“ m [\nzcdn m db Mu mm.
+2. Tu deifii un laptop;
+
+3. 2 + 2 I 4 (Doz' 52' cu doz' fac patru).
+
+2.3 Conjunctii
+
+Unele propozitii sunt cornpuse din altele rnai mici. De exemplu, propozifuia
+afard ploud 5i eu sunt supdmt este compusa din afard ploud 5i din sunt
+supdrat, legato intro ele prin $21 Daca doua propozifcii7 4p $i respectiv 1/1,
+sunt legato printr-un 52', propozitia rezultata7 4p 52' w, se numeote o conjunctie
+(conjunctia luz' <p 52' d1).
+
+O conjunctie este adevarata daca arnbele parti componente sunt adevarate.
+De exemplu7 propozitia afard ploud 5i eu sum‘ supdmt este adevarata daoa
+atat propozitia afard ploud cat oi propozitia sunt supdmt sunt adevarate. In
+particular, din moment ce nu sunt suparat7 aceasta conjuncpie este falsa.
+Partea I - Logica propozitionala 10 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-mud W". mm.“ zuzuznzl "mm. Mum 1m M
-mm. ‘Ir-"mm a” a F Wm me d: WW mum“; W
-pilmkruvmpvmmcwm n/mwh. g Wm AW“ Mm.‘
-m hm: mmmeumhw.“ M,
+Logica pentru informatica 2020-2021 Universitatea Alexandra I oan Cuza
+O conjunctie nu contine neaparat cuvantul .52‘ in mod explicit. De exemplu,
 
-Ewlvihul 1 cw Mb Mm." w WWW W m@.\+..v.r.\
-I. “va
+propozitia afard ploud, claT eu am 0 umbreld este de asemenea 0 conjunctie, iar
 
-mm... 1. [Mn mm ,1. H WW,” m“ N "mm '1' H
-2.4 Disjuucgii
+partile ei componente sunt afard ploud si eu am 0 umbreld. Aceaste propozitii
 
-Dun-MM,» MM“. Huemmvkluhu m Dr {>1 “1mm”
-m m Mm N, n MW . WNW WWW. M‘ mum
-mm“... l um WW WM”, m dam-mun w mm. w
-“pm-mm 4m» MMMMWWMH.” MMMWM
-1mm mm m "I: don! yam WWW.“ W ,a m Wm ..
-mm“ n Imam m In“?
+sunt legate prin conjunctia adversativa dart
 
-0(lupvmmmemevtmidnclw! m. “Mm mm “WNW-“e
-me "Mm; Dc mum.‘ MW 1 > S a > 1 m mm“
-Wm! > 7 me “M...
+Exercitiul 1. Gdsitl pdrtlle componente ale conjunctz'el ma joc acasa 5i invat
 
-Arm "m, >~| WWI“ ( "WW MW ,. m! WM m
-mum. WWMM“..\ m m: MW m Mm», W.» m“
-rm.‘ m. “uh M “Mm mum. (m ‘KM WW m ﬁr
-Mm WWW. m,‘ will!)
+1a scoala.
 
-mm... 5. M M“ MM,“ y- ‘ 1m ,m 1" m J» mm M1
-v M w
+Exercitiul 2. Dali un exemplu de 0 conjunclle falsd .52‘ un exemplu de 0
 
-2.5 Implicam
+conjuncgfle adevdratd.
 
-1,":kamnmp-IMMM. dnniv MW Pmylnunnvwmmm
-mm um. WWW.“ n [\nzcdn m db Mu mm.
+2.4 Disjunctii
+
+Dlsjunctllle sunt propozitii legate intre ele prin sau. De exemplu, afard ploud
+
+sau sunt supdmt este 0 disjunctie a propozitiilor afard ploud si sunt supdmt.
+
+Exercitiul 3. Gdsltz' pdrllle componente ale disjuncllei Voi curnpara un lap-
+
+top sau 0 tableta. Atemfle! Cele cloud pdrgf'l componente trebule 5d ﬁe propozltll
+
+(anumlte cum'nte din cele cloud pdrll componente pot sci ﬁe lmpllclte .52‘ in
+
+conseclntd sd nu apard in text).
+
+O disjunctie este adevarata daca cel putin una din partile sale componente
+este adevarata. De exeniplu7 disjunctia 7 > 8 sau 8 > 7 este adevairata7
+deoarece 8 > 7 este adevarata.
+
+Acest inteles a1 disjunctiilor se nume$te sau lncluslv 3i este standard in
+Inatematica. Cateodata cuvantul sau este folosit in limbaj natural in sensul
+de sau emelusz'v. De exemplu, in propozitia albul sAau negrul cdgtlgd intr-un
+joe de go7 cuvantul sau are inteles de sau excluslv. Intelesul este ca sau albul
+mega, sau negrul, dar nu amandoi simultan (este exclusa optiunea sa ﬁe
+amnele adevarate in acelagi timp).
+
+In continuare, prin disjunctie vorn intelege sau lncluslv (interpretarea stan-
+dard in matematica).
+
+Exercitiul 4. Dali un exemplu de 0 disjunclie falsd 52' un exemplu de 0
+dlsjunctle adevdratd.
+
+Exercitiul 5. Cdnd este disjunclia <p sau 1/1 falsd (in functle de valom'le luz'
+s0 w‘ 1/1)?
+
+2.5 Implicatii
+
+Implicatllle sunt propozitii de forma dacd cp atuncl w. Propozitia 4p se numeste
+antecedent a1 implicatiei, iar propozitia 1/1 se nume$te consecvent (sau eon-
+cluzz'e) a1 implicatiei.
+
+Partea I - Logica propozitionala 11 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-mud W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-
-\v,. mm“ (k .mplmt M M lnv M hm m Z MM “Z
-mm.“ Z" m In Lam w “chm-W w ., WM" cm m:
-u m.,.|.W>MMMA/mw o ".th W M MW mm durum
-Iwwlmmluu minuudu<mv<mnllﬂ m m s‘. WIN.“ mm‘ m
-1M,“ MM M am u Wm MW MM“ M 1m M MM
-m .1 wh'lnw. m mwlmwwl W air W. (“WNW m WW A“,
-WWW m
-
-lmdwml W mm, mm»dwmnmmmmmm ‘kw-“mm
-i mmmmv Wmh W um‘ w m “Mum w‘ n Mm dz
-"WWW Wm 1P MW. 1,. W.“ vk n m u I’. Wm. M m a‘ rim!‘
-WM“ w. h" in ‘Wm m v WW‘ WWW ~- W ,, Mumm-
-Wmvw. WWW “Z “*th1mm“, 1 Mm.“ Ah’
-Mm.» mm A» WHMZWAM ml m M, mm, 4, Mm
-m M W. W I, W 1.. MW“, LIP 1, en 1.‘ .u. mu. W, "Mm
-w mm... M. Mm“ mm mum M Z» dmm ,mMm. m.
-... Wm dZ mum/Ilium mm Ar n, WM“ mm“, M “mm
-1m MW Mm 1 . 1 Z ‘ m. .. m. m MM mmmm
-
-yumhm Mud». h. WWW Z MM mm, WW». w-
-“..M, ulna: M M “mum WM m. ‘\e m um “W.- ,4, WM
-MW”. (mmmknml A (“"an m. Z .Z mum dr "Mum,
-mm“ m MM MN ‘l MM,“ mm“ m ‘MM-W m nmynﬂ m
-Mm] mu lunhllu] mum Lu m. \mn-nl). n.‘ “mnmmm
-“mm 1m‘ yumknl m WM,“ m mm“)
-
-h:ylnmruhl.nuFwy/am-Mmpmminmuleph! MM 'Zhﬂzinld
-mm". mmfmmmnul "Mm m, m Z m.“ Muir-n “Mm
-lmxslrmul Me hh
-5mm.“ n cm my WW a W... ml’ WW0», ‘M4121 1 Z 4
-w." Pam“: Z“ pm u M ‘Z1 Z a‘ awn“ mm.“ W "Mi
-
-“Mann-(mil . WWW 11qu “m wdvnmrlndnm mm...“
-“Z ukvkr A‘. nmedemuhu Z m mummy". w .. arm mm.“ 1..
-“mm nix] (k "M.
-
-v .\ (WM-mm.»
-
-1,1” m, “Mm
-
-1,1. adzuiml mm
-“Mm 1,,“ m
-nmmi MM mm‘
-
-Ummuml MM“ M‘ d Inhelul (k MM. (k m. W m WM
-“WWW ImzudnLi . Mm“ Sunwu m. W...“ (k lounl d M
-mm. mumd m "M. "W Akle‘ m vanlml Mm m "M,
-1 “m Ink/nmrmrvmlumL manna’ mlrmmdvmhwsbemmvilnﬁ In
-17mm Mgmpmwnmm}. u “,me dnlmumm
+Logica pentru informatica 2020-2021 Universitatea Alexandra I oan Cuza
+Un exemplu de implicatie este dacd tree la Logicd, dau 0 petrecere. An-
+tecedentul este tree la Logicd7 iar concluzia este dau 0 pretrecere. cand este
+0 implicatie adevarata/falsa? O implicatie este falsa daca $1 nurnai daca an-
+tecedentul este adevarat, dar consecventul este fals. sa presupunem ca tree la
+Logica $1 ca totu$i nu dau 0 petrecere. Atunci implicatia dacd tree la Logicd,
+dau 0 petrecere, in ansarnblul sau, este falsa (antecedentul este adevarat, dar
+consecventul fals).
+lntelesul unei implicatii merita 0 discutie mai arnanuntita7 deoarece poate
+ﬁ contraintuitiv. Implicatiile, aga cum apar in maternatica7 pot ﬁ diferite de
+implicatiile pe care le folosirn in viata de Zi cu Zi. in viata de Zi cu zi, cand
+spunern dacd tree la logicd, dau 0 petrecere, intelegern ca avern 0 legatura de
+cauzalitate intre faptul de a trece la Logica $i faptul de a da 0 petrecere. Alte
+exemple de astfel de legatura de cauzalitate: dacd am bani, cumpdr 0 ma5z'nd
+sau dacd md ajutz', t6 ajut. in limbajul de Zi cu Zi, nu ne-arn gandi niciodata
+sa conectarn doua propozitii printr-o implicatie daca cele doua propozitii nu
+au legatura de cauzalitate intre ele. De exemplu, propozitia dacd pdmdntul
+este rotund, atunci 2 + 2 I 4 nu ar avea sens (de$i este adevarata).
+Implicatia folosita in matematica se numeste implicatie materiald. Val-
+oarea de adevar a unei implicatii depinde doar de valorile de adevar ale partilor
+componente (antecedentul si consecventul)7 nu 5i cle legatura de cauzalitate
+dintre ele. Acest inteles al implicatiei materiale nu corespunde tot timpul cu
+intelesul din lirnbajul natural (e.g., limba romana), dar practica arata ca este
+singurul inteles rezonabil in matematica (si informatica).
+in particular, atat propozitia dacd pdmdntul este plat, atunci 2+2z5, cat $1
+propozitia dacci pdmdntul este plat, atunci 2 + 2 I 4 sunt adevarate, deoarece
+antecedentul este fals.
+Exercitiul 6. Care sunt valom'le de adevdr ale propozz'tiz'lor daca 2 + 2 I 4,
+atunci Pamantul este plat 5i daca 2 + 2 I 57 atunci Parnantul este plat?
+Valoarea de adevar a implicatiei dacd 30, atunci 1b depinde doar de valorile
+de adevar ale antecedentului, 30, si consecventului7 11), $i este prezentata in
+urrnatorul tabel de adevar:
+4,0 @[1 daca 4,07 atunci 1/1
+fals fals adevdrat
+fals adevdmt adevdmt
+adevdmt fals fals
+adevdmt adevdmt adevdrat
+Urrnatorul exemplu arata ca tabelul de adevar de rnai sus este singura
+intrepretare rezonabila a implicatiei. Sunteti cu siguranta de acord ca orice
+nurnar natural este nurnar intreg. Altfel spus, propozitia pentru om'ce numdr
+x, dacd a: este numdr natural, atuncz' m este numdr intreg este adevarata. in
+Partea I - Logica propozitionala 12 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-1.1.111 11.11....1111111111 11111111. 111.1111... 11.1.... 1..... r1.»
-1111111111 .11. 1111 .1111 11 111111111111 1111.11.11 11. 11111111111111.1111
-1 Z Z11. 1 Z 1111 1 Z1111...11111111111111.1111... .1111 1.111111
-111.111.11.111. 1.1.11.1... 1111 Z11 .... .1..... 1.1.11 11.1.1 Z111
-1.1 1111.11.11.11 11111111111111.1111... 1.11.1.1 1.11 1.1.1.111...
-1111.11.11. .1.....1... 1.1.1.11 .111 1.1.1 11111 . 11.. 11.11.111.111
-.111 1111.11.11 111.1 1.11... 1.11.1111... 11.11.11.111 11.11.1111 1. 1 .1 1 1.11
-1.1.11.1... 111111.11 .11 111. .11 11111.1 1.1111... 111111111. 1. 1.1.1.11
-11 c.1111w1111111111111111 1.1.1.1111. 111111 11.11 .1 .1.1111.~..1111
-1 111 111.111.1111 1.1.11 1111.. 1.11.1 1. 111111.111 111111. 1111....
-1 .1 Z 1 111.111.111.111. 1. 2 Z 1 .... .11111,1.1..1111.1..1.1.1 Z 1
-1.11.1
-111.111.111.111...1.1111..111.1.11111.11.11.11.1 111.111.1111 1.11.11.11.11.
-.11 1. 1...... ... 1,111.1 . 11111111111111 ~11 1111111....111111111 1.1
-1111.11.11.11111111-1.1.1 ... 1.. 1.,1.
-11111.11 1.1.1.1.111..11~.11 1.1.1.... 1.11.11... .... 1.1.1....
-..., 1. 1.11111 .... 1...... 11.1.1111. ...1 ... 1. 1.....
-...1.-1.. 1.1.111... ...1. 1.... .... 1.1 1.. 1.1.11.
-11.11.11.111 111.111.111.111... 11111111111111. 1111.11.11 1.111.111 .1111
-1.1.111 11 1.11.111... 1111.1 1111.... 11.11111 11 1111.11.11 11.11.
-11.1. 11.... 1. 1.1.1.1 11.1.1111 1 1111.11.11. 1.11 11.11 1. .11 1.
-11111 1.1.1.1 111.111.111.11.11.1111> 111111.111.111.111.11.11111.1...
-2.5 Negaﬁile
-0 1.111.111.1111... 1.. 1.11 1.1111111 .1 1 111.11 1. .1.....11 1. .11 .1
-11.1.1.1 11.1111... .1 1111111111... .1 11.1... 1.1111111... 111.111.... 1111.1
-11111.1... 11.11.1111 1 11111.1. 1.1.. 1111111.. 11.111.11.11 .111... .1. 1.11.11
-.1 1111111.. 1 1.. 11.11.11.111. 111.11.111.11. 111....11111.11111..1-11
-1.11. .. 111. 1.1.1.11 1. ...1.. 11111111111111
-“...1.... 1. 111 .. 11.111 11 1 111111111. 1111 1... 111...... .111. 1
-11.11.11 1.111. 11.111.111.11 11 1111.111... 11 111.1 1.1.1
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+particular veti ﬁ de acord 6:1 propozitja este adevératé in cazurile particulate
+:c I —107 w I 10 $1 a: I 1.2 (din moment ce este vorba despre orlce numdr :10).
+
+Obfpinem cazurile particulate dacd —10 este numar natural, atuncl —10
+este numar intreg, daca“ 10 este numdr natural, atuncz' 10 este numar intreg $1
+daca 1.2 este numar natural, atunci 1.2 este numa'r intreg., care trebuie toate
+sé ﬁe adevérate. Aceste cazuri particulare exempliﬁcé réndurile 2, 4 3i 1 ale
+tabelului de adevér de mai sus (de oloicei7 studentii nu au incredere in réndul
+2). Cét despre a treia linia, o propozitie de forma daca 4p, atuncl 1p, unde
+4p este adevératé, dar 1b este falsé, nu poate ﬁ decét falsé. Altfel, ar trebui
+s51 acceptérn ca ﬁind adevérate propozitii cum ar ﬁ Dacd 2 + 2 I 4, atuncz'
+2 + 2 : 5. (antececlentul7 2 + 2 : 47 este adevérat, consecventul, 2 + 2 : 5,
+este fals).
+
+Unele implicapii pot ﬁ relativ diﬁcil de identiﬁcat. De exernplu7 in propozitia
+trec la Loglcd doar dacd may, antecedentul este (impotriva aparentelor) trec
+la L0gica, iar consecventul este inudl. Atentie! Propozitia de Inai sus nu are
+acela$i inteles cu dacd inudl, tree la Logica.
+
+Atentie! in propoziﬂciile de forma trec la Loglcd doar dacd inuat sau
+tree la Loglcd numaz' claca' inual, antecedentul este trec la Logicd,
+iar consecventul este may Aceste doué propozitii nu au acela$i
+inﬁeles cu propozitia clacd inval, atuncl trec la Logica.
+
+Implicatiile in limba roméné pot céteodaté s5 nu foloseascé $ab10nu1 claca
+...atuncz' De exemplu, sensul cel mai rezonabil a1 propozipiei trec la
+Loglcd 5au renunt la facultate (aparent 0 disjuncpie), este (:51 dacd nu tree la
+Loglcd, renunl la facultate (implicapie). Din fericire7 cele doué propoziﬁii sunt
+echivalente7 intr-un sens pe care il vom studia in cursurile urmétoare.
+
+2.6 Negatiile
+
+O propozitie de forma nu este adeuarat ca 4p (sau pur $1 simplu nu g0) se
+nume$te negagfla lui 4p. De exemplu7 nu ploud este negatia propozifuiei ploud.
+Valoarea de adevér a negatiei unei propozitji 30 este opusul valorii de adevér
+a1 propozifuiei 30. in momentul in care scriu acest text, propozipia ploua este
+fallsél7 5i deci propozifuia nu ploud este adevératé.
+
+Exercitiul 7. Dali un exemplu de 0 propozlgﬁle falsd care f0l056$te atat 0
+negatz'e, cat §i 0 conjuncgfle.
+
+Partea I - Logica propozitionalé 13 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-Lwd. W... ...1...........1 2.121.111. 11W“... AW“... 1...... r...
-2.1 Echivaleule
+Logica pentru informatica 2020-2021 Universitatea Alexandra I oan Gaza
+2.7 Echivalente
 
-11 pioymum‘ .1. 1U...» ; .1... .1 1...... .1... .1 M .......M. 5......15... V...
-“.11....v1m... u ....1d.1............ ... W....1..11>... e.1. ....1.... .1...
-m1 .1. ... m... W... .1. n.1.....1.......1. MM W. .......1...1.........
+O propozitie de forma cp daca 52' namai daca 1p se numeste echwalenta sau
+dubla implicatie. O astfel de propozitie7 in ansamblul sau, este adevarata daca
+<p si 1/) au aceeasi valoare de adevar (ambele false sau ambele adevarate).
 
-D. WW... .1. .1n..........1 ... m. ..~.... .W .... NW...“ M... .1...
-1.M.............,.......1....... 1) ,.1 11mm»......1...u....1...
-m. <. mm... .W W... 1.1..
-mum.“ 1 r.“ .... mhmra .1. .1...“ 1. mm” .1.....1..1 -. M.
-n.1,... .1... .. ......... .1... 1.... ......... p. .1...
+De exemplu, in momentul in care scriu acest text7 propozitia ploaa daca
+5i namaz' daca m'nge este adevarata. De ce? Deoarece atat propozitia ploud
+cat si propozitia ninge sunt false.
 
-u....~.............. .1....-.......1....1.............c ...............w..1....1-1......
-v .1..<111........¢....1.1 mummle 1...... “11......1. ...
+Exercitiul 8. Care este valoarea de adeodr a propozz'tiei Numarul 7 este
+impar daca si numai daca 7 este numar prim?
 
-.- W .. .. .- .W. .W .1
-......1........ 1......1 WM... 1.... .1.
-1W“... ,- 1.....QWW ... 1,1,. .~ .1...» 1.11.....11....1...<..,....1
-I'wwzﬂug W .1". .1 u.1.,.1.-.'.....1~.., .1.” .1... . .. 1.. .1... .1
-W.‘ .~. .......1.... m. .1... ".1. 1.. _.......... WW... 1a ......1..ﬂ...
-2.5 Conectorii lngici
-1,. .1..1.,.....11..1 w... .W W...“ 1-1....1.......H... 1. 1......1. W...
+Echivalentele sunt7 din punct de vedere semantic7 conjunctia a doua implicatii:
+<p daca 52' numaz' daca 1Z1 transmite aceeasi informatie cu
 
-Ammﬂ o W111... 1... .11.”...1mr. .1....,....V..111m1 "1w...
-1.1. “'11.... ... "up"... ..... ...... mm. .1. muwm 1.4... 1......1... 1....
-..._ n. Wm... WW... W W Mm. .... .. m... 1.1,, c... u
-WW..- .wm 11.. w.......~M.1......1.11
+90 daca 1/1 52' 4p namaz' daca a).
 
-1...... WM... .... .1... m. my...“ .1...“ .....V.. “1.1 1...... .1“.
-1W... 11. mu»... ".11.... .1. ...1.....11 .M m. ..........1..11. W1...
-. .1W . .......1...1. W. 11.. w..~.......w1..m..n "1...... ......1.1...1... 1..
-1...... .1. ...1.....1 1. WW... W m... “.11.... ml’ .. “w. ".1... ....
-2.9 Ambigunm in limba 1.1mm
-Amwuemn m...“1......11..11...... WWW... Wmnmmm wk
-.... .1... .. .... 1.... ... m1 ... m.. Wm... .1..1.1.... 1...... mm...
-1.....1 1w. 1.....4.......11 .1 1.....1. m... .1. \Mu m...
+W _/—’
+
+implicatia inversd implicatia directa
+
+Propozitia 30 daca 1/1 este aceeasi cu daca 1/1, atuncz' 4p (doar ca are alta topica).
+Propozitia g0 namai daca 1b are acelasi inteles cu g0 doar daca 1p si cu daca cp,
+atancz' 1b, dupa cum am discutat in sectiunea referitoare la implicatii.
+2.8 Conectorii logici
+Cuvintele/eXpresiile $i, saa, alaca-atancz'7 doar daca, non, daca-ei-namai-daca
+(si altele similare) sunt numite conectom' logici, deoarece pot ﬁ folosite pentru
+a conecta propozitii mai mici pentru a obtine propozitii mai mari.
+
+Atentie! O propozitie este atomicd in logica propozitionala daca nu poate
+ﬁ despartita in propozitii mai mici separate de conectorii logici discutati mai
+sus. De exemplu, propozitia orice namar natural este 52‘ numar intreg este 0
+propozitie atomica (in logica propozitionala).
+
+Aceeasi propozitie nu mai este neaparat atomica intr-o alta logica mai
+bogata. De exemplu, in logica de ordinul I (pe care o vom studia in partea
+a doua a cursului), avem doi conectori suplimentari numiti cuantz'ﬁcatom'. In
+logica de ordinul I, propozitia orice numar natural este 5i numar intreg nu
+este atomica.
+
+2.9 Ambiguitéti in limba romana
+
+Am prezentat mai sus limbajul logicii propozitionale: propozitii atomice conec-
+tate prin 52', saa7 non etc. Pana in acest moment, am folosit limba romana.
+Partea I - Logica propozitionala 14 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-1.11.. W... .11....1..1.. 21121.2... “11...”... Mm... .1.m r...
-11...... .11.... 1.11.1... <.. 0.... .1. 111...... 1......»1) 1.. .<.. 11......n .111...
-1.......1......111..1......n .11....1..1....1
-1...n mm... ... 1..w-..11.11........
-1 h. “141...... .1111... (1......111 .....1.111......1...1 Mm...
-.1“. 1.1.11.1... pm).
+Logica pentru informatica 2020-2021 Universitatea Alexandra I oan Cuza
+Totu5i, limba romana (gi orice alt limbaj natural) nu este potrivita pentru
+scopul nostru din cauza ambiguitdtilor.
 
-1 "min/v". .1......1. .1... ...1......1........ 1111......111 1...... ....
-.1....11.111.1....1...<>.
+Iata exemple de propozitii ambigue:
 
-1 Tnmu 1.1.1... .1. I... .11....1 1 m“... .1.. .1 1.11 ..... .1 n. 1. .....1..
-.11. 1.111. .11.... 1.1....1 1 .1... .... .1». 1. .1 ..1...1.....1.1...1
+1. Ion 52' Maria sunt cdsdtom'tz' (intelesul 1: intre ei; intelesul 2: casatoriti7
 
-. N1. 1...... 11 MM... .11....“ 1 1K .111... ... .1 11....‘ 1. 11......
-\mda 1 11......1... .11. mm...
+dar posibil cu alte persoane);
 
-A“... .1 1......11.... 1.... ...1-...1......1..1..1..........1w..1.1.111..." ...
-...m.111..1.. .1...”- ... .1....1...1..<...w».1.11<.11“ 11.1.1.1... 1.1.1.1....1
-11.11. .. 1.11....- ......>11.11..1 “11.11. w. .1.» .1. 1... 11.1.1 1 1.1....
-n. 11.1.1.1 11...... 1.1.... .1. 1.11.1.1...» .11. 1...»... .m... 1111...... 1....
-“1.11.1.1... 1 “.1... 111 1.11.... xv... m1 .11... .1 1.1.11.1... 111.1..1
-11111-1111... .1.10.1...1111..1....1...1....11.._ 11.1.1.1..111w1... 1.11.1..111 11.1.1
-.1... .1 .... 11...... W111...1..1..1.1.»11 M... w H1. .7111...»
+2. Vdd negru (inteles 1: sunt suparat; inteles 2: ma simt rau; inteles 3: nu
 
-11.1111.1......1..11.1...111......1... 1.1.1.. 1 1.1.1.1....“
-.1... .. 1......11m... 1.» .....1_ 1",... 1.1.1.11“...
+este lumina in jur etc);
 
-2.10 Fisi .19 exerciﬁi
+3. Trimz't mesajul luz' [0n (inteles 1: mesajul este al lui Ion si eu il trimit7
 
-5......1... g. 51...... M 1.1.1. 11.1.1.1... w»... ..... 7111......
-“1.11.1.1...
+nu se $tie unde; inteles 2: am un mesaj 5i il trimit catre Ion);
 
-ZN"... .1...
+4. Nu vorbesc 5i mdndnc (inteles 1: neg faptul ca si vorbesc $i mananc;
 
-z»... .11.... .11.
+inteles 2: nu vorbesc, dar mananc).
 
-11.1.1.1....11..g11. 1m... .1 ..1 11.... 1. 1.1.1..
+Astfel de ambiguitati sunt cel putin neplacute daca scopul nostru este sa
+determinam valoarea de adevar a unei propozitii (daca nici macar nu suntem
+siguri ce inseamna propozitia). Pentru peste 2000 de ani, logica a lucrat
+cu limbaj natural. Nevoia de a introduce un limbaj formal, simbolic7 fara
+ambi1g;uitati7 a aparut in secolele XVIII - XIX, odata cu dezvoltarea logicii
+matematice. In logica simbolica/formala, pe care urmeaza sa 0 studiem, vom
+lucra cu un limbaj artiﬁcial, numit limbaj formal, care este proiectat de o
+asemenea maniera incat sa nu contina nicio ambiguitate.
 
-A1,... w... .11. .1 .1... 1......111
+In fapt7 primul limbaj formal pe care il vom studia va f1 limbajul formal al
+logicz'z' propozz'tz'onale (pe scurt7 logica propozitionald).
 
-1.1... .- 1111. .11. ..1. .- .1111.
+2.10 Figa de exercitii
 
-1.1.. M11111... .. .1..." 1. h...1....1.....1..1
+Exercitiul 9. Stabiliti care dintre urmdtoarele expresiz' sunt propozz'tz'i:
+Tu ai un laptop.
 
-.uz. .11.. .111. .1..1 cg! .14.
+Zapada este alba.
 
-“1.111....
+Zapada nu este alba.
 
-1...... lagmpmwnmml. .. 11......~ 11......m...
+Tatal meu merge la servici §i eu merg la §coala.
+
+Afara ploua, dar eu am umbrela.
+
+Maine va ploua sau nu va ploua.
+
+Daca obtin nota de trecere la logica, voi sarbatori.
+
+2 + 2 I 4. (Doi plus doi egal cu 4.)
+
+Roeu sj Negru.
+
+7r.
+
+Partea I - Logica propozitionala 15 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-mud W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-pm»
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+Ploué?
 
-um L‘ Wm‘
+Hai la pescuit!
 
-I m m. m ‘hull 7
+:c este mai mare decét 7.
 
-AMmﬁmNMJ-a
+Aceasté aﬁrmafuie este falsé.
 
-BMW-u w M“.memnwwm, “mm w.‘ WW“
-17mm Mgmpmwnmm}. m “,me dnlmumm
+Exerciigiul 10. Pentru toate pmpozigfz'ile identiﬁcate, stabiliti dacd sunt propozigfii
+atomice sau compuse, iar dacd sunt compuse, stabilitz' dacd sunt conjuncgfm',
+negatii etc.
+
+Partea I - Logica propozitionalé 16 Note de curs - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:17**************
-Capitolul s
+I
+Capltolul 3
+Sintaxa formalﬁ a logicii
 
-Sintaxa formalé a logicii
+r0 ozitionale
+P P ,
+in continuare, vorn studia lirnbajul formal a1 logicii propozitionale.
 
-propoziﬁonale
+Prin sintaxd intelegern, in general, un ansarnblu de reguli pentru scrierea
+corecté. Dupé curn arn promis in capitolul anterior, in acest capitol vorn
+dezvolta un limbaj artificial7 pe care i1 vorn numi logica propozigiionald for-
+mald (sau, pe scurt7 doar logica propozitz'onald). Sintaxa formalé a logicii
+propozipionale se referé la regulile de scriere pentru acest limbaj.
 
-in (ummlum mu mm“ ummnn mum “I 1mm bmhxwmnuﬂr
+3.1 Notiunea de alfabet in informaticé
 
-3,1 Notiuuea d2 alfabet in informaticé
+in contextul informaticii, prin alfabet se inﬁelege o rnulﬁime. Elementele unui
+alfabet se numesc simbolum'. De cele mai multe ori, alfabetul este 0 multime
+ﬁnitﬁ (dar nu in cazul logicii propozipionale).
 
-in(ummulmmumnw bun ‘Mum’wmum!“uhmmmv Hmnmu 1mm
-n
+Care este diferenfua dintre 0 multime si un alfabet? A priori7 niciuna. Con-
+teazé intentia 1 ce vorn face cu elernentele multimii/alfabetului rnai departe.
+Folosirn elementele unui alfabet pentru a crea cuvinte. Un cuvdnt peste un
+alfabet este o secventé de simboluri din alfabet.
+
+Exemplul 11. Fie alfabetul X I {0,1}. Sirum'le/secvemfele d6 simbolum'
+001010, 101011 52' 1 sunt exemple de cum'nte peste alfabetul X.
+
+Cuvéntul vid, format din 0 simboluri ale alfabetului este notat de obicei
+cu a.
+
+17
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:18**************
-11111111 1.1.11... 11111111111111 1111111111 11111111111. 1111111111 111.11. (‘11:1
-3.2 “511111111 logicii 11101111111101.1111
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+3.2 Alfabetul logicii propozitionale
 
-1 11 1 111' 11 1 111111.111. 1111111111 111111111111
+Limbajul logicii propozitionale este format din formule propozigfionale, care
+Inodeleazé propozitji din logica propozipionalé, propozitji despre care arn dis-
+cutat in capitolul anterior.
 
-1 11111111 111.111.1111 11111111111111 11111
-111.111.111.11 1.1111111 11111.1. 11111111111 1111111 11111111111111 111111111111
-11.11 111111111111 11111111111111
+Formulele propozz'tz'onale sunt cuvinte peste alfabetul logicz'i propozigﬁz'onale
+(anumite cuvinte sunt formule; nu toate). Alfabetul logicz'z' propozz'tionale este
+reuniunea urmétoarelor multimi:
 
-1.11 r11111.11 1111.111... 11111 11111111111 1111111 1.111111111111111
+1. {p7 q, r, p’7 ql, . . .}, multimea variabilelm" propozz'tionale;
 
-1 111111
+2. {-1, /\7 V}, mulpimea conectom'lm" logici;
 
-1 111111
+3. {(7 )}, mulpimea simbolurilor auxiliare (un simbol pentru parantezé de-
 
-1 1
+schisé 5i un simbol pentru parantezé inchisé).
 
-1 111
+Vom nota mulﬁimea variabilelor propozitionale cu A (vom vedea de ce in
+continuare). Atentie! A nu este tot alfabetul logicii propozitionale, ci conﬁne
+doar variabilele propozipionale.
 
-1 1,1111
+Iaté exemple de cuvinte peste alfabetul logicii propozitionale:
 
-D\ 11111111111 1.1.11.11.1.1.11 111 1.11 111 141v 11 1111111111 1 1111111
-11111111111111 1111111111111 1111111 v 1 111.1 11.1 11.1.1 111111111111
-3.3 “11111111 prnpoziﬁnnale
-M1111111111111111111111111111111111111111111 111111111111 111111111 11
-11.1, 111111.111 111 11 1111111111111 11.11111 1.1111111. 1 .11-111,111
-. Cam] 11 1111 11111111111111.11111111111111 11111111 11.11. 11111111 11111111
-1111111 11111111111111.11 11 11111111111 111111111111
+1- ))P \/ /\;
+
+2. \/ \/ —|(p);
+
+3. p;
+
+4- PPP;
+
+5- up \/ q).
+
+Anumite cuvinte se numesc formule propozitionale.
+
+De exemplu, ultimul cuvént de mai sus7 —\(p V q), este 0 formulé a logicii
+plvopozitionable7 dar a1 doilea cuvént, \/ \/ —'(p), nu este formula. Urmitoarea
+deﬁnitie surprinde cu precizie care cuvinte sunt formule $1 care cuvinte nu
+sunt formule propozitionale.
+
+3.3 Formule propozitionale
+
+Deﬁnitia 12 (Multimea forInulelor propoziﬁonade7 notaté 1UP’). Multimea LIP’
+(multimea formulelor propozigfionale) este cea mai micé multime de cum'nte
+peste alfabetul logiciz' propozigfionale care satisface urmdtoarele proprietdgﬁi:
+
+0 Cazul de Bazd. Orice variabild propozz'gfionald, vdzutd ca un cuvdnt d6 lungz'me
+1, este in multimea LIP’;
+
+Partea I - Logica propozitionalé 18 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-mud W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-- vw'mm 1 Dump E u,‘ MW w é u 1m M rum-KW
-“a mmmwmywm MW u "Wm m» "W rum/160M ~ ,Y
-wnlmm? “WWW .1," ,- “1.1mm V'VWXIIWMJIIL
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+0 Cazul Inductiv 1. Dacd 4p G LIP’, atunci —\30 G LIP> (sau: dacd cuvdntul 4p
+este 0 formuld propozigfionala”, atunci 52' cumimful care incepe cu simbolul —| 52'
+continud cu simbolum'le din g0 este formuld propozitz'onald);
 
-. nmmmmd Dmlw é‘ E u Wm M AW] E u (m
-MM Mm M;
+0 Cazul Inductiv 2. Dacci 901,902 6 LIP’, atuncz' (301 /\ 902) G LIP’ (sau: Hr
+exerciiiu pentru acasd);
 
-- kumw 1 BMW,» i u,‘ amvm mvvn i u (m
-.m/w Mnim W“;
+0 Cazul Inductiv 3. Dacd g01,<p2 G 1UP’, atuncz' (<p1 V (p2) E LIP’ (sau: ...e
+exerciifz'u pentru acasd).
 
-1m (Mm mm .1: Mm“ Mm w
-P q i» *4 w‘ ‘*In “Wu 4PM».
+Iaté céteva exemple de elemente ale multimii LIP’:
 
-am» HMﬂL ﬁquv Hpquﬂ
+P, q, up, uqv up’, _'_'P17 (P V q)? (P /\ q),
+u(p\/q)7 (up/\uqh _‘(_‘_‘PVP)7 ((qu) Ar)?
+(P \/ (q /\ r))-
 
-mum)
+Iaté exemple de cuvinte care nu sunt in LIP’:
 
-m mm 4mm.“ M 1.“ m m u
+pp, quq, q /\ up, p + q-
 
-w‘ w, M11 w“
+Deﬁnigia multimii LIP’ este un exemplu de deﬁnitie inductivd. Astfel de
+deﬁnitii sunt foarte importante in informaticé 5i este obligatoriu sé ajungem
+s51 1e intelegein foarte bine. Intr-o deﬁnitie inductivém7 existé de obicei 1 sau
+mai multe cazuri de bazi, care definesc cele Inai mici elemente ale multimii
+(in cazul nostru, variabilele propozitionale). Cazurile inductive araté cum se
+pot construi elemente mai marz' pornind de la alte elemente Inai mici, de-
+spre care $tim deja c5 sunt in multime. Alt element important este restrictia
+de minimalitate (subliniaté in deﬁnitia de mai sus), care indicé c5 doar e1-
+ementele care pot ﬁ construite apeléind la cazurile de bazé 5i la cazurile in-
+ductive fac parte din multime. Aceastﬁ restrictie de minimalitate asiguré
+unicitatea multimii (nu existé 0 alté multime cu cele 4 proprietépi 5i care s21
+ﬁe minimalé) 5i ne permite s5 arétérn ca anurnite elemente nu fac parte din
+multime (cele care nu pot ﬁ construite prin cazurile de bazé/ inductive).
 
-Lkﬁnmn Wm“... u m m. mum dr 44mm; mm Aulcl at
-mm N.“ rm. mm...“ m uvlommnckn m Manon“ ¢ mm.
-\l u. MW, h.” rm 1m deﬁmnz Mm“ "mud! 0W 1 W.
-m. M" mm .1: M‘ cm MW wk KW M um“ .k mm“...
-(m (“1| Mn.‘ \mbmwwmwm Mm mm" mulcum a:
-w unmnu Mm mu W Wm M m m Mm n... mm d<~
-\vm m m". WWW m mm" u! mm ""an W MW.
-dc Wmmm (\qulwlmUl 1,. MW d= m. my. W mm W an“ Ev
-“mm W M n wlem Mm ‘A mm A‘ w “ |. Mm m-
-mm hr M, m,- mlw. Am.“ WW ‘1r WM" Wm;
-m“... muhnun <.". mm ., m MW m 4H:- A me ,. m q
-M mlmmm _‘ M mm“, n mm m Mm“. .W-W H.‘ m mm Am
-mnkmm 0M» m. m. .M n “MM, w... MEN, \m/mmm
+De exemplu, cuvéntul pp nu este in multimea UP’, deoarece nu poate fi
+construit prin aplicarea niciunui caz dintre cele 4 (cazul de bazé sau cele trei
+cazuri inductive).
 
-D. exmmln‘ ‘.mm.“ ,P m, M! m mulllum w. dams" m. W“ n
-ml.“ m. mm.“ mm. m mum Mk4 (“ml M hulun mknn
-mm “mum
-3.4 Cum amim cé \m cuvﬁnt face pane din
+3.4 Cum arétém c5 un cuvént face parte din
+LIP’
 
-LIP
-Ymem .m. d m. mum M w“ mu 117mm»! mm »e m ‘PM W.‘
-a4 M i‘ M mmw M “mm-M n “mm. a. 49v v é u
-17mm mmmmmm m “,me dnlmumm
+PuteIn aréta c5 un cuvéint face parte din LP explicénd cum se pot aplica pasul
+
+de bazé 5i paeii inductivi. Iaté 0 demonstratie a faptului c5 —\(p V q) G LIP’:
+
+Partea I - Logica propozitionalé 19 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-but‘ M... Mm“ 202mm "MM. “Mm 1M M
+Logica pentru informatica 2020-2021 Universitatea Alexandra I oan Cuza
 
-1 “unwddtmdmné A),
+1. p E lLlP’ (din pasul de baza, deoarece p 6 A);
 
-1 “ELMHMMM. MM“ A7
+2. q G LIP (din pasul de baza, deoarece q E A);
 
-1 W,» < u M. Md MM a‘ M é. Z ,M H Z q,
+3. (p \/ q) G lLlP (din pasul inductiv 3, unde (p1 I p 5i 902 I q);
 
-‘ \nw q) i u (m PM Mm I‘ MW Z u: vqn
-pm MM. \M “(M m M...“ M" .1, WM, MM, MW
-km FM. [oumvh 41>qu
+4. —|(p \/ q) € 1L]? (din pasul inductiv 17 unde 30 I (p \/ q)).
+Putem rearanja lista de mai sus intr-un arbore de construciie adnotat echiva-
+lent pentru formula —|(p \/ q):
 
-mph-M WWW. M 3
-—‘"‘7‘ ‘1' N MMMI
-4w» E m
+i pas de baza i pas de baza
 
-v0“. Mr. m WWW.“ Mmhmm Mmmﬂdmu
-t “MM ‘A .u. Mhum... Q‘ quuv hm! mm.“ mm
-“Mm/u‘ M in." MM dc hm: m "MM nvlcmnn ,. WW. c.
-M ,mm. 1 MM mnkc Mm) hlmmm-MM MW
-MM W Rum “M @M NM MM MM M MM
+p G LIP’ q E LIP’ p _
 
-WWW-m WWW-MM.“ "MM W" .1, com-MY, W
-M WI“ My v q,
+— pas inductiv 3
 
-B E
+(P \/ q) 6 1UP’ . .
+— pas inductiv 1
+—\(p V q) G lLlP>
+
+Vom vedea acest tip de notatie de mai multe ori in Informatica si de aceea
+e important sa ne familiarizam cu ea. Fiecare linie orizontala se numeste
+inferenia; sub fiecare astfel de linie este concluzia inferentei $i deasupra ei
+sunt ipotezele (07 1 sau mai multe ipoteze). Inferentele cu 0 ipoteze se numesc
+axiome. Langa ﬁecare linie se gaseste numele regulii care a fost aplicata.
+
+Daca renuntam la adnotatii, obtinem urmatorul arbore de construciie pen-
+tru formula —|(p \/ q):
+
+P q
 M
-<@vw
+ﬁ®v®
 
-m: M (k ‘M a. W MM ur (WA .. MM (Im CM‘
-MM “MM! PM. “I mm
-3.5 Conectorul principal a1 uuei (ormule
-n MMMWWM (“M mm WWMM MMMM
-P MM q] m Mm MM Mm m \M mm 4Q u
-Mm. A . "MM. WWW M MM, A u M 1. MM
+Este u$or de vazut ca un cuvant apartine lLlP’ daca $i numai daca exista
+un arbore de constructie pentru acel cuvant.
 
-MM mm. A. h w M lPV'ﬂ ,1 .MM MM.
-M MM Mm";
+3.5 Conectorul principal a1 unei formule
 
-Um MM Mm m WM MM m M (W M MM
-k.‘ 1|." MM M d, WM“ m Mm“. mml “Mm .\
-MM 4w‘) M “MM “Mm-MM.‘ pump“ MM
-mm 1' “Am NMMM 2» MM M A” m.‘ M
+O formula care consta doar dintr-o variabila propozitionala (cum ar ﬁ formula
+p sau formula q) se numeste formula atomica. Acest lucru explica de ce
+multimea A a variabilelor propozitionale se nume$te A (A, de la atomic).
+
+Formulele mai complexe, cum ar ﬁ —|p sau (p \/ q)7 se numesc compuse
+(sau7 in engleza, moleculare).
+
+Orice formula compusa are un conector principal7 care este dat de ultima
+inferenta din arborele sau de constructie. De exemplu, conectorul principal al
+formulei —|(p \/ q) este —| (negatia), in timp ce conectorul principal al formulei
+Partea l - Logica propozitionala 20 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-marl W... mlmmlnd zuzuznzl "mm... Mm... lmn r...
-wv q. N. v ldquu») Nnnmn Mm...“ .q cum (M... mm...“
-m A WW... 5...“... Wuwmn pm...‘ .l m... Wm"... v
-Mm... N. .. “NW... w W. wnwluruy mu...‘ 6.. ~ 3...... W u
-3.6 Cum mama". 05 \m cuvént nu face pane
-din JLIP
+Logica pentru informatica 2020-2021 Universitatea Alexandra I oan Cuza
+(—\p \/ q) este V (disjuncpia). Numim formulele al caror conector principal
+este /\ conjuncfii. Similar, daca conectorul principal al unei formule este \/7
+formula este o disjunctie, iar daca conectorul principal este —|, atunci este 0
+negatie.
 
-a... M... .... 6.5... P... n... \nnr m...|...|1»\ M... a .... M... ...
-hm h... .l... w
+3.6 Cum aratam ca un cuvant nu face parte
 
-Dwd mm..." .... m. 9.... mm... ma. ... mm N. 0...“... ...
-.m mat-Mun? + q k... hummuwm... m... +1 ........W......... cl.
-mW. .... lace pm 4... ur. w...“ u- 1...“... m... W...“ F... ."M...
-Ingwn WWW...
+din LIP’
 
-Dun cuvnvmvl me w. Mm... W .. vmw .. Mm... .4 .... w.
-pm. .1... u. ......<. m... ,. M W... 4.4 (wlnlmn m. ................ 1....
-m... w... u... n 1H) e ur
+Este pupin mai dificil (sau7 mai bine spus7 lung) sa aratarn ca un cuvant nu
+face parte din LIP’.
 
-www.mm w... mm... M... .. 1H) é m lnncm cm...
-“MM. m........1....., fuml cu "th i m mm... s. w... r. m...
-m. ..... 4...... "1. M. w... .1. W...‘ (ml .1. m. mu m... 1......
-w. .m p... ......=..V.>
+Daca cuvantul nu este peste alfabetul corect, asa cum este cuvantul cu
+trei simboluri p + q (care folose$te simbolul strain +), atunci este evident ca
+acesta nu face parte din lLlP’, deoarece LIP confine doar cuvinte peste alfabetul
+logicii propozifionale.
 
-m. .... rm. a.“ m... 4. “mm... .. w... a. um E m AW"
-1mm 4
+Daca cuvantul este peste alfabetul corect si vrem sa aratam ca nu face
+parte din lLlP’, atunci trebuie sa ne folosim de conditia de minimalitate. Iata
+cum putem arata ca (p-1q) ¢ lLlP’:
 
-1-» “mm .... W... M... um w... "m... 1. W...» .... m...
-m mm.’ m... .M {PM Z j,- w» rm...“ .- E n... A...
-.............v.1.m....'..w .. n 4. m hm... m...» .\ .w... W... v. n
+sa presupunem, prin reducere la absurd, ca (p-1q) € LIP’. 1n acest caz, din
+conditia de minimalitate, faptul ca (p—\q) G lLllD trebuie sa poata fi explicat
+prin una dintre cele patru reguli de formare (pasul de baza sau unul dintre
+cei trei pa$i inductivi).
 
-Wm...w......................~... 1 Mm“....Xb..u.......1.1~. 91E
-u- NH m... (m) Z MN.» Wm... m. ﬂax! .w. E u mm...
-..... v...“ 1m"! ... W... Mm... A. .. n...“ (M... .1... mum ..
-m.......1
+Dar nu putem aplica cazul de baza pentru a arata ca (p—|q) G LIP’7 deoarece
+(an) ¢ A-
 
-mm... .m... m... .... m... w... mm... MM... a
+De asemenea, nu putem aplica nici cazul inductiv 17 deoarece nu exista
+nicio formula (p astfel incat (p—|q) I mp (orice formula 4,0 € lLlP’ am alege7
+primul simbol al parfii stangi ar ﬁ (, iar primul simbol al partii drepte ar fi
+_|.
 
-Dm ............ 1. ...=.......| 4mm Ru. Finn a...“ .... .............u m‘
-mvmmu M... e... mu .. an 1H» E u
-m... lag.“ hwy-1......“ 2. m... .1. n... .1. Mu m...
+Nu putem aplica nici cazul inductiv 2, deoarece nu exista formulele <p1, 302 G
+LlP astfel incat (p—\q) I (gal/Mpg) (oricum am alege <p1,g02 E LIP’, cuvantul
+din partea stanga nu confine simbolul /\7 in timp ce cuvantul din dreapta il
+confine).
+
+Dintr-un motiv similar, nu putem aplica nici cazul inductiv 3.
+
+Din moment ce niciunul dintre cele patru cazuri nu functioneaza7 pre-
+supunerea noastra este falsa, 5i deci (p—|q) Q! LIP’.
+
+Partea I - Logica propozifionala 21 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-Lwrﬂ W... uvlmnmnd. zuzuznzl "mm". Mum 1m M
-3.1 Pmpriemtea de citire unicé
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+3.7 Proprietatea de citire unicﬁ
 
-Dnmmn u m u Wm," “mum W w WM, WWW .1‘
-“mm n (PNNRMM Wm mm u WW WWW» m
-W W. 1mm p5 n‘ rm M w, W" d’ ,wym,
+Deﬁnitia 1UP’ are 0 proprietate importanté, care se numeste proprietatea de
+citire unicd:
 
-mm“ .1! mm >u~ m .m um,“ M mnmmm Mum
-haw-1mm.“ MWM.“ WWW 1." hm‘ MMMM m
-“mm nehmeMlmekgzmmmuhuquln m m m \nnv Mm”.
-a .M Wm (lefumw (MW Wm u> ,. Wm m.- w N m. Wm
-(Mann: “Rm-M W mm
+Teorema 13 (Proprietatea de citire unicé a formulelor propozipionale). Pen-
+tTU orice formuld <p € LIP’, eam'std un um'c arbore de constructie.
 
-immmu m1 MM £7le 12mm u,
-a; Wm m M.“ mm 3 u n
-. mu! lmnnh 1 m. m A E u mm “VA E u
-mm Ahfrmm}. M m Ahhmlm mun}. M. A m1 mm“
-Wmneununml(\wvnmuim Cunumllxbehmmnkemluvl
-km n \m w. .m W a ﬁpv“ n m" an“ ruvnul
-M m (1m m...“ wmmvclw mm,
-Q i ,
-Ni‘ U
-w v q w v q
-Umxkhksmlﬂgmlnnm Mm,“ m mum; W...»
-m W." (‘Mm W .m pm" w M qu W u
-mm <0 m .M» (Ir (“mm (1.“ My", W u
-mm m m Wm dr WWW 4m Mm») Dr lam,
-mm. "M mm. MuMglunKu mm! . [W m“ (M
-m muuwk» w“... W m.- WM ‘rm mm“, mvmrl‘ M
-m mm M "Mm MW mm.
-Shunul um m1...“- u.“ mm. u.
-17mm WMWWWM 22 mum“ drlwtumm
+Proprietatea de mai sus se mai numeste si neanibiguitatea graniaticii
+logicii propozitionale. Demonstrarea proprietétii nu face parte din acest curs.
+Totusi, trebuie six inﬁelegem semniﬁcafnia ei. In acest sens7 vom considera
+0 alté posibilé deﬁnipie (gresité) pentru LIP si vom araté in ce sens aceasté
+definitie alternativé este ambigué.
+
+inceputul unei deﬁnitii gresite pentru LIP’.
+S21 ne imaginém c5 pasul inductiv 3 a1" ﬁ:
+0 Cazul Inductiv 3. Dacé gal, apg € LIP’, atunci gap/4,02 € LIP’;
+Singura diferenté faté de deﬁnitia corecté este cé nu putern
+paranteze in jurul disj unctiilor. Cu aceasté deﬁnitie alternativé,
+ﬁctivé7 a lui 1UP, am avea 05 ﬁp V q E LIP. Totusi7 acest cuvént
+ar avea doi arbori de construcpie diferiti:
+U L i
+P V q _‘P q
+_‘P \/ q np \/ q
+O astfel de ambiguitate ar ﬁ deosebit de neplécuté pentru scop-
+urilo noastrc, dcoarecc nu am putca sti dacé ﬁp \/ q cstc 0
+disjunctie (ca in arborele de constructie din dreapta) sau 0
+negatie (ca in arborele de constructie din sténga). De fapt7
+evitarea unor asemenea ambiguitéﬁ sintactice a fost unul din-
+tre motivele pentru care am pérésit sfera limbajului natural si
+am inceput s5 studieni logica formalé.
+Sférsitul unei deﬁnitii gresite pentru LIP.
+Partea I - Logica propozitionalé 22 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-Lwd W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-m.» urnﬂa mm.“ .. Wm, u m cw (k w mm“ (k m,"
-"m W mm. u. m. (mvlnu PM". m v. MW an: MW
-“Km WM Q “ Arm-mm m mm" .u "er Q iw u” h (c
-m.“ Hm m a WW“ mm A mm“ “MM nr “a d.
-W nmvwwmwm "we n rmm m-m “m. M m m Wm
-W MHMNWWM w. m “NW-“w. “mm
-5.5 Limbaj-obicct si mem-limbni
-n yxnllmhnul' ‘1mm. m ‘uvlmn whmmlm (Mm. de mm.
-wwulnnbemnh] W Mnnnlefxlunmnhm M'M.\,.‘k.mmmn
-m mmullmlunLivnvtueknkilmudmPbynmn nemmulu mm“
-Wm.“ Mm m. pmmmum \menl \nuunmcul
-NW“. W M M1" Ml» [m M ,Mmm WW h.
-Mm ‘.u Mm
+Logica pentru informatica 2020-2021 Universitatea Alexandra I oan Cuza
+Dupa aceasta incursiune, ar trebui 5a ﬁe clar de ce teorerna de citire
+unica este netriviala (ca un exercitiu pentru cei cu inclinare spre matern-
+atica, incercagi sa 0 demonstrati). De asernenea7 ar trebui sa ﬁe clar de ce
+citirea unica este 0 proprietate esentiala a deﬁnitiei formulelor: ne arata ca
+orice formula propozitionala poate ﬁ citita intr-un singur fel; cu alte cuvinte7
+orice formula propozipionala nu are ambiguitafui sintactice.
+3.8 Limbaj-obiect 5i meta-limbaj
+O particularitate a logicii este ca studiern propozitii (analizarn, de exernplu,
+valoarea lor de adevar), iar pentru a efectua studiul, ne folosirn de rationarnent
+care, in mod natural7 sunt $i ele alcatuite din propozitii. De exemplu, in cursul
+studiului nostru, am putea efectua urmatorul rationarnent:
+Propozirfia nu merg la would este falsd dacd propozz'tz'a merg la
+{scoald este adevdmtd.
 
-1-» ‘1mm mm“, M. M,M,\,m,|m h." my.“ Wm
-M,“ Mm \ Mummy“ ,.;,.\,W..y.m.» MM". m. WM
-WM W 1m M WWW M, in Wm. m, W...“ M‘- h “mm
-H ,. mm» NM ,mmlm W, mummy mm... WNW“
-HM mmxh ‘Mm.
+De observat ca aﬁrrnafuiile care fac obiectul studiului (nu merg la scoald $1
+merg la gcoald) sunt propozitii, dar 5i intreaga aﬁrrnatie Propozigﬁz'a nu merg la
+$coald este falsd dacd propoznfz'a merg la $c0ald este adevdmtd este la randul
+ei o propozifuie. Astfel7 pare ca facem un rationament circular, in care studiem
+chiar rnetoda de studiu.
 
-Aswan mm." Iplmvll M .p." .. 1.. cm.‘ “mum a. usulphu
-1n Wm.“ \uulwm mm M Wm“, Wu: mm, W mm n 1M
-hm.“ WW.
+Aceasta diﬁcultate aparenta nu apare $1 in cazul aritrneticii, dc exemplu.
+in aritrnetica, studiern numere 5i operacii peste numere, iar studiul il facem
+folosind propozipii.
 
-DWmIlunm N m Imlvun hm. ‘mum ml; n MW“, “'4an
-M "m. MM, menn 1mm m hmhlml p, m, w nmhrul (Ln W
-nveln'hmhnml me \unhtml P4 a.‘ .\ Mm Wmdkm nmlnﬂ um»
-mum
+Diﬁcultatea isj are rezolvarea prin separarea stricta a limbajulm' object
+de meta-limbaj. Limbajul obiect este limbajul pe care il studiern (LP), iar
+meta-limbajul este lirnbajul pe care il folosirn pentru a efectua studiul (limba
+romana).
 
-LnuiI-uuwhml W mmm M m alum“! vlmkmlul in. W.“
-m... ‘mu pmwmwml) \lnrhmlnjnl “k hmhnﬂ v»
-m 1| Mum mm. A Wm. M" mm‘ nmmhn (m
-m1 Wm. 1m». mun
+Limbajul-obiect este limbajul care face obiectul studiului (in cazul
+nostru, logica propozitionala). Meta-limbajul este lirnbajul pe
+care il folosim pentru a cornunica despre obiectul studiului (in
+cazul nostru, lirnba romana).
 
-1w, m m mm n “Mm M W ca‘: (Inn). “my, mm".
-Lunvcnm Km rmuruwhdm hmhqulnbm 1, mm“ m m gm“
-m“ [(kmnvyhv. 4W1! urmnmlmexlm nmrhmM] “W MM,“
-1m.‘ "W ohmm! Wmmph. .W mm MM My, I jummld]
-17mm m“, WWW.“ 21 [\nlcdr m d: Mu mm
+in acest curs, pentru a diferentia u$or intre cele doua7 facern urrnatoarea
+conventie: toate elementele din limbajul-obiect 1e scriern cu font sans-serif al-
+bastru (de exernplu7 (p /\ (1)), iar aﬁrrnatiile din meta-limbaj 1e scriem folosind
+font negru 0bi$nuit (de exemplu, om'ce formnld atomicd este 0 formuld).
+Partea I - Logica propozitionala 23 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-mud M... Mm“ mmznzl "mm. Mum 1m M
-m m. Ae WW.“ .1 rm. MM. Mk hmhnnvlnhmn
-Mum-J mum!» WeMuudwmmw,
-wgmnm Elmwnmamawlunhnpvhumnncuxccuﬁsmohmum
-.1! mm m.‘ mm“ lmWhmm m“ me MM
-um» 0“qu mm dunmpnmlhmnehukmmenzlv
-mm“ Q ‘M, a mum-m m1.”
-
-3.9 Fi§§ '12 exercitii
-
-BMW u Amhm m Wmm ,m m ‘mu-m wwww
-
-1mm: mm... “1. mm w "Mn/EM m ML M '1' Wm,»
-
-1pm,,“ W. m m1 imm- w. WK Mm W
-
-I "u
-
-y 0qu!
-1 \nw =1‘
-¢ ‘*PV i=1
-s WM in
-
-“~mequ my Amwh MMDM NW Mm.’ (knew M, Mn“
-
-w 1mm" Mm m WM 4M "k 4 "wk m hm. n- PM! ﬁ
-
-“punt”
-
-1 bk
-z v w
-.7 m
-4 PA!
-5 1mm
-mm"... 1e. m M" mm” W M- 1W...“ .m u ,X m.
-I v1
-lmvm
-“my MMWWM 2‘ mm.“ Animumm
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+Este extrern de important s5 facern diferenta intre limbajul-obiect
+si meta-limbaj. In acest scop, notele de curs folosesc 0 conventie ti-
+pograﬁcé. Elementele meta-limbajului sunt scrise cu font obisnuit,
+de culoare neagré. Elementele limbajului-obiect sunt scrise astfel:
+(p /\ q). Din acest motiv, dacé imprimapi notele de curs, este re-
+comandat s5 folositi 0 imprirnanté color.
+3.9 Fisﬁ de exerciigii
+Exerciigiul 14. Ardtagfz' ed urmdtoarele cuvz'nte sunt formule propozitionale
+(adicd elemente ale multimn LIP), explicdnd care sunt pasn de constructie
+(pas de bazd, respectiu unul dintTe cez' trei past inductim'):
+1. —\q;
+2 (P1 /\ q);
+3' ﬁ(p V q);
+4- (ﬁp \/ ﬁq);
+5- (_'P /\ 11)-
+Exercitiul 15. Ardtati ed urmdtoarele cum'nte nu sunt elemente ale multimu'
+1UP’ (indicatie: ardtati cd nicz'una dintre cele 4 reguli de formare nu poate ﬁ
+aplz'catd):
+1- (“)q;
+2. q /\ —|;
+5’- pq;
+4' p A q;
+5’ (p) A (q)
+Exerciigiul 16. Care dintre urmdtoarele cuuinte sunt formula din LIP’ 52' care
+nu sunt:
+1. p1,’
+2. P1 V C11,’
+Partea I - Logica propozitionalé 24 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-mud M... mlmmlnrl zuzuznzl "mm. Ainnmlm 1m M
-1 1p, w)‘
-‘ MW.»
-5 \(mvm)
-i WAY
-BMW ,1 M um,» ,1. mm.” WMHW WNW (m M
-“Wm. 1mm»
-“my Mgmmwwnmm}. 2'. hnzcdnmm Animumm
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+3' (P1 \/ <11);
+4' (ﬁpl \/ <11);
+5' _‘(P1 V <11);
+6. (—\p) ?
+Exerciigiul 17. Datz' example d6 5 formula propozigfz'onale interesante ( cu maz'
+multz' conectom', moi multe variabile propozitionale etc.) 5i justiﬁcagfz' cd sunt
+intT-adevdr formula.
+Partea I - Logica propozitionalé 25 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-Lwd W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-17mm WMWWWM in [\nlcdrmw drlmumm
+Logicé pentru informatici 2020-2021 Universitatea Alexandru 10cm Cuza
+Partea I - Logica propozitionalé 26 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-Capitolul 4
-Funcﬁi recursive peste LIP’
-ll 2 X) ammz‘ 1 W {U (23 (J! H 2» H .ﬁ £2 3) H 2 3H ‘mm;
-‘m llwm rmm w’ ﬁx‘ 1 2V ma u 411711er mmmu In 1m“ "h wmw
-.0 A 1M WW m1 ‘m ,h z‘
-1m»
-W»! 11' )1 WW“.
-{:1 m a ; s A
-M» ,~ (ﬂu-M ,-. W ,‘1
-A.“ "7w W!) m m
-21
+Capltolul 4
+
+Q C C
+Func§11 recurswe peste LIP’
+Memento. Dacd X este 0 multime, prin 2X notdm multimea pértilor lui
+X, adicd multimea tutumr submulgfimz'lor lui X. De exemplu, dacd X :
+{1,2,3}, atuncz'2X : {@,{1},{2},{3},{1,2},{1,3},{2,3},A{1,2,3}}. CdndX
+este ﬁnitd, avem cd |2X| I 2‘X|, ceea ce explicd notalfm. In liceu, este posibil
+sdﬁ folosit notatia 73(X) in loc de 2X.
+
+Dacé 0 mulﬁime este deﬁnitd inductiv, putem deﬁni functii recursive care
+opereazé pe elementele multimii. Deﬁnitia acestor functii urmeazé structum
+elementelor din multimea deﬁnité inductiv.
+
+Iaté un exemplu de functie care calculeazé mulﬁimea subformulelor unei
+formule:
+
+subf: 1UP’ —> 2UP, deﬁnité prin
+
+{w}, daca <P e A;
+{go} U subf<cp’), dacé (p I —|<p’ sj 30’ € LIP’;
+WW) I {w} w subeol) u subf(¢2),
+dacé go I (301 /\ 302) si $01,302 6 1UP’;
+{<p} U subf<<p1) U subf(<p2),
+dacé cp I (4,01 \/ 4,02) $1901,ch € 1UP’.
+Iaté cum se poate calcula subf<<p> pentru 30 I —\(p \/ q):
+27
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-w.‘ M... ......m... mmznzl "mm"... Mm... 1.... M
-M/[ﬂw/ﬂ) : My vqan/(w w)
-- l~(nvu))v((vvu)!uwn/(p)um!(q)
-1 wwwupwwmum
-= (wwqurm
-om... .... ...... ......" .1. ......” .... m. ... “...... a. ...
-v. M p-m ...-“...... .... My»... “mm... ......“ MA u.
-m1. .1.- ..m. ...... “......xk..." MM...‘ hm. WWW... “......
-...... Wm... .... ......W.......... a... ......mm. ... ....» .1 ......»
-“... Wm... .... mm“... M... . k MM... ...... m... ......m...
-.... ...... M... ...... M ...... .....M.... < p. .. M...» . ..1
-...... ‘.... ‘.... - "... ......“- w...... “Wm... “MM...
-‘...... "m... m...“ .... ...-W..." D.....".>\..,<..... p...“
-...... .../(..v.) ... ... ......4... ...). .... ...... ...-“...... 7v.
-WW m. ...... .....M...“ >1 .....w... .... ...”...- m... ......“
-m... . vmvkg! ......‘ (......I... .... .|..........\. n ...... ... “......
-4.1 Arburele .19 5mm: absmm; a1 unei for’
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+subfbo v q)) z Hp v q» w subf((p v q))
+I Hp v on} w {<p v 01>} u subf(p) w subf(q)
+: {_‘(P V q)} U {(P \/ q)} U {P} U {q}
+I {_'(P \/ q)? (P \/ q),p, q}-
+
+Observati cele doué tipuri de paranteze care apar in calculul de mai sus.
+Pe de 0 parte, avem parantezele care mérginesc argumentul functiei subf, iar
+pe de alté parte avem parantezele din alfabetul logicii propozitionale. Primul
+tip de paranteze sunt paranteze obi$nuite din matematicé, in timp a1 doilea tip
+sunt simboluri ale alfabetului. Pentru a 1e diferentiai7 vom adopta conventia
+urmétoare in aceste note de curs: folosim paranteze cu font obi$nuit, de obicei
+mai mari, pentru apelul de functie (de exemplu ( sau (), 5i parantezele ( $1 )7
+scrise cu font sans — serif albastru7 pentru simbolurile alfabetului.
+
+Ambele tipuri de paranteze sunt importante. De exemplu, este o gre$ealé
+sé scriem subf(p V q) in loc de subf((p V (1)), din moment ce cuvétntul p V q
+nu este o formula.
+
+Functia subf este prima dintre functiile pe care 1e vom deﬁni recursiv, in
+functie de structura formulei <p G 1UP’. Aceste functii se numesc recursive
+structural. Este foarte important sé intelegem cum opereazé aceste functii
+pentru a intelege restul cursului. Iaté alte exemple de astfel de functii.
+
+4.1 Arborele de sintaxii abstractii a1 unei for-
 mule
-mm... "...... ......M mm... ... mm... MW .| ...“...
-.... u. 1m ......“ Pun
-m... 1. lag.“ WWW...‘ 2.. m... n... An ...... m.
+Urmétoarea functie calculeazzi arborele de sintamd abstractd a1 unei formule:
+arb : 1UP —> Trees7 deﬁnité prin:
+Partea I - Logica propozitionalé 28 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-m‘ W... mm WM. WW... mm M M
-® dua¢&A_
-<73 . W
-map
-A\
-Mb"): NM M“)
-M v: w, A m A é. n < L,
-4m
-W‘) mp1)
-m v: w, v m A é. n < u
-1m um.‘ “v MW.“ Mm Mm.‘ mm W 1, A r1
-“Qummn Z M
-MU» A <1») m4‘)
-n.4,) MM)
-“(a
-“Mumpmmm 29 “Mm WNW
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+(30>, dacﬁ 30 E A;
+, dacé (p I ﬁga’ $1 90’ € LIP;
+arb ((p’)
+4,0 arb<<p1) arb<<p2)
+dacé w I (901 /\ $02) $1 $01, w € 1UP’;
+arb<301) arb(902>
+dacé cp I (901 V 902) $1 $1,902 E LP.
+Iaté un calcul a1 arborelui abstract de sintaxé a1 formulei ((p /\ —|q_) /\ r).
+arb(((p /\ —'q) /\ r)> I /</9\
+arb((p /\ —\q)) arb (r)
+arb (p) arb(—\q)
+arb (q)
+Partea I - Logica propozitionalé 29 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-1....‘ W... Wm... zuzuznzl "mm... Am... I... r...
-Wm... 1..."... mm...» m... c. m... n.1,...
-w... A. M... m...‘ . m..." w............ m. m... M...
-.. ....... m... A...“ m... “M... M. Mm...“ we...
-.... m“... mg... . M... Mm“... .. .....,......... .. ....
-n.1,...“ .l. . m. . .....,.. .... M... .. W... I. m... .
-mm..." .1. mm... . Mm... “5...... Wm... ........
-h... W... M... mm...“ 1......” w». .w... m... .1. m“...
-Mm. ...... “mm... m. M. m... h. .. mm.
-4.2 A1... example de [new deﬁnite recursiv
-1...... .... m... .. hm... .1...“ .... m... mm...“ F... k.
-m... W... W. n a N. “m... w...“ .M... M...
-.. a... we A
-Maw). duh-14......
-WW) Z .. ...,(M,..(,..) Wm.»
-Mp... M). WK».
-. . ....(.....(¢.) WW)
-MW... Vanna-mew
-r...“ W. M - MW...“ ......\....... .... w. “W...
-u.......... m... .1 Q v um...“ MW... m...
-M... .1. m"... .. ..... m... (mu m"... 4. M...
-m... m... MW...‘ 1.. m... m... d. ..... m.
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+
+Multimea Trees este multiinea arborilor cu rédéciné, etichetati.
+
+Arborii de sintaxé abstracté sunt extrern de importanti deoarece, din
+punct de vedere conceptual, o formulﬁ propozitionalé este arborele abstract
+de sintaxzi. Totusi, deoarece scrierea arborilor nu este convenabili (pen-
+tru persoane)7 recurgern la notatia conventionalé, si scriemA formulele in stil
+traditional, de la sténga la dreapta7 sub fornié de cuvinte. In schinib7 la ini-
+plementarea pe un calculator a diferitilor algoritini care prelucreazé forinule
+logice7 vorn prefera reprezentarea formulelor sub forma arborelui de sintaxé
+abstractit in dauna reprezentitrii sub forma unui cuvétnt (sir de caractere).
+4.2 Alte exemple de functii deﬁnite recursiv
+Iaté incé trei exemple de functii deﬁnite prin recursie structuralé peste for-
+mule.
+
+Prima functie, height : Ll? —> N, calculeazé indltimea arborelui abstract
+de sintaxé a1 unei formule:
+
+1, dacé 90 G A;
+1 + height<g0’), dacé g0 : —|<p’ si 4p’ G LIP;
+height<go> : 1 + mam<height<<p1) , height(<p2)),
+daci <P I (901 /\ <22) $1 <P11<P2 e 1UP‘;
+1 + max<height<cp1) , hez'ght(<,02))7
+dam‘; <P I (901 V (P2)$1<P1,902 € LP-
+
+Functia max : N >< N —> N care apare in deﬁnitia functiei height este functia
+obisnuité care calculeazé maximul dintre doué numere naturale.
+
+Urrnétoarea functie, size : lLlP —> N7 calculeazé dimensiunea arborelui
+abstract de sintaXEL a1 unei formule (adicei nurnérul de noduri):
+
+Partea I - Logica propozitionalé 30 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-W‘ W Wmd Mm. WW... Wm M M
-L M. p E A
-“mm “WWW”
-~43 z H mm) t WM
-WI v Z {w Aw) n my: e Ll?
-H My.) W491),
-WNW m1 “Mm
-mumvmwhh m w A WWWWmmmmk
-m W ‘W
-w) (w; ,1 s A
-Wm WWWWYEL-
-mg) 1 My‘) MM
-MM u MAW)
-4.3 Demonstratii win inducﬁc shuctulalé
-WW.» m WWW“ w.“ WWW“ 5m.“ an.
-. W “e mm Hm "k WW
-. W WW, M MM m t n W» m.‘ s v
-mm W. WWW.“ n MW d, M.‘ W.
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+1, dacé 4p E A;
+1 + size (90’), dacé 90 I —\<p’ 5i go’ € LIP’;
+size (4p) I 1 + size (4,01) + size<<p2),
+daczi go I (cpl /\ 302) $1 301,902 € 1UP’;
+1 + size (4,01) + size<<pg>7
+daczi 30 I (cpl \/ 302) $1§017§02 € LIP’.
+Ultimul exemplu, prop : LIP’ —> 2A, calculeazé toate variabilele propozitionale
+care apar intr-o formula:
+{w}, daca <0 e A;
+prop <90’), dacé 90 I I90’ si go’ € 1UP’;
+Pr0p(<p) I Pp0p(<p1) Uprop<s02),
+daci s0 I ($01 /\ s02) $i $017902 € 1UP’;
+Wop ($1) U pmp<s02),
+dacé g0 I ($01 V (pg) $1 (p1,§02 € LIP’.
+Asigurati-vé 05L inpelegeti $1 cé sfniti $5 deﬁnigi si s5 calculati cu astfel de
+functii.
+4.3 Demonstratii prin inductie structuralé
+Céteodaté, vom face demonstratii prin induciie structurald. Sunteﬁi deja
+familiarizapi din liceu cu demonstrapiile prin inductie matematicé.
+Pentru a demonstra 0 teoremé de forma
+Pentru orice n € N, este adevdmt ed P(n)7
+principiul inducﬁiei matematice postuleazé c5 este suﬁcient s23 arétém cé:
+o (cazul de bazé) P(0) este adevdmt;
+o (cazul inductiv) P(l<:) implied P(k + 1), pentru opice k: G N.
+Demonstratiile prin inducﬁie structuralé generalizeazé principiul de mai
+sus $1 pot ﬁ aplicate oricérei multimi deﬁnite inductiv7 cum a1" ﬁ LIP’.
+Pentru cazul LP, principiul inductiei structurale este c5, pentru a demon-
+stra 0 teoremé de forma
+Partea I - Logica propozitionalé 31 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-MM. M... ............. MM... ...MM... MM... M r...
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
 
-M... m1.....M..MMM.M.- Z M, MM... .. Pp).
-. .M... M M... 4.’) M M MM MM... MM... d Z A MM
-. M... MM... .. PM M... MM.) .M...
-. .M... MM 1. .1... A...) M MM FM.) .. 4..) M M
-. M... MM... m». v...) M M M. .19.) .. PM) M
-MM... M MM... M MM... PM. i MM...- M MM.
-MM"... MM .M MM. MW... M M. M M...) g
-MM»)
+Pentru orice formuld propozigfionald 4p E LIP’, este adevdmt Cd P<g0>,
+este suﬁcient s21 arétém c212
+0 (cazul de bazé) P<go’) are [00 pentru om'ce formula atomicd 90’ € A (altfel
+spus, proprietatea P este adevératé pentru orice formulé atomicé);
 
-r... Z MM...) S M4.)
+0 (cazul inductiv 1) P<—\<p’) are loc dacd P(90') are loc;
+o (cazul inductiv 2) P((<p1 /\ (p2)) are loc dacd P(301) 5i P002) au loc;
+o (cazul inductiv 3) P((<p1 \/ 902)) are loc dacd P(301) 5i P(g02> au 10c.
 
-. ...........M...M..(.1) 5 MM.) .M......M M.......M..M...M
-.JZ A
+Iaté un exemplu de teoremé $1 de demonstratia ei prin inductie structuralé:
+Teorema 18 (Exemplu de teoremé care poate ﬁ demonstraté prin inductie
+structuralé). Pentru orice formuld propozz'tz'onald 4p, avem cd height<<p> g
+5ize(<p).
 
-n... M. MM... MW) Z . .. M4,) Z . (MM. Z A. s.
-. MM M .> .M.....M. M My) Z MM) MM. M
-WW) S MW)
+Demonstratie: Facem demonstrapia prin inducpie structuralé, unde pro-
+prietatea P este deﬁnité astfel:
 
-D... M. MM... Imwh1(~d) Z .. MMM') . MM) Z ..
-My) s. M MM“) S h M4,.) M... M.... MM... .M
-M... M...MM....M M MMM. MM...
+P(<p) I height<<p> g size<np).
+Este suﬁcient sé arétém c5:
+1. (cazul de bazé) height<gd> g size (90’) pentru orice variabilé propozifuionalé
+<p’ € A.
+
+Dar, prin deﬁnitie, height<gd> I 1 $1 size<<p’) I 1 (deoarece 4p’ € A). Si
+1 g 1, deci am terminat de demonstrat acest caz.
+
+2. (cazul inductiv 1) Presupunénd c5 height(4p’) g size(4p’), arétém 05L
+height<ﬁgd> g size(—\<p’).
+
+Dar, din deﬁniyie, height<ﬁ<p’) I 1+ height<g0') §i size(—\<p’) I 1 +
+size<g0’). Si 1 + height<g0’) g 1 + size<cp’) (ceea ce trebuia s5 airéitéiiii)7 din
+moment ce gtim deja (:51 height<gd> g size (<p’).
+
+Partea I - Logica propozitionalé 32 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-marl W... Mm.“ Mm. "mm... Mm M M
-1 WWW 1, MW“ M 1m“) 5 M, [n] ‘.anv) 5
-M4,‘) “m. b‘ MMM Mn) s “(49. M1)
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+3. (cazul inductiv 2) Presupunénd c5 height<<p1) g size<g01) sj height<ga2) g
+5226(902), arétérn (:5 height<(301 /\ 902)) g 5226((301 /\ 902)).
 
-um MM.“ Iwghi((;\ M) 1 MMQWW WM)
-.. .1,“ mm. R mm» S MW". m mm mm.“ N]
-.mmmw. m) S l~lmyN(v1)~h/WM(¢1) 0.. haw-‘(9.) s
-mg.) L195 21 .1.“ Wm M aw. Mmev. m) S | W49.) ,
-“9(a) nu‘ d". Mm “(m Am) Z MR4”) * “(my _.
-Am WW A a’) S “(M A my)‘ W. m k.\mm.m..
-‘ (um. mm 1) “mm, mm“ 1
+Dar, prin deﬁnitie7 height((901 /\ 902)) I 1+max<hetght<<p1), height<<p2))
+si, din moment ce max(a, b) g a + b (pentru orice numere naturale a, b G N)7
+avem c5 height<(<,01 /\ 4%)) g 1+height(301)+height(cp2). Dar heighten!) g
+522490)) (1 g t 5 2) din ipotezét7 $i deci height((<p1 /\ 4%)) g 1 + $226001) +
+size(<p2). Dar, din deﬁnitie, size((<,01 /\ 902)) I 1+ size(<p1) + $226002), gi
+deci height((<p1 /\ npg)) g stze((<p1 /\ 902)), ceea ce trebuia s5. arétém.
+4. (cazul inductiv 3) analog cazului inductiv 2.
 
-um
+q.e.d.
 
-4.4 ma de “mini
-Md“... “v mum!» [MW/Mm ML mum 1. Mlumm ,b
-WW
+4.4 Fi$5 de exercitii
+Exercitiul 19. Calculati, folostnd functta subf, multimea d6 subformule ale
+formulelm":
 
-I “ll/\“UA', i HIV WMYL J ‘((PVWVH'P
-‘Wm... w. Mm Wm “MM m .Mwwm
+1- ((P /\ ﬁ<1)/\ r); 2- ((P \/ ﬁq) /\ r); 5’- “((P V ﬁq) /\ r)-
+Exercitiul 20. Calculatt arborti abstracti at urmdtoarelov" formule:
 
-l (LP A ‘I? A r)‘
+1- ((P /\ 11) /\ r);
 
-l up v <1» A I:
+2’ ((p \/ ﬁq) /\ r);
 
-a ‘qu i=1 M»
+3’ “((P \/ ﬁ<1)/\ r);
 
-¢ 1*4Pv ‘17 A!)
-Md“... n. MW WW Mm WM LP A N WW a,’
-WM WM, h "W MW mm MW MM a, M Emu/MW
-Md“... 27' MW, “Wm” M ILP Q N‘ Wm 1.
-"W ,1 ‘Mm: Wm a MM Mm M" mm 1mm, d: M1
-MKWW
-5mm... n mm MW 1W, W u’ ‘ A Wm m
-Mummywb m W MMMWWW, 4.1%»me
-5mm... n Mm,“ WMWWWL WWMW PM»
-W mlmm WWW. v m MM < m4‘) ‘ .
-Ymu 1' W. WWWM 11 hm m M m.‘ mm
+4' (“(P \/ nq) /\ r).
+Exercitiul 21. Calculatt, uttlizdnd functia height : LIP> —> N, inaltz'mea ar-
+boreluz' abstract de stntaaca” pentru ﬁecare dintre formulele de la Emersitiul.
+Exercitiul 22. Calculati, utilizand functia size : LIP’ —> N, numarul de
+nodurt al arborelut abstract de sintaaca” pentru ﬁecare dintre formulele d6 la
+Exercitz'ul I.
+Exercitiul 23. Calculati, utilizand fanctta prop : LIP’ —> 2A, multimea vari-
+abilelor pmpozttionale care apaT in ﬁecare dintre formulele de la EmercttiUZI.
+Exercitiul 24. Demonstratz' utiltzdnd principiul tndactz'ei structurale ca pen-
+tTU ortce formula propozittonala 4p, avem ca height(4p) < size (4p) + 1.
+Partea I - Logica propozitionalé 33 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-Lwd W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-17mm WMWWWM u [\nlcdrmw drlmumm
+Logicé pentru informatici 2020-2021 Universitatea Alexandru 10cm Cuza
+Partea I - Logica propozitionalé 34 Note de curs - de listat color
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:35**************
-Capitolul 5
-Semantica logicii
-propozigionale
-u v Z Q
+Capltolul 5
+S t . l O O .
+Q Q
 
-mm.“ [Mi I“ mm. WW Wm“ WK. W
-MZMHZHWZ1H1.
+propozﬂyonale
+Multimea B I {0,1} se nume$te multimea valorilor booleene (sau multimea
+valorilor de adevér). Valorea 0 reprezinté falsul 5i valoarea 1 reprezinté
+adevérul.
 
-m“... B X E a E ‘ WK Wm W" _. W Wm. W
-u M“ Ml Ml \:!
+Functia i : B —> B se nume$te negatie logicd $1 este deﬁnité astfel: 6 I 1
+si I I O.
 
-anm Hi ‘ '1 Mummyl u H'Wﬂvu Wm”.
-5.1 ALribuiri
+Funcpia + : B >< B —> B se nume$te disjunctie logicd $1 este deﬁnité astfel:
+0+0I0,0+1I1,1+0I1,1+1I1.
 
-I mm’!
+Funcpia - : B >< B —> B se numeste conjunctie logicd $1 este deﬁnité astfel:
+0-0I0,O-1I0,1-0I0,1-1I1.
 
-J MW
+Tuplul (B, +, ‘,i) formeazé 0 algebrd booleand.
+5.1 Atribuiri
+O atribuz're de valom' de adevdr (sau pur $1 simplu atribuz're de aici inainte)
+este orice functie 7' : A —> B. Cu alte cuvinte7 0 atribuire este 0 funcﬁie care
+asociazé ﬁecérei variabile propozitionale 0 valoare de adevér.
+Exemplul 25. Fz'e 7'1 : A % B 0 functie deﬁnitd dupd cum urmeazd:
 
-/ MW
+2. 71(q) I O;
 
-J mu! :ﬁ wmw-mu u Y ,u (P q I!
+5). T1(I') I 1,’
 
-<1
+4. 71(a) I O pentru orice a E A \ {p, q, r}.
+
+35
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-1W W WNW Mm. WW... Wm ,m M
-4, W
-MW m. F,‘ n A Z E W Wm m W“,
-. Zm Z H
-a W Z n
-a W Z .
-0 vain»: | Pmlm mm: E AMP Q I)
-WW 11v h, Y, A Z D W,“ 4W W Wm
-5.7 Valoarea dc adevér a unei formula intr-o
-akﬂbuire
-m. WM W
-1,1 W R A
-4;’) W ¢Z Z,‘ u v Z u=
-'(v) Z 'W *(W)
-WRVZM Avxhlw new
-4w) ‘7(a)
-{WW v - 1w v v1) u '3sz e LP
-“(wmpnggM.(Q)ZM.>1W1ZMZ-
-m“ W. WWW.“ u W1, A, W W
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+Din moment ce este o functie de la A la B, T1 este 0 atribnz're de valori
+de adevdn
+Exemplul 26. Fie T2 : A —> B 0 functie deﬁnitd dupd cum urmeazd:
+1. 7'2 (P) I 0,‘
+2. T2(q) I 0;
+3. T2(r) I 1;
+4. 72(a) I 1 pentru orice a G A \ {p, q, r}.
+Din moment ce este 0 functie de la A la B, T2 este de asemenea 0 atribuire.
+Exemplul 27. Fie T3 : A —> B 0 functie deﬁnitd dnpd cum urmeazd:
+1. 73(a) I 0 pentru om'ce a € A.
+Din moment ce este 0 functie de la A la B, 1'3 este 0 atribuz're.
+5.2 Valoarea de adevﬁr a unei formule intr-o
+atribuire
+Valoarea de adevér a unei formule cp intr-o atribuire T este notaté cu $(go) $1
+este deﬁnité astfel:
+T(<p), dacé go E A;
+ﬂu), dacé w I w’ $1 <p’ e LIP’;
+W) I $01) n02)’
+dacé <p I (<p1 /\ w) $1 s01, <p2 é LIP;
+72(901) +7A'(<P2),
+dacé 4p I (4,01 V 4,02) $ig01,<p2 G LIP.
+De fapt, functia e : LIP’ —> B se nume$te extensia homomorﬁcd a atribuirii
+T : A —> B la multimea de formule LIP’.
+Un exemplu de calcul a valorii de adevir a formulei (p \/ q) in atribuirea
+7'1 este prezentat mai jos:
+ﬁ((P \/ c1)) I 721(1)) +$1(q) I T1(P)+T1(C1) I 1 + 0 I 1-
+Concluzioném c5 valoarea de adevér a formulei (p \/ q) in 7'1 este 1.
+Partea I - Logica propozitionalé 36 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-marl W... Wm.“ Mm. "mm... Mm m M
-hmnn mmmplu,mwrukuumuwmukulwnrninrmulq ~‘PAQ,
-ﬁ(-\va) Z mm») Z Z4?) hp‘) Z “m w ZWZ
+Logica pentru informatica 2020-2021 Universitatea Alexandru I oan Cuza
 
-VZ ,
+Iata un alt exemplu7 in care calculam valoarea de adevar a formulei —\(p /\ q)
+in atribuirea T1:
 
-WWW “th- MM A mm WM, ,1. Z m .
-4W‘) Z “(*q) Z ,4‘) I“; ZiZiZ l»
-W.‘ Wm n» m,“ Mm win Z W u
+T1(I(p/\q)) I T1((p/\q)) I T1(P) T101) I T1(P) ~T1(q) I 1-0 I
+0 I 1.
 
-OM“. . in ,(m. n. m m. mm Wm. a: .W. ﬂ
+Concluzionam ca valoarea de adevar a formulei —|(p /\ q) in T1 este 1.
 
-hm.“ Wm D hm Mi MM m Mm Wm .m
+Iata inca un exemplu, in care calculam valorea de adevar a formulei —\—|q
+in atribuirea de valori de adevar 7'21
 
-lummwa MM A" mm WW mnnkmﬂm. Wm
-. pm .W mm W W m M1 WM MM, m Wm. .m
+Asadar, valoarea de adevar a formulei —mq in T2 este 0.
 
-lelwnhq at: mu In Mm)‘ m 4m: n mm» [nnmﬂl nle ldnlrul
+Observatie. o in general, nu are sens empm'marea valoarea de adevar a unei
+formule, deoareee 0 formuld poate ﬁ adeudmtd lntT-o anumltd atm'buz're, do?‘
+falsd in alto“ atleuz'Te. Are sens sd spunem valoarea de adevar a unei formule
+intr-o atribuire.
 
-1W, w m, mm", m W. m m
-. M mm w WMMMM Wm Z Wm rum
+0 Din aeelasi motiu, nu are sens sd spunem formula este adevarata sau
+formula este falsa. In sehz'mb, are sens sd spunem formula este adevarata
+in aceasta atribuire sau formula este falsa in aceasta atribuire. De exemplu,
+formula —|—|p este adeodmtd in T1, dar falsd in 7'2.
 
-m h mm .W mm," h mum B .Z n. D “1M “c Mr
+0 Dacd spunem dour valoarea de adevar a formulei 90, intelegem 0 functie
+de la multimea tuturor atribuirilor la multimea B si nu 0 valoare de adevar
+din multimea B.
 
-“My.” Wmmulm. o.m..wm~/W MZM _
+Deﬁnitia 28 (Notiunea de satisfacere). O atribuire T satisfaee 4p dacd T(g0) I
+1.
 
-.
-in m 4e v mm/m v pvlmn MW DHCIR mum “mums! [oune
+ln loc de T satisface 4p, putem folosi oricare dintre urmatoarele forme
+eehivalente:
 
-mm“
+1. T este model a1 formulei 4p;
 
-1 Y M.“ mm n, WM Z
-, Z M Mm“
+2. 4p pine in T;
 
-Dimplul III. Alum 1‘ alﬁvma mm m “n mm mm‘ 4p M1)
+3. T face (p adevarata;
 
-AknAimm v. n» 41k mm M [0"!le (‘P A q)
+Exemplul 29. Atm'buirea T1 deﬁnitd moi sus este model pentru —|(p /\ q).
+Atribulrea T1 nu este model al formulez' (—\p /\ q).
 
-- m. “Mm, M. ,(Z) Z .,
+Scriem T l: (p ($1 citim: T este model a1 formulei go; sau: T satisface cp etc.)
+ddaca T(<p) I 1. Scriem T Fé 30 ($1 citim: T nu este model al formulei 4p; sau:
+T nu satisface go) ddaca T00) I 0.
 
-Mn“! w "mm Mm (mm Z», "M Z‘ W Wm
+Deﬁnitia 30 (Relafia de satisfacere (notata II)). Relalia I, dintre atribui'rz'
+si formule, se numeste relapia de satisfacere. Relalia este definitd astfel: T l:
+4p ddacd T(go) I 1.
 
-“MM v "W." “MMMMN WM Mm NM , Z
-
->- M 4,) Z.
-
-mm ,7 W. WWW.“ n MM M m.‘ mm
+Partea I - Logica propozitionala 37 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-UM W... mum Mm. WW... MM m M
-5.3 Satisﬂabilitate
-Mm». a MM. 9 M, ‘MM M ,M "l Mm n MM"
-Y @1171in Y F , 1, ' W MM M”
-“Mm rm," [My ‘ m MW 4“, "Mm M. M,‘
-mm“, MMwww.mn.“MM," ,lmM MM
-.k MM 1m [MM M NM
-mm“, M. Mm um) m, “MM Wm, MM
-.1, ,M, m. m MM.
-“cm-MW MMM “MW A4 u W
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+5.3 Satisﬁabilitate
 
-Awmnﬁgwwgzm Many, ms“, Ty,
+Deﬁnitia 31. O formula cp este satisﬁabilé daed existd eel pulin o atribuire
+r astfel ineat r l: 90 (i.e., daed go are eel puiin un model).
 
-D," w» M. M M.
+Exemplul 32. Formula (p V q) este satisﬁabild, din moment ce are un model
+(de exemplu, atribuirea 7'1, deﬁnita mai sus).
 
-I MW“; Mw . I», W 41PM») - - ,<,, $-
+Exemplul 33. Formula —\p este de asemenea satisﬁabild: de exemplu, atribuirea
+T3, deﬁnitd mai sus, face formula adeudratd.
 
-u WM 1M,
-g m ,1 Mm m, mm, mgpwv) Z ﬁn» m:
-I 1:1 “M
+Exemplul 34. Formula (p /\ —\p) nu este satisﬁabild, deoarece are ualoarea
+de adeuar fals in orice atribuire.
 
-UM“, M in MM Wmnwhpl) M m, 1 MN H
-MM. ,5 “MM, 01m’. m. M, “BMW ,. mm
-My.“
-mm“, 15. M M m M M m ‘pm, M u Wm.
-5,4 Validitate
-Mum. ,1 Mu.“ “.va "MM; H‘. MA M MM"
-- m MW”. M F 9 (W Mm M, ".m,,|,.M,mM
-Mun“ 5a ‘Mam, “MM M4,. .‘ MM ,X Mm»
-2mm", mem|>w> m. M“ MMRWM.“ M
-MW N 7 a Mm mm m MPH») Z .wwm
-Mum?! MM“ M WWW,“ “MW; W WM
-APMWAWMM mm MUM-(yum
-MM WMWMM u. mum.“ MMM
+Demonstratie: Considerdm o atribuire T : A —> B oarecare.
+
+Avem ca +((p A em) z +(p) .41.) I T<p> -+(p) I T<p> Mp)-
+
+Dar T(p) poate fl 0 sau 1:
+
+1. in primul caz (T(p) I 0), auem ca i‘((p /\ —|p)) I I T(p) - T(p) I
+
+0 - 0 I 0 - 1 I 0;
+2. in al doilea caz (r(p) I 1), auem ed 7”’((p /\ —\p)) II T(p) -r(p) I
+1 -1 I 1 ~ 0 I 0.
+
+Din acest motiu, in orice caz, auem ed r((p /\ —|p)) I 0. Dar r a fost o
+atribuire aleasd arbitrar, 5i din aeest motiu inseamnd ca (p /\ —|p) este falsd
+in orice atribuire r. Dar acest lucru inseamna ca este nesatisﬁabila. q.e.d.
+Deﬁnitia 35 (Contradicﬁie). O formula care este nesatisflabild se nume$te
+contradictie.
+
+Exemplul 36. Dupd cum am udzut mai sus, (p /\ —|p) este o contradiclie.
+5.4 Validitate
+
+Deﬁnitia 37 (Formulé validé). O formula go este validé daca orice atribuire
+T are proprietatea ca 7' ,I g0 (orioe atribuire este model pentru formula).
+Deﬁnitia 38 (Tautologie). O formula“ ualidd se mai numeste 5i tautologie.
+Exemplul 39. Formula (p V —\p) este ualidd, deoareee este adeudratd in orice
+atribuire: ﬁe 7' 0 atribuire oarecare; auem ed 7°((p \/ —|p)) I r(p) + 7(p).
+Deoarece T(p) poate lua doar 2 ualori posibile, adicd 0 sau 1, uom auea ed
+T(p) + T(p) este sau 0 + 1, sau 1 + 0, deci 1 in ambele cazuri.
+
+Partea I - Logica propozitionalé 38 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-mud W". MW.“ zuzuznzl "mm". Ammmm 1m M
-mm.‘ mm MM/MMMMM Z» m: MM M W‘ Mu >- v
-“mm 4n. MM M MM Mk MM, “MW mm .7 MW...‘ .1, I»
-MMM uM/w/DMMMM/M
-5.5 libn-nule salisﬂabile, dnr care nu sun! valide
-DMZ-m“. iM MM“. a hmwhi mm MM m. WW“ M W
-MMWM WWW M “MM/WM Wm. WWW-WM M
-mummy” MWWMM W4.“ Wm, “WM dm m
-Dellnlﬂl u. 0 jnnmdd m M. ,M, ,DMMMMW M MM WW, M
-my.“ :ummkm).
-m..,|n...,.“p..m i mmmnmWWIMMMMMWZ
-n mum“
-mm.‘ n, 1m M,» MM,’ mild .1. M m 1m»
-M {PM My» M‘, M Mmm»
-g ,.M.M,,M,.WM,.
-M WV My» ML, M MW
-5.6 Formula echivalente
-MM. u. MM M ‘QM/MM.“ Z-M 4, e u w “Mm ,1
-MMMM w ZZZ MMMM. MM, “MM M M Z u, Mg.) Z 4w)
-MW lummmbc W mm“ .MM MM (mu quM
-.ZW Mm";
-Exemplul AA. L,‘ haqumd MM. m, M: 1mm» M M MM,
-m Mm 1 MM“ Mani m ,, 1M WM M I! W MM M .M
-MMM/ Tum» ,MMMMWM M, MMZIMMM MM 4m {k P Z
-MM» “Mum 1.1”“me MWMKMMMMLM.“ awn!
-Mm, lumw MM . lrvrwmlw p Z MM, at: Mm.‘ .4 Mm M.
-MM m “WM 445d. ,M MM Mm m M D mm
-MM MW MM +11) Z My» Z my» Z 7(11) P, m ;[~~») Z
-iLy) m MMM M Y M ,MM MM MMMMM Mm ,M +(~_») Z M1,)
-.ZMMM M WM" M M a: m. WM M “M Mm,“ M. MMP
-mm um. WWW“ 19 [\nzcdn m Mk Mu mm.
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+Notatie. Faptul ca formula 4p este ualidd se mai noteazd cu II 90.
+Exemplul 40. Formula p nu este ualida (deoarece emista 0 atribuire, de ea:-
+emplu 7'3, care face formula falsd).
+5.5 Formule satisﬁabile, dar care nu sunt valide
+Observatie. in englezd, 0 formula care nu este nici contradictie 5i nici tau-
+tologie se numegte contingent formula. In limba Tomand, nu auem un cuuant
+precis pentru acest concept, 5i 110m folosi exprimarea formulé contingentzi (sau
+contingenté), suprainearcdnd intelesul cuuantului contingent din DEX.
+Deﬁnitia 41. O formula care nu este nici contradictie 5i nici tautologie se
+numeote contingenti.
+Fiecare formulé poate ﬁ clasiﬁcaté ca ﬁind o contradictie, o tautologie, sau
+o contingentzi.
+Exemplul 42. Iata ememple din fiecaTe astfel de clasd de formule:
+1. (p /\ —|p) este o contTadiotie;
+2. p este o contingenta;
+3. (p V —|p) este o tautologie.
+5.6 Formule echivalente
+Deﬁnitia 43. Spunem ca“ doud formule <p1,g02 € LIP’ sunt echivalente, 5i
+seriem 4,01 E 902, daca pentru orice atribuire T : A —> B, T<<pl) I T<cp2).
+Intuitiv, formulele care sunt echivalente an acela$i inteles (adicé exprirné
+acelaoi lucru).
+Exemplul 44. La inceputul cursului, am udzut ed formulele p 5i —|—|p nu
+sunt egale. Evident ed formulele nu sunt egale, deoaTece prima are 1 simbol,
+iar cealalta 3 simboluri (daca a7" ﬁ fost egale, a?" ﬁ auut acelagi numav" de
+simboluri). Totuoi, acum suntem pregatiti 5d intelegem relatia dintre ele: p E
+ﬁﬁp. Cu alte cuuinte, chiai" daca nu sunt egale, ele sunt eohiualente: emprimd
+acela$i lucru. PentTu a demonstra p E —|—|p, este suﬁcient sd ardtdm ed
+formulele au aceeagi ualoare de adevdT in oriee atribuire. Fie T 0 atTibuiTe
+oaTecaTe. Auem ca T(—'—|p) I T(p) I T(p) I T(p). Pe seuTt, T(—|—|p) I
+T(p). Din moment ce T a fost aleasa arbitTaT, inseamnd ca T(I—|p) I T(p)
+pentTu orice atribuire T 5i de aoest motiu p este eehivalent cu Iﬁp.
+Partea I - Logica propozitionalé 39 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-1M. .M... ............. M..... "M..... M..... M n.»
-himplul 45 l/mmmm ulmwbn/n mlw (Pv q) - ~(~v A *1) (Lwnm
-M..... M M M... M ..../
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+Exemplul 45. Urmdtoarea eehivalenld are loe: (p V q) E —\(—|p /\ —\q) (exerciliu:
+oeriﬁcali ed intr-adevdi" aoa este).
 
-M M .M MM... M..... ............... M.....“ h...
-... .7. "M.
+Iaté incé doué echivalente importante7 cunoscute sub denumirea de legile
+lui De Morgan:
 
-M..... w M... M 1M... W. E ur .M ..
+Teorema 46. Pentru orice formule <p1,<p2 E LIP’, avem ed:
 
-. w. . M. E w. A My
+1- “($1 V <02)E(_'<e1 /\ “@2);
 
-l “(91 A91)- (man/wt)
-5.7 Conseciuti semanticé
-M..... 4.. r. r Z M. W. )0 M... (Mm! M..... .1. 1..
-M M..... .. . u. . M..... MM... . M..... r . M...
-rb¢ M .M M..... ........................1........ M r M
-M.. .. M.. M..... .
-himplul 4!. I». l‘ - (MW V u)! 4W" MT P q
+2- “($1 /\ <P2) E (‘W1 V “P21
+5.7 Consecinigé semanticé
+Deﬁnitia 47. Fie F : {901, . . . ,4pn, . . .} o mullime (posibil inﬁnitd) de for-
+mule. Spunem ca go este o consecinté semanticﬁ a multimii I‘, 5i scriem
+I‘ I: go, dacd orice atribui're care este model pentru toate formulele din I‘ este
+model 5i pentru formula go.
 
-1....M... M . M.» ../..M.»... .. <~. v.) .1. M... u
-. M M.. M... M. M. M..... .. M1.
+Spunem de asemenea c5 go este o consecintd logiea a mallimii F sau 05L
+4p este o oonsecinld tautologicd a mullimii F in 10c de 4p este o consecinld
+semantieci a mullimii F.
 
-.1. M... .. . M....MMW .q, .M...(._,v.,) Z. 0..
-4......) ZEN... 0.. ..,. Z .. . MM. . .0) :0...) Z
-M. M..... M.. Z .
+ExeAmplul 48. Fie I‘ : {p, (-1p V q)}. Avem ca P I: q.
 
-D... . H. M. M.. . ... ,M... . .... ....... M.. ,, .
-w... .. M.. m...M........ M... ..............q .7. M.....
-M.. M..-1...... M <, hm.) > q M ., M.. .. M.
-M..... as. 4.... .. M. v n) >6 -., u... _. M M.....
-‘M. M.....l... w w) PM... . M. .M. MM... .... M
-M... .. M.. M.. M.. 1M... P .. (,v .>. ... M m ﬂ.
-M.. .. 1M... ~. nanny-1mm‘ . .. M. Z . m... Z . 1.. .M...
-“I .....1... M M. MM...
+Intr-adevdr, ﬁe T an model al formulelor p 5i (—\p V q). Din moment ce
+T este model pentru p, avem prin deﬁnilie ca T(p) I 1.
 
-M..... MM. M..
-v. M : .~
-M ... d.
-w. w) > .1
-Y... .7 m... “MM... m M... M A. .M. M.
+Din moment ce T este model al (—\p V q), avem ca T((—\p V q)> I 1. Dar
++(hp v 01>) I T<p> +T<q>1 DMT(p):1, dew‘ +(hp v <0) I 0+T<q> I
+T(q). inseamnd ed T(q) I 1.
+
+Deci T este model pentm q. Am presupus ed T este model pentru p 5i
+(—\p V q) 5i am aratat ed in mod neeesar T este 5i model pentru q. Dar aceasta
+este ﬁx deﬁnilia faptului ed {p, (-1p V q)} |: q, ceea ce ooiam sav aratam.
+Exemplul 49. Aoem ca {p, (p V r)} ké —|r, adicd ﬁr nu este consecinld
+logicd a formulelor p7 (p V r). Pentru a ardta aceastd neconsecinté, este su-
+ﬁcient sa gdsim an model pentm formulele p 5i (p V r), dar care sd nu ﬁe
+model alformulei —\r. Orice atribuire T cu T(p) I 1 5i T(r) I 1 (de exemplu,
+T1) satisfaee cele cloud proprietali.
+
+Notatie. Cdteodata seriem
+$17 - - ~ , sen i: s0
+in loc de
+{(1011---v<pn} 1: w-
+Partea I - Logica propozitionalé 40 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-mud M... mlmmlnrl zuzuznzl "mm. Ainnmlm 1m M
-Ohnmh- 1M n - m ,~. Wm >- V» ~, MM m 1mm w v “h
-Wm)“ uvvmnhz/l a MM m Am'hwm WW W ,.,, Wm
-M MMM MW w Wm 1W‘ w 9 uh "Mu
-5.5 Mummi consistente de formula
-0 m mmvlw )rmmvunl cm up“)! "MW a" 1,. man .\ a" m u
-kw“ \rmum n. Wm‘ A m mmnw» .1: Mm." MMMW.
-.1, 1.7mm
-M...» w mm“ “,me driurmvllv). 01mm” MW m
-1k 1mm v: mm“ mummni m mm q nLvav T M .1 n, Mm
-1am Vuak/nvvwkl/ v. /\ s , s n:
-Dbl-m9," Alum/V 4W, Mm 7 m". WWW a,» mulhnw
-1M “k 4 mm Vital/(ll NM 111an mm mm»,
-u nmkmic Mm mm W mmm.“ M mummy 61c‘ m."
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+Observayie. Dacd n I 0, 301,...,gon l: <p se reduce la faptul ca (p este
+conseclngfd semantlca a multimll ulde. Acest lucru inseamna ca go este oalldd,
+ceea ce justlﬁcd notatld I: np pentru faptul ca (,0 este ualldd.
+5.8 Multimi consistente de formule
+O alté nociune semanticé care apare relativ des in practicé 5i care are o
+legaturé strénsé cu conectorul /\ este nofuiunea de mulllme (ln)conslstentd
+de formule.
+Deﬁnitia 50 (Multime consistenté de formule). O mulllme {<p1, 4,02, . . . , 4pm}
+de formule se numesfce consistenté dacd em'std o atm'bulre T care 5d ﬁe model
+pentru toate formulele 4,01- (1 g l g n).
+Observatie. Atenlle! Aceeagz' atrlbuire T pentru toate formulele din multime
+( nu cate o atm'bulre potential dlfem'ta pentru ﬁecare formula)!
 
-Wm“;
-1m. 51 [hp-um mm. mum-m Mm‘. _\ WM.“ W A). 0
-"WM 4' 1mm» (w w. W1 W mum“. Mum/“11mm
+O multime de formule este inconsistenté (sau neconsistenté) dacé nu este
+consistenté.
+Lema 51 (Legétura dintre multimile consistente $i conectorul logic A). O
+multlme de formule {3017 902, . . . 7 cpn} este consistentd ddaca formula
 
-um AVI)/\ )Aw)
-“u “Mum
-lel w um“, Hume Wm mmmmeuurﬂ (0mm W AL 0
-MM Mlmvw (“M W "1:".me Md Mm
+(((sm /\ 902) /\ ~--) /\ vn)
+este satisﬁablla.
+Lema 52 (Legétura dintre multimile inconsistente $1 conectorul logic /\). O
+multlme de formule {301, Lpg, . . . , apn} este lnconsz'stentd ddaca formula
+((001 /\ $2) /\ - - -) /\ w)
 
-um A w) A M 9“)
-W m, mlu/Twhm
-5mm.“ a: MM m PM .W hm ,-‘ M rpm‘ my
-m ., Mum mummy; drlwvwic, mm m’
-
-<9”: é”) Fr
-zwmm s4 Amnm m ml
-w. w. w» rpm».
-
-Mm w‘ v1. w) m 4 mulhm: Wmmma .1, Mm
-Ymu 1' HQ“ WWW.“ M Mm m An m.‘ mm
+nu este satisﬁabild.
+Exercitiul 53. Aratalz' ca, pentru om'ce formula 4p, daca {<p1,<p2,...,<pn}
+este o multime lnconsistentd de formule, auem ed
+Exercilgiul 54. Aratall ca dacd
+atuncz' {4,01, gag, . . . ,gon} este o mulllme inconsistentd de formule.
+Partea I - Logica propozitionalé 41 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-111.11 1.111... 11.111.111.11 11.11.1111 111111.11... 1111.111 1.1.1 M
-5.9 “111111111 1
-11111.1 1 .. .1111. 11.111. $1111.11 11111 "11>.
-“11111-111 11 . 11.1 .111 1».
-1.111111% 1. 1.1 . 1.111 11.1 .11
-111.11 111.1111 .1 1.1111111. 1.11.1 111111111111.
-11111111111111111.11....»11111111...»
-1111.1111-11 11 .1.. 1 1.1.1 11.1 .11
-“11111-11 11 1 11-1 1111 1».
-11.11.111.111 1.11.1 111 11.1... 11.1.1111 1.11.11.11.11... 111-1111111111.’
-z 11111.1 .1..-.11... 111.1111... 1.111 11.1... 11,11 11111 1. 1.1.1.11. 11111 11.1
-.1.-1.. .11 1. 1.11.11. .1. 1111.11.11 11. 11.1 11.11 11.11.. 1.1111 1 111111.11
-11.11.1111. 11.11.11 11111.11 1.111111 111.1. 1.111111111111111 111.111.11.111.
-1111111111111 1111.11.11.1111111111111111111.
-11.1111 11. 1.1111 .111. 1.111.. 111111111111 111. 1111111111111 1111.1 11 1.,
-11 1.111.111.1111 111.111.11.111... 11.1.1.1... 1.11.1. 1 1. .111. 111111.11
-1 111111.111.111111111111111111111111 1.111.111. 1.11.11. 11 >1 1 --
-1.1
-1 11.1.1111 11111111111111 11 111.11 11111 1111111111 11.1.1.1 1. 1 111.
-1 11111.11. .1..-11.11.1111 1 1111.1. 11.11 1111.11.11 11.1.1111 1. 1 111.
-.. 11>
-1.1. 1.11.1. 111.1.1.1..1111111.11.111111111114111 11w 11
-11.1.1111 1111.11 1.11 1.1.1.1.... 111.11. 11111-111111 4(qu) 1 1n
-111.11.111.1111111... 11.1111 11111111111111 11111111111111.11111111.
-.1 1.11 111111 11.111.111.111 1111111111.. 11 11111111 1.1.1.111 1.11 111.11 11
-.411wa vnzﬂquwﬂl'
-11111111111111.1111111111111 .111.1.11111.1.111... 1.1.1.1111. 11111
-111. 111.111.11.111 1.111111111111111 11. 11.1.1.1
-11.1.1 11111. 1111.11.11.11 11 111.111 1.1. 111111111111
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+5.9 Aplicatia 1
+Ion scrie urmétorul cod:
+if (((y ‘Z, 4 == 0) && (y ‘Z, 100 != 0)) || (y ‘X, 400 == 0))
+printf("%d is a leap year.", y);
+else
+printf("%d is not a leap year.", y);
+Ioana incearcé sé simpliﬁce codul in felul urmétor:
+if (((y "A 4 != 0) || (y ‘X. 100 == 0)) 8:86 (y Z 400 != 0))
+printf("%d is not a leap year.", y);
+else
+printf("%d is a leap year.", y);
+
+Transformarea fauna de Ioana pistreazé comportamentul programului?
+E diﬁcil s5 spunem cu certitudine acest lucru dacé doar ne uitam la cod, dar
+putem s5 ne folosim de conceptele pe care le-am invéyat pentru a modela
+problema de mai sus folosind uneltele logicii propozipionale si s51 determinam
+Clanl cele doué programe an acelasi comportament.
+
+Inainte de toate7 vom traduce conditiile din instructiunea if-else In log-
+ica propozipionalé. Vom identiﬁca propozz'gfiz'le atomice si le vom inlocui cu
+variabile propozitionale dupé cum urmeazé. Fie y un an ﬁxat:
+
+1. variabila propozipionalé p va ‘pine locul propozifuiei atomice (y “A 4 ==
+
+O);
+2. variabila propozitionalé q va tine locul pr0pozi§iei atomice (y "A 100
+3. variabila propozitionalé r va pine locul propozitlei atomice (y ‘Z, 400
+== O).
+
+Tinzind cont de traducerea de mai sus, vedem (:21 condipia din programul
+lui Ion este, in limbajul logicii propozifuionale, ((p /\ —|q) \/ r).
+
+Formula Ioanei este7 in limbajul logicii propozitionale7 ((—|p V q) /\ —|r).
+
+Observati de asemenea ca ramura if a primului program corespunde ra-
+murii else a celui de-al doilea program si invers. Pentru ca cele doué programe
+sé aibé acelasi comportament, este suﬁcient ca negatia formulei lui Ion sé ﬁe
+echivalenté cu formula Ioanei. Cu alte cuvinte, are loc echivalenta:
+
+“((P /\ ﬁq) \/ r) E ((“P V q) /\ or)?
+
+Aplicénd legile lui De Morgan, vedem c5 echivalenta are intr-adevar loc si
+deci transformarea propusé de Ioana este corecté.
+
+Partea I - Logica propozitionalé 42 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-Uﬂrl W... “mm 2mm. "mm". Amm lmn M
-5.1a F55 de “mm;
-“mm... 55. m v A Z g mm" MM Mdmmm 1(a) Z
-l rm Z n rm Z n A“, Z n m... m “mm MAW.
-n Z A\ w n
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+5.10 Fi$5 de exercitii
+Exercitgiul 55. Fle T : A —> B atm'bulrea deﬁnltd dupd cum urmeazd: T(p) I
+1, T(q) I 0, T(r) I 0, T(a) I 0 pentru orice altd variabllii propozillonald
+a G A\{p,q,r}.
 
-51mm» Mm a Mum A. 11mm , .14 m. m A .MMWAA
-m
+Stabilill valoarea de adevdr in atriburea T de mal sus a urmdtoarelor for-
+mule:
 
-I (PAH?
+1- (P /\ q);
 
-r WAY»
+2’ (<1 /\ P);
 
-a 1
+3. —|<1;
 
-4 WA n
+4- (Iq /\ r);
 
-5 1r‘ A X» v w)
-mwmm my Gunh m: F MM Y m m Wm, 1W1”, .1 h
-MAW” 1m ., mm Fmpm 1mm)
+5- ((Pq /\ r) V “Pl
+Exerciigiul 56. Gdslll cdte 0 atribulre T in care urmdtoarele formule sci ﬁe
+adevdrate (cdte o atm'buire pentru ﬁecare formuld):
 
-I (Aw,
+1' (P /\ q);
 
-r (PA A‘)
+2’ (P /\ Iq);
 
-‘7 up A 11» v a
+5’- ((P /\ 11W q)-
 
-Emil A 1mm, M..." m Illa/d leak 1dr AAA/mm Ir MM.
-MAW
-5mm.“ s1 Gimh (in .7 MW Y in m" Wm‘, 1.7mm, m”
-1m W .1 Mm Am W» 1.7mm
+Existd 0 (singurd) atrlbulre care sci facd toate cele trei formula do mal sus
+adevdmte?
+Exerciigiul 57. Gdsigfz' odte o atrlbuz're T in care urmdtoarele formula 5d ﬁe
+false (cdte 0 atrlbulre pentru ﬁecare formuld):
 
-I 0qu
+1- (P \/ q);
 
-2 (q A (p v in
+2- (q /\ (P \/ 11));
 
-.7 up A in v l)
-“mm 5a (m 0n!" me 1m, n! MAMA
+3' ((P /\ 11)\/ q)‘
+Exerciigiul 58. Care dlntre urmdtoarele formule sunt satisﬁablle?
 
-I (YA “Pl
+1- (P /\ _‘P);
 
-r w»)
+2’ (P \/ “P);
 
-‘7 up v w) A ‘a
+5’- ((P \/ "P) /\ Iq);
 
-urpvwvAhPAm
-Yum‘ I’ lam WWW.“ u Am” m AA “mu mm
+4- ((P \/ _‘P) /\ (_'P /\ q));
+Partea I - Logica propozitionalé 43 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-ME‘ W... mlmmlnrl zuzuznzl 11mm“. Aﬁnmnim lmn M
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oau Cuza
 
-5 1wv-<m~»w>>
-halclﬁul m. (m Iva!" meuanU 1mm W mm?
+5’ ((P V ﬁq) /\ (op V r))-
+Exerciigiul 59. Care dintre urmdtoarele formule sunt ualz'de?
 
-I 19A w
+1- (p A "P);
 
-r Wm
+2- (p V _‘P);
 
-1 v
+3. p;
 
-4 4m v w) A in
+4- ((P \/ _'P) /\ ﬁq);
 
-5 uwwwwmn
-Ewwiﬁul w M1 “wk a, E (“ME/X, Mm,”
-mm.“ u. M mm‘, ,1, 5 WWW “WW,
-mm.“ e2. “WM N MM nmvlummv Wm» E u- M m
-mmm mxmkmr
+5- ((P /\ <1)V(_‘P /\ 1"))-
+Exerciigiul 60. Dali ewemple de 5 contradlclz'i interesante.
+Exercitiul 61. Dali eatemple de 5 tautolog22' interesante.
+Exercitiul 62. Demonstrall ad, peutru 0r2'ce formule 301,302,903 € 1UP, au loc
+urmdtoarele echlualemfe:
 
-1 w‘ Am Mm E rm AW) AW]
+1' ($01 /\ (902 /\ $03)) E ((901 /\ $2) /\ 903);
 
-2 w A 92) E w, A my‘
+2- ($01 /\ <P2) E ($02 /\ 901);
 
-1 1w v m wm E (1w v w) vw)
+5’- (201 V (W2 V $03)) E (W1 V 4P2) V W3);
 
-4 w, vvﬂ E m v m
+4' ($01 V $02) E ($02 V $01);
 
-5 “v1 E w
+5- ‘@901 E W1;
 
-u w, A m E w vv‘)
+5- _'(<P1 /\ $2) E (“/91 V WP2);
 
-1 w, v a) E w‘ Amy
-mm.“ u PM Mm“. m Mm W» 1""va 91.0 E n
-w v v1) E v. ME. M Mm, Jam E. E u- m, mumbgm“
-mm.“ M PM. dummnm El Wm ""1de up». E u
-M My E q dnni M MM, M 9. E u m WWW
-BEN-h.“ nu lem 44M,”- En m MEN/mm v‘ m E n
-M AW) E a. m n MM. M ,~. E u E.“ (“,va
-5mm.“ w Mm MW," n‘ "m W 1mm, vm E n‘
-M v my E a2 M E WM. M ,E. E Lv M1, mmmdev
-5mm.“ 51 Mm a E, m, Wm“ “Mm m WV EN
-mm.“ w Ammu my m. "mm Mm“ m My,”
-mm.“ w. W.“ m, M‘, mm» WWW“ 4m WV P] M q
-mm.“ m. WM». E.“ mnumnﬂgmmlmflmlﬁh v mm»,
-“*ﬂn WEN 4w» v ﬁlm) M w. A w
-Ymu 17 144m WWW.“ 44 “ME m AR m.‘ Em
+'7' “($01 V <P2) E (“W1 /\ “902)-
+Exerciigiul 63. Putem demonstra Cd, pentru 0r2ce formule 4,01, 902 G LIP’,
+(4,01 V 302) E 4,01 dacd 52 numal clacd 4,01 G LIP este tautologle?
+Exercilgiul 64. Putem demonstra cii, pentru 0r2ce formule 4,01, 902 G LIP’,
+(4,01 /\ 302) E 902 dacd 52 numal dacd cpl E LIP’ este tautologle?
+Exerciigiul 65. Putem demonstra Cd, pentru 0r2'ce formule 4,01, 4,02 € LIP’,
+(cpl /\ 302) E 4,01 dacd 52' numal dacd cpl G LIP’ este contradlclz'e?
+Exerciigiul 66. Putem demonstra cii, pentru 0r2'ce formule 4,01, 4,02 E LIP’,
+(4,01 V 302) E 4,02 dacd 52 numal dacd 901 G LIP’ este contrad2cl2'e?
+Exercitiul 67. Ardtam' ca“ ﬁp este consecz'mfd semantlod d2r2 (—|p V —\p).
+Exercitiul 68. Ardtau' Cd p nu este conseclnld semantlcd d2n (—\q V p).
+Exercitiul 69. Ardtagfl cd p este conseclnld semantlcd clln (-1q V p) 52 q.
+Exerciigiul 70. Ardtall Cd p3 este conseclnld semanticd d2'r2 (-1p1 V (p2 V p3)),
+((“ﬁpz \/ -'P4) /\ (own \/ ﬁp10) $2 (P1 /\ ﬁp4)-
+Partea I - Logica propozitionalé 44 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-Capitolul 6
+.
+
+Capltolul 6
 Conectori logici
-4m Ml) 1;‘) . 4h)
-m a a»; w w»
+Mai existzi doi conectori logici importanpi in logica propozipionalé: implicatia
+$1 echz'valemfa. Conectorul echz'valemfd este numit de asemenea dubld implicatie.
 
-(n H a) “w “ v3)/\Lv\l 4 w?)
-zumplu: H. 4mm v6 (P < P7 m.- » fummld 00!er Uv u r rmm
-‘v’? v) Mr HVHMIva hp v P) mum "m wiwn "am mm"! v41 19H
-6.1 Mai multe lugici prupnziﬁunala
+Semantica unei implicatii ($1 —> <p2) este daté de
 
-41
+$((801 —> $02)) I $(801) ‘1-?(902),
+pentru orice atribuire T. Se poate observa u$0r c5
+(<P1 —> <P2) E (“P1 V <P2)-
+
+Similar, semantica unei duble implicatii (901 <—> 4,02) este deﬁnité astfel
+
+incét
+(s01 <—> @2)E((s01 —> s02) /\ (s02 —> s00)-
+
+Exemplul 71. Avem cd (p —> p) este 0 formuld validd. De ce? Formula
+(p —> p) este echz'valentd (—|p \/ p), despre care putem vedea imediat cd este
+validd.
+6.1 Mai multe logici propozitionale
+Péné in acest moment am studiat logica propoziﬁionalzi a conectorilor —\, /\7 V7
+pe care am notat-o cu LIP’. De faupt7 in functie de multimea conectorilor logici
+de care avem nevoie7 existé mai multe logici propozitionale. Logica pe care
+am studiat-o péné in acest moment 0 vom nota cu LED-l,/\,\/ : LIP.
+
+In functie de conectorii logici permigi7 putem obpine $1 alte logici intere-
+sante:
+1. LlPth este logica propozitionalé in care singurii conectori permi$i sunt —|
+$1 \/.
+
+45
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-Uﬂrl W... mlmmlnrl zuzuznzl "mm. Aﬁnmnim 1m M
-z uh Q m: hm www.1- m cmsmrln-n mm. Prrmm mm l
-@ka "mm m _ mm!“ mm WWW WWW
-m m 0m mnbnnv
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+2. LlPlr, este logica propozitjonalé in care singurii conectori permiSi sunt J_
+(conector de aritate 0) si —>. Formula J_ (citire: bottom sau T intors) este
+falsé in orice atribuire.
 
-1 LM MM lumi ,.. m mm mnmml mm. m‘ v u A
-mm.“ n. 301m I'llmmlnmmhmmgmnmllmdvmlammhgmk
-.1, m, mm
+3. LIPVIA este o logicé in care singurii conectori permi$i sunt \/ $i /\.
+Exercitiul 72. Scriegfi deﬁnigfm formald pentru sintarra ﬁecdreia dintre logicile
+de mai susEl
 
-a! ... m m.“ n LN uAJ Sum “WWW AM W...
-m mm v i u mu .7 lumm“ a’ i u“ "Kiel mm v E v' <5.
-mm mu“ m my.“ d E may an“ a km.“ mm,“ nv un
+Ce au in comun LRLIPLHWLIPLVA? Sunt echz'expresz've. Adicé pentru
+orice formulé cp E LIP’ existé 0 formulé 90’ 6 LPTV astfel incét go E <p’ (Si
+invers7 pentru orice formulé 4p’ G LIEDWV existé 0 formula echivalenté in LIE”).
 
-(‘um pm. mu W u- m ur. v m m w dc m”: Pcnlm m
-‘MM-W, “mm me Mvwmmww Mum um.‘
-M.‘ mm
+Cum putern aréta c5 LIP’ $i LIPLW sunt 1a fel de expresive? Pentru una
+dintre directii, este suﬁcient s5 traducem toate conjuncpiile posibile din LIP’ in
+felul urmétor:
 
-w "1; ﬁhov v»
+I _ I
+(so/MMInwaw)
 
-LN“- mm.“ “ Mmmumnam mummwmn <_.
-um may. u». V) ‘mm WP Mum m" w. V mum,‘ “nu-Mm
-u-
+La sfér$it vom obpine 0 formulé echivalenté care nu conﬁne conjunctii ($i
+deci este in LIP-W). Invers7 orice formulé din UPLW este deja $i formulé din
+LIP’.
 
-m, pm, .m. d LI~V£I|LI‘4llhllhlt‘4k€1<plﬂvgl
+Cum puteIn aréta 05L LIPLHV $i LPL7_> sunt la fel de expresive?
 
-WWWmkd»,.mm,\wm.whmmvmmm Kan-m“!
-| ww; E w _ w‘
+Transformém toate disj unctjile $i negatiile folosind urrnzitoarele echivalente:
+1- (s0 V w’) E (_‘<P —> <2’);
 
-2 v E xv» < n
+2. ﬁQp E (4p —) l).
 
-()wnmdnmmioumre>euplme m‘ m. unmil m m...“ rank-ml
-mmmmmmmm, [mum-Anna“ m- Wm (in “WWW
-m.‘ (nunwn 1 .‘ Q
+Operaﬁia de transformare se 0pre$te dupé un numér ﬁnit de pa$i $1 rezultatul
+este 0 formula echivalenté cu formula de 1a care am plecat, dar care nu conﬁne
+decét conectorii J_ $i —>.
 
-1.le w“ W Mn m. mm. “Mm Dc mmphn m .wm
-hm," cum] rum wmmk
-Ewwviﬁul u Wm»! a, u iv w“ huh hm”, m. mmmm
-Obvenniu PM MW www.“ v. M”, m" My“ u... "I. h.
-1.1“. WW. a. m 1k WW" I.F_,\ m v u-__ my W, ‘W
-,MWWJ’, MLF_ "LI-M M .m.“,.u.x,,,-v,.,mm (mvnmmmlm
-4wguwmmmmu.‘WSW Maw “TL-AM“ vmém
-"WUWW.w."Mwwmw.‘mm.M¢mmrg “M
-Ymu 1' Mm WWW.“ a, [\nmdn m AR m.‘ mm
+Logica MFR/7A este strict mai puﬁin expresivé. De exemplu, in aceasté
+logicé nu existé formule nesatisﬁabile.
+
+Exerciﬁul 73. Explicati de ce in LIPVVA toate formulele sunt satisﬁabile.
+Observatie. Prin logicé propozitionalé se intelege om'ce logicd care este la
+fel de expresz'vd ca LP. De exemplu, LIP-HA, LIP-UV, LIP-.76 sunt toate logicz'
+propozz'tz'onale, dar LIPL. 5i LIP/W, nu sunt logicz' propozz'tionale (sunt maz' putz'n
+ewpresive)
+
+1Pentiru conectorul _L sunt doué posibilitépi, 1a alegere: s5 considerapi cé este folosit intr-
+un pas de bazé sau intr-un pas inductiv. Distincpia dintre un caz de bazé $i un caz inductiv
+este pur didacticé (face deﬁnitiile inductive mai u§0r de abordat)7 nu fundamentalé. Totu$i7
+pentru consecvenfué, vom considera 05 J_ este folosit intr-un a1 doilea caz de bazé.
+Partea I - Logica propozitionalé 46 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-Wm M". mlmnmnm mmzuzl "WWW mum M rM
-6.2 Legmum dintre implicatie gi ounsecintk SE.
-manlicli
-F w‘ a m (WM (a M m N. “M;
-FMMAnM 1M1“)
-.h Mummy PmlmmW/Mwmu ,», m u
-F m ~ m
-6.3 mducerea propnzitiilor din limbs romiani
-in ILIP
-mm. A", inn“ WWW.“ Swum W1 M, h MUM,“
-WWW. "M m
-Mm. ﬂ MW WWW a". m,‘ MW MW WWW.“
-MM Mm“ WWMMM 41 [mm]: h.“ A: MM (w.
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+6.2 Legﬁtura dintre implicatie gi consecintﬁ se-
+manticé
+Existé o legéturé importanté intre conectorul loglc lmpllcalle Si notjunea de
+conseclngfa“ semantlcd, daté de urmétoarea teoremé.
+Teorema 74 (Legétura dintre implicatie $1 consecinpé semanticé). Pentru
+orlce doud formule 301, (p2 E UP’, auem cal
+(p1 l: 4,02 (formula 4,02 este conseciuld a formulel 4,01)
+dacd 52' numaz' dacd
+I: (4,01 —> 4,02) (formula (901 —> (p2) este ualldd).
+
+De asernenea7 are loc urmétoarea teoremi mai generalé:
+Teorema 75 (Legétura generalizaté dintre implicatie gi consecinté seman-
+ticé). Pentru orlce formula 901, 902, . . . , 90m 4p € LIP’, avem cd
+
+s01,s02,~~,s0n IIsO
+clacd 52' numaz' dacd
+F (((001 /\ r2) /\ - - -) /\ rm) —> r)
+
+O legéturé similaré avern intre conectorul logic echivalenpé $1 notiunea de
+echivalenpé semanticé:
+Teorema 76 (Legétura dintre conectorul echivalenté si nopiunea semanticé
+de echivalenfcé). Peutru orlce doud formula Q1, 4,02 G LIP, auem cd
+
+$01 E $02
+dacd 52' numal
+I: (s01 <—> s02)-
+6.3 Traducerea propozitiilor din limba roméné
+in L113’
+
+Prin traducere se intelege modelarea unei propozitii scrisé in limba roméné
+ca o formulé din logica propozipionalé. Scopul modelérii poate ﬁ: clariﬁcarea
+intelesului propoziﬁiei prin eliminarea ambiguitétilor sintactioe, veriﬁcarea (:23
+propoziﬁia este validé, etc.
+
+Pentru a traduce propozitii din limba roméné in logica propozitionalél7
+trebuie s5 urmém doi paoi:
+Partea I - Logica propozitionalé 47 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-mud M... mlmmlnrl zuzuznzl "mm. Ainnmlm 1m M
-1 Mnmﬁmivlvaumnhnnnnnwtnnlmmum\lnnbﬂcpnvpommlmlc
-2 “HM-W Wuwv" Yum H Wm". WW“
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
 
-n. .mph‘. a “kw-‘mm, .5 V...“ Q‘ WW. “WM mm
-M M W M m 1m "WM M Mm "I, "Mm" v“ ‘(W
-“mm-M
+1. Identiﬁcarea propozitjilor atomice 5i asocierea cu variabile propozitionale;
 
-mm Wm “whim‘WWWMM ‘.H WI M.“ W.‘
-‘M WWW an...”
+2. Identificarea conectorilor logici 5i a ordinii acestora.
 
-‘ Mmmmhm
+De exemplu, $5 presupunem c5 vrem s5 tmducem propozitja vreau sd
+innit la logicd 5i 5d trec examenul dacri material este interesantd in logica
+propozitionalﬁ.
 
-1 W“ u! W mm": ‘mm. MM.“ m. m. Mine “PM m
+Primul pas este identiﬁcarea propozitiilor atomice. In cazul nostivu7 gisini
+trei propozitii atomice:
 
-www
+1. vreau sd invdt la Logicd;
 
-1 Mm “u MM,“
+2. vreau sd trec emamenul; (altentyie7 cuvéntul vreau nu apare explicit in
 
-Mama‘ mm. M m Inna 1|.“ WWW m...“ Dc
-mm. , m‘. pmmmm m m. M malma ml
-wknmnu
+propozipie)
 
-Amormcueo um.“ mummy‘ =.. m.“ P-wwmmm
+3. materia este interesantd.
 
-\MMMNMMJN wmhmmmmm
-F m“ .4 M m L/qm
-q m.‘ n.‘ M mm.‘
-. mam“ t.“ “Mm
-Ammm' PM“ Mm m umMm‘ Maw-WWW“
-“A “um-“um. [chm Mm.munmmmvnm mm
-n .. We“, m‘ mm WWW“
+Atentie! Conectorii nu fac parte din propozifuiile atomice. De
+exemplu, a treia propozitie atomicé nu este dacd materia este
+interesantd.
 
-Unmwml W ale WWW unnwrﬂul MW x“ cxrumhd JP mm
-m‘ m w “mm 1w“
+Asociein céte 0 variabilzi propozifuionalé cu ﬁecare propozitie atomicé:
 
-1 "MW" n mmmrxml“ / MM“ mm. 1 mermu
+variabilé propozitionalé propozitie atomicé
+p wean sci invdif la Logicd
+q vreau sci tree examenul
+r materia este interesantd.
+Aten§iel Pentru 0 traducere cét mai ﬁdelzil7 daczi 0 propoziﬁie apare
+de mai multe ori (chiar dacﬁ nu exact cu aceleasj cuvinte)7 trebuie
+$21 ii asociem aceea$i variabilé propozipionalé.
 
-MM,
-1 Minn" M Mm m... (In-l munml m,‘ m-mmmu m
-mm.‘ x ,\ WNW“, WM W; LURMMmW.“
-“my Mgmmwwnmm}. m [\nzcdnmm Animumm
+Urniétorul pas este identiﬁcarea conectorilor logici. In exemplul de mai
+sus, apar doi conectori logici:
+
+1. conectorul 52' in contextul [./ la logicd 52' sd tree [], care indicé 0
+
+conjunctie;
+
+2. conectorul dacd-atuncz' (chiar dacé cuvélntul atuncz' nu apare explicit) in
+
+contextul [...] examenul dacd materiel este [..f, care indicé 0 implicatie.
+Partea I - Logica propozitionalé 48 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-mud M... Mm“ mmznzl "mm. Mum 1m M
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+Care este ordinea celor doi conectori? Cu alte cuvinte, propozitia este 0
+conjunctie sau 0 implicatie? Care este conectorul principal? Simfuul limbii
+roméne ne spune (:5 intelesul este Inai degrabi 0 implicagie (de exeniplu7
+din cauza faptului c5 verbul ureau este subinteles in propozipia ureau sa tree
+examenul). Traducerea este a$adar
+(r —> (P /\ 61)),
 
-Lu: m: .4.“ “1w .1“, WNW c“ “1" mm ymMnm m a
-WMWW .mphmnw c.“ M wuwwnl' mm.“ 5mm“ m.‘
-mm m mm c3 WM W m. mm .. .mphw 1a= mm.
-“Wm MM, “\r Ma.
+deoarece propozipia asociaté variabilei propozitionale r este antecedentul implicatiei,
+chiar dacé apare sintactic 1a sfér$itul propozifuiei.
 
-1, a rp A q)».
-.kwmmm-mmm‘.mwﬂwwmmv"m“mammphcnm
-MM W “Wm ‘mmwn mum
+Atentie! in ciuda denuniirii7 variabilele propozitionale nu sunt
 
-whlvﬂe m WM, n ‘mm WWW. “W
-P: m" M M M Wm
-m l, m. mm mm .> m em M m- v Q.
-mm mm. um mm.“ dm we m1 m W .W
-m “hm Emmy“. a MW, lnlamm mm Wm“
-mm"... 11, MM mm,» WW“ 1" ‘m 1%“me s,“
-W h mud m m
-Amm m Mm M m: 4mm mm Winn]: Mm Amm
-In Mm“ WWW“, M MM M m- mm ,Wm u
-m. m. mm w M,» mm/nmw
-6.4 Aplicaﬁa 2
-UnnAwml pm M.‘ a", W PM Sm!» An Inlwlwtwv w
-me, m mmwmM.W...\.mmmm vummmn
-arm-mam. Mm...“ . m.“ mm. mum." . mm“. MM
-“W . ‘M Wm." vm... . m mm.“ Rm“ a m,“
-.1.“ mm...’
-Am“. rm.“ WW.“ mm D mm Wmmm W
-‘ Mm Wm.‘ mmmm mm. mm mm. ,,
-1 Mm mum.“ MW n my mm “MM
-1 Pemnl mm. nehno n mm WM mm. n
-Ymu 1' lag»:- mmmm 49 [\nzcdn m An m.‘ mm
+variabile in sens Inateinatic. O gre$ealé frecventé este s5 scriem
+
+p I wean sci inuat la Logz'ea7
+
+ceea ce nu este corect, deoarece p este egal doar cu p $i cu
+
+nimic altceva. Orice variabilé din curs apare scrisé cu font ne-
+
+gru 0bi$nuit. De exemplu, de multe ori folosirn variabila (p pentru
+
+a pine locul unei formule.
+Exerciigiul 77. Traducell urmatoarea propoznfz'e in loglca propozlllonald.’ Sau
+trec 1a Logicé, sau nu trec.
+
+Atengfle la cuulntele care nu apar explicit in propozilnle atomice. Atentie
+la semnz'ﬁcalla conectorulul sau-sau (lnollclu: nu apare printTe conectorn' pe
+care l-am dz'scutat, clar poate ﬁ emulat/simulat).
+
+6.4 Aplicatia 2
+
+Urniétorul puzzle este preluat din cartea Peter Smith. An Introduction t0
+Formal Logic: Fie majordomul, ﬁe bucétarul a comis crima. Victima a Inurit
+otrévité dacé bucﬁtarul a comis crima. Majordornul a comis crima doar dacé
+victima a fost injunghiaté. Victima nu a murit otrévité. Rezulté 05L victima
+a fost injunghiaté?
+
+Asociem ﬁecérei propozifuii atomice 0 variabilé propozitionalé, dupé cum
+urmeazé:
+
+1. Pentru propozitia majordomul a comls crlma variabila p;
+
+2. Pentru propozipia bucatarul a comls crlma variabila q;
+
+3. Pentru propozifuia uictlma a murlt mama variabila r1;
+
+Partea I - Logica propozitionalé 49 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-Md W... “mm mm- "mm". Mum M M
-‘ Pmm "'me my“. 11m Mum Wm n
-hum-m‘: Punk-M .t “Wm. in hmu mummy.‘ m "mm-"1c
-hm.“
-1 m, w A awn mwmwrvm mum m q»
-2 w ‘ n»
-x ‘,7 ‘ {,1 Wen» ‘mm. Mum
-1 w,
-hmmm mm “mum WM
-M.“ . mm, h pm m M... “Mm d "Mm m
-(upwnwmm“Mann ﬁn) F»!
-imp-mun “Mm. mm “K WW.“
-6.5 ma d9 exerciﬂi
-“mm... 1n AW“ pawn/mm: 4m mnnmmmmn
-A...“ m ,5 mm Mm‘ m m M, Mm
-I M 41m M m. ... Mm M m mu M. m“ m M W
-M M M MM.‘ A/md mm ,. m WW.“
-1 Lam: h ham] M M M, M,‘ .w W “W “Mm
-W n. M, M M m“ um Mm, a W “m m ham} u m
-.m mu mm n WM
-1 “mm, W. m m M 4w h MW. M W M. W M
-Wm m MM 0W“ W in Mm, M ,Y Mm
-M MW m M m M MW, ..., .wmm .1”
-WM .M {n WWW
-Ymu 1' lam WWW.“ 1» hm m M M.‘ mm
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+
+4. Pentru propozifuia uictima a fost injunghiatd variabila r2.
+
+Ipotezele puzzle-ului se modeleazé in logica propozitjonalé ca urmétoarele
+
+formule:
+
+1. ((p \/ q) /\ —\(p /\ q)) (disjunctia exclusivé dintre p $1 q);
+
+2. (q —> r1);
+
+3. (p —> r2) (atenpie la sensul implicapiei);
+
+4. —|r1.
+
+lntrebarea este modelati de formula r2.
+
+Pentru a réspunde la puzzle cu da/nu, este suﬁcient s5 veriﬁcém dacé
+
+{((pv q) A ﬁ<p A q», (q —> Imp —> r2)ﬁr1}|:
+lntr-adevér consecinta semanticé are 10c (exercitiu).
+6.5 Fi$§ de exerciigii
+Exerciigiul 78. Asocz'agfi pentru ﬁecare dintre aﬁrmagfiz'le urmdtoare 0 formuld
+din lLlP care sd modeleze intelesul sdu din limbo romdnd.
+
+1. Dacd afard ploud, stau in casd sau merg in mall. Nu stau in casii dour
+dacd nu md plictz'sesc. Afard ploud $i nu md plictz'sesc.
+
+2. Lucrez la logicd doar dacd nu se poate z'esz' afard. Se poate 1652' afard
+dacd nu ploud 52‘ este cald. Din moment ce nu Zucrez la logicd 5i afard
+este cald, inseamnd Cd ploud.
+
+3. Lucrum'le merg bine in lard dacd la conducerea gidm'i nu sunt hotz' 52'
+economia este sdndtoasd. Oamenn' pleacd in strdindtate dacd {52' numaz'
+dacd Zucrum'le nu meTg bine in turd. Economia este sdndtoasd, dar
+omnenz'i pleacd in strdindtate.
+
+Partea I - Logica propozitionalé 50 Note de curs - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:51**************
-Capltolul 7
+Capitolul 7
+D d t ' N t 1v
 
-Deducpa Naturala
+7
+In capitolul anterior ani discutat cateva notiuni importante care ‘pin de se-
+mantica logicii propozitionale:
+1. valoarea de adevar a unei formule intr-o atribuire;
+2. satisﬁabilitate;
+3. validitate;
+4. echivalenta;
+5. consecinta semantica.
+Arn vazut ca pentru a stabili, de exernplu7 ca doua forrnule sunt echivalente,
+este necesar un rapionarnent nu foarte complicat, dar totusi un rationarnent
+la nivel semantic (adica rapionarnent care foloseste nopiunile semantice de
+valoarea de adevar, atribuire etc). A priori, un astfel de rapionarnent este
+propriu oarnenilor.
 
-1 “WWW
+Una dintre preocuparile principale in logica pentru informatica este crearea
+de metode rnecanice (adica metode pretabile implementarii pe calculator) pen-
+tru rationarnentele semantice aferente.
 
-1 WW
+In acest capitol, prezentarn 0 rnetoda pentru rnecanizarea notiunii de
+consecinta semantica. Prin mecanizare a notiunii de consecinpa semantica
+intelegern 0 rnetoda de a demonstra consecinfue cu urrnatoarele proprietapi:
 
-‘ MW,“
+1. sa putern convinge pe cineva sa accepte ca consecinta are 10c7 fara ca acea
+persoana sa ﬁe nevoita s5 urmeze un rapionarnent semantic;
+2. in particular7 ﬁecare pas a1 demonstratiei trebuie sa poate ﬁ veriﬁcat usor
+(mecanic, fara a intelege);
 
-I M mmmm p, mm .i mqm (a "MW W m mm.
-n
+51
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:52**************
-mud M... Mm“ mmznzl "mm. Mum 1m M
-A mm {Mum m m PM» Wm‘ .1: m.“ mm mummy“ m
-Wlln h wk. .1‘ "MW
-1.1 Secvenze
-M...» w [Sm-“n (“Mm 14k n mew Mm WW
-4, MM m w ﬂ .WMWM; w» My.“ ‘M 1W“
-(w .mw
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I 0dn Cuza
 
-mm“ é. .W >1 v» m (lm mm. w. A v ﬁ L
+3. metoda trebuie sé ﬁe precisé, intr-atét de precisé incéxt rationamentul $5
 
-CHM.“ .m. W. m m » a m rm. v» W mm“
-MM m M. w) MM a‘ .W ,1 mm smeadeum
-mm. w WWW.“ mm
+poaté ﬁ veriﬁcat de un calculator.
 
-m m" M. m. W. r : M .m mm. .1! “mam, m
-m Wmm WWW!‘ r» v nan-mm.‘ mummy.“
-.u ‘mm WWW.“ ‘h ‘w > v<l1h<lim wmlo w do
-m m > v‘ ‘1.. mm. >1‘ Hm. m u m Wm m;- . "Mm
-> m. .k up. mm."
-awn...“ so M Him. WM, 4, Wm,
-1 0»pr
-1 wuhmww»
-a UPAquWﬂNW/W)
-1.2 Reguli de inrmma
-Dehum- n u mpnldn km A" W M 1mm m
-1 mmkmmksh .5“ mnwﬂwmkmm
-a .1 "Mm: m" u mm “MW mm
-a H mm mm. .1, MW n ml
+7.1 Secvente
 
-o "QM u mkmm. N m.“ mm mm,
+Deﬁnitia 79 (Secvenpé). O secvenﬁé este 0 pereche formatd dintr-o multime
 
-s, q, I
+de formula {4,01, . . . , 4pm} 52' dintr-o formuld 4p, pereche notatd sub forma
+{W17H'7Q01'L} l— g0‘
 
-YMMVMMMWMM 12 mm.“ Animumm
+Formulele $01, . . . , gun 5i 30 sunt din multimea LIP-umvrnl-
+
+Céteodaté citim notapia {901, . . .,cpn} l- 30 sub forma g0 este consecz'ngfd
+sintacticd din {901, . . . , cpn}. Formulele cpl, . . . , cpn se numesc antecedentii
+secvenfuei, iar g0 consecventul secventei.
+
+De multe ori7 vom nota cu F I {<p1, . . . , gon} multimea de antecedenti $1
+in acest caz vom scrie secvenﬁa astfel: I‘ F 30. De asernenea, notatia uzualé
+in literaturé permite scrierea 301, . . .,gan F 30 (adicé féré acolade) in loo de
+{901, . . . , 90”} l- ap, dar trebuie sé ‘pinem cont 05L in partea sténgé a simbolului
+l- avem de fapt 0 multime.
+
+Exemplul 80. latd cdteva ewemple de secvengfe:
+1- {qu} F (P /\ q);
+
+2- {P701 /\ 10} P (p V q);
+
+3’ {(P /\ (1)7(P \/ (1)}P (P /\ r)’
+
+Mai tdrzz'u vom vedea cd primele doud secvengfe de mai sus sunt valide,
+id?" ultima secventd nu este validd.
+7.2 Reguli de inferentéi
+Deﬁnitia 81. O regulé de inferenté este un tuplu format din:
+1. 0 multime d6 secvente Sl, . . . , Sn, care 56 numesc ipotezele regulii;
+2. 0 secventd S care se nume$te concluzia regulz'z';
+3. 0 posibz'ld conditie de aplicare a reguliz';
+4. un nume.
+
+O regulé de inferenpé se noteazé in felul urmétor:
+
+S1 Sn ‘ _
+NUME — condme.
+S ,
+
+Partea I - Logica propozitionalé 52 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-Uﬂrl W... WWW zuzuzm "WWW. Ammmm lmn M
-mum“. m WWWWM "~1me W" - leuzz WM
-.1, "W m WW5 a u WW u WW Wm
-0mm“ D. Mm .4,’ MW m ‘WW WW J; W”...
-mm...‘ :2. [uni Wm MW 1, "1m I: mfmni
-A110 l">~' ~ 1‘F1V'\v"')
-rw/W'» ‘ rw‘
-M r > w A w
-r» a
-Mr N, WW1 .14 mievm/n .14 M M 41ml mm WM “my
-W 1A W min» M WW .MM W. 4m m m» .1‘ W n.
-w W Mm WW M w W mm a m“ M Z n Wm a” n
-W MM“
-WW m W € r
-I.» w. mm». 4: F “M u mluvnln' ‘Wu 1W m:- M WW
-in N my W WWW
-mm mum i
-' ' r > w A w
-Ohm-u. Puma/1PM"). WW "W.- .1, WWW WWW m»
-Wm W m 1w WW a, WW. n mm. Aw, Wm Mm
-m u W w, [WW m m "W "WW MW .W Wm
-WWW "WWW mr m [WW Wm, D~ MW W M
-m...” "b “W m ,l. M w
-N <|> m» (Mm A‘ (W mum» (v q w»
-(whhma) wmnumym
-1m“, u: q} "WM "MW," >- m WW? u WW L1,.
->1 WWW,
-“mm... 5:. MW n. R when! pm Wm m m A: A don
-mm
-Ymu 1' 1W. WWW.“ :2 [\nmdn W An m.‘ Wu
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+Observayie. Este poslbll ca 0 regula” de inferenla 55 aibd n : 0 lpoteze. Astfel
+de regull de lnferenla, cu 0 lpoteze, se numesc axiome.
+Observatie. De asemenea, este poslbil ea” llpseasca conclllla de apllcare.
+Exemplul 82. lata“ cdteua eatemple de regull ole lnferenla:
+_1"l—<p Fl-go’ Fl-(goAcp')
+/\’L —, A61 i
+F P (s0 /\ w ), F P so,
+F P (so /\ s0’)
+/\e2 i,
+F l- <p .
+
+Toate cele trel regull cle lnferenta“ de mal sus sunt corecte, intr-un sens pe
+care ll uom deﬁnl mal tarzlu. Nlcluna dintre cele trel regull de mal sus nu
+are 0 condllle atasatd. Iata 52' un exemplu cle regula cu n : 0 lpoteze, dar cu
+o condllle:
+
+IPOTEZA i G F.
+F l- <p 4p
+
+Iatd un exemplu de o reguld de lnferenfd inoorectd (110m uedea maz' 12mm
+
+in ce sens este lncorectd):
+v U F P s0’
+REGULA INCORECTA i,
+F F (so /\ w )-
+
+Observaigie. Pentru a ﬁ preclel, lpotezele regulll de lnferenla, preeum 52' con-
+cluzz'a, sunt de fapt scheme de secuenle 52' nu secuenle. Acest lucru inseamnd
+ca o reguld de lnferenld are mal multe instante, obllnute prln inloculrea
+uam'abz'lelor matematlce <p,go’,F cu fo'rmule concrete. De exemplu, laid doua
+lnstanle ale regulll /\i de mal sus:
+
+.{p,q}PP {p,q}Pq .{quvr}P(P/\q) {p7q7r}PP
+
+/\Z i A7, —
+{P,q}P(P/\q); {P7q71'}'_((P/\<1)/\P)-
+
+in prima lnstanfd, am inlocult uarlabila matematlcd I‘ cu multimea de
+formule {p,q}, uarlablla matematlca go cu formula p oi uarlablla matematlca
+4p’ cu formula q.
+
+Exercitiul 83. Stablllll cu ce am lnlocult ﬁecare uarlablld in cea de-a doua
+lnstanfa.
+Partea I - Logica propozitionalé 53 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-1w!‘ W". “mm zuzuznzl "mm. Mum 1m M
-5mm.“ n. Wm m H Wm", "M “M Mm .. "M
-“MW mm
-um» rm»
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I 0dn Cuza
+Exercitiul 84. Ezplicagfi de ce urmdtoarea reguld nu este instantd a regnlii
+. {1m} "P {P7C1}'_ q
+/\Z i
 
-1.3 Sisbem deductiv
-Dellnhu as w N MW m’ u mum. u, Mm A, m/mm
-“ml-.1“ n’ WM MM“ n, MM 4m “WW Wynn-91w
-A. Mm
-] r r»; “>1 “mam
-"‘"“‘W"€ “W MT
-) “(Mm
-" rw'
-1.4 Demonstratie forms
-Mnm.mnmmmﬁmm Udammumumﬁmmlmmmmm
-MM W ¢ M .1, km”
-1 s.
-g s,
-WWW m WNW“ | 5 ‘ 5 .,
-s. rm Maw .M mm)» a m, m ‘Wm m m
-nmmmm/MmmWmﬂnwwmm s
-m mm "M (w WNW 1M "m .1, MW m
-WW
-mm...‘ as. M WM m .1".me 1m.“ m mm‘ L)‘
-WWW.“
-1 Mm ﬂrorui/
-mm Lagmmpmwnmml. 14 “Mm drhnumm
+{P7 q} F (P /\ P)-
+7.3 Sistem deductiv
+Deﬁnitia 85. Un sistern deductiv este 0 multime de reguli de inferentd.
+Exemplul 86. Fie sistemul deductiv D1, format din urmdtoarele patrn reguli
+de inferentd:
+F |— F l- ’ F l- /\ ’
+IPOTEZA i 4p E F A1‘ <p—/g0 A61 M
+FHP, FFWMO), Fwd
+F P (s0 /\ so’)
+A62 i,
+F l- ap .
+
+7.4 Demonstratie formalﬁ
+Deﬁnitia 87 (Demonstratie formalé). O demonstratie formalé intr-un sistem
+deductiv este 0 listd de secvengfe
+1. Sl,’
+2. SQ,’
+n. Sn
+cu proprietatea cd pentru ﬁecare 1 g i g n,
+
+Si este concluzz'a unez' instante a unez' regulz' de inferentd dz'n 52's-
+
+temul deductiv care foloseste ca ipoteze doar secvengfe dintre $1, . . . , S121
+
+5i conditia regulii este adevdmtd (dacd regula de inferenta" a're
+
+conditie)
+Exemplul 88. Iatd un exemplu de demonstmgfie formcdd in sistemul D1
+deﬁnit maz' sus:
+1. {p7 q} l- p; (IPOTEZZ)
+Partea I - Logica propozitionalé 54 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-Md W... Mum ZUZuZMI “mm. My.“ m M
-z Wm (lmww)
-w (“Hm M1 W
-‘ MHWqu m 1 1/
-0%me W Nahum m M1 w, ,l, ‘Wm “Mn
-,mm ., m M, M n... .. WW Wm‘, W.“ Wm.
-Mum. w ‘gm mm. u mm r > ,~ "k mm). M M...
-Mm,‘ u M (m n mm,“ MW“ 5‘ s,‘ w u M/zl W
-5.4»
-mm“, m hymn“) V w» My‘ WMWWNMW
-1mm
-1 mm: (Irmm)
-2 MW “WM,
-a :pqmpm W 1 1,
-Mm". mm» v“ "MW WW. ,1, ‘mm MM“ M
-‘M MW m WW. ,L. QM. M
-1'5 Deducﬁa naturali
-1.571 Raguhle mm mum".
-A". m.“ A“, MM, Mum“ d, Mm mm WW.“ .,
-r»; r1 A {FWAé'I Hum
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+2. {p, q} l- q; (IPOTEZA)
+5’- {P7Qll_(P/\C1); (m, 1, 2)
+4- {1m}P (q/\ (P /\ q))- (A1323)
+Observati ed ﬁecare lime 65156 adnotatd cu numele regulii de inferentd aplicate,
+precum 5i cu Ziniz'le la care se gdsesc z'potezele necesare aplz'cdm'z'.
+Deﬁnitia 89 (Secventé validé). O secvengﬁd l" l- <p este validé intr-un sistem
+deductiv D dacd emistd 0 demonstratie formald S1, . . . , Sn in D astfel incdt
+Sn I F l- 4p.
+Exemplul 90. Secvemfa {p,q} l- (p /\ q) este validd in sistemul deductiv
+D1 de maz' sus, deoarece este ultima secvengﬁd din urmdtoarea demonstratie
+formald:
+1. {p7 q} F p; (IPOTEZA)
+2. {p, q} l- q; (IPOTEZ/K)
+5’- {1m}P (pAq)- (M, 1, 2)
+Observatie. Atemfie/ Nu confundati notiunea de secvenfsi validé intr-un
+sistem deductiv cu nozfz'unea de formulé validei.
+7.5 Deductia naturaléi
+Deductia naturald este un sistem deductiv pentru lLlPLHAthl. in acest
+sistem deductiv7 ﬁecare conector logic are una sau mai multe reguli de intro-
+ducere 5i una sau Inai multe reguli de eliminare.
+7.5.1 Regulile pentru conjunctii
+Am vézut deja regulile de introducere sj de eliminare pentru conectorul 52':
+THO Fl-Wl PPM/w’) FHWW’)
+A71 —/ /\€1 i A62 i,
+Fl-(go/Mp), Pl-go, Fl-(p.
 
-N Maw: " rw M n»;
-
-Aw .M Mm u W..." (HM "MM Mm Irguhk d!
-n Mum rwm» d.“ “WM r M mm He): d m‘ mm n
-mmm “Many/“WWW” mm,m.,.r cw,
-mm,MM(“Mmumummmmm-wmm
-17mm WMWMM 11 MM.“ “WM
+Acest sistem deductiv se numesfce deductie naturala” deoarece regulile de
+inferenpé mimeazé rationamentul uman:
+o Regula de introducere a conectorului 5i ne indicé (:5 putem demonstra
+o conjuncpie (30 /\ 30’) din antecedentii I‘ daczi stim deja (:5 ﬁecare parte a
+conjuncfuiei7 g0 $1 respectiv 4p’, sunt consecinﬁe ale formulelor din I‘. Cu alte
+cuvinte, pentru a aréta 0 conjunctie dintr-un set de ipoteze, este suﬁcient s21
+stabilim individual c5 ﬁecare parte a conjunctiei este 0 consecin'gé a ipotezelor.
+Partea I - Logica propozitionalé 55 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-mud W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-- Pcmmwmnvnllnmﬂndmmlrgwhﬂcdlmuvm: pm mmdm
-.mwmmm. w Mmr-m “WW-Mn (kW-Wm.“
-w w) UH’mmmlmuufurmﬂdvnhn mum-m MW. _\ WWW;
-l mum-“m, p‘ m umaumﬂ 1. mm.“ r A m mm W “mm.
-MM: Wllvm n N mm ~11 NMWM r 3 ‘W pm: 1. m. WNW
-m WNW W Wm.“ M molar‘: M Mum. ale “mm A
-MM MW. M WW
-1m “mm, “WWW! Inmndi m mum.“ "mine a: “Mm
-mm. unacclmu] n
-I nmhvww. Hrmn-U
-2 kuz) a»! “mm,
-1 “PAQIHFP w. u
-‘ ummwm mm
-mm.“ n. W.“ '4 WWW Wm,‘ W.‘ m»,
-1 uwmm > um
-a WM q) Mm » (r' A <1
-1((IPAnlAtﬂHleqIAPl
-1.5 2 mum pm". ampumui
-mw\WWMA"mm-m. Wm WM. WW h. m.“ a.“ W
-Mm n» .H-mm. Wm. d: “MM. .m ... \. 1mm",
-Mrwﬂ'» nv
-n d
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+0 Pentru conectorul $2‘ avem doué reguli de eliminare. Prima regulé de elim-
+inare a conectorului 5i ne indicé faptul c5 dacé am stabilit deja 021 0 conjunctie
+(np /\ 4p’) este consecinfoé a formulelor din multimea F, atunci $1 partea sténgé
+a conjunctiei7 90, este consecin'gé a multimii F. A doua regulé este simetricé
+faté de prima $1 ne permite s5 concluzioném (:51 a doua parte a unei conjunctii
+este consecinpa unei multimi de ipoteze dacé conjunctia este consecinﬁé a
+aceleiagi multimi de formule.
+Iaté un exemplu de demonstratie formalé care utilizeazé regulile de inferenﬁé
+pentru conectorul $21
+1- {(P /\ q), r} F (P /\ q); (IPOTEZ/K)
+2. {(p /\ q)7 r} l- r; (IPOTEZ/K)
+3‘ {(pAq),r}|—p; (A6171)
+4- {(PAq),r}F (PAI)- (A1} 3, 2)
+Exercitiul 91. Ardtati cd urmdtoarele secvemfe sunt valide:
+1’ {((P /\ <1) /\ r)} P (q /\ r);
+2- {((P /\ q) /\ 1")7r’]+ (I' /\ q);
+3- {((P /\ q) /\ r)} F ((r /\ q) /\ P)-
+7.5.2 Regulile pentru implicatii
+Regula de eliminare a implicaﬂei, numité $1 modus ponens in latiné, este una
+dintre cele Inai importante reguli de inferenfué pe care le aplicém:
+F P (90 —> s0’) F P so
+$ e i
+F (- 4p’.
 
-MUM Mum‘ .memhum. L: a ,4» w." w pm
-‘l >- m 41m r). 44mm W A a [mu r1
+Regula ne indicé cé, presupunénd 051 stirn (cp —> go’) (din I‘) si in plus $tirn
+$1 cp (tot din I"), atunci $tin1 $1 4p’ (din I‘).
 
-hm W, mm“. n» drummnm» rm unb. m MM "m MMW
-. "my-Hem“
-I upMmPanpw “mun
-1 (\vﬂrwwvm whu
-1 uh,».rpmmv~n uvmmx
-‘uhmpww MM!
-17mm um pmpuunmm}. 11, Mm m db Mu mm
+Iaté un exemplu de demonstratie formalé care folose$te regula de eliminare
+a implicapiei:
+1- {(P —> r), (P A q)} P (P A q); (IPOTEZA)
+2‘ {(P—>r)KP/\<1)}(_P; (A617 1)
+3- {(P —> 1"), (P /\ q)} P (P —> r); (IPOTEZ/K)
+4- {(P—>r),(P/\q)}Pr- (—>@, 3, 2)
+Partea I - Logica propozitionalé 56 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-marl ..."... mlmmlnrl zuzuznzl Umvmmuln Aﬁnmnim 1.... M
-Acuumdmwlunulr ......“ ...“ .. ......»- uy ~ .mmn > m.
-...... ...... hm... .. “...... . .... .. ...”...- . ..."...w (v _ .> ..
-1PM» 11......" Mm... .... WM! ......1. a .. 1 ... mum-1.“ ...... 4
-(...-.....an ......m... “...... .....N...“
+Logica pentru informatica 2020-2021 Universitatea Alexandru I oan Cuza
+Aceasta demonstratie formala arata ca secventa {(p —> r)7 (p /\ (1)} l- r este
+valida7 adica faptul ca formula r este o consecinta a formulelor (p —> r) si
+(p /\ q). De observat ordinea in care apar liniile 3 $i 2 in explicatia liniei 4
+(urmeaza aceea$i ordine cu regula de inferenta).
 
-5mm... m. M... ri Wm...” ...Wm ...... ......
+Exercitiul 92. Ardtati cd urmdtoarele secvente sunt valide:
 
-1 um.) “wan.
+1- {((P /\ q) —> r),p,q} t r;
 
-2 UPQX\.P.Q)*U1’\\'\
+2- {(P —> r),p,q} t (q/\ r)-
 
-......- a. ...“...W“ "......w. m. .... ...»... M... . ...... .. ..
-...»...w. w ~ w ......g- .... r. WW..." .1 ... p... .... d: r. ﬂ "......
-a c. ......n...“ ....M...m.........n...1...-.....h.»|. .............<... r
-m...- P...“ h ...... ... a...“ m...u.......»1.....,.... 1c an”... ...... ......
-w... .. ...... m... Mm. mm... ... m... mm..." ... mm...
-..........|.,........1.........w..........-.... u ... “0...”...mW...“
-...-M... ...“...w. .... “......
+Regula de introducere a implicatiei este mai subtila. Pentru a arata ca o
+implicatie (Lp —> 4p’) decurge din F, presupunem (p (in plus fata de F) $i aratam
+4p’ . Cu alte cuvinte, in ipoteza regulii, adaugam formula 4p la formulele din I‘.
+Regula poate ﬁ scrisa in doua moduri echivalente7 care se deosebesc doar prin
+faptul ca prima regula foloseste conventia de notatie referitoare la acoladele
+din jurul premiselor unei secvente, in timp ce in a doua regula acoladele care
+marcheaza multimea apar explicit:
 
-...»w Mm.’
-“(hwy F>Wi~ﬂ
+. thw’ .FU{s0}t<p’
+Ft(¢—>¢), Ft(</>—>s@)‘
 
-g. ... “mm... ... ......m. ﬂ ... ...... .. ....“ ...-.....1..." .
-....p........ .... ... ......u... “...... ,. "1...... ... h ......1...“ "...... h
-...-m. m... n... ... 9......“ ...... ... m...» w _ "y ......“ ....
-r. ... ......” "an... .a ...“... .. .Y ......“ ..." pm»... r u M 0..
-.... ...“... ... ......“ mnnuv. W...... .. dummy“ . ......M... w Q v).
-mm..." ...MM... 9 .. ...“... WWW..." v‘
+Ce este important de observat $i de inteles la regula de introducere a
+implicatiei este ca premisele secventei se schimba de la concluzia regulii la
+ipoteza regulii. Daca in concluzie avem ca formula (4p —> 30') decurge din
+F, in ipoteza trebuie sa aratam ca 4p’ decurge din premisele F U {g0}. Cu
+alte cuvinte, la modul intuitiv7 pentru a demonstra o implicatie (30 —> 90’),
+presupunem antecedentul g0 $i aratam consecventul g0’.
 
-“my... n s. ......» .. W... U . 1, A ... .... “......
+Exemplul 93. S'd ardtdm cd secvengfa {} l- (p —> p) este validd:
 
-I (v) » p. (1mm;
-z mum.» 1-...’
-hump... .... s. mu... ... “...... up ~ ..n . ... ~ q) .... ......“ u
-“Mm... “...... L.“
+1. {p} l- p; (IPOTEZ/K)
+2. ill‘(P—>P)~ (+131)
+Exemplul 94. Sd ardtdm Cd secvemﬁa {(p —> (1)} l- (p —> q) este validd. O
+demonstratie simpld este:
 
-1 u. ~ qH > 1» ~ q» (harm!
-0 m .....m.m.~/M.u,....m W... ..."... dammlu WM...
-.....w. ...
+1. {(p—>q)}l—(p—>q). (IPOTEZA)
+O altd demonstratie formald pentru aceeagsz' secvemfd, demonstratie putin maz'
+lungd, este:
 
-1 HPQQJPI'KP~~11 “mini;
-1 up.) H’? "mm;
-...... .. 1...... pmpmmmm}. :1 ...... n... ... ...... ....
+1- {(P —> q),p} t (P —> q); (IPOTEZ/K)
+2- {(P —> q),P} t P; (IPOTEz/K)
+Partea I - Logica propozitionala 57 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-Uﬂrl W... “mm zuzuzm "mm". Ammmm lmn M
-a (@me 1-» ml
-¢ quvqu» pm
-buy...‘ nu s, "M" N1 Mm» HP ~ qu d m > 1p ~ r» m4
-mm
-1 qumﬂv-wrwqm (vaiu/
-i up“ awn)» (lvmm/
-@qumﬂmw [~r\1)
-¢ qumﬂmmﬂ» (1mm)
-- (wﬂmhrv-wr‘ W 44/
-a up“) lhmwhn (M 5/
-5mm.“ so Ava/m r5 “WW Wm, W WM,
-1 (upmlﬂnnquﬂn
-z uwmﬂmuzywﬂr
-1 5,3 Mull]: mm disjunqii
-enmmn m. m dmvl m. at ‘Mum
-WWW,» THWVnY
+Logicé pentru informatics} 2020-2021 Universitatea Alexandra loan Cuza
+3’ {(P—>C1)»P}'_q,' (—>@,1,2)
+4. {(p—>q)}P(P—>q)- H133)
+Exemplul 95. Sd ardtdm ed secvemfa {(p —> q)7 (q —> r)} l- (p —> r) este
+validd:
+1- {(P—*C1)7(Q—>r)>P}'_ (P—>q); (IPOTEZ/K)
+2. {(P —> q), (q —> r)»p} P p; (IPOTEZIK)
+3’ {(P—>q)7(q—>r),p}kq; (—>@,1,2)
+4. {(p—>q),(q—>r),P}P(q—>r); (IPOTEZ/i)
+5- {(P—>q),(q—>r),p}Fr; (—>€, 4, 3)
+6- {(P—>q)7(q—>r)}F(P—>r)- (—>i, 5)
+Exercitiul 96. Ardtagfi cd urmdtoarele secvemfe sunt valide:
+1. {((P /\ q) —> r)} F (p —> (q —> r));
+2-{(1O —> (q —> 1'))}'_((P /\ <1)—> r)-
+7.5.3 Regulile pentru disjunctii
+Conestorul sau are doué reguli de introducere:
+I‘ l- 1 I‘ I- 2
 
-m». .Q.“ n. "mold am mm w m.“ r» mm mm n 1w v m;
-(mun “Mm .1! v, Cum-m.“ W.» Mm. v- mm.
-M v W Mm) “mu-www.mm m‘ “mm-mm pm.
-Mm. . dwmmm
-Mm...‘ n1, 5,. M. m Mm up A m » W” m. Wm
-1 mmnupw (Imwwl
-2 (“mam 1M. u
-v 0%anqu W1, 1/
+Vii FF ($01102), V12 FHwﬁw)
 
-n m WWW 1w“ Wm Wm Mm at’
-1 (wwnwm "mm,
-YM1uLlAgk-pmwmmﬂ m MAM.“ damn-‘mm
+Prima regulé ne indicé 05L dacé $tim 4,01 (din F), atunci $tim $1 (901 \/ 4,02)
+(din F), indiferent de $02. Cu alte cuvinte7 intuitiv7 dacé, $tim $01, sfcim $1
+(gal \/ orice altceva). A doua regulé de eliminare este simetricﬁ, pentru partea
+dreapta a disjunctiei.
+
+Exemplul 97. Sci ardtdm cd secvengfa {(p /\ (1)} l- (p V q) este validci:
+
+1. {(pAq)}|-(p/\q); (IPOTEZK)
+2- {(PAqH "P; (A61, 1)
+3’ {(PAQ)}'_(PVQ)' (V113)
+
+O altd demonstratie formalfi pentru aceeagi secvemfd este:
+
+1. {(pAq)} l- (pAq); (IPOTEZA)
+Partea I - Logica propozitionalé 58 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-Uﬂrl W... “mm zuzuzm "mm". Ammmm lmn M
-z mmnw [Am u
-1 “Mananv (v2, 2/
-“mm... u mum N1 My.“ mm» r 41 v P] Mir mm
-mm, 4, mm. . MW. ~14 w. WPM M a .er
-mu Mm. an “Mm, .m mum“ m“ an L: W“
-“mm:
-mew» er¢' Mw
-W
-rm.“ MM n Mm.‘ r > (91v m‘ W w m» MN pm. l.
-“Wm n MW. Am r Wm 1 ,\ 3 w M. mm r. WWW.‘
-M ‘1mm MM w ‘- mm a M m ‘a. W m ¢ m he
-MMWMPMW lmmmmmpl‘).v4 um. \aldnr). WWW
-w {m m. luldr n. a’ m m In: sl .W, Wm. u, WM v’ ..,
-In: “,mm“ “MM” é. 1| WW a; n M. m
-mm.‘ um s: mm. t. Mm up w» » W,‘ a“ W.
-1 qum» "mm,
-r awn-w nqvw M. u
-J (“>ququ (Dorm)
-‘ (qu.quwv M. 1/
-5 “qubl'kpvqy “mm,
-ﬁ (qumvvl M’, 2.4!
-(MM u Mm mm m m Mm n “Mm m.“ n In
-a mm m m p1 MW Inmzmlmmv 1W,“ "WW WM .1‘
-m/mm
-‘3mm... Inn. Ardmu .5 mm uvvqm ~ n w Q m » X W
-mm
-“mm... 1m. Mm, :4 .mm m, Q I) ‘Q a I» » mm» Q I:
-“mm
-YMMMMPMMWM 19 MAM.“ damn-‘mm
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+2' {(P A q)} '- q; (A62, 1)
+5’. {(PAqHHPVql (V21, 2)
+Exercilgiul 98. Ardtayﬁz' Cd secvemfa {(p /\ (1)} l- (r V p) este validd.
+
+Regula de eliminare a disjuncpiei este u$0r mai complicaté, ﬁind 0 alté
+regulé in care multimea de antecedent} ale secventelor variazé de la ipotezé
+la concluzie:
+
+Ve F P (<P1 Wm) M01 P w’ F7<P2 P sw/
+F l- 4p’
+
+Prima ipotezi a regulii7 F F (4,01 V 902), este u$0r de inteles: pentru a
+“elirninal77 0 disjuncpie, trebuie sé avern 0 disjuncpie printre ipoteze (disjunctie
+pe care s5 o “eliminém”). Ultimele doué ipoteze ale regulii de eliminare a
+disjunctiei trebuie inpelese intuitiv dupé cum urmeazé. Din prima ipotezé
+$tim (<p1 V (p2) (din F); cu alte cuvinte7 111513511‘ una dintre formulele 4,01 $1
+rcspcctiv (p2 dccurgc din F. Ipotozolo 2 si 3 no indicé faptul c5, indifcrcnt
+care dintre formulele 301 $i respectiv 302 ar avea 10c, in orice caz 90’ are 10c.
+Adicé dacé presupunem gal (in plus faté de I‘), 30’ are loc7 iar dacé presupunem
+4,02 (in plus falé de F), 4p’ tot are loc. Si atunci concluzia ne indicé 05m (p' are
+loc indiferent care dintre (p1 $1 respectiv gag ar avea 10c.
+
+Exemplul 99. Sd ardtdm cd secvemfa {(p V q)} l- (q V p) este validd:
+
+1- {(P V (1)7P} F P; (IPOTEz/K)
+
+2- {(PVQ)7P}l_(q\/P); (W2, 1)
+
+5’- {(P \/ q), q} P q; (IPOTEZIK)
+
+4’ {(pvq),q}P(q\/p); (W1, 1)
+
+5’ {(p \/ q)} P (p v q); (IPOTEZ/i)
+
+6’ {(PVq)}P(q\/P)' (V6, 5, 2, 4)
+
+Observati cu atengﬁz'e modul in care multimea de antecedenti variazd de la
+0 secvemfd la alta pe parcursul demonstratiez' formale, respectdnd regulz'le de
+inferentd.
+
+Exerciigiul 100. Ardtagfz' cd secvemfa {(p V q), (p —> r)7 (q —> r)} l- r este
+validd.
+
+Exercilziul 101. Ardtati cd secvengﬁa {(p —> r), (q —> r)} l- ((p V q) —> r)
+este validd.
+
+Partea I - Logica propozitionalé 59 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-mud M... mlmmlnrl zuzuznzl "mm. Ainnmlm 1m M
-1.“ mum Dentin “emu
-mm mm. nmhmm u mmwdmm MM m. h MM m
-n null mm. Amunmmmmm. 1
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+7.5.4 Regulile pentru negatii
+Regulile pentru introducerea 5i respectiv eliminarea negapiei vin la pachet cu
+0 regulé pentru eliminarea conectorului 1:
+F,<p|—J_ FPgo F|——|<p F|—J_
+—\i i ﬁe — 1e i
+P l- —|<p, I‘ I- J_, I‘ l- <p.
 
-m»; rm» r“: 1 r“
+Sé ne readucem aminte (:21 J_ este un conector logic O-ar (de aritate 0)7
+adiczi conecteazé 0 formule intre ele. Cu alte cuvinte, conectorul J_ este de sine
+stététor 0 formula. Semantica formulei 1 este cé este falsé in orice atribuire.
+Cu alte cuvinte7 J_ este 0 contradictie.
 
-"pi, ‘ r»; ‘in;
+Prima regulé dintre cele de mai sus, cea de introducere a negatiei, este u$0r
+de explicat intuitiv: cum putern aréta c5 0 formulé de forma —\<p decurge din
+premisele I‘? Presupunern, in plus faté de premisele 1", 05m avern 90 5i arétérn
+05L din I‘ $i 4p decurge 0 contradictie (1"7 cp l- 1). In acest fel7 arétiun c5 ﬂap
+decurge din F.
 
-5* Wm“ “W a l W m. “Wm 1w. M W mmr m
-mHmmuxwm/Hnnmbhnnﬂe ﬂunkemvmn mmmuwdm,
-Mm U Lnumln 5mm,“ mm. 1 M! MI. m“ m W “mm
-r," 1m “Wm. l W Mum-mm
+A doua regulé, pentru eliminarea negatiei, ne indicé faptul 05 dacé atét
+0 formuli <p, céit $i negatia sa, —|<p, decurg din aceeasi multime de premise I‘,
+atunci din I‘ decurge gi 0 contradictie, J_. V0n1 vedea (:5 0 multime I‘ din care
+decurge 0 contradictie este o Inul§ime inconsistentd de formule.
 
-Yum»Imilhhnlmndnmmunwo'ubc umodmrmnwnnm mum
-M My“ mmmv mm vumn .m. dc fauna“ “A rm.“ \- Mum.
-paw], r' YMWM m m kl‘ u WW r cl um v .. “m”.
-d. (m r m v (hung! n WWW (m > l) In .M m um.“ a. iv
-ﬁlmlledm r
+A treia regulé indicé cé dacé I‘ este 0 multime inconsistenté de forrnule7
+atunci orice formulé 4p decurge din P. Aceasté regulé este denumité principz'ul
+ewplozz'ez' (dacé dintr-o multime de premise pot deduce o contradictie7 pot
+deduce orice) sau ea; falso quodlz'bet (din fals, oriceﬂ
 
-A 6mm "gull Mm ehmmnn mm. n, M ‘WI d ﬂu) 1m
-a WM a m 5| WW. w». M.“ (m m‘ mummdc m,“
-mm a“. www.mmm,“ 1 vﬂm vsle-chnmnllmu! r mm"
-Mmmmmm m .- mhm Mwm a: Wm
+Nu existé nicio regulé pentru introducerea conectorului J_ (sau, regula de
+eliminare a negatiei se poate considera ca ﬁind $i regula de introducere a lui
+Exemplul 102. Sci ardtdm cd secvemfa {p} l- —'—|p este validd:
 
-A "m mu mini a M r m n Immune WWW“ a: Inmvme
-.nmmm'mm vxkcnliuhnl Arno.“ mu m (1mm MW
-‘WM {M <1.mm.k.m .k Wm. M My.“ u zwnmhnve pm
-4mm m» m. "mm mm! (m. “Mung
+1. {p7 —|p} |— p; (IPOTEZA)
 
-v" m1» mun "m w“... muvdvlzelvnulnrrlomhu l (m "mat
-dmlmmv n mm m w.“ (“Mum-mm N “mm WWW .1".
-n
-bumplul m s” nmlnm m Mm m > w “h "M.
+2- {P7 —'P} l‘ _'P; (IPOTEZA)
 
-I w MW (1mm;
+3' {P7 _\P} l- l; (“6, 1a 2)
 
-z 4w») > w “mun
+4- {P} F onp- (oi, 3)
+Exemplul 103. Sci ardtdm cd secventa {p7 —\p} l- r este validci:
 
-.7 493ml 1» 1 u
+1. {p, —|p} |— p; (IPOTEZA)
 
-4 4m” (1 1/
-mmplul 1n: s“ mm. =4 “mm U, w) > r k.“ mhlA’
-
-1 (P-*|>)FP “Mm
-fa,» M M NW .w WW M Mm.‘ M“ MM, m: "W
-\V.mk~=m1.m.m
-Ymu 1' HQ“ WWW.“ m Mm m An m.‘ mm
+1Existéi logici care resping acest principiu (de exemplu, logica minimald), dar aceste
+logici depéeesc cadrul cursului.
+Partea I - Logica propozitionalé 60 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:61**************
-Md W... “mm mm- "mm". Mum M M
-a rwyw (Imwwl
-1 Kw,“ M m,
-4 rm)»: u" v
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
 
-hm.“ 104. MM m "WM W, m“ W,
+2. {p, —\p} l- —\p,' (IPOTEZ/K)
 
-1 qun » “mm
-a mm»: » wwvm
-1 uwv-anwm
-4 uw-qnwm»
-s mm)!» thw)
+3. {p7 —|p} l- J_; (ﬁe, 17 2)
 
-1.5:; AIL: mu
+4. {p, —|p} l- r. (is, 3)
+Exerciigiul 104. Ardtagfz' cd urmdtoarele secvengfe sunt valide:
 
-(“WWW hm“ m.“ mmmmmm 4m.“ 4w,
+1’ {(p \/ q)} P ﬁﬁp /\ w1);
 
-m M. Mummy “m... m.‘ “A mm mm m. ml.
+2- {(P /\ O1)} F ﬁﬁp \/ ﬁq);
 
-E r» >-
-Am.“ RM Mm “M d a.“ a“ “Mm. mm mum
+5’- {(ﬁp \/ ﬁc1)} P "(P /\ q);
 
-a mm, r m. a m Wm“ ,. . m W M mum A,
+4’ {(“P /\ ﬁ<0} P ﬁ(P \/ q);
+5- {ﬁ(P \/ (1)} F (*P /\ _'<1)-
+7.5.5 Alte reguli
+O alté regulé utilé (in special pentru demonstrarea regulilor derivate 1 despre
+care vom discuta in curénd), care nu tine de un anumit conector, este regula:
+EXTINDERE Wisp
+F, 4p’ l- 30.
 
-w n- “mm pm. m.“ mm“ MW. M Mm. .. m
+Aceasté regulé ne indicé faptul (:5, daca g0 este consecinpé a unei mulﬁmi
+de formule I‘, atunci 4p este consecinﬁi $i a mulﬁimii I‘ U {30'} (indiferent de
+4p’) Cu alte cuvinte, putem extinde oricénd multimea de antecedenﬁi ai unei
+secvenfoe valide $1 obtinem 0 noué secvenpé validé.
 
-mm. "WWW." a M‘ mm “m
+Exemplul 105. Sd ardtdm Cd secvemfa {p, ﬁq, I‘, (<11 /\ (12)} 1- —\—\p este
+validd:
 
-“WM m 5. Mm d Wm. mm (m Aw) » w “u
+1. {p7 —|p} |— p; (IPOTEZA)
 
-m.
+2. {p, —|p} |— —|p,' (IPOTEZA)
 
-1 “Wm "mun
-1 up») » w "mun
-J WP,“ [if 1.1,
-¢ wnw (1-1!
-5 WWW [Exwmwmm v
-a (M WW mum“. 5;
-1 w.“ m m» > w 1mm“. m
-Ymu 1' lam WWW.“ M hm m M M.‘ mm
+3. {p,—\p}|—J_; (ﬁe, 1, 2)
+
+4- {P} F _'_'P; {*1} 3)
+
+5. {p, —|q} |— —|—\p; (EXTINDERE, 4)
+
+6. {p, —\q,r} F —\—\p; (EXTINDERE, 5)
+
+7. {p7 —|q,r, (ql /\ q2)} 1— —wp. (EXTINDERE, 6)
+Partea I - Logica propozitionalé 61 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:62**************
-Uﬂrl W... “mm zuzuzm "mm". Ammmm lmn M
-hm: m1.“ dc n.“ m Km...“ Mm WM 9mm: .1 w‘
-mmww W VWWuhmv-nln WWW. |,. w n mam
-W- Pwlvthamki mm mm hm W‘ mm d“: mm
-mm" Mm L"... mumwnmi W rm “Wm "MW;
-dwwdznwnwuuk 1“.va m. m.“ WM." Mm WWW“.
-M1.‘ mum-mm. w w ‘\e Wm WWW; Mm Mm in m.
-PEN-“MWWWMWMMWMWmmmm.»
-Hm m pm.“ “Wm. ml m “m, Mn mum.“
-V “W
-_ . ‘W
-Even-pin! m. h mm. m “W. M Q ‘W, > P m’ MM.
-1 “*P‘\17"1-*I7)**P “mm;
-r (whww-wwhq» "MEX!
-a hm‘) aw“ H, 11/
-4 wpﬂ) ﬂawhﬁz umw/
-5 MM“) ﬂap)“ w 4.1;
-» Kw“: ~Izl>~~v (-nﬁ)
-1 my“) wm: (“.5/
-‘~um m s, mam rd Wm. n > “w w) "u le
-I (‘(PV win» *er w», (vaiu/
-r (*kawLMFv (vam/
-J hwvwmwpwn M1;
-4 (“(PVWLPPL 1—PL=I
-s (‘:vanw h.“
-I Hpvwnwwwl M, 1/
-74*(Pv1ﬂhﬂpvwﬂ "mm;
-Ymu 1' u“. WWW.“ a2 Mm m An “nu mm
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+
+Toate regulile de mai sus reprezinté deductia Anaturalé pentru 0 logicé
+care se nume$te logica propozigfionald intuitionistav. In acest curs, noi studiern
+logica propozz'tz'onald clasz'cri. Cele doué logici an aceea$i sintaxé, dar seman-
+tica este diferitﬁ. Logica intuitionisté este foarte importanté in informaticé,
+deoarece demonstratiile formale din aceasté logicé sunt intr-o corespondenpé
+1-la-1 cu programele de calculator. Adicé oricérei demonstrapii intuitioniste
+ii corespunde un program7 $1 oricérui program ii corespunde o demonstratie
+intuitionisté. Adicé, de fapt, orice demonstrapie formalé este un program.
+Logica intuitionisté este un caz de logicd constructivd, adicé o logicé in care
+orice demonstratie reprezinté un algoritrn de calcul.
+
+Pentru a obtine un sistern deductiv care s5 corespundé logicii propoziﬁionale
+clasice7 cea pe care o studiern7 mai avern nevoie de 0 singuré regulé:
+
+F |— ﬁﬁrp
+we r r $0.
+
+Exemplul 106. Sci ardtdm cd secvemfa {(—\p —> q)7 ﬁq} l- p este valida“:
+
+1~ {(op —> q), oq, op} F op; (IPOTEZA)
+
+2- {(op —> q). ﬁq, op} F (op —> q); (IPOTEZ/K)
+
+3' {(“P _> (1)7 _'q.1 _'P} '_ q; (—> 6, 21 l)
+
+4' {(op —> q), ﬁq, op} F oq; (IPOTEZA)
+
+5- {(op —> Q)7_‘<1FP} P l; (oi, 4. 3)
+
+6' {(“P _> (1), ﬁq} '_ _‘_'p; (oi, 5)
+
+7' {(op —> q), ﬁq} P P- (we, 6)
+Exemplul 107. Sci ardtdm cd secvemfa {} l- (p \/ —\p) este validd:
+
+1. {—|(p \/ —|p),p} l- —|(p \/ —|p); (IPOTEZA)
+
+2. {—\(p v —|p),p} l- p; (IPOTEZA)
+
+3' {o(p \/ _‘P)>P} P (P V _‘P); (W1, 2)
+
+4- {ﬁ(P \/ _‘P),P} F l; (“6, 1, 3)
+
+5- {ﬂp \/ "P)l’ r op; (oi, 4)
+
+6’ {ﬂp \/ "P)} r (P \/ ﬁP); (We, 5)
+
+7. {ﬁ(p \/ —lp)} l- —I(p \/ ﬁp); (IPOTEZ/vk)
+Partea I - Logica propozitionalé 62 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:63**************
-mud W... MW.“ zuzuznzl "mm... Am.“ 1m M
-5 (“kW-w)»; Iv a»)
-J l)>**h>vw)‘ (w!!!
-“7 OWN/w) 1*‘ W
-
-mm.“ we. mm m Mmk mm M ‘W
-I {*(PA q!‘ r [*va!
-
-l {*(w v *QH P (PA q!
-J PAWM *QH P (Pv ~17
-
-7.6 Deductia natural}
-
-Mm \ m Wm, M Mm.“ MW M...“ mm W mm.d...,. \ m.»
-
-"WW W W W mm
-
-r»,- n1 mm»
-m T'w/w'b- “a
-WA» mm,» r», r,“
-
-M rrv‘ Q‘ fry. Q'rwvﬁq').
-‘ervvzl “nmvm
-WFHV'WW) r91»; MW
-r r a"
-
-r»; n» mu l H
-
-H‘ r r L ‘ r r a; t r r u-
-Wmiﬂ r. mmmrfiv “m
-
-T F v" r‘ ; > p r > v
-
-1.1 Reguli derivaw
-
-u "M 1mm .m "m. (I, ml.‘ m .e Pm. WM. M
-
-W1 WW“ m“ .1.“ ‘ mm Mm. 4, WWW [Wm U
-
-17mm W. WWW.“ (a m db m db M.‘ mm.
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+8’ {ﬂp \/ 10% l; (ﬁe, 7, 6)
+9- {} P ﬁﬁ(p \/ _‘P); (w, 8)
+10. {}|—(p\/—|p). (ﬁﬁe, 9)
+Exercitiul 108. Ardtagfi cd umdtoarele secvengfe sunt valide:
+1- {ﬂp /\ q)} P (ﬁp V w);
+2- {ﬁﬁp \/ “0} F (P /\ q);
+3’ {ﬁbp /\ 11)} P (P \/ q)‘
+7.6 Deductia naturaléi
+Deductia naturalé este sistemul deductiv alcétuit din toate regulile din sectiunile
+precedente. Iaté aici toate regulile:
+.PHQ FHP’ FHWW’)
+F |— (4p /\ 4p ), F '- 4P»
+FHWW’) FP(<P—>¢’) FWP . thﬂ’
+/\€2 i, —> € i, —> 'L —/
+V21 — V'Lg —
+F"(<Pl\/<P2)1 F"(901\/<P2)7
+V F"(<P1V<P2) Remhp’ RWWP’
+e —
+F P sOC
+Fl—<p F|——\<p F,<pl—J_ FPL
+—\e — —\z' i J_e i
+I‘ }— l, I‘ I- —\<p, I‘ I- go,
+V F l- g0 F l- —|—\<p
+IPOTEZA i Lp 6 F, EXTINDERE /i —\—\e i
+I‘ l- <p 11,90 I- 30, I‘ l- 4p.
+7.7 Reguli derivate
+O reguld derivatd este 0 regulé de inferenté care se poate demonstra cu aju-
+torul celorlalte reguli din sistem printr-o schemd de demonstratie formald. O
+Partea I - Logica propozitionalé 63 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:64**************
-Uﬂrl W... mlmmlnrl mm“ 11mm“. Amm lmn M
-add .k mum “mind: “Mm ndvlhlu w“.
-“iv
-A r > M,
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+astfel de regulé este regula de introducere a dublei negatii:
+. F P s0
+441 F l- —|—|g0.
 
-1.“ n mm A: demmmnne mu mm, my. a: \mmdum .
-“Mum, Purmmnllvnuankmguln uuklmnncwnllmnnmummlnun
-"M, ,- u Wm,- m1“
+Iaté o schemé de demonstratie formalé pentru regula de introducere a
+dublei negapii. Pornim cu ipotezele regulii, iar ultima secventé din demonstrapie
+trebuie s5 ﬁe concluzia regulii.
 
-1 r » ,1 (mama Wm llcnmm]
+1. F % 30; (ipoteza regulii derivate)
 
-2 rm,» (Ex'rlmunn u
+2. F, —|(p k 90; (EXTINDERE, 1)
 
-z r. v > ﬁr‘ “Yaw-LA]
+3. F, —|<p k 10; (IPOTEZA)
 
-A h,» l. {in 1‘ 11
+4. F, —\<p F J_; (ﬁe, 2, 3)
 
-4 r > W w 4,
+5. F 1- —I—1Lp. (ﬁi, 4)
 
-mp1 R . fan dlmomlruﬂ (u M m), B Irgull Mun pm 519mm
-WNW.“ w mewmﬂm mm mounzurummdu‘ m
-mm.““mm-m“mumnhmmdumum.“ huummvllmn
-a‘ Mmm Tumuli m fab-ﬂue “m- d‘ mlmdum: n duhim W".
+Dupé ce a fost demonstraté (ca mai sus), 0 regulé derivaté poate ﬁ folosité
+pentru a scurta alte demonstratii, similar cu modul in care scurtim codul prin
+scrierea de subprograme (funcﬁii) in limbajele de programare. Iaté un exemplu
+de demonstrapie formalzi care folose$te regula de introducere a dublei negatii:
 
-1 “wan”? [Irma-i]
+1. {(-1-1p —> q).p} |— p; (IPOTEZA)
 
-1 (1*w~®9)>*w- y“ u
+2. {(“ﬁp —> (1)7P} P ﬁﬁp; (44¢, 1)
 
-1 41w J q) p) > 4w Q q». “mun
+3. {(-1-112) —> q).p} |— (-1-1p —> q); (IPOTEZ/K)
 
-‘ uwﬂmw Hrlil
+4. {(-1-1p —> q).p} l- q. (—>e, 3, 2)
 
-1" aw.“ Wm. WM, Mm M Wm, ..wm..m.w dunmmmm-
-.M. “W Mm “HM. M w
+in absenfua folosirii regulii derivate, ar trebui s5. construirn 0 demonstratie
+mai lungé pentru secventa de mai sus:
 
-1 uw Q w: >1» “mum
+1. {(-1-1p —> q).p} |— p; (IPOTEZA)
 
-1 uw ~ wan) > p (Ex'mmnnn n
+2. {(-1-112) —> q).p, —|p} |— p; (EXTINDERE, 1)
 
-1 uw ~ own > 11 Hymn“)
+3. {(-1-112) —> q).p7 —|p} |— —|p; (IPOTEZA)
 
-‘ u~~p~w~v1w> Mm
+4. {(-1-1p —> q).p7 —|p} l- J_; (—\e7 2, 3)
 
-5 quwhw 1-»41
+5- {(ﬁﬁp —> (1)7P} F —'_‘P- (Wk 4)
 
-a “w Q w» > (w A v- “mun
+6. {(ﬁﬁp —> q).p} |— (—mp —> q); (IPOTEZA)
 
-1 uwﬂmw l“ 5‘ 51
+7. {(ﬁﬁp —> q).p} l- q. (—>e, 6, 5)
 
-0mm a hm 1'5 4.“ demand-Ml m. 1m,“ mm u "mm .
-Wm. .1! amt.“ hm.“ . NM. am.“
+Observagi 051 liniile 1*5 din demontrapia mai lungi sunt 0 instanti a
+schemei de demonstratie formalé a regulii derivate.
 
-Ymu 1' lum- mmmm (>4 [\nm dc m AR “mu mm
+Partea I - Logica propozitionalé 64 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:65**************
-Lwd Fm... uvlmnmnd. 2mm WWW. MW," 1m M
-7.8 Corecbitudinea si mmplelitudinea deducgiei
-naturals
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I 0dn Cuza
 
-mm.“ m irm.‘.muw1..1.u‘F. Wm» Mm mm Mm.‘ w
-pm“- n van/Wu F M Wm r F F m, MM" Mm r F F
+7.8 Corectitudinea 5i completitudinea deductiei
+naturale
 
-Exrvrmn “a (“WNW Wm...
-‘hon-nun no (vamthmmM MM“ 1. “H. M Mm "w, WW
-4b 1mm‘. r v. W 1W”, M r F F mm Mm r F v- My.
-"M
+Teorema 109 (Corectitudinea deductiei naturale). Pentru orice multime de
 
-WWW mm. u, wullvlmuuhzw w...“ m1.“ my“.
-Obmrvai: 1» Wm, MM WW1. ,1. ,mwm, u “Wm
-.1, MMMW, "m. F Hm‘. m "Wm F ,lm mm, M
-Mm‘,
-“mm m. Wm, [mum ‘A, m4 ‘Wm .1, M W, m mulmvw
-w, m .m .1, mm m mwmmmmddmdmvwlﬂﬂ w m F
-1 W NM
-1.9 Figé d2 exercitii
-Exemlnul m, ‘ammulmwmd WWMMMMM WNW
-ummq» mm
-Dulviﬁul m WM m Wm“ Mm, m MM,
+formule I‘ 5i orice formuld 30, dacd secvengfa F l- ap este validd, atunci I‘ I: 4p.
 
-|(yAq)_r> LpAp'VKH
+Exercitiu: de demonstrat 1a seminar.
 
-2 (vQLuﬁrl)*(lqu\<rl
+Teorema 110 (Completitudinea deductiei naturals). Pentru orice multime
+de formula I‘ 5i orice formuld 90, dacd I‘ I: 4p atunci secvenia F 1- gp este
+validd.
 
-1 HPAi)~~17“ﬂva
-mum“ 114 1mm“ W m lnnlmm_
-Nuhww memmm M/Iva
-um mm MSW, M WW Um W M, h W “mm
-Wm M 4m WWW! "yum MW, MM“ ‘1w Mm, Wm.
-1M W ,M-V W,
-Exemmul us. Drmummm m mmw Wk M WW
+Demonstratia teoremei de completitudine dep21$e$te nivelul cursului.
+Observatie. De remarcat Cd, folosind teoremele de corectitudine 5i respectiv
+de completitudine, relaiia F coincide cu relaiia II, de5i an deﬁniiii cu totul
+diferite.
 
-1 FF,
-17mm WMWWWM (,1 mum“ drlwlnmm
+Exercitgiul 111. Ardtagﬁi, folosind cele doud teoreme de mai sus, Cd 0 multime
+{4,01, 4,02, . . . , gon} d6 formule este inconsistentd ddacd secvengfa {4,01, gag, . . . , gon} l-
+1 este validd.
+
+7.9 Fi$€1 de exerciigii
+
+Exercitiul 112. Demonstraii ed (p /\ r) este consecintd sintacticd din multimea
+{((q /\ r) A q), (P /\ P)}-
+
+Exercitiul 113. Ardtati Cd urmdtoarele secvenie sunt valide:
+
+1- (P /\ q),r P (P /\ (r V r’));
+
+2’ (P—> (q—>r))P((P/\q) —>r);
+
+5’- ((P /\ ﬁr) —> q), new P r;
+
+Exercitiul 114. Terminaii jocul de la adresa_
+Nu tri5ati. Se considerd tri5at: schim-
+barea codului JavaScript, dacd altcinei/a rezolvd un nivel in locul dumneav-
+oastrd, sau dacd demonstraii regnlile derivate folosind chiai’ regulile derivate
+(intT-un singui" pas)
+
+Exercitiul 115. Demonstraii cd urmdtoarele reguli sunt derivate:
+
+1. ﬁﬁi;
+
+Partea I - Logica propozitionalé 65 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:66**************
-Uﬂrl W... mlmmlnrl zuzuznzl 11mm“. Aﬁnmnim lmn M
-
-z Luu 1W u/MM "MAM! “*‘ﬁw v7,
-
-m my» l
-1 rec (m1 9, (“Mn 1m] if» v‘
-r » 4v» A a) r » w’
-
-4 m 1mm, mllrm/ “T n» w
-mm.“ m. WWW Wm A: mmmm 11m MW Ann
-Mm .1, m m dmmmmm rmmm
-mmmul m. Ami-lab :6 "w w MM mmm Mnmm (u
-“M, 1M mm lummnlmbn Inmmhl darvm w,
-mun-v I'mmumv;*v'mhxnd W Amﬂnv+ a L.
-WWW MM. 1011M d mm,» v » .1' M v < a m Wm
-5mm.“ )u. Dawn-1mm MM In We‘: a MmMM n m
-WWM rm ¢ W am .K “M dun 91- v2
-Ymu 1' 144m WWW.“ M [\nmdn m AR m.‘ mm
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I odn Cuza
+, LEM —
+2. LEM (law of excluded middle): F |— (4p \/ —\<p);
+I‘, 10 |— J_
+_ _ PBC i
+3. PBC (proof by contradzctzon): F l- go;
+MTF|_((p—)Lp/) F|——\<p’
+4. MT (modus tollens): P l- —|<p.
+Exercitiul 116. Demonstratz' teorema de corectz'tudz'ne (prim induclle dupd
+numdrul de pa$i din demonstralla formald).
+Exerciigiul 117. Ardtati cd regula ﬁﬁe poate ﬁ derivatd folosz'nd LEM (216.,
+putegfl folosl LEM in demonstralla formald, do?" nu —|—\e).
+Notatie. Putem some $2' 4p —| 90/ in loc de go’ l- go. Scriem go —||— go’ ca
+prescurtare pentru faptul ed secvemfele cp l- 90’ 52' g0 —1 <p' sunt vallde.
+Exerciigiul 118. Demonstrall, apeldnd la teoremele de corectltudlne 52' com-
+pletltudlne, ed Q01 —U— 4,02 ddcd 52 numaz' dacd <p1 E (p2.
+Partea I - Logica propozitionalé 66 Note de curs - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:67**************
 Capltolul 8
-Forme notmale
-8-1 Notaﬁi
-in MM (and m“. mm, (m. u m. mm. WWW (m M
-h m M ,, X V x H W u X H“ + 2 1, M M
-n1
+
+Forme normale
+
+Pétné acurn am discutat despre sintaxa si semantica logicii propozitionale, iar
+in ultimul capitol am abordat 0 primé metodé de mecam'zare a demonstratiilor
+formale, $1 anume deductia naturald.
+
+Una dintre preocupérile importante in Logicé este demonstrarea automatd7
+adicé cdutarea automatd de demonstratii formale de citre un calculator pentru
+0 anurnité conjecturé/teoremi.
+
+Deductia naturalé este un sistern deductiv care are anumite calitéti (de
+exernplu7 demonstratiile formale pot ﬁ veriﬁcate $1 intelese u$or in principiu)7
+dar performanta demonstratoarelor automate care folosesc deductia natural?»
+lasé de dorit in practicé.
+
+Din acest motiv7 v0n1 studia un alt sistern deductiv7 numit rezolutz'e, $1 care
+permite implementéri eﬁciente in practicé7 desi demonstratiile prin rezolutie
+nu sunt atét de elegante ca demonstratiile prin deductie naturalé.
+
+Spre deosebire de deductia naturalé, care lucreazé cu formule oatrecatre7
+rezolutia este limitaté 1a formule care an 0 anumiti forma“7 numitét formd
+normald clauzald. Scopul acestui capitol este studiul acestei forme normale.
+8.1 Notatii
+in practicé, cénd scriem formule din LIP, nu scriem parantezele decét dacé
+este strict necesar.
+
+La fel cum dacé scrieIn 5 >< —3 + 2 intelegem (5 >< (—3)) + 27 1a fel in 10c
+de p /\ —|q V r vom intelege ((p /\ —|q_) \/ r). in acest sens7 negatia —| este
+operatorul cu prioritatea cea mai mare, urrnat de /\ $1 apoi urmat de \/.
+Putem tine rninte aceasté conventie asociind:
+
+1. —| cu minusul unar;
+
+67
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:68**************
-Uﬂrl W... mlmmlnrl zuzuznzl 11mm“. Aﬁnmnim lmn M
-1 A A. Inmulmm u
-1 v A. mhnm"
-1“ .Wv-m w...‘ "mnemmdr Mm» rmvmw wwwsm
-mm“ mlmnk WW W.M..W mun
-l‘ A A‘ v‘ Q‘ .Q
-m Wm. MM a: "HM".
-WHAMWAPH
-“mm. [mm].
-mwv u Ayn ‘ mwm ~ v
-m mm.- m w- m. v an v m A. A v a: v w(-dlclvnn<1
-mm“ d. Wm ,. I.“ mm. |. M91
-u mm“, m m- 11M m A m m. ﬂ A v2 A w (-1.“ "m
-"mu a. Mm ,. "R Wm. |. nun?!
-bumplul m SW".
-VAQAYVAPAXAA,
-mam rum“,
-“(PA q) A!» v uwAw Aw»
-5mm
-,,, A h A m A m
-W...“ 1mm
-my‘ A m A») Aw
-5mm
-y- v m v w v P‘
-RMMMMB
-my. v m vm vm
+Logicé pentru informatics} 2020-2021 Universitatea Alexandra loan Cuza
+2. /\ cu inmultirea 3i
+3. \/ cu adunarea.
+in continuare, vom permite scrierea de formule féré paranteze, respectélnd
+urmétoarea ordine de prioritate a conectorilor logici:
+l, —\, /\, \/, —>, <—>.
+De exemplu, prin $irul de simboluri
+—\—|pVJ_/\p—>—|p/\q<—>q
+infuelegem formula
+(((eep \/ (l A P)) —> (op /\ q)) H q)~
+De alsemeneal7 vom nota ((901 \/ (p2) V gag) cu 4,01 \/ (p2 V (p3 (adicé intr-o
+secvenfsé de V-uri se face asocierea la sténga).
+De asemenea, vom nota ((901 /\ 902) /\ 303) cu gal /\ cpg /\ <p3 (adicé intr-o
+secventzi de /\-uri se face asocierea la stémga).
+Exemplul 119. Scrz'erea
+pAqAIVﬁpAﬁqAﬁr
+reprezlnta formula
+(((P /\ q) /\ 1") V ((ep /\ eq) /\ or»
+Scrlerea
+P1 /\ P2 /\ P3 /\ P4
+reprezintd formula
+(((P1 /\ P2) /\ P3) A P4)-
+Scrierea
+P1 V P2 V P3 V P4
+reprezintd formula
+(((Pl V P2) V P3) V P4)-
 8.2 Literal
-Mm» 1104mm). 01m.“ M WM, hm M mm’ n m
-m: mnlwunh n e 4 my“ mmk
-v Z a m V Z A“
-Dimplul m. mum“ lnmmkkp q 1‘ ﬁp' q‘ “Mm-111 WI“
-M“ rp v q) 0,, 9w. 411 A q\ 1m m1 um
-Ymu 1' 144m WWW.“ (A. [\nm An m AR m.‘ mm
+Deﬁnitia 120 (Literal). O formula go se numegte literal daca 6mm o vari-
+abila propozilionala a G A astfel mat
+cp I a sau 4p I —|a.
+Exemplul 121. De exemplu, formulele p, q7 —\p, —\p’,q1 sunt llterali, dar for-
+mulele (p \/ q)7 —|—|p7 —|—|—\q1, (—|p /\ q) nu sunt llteralz'.
+Partea I - Logica propozitionalé 68 Note de curs - de listat color
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:69**************
-Lwd W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-8.3 Clauzé
-Mm»- m 01”’qu 9 v W‘ um M mm ,‘ z 1 tum];
-v : w v ,1 v v ‘u
-c“ u" ulvmm u M113 NH WW Mm‘.
-Exemplul m mm" 1r 1mm, M M»
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+8.3 Clauzﬁ
+Deﬁnitia 122. O formuld 4p se nume5te clauzé dacd emistd n Z 1 literalz'
+901, . . . , 4pm astfel incdt
+90:301V4p2V...V<pn.
+Cu alte cuvinte7 0 clauzé este o disjunctie de literali.
+Exemplul 123. Urmdtoarele formule sunt clauze:
 
-1 v v qv I
+1. p V q V r;
 
-2 v v i v ﬁr
+2. p V —\q V —\r;
 
-a j, v i‘ v w,
+5’. —|p V —|q V —\r;
 
-4*»1vmvhvwvﬂ
+4. —|p1 V p1 V p2 V —|qV —\r;
 
-J w‘ v p.»
+5- (_'P1 V P1);
 
-» 111 m . n
+6. —\p1 (n I 1).
 
-1 P 1,. Z n
+'7. p (n I 1)
 
-L'nndwmrk 1W.“ m. m, dour
+Urmdtoarele formula nu sunt clauze:
 
-1 v A X WNW," r" I” dc MM;
+1. p /\ r; (conjuncﬁie in loc de disjunctie)
 
-2 F v why, (w . MW a’ mnm/
+2. p V —|—|q V —\r; (nu e disjunctie d6 literali)
 
-v wvwm (mm Y .1,“ m. “mum-111 Mr A/
-8.4 Forms Normals Cnnjunmva
-mm“. m [we]. o MM ,~ m. m m M 1111M n g 1 HM
-9,, 9,. w,» {mu
+3. —'—|p V p /\ —\p1. (apare pp, deci nu auem literali; apare A)
+8.4 Forma Normalé Conjunctivé
+Deﬁnitia 124 (FNC). O formuld 30 este in FNC dacd existd n Z 1 clauze
+<p1, . . . , 90” astfel incdt
 
-kMM “A”
+<p:g01/\g02/\.../\<pn.
 
-c" m nmule. u [0“va m k‘NCn|w WNW (k mm“. (b4 hlzudl
-s." n 5mm» 1,. wt m: u WNW (k my." m K um MW“.
-1.1mm mm!- chum‘
+Cu alte cuvinte, 0 formulé in FNC este 0 conjunctie de disjuncpii de literali.
+Sau: 0 formulé in FNC este o conjuncpie de clauze. FNC se mai nume$te $1
+formé. normalzi clauzalé.
 
-BMW m, WWW» 1mm m mp
+Exemplul 125. Urmdtoarele formule sunt in FNC:
 
-‘hpvqmrwwwwwwm
-17mm um. WWW.“ m Mm m d: Mu mm
+1. (—|p V q) /\ (r \/ ﬁp V r’) /\ (—|p V —|r);
+
+Partea I - Logica propozitionalé 69 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:70**************
-Lwd W... ..|........... ZUZMMI “Wm... Am... 1.... r.»
-a ~..A<.v~..v.'>A_.
-.1 w A . A -.
-4 ~p
-1 P
-mm... A»... ... A... .. FNL'
-I ~<~p m A M ~vv m A w v m 1...... m... .n
-mm... _ .-.. 1...;
-2 ‘P A j... WW, 1. .... A...“ .w v.1...
-. WW <. A j.An Wm...‘ m...‘ . ......... 1.... ..
-W... ....
-4 w m... w. 4.. ... m. m...
-J 1» v m A m 14......“ .4 mm... M WW... .4 W..." .1.
-mm
-3.5 Tenrema de inlocuire
-1. Wm“..- vvnvwmw .. .m... W m .... A.-. Q .A'... w... ....|...
-1...“... m <1”... .1. .......~.. r. w' M... 1...... M1» M...
-.A E ,1
-F1: (A. . 1...... m. W... é m “Mm...
-F1: a. 10...... abmmm’ ..A m w“ 11:10am" 1mm M... . M v W a
-Amm W E é.
-u. .|.. my... E m. . WM»
-Mm... m r. v Z v .. d Z n»
-r1». Z (.vv -. 9. Z (“w/qr
-p... M... .. W... .M. .. g, E ,1 a. .1.’ mm... M
-....... h... [.mm . ".A/m... A. .M .......... .... 1...... ...
-......... A. ... .l, .. n... m. .4’...
-ex. Aducerea “he; formula in FNC
-1..."...- m .11....“ Ae .4...“ . .M ‘m... .. FNJ). m... W.
-1m... v m... Hm...” .11... A. m- “v.1”... E v
-m... u... “WAN... 1.. A... .1. A.“ .1. Mu m...
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+
+2. —\p /\ (r v ﬁp \/ r’) /\ —\r;
+
+3. —|p /\ r /\ —\r;
+
+4- op;
+
+5. p.
+
+Urmdtoarele formule nu sunt in FNC:
+
+1. —'(—\p V q) /\ (r V —\p V r’) /\ (—\p V —\r); (prima clauzd are
+
+conectorul —| in fata”)
+
+2. —|p /\ —|(r V —|p V r’); (a doua clauzd are —\ in fatd)
+
+3. —\p V (r /\ —\p /\ r’); (conectorul principal e disjunctia, in loc de
+
+conjunctie)
+
+4. —'—|p; (apare —\17 decz' nu auem literali)
+
+5. (p V (q /\ 1-)). (disjunctie do conjunctii, nu conjunctie d6 disjunctii de
+
+literali)
+8.5 Teorema de inlocuire
+1n continuare, prezentérn 0 teoremi pe care am folosit-o péné acurn implicit:
+Teorema 126 (Teorema de inlocuire). Fie <p,<p’ doud formule astfel incdt
+</> E s0’-
+
+Fz'e 4,01 o formuld care conﬁne <p ca subformuld.
+
+Fie gag formula obtinutd din 301 pmn inlocuirea unei aparigfn a lui go cu g0’.
+
+Atuncz' 4,01 E 902.
+
+Cu alte cuvinte7 E este 0 congruentd.
+
+Exemplul 127. Fz'e (p I p oi (p/ : ﬁﬁp.
+
+Fie <p1 I (P \/ q) 5i s02 I (“op \/ q)-
+
+Prz'n teorema de inlocuire, auem ed (p1 E 302. Cu alte cum'nte, daczi
+inlocuim intT-o formuld o subformuld cu una echiualentd, noua formuld este
+echiualentd cu cea de la care am plecat.
+
+8.6 Aducerea unei formule in FNC
+
+Teorema 128 (Teorema de aducere a unei formule in FNC). Pentru orice
+formuld go, existd o formuld g0’, aﬂatd in FNC, astfel inccit 4p E g0’.
+
+Partea I - Logica propozitionalé 70 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:71**************
-marl W... mlmmlnrl zuzuznzl Umvmmuln Aﬁnmnim 1.... n.»
-quvnw-hu: is...“ :1: ................\
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+Demonstratie: [Schipé de demonstratie]
 
-y... m..."- k»....1......m.............. hm..................=...........
+Prin aplicarea repetaté a teoremei de inlocuire7 folosind urmétoarele echivalenpe:
 
-. w. ~ m;1<;.~ m A w. - w)?
+1- (801 H $02) E (($01 —> $02) /\ ($02 —> $01));
 
-1 w. ‘my =w. vm
+2~ (801 —> $02) E (101 V 4P2);
 
-1 w. v w. Av.» = (w. v v.) A m Wm.
+3' ($01 V (W2 /\ 4%)) E (W1 V W2) /\ (901 V 903));
 
-. w. Aw) w.» E (w. v w) A A“ w.»
+4- ((<P2 /\ <P3) V W1) E ((<P2 V W1) /\ (W3 V $01));
 
-a w. v w: w.» E (w. v v1) va).
+5- ($01 V (W2 V 4%)) E (W1 V W2) V $03);
 
-s w. A w. A91), E a». A v1) A»...
+6~ (801 /\ ($2 /\ L#13))E((<P1 /\ W2) /\ 4P3)?
 
-1 ‘w. v a) E w. Aﬁwﬂ.
+7- ism V @4101 /\ W2);
 
-.. *(v. A a) E w. hm
+8~ “($1 /\ <P2) E (‘W1 V “@2);
 
-g w E v
+9~ —\—\§p E (p.
 
-Yuvneledmlednvdmummn “mm... W... A»... .6... mvvhumk
-.. a...“ mm...
+Primele doué echivalente asiguré faptul cé din formulé dispar toate implicatiile
+$1 dublele implicatii.
 
-mum“... 1.. 1 W... D... W“... m. m... .................... w..."
-..... m..........
+Echivalenpele 3 5i 4 asigurﬁ (:5 in arborele formulei toate disjuncﬁile coboard
+sub conjuncfuii.
 
-Wm“... a _. s mm... w......~.m1........v.,. m. Mm..." .. ..~
-um .W .1. MW... m... W. u W... W w v a v w. v .v 9.. ...
-... A:- mxw. M. v a. v .1 w.»
+Echivalenpele 5 $i 6 asiguré asociativitatea lanpurilor de disjuncmi 5i re-
+spectiv de conjunctii (astfel incét s5 punem scrie Q01 V 902 V 4,03 V . . . V cpn in
+loc de ((((g01 V (p2) V gag) V . . .) V 4p”).
 
-MM“... 1 .. A Mn... Mpuﬂ d. m“... W... M WNW... ..
-Am... ... WM. 5......"
+Echivalenpele 7 $1 8 asiguré faptul c5 negatiile ajung sub conjunctii $1
+disjunctii in arborele formulei.
 
-w“... Mm...“ mun .. .... m... A... w... .n. “A .... m M
-5....“ 4. HM. “bar-m-
+Ultima echivalenfué asiguré c5 nu existé doué negatii una sub alta in ar-
+borele de sintaxé abstracté.
 
-»...m ccmv-‘emdm .1. m. m .K up.“ h... .K W m... .. ...r.....
+Aplicarea echivalenﬁelor de mai sus se opreste (nu se pot aplica la inﬁnit
+i de ce7).
 
-.k (a)
-
-“mum... .. .. .. m... ... m mm... ..... lmm'm WM...
-5.. .. "M... ... m... dmpm mum-Mu: Minn ... mm. m"... de
-mm... ma .. rm...- ... rm: . H.
-m... .7 1...“. WWW... 1. [\nm dc A... An m... m...
+Rezultatul va ﬁ 0 formulé in care conjunctiile sunt deasupm disjunctiilor7
+care la réndul 101" sunt deasupm eventualelor negatii in arborele abstract de
+sintaxé, adicé 0 formulé in FNC. q.e.d.
+Partea I - Logica propozitionalé 71 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:72**************
-1w!‘ Wm mm.“ 2112mm "mm". “mm lmn M
-hwy“! m .n Mum/mm w a “w ~ (q a v1) in m
-WM w M (\r‘ m
-
-§ my“)mﬂmuqﬂwww»
-f vavw)~H1vaH<vv¥~hwvﬁqU
-? (*hwvwlvhquHAthvrh/hwvwn
-% WMﬂyWW»mwwwrwwn
-? “qu?vhwrllAUqulvfpvﬁzH
-é (WW WWW wwwnmuvw wwwww wm
-é \[(“PV*Q)VP7A[FD/“17VPHAUNVY)“*Q)A\[*YVF)V*QW
-f @vawlqvﬂwmvapvwwvavwn
-E llkhlwwvrhlqv*quM(qvvvﬁqthm/pvﬁzh
-: hrv*qvv)Ahvﬁnvr)AlquvﬂMthyvﬂ>
-an Folma Noxnlalé Dmunmvs
-Mn“,- m mum a 1.7m“ air i. mp M m .1 Mm a
-Wm“. at lamb
-mm“! m ummk/mw m w mu
-
-I wwwrmpwwhwﬂy
-
-1 wvhmpwwm
-
-‘7 wwvﬂ
-
-4 w
-
-5 p
-
-l/mmlwvlr 1mm N1 in m
-
-I‘wwwwwm'wwmn,
-
-1 wwmwm
-
-1 wmwwn
-
-4 *w‘
-
-5 mm,»
-“mm... 1:2, Emmm ., “Minn dmurqu-m WW .1, Wm m
-m
-mwummmmm 11 [\nmdnmm ARMNW
+Logicé pentru informaticé 2020-2021 Universitatea Alexandra loan Cuza
+Exemplul 129. Sd aducem formula ((—\p —> —\q) <—> (q —> p)) in FNC:
+1 ((PP —> Pq) H (q —> P))
+f ((PP —> Pq) —> (q —> P)) /\ ((q —> P) —> (PP —> Pq))
+f ((PPP V P01) —> (Pq V P)) /\ ((Pq V P) —> (PPP V Pq))
+§ (P(PPP V Pq) V (Pq V P)) /\ (P(Pq V P) V (PPP V Pq))
+f ((PPPP /\ PPq) V (Pq V P)) /\ ((PPq /\ PP) V (PPP V Pq))
+f ((PP /\ q) V (PqV P)) /\ ((q/\ PP) V (P V Pq))
+i ((PP V (Pq V P)) /\ (q V (Pq V P))) /\ ((q V (P V Pq)) /\ (PP V (P V Pq)))
+E (((PP V Pq) V P) /\ ((q V Pq) V P)) /\ (((q V P) V Pq) /\ ((PP V P) V Pq))
+j ((PPVPqVP) /\ (qVPqVP)) /\ ((qVPVPq) /\ (PPVPVPq))
+E ((((PPV PqVP) /\ (qV PqVP)) /\ (qVPV Pq)) A (PPVPV Pq))
+I (PPVPqVP) /\(qVPqVP) /\ (qVPVPq) /\(PPVPVPq)-
+8.7 Forma Normalé Disjunctivéi
+Deﬁnitia 130 (FND). O formuld este in FND dacd este 0 disjunctie d6
+conjunctiz' de literal’).
+Exemplul 131. Urmdtoarele formule sunt in FND:
+1- (PP /\ q) V (r /\ PP /\ r’) V (PP /\ Pr);
+2. PpV (r/\ PpAr’) \/ —\r;
+3. —\p V r \/ —\r;
+4- PP;
+5. p.
+Urmdtoarele formule nu sunt in FND:
+1’ P(PP /\ q) V (r /\ PP /\ r’) V (PP /\ Pr);
+2' (PP V P(r /\ PP /\ r’));
+5’. —|—|p /\ (r \/ —|p V r’);
+4- PPP;
+5- (quvm-
+Exercitiul 132. Enuntati 52' schigfagfz' demonstratia teoremei de aducere in
+FND.
+Partea I - Logica propozipionalé 72 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:73**************
-mud W". mm.“ zuzuznzl "mm. Mum 1m M
-s.s Legélura dintre FNC 5i FND
-Mnm. m. mekmmmk m 1mm Z Z u h v M amend w .X
-I," MM MAM
-
-I Z Z,‘ PM n Z ‘
-
-a (w Z v, Mm M v E m
-
-J 4whw)‘:1wvm'l Mm W W.“ Z u
-
-4 w vvﬂ’ Z (w'Avs'! Mm W W15 u
-“ml-.1 154' I.“ (mm mm,“ .1, mmwmhm mph-M...
-
-I (ZN: Z P ‘almlm WWW M Z.) m. m4 w,
-
-Y HZMMMZP A #1va my Z
-
-H, /\ mm v P v 4W» v I»
-v M,VWWZ,WWZWZ.WZ
-mﬂmﬂwhnwm
-1mm. m (mmmmmuv! W MW mm. pm," M I,“
-M Z § w A v m ,4
-é‘ Z w
-“mm... 1m. Damamhuh Mm .1! m, W MM MM»
-mm...‘ m 4M wv Zm‘ Z hp v MA m Z in» n: v ﬁn)
-1mm. m (um-n hm m- N WY M Z. A” ¢ 1mm
-no» v1 WM m w‘ m,‘
-91‘ Z’, in w
-
-11.9 Figé d2 exerciﬁi
-5mm.“ 1w. hwmmmmvmmn me MW
-
-‘uphwn :- mwerl 1 mwwvm
-mm um. WWW.“ 11 m db m db Mu mm.
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oau Cuza
+8.8 Legétura dintre FNC $i FND
+Deﬁnitia 133. Complementul unei formula 90 G LIP-HAN se noteazd 900 .52‘
+este deﬁuit astfel:
+1. ac I Ia, peutru orice a G A;
+2. (-14p)c I 4p, peutru om'ce up E LP;
+3. (cpl /\ (p2)c I (nplc V 4,026), pentru orioe 4,01, (p2 E 1UP’;
+4' ($01 V $02)C I ($01C /\ W2C), Pentm Once <P1, $02 6 LIP’-
+Exernplul 134. laid cdteua exemple do caloul pentru functia complement:
+1. (Ip)c I p (atentie, complementul luz' —|p nu este —|—\p);
+2' (ﬁhp /\ q)\/(r /\ “'P /\ I'M/(op /\ ﬁr))c I
+(op /\ q)/\(ﬁr \/ P \/ or’)/\(P V r);
+5’- ((_'P \/ <11)/\(r \/ _'P \/ r’) /\ (_'P \/ IIW I
+(p/Wq) \/ (“rAPA“I')V(PAr)-
+Teorerna 135 (Complementul este echivalent cu negatia). Pentru orice for-
+muld 4p € LIPWAN, auem cd
+4pc E —\<p.
+Exercitiul 136. Demonstrati teorema de mai sus prm inductie structurald.
+Exemplul 137. (p /\ (q \/ —|r))c I (—|p V (Iq /\ r)) E I(p /\ (q \/ —|r)).
+Teorema 138 (Legétura dintre FNC $i FND). Dacd 901 este 0 formuld in
+FNC 52' (p2 o formuld in FND, atuncz'
+(p16 este in FND
+.52‘
+9020 este in FNC.
+8.9 Fi$éi de exerciigii
+Exercipiul 139. Exprimati cu cdt moi putine paranteze urmdtoarele formula:
+1- ((r> /\ Iq) /\ r); 2- ((P \/ ﬁq) /\ r); 3- _‘((P \/ Iq) /\ r)-
+Partea I - Logica propozitionalé 73 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:74**************
-Lhﬂrl Wm “um-hm‘ mm“ 11mm". Alnmnim lmn M
-hvlviﬁul 14m 5mm Mm 010“!wa “ka My.“ Wm
-M m u Mnlruw Wm m" 4, WW: . ﬂﬁ'mhrwlo'r
-‘Mm/n x WA"q\/~x 1 yAqur‘ ‘ whmv,»
+Logicé pentru informaticé 2020-2021 Universitatea Alexandra loan Cuza
+Exerci'piul 140. Scriett arborclc abstract pentru urmdtoarclc formulc, avand
+gm'ja” sa le parantezatt conform ordinlt cle priorttate a operatom'lor:
 
-s va/whvrb
-5mm.“ u! Mum: Imw'lml: 1m“, in rm:
+1. pAqu; 2. —\p/\ﬁqV—|r; 5’. pAﬁqu; 4. —|p/\—\(qu);
+5. pV—|p/\—\(qu).
+Exercitiul 141. Aducett urmdtoarele formule in FNC:
 
-I up A ~17 v r»
+1- ((p A q) \/ r);
 
-r up v ~17 A I»
+2. ((p \/ q) A r);
 
-w *qu» A n‘
+5’- “((P V q) A r);
 
-4 my A q» v Xv
+4- ﬁ((p A q) \/ r);
 
-5 up A a) v (*PAﬂY),
+5- ((p A q) \/ (op A ﬁq));
 
-L mammww)
+6- ((p A (q A 1)) \/ ﬁp);
 
-1 +4Mq1v<mn
+7’ "(“(P A q) v (p \/ q));
 
-a hmqpnm w»
+8’ ("(P A q) —>(ﬁp A ﬁCD);
 
-11> ~ (quwA NHL
+9’ (P <—> (q—>(ﬁp A ﬁq)));
 
-n/ up» » w- in»
+10' ((P —> q) <—> (ﬁq—> _‘P));
+11. (p1 /\ ql) V (p2 /\ qg) V . . . V (pn /\ qn) (rezolvati intai pentru n : 2 $2‘
+n I 3, apol pentru un n oarecare);
 
-u 1P1N11)VYP1'\Q:)V 1v (p. A q.» [MW inhiIP/nhu n Z 1 M
-
-":v WWW»... “Wm
-
-5mm.“ m (Mum n m Wm [Wm ,v q Q 7A \r (uh/uh!
-1. Mm “WW:
-Eurdyml m (Mum: anm IMMW W, in Inc "WM,
-m. 1' lum- WWWM 11 [\nm dc m AR M.‘ mm
+Exercitiul 142. Calculatt o FNC pentm formula p V q —> p /\ —\r (atentte
+la ordtnca operatorilor).
+Exerci'piul 143. Calculatt complementul formulelor aflatc in FNC calculate
+mat~ sus.
+Partea I - Logica propozipionalé 74 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:75**************
-Capitolul 9
+.
+Capltolul 9
+Rezolutie in 10 ica
+, g
+0 t o l v
+P P ,
+Deductia naturala este un sistern deductiv care este apropz'at d6 mtz'onamentul
+umcm.
 
-Rezoluﬂe in logica
-propoziﬁonalﬁ
+Totugi, un minus al deductie naturale este ca, dandu-se 0 secventa
 
-9-1 ClauZC ca mulﬁrni dc litcrali
+s01,<p2,~-~,svn P w,
+este diﬁcil pentru un calculator sa construiasca 0 demonstratie formala a
+secventei (Le.7 nu este deosebit de eficient) din cauza nurnarului potential
+rnare de reguli de inferenta care se pot aplica la ﬁecare pas.
+
+Rezolutia este un sistem deductiv, la fel ca daductia naturala, dar este opti-
+niizat pentru calculatoare $i nu pentru oameni. In particular, este u$or pentru
+un calculator sa gaseasca demonstratii prin rezolutie (eel putin7 niai u$0r decat
+sa gaseasca dernonstratii prin deductie naturala). Totusi, dernonstratiile for-
+rnale prin rezolutie nu searnana foarte mult cu gandirea urnana. Exista lirnbaje
+de programare (Prolog) care folosesc 0 varianta a rezolutiei ca pas de baza
+pentru executie.
+
+Spre deosebire de deductia naturala, rezolutia lucreaza doar cu clauze in
+loc de forrnule oarecare. De asernenea7 spre deosebire de deductia naturala,
+rezolutia este un sistern prin care se demonstreaza nu consecz'nte, ci nesatisﬁ-
+abilitatea unor formule.
+
+9.1 Clauze ca multimi de literali
+Stini despre disjunctie ca este:
+75
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:76**************
-Md W... “mm mm- "mm". Mum M M
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
 
-1 mm.“ mm m Vl\v"1\vl E 11>,
+1. asociativé: pentru orice <p1, $02, 303 € LIP’,
 
-w, vm w,» E (Av; v M v w.
-1 mum M“... M Q. w e u.
-w, W1) E w! v m
+(s01 \/ (<52 \/ <59) E (W1 \/ <52) \/ <p3);
+2. comutativé: pentru orice 4,01, 902 G LIP’,
+(s01 V s02) E (s02 V 901);
 
-1 mm.“ m.“ mp» 9 e u twvn E é
-Emu‘... 144. Dmmumm m m mm“ n m
+3. idempotenté: pentru orice 4p G 1UP’, (4p V 4p) E (p.
+Exercitiul 144. Demonstrati cele trei echz'valemfe de mai sus.
 
-WMNM.“ dpmmmmhmmv pv pv ~qv i,‘ pv i,‘
-“W W» m WM m, "H mm“ A, m.‘ "mum
-Wm Mm. mm.
-Nnnm, pm W mm]: 9,. .9“ MW.
+Acest lucru inseamé7 de exemplu, (:51 clauzele p V p V p V —\q V pq, p V —\q,
+—\q V p V —\q V p sunt echivalente. Cele trei echivalenfue de Inai sus justiﬁcé
+folosirea urmzitoarei notaﬁii:
 
-MW My
+Notatie. Pentm orice literalz' 4,01, . . . , 30m folosim
+ca 0 notaﬁie pentru clauze
+Q01V<pgv . . . V410”.
 
-.A ¢ MM ,m W
+Altfel spus7 0 clauzé este reprezentati prin multimea literalilor séi.
+Exemplul 145. Clauza p V q V —|r este reprezentatd de multimea {p, q7 —\r}.
+Aceastd multime de literali, { p, q, —|r }, mai reprezz'ntd 5i urmdtoaTele clauze:
 
-mm W a MW mmmuné ,m MM.“ mm W
-“ml-.1 m 01”»?qu W M mam“ Wu my")
-4W. WW MM ( M w y, WWW-1 n mmw m,‘
+1. q V p V —|r;
 
-I q v P v x
+2. quV-mVp;
 
-2 q v F v i v ,,
+5’. quVpV-mVp;
 
-Y P v a v P v i v ,
+4. etc.
 
-‘ ‘k
+(Datom'td faptuluz' cd disjunctia este asociativd, comutativd 52' idempotentd,
 
-(UMLﬂ/npnlmdlumunmzamnhvm NMWWWM
-M .M 1m‘, my HM,“ ;
-mum“. 4mm! a MW 4, humh mm "Mm W .m
-M .M w‘ M “WM
-“mm... 146 WWW. m a» "M. mm k ., M M,
-W. a: h ¢ Mm In MM W
-Ymu 1' lam WWW.“ 16 m M m M M.‘ mm
+toate aceste formula sunt echz'valente.)
+Observatie. Atemﬁz'e/ O multime d6 literali reprezz'ntd mai multe clauze, dar
+toate aceste clauze sunt echz'valente.
+Exercitiul 146. Asigumgfi-vd cd atz' inteles notatiile d6 mai 5us 52 cd putegfi
+trece de la 0 notatie la cealaltd U501‘.
+Partea I - Logica propozitionalé 76 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:77**************
-1w!‘ W". “mm zuzuznzl "mm. Mum 1m M
-chm.“- 1" WWW Wm MM, M um u mm; n W.
+Logicé pentru informatici 2020-2021 Universitatea Alerandru I oan Cuza
+Observarie. in continuare, uom permite un mic abuz de limbaj 5i uom spune
+clauzé unei multimi de literali.
 
-ur "MW mm mu, Wm dam." "12M: m mm d1 M
-"I, i,‘ h, d; MW‘ my MM M ,... WW M a,» W" MM
-"Wm" 4, mum.“ h ‘W: "1mm
+De asemenea, uom permite folosirea olauzelor udzute ca muliimi de liter-
+ali in loc de formula, atunci cand nu este relevant la care dintre formulele
+reprezentate de multimea do literali ne referim.
 
-n, "mm MM Mud d’ W." “my M MM M
-MW F w, ; "WM" D: M pm.” mid Wm.”
-5W. ¢ ,7‘ T’ > m- ,Mm M w» up v ‘P1 v Pu m’ MW.
+De exemplu, folosind abuzul de limbaj explicat mai sus, auem faptul ca
+clauza { p, —\p } este ualidci. De ce? Deoarece orice formula reprezentata de
+clauza { p, —\p } (do exemplu, (p V —|p) sau ((p V —|p) V p)) este adeuarata
+in orice atribuire.
 
-(1m mm, m “WMWM ,m W NW. WWW,“
-Mm.“ Mum M. 1. Mm H, “M. a" M. W mumm
-Mu UM‘ n WWW-m“ Hm] mum“, mm- M..." 1“
-hm.“- Apv =1 ma . h Mm. n mm “Mummy
-cum". mm. Wm MM m u; WM‘ m‘ MM“ a]
-MW... .1‘ n Mm,‘ Mm MM MW“,
-9.2 FNC'urile ca mummi de clauze
-mm. MM“. mm. Wm h. M mmwmm WWW,
+Clauza uida (U)1n continuare7 discutérn un caz particular: ce se intarnplé
+cu multimea vidé de literali? Multimea vidé de literali se numeote clauzé vidé
+$1 este notaté cu III. Intuitiv, multimea vidé de literali reprezinté o disjuncpie a
+0 literali. Din acela$i motiv pentru care surna a 0 numere este 0 $1 pentru care
+produsul a 0 numere este 17 disjunctia a 0 literali este falsé in orice atribuire.
+Asaclar, D este 0 reprezentare pentru 0(rice) contradicrie, féré a ﬁ propriu-Zis
+o formulé din LlP’ (tot a$a cum multimea { p, q } este 0 reprezentare pentru
+formula (p V q)7 féré a ﬁ propriu-Zis o formula propozifnionalé).
 
-1 WWW WWW. v‘ m Wéll!
+Observatie. Clauza uida (notata cu D) reprezinta cazul particular al unei
+disjunciii de 0 literali, agadar reprezinta orice contradiciie.
+9.2 FNC-urile ca multimi de clauze
+Similar cu disjuncpia, conjuncﬁia satisface 5i ea urrnétoarele proprietéfui:
+1. asociativitate: pentru orice 301, rpg, Q03 E lLlP’7
+(s01 /\ (<P2 /\ s09) E (W1 /\ @2) /\ #13);
+2. comutativitate: pentru orice (p1, $02 E lLlP,
+($01 /\ 902) E ($02 /\ $01);
+3. idempotenté: pentru orice cp E LIP’, (<p /\ (p) E <p.
+Exerciigiul 147. Demonstraii cele trei echiualenie do mai sus.
 
-w‘ Mw/wx)?! up, mm»
-2 Mnmmwnne mm“, v». 91$ u.
-1w Mu EMA?»
+Cele trei echivalenfne de mai sus justificé urrnétoarea notatie: déndu-se
+clauzele gob...,gon, scriern {<p1,...,<pn} in loc de formula aﬂaté in FNC
+<p1/\ . . . Ago”.
 
-2 uh-mummi Wm W < u. w A :1; >-
-mm... m. 0mm“ w» M WWW ,l, m
-Mm n. p“. ‘Mm (w .m m (1Q mmm M.“ FNF
-M M
+De exemplu, scriern {p V —\q, q V r V p} in loc de (p V —\q) /\ (q V r V p).
 
-Duwnvhl M n, v *q iv X v p) ‘MAE (Pv w» A A,“ v P1
+Mergénd mai departe, putern scrie 5i clauzele/disjuncriile ca multimi cle
+literali, de exemplu, {{p, —|q}7 {(1, r, p}} in loc de (p V —\q) /\ (q V r V p). Al-
+tfel spus7 vom considera o formulé in FNC ca ﬁind o multime de multimi de
+literali.
 
-“up-ml drum. pm“. m .. dmuek/Ammmnk m Imm. d:
-hm. “WW: u» w) (q Mn \Mdﬂph,»~mv.» A,’
-hm.“
-mm um, WWW.“ 11 [\nlcdn m d: Mu mm.
+Partea I - Logica propozitionalé 77 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:78**************
-mud W... MW.“ zuzuznzl "mm. Ainmmm 1m M
-5mm.“ nu Srwzh/wvmln mFNEEy w m MW a» mm“.
-‘W
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+Exercitiul 148. Scriegfi formula in FNC (p V q) ca 0 multime de multimi de
+literalz'.
 
-SM‘ 1mm r" mew q) m .7 MW .k WW .1, “mm
-9.: Rezalutia
-mmwmm 1Mcm ‘Ill-W my Q WM "undid: "MM. lequr
-‘i WW Wm. ‘k \Mmm.‘ damn vazutr n. mum.“ ‘1- mm m
-MW‘ WW.“ "mum .. WWW. “my
+Scriegfz' formula in FNC (p /\ q) ca o maltz'me de multimi do literalz'.
 
-WWW "MAP .meh.‘ “my MUM .| MM."
+9.3 Rezolutia
 
-c U w D J w»
-“mm-k EM‘ if“ D
+Rezolutia este un sisteIn deductiv cu 0 singuré regulé de inferenté. Ipotezele
+si concluzia regulii de inferenté sunt clauze, vizute ca multimi de literali (1a
+deductia naturalé, ipotezele $i concluzia erau secvenfue).
 
-1w, W‘. (h: m, m. c .. D mm (Mule Mm vim“: k. mum. A:
-hm. m a e A W u “Mm WNW.“ Wm um mumrm m <-
-NWIMm a E A ma \m.>mMWW.M m.“ cum Mm
-Wm “hm cm“ cu m W Plum WM- . "Quin .1! nvfewm).
+Iaté singura regulé de inferenﬁé din sistemul deductiv a1 rezolupiei:
 
-A m. mm mum. DU w; cm.“ “m. w m udmvxh
-,. mm c u u
+u C U {a} D U {ﬁa}
+REZOLUTIE BINARA i
+C U D
 
-m m. “mm .1! IPhcm » W1“ 4e mm
+in regula de Inai sus, C 5i D sunt clauze oarecare, vézute ca multimi de
+literali, $i a G A este 0 variabilé propozitionalé oarecare. Din moment ce C
+este o clauzé $1 a G A este o variabilé propozifnionalé, avem cé C U {a} este de
+asemenea 0 clauzé. Clauza C U {a} este prima ipotezé a regulii de inferenpé.
 
-1 rm) (pm-Wu
+A doua ipotezé este clauza D U {ﬁa}. Concluzia regulii este tot o clauzéh7
+si anurne C U D.
 
-1 w a!) (WM!
+Iaté un exemplu de aplicare a regulii de rezoluﬁe:
 
-J (qﬁr) 1m m‘ WM 1 "Zyl
-Deﬂnlyu 1m. mmcw mmmmmm "MM "Mm
-mm “1 MM”, (‘u m n m h.»
+1. {p7 q}; (premiszi)
 
-Mnhnlml . 4M dun” m. M. m n. mum. dumb h, q» A
-WW.) w M Mm...“ (P, x) \l n mm pm... Am‘, mm
-remlwnn W mm.“ nqmen». , mmnbm WWW“: A be m m
-‘MM mm . Mlhm Irgxh M malnnn
-Mm". 150. Chum: run mmnmm Mm Mm" "MW.
-mm m :mndm Cu (a) A‘ 0‘. (in, “Hg/m humve M 1.“..“1 a
+2. {—\p7 ﬁr}; (premisé)
 
-D<exemph| ‘PM menu/‘venmhlnylanlmzdnr u w. WSW
-m m, me (q “A me mum.“ k" m [mm M
+3. {q, —|r}. (prin R.B., liniile 1, 2, a : p)
+Deﬁnitia 149. Clauza CUD rezultatd in urma aplioam'z' rezolugfiez' se numeote
+rezolvent al clauzelor C U {a} 5i D U {ﬁa}.
 
-0M1." cl. Wm‘ W. nguh d: mlvmml W [mm um mm
-mm.“ “wwuummmﬂmﬂ Deuemvhl am." henna‘
-m W“. mild" m nunilunu
-17mm mm WWW.“ 1» Mm m db Mu mm
+Rezolventul a doué clauze nu este unic. De exemplu, clauzele {p,q} $1
+{—|p, ﬁq,r} au doi rezolventi: {p, —|p,r} $1 {q, —\q,r}. Putem distinge intre
+rezolventi prin marcarea explicité a oam'abz'lez' propozz'tionale a pe care am
+folosit-o pentru a aplica regula do rezolufuie:
+
+Deﬁnitia 150. Clauza CUD rezultata in urma aplicam'z' rezolugfiei se nume$te
+rezolvent al clauzelor C U {a} $1 D U {ﬁa} dupé/in functie de literalul a.
+
+De exemplu, {p, —\p, r} este rezolventul dupé q a1 clauzelor {p7 q} $1 {—\p, —|q, r},
+in timp ce {(1, —\q, r} este rezolventul lor in functie de p.
+
+Observaﬁi (:21 aplicarea unei reguli de inferenté este foarte rigidé, regula
+trebuind aplicaté exact a$a cum este scrisé. De exemplu, o gre$ealé frecventé
+in aplicarea regulii este urlnétoarea:
+
+Partea I - Logica propozitionalé 78 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:79**************
-11.111 1.1.1.1...1111111 11.11.1111 11.1111... 1111.... 11... (‘11:1
-1 11 1.11. (v1.1.1.1
-1 (~11 1-1) (111.1111
-1 m <1..1....111-1.“..111.1..11.11.1....1.1..1111
-Pe 1.1.. 1 1.1.... 1.1.11.1... 11.1.1.1...11111 .1 1.1.1 1 111.
-.11 .11 .1 1.1.1.1.. 11. .11. 1.11.1.1... 1-1... 1 .. 1 111111.111 .1 1..
-1.11.1 .11. 1111..
-1 11.1.» 1111......
-1 w w» 1.1111111
-1 (1.1.111. 1.111.111 1.1.1.1....
-.1 .111 1.11.1 .111111111111
-1 11 1.11. (11.1.1111
-1 (~11 111) (1111.111
-1 11.1.1 1.1.11.1...11 11......an
-9.4 091.101.111.111; 11111111111
-1111...... 111 u 111.11.111.11... 11.1.11. 1 11...... 1.. 1.11.111 1. .1...
-1.... .v». .11. 11.111 11.1... 1.1.. .1. .11111..1.1,.1».1 1.1.
-1 S11 ..
-. .1111 i (91. .1.)
-. 1.1 .1 1.1. 11.11.11. 1 11.11 .1111 .~, 1. 1.. .1. 1,1. .1... 11......
-1. 1.111.111.1111». 15).‘ <1
-.111. .1111 1. 1.11.1 .1 ﬁ, 1....1/111111 11. .1
-0.11.1. .1. .1. 11...... .11.... 1.11.1.1...“ 11......1. .. .~ ..
-11.1.1..111...“1.1.1.1...11111..111 hm» 1.. h. 11.1.0.1. 1.1
-.1 1.1.111 11.11.11...
-1 111.11 11.1.11.
-11.1.11. 11111. 111.111.11.111 11 1.1111. 1.... 11.11....111
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+l- {Pﬂbr}; (premiszi)
+2. {—\p,—\q_}; (premisi)
+3. {r}. (aplicare gresité a regulii de rezolutie binaré)
+Pe linia 3, putem concluziona sau rezolventul dupé p sau dupé q, dar nu
+
+are sens Si amestecém cei doi rezolvenﬁi, dupé p si q. Asigurafni-vé cé aﬁi
+
+inteles acest aspect.
+Iaté prima varianté corectzi:
+1- {p.q,r}; (premiszi)
+2. {—\p7—\q}; (premisi)
+3. {q,r7 —|q}; (rezolvent a1 1, 2 dupé a I p)
+si iaté a doua varianté corectéz
+1- {p,q,r}; (premisi)
+2- {_‘P>_‘Q}; (premisé)
+3. {p,r, —|p}. (rezolvent a1 1, 2 dupé a I q)
+
+9.4 Demonstratii formale
+
+Similar deductiei naturale,
+
+Deﬁnitia 151. O demonstratie formali a clauzez' 90 din multimea de clauze
+
+901,302, . . .,90n este 0 listd de clauze 1/11,¢2,...,1/1m astfel inccit, pentru orice
+
+1 g i g m:
+
+. sau 1/11' G {@1w-w80n};
+
+0 sau $1‘ este rezolventul a doud clauze wj 5i wk care apar mai devreme
+
+in demonstratia formald: 1 g j, k: < i.
+
+Mai mult, 1/1m trebuz'e sci ﬁe aceeasz' formuld cu <p.
+
+Clauzele 4,01, . . .,<pn se numesc premisele demonstratiei formale si 30 se
+numeste concluzia demonstratiei formale.
+
+Iaté un exemplu de demonstrapie a clauzei {p7 —|q} din {mg p, —\r'}, {r, p}
+si {r’, —\q} prin rezolutie:
+
+1. {—1I,p,ﬁ1"’}; (premisﬁ)
+
+Partea I - Logica propozitionalé 79 Note de curs - de listat color
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:80**************
-w‘ W... “mm Mm. "NW... MM M M
-1 hp) WW
-1 “I w, WM,
-‘KM/y Mmkzw
-< (m, [Fund]
-mm“ WM. MM" (m. mm A m" >4 1." n» ("Wm
-WNW mm Wm; ‘.MWMM Mm“, in», a},
-1 “Lﬂl, [Plenum]
-1 ['1] (mu-N1
-1 w» WM,
-4i!!! lRILZ\n-q]
-w (M; Um,
-n “M. n m. 1 mu a A N. m.“ "Mm U WW
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+2. {r,p}; (premisé)
+3- {r’, ﬁQ}; (premisé)
+4. {p, —|r’}; (R.B.,2,1,a I r)
+5. {p, —\q}. (R.B., 3, 4, a I r’)
+Céteodaté spunem derivare (prim rezolutie) a clauzei 4p in loc de demonstratie
+
+formald prin rezoluiie a elauzei 4p. Iaté 0 derivare a clauzei vide din {p, —\q}, q, —|p:
+1. {p, ﬁq}; (premisé)
+2. {q}; (premiszi)
+3. {ﬁp}; (premisﬁ)
+4. {p}; (R.B.,2,1,a I q)
+5. E, (RB, 4, 3, a : p)
+O derivare a clauze U din <p1, . . . , g0” este numité céteodaté. 0 respingere
+
+a multimii de clauze 901, . . . , 90”.
+
+Exercitiul 152. Pornind cu aceleagi premise ca mai sus, gdsigfi 0 altd derivare
+
+prin rezolutie a clauzei l1
+
 9.5 Corectitudine
-u “ Mm Mm». mm. w mm. h mm WW .m.
-mm Mm, W mm
-,7. @Fv
 
-5mm.“ m. Mum Wm
+Ca si dcducfuia naturalé, rezolupia 0stc corccti. 1n accasté sccpiunc arétérn
 
-m. m m c u M W M, q E A D W,» wowmwmm
+acest lucru.
 
-Cummwwrw
+Lema 153. Fie 90 G {@1,...,<pn}. Avem ed
 
-“mm... m. WWW, mm
+901, - ~ - 9% 1: 90-
 
-Mm. m WWW.“ MM, M m.“ a WWW m
-a. wkv
+Exercitiul 154. Demonstrati Lema -.
 
-17mm WWWWM m mm.“ dmﬂmm
+Lema 155. Fie C,D doud elauze 5i ﬁe a € A 0 variabild propoziiionald.
+
+Avem ed
+
+CU{a},DU{—\a} lzCuD.
+
+Exercitiul 156. Demonstragfi Lema -.
+
+Teorerna 157 (Corectitudinea rezolutiei). Dacii existd 0 demonstratie prin
+
+rezolugfie a clauzei 90 din gal, . . . , gun, atunei
+
+r1.---.<pn lzsﬂ-
+Partea I - Logica propozitionalé 80 Note de curs - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:81**************
-Uﬂrl W... mlmmlnrl zuzuznzl "mm. ~me 1m M
-mum-h" m v1‘ ,wm a (knwnnrluc pm. mm . chum v
-“mph ,vn
-Vow m.- m. "MM-M ‘Z M .w) (-
-w .ZZZQ.
-rm Y Z (u J») M Tum?! M“. W Wm n< Mm“.
-o- wkaywnu-umwieﬂz ,Z“
-“mum
-w ,an v.
-rm deimm m Jcmulen mm pm. WW W" Z’ ﬁm i.‘
-m1mm“WW-vb‘WWW
-1 MM. w) inupnzuwemﬁ
-Z1. Z“ Z»
-m “ME mm mm I. mm. Z‘ "m".
-2 h a m MW.“ m, mm d". m» .va s 1» <, 1W,‘
-W », “0an ‘Aw-mm ZWW mm nimh'hmlm
-v, Z DU w» v w‘ Z cu n um» 011mm,.“ m M Z A M o
-m mm» mlmmnmh
-¥7m|1|mlz14ubr mmmww» w v r, mm, M‘ >- m
-lnlnrunvl w, u w n. w, Z Cu m n h Z Duh,» my d
-w- v“ Znum
-w _¢_ Zomba!
-Ammu
-Z-Z Wwow
-nun-MAWIM .m Ammdvmempdel-lCup)
-M nub-z) dunnllu'hi WWW .mmwmm W um
-m.- Mm d v Me model xl “m um 1m w Z UL D w
-am v W mmld .\ .\, pm,“ Z m. m. moi umuu m. Z.
-m». mm.
-Z. w‘ m.
-m Me ﬁx I. nehml i‘ mm"
-“my MMMMWM m humdnmnx Animumm
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+Demonstratie: Fie 1/11,...,1/)m o demonstrapie prin rezolu§ie a clauzei 4p
+din Q17...,§0n.
+Vom aréta prin inductie dupé 2' G {1, 2, . . . , m} c5
+<p17"'7<pn 'Iw'l'
+Fie i € {1, 2, . . . , m} un intreg. Avem prin ipoteza de inductie c5
+<p1,...,<pn lITbl pentru orice l E {1,2,...,2‘* 1}
+gi arétém c5
+(p17"'7<)07l 'Iwz'
+Prin deﬁnitia unei demonstratii formale prin rezolupie, trebuie s51 ﬁm in
+unul dintre urmétoarele doui cazuri:
+1. $1‘ E {4,01, . . .,<pn}. 1n acest caz avem czi
+prin Lema ceea ce e exact ce trebuia s5 arétém.
+2. $1‘ a fost obfuinuté prin rezolufuie din 'L/Jj,’L/Jk, unde 1 g j, k < 2'. 1n acest
+caz, 1/1j trebuie $21 ﬁe de forma wj : C U {a}, z/Jk trebuie six ﬁe de forma
+l/Jk : D U {no} $i 1/11‘ I C U D7 uncle C,D sunt clauze $i a G A este o
+variabilé propozipionalé.
+Prin ipoteza de inducpie avem c5 4,01, . . . , 4p” I: wj $i c5 901, . . . , 90” I: 112k.
+Inlocuind z/Jj 3i wk cu 1P3‘ I C U {a} ei wk I D U {no}, avem 05L
+<p1,...,<pn I:CU{a}
+si oil
+901,...,90n I:DU{—|a}.
+Arétém c5
+<p1,...,<pn IICUD.
+Fie T un model pentru 901, ..., si 90”. Avem 021 T este model a1 C U {a}
+$i a1 D U {no} datorité celor doué consecinfue semantice de mai sus. Din
+Lema -, avem c5 T este model a1 clauzei C U D. Dar 11%‘ : C U D $1
+deci T este model a1 7,211. Deoarece T era un model arbitrar pentru 301,
+..., 5i gun, avem (:5
+$017"'7§0n ‘Iwiv
+care este ﬁx ce trebuia $5 arétém.
+Partea I - Logica propozitionalé 81 Note de curs - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:82**************
-Md W... “mm 202mm "mm. Mum m M
-h Mm mm .‘m W.‘ m
-v». é.‘ > v“
-Mn. m 1 S ¢ S m Dewar‘: W Wm m .1 Mm,“ M... v
-m. w - v» .1: mm ‘ - Mm.“
-¢.. v“ > v-
-“@an
-um
-9.6 Completinudine
-u,- mw. Mm.» mm K. ik w... Mn. n a fulmwr ‘ML N
-Mm A. MW“. m m
-1mm m m c. m". Mm,‘ m m ,. mm.‘ .ij a; "c
-wmmﬂmmm rm.“ M Mum“:
-m- Wm mm m “um-k“ M m m“ WW
-WNW.‘
-M...“ m ‘MW m‘ .nmvlml. W. MW‘ w Mm ; M
-m M
-7-.‘ ‘w F v‘
-“WM Md». :P\vz:qu9: m» m.‘- w >
-v‘ a" man "Wham mum. Mqumum. m
-mm
-‘ m WM
-1 w (mm
-1
-Mm m w... hm.‘ mm Um‘ .10.. p» q m ﬁ am“ m
-mm a.“ M q t d
-M.“ mm.“ W.“ a‘ D innnl M..wh...mdmt>1.h~ M.“
-mum“, WWW
-1mm. m WWW,“ mummmhm. Dnrdlnmmln
-F'VL'WA M m4 WWW Wm m.» a Mm,» mm .
-5W”, inﬂow/Van W ‘W
-MW.“ 6AM “M “mm. d" m ‘W mm.“ v‘
-Ymu 1' W. WWW.“ M hm m M m.‘ mm
+Logicé pentru informatici 2020-2021 Universitatea Alexandra I oan Cuza
+
+in ambele cazuri7 arn arétat (:23
+pentru orice 1 g i g m. Deoarece @111, . . . ,wm este o demonstrapie pentru 4p,
+avern 1/1m I g0 si deci7 pentru i I m, 0b§inern
+
+sob-“w” Few,
+concluzia teorernei.
+q.e.d.
+
+9.6 Completitudine
+Un sistern deductiv trebuie s5 fie corect pentru a ﬁ folositor (altfel, ne-ar
+permite 55L demonstrérn ceva fals).
+
+Totusi, este bine ca un sistern deductiv s5 ﬁe si cornplet7 adicé s5 ne
+permité s5 demonstrérn formal orice este adevzirat.
+
+Din picate, rezolutia nu este completé, dupé curn ne araté urrnétorul
+contraexernplu:
+Teorema 158 (Rezoluﬂoia este incompleté). Existd clauzele 4,01, . . . , 4p”, 4p ast-
+fel incdt
+
+amp-won IIsv,
+
+dar nu existd nicio demonstratie prin rezoluifie a clauzei 30 din $1,. . . , gon.
+Demonstratie: Fie n : 27 (p1 : p7 4,02 : q si 30 I {p, q}. Avem cé {p7 q} l:
+4p, dar nu existé nicio modalitate de a continua urrnétoarea demonstratie prin
+rezolupie:
+
+1. {p}; (premisé)
+
+2. {q}; (premisé)
+deoarece nu apare niciun literal negativ. Deci7 doar p 5i q pot fi derivate prin
+rezolufuie din p, q. q.e.d.
+
+Totugi, rezolutia se bucuré de 0 formé de completitudine mai slabﬁ, numité
+completitudine refutationald:
+Teorerna 159 (Completitudinea refutationalé a rezolufuiei). Dacd formula in
+FNC 901A . . . Agon este nesatz'sﬁabild, atuncz' existd 0 derivare prin rezolutz'e a
+U pommd de la clauzele 4,01, gag, ..., 4p”.
+
+Demonstrapia depé$e$te cadrul cursului7 dar nu este foarte complicaté si
+recomand s5 0 incercaﬂoi sub forma unui exercipiu.
+Partea I - Logica propozitionalé 82 Note de curs - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:83**************
-Lwrﬂ W". “Mum zuzuznzl "mm. Mm, 1m M
-9.1 Demonstrma validitkgii g consecingelor s»
-mantioe lolnsind rezolubia
-m“, MWMWMM WWW“. niunlwuﬂi . mm m
-"umummy,“mm.PM".MmmmmmvWmm
-W,
-new“. vumm." m mm. "F MM . “mm I»!
-“mm up m Q (q v m
-1n mm] M1‘ “m k.
-“mum 01mm my WWW WM a; m, vwvmudulu
-“mm... 1m. WWW Mm ‘k m
-n K.“ mm,“ Mum-w ‘mm (0qu Q lqvbl) Mn ‘Hm.
-km. mm. wmmm mm ﬂu; v =1 A luv p»
-o WHEN“MM “M mum m M WWW
->04!!an Q rm: , Mm. my w ~ n: VP“
-ﬁqup 4w»); *hlwquvm
-E hﬂpquWv/PN
-E w v q» A w A w
-Am "m. h hm m,“ n. mm Mm. .Me WC u...“ u
-1 rm (mm
-1 w) WW,
-1 w» Lp'emum]
-‘ m. (nB‘\‘1n:q1
-7D M “"sz
-(u “Mum”
-emu"! m Wm rMmMm Muwwmm 1M a
-Wm Wm, .1‘ W w. w My, "WNW
-mm “MMWWM m mum.“ “Wm.
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+9.7 Demonstrarea validitétii 5i consecintelor se-
+mantice folosind rezolutia
+Putem folosi corectitudinea $1 completitudinea refutationalé a rezolutiei pen-
+tru a construi un algoritrn pentru testarea validitétii $i respectiv a consecinpelor
+logice.
+Demonstrarea validitétii Iaté un exemplu de testarea a validitéﬁii for-
+mu19i ((P V q) —> (q V 13))‘
+In primul rand, $tim C5:
+Teorema 160. Oformuld 4p este validd ddacd negagfm sa, ﬂap, este 0 contradictie.
+Exercitiul 161. Demonstrati teorema d6 maz' sus.
+De auceeab7 stabilirea validitétii formulei ((p V q) —> (q V p)) este echiva-
+lenté cu stabilirea nesatisﬁabilitétii formulei ﬁ((p V q) —> (q V p)).
+O formulé este satisﬁabilé ddacé FNC-ul ei este satisﬁabilé.
+Sé calculém 0 FNC a formulei —|((p V q) —> (q V p)):
+“((PVQ) —> (qVP)) E ﬁ(ﬁ(p\/<-1)\/(q\/P))
+E (_'*(P\/<1) Aﬁ(q\/P))
+E (qu)/\“q/\“P-
+Am ajuns la o FNC. Pornind cu clauzele formulei aﬂate in FNC7 gésim 0
+derivare pentru U prin rezolufuie:
+1~ {P7 Q}; (premisé)
+2. {-uq}; (premiszi)
+3. {ﬁp}; (premisé)
+4- {P}; (R.B., 1, 2, a I q)
+5. U. (RB, 4, 3, a : p)
+Putem rationa in continuare prin aplicarea urmétorului corolar a1 teoremei
+de corectitudine:
+Corolarul 162. Dacd U este derivabild pm'n rezolugfz'e porm'nd de la gal, . . . , g0”,
+atuncz' multimea de clauze {4,01, . . . , 4,0,1} este neconsz'stentd.
+Partea I - Logica propozitionalé 83 Note de curs - de listat color
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:84**************
-w‘ W WNW Mm. WW... WM M M
-“W5 A a B W W 4w) Z z ‘1%):1 D,“
-R mm m’ WV.» Q W," w “WW W W Wm
-\Wwwn
+Logicé pentru informatici 2020-2021 Universitatea Alexandru I oan Cuza
+Demonstratie: Prin teorerna de corectitudine7 avem oi 901, . “so” I: U.
+Presupunem prin reducere la absurd 05m {3017 . . . , gon} este consistenté; atunci
+existé 0 atribuire 7' : A —> B astfel incét $(g01) : : $00”) : 1. Din
+moment ce 901, . . . 30” I: U, avern cé $(U) I 1. Dar, prin deﬁnitie7 nu existé 0
+astfel de atribuire (care face clauza U adevérati), $1 deci presupunerea noastré
+trebuie sé ﬁ fost falsi. Deci {301, . . . , gun} nu este consistenti. q.e.d.
+Continuénd exemplnl7 multimea noastré de clauze este neconsistenté, ceea
+ce inseamné oi —\((p \/ q) —> (q \/ p)) este nesatisﬁabilé, si deci formula
+((P \/ q) —> (qv P))
+este validé (ceea ce trebuia $21 arétém).
+Veriﬁcarea consecintelor semantice Cum putem folosi rezolutia pentru
+a aréta c5 <p1,...,<pn |: 4p?
 
-MM. “madam Wm‘. c W W. WM W.
-mm“. my»
+Folosim urmétoarea teorerné7 care reduce consecinta logici la validitate:
+Teorema 163. Fie <p1,...,<pn,<p om'ce formule propozz'gfionale. Avem co?
 
-W.“ mm.“ W“ 5., .W W W h W
+s01. - - - 7 wn F s0
+ddacd
 
-m M» :v»
-M
-M MW
+901A . . . /\<pH—><p
+este validd.
+Exerciigiul 164. Demonstraﬁ teorema d6 mai sus.
 
-“mm... m. .WW, Wm .k m,
-WWWGW
-9.5 Fisé d2 exerciﬁi
-mm“... m1. WWW WMMWMM m
+Pentru a arﬁta folosind rezolutia c5 0 consecinté semanticé are 10c, intéi
+aplicérn teorerna de mai sus7 $1 apoi aplicém metoda pentru demonstrarea
+validitétii prin rezolufnie.
 
-,m-AMPW
+9.8 Figé de exercitii
+Exercitiul 165. Folosind rezolugfm, ardtagfi cd urmdtoarele formula sunt valide:
 
-2 4v A (id P“
+1- ((P /\ q) —> (P \/ q));
 
-J H94 n7 A (‘A w“
-EM“... m. WWW“, W WMWWH W
-M W
-17mm WWWWM M “MW WWW
+2- (P —> (q —> p));
+
+5’. ((P —> q) —> (nq —> np));
+
+Exercitiul 166. Folosz'nd rezolugﬁz'a, ardtati cd urmdtoarele consecimfe seman-
+tice au loc:
+Partea I - Logica propozitionalé 84 Note de curs - de listat color
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:85**************
-Lhﬂrl Wm “um-hm‘ mm“ 11mm". Alnmnim lmn M
-1 v >- (pv q)‘
-r um» F Lv v a)‘
-4 umhrrwwuﬂw
-‘ (wp'mﬂwquww'vw»
-m. 1' lum- WWWM m mm m AR M.‘ mm
+Logicé pentru informaticé 2020-2021 Universitatea Alexandra loan Cuza
+1’ P F (p V q);
+2'(P/\C1)|:(PVQ);
+3’ ((P /\ q) —> r) F (P —> (q —> r));
+4’ (P —> P’), (q —> q’) F ((P /\ q) —> (P' \/ q’))¢
+Partea I - Logica propozipionalé 85 Note de curs - de listat color
 
 ***************Ending Page***************
 

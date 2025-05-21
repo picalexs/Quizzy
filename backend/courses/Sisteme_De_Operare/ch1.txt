@@ -1,1093 +1,1178 @@
 ***************Beginning Page***************
 ***************page number:1**************
-ChaBter 1: Introduction
+Ch I
+
+a t6!‘ 1' IntI'OdUCtIOH
+b
+Operating System Concepts - 10h Edition Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-A
-
-“w Chapter 1: Introduction
-
+we
+‘Q?’ Chapter 1: Introduction
 I What Operating Systems Do
-
 I Computer-System Organization
-
 I Computer-System Architecture
-
 I Operating-System Operations
-
 I Resource Management
-
 I Security and Protection
-
-I Viriualizaiion
-
+I Virtualization
 I Distributed Systems
-
 I Kernel Data Structures
-
 I Computing Environments
-
 I Free/Libre and Open-Source Operating Systems
-Wm, m..." mummy mm t 1 mm.‘ W“ m “View
+Operating System Concepts _10m Edition 12 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-A . .
-MW Ob jectwes
+they)’ Ob jectlves
 I Describe the general organization of a computer system
-and [he role 0f inlerrupls
+and the role of interrupts
 I Describe the components in a modern, multiprocessor
 computer system
-I Illustrate the transition lrorn user mode to kernel mode
-I Discuss how Operalirlg syslems are used in various
-oumputing environments
-I Provide examples 0f free and Open-Source Operating
+I Illustrate the transition from user mode to kernel mode
+I Discuss how operating systems are used in various
+computing environments
+I Provide examples of free and open-source operating
 systems
-OM", sh..." “w.” mm . , “mm W“ m “View
+AA?“
+Operating System Concepts — 10th Edition 1.3 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-t‘
-W)? Y Computer System Structure
+trey)’ Computer System Structure
 I Computer system can be divided into four components:
 ' Hardware — provides basic computing resources
 > CPU, memory, l/O devices
-Q Operating system
-' Controls and coordinates use 01 hardware among various
+' Operating system
+> Controls and coordinates use of hardware among various
 applications and users
-0 Application programs e deﬁne the ways in which the system
+. Application programs — define the ways in which the system
 resources are used to solve the computing problems of the
 users
 > Word processors, compilers, web browsers, database
 systems, video games
 ' Users
 > People, machines, other computers
-emu".5y....ne.m.,.,\.em.,.m .. Memes-m“requiem.
+Operating System Concepts — 10th Edition 1.4 Silberschatz, Galvin and Gagne @202‘;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-“ﬁlbstract View of Com ponents of Computer
-app lcatlon programs
-(unmrsllersv web bran/um dmlwmem RM 9R)
-I ¢ I
-I i 1
-(CPU, memory, l/O devkes, eh.)
-Wmﬂnmmwvwm .5 summum.mmww.
+‘5% ' j" yﬁbstract Vlew of Com ponents of Com puter
+ms “
+application programs
+(compilers, web browsers, development kits, etc.)
+operating system
+computer hardware
+(CPU, memory, l/O devices, etc.)
+
+Operating System Concepts — 10th Edition 1.5 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-A
-“W What Operating Systems Do
-I Depends on (he porru or view
-I Users want oorweruerree, ease of use and guod performance
-. Don’! care about resource ulililation
-I Bui shared cempuier such as mainframe or minicnmputer musi keep ail users
-nanny
-0 Qpemung sysiem ls a resource allocakor and conirol program makrng
-emorem use oi HW and managmg execuilon of user programs
-I Users oi dedicate systems such as worksiaiions have dedicated resources but
-irequemly use shared resources from servers
-I Mobiie oevrees lrke smanphones and reoles are resource poor, optimized for
-useorlrry and battery hie
-' Mobile user interiaoes such as (ouch screens, voroe recognition
-I Some compulers have lime 0r r10 user \nieriace, such as embedded compuiers in
-devices and aulcrrwbiles
-0 Run pnmaniy without user Interventrcn
-om", ,....n WWW em r s snowmen. W“ .r. Wiser.
+My)’ What Operatlng Systems Do
+I Depends on the point of view
+I Users want convenience, ease of use and good performance
+' Don’t care about resource utilization
+I But shared computer such as mainframe or minicomputer must keep all users
+happy
+' Operating system is a resource allocator and control program making
+efficient use of HW and managing execution of user programs
+I Users of dedicate systems such as workstations have dedicated resources but
+frequently use shared resources from servers
+I Mobile devices like smartphones and tables are resource poor, optimized for
+usability and battery life
+. Mobile user interfaces such as touch screens, voice recognition
+I Some computers have little or no user interface, such as embedded computers in
+devices and automobiles
+' Run primarily without user intervention
+Operating System Concepts — 10th Edition 1.6 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-m
-“$9 Deﬁnmg Operatlng Systems
+‘a’??? Def|n|ng Operatlng Systems
 I Term OS covers many roles
 ' Because of myriad designs and uses of OSes
 ' Present in toasters through ships, spacecraft, game
 machines, TVs and industrial control systems
 ' Born when fixed use computers for military became
 more general purpose and needed resource
-management and program comrol
-Wm, 5"..." “MW w Em . r mm.‘ W“ m suntan“
+management and program control
+| Operating System Concepts —10th Edition 1.7 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-t‘
-W Operating System Defln ltlon (Cont.)
-I Nu universally aooepled deﬁnilion
-I “Everything a vendorships when you order an operalirig syslem“ is
+’ .‘iiw’ I I I I
+‘ﬁr’ Operatlng System Def|n|t|on (Cont.)
+I No universally accepted definition
+I “Everything a vendor ships when you order an operating system” is
 a good approximation
-' Bul varies wildly
-I “The onS program running ai all tlmSS on the compuler' is (he
-kernel, part loe operating system
-I Everything else is eiiher
-- a sysiem program (shlps with (he operating sysiem, but HO!
-pan al ihe kemel) . or
-' an applieaiieri program, all programs rim associated with ihe
-operating syslem
-I Today's OSes lar general purpose and mobile compuling also
-include middleware a a set 0| soﬂware frameworks that provide
-addition services to application developers such as dalabases,
-muliimedia, gmphlcs
+' But varies wildly
+I “The one program running at all times on the computer” is the
+kernel, part of the operating system
+I Everything else is either
+' a system program (ships with the operating system, but not
+part of the kernel) , or
+' an application program, all programs not associated with the
+operating system
+I Today’s OSes for general purpose and mobile computing also
+include middleware — a set of software frameworks that provide
+addition services to application developers such as databases,
+multimedia, graphics
+Operating System Concepts — 10th Edition 1.8 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-“)Fr Computer System Organlzatron
+‘Q? Computer System Organlzatlon
 I Computer-system operation
-' One or more CPUs, device conirollers connect ihrough common
-bus providing awess to shared memory
-' Concurrent execution of CPUs and devices comparing (or
+' One or more CPUs, device controllers connect through common
+bus providing access to shared memory
+' Concurrent execution of CPUs and devices competing for
 memory cycles
-mouse keyboard Primer muniiov
-disks
-9;; <5 w g
-h.
-u m
+mouse keyboard printer monitor
+a M-
+CPU diSk USB controller graphics
+controller adapter
 system bus
-1
-Wmmmmmnmm .. sr-hmwm.mmim.
+in
+Operating System Concepts — 10th Edition 1.9 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-t‘
-W Computer-System Operation
+Ki"? Computer-System Operation
+
 I l/O devices and the CPU can execute concurrently
+
 I Each device controller is in charge of a particular device type
-I Each dewce controller has a local buffer
+
+I Each device controller has a local buffer
+
 I Each device controller type has an operating system device
+
 driver to manage it
-I CPU moves data from/lo main memory lo/trom local butters
-I l/O is from the device to local butler oi controller
-I Device controller inlorms CPU that it has ﬁnished its
+
+I CPU moves data from/to main memory to/from local buffers
+
+I l/O is from the device to local buffer of controller
+
+I Device controller informs CPU that it has finished its
+
 operation by causing an interrupt
-Wm. m..." Ema.’ raw a.” Hi Slim-m W“ m w‘. my.
+
+A
+
+I Operating System Concepts _10m Edition 1_10 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-~
-W Common Functions of Interrupts
+‘a’??? Common Functlons of lnterrupts
 I Interrupt transfers control to the interrupt service routine
 generally, through the interrupt vector, which contains the
 addresses of all the service routines
-I Interrupt architecture must save the address 01 the
-interrupted instmction
-I A trap or exception is a soﬁware-genemted interrupt
+I Interrupt architecture must save the address of the
+interrupted instruction
+I A trap or exception is a software-generated interrupt
 caused either by an error or a user request
 I An operating system is interrupt driven
-Wm. 5"..." “We w mm i n “mm cm m with“
+| Operating System Concepts —10th Edition 1.11 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-“fr Interrupt Timeline
-5 5 5 HE
-* ‘ii i Q i 5
+W" lnterru t limeline
+CPU user program
+l/O interrupt processing
+O OO
+l/O idle
+device —
+transferring
+_ q _' -' _ =2‘ 5' 5'
+5 g é é 5 g a a
+~ ‘-”~ é 5 e e e a
+3 Q 12. ‘Q 8 Q 9. 2
+l-I- (D 3 3 l-t- m 3 I
+g Q- a_:_ Q
+g 8 8 3
+Operating System Concepts -10th Edition 1.12 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-~
-“$35M Interrupt Handllng
-I The operating system preserves the state oi the CPU by
-storing registers arid the program Counter
-I Determines which type oi interrupt has occurred:
-I polling
-. vectored interrupt system
+‘tag Interrupt Handlmg
+I The operating system preserves the state of the CPU by
+storing registers and the program counter
+I Determines which type of interrupt has occurred:
+' polling
+' vectored interrupt system
 I Separate segments of code determine what action should
-be taken tor each type oi interrupt
-0mm sh..." “We” a.“ i it Siam.‘ W“ m mien“
+be taken for each type of interrupt
+| Operating System Concepts —10th Edition 1.14 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-w’); Interrupt-drlve lIO Cycle
-.
-
-‘
-
-.WW.“ WWW.
-
-MM“ mmmw
-7 5
+‘it? y?“ lnterru pt-d rive llO Cycle
+ms "
+CPU I/O controller
+1
+device driver initiates l/O 2
+initiates l/O
+CPU executing checks for
+interrupts between instructions
+: 3
+I
+CPU receiving interrupt, 4 input ready, output
+transfers control to complete, or error
+interrupt handler generates interrupt signal
+7
 5
+interrupt handler
+processes data,
+returns from interrupt
+6
+CPU resumes
+processing of
+interrupted task a
+Operating System Concepts -10th Edition 1.15 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-“3;?
-I
-._ IIO Structure
+pp}
+“1% IIO Structure
 I After l/O starts, control returns to user program only upon l/O
 completion
-i Wait instruction idles the CPU until the next interrupt
-0 Wait loop (contention for memory access)
-. At most one l/O request is outstanding at a time, n0
+. Wait instruction idles the CPU until the next interrupt
+' Wait loop (contention for memory access)
+. At most one l/O request is outstanding at a time, no
 simultaneous l/O processing
 I After l/O starts, control returns to user program without waiting
 for l/O completion
-Q System call — request to the OS to allow user to wait tor l/
+. System call — request to the OS to allow user to wait for l/
 O completion
-. Device-status table Contains entry for each l/O device
+' Device-status table contains entry for each l/O device
 indicating its type, address, and state
-i OS indexes into l/O device table to determine device
-status and to modlfy table entry to include interrupt
-0min, 5"..." “WP tar mm its sum-a W“ .nt W“. my.
+' OS indexes into l/O device table to determine device
+status and to modify table entry to include interrupt
+Operating System Concepts — 10th Edition 1.16 Silberschatz, Galvin and Gag; @262
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-N
-“W Storage Structure
-I Main memory i pnly large slorage media lhat the CPU can access directly
+W’ Storage Structure
+I Main memory — only large storage media that the CPU can access directly
 ' Random access
-0 Typically volatile
-' Typically random-access memory in the lprm oi Dynamic Random-access
+' Typically volatile
+' Typically random-access memory in the form 0f Dynamic Random-access
 Memory (DRAM)
-I Seoondan/ storage — extension of main memory that provides large
+I Secondary storage — extension of main memory that provides large
 nonvolatile storage capacity
 I Hard Disk Drives (HDD) — rigid metal or glass platters covered with
 magnetic recording material
-' Disk suriace is logically divided into tracks, which are subdivided into sectors
-' The disk mmmllerdemrminee the logical interaclion between the device and lhe
+' Disk surface is logically divided into tracks, which are subdivided into sectors
+' The disk controller determines the logical interaction between the device and the
 computer
 I Non-volatile memory (NVM) devices- faster than hard disks, nonvolatile
-~ Various technologies
-I Becoming more popular as capamty and performance increases, price drops
-We“, 5"..." “We” em i i1 sllhmm-u. W“ m seq-3mm
+' Various technologies
+' Becoming more popular as capacity and performance increases, price drops
+Operating System Concepts — 10th Edition 1.17 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-ml.‘
-
-‘1/’ Storage Definitions and Notation ReVIew
-The oasic unit pt computer storage is the bit . A hit can contain one of two
-values, n and 1. All other storage in a computer is based on collections oi b'its.
-Given enough bits, it is amazing haw many things a computer can represent;
-numbers, letters, images, movies, sounds, documents, and programs, t0 name
-a few, A byte l5 8 bltS, and On mOSt computers It l5 the smallest convement
-Chunk of storage, For example, most computers dDrl't have ari ‘instruction t0
-move a bit but do have one ta move a byte. A less common term is ward,
-which ls a given computer architecture’; native uﬂlt Of data. A word lS made
-up bf one or mare bytes. For example, a computer that has 54bit registers and
-64rhit memory addressing typically has 64rbit (Srhyte) words. A computer
+"IQ
+“V Storage Def|n|t|ons and Notatlon ReVIew
+The basic unit of computer storage is the bit . A bit can contain one of two
+values, 0 and 1. All other storage in a computer is based on collections of bits.
+Given enough bits, it is amazing how many things a computer can represent:
+numbers, letters, images, movies, sounds, documents, and programs, to name
+a few. A byte is 8 bits, and on most computers it is the smallest convenient
+chunk of storage. For example, most computers don't have an instruction to
+move a bit but do have one to move a byte. A less common term is word,
+which is a given computer architecture’s native unit of data. A word is made
+up of one or more bytes. For example, a computer that has 64-bit registers and
+64-bit memory addressing typically has 64-bit (8-byte) words. A computer
 executes many operations in its native word size rather than a byte at a time.
-Computer storage, along Wltl'l most camputer throughput, IS generally
+Computer storage, along with most computer throughput, is generally
 measured and manipulated in bytes and collections of bytes. A kilobyte , or
-KB , is 1,024 bytes; a megabyte , or MB, is 1,024z bytes; a gigabyte , or GB , is
-1,0241 bytes; a terabyte , orTE , is 1,024‘ bytes; and a petahyle , or Pa , is 1,024;
-bytes, Computer manufacturers often ruund Off these numbers and Say that
-a megabyte lS l milllOﬂ bytes and a gigabyte l5 1 blllion bytes. Networkmg
+KB , is 1,024 bytes; a megabyte , or MB , is 1,0242 bytes; a gigabyte , or GB , is
+1,0243 bytes; a terabyte , or TB , is 1,0244 bytes; and a petabyte , or PB , is 1,0245
+bytes. Computer manufacturers often round off these numbers and say that
+a megabyte is 1 million bytes and a gigabyte is 1 billion bytes. Networking
 measurements are an exception to this general rule; they are given in bits
 (because networks move data a bit at a time).
+Operating System Concepts — 10"1 Edition 1.18 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-t‘
-“W Storage Hlerarchy
+wf‘ Storage H |erarchy
 I Storage systems organized in hierarchy
 ' Speed
 ' Cost
-i Volatility
+' Volatility
 I Caching — copying information into faster storage system;
 main memory can be viewed as a cache for secondary
 storage
-I Device Driver for each device controller to manage l/O
-' Provides uniform interface between controller and
+I Device Driver for each device controller to manage |/O
+. Provides uniform interface between controller and
 kernel
-0mm, sh"... Cum,“ e in?‘ mm t w Sllhvumu. Bllvln m m". em
+| Operating System Concepts-10th Edition 1.19 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-‘ff Storage-Device Hierarchy
-smrage capacity axes: ‘ime
-y%
-g cache my 5
-vulnlh Fiil—ﬂ
-m. "WW
-W W
-, -- W
-.._—‘
--'V
-. __‘
-a m g
-2- -- MW e
-2 . —‘ W i
-MMMCBWVMM m “Inﬂammammuu
+j _¢\p I u ,‘ I I
+M St D H h
+,, orage- GVICG lerarc y
+Uh ”
+storage capacity access time
+—
+c —l
+2 i—r ‘0-,
+(-5 _ ——' primary 1;;
+e storage .2
+v‘ ‘—l
+volatile —i-—
+——--———--——--———--——-- ‘In--——--———--———-———--——--———--—
+nonvolatlle —
+storage nonvolatile memory secondary
+_ _ —r ' storage
+hard-disk drives
+l
+j’ l——
+L optical disk ! L
+a ' —r “é
+r. tertiary
+'_° jl_—! storage a
+magnetic tapes
+Operating System Concepts _ 10m Edition 120 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-*4}; How a Modern Computer Works
-.
-“"“WW'M Mmm ' g; '
-CPU ‘N
-g g g m
-5 s é / mm
-A van Neumann architecture
+g o instruction execution
+_ g cycle instructions
+thread of executlon 8' d t t and
+a a movemen data
+CPU (*N)
+6 _.
+s Q 5* DMA
+CD Q) 1
+_Q l-l- qi
+c Q) g
+(EDA F, / memory
+A von Neumann architecture
+Operating System Concepts _ 10th Edition 1_21 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-“yr Direct Memory Access Structure
+‘gay? D|rect Memory Access Structure
 I Used for high-speed l/O devices able to transmit
-information al close l0 memory speeds
-I Device controller translers blocks oi data lrom butler
-storage directly l0 main memory without CPU
+information at close to memory speeds
+I Device controller transfers blocks of data from buffer
+storage directly to main memory without CPU
 intervention
 I Only one interrupt is generated per block, rather than
 the one interrupt per byte
-Wm. m..." “We w a.” l u “mm W“ m swim.
+| Operating System Concepts —10th Edition 1.22 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-'Q
-“W Computer-System Architecture
+a??? Computer-System Architecture
 I Most systems use a single general-purpose processor
-i Most systems have special-purpose processors as well
+' Most systems have special-purpose processors as well
 I Multiprocessors systems growing in use and importance
 ' Also known as parallel systems, tightly-coupled systems
 ' Advantages include:
 1. Increased throughput
-z. Economy 0| scale
-a. Increased reliability — graceiul degradation or fault tolerance
-0 Two typeSI
-I. Asymmetric Multiprocessing — eacn processor is assigned a
-specie task,
+2. Economy of scale
+3. Increased reliability — graceful degradation or fault tolerance
+' Two types:
+1. Asymmetric Multiprocessing — each processor is assigned a
+specie task.
 2. Symmetric Multiprocessing — each processor performs all tasks
-om“. 5"..." “We” a.“ i z: Home W“ m animal‘
+Operating System Concepts _10m Edition 123 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-9w‘ Symmetric Multiprocessing Architecture
-m E
+{1H Sym metric M u lti processi ng Arch itectu re
+E E
+\ i
+Operating System Concepts — 10‘h Edition 1.24 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-“W A Dual-Core Design
-I Mulii-chip and multicore
-I Systems comaining all chips
-. Chassis containing multiple separate systems
-pm»
-OPUm ovum.
-mam l mllln
-I I ‘
-M. | i M.
-i m"
-‘ "W" A
-0mm, syn-m Cum,“ 7 w mm i zs Sllhvmhu. Gllvin v.4 5.“. emu
+4e $5‘ A o |c D '
+I Multi-chip and multicore
+I Systems containing all chips
+' Chassis containing multiple separate systems
+pl'OCGSSOFO
+CPU coreo CPU core1
+A
+Operating System Concepts — 10th Edition 1.25 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:25**************
-“43$, 7 Non-Uniform Memory Access System
+V“) Myﬁlon-Unlform Memory Access System
+interconnect
+CPUO CPU1
+(IPu2 CPU3
+Operating System Concepts — 10th Edition 1.26 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-ﬁ
-“W Clustered Systems
+@336 Clustered Systems
+M3 5
 I Like multiprocessor systems, but multiple systems working together
 ' Usually sharing storage via a storage-area network (SAN)
-' Provides a high-availability service which survives laiiures
+' Provides a high-availability service which survives failures
 > Asymmetric clustering has one machine in hot-standby mode
-t Symmetric clustering has multiple nodes running applications,
+> Symmetric clustering has multiple nodes running applications,
 monitoring each other
 ' Some clusters are for high-performance computing (HPC)
 > Applications must be written to use parallelization
-' Some have distributed lock manager (DLM) to avoid conﬂicting
+. Some have distributed lock manager (DLM) to avoid conflicting
 operations
-OM", sh..." “We.” a.“ i 2'1 mm.‘ W“ m “View
+A
+I Operating System Concept5_10th Edition 127 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-W Clustered Systems
-e
-Mk
+Cl t d s t
+r US ere ys ems
+interconnect interconnect
+computer l computer I computer
+storage-area
+network ‘A
+Operating System Concepts -1oth Edition 1.28 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-MP
-My) PC Motherboard
-Consxdcl lhc dcsklop PC motherboard \vim a pmccssor sackct shnwn below
-WM WWW
-I: % ,
-‘ i
-\ ‘ ‘ / Pmbusnous \
-. v "- ' ' ".7, ,/
-> W i \ . y '/
-' I I I ' -— ‘
-O a E<,- - 1 y ‘ ~.
-- mﬁ-L F5» -
-/ \
-Thls mm |s a Iully'funchQnmg mmpmer, \mce us gm; are populamd,
-ll consists a! a pwcrssol sockcl (onlamilu; a CPU, DRAM sackcs, l'Clc bus
-slots, and 1/0 connectors of \‘anmAs types, Even u» lowestfosl general’
-pulpose cw cvnlams mulhple tore; Some moﬂmrboanis conlam mulhple
-pnxreemw “Eh-b, Mum advanml (lvmpuwv! alluw mom lhan (m! mm
-[www.mgmm gym A
+‘we “$1,. PC Motherboard
+‘he, “
+Consider the desktop PC motherboard with a processor socket shown below:
+DRAM slots processor socket
+._ _ PCI bus slots
+. -‘ u. I‘ I I .II - .- _
+__- .. . _. I ._. ..: ,_ l D .-:
+Various HO and power
+connectors
+This board is a fully-functioning computer, once its slots are populated.
+It consists of a processor socket containing a CPU, DRAM sockets, PCIe bus
+slots, and I/O connectors of various types. Even the lowest-cost general-
+purpose CPU contains multiple cores. Some motherboards contain multiple
+processor sockets. More advanced computers allow more than one system
+board, creating NUMA systems.
+Operating System Concepts — 10th Edition 1.29 SileI'SChatZi Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-t‘
-sew Operati ng-System Operations
-I Bootstrap program e simple code to initialize the system, load
+‘ta-"3y? Operatlng-System Operatlons
+I Bootstrap program — simple code to initialize the system, load
 the kernel
 I Kernel loads
-I Starts system daemons (sen/ices provided outside of the
+I Starts system daemons (services provided outside of the
 kernel)
 I Kernel interrupt driven (hardware and software)
-° Hardware interrupt by one oi the devices
+. Hardware interrupt by one of the devices
 ' Software interrupt (exception or trap):
-t Software error (e.g., division by zero)
-t Request for operating system service — system call
-> Other process problems include inﬁnite loop, processes
+> Software error (e.g., division by zero)
+> Request for operating system service — system call
+> Other process problems include infinite loop, processes
 modifying each other or the operating system
-Wm, 5"..." “WP w mm W, Slim-a W“ m W‘. my.
+Operating System Concepts — 10th Edition 1.30 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-A
-W Multiprogramming and Multitasking
-I Multiprogramming (Batch system) needed for elliciency
-I single user cannol keep CPU and IIO devices busy at all times
-0 Multiprogramming organizes jobs (code and data) so CPU always has one
-lo execute
-I A subset of total yobs in system is kept in memory
-' Onejoh selected and run viajob scheduling
-I Wnen it has to wait (lor l/O lor example), 05 switches lo another job
-I Timesharing (multitasking) is logical extension in whicn CPU switches iobs
-so lrequently mat users can interact with eacn job while it is running, creating
+My)’ Multlprogrammlng and Multltasklng
+I Multiprogramming (Batch system) needed for efficiency
+P Single user cannot keep CPU and l/O devices busy at all times
+' Multiprogramming organizes jobs (code and data) so CPU always has one
+to execute
+' A subset of total jobs in system is kept in memory
+' One job selected and run via job scheduling
+P When it has to wait (for l/O for example), OS switches to another job
+I Timesharing (multitasking) is logical extension in which CPU switches jobs
+so frequently that users can interact with each job while it is running, creating
 interactive computing
-' Response time should be < l second
-' Each user has at least one program execuling in memory uprocess
-° If severaljobs ready to run slthe same time n CPU scheduling
-' ll processes don't ﬁt l|’l memory, swapping moves them in and outto run
-i Virtual memory allows execution of processes not complelely in memory
-em", an..." “We law am in snowmen. can“ .xa W‘. my.
+' Response time should be < 1 second
+' Each user has at least one program executing in memory Uprocess
+. lf several jobs ready to run at the same time [I CPU scheduling
+' If processes don’t fit in memory, swapping moves them in and out to run
+' Virtual memory allows execution of processes not completely in memory
+Operating System Concepts — 10th Edition 1.31 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-WMemory Layout for Multiprogrammed System
+‘ﬁd Memory Layout for M u lti prog ram med System
+\3
 max
 0
-
-WMWWBMWWW m “mumWWW.
+Operating System Concepts — 10th Edition 1.32 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-ﬁ
-“3} ‘Y Dual-mode and Multlmode Operatlon
-I Dual-mode operation allows OS to protect itself and olher syslem
+‘Q?’ Dual-mode and Multlmode Operatlon
+I Dual-mode operation allows OS to protect itself and other system
 components
-i User mode and kernel mode
+' User mode and kernel mode
 . Mode bit provided by hardware
-t Provides ability to distinguish when syslem is running user
+> Provides ability to distinguish when system is running user
 code or kernel code
-t Some instructions designated as privileged, only
+> Some instructions designated as privileged, only
 executable in kernel mode
 > System call changes mode to kernel, return from call resets
 it to user
-I Increasingly CPUs supporl multi-mode operations
-i i.e. virtual machine manager (VMM) mode for guest VMs
-Wm,Synmcwmwsmdm in sum-a “MMHNNJW.
+I Increasingly CPUs support multi-mode operations
+' i.e. virtual machine manager (VMM) mode for guest VMs
+Operating System Concepts — 10th Edition 1.33 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-t‘
-W Trans|t|on from User to Kernel Mode
-I Timer to prevent infinite loop l process hogging resources
-
+‘imril I I
+ng/ Transltlon from User to Kernel Mode
+I Timer to prevent infinite loop / process hogging resources
 ' Timer is set to interrupt the computer after some time period
-
-' Keep a counter that is deoremented by the physical clock
-
+' Keep a counter that is decremented by the physical clock
 . Operating system set the counter (privileged instruction)
-
-Q When counter zero generate an interrupt
-
-. Sel up belure scheduling process t0 regain control 0r terminate
-
+. When counter zero generate an interrupt
+' Set up before scheduling process to regain control or terminate
 program that exceeds allotted time
-umrmodn
-
-Wm,5y...mcm.,..em-E.,.m w Slum-e summariw.
+user process
+user mode
+=
+k | trap return
+eme mode bit: o mode bit = 1
+kernel mode
+Operating System Concepts — 10‘h Edition 1.34 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-t‘
-NW Process Management
-I A process is a program in execution. n is a unit of work within the
+trey?’ Process Management
+I A process is a program in execution. It is a unit of work within the
 system. Program is a passive entity, process is an active entity.
 I Process needs resources to accomplish its task
-' CPU, memory, l/O, files
-° Initialization data
+. CPU, memory, l/O, files
+' Initialization data
 I Process termination requires reclaim of any reusable resources
 I Single-threaded process has one program counter specifying
 location of next instruction to execute
-. Process executes instructions sequentially, one at a time,
-until complelion
+P Process executes instructions sequentially, one at a time,
+until completion
 I Multi-threaded process has one program counter per thread
 I Typically system has many processes, some user, some
-operating system rurlrlirlg concurrently 0n one 0r more CPUS
-Q Concurrency by multiplexing the CPUs among the
+operating system running concurrently on one or more CPUs
+. Concurrency by multiplexing the CPUs among the
 processes / threads
-om",s"..mc.m.=.mierm.m is gram-a “Mr-"dwiwr.
+Operating System Concepts — 10th Edition 1.35 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:35**************
-t‘
-“$9 Process Management Actlvmes
-The operating system is responsible lorthe lollowing activities in
+@ﬁﬁ Process Management Activities
+
+The operating system is responsible for the following activities in
+
 connection with process management:
+
 I Creating and deleting both user and system processes
+
 I Suspending and resuming processes
-I Providing mechanisms lor process synchronization
+
+I Providing mechanisms for process synchronization
+
 I Providing mechanisms for process communication
-I Providing mechanisms lor deadlock handling
-Wm, 5"..." Cum.’ w mm is Slim-s W“ m W‘. W.
+
+I Providing mechanisms for deadlock handling
+
+A
+
+I Operating System Concepts _10m Edition 1_36 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-r‘
-W Memory Management
-I To execute a program all (or part) oi the instructions must be in
+a”; Memory Management
+I To execute a program all (or part) of the instructions must be in
 memory
 I All (or part) of the data that is needed by the program must be in
 memory
 I Memory management determines what is in memory and when
-. Optimizing CPU utilization and computer response (D users
+' Optimizing CPU utilization and computer response to users
 I Memory management activities
-i Keeping track of which parts of memory are currently being
+' Keeping track of which parts of memory are currently being
 used and by whom
-i Deciding which processes (or parts thereof) and data to
+' Deciding which processes (or parts thereof) and data to
 move into and out of memory
-0 Allocating and deallocating memory space as needed
-om“, 5"..." “We w m l a1 “Wm W“ m wig,”
+' Allocating and deallocating memory space as needed
+Operating System Concepts — 10th Edition 1.37 Silberschatz, Galvin and Gag; @251:
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:37**************
-r‘
-W File-system Management
+‘fey! F|le-system Management
 I OS provides uniform, logical view of information storage
-. Abstracts physical properties t0 logical storage unit - tile
-° Each medium is controlled by device (i.e., disk drive, tape drive)
-t Varying properties include access speed, capacity, data-
-transter rate, access methcd (sequential 0r random)
+' Abstracts physical properties to logical storage unit - file
+' Each medium is controlled by device (i.e., disk drive, tape drive)
+> Varying properties include access speed, capacity, data-
+transfer rate, access method (sequential or random)
 I File-System management
-0 Files usually organized Into d|rectones
-. Access ccntrol 0n most systems t0 determine who can access
-what
-0 OS activities include
-t Creating and deleting files and directories
+' Files usually organized into directories
+. Access control on most systems to determine who can access
+What
+' OS activities include
+> Creating and deleting files and directories
 > Primitives to manipulate files and directories
-t Mapping ﬁles onto secondary storage
-t Backup ﬁles onto stable (non-volatile) storage media
-amt.“ 5m... Wm“ e In.‘ mm t u sllhvszhu. GIM“ m m:- mil
+> Mapping files onto secondary storage
+> Backup files onto stable (non-volatile) storage media
+Operating System Concepts — 10th Edition 1.38 Silberschatz, Galvin and Gag; @262
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-A
-‘W Mass-Storage Management
+53¢" Mass-Storage Management
 I Usually disks used to store data that does not fit in main memory or data that
-must be kept tor a “long' period oi time
-
-I Proper management IS uicentral importance
-I Entire speed of oomputeroperaiion hinges on disk subsystem and its algorithms
+must be kept for a “long” period of time
+I Proper management is of central importance
+I Entire speed of computer operation hinges on disk subsystem and its algorithms
 I OS activities
-
-i Mourning and unmounting
-
-. Freespace management
-
-' Storags alienation
-
-' Disk scheduling
-
-i Partitioning
-
+' Mounting and unmounting
+. Free-space management
+' Storage allocation
+. Disk scheduling
+' Partitioning
 ' Protection
-I Some sturage need not. be fast
-
-' Tertiary storage includes optical storage‘ magnetic tape
-
-0 Stili must be managed e by 0s or applications
+I Some storage need not be fast
+' Tertiary storage includes optical storage, magnetic tape
+' Still must be managed — by OS or applications
+4t
+Operating System Concepts -10th Edition 1.39 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-t‘
-“W Caching
+My’ Cachlng
 I Important principle, performed at many levels in a computer
-(in hardware, opemiing system, software)
-I Information lrl use copied from slower to faster storage
+(in hardware, operating system, software)
+I Information in use copied from slower to faster storage
 temporarily
-I Faster storage (cache) checked ﬁrst to determine if
-informaliorr ls lhere
-° If if is, information used directly from the cache (fast)
-. If not, data Copied to cache and used there
+I Faster storage (cache) checked first to determine if
+information is there
+. If it is, information used directly from the cache (fast)
+' If not, data copied to cache and used there
 I Cache smaller than storage being cached
 ' Cache management important design problem
-. Cache size and replacement policy
-OM",showmawsmdm W amnesia“Mariam
+' Cache size and replacement policy
+Operating System Concepts _10m Edition 140 Silberschatz, Galvin and Gagn: ©2on
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-WCharacterlstlcs of Varlous Types of Storage
-m-mmw“
-llnplemmlalinn (‘m-mm" mm“ (mossmn llaslmlemnry magneticdisk
-technoluqy Wilhlnulliple olkhip
+‘6%?’ Characteristics of Various Types of Storage
+———-—-
+technology with multiple off-chip
 
-mums cumsnm
-M
-“WWW mmmw
-——M
-—m-———
-Movement between levels ol storage hierarchy can be explicit or implicit
-0mm", Sm... Cum,“ 7 w mm m Sllhvuzhn. Gllvin m 5-“. mu
+ports CMOS CMOS SRAM
+I Movement between levels of storage hierarchy can be explicit or implicit
+Operating System Concepts -10th Edition 1.41 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-t‘
-MW Migration of data “A” from Disk to Register
-I Multitasking environments must be carelul to use most recent
-value, no mailer where ii is siored in the storage hierarchy
-magnetic main hardware
-disk I memory I E. register
-I Multiprocessor environment musi provide cache coherency in
+@v/ Migration of data “A” from Disk to Register
+I Multitasking environments must be careful to use most recent
+value, no matter where it is stored in the storage hierarchy
+magnetic I main hardware
+memory m cache I register
+I Multiprocessor environment must provide cache coherency in
 hardware such that all CPUs have the most recent value in their
 cache
 I Distributed environment situation even more complex
-' Several copies ofa datum can exist
-° Various solutions covered in Chapter 19
-0mm, 5m... Cum,“ e w mm m new.‘ elm-i m m". mm
+' Several copies of a datum can exist
+' Various solutions covered in Chapter 19
+Operating System Concepts — 10th Edition 1.42 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-ﬁe
-‘4} 9 lIO Subsystem
+@Y’ llO Subsystem
 I One purpose of OS is to hide peculiarities of hardware devices
 from the user
 I l/O subsystem responsible for
-0 Memory management of l/O including buffering (storing data
-temporarily while it is being transferred), caching (storing pans
-0f data in (aster storage tor performance), spooling (the
-overlapping of output of one job with input of other jobs)
-. General device-driver interface
-Q Drivers tor speciﬁc hardware devices
-OM",mummmmmmm m “mum-vi“.mmimm
+' Memory management of l/O including buffering (storing data
+temporarily while it is being transferred), caching (storing parts
+of data in faster storage for performance), spooling (the
+overlapping of output of one job with input of otherjobs)
+' General device-driver interface
+' Drivers for specific hardware devices
+| Operating System Concepts —10th Edition 1.43 Silberschatz, Galvin and Gagne ©201l8
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-r‘
-“3?; Protectlon and Securlty
-I Protection e any mechanism for controlling access of processes or
-users to resources deﬁned by the OS
+fey-r Protectlon and Secur|t
+I Protection — any mechanism for controlling access of processes or
+users to resources defined by the OS
 I Security — defense of the system against internal and external attacks
-' Huge range, including denial-of-service, worms, viruses, identity
+. Huge range, including denial-of-service, worms, viruses, identity
 theft, theft of service
-I Systems generally ﬁrst distinguish among users, to determine who
+I Systems generally first distinguish among users, to determine who
 can do what
-° User identities (user IDs, security IDs) lnclude name and
+. User identities (user IDs, security IDs) include name and
 associated number, one per user
-. User ID then associated with all files, processes of that user lo
+' User ID then associated with all files, processes of that user to
 determine access control
-i Group identiﬁer (group ID) allows set of users to be deﬁned and
-controls managed, then also associated wllh each process, lile
-° Privilege escalation allows user to change to effective ID with
+. Group identifier (group ID) allows set of users to be defined and
+controls managed, then also associated with each process, file
+' Privilege escalation allows user to change to effective ID with
 more rights
-Wm.s,,...,c,,.§.,,,sm.,.m m “Mme-v‘,“denim.
+Operating System Concepts — 10th Edition 1.44 Silberschatz, Galvin and Gaylek @251:
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-r‘
-‘43¢ Virtualization
+133'???” I I I
+Key)’ Vlrtuallzatlon
 I Allows operating systems to run applications within other OSes
-i Vast and growing industry
+' Vast and growing industry
 I Emulation used when source CPU type different from target
-type (i.e. PowerPC lo Intel x86)
+type (i.e. PowerPC to Intel x86)
 . Generally slowest method
-i When computer language not compiled lo nalive code e
+' When computer language not compiled to native code —
 Interpretation
-I Virtualization , 05 natively compiled for cpu, running guest
+I Virtualization — OS natively compiled for CPU, running guest
 OSes also natively compiled
 ' Consider VMware running WinXP guests, each running
 applications, all on native WinXP host OS
-. VMM (virtual machine Manager) provides virlualizalion
+. VMM (virtual machine Manager) provides virtualization
 services
-OM",shamammmmm us WMMMmartian“
+Operating System Concepts — 10th Edition 1.45 Silberschatz, Galvin and Gagne @202‘;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:45**************
-r‘
-“43$; Virtualization (cont.)
+taw'f V|rtual|zat|on (cont.)
 I Use cases involve laptops and desktops running multiple OSes
 for exploration or compatibility
-0 Apple laptop running Mac OS X host, Windows as a guest
-i Developing apps for multiple OSes without having multiple
+' Apple laptop running Mac OS X host, Windows as a guest
+. Developing apps for multiple OSes without having multiple
 systems
-0 QA testing applications wilhoul having multiple systems
-. Executing and managing compute environments within data
+' QA testing applications without having multiple systems
+' Executing and managing compute environments within data
 centers
 I VMM can run natively, in which case they are also the host
-i There is no general purpose host then (VMware ESX and
+. There is no general purpose host then (VMware ESX and
 Citrix XenServer)
-Wm, 5"..." Emma w a.“ W silhvmn-u. W“ m W“. my.
+Operating System Concepts — 10th Edition 1.46 Silberschatz, Galvin and Gaylek @251:
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:46**************
-MW‘ Computing Environments - Virtualization
-mm“;
-Processes Processes
+j . ,6 > ,. I I I I I
+1 ~~ Computl ng EnVIronments - V| rtual |zat|on
+processes
+
+processes
+
+processes processes
+
 I I I
-/'
-, mummy
-‘1M!
-vvmlal machme
-mm,
-ha'dwm hardware
-(a) (bl
-Wm.IMMIWHIEIIM ‘I, IIMMM“II-MW.
+f . /
+programmlng
+W3
+kernel . .
+Vlrtual machlne
+manager
+hardware
+hardware
+(a) (b)
+Operating System Concepts _10m Edition 1_47 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-|\
-MW Distributed Systems
+‘ﬁfty/"F Distributed Systems
 I Distributed computiing
 ' Collection of separate, possibly heterogeneous, systems
 networked together
-> Network is a communications path, TCPIIP most common
-- Local Area Network (LAN)
-- Wide Area Network (WAN)
-, Metropolitan Area Network (MAN)
-, Personal Area Network (PAN)
-' Network Operating System provides leatures between
+> Network is a communications path, TCPIlP most common
+— Local Area Network (LAN)
+— Wide Area Network (WAN)
+— Metropolitan Area Network (MAN)
+— Personal Area Network (PAN)
+' Network Operating System provides features between
 systems across network
 > Communication scheme allows systems to exchange
 messages
-t Illusion of a single system
+> Illusion of a single system
+A
+Operating System Concepts -10th Edition 1.48 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-“($33? Kernel Data Structures
+gal‘ Kernel Data Structures
+gym I‘
 I Many similar to standard programming data structures
-I Singlylinkedll'sl
-am am am null
-T T T T T T T T
-I Doublyllnkedllsl
-T T l T T T T T
-m. m.“ dam m. _ _ v dam Mu
-T T T T T T T T
-I Circularlinkedlist
-data data data data
-T T T T T T T T A
-ownﬂnmmmmmmmm us WMMM.mmiem
+I Singly linked list
+I data I data I data I null
+|—i |—i |_i |_i
+I Doubly linked list
+data null data data data null
+|—i |—i |_i |—i
+I Circular linked list
+I data I data I data I data
+|—i |—i |_i |_i A
+Operating System Concepts — 10th Edition 1.49 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:49**************
-9;}; Kernel Data Structures
+48%;‘ Kernel Data Structures
 I Binary search tree
-leﬂ <= right
+left <= right
 ' Search performance is 0(n)
-I Balanced binary search tree is 0(Ig n)
-oéé}
-6 14 31 40
-/
-Wm", sh"... 5mm 7 w Wm ¢ so Sllhvmnlu. DIM“ m m". @zuu
+' Balanced binary search tree is 0(lg n)
+{ix
+6 l4 32 40/
+Operating System Concepts — 10th Edition 1.50 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-w)’; Kernel Data Structures
+he??? Kernel Data Structures
 I Hash function can create a hash map
-hashjuncnomkeyl
-hash ma;
-0 1 . . n
-“We
-I Bitmap , string of n binary digi's representing me status of n items
-I Linux data structures deﬁned in include files <linux/list . h>,
-<11nux/kfifo ‘ h>, <linux/rbtree ,h>
-WWW..."mwpmm m WMMMmum“
+hash_function(key)
+hash map
+O 1 . . n
+value
+I Bitmap — string of n binary digits representing the status of n items
+I Linux data structures defined in include files <linuX/list . h>,
+<linuX/kfifo.h>, <linuX/rbtree.h>
+Operating System Concepts — 10th Edition 1.51 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-t‘
-“W Computing Environments - Traditional
+@ﬁ Computing Environments - Traditional
+
 I Stand-alone general purpose machines
+
 I But blurred as most systems interconnect with others (i.e.,
-the lntemel)
+
+the Internet)
+
 I Portals provide web access to internal systems
+
 I Network computers (thin clients) are like Web terminals
+
 I Mobile computers interconnect via wireless networks
-I Networking becoming ubiquitous e even home systems use
-lirewalls to protect home computers from Internet attacks
-Wm,5,...mmmxmemtm in summit““requiem
+
+I Networking becoming ubiquitous — even home systems use
+
+firewalls to protect home computers from Internet attacks
+
+A
+
+| Operating System Concepts- 10"1 Edition 1,52 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-A
-W Computing Environments - Mobile
+Q6»??? Computing Environments - Mobile
 I Handheld smartphones, tablets, etc
-I What is the lunctional difference between them and a
+I What is the functional difference between them and a
 “traditional” laptop?
-I Extra feature — more OS leatures (GPS, gyroscope)
+I Extra feature — more OS features (GPS, gyroscope)
 I Allows new types of apps like augmented reality
-I Use IEEE 802,11 wireless, or cellular data networks for
+I Use IEEE 802.11 wireless, or cellular data networks for
 connectivity
 I Leaders are Apple iOS and Google Android
-Wm, 5"..." “We.” a.“ i s: mm.‘ W“ m “View
+I Operating System Concepts-10"‘ Edition 1_53 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:53**************
-M Computing Environments - Client-Sewer
-I Client-Sewer Computing
-. Dumb terminals supplanted by srnarl PCs
-Q Many systems now servers, responding to requests generated
+@ﬂ‘ Computing Environments — Client-Server
+I Client-Server Computing
+' Dumb terminals supplanted by smart PCs
+' Many systems now servers, responding to requests generated
 by clients
-> Compute-server system provides an inlerface l0 Clienl 10
+> Compute-server system provides an interface to client to
 request services (i.e., database)
-> File-server system prowdes interface ior clients to store
-and retrieve ﬁles
+> File-server system provides interface for clients to store
+and retrieve files
 client
 desktop
-chem
-nliem
-imanphv
-OM", sh..." “We” a.“ l 54 Slim.‘ W“ .M animal‘
+laptop
+client
+smartpw
+Operating System Concepts — 10th Edition 1.54 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:54**************
-l‘
-‘43$’ Computing Environments - Peer-to-Peer
-I Another model oi distributed system
+@v/ Computlng Enwronments - Peer-to-Peer
+I Another model of distributed system
 I P2P does not distinguish clients and servers
-' Instead all nodes are considered peers
-i May each act as client, server or both A‘
-clwnt clllnt
-' Node mustjoin P2P network ‘.7 /
+' Instead all nodes are considered peers @
+' May each act as client, server or both @‘D
+client
+' Node must join P2P network ‘.7
 > Registers its service with central
 lookup service on network, or -
-> Broadcast request for sen/ice and CW“ “m
-respond to requests for servioe via
+> Broadcast request for service and C'iem C'ie'“
+respond to requests for service via
 discovery protocol
-. Examples include Napster and Gnutelle,
-Voice over lP (VOIP) such as Skype
-Wm.n,=,i..mc.,n.,.mmwa.“ is; Snowman-u. G.~r."¢=.J.W.
+. Examples include Napster and Gnutella,
+Voice over lP (VolP) such as Skype
+Operating System Concepts _ 10th Edition 1_55 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:55**************
-A
-w Computing Environments — Cloud Computing
-I Dellvers oompuling, slorage, even apps as a saruloa aoross a network
-I Logical exlension of vlnualizaliun because it uses virtualizatiun as lhe base
-[or lt functionallty
-Q Amazon ECZ has thousands 0i servers, millions 01 virtual machlnes,
-pelaoyles ol slorage available across me Internet‘ pay based on usage
-I Many lypes
-i Public cloud , available vla lmernel lo anyone willing lo pay
-0 Privale cloud , run by a company (orlne company's own use
-' Hybrid cloud - includes both puollo and priuale cloud oomponenls
-O Software as a Servloe (SaaS) - one or more applicatlons available vla
-me lnlernsl (Mew word processor]
-. Plst'orm as a servlee (FaaSI - sollware slack ready lorapplloallon use
-via lne lnlernel (rev, a dalaoase server)
-0 lnnaslruolure as a Service (IaaS) , servels or storage available over
-lnlernel (i.e., slorage avallable lor backup use)
-am", an..." “may la a.” l so sllhmm-lz. W“ .a Emma
+’ gimp” I I '
+Pm)‘ v1’ Computlng Enwronments — Cloud Computlng
+I Delivers computing, storage, even apps as a service across a network
+I Logical extension of virtualization because it uses virtualization as the base
+for it functionality.
+P Amazon EC2 has thousands of servers, millions of virtual machines,
+petabytes of storage available across the Internet, pay based on usage
+I Many types
+P Public cloud — available via Internet to anyone willing to pay
+. Private cloud — run by a company for the company’s own use
+P Hybrid cloud — includes both public and private cloud components
+' Software as a Service (SaaS) — one or more applications available via
+the Internet (i.e., word processor)
+' Platform as a Service (PaaS) — software stack ready for application use
+via the Internet (i.e., a database server)
+' Infrastructure as a Service (laaS) — servers or storage available over
+Internet (i.e., storage available for backup use)
+Operating System Concepts — 10th Edition 1.56 Silberschatz, Galvin and Gagne ©201'8
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:56**************
-W Computing Environments — Cloud Computing
+W’? Computing EnVIronments — Cloud Computing
+iii“ i‘
 I Cloud computing environments composed of traditional OSes,
 plus VMMs, plus cloud management tools
-° Internet connectivity requires security like ﬁrewalls
-l Load balancers spread lraﬂic across multiple applications
-\Qw.
-Im-
-‘m.
-i MM
-1mm”!
-1 Mm“
-“MM
-Dammit..."“WNW.” in “mum-vi““minim”
+' Internet connectivity requires security like firewalls
+. Load balancers spread traffic across multiple applications
+@‘\ customer
+‘\requests
+cloud
+customer
+= cloud
+{management
+: commands
+machines machines managment
+SGI'VICGS
+servers servers //
+Operating System Concepts — 10th Edition 1.57 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:57**************
-W!‘ Computing Environments — Real-Time Embedded Systems
-I Real-time embedded systems most prevalent form oi computers
-° Vary considerable, special purpose, limited purpose OS,
+Eafw¢§ﬁ Computing Environments — Real-Time Embedded Systems
+I Real-time embedded systems most prevalent form of computers
+' Vary considerable, special purpose, limited purpose OS,
 real-time OS
 ' Use expanding
 I Many other special computing environments as well
-° Some have OSes, some perform tasks Without an OS
-I Real-time OS has well-deﬁned fixed time constraints
-° Processing must be done within constraint
+' Some have OSes, some perform tasks Without an OS
+I Real-time OS has well-defined fixed time constraints
+' Processing must be done within constraint
 ' Correct operation only if constraints met
-Wm. 5"..." Emmy” Em l s1 mm.‘ W“ m “View
+4i
+I Operating System Concepts _10.h Edition 1_58 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:58**************
-t‘
-MW Free and Open-Source Operatmg Systems
-I Operaling systems made available In source-code rprrnat ratherthan
+My)’ Free and Open-Source Operating Systems
+I Operating systems made available in source-code format rather than
 just binary closed-source and proprietary
 I Counter to the copy protection and Digital Rights Management
 (DRM) movement
-I Staned by Free Software Foundation (FSF), which has “oopyleft'
-GNU Public License (GFL)
-. Free software and open'souroe software are MO diﬂererlt ideas
-championed by drﬂerent groups pr people
-r http:/ignu org/prrrlosoprry/operrsource-mieses-trre-ppirrtrrtrrri/
-I Examples inciude GNU/Linux and BSD UNIX [includlng core uf Mac
-os X), and many more
-I Can use VMM like VMware Piayer (Free on Windows), Viﬂualbox
-(open source and (ree on many platforms - hﬂp:/Iwww.vir\ualbox.oom)
-' Use to run guest operating systems (or exploration
-ppm", Syn-m pump“ e ml mm t so snowmen. errvr-r Ind e-r-r. em
+I Started by Free Software Foundation (FSF), which has “copyleft”
+GNU Public License (GPL)
+' Free software and open-source software are two different ideas
+championed by different groups of people
+> http://gnu.org/philosophy/open-source-misses-the-point.html/
+I Examples include GNU/Linux and BSD UNIX (including core of Mac
+OS X), and many more
+I Can use VMM like VMware Player (Free on Windows), Virtualbox
+(open source and free on many platforms - http://www.virtualbox.com)
+' Use to run guest operating systems for exploration
+Operating System Concepts — 10th Edition 1.59 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:59**************
-m1!‘ .
+M r91"? The Study of Operatl ng Systems
+There has never been a more interesting time to study operating systems, and it has never been
+easier. The open-source movement has overtaken operating systems, causing many of them to be
+made available in both source and binary (executable) format. The list of operating
+systems available in both formats includes Linux, BSD UNIX, Solaris, and part of macOS.
 
-My’ The Study of Operatlng Systems
-The WWW MM has Wake“ mm gym, mm my of m m be
-made avavlable m bum source and bmarv (executable) format. The hsl of Overatmﬁ
-mm Mum m m mm We; UM, BSD W, SM, m WINDS
-The Mm." a. 5m m arm “s w My qu Wm M me mm M
-Quesuuns mat we could once answer only by lookmg at documentatlnn or me benavmr of an
-mm systems M m m We, comm mm rm been mmm a; we“, Wm
-us w study haw Sysbems operaked m a Mme of fewer CPU, memﬁry, iﬂd sxorege resources‘
+The availability of source code allows us to study operating systems from the inside out.
 
-An extensrve buK Incumwete lrst of Wen-source Weratmg-System Drolem vs avallable
+Questions that we could once answer only by looking at documentation or the behavior of an
 
-1mm thsJ/(urlle.org/Computers/Saﬂware/Gperaﬂngisystems/OperLSuurce/
+operating system we can now answer by examining the code itself.
 
-In addmon, the rlse of vrrtuahzauon as a mamsxream (and frequenﬂv free) oomvumr runctmn
-We; r: mm 1., my mm mm M m M Wm, m “We, Wm
-(htw l/wwwvvmwaremcm) vamesa free “Player” for Wmdows rm whvch hundreds of free
-"vrrtual awhances' can run. Vrrtuamnx (hm: //Www vrrtualbnxsnm) arm/mes a free, Oven-source
-mar mm MW" my mam Wm Um W We 5mm m M
-hundreds of Overalmq SVStems wrlhnul dedvrzted hardware.
+Operating systems that are no longer commercially viable have been open-sourced as well, enabling
 
-The mm or 0mm mm Wm; has m We n w make ‘he m m
-sludem (u Overatmq-System devewuer. Wlth some knowledge, some effort, and an Internet
+us to study how systems operated in a time of fewer CPU, memory, and storage resources.
 
-\l was mfﬁcuk or lmpossrble m qek access lo source wdev NOW, such access vs hmrted onlv by
-m m were“, “we. m m 5m a mm m.
+An extensive but incomplete list of open-source operating-system projects is available
+
+from https://curlie.org/Computers/Software/Operating_Systems/Open_Source/
+
+In addition, the rise of virtualization as a mainstream (and frequently free) computer function
+
+makes it possible to run many operating systems on top of one core system. For example, VMware
+
+(http://www.vmware.com) providesa free “player” for Windows on which hundreds of free
+
+“virtual appliances” can run. Virtualbox (http://www.virtualbox.com) provides a free, open-source
+
+virtual machine manager on many operating systems. Using such tools, students can try out
+
+hundreds of operating systems without dedicated hardware.
+
+The advent of open-source operating systems has also made it easier to make the move from
+
+student to operating-system developer. With some knowledge, some effort, and an Internet
+
+connection, a student can even create a new operating-system distribution. Just a few years ago,
+
+it was difficult or impossible to get access to source code. Now, such access is limited only by
+
+how much interest, time, and disk space a student has.
+
+‘vukf“\‘ ‘\l \
+
+Operating System Concepts — 10"1 Edition 1.60 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:60**************
-End of Chapter 1
-—
+Operating System Concepts - 10h Edition Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 

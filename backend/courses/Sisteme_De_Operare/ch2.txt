@@ -2,13 +2,13 @@
 ***************page number:1**************
 Chapter 2: Operating-System
 Structures
+— —
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-t‘
-W Chapter 2: Operating-System Structures
+%$$ Chapter 2: Operating-System Structures
 I Operating System Services
 I User and Operating System-Interface
 I System Calls
@@ -18,1025 +18,1098 @@ I Why Applications are Operating System Specific
 I Operating-System Design and Implementation
 I Operating System Structure
 I Building and Booting an Operating System
-I Opemting System Debugging
-ownswhmumieWm.“ n gimme-vi““minim.
+I Operating System Debugging
+I Operating system Concepts _10m Edition 2,2 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-ow”
-. _ Objectives
-I Identily services provided by an operating system
-I llluslrale how syslem calls are used to provide operating
+m» Objectlves
+
+I Identify services provided by an operating system
+
+I Illustrate how system calls are used to provide operating
 system services
+
 I Compare and contrast monolithic, layered, microkernel,
 modular, and hybrid strategies for designing operating
-syslems
-I Illustrate the process lor booting an operating system
+systems
+
+I Illustrate the process for booting an operating system
+
 I Apply tools for monitoring operating system performance
-I Design and implement kernel modules for interacting with a
+
+I Design and implement kernel modules for interacting With a
 Linux kernel
-omrm Syn-m Cum,“ , rr- mm z a Silhvuznlu. s-Mr In! on". on“
+
+Operating System Concepts —10th Edition 2.3 Silberschatz, Galvin and 639;‘; @251;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-y‘
-“W Operating System Serwces
-I Operaling syslems provide an envimnmentfor execution ol programs
-and services lo programs and users
-I One seloloperaling-syslem services provides lunolions lhalare
-nelplul to lne user.
-° User inlerfeee - Almost all Operating syslerns have a user
-inlerfaoe (Ul)
-. Varies oerween Command-Line (cu), Graphics User
-lnlerfaee(6Ul), much-screen, Batch
-I Program execullon _ The syslern musl oe able lo load a program
-inlo memory and lo mn lnal program, end execution, eilner
-normally or abnormally (rndroaling error)
-' l/O operations - A running program may require l/o, which may
-involve B ﬁle or an l/U device
+W1’ Operatlng System SerVIces
+I Operating systems provide an environment for execution of programs
+and services to programs and users
+I One set of operating-system services provides functions that are
+helpful to the user:
+' User interface - Almost all operating systems have a user
+interface (Ul).
+> Varies between Command-Line (CLI), Graphics User
+Interface (GUI), touch-screen, Batch
+. Program execution - The system must be able to load a program
+into memory and to run that program, end execution, either
+normally or abnormally (indicating error)
+. IIO operations - A running program may require l/O, which may
+involve a file or an l/O device
+Operating System Concepts — 10th Edition 2.4 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-A
-“3?; Operatlng System SerVIces (Cont.)
-I One set cloperatmg-system sennoes prevroes funclions lhalare nelprm to me
-user (Cont.).
-
-. File-System manipulation - The me sysiem is of paﬂlcular \nterest
-Programs need lo read and Wriie mes and drrectoriesv create and de\ete
-them, search (hem, lrsurle Invorrnarion, permissren management.
-
-i Communications e Preeesses may exchange inlormalion, on me same
-computer or bemeen computers overa neuwork
-
-r Cummumcahons may be via shared memory or mrougn message
-passing (packets moved by the 0s)
-
-' Error deiedicrl — OS needs \0 be nonstanﬂy aware 0' pussime errors
-
-' May occur in ‘he CPU and memory hardware, in IIO devices, in user
+» l
+@w Operatlng System SerVIces (Cont.)
+‘he;
+I One set of operating-system services provides functions that are helpful to the
+user (Cont.):
+' File-system manipulation - The file system is of particular interest.
+Programs need to read and write files and directories, create and delete
+them, search them, list file Information, permission management.
+' Communications — Processes may exchange information, on the same
+computer or between computers over a network
+> Communications may be via shared memory or through message
+passing (packets moved by the OS)
+' Error detection — OS needs to be constantly aware of possible errors
+> May occur in the CPU and memory hardware, in l/O devices, in user
 program
-
-. For each type or error, os should lake me appropriate acuon to
-ensure correcl and consistent computing
-
-r Debugging (acililies can greaﬂy enhance me user‘s and
-programmer's amines m emeienﬂy use me sys\em
+> For each type of error, OS should take the appropriate action to
+ensure correct and consistent computing
+> Debugging facilities can greatly enhance the user’s and
+programmer’s abilities to efficiently use the system
+Operating System Concepts — 10th Edition 2.5 Silberschatz, Galvin and Gagne ©201'8
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-A
-W Operating System SerVIces (Cont.)
-I Anoiher sei 0i OS iunciiorls exisis for ensuring the emcien! operaiiorl of ihe
-sysiem riselrvie resource sharing
-' Resource allocation - When multiple users or rnuiiiple iobs running
-ooncurrenily‘ resouroes must be allocated in each uHhem
-. Many types of resources - CPU cycles, main memory, ﬁle storage,
-IIO devices.
-0 Logging -To keep track oi which users use how much and what kinds
-oi compuier resources
-. Preheckioll and security - The OWHSIS of information stored in a
-muliiuser or neiworked wmpuier sysiern may wam lo conirei use er ihai
-informationv ooncurreni processes should no! interiere with each other
-v Promectlon involves ensuring that ali access to system reseurees is
-oonimlled
-' Security of the sysiem irom ouisiders requires user auiheniicaiiori,
-extends to deiendlrig externai IIO devices from invalid access
-anempis
+fey)’ Operatlng System SerVIces (Cont.)
+I Another set of OS functions exists for ensuring the efficient operation of the
+system itself via resource sharing
+' Resource allocation - When multiple users or multiple jobs running
+concurrently, resources must be allocated to each of them
+> Many types of resources - CPU cycles, main memory, file storage,
+l/O devices.
+' Logging - To keep track of which users use how much and what kinds
+of computer resources
+' Protection and security - The owners of information stored in a
+multiuser or networked computer system may want to control use of that
+information, concurrent processes should not interfere with each other
+> Protection involves ensuring that all access to system resources is
+controlled
+> Security of the system from outsiders requires user authentication,
+extends to defending external l/O devices from invalid access
+attempts
+Operating System Concepts — 10th Edition 2.6 Silberschatz, Galvin and Gagne ©2015
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-my}; A View of Operating System Services
-u-mu
-—=:|:—
-m
-—m—
+)2 A _ .. I I I
+‘ J . .‘
+W A Vlew of Operatlng System SerVIces
+like
+user and other system programs
+system calls
+program V0 ﬁle communication resource accountin
+execution operations systems allocation g
+error protecéjtion
+detection an .
+. securlty
+serwces
+operating system
+Operating System Concepts — 10th Edition 2.7 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-t‘
-W User Operating System Interface - CLI
+‘(629')’ User Operating System Interface - CLI
 CLI or command interpreter allows direct command entry
-' Someiimes implemenied in kernel, sometimes by systems
+' Sometimes implemented in kernel, sometimes by systems
 program
-' Sometimes multiple ﬂavors implemented — shells
-' Primarily fetches a command lrom user and executes it
-' Sometimes commands built-in. sometimes just names of
+' Sometimes multiple flavors implemented — shells
+' Primarily fetches a command from user and executes it
+' Sometimes commands built-in, sometimes just names of
 programs
-P If the Iaiierv adding new ieatures doesn't require shell
-modiﬁcation
-om", m..." “may m» mm 1 . Slim-a W“ m W‘. W.
+> lf the latter, adding new features doesn’t require shell
+modification
+| Operating System Concepts-10th Edition 2.8 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:9**************
-“,2; Bourne Shell Command Interpreter
-O YrmruxrhYL-Y HE mu! @5th
-- a
+Iteeqf‘?'“F*-l >
+“w Bourne Shell Command Interpreter
+O 1. r00t@r6181—d5—u501:~ (ssh)
+root@r6181~d5»u... 0 x1 ssh a) m >1 root@r6181-d5-u501... ass
+Operating System Concepts — 10th Edition 2.9 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:10**************
-r‘
-“3?; User Operatlng System Interface - GUI
+.2\W I
+“59",?” User Operatlng System Interface - GUI
 I User-friendly desktop metaphor interface
-Q Usually mouse, keyboard, and monitor
-' Icons represent files, programs, aclions, etc
-Q Various mouse buttons over objects in the interface cause
-various actions (provide information, Options, execute function,
+' Usually mouse, keyboard, and monitor
+' Icons represent files, programs, actions, etc
+' Various mouse buttons over objects in the interface cause
+various actions (provide information, options, execute function,
 open directory (known as a folder)
-' Invented at Xerox PARC
-I Many systems now include both CLl and GUI interfaces
-' Microsoﬂ Windows is GUI with CLI “command” shell
-° Apple Mac OS X is “Aqua” GUI interface with UNIX kernel
-undemealh and shells available
-Q Unix and Linux have CLI with optional GUI interfaces (ODE.
+. Invented at Xerox PARC
+I Many systems now include both CLI and GUI interfaces
+. Microsoft Windows is GUI with CLI “command” shell
+. Apple Mac OS X is “Aqua” GUI interface with UNIX kernel
+underneath and shells available
+. Unix and Linux have CLI with optional GUI interfaces (CDE,
 KDE, GNOME)
+Operating System Concepts — 10th Edition 2.10 Silberschatz, Galvin and Gagne @251;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-@Fr Touchscreen Interfaces
+WV Touchscreen Interfaces
+m3 “
 I Touchscreen devices require new
-inierfaces
+interfaces
 . Mouse not possible or not desired
-' Aciiuns and selection based on
-gesiures
-. \ﬁrtual keyboard foriext eniry
-. Voice commands
+. Actions and selection based on
+gestures
+' Virtual keyboard for text entry
+' Voice commands
+| Operating System Concepts — 10th Edition 2.11 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-r‘
-“$5 System Calls
-I Programming interface l0 the services provided by the OS
-I Typically written in a high-level language (C or CH)
-I Mostly acoessed by programs vla a high-level
+wavy System Calls
+I Programming interface to the sen/ices provided by the OS
+I Typically written in a high-level language (C or C++)
+I Mostly accessed by programs via a high-level
 Application Programming Interface (API) rather than
 direct system call use
-I Three most common APls are Win32 API for Wmdows.
-POSIX API for POSlX-based systems (includmg wrlually
-all versions of UNIX, Lmux, and Mac OS X), and Java API
-for the Java virtual machme (JVM)
-Note that the system»call names used throughout this text are
-generic
-ommsmmmmmwm 212 WMMM“autism
+I Three most common APls are Win32 API for Windows,
+POSIX API for POSIX-based systems (including virtually
+all versions of UNIX, Linux, and Mac OS X), and Java API
+for the Java virtual machine (JVM)
+Note that the system-call names used throughout this text are
+genenc
+Operating System Concepts-10th Edition 2.12 Silberschatz, Galvin and Gagne @251;
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:13**************
-“)Fy Example of System Calls
-I System call sequence to copy the contents at one ﬁle to another ﬁle
-Example System Cull sequem
-qule mpul m name
-Wntn pmmpl la screen
-Accept lnput
-Acqmle outgut tile name
-Wntn pmmpl ln screen
-Accept mpttt
-Open the lrlplll n-
-w Illa mm sxlst, mu
-Cmils output llla
-w ﬁle masts, anon
+‘$3 $1? Exam le of S stem Calls
+I System call sequence to copy the contents of one file to another file
+
+Example System Call Sequence
+
+Acquire input file name
+
+Write prompt to screen
+
+Accept input
+
+Acquire output file name
+
+Write prompt to screen
+
+Accept input
+
+Open the input file
+if file doesn‘t exist, abort
+
+Create output file
+if tile exists, abort
+
 Loop
-em m lnPul Ills
-wnte to 0mm“ llle
-unul mad tall;
-cm: outvul Ills
-Wvlte comnletlon measles to screen
-Twnvnate mnnalty
-0mm mu... “mu. 7 tu- Edmun 1 t: Sllhvmnlu. utuu Ind mu. @zutl
+Head from input file
+
+Write to output file
+
+Until react fails
+
+Close output file
+
+Write completion message to screen
+
+Terminate normally
+
+Operating System Concepts — 10th Edition 2.13 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-‘45$ Example of Standard API
-mmmmmm
-Asanmmpk-oh standard Aﬂmerlhenldﬂ lumﬁeniralnlvail'
-a» .n .m, um Wm. M1 h. M mm . mm. M
-m... "WMMWM
-.... r...‘
-m m mm, hm “mmmmmm
-“mm mm.
-|—] L] %l
-m mm "m
-m. m.
-Apmgnmﬂutuscsl'lenldU Mmmmmmmmmm
-m, u m" ml deﬁnn n! um.‘ m1 nu! am we (mu-'5 on“
-W MmmW .., mm Mum
-. MMMMPWM m
-. .W_.M.,WMMMHW
-. MM! Mm mm o. m, m M M m .M
-Wk.
-mmmmmmmmm “WM
-mam“ “mmmmommq A
-Dummy Syilem CGIW/Eﬂﬁi In‘h Edlhnn 2 u Sllherazh-le (“Mn Ind 3-5" mm;
+tie,» Example of Standard APl
+m3 "
+EXAMPLE OF STANDARD API
+As an example of a standard API, consider the read O function that is avail-
+able in UND( and Linux systems. The API for this function is obtained from
+the man page by invoking the command
+man read
+on the command line. A description of this API appears below:
+#include <unistd . 11>
+ssize_t read (int fd, void *buf, size_t count)
+return function parameters
+value name
+Aprogram that uses the readO function must include the uni std _ h header
+ﬁle, as this ﬁle deﬁnes the ssize_t and size_t data types (among other
+things). The parameters passed to read() are as follows:
+i int fd—the ﬁle descriptor to be read
+I v0 id *bui —a buffer into which the data will be read
+0 size _t count —the maximum number of bytes to be read into the
+buffer
+On a successful read, the number of bytes read is returned. A return value of
+U indicates end of ﬁle. lf an error occurs, readO returns —1. A
+Operating System Concepts -10th Edition 2.14 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-r‘
-“W System Call Implementatlon
+fey’ System Call Implementatlon
 I Typically, a number associated with each system call
-i System-call interface maintains a table indexed according to
+' System-call interface maintains a table indexed according to
 these numbers
-I The system call inlerlace invokes the intended system call in OS
-kernel and returns status oi the system call and any return values
+I The system call interface invokes the intended system call in OS
+kernel and returns status of the system call and any return values
 I The caller need know nothing about how the system call is
 implemented
-. Just needs t0 Obey API and understand whal OS will d0 as a
+' Just needs to obey API and understand what OS will do as a
 result call
-' Most details 0f OS interface hidden from programmer by API
-t Managed by run-time support library (set oi lunctions built
+' Most details of OS interface hidden from programmer by API
+> Managed by run-time support library (set of functions built
 into libraries included with compiler)
-om»,Swammmamiemmm 2t: sum-a Gin-Mamie,“
+Operating System Concepts — 10th Edition 2.15 Silberschatz, Galvin and Gag; @251;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-*4)??? APl — System Call — OS Relationship
-ODQHU < >
+46$ y; APl — System Call — OS Relatlonshlp
+um "
+open()
+user
 mode
+system call interface
 kernel
 mode
-openU
-Immememaxion
-i -= niopenn
-I systemmll
-IElUm
+Openi)
+Implementation
+i -= of open()
+I system call
+return
+Operating System Concepts — 10th Edition 2.16 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-r‘
-“65$; System Call Parameter Passmg
+fey! System Call Parameter Passlng
 I Often, more information is required than simply identity of desired
 system call
-i Exact type and amount of information vary according to OS
-arid call
+. Exact type and amount of information vary according to OS
+and call
 I Three general methods used to pass parameters to the OS
-i Simplest: pass the parameters in registers
-r In some cases‘ may be more parameters than registers
-. Parameters stored in a block, or table, in memory, and address
+' Simplest: pass the parameters in registers
+> ln some cases, may be more parameters than registers
+' Parameters stored in a block, or table, in memory, and address
 of block passed as a parameter in a register
 > This approach taken by Linux and Solaris
-. Parameters placed, 0r pushed, onto the stack by the program
+. Parameters placed, or pushed, onto the stack by the program
 and popped off the stack by the operating system
-i Block and stack methods do not limit the number or length 0t
+' Block and stack methods do not limit the number or length of
 parameters being passed
-BMWSWMMMMmHMall,“ 1., gimme-vi“Mariam
+Operating System Concepts — 10th Edition 2.17 Silberschatz, Galvin and Gag; @252
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-‘6):’? Parameter Passing via Table
-register
+‘s3 $75‘ Parameter Passmg Vla Table
+M—
 X: parameters
 for call
-code for
-load address X I “8:0”:th system
-system call 13 call 1a
-user progmm -
-operaﬁng system
-om“, 5m... CW,“ 7 “1- mm 1 w Sllhvumu. Ban m m... mun
+use parameters code for
+load address X from table X system
+system call 13 call 13
+
+operating system
+
+Operating System Concepts — 10th Edition 2.18 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:19**************
-t‘
-“W Types of System Calls
+33¢‘? Types of System Calls
 I Process control
-
-° create process, terminate process
-
-l end, abort
-
-o load, execute
-
-0 gel process attributes, set process attributes
-
+' create process, terminate process
+' end,aboﬂ
+' load, execute
+' get process attributes, set process attributes
 ' wait for time
-
-° wait event, signal event
-
+. wait event, signal event
 ' allocate and free memory
-
-° Dump memory if error
-
-' Debugger for determining bugs, single step executiun
-
-° Locks for managing access to shared data between processes
-ownswhmcmmemm“ 2|! WMMM“Mimi
+. Dump memory if error
+. Debugger for determining bugs, single step execution
+I ' Locks for managing access to shared data between processes
+Operating System Concepts _10m Edition 249 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
-W Types of System Calls (cont.)
+wt‘ Types of System Calls (cont.)
 I File management
-' create ﬁle, delete ﬁle
-' open, close ﬁle
-i read, write, reposition
-' get and set ﬁle attributes
+' create file, delete file
+' open, close file
+' read, write, reposition
+' get and set file attributes
 I Device management
-' request device, release device
-° read, write, reposition
-. get device attributes, Set deviee attributes
-. logically attach or detach devices
-ownswcmcunaminwmm 2m summit““minim.
+. request device, release device
+. read, write, reposition
+' get device attributes, set device attributes
+I ' logically attach or detach devices
+Operating System Concepts _10m Edition 220 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-r‘
-‘W Types of System Calls (Cont.)
-I lnlormation maintenance
+‘56?’? Types of System Calls (Cont.)
+I Information maintenance
 ' get time or date, set time or date
 ' get system data, set system data
-i get and set prooess, ﬁle, or device attributes
+' get and set process, file, or device attributes
 I Communications
 ' create, delete communication connection
-' send, receive messages if message passing model to host
+. send, receive messages if message passing model to host
 name or process name
 > From client to server
-° Shared-memory model create and gain aocess to memory
-reglons
+' Shared-memory model create and gain access to memory
+regions
 ' transfer status information
-' attach and detach remote devices
-OsmwﬂﬂmammieWm.“ ,1. silhmm-msuvmnude-“£82m:
+. attach and detach remote devices
+Operating system Concepts _10m Edition 221 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-83$’? Types of System Calls (Cont)
+‘E539; Types of System Calls (Cont.)
+‘\c ,,
 I Protection
 ' Control access to resources
 ' Get and set permissions
-i Allow and deny user access
-Wm“, 5m... CW,“ 7 “1- mm 1 22 Sllhvuzhu. 91M“ m m... mun
+' Allow and deny user access
+| Operating System Concepts — 10th Edition 2.22 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:23**************
-Mari"; Examples of Wmdows and Unlx System Calls
-mmmmmwmnummmms
-m Mum m...“ “w WM mm. I“. Mm“,
-wuwmmyn...“
-MW. M
-M‘. emupmw) tum)
-m. Wham." um)
-mmwmmo m0
-“k “will.” Mn
-“MM Mm“) mm
-mum“) mm)
-munmho mm)
-Mm. Mummdm mm
-mm.“ WWW) ".40
-"unnumbo mm)
-1mm‘ “Wrmmﬂumo MM,
-“Mm Sum“) an
-5mm .Mu
-memw WWW) Wu
-"nabbhwmw ‘my-r10
-Mum“) mp0
-M... smusﬂmqo mm
-1mmmwmmmmmn Mm
-s.ls.mmn..cnmwpu mun A
-ova-mam“... Emulmmdm 223 Sllhvurulz alvmnmﬁwmw
+‘if .t z ' v - I I
+A $5‘ Examples of Windows and Unix System Calls
+LX>\:3
+EXAMPLES OE WINDOWS AND UNIX SYSTEM CALLS
+
+The following illustrates various equivalent system calls for Windows and
+
+UNIX operating systems.
+Windows Unix
+
+Process CreateProcess O fork ( )
+
+control ExitProcessO exitO
+HaitForSingleDbj ect () wait O
+
+File CreateFile O open O
+
+management ReadFile O read O
+HriteFileO writeO
+CloseHandle O close O
+
+Device SetConsoleMode O ioctl O
+
+management ReadConsole () read O
+Iit'riteConsole 0 write O
+
+Information GetCurrentProcessID O getpido
+
+maintenance SetTimer O alarm ()
+Sleep() Sleepo
+
+Communications CreateP ipe O pipe O
+CreateFileMapping O shm_open O
+MapViewUf File O InmapO
+
+Protection SetFileSecurity () chmodO
+InitlializeSecurityDescriptorU umaskO
+SetSecurityDescriptorGroup () chownO A
+
+Operating System Concepts -10th Edition 2.23 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:24**************
-ml‘ -
-M," Standard C lerary Example
-I C program invoking pn'ntf() library call, which calls write() system call
-mt nANnmmculnlv
-m mmhld c “my mm . Pm... a m “Wan m h-
-many venmu a! um m1 h...“ A1 ... eumpk, “3am. c p...
-gram mvnkslupnnﬂ) mm mmmwmmmnw
-m“.“wwwmmummmmwmmimm
-.~|.m,m=mmi “Mull mClbmy umhvnlurmunudhv
-w“.um,>.-a.mmmmpm
-“MMM
-mm!
-i
-j a...“ l
-:Iwmn
-i
-n";
-w
-i...‘
-M.
-0mm Sim... Emmi’ m mm 1 u “Mm-1 GM v.4 mum“
+‘new Standard C Libra Exam le
+ms "
+I C program invoking printf() library call, which calls write() system call
+THE STANDARD C LIBRARY
+The standard C library provides a portion of the system-call interface for
+many versions of UNIX and Linux. As an example, let's assume a C pro-
+gram invokes the printf () statement. The C library intercepts this call and
+invokes the necessary system call (or calls) in the operating system—in this
+instance, the write() system call. The C library takes the value returned by
+write () and passes it back to the user program:
+#include <stdio.h>
+int mainl )
+{
+printf ("Greetings");
+return 0;
+}
+user
+mode
+kernel
+mode
+(write()
+write()
+system call A
+Operating System Concepts -10th Edition 2.24 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-rs
-W Example: Ardulno
+‘may’ Example. Ardulno
 I Single-tasking
 I No operating system
 I Programs (sketch) loaded via
-uss into ﬂash memory free memory
+USB into flash memory free memory
 I Single memory space
-I Boot \oader loads program free memory user
+I Boot loader loads program free memory user
 I Program exit -> shell program
 reloaded (sketch)
 boot loader boot loader
 (a) (b)
 At system startup running a program
-ommshm“Mm-5.1.,“ 225 stemmed“ﬁne-“hm
+Operating System Concepts —10th Edition 2.25 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-r‘
-‘43¢ Example: FreeBSD
+454,. y/ Exam ple: Free BSD
 I Unix variant
-I Mullilasking mg,‘
-I User Iogin -> invoke user's choice of shell "'e'"°"/ u
-I Shell execules fork() system call to creale
-process ﬁes memory
-' Executes exec() to load program inlo
-pro oe 5 5 process c
-0 Shell waits for process to terminate or
-continues with user oommands
-I PrOCeSS eXils wilh: B
-recess
-. code = 0 — no error p
-° code > 0 i error code ‘ow
-lap-Mm 5m... Cum,“ 7 “1- mm 1 as Sllhvuzhlu. Bllvin m Glynn mu
+I Multitasking high
+I User login -> invoke user’s choice of shell memory
+I Shell executes fork() system call to create
+process free memory
+' Executes exec() to load program into
+process pl'OCESS C
+' Shell waits for process to terminate or
+continues with user commands
+I Process exits with:
+process B
+' code = 0 — no error
+' code > O — error code low
+Operating system Concepts _ 10th Edition 226 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:27**************
-ﬁe
-843$; System Services
+ﬁlm} System Services
 I System programs provide a convenient environment for program
-development and execution‘ They can be divided into:
-0 File manipulation
-' Status information sometimes stored in a Vile
-° Programming language support
+development and execution. They can be divided into:
+' File manipulation
+. Status information sometimes stored in a file
+' Programming language support
 ' Program loading and execution
-° Communications
+' Communications
 ' Background services
-° Application programs
-I Most users‘ view oi the operation system is deﬁned by system
+' Application programs
+I Most users’ view of the operation system is defined by system
 programs, not the actual system calls
-gamma..."“Manama” 221 Momma-vi““minimal
+|
+Operating System Concepts _ 10m Edition 227 Silberschatz, Galvin and Gagn: ©2822;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-r‘
-“23$; System SerVIces (cont)
+“W System SerVIces (cont.)
 I Provide a convenient environment for program development and
-execution
-i Some of them are simply user interfaces to system calls; others
+execuﬁon
+. Some of them are simply user interfaces to system calls; others
 are considerably more complex
 I File management - Create, delete, copy, rename, print, dump, list,
-and generally manipulate ﬁles and directories
+and generally manipulate files and directories
 I Status information
-° Some ask the system for info - date, time, amount of available
-memory, disk spaoe, number of users
+' Some ask the system for info - date, time, amount of available
+memory, disk space, number of users
 . Others provide detailed performance, logging, and debugging
 information
-Q Typically, these programs format and print the output to the
+' Typically, these programs format and print the output to the
 terminal or other output devices
-Q Some systems implement a registry - used to store and
-retrieve conﬁguration information
-om",Swamamammm 2n Slam-a “laudawiw.
+' Some systems implement a registry - used to store and
+retrieve configuration information
+Operating System Concepts-10th Edition 2.28 Silberschatz, Galvin and Gag; ©20j;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-r‘
-we??? System SerVIces (Cont.)
-I File modiﬁcation
-' Text editors to create and modily ﬁles
-I Special commands to search contents oi ﬁles or perform
-transformations of lhe lexl
+r%,_/ System SerVIces (Cont.)
+‘Lxs
+I File modification
+' Text editors to create and modify files
+' Special commands to search contents of files or perform
+transformations of the text
 I Programming-language support - Compilers, assemblers,
 debuggers and interpreters sometimes provided
-I Program loading and execution- Absolule loaders, relocatable
+I Program loading and execution- Absolute loaders, relocatable
 loaders, linkage editors, and overlay-loaders, debugging systems
-lar higher-level and machine language
+for higher-level and machine language
 I Communications - Provide the mechanism for creating virtual
 connections among processes, users, and computer systems
-' Allow users lo send messages lo one another's screens,
+' Allow users to send messages to one another’s screens,
 browse web pages, send electronic-mail messages, log in
-remotely, transfer files from one machlne to another
-am“. m..." “We m» an,“ 1 a Slam-e W“ m a“; W.
+remotely, transfer files from one machine to another
+Operating System Concepts-10th Edition 2.29 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-r‘
-‘W System Services (Cont.)
+i F
+‘it???’ System Services (Cont.)
 I Background Services
-° Launch at boot time
-t Some for system startup, then terminate
+' Launch at boot time
+> Some for system startup, then terminate
 > Some from system boot to shutdown
-. Provide facilities like disk checklng, process scheduling, error
+. Provide facilities like disk checking, process scheduling, error
 logging, printing
-i Run in user oontext not kernel context
-. Known as services, subsystems, daemons
+' Run in user context not kernel context
+' Known as services, subsystems, daemons
 I Application programs
-0 Don't pertain to system
-. Run by users
-° Not typically considered part oi OS
-i Launched by command line, mouse click, ﬁnger poke
-om", m..." “We.” 5.1mm 2w sum-a murmnﬂqﬁw.
+' Don’t pertain to system
+' Run by users
+' Not typically considered part of OS
+' Launched by command line, mouse click, finger poke
+ea
+Operating System Concepts -10th Edition 2.30 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-r‘
-“3} § L|nkers and Loaders
-I Source code compiled into object ﬁles designed to be loaded into any
-physical memory location , relocatable Object file
-I Linker combines these into single binary executable ﬁle
-i Also brings in libraries
+‘W’ L|nkers and Loaders
+I Source code compiled into object files designed to be loaded into any
+physical memory location — relocatable object file
+I Linker combines these into single binary executable file
+. Also brings in libraries
 I Program resides on secondary storage as binary executable
-I Must be brought inlo memory by loader lo be executed
-. Relocation assigns ﬁnal addresses to program parts and adjusts code
+I Must be brought into memory by loader to be executed
+' Relocation assigns final addresses to program parts and adjusts code
 and data in program to match those addresses
-I Modern general purpose systems don't link libraries into executables
-i Rather, dynamically linked libraries (in Windows, DLLs) are loaded
-as needed, shared by all that use the same version ol that same libran/
-(loaded Once)
-I Object, executable ﬁles have standard formats, so operating system knows
-how l0 load and start them
-ammo..."mmmwm n. sllhvuzh-mmlvln“downtown
+I Modern general purpose systems don’t link libraries into executables
+' Rather, dynamically linked libraries (in Windows, DLLs) are loaded
+as needed, shared by all that use the same version of that same library
+(loaded once)
+I Object, executable files have standard formats, so operating system knows
+how to load and start them
+Operating System Concepts-10th Edition 2.31 Silberschatz, Galvin and Gag; @252
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-WThe Role of the Linker and Loader
-J,
-gcc -¢ maxn.c
-¢ ¢ m.“
-® Mm
-‘Am gcc -a mlin mm.n.o -1m
-‘ l Wm
-E ./main
+Q??? The Role of the Llnker and Loader
+main.c
+program
+¢ L generates
+°bie¢t main.o
+other ﬁle
+object
+ﬁles ,~ +
+“A- gcc —o main main.o —lm
+¢ l generates
+executable main
+ﬁle
+dynamically
+linked l
+libraries ‘x
+‘A program
+in memory
+Operating System Concepts — 10th Edition 2.32 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-r‘
-W Why Applications are Operating System Specific
-I Apps compiled 0n one system usually nol execulable on other
+gag}, Why Appllcatlons are Operatlng System Spec|f|c
+I Apps compiled on one system usually not executable on other
 operating systems
-I Each operating system pmvides its Own unique syslerrl calls
-° Own file lorrnats, etc
-I Apps can be multi-operaling system
-' Written m lnterpreted language like Python, Ruby, and
-inlerpreler available 0n multiple Operating Systems
-' App wntten in language that includes a VM containing the
+I Each operating system provides its own unique system calls
+. Own file formats, etc
+I Apps can be multi-operating system
+' Written in interpreted language like Python, Ruby, and
+interpreter available on multiple operating systems
+. App written in language that includes a VM containing the
 running app (like Java)
-° Use standard language (like C), compile separately on eacn
-operaling syslem lo run on each
+' Use standard language (like C), compile separately on each
+operating system to run on each
 I Application Binary Interface (ABI) is architecture equivalent of
-API, deﬁnes how different componenls of binary code can interlace
-for a given operating system on a g|ven archltecture, CPU, etc
-om»,=,i..m¢m.,.iem~a.m 2:: Slim-a “Mme-‘Jaw.
+APl, defines how different components of binary code can interface
+for a given operating system on a given architecture, CPU, etc
+Operating System Concepts — 10th Edition 2.33 Silberschatz, Galvin and Gaylei @252
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-r‘
-W Operating System Design and Implementation
+,m. >$ I I I
+tag-“x Operatlng System Deslgn and Implementatlon
 I Design and Implementation of OS not “solvable”, but some
 approaches have proven successful
-I Internal structure of different Operating Systems can vary widely
-I Start the deslgn by defining goals and speciﬁcations
-I Affected by choioe of hardware, type of system
+I Internal structure of different Operating Systems can vary Widely
+I Start the design by defining goals and specifications
+I Affected by choice of hardware, type of system
 I User goals and System goals
-' User goals i operating system should be convenient to use,
-easy to ieam, reliable, safe, and fast
-' System goals i operating system should be easy to design,
-implement, and maintain, as well as ﬂexible, reliable, error-free,
-and eﬂicieni
-WWW“Cummiemwd...“ 1,. sum-a GMMGNJW.
+' User goals — operating system should be convenient to use,
+easy to learn, reliable, safe, and fast
+. System goals — operating system should be easy to design,
+implement, and maintain, as well as flexible, reliable, error-free,
+and efficient
+Operating System Concepts-10th Edition 2.34 Silberschatz, Galvin and Gag; @251;
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:35**************
-A
-W Operating System Design and Implementation (Cont)
-I Imperiani principle to separate
+£62k)’ Operating System Design and Implementation (Cont.)
+I Important principle to separate
 Policy: What will be done?
-Mechanism: Howlo d0 ii?
+Mechanism: How to do it?
 I Mechanisms determine how to do something, policies decide
 what will be done
 I The separation of policy from mechanism is a very important
-principle, it allows maximum flexibility ii policy decisions are to
-be changed later (example e timer)
-I Specifying and designing an OS is highly creative task 0t
+principle, it allows maximum flexibility if policy decisions are to
+be changed later (example — timer)
+I Specifying and designing an OS is highly creative task of
 software engineering
-gunmen..."“Minnelli” zas sllhmm-u. “elude-‘Jew.
+| Operating System Concepts-10th Edition 2.35 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:36**************
-r‘
-“W Implementation
+$63?’ Implementation
 I Much variation
 ' Early OSes in assembly language
-' Then system programming languages like Algol, PL/1
-° Now C, C++
-I AClually usually a mix of languages
-° Lowest levels in assembly
-' Main body in C
-° Systems programs in C, C++, scripting languages like PERL,
-Python, shell scrlpls
+. Then system programming languages like Algol, PL/1
+' Now C, C++
+I Actually usually a mix of languages
+. Lowest levels in assembly
+. Main body in C
+' Systems programs in C, C++, scripting languages like PERL,
+Python, shell scripts
 I More high-level language easier to port to other hardware
-I But Slower
-I Emulation can allow an OS to run on non»native hardware
-WWW,"mmdmm m Slum-WW“Mimi
+' But slower
+I Emulation can allow an OS to run on non-native hardware
+operating System Concepts _10m Edition 2.36 Silberschatz, Galvin and Gagnt©20a1ig
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-W‘ Operating System Structure
+W??? Operatlng System Structure
+ma "
 I General-purpose OS is very large program
-I Various ways to slmmure ones
-' Simple structure — MS-DOS
-' More complex - UNIX
-' Layered — an abslrcalion
-. Microkernel »Mach
-Wmmm Emmy.“ 2:1 mm.‘ W“ .n. W181“
+I Various ways to structure ones
+. Simple structure — MS-DOS
+' More complex -- UNIX
+' Layered — an abstrcation
+' Microkernel -Mach
+| Operating System Concepts — 10th Edition 2.37 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-A
-W Monolithic Structure — Original UNIX
+Q6»? Monol|th|c Structure — Orlglnal UNIX
 UNIX — limited by hardware functionality, the original UNIX
 operating system had limited structuring. The UNIX OS
 consists of two separable parts
-° Systems programs
+
+' Systems programs
+
 ' The kernel
-> Consists of everything below the system-call interfaoe
+> Consists of everything below the system-call interface
 and above the physical hardware
-> Provides the ﬁle system, CPU scheduling, memory
+> Provides the file system, CPU scheduling, memory
 management, and other operating-system functions; a
-large number oi lunctions (or one level
-Wm“tummmumiemm 1,. stlhmm-u. “meantime.
+large number of functions for one level
+
+| Operating System Concepts-10th Edition 2.38 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-Myy Tradltlonal U NIX System Structure
-Beyond simple but rlot fully layered
+469w’ Trad |t|onal U NIX System Structure
+Beyond simple but not fully layered
 (the users)
 shells and commands
-compilers and Interpreters
+compilers and interpreters
 system libraries
-system-call interface m the kernel
-_ slgnals terminal lile system CPU scheduling
-‘E’ handllng swapping block l/O page replacement
+system-call interface to the kernel
+_ signals terminal file system CPU scheduling
+g handling swapping block l/O page replacement
 g character l/O system system demand paging
 terminal drivers disk and tape drivers virtual memory
 kernel interface to the hardware
-terminal controllers devrce controllers memory controllers
+terminal controllers device controllers memory controllers
 terminals disks and tapes physical memory
-am“. aw..." “may ill» all“ 1 w stamina will “a a“; all.
+Operating System Concepts — 10th Edition 2.39 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-mgr L|nux System Structure
 Monolithic plus modular design
-applicaxlons
-l l
-l l
-$-
-Sihldulll
-(mp/m manger
-m-
-divine;
-l l
-0mm 5m... Cum,“ 7 “1- mm z w snmmm um“ m a-v-l- mu
+applications
+system-call interface
+ﬁle CPU
+systems scheduler
+networks memory
+(TCP/IP) manager
+block character
+devices devices
+A
+Operating System Concepts -10th Edition 2.40 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:41**************
-Mfr Layered Approach
+’ sim~
+‘ﬂy’ Layered Approach
 
-I The operating system is divided i:
-iMO a number of layers (levels), “1'3"”
-each built on lop of lower
-layers. The bottom layer (layer
-O), is lhe hardware; lhe highest hwv
-(layer N) is the user interlace.
+I The operating system is divided
+into a number of layers (levels), use'raiftgﬂace
+each built on top of lower _
+layers. The bottom layer (layer I
+O), is the hardware; the highest layer]
+(layer N) is the user interface.
 
-I with modulariiy, layers are ‘
-selected such that each uses j
-funclions (operalions) and
-sen/Ices 0| only lower-level
+I With modularity, layers are layerO
+selected such that each uses hardware
+functions (operations) and
+services of only lower-level
 layers
 
-unwind." Cunmw WM m “mm W“ .m a"; w“
+| Operating System Concepts —10th Edition 2.41 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:42**************
-A
-“W Microkernels
+ml?‘
+Key)’ Microkernels
 I Moves as much from the kernel into user space
 I Mach example of microkernel
-° Mac OS X kernel (Darwin) partly based on Mach
+' Mac OS X kernel (Darwin) partly based on Mach
 I Communication takes place between user modules using
-message passing
-I Beneﬁts:
-° Easier to extend a microkernel
-I Easier to port the operating system lo new architectures
-. More reliable (less code is running in kernel mode)
-' More secure
+message passmg
+I Benefits:
+' Easier to extend a microkernel
+' Easier to port the operating system to new architectures
+' More reliable (less code is running in kernel mode)
+. More secure
 I Detriments:
-' Performance overhead oi user space to kernel space
+' Performance overhead of user space to kernel space
 communication
-cumin..."“mm-mm 212 WMMM“Mimi
+Operating System Concepts -10th Edition 2.42 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:43**************
-W”
-. _ Modules
+‘ﬁg?’ Modules
 I Many modern operating systems implement loadable kernel
 modules (LKMs)
-. Uses object-oriented approach
-i Each core component is separate
-. Each talks to the others over known interfaces
-i Each is loadable as needed wilhin lhe kernel
-I Overall, similar to layers but with more ﬂexible
-' Linux, Solaris, etc
-gamma““mm-Em 21: “imam-vi““Mimi
+' Uses object-oriented approach
+' Each core component is separate
+' Each talks to the others over known interfaces
+' Each is loadable as needed within the kernel
+I Overall, similar to layers but with more flexible
+. Linux, Solaris, etc
+I Operating System Concepts-10"‘ Edition 2.43 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:44**************
-r‘
-“33$; Hybrld Systems
-I Most modem operating systems are actually not one pure model
-i Hybrid oombines multiple approaches lo address performance,
+fay’ Hybrld Systems
+I Most modern operating systems are actually not one pure model
+' Hybrid combines multiple approaches to address performance,
 security, usability needs
-i Linux and Solaris kernels in kernel address spacev so
-monolithic, plus modular lor dynamic loading of lunctionality
-. Windows mostly monolithic, plus microkemel for diﬂerent
+' Linux and Solaris kernels in kernel address space, so
+monolithic, plus modular for dynamic loading of functionality
+. Windows mostly monolithic, plus microkernel for different
 subsystem personalities
 I Apple Mac OS X hybrid, layered, Aqua Ul plus Cocoa
 programming environment
-' Below is kernel consisting 0f Mach microkernel and BSD Unix
-parts‘ plus IIO kit and dynamically loadable modules (called
+' Below is kernel consisting of Mach microkernel and BSD Unix
+parts, plus l/O kit and dynamically loadable modules (called
 kernel extensions)
-om»,“tamamumiumidm 1.. “mum-n“minim.
+Operating System Concepts — 10th Edition 2.44 Silberschatz, Galvin and Gag; @252
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:45**************
-“3} 7 macOS and IOS Structure
-appllcatlons
-+
-kernel envllonment 1Darwirl)
+@Q' macOS and iOS Structure
+applications
+user experience L
+application frameworks
+core frameworks
+kernel environment (Darwin)
+Operating System Concepts -10th Edition 2.45 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:46**************
-“?ﬁ Darwm
-
-_
-libraly intellace
-_
-
-BSD (POSle
-
-system calls
-_
-
-mm
-
-w.“
+en “P *“" -
+\b Darwm
+applications
+—
+library interface
+—
+Mach BSD (POSIX)
+traps system calls
+—
+memory
+h lin
+sc edu g ‘PC management
+Operating System Concepts -10th Edition 2.46 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:47**************
-r‘
-age Android
+raw Android
 I Developed by Open Handset Alliance (mostly Google)
-o Open Source
-I Similar stack t0 IOS
-I Based on Linux kernel but mOGlfled
-' Prowdes process, memory, device-driver management
+. Open Source
+I Similar stack to IOS
+I Based on Linux kernel but modified
+. Provides process, memory, device-driver management
 ' Adds power management
-I Runtlme environment includes core set of libraries and Dalv|l<
+I Runtime environment includes core set of libraries and Dalvik
 virtual machine
-' Apps developed in Java plus Android API
-t Java class ﬂies compiled to Java bytecode then translated
+. Apps developed in Java plus Android API
+> Java class files compiled to Java bytecode then translated
 to executable than runs in Dalvik VM
 I Libraries include frameworks for web browser (webkit), database
-(SQLite), multimedia, smaller Iibc
-cumin..."await-am zu Mam-WWmania“
+(SQLite), multimedia, smaller libc
+Operating System Concepts _10m Edition 2.48 Silberschatz, Galvin and Gagn: ©2on
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:48**************
-ssfy Android Architecture
-W
-ﬂ-I
-‘IIMEWOM
-limelib'lfiﬁ
+Android
+frameworks JN'
+native libraries
+surface media
+manager framework
+a
+Operating System Concepts _10th Edition 2.49 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:49**************
-A
-W Building and Booting an Operating System
+53"" I I I I
+‘ﬁr/ Bulldlng and Bootlng an Operatlng System
 I Operating systems generally designed to run on a class of systems
 with variety of peripherals
 I Commonly, operating system already installed on purchased
 computer
-. But can build and install some other operating systems
-' ll generating an operating system from scratch
-t Write the operating system souroe oode
-> Conﬁgure the operating system for the system on which it
+' But can build and install some other operating systems
+. If generating an operating system from scratch
+> Write the operating system source code
+> Configure the operating system for the system on which it
 will run
 > Compile the operating system
-t Install the operating system
+> Install the operating system
 > Boot the computer and its new operating system
-WW“tamamuwmwm zsa sllhvuzh-msulvlnnude-“£82m:
+JA
+Operating System Concepts-10th Edition 2.50 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:50**************
-q} 7 Bulldlng and Bootmg L|nux
+‘@Z Bulldlng and Bootlng L|nux
 I Download Linux source code ( )
-I Conﬁgure kernel via “make menuconfiq"
-I Compile the kernel Using “make”
-i Produces lelnuZ, the kernel image
-' Compile kernel modules via “make modules"
-' Install kernel modules into vmlinuz via “make modulesiinstall"
-' Install new kernel on the system via “make install"
-Dummy“... Cummiem-Edm zst Sllhvmnlu. Bllvlnlndélinlﬁﬂll
+I Configure kernel via “make menuconfig”
+I Compile the kernel using “make”
+' Produces vmlinuz, the kernel image
+' Compile kernel modules via “make modules”
+' Install kernel modules into vmlinuz via “make modules_install”
+. Install new kernel on the system via “make install”
+| Operating System Concepts-10th Edition 2.51 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:51**************
-r‘
-MW System Boot
-I When power initialized on system, execution starts at a ﬁxed memory
-location
-I Operating syslern rnust be made available to hardware so hardware can
+wavy)’ System Boot
+I When power initialized on system, execution starts at a fixed memory
+locaﬁon
+I Operating system must be made available to hardware so hardware can
 start it
-. Small piece of code — bootstrap loader, BIOS, stored in ROM or
-EEPROM locates the kernel, loads it into memory, and starls it
-. Sometimes two-step process where boot block at ﬁxed location
-loaded by ROM Code, which loads bootstrap loader from disk
-. Modern systems replace BIOS with Uniﬁed Extensible Firmware
+' Small piece of code — bootstrap loader, BIOS, stored in ROM or
+EEPROM locates the kernel, loads it into memory, and starts it
+' Sometimes two-step process where boot block at fixed location
+loaded by ROM code, which loads bootstrap loader from disk
+' Modern systems replace BIOS with Unified Extensible Firmware
 Interface (UEFI)
 I Common bootstrap loader, GRUB, allows selection of kernel from
 multiple disks, versions, kernel options
 I Kernel loads and system is then running
-I Boot loaders frequerllly allow various boot states, such as single user
-mode I
-gramme... 5.1".”in mm 2:2 Silhvmnlu. ollvlnlndelinlﬁzlltl
+I Boot loaders frequently allow various boot states, such as single user
+mode y V
+Operating System Concepts — 10th Edition 2.52 Silberschatz, Galvin and Gag; @251;
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:52**************
-r‘
-“23$; Operatlng-System Debugglng
-I Debugging is finding and lixing errors, or bugs
+1%???” I I
+if?’ Operating-System Debugging
+I Debugging is finding and fixing errors, or bugs
 I Also performance tuning
-I OS generate log tiles containing error inlormation
-I Failure of an application can generate core dump ﬁle capturing
-memory oi tne process
-I Operaling syslem failure can generate crash dump lile containing
+I OS generate log files containing error information
+I Failure of an application can generate core dump file capturing
+memory of the process
+I Operating system failure can generate crash dump file containing
 kernel memory
-I Beyond crashes, perlormance tuning can optimize system performance
-. Sometimes using trace listings of activities, recorded for analysis
-i Profiling is periodic sampling of instruction poinler lo look lor
+I Beyond crashes, performance tuning can optimize system performance
+' Sometimes using trace listings of activities, recorded for analysis
+. Profiling is periodic sampling of instruction pointer to look for
 statistical trends
-Kernighan's Law: “Debugging is twice as hard as writing the code in the
-first place. Therelore, ll you write the code as cleverly as possible, you
-are, by definiiion, no‘ smari enough t0 debug it"
-gammy“... Ccmntieiiwm as; Silhvmn-tz. GIIvln-ndG-qmozuu
+Kernighan’s Law: “Debugging is twice as hard as writing the code in the
+first place. Therefore, if you write the code as cleverly as possible, you
+are, by definition, not smart enough to debug it.”
+Operating System Concepts-10th Edition 2.53 Silberschatz, Galvin and Gagne @251;
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:53**************
-‘4,3? Performance Tuning
-I Improve periorrnance by removing bottlenecks
-I OS musi provide means of computing and displaying measures of system
+46%;‘? Performance Tunlng
+atlas 1"
+I Improve performance by removing bottlenecks
+I OS must provide means of computing and displaying measures of system
 behavior
-I For example, “10p” program or Windows Task Manager
-Wmsm mumm- 15. mm.‘ W“ .M “View
+I For example, “top” program or Windows Task Manager
+| Operating System Concepts — 10th Edition 2.54 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:54**************
-r‘ .
-‘W Traclng
-I Collects data lor a speciﬁc event, such as steps involved in a system
-call invocation
+tar??? Tracing
+I Collects data for a specific event, such as steps involved in a system
+caHinvocaﬁon
 I Tools include
-I slrace i lrace syslem calls invoked by a process
+I strace — trace system calls invoked by a process
 I gdb — source-level debugger
-I perfe collection ol Linux performance tools
-I (cpdump — collects network packets
-Mme.““Well-5.1.,“ 255 Mammal“mug-“km
+I perf — collection of Linux performance tools
+I tcpdump — collects network packets
+I Operating System Concepts -10th Edition 2.55 Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:55**************
-~99“ BCC
+iii“
 I Debugging interactions between user-level and kernel code nearly
-impossible without toolset that understands both and an inslrumenl
+impossible without toolset that understands both and an instrument
 their actions
 I BCC (BPF Compiler Collection) is a rich toolkit providing tracing
-fealures for Linux
-I See also the original DTi'ace
-I For example, disksnooppy traces disk IIO activity
-mm) T Brrzs Lulu!)
-ms . mum rt s o. 21
-1946.33965000 R a 0.26
-istmtsesoao v em 0.96
-issmmtooc R 4096 0.56
-1951.14171000 it 4095 0.35
-I Many otherlools
-Wm", sit“... Cami , m- mm z as Sllhmzhlu. um“ m @Ivnl mi:
+features for Linux
+I See also the original DTrace
+I For example, disksnoop.py traces disk l/O activity
+TIME(s) T BYTES LAT(ms)
+1946.29186700 R 8 0.27
+1946.33965000 R 8 0.26
+1948.34585000 W 8192 0.96
+1950.43251000 R 4096 0.56
+1951.74121000 R 4096 0.35
+I Many other tools
+A
+Operating System Concepts-10th Edition 2.56 Silberschatz, Galvin and Gagne ©2013
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:56**************
-End of Chapter 2
-—
+Operating System Concepts - 10th Edition Silberschatz, Galvin and Gagne ©2018
 
 ***************Ending Page***************
 

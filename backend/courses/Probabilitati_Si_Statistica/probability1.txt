@@ -1,762 +1,818 @@
 ***************Beginning Page***************
 ***************page number:1**************
-22 [ebnune 2022
+22 februarie, 2022
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:2**************
-. anele PS: mmmm 1w- mmmmnm “mm
-mm mm Sumua
+o Primele §ase séptéméni: Teoria probabilitégilor, ultimele
+§apte séiptéméni: Statisticé.
 
-. 5." “mu-m,‘ WE “mm” ,. ‘mp-ma Um",
+0 Sase seminarii, §apte laboratoare §i treisprezece cursuri;
 
-. Dmli pun-mu: mmnnedmle mule mane mammal a
-“ha-‘mm m1 T,
+0 Doué punctaje intermediare sunte asociate seminarelor §i
+laboratoarelor: T1 §i T2:
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:3**************
-. nuinmmaiSI-Icnmc riicunkﬂmzlcdihﬁmlc
-1mm d: lemma! (mam-m) mmmmmmwum
-w a: mm um ‘=1: n X m w). mm. m: n mm“
-.1! mum-e . mmphm (T, > so)
+0 T1 este suma a §ase note: céte un test care se d5 1a ﬁecare
+sfér§it de seminar (10-15 minute). Trebuie ob'ginute cel pu'gin
+30 de puncte (din cele 6 >< 10 : 60), aceasta este 0 condigie
+de promovare a disciplinei (T1 2 30).
 
-. 1; mcampune a.“ m» vunnememtl cm“ “MM
-m: plum 4n .1. pm“ mm. ‘wk a: 11mm mm
-0mm ‘A Mm w do vunm ldm me 20+ m Z so)
-mm m. a mammmmmn impugn (T, , an)
+o T2 se compune din 20 de puncte prezenta curenté 1a labora-
+tor plus 40 de puncte pentru temele de laborator. Trebuie
+obtinute cel pu§in 3O de puncte (din cele 20 + 4O : 60),
+aceasta este o condigie de promovare a disciplinei (T2 Z 30).
 
-m cxmixenum do (minke suu Inﬂnn'
-Punnajel: ,1 “wk M, R sham,‘ mm a! hepuml mm
+Nu existé sesiune de restange sau mériri!
+Punctajele §i notele ﬁnale se ﬁnalizeazé inainte de inceputul sesiunii!
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:4**************
-. Formula de mun a mum-.1“. mm
-T Z 1. ¢ n
+o Formula de calcul a punctajului ﬁnal
+T : T1 + T2.
 
-. PunzHM m, x: Innliannl m mil an.“ “\tenur, a»
-m r E [mm] ’ Mai 1 E pmw) mm, r E
-[wan] a m; 7‘ 'r E [w mo) _ ma 5.1‘ E m nu) 7,
-Mun. Tr [110,120] “mm
+o Punctajul acesta se transforméi in nota ﬁnalé ulterior, ast-
+fel: T € [60, 70) —+ nota 5, T E [70, 80) —> nota 6, T G
+[80,90) —> nota 7, T 6 [90,100) —> nota 8, T G [100,110) —>
+nota 9 §i T 6 [110,120) —> nota 10.
 
-. Amhzilpunnijek mm“ V r, .- n 4mm.“ llﬁeyuke
-so dz mm
+o Ambele punctajele implicate — T1 §i T2 — trebuie sé ﬁe peste
+30 de puncte.
 
-. Dan r, \ :m Wm. n est: \ 1n‘ am, Wm. m
-mpmmmu
+o Dacé T1 < 30 gi/sau T2 este < 30, atunci disciplina este
+nepromovaté.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:5**************
-Exﬂmmcnt mm i. mm“! mm
+Experiment aleator §i eveniment aleator.
 
-mmmem ‘1mm
+Experiment aleator
 
-hmm mm
+Eveniment aleator
 
-5mm.“ mm" V mm“, u mug“
-mm a: whim“
+Evenimente aleatoare - proprieté'gi §i nota'gii
+Functia de probabilitate
 
-mm. ¢= ymbamlnac:
+Functia de probabilitate
 
-Pmbamlnxn mmmw 1km.‘ mm.“
-mm“,
+Probabilitatea evenimentelor aleatoare elementare
+Exercitii
 
-Evzmmxnlu mm“
+Evenimente aleatoare
 
-mm“ ¢= ymbamlnac:
-ExbhmiPhY
+Func'gia de probabilitate
+Bibliography
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:6**************
-. Mmmdmmmram [mm-mum] nimtavmlu'yundzl
-m...“ m1mmmmumwmmmmmm
-m. pm: ﬁ umnluﬂ mm“ “Mum mum a“ 1
-dim mulllm¢ do lemma’! Double em mm“
+o Notiunea de empem'entd sau (experiment) aleato'r' corespunde,
+intuitiv, unui proces in urma caruia obtinem un rezultat care
+nu poate ﬁ cunoscut inaintea desfégurarii procesului, dar a
+carui multime de rezultate posibile este cunoscutii.
 
-- ﬁlmmmmmmmk u." mfel dlrl'pmmlm m
-41¢ wael .m ahwrvuml mu“ $1 mm nx m. plmaplnt
-$1., mm‘ ﬂputcapaﬂmpa h cfcnuarca (sznmmtuhn
-.1an Expenme'mek m mBanlak 1m.- pncnze a» m
-a n mnnn:
+o Cel care analizeaza rezultatele unui astfel de experiment este
+de obicei un observator neutru §i mai rar un participant
+de§i, uneori, ar putea participa 1a efectuarea experimentului
+aleator. Experimentele in majoritate sunt practice dar pot
+ﬁ §i abstracte.
 
-. mm“!!! W {ml-1m...‘ meaty: m.‘ dim“ ,Mm
-m mxmumul m m 61¢ ‘Kg-mam] :2 mam»: 1mm
-.m: m. mm v“. mm“ d, h “n mm, an,
-avem m aunt» M smgul cxpcnmanl, m. ﬂu! =1» pone
-repel:
+0 Rezultatele unui experiment aleator sunt datorate §ansei,
+iar mecanismul prin care ele (rezultatele) se produc intere-
+seaza mai putin. Vom considera ca, 1a un moment dat,
+avem in atentie un singur experiment, chiar daca e1 se poate
+repeta.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:7**************
-Deﬁmhun 1
-s: "W" “mm” mm m WM, ,1 (w m1,”
-W m mm.“ 4mm“. m. m MM um“ MM
-M cunmculz m Wm,» ;1 M pmkﬂ 1m.” m mm
-(dmhu
-. mm.‘ un m‘ u Ilihu un) dmm Md: m ‘5)
-mm, mwmummwnk ;
-. mum mm! mm‘ w Mm um mm wmlzmimle
-(u 1111.1)‘ .zm)‘ mm m m.‘ =1= I
-- mum M=m=¢=. WWW aparulema m mm.
-mm z») p: “mm u. Wm Mm]: pm.“ ml
-mmhmw, u ,1‘ (my, (mm a) Q
-. Dani upenmn'nlul m1; m mnunleu mum dc mm .
-m. Mm.‘ m mum“ n a m mm m1 l 2 n a
+Deﬁnition 1
+
+Se nume§te experiment aleator un experiment al cciruz' rezultat
+nu este cunoscut d'mainte, dav" ale céruz' rezultate posibz'le
+sunt cunoscute in totalitate §i care poate ﬁ repetat in condijiz'
+identice.
+
+o Aruncénd un zar, va apérea una dintre fe'gele {1, 2, . . . , 6},
+féré a §ti cu siguranigﬁ care dintre ele. J.
+
+0 Aruncénd douéi zaruri, va apérea una dintre combina'giile
+{(1, 1), (l, 2), . . . , (6, 6)}, féré a §ti care dintre ele. J.
+
+o Aruncénd doué monede, cu siguran'géi apare stema (s) §i/sau
+banul (b) pe améndoué, iar toate rezultatele posibile sunt
+combina'gnle (s, s), (5, b), (b, s),(b, b). u}
+
+o Dacé experimentul consté in misurarea duratei de via'gé a
+unei baterii, atunci rezultatul va ﬁ un numér real :1: 2 O. ‘a
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:8**************
-. “mm m, ekpenment mm “mm remllaml ace»
-m‘ Manda.“ m mm Mum ‘. n ma“ M = m
-‘m (Gm mulﬂmel umauutl I mum»: mm“) ‘lam
-.pm d n PM“ m mum-m rlzmzmnr
+o Analizénd un experiment aleator, urmérim rezultatul aces-
+tuia; intotdeauna un singur rezultat se va produce, féré a §ti
+care (din multimea cunoscuté a rezultatelor posibile). Vom
+spune c5 se produce un evem'ment elementar.
 
-Deﬁnmnn z
+Deﬁnition 2
 
-w mum 1mm! al 1mm :11»me mam :2 nnmtﬂz
-mum‘ an.“ Emma, ‘av mam.“ mum .l “mm
-mm! A: kw» mu 1| wemmemelox eiemenrm - natal an
-n
+Un rezultat post'bil al unui experiment aleator se nume§te
+eveniment aleator elementar, tar multimea acestom se nume§te
+spatiul de selectie sau a1 evenimentelor elementare - notat cu
+Q.
 
-. on» mm" mm wum‘ a». m1 dun“ zlzlnznlzlz
-mum" n Ema-‘Pm V y a,“ mm". um, p. m. a
-m Baal: (annual 9614th mpmmenudm
+o Dupé efectuarea unui experiment, doar unul dintre elementele
+multimii Q se “intémplé” - §i asta conform §ansei pe care o
+are ﬁecare rezultat posibil a1 experimentului.
 
-. my“ Mum!“ eXPcnmmmlm 1e PM Inc: [Mmlnmcmm
-Iud:z:'.1,1ar mknnﬂ PM! a .m. m. am a. mm“; ...
-Sm: at My“: mum-m do mu“ din cm Iawd pine
+o Asupra rezultatelor experimentului se pot face rationamente,
+judecé'gi, iar interesul poate ﬁ atras nu doar de rezultatul in
+sine cét de tipul rezultatului, de familia din care face e1 parte.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:9**************
-- 2mm ink! Mu...“ a! “mm mm dmmtal
-Deﬁmtmn a
-s, Wm“, mm.‘ mam a “mu “mun” A in»
-n1,“ a: may" A g n
+0 Extindem astfel no'giunea de eveniment aleator elementar.
+Deﬁnition 3
+Se nume§te eveniment aleator o anumz'td submulﬁime a spati-
+ulm' de selectie: A Q Q.
 
-. Arumand m m!‘ rpm; <mmmﬂ, dcwm m n z
-(m, ‘5), =1 pm mm“ mm‘.- W w, m mlmi!
-w‘ an“: ﬁlznmunznlu! 11“wa (2,“) §
+o Aruncénd un zar, spa'giul evenimentelor elementare este Q :
+{1, 2, . . . ,6}; ar putea interesa apari'gia unei fe'ge cu numir
+par, acesta este evenimentul aleator A = {2,4,6}. J.
 
-- “mm an“: m", n Z (“11.04; ‘(4.51), an:
-Antarexeuﬂ u suma we!“ e11: A‘ amnu ale evemmenml
-mm:(lxaLungw); ;
+o Aruncénd doué zaruri, Q I {(1,1),(1,2),...,(6,6)}; dacé
+intereseazéi ca suma fetelor este 4, acesta este evenimentul
+aleator A : {(1,3), (2,2), (3, 1)}. of.
 
-- hamncuaaﬂoulmoneﬂe, n Z (mm. mmmm m
-zmmm mm ‘Md: an p: wk an“; “W m
-amnw =|= A : m “1.0.51; 1a! “1mm ynn ‘ye :el
-mm m M“ (d: a“; “We: 1pm ikma“ m, in,’
-m1‘ E:([x‘§),(;,b],(n,§]) ;
+o La aruncareaadoué monede, Q : {(s, s), (s, b), (b, s), (b, b)}.
+Evenimentul aleator "fetele de pe cele doué monede sunt
+diferite” este A : {(s, b), (b, 5)}, iar cel deﬁnit prin "pe cel
+pu'gin una dintre cele doué monede apare stema” este, for-
+ma1,B I {(s,s), (s, b), (b, 5)}. 4|
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:10**************
-- mm \m cvemmun Mum an: deﬂnl! Dim mm.“
-W mam mmwm n a 1.1m. a.“ "=me
-elemental: (Mum expenmenmhn] car: “mu; my
-m; mm“
+o Uzual un eveniment aleator este deﬁnit prin intermediul
+unui predicat: evenimentul va ﬁ format din evenimentele
+elementare (rezultatele experimentului) care satisfac predi-
+catul respectiv.
 
-- un 1mm‘ mm: I.“ pnwl‘ rut-n4‘ m mblmlllxm: .
-mnhunu do evenlmnnle dmmm'e n
+o Un eveniment aleator este privit, formal, ca o submuligime a
+multimii de evenimente elementare Q.
 
-- man maximum-mu (m1 Rm.“ mm»),
-Ilunu once submlﬂhme A g n m wmmu mmmm
-mam:
+o Dacé Q este o multime discreté (adicé cel mult numéirabilé),
+atunci orice submul'gime A Q Q este consideraté eveniment
+aleator.
 
-- n": n I.“ an: d\!z|eti,llunz1 mmm mm." :ubmulhrm
-Pm a =mmm mm“
+o Dacé Q nu este discreté, atunci numai anumite submul'gimi
+pot ﬁ evenimente aleatoare.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:11**************
-Dkﬁmuun A
-Syuvlm Munevzmmznkaleﬂul A c n nreahnu: $014 n y»
-mm ms, in um 4:sz :zpznmzwtulm MM’, mm
-mmtul mm ,‘mlm (vuultzlnlj “PM! Lm A
-- Evmmenule-uuzoue m mm nub/1m‘ cu lum m“
-a.» "mum imam“. A‘ s, Cm‘ new-m,“ m.’
-Jonlnm mum“ n u ﬁ o Mum mm“ vom consid-
-ﬂm an‘: “mum. i1“. n .i. \m mum-m in“.
-- m "m hum mm“ mm submumml a". n n :venr
-mm datum, Fmpl'lziﬂll: n “mm cu mm...“ 1=
-mum: asuyri mmmemelnr mum"
-V a an: “WNW ‘"Wﬂslbﬂ (M ,, mm: “ma-m,
-V n em :I/zmmmtu! SW (m (Gm V .5 "gum: mm’
-mm»,
+Deﬁnition 4
+
+Spunem cd un eveniment aleator A Q Q se realizeazé sau se pro-
+duce dacﬁi, in urma efectudm'z' empem'mentuluz' aleator, eveni-
+mentul aleator elementa'r (rezultatul) apartine luz~ A.
+
+0 Evenimentele aleatoare se noteazé, de obicei, cu litere mari
+de 1a inceputul alfabetului: A, B, C etc. Deoarece, in ma-
+joritatea aplicatiilor Q va ﬁ o multime discreté, vom consid-
+era c5 orice submultime a lui Q este un eveniment aleator.
+
+o Nu mai facem distinctie intre submul'girni din Q §i eveni-
+mente aleatoare; proprieté'gile §i operatiile cu multimi se
+transferé asupra evenimentelor aleatoare.
+
+- Q este evenimentul imposibz'l (nu se realizeazé niciodaté);
+
+- Q este e'uemlmentul sigur (sau total - se realizeazé intot-
+deauna);
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:12**************
-V A... A. s g n mnl evemmmm MAM», m...
+- dacé A, B Q Q sunt evenimente aleatoare, atunci
+o A U B este de asemeni eveniment aleator care se realizeazi
+cénd se realizeazé micar unul dintre evenimentele A §i B;
+o A O B este de asemeni eveniment aleator care se realizeazé
+cénd se realizeazé §i A §i B;
+0 A \ B este un eveniment aleator care se realizeazé cénd se
+realizeazé A dar nu §i B;
 
-. A A E m Am... m...“ A‘... L... Rm...“
-a... w “1...... m. ..... “WWW... A .- A,
+- dacé A este eveniment aleator, atunci A : Q \ A este de
+asemenea eveniment aleator §i este numit evenimentul con-
+trar lui A: A se realizeazé ori de céte ori A nu se realizeazé;
 
-.7 A 1 B 5.. .mm. mm’. .Am m. “mm...
-c... .. “1...... .. A v1 s.
+- dacé A Q B, atunci se spune ca evenimentul A i1 impliczi
+pe B;
 
-. A \ B m... mm. MW...‘ "m... m... .c
-nethn A an M E.
-
-V .1... A m .mm. A“... A...“ A m A ...A d:
-“www.mm... “5...... .... ......... mm”... m
-W1... A A .. realm“ .1. a. m‘... A mu: MM,
-
-V A... A g s‘ W... .A mu... .. mm... A .1 m’...
-p. a,
-
-V A... AME Z a: .A w...- .. A .. E A... “mm... (9..
-MW»). M Ar‘ s f a‘ A n B m... camiaumle,
+- dacé Aﬁ B : Q se spune c5 A §i B sunt incompatibile (sau
+disjuncte), dacé A O B 5i Q, A §i B sunt compatibile;
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:13**************
-- i“ M nmllar .Z w m... WWW.“ mtnsmfu m.
-numEr m [nu mﬁlm numimbﬂ) dcevemmnnle mm.“
+o in mod similar se pot deﬁni 'reumunea sau intersecﬂa unui
+numér ﬁnit (sau inﬁnit numérabil) de evenimente aleatoare.
 
-51mm s: [mammmwmmmumm “whim.
-ﬂ:((w] 1 1 h, :s), mm 35dee'vemmz11ledemenhle
-m A ZWWM “mm mm,‘ m v.11; Z “mm m
-"m man a»; 4“
+Exemplu. SE considerim ca experiment aruncarea a doué zaruri:
+Q : {(i,j) : 1 g z',j g 6}, sunt 36 de evenimente elementare.
+Fie A evenimentul “suma zarurilor este 4” §i B : “zarurile sunt
+mai mari decét 4”:
 
-A {u 1:. (2‘ 2:. :1‘ n} v B (a 51. (5‘ 61. (5‘ 5:. (5‘ 6:)
+A : {(1, 3), (2, 2), (3, 1)} §i B : {(5, 5), (5, 6), (6, 5), (6, 6)}
 
-Z A u E Z((1‘11,(¢‘1;,(;‘1),(5‘5)‘(5‘¢m,51‘My),
+- A U B : {(1,3), (2, 2), (3, 1), (5,5), (5,6), (6,5), (6,6)};
 
-Z A n B Z W A x1 s mm evmlmenw Incompanbﬂh
+- A H B : Q - A §i B sunt evenimente incompatibile;
 
-'1 Z (ll-1)‘ (1.11‘ (1- 11‘ (ML [H]- [6-51) I
+- Z I {(1,1),(1,2),(2,1),(3,2),(2,3),---(6,6)}- ‘Y-
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:14**************
-. vmmummmu “mummmmmmi
+0 Vom considera in aceastii sec'giune cé Q este cel mult numéra-
+bilé:
 
-b"!
-n Z MM,‘ nan.“ w m. “mm
+Q I {w1,w2, . . .} (ﬁnitéi sau inﬁnit numéirabilé).
 
-. Mm- “, WWW m ca 9....‘- d: plane ma: a:
-1 mm (m: w Mk R.‘ am =mm in.“ m
-my“ d! a l: mm." ,. mm. W pm
+o No'giunea de probabilitate are ca punct de plecare ideea de
+a asocia céte un numér real ﬁecérui eveniment aleator cu
+scopul de a 1e misura §i compara astfel §anse1e.
 
-. Mm mebabmlﬂﬂl x hueuﬂ‘ mm ﬂak‘ v: [aptul
-d mm m m. m. hm.“ ‘m. .3 n m
-1m; a mm." m. mm
+o Deﬁniigia probabilité'gii se bazeazé, printre altele, pe faptul
+cé unui eveniment care apare mai frecvent trebuie sa ii core-
+spundé o probabilitate mai mare.
 
-. thmmam m... mm, mm A R n m. w PM]
-Ame]: are mm; deﬁne“ MM dc Pmbnbxhhxte
+o Probabilitatea unui eveniment aleator A se va nota cu P(A).
+Axiomele care urmeazé deﬁnesc funcﬁa de probabilitate.
 
-. p, w mm “mm a: =mm Mm ., Pm m.
-Gwen: m" a: ymbabllﬂaw
+o Pe o aceeagi mul'gime de evenimente aleatoare se pot deﬁni
+diverse functii de probabilitate!
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:15**************
-Mum 5
-YKuLvnPgmv) DMD =51: mullmlu (vzvnmznlzlar almnmz
-mm,“ m ,Wm M”, a mm .1. ,m
-mum: mm» mm m o 1M, P 14me 1mm
-"mm" Mm (n. ML mm m1, M Wm
-Axwmnl 0 < PM) Q L palm on‘: cwvummz alcamr
-A
-Amama 2 Fm] : l :1 Hz) : 0
-mm 1 M "mm," A.‘ A2. ‘AM M,
-mm, ‘Wm MM “WM “W
-P(U A.) , EMA!
+Deﬁnition 5
+(Kolmogo'ro'u) Dacii Q este multimea evenimentelor aleatoare
+elementare ale 1mm; experiment aleato'r, 0 funcigie de proba-
+bilitate asociatii acestuia este o funcﬁe P deﬁnitd pe familia
+even'imentelov" aleatoare (in cazul nostru 73(9)) care satisface
+Axioma 1. O g P(A) g 1, pentru om'ce e'uem'ment aleator
+A.
+Axioma 2. P(Q) : 1 §1LP(®): 0.
+Axioma 3. Dacd evenimentele A1,A2,...,Ak,... sunt
+eveni'mente aleatoare mutual incompatibile, atuncz'
+OO OO
+P (U Ah) I Z P(Ak).
+ktzl 16:1
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:16**************
-- Mm.’ 1 m 1mm: a plothlmLeu mmu 1mm "m
-m, Mum m: m m1. “mum F album“!
+0 Amioma 1 ne spune c5 probabilitatea asociaté unui eveni-
+ment aleator este un numér nenegativ §i subunitar.
 
-- Anomu Zuawclonoexeiulhl ,1 =Xpe|1menhﬂuhcupmh
-MM! 1‘ .. gin‘!- in mm... n 1n Phu, m. mm. =5
-mmmenlu! mlywbn nu w Dwduze “mad-l:
+o Axioma 2 araté c5 orice rezultat a1 experimentului, cu prob-
+abilitate 1, se gése§te in multimea Q. in plus, mai spune c5
+evenimentul imposibil nu se produce niciodaté.
 
-- Auvmn 3am! ca‘ pm“. mm: w a: mmmznlc dam“
-mukuﬂ \nsnlnpanhvk‘ pinbabxhtaea a: i u Wm.“ mki!
-umﬂ dmm an“: Mmmm m mm mhabmmwm h.’
-m“, mmmmdm
+o Amioma 3 araté c5, pentru orice §ir de evenimente aleatoare
+mutual incompatibile, probabilitatea de a se produce micar
+unul dintre aceste evenimente este suma probabilitétgilor tu-
+turor evenimentelor.
 
-. m and m me m1 ale mm nmkpm m mum 9|
-d PW > u. w-n. a mm a! m.“ k)‘ mm 1
-“we”: u converEFM-l xenel 41m membml 4mm
+o in cazul in care §iru1 este inﬁnit (in'gelegénd prin aceasta §i
+c5 P(Ak) > 0, pentru o inﬁnitate de indici k), axioma 3
+garanteazé §i convergen'ga seriei din membrul drept.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:17**************
-Ympmkwn 1
-m AHA, ‘Am mm“, “(mm MW WWI,
-M: MM.
-P(U AA) : Emu
-pm; 56.1mm \n mm 3, A. : a, Vk ;- M 1 I
-mmm 2
-m A M E MAM” mom, Mm
-m Pm Z PM H Bl ~ PM \ B1,
-n.) PIA A. E) Z PIA] 7 HA w 51+ m],
-[m] HZ] 1 PM)
-(w) M A Wm s (A ; E), m‘. PIA) < m]
+Proposition 1
+Fie 141,142, . . .,Am e'uemmente aleatoa're mutual incompati-
+bile, atuncz' m m
+
+P (U A16) I Z P(Ak).
+
+k:1 k:1
+
+proof: Considerém in axioma 3, Ak : Q, V k > m + 1. I
+Proposition 2
+Fz'e A §z' B evemmente aleatoare, atuncz'
+(i) P(A) : P(A O B) + P(A \ B);
+(ii) P(A LJ B): P(A) — P(A O B) + P(B);
+(iii) P(Z) : 1 — P(A);
+(iv) dacd A implied B (A Q B), atuncz' P(A) g P(B) .
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:18**************
-mm h) “mm. 1 Mm m Z M, Z AURA; Z N,
-(m Z MW: u) 5| pmponun L (In) uuhﬂm PIVPW'M | 5|
-mm ‘ Z Pm] Z mm“; (w, Nahum um...“
-W... m] Z PIEWZMW Z PWZPIEW > Fm
+proof: (i): in propozi'gia l luém m : 2, A1 : AOB, A2 : A\B..
+(ii): se folose§te (i) §i propozitia 1. (iii): utilizém propozi'gia 1 §i
+axioma 2: 1 : P(Q) : P(A)+P(Z). (iv): conform (i) §i axiomei
+1 avem P(B) : P(BQA)+P(B\A) : P(A)+P(B\A) 2 P(A).
 I
-Mum a
-WWW‘ “MW i. .1 “Mm; [M Am, ‘A’,
-um! mm“, ntmwnw, MW
-
-P<O A,)Z§Pw1 2 144th +
-
-+( 11"‘ Z P(AA_‘HA§H ﬂAk,)¢ +
-
-M h M m
-ZlZm-‘mw m Mm)
+Proposition 3
+(Principiul includerii 392' al emcludem'z') Dacd A1, A2, . . .,Am
+sunt evenimente aleatoa're, atuncz'
+m m
+P<U Ah) I ZP(Ak)— Z P(Ak1 nAk2)+---+
+16:1 kzl 1<k1<k2gm
++(_1)1"+1 Z P(AklﬁAkzﬁ...ﬁAkp)+-~+
+1§k1<k2<...<kp<m
++(—1)m+1P(A1 n A2 n . . . n Am).
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:19**************
-h... mum w“. .Wv- dupl m m,“ m Z 7 m...
-Plopozvkn 2 (n) Fruﬂvunem “um d PIVPIIBR'AI HIE ad:
-m“ m“. m [m 11 ZWW Mm
-P(O A.) Z P(“U\A;) P RUM) Mn]+mm1 Z
-H m , H m \ ..\ <1)
-p( U A.) P [ U [AmAml] = mm]
-PM. Wm m, mm, WM.“ Wm mum ,1 Mm,"-
-F(WU‘M) Z "£me 2 PW ﬂAhJ+ Z
-Z, M WM .
+dem.: Procedém prin induc'gie dupé m: pentru m : 2 avem
+propoziigia 2 (ii). Presupunem acum cé proprietatea este ade-
+vératé pentru orice (m — 1) evenimente aleatoare.
+m mil mil
+P(U Ah) :P<U Ak)—P M U Ah) nAm1+P(Am):
+19:1 kzl [6:1
+(1)
+mil mil
+:P<U Ak) —P[U (AkﬁAm)] +P(Am).
+k:1 16:1
+Pentru primele doué sume aplicém ipoteza inductivé §i ob'ginem
+m—1 m—l
+P(UAk):ZP(Ak)_ Z P(Ak1nAk2)+---+
+16:1 kil 1§k1<k2<mil
 (2)
-+£ 11" Z PWMN \vA;,,1+ Z
-WM ‘NZ,
++(—1)P+1 Z P(AklﬁAk20...ﬁAkp)+-~+
+l§k1<k1<...<kp§mil
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:20**************
--(mmmmAm HA“ ,1‘
-P Umwm] :mfmknm (a)
-Z z FIMF'AM'ANH +
-WWW‘
-+11» \ z PW ﬂAh w n A1, nAm]+ ‘
-+[7l)"‘“F[A| w" "A" ,Mm)
-0mm“ m‘ u) I, (1» Mm Wm“; mu I
++(—1)mP(A1 O A2 O . . . O Am_1),
+mil mil
+P l U (Ak m Ann] : Z P<Ak m Am>— <3)
+16:1 kzl
+: Z P(Ak1mAkznAm)+---+
+1§k1<k2§mil
++(_1)1”+1 Z P(Ak1 OAkZ m...OAkpnAm)+---+
+l<k1<k1<m<kp<m—l
++(—1)m+1P(A1 n A2 n . . . n Amil n Am).
+Combinénd (1), (2) §i (3) obtinem proprietatea dorité. I
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:21**************
-- v“... mu (u P[u) WWW». mm...“.\m “my <17
-(mmhl m v” E n Ummna mm! a‘ Pehlm We
-mum- A‘ m,
+o Vom nota cu P(w) probabilitatea evenimentului aleator e1-
+ementar {w}, Vw € Q. Utilizénd axioma 3, pentru orice
+eveniment A, avem
 
-PM) Z Z PM (A)
+PM) I Z PM- (4)
+wEA
 
-- Dan A mm“ m. m1. am dukmk‘ “um-um a!
-mm 1-.- are n M; mm! nu Em a an: dad A may":
-m. m“ mam» a. dmmk a...‘ m. M an: A ..~.
-mummea m:
+o Dacé A con'gine un numér ﬁnit de elemente, atunci suma de
+mai sus este 0 sumé ﬁnité sau este o serie dacéi A contine
+un numér inﬁnit de elemente. Suma este nulé dacé A este
+multimea vidé.
 
-. Ubhrwm a Mm“ mum“ i mug, a: pub-mm“:
-a»: mm",- Wm z m
+o Ob'ginem 0 deﬁni'gie echivalentéi a func'giei de probabilitate
+dacé inlocuim axioma 3 cu
 
-“mm. v Mn. m, mm,“ ‘m, A
-Pm Z Z rm]
+Axioma 3’. Pentru orice eveniment aleator A
+P(A) I Z P(w).
+wEA
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:22**************
-1n mm mm,“ n mm um Em.‘ mm.‘ m1 Pm»
-abﬂe ,1 m Mm mm
-
-n Z (MM. My Flu.) Z pm k ‘ s w
-an...“
-
-Pm! : 1: 2PM : "m1: PM :p: 5v!
-Sizunndzdm, m a‘... m, ..,. mum 1mm A‘ n. A‘ Z k,
-A :(wm "My MW
-
-m1:2m.1:§: ‘g
+in multe situatii Q constéi din evenimente elementare egal prob-
+abile §i in numér ﬁnit:
+atunci
+n 1
+P921: Pu: '. .Pw-z Iiv'.
+() 2(1) 7110,16, <1) p n»
+Si considerém, in acest caz, un eveniment aleator A, cu |A| : k,
+A : {w¢1,w12,. . . ,wik}, atunci
+k
+k IAI
+P(A) I Z P(w¢]) z i I i.
+n IQI
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:23**************
-A... mm... m m M
-mm...“ <
-D“. Mm“... mm... “my...” m. zgvi Fmbublk
-1;. m numﬂv ﬁmll. mm. mum...“ m. Mm“:
-Bx»... A .1 Wm... m mm... a..." “may... .1. n1.
-man: .1... A ,. mamiﬂi .1: :Immi: a... n
-. 1.. .4... an w.b.........=. m... "mm. .1“... n.‘ mm
-.1. “1.... lavnnmk n...“ .......=..| um! a! m... Pm...
-P..¢...,¢.1¢.M pmhnbllIl-lhlo: dmmecpmhkmldnnumXI-ue
-. Sm’... ... m. R paste n...“ mm»... .1. m. .... luv
-bme 1. m am...» n. m1: pm... an» mm“... M...-
-m.n...e .............=...... 1..“me mun-mm...
-m... mum... mm... .| smmnel evemmenle m“...
-m. “mum! ... vmbabﬂnlh =5...
+Am demonstrat in acest fel
+
+Proposition 4
+
+Dacci evenimentele aleatoa're elementare sunt egal probabile
+(gt in numdr ﬁnit), atuncz' probabilitatea unuz' e'uem'ment
+aleator A se determinci ca mportul dintre numdrul de ele-
+mente din A §i numd'rul de elemente din Q.
+
+o in acest caz probabilitatea unui eveniment aleator este numérul
+de cazuri favorabile supra numérul total de cazuri posibile.
+Practic, calculul probabilitétilor devine o problemi de numirare.
+
+o Situagiile in care se poate aplica rezultatul de mai sus tre-
+buie sa ﬁe distinse cu grijé pentru c5 nu intotdea'zma eveni-
+mentele elementare sunt egal probabile. Drept reper putem
+folosi principiul subin'geles a1 simetriei: evenimente similare
+sau “identice” au probabilité'gi egale.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:24**************
-mm,“ Munu rind “mm u m: mm “m .9 mm
-a am: m1: are wall Prabmmm ¢= a n mm: um m
-um mu \nkdzculun dllznv: duuhnknhc ﬂtlm Wm“
-m. m. pulem pump.“ :l ﬁenre (“1m m mm w.“ a!
-“mm A
+Exemplu. Atunci cénd extragem o biléi dintr-o urné se in'gelege
+cé orice bilé are aceea§i probabilitate de a ﬁ extrasé. Dacé in
+urné avern bile de culori diferite: doué bile albe §i trei bile negre,
+nu mai putem presupune céi ﬁecare culoare are acelea§i §anse de
+a ﬁ extrasé. a}
 
-mm a“; n numb m m mm‘ “mm.” ‘s
-apaﬁ p! m: unul M" humus]: m, A) I.“ “q.
-a,“ M P: m, mm [1L2 an: mu mm“: a‘ m P: 0»
-Mk we numuele 2‘ a .. t mm h mum m1“. mm,“
-anBIMlMI 1 M mm a1! egm cu a (damn: 1m numm a
+Ememplu. Dacé se aruncé un zar 0bi§nuit, probabilitatea s5
+apari pe faté unul dintre numerele {1,2,...,6} este aceea§i.
+Dacé insé pe trei dintre fete este inscris numérul 1, iar pe cele-
+lalte fete numerele 2, 3 §i 4, atunci, la aruncarea zarului apari'gia
+numérului 1 nu mai este egalé cu a celorlalte trei numere. J.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:25**************
-. Emm “mm 11,1115
+o Evenimente aleatoare: 1.1, 1.3, 1.5
 
-. mm & pwbabmme n 1 (m 112mm [XiUHMr
-u 5 (m. n s). m (m. u a). u n
+o Func'gia de probabilitate: 11.1 (b,c), 11.2 (c), 11.3 (sau 11.4),
+11.5 (sau 11.6), 11.8 (sau 11.9), 11.14
 
-. mm 1m, u as‘ n w
+o Rezervﬁ: 11.12, 11.18, 11.19
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:26**************
-5mm
+Sfér§it
 
 ***************Ending Page***************
 
 
 ***************Beginning Page***************
 ***************page number:27**************
-n 1m “mom 1,1 a a mm Fe 1mm» Mm mm o
-mm‘ cw (1| m! mm. PM...“ mm Mm...“ m.’
-mmm eiememm pom n damn! mm [n mm m n 1
-mm. ml)
-n : mmmm ‘anon a» 1
-.) “MWMHHHWMMW A, Z mam.‘ ‘ 1w:
-10m, X : H
-h) BMW, mnlmgmzlz mm.‘ m‘ m 4,, A, U
-AzJA: uAimAzuA,
-I; mm, c: A. J4) g r, v.“ ‘Mm c: A; M, : Tn
+I.l. 'ITei jucétori, 1, 2 §i 3 aruncé pe rand, in aceasté ordine, o
+monedé. Cé§tig5 cel care obgine primul stema. Mul'gimea eveni-
+mentelor elementare poate ﬁ descrisé astfel (0 pentru ban §i l
+pentru stemé)
+Q : {1,01,001,0001, . . .,0000-- ~01, . . .}
+a) Determinati evenimentele aleatoare Ai : "jucétorul z' cé§tigé
+jocul, 'L' : 17>".
+b) Determinati evenimentele aleatoare A1 U A3, TlU A2, A1 LJ
+A2UA3§1A1UA2UA3.
+c) Aréta'gi <35 A1 U A3 Q Aig. Este adevérat c5 A1 U A3 : T2?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:28**************
-n 5‘ alum! m1 “m. (m; m. ,. m1 mm, FR A
-mmm a...“ nuunw: me M mum‘! 1mm‘, B Z ‘m
-mm m1 M“ m... m my.“ w ,1 c j‘ mm mm
-are s" Ducmh cvemmc'nme A n s‘ A U c, s n c, A n c,
-z n a n A n E n r
-1a m A u Edam!evemmenwunzlakunmﬂwnmemakllur
-mm c:
+1.2. Se aruncé doué zaruri (unul ro§u §i unul negru). Fie A
+evenimentul “suma zarurilor este un numér impar”, B : “cel
+putin unul dintre zaruri are valoarea 1” §i C I” suma zarurilor
+este 5”. Descrie'gi evenimentele A O B, A U C, B O C, A O C,
+Z n B §i A n B n F.
+1.3. Fie A §i B doué evenimente asociate unui experiment aleator.
+Arﬁtati c5
 
-.) Aqu:]ME‘AinE:ju§
+a) M:ZQB, W:ZUB;
 
-m AuTiiTinBuAnﬁiﬂﬂmuﬁl‘
+b) AUBIAQB, AnB : Bm(AUB);
 
-t) AnB:En[IinE)‘AHB:B\(Z/‘B)
+c) AnBzBMZmB), AnB:B\(ZnB).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:29**************
-u F1: A a s evnmmmm ale-lam Smphﬂcnﬂ urmiloueie
-nw-n
+1.4. Fie A §i B evenimente aleatoare. Simpliﬁca'gi urmétoarele
+expresu
 
-a) (Msmwil,
+a) (AU B) n (AUB);
 
-by [AUBWMEWIUE]
-15 Pw A‘ s g] c \m :vemmeme ‘Inhale innate unul ex’
-Fcnmmt 0mm“ ... rum» a A‘ B >- c‘ “Plank m,
-mum“. “.an mumm
+b) (AU B) n (AUB) n (EU B).
+1.5. Fie A, B §i C trei evenimente aleatoare asociate unui ex-
+periment. Determinati, in functie de A, B §i C, expresiile core-
+sponzétoare urmétoarelor evenimente
 
-Q1 em“ w: hm evcmmmtz m mm“ an: A,
+a) dintre cele trei evenimente se realizeazi doar A;
 
-h) .l xealunl: A g c a“ m, ,1 s
+b) se realizeazé A §i C dar nu §i B.
 
-c) w: Puﬂn don‘ dmm cele 1m Mme.“ >2 Mural!‘
+c) ce1 putin douﬁ dintre cele trei evenimente se realizeazé;
 
-d7 .. nalnln: Inn um“ aw. “1! he] mmk‘
+d) se realizeazé exact unul dintre cele trei evenirnente;
 
-e) 1: mllleuK ==\ mm m. dmtre eie
+e) se realizeazé cel mult trei dintre ele.
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:30**************
-n m A515 evemmcmc mam“
-i7m:h\1nl:(1m?)u[1n1;]uE:(AnE)u(X'1E],
-h)A1594!)ﬂm:[jﬂ§]l\(iﬂ§]\\[Aﬂ§)
-£1 s; unmci m m - §= mm cu A mmznlul a 1P1:
+1.6. Fie A §i B evenimente aleatoare.
 
-“n M...“ \mpar, m n. E mmmm I: ‘PM m. mun}!
-m. mm man Damn-mag; evmmmulcdmalingﬂudm
-draw: mm." a! 1mm a‘ h pumm hp
+a) Aréta'gi c5 Z : (IO B) U (In?) §i F z (A OF) U (10?);
+
+b) Arétagi 05 An B : (In B) u (Em?) u (AQF).
+
+c) Se aruncé un zar §i se noteazé cu A evenimentul 05 apare
+un numér impar, iar cu B evenimentul c5 apare un numér
+mai mic deceit 4. Determinati evenimentele din sténga §i din
+dreapta semnului de egalitate de 1a punctul b).
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:31**************
-1n we A ,. 5 M: mun-“m mm.‘ mm. :l
-a) Pm E) : i Pm ms) ¢ pm s)‘
-v, PMuE):P[A\E)+P[AHE)+P[E \AL
-z) PIAAE) Z Pm 7 1m n B) + ms)
-n 1 mm: c; pm". m1 mm“ mum A, a, c m 1m
-Illmiwarel: Rm“
-.1 mmm P[[A\B)U[B\A) 4 mm 1,
-b) P[Iﬂ§)+P[A]+ Fm a) Z 1‘
-=1 PIXHEFEJ+PIA1$FKZFBJ+PKIHEF151:1‘
-a) m n a) 7 P[A]P[E) Z pm 1:) 7 Palm)
+II.1. Fie A §i B doué evenimente aleatoare. Aréta'gi c5
+a) P(ZOF) : 1 — P(A) — P(B) + P(A O B);
+b) P(AUB) : P(A\B)+P(AQB)+P(B\A);
+c) P(AAB) : P(A) — 2P(A F) B) + P(B).
+11.2. Aréta'gi 05 pentru trei evenimente aleatoare A, B, C au 10c
+urmétoarele relatii
+a) P(An B) + P[(A\B) U (B \ A)] + P(ZQB) : 1;
+b) P(ZQB) + P(A) + P(Zn B) : 1;
+c) P(ZQBQF) + P(A) + P(Zn B) + P(Zan C) : 1;
+d) P(A O B) — P(A)P(B) : P(ZQF) — P(Z)P(§).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:32**************
-111 Smudﬂ=mwmmh1..m u. 11 Z (“111/ M
-s: m: 1.1 rum/11.11,)! Z 1/1. Pal/MMMJ/Nhuﬂ) Z s/s 1-
-Fauna/7)) Z 1/6 ovum“ mmmmu Z (“M/11.. Us)‘
-huh-1.1111111cam/1h»;
-.1 Evmmncnkk A 11 1; 11m cum/11,1111 11“ A 1. c1
-1/ can-.1111 mum c1: mm, PlAu c111 mm
-=1 a,“ 1111111111, P[(w1.M)) Z 1/1,P1(»1/~1/~1.~41Z 3/8
-,. Paw/MM); Z 15/111
-111 Sewnndeﬂ 11,. expemrwnt 11:110. ‘1. 11 Z (1/1/11 .11.)
-5= 11,1 =1 P101111 Z PKm)! Z 1/6 1- P1(~1~1.w~§11 Z
-1/: Canuwm mmmm.“ A Z (NW/~51 Mm." 1..
-"1mm 1; mewmpmhﬂ 1.. A‘ 111 m. M11111... A
-.) MM [1 m U a) < 1
-1) cat-1m; m \91, m n a)‘ m1) .1 P[AAE]
-1/ En: 11.1111 a Pam/1111111Z1/1,1>/(M,‘M4,.1M11Z
-1/: “£01,141”: 1/11
+11.3. Se consideré un experiment aleator cu Q : {w1, (4)2, . . . ,w6}.
+Se §tie c5 P({w1,w2,w3}) : 1/2, P({w1,w2,w3,w4,w5}) : 5/6 §i
+P({w1, w2}) : 1/6. Considerém evenimentele A : {w1, (4)2, w4,w5},
+B : {w3,w4,w5,w6} §i C : {w3,w4,w5}.
+a) Evenimentele A §i B sunt compatibile? Dar A §i C"?
+b) Ca1cu1a§iP(AU(B\C)), P(AAB), P(AU C) §i P(B\A).
+c) Este posibil ca P({w1,w2}) : 1/4, P({w2,w3,w5,w6}) : 3/8
+§i P({w1,w2,w4}) : 15/16?
+II.4. Se consideré un experiment aleator cu Q : {w1, 0J2, . . . ,w6}.
+Se §tie 05 P({w1}) : P({w2}) : 1/6 §i P({w2,w3,w4,w5}) :
+2/3. Consideréim evenirnentul A I {w3, 0/4, 015}. Deﬁniti un
+eveniment B incompatibil cu A, dar nu contrar lui A.
+a) Arﬁta'gi <35 P(A U B) < 1.
+b) Calcula'gi P(A \ B), P(A O B), P(B) §i P(AAB).
+c) Este posibil ca P({w1,w2,w3}) : 1/4, P({w2,w4,w5,w6}) :
+2/3 §i P({w1,w3}) : 1/5?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:33**************
-u 5 n. A F 5 m1 gm“... mm, “M mm m; \
-A] Z 1/3, m n 51:1/s n m \ B) Z 1/:
-.7 Calm-m: PIA)‘ mm‘ PM U E] Z. m \ y;
-h) Evemmenwk A n a mm mum A m T5 mm zompnr
-mm
-"a n, A ,. E m: mm.“ ‘Imam mm mm P[A\
-a) 1/5‘ mans] mesm Z 1/3
-.) elm-m,‘ m U E], was], pm a) ,, Fm s)
-m Evammenbele A :1 s m wmpmmw A a‘ s\ A m
-mmm
-n7 m A n B douKevemmznle “=me mm mar P(A\
-a) Z 1/1‘ Pm 51:1/7 ‘- mm Z 5/1
-n Calculi'APlAL F(51.P(ME>,P(X\ a) ,. F(s\ A]
-by Emmmg A v B run! (WM a" cwmpéhbdi'
+II.5. Fie A §i B doué evenimente aleatoare astfel incét P(B \
+A) : 1/3, P(Aﬁ B): 1/6 §iP(A\B):1/3.
+a) Ca1cu1a1;iP(A), P(AAB), P(A U B) §1P(A\B).
+b) Evenimentele A §i B sunt contrare? A §i B sunt compati-
+bile?
+II.6. Fie A §i B doui evenimente aleatoare astfel incét P(A\
+B): 1/6, P(Aﬁ B): 1/6 §i P(B \ A) : 1/3.
+a) Ca10u1a§iP(A U B), P(AAB), P(Aﬁ B) §i P(A\ B).
+b) Evenimentele A §i B sunt compatibile? A §i B \ A sunt
+contrare?
+II.7. Fie A §i B douﬁ evenimente aleatoare astfel incét P(A\
+B): 2/7, P(A O B): 1/7 §i P(AAB) : 5/7.
+a) Ca10u1a§iP(A), P(B), P(A U B), P(A\ B) §i P(B \ A).
+b) Evenimentele A §i B sunt contrare? Dar compatibile?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:34**************
-u x s! inmzldmliumnyuumkaﬂ A Z-mnwum at:
-m, mAmKI Bum-{15 :‘vmduml munlox em > w
-.7 Czlculitl my‘ m], P[AAB), m u E)|1P[A\B)
-a) Evemmenkk A u s mm mm" a,’ complnmk"
-(I; man-u m mum.“ ﬂaw: m ‘K m1.“ A ,. .1: 5A m7
-wmyinhll m s
-n n s: mm am mun ‘A A um: A “plum-.1 mm,‘
-ale (11mm m“ .. E at“ m", m1 dmh'e mm e», pm“
-.) cm“; my‘ HE], P[AAB), PM n a) p P“; \A)
-b) Evemmenbele A u s mm wmw Du complnbue"
-((7 Dlﬁnlhunmnlmlm ammunmmmm m A a).
-nu cu a
+II.8. Se aruncé doué zaruri §i se noteazé A :"suma zarurilor este
+un numér prim" §i B :"produsul zarurilor este Z 19".
+a) Ca10u1a§iP(A), P(B), P(AAB), P(A U B) §i P(A \ B).
+b) Evenimentele A §i B sunt contrare? Dar compatibile?
+(c) Deﬁni§i un eveniment aleator care s5 implice A §i s5 ﬁe in-
+compatibil cu B.
+
+11.9. Se aruncé doué zaruri §i se noteazé A :"produsul valorilor
+este cel mult 10" §i B :"cel pu'gin unul dintre zaruri este prim".
+a) Calcula'gi P(A), P(B), P(AAB), P(A ﬁ B) §i P(B \ A).
+
+b) Evenimentele A §i B sunt contrare? Dar compatibile?
+(c) Deﬁniti un eveniment aleator care s5 ﬁe compatibil cu A dar
+nu cu B.
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:35**************
-n m m“ - s mammmm 1km.‘ mum“; pm".
-m! k 1m.‘ my Z n 1 ,1 F[E) Z o 5 c.“ a.‘ mm,»
-mm Q
+11.10. Fie A §i B doué evenimente aleatoare incompatibile pentru
+care se cunosc P(A) : 0.3 §i P(B) : 0.5. Care este probabili-
+tatea ca
 
-.) .= .1 uahzu: A m. B7
+a) sé se realizeze A sau B?
 
-b) 1; 5e {when B du n“ u m
+b) sii se realizeze B dar nu §i A?
 
-(7 .= .1 mum. Immllin m. an“; emmw
-1H! n.» mm" dc m "mom a $1 :1 6| ne: Hmwn J!‘ n 6|
-13 -= intilnzsc mm. huncu 0m m. m mbmmﬂ d:
-a aw: “mm ml: w; a: m a W 1m,
+c) s5 se realizeze simultan cele doué evenimente?
+II.11. Doi jucétori de §ah seniori, 51 §i $2 §i trei juniori jl, jg §i
+j3 se intélnesc intr-un turneu. Orice senior are probabilitatea de
+a cé§tiga turneul dublé faté de cea a unui junior.
 
-Q1 mam; ‘mm a: a cimga mm m mum.“
+a) Determina'gi §anse1e de a cé§tiga turneul ale unui junior.
 
-b) c,“ m! wnmmhum I. ., m. ,, q “4.15! “mun
+b) Care este probabilitatea ca 51 sau jl s5 cégtige turneul?
 
 ***************Ending Page***************
-
 
 ***************Beginning Page***************
 ***************page number:36**************
-u .1 m ....... ,.......§.. ...... ........... “up: m... K..." L...
-...|.>........m. m 5.... m»... .1. “Mm ... 407. 1.. p-me
-............ a... ......... “w... s. a... .. mum..." .... m...
-4... m»... m... c... a1! pmhnbmum .. .1 .x .... a; .....
-m... a. mm... .. n... m...
-1113 Pemmua mm... n 1mm‘ ... m. mm“... s u A
-m»... .. um: w... 5.... .- PHD em... Mama“...
-Dmhe mm (mluhle mu...» mm. a...‘ my... lewlmv:
-.nv. m: a. em... 1m m: .1. 5....» .- w'a m: .1. w: m...
-...... .1"... D... 1.... WP... s: .. :alculm ,...............a ..
-.1 . "mu. ouecm .. m... 1. mam.
-b) .. “1...... w...“ .= m... a. .X... ..... 5...... my...
-Mm»...
+11.12. 60% dintre studentii unei anumite grupe sunt genii (in
+informaticé), 70% sunt amatori de ciocolaté, iar 40% fac parte
+simultan din ambele categorii. Se alege 1a intémplare un student
+din aceasté grupi. Care este probabilitatea ca e1 s5 nu ﬁe nici
+amator de ciocolaté §i nici geniu?
+11.13. Pentru ca 0 rezolu'gie s51 ajungé in fata pre§edinte1ui S.U.A.
+trebuie s5 treacﬁ prin Senat §i prin Camera Reprezentan'gilor.
+Dintre toate rezolutiile prezentate acestor doué corpuri legislative
+60% trec de Camera, 70% trec de Senat §i 80% trec de cel putin
+unul dintre cele doué corpuri. Si se calculeze probabilitatea ca
+a) o rezolutie oarecare s5 ajungé 1a pregedinte.
+b) o rezolu'gie oarecare s5 treacéi de exact una dintre camerele
+legiuitoare.
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:37**************
-u u un .|.v imbue .1 mmw mum “mam-A- mm.
-mmx, maternahd a nun: m due mm c“ probamhuze
-5,!‘ hum: m Pmbahxhhk 5/! I, an“ hancmi $- 1M“ cu
-wawmme m Car: “w mmmw mm ca elcvul u
-muXmmmAucﬂ an pwhahnhkam m1 m magmas": m
-“My
-n 15 hm cuni mama minim: m. m m, m u u, u. a:
-a: dnuinn m. muhepm :a H, Adm“, m H, a! m1 w.
-mm make {we ca 1-1‘ Q chum
+11.14. U11 elev trebuie s5 aleagé doué dintre urmétoarele cursuri:
+francezé, matematici §i istorie. E1 alege istorie cu probabilitate
+5/8, francezé cu probabilitate 5/8 §i alege francezé §i istorie cu
+probabilitate 1/4. Care este probabilitatea pentru ca elevul s5
+aleagéi matematici? Dar probabilitatea ca e1 s5 aleagé istorie sau
+francezé?
+11.15. 1ntr-o cursé hipicé se intrec trei cai: H1, H2 §i H3. H1 are
+de doué ori mai multe §anse ca H2 s5 cégtige, iar H2 de doué ori
+mai multe §anse ca H3 s51 cé§tige.
 
-.7 c,“ m mammal a! 1 a“. d: “1n. m, [in
+a) Care sunt probabilitéigile de a cé§tiga ale celor trei cai?
 
-a) Du pronummatea ca m anuL mu a1 danca m 1x m.
+b) Dar probabilitatea ca nici primul, nici a1 doilea cal s5 nu
 
-cimw
+cé§tige?
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:38**************
-n 15- Dal mm, X i1 y “mm: m m h m‘ m m
-mm»... n Pm Mm unul dm “mnmk “"an A,
-Emu c mama”. mmmu a me a a Pnb-nhmnm
-I. whim.“ m DA thihxhtileizimnunulll mm:
-A a» be: mu unul Q obgum a =11: n 1 Cue a1! mmbmmeu
-I. (=1 mm MM“ mm; S: chm-u a a» mu m1 u m.
-Mm! c"
-n 11’ 1mg m; m m an; numn'maiz a: h 1 h w‘ .1...
-m: ‘e emu daui We Care we momma ca lum- cellar
-mm mm ink! mm“ ‘Hz mm an:
+II.16*. Doi studen'gi X §i y urmeazé un curs la care, in urma
+examinérii, se poate ob'gine unul din urmétoarele caliﬁcative: A,
+B sau C. Probabilitatea ca x s5 obtiné B este 0.3. Probabilitatea
+ca y s5 obtiné B este 0.4. Probabilitatea ca nici unul s5 nu obtiné
+A dar cel putin unul s5 ob'giné B este 0.1. Care este probabilitatea
+ca cel pu'gin unul dintre studen'gi s5 obtinii B dar nici unul sEi nu
+obtiné C?
+II.17*. lntr-o urnﬁ sunt zece bile numerotate de la 1 la 10; din
+urni se extrag doué bile. Care este probabilitatea ca suma celor
+doué numere astfel ob'ginute s5 ﬁe imparé dacé
 
-i) Dd: m: m M m.“ mum",
+a) cele douﬁ bile sunt extrase simultan?
 
-m w: m1 hue 5m nuns: m dun m m muzzle"
+b) cele doué bile sunt extrase una dupéi alta féréi intoarcere?
 
-t) R1‘ M: b“! M “km m a“: in; U. Inmate’!
+c) cele douﬁ bile sunt extrase una dupé alta cu intoarcere?
 
 ***************Ending Page***************
 
+
 ***************Beginning Page***************
 ***************page number:39**************
-n )!‘ m. u m mm.» 1- w m mm Mam-w n= 1
-Wm. h m: m, WWW” m m1...‘ m P= m W
-a) a.“ 5-: pmblhxhnlea a: a m.“ c m m Mn w Ln
-b) a" mhnbmum de l m.“ \m nule an'!
-u 1;" F“ A» A: .- A; ~m "mm, mm. “pm
-ment mm
-.7 1n m mm m 1m "mu
-WWWWI) Z m,”421+mmﬂwlhwmm
-m nzmmlm. a, M A n an c a, mm
-P[[AuE)F[EuC]n(CuA)] Z F[AHB]+F(EHC)+P[CHA]
+II.18*. Un zar este construit in a§a fel incét probabilitatea de a
+apérea o faté este proportionalé cu numérul de pe acea fa'gé.
+a) Care este probabilitatea de a obtgine o fa'gé cu numér par 1a
+o aruncare?
+b) Dar probabilitatea de a ob'gine un numér prim?
+II.19**. Fie A1, A2 §i A3 trei evenimente asociate unui experi-
+ment aleator.
+a) in ce condi'gii are 10c relaﬁia
+b) Demonstrati (:5, dacé A Q B O C’ I Q, atunci
+P[(AUB)n(BUC)n(CUA)] : P(AnB)+P(BnC)+P(CnA).
 
 ***************Ending Page***************
 
 ***************Beginning Page***************
 ***************page number:40**************
-n an un n: an: mu...» an asnzl mm once Minn M m
-Nahum“ .1, a an“; mu mu bl: "um c,“
-are prob-hum!“ L, I. o nnmculexl 1c 0mm
-.7 n m: n. mu. MW
-h) a m m m“ mm m nu em cu w
-m .1 m1 n. m» Pm pin
-1121‘ a»: my Z a s n PIE) Z n a, mm, z} PIA n E) >,
-n 1
-.) mm, I: P[A n E) 2 F[A] i H514
-m Dammit-W Dun mduBLle MM.“ m. 56mm“ M
-m. n 1mm.‘ mm“ AHA:- A“ m
-P(n4.) >2Pm n+1.
+11.20. Un zar este construit in a§afe1incét orice faté paré pare are
+probabilitatea de a apérea dublé decét orice fati imparé. Care
+este probabilitatea ca 1a o aruncare s5 se obtiné
+a) o fate"). cu numér impar?
+b) o fa'gé cu numér mai mic sau egal cu 4?
+b) o fa'géi cu numér prim par?
+II.21*. Dacé P(A) : 0.9 §i P(B) : 0.8, arétati c5 P(A O B) 2
+0.7.
+a) Arétagi 05 P(A ﬁ B) 2 P(A) + P(B) — 1.
+b) Demonstra'gi prin induc'gie inegalitatea lui Bonferroni: pen-
+tru n evenimente aleatoare A1, A2, . . . An avem
+7L TL
+P (Q A1) > ZP(A¢) —n+l.
+1:1 1:1
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:41**************
-“12' s. mum u “mm m m m m1. mam
-numhlbﬂ no evemmente Jealous ekmcnhle
-n:(wwm ‘Mm )
-Q1 mm, =5 m, me pcnhd Q M: mmmh demmme
-.= a.» a mm, gamma! mm:
-m a,“ MM u mu mum ekmnnlm n m» m.
-mm mum
-n 21- Se wnndet! “I. “Mlmem mm :1 n mulpmeu even]-
-...mdm chm-m s: r in“ n M. .1 vm) X m) V.
-[m n, deﬁmﬂ Imn m s! Z PIAAB) w“ mm“ whim“-
-mmmkb, mm.‘ ‘Pm!
+1122*. Se consideré un experiment care are un numér inﬁnit
+numérabil de evenimente aleatoare elementare:
+Q I {w1,w2,...,wn,...}.
+a) Arétagi cé nu este posibil ca toate evenimentele elementare
+sé aibé o aceea§i probabilitate nenuléi.
+b) Este posibil ca toate evenimentele elementare s5 aibé prob-
+abilitate nenulé?
+II.23*. Se consideréi un experiment aleator §i Q multimea eveni-
+mentelor elementare. Si se arate c5 func'gia d I 73(9) >< 73(9) —>
+[0, l], deﬁnité prin d(A, B) : P(AAB) este o metricé pe familia
+evenimentelor aleatoare 73(9).
 
 ***************Ending Page***************
+
 
 ***************Beginning Page***************
 ***************page number:42**************
-n n- PM A“ 41‘ .A. =Wk1|=mmm “VF-mum
-u) MK Umwmm
-m) Ammmwmgmwkgﬂ
-Shun“ n n
-2F (U A.) :ZFMJ
+1124*. Fie A1, A2, . . . , An evenimente aleatoare cu proprietétile:
+(1)1412 U A1, V1517’;
+iii
+(11) AiﬁAjﬁAk:@,Vl<i<j<k<n.
+Si se arate c5
+7L n
+2P (U A1) z E P(AZ~).
+‘L21 izl
 
 ***************Ending Page***************
+
+
 
 ***************Beginning Page***************
 ***************page number:43**************
-IE Bun-‘mm P‘! N mumva-mwﬂw
-Pmbabxhw‘ mm 5mm‘ 20m
+a Bertsekas, D. P., J. N. Tsitsiklis, Introduction t0
+Probability, Athena Scietiﬁc, 2002.
 
-IE Goldwﬂ‘ H, Duzsz: waqmw‘ 511!‘an chhb “"1
-me, 1997
+a Gordon, H., Discrete Probability, Springer Verlag, New
+York, 1997.
 
-IE mm“ S, 1mm “a Fmblam o/ mmmm
-sthm'. cum“. 51m‘ Miami“ 1565
+a Lipschutz, S., Theory and Problems of Probability,
+Schaum’s Outline Series, McGraW-Hill, 1965.
 
-IE m» s M ‘ A m: ers: m mommy , Plenum: uni,
-m. mmm, 199!
+a Ross, S. M., A First Course in Probability , Prentice Hall,
+5th edition, 1998.
 
-IE sum c J, A Cows: m moanlw M4 Slalunu‘
-WWY pm“ use
+a Stone, C. J., A Course in Probability and Statistics,
+Duxbury Press, 1996.
 
 ***************Ending Page***************
+
 
