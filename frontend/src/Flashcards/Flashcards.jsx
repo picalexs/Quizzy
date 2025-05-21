@@ -58,10 +58,10 @@ const Flashcards = () => {
                     };
 
                     // Verificăm dacă este o întrebare cu opțiuni multiple
-                    if (card.questionType === 'MULTIPLE_CHOICE') {
+                    if (card.questionType === 'Teorie') {
                         // Extragem opțiunile și răspunsul corect
-                        const options = card.answers.map(answer => answer.text);
-                        const correctAnswer = card.answers.find(answer => answer.correct)?.text;
+                        const options = card.answers.map(answer => answer.optionText);
+                        const correctAnswer = card.answers.find(answer => answer.correct)?.optionText;
 
                         processedCard.options = options;
                         processedCard.correctAnswer = correctAnswer;
