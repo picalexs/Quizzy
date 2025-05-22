@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master , FIX-AWS-BACKEND-LINK ]
   workflow_dispatch:
 
 permissions:
