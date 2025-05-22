@@ -4,11 +4,11 @@ import { api } from '../utils/api';
 import './PDFViewer.css';
 
 function PDFViewer() {
-    // Since we're now using a wildcard route, we need to extract the path differently
+    // Extract the full path from the URL
     const location = useLocation();
     const fullPath = location.pathname.replace('/Material/path/', '');
     const stateTitle = location.state?.title;
-    
+
     const [pageMode, setPageMode] = useState('single');
     const [pdfUrl, setPdfUrl] = useState('');
     const [objectUrl, setObjectUrl] = useState('');
@@ -23,39 +23,39 @@ function PDFViewer() {
             console.log('Full PDF Path:', fullPath);
             // Make sure path is properly decoded
             const path = decodeURIComponent(fullPath);
-            
-            // The PDF path should be in format: "cursuri/{courseTitle}/{fileName}.pdf"
+
+            // The PDF path should start with "cursuri" and end with ".pdf"
             const pathParts = path.split('/');
-            
-            if (pathParts.length >= 2 && pathParts[0] === 'cursuri') {
+
+            if (pathParts.length >= 3 && pathParts[0] === 'cursuri') {
                 const courseTitle = pathParts[1];
-                const fileName = pathParts[2];
-                
+                const fileName = pathParts[pathParts.length - 1]; // Get the last part (PDF filename)
+
                 // Set title from filename if not provided in state
                 if (!stateTitle) {
                     setTitle(fileName.replace('.pdf', '') || 'Document');
                 }
-                
-                // Create direct URL for fallback
+
+                // Create direct URL for fallback - use the full path as received
                 const baseUrl = window.location.origin;
-                const apiEndpoint = `/Material/path/cursuri/${courseTitle}/${fileName}`;
+                const apiEndpoint = `/Material/path/${path}`;
                 const directPdfUrl = `${baseUrl}${apiEndpoint}`;
                 setDirectUrl(directPdfUrl);
-                
+
                 console.log('Fetching PDF from API endpoint:', apiEndpoint);
-                
+
                 // Use the api.getBinaryFile method to fetch the PDF
                 const response = await api.getBinaryFile(apiEndpoint, {
                     'Accept': 'application/pdf'
                 });
-                
+
                 console.log('PDF response received:', response.status);
-                
+
                 if (response.data && response.data.size > 0) {
                     // Create a blob URL
                     const blob = new Blob([response.data], { type: 'application/pdf' });
                     const blobUrl = URL.createObjectURL(blob);
-                    
+
                     console.log('Blob URL created, size:', blob.size);
                     setObjectUrl(blobUrl);
                     setPdfUrl(blobUrl);
@@ -65,7 +65,7 @@ function PDFViewer() {
                     setPdfUrl(directPdfUrl);
                 }
             } else {
-                setError('Invalid PDF path format. Expected: cursuri/{courseTitle}/{fileName}.pdf');
+                setError('Invalid PDF path format. Expected: cursuri/{courseTitle}/.../{fileName}.pdf');
                 console.error('Invalid PDF path format:', path);
             }
         } catch (err) {
