@@ -510,7 +510,7 @@ INSERT INTO public.course (courseid, title, description, userid, semestru) VALUE
 INSERT INTO public.course (courseid, title, description, userid, semestru) VALUES (28, 'Inteligenta_Artificiala', 'Introducere în AI, agenți inteligenți.', 71, '5');
 INSERT INTO public.course (courseid, title, description, userid, semestru) VALUES (29, 'Invatare_Automata', 'Algoritmi de machine learning.', 7, '5');
 INSERT INTO public.course (courseid, title, description, userid, semestru) VALUES (30, 'Limbaje_Formale_Automate_Si_Compilatoare', 'Teoria limbajelor și automatizări.', 69, '3');
-INSERT INTO public.course (courseid, title, description, userid, semestru) VALUES (31, 'Logică_Pentru_Informatica', 'Logică propozițională și predicate.', 72, '1');
+INSERT INTO public.course (courseid, title, description, userid, semestru) VALUES (31, 'Logica_Pentru_Informatica', 'Logică propozițională și predicate.', 72, '1');
 INSERT INTO public.course (courseid, title, description, userid, semestru) VALUES (41, 'Matematica_Calcul_Diferential_Si_Integral', 'math', 72, '1');
 INSERT INTO public.course (courseid, title, description, userid, semestru) VALUES (42, 'Practica_Sisteme_De_Gestiune_Pentru_Baze_De_Date', 'bd', 72, '4');
 INSERT INTO public.course (courseid, title, description, userid, semestru) VALUES (32, 'Probabilitati_Si_Statistica', 'Bazele probabilităților și statisticii.', 66, '2');

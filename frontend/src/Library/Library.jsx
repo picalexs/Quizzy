@@ -116,7 +116,7 @@ const Library = () => {
                 ) : courses.length === 0 ? (
                     <div className="library-empty">
                         You are not enrolled in any courses yet
-                        <button 
+                        <button
                             className="library-explore-button"
                             onClick={() => navigate('/explore')}
                         >

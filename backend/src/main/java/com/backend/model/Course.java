@@ -1,7 +1,6 @@
 package com.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,8 +37,8 @@ public class Course {
     @JsonBackReference
     private User professor;
 
-    @OneToMany(mappedBy = "course", fetch = FetchType.EAGER)
-    @JsonManagedReference
+    @OneToMany(mappedBy = "course")
+    @JsonBackReference
     private Set<Material> materials;
 
     @OneToMany(mappedBy = "course")
