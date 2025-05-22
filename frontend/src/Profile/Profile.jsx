@@ -33,7 +33,7 @@ function Profile() {
                 setLoading(true);
                 // Get email directly from localStorage
                 const userEmail = localStorage.getItem('user');
-                
+
                 if (!userEmail) {
                     setError('User not authenticated');
                     setLoading(false);
@@ -94,7 +94,7 @@ function Profile() {
                     localStorage.setItem('user', userData.email);
                     console.log('Updated email in localStorage to:', userData.email);
                 }
-                
+
                 setUpdateStatus(prev => ({
                     ...prev,
                     [field]: 'Updated successfully'
@@ -240,13 +240,13 @@ function Profile() {
                         <div className="form-group">
                             <label>First name</label>
                             <div className="input-with-button">
-                                <input 
-                                    type="text" 
+                                <input
+                                    type="text"
                                     value={userData.firstName}
                                     onChange={(e) => handleInputChange('firstName', e.target.value)}
                                 />
-                                <button 
-                                    type="button" 
+                                <button
+                                    type="button"
                                     onClick={() => handleUpdate('firstName')}
                                     className="update-button"
                                 >
@@ -260,13 +260,13 @@ function Profile() {
                         <div className="form-group">
                             <label>Last name</label>
                             <div className="input-with-button">
-                                <input 
+                                <input
                                     type="text"
                                     value={userData.lastName}
                                     onChange={(e) => handleInputChange('lastName', e.target.value)}
                                 />
-                                <button 
-                                    type="button" 
+                                <button
+                                    type="button"
                                     onClick={() => handleUpdate('lastName')}
                                     className="update-button"
                                 >
@@ -280,13 +280,13 @@ function Profile() {
                         <div className="form-group">
                             <label>Email</label>
                             <div className="input-with-button">
-                                <input 
+                                <input
                                     type="email"
                                     value={userData.email}
                                     onChange={(e) => handleInputChange('email', e.target.value)}
                                 />
-                                <button 
-                                    type="button" 
+                                <button
+                                    type="button"
                                     onClick={() => handleUpdate('email')}
                                     className="update-button"
                                 >
@@ -299,7 +299,7 @@ function Profile() {
                         </div>
                         <div className="form-group">
                             <label>Role</label>
-                            <input 
+                            <input
                                 type="text"
                                 value={userData.role}
                                 readOnly
@@ -311,7 +311,7 @@ function Profile() {
                         <div className="form-group">
                             <label>New Password</label>
                             <div className="password-wrapper">
-                                <input 
+                                <input
                                     type={showPassword ? 'text' : 'password'}
                                     value={passwordData.newPassword}
                                     onChange={(e) => handlePasswordChange('newPassword', e.target.value)}
@@ -330,7 +330,7 @@ function Profile() {
                         <div className="form-group">
                             <label>Confirm Password</label>
                             <div className="password-wrapper">
-                                <input 
+                                <input
                                     type="password"
                                     value={passwordData.confirmPassword}
                                     onChange={(e) => handlePasswordChange('confirmPassword', e.target.value)}
@@ -338,8 +338,8 @@ function Profile() {
                                 />
                             </div>
                             <div className="button-container">
-                                <button 
-                                    type="button" 
+                                <button
+                                    type="button"
                                     onClick={handleUpdatePassword}
                                     className="update-button"
                                 >
