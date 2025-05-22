@@ -20,10 +20,16 @@
 Aceasta va porni automat:
 - baza de date
 - backend-ul (disponibil pe [http://localhost:3000](http://localhost:3000))
-- frontend-ul (disponibil pe [http://localhost:8080](http://localhost:8080))
+- frontend-ul (disponibil pe [http://localhost:36882](http://localhost:36882))
 
 Pentru a opri serviciile:
 
 ```bash
 docker compose down
+```
+
+Pentru a opri serviciile si pentru a reseta baza de date:
+
+```bash
+docker compose down --volumes
 ```
