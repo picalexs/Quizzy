@@ -9,6 +9,7 @@ import GraphAlgorithmsPage from "./GraphAlgorithmsPage/GraphAlgorithmsPage.jsx";
 import Register from './Register/Register.jsx';
 import Explore from './Explore/Explore.jsx';
 import PDFViewer from './PDFViewer/PDFViewer.jsx';
+import CoursePage from './CoursePage/CoursePage.jsx';
 
 
 
@@ -23,8 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/graph-algorithms" element={<GraphAlgorithmsPage />} />
             <Route path="/register" element={<Register />} />
             <Route path="/explore" element={<Explore />} />
-            <Route path="/course/:id" element={<GraphAlgorithmsPage />} />
-            <Route path="/Material/path/:pdfPath" element={<PDFViewer />} />
+            <Route path="/course/:id" element={<CoursePage />} />
+            <Route path="/Material/path/*" element={<PDFViewer />} />
 
         </Routes>
     </BrowserRouter>

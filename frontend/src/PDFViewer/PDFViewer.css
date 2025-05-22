@@ -43,7 +43,7 @@ body, html, #root {
 
 .Pdf-section.light {
   background-color: #EFEAE6;
-  padding-bottom: 1rem; /* Ensure there’s enough space for buttons */
+  padding-bottom: 1rem; /* Ensure there's enough space for buttons */
   flex-grow: 0; /* Prevent it from growing and taking more space */
   position: relative; /* Allow positioning buttons within */
   display: flex;
@@ -198,4 +198,23 @@ iframe {
     zoom: 0.7; /* Further shrink the content inside the iframe for mobile */
     min-height: 60vh;
   }
+}
+
+.Pdf-error {
+    color: #e74c3c;
+    background-color: #fde2e0;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.pdf-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f8f8f8;
+    color: #666;
+    font-size: 16px;
 }

@@ -1,6 +1,6 @@
 import { FaFilePdf } from 'react-icons/fa';
-import './GraphAlgorithmsPage.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import './CoursePage.css';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -10,8 +10,11 @@ import { api } from '../utils/api';
 function CoursePage() {
     const navigate = useNavigate();
     const { id } = useParams();
-    const [course, setCourse] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const location = useLocation();
+    const courseFromState = location.state?.course;
+    
+    const [course, setCourse] = useState(courseFromState || null);
+    const [loading, setLoading] = useState(!courseFromState);
     const [error, setError] = useState(null);
     const [enrolled, setEnrolled] = useState(false);
     const [enrolling, setEnrolling] = useState(false);
@@ -28,6 +31,9 @@ function CoursePage() {
     }, [notification]);
 
     useEffect(() => {
+        // If we already have a course from state, skip fetching
+        if (courseFromState) return;
+        
         const fetchCourse = async () => {
             setLoading(true);
             setError(null);
@@ -41,7 +47,7 @@ function CoursePage() {
             }
         };
         fetchCourse();
-    }, [id]);
+    }, [id, courseFromState]);
 
     useEffect(() => {
         const checkEnrollment = async () => {
@@ -50,20 +56,22 @@ function CoursePage() {
             try {
                 const response = await api.get(`/enrollments/student/${userId}`);
                 const enrolledCourses = response.data;
-                setEnrolled(enrolledCourses.some(c => String(c.id) === String(id)));
+                setEnrolled(enrolledCourses.some(c => String(c.id) === String(course?.id)));
             } catch {
                 setEnrolled(false);
             }
         };
-        checkEnrollment();
-    }, [id, enrolling, unenrolling]);
+        if (course) {
+            checkEnrollment();
+        }
+    }, [course, enrolling, unenrolling]);
 
     const handleEnroll = async () => {
         setEnrolling(true);
         setError(null);
         const userId = localStorage.getItem('userId');
         try {
-            const response = await api.post(`/enrollments?userId=${userId}&courseId=${id}`);
+            const response = await api.post(`/enrollments?userId=${userId}&courseId=${course.id}`);
             if (response.status === 200) {
                 setEnrolled(true);
                 setNotification('Successfully enrolled in course!');
@@ -80,7 +88,7 @@ function CoursePage() {
         setError(null);
         const userId = localStorage.getItem('userId');
         try {
-            await api.delete(`/enrollments/${userId}/course/${id}`);
+            await api.delete(`/enrollments/${userId}/course/${course.id}`);
             setEnrolled(false);
             setNotification('Successfully unenrolled from course');
         } catch (err) {
@@ -91,10 +99,10 @@ function CoursePage() {
     };
 
     const handleMaterialClick = (material) => {
+      console.log('Navigating to PDF path:', material); // Debug log
       navigate(`/Material/path/${material}`, {
         state: {
-          title: typeof material === 'object' ? material.name : material.split('/').pop(),
-          pages: typeof material === 'object' ? material.pages : null
+          title: material.split('/').pop().replace('.pdf', '') || 'Document'
         }
       });
     };
@@ -259,4 +267,4 @@ function CoursePage() {
     );
 }
 
-export default CoursePage;
+export default CoursePage; 

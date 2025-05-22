@@ -1,62 +1,105 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { api } from '../utils/api'; // Relative path
+import { useLocation } from 'react-router-dom';
+import { api } from '../utils/api';
 import './PDFViewer.css';
 
 function PDFViewer() {
-    const { pdfPath } = useParams();
+    // Since we're now using a wildcard route, we need to extract the path differently
+    const location = useLocation();
+    const fullPath = location.pathname.replace('/Material/path/', '');
+    const stateTitle = location.state?.title;
+    
     const [pageMode, setPageMode] = useState('single');
     const [pdfUrl, setPdfUrl] = useState('');
     const [objectUrl, setObjectUrl] = useState('');
-    const [title, setTitle] = useState('PDF Viewer');
+    const [title, setTitle] = useState(stateTitle || 'PDF Viewer');
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [displayMode, setDisplayMode] = useState('object'); // 'iframe' or 'object'
+    const [directUrl, setDirectUrl] = useState('');
 
-    const fetchPdfBlob = async () => {
+    const fetchPdf = async () => {
         try {
-            const response = await api.get(`/materials/${pdfPath}`, {
-                responseType: 'blob'
-            });
-
-            // Extract filename from content-disposition header if available
-            const contentDisposition = response.headers['content-disposition'];
-            let filename = 'Document';
-            if (contentDisposition) {
-                const filenameMatch = contentDisposition.match(/filename="?(.+)"?/);
-                if (filenameMatch && filenameMatch[1]) {
-                    filename = filenameMatch[1].replace(/\.pdf$/i, '');
+            console.log('Full PDF Path:', fullPath);
+            // Make sure path is properly decoded
+            const path = decodeURIComponent(fullPath);
+            
+            // The PDF path should be in format: "cursuri/{courseTitle}/{fileName}.pdf"
+            const pathParts = path.split('/');
+            
+            if (pathParts.length >= 2 && pathParts[0] === 'cursuri') {
+                const courseTitle = pathParts[1];
+                const fileName = pathParts[2];
+                
+                // Set title from filename if not provided in state
+                if (!stateTitle) {
+                    setTitle(fileName.replace('.pdf', '') || 'Document');
                 }
+                
+                // Create direct URL for fallback
+                const baseUrl = window.location.origin;
+                const apiEndpoint = `/Material/path/cursuri/${courseTitle}/${fileName}`;
+                const directPdfUrl = `${baseUrl}${apiEndpoint}`;
+                setDirectUrl(directPdfUrl);
+                
+                console.log('Fetching PDF from API endpoint:', apiEndpoint);
+                
+                // Use the api.getBinaryFile method to fetch the PDF
+                const response = await api.getBinaryFile(apiEndpoint, {
+                    'Accept': 'application/pdf'
+                });
+                
+                console.log('PDF response received:', response.status);
+                
+                if (response.data && response.data.size > 0) {
+                    // Create a blob URL
+                    const blob = new Blob([response.data], { type: 'application/pdf' });
+                    const blobUrl = URL.createObjectURL(blob);
+                    
+                    console.log('Blob URL created, size:', blob.size);
+                    setObjectUrl(blobUrl);
+                    setPdfUrl(blobUrl);
+                } else {
+                    console.warn('Empty PDF response received');
+                    // Fall back to direct URL
+                    setPdfUrl(directPdfUrl);
+                }
+            } else {
+                setError('Invalid PDF path format. Expected: cursuri/{courseTitle}/{fileName}.pdf');
+                console.error('Invalid PDF path format:', path);
             }
-            setTitle(filename);
-
-            const blob = new Blob([response.data], { type: 'application/pdf' });
-            const url = URL.createObjectURL(blob);
-            setObjectUrl(url);
         } catch (err) {
-            console.error('Failed to fetch PDF Blob:', err);
+            console.error('Error fetching PDF:', err);
+            
+            // Try direct URL as fallback
+            if (directUrl) {
+                console.log('Using direct URL as fallback');
+                setPdfUrl(directUrl);
+            } else {
+                setError(`Failed to load PDF: ${err.message || 'Unknown error'}`);
+            }
+        } finally {
+            setLoading(false);
         }
     };
-
-    const updatePdfUrl = () => {
-        if (!objectUrl) return;
-        const zoomLevel = Math.max(50, Math.min(200, (window.innerWidth / 1000) * 100));
-        const viewMode = pageMode === 'continuous' ? 'FitH' : 'FitV';
-        const url = `${objectUrl}#zoom=${zoomLevel}&view=${viewMode}&t=${Date.now()}`;
-        setPdfUrl(url);
-    };
-
+    
     useEffect(() => {
-        fetchPdfBlob();
+        if (fullPath) {
+            fetchPdf();
+        }
+        
         return () => {
+            // Clean up blob URL when component unmounts
             if (objectUrl) {
                 URL.revokeObjectURL(objectUrl);
             }
         };
-    }, [pdfPath]);
+    }, [fullPath]);
 
-    useEffect(() => {
-        updatePdfUrl();
-        window.addEventListener('resize', updatePdfUrl);
-        return () => window.removeEventListener('resize', updatePdfUrl);
-    }, [pageMode, objectUrl]);
+    // Function to toggle between iframe and object display modes
+    const toggleDisplayMode = () => {
+        setDisplayMode(prevMode => prevMode === 'iframe' ? 'object' : 'iframe');
+    };
 
     return (
         <div className="App">
@@ -65,25 +108,22 @@ function PDFViewer() {
                     <div className="Pdf-header">
                         <div className="Pdf-section dark">
                             <h1 className="Pdf-title">{title}</h1>
+                            {error && <p className="Pdf-error">{error}</p>}
+                            {directUrl && (
+                                <p className="Pdf-direct-link">
+                                    <a 
+                                        href={directUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{color: 'white', textDecoration: 'underline'}}
+                                    >
+                                        Open PDF in New Tab
+                                    </a>
+                                </p>
+                            )}
                         </div>
 
                         <div className="Pdf-section light">
-                            <div className="App-link-container">
-                                {objectUrl && (
-                                    <a
-                                        className="App-link"
-                                        href={objectUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        title="Open Full Screen"
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                            <path d="M3 3H9V9H3V3ZM15 3H21V9H15V3ZM3 15H9V21H3V15ZM15 15H21V21H15V15Z" />
-                                        </svg>
-                                    </a>
-                                )}
-                            </div>
-
                             <div className="page-toggle-buttons">
                                 <button
                                     className={`toggle-btn ${pageMode === 'single' ? 'active' : ''}`}
@@ -103,6 +143,13 @@ function PDFViewer() {
                                         <path d="M3 3H9V9H3V3ZM15 3H21V9H15V3ZM3 15H9V21H3V15ZM15 15H21V21H15V15Z" />
                                     </svg>
                                 </button>
+                                <button 
+                                    className="toggle-btn"
+                                    onClick={toggleDisplayMode} 
+                                    title="Toggle Display Mode"
+                                >
+                                    {displayMode === 'iframe' ? 'Use Object Tag' : 'Use Iframe'}
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -115,15 +162,35 @@ function PDFViewer() {
                             overflow: pageMode === 'single' ? 'hidden' : 'auto',
                         }}
                     >
-                        {pdfUrl && (
-                            <iframe
-                                id="pdf-iframe"
-                                title="PDF Preview"
-                                src={pdfUrl}
-                                width="100%"
-                                height="100%"
-                                style={{ border: 'none' }}
-                            />
+                        {loading ? (
+                            <div className="pdf-loading">Loading PDF...</div>
+                        ) : pdfUrl ? (
+                            displayMode === 'iframe' ? (
+                                <iframe
+                                    id="pdf-iframe"
+                                    title="PDF Preview"
+                                    src={pdfUrl}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 'none' }}
+                                    allowFullScreen={true}
+                                />
+                            ) : (
+                                <object
+                                    data={pdfUrl}
+                                    type="application/pdf"
+                                    width="100%"
+                                    height="100%"
+                                >
+                                    <p>Your browser does not support PDFs. 
+                                        <a href={pdfUrl} download={`${title}.pdf`}>Download the PDF</a> instead.
+                                    </p>
+                                </object>
+                            )
+                        ) : (
+                            <div className="pdf-loading">
+                                {error ? 'Failed to load PDF.' : 'Preparing PDF...'}
+                            </div>
                         )}
                     </div>
                 </div>

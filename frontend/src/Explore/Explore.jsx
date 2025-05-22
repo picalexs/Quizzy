@@ -112,7 +112,7 @@ const Explore = () => {
                             key={course.id || index}
                             className="library-card"
                             style={{ cursor: 'pointer' }}
-                            onClick={() => navigate(`/course/${course.id}`)}
+                            onClick={() => navigate(`/course/${course.id}`, { state: { course } })}
                         >
                             <div className="library-card-header" />
                             <div className="library-card-header-text">
