@@ -164,7 +164,6 @@ public class MaterialController {
                     .body(pdfResource);
 
         } catch (Exception e) {
-            logger.error("Unexpected error while retrieving PDF for course '{}' with name '{}': {}", courseTitle, courseName, e.getMessage(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }

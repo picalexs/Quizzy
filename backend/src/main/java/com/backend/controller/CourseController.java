@@ -28,7 +28,6 @@ public class CourseController {
     private final FlashcardRepository flashcardRepository;
 
     @Autowired
-    public CourseController(CourseService courseService, EnrollmentService enrollmentService) {
     public CourseController(CourseService courseService, EnrollmentService enrollmentService, FlashcardRepository flashcardRepository) {
         this.courseService = courseService;
         this.enrollmentService = enrollmentService;
@@ -36,8 +35,6 @@ public class CourseController {
     }
 
     @GetMapping
-    public ResponseEntity<Collection<Course>> getAllUsers() {
-        return ResponseEntity.ok(courseService.getAllCourses());
     public ResponseEntity<List<Map<String, Object>>> getAllCourses() {
         List<Course> courses = (List<Course>) courseService.getAllCourses();
         List<Map<String, Object>> result = new ArrayList<>();

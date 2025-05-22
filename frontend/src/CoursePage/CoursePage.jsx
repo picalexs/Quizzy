@@ -4,7 +4,7 @@ import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { api } from '../utils/api';
 
 function CoursePage() {
@@ -20,6 +20,7 @@ function CoursePage() {
     const [enrolling, setEnrolling] = useState(false);
     const [unenrolling, setUnenrolling] = useState(false);
     const [notification, setNotification] = useState(null);
+    const [materials, setMaterials] = useState([]);
 
     useEffect(() => {
         if (notification) {
@@ -30,51 +31,80 @@ function CoursePage() {
         }
     }, [notification]);
 
-    useEffect(() => {
-        // If we already have a course from state, skip fetching
-        if (courseFromState) return;
-        
-        const fetchCourse = async () => {
-            setLoading(true);
-            setError(null);
+    // Fetch course data
+    const fetchCourse = useCallback(async () => {
+        setLoading(true);
+        setError(null);
+        try {
+            const response = await api.get(`/courses/${id}`);
+            setCourse(response.data);
+            
+            // Get materials for this course
             try {
-                const response = await api.get(`/courses/${id}`);
-                setCourse(response.data);
-            } catch (err) {
-                setError(err.response?.data?.message || err.message);
-            } finally {
-                setLoading(false);
+                const materialsResponse = await api.get(`/Material/course/${id}`);
+                setMaterials(materialsResponse.data || []);
+            } catch (materialErr) {
+                console.error('Error fetching materials:', materialErr);
+                setMaterials([]);
             }
-        };
-        fetchCourse();
-    }, [id, courseFromState]);
+        } catch (err) {
+            setError(err.response?.data?.message || err.message);
+        } finally {
+            setLoading(false);
+        }
+    }, [id]);
 
+    // Check enrollment status
+    const checkEnrollment = useCallback(async () => {
+        const userId = localStorage.getItem('userId');
+        if (!userId) return setEnrolled(false);
+        try {
+            const response = await api.get(`/enrollments/student/${userId}`);
+            const enrolledCourses = response.data;
+            setEnrolled(enrolledCourses.some(c => String(c.id) === String(id)));
+        } catch {
+            setEnrolled(false);
+        }
+    }, [id]);
+
+    // Initial data loading
     useEffect(() => {
-        const checkEnrollment = async () => {
-            const userId = localStorage.getItem('userId');
-            if (!userId) return setEnrolled(false);
-            try {
-                const response = await api.get(`/enrollments/student/${userId}`);
-                const enrolledCourses = response.data;
-                setEnrolled(enrolledCourses.some(c => String(c.id) === String(course?.id)));
-            } catch {
-                setEnrolled(false);
-            }
-        };
+        if (courseFromState) {
+            // If course is from state, still check enrollment
+            checkEnrollment();
+            
+            // Try to fetch materials
+            const fetchMaterials = async () => {
+                try {
+                    const materialsResponse = await api.get(`/Material/course/${id}`);
+                    setMaterials(materialsResponse.data || []);
+                } catch (err) {
+                    console.error('Error fetching materials:', err);
+                }
+            };
+            fetchMaterials();
+        } else {
+            fetchCourse();
+        }
+    }, [id, courseFromState, fetchCourse, checkEnrollment]);
+
+    // Check enrollment whenever course changes or enrollment actions happen
+    useEffect(() => {
         if (course) {
             checkEnrollment();
         }
-    }, [course, enrolling, unenrolling]);
+    }, [course, enrolling, unenrolling, checkEnrollment]);
 
     const handleEnroll = async () => {
         setEnrolling(true);
         setError(null);
         const userId = localStorage.getItem('userId');
         try {
-            const response = await api.post(`/enrollments?userId=${userId}&courseId=${course.id}`);
+            const response = await api.post(`/enrollments?userId=${userId}&courseId=${id}`);
             if (response.status === 200) {
                 setEnrolled(true);
                 setNotification('Successfully enrolled in course!');
+                fetchCourse(); // Refresh data after enrollment
             }
         } catch (err) {
             setNotification(err.response?.data?.message || "Failed to enroll in course");
@@ -88,9 +118,10 @@ function CoursePage() {
         setError(null);
         const userId = localStorage.getItem('userId');
         try {
-            await api.delete(`/enrollments/${userId}/course/${course.id}`);
+            await api.delete(`/enrollments/${userId}/course/${id}`);
             setEnrolled(false);
             setNotification('Successfully unenrolled from course');
+            fetchCourse(); // Refresh data after unenrollment
         } catch (err) {
             setNotification(err.response?.data?.message || err.message);
         } finally {
@@ -144,9 +175,13 @@ function CoursePage() {
     if (error) return <div className="graph-container"><div className="library-loading">Error loading course. Please try again.</div></div>;
     if (!course) return <div className="graph-container"><div className="library-loading">No course found.</div></div>;
 
-    const allFlashcards = course.materials
-        ? course.materials.flatMap(mat => (mat.flashcards ? mat.flashcards : []))
-        : [];
+    // Debug logs to verify course data
+    console.log('Course data:', course);
+    console.log('Materials:', materials);
+
+    // Get flashcards from materials
+    const allFlashcards = materials
+        .flatMap(mat => (mat.flashcards ? mat.flashcards : []));
 
     return (
         <div className="graph-container">
@@ -236,10 +271,10 @@ function CoursePage() {
                 <div className="graph-files">
                     <div className="graph-file-header">
                         <h2 className="graph-section-title">Files</h2>
-                        <h2 className="graph-file-count">{course.materials?.length || 0}</h2>
+                        <h2 className="graph-file-count">{materials.length}</h2>
                     </div>
-                    {course.materials && course.materials.length > 0 ? (
-                        course.materials.map((mat, i) => (
+                    {materials.length > 0 ? (
+                        materials.map((mat, i) => (
                             <div key={mat.id || i}>
                                 <div
                                     className="graph-file-entry clickable"
@@ -254,7 +289,7 @@ function CoursePage() {
                                         </p>
                                     </div>
                                 </div>
-                                {i < course.materials.length - 1 && <div className="graph-divider-small"></div>}
+                                {i < materials.length - 1 && <div className="graph-divider-small"></div>}
                             </div>
                         ))
                     ) : (
