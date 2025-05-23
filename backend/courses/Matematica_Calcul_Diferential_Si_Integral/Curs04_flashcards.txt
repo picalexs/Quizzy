@@ -1,0 +1,409 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition must a series satisfy to be classified as a series with arbitrary terms?
+--InteriorSeparator--
+The general term of the series does not have the same sign for all n ∈ N*.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the definition of an absolutely convergent series?
+--InteriorSeparator--
+A series ∑an is absolutely convergent if ∑|an| is convergent.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the conditions for the Dirichlet's Criterion to prove the convergence of ∑an*yn?
+--InteriorSeparator--
+(right) (Sn)n∈N* is bounded
+(right) (yn)n∈N* is monotonically decreasing with lim(n→∞) yn = 0
+(wrong) (yn)n∈N* is monotonically increasing
+(wrong) (Sn)n∈N* is unbounded
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the radius of convergence (R) for a power series if  ρ = lim (n→∞) (1/|an|^(1/n)) = +∞?
+--InteriorSeparator--
+R = 0
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+According to Abel's Theorem, what can be said about the convergence of a power series ∑an*x^n if its radius of convergence is R?
+--InteriorSeparator--
+(right) Converges absolutely for |x| < R
+(wrong) Diverges for |x| < R
+(right) Diverges for |x| > R
+(wrong) Converges conditionally for |x| > R
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a sufficient condition for a power series to converge at x = 0?
+--InteriorSeparator--
+The power series always converges at x = 0, regardless of the coefficients.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State the Leibniz criterion for the convergence of an alternating series.
+--InteriorSeparator--
+If (yn)n∈N* is a sequence of positive real numbers, decreasing and convergent to 0, then the series ∑(-1)^n * yn is convergent.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the difference between absolute and semiconvergence?
+--InteriorSeparator--
+A series is absolutely convergent if the sum of the absolute values of its terms converges, and semiconvergent if it converges but the sum of the absolute values of its terms diverges.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State the formula for the geometric series and its radius of convergence.
+--InteriorSeparator--
+∑x^n = 1/(1-x) for |x| < 1, R = 1
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define the term "domain of convergence" (Dc) for a power series.
+--InteriorSeparator--
+The set of all x ∈ R for which the power series ∑an*x^n converges.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the domain of absolute convergence for the series  ∑0 to ∞ x^n/n! ?
+--InteriorSeparator--
+R
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If lim (n→∞) |an+1/an| = L, what is the radius of convergence R according to the ratio test (D'Alembert's criterion)?
+--InteriorSeparator--
+R = 1/L, with R = 0 if L = +∞ and R = +∞ if L = 0.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How do you determine the radius of convergence if lim sup (n→∞) |an|^(1/n) exists?
+--InteriorSeparator--
+The radius of convergence R is 1/p, where p = lim sup (n→∞) |an|^(1/n).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+For what values of α does the series ∑ (1/n^α) x^n have a domain of convergence equal to [-1,1)?
+--InteriorSeparator--
+0 < α ≤ 1
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State the formula for cos(x) as a power series.
+--InteriorSeparator--
+cos(x) = ∑ (n=0 to ∞) (-1)^n * (x^(2n))/(2n)!
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the radius of convergence for the power series representing sinh(x)?
+--InteriorSeparator--
+R = ∞
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is true for an alternating series?
+--InteriorSeparator--
+(right) It can be written as ∑(-1)^n*yn, where yn ≥ 0
+(wrong) It always converges
+(right) Terms alternate in sign
+(wrong) Terms are always positive
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the power series representation of the exponential function e^x?
+--InteriorSeparator--
+e^x = ∑ (n=0 to ∞) x^n/n!
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State Abel's Theorem regarding power series convergence.
+--InteriorSeparator--
+For any power series ∑an*x^n, there exists R, 0 ≤ R ≤ +∞, such that the series converges absolutely for |x| < R and diverges for |x| > R.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If a series is absolutely convergent, is it necessarily convergent?
+--InteriorSeparator--
+Yes.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the domain of absolute convergence (Dac) related to the domain of convergence (Dc)?
+--InteriorSeparator--
+(right) Dac is a subset of Dc
+(wrong) Dac is a superset of Dc
+(wrong) Dac is equal to Dc always
+(right) (_R,R) ⊆ Dac ⊆ Dc ⊆ [-R,R]
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If  ρ = lim (n→∞) |an|^(1/n) = 0, what is the radius of convergence?
+--InteriorSeparator--
+R = +∞
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What conclusion can be drawn if lim (n→∞) n * ((|an|/|an+1|) - 1) > 1?
+--InteriorSeparator--
+(right) Series converges absolutely.
+(wrong) Series diverges.
+(wrong) The series converges conditionally.
+(wrong) Limit does not exist.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the conditions for Abel's Criterion to be applied?
+--InteriorSeparator--
+∑xn is convergent and (yn)n∈N* is monotonic and bounded.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+For a series to be semiconvergent, which conditions must be met?
+--InteriorSeparator--
+(right) The series converges
+(wrong) The series diverges
+(right) The series of absolute values diverges
+(wrong) The series of absolute values converges
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does it mean for a sequence (Sn) to be bounded?
+--InteriorSeparator--
+There exists a real number M > 0 such that |Sn| ≤ M for all n in N*.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the difference between y and y0 in the general term of a power series, an(y - y0)^n?
+--InteriorSeparator--
+y is the variable, and y0 is the center of the power series.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following intervals are always subsets of the Domain of Convergence (Dc)?
+--InteriorSeparator--
+(right) (-R, R)
+(wrong) [-R, R]
+(right) Domain of Absolute Convergence
+(wrong) (-∞, -R) ∪ (R, +∞)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+When does the root test (Corolar) fail to provide information about the convergence or divergence of a series?
+--InteriorSeparator--
+When lim (n→∞) |an|^(1/n) = 1.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If R=0 for the power series ∑anx^n, what does this imply about the convergence of the series?
+--InteriorSeparator--
+The series converges only at x=0.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Write the power series representation of cosh(x).
+--InteriorSeparator--
+cosh(x) = ∑ (n=0 to ∞) x^(2n) / (2n)!
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+For what values of x is the series ∑ x^n convergent?
+--InteriorSeparator--
+(right) x ∈ (-1, 1)
+(wrong) x ∈ [-1, 1]
+(wrong) All real numbers
+(wrong) Only x = 0
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+}], role=model}, finishReason=STOP, avgLogprobs=-0.1614281054437922}]

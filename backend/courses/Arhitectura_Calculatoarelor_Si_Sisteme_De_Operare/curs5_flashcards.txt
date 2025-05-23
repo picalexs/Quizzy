@@ -1,0 +1,419 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the key problem with fixed-point representations?
+--InteriorSeparator--
+Magnitude and precision are pre-established and cannot be modified.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are characteristics of the normalized scientific notation?
+--InteriorSeparator--
+(right) Exactly one significant digit before the decimal point
+(wrong) Allows multiple significant digits before the decimal point
+(right) Unique representation
+(wrong) Requires memorization of the base
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In binary scientific notation, why is the digit before the decimal point usually not stored?
+--InteriorSeparator--
+Because for non-zero numbers, it is always 1.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the main components of a floating-point representation?
+--InteriorSeparator--
+(right) Sign (S)
+(right) Mantissa (M)
+(right) Characteristic (C)
+(wrong) Base (B)
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens when a floating-point number exceeds the maximum representable value?
+--InteriorSeparator--
+It is considered infinity (inf).
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the IEEE 754 standard?
+--InteriorSeparator--
+To ensure portability of floating-point representations.
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the two main variants of the IEEE 754 standard?
+--InteriorSeparator--
+(right) Single precision (32 bits)
+(right) Double precision (64 bits)
+(wrong) Quadruple precision (128 bits)
+(wrong) Half precision (16 bits)
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the exponent bias used in single-precision floating-point representation?
+--InteriorSeparator--
+127
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the minimum magnitude (base 10) representable in double precision?
+--InteriorSeparator--
+Approximately 1.7 x 10^-308
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In what order should the fields (S, C, f) be considered when comparing two floating-point representations?
+--InteriorSeparator--
+S, C, f
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What type of representation is used for the characteristic in floating-point numbers?
+--InteriorSeparator--
+Excess representation.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What is the value of the exponent for normalized numbers in single precision, according to the IEEE 754 standard?
+--InteriorSeparator--
+-126 to 127
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+Represent -23.25 in single-precision floating-point format. Give the hexadecimal representation.
+--InteriorSeparator--
+C1BA0000(16)
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What decimal number does the single-precision floating-point representation 42D80000(16) represent?
+--InteriorSeparator--
+108
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does NaN stand for in floating-point arithmetic?
+--InteriorSeparator--
+Not a Number
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of extended arithmetic in floating-point representation?
+--InteriorSeparator--
+Handling infinity and undefined operations.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What value does (-1)^S * ∞ * 2^C represent?
+--InteriorSeparator--
+Infinity with the sign given by S.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the consequence of underflow in floating-point representation?
+--InteriorSeparator--
+The number is considered zero.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the main characteristic of denormalized numbers?
+--InteriorSeparator--
+The exponent has the minimum possible value, and the mantissa is of the form 0.f.
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why does the precision of floating-point representation depend on the exponent?
+--InteriorSeparator--
+Because the spacing between representable numbers increases with the exponent.
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What kind of numbers can be represented exactly using floating-point representation?
+--InteriorSeparator--
+Rational numbers.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In floating-point arithmetic, how is the exponent of two numbers equalized before addition or subtraction?
+--InteriorSeparator--
+By shifting one of the mantissas.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the steps involved in floating-point addition?
+--InteriorSeparator--
+(right) Comparing the exponents.
+(right) Adding the mantissas.
+(right) Normalizing the sum.
+(wrong) Subtracting the exponents
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What steps are involved in floating-point multiplication?
+--InteriorSeparator--
+(right) Adding the exponents
+(right) Multiplying the mantissas
+(right) Determining the sign of the result
+(wrong) Subtracting the mantissas
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+Follow the steps of floating-point addition for the single-precision representations of -0.75 and 0.375, expressed in base 2.
+--InteriorSeparator--
+Result will depend on the precise application of the rounding rules.
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the key feature of the von Neumann architecture?
+--InteriorSeparator--
+Stored program: instructions are stored in the same memory as data.
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the Program Counter (PC)?
+--InteriorSeparator--
+To store the address of the next instruction to be executed.
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are examples of languages at a low level of abstraction?
+--InteriorSeparator--
+(right) Machine language
+(right) Assembly language
+(wrong) C++
+(wrong) Java
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the role of an assembler?
+--InteriorSeparator--
+Translates assembly language into machine language.
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the advantages of high-level languages?
+--InteriorSeparator--
+(right) Faster program development
+(right) Easier program maintenance
+(right) Program portability
+(wrong) Direct hardware control
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+34
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the advantages of assembly language?
+--InteriorSeparator--
+(right) More compact code
+(right) Faster execution
+(right) Access to hardware resources
+(wrong) Easier to read
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does Amdahl's Law help to determine?
+--InteriorSeparator--
+Which component of a system is worth improving the most.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+36
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+According to Amdahl's Law, what is the formula for the overall speedup if a fraction 'fa' of a task is improved by a factor of 'a'?
+--InteriorSeparator--
+1 / ((1 - fa) + (fa / a))
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+38
+--FlashCardSeparator--}], role=model}, finishReason=STOP, avgLogprobs=-0.10381920007246136}]

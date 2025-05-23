@@ -1,0 +1,454 @@
+[{content={parts=[{text=```
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the general behavior of a jump instruction?
+--InteriorSeparator--
+It modifies the value of the program counter register.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the two categories of jump instructions?
+--InteriorSeparator--
+Unconditional and conditional.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the syntax for an unconditional jump?
+--InteriorSeparator--
+jmp address
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is used to represent an address in an unconditional jump?
+--InteriorSeparator--
+(right) Labels
+(wrong) Numbers
+(wrong) Variables
+(wrong) Constants
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How do conditional jumps work?
+--InteriorSeparator--
+They test a condition and jump only if the condition is true (or false).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What can be tested by conditional jumps?
+--InteriorSeparator--
+(right) Individual condition flags
+(right) Combinations of condition flags
+(wrong) Register values
+(wrong) Memory addresses
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the 'cmp' instruction?
+--InteriorSeparator--
+It performs an internal subtraction to set condition flags.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the `cmp` instruction do with the result of the subtraction?
+--InteriorSeparator--
+(wrong) Stores the result in a register
+(wrong) Stores the result in memory
+(right) Does not store the result
+(wrong) Displays the result
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How are control structures implemented at the processor level?
+--InteriorSeparator--
+Through jump instructions.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How is the conditional jump in an 'if' statement implemented in assembly, compared to C?
+--InteriorSeparator--
+It uses a conditional jump on the inverse of the C condition.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the assembly implementation of an `if...else` statement, what is the purpose of the second jump instruction?
+--InteriorSeparator--
+(wrong) To jump to the beginning of the `if` block
+(right) To jump past the `else` block after executing the `if` block
+(wrong) To jump to the end of the program
+(wrong) To compare two values
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How many jump instructions are used to implement a 'while' loop?
+--InteriorSeparator--
+Two.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition is tested in the first jump instruction of a 'while' loop, relative to the C code?
+--InteriorSeparator--
+The inverse of the condition in the C code.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What kind of jump is the second jump instruction in the 'while' loop?
+--InteriorSeparator--
+Unconditional.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of auxiliary instructions in a 'for' loop?
+--InteriorSeparator--
+To initialize variables and update their values for the next iteration.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which loop structure executes its body at least once?
+--InteriorSeparator--
+(wrong) While loop
+(right) Do-While loop
+(wrong) For loop
+(wrong) If statement
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Where is the test for continuation/exit located in a 'do-while' loop?
+--InteriorSeparator--
+At the end.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In a `do-while` loop implementation in assembly, what does a true condition typically lead to?
+--InteriorSeparator--
+(wrong) Exiting the loop
+(right) Re-execution of the loop
+(wrong) Termination of the program
+(wrong) Displaying an error message
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the jump instruction `je` do?
+--InteriorSeparator--
+Jumps if equal.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+N/A (From instruction sheet - not explicitly in text)
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the jump instruction `jl` do?
+--InteriorSeparator--
+Jumps if less than.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+N/A (From instruction sheet - not explicitly in text)
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the jump instruction `jg` do?
+--InteriorSeparator--
+Jumps if greater than.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+N/A (From instruction sheet - not explicitly in text)
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the jump instruction `jle` do?
+--InteriorSeparator--
+Jumps if less than or equal.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+N/A (From instruction sheet - not explicitly in text)
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the jump instruction `jge` do?
+--InteriorSeparator--
+Jumps if greater than or equal.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+N/A (From instruction sheet - not explicitly in text)
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When implementing an `if` statement, why is the conditional jump based on the inverse of the C condition?
+--InteriorSeparator--
+(right) Assembly jumps are often used to *skip* code blocks.
+(wrong) C uses a different comparison method than assembly.
+(wrong) The assembler automatically inverts the condition.
+(wrong) It makes the code easier to read.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Why does implementing control structures in assembly involve jump instructions?
+--InteriorSeparator--
+(right) Jump instructions control the flow of execution.
+(wrong) Assembly lacks other control flow mechanisms.
+(wrong) It’s simply a convention of assembly programming.
+(wrong) Jump instructions are more efficient than other options.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When translating a complex C condition to assembly with multiple indicators, what's a key consideration?
+--InteriorSeparator--
+(wrong) Ignoring individual flags simplifies the process.
+(wrong) Only one flag is sufficient for most conditions.
+(right) All relevant flags must be checked to ensure correct behavior
+(wrong) The compiler automatically handles the flag translation.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens after a conditional jump instruction when the specified condition is not met?
+--InteriorSeparator--
+Execution continues with the next instruction in sequence.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the role of labels in jump instructions?
+--InteriorSeparator--
+(right) They serve as symbolic representations of memory addresses
+(wrong) They store the value to be compared.
+(right) They help in creating more readable and maintainable code.
+(wrong) They directly translate into machine code addresses.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What assembly instruction updates condition flags based on a comparison?
+--InteriorSeparator--
+cmp
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In assembly implementation of the `for` loop, what parts have to be handled manually using assembly instructions and jumps?
+--InteriorSeparator--
+(right) Incrementing/decrementing the loop counter.
+(right) Checking the loop continuation condition.
+(wrong) Automatically creating the loop variable
+(wrong) Setting up the initial loop scope
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+How does the ASM implementation of an `if...else` differ from a single `if` statement?
+--InteriorSeparator--
+(right) The `else` block needs a jump past it after the `if` block finishes.
+(wrong) Condition is tested on the opposite case.
+(wrong) The first block is handled by default, the second uses a jump.
+(wrong) Only single `if` statements need jump instructions.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What can a conditional jump instruction not directly test?
+--InteriorSeparator--
+(wrong) The Zero Flag.
+(wrong) The Overflow Flag.
+(wrong) Combinations of Flag Values
+(right) Register values themselves.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+4, 5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Why are labels important in assembly code that uses jump instructions?
+--InteriorSeparator--
+(right) They improve code readability.
+(right) They make code easier to maintain and modify.
+(wrong) They improve the execution speed of the code.
+(wrong) They are automatically generated by the assembler.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When translating a 'while' loop from C to assembly, what needs to be considered regarding the loop's condition?
+--InteriorSeparator--
+(right) The assembly code typically uses the inverse of the C condition for the jump out of the loop.
+(wrong) The assembly condition must directly match the C condition.
+(right) Jumps in assembly need labels for proper flow control.
+(wrong) Condition flags are automatically set by the compiler.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+```}], role=model}, finishReason=STOP, avgLogprobs=-0.25785790143044957}]

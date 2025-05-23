@@ -1,0 +1,449 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the base case for the Fibonacci sequence when n equals 0?
+--InteriorSeparator--
+0
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+1
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the formula for calculating the nth Fibonacci number recursively when n is greater than or equal to 2?
+--InteriorSeparator--
+f(n-1) + f(n-2)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+1
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of the recursive Fibonacci algorithm without memoization?
+--InteriorSeparator--
+Exponential
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+1
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the context of the recursive Fibonacci function, what are the labels of the leaf nodes in the generated tree?
+--InteriorSeparator--
+(right) f(0)
+--InteriorSeparator--
+(right) f(1)
+(wrong) f(2)
+(wrong) f(n)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How many internal nodes exist in a full binary tree with 'x' leaves?
+--InteriorSeparator--
+x - 1
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If T(n) is the time complexity of calculating the nth Fibonacci number, what is the relationship between T(n) and f(n+1)?
+--InteriorSeparator--
+T(n) = 2f(n+1) - 1
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of calculating the nth Fibonacci number using memoization?
+--InteriorSeparator--
+O(n) - Linear
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the main idea behind memoization?
+--InteriorSeparator--
+(right) Storing the results of function calls.
+--InteriorSeparator--
+(wrong) Always using iterative methods.
+(right) Returning stored results directly for repeated calls with the same arguments.
+(wrong) Recalculating function results every time.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the context of the rod cutting problem, what does d(i) represent?
+--InteriorSeparator--
+The maximum profit that can be obtained by cutting a rod of length i.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of the iterative dynamic programming solution for the rod cutting problem?
+--InteriorSeparator--
+O(n^2)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the 'prima' array in the rod cutting problem solution?
+--InteriorSeparator--
+To store the length of the first section in an optimal cut of length i.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define the Levenshtein distance between two strings.
+--InteriorSeparator--
+The minimum number of edits (substitutions, insertions, or deletions) needed to transform one string into the other.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If d(l,k) represents the edit distance between the prefix of length l of string s and the prefix of length k of string t, what does d(0,k) represent?
+--InteriorSeparator--
+k
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the edit distance problem, what does a space on the first line indicate?
+--InteriorSeparator--
+An insertion
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What property justifies the recursive definition of the edit distance?
+--InteriorSeparator--
+The property of optimal substructure.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the money change problem, what is the significance of b1 = 1?
+--InteriorSeparator--
+It guarantees that any amount can be paid.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a pseudo-polynomial algorithm?
+--InteriorSeparator--
+An algorithm that is polynomial in the numeric value of the input, but exponential in the length of the input representation.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the necessary conditions for matrix multiplication M1 x M2 to be defined?
+--InteriorSeparator--
+(right) The number of columns in M1 must equal the number of rows in M2.
+--InteriorSeparator--
+(wrong) The number of rows in M1 must equal the number of rows in M2.
+(wrong) The number of columns in M1 must equal the number of columns in M2.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the optimal matrix chain multiplication problem, what does d(i, j) represent?
+--InteriorSeparator--
+The minimum cost to compute the product of matrices Mi through Mj.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why is enumerating all possible parenthesizations for matrix chain multiplication inefficient?
+--InteriorSeparator--
+Because there are an exponential number of such parenthesizations.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How can the memoized algorithm for optimal matrix chain multiplication be transformed into an iterative one?
+--InteriorSeparator--
+By calculating d(i,j) values in order of increasing j-i.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the main difference between greedy algorithms and dynamic programming?
+--InteriorSeparator--
+(right) In greedy algorithms, the choice is dictated by a greedy criterion, while dynamic programming enumerates all possibilities.
+--InteriorSeparator--
+(wrong) Greedy algorithms always guarantee an optimal solution, while dynamic programming does not.
+(wrong) Dynamic programming is faster than greedy algorithms.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the activity selection problem, what does S(i, j) represent?
+--InteriorSeparator--
+The set of activities that start after activity i and finish before activity j.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the significance of the 'first' function in the optimized activity selection problem using dynamic programming?
+--InteriorSeparator--
+It returns the activity that finishes earliest among the activities in S(i,j).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why was the term "dynamic programming" chosen by Richard Bellman?
+--InteriorSeparator--
+For political reasons, to avoid negative connotations related to mathematical research during that period.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the context of knapsack-like problems, which technique is used to find a pseudo-polynomial algorithm for the discrete knapsack problem?
+--InteriorSeparator--
+(right) Dynamic Programming
+--InteriorSeparator--
+(wrong) Greedy Algorithm
+(wrong) Divide and Conquer
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+For the edit distance problem with only insertion and deletion operations, what is the constraint imposed on the allowed operations?
+--InteriorSeparator--
+Only insertion and deletion operations are permitted; substitution is not allowed.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Given two sequences of numbers, what does the longest increasing subsequence problem aim to find?
+--InteriorSeparator--
+The longest subsequence that is increasing and appears in both sequences.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the constraints regarding number selection for each level in the maximum sum in triangle problem?
+--InteriorSeparator--
+For each subsequent level, only the number beneath the number from the current level, either from the left or the right, is included.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the context of chain matrix multiplication, what do the subproblems typically represent?
+--InteriorSeparator--
+(right) The minimum number of scalar multiplications needed to compute Ai * Ai+1 * ... * Aj
+--InteriorSeparator--
+(wrong) The maximum number of scalar multiplications needed to compute Ai * Ai+1 * ... * Aj
+(wrong) The actual matrices Ai * Ai+1 * ... * Aj
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the optimal binary search tree problem, what are the subproblems?
+--InteriorSeparator--
+x[i,j] which represents the optimal binary search tree for numbers ai, ai+1, ..., aj.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the money change problem, if we are given coin values of 1, 3, and 4, and we want to make change for 6, which coins would be used in the optimal solution?
+--InteriorSeparator--
+(right) One coin of value 3
+(right) One coin of value 3
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+A rod of length 5 has the following possible cut values: a[1] = 2, a[2] = 5, a[3] = 7, a[4] = 8, a[5] = 9. What is the optimal profit d(5)?
+--InteriorSeparator--
+(right) 10
+--InteriorSeparator--
+(wrong) 9
+(right) 5 + 5
+(wrong) 7 + 2
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the edit distance problem, why isn't it possible to have two spaces in the same column of an optimal alignment?
+--InteriorSeparator--
+Because two spaces indicate that no operations are performed in that column, which is not an efficient way to align the strings.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the optimal substructure property concerning money change problems?
+--InteriorSeparator--
+(right) If b1 + ... + bl = n is an optimal decomposition of n, then b1 + ... + bl-1 = n-bi is an optimal decomposition for n-bi
+--InteriorSeparator--
+(wrong) If b1 + ... + bl = n is an optimal decomposition of n, then b1 + ... + bl+1 = n-bi is an optimal decomposition for n-bi
+(wrong) Any decomposition of n implies the existence of optimal decompositions of its parts.
+(wrong) Subproblems must be overlapping, but not necessarily optimal.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.1835362485681098}]

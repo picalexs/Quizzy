@@ -100,7 +100,7 @@ public class FlashcardController {
     }
     
     @PostMapping("/generate-all")
-    public ResponseEntity<Map<String, Object>> generateFlashcards(@RequestParam String course) {
+        public ResponseEntity<Map<String, Object>> generateFlashcards(@RequestParam String course) {
         try {
             // Get project root directory
             String projectPath = new File("").getAbsolutePath();

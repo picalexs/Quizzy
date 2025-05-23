@@ -1,0 +1,416 @@
+[{content={parts=[{text=```
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the condition for promoting the course?
+--InteriorSeparator--
+At least 10 points in total (cumulative from both tests)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the first half of the course cover?
+--InteriorSeparator--
+(right) Combinational circuits and boolean functions
+(wrong) Quantum computing algorithms
+(right) Internal representations
+(wrong) Data Structures
+(right) Computer architecture and organization
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a digital signal?
+--InteriorSeparator--
+A discrete signal with a few distinct levels it can take.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What differentiates combinational circuits from sequential circuits?
+--InteriorSeparator--
+(right) Combinational circuit outputs depend exclusively on the inputs.
+(wrong) Sequential circuits operate instantaneously.
+(right) Sequential circuit outputs depend on inputs and the current state of the circuit.
+(wrong) Combinational circuits evolve over time.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a truth table used for in the context of circuits?
+--InteriorSeparator--
+Describing the functioning of a combinational circuit.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What corresponds to each truth table?
+--InteriorSeparator--
+A boolean function.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which properties should a non-empty set B contain to be considered an algebraic structure?
+--InteriorSeparator--
+(right) At least two elements, a and b, where a ≠ b.
+(wrong) Only one binary operation {+}.
+(right) Binary operations {+, •}.
+(wrong) No unary operations.
+(right) Unary operation {¬}.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If f : B^n -> B^m, and B = {0, 1}, how many such functions exist?
+--InteriorSeparator--
+(2^m)^(2^n)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the generalization axiom (duality) state in boolean algebra?
+--InteriorSeparator--
+f(X1,...,Xn,0,•,+) = ¬f(¬X1,...,¬Xn,1,or,+)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What type of operations are considered as elementary in current calculators?
+--InteriorSeparator--
+Operations of boolean logic.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the conjunctive normal form (CNF)?
+--InteriorSeparator--
+Dual of the disjunctive normal form.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are elementary logic gates?
+--InteriorSeparator--
+(right) AND
+(wrong) NAND
+(right) OR
+(wrong) XOR
+(right) NOT
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the circle on a logic gate symbol usually indicate?
+--InteriorSeparator--
+Negation (NOT operation).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a minimal set of generators in the context of logic gates?
+--InteriorSeparator--
+A set of gate types with the minimum number of types, which can implement any boolean function.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following sets of gate types are generator sets?
+--InteriorSeparator--
+(right) NOT, AND
+(right) NAND
+(wrong) XOR
+(right) NOR
+(right) NOT, OR
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is Sigma-notation (Σ) used for in boolean functions?
+--InteriorSeparator--
+Defining boolean functions.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In Σ-notation, what does each number within the parentheses represent?
+--InteriorSeparator--
+A conjunction term.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If a Σ-notation is given as Σ(10), how many variables are necessary?
+--InteriorSeparator--
+4 (because 2^3 < 10 < 2^4)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Why simplify boolean expressions?
+--InteriorSeparator--
+(right) To make circuits faster
+(right) To make circuits cheaper
+(right) To make circuits more reliable
+(wrong) To make circuits larger
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+How can one simplify a boolean expression derived from the disjunctive normal form?
+--InteriorSeparator--
+(right) Equivalent rewriting
+(wrong) Quantum entanglement
+(right) Using boolean algebra laws and axioms
+(right) Veitch-Karnaugh method
+(right) Quine-McCluskey method
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why is algebraic rewriting difficult for complex expressions?
+--InteriorSeparator--
+It can be hard to identify which rules to apply and when.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the main idea behind the Veitch-Karnaugh method?
+--InteriorSeparator--
+Visually grouping the conjunction terms from FND for which unification can be applied.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What should a Karnaugh map contain?
+--InteriorSeparator--
+Variable names, labels, and the values of the function (outputs).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the Gray code and why is it used in Karnaugh maps?
+--InteriorSeparator--
+An ordering of binary numbers such that two successive values differ in only one bit. Used to ensure adjacent cells in the map differ by only one variable.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does adjacency mean in a Karnaugh map?
+--InteriorSeparator--
+Two positions are adjacent if their corresponding labels differ by a single bit.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+36
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What kind of blocks should be searched for in a Karnaugh map for minimization?
+--InteriorSeparator--
+(right) Blocks containing only 1s
+(right) Blocks corresponding to adjacencies
+(wrong) Blocks with a mix of 0s and 1s
+(right) Blocks as large as possible
+(right) As few blocks as possible
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How are don't care conditions used in Karnaugh maps?
+--InteriorSeparator--
+They can be treated as either 0 or 1 to simplify the expression.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+43
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In a 7-segment display example, what do 0 and 1 represent for a segment?
+--InteriorSeparator--
+0 - segment is off, 1 - segment is on.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+44
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the inputs for the comparator of two 2-bit numbers example?
+--InteriorSeparator--
+(right) A, B, C, D
+(wrong) LT, EQ, GT
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+47
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+For the increment by 1 BCD, what values are ignored?
+--InteriorSeparator--
+Combinations after 9 (1010, 1011, 1100, 1101, 1110, 1111)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+49
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the key consideration for grouping cells in a Karnaugh map?
+--InteriorSeparator--
+Ensure the simplified expression will be minimal by avoiding redundant groupings.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What benefit does Gray code adjacency provide?
+--InteriorSeparator--
+It translates adjacency into neighborhood, which ensures logical neighbors in the Karnaugh map are physically adjacent.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+36
+--FlashCardSeparator--
+```}], role=model}, finishReason=STOP, avgLogprobs=-0.1781484091376541}]

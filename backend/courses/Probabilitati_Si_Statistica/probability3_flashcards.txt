@@ -1,0 +1,396 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does a probabilistic scheme use as context?
+--InteriorSeparator--
+A probabilistic scheme uses the following context: In an urn, there are n1 white balls and n2 black balls, n = n1 + n2. k balls are extracted from the urn without replacement (the k balls are extracted simultaneously from the urn).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the condition for a variable to be considered discrete?
+--InteriorSeparator--
+A variable is discrete if its image has a cardinal that is at most countable.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is a required property of a function of repartition FX?
+--InteriorSeparator--
+(right) FX is a non-decreasing function: FX(a) ≤ FX(b), for any a < b.
+(wrong) FX is a decreasing function: FX(a) ≥ FX(b), for any a < b.
+(right/wrong) lim(a->+inf) FX(a) = 1
+(wrong) lim(a->+inf) FX(a) = 0
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Poisson scheme, what does 'p' represent?
+--InteriorSeparator--
+p represents the known probability of event A, P(A).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does X represent in P{X = xi} = P(X = xi) = pi?
+--InteriorSeparator--
+(right) A discrete random variable
+(wrong) A continuous random variable
+(wrong) An event
+(wrong) A constant
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State the formula for P{a < X ≤ b} using the repartition function.
+--InteriorSeparator--
+P{a < X ≤ b} = Fx(b) - Fx(a)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the context of a hypergeometric scheme, what is being selected?
+--InteriorSeparator--
+(wrong) Balls are being selected with replacement.
+(right) Balls are being selected without replacement.
+(wrong) Cards are being selected with replacement.
+(wrong) Cards are being selected without replacement.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a random variable?
+--InteriorSeparator--
+A random variable is a function that associates each elementary random event with a number, which is the result of an observation or measurement of the event.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the formula for the probability that event A occurs exactly on the nth trial in a geometric scheme?
+--InteriorSeparator--
+(right) p(1 − p)^(n−1)
+(wrong) p^n
+(wrong) (1 − p)^(n−1)
+(wrong) p(1 + p)^(n−1)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the name of the function fX: X(Q) -> [0,1] defined by f(xi) = pi = P{X = xi}?
+--InteriorSeparator--
+(wrong) The repartition function of the random variable X.
+(right) The mass function of probability of the discrete random variable X.
+(wrong) The density function of the random variable X.
+(wrong) The CDF function of the random variable X.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In a binomial scheme, what does the variable 'k' represent?
+--InteriorSeparator--
+k represents the number of times the event A occurs in n independent trials.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the formula for P(A1 ∩ A2 ∩ ... ∩ An)?
+--InteriorSeparator--
+(right) P(A1) * P(A2|A1) * ... * P(An|A1 ∩ A2 ∩ ... ∩ An-1)
+(wrong) P(A1) + P(A2|A1) + ... + P(An|A1 ∩ A2 ∩ ... ∩ An-1)
+(wrong) P(A1) * P(A2) * ... * P(An)
+(wrong) P(A1) + P(A2) + ... + P(An)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When is P(A1 ∩ A2 ∩ ... ∩ An) defined according to Proposition 1?
+--InteriorSeparator--
+(right) when P(A1 ∩ A2 ∩ ... ∩ An-1) > 0
+(wrong) when P(A1 ∩ A2 ∩ ... ∩ An-1) < 0
+(wrong) when P(A1 ∪ A2 ∪ ... ∪ An-1) > 0
+(wrong) always
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the two types of random variables?
+--InteriorSeparator--
+Discrete and Continuous
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the following formula represent when extracting balls *without* replacement: (n1 choose k1) * (n2 choose k2) / (n choose k)
+--InteriorSeparator--
+(wrong) The probability of drawing k balls with k1 of one color and k2 of another *with* replacement.
+(right) The probability of drawing k balls with k1 of one color and k2 of another *without* replacement.
+(wrong) The probability of drawing k balls where k1 + k2 = k when the balls are different colors with replacement.
+(wrong) The probability of drawing k balls where k1 + k2 = k when the balls are different colors *without* replacement.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition must the sum of probabilities in a distribution table satisfy?
+--InteriorSeparator--
+The sum must be equal to 1 (Σpi = 1).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In a Poisson scheme with independent events A1, A2, ..., An, what is the probability of exactly k events occurring?
+--InteriorSeparator--
+(wrong) The sum of the coefficients of x^k in the expansion of (p1x + q1) + (p2x + q2) + ... + (pnx + qn)
+(right) The coefficient of x^k in the expansion of (p1x + q1) * (p2x + q2) * ... * (pnx + qn)
+(wrong) p^k
+(wrong) The product of the coefficients of x^k in the expansion of (p1x + q1) * (p2x + q2) * ... * (pnx + qn)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In a Binomial probabilistic scheme with n independent trials and probability 'p' of success, what is the probability of exactly 'k' successes?
+--InteriorSeparator--
+(wrong) p^k * (1-p)^(n+k)
+(wrong) p^k + (1-p)^(n-k)
+(right) (n choose k) * p^k * (1-p)^(n-k)
+(wrong) p^k * (1-p)^(n-k)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does X^-1(J) represent according to Definition 1, where X is a random variable and J is an interval?
+--InteriorSeparator--
+X^-1(J) represents a random event.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+How is the probability P{a < X ≤ b} calculated using the function of repartition FX of the random variable X?
+--InteriorSeparator--
+(wrong) Fx(a) - Fx(b)
+(right) Fx(b) - Fx(a)
+(wrong) Fx(a) + Fx(b)
+(wrong) Fx(b) + Fx(a)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the formula for the probability that event A occurs exactly on the nth trial in a geometric distribution?
+--InteriorSeparator--
+P(A occurs on nth trial) = p*(1-p)^(n-1)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the connection between the function of mass of probability and the function of repartition of a variable?
+--InteriorSeparator--
+(right) Either of them provides complete information on the variable
+(wrong) The function of repartition is derived from the function of density.
+(wrong) The function of mass of probability is always superior
+(wrong) They cannot be connected.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Under what condition is a random variable X considered discrete?
+--InteriorSeparator--
+(wrong) The image of X is not countable
+(wrong) The image of X is uncountable
+(right) The image of X is at most countable
+(wrong) The domain of X is at most countable
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If X is a discrete random variable, how can we represent its distribution?
+--InteriorSeparator--
+Using a table of pairs (xi, pi), where xi are the values of X and pi are the probabilities P{X = xi}.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does Proposition 4 state about the probability of exactly *k* events occurring in *n* independent trials with different probabilities?
+--InteriorSeparator--
+(wrong) The probability is the sum of the coefficients of x^k in the expansion of the polynomial (p1x + q1)(p2x + q2)...(pnx + qn), where q1 = P(A'i)
+(wrong) The probability is p1*p2*....pk, where pi = P(Ai)
+(right) The probability is the coefficient of x^k in the expansion of the polynomial (p1x + q1)(p2x + q2)...(pnx + qn), where qi = P(Ai')
+(wrong) The probability is q1*q2*....qn, where qi = P(Ai')
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does 'n' represent in the hypergeometric distribution context?
+--InteriorSeparator--
+'n' represents the total number of balls in the urn (n = n1 + n2).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the purpose of Formula of Multiplication?
+--InteriorSeparator--
+(right) Calculates the probability of intersection of n events.
+(wrong) Calculates the probability of reunion of n events.
+(right/wrong) Calculate the probability of conditional events.
+(wrong) Calculates the probability of mutually exclusive events.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the result of lim(a->-inf) FX(a) where FX is the function of repartition for the random variable X?
+--InteriorSeparator--
+(wrong) 1
+(right) 0
+(wrong) -1
+(wrong) Infinity
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How is a random variable also known as?
+--InteriorSeparator--
+Distribution or Repartition
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.2111345714720896}]

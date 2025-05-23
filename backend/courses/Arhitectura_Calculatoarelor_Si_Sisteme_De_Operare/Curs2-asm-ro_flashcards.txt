@@ -1,0 +1,324 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the operands for addition/subtraction operations in ASM?
+--InteriorSeparator--
+A register or memory location
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+1
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What indicators receive values based on the result of the operation in addition/subtraction?
+--InteriorSeparator--
+Condition indicators
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+1
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are valid operands for the `add` instruction?
+--InteriorSeparator--
+(right) Register
+(right) Memory location
+(wrong) Constant value above the allowed size
+(wrong) Another instruction
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What should be tested in unsigned and signed operations to avoid incorrect results due to overflow?
+--InteriorSeparator--
+Carry flag for unsigned, Overflow flag for signed
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What flags are set by the processor, regardless of whether the operands are signed or unsigned?
+--InteriorSeparator--
+All flags
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the syntax for incrementing a value in assembly?
+--InteriorSeparator--
+inc op
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the `adc` instruction?
+--InteriorSeparator--
+Addition with carry
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the `sbb` instruction?
+--InteriorSeparator--
+Subtraction with borrow
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In multiplication operations, if only one operand is specified, what determines the second operand and the destination of the result?
+--InteriorSeparator--
+The size of the first operand
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What restrictions apply to the explicit operand in the `mul` instruction?
+--InteriorSeparator--
+(right) It cannot be a constant.
+(right) The dimension must be specified if it's a memory location.
+(wrong) It must always be a register.
+(wrong) It can only be a byte.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What size is required for the destination of a multiplication result, relative to the operands?
+--InteriorSeparator--
+Double the size of the operands
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In division operations, if only one operand is specified, what is it?
+--InteriorSeparator--
+Divisor
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In division operations, if only one operand is specified, what determines the dividend?
+--InteriorSeparator--
+The size of the divisor
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What operands are implicit in division operations?
+--InteriorSeparator--
+(right) Dividend
+(right) Quotient and remainder destinations
+(wrong) Carry flag
+(wrong) Sign flag
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens when attempting to divide by zero in assembly?
+--InteriorSeparator--
+An error occurs during execution.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens when the quotient is too large to fit in the destination register in a division operation?
+--InteriorSeparator--
+An error occurs during execution.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+When does the error of a too-large quotient occur in division?
+--InteriorSeparator--
+When the more significant half of the dividend is greater than or equal to the divisor.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why does the "too large quotient" error not usually occur in C language division operations?
+--InteriorSeparator--
+Because operands are always of the same type and the dividend has double the size, with the most significant half being zero.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the elementary boolean operations implemented in assembly?
+--InteriorSeparator--
+NOT, AND, OR, XOR
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+Single
+--InteriorSeparator--
+What is the difference between the `and` instruction and the `test` instruction?
+--InteriorSeparator--
+`and` modifies the first operand, `test` doesn't.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the `test` instruction do?
+--InteriorSeparator--
+Calculates the boolean AND but does not write the result, only sets the condition flags.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of shift instructions?
+--InteriorSeparator--
+To move bits left or right within an operand.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the second operand of a shift instruction and what can it be?
+--InteriorSeparator--
+(right) The number of positions to shift
+(right) A constant or the CL register
+(wrong) The destination register
+(wrong) A memory location
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens to the bits that "exit" during a shift operation?
+--InteriorSeparator--
+They are stored in the Carry flag one by one, with only the last one being preserved.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What value do the bits that "enter" during a shift operation have?
+--InteriorSeparator--
+Zero
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the practical use of left shift for unsigned numbers?
+--InteriorSeparator--
+Multiplication by 2 to the power of the number of positions shifted.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the practical use of right shift for unsigned numbers?
+--InteriorSeparator--
+Division by 2 to the power of the number of positions shifted.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why can't a simple right shift be used for division of signed numbers?
+--InteriorSeparator--
+Because the sign bit needs to be preserved.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the `sar` instruction used for?
+--InteriorSeparator--
+Arithmetic right shift, division by 2^n for signed numbers.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the `sar` instruction do with the sign bit?
+--InteriorSeparator--
+It preserves the sign bit by copying it into the shifted positions.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is correct about the shift instructions?
+--InteriorSeparator--
+(right) `shl eax,1` shifts the value in eax one bit to the left
+(wrong) `shl byte ptr [ebx+ecx],3` shifts the value at ebx+ecx 3 bits right
+(wrong) `sar eax,2` multiplies the value in eax by 4
+(right) `shr dx,cl` shifts the value in dx by the number of bits specified in cl register.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+}], role=model}, finishReason=STOP, avgLogprobs=-0.17427916260391305}]

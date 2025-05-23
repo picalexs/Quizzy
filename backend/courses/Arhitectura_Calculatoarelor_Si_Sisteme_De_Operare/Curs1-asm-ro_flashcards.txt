@@ -1,0 +1,410 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the primary function of assembly language instructions?
+--InteriorSeparator--
+Each instruction performs a single operation.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are valid operand types in assembly language?
+--InteriorSeparator--
+(right) Constants
+(right) Memory locations
+(wrong) Functions
+(wrong) Data Structures
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How are variables accessed in assembly language?
+--InteriorSeparator--
+By specifying their memory address.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why are processor registers faster than memory locations?
+--InteriorSeparator--
+They offer a higher access speed.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are 32-bit registers in the Intel architecture?
+--InteriorSeparator--
+(right) EAX
+(right) ESP
+(wrong) AX
+(wrong) SP
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Which register usually stores the address of the top of the program's stack?
+--InteriorSeparator--
+ESP
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the general purpose of EBP register?
+--InteriorSeparator--
+Used by compilers in function calls.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which registers can be used for storing numerical values?
+--InteriorSeparator--
+(right) EAX
+(right) EBX
+(wrong) CS
+(wrong) SS
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Can memory addresses contain more than one registers and constants?
+--InteriorSeparator--
+Yes
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are valid forms of memory addressing?
+--InteriorSeparator--
+(right) [EAX]
+(right) [EBX+5]
+(wrong) EAX+5
+(wrong) 100
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Can registers be multiplied when specifying memory addresses?
+--InteriorSeparator--
+Yes, a register can be multiplied by 2, 4, or 8.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of condition flags (or indicators)?
+--InteriorSeparator--
+To provide additional information about the results of operations.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are commonly used condition flags?
+--InteriorSeparator--
+(right) Carry (C)
+(right) Zero (Z)
+(wrong) Address (A)
+(wrong) Pointer (P)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How can conditional flags be used in assembly language?
+--InteriorSeparator--
+Their values can be tested to implement control structures.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In Visual C++, for which type of programs assembly language instructions can be easily intermixed?
+--InteriorSeparator--
+32-bit programs.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the keyword used to introduce assembly language code in Visual C++?
+--InteriorSeparator--
+_asm
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the common separators used between instructions within an `_asm` block?
+--InteriorSeparator--
+New line or semicolon (;)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the three operand categories in assembly language?
+--InteriorSeparator--
+General-purpose registers, memory locations (variables), and constants.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the general rule about the size of operands in assembly language instructions?
+--InteriorSeparator--
+Operands must have the same size.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why can't the first operand of a binary operation be a constant?
+--InteriorSeparator--
+Because it needs to store the result and constants can’t store data.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why is it generally disallowed for both operands to be memory locations in Intel processors?
+--InteriorSeparator--
+To force the use of registers, which are faster.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the syntax for the `mov` instruction in assembly language?
+--InteriorSeparator--
+mov destination, source
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following `mov` instructions are syntactically valid (assuming register and memory are appropriately sized)?
+--InteriorSeparator--
+(right) mov eax, ebx
+(right) mov cx, 5
+(wrong) mov 5, eax
+(wrong) mov [100], 5
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens if one of the operands is a register?
+--InteriorSeparator--
+The other operand must have the same dimension as the register.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+When must the size of memory operands be explicitly specified?
+--InteriorSeparator--
+When neither operand is a register.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which keywords are used to explicitly specify the size of memory operands?
+--InteriorSeparator--
+(right) byte ptr
+(right) word ptr
+(wrong) int ptr
+(wrong) long ptr
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+When is it not necessary to explicitly specify the dimension of a memory location in Visual C++?
+--InteriorSeparator--
+When the memory location is a variable declared in C/C++.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Does the equal size rule of operands still apply when using C/C++ declared variables?
+--InteriorSeparator--
+Yes, the equal size rule remains valid.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Does the `mov` instruction modify condition flags?
+--InteriorSeparator--
+No, the `mov` instruction does not modify the condition flags.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why is `_asm mov a,b;` incorrect if a and b are C/C++ variables?
+--InteriorSeparator--
+Because both operands are memory locations.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+25
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a correct way to translate the C/C++ line `a=b;` into assembly language (assuming a and b are C/C++ variables)?
+--InteriorSeparator--
+```assembly
+mov eax, b
+mov a, eax
+```
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following statements are true regarding assembly language?
+--InteriorSeparator--
+(right) Operands must have the same dimension
+(wrong) The first operand cannot be a constant
+(wrong) Condition flags are always modified after the execution of `mov`
+(right) Register is faster than memory locations
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16-24
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.13283441005608973}]

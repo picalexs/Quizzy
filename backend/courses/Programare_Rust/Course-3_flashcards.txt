@@ -1,0 +1,534 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In Rust, how do you access a value from an enumeration?
+--InteriorSeparator--
+`enum_name::value`
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is true about Rust enums compared to C/C++ enums?
+--InteriorSeparator--
+(right) Rust enums are more similar to C++ classes.
+(wrong) Rust enums are implicitly associated with an integer value.
+(right/wrong) Rust enums require `#[derive(PartialEq)]` to be compared for equality.
+(wrong) Rust enums cannot hold data.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5, 7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does `#[derive(PartialEq)]` do for an enum in Rust?
+--InteriorSeparator--
+It automatically implements the PartialEq trait, allowing equality and inequality comparisons.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5, 15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does implementing `PartialEq` for a type involve?
+--InteriorSeparator--
+(right) Adding `eq` and `ne` methods.
+(wrong) Overloading the `=` operator.
+(wrong) Creating a conversion to `int`.
+(right/wrong) Providing logic for equality and inequality comparisons.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why does Rust use `PartialEq` instead of `Eq`?
+--InteriorSeparator--
+`PartialEq` handles cases where equivalence relations (reflexivity, symmetry, transitivity) may not fully hold, such as with floating-point NaN values.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the default memory representation of a simple Rust enum (without explicit specifications)?
+--InteriorSeparator--
+It is more like a `u8` or `i8` value.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are true about Rust enums?
+--InteriorSeparator--
+(right) Rust enums support having variants with different types.
+(wrong) Bitflags are directly supported within Rust enums with the standard library.
+(wrong) Enums in rust must only have integer types.
+(right/wrong) Rust enums are more flexible than C/C++ enums in terms of data types of variants.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+34, 35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How can you determine the underlying type of a variant in a Rust enum with multiple types?
+--InteriorSeparator--
+Using `match` to validate the type and extract the value.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+39
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the term for a numerical value that specifies the type of a variant within an enum?
+--InteriorSeparator--
+Discriminant
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What happens when comparing two enum variants in Rust?
+--InteriorSeparator--
+(right) Rust compares both their types and their values (if present).
+(wrong) Rust compares only their types.
+(wrong) Rust compares only their values.
+(wrong) Rust uses bitwise comparison.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+44
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If a Rust enum has variants with different data types, how is it typically represented in memory?
+--InteriorSeparator--
+More like a union than multiple data members within the same class.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+53
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+According to the material, what are three scenarios that require error management in programs?
+--InteriorSeparator--
+(right) Compile Error
+(right/wrong) Run-time Error (manageable)
+(wrong) Logic Error
+(right) Run-time Error (critical)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+55
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In error management, what does "treated" mean?
+--InteriorSeparator--
+There is specific code to handle the error.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+56
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are some disadvantages of using a boolean return type for error handling in C/C++?
+--InteriorSeparator--
+(right) The bool type is not necessarily associated with errors.
+(wrong) Bool type is not performant.
+(right/wrong) The actual error is unknown.
+(wrong) Using a bool is difficult to write.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+61
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In error handling, what is a disadvantage of using exceptions?
+--InteriorSeparator--
+Memory allocation might not be cleared, and it cannot really be enforced.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+67
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What error handling approach does Rust favor?
+--InteriorSeparator--
+Using an error specific type that holds both the value and error/error code.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+71
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the primary ways to perform error management in Rust?
+--InteriorSeparator--
+(right) Using the `panic!` macro.
+(right/wrong) Using the `Option` type.
+(wrong) Using try-catch blocks.
+(right) Using the `Result` type.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+74
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a "panic" in Rust?
+--InteriorSeparator--
+A critical runtime-error that you can not recover from.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+76
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When can a panic error be triggered in Rust?
+--InteriorSeparator--
+(right) When the execution flow reach a point where the outcome cannot be computed in a deterministic way.
+(right/wrong) If the program can not serve its purpose anymore.
+(wrong) Division by 0
+(wrong) Memory allocation error
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+76
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the `panic!()` macro do?
+--InteriorSeparator--
+It aborts the program immediately.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+77
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does Rust 1.71.0 and later versions attempt to do during compilation regarding array access?
+--InteriorSeparator--
+(wrong) Always detect array out of bounds.
+(right/wrong) Identify more complex cases leading to out-of-bounds accesses and trigger compile-time errors.
+(wrong) Ignore array indexing errors to improve performance.
+(right) Detect cases where out-of-bounds access will occur.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+82
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is it recommended to use `catch_unwind` often?
+--InteriorSeparator--
+No, it is not recommended and if used with C++ exceptions from an exported function, the behavior is undefined.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+85
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the two scenarios for returning with a Rust Option type?
+--InteriorSeparator--
+(right) A `Some` case, indicating success with an associated value.
+(wrong) An `Error` case, indicating failure with an associated error message.
+(wrong) A `Success` case, indicating success with an associated value.
+(right/wrong) A `None` case, indicating failure with no associated value.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+89
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If you use the `unwrap()` method on an Option that contains `None`, what happens?
+--InteriorSeparator--
+The program panics.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+91
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which methods are used to handle result values when using Rust's Option type?
+--InteriorSeparator--
+(wrong) `is_error()`
+(right) `unwrap_or()`
+(right/wrong) `expect()`
+(wrong) `or_else()`
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+91
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the `.take()` method do on an Option?
+--InteriorSeparator--
+If the Option is `Some(value)`, it replaces the Option with `None` and returns `Some(value)`. If it's already `None`, it returns `None`.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+101
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the size of Option<&str> in memory, according to the provided material?
+--InteriorSeparator--
+(wrong) 8 bytes
+(right) 16 bytes
+(wrong) Depends on the architecture.
+(wrong) Equal to the size of `&str`.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+105
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why does `Option<&str>` not require an additional boolean field for the `None` case?
+--InteriorSeparator--
+Because a reference is never null, so `null` can be used to represent `None`.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+104, 106
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the purpose of `NonNull` and `NonZero{numeric type}` when used with `Option`?
+--InteriorSeparator--
+(wrong) To increase the size of the `Option` to ensure safety.
+(right) To allow Rust to optimize the memory representation of the `Option` by using invalid values to represent `None`.
+(wrong) To prevent `Option` from being used with potentially null values.
+(wrong) To provide additional methods for working with numeric values.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+115
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If a Rust enum fills up the entire space of possible values for its underlying type, what happens to the size of `Option<Enum>`?
+--InteriorSeparator--
+It will require an additional byte to represent the discriminant and as such, the size will be higher.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+114
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the Rust `Result` type represent?
+--InteriorSeparator--
+(right) A value or an error explaining what happened.
+(wrong) Only a successful value, with errors causing a panic.
+(wrong) A value or nothing.
+(right/wrong) The possibility of either a success value or an error value.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+123
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How do you check if a Result contains an Ok or an Err value?
+--InteriorSeparator--
+Using the `is_ok()` and `is_err()` methods.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+126
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following C++ types are the most closely related to Rust's `Result` type?
+--InteriorSeparator--
+(right) `std::expected` (from C++23)
+(wrong) `std::future`
+(right/wrong) `std::variant` (from C++17)
+(wrong) `std::any`
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+136
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What trait must a type implement to be used as a valid type for the Ok variant of an Result from the main function?
+--InteriorSeparator--
+Termination
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+140, 142
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When are `if let` and `while let` expressions useful in Rust?
+--InteriorSeparator--
+(wrong) With simple data types like integers and booleans.
+(right) When working with enums to destructure them.
+(right/wrong) When you want to copy the value associated with an enum variant into a variable.
+(wrong) When you want to implement inheritance in Rust.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+144
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens if the variant in an `if let` or `while let` expression does not match the expression's result?
+--InteriorSeparator--
+The code block within the `if let` or `while let` is not executed.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+144
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the purpose of the `let...else` syntax?
+--InteriorSeparator--
+(wrong) To define a default value for a variable if it's not initialized.
+(right) To provide an alternative code block to execute when a pattern matching fails during variable initialization.
+(wrong) To handle exceptions in Rust.
+(right/wrong) It allows direct initialization of a variable from an expression that results in an enum.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+155
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the typical purpose of the error code section when using `let EnumVariant(variable) = Expression else { <error code> }`?
+--InteriorSeparator--
+A `panic!` macro or a return value (if called from within a function).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+155
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the question mark operator `?` do in Rust?
+--InteriorSeparator--
+(right) Unwraps the value if it's `Some` or `Ok`.
+(right/wrong) Returns the error (Err or None) from the current function if the value is `None` or `Err`.
+(wrong) Creates a new error if a value is `None` or `Err`.
+(wrong) Converts a result to the opposite (Ok/Err).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+160
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is an important requirement when using the `?` operator with `Result` types?
+--InteriorSeparator--
+A conversion between the error types of different Results must be possible.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+167, 170
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.23688278009965383}]

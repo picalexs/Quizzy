@@ -1,0 +1,388 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does a(x) represent in the context of minimum cost flows, given a flow x and a cost function a: E -> R?
+--InteriorSeparator--
+The cost of the flow x, calculated as the sum of the product of the cost of each arc (a(ij)) and the flow on that arc (xij).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are examples of problems that can be modeled as minimum cost flow problems?
+--InteriorSeparator--
+(right) The assignment problem
+(right) The Hitchcock-Koopmans transportation problem
+(wrong) Maximum flow problem
+(wrong) Shortest path problem
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4, 5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition must be met for the Hitchcock-Koopmans transportation problem to have a solution?
+--InteriorSeparator--
+The total supply from the depots must be greater than or equal to the total demand from the clients (Σdi ≥ Σcj).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How is the cost of a forward arc defined within an augmenting path (P) related to a flow x?
+--InteriorSeparator--
+The cost is aij, where aij is the cost associated with the arc ij, if it is a forward arc.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the significance of finding a negative cost A-cycle (augmenting cycle) in the context of minimum cost flow?
+--InteriorSeparator--
+(right) It indicates that the current flow is not of minimum cost.
+(wrong) It indicates the flow cannot be improved.
+(right) The flow can be improved by pushing flow around the cycle.
+(wrong) It indicates the maximum flow has been reached.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does A(x, x*) = 0 imply, where x is a flow and x* is a minimum cost flow of the same value?
+--InteriorSeparator--
+It implies that the flow x is also a minimum cost flow (x = x*).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the minimum cost flow algorithm, what is adjusted when a negative cost cycle is found?
+--InteriorSeparator--
+The flow is updated by augmenting the flow along the negative cost cycle.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of a polynomial-time reduction from problem P1 to problem P2?
+--InteriorSeparator--
+To show that if problem P2 can be solved efficiently (in polynomial time), then problem P1 can also be solved efficiently.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is a key property of polynomial-time reductions?
+--InteriorSeparator--
+(right) They demonstrate how to use an oracle for one problem to solve another.
+(wrong) They always find optimal solutions.
+(right) The reduction function is computable in polynomial time.
+(wrong) They can only be used for optimization problems.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the significance of the SAT problem in computational complexity theory?
+--InteriorSeparator--
+It is the first problem that was proven to be NP-complete.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is BSAT?
+--InteriorSeparator--
+BSAT is a restricted version of the SAT problem where each clause has exactly 3 literals.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the components used to construct the graph G in the polynomial-time reduction from BSAT to the maximum stable set (SM) problem?
+--InteriorSeparator--
+(right) Disjoint graphs Ti for each variable.
+(right) Disjoint graphs Zj for each clause.
+(wrong) A complete graph Kn.
+(wrong) A cycle graph Cn.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the reduction from 3SAT to the maximum stable set problem, what does the value of 'k' represent?
+--InteriorSeparator--
+The target size of the stable set, equal to the number of variables plus the number of clauses (n + m).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If a stable set S in graph G (constructed from a BSAT instance) has a node ajk from a clause graph Zj, what can be inferred about the corresponding literal vjk in the clause Cj?
+--InteriorSeparator--
+vjk must be assigned 'true' under the truth assignment implied by S.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the reduction from BSAT to SM, what property must the set S possess to ensure a 'yes' instance for SM?
+--InteriorSeparator--
+(right) S must be a stable set.
+(wrong) S must be a clique.
+(right) The size of S must be greater than or equal to k.
+(wrong) S must contain all variables.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the problem COL?
+--InteriorSeparator--
+COL is the problem of determining whether a given graph G can be colored with p colors.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does it mean for a problem to be NP-hard?
+--InteriorSeparator--
+It means that every problem in NP can be reduced to it in polynomial time, but it is not necessarily in NP itself.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is a key idea used in the reduction from 3SAT to 3-COL?
+--InteriorSeparator--
+(right) Using a specific graph H to force certain color assignments.
+(wrong) Directly mapping variables to colors.
+(right) Ensuring that a 3-coloring exists if and only if the 3SAT instance is satisfiable.
+(wrong) Constructing a bipartite graph.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the reduction from 3SAT to 3-COL, if c(v) = 2, where v is a literal, what is the truth assignment t(v)?
+--InteriorSeparator--
+t(v) is false.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition must be met for the graph constructed in the 3SAT to 3-COL reduction to be 3-colorable?
+--InteriorSeparator--
+There must exist a truth assignment t: U -> {true, false} such that t(C) = true.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is a Hamiltonian circuit?
+--InteriorSeparator--
+(right) A cycle in a graph that visits every vertex exactly once.
+(wrong) A path that visits every edge exactly once.
+(wrong) A cycle that includes all edges in a graph.
+(right) A circuit G of G such that V(G)=V(G).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does it mean for two problems, P1 and P2, to be polynomially equivalent?
+--InteriorSeparator--
+It means that P1 can be reduced to P2 in polynomial time, and P2 can be reduced to P1 in polynomial time (P1 ≤p P2 and P2 ≤p P1).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which problems are polynomially equivalent to the Hamiltonian cycle problem (CH)?
+--InteriorSeparator--
+(right) The traveling salesman problem
+(right) The Hamiltonian path problem (TR)
+(wrong) The shortest path problem
+(wrong) The minimum spanning tree problem
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the reduction from the Hamiltonian Cycle problem (CH) to the Hamiltonian Path problem (TR), what is the purpose of adding nodes x, y, and z to create graph H from graph G?
+--InteriorSeparator--
+To ensure H is traceable if and only if G is Hamiltonian.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the reduction from CH to DCH, how is the digraph D constructed from the undirected graph G?
+--InteriorSeparator--
+Each edge in G is replaced with a pair of symmetric arcs in D.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+34
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the reduction from DCH to CH, what structure replaces each node v in the digraph D?
+--InteriorSeparator--
+(wrong) A single edge.
+(right) A graph P3(v) with three nodes and two edges.
+(wrong) A cycle of length 3.
+(right) A path of length 3 (P3(v)).
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the two main steps required to prove that a problem is NP-complete?
+--InteriorSeparator--
+(right) Show that the problem is in NP.
+(wrong) Show that it has an optimal solution.
+(wrong) Show that it can be solved in polynomial time.
+(right) Show that some NP-complete problem can be reduced to it in polynomial time.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+37
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does it mean to show that a problem is NP-hard, but not necessarily NP-complete?
+--InteriorSeparator--
+It means that the problem may not be in NP and that every problem in NP can be reduced to it in polynomial time.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+37
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a quasi-kernel in a digraph?
+--InteriorSeparator--
+A stable set S such that every node outside of S is reachable from S by a path of length at most 2.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+40
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the context of the 2SAT problem, what is the implication graph G?
+--InteriorSeparator--
+A digraph where vertices are literals and edges represent implications derived from the clauses.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+43
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.16326885608156408}]

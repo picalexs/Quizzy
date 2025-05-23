@@ -1,0 +1,430 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the value of the Legendre symbol (a/p) if a ≡ 0 (mod p)?
+--InteriorSeparator--
+0
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition must be met for 'n' in the Jacobi symbol (a|n)?
+--InteriorSeparator--
+n must be a positive integer.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are properties of the Jacobi symbol?
+--InteriorSeparator--
+(ab|n) = (a|n)(b|n)
+(a|mn) = (a|m)(a|n)
+(a|n) = (b|n) if a ≡ b (mod n)
+(wrong) (a+b|n) = (a|n)+(b|n)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If gcd(a, n) != 1, what is the value of (a|n)?
+--InteriorSeparator--
+0
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the value of (a^2|n) in Jacobi Symbol?
+--InteriorSeparator--
+1 if gcd(a, n) = 1
+0 if gcd(a, n) != 1
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the value of (m|n)(n|m) when m and n are coprime?
+--InteriorSeparator--
+(-1)^((m-1)/2 * (n-1)/2)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Under what condition is (m|n)(n|m) equal to -1, assuming m and n are coprime?
+--InteriorSeparator--
+n ≡ m ≡ 3 (mod 4)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the value of (-1|n)?
+--InteriorSeparator--
+(-1)^((n-1)/2)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the possible values of 'n' modulo 8 if (2|n) = -1?
+--InteriorSeparator--
+n ≡ 3 (mod 8)
+n ≡ 5 (mod 8)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the value of (2|n) when n ≡ 1 or 7 (mod 8)?
+--InteriorSeparator--
+1
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Simplify (8a^2 | n) using Jacobi symbol properties.
+--InteriorSeparator--
+(2|n)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the algorithm for calculating the Jacobi symbol, what actions are performed when 'a' is even?
+--InteriorSeparator--
+a is divided by 2
+If n%8 == 3 or n%8 == 5, j = 0 - j
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Jacobi algorithm, what happens to 'a' and 'n' when both a ≡ 3 (mod 4) and n ≡ 3 (mod 4)?
+--InteriorSeparator--
+a and n are swapped, and j = 0 - j
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What operation is performed on 'a' after the possible swap with 'n' in the Jacobi algorithm?
+--InteriorSeparator--
+a = a % n
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Jacobi algorithm, what value is returned if n == 1?
+--InteriorSeparator--
+j
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Jacobi algorithm, what value is returned if n != 1 after the while loop?
+--InteriorSeparator--
+0
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which condition must be met for the jacobi(a, n) function to work correctly, according to the algorithm's requirements?
+--InteriorSeparator--
+n > 0
+n % 2 != 0 (n is odd)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the Legendre symbol (a/p) represent when a is a quadratic residue modulo p?
+--InteriorSeparator--
+1
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the relationship between the Legendre and Jacobi symbols when n is prime?
+--InteriorSeparator--
+(a|n) = (a/n)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following statements are true?
+--InteriorSeparator--
+(a|n) = (b|n) if a ≡ b (mod n)
+If gcd(a, n) != 1 then (a|n) = 0
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What property of the Jacobi symbol is used to reduce 'a' in the algorithm?
+--InteriorSeparator--
+If a ≡ b (mod n) then (a|n) = (b|n)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which values of 'n' mod 4 cause (m|n)(n|m) = -1?
+--InteriorSeparator--
+n ≡ 3 (mod 4) and m ≡ 3 (mod 4)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens to 'j' (initialized to 1) in the Jacobi algorithm when 'a' is even and n ≡ 3 or 5 (mod 8)?
+--InteriorSeparator--
+j is negated (j = 0 - j)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+After swapping 'a' and 'n' in the Jacobi algorithm, when is 'j' negated?
+--InteriorSeparator--
+When a ≡ 3 (mod 4) and n ≡ 3 (mod 4)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following steps are part of the iterative process in the Jacobi algorithm?
+--InteriorSeparator--
+Reducing 'a' modulo 'n'
+Dividing 'a' by 2 when 'a' is even
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition determines the end of the while loop in the Jacobi algorithm?
+--InteriorSeparator--
+a != 0
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the necessary condition of "n" to compute jacobi(a,n)?
+--InteriorSeparator--
+n is odd and greater than 0.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If (n|a) = -(a|n) holds, what can you say about n and a?
+--InteriorSeparator--
+n ≡ 3 (mod 4) and a ≡ 3 (mod 4)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Write the formula for Jacobi symbol.
+--InteriorSeparator--
+(a|n)=(a/p1)^a1(a/p2)^a2...(a/pk)^ak
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If n ≡ 1 (mod 4), what is (m|n)(n|m)?
+--InteriorSeparator--
+1
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What value does the Jacobi algorithm return if n is even?
+--InteriorSeparator--
+The algorithm requires n to be odd, so it won't work with even n.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Given that a = 2*b, when do you divide by 2 in the pseudocode?
+--InteriorSeparator--
+While a is even
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the primary difference between the Legendre and Jacobi symbols?
+--InteriorSeparator--
+The Legendre symbol requires the denominator to be prime, while the Jacobi symbol requires it to be a positive integer.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Which of the properties is the core behind efficient Jacobi symbol calculation.
+--InteriorSeparator--
+(a|n) = (b|n) if a ≡ b (mod n)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following must be true for the Jacobi Algorithm to function correctly?
+--InteriorSeparator--
+n is odd
+n is positive
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.17471701001364087}]

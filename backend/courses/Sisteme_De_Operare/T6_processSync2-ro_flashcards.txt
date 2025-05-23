@@ -1,0 +1,431 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What concept does the Producer-Consumer problem illustrate?
+--InteriorSeparator--
+The concept of cooperating processes.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are classic synchronization problems?
+--InteriorSeparator--
+(right) Producer-Consumer problem
+(right) Dining Philosophers problem
+(wrong) Banker's Algorithm
+(wrong) Shortest Job First
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the 'mutex' semaphore in the unbounded buffer Producer-Consumer solution?
+--InteriorSeparator--
+To control the critical section and provide exclusive access to the buffer.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the function of the 'empty' semaphore in the bounded buffer Producer-Consumer problem?
+--InteriorSeparator--
+It counts the number of empty locations in the buffer.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the bounded buffer Producer-Consumer problem, what happens if the order of `wait(empty)` and `wait(mutex)` in the producer process is switched?
+--InteriorSeparator--
+(right) A deadlock may occur.
+(wrong) The consumer starves.
+(wrong) The producer starves.
+(wrong) The program runs faster.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does CREW stand for in the context of the Readers and Writers problem?
+--InteriorSeparator--
+Concurrent Read Exclusive Write.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the Readers and Writers problem, which processes might suffer from starvation in version #1 (reader priority)?
+--InteriorSeparator--
+(right) Writers
+(wrong) Readers
+(wrong) Neither readers nor writers
+(wrong) Both readers and writers equally
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Readers and Writers problem, how does version #2 prioritize access to the shared resource?
+--InteriorSeparator--
+It prioritizes writers over readers.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is a key characteristic of Readers and Writers version #3?
+--InteriorSeparator--
+(right) Requests are handled in the order of arrival
+(right) Prevents starvation for both readers and writers.
+(wrong) Prioritizes readers over writers
+(wrong) Prioritizes writers over readers
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Readers and Writers problem (version #1), what is the purpose of the 'readcount' variable?
+--InteriorSeparator--
+To keep track of the number of reader processes currently reading the shared object.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Readers and Writers problem, why is a mutex needed to protect the `readcount` variable?
+--InteriorSeparator--
+To ensure mutual exclusion when updating the `readcount`.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the Dining Philosophers problem, what can occur if each philosopher picks up their left chopstick simultaneously?
+--InteriorSeparator--
+(right) A deadlock
+(wrong) Starvation of one philosopher
+(wrong) Increased throughput
+(wrong) Improved resource utilization
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What do the philosophers do after they finish eating in the Dining Philosophers problem?
+--InteriorSeparator--
+Put the chopsticks back on the table and start thinking again.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the potential issue with the simple Dining Philosophers solution where each philosopher picks up the left chopstick and then the right chopstick?
+--InteriorSeparator--
+(right) Deadlock
+(right) Starvation
+(wrong) Improved throughput
+(wrong) Race conditions
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Sleeping Barber problem, what does the barber do if there are no customers?
+--InteriorSeparator--
+The barber sleeps.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the Sleeping Barber problem, what happens when a customer arrives and the barber is sleeping?
+--InteriorSeparator--
+(right) The customer wakes up the barber.
+(wrong) The customer leaves.
+(wrong) Another barber starts cutting hair.
+(wrong) The customer starts cutting their own hair.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the `freeseatscount` variable track in the Sleeping Barber problem solution?
+--InteriorSeparator--
+The number of free seats in the waiting room.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+37
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the `customers` semaphore in the Sleeping Barber problem?
+--InteriorSeparator--
+To keep track of the number of waiting customers.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+37
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the Sleeping Barber problem, what is the role of the `mutex` semaphore?
+--InteriorSeparator--
+(right) To ensure mutual exclusion when accessing the `freeseatscount` variable.
+(wrong) To signal the barber to start cutting hair.
+(wrong) To allow multiple customers to enter the barbershop simultaneously.
+(wrong) To wake up the barber.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+37
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a monitor in the context of synchronization?
+--InteriorSeparator--
+A high-level synchronization construct that encapsulates shared data and operations with mutual exclusive access.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the main advantage of using monitors over semaphores?
+--InteriorSeparator--
+(right) Reduces synchronization errors due to incorrect wait/signal calls.
+(wrong) Faster execution speed.
+(wrong) Lower memory usage.
+(wrong) Simplifies debugging.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a condition variable within a monitor used for?
+--InteriorSeparator--
+To allow processes to wait for a specific condition to become true.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+44
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following synchronization mechanisms are available in C++11?
+--InteriorSeparator--
+(right) Mutexes
+(right) Condition variables
+(wrong) Semaphores
+(wrong) Monitors
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+45
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a key characteristic of functional programming languages that makes them suitable for concurrent programming?
+--InteriorSeparator--
+Variables are immutable.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+46
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are some advantages of memory transactions?
+--InteriorSeparator--
+(right) Atomic execution of memory reads/writes.
+(wrong) Reduced memory usage.
+(wrong) Increased clock speed.
+(wrong) Simplified garbage collection.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+46
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the primary goal of synchronization mechanisms in operating systems?
+--InteriorSeparator--
+To manage access to shared resources to prevent race conditions and ensure data consistency.
+--InteriorSeparator--
+easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the main purpose of the `wait()` operation on a semaphore?
+--InteriorSeparator--
+(right) Decrements the semaphore value and blocks the process if the value is negative.
+(wrong) Increments the semaphore value and allows the process to continue.
+(wrong) Checks if the semaphore value is zero and does nothing.
+(wrong) Deallocates the semaphore.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which conditions must hold true to prevent deadlocks?
+--InteriorSeparator--
+(wrong) Priority inversion
+(wrong) Aging
+(right) Mutual exclusion
+(right) Circular wait
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is a race condition?
+--InteriorSeparator--
+(right) When the outcome of execution depends on the particular order in which concurrent processes access shared resources
+(wrong) A hardware failure that corrupts data
+(wrong) A technique for improving cache performance
+(wrong) When one process prevents another from accessing the CPU
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the main difference between a binary semaphore and a counting semaphore?
+--InteriorSeparator--
+A binary semaphore can only have values 0 or 1, while a counting semaphore can have any non-negative integer value.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the purpose of the signal() operation on a semaphore?
+--InteriorSeparator--
+(right) Increments the semaphore value, potentially unblocking a waiting process.
+(wrong) Decrements the semaphore value, potentially blocking the current process.
+(wrong) Resets the semaphore value to its initial value.
+(wrong) Deletes the semaphore.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which synchronization mechanisms are used to solve the sleeping barber problem?
+--InteriorSeparator--
+(right) Semaphores
+(right) Shared Variables
+(wrong) Message passing
+(wrong) Named Pipes
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following statements best describe monitors?
+--InteriorSeparator--
+(right) Monitors provide mutual exclusion.
+(wrong) Monitors rely on shared memory and message passing.
+(right) Monitors have condition variables to help with synchronization.
+(wrong) Monitors only prevent deadlocks.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.18260402854429472}]

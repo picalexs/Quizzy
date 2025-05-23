@@ -1,0 +1,386 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the term for a finite set of relation schemas?
+--InteriorSeparator--
+Schema of a database
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are set operators in the relational model?
+--InteriorSeparator--
+(right) Union
+(right) Intersection
+(wrong) Projection
+(wrong) Selection
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the practical term for a 'relation' in database terminology?
+--InteriorSeparator--
+Table
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are specific operators in relational algebra?
+--InteriorSeparator--
+(right) Selection
+(right) Projection
+(wrong) Union
+(wrong) Difference
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does `dom(Ai)` represent in the relational model?
+--InteriorSeparator--
+The domain of values for attribute Ai
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which conditions must be met when using the UNION operator between two relations?
+--InteriorSeparator--
+(right) The relations must be constructed over the same set of attributes.
+(wrong) The relations must have different names.
+(wrong) The relations must have overlapping data.
+(right) The relations must have the same schema.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What SQL keyword is used to implement the difference operator in relational algebra?
+--InteriorSeparator--
+MINUS
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What SQL keyword is used to implement the intersection operator in relational algebra?
+--InteriorSeparator--
+(right) INTERSECT
+(wrong) EXCEPT
+(wrong) JOIN
+(wrong) UNION
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the result of the Cartesian product of two relations R1[U1] and R2[U2] with U1 ∩ U2 = ∅?
+--InteriorSeparator--
+A new relation over the attribute set U1 ∪ U2.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What happens when the same attribute name appears in two tables involved in a Cartesian product?
+--InteriorSeparator--
+(right) The attribute names are distinguished, e.g., table1.attribute and table2.attribute
+(wrong) The Cartesian product fails.
+(wrong) One of the attributes is automatically renamed.
+(wrong) The duplicate attributes are merged.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If U = {A1, A2, ..., An} and X ⊆ U, what does πX(t) represent, where t is a tuple over R[U]?
+--InteriorSeparator--
+The projection of tuple t onto the attribute set X.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the SQL equivalent of the projection operator in relational algebra?
+--InteriorSeparator--
+(right) SELECT attribute_list FROM table_name;
+(wrong) WHERE condition;
+(wrong) GROUP BY attribute_list;
+(wrong) ORDER BY attribute_list;
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the selection operator (σ) in relational algebra?
+--InteriorSeparator--
+To filter tuples from a relation based on a specified condition.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If θ is a selection expression, what does σθ(r) represent?
+--InteriorSeparator--
+(right) The set of tuples in relation r that satisfy the condition θ.
+(wrong) The projection of relation r onto the attributes in θ.
+(wrong) The Cartesian product of relation r with itself, filtered by θ.
+(wrong) The union of relation r with another relation filtered by θ.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the SQL equivalent of the selection operator in relational algebra?
+--InteriorSeparator--
+WHERE clause
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the purpose of the rename operator (ρ) in relational algebra?
+--InteriorSeparator--
+(right) To change the name of an attribute.
+(wrong) To change the values of an attribute.
+(wrong) To remove an attribute.
+(wrong) To add a new attribute.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the SQL keyword to rename columns?
+--InteriorSeparator--
+AS
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Given relations r1 and r2, what does r1 ⋈ r2 represent?
+--InteriorSeparator--
+(right) The natural join of r1 and r2.
+(wrong) The Cartesian product of r1 and r2.
+(wrong) The union of r1 and r2.
+(wrong) The difference between r1 and r2.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition must be met in order to perform a natural join?
+--InteriorSeparator--
+The tables must have one or more attributes with the same name and data type.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the result of a natural join between two relations if they have no common attributes?
+--InteriorSeparator--
+(right) The Cartesian product of the two relations.
+(wrong) An empty relation.
+(wrong) An error is raised.
+(wrong) The union of the two relations.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+The natural join operation is associative. True or False?
+--InteriorSeparator--
+True
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is an equijoin?
+--InteriorSeparator--
+(right) A θ-join where θ only uses equality comparisons.
+(wrong) A natural join.
+(wrong) A semi-join.
+(wrong) An anti-join.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How can any join be expressed using basic relational algebra operations?
+--InteriorSeparator--
+As a selection on a Cartesian product.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the left semijoin of r1 and r2 (r1 ⋉ r2) return?
+--InteriorSeparator--
+(right) The tuples from r1 that participate in the natural join with r2.
+(wrong) All tuples from r1 and r2.
+(wrong) Tuples from r1 that do not participate in the join.
+(wrong) All tuples from r2.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the result of an antijoin?
+--InteriorSeparator--
+The tuples from the left relation that *do not* participate in the semijoin with the right relation.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the difference between a left join and a right join?
+--InteriorSeparator--
+(right) A left join keeps all tuples from the left relation, while a right join keeps all tuples from the right relation.
+(wrong) A left join keeps all tuples from both relations, while a right join keeps only matching tuples.
+(wrong) They are identical operations.
+(wrong) A left join is faster than a right join.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens to non-matching tuples in a left or right join?
+--InteriorSeparator--
+They are padded with NULL values for the attributes of the other relation.
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the full outer join?
+--InteriorSeparator--
+(right) Combines the results of both left and right outer joins.
+(wrong) Same as natural join.
+(wrong) Same as Cartesian product.
+(wrong) An empty relation.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What value is used to pad attributes with no existing corresponding values in a LEFT JOIN, RIGHT JOIN, or FULL OUTER JOIN?
+--InteriorSeparator--
+NULL
+--InteriorSeparator--
+easy
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.141132454392231}]

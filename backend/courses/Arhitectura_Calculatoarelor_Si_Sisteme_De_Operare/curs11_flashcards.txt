@@ -1,0 +1,439 @@
+[{content={parts=[{text=```
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the role of the operating system?
+--InteriorSeparator--
+To manage the computer system and act as an intermediary between hardware and applications.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the most important hardware support required by the operating system?
+--InteriorSeparator--
+The interrupt system.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the main components of an operating system?
+--InteriorSeparator--
+Kernel and drivers.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the role of the kernel of the operating system?
+--InteriorSeparator--
+Resource management of the computer, both hardware and software.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What functionalities are included in the kernel's main functions?
+--InteriorSeparator--
+(right) Process management
+(right) Memory management
+(wrong) Data Encryption
+(wrong) Antivirus Scans
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the two modes of operation for the processor?
+--InteriorSeparator--
+User mode and kernel mode.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In which mode do applications typically run?
+--InteriorSeparator--
+User mode.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How does the transition between user mode and kernel mode occur?
+--InteriorSeparator--
+Through the interrupt system.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+How can the system transition from user mode to kernel mode?
+--InteriorSeparator--
+(right) Software interrupt call
+(right) Exception generation (error)
+(wrong) Direct memory access
+(wrong) Hardware Reset
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a consequence of running application code in user mode instead of kernel mode?
+--InteriorSeparator--
+Errors in an application do not affect other programs or the operating system.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the disadvantages of running application code in user mode instead of kernel mode?
+--InteriorSeparator--
+(right) Performance decrease
+(wrong) Increased Security
+(wrong) Greater Hardware Flexibility
+(wrong) Reduced Memory usage
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are system calls?
+--InteriorSeparator--
+Requests from applications to the kernel for actions that cannot be executed directly in user mode.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why are system calls performed in kernel mode?
+--InteriorSeparator--
+For system security.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the first three steps in performing a system call?
+--InteriorSeparator--
+(right) Program deposits system call parameters in a memory area
+(right) A software interrupt is generated, switching the processor to kernel mode
+(wrong) Direct hardware manipulation
+(wrong) Allocating memory without permissions
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens if errors are found during the system call routine?
+--InteriorSeparator--
+The call fails.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What occurs after the system call routine finishes executing?
+--InteriorSeparator--
+The results are placed in a memory area accessible to the calling application.
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the characteristics of system calls?
+--InteriorSeparator--
+(right) Communication between application and kernel
+(right) Critical actions are performed securely
+(wrong) They are less time consuming.
+(wrong) Only one system call is needed
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why are system calls resource-intensive?
+--InteriorSeparator--
+Due to the overhead of switching between user mode and kernel mode, parameter passing, and security checks.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are drivers?
+--InteriorSeparator--
+Software modules that manage communication with peripherals.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In what mode of the processor do drivers execute?
+--InteriorSeparator--
+Kernel mode.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+How are drivers utilized within the operating system?
+--InteriorSeparator--
+(right) Used by interrupt handlers
+(right) Under the control of the kernel
+(wrong) Independent of the operating system
+(wrong) Managing memory directly
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is multitasking?
+--InteriorSeparator--
+The ability to run multiple programs simultaneously.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is true about parallelism?
+--InteriorSeparator--
+(right) Parallelism occurs only if the system has multiple processors
+(wrong) Every process runs in parallel with each other
+(wrong) Parallelism automatically optimizes code
+(wrong) Programs cannot have multiple processes
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Does the operating system work with programs or processes?
+--InteriorSeparator--
+Processes.
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens to the memory allocated to a process when it terminates?
+--InteriorSeparator--
+The memory is released.
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the possible states of a process?
+--InteriorSeparator--
+Running, ready, and waiting.
+--InteriorSeparator--
+easy
+--FlashCardSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the "waiting" state of a process?
+--InteriorSeparator--
+(right) Waiting for a system call to complete
+(right) Does not compete for processor resources
+(wrong) Process is terminated due to errors
+(wrong) Process is executing instructions
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How does a process leave the "running" state?
+--InteriorSeparator--
+By terminating, making a system call, or being de-scheduled.
+--FlashCardSeparator--
+medium
+--FlashCardSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is non-preemptive multitasking?
+--InteriorSeparator--
+A multitasking method that does not allow a process to be de-scheduled.
+--FlashCardSeparator--
+medium
+--FlashCardSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the advantages of preemptive multitasking over non-preemptive multitasking?
+--InteriorSeparator--
+(right) Guarantees some level of CPU time to each process
+(wrong) Less susceptible to bugs
+(right) Prevents a single process from hogging the CPU
+(wrong) Prevents errors from occurring
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is necessary for the operating system to measure the execution time of a process?
+--InteriorSeparator--
+A form of time measurement.
+--FlashCardSeparator--
+medium
+--FlashCardSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How does the operating system measure the execution time of a process?
+--InteriorSeparator--
+Using a real-time clock that generates interrupts at regular intervals.
+--FlashCardSeparator--
+medium
+--FlashCardSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of using buffers in the `printf` function?
+--InteriorSeparator--
+To reduce the number of system calls, improving performance.
+--FlashCardSeparator--
+hard
+--FlashCardSeparator--
+103
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When a process is in the 'ready' state, what is it waiting for?
+--InteriorSeparator--
+(right) To be executed by the processor
+(wrong) Completion of the program code
+(wrong) To free up memory
+(wrong) System restart
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+111
+--FlashCardSeparator--
+```}], role=model}, finishReason=STOP, avgLogprobs=-0.21429183162372134}]

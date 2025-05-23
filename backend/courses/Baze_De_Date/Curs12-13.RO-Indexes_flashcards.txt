@@ -1,0 +1,420 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the first step in relational database design methodology?
+--InteriorSeparator--
+Analysis of requirements and specifications
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What factors determine the time required to bring a block of data into memory?
+--InteriorSeparator--
+(right) Seek time
+(right) Rotational latency
+(wrong) Data encryption time
+(wrong) CPU processing speed
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of binary search when data is sorted by the search key?
+--InteriorSeparator--
+O(log2(N))
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following statements are true about index files?
+--InteriorSeparator--
+(right) A data file can have multiple index files associated with it.
+(right) Index files are usually smaller than the data file.
+(wrong) Index files must contain every attribute of the data file.
+(wrong) Index files are always larger than the data file.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the two main types of ordered indices?
+--InteriorSeparator--
+Sequential indices and B+-trees
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+A table can have at most one what?
+--InteriorSeparator--
+Primary Index
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What type of index contains entries for every value of the search key in the data file?
+--InteriorSeparator--
+Dense index
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following statements are true about sparse indices?
+--InteriorSeparator--
+(right) Applicable only for records that are ordered based on the search key
+(wrong) Contain entries for every value of the search key.
+(wrong) Not applicable for records that are ordered based on the search key
+(wrong) Can be used when the search key is not the sort key.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What type of index is built over another index?
+--InteriorSeparator--
+Multi-level index
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What considerations must be taken into account when using indexes?
+--InteriorSeparator--
+(right) Storage Space
+(right) Access Time
+(wrong) User Interface
+(wrong) Cable management
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+When deleting a record from a data file with a sparse index, what action is taken if the deleted record's search key value exists in the index?
+--InteriorSeparator--
+The entry is replaced by the next search key value in the data file. If that next value already exists in the index, the corresponding entry is deleted.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What happens to sequential index structure as insertions in the data file happen?
+--InteriorSeparator--
+The sequential structure degenerates due to the creation of overflow blocks.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What key benefit do B+-trees provide over sequential ordered structures when managing indexes?
+--InteriorSeparator--
+B+-trees increase the speed of finding data and eliminate the need for continuous reorganization.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the minimum number of pointers a root node in a B+-tree can have?
+--InteriorSeparator--
+2
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In a B+-tree, what is the relationship between the search key values in the subtree pointed to by Pi (2 <= i <= m) and the key values Ki-1 and Ki?
+--InteriorSeparator--
+(right) Search key values are greater than or equal to Ki-1
+(right) Search key values are less than Ki
+(wrong) Search key values are less than or equal to Ki-1
+(wrong) Search key values are greater than Ki
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What is the maximum number of levels a B+-tree with K search key values can have?
+--InteriorSeparator--
+1 + log((m+1)/2)(K)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+In B+-trees, what happens when a leaf node is full during insertion?
+--InteriorSeparator--
+The leaf node is split. The first half of the entries stay in the original node, and the second half moves to a new node.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+During the insertion process in a B+-tree, after splitting a leaf node, what value is inserted into the parent node?
+--InteriorSeparator--
+The smallest key value from the newly created node.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+In B+-trees, what is done during deletion if a leaf node has too few entries and there isn't enough space in a neighboring leaf node to redistribute?
+--InteriorSeparator--
+Insert all entries into the left leaf, then delete the right leaf and repeat as needed
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How does the structure of a B-tree differ from that of a B+-tree?
+--InteriorSeparator--
+B-trees allow a search key value to appear only once. Not all values appear on the leaf level.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What is one major disadvantage of B-trees compared to B+-trees that makes B+-trees generally preferred in relational database systems?
+--InteriorSeparator--
+Insertions and deletions are more complicated to implement in B-trees
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+40
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens with indexes if only one of the search conditions is satisfied?
+--InteriorSeparator--
+If only one condition is satisfied, and a large number of records satisfy that condition, performance is reduced.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the order used with multi-key indexes?
+--InteriorSeparator--
+Lexicographical order
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+43
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+In multi-key indexes, what factor significantly impacts efficiency?
+--InteriorSeparator--
+The order of attributes within the index
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+44
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In hash file organization, how are records grouped?
+--InteriorSeparator--
+Records are grouped into buckets using a hash function.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+48
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What is a disadvantage of hashing?
+--InteriorSeparator--
+The bucket size may be too small to hold all of the records
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+49
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What characteristics should hash functions have?
+--InteriorSeparator--
+(right) Uniform distribution
+(right) Random assignments
+(wrong) Locality Sensitive
+(wrong) High Collision Rate
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+49
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What operations are performed when using hash indices?
+--InteriorSeparator--
+For search, the bucket is scanned. For insertion, the record is first inserted into the data file, then the index entry is inserted into the bucket. For deletion, the hash is calculated, the bucket is scanned, and the record is deleted.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+52
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Why are hash indices not efficient for range queries?
+--InteriorSeparator--
+(right) Buckets may not be stored in any particular order
+(wrong) Hash functions guarantee proximity for similar keys
+(wrong) Hash functions can be computationally expensive
+(wrong) Hash functions distribute keys sequentially
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+53
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the primary motivation behind dynamic hashing?
+--InteriorSeparator--
+To dynamically modify the number of buckets as needed to handle file growth or shrinkage.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+54
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the value 'ij' associated with each bucket in extensible hashing specify?
+--InteriorSeparator--
+The length of the prefix, where all entries in bucket j have the same value on the first ij bits.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+56
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+When does bucket splitting in extensible hashing lead to doubling the directory size?
+--InteriorSeparator--
+When 'i' (global depth of directory) equals 'ij' (local depth of the bucket being split).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+57
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+For which types of attributes are bitmap indices best suited?
+--InteriorSeparator--
+(right) Attributes with a small number of distinct values.
+(right) Categorical attributes
+(wrong) Attributes with continuously varying values.
+(wrong) Floating point attributes.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+66
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.22337548808878596}]

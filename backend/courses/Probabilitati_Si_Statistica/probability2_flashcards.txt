@@ -1,0 +1,421 @@
+[{content={parts=[{text=```text
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the formula for conditional probability of event A given event B?
+--InteriorSeparator--
+P(A|B) = P(A ∩ B) / P(B), where P(B) > 0
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is the correct formula for two independent events A and B?
+--InteriorSeparator--
+(right) P(A ∩ B) = P(A) * P(B)
+(wrong) P(A ∪ B) = P(A) + P(B)
+(right) P(A|B) = P(A)
+(wrong) P(A|B) = P(B)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does it mean when two events A and B are independent?
+--InteriorSeparator--
+The occurrence of event B does not change the probability of event A occurring.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If events A and B are independent, which of the following pairs are also independent?
+--InteriorSeparator--
+(right) A and B complement
+(wrong) A complement and B complement complement
+(right) A complement and B
+(wrong) A and B union
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the formula for the Law of Total Probability?
+--InteriorSeparator--
+P(B) = Σ P(B|Ai) * P(Ai), where {A1, A2, ..., An} is a partition of the sample space Ω.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the formula for Bayes' Theorem?
+--InteriorSeparator--
+P(Ak|B) = [P(B|Ak) * P(Ak)] / Σ[P(B|Ai) * P(Ai)]
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In Bayes' Theorem, what are P(B|Ak) and P(Ak|B) referred to as?
+--InteriorSeparator--
+(right) P(B|Ak) - a priori probability, P(Ak|B) - a posteriori probability
+(wrong) P(B|Ak) - a posteriori probability, P(Ak|B) - a priori probability
+(wrong) Both are a priori probabilities
+(wrong) Both are a posteriori probabilities
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the definition of conditional independence of events A and B given event C?
+--InteriorSeparator--
+P(A ∩ B | C) = P(A | C) * P(B | C)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If A and B are independent events, what can be said about their conditional independence given event C?
+--InteriorSeparator--
+(wrong) They are always conditionally independent.
+(wrong) They are never conditionally independent.
+(wrong) They are conditionally independent only if C is the empty set.
+(right) Independence does not necessarily imply conditional independence, nor vice versa.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Explain the meaning of independence in ensemble for n events.
+--InteriorSeparator--
+For any subset of the events, the probability of their intersection equals the product of their individual probabilities.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+A coin is flipped three times. Let A be the event "more heads than tails" and B be the event "the first flip is heads". What is P(A|B)?
+--InteriorSeparator--
+(right) 3/4
+(wrong) 1/2
+(wrong) 1/8
+(wrong) 1/3
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the conditional probability that one of two numbers is even, given that their sum is even? The numbers are chosen from 1 to 9.
+--InteriorSeparator--
+6/16 = 0.375
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In an urn with 4 white balls (2 with the number 1, and 2 with the number 2), 5 yellow balls (3 with the number 1, and 2 with the number 2), and 6 black balls (2 with the number 1, and 4 with the number 2). If the ball extracted is not black, what is the probability that it is white?
+--InteriorSeparator--
+(right) 4/9
+(wrong) 2/15
+(wrong) 4/15
+(wrong) 2/9
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State Proposition 7
+--InteriorSeparator--
+P(A|B) = P(C|B) * P(A|B ∩ C) + P(C complement|B) * P(A|B ∩ C complement)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Two dice are rolled. A is the event "the first die is even" and B is the event "the second die is at least three". Are A and B independent?
+--InteriorSeparator--
+(right) Yes
+(wrong) No, they are dependent because the first die being even changes the possible outcomes of the second die.
+(wrong) The problem doesn't have enough information.
+(wrong) Only if the dice are fair.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Describe a situation in which 'physical' independence does not necessarily translate to mathematical independence.
+--InteriorSeparator--
+When the events are not elementary and equally probable, intuition about independence can be misleading; probabilities must be calculated.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Why are conditional probabilities important in probability theory?
+--InteriorSeparator--
+(right) They allow us to update probabilities based on new information.
+(wrong) They are not important, as all events are independent.
+(right) They are used in Bayes' theorem for calculating posterior probabilities.
+(wrong) They only apply to coin flips and dice rolls.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the significance of the formula of total probability in practical applications?
+--InteriorSeparator--
+It allows to calculate the probability of an event by considering all possible mutually exclusive scenarios leading to that event.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following best describes the condition for events A1, A2,...Ak to be independent in ensemble?
+--InteriorSeparator--
+(right) The probability of the intersection of any subset of these events equals the product of their individual probabilities.
+(wrong)  The probability of the union of any subset of these events equals the sum of their individual probabilities.
+(wrong) The conditional probabilities are all equal to zero
+(wrong) P(A1 ∩ A2 ∩...∩ Ak) = 0
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What must be demonstrated in order to show that two events A and B are independent?
+--InteriorSeparator--
+That P(A ∩ B) = P(A) * P(B), or equivalently, P(A|B) = P(A) if P(B) > 0.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Consider three events A, B, and C. Which condition(s) must be met for these events to be mutually independent?
+--InteriorSeparator--
+(right) P(A ∩ B) = P(A)P(B), P(A ∩ C) = P(A)P(C), P(B ∩ C) = P(B)P(C)
+(wrong) P(A ∩ B ∩ C) = P(A)P(B)P(C)
+(right) All three pairwise independence conditions must be met.
+(wrong) None of the above
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a partition of a sample space?
+--InteriorSeparator--
+A collection of mutually exclusive events whose union is the entire sample space.
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the importance of the condition P(B) > 0 in the definition of conditional probability P(A|B)?
+--InteriorSeparator--
+(right) It avoids division by zero
+(wrong) If P(B)=0 then P(A|B) = 0
+(right) It ensures the conditional probability is well-defined
+(wrong) The formula works either way
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Give an example of a situation where conditional probability is useful.
+--InteriorSeparator--
+Medical diagnosis: determining the probability of a disease given the presence of certain symptoms.
+--InteriorSeparator--
+easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Consider a bag containing one card. It can be a Joker or an Ace. You draw a card and it turns out to be an Ace. What is the best way to describe this situation?
+--InteriorSeparator--
+(right) You have updated your belief about the contents of the bag through conditional probability
+(wrong) The event is independent of the card extracted
+(wrong) There is no connection between the extracted card and the initial contents
+(wrong) One is always more likely than the other, therefore drawing the Ace is the right event
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What makes the formula of Total Probability 'total'?
+--InteriorSeparator--
+It takes into account all possibilities in the partition, summing over them to find the total probability
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which is the correct formula for A and B conditionally independent given C:
+--InteriorSeparator--
+(right) P(A ∩ B | C) = P(A | C)P(B | C)
+(right) P(A|B ∩ C) = P(A|C)
+(wrong) P(A U B | C) = P(A | C) + P(B | C)
+(wrong) P(A U B | C) = P(A | C)P(B | C)
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Give an example of 3 events that are pairwise independent but not independent in ensemble
+--InteriorSeparator--
+Example is on page 38
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+A door has a probability 1/2 of being locked. The key to that door is in a set of 12 keys. We pick two keys. What is the probability to open the door without going to get other keys?
+--InteriorSeparator--
+(right) 1/6
+(wrong) 1/12
+(wrong) 11/12
+(wrong) 5/6
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Explain with your own words why Independence is important in Probability.
+--InteriorSeparator--
+Independence is important as it models when the outcome of an event has no effect over another, allowing us to easily calculate probabilities.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following situations requires the use of conditional probability?
+--InteriorSeparator--
+(wrong) Calculating the probability of rolling a 6 on a fair die.
+(right) Calculating the probability of rain tomorrow, given that it is cloudy today.
+(wrong) Calculating the probability of drawing an ace from a standard deck of cards.
+(right) Updating the probability of a patient having a disease after a positive test result.
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In probability, what is meant by the term "a priori probability"?
+--InteriorSeparator--
+The probability of an event before considering new evidence.
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following statements is true regarding independent events A and B?
+--InteriorSeparator--
+(wrong) If A occurs, B cannot occur.
+(right) The probability of A occurring is not affected by whether or not B occurs.
+(wrong) A and B must be mutually exclusive.
+(right) P(A|B) = P(A) if P(B) > 0.
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+```}], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=6311, endIndex=6434}]}, avgLogprobs=-0.2644400967005925}]

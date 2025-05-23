@@ -1,0 +1,424 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the complexity of using a priority queue in a source reduction step for Huffman code computation?
+--InteriorSeparator--
+O(n log n)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the initial Huffman tree in the Faller-Gallager-Knuth (FGK) algorithm?
+--InteriorSeparator--
+Consists of only one node whose weight will always be 0.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following information can Hecodeeinfo contain?
+--InteriorSeparator--
+(right) Symbols' frequencies
+(wrong) The encoded text itself
+(right) The Hetree itself
+(wrong) The decoded text
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the decoding procedure for static Huffman codes?
+--InteriorSeparator--
+Recover the Hecode (Hetree) from Hecodeeinfo, then decode by traversing the tree based on the bit sequence.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In Vitter's algorithm, what is a block?
+--InteriorSeparator--
+(right) A maximal sequence of nodes, in the implicit order, of the same weight and type
+(wrong) A sequence of nodes with different weights
+(wrong) A sequence of nodes of the different type
+(wrong) A minimal sequence of nodes with the same weight
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+75
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the main idea of Faller-Gallager-Knuth's algorithm for dynamic Huffman coding?
+--InteriorSeparator--
+Use an initial Huffman tree with a single node of weight 0 and update the tree with each new symbol.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is a key element to be described in Vitter's algorithm?
+--InteriorSeparator--
+(right) Implicit numbering
+(right) Invariant
+(wrong) Explicit ordering
+(wrong) Variant
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+72
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the "escape code" in the FGK algorithm?
+--InteriorSeparator--
+To insert a new symbol (which is not yet in the tree). The first occurrence of this symbol is encoded by the escape code followed by the unencoded symbol.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the two main techniques employed for ordering the source in static Huffman encoding?
+--InteriorSeparator--
+(right) Using a priority queue
+(right) Using two queues
+(wrong) Using a stack
+(wrong) Using a linked list
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the complexity of using two queues in a source reduction step for Huffman code computation if the initial source is ordered?
+--InteriorSeparator--
+O(n)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In Vitter’s algorithm, what does CN stand for?
+--InteriorSeparator--
+Current Node
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+76
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is a step in the encoding procedure for static Huffman codes?
+--InteriorSeparator--
+(right) Parse the text
+(right) Collect symbols' frequencies
+(wrong) Decompress the text
+(wrong) Encrypt the text
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+According to the provided material, who proposed the sibling property for the FGK algorithm?
+--InteriorSeparator--
+Gallager
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does Ltl refer to in Vitter's algorithm?
+--InteriorSeparator--
+Leaf to Increment
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+76
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the initial value of a node's weight in the FGK algorithm?
+--InteriorSeparator--
+(right) 0
+(wrong) 1
+(wrong) A random value
+(wrong) Depends on the symbol
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the sibling transformation for symbol 'a' in tree hi about?
+--InteriorSeparator--
+Comparing 'a' to its successors and swapping it with the last successor with frequency k or smaller (excluding the parent), then incrementing the frequency of 'a'.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+43
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What should the Hecodeeinfo give for static Huffman codes?
+--InteriorSeparator--
+(right) Sufficient information so that the decoder can recover the Hecode
+(wrong) The original text
+(wrong) The encoded text without the Hecodeeinfo
+(wrong) A summary of the text
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why the order of symbols in the text is irrelevant to computing the Hecode in static Huffman codes?
+--InteriorSeparator--
+The order of symbols in the text is irrelevant to computing the Hecode!
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are some of the goals of Vitter's algorithm?
+--InteriorSeparator--
+(right) Minimize the average codeword length
+(right) Minimize the maximum codeword length
+(wrong) Maximize the average codeword length
+(wrong) Maximize the minimum codeword length
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+72
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In dynamic Huffman coding, what is the fundamental issue?
+--InteriorSeparator--
+How to update the Huffman tree.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In static Huffman decoding, where do you start the process with the next bit after decoding a bit sequence by the leaf?
+--InteriorSeparator--
+At the root.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In Vitter's algorithm, what is the invariant that needs to be maintained?
+--InteriorSeparator--
+(right) For each weight W, all leaves of weight w precede (in the implicit numbering) all internal nodes of weight w.
+(wrong) Internal nodes of a certain weight should precede leaves of the same weight
+(wrong) The weight of internal nodes should be always be greater than the leaf nodes
+(wrong) The implicit numbering should not be changing
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+74
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the final algorithm known as which includes the sibling property and other improvements of the FGK algorithms?
+--InteriorSeparator--
+The FGK algorithm.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How is the first occurence of each symbol handled during dynamic Huffman encoding?
+--InteriorSeparator--
+The first occurrence of each symbol will be unencoded.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following steps are part of inserting an existing symbol with Vitter's algorithm?
+--InteriorSeparator--
+(right) CN is the existing node of a
+(right) Interchange CN with the leader of its block
+(wrong) Ltl becomes the left children of CN
+(wrong) Add two children to CN: a O-node as the left children and a leaf for
+a as the right children
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+78
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the primary difference between static and dynamic Huffman coding?
+--InteriorSeparator--
+Static codes have a fixed tree, while dynamic codes update the tree during encoding/decoding.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+6, 41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is implicit numbering in Vitter's algorithm?
+--InteriorSeparator--
+A numbering scheme that numbers the tree nodes in increasing order on levels from left to right and bottom to top.
+--InteriorSeparator--
+hard
+--FlashCardSeparator--
+73
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the sibling transformation involve in the FGK algorithm?
+--InteriorSeparator--
+(right) comparing a to its successors in the tree
+(wrong) shifting each branch to the right
+(right) increment the frequency of a
+(wrong) changing node parents
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+43
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the context of dynamic Huffman coding, what is 'ho'?
+--InteriorSeparator--
+An initial Huffman code (tree).
+--InteriorSeparator--
+easy
+--FlashCardSeparator--
+41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Who designed Vitter's algorithm?
+--InteriorSeparator--
+Jeffrey Scott Vitter.
+--InteriorSeparator--
+easy
+--FlashCardSeparator--
+72
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does static Huffman encoding consist of?
+--InteriorSeparator--
+(right) Encoding the text and submit < Hecodeeinfo # encodedetext >
+(right) Computing the Hecode
+(wrong) Removing Symbols
+(wrong) Encrypting the Text
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following actions need to be performed in Static Huffman Codes: Encoding?
+--InteriorSeparator--
+(right) Collect Symbols' Frequencies
+(wrong) Compress the symbols
+(right) Parse the text
+(wrong) Reverse the text
+--InteriorSeparator--
+medium
+--FlashCardSeparator--
+7
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.2401600620202851}]

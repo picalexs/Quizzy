@@ -1,0 +1,384 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What concept does the notion of a derivative capture regarding a function's value?
+--InteriorSeparator--
+The rate of change of a function's value with respect to its variable.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If a function *f* is differentiable at a point *x0*, what is guaranteed about its continuity at that point?
+--InteriorSeparator--
+It is continuous at *x0*.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is true if *f* and *g* are differentiable functions?
+--InteriorSeparator--
+(f+g)' = f' + g'
+(wrong) (f*g)' = f' * g'
+(wrong) (f/g)' = f'/g'
+(wrong) (g o f)' = g' o f'
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the derivative of sin(x)?
+--InteriorSeparator--
+cos(x)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If *f* and *g* are differentiable vector-valued functions, which of the following rules apply?
+--InteriorSeparator--
+(f+g)'(x0) = f'(x0) + g'(x0)
+(right) ((φf)'(x0) = φ'(x0)f(x0) + φ(x0)f'(x0)
+(wrong) (f+g)'(x0) = f'(x0) - g'(x0)
+(wrong) ((φf)'(x0) = φ'(x0)f(x0) - φ(x0)f'(x0)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a Gâteaux differential?
+--InteriorSeparator--
+The function u |—> f’(x0; u) where f’(x0; u) is the directional derivative of f in x0 in the direction u.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If *f* is Gâteaux differentiable at *x0*, what property does Df(x0) have?
+--InteriorSeparator--
+It is homogeneous
+(wrong) It is multiplicative.
+(right/wrong) It is additive if f is Gâteaux derivabile.
+(wrong) It is non-linear.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the Gâteaux derivatives of a constant function *c* and a linear transformation *T*?
+--InteriorSeparator--
+Dc(x0) = 0, DT(x0) = T
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the formula to calculate the partial derivative of *f* with respect to *xk* at *x0*?
+--InteriorSeparator--
+lim (t->0) [f(x1,...,xk+t,...,xn) - f(x1,...,xk,...,xn)] / t
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Does the existence of partial derivatives of a multivariable function at a point guarantee the existence of all directional derivatives at that point?
+--InteriorSeparator--
+no
+(wrong) yes
+(wrong) only if the function is continuous
+(wrong) only if the function is linear
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the matrix associated with Df(x0) called?
+--InteriorSeparator--
+The Jacobian matrix.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If a function *f* is Gâteaux differentiable at a point, what kind of continuity is guaranteed at that point?
+--InteriorSeparator--
+directional continuity
+(wrong) uniform continuity
+(wrong) absolute continuity
+(wrong) simple continuity
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Under what condition, besides existence, must partial derivatives satisfy in a neighborhood of x0 to guarantee continuity of the function at x0?
+--InteriorSeparator--
+They must be bounded.
+(right/wrong) They must be continuous at x0.
+(wrong) They must be differentiable.
+(wrong) They must be zero.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the defining characteristic of a C1 function?
+--InteriorSeparator--
+It is differentiable, and its derivative is continuous.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What condition must a linear operator T satisfy for f to be Fréchet differentiable at x0?
+--InteriorSeparator--
+lim (x->x0) [||f(x) - f(x0) - T(x - x0)|| / ||x - x0||] = 0
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If a function *f* is Fréchet differentiable at *x0*, what can be said about its Gâteaux differentiability at that point?
+--InteriorSeparator--
+It is Gâteaux differentiable, and their derivatives are equal
+(wrong) It is not Gâteaux differentiable
+(wrong) It is Gâteaux differentiable, but their derivatives are different.
+(wrong) No relationship can be established.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If a function is Fréchet differentiable at x0, what is also true?
+--InteriorSeparator--
+It has partial derivatives at x0
+(wrong) It is discontinuous at x0
+(right/wrong) It is continuous at x0
+(wrong) It is undefined at x0
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the traditional notation for the Fréchet differential of the projection onto the i-th component, pri?
+--InteriorSeparator--
+dx_i
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the sufficient condition for Fréchet differentiability regarding the partial derivatives of a multivariable function?
+--InteriorSeparator--
+If partial derivatives exist in a neighborhood and are continuous in that neighborhood.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If f and g are Fréchet differentiable at x0, which is true about their linear combination?
+--InteriorSeparator--
+d(αf + βg)(x0) = αdf(x0) + βdg(x0)
+(wrong) d(αf + βg)(x0) = df(x0) + dg(x0)
+(wrong) d(αf + βg)(x0) = αdf(x0) - βdg(x0)
+(wrong) d(αf + βg)(x0) = αdf(x0) * βdg(x0)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If f: D -> E and g: E -> IRp are Frechet differentiable, what is the differential of their composition?
+--InteriorSeparator--
+d(g o f) (x0) = dg(f(x0)) o df(x0)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a diffeomorphism?
+--InteriorSeparator--
+A bijective function f: D -> E, where f ∈ C1(D; IRn) and Jf(x) is non-singular for all x ∈ D.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How is the second derivative of f at x0 denoted?
+--InteriorSeparator--
+f''(x0) or d^2f/dx^2(x0)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What condition is required for the mixed partial derivative to be reordered (Schwarz's Theorem)?
+--InteriorSeparator--
+The mixed partial derivatives exist in a neighborhood and are continuous.
+(wrong) The mixed partial derivatives exist only at a point and are continuous
+(wrong) The mixed partial derivatives only exist, no continuity required
+(wrong) The partial derivatives have to be Frechet differentiable
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the mixed partial derivative notation d^(p)f/(dx1^(α1) dx2^(α2) ... dxn^(αn)), what does αi represent?
+--InteriorSeparator--
+The number of times x_i appears in the list of derivatives.
+(wrong) The order of derivative with respect to xi
+(wrong) The sum of derivatives
+(wrong) The product of derivatives
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+34
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the condition of a function to be Fréchet differentiable of order p in x0?
+--InteriorSeparator--
+There exists a neighborhood of x0 such that all partial derivatives of order p-1 exist and are Fréchet differentiable in x0.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the formula of Taylor provide?
+--InteriorSeparator--
+An approximation of a function using its derivatives at a specific point.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+36
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When does the Taylor series associated to f converge to f?
+--InteriorSeparator--
+When f is analytic
+(wrong) Always
+(right/wrong) When f is defined by a power series
+(wrong) When f is continuous
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+37
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the Taylor series convergence sufficient for it to converge to f?
+--InteriorSeparator--
+No.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.15771689903903}]

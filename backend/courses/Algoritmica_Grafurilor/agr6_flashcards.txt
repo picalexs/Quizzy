@@ -1,0 +1,419 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the goal of the Minimum Spanning Tree (MST) problem?
+--InteriorSeparator--
+To find a tree T* within a graph G that connects all vertices with the minimum possible total edge cost.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the initial state of the family of trees in the general MST method?
+--InteriorSeparator--
+The family starts with *n* disjoint trees, each containing a single vertex from the graph.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the general MST method, what criteria are used to extend the current tree Tsk?
+--InteriorSeparator--
+(right) A minimum-cost edge e* connecting a vertex in V(Tsk) to a vertex in V \ V(Tsk).
+(wrong) A maximum-cost edge connecting two vertices in V(Tsk).
+(wrong) A random edge connecting V(Tsk) to any other vertex in the graph.
+(wrong) The edge that creates a cycle with the minimum number of edges.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens in the general MST method if, at any step, there's no edge connecting the current tree to the rest of the graph?
+--InteriorSeparator--
+The graph is not connected, and therefore, no MST exists.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+According to the text, what is guaranteed about T^(n-1) after the general MST algorithm terminates if G is a connected graph?
+--InteriorSeparator--
+(right) T^(n-1) is a Minimum Spanning Tree (MST) of G.
+(wrong) T^(n-1) only contains the cheapest edges from G
+(wrong) T^(n-1) is disconnected
+(wrong) T^(n-1) contains every vertex from G, but might not be connected
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the proof of MST correctness using induction, what assumption is made about the existence of an MST Tk at step k?
+--InteriorSeparator--
+It is assumed that there exists an MST T'k such that E(T'k) contains all the edges from the trees in Tk.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens in the proof if the chosen edge *e* already exists in the MST T'?
+--InteriorSeparator--
+The MST T'k+1 is simply set to T'k, as the property still holds for k+1.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+In the MST proof, if e* is not in E(T'), how is T1 constructed, and why is it still an MST?
+--InteriorSeparator--
+T1 is constructed by adding e* to T' and removing an edge e1 from the resulting cycle C, where e1 is in E(T') \ E(Tk). T1 is still an MST because c(e*) <= c(e1), ensuring that c(T1) <= c(T'). Since T' is an MST, c(T1) must equal c(T').
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the two classical strategies for choosing the tree Tsk in the general MST method, according to the text?
+--InteriorSeparator--
+Choosing the tree of maximum order or choosing one of two trees connected by a minimum cost edge.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the key characteristic of Prim's algorithm's strategy for selecting Tsk?
+--InteriorSeparator--
+Prim's algorithm selects the tree of maximum order (the one with the most nodes) as Tsk.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In Prim's algorithm, what do the vectors alpha and beta represent?
+--InteriorSeparator--
+(right) alpha[v] stores the node in Vs closest to v.
+(right) beta[v] stores the cost of the edge connecting v to its closest node in Vs.
+(wrong) alpha[v] stores the cost of the edge connecting v to the starting node s.
+(wrong) beta[v] stores the total distance from v to all nodes in Vs.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What is the significance of the condition (S) being satisfied after initialization in Prim's algorithm and how is it maintained?
+--InteriorSeparator--
+(S) represents the invariant that beta[j] stores the cost of the minimum-cost edge connecting j to the current tree Vs. It's maintained by updating beta[j] with c(j, j*) if c(j, j*) is less than the current beta[j] within the inner 'for' loop, ensuring the closest node and its cost are always tracked.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of Prim's algorithm as described in the text?
+--InteriorSeparator--
+O(n^2), making it suitable for dense graphs.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is Kruskal's algorithm's strategy for selecting Tsk?
+--InteriorSeparator--
+Kruskal's algorithm selects two trees connected by an edge of minimum cost.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the first step in Kruskal's algorithm?
+--InteriorSeparator--
+Sorting all the edges of the graph in ascending order of their cost.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the purpose of the "find" function in Kruskal's algorithm and what does it return?
+--InteriorSeparator--
+(right) Determine which set a node belongs to.
+(right) The root of the tree representing the set containing the node.
+(wrong) Returns the parent node of the given node.
+(wrong) Returns the set of all nodes connected to the given node.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of the "union" method in Kruskal's algorithm?
+--InteriorSeparator--
+To merge the sets of nodes from two trees into a single set, preventing cycles.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+In the initial implementation of Kruskal's, what is the time complexity of the "union" method, and why?
+--InteriorSeparator--
+The initial "union" method has a time complexity of O(n) because it iterates through all vertices in the graph, updating the root of each vertex in the set being merged, which takes linear time with respect to the number of vertices.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the overall time complexity of Kruskal's algorithm with the initial implementation of the union method?
+--InteriorSeparator--
+O(max(m log n, n^2))
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What information is stored in the `pred` array in the improved Kruskal's algorithm?
+--InteriorSeparator--
+`pred[v]` stores the node preceding `v` on the path from `v` to the root of its tree.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+Why does the specific sequence of "find" and "union" calls described in the example on page 20 lead to Q(n^2) complexity, even on a sparse graph?
+--InteriorSeparator--
+The sequence of "union" calls always makes the shallower tree a subtree of the deeper tree. This creates a chain-like tree, resulting in "find" operations traversing a path of length O(n), leading to O(n) time complexity for each "find".
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+How is the 'union' method improved to avoid the O(n^2) complexity issue, and what is the new significance of pred[v] when v is a root?
+--InteriorSeparator--
+The improvement involves storing the cardinality of the set in the 'pred' field of the root node, where pred[v] < 0 indicates that v is the root of a tree representing a set with -pred[v] nodes.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of the improved "union" method?
+--InteriorSeparator--
+O(1)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What is the invariant (*) maintained by the improved find and union methods, and what does it imply for the height of the trees?
+--InteriorSeparator--
+The invariant is -pred[find(v)] >= 2^h(v), which means the number of nodes in the tree containing v is at least 2 raised to the power of the distance from v to the root. This limits the tree height to O(log n).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+How does the case where the 'union' method is called affect the invariant in the proof on pages 23-24, and why is it important?
+--InteriorSeparator--
+If union(x, y) is called, and pred[y] <- x is executed, the nodes v with find(v) = y have their h(v) increased by 1. The proof shows that even with this change, -pred'[x] >= 2^(h'(v)), ensuring the invariant is maintained after the union. This is crucial because it guarantees logarithmic height and thus logarithmic time complexity for the find operations.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity of Kruskal's algorithm using the improved "union" and "find" methods?
+--InteriorSeparator--
+O(m log n).
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What is the key optimization introduced by Tarjan for the "find" function, and how does it improve performance?
+--InteriorSeparator--
+Tarjan introduces path compression. The find function collapses the path from a node to its root, making each node on the path point directly to the root, thereby improving the performance of future find operations on those nodes.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+What is the time complexity of Kruskal's algorithm when using Tarjan's optimized "find" function and the improved "union" method, and why is it considered practically linear?
+--InteriorSeparator--
+O(m * a(m, n)), where a(m, n) is the inverse Ackermann function. It's practically linear because the inverse Ackermann function grows extremely slowly, so for all practical values of n, a(m, n) is less than or equal to 3.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a matching in a graph G?
+--InteriorSeparator--
+A matching in G is a set of edges M ⊆ E such that no two edges in M share a common vertex.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a saturated node with respect to a matching M?
+--InteriorSeparator--
+A node v is saturated by M if dM(v) = 1, meaning it is incident to exactly one edge in M.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the goal of the maximum matching problem?
+--InteriorSeparator--
+To find a matching M* in a graph G such that the cardinality of M* is maximized.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is an edge cover of a graph G?
+--InteriorSeparator--
+An edge cover is a set of edges F ⊆ E such that every vertex in G is incident to at least one edge in F.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the goal of the minimum edge cover problem?
+--InteriorSeparator--
+To find an edge cover F* in a graph G such that the cardinality of F* is minimized.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Hard
+--InteriorSeparator--
+State Norman-Rabin's theorem (1959) regarding the relationship between maximum matching and minimum edge cover.
+--InteriorSeparator--
+For a graph G of order n without isolated vertices, if M* is a maximum matching and F* is a minimum edge cover, then |M*| + |F*| = n.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+32
+--FlashCardSeparator--}], role=model}, finishReason=STOP, avgLogprobs=-0.19246940522611}]

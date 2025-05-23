@@ -1,0 +1,433 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does p(X, Y; G) represent?
+--InteriorSeparator--
+The maximum number of node-disjoint XY-paths in G.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is an XY-separating set in a graph G?
+--InteriorSeparator--
+A subset Z of V such that every XY-path in G intersects Z.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following statements are true about an XY-separating set Z?
+--InteriorSeparator--
+(right) Removing Z from G eliminates all XY-paths.
+(wrong) Removing Z from G creates new XY-paths.
+(right) If A contains Z, then A is also an XY-separating set.
+(wrong) If T is an XY-separating set, then Z must contain T.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5-6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State Menger's Theorem.
+--InteriorSeparator--
+p(X, Y; G) = k(X, Y; G), the maximum number of node-disjoint XY-paths equals the minimum size of an XY-separating set.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+According to Menger's Theorem (using internally disjoint paths), if there exist k internally disjoint paths from s to t in a graph G, then:
+--InteriorSeparator--
+(right) There exists at least one path from s to t in the graph obtained from G by deleting any set of fewer than k nodes (other than s and t).
+(wrong) There do not exists any path from s to t in the graph obtained from G by deleting any set of fewer than k nodes (other than s and t).
+(wrong) The graph is disconnected
+(wrong) The number of edges is less than k.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a p-connected graph?
+--InteriorSeparator--
+A graph G is p-connected if either G is a complete graph Kp, or |G| > p and G \ A is connected for any A contained in V(G) with |A| < p.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the node connectivity number k(G) of a graph G?
+--InteriorSeparator--
+The largest p for which G is p-connected.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define a vertex cover of a graph G.
+--InteriorSeparator--
+A set X contained in V(G) such that G - X is a null graph (every edge in G has at least one endpoint in X).
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State Kőnig's Theorem.
+--InteriorSeparator--
+In a bipartite graph G = (S, T; E), the maximum size of a matching is equal to the minimum size of a vertex cover.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a transversal of a family of subsets A?
+--InteriorSeparator--
+An injective representation function 𝑇𝐴: 𝐼 → 𝑆 for a family A: (Ai)i∈I of subsets of S.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State Hall's Theorem.
+--InteriorSeparator--
+A family A = (Ai)i∈I of subsets of S has a transversal if and only if |A(J)| >= |J| for all J contained in I.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which statement(s) is/are used in the proof of Hall's Theorem?
+--InteriorSeparator--
+(right) Konig's Theorem
+(wrong) Menger's Theorem
+(right) A transversal exists iff the bipartite graph has a matching of cardinality |I|
+(wrong) Dirac's Theorem
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+13-14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State Dirac's Theorem (structure of p-connected graphs).
+--InteriorSeparator--
+For a p-connected graph G of order |G| >= p+1, given U contained in V, |U| = p, and x in V \ U, there exist p mU-paths such that any two of them have only x as a common node.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Let G be a p-connected graph, p >= 2. What does Dirac's Theorem states about circuits?
+--InteriorSeparator--
+(wrong) For any two nodes e1 and e2, there are p - 2 edges
+(right) For any two edges e1 and e2 and any p - 2 nodes, there exists a circuit in G containing all these edges and nodes.
+(wrong) There is always a Hamiltonian circuit
+(wrong) There aren't any circuits in G.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the first step in the inductive proof of Dirac's theorem regarding circuits in p-connected graphs?
+--InteriorSeparator--
+(wrong) Assuming the proposition is true for any p' - connected graph with 2 <= p' < p, and considering a p-connected graph G.
+(right) Showing that in a 2-connected graph G, any two edges e1 and e2 belong to a circuit.
+(wrong) Finding p wp_2 Y-paths such that any two of them have in common only a single node
+(wrong) Applying pigeon hole principle
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State the Erdős-Chvátal Theorem.
+--InteriorSeparator--
+If G is a p-connected graph and alpha(G) <= p, then G is Hamiltonian.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What property is used in the proof of the Erdős-Chvátal Theorem?
+--InteriorSeparator--
+(wrong) Dirac's Theorem regarding circuits
+(right) Dirac's Theorem |G| >= p
+(wrong) Hall's Theorem
+(right) Assuming G is not Hamiltonian to reach a contradiction
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+21-23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define a tree.
+--InteriorSeparator--
+A connected graph without cycles.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following statements are equivalent to G being a tree?
+--InteriorSeparator--
+(right) G is connected and has no cycles.
+(right) G is connected and minimal with this property.
+(wrong) G has cycles and is maximal with this property.
+(wrong) G is disconnected and has no cycles.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a spanning tree of a graph G?
+--InteriorSeparator--
+A subgraph T of G that is a tree and includes all vertices of G.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which condition(s) are required for TG(the set of all spanning trees of G) to be non-empty?
+--InteriorSeparator--
+(right) G must be connected.
+(wrong) G must be a complete graph.
+(right) There exist a spanning tree T
+(wrong) G must be bipartite
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How many edges does a tree with n nodes have?
+--InteriorSeparator--
+n-1
+--InteriorSeparator--
+easy
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which statements are equivalent for a graph G : (V, E) with n nodes to be a tree?
+--InteriorSeparator--
+(right) G is connected and has n-1 edges
+(right) G does not have circuits and has n - 1 edges
+(wrong) G is not connected and has n - 1 edges
+(wrong) G has circuits and has n - 1 edges
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define the Laplacian matrix L[G] of a graph G.
+--InteriorSeparator--
+L[G] = D - A, where D is the diagonal matrix of degrees and A is the adjacency matrix.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State the Kirchhoff-Trent Theorem.
+--InteriorSeparator--
+The number of spanning trees of a (multi)graph G is equal to the determinant of any cofactor of its Laplacian matrix.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State Cayley's Formula.
+--InteriorSeparator--
+The complete graph Kn has n^(n-2) spanning trees.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the algorithm to generate all spanning trees using backtracking, which statements are true:
+--InteriorSeparator--
+(right) the vector T stores the indices of the edges included in a partial spanning tree.
+(wrong) root[u] is the parent of u in the spanning tree.
+(right) ALL-ST-Gen(i) generates all spanning trees with the smallest i-1 edges equal to T[1] < T[2] < ... < T[i-1]
+(wrong) Vector root is updated after printing the spanning tree.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+40-45
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the backtracking algorithm, under which condition do we check for cycles?
+--InteriorSeparator--
+(wrong) Always, for every subset of edges.
+(right) Only when we are not in the initial step (i = 1).
+(wrong) Only if root['u] == root['w]
+(right) Because, from construction, ({T[1],..., TH — 1]}>G does not have circuits
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+42-43
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the backtracking algorithm, what does root[u] represent?
+--InteriorSeparator--
+The root of the connected component containing vertex u.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+43
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the ALL-ST-Gen algorithm, what happens after the root vector is updated?
+--InteriorSeparator--
+(right) After the ALL-ST-Gen(i + 1) call, the root vector must be reset to its value before the call.
+(wrong) After printing the solution, we need to find other possible roots
+(right) The root vector is updated after checking that there aren't any circuits
+(wrong) There isn't need to update the root vector
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+44-45
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If G is a 2-edge-connected graph, when is e X f (e is equivalent to f) ?
+--InteriorSeparator--
+e X f if and only if e and f belong to the same circuits.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+34
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If G has at least 3 nodes and is 2-connected, can we orient its edges to make it strongly connected?
+--InteriorSeparator--
+Yes, if G is 2-connected, then we can orient its edges to make the directed graph strongly connected.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Suppose that we have a p-regular and bipartite graph. What is it's connectivity?
+--InteriorSeparator--
+(wrong) It must be 1-connected
+(right) It must be 2-connected
+(wrong) It must be p-connected
+(wrong) It is not connected
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.21049362901870453}]
