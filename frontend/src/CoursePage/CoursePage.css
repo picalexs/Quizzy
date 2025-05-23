@@ -139,60 +139,72 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .graph-title {
-  top: 136px;
-  left: 136px;
   color: #173b61;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.graph-buttons-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .graph-unenroll-button {
-  top: 40px;
-  position: absolute;
-  left: 550px;
   width: 124px;
   height: 44px;
-  background-color: #efeae6;
+  background-color: #fff;
   color: #a52a2a;
   border: none;
-  outline: 2px #a52a2a solid;
-  border-radius: 16px;
+  outline: none;
+  border-radius: 24px;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(165, 42, 42, 0.2);
+}
+
+.graph-unenroll-button:hover {
+  background-color: #ffeaea;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(165, 42, 42, 0.3);
 }
 
 .graph-enrolled-button {
-  top: 40px;
-  position: absolute;
-  left: 700px;
   width: 124px;
   height: 44px;
   background-color: #efeae6;
   color: #1e4b7b;
   border: none;
   outline: 2px #173b61 solid;
-  border-radius: 16px;
+  border-radius: 24px;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(23, 59, 97, 0.2);
+}
+
+.graph-enrolled-button:hover {
+  background-color: #e6e1dd;
 }
 
 .graph-start-button {
-  left: 1153px;
-  top: 136px;
-  width: 166px;
-  height: 44px;
+  width: 180px;
+  height: 50px;
   background-color: #e2a54d;
   color: white;
   border: none;
@@ -202,12 +214,14 @@ body {
   font-weight: bold;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(226, 165, 77, 0.4);
 }
 
 .graph-start-button:hover {
-  background-color: #f4f4f4;
-  color: #1e4b7b;
+  background-color: #e6b76a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(226, 165, 77, 0.5);
 }
 
 .graph-divider {
@@ -253,6 +267,43 @@ body {
   margin-top: 30px;
 }
 
+.graph-files-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 15px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.graph-files-container:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom scrollbar styling */
+.graph-files-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.graph-files-container::-webkit-scrollbar-track {
+  background: rgba(23, 59, 97, 0.05);
+  border-radius: 10px;
+}
+
+.graph-files-container::-webkit-scrollbar-thumb {
+  background: rgba(23, 59, 97, 0.2);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.graph-files-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(23, 59, 97, 0.4);
+}
+
 .graph-file-header {
   display: flex;
   justify-content: space-between;
@@ -275,7 +326,21 @@ body {
 .graph-file-entry {
   display: flex;
   align-items: center;
-  padding: 10px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.graph-file-entry:last-child {
+  margin-bottom: 0;
+}
+
+.graph-files-container .graph-divider-small {
+  margin: 8px 0;
+  opacity: 0.1;
 }
 
 .graph-file-text {
@@ -314,9 +379,6 @@ body {
 }
 
 .graph-enroll-button {
-  top: 40px;
-  position: absolute;
-  right: 120px;
   width: 124px;
   height: 44px;
   background: linear-gradient(
@@ -330,17 +392,19 @@ body {
   );
   color: white;
   border: none;
-  border-radius: 16px;
+  border-radius: 24px;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .graph-enroll-button:hover {
-  background-color: #4b79df;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .graph-container {

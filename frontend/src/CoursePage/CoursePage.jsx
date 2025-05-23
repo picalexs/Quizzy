@@ -141,6 +141,15 @@ function CoursePage() {
     })
   }
 
+  const handleAddFlashcard = () => {
+    navigate('/flashcardsProf', {
+      state: {
+        courseId: id,
+        courseTitle: course?.title || 'Unknown Course'
+      }
+    });
+  };
+
   const handleNavClick = (label) => {
     if (label === "Home") navigate("/dashboard")
     else if (label === "Library") navigate("/library")
@@ -251,23 +260,25 @@ function CoursePage() {
       <div className="graph-content-box">
         <div className="graph-header">
           <h1 className="graph-title">{course.title}</h1>
-          {enrolled ? (
-            <>
-              <button className="graph-unenroll-button" onClick={handleUnenroll} disabled={unenrolling}>
-                {unenrolling ? "Unenrolling..." : "Unenroll ►"}
+          <div className="graph-buttons-container">
+            {enrolled ? (
+              <>
+                <button className="graph-unenroll-button" onClick={handleUnenroll} disabled={unenrolling}>
+                  {unenrolling ? "Unenrolling..." : "Unenroll ►"}
+                </button>
+                <button className="graph-enrolled-button" disabled>
+                  Enrolled
+                </button>
+              </>
+            ) : (
+              <button className="graph-enroll-button" onClick={handleEnroll} disabled={enrolling}>
+                {enrolling ? "Enrolling..." : "Enroll"}
               </button>
-              <button className="graph-enrolled-button" disabled>
-                Enrolled
-              </button>
-            </>
-          ) : (
-            <button className="graph-enroll-button" onClick={handleEnroll} disabled={enrolling}>
-              {enrolling ? "Enrolling..." : "Enroll"}
+            )}
+            <button className="graph-start-button" onClick={() => alert("Start learning!")}>
+              Start learning ►
             </button>
-          )}
-          <button className="graph-start-button" onClick={() => alert("Start learning!")}>
-            Start learning ►
-          </button>
+          </div>
         </div>
 
         <div className="graph-divider"></div>
@@ -276,7 +287,7 @@ function CoursePage() {
           <div className="flashcards-header">
             <h2 className="graph-section-title">Flashcards</h2>
             <div className="flashcards-buttons">
-              <button className="flashcard-add-button">Add</button>
+              <button className="flashcard-add-button" onClick={handleAddFlashcard}>Add</button>
               <button className="flashcard-remove-button">Remove</button>
             </div>
           </div>
@@ -311,25 +322,27 @@ function CoursePage() {
             <h2 className="graph-section-title">Files</h2>
             <h2 className="graph-file-count">{materials.length}</h2>
           </div>
-          {materials.length > 0 ? (
-            materials.map((mat, i) => (
-              <div key={mat.id || i}>
-                <div className="graph-file-entry clickable" onClick={() => handleMaterialClick(mat.path)}>
-                  <FaFilePdf size={40} color="#E74C3C" />
-                  <div className="graph-file-text">
-                    <p className="graph-file-name">{mat.name || "Unnamed Material"}</p>
-                    <p className="graph-file-details">
-                      {mat.pages ? `${mat.pages} pages` : "Unknown pages"} |
-                      {mat.flashcards ? ` ${mat.flashcards.length} flashcards` : " No flashcards"}
-                    </p>
+          <div className="graph-files-container">
+            {materials.length > 0 ? (
+              materials.map((mat, i) => (
+                <div key={mat.id || i}>
+                  <div className="graph-file-entry clickable" onClick={() => handleMaterialClick(mat.path)}>
+                    <FaFilePdf size={40} color="#E74C3C" />
+                    <div className="graph-file-text">
+                      <p className="graph-file-name">{mat.name || "Unnamed Material"}</p>
+                      <p className="graph-file-details">
+                        {mat.pages ? `${mat.pages} pages` : "Unknown pages"} |
+                        {mat.flashcards ? ` ${mat.flashcards.length} flashcards` : " No flashcards"}
+                      </p>
+                    </div>
                   </div>
+                  {i < materials.length - 1 && <div className="graph-divider-small"></div>}
                 </div>
-                {i < materials.length - 1 && <div className="graph-divider-small"></div>}
-              </div>
-            ))
-          ) : (
-            <div className="graph-file-entry">No files available.</div>
-          )}
+              ))
+            ) : (
+              <div className="graph-file-entry">No files available.</div>
+            )}
+          </div>
         </div>
       </div>
       {error && <div className="library-error">{error}</div>}
