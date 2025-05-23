@@ -8,9 +8,10 @@ import java.util.Set;
 public class FlashcardDTO {
     private Long id;
     private String question;
-    private int level;
+    private Integer level;
     private Date lastStudiedAt;
     private String questionType;
+    private Integer pageIndex;
     private Integer userId;
     private Long materialId;
     private Set<AnswerFCDTO> answers;
@@ -21,7 +22,7 @@ public class FlashcardDTO {
     public void setQuestion(String question) {
         this.question = question;
     }
-    public void setLevel(int level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
     public void setLastStudiedAt(Date lastStudiedAt) {
@@ -29,6 +30,9 @@ public class FlashcardDTO {
     }
     public void setQuestionType(String questionType) {
         this.questionType = questionType;
+    }
+    public void setPageIndex(Integer pageIndex) {
+        this.pageIndex = pageIndex;
     }
     public void setUserId(Integer userId) {
         this.userId = userId;
@@ -45,7 +49,7 @@ public class FlashcardDTO {
     public String getQuestion() {
         return question;
     }
-    public int getLevel() {
+    public Integer getLevel() {
         return level;
     }
     public Date getLastStudiedAt() {
@@ -53,6 +57,9 @@ public class FlashcardDTO {
     }
     public String getQuestionType() {
         return questionType;
+    }
+    public Integer getPageIndex() {
+        return pageIndex;
     }
     public Integer getUserId() {
         return userId;

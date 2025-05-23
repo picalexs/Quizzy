@@ -20,11 +20,30 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
     List<Flashcard> findDueFlashcards(@Param("date") Date date, @Param("userId") Integer userId);
 
     @Query("SELECT f FROM Flashcard f WHERE f.level = :level AND f.user.id = :userId")
-    List<Flashcard> findByLevelAndUserId(@Param("level") int level, @Param("userId") Integer userId);
+    List<Flashcard> findByLevelAndUserId(@Param("level") Integer level, @Param("userId") Integer userId);
 
     @Query("SELECT f FROM Flashcard f WHERE f.material.course.id = :courseId AND f.user.id = :userId")
     List<Flashcard> findByCourseIdAndUserId(@Param("courseId") Long courseId, @Param("userId") Integer userId);
 
     @Query("SELECT f FROM Flashcard f WHERE f.questionType = :type AND f.user.id = :userId")
     List<Flashcard> findByQuestionTypeAndUserId(@Param("type") String type, @Param("userId") Integer userId);
+
+    @Query("SELECT f FROM Flashcard f WHERE f.question = :questionText")
+    Flashcard findByQuestion(@Param("questionText") String questionText);
+    
+    @Query("SELECT f FROM Flashcard f WHERE f.pageIndex = :pageIndex")
+    List<Flashcard> findByPageIndex(@Param("pageIndex") Integer pageIndex);
+    
+    @Query("SELECT f FROM Flashcard f WHERE f.pageIndex = :pageIndex AND f.user.id = :userId")
+    List<Flashcard> findByPageIndexAndUserId(
+            @Param("pageIndex") Integer pageIndex, 
+            @Param("userId") Integer userId);
+    
+    @Query("SELECT f FROM Flashcard f WHERE f.pageIndex = :pageIndex AND f.material.id = :materialId")
+    List<Flashcard> findByPageIndexAndMaterialId(
+            @Param("pageIndex") Integer pageIndex, 
+            @Param("materialId") Long materialId);
+
+    @Query("SELECT COUNT(f) FROM Flashcard f WHERE f.material.course.id = :courseId")
+    Long countByCourseId(@Param("courseId") Long courseId);
 }

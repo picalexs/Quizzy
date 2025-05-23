@@ -28,13 +28,16 @@ public class Flashcard {
     private String question;
 
     @Column(name = "level")
-    private int level;
+    private Integer level;
 
     @Column(name = "laststudiedat")
     private Date lastStudiedAt;
 
     @Column(name = "questiontype")
     private String questionType;
+    
+    @Column(name = "pageindex")
+    private Integer pageIndex;
 
     @ManyToOne
     @JoinColumn(name = "userid", nullable = false)
@@ -62,10 +65,10 @@ public class Flashcard {
     public void setQuestion(String question) {
         this.question = question;
     }
-    public int getLevel() {
+    public Integer getLevel() {
         return level;
     }
-    public void setLevel(int level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
@@ -80,6 +83,12 @@ public class Flashcard {
     }
     public void setQuestionType(String questionType) {
         this.questionType = questionType;
+    }
+    public Integer getPageIndex() {
+        return pageIndex;
+    }
+    public void setPageIndex(Integer pageIndex) {
+        this.pageIndex = pageIndex;
     }
     public User getUser() {
         return user;
