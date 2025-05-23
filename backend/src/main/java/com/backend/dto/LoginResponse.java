@@ -11,21 +11,26 @@ public class LoginResponse {
     private String role;
     private String message;
     private boolean success;
-
+    private Integer userId;
     public LoginResponse() {
         this.token = "";
         this.email = "";
         this.role = "";
         this.message = "";
         this.success = false;
+        this.userId = null;
     }
 
-    public LoginResponse(String token, String email, String role, String message, boolean success) {
+    public LoginResponse(String token, String email, String role, String message, boolean success,Integer userId) {
         this.token = token != null ? token : "";
         this.email = email != null ? email : "";
         this.role = role != null ? role : "";
         this.message = message != null ? message : "";
         this.success = success;
+        this.userId = userId;
+    }
+    public LoginResponse(String token, String email, String role, String message, boolean success) {
+        this(token, email, role, message, success, null);
     }
 
     // Explicit getters and setters
