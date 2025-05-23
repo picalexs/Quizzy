@@ -388,14 +388,4 @@ hard
 57
 --FlashCardSeparator--
 
---FlashCardSeparator--
-Single
---InteriorSeparator--
-When applying the QR algorithm to a symmetric matrix, what is the form of the Schur real form that is achieved?
---InteriorSeparator--
-A diagonal matrix.
---InteriorSeparator--
-medium
---InteriorSeparator--
-57
 }], role=model}, finishReason=STOP, avgLogprobs=-0.12075329147526966}]

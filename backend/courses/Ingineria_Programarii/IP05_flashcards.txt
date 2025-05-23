@@ -1,33 +1,6 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does SRP stand for in the SOLID principles?
---InteriorSeparator--
-Single Responsibility Principle
---InteriorSeparator--
-easy
---InteriorSeparator--
-4
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are SOLID principles?
---InteriorSeparator--
-(right) Liskov Substitution Principle
-(right) Open/Closed Principle
-(wrong) Agile Modeling Principle
-(wrong) Rapid Application Development
---InteriorSeparator--
-medium
---InteriorSeparator--
-4
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 Who introduced the SOLID principles?
 --InteriorSeparator--
 Robert C. Martin
@@ -40,12 +13,39 @@ easy
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to the Single Responsibility Principle (SRP), what should a class encapsulate?
+Which of the following are SOLID principles?
+--InteriorSeparator--
+(right) Single Responsibility Principle
+(right) Open/Closed Principle
+(wrong) Don't Repeat Yourself
+(wrong) Keep It Simple, Stupid
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does SRP stand for?
+--InteriorSeparator--
+Single Responsibility Principle
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+According to the Single Responsibility Principle, what should a class encapsulate?
 --InteriorSeparator--
 (right) A single responsibility
-(wrong) Multiple unrelated responsibilities
-(wrong) All possible functionalities
-(right) That responsibility should be entirely encapsulated by the class
+(wrong) Multiple related responsibilities
+(wrong) All responsibilities related to the application
+(wrong) No responsibilities
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -55,21 +55,21 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What are the classic solutions for SRP violations?
+According to Robert Martin, how many reasons should there be for a class to change?
 --InteriorSeparator--
-Separate printer & separate saver
+One
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
-7
+6
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-How does adhering to the Single Responsibility Principle (SRP) impact code design?
+What are the results of applying the Single Responsibility Principle correctly?
 --InteriorSeparator--
-Leads to flexible design, lower coupling, and higher cohesion.
+Flexible design, lower coupling, and higher cohesion
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -79,7 +79,7 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does OCP stand for in the SOLID principles?
+What does OCP stand for?
 --InteriorSeparator--
 Open/Closed Principle
 --InteriorSeparator--
@@ -89,25 +89,16 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-Who originated the term OCP (Open/Closed Principle)?
+What does the Open/Closed Principle state?
 --InteriorSeparator--
-Bertrand Meyer
+(right) Software entities should be open for extension
+(right) Software entities should be closed for modification
+(wrong) Software entities should be open for modification
+(wrong) Software entities should be closed for extension
 --InteriorSeparator--
-easy
---InteriorSeparator--
-9
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Explain the Open/Closed Principle (OCP) in your own words.
---InteriorSeparator--
-Software entities should be open for extension but closed for modification. New behavior should be added without altering existing code.
---InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
 10
 --FlashCardSeparator--
@@ -115,36 +106,21 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is one way to achieve the Open/Closed Principle (OCP)?
+What are some approaches to achieve the Open/Closed Principle?
 --InteriorSeparator--
-Rely on abstractions, not implementations
+Parameters, Inheritance/Template Method pattern, Composition/Strategy pattern
 --InteriorSeparator--
-medium
---InteriorSeparator--
-11
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are some approaches to achieve the Open/Closed Principle (OCP)?
---InteriorSeparator--
-(right) Inheritance / Template Method pattern
-(wrong) Using concrete classes directly
-(right) Composition / Strategy pattern
-(wrong) Ignoring future changes
---InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 11
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-Why is it not possible to close a design against all changes?
+Why does OCP add complexity to the design?
 --InteriorSeparator--
-All systems change during their life cycles. Experience will tell you which pattern to use and when to apply OCP.
+No design can be closed against all changes (TANSTAAFL).
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -154,7 +130,7 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does LSP stand for in SOLID principles?
+What does LSP stand for?
 --InteriorSeparator--
 Liskov Substitution Principle
 --InteriorSeparator--
@@ -166,9 +142,24 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-According to the Liskov Substitution Principle, what should child classes not do?
+What is the main idea behind the Liskov Substitution Principle?
 --InteriorSeparator--
-Remove base class behavior or violate base class invariants.
+Subtypes must be substitutable for their base types.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does substitutability, according to the Liskov Substitution Principle, imply?
+--InteriorSeparator--
+(right) Child classes must not remove base class behavior.
+(right) Child classes must not violate base class invariants.
+(wrong) Child classes should always add new behavior.
+(wrong) Child classes must always override base class methods.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -176,26 +167,11 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-Explain the "Tell, Don't Ask" principle and how it relates to LSP.
+How can you fix a violation of LSP?
 --InteriorSeparator--
-Instead of asking an object about its type and then deciding what to do, tell the object what to do and let it handle the implementation. This avoids type checking and potential LSP violations.
---InteriorSeparator--
-hard
---InteriorSeparator--
-16
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are consequences of Liskov Substitution Principle violation?
---InteriorSeparator--
-(wrong) Simpler Code
-(right) Polymorphism breaks Client code expectations
-(right) "Fixing" by adding if-then — nightmare (OCP)
-(wrong) Increased Flexibility
+"Tell, Don’t Ask" and refactoring to base class or introducing a third class
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -205,7 +181,7 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does ISP stand for in SOLID principles?
+What does ISP stand for?
 --InteriorSeparator--
 Interface Segregation Principle
 --InteriorSeparator--
@@ -215,28 +191,28 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the Interface Segregation Principle state?
+--InteriorSeparator--
+Clients should not be forced to depend on methods they do not use.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to the Interface Segregation Principle (ISP), what should clients not be forced to do?
+What does a "fat" interface imply?
 --InteriorSeparator--
-(wrong) Implement all interfaces
-(right) Depend on methods they do not use
-(wrong) Use multiple interfaces
-(right) Prefer small, cohesive interfaces
+(right) Classes with useless methods
+(right) Increased coupling
+(wrong) Reduced complexity
+(wrong) Increased cohesion
 --InteriorSeparator--
 medium
---InteriorSeparator--
-20
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-What is a "fat" interface, and why is it undesirable according to the Interface Segregation Principle (ISP)?
---InteriorSeparator--
-A "fat" interface contains methods that some classes don't need. This leads to increased coupling, reduced flexibility, and decreased maintainability.
---InteriorSeparator--
-hard
 --InteriorSeparator--
 20
 --FlashCardSeparator--
@@ -244,21 +220,9 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-According to the Interface Segregation Principle (ISP), what pattern can be used if the "fat" interface is not yours?
+How can you address the problem of a "fat" interface if you cannot modify it?
 --InteriorSeparator--
-Adapter pattern
---InteriorSeparator--
-medium
---InteriorSeparator--
-21
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Explain how the Adapter pattern can help adhere to the Interface Segregation Principle (ISP) when dealing with a pre-existing "fat" interface.
---InteriorSeparator--
-The Adapter pattern allows you to create a separate adapter class that implements only the necessary methods from the "fat" interface, thus preventing the client from depending on unused methods.
+Use the "Adapter" pattern.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -268,7 +232,7 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does DIP stand for in SOLID principles?
+What does DIP stand for?
 --InteriorSeparator--
 Dependency Inversion Principle
 --InteriorSeparator--
@@ -280,26 +244,14 @@ easy
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to the Dependency Inversion Principle (DIP), what should high-level modules depend on?
+What does the Dependency Inversion Principle state?
 --InteriorSeparator--
-(wrong) Low-level modules
-(right) Abstractions
-(wrong) Concrete implementations
-(wrong) Frameworks
+(right) High-level modules should not depend on low-level modules.
+(right) Abstractions should not depend on details. Details should depend on abstractions.
+(wrong) High-level modules should depend on low-level modules.
+(wrong) Details should depend on abstractions, and abstractions should depend on details.
 --InteriorSeparator--
 medium
---InteriorSeparator--
-24
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Explain the Dependency Inversion Principle (DIP) in your own words.
---InteriorSeparator--
-High-level modules should not depend on low-level modules; both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.
---InteriorSeparator--
-hard
 --InteriorSeparator--
 24
 --FlashCardSeparator--
@@ -307,24 +259,21 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What principle is "Don't call us, we'll call you!" an example of?
+How should classes declare what they need, according to DIP?
 --InteriorSeparator--
-The Hollywood principle (related to Dependency Inversion).
+Constructors should require dependencies, and dependencies should be abstractions and be shown.
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 26
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-How to fix a violation of DIP?
+What are some common examples of dependencies that should be avoided?
 --InteriorSeparator--
-(right) Dependency Injection
-(wrong) Using of the new keyword
-(right) Inversion of Control container
-(wrong) Using static methods/properties
+The new keyword, static methods/properties.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -339,6 +288,23 @@ What does DRY stand for?
 Don't Repeat Yourself
 --InteriorSeparator--
 easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What can lead to repeating yourself in code?
+--InteriorSeparator--
+(right) Magic strings/values
+(right) Duplicate logic in multiple locations
+(wrong) Single logic in multiple locations
+(wrong) Unique strings/values
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+31
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -346,91 +312,10 @@ Single
 --InteriorSeparator--
 What does YAGNI stand for?
 --InteriorSeparator--
-You Aren't Gonna Need It
+You Ain't Gonna Need It
 --InteriorSeparator--
 easy
+--InteriorSeparator--
+4
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does KISS stand for?
---InteriorSeparator--
-Keep It Simple, Stupid
---InteriorSeparator--
-easy
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Explain why duplication is considered "evil" in software development, according to the DRY principle.
---InteriorSeparator--
-Duplication leads to increased maintenance costs, higher risk of errors, and reduced code reusability.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Explain the core idea behind the "You Aren't Gonna Need It" (YAGNI) principle.
---InteriorSeparator--
-Avoid adding functionality until it is actually necessary to prevent wasting resources on features that might not be used.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does GRASP stand for?
---InteriorSeparator--
-General Responsibility Assignment Software Patterns (Principles)
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are principles used in GRASP?
---InteriorSeparator--
-(right) High Cohesion
-(right) Low Coupling
-(wrong) Complex Inheritance
-(wrong) Complete Abstraction
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Which GRASP principle helps decide which class should be responsible for creating an instance of another class?
---InteriorSeparator--
-Creator
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Explain the Information Expert pattern and how it aids in assigning responsibilities to classes.
---InteriorSeparator--
-Assign a responsibility to the class that has the information needed to fulfill that responsibility. This promotes encapsulation and reduces coupling.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-What is "Law of Demeter"?
---InteriorSeparator--
-Any method of an object should only call methods belonging to itself, any parameter of the method, any object it created, any objects it contains
---InteriorSeparator--
-hard
---FlashCardSeparator--
-}], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=7291, endIndex=7451, uri=https://www.claudiobernasconi.ch/2019/01/03/introduction-to-dependency-injection-in-c/}]}, avgLogprobs=-0.14050652359842872}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.09238544369754859}]

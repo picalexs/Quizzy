@@ -254,7 +254,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain the difference between "<<import>>" and "<<access>>" dependencies in UML package diagrams.
 --InteriorSeparator--
@@ -266,7 +266,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How does reverse engineering a smart card work and what countermeasures are used?
 --InteriorSeparator--
@@ -278,7 +278,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Describe how reverse engineering is employed in military contexts and provide a concrete example.
 --InteriorSeparator--
@@ -290,7 +290,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 In software reverse engineering, what is the difference between situations where source code is available but poorly documented versus when no source code is available?
 --InteriorSeparator--
@@ -302,7 +302,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What are the implications of ethical considerations for Reverse Engineering?
 --InteriorSeparator--
@@ -314,7 +314,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Describe in detail the steps necessary to perform forward engineering using ArgoUML and NetBeans, starting from a UML Class Diagram.
 --InteriorSeparator--
@@ -329,7 +329,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Describe in detail the steps necessary to perform reverse engineering using a Java Decompiler and ArgoUML, starting from compiled .class files.
 --InteriorSeparator--

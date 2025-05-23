@@ -181,17 +181,6 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In the Prisoner's Dilemma, what is the strictly dominant strategy?
---InteriorSeparator--
-Confess
---InteriorSeparator--
-medium
---FlashCardSeparator--
-30
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 What is Paretto optimality?
 --InteriorSeparator--
 A strategy is Paretto optimal if no change can be made to it in order to improve the players’ payoff without diminishing the other players payoffs.
@@ -233,8 +222,9 @@ In the Hunting Game, what are the two equilibria?
 (Stag, Stag) and (Rabbit, Rabbit)
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 36
+--FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
@@ -244,8 +234,9 @@ In the "money game" example, what is the equilibrium?
 Each player writes n/m.
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 39
+--FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
@@ -259,58 +250,5 @@ medium
 41
 --FlashCardSeparator--
 
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the necessary calculation to determine equilibria as a mixed strategy for the goalkeeper game?
---InteriorSeparator--
-The equilibria must provide equal payoffs for all possible opponent decisions.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-42
 
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a key requirement for equilibria to be reliable in practice?
---InteriorSeparator--
-All players obey the game rules and aim to maximize their payoffs.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-43
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is Parrondo's paradox?
---InteriorSeparator--
-There is at least one winning strategy which can be built using two losing strategies alternatively.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-44
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What benchmark strategy is typically considered for all games?
---InteriorSeparator--
-The equilibria which exists and can be determined for all games.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-45
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Describe the Monte-Carlo Strategy.
---InteriorSeparator--
-Generate all neighbours of the current state and add them to the graph until a set depth has been reached OR until enough ﬁnal states have been reached. Run a simulation for all unexplored states in the graph. Compute a score for each state after each simulation. Update the scores of all nodes above the current one using the newly computed score. Select the neighbour of the starting state With the best score.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-46
 }], role=model}, finishReason=STOP, avgLogprobs=-0.12914338924754382}]

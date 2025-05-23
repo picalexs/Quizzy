@@ -32,6 +32,7 @@ public class FlashcardImport {
     private final AnswerFCRepository answerFCRepository;
 
     private static final Integer DEFAULT_USER_ID = 1;
+    private static final int MAX_OPTION_TEXT_LENGTH = 255;
 
     @Autowired
     public FlashcardImport(
@@ -91,10 +92,6 @@ public class FlashcardImport {
 
     /**
      * Finds the corresponding Material for a flashcard file based on its path and filename.
-     *
-     * @param flashcardFilePath Path to the flashcard file (e.g., /some/path/cursuri/Algoritmica_Grafurilor/agr1_flashcards.txt)
-     * @param baseDir Base directory for the import
-     * @return Material object if found, null otherwise
      */
     private Material findMaterialForFlashcardFile(Path flashcardFilePath, String baseDir) {
         try {
@@ -187,7 +184,6 @@ public class FlashcardImport {
         }
 
         // Strategy 5: Try to build alternative paths
-        // Sometimes the path might be stored differently in DB
         String[] alternativePaths = {
                 "courses/" + expectedMaterialPath,
                 "cursuri/" + expectedMaterialPath,
@@ -231,37 +227,49 @@ public class FlashcardImport {
         int count = 0;
 
         for (FlashcardDTO fc : flashcards) {
-            String questionText = extractQuestionText(fc.getQuestion());
-            Optional<Flashcard> existingOpt = Optional.ofNullable(flashcardRepository.findByQuestion(questionText));
-            Flashcard flashcard;
+            try {
+                String questionText = extractQuestionText(fc.getQuestion());
+                Optional<Flashcard> existingOpt = Optional.ofNullable(flashcardRepository.findByQuestion(questionText));
+                Flashcard flashcard;
 
-            if (existingOpt.isPresent()) {
-                flashcard = existingOpt.get();
-                // Update material if it's different
-                if (!flashcard.getMaterial().getId().equals(material.getId())) {
+                if (existingOpt.isPresent()) {
+                    flashcard = existingOpt.get();
+                    // Update material if it's different
+                    if (!flashcard.getMaterial().getId().equals(material.getId())) {
+                        flashcard.setMaterial(material);
+                        System.out.println("Actualizat materialul pentru flashcard existent: " + questionText);
+                    }
+                } else {
+                    flashcard = new Flashcard();
+                    flashcard.setQuestion(questionText);
+                    flashcard.setLevel(fc.getLevel());
+                    flashcard.setLastStudiedAt(null);
+                    flashcard.setQuestionType(fc.getQuestionType());
+                    flashcard.setUser(user);
                     flashcard.setMaterial(material);
-                    System.out.println("Actualizat materialul pentru flashcard existent: " + questionText);
-                }
-            } else {
-                flashcard = new Flashcard();
-                flashcard.setQuestion(questionText);
-                flashcard.setLevel(fc.getLevel());
-                flashcard.setLastStudiedAt(null);
-                flashcard.setQuestionType(fc.getQuestionType());
-                flashcard.setUser(user);
-                flashcard.setMaterial(material);  // Set the found material
-                flashcard.setPageIndex(fc.getPageIndex());
+                    flashcard.setPageIndex(fc.getPageIndex());
 
-                if (flashcard.getAnswers() == null) {
-                    flashcard.setAnswers(new HashSet<>());
+                    if (flashcard.getAnswers() == null) {
+                        flashcard.setAnswers(new HashSet<>());
+                    }
+
+                    // Save flashcard first to generate ID
+                    flashcard = flashcardRepository.save(flashcard);
+                    count++;
                 }
 
-                flashcard = flashcardRepository.save(flashcard);
-                count++;
+                // Update answers after flashcard is saved and has an ID
+                updateAnswers(fc, flashcard);
+
+                // Save flashcard again with updated answers
+                flashcardRepository.save(flashcard);
+
+            } catch (Exception e) {
+                System.err.println("EROARE la procesarea flashcard-ului: " + fc.getQuestion());
+                System.err.println("Eroare: " + e.getMessage());
+                e.printStackTrace();
+                // Continue with next flashcard instead of failing completely
             }
-
-            updateAnswers(fc, flashcard);
-            flashcardRepository.save(flashcard);
         }
 
         return count;
@@ -274,15 +282,51 @@ public class FlashcardImport {
 
         if (fcDTO.getAnswers() == null) return;
 
+        // Clear existing answers to avoid duplicates
+        Set<AnswerFC> existingAnswers = new HashSet<>(flashcard.getAnswers());
+
         for (AnswerFCDTO answerDTO : fcDTO.getAnswers()) {
-            if (!answerExists(flashcard, answerDTO.getOptionText())) {
-                AnswerFC answer = new AnswerFC();
-                answer.setFlashcard(flashcard);
-                answer.setOptionText(answerDTO.getOptionText());
-                answer.setCorrect(answerDTO.isCorrect());
-                flashcard.getAnswers().add(answer);
+            String optionText = truncateOptionText(answerDTO.getOptionText());
+
+            if (!answerExists(flashcard, optionText)) {
+                try {
+                    AnswerFC answer = new AnswerFC();
+                    answer.setFlashcard(flashcard);
+                    answer.setOptionText(optionText);
+                    answer.setCorrect(answerDTO.isCorrect());
+
+                    // Save the answer immediately to generate ID
+                    answer = answerFCRepository.save(answer);
+                    flashcard.getAnswers().add(answer);
+
+                } catch (Exception e) {
+                    System.err.println("EROARE la salvarea raspunsului: " + optionText);
+                    System.err.println("Lungime text: " + (optionText != null ? optionText.length() : "null"));
+                    System.err.println("Eroare: " + e.getMessage());
+                    // Continue with next answer instead of failing completely
+                }
             }
         }
+    }
+
+    /**
+     * Truncate option text if it's too long for the database field
+     */
+    private String truncateOptionText(String optionText) {
+        if (optionText == null) {
+            return null;
+        }
+
+        if (optionText.length() <= MAX_OPTION_TEXT_LENGTH) {
+            return optionText;
+        }
+
+        // Truncate and add ellipsis
+        String truncated = optionText.substring(0, MAX_OPTION_TEXT_LENGTH - 3) + "...";
+        System.out.println("AVERTISMENT: Text raspuns prea lung, s-a trunchiat la " + MAX_OPTION_TEXT_LENGTH + " caractere");
+        System.out.println("Text original: " + optionText.substring(0, Math.min(100, optionText.length())) + "...");
+
+        return truncated;
     }
 
     private String extractQuestionText(String rawQuestion) {
@@ -298,12 +342,24 @@ public class FlashcardImport {
         if (fcDTO.getAnswers() == null) return answers;
 
         for (AnswerFCDTO answerDTO : fcDTO.getAnswers()) {
-            if (!answerExists(flashcard, answerDTO.getOptionText())) {
-                AnswerFC answer = new AnswerFC();
-                answer.setFlashcard(flashcard);
-                answer.setOptionText(answerDTO.getOptionText());
-                answer.setCorrect(answerDTO.isCorrect());
-                answers.add(answer);
+            String optionText = truncateOptionText(answerDTO.getOptionText());
+
+            if (!answerExists(flashcard, optionText)) {
+                try {
+                    AnswerFC answer = new AnswerFC();
+                    answer.setFlashcard(flashcard);
+                    answer.setOptionText(optionText);
+                    answer.setCorrect(answerDTO.isCorrect());
+
+                    // Save the answer to generate ID
+                    answer = answerFCRepository.save(answer);
+                    answers.add(answer);
+
+                } catch (Exception e) {
+                    System.err.println("EROARE la crearea raspunsului: " + optionText);
+                    System.err.println("Eroare: " + e.getMessage());
+                    // Continue with next answer
+                }
             }
         }
 

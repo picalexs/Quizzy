@@ -358,7 +358,7 @@ Ellipsoid, Hyperboloid with one sheet, Hyperboloid with two sheets, Elliptic Par
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-29-32
+29
 --FlashCardSeparator--
 
 --FlashCardSeparator--

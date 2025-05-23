@@ -7,7 +7,7 @@ Lexical analysis, syntax analysis, semantic analysis, intermediate code generati
 --InteriorSeparator--
 easy
 --InteriorSeparator--
-2, 4
+2
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -311,6 +311,8 @@ Which of the following can be represented by type expressions?
 (wrong) Functions
 (wrong) Operators
 --InteriorSeparator--
+medium
+--InteriorSeparator--
 26
 --FlashCardSeparator--
 
@@ -436,4 +438,5 @@ hard
 --InteriorSeparator--
 33
 --FlashCardSeparator--
+
 }], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=136, endIndex=264, uri=https://slideplayer.com/slide/14483434/}]}, avgLogprobs=-0.12250612013998663}]

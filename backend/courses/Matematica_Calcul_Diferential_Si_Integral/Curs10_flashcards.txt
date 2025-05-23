@@ -200,17 +200,6 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What condition must be satisfied for (λ₀, x₀, y₀) to be a critical point for Lagrangian Ф?
---InteriorSeparator--
-∂Ф/∂λⱼ (λ₀, x₀, y₀) = 0, for all j from 1 to m.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-26
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 When using the Lagrange multiplier method, if the second-order differential d²L(x₀) is positive definite, what can be concluded?
@@ -233,7 +222,7 @@ In the context of entropy maximization, what constraint is typically imposed on 
 Σpₖ = 1
 --InteriorSeparator--
 medium
---FlashCardSeparator--
+--InteriorSeparator--
 29
 --FlashCardSeparator--
 
@@ -248,93 +237,7 @@ In maximizing Shannon's entropy with the constraint Σpₖ = 1, what is the opti
 (wrong) The probabilities are proportional to their indices.
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 30
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does the entropy of a source measure?
---InteriorSeparator--
-The quantity of information provided.
---InteriorSeparator--
-easy
---FlashCardSeparator--
-8
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In what year was entropy introduced as a mathematical quantity by Claude E. Shannon?
---InteriorSeparator--
-1947
---InteriorSeparator--
-easy
---FlashCardSeparator--
-8
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the term used for extreme values of functions whose arguments are subject to constraints?
---InteriorSeparator--
-(wrong) Unconditional extremes
-(right) Conditional extremes
-(right) Extremes with constraints
-(wrong) Free extremes
---InteriorSeparator--
-easy
---FlashCardSeparator--
-24
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Consider a function f: A -> R and a point x0 in A. According to the definition, what signifies that x0 is a point of local minimum?
---InteriorSeparator--
-(wrong) f(x) ≤ f(x0) for all x in A.
-(right) There exists a neighborhood V of x0 such that f(x) ≥ f(x0) for all x in A ∩ V.
-(wrong) f(x) < f(x0) for all x in A \\ {x0}.
-(wrong) f(x) > f(x0) for all x in A \\ {x0}.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-10
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What defines a "problem of unconstrained extremum"?
---InteriorSeparator--
-Finding global or local extrema of a function *f*: D -> ℝ, where D is an open set in ℝⁿ.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-11
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What defines a "problem of constrained extremum"?
---InteriorSeparator--
-Finding global or local extrema of *f*|ₐ∩D where A is a set of restrictions.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-11
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the conditions for d2L(x0) to be analyzed when determining sufficient conditions for conditional extremality?
---InteriorSeparator--
-(wrong) It must be positive definite
-(wrong) It must be negative definite
-(right) It can be positive definite, negative definite or indefinite
-(wrong) It must be equal to zero.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-27
 }], role=model}, finishReason=STOP, avgLogprobs=-0.1967932637742468}]

@@ -187,54 +187,6 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Let V and W be finite-dimensional vector spaces with dim(V) = n and dim(W) = m. Let B be a basis for V and B' be a basis for W. If T: V -> W is a linear transformation, what is the matrix representation of T with respect to B and B'?
---InteriorSeparator--
-The matrix whose columns are the coordinates of T(b_k) with respect to the basis B', where b_k are the basis vectors of B.
---InteriorSeparator--
-hard
---InteriorSeparator--
-27
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If v ∈ V has coordinates x1, ..., xn in basis B, and T(v) ∈ W has coordinates y1, ..., ym in basis B', how are the coordinates of v and T(v) related using the matrix representation AB,B' of the linear transformation T?
---InteriorSeparator--
-yB' = AB,B' * xB
---InteriorSeparator--
-hard
---InteriorSeparator--
-29
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Let B and B̃ be two bases for V, and B' and B̃' be two bases for W. If AB,B' is the matrix representation of T: V -> W with respect to B and B', and AB̃,B̃' is the matrix representation of T with respect to B̃ and B̃', how are these matrices related, given the change-of-basis matrices SB,B̃ and SB',B̃'?
---InteriorSeparator--
-ÃB̃,B̃' = (SB',B̃')^(-1) * AB,B' * SB,B̃
---InteriorSeparator--
-hard
---InteriorSeparator--
-30
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If T: V -> W and T': W -> W' are linear transformations, and AB,B' and AB',B'' are their matrix representations with respect to bases B, B' and B'', what is the matrix representation of the composition T' ◦ T with respect to B and B''?
---InteriorSeparator--
-AB,B'' = AB',B'' * AB,B'
---InteriorSeparator--
-hard
---InteriorSeparator--
-31
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 If V = R^n and W = R^m, and B and B' are the standard bases, how can a linear transformation T: V -> W be identified with a matrix A?
 --InteriorSeparator--
 T(v) = A * v, where v is a column matrix in R^n
@@ -278,21 +230,6 @@ Ker(T - λIv) = {u ∈ V | T(u) = λu}
 medium
 --InteriorSeparator--
 34
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which statements are always true about eigenvectors and eigenvalues?
---InteriorSeparator--
-(right) A single eigenvalue can have multiple eigenvectors.
-(wrong) A single eigenvector can have multiple eigenvalues.
-(right) If v is an eigenvector for T corresponding to eigenvalue λ, then cv is also an eigenvector for the same eigenvalue λ (where c is any non-zero scalar)
-(wrong) If v is an eigenvector for T corresponding to eigenvalue λ, then cv is also an eigenvector for a different eigenvalue (where c is any non-zero scalar)
---InteriorSeparator--
-hard
---InteriorSeparator--
-38
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -391,6 +328,6 @@ What is the general procedure for diagonalizing an endomorphism T in R^n?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-44-45
+44
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.09121336713358934}]

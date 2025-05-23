@@ -416,19 +416,6 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What factors should be considered when using the spiral model?
---InteriorSeparator--
-(right) Feasibility study
-(right) Risk management
-(wrong) Fast prototyping
-(wrong) Ignoring client input
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What has happened to the cost distribution between hardware and software since 1955?
@@ -455,13 +442,4 @@ hard
 25
 --FlashCardSeparator--
 
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the initial activity in the Spiral Model?
---InteriorSeparator--
-Study of Feasibility
---InteriorSeparator--
-hard
---FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.24568242410289923}]

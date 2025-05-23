@@ -1,21 +1,9 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the main purpose of the program stack?
+What type of memory access discipline does the stack use?
 --InteriorSeparator--
-To store temporary information.
---InteriorSeparator--
-easy
---InteriorSeparator--
-7
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the function of the ESP register?
---InteriorSeparator--
-Manages the top of the stack.
+LIFO (Last-In, First-Out)
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -25,36 +13,36 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the impact of an uncompensated 'pop' instruction on the stack?
+Which register stores the address of the top of the stack?
 --InteriorSeparator--
-It affects multiple data beyond immediate observation.
+ESP
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
-8
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are valid uses of the `push` instruction?
---InteriorSeparator--
-(right) `push eax`
-(wrong) `push 10`
-(right) `push dword ptr [200]`
-(wrong) `push word ptr 5`
---InteriorSeparator--
-medium
---InteriorSeparator--
-4
+2
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What happens to the ESP register when a `push` instruction is executed?
+What is the syntax for pushing an operand onto the stack?
 --InteriorSeparator--
-The value of ESP is decreased by the size of the operand.
+push operand
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which operand sizes are typically used with the `push` instruction?
+--InteriorSeparator--
+(right) 2 bytes
+(right) 4 bytes
+(wrong) 1 byte
+(wrong) 8 bytes
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -64,9 +52,210 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
+What happens to the ESP register when a value is pushed onto the stack?
+--InteriorSeparator--
+ESP is decremented by the size of the operand.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are valid examples of the `push` instruction?
+--InteriorSeparator--
+(right) push eax
+(wrong) push 10
+(right) push dword ptr [esi*2+ecx]
+(wrong) push byte ptr [ebx]
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the syntax for popping a value from the stack?
+--InteriorSeparator--
+pop destination
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens to the ESP register when a value is popped from the stack?
+--InteriorSeparator--
+ESP is incremented by the size of the operand.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following can be a valid destination for the `pop` instruction?
+--InteriorSeparator--
+(right) eax
+(right) dword ptr [ebx+edi]
+(wrong) 100
+(wrong) byte ptr [esi]
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Can a constant value be used as the destination operand in a `pop` instruction?
+--InteriorSeparator--
+No
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is a practical use of the program stack?
+--InteriorSeparator--
+(right) Saving the value of a register temporarily.
+(right) Storing local variables.
+(wrong) Storing global variables.
+(wrong) Executing system calls.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens if `push` and `pop` instructions are not properly balanced?
+--InteriorSeparator--
+It can affect multiple data points and cause errors.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the potential impact of an unbalanced stack?
+--InteriorSeparator--
+It affects more data than initially apparent.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the example on page 9, what is the primary purpose of the `push eax` and `push edx` instructions?
+--InteriorSeparator--
+To save the values of eax and edx before they are modified, and restore them after.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens if a `pop` instruction is omitted after pushing values onto the stack?
+--InteriorSeparator--
+Registers will receive incorrect values, and the original values might not be restored.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How does a function call differ from a simple jump instruction?
+--InteriorSeparator--
+A function call saves the return address to allow the program to return to the point of the call after the function completes.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Where is the return address typically stored during a function call?
+--InteriorSeparator--
+On the stack
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the syntax of the `call` instruction?
+--InteriorSeparator--
+call address
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the effect of the `call` instruction?
+--InteriorSeparator--
+It pushes the address of the next instruction onto the stack and jumps to the specified address.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the syntax of the `ret` instruction?
+--InteriorSeparator--
+ret
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
 What is the effect of the `ret` instruction?
 --InteriorSeparator--
-It retrieves the return address from the top of the stack and jumps to that address.
+It pops the return address from the stack and jumps to that address.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -74,14 +263,59 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-What is the role of the caller regarding function parameters?
+What happens if an extra `pop` instruction is executed before a `ret` instruction?
 --InteriorSeparator--
-(right) To push the parameters onto the stack before the call.
-(right) To remove the parameters from the stack after the function returns.
-(wrong) To use the `pop` instruction to remove parameters from the stack.
-(wrong) To store parameters in registers only.
+The `ret` instruction will retrieve an incorrect return address from the stack.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the potential consequence of an incorrect return address after a `ret` instruction?
+--InteriorSeparator--
+Program crash or forced termination.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Who is responsible for pushing parameters onto the stack before a function call?
+--InteriorSeparator--
+The caller
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Who is responsible for removing parameters from the stack after a function call?
+--InteriorSeparator--
+The caller
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How are parameters removed from the stack after a function call (without using `pop`)?
+--InteriorSeparator--
+By adding the total number of bytes occupied by the parameters to the ESP register.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -103,9 +337,21 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Why is it important to leave the stack in the same state as before a function call?
+Why are parameters pushed in reverse order in C/C++?
 --InteriorSeparator--
-To avoid errors like incorrect return addresses.
+To support functions with a variable number of parameters.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why is it important to leave the stack as it was found upon entering a function?
+--InteriorSeparator--
+To avoid errors caused by an unbalanced stack.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -115,87 +361,51 @@ hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What happens if a 'pop' instruction is omitted before a 'ret' instruction?
+Given the C++ code `void dif(int a, int b)`, what ASM instructions would typically be used to call `dif(9, 5)`?
 --InteriorSeparator--
-(right) The `ret` instruction will retrieve an incorrect return address.
-(wrong) The program will execute correctly.
-(right) The program might crash or terminate unexpectedly.
-(wrong) The stack will automatically re-align.
---InteriorSeparator--
-hard
---InteriorSeparator--
-14
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-How are function return values typically handled in Visual C++ for 4-byte data types?
---InteriorSeparator--
-The return value is stored in the EAX register.
---InteriorSeparator--
-medium
---InteriorSeparator--
-20
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What must a function do with the registers it uses (excluding EAX and EDX for return values)?
---InteriorSeparator--
-Save their values on the stack at the beginning and restore them before returning.
+(right) push dword ptr 5
+(right) push dword ptr 9
+(wrong) push 9
+(wrong) push 5
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-21
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What distinguishes a 'call' instruction from a simple jump instruction?
---InteriorSeparator--
-The 'call' instruction saves the return address on the stack.
---InteriorSeparator--
-medium
---InteriorSeparator--
-11
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does the `call adresa` instruction do?
---InteriorSeparator--
-Pushes the address of the next instruction onto the stack and jumps to 'adresa'.
---InteriorSeparator--
-medium
---InteriorSeparator--
-12
+18
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the potential consequences of stack errors?
+Following the call to `dif(9,5)`, what instruction is used to clean the stack?
 --InteriorSeparator--
-(right) Program crashes.
-(right) Forced termination of the program.
-(wrong) Automatic stack correction.
-(wrong) Minor data corruption.
+(right) add esp, 8
+(wrong) pop eax
+(wrong) ret
+(wrong) sub esp, 8
 --InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
-14
+18
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If the first parameter in a function definition is 'x', where is it typically located in memory, relative to EBP?
+How are function parameters accessed in Visual C++?
 --InteriorSeparator--
-EBP + 8
+By their names.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How are function parameters generally accessed in assembly?
+--InteriorSeparator--
+By their addresses.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -203,215 +413,65 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-What actions are associated with stack management?
+Where is the first parameter in a function's parameter list typically located (assuming the standard calling convention)?
 --InteriorSeparator--
-(right) Pushing values onto the stack
-(wrong) Defragmenting memory
-(right) Popping values from the stack
-(wrong) Allocating heap space
+EBP+8
 --InteriorSeparator--
-easy
+hard
 --InteriorSeparator--
-2-5
+19
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the effect on the stack when the following instructions are executed: `push eax`, `push ebx`, `pop ecx`?
+Where are subsequent parameters located relative to the first parameter (EBP+8)?
 --InteriorSeparator--
-The value of EBX is now in ECX, and the stack pointer points to where EAX was pushed.
+At increasing addresses, EBP+12, EBP+16, etc.
 --InteriorSeparator--
 hard
+--InteriorSeparator--
+19
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What could go wrong if a function pushes a value onto the stack, but fails to pop it before returning?
+Which register is used to return a 4-byte value from a function in Visual C++?
 --InteriorSeparator--
-The stack pointer will be misaligned, causing the return address to be read incorrectly, potentially leading to a crash.
+eax
 --InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
+medium
 --InteriorSeparator--
-If a function receives three `DWORD` parameters via the stack, after the return address, what offset from EBP would the third parameter be found?
---InteriorSeparator--
-EBP + 16
---InteriorSeparator--
-hard
+20
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What data types can the operand of a `push` instruction be?
+What registers are typically used to return an 8-byte value from a function in Visual C++?
 --InteriorSeparator--
-(right) 2-byte
-(right) 4-byte
-(wrong) 1-byte
-(wrong) 8-byte
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are true about the `pop` instruction?
---InteriorSeparator--
-(right) It can be used to move the top value from the stack to a register.
-(wrong) It can have a constant as a destination.
-(right) It increments the ESP register by the size of the operand.
-(wrong) It automatically clears the value at the top of the stack.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the value of ESP after executing "push eax" if ESP was initially 0x1000 and EAX contains a 4-byte value?
---InteriorSeparator--
-0x0FFC
+(right) edx
+(right) eax
+(wrong) ecx
+(wrong) ebx
 --InteriorSeparator--
 hard
+--InteriorSeparator--
+20
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a typical use-case for saving and restoring registers on the stack within a function?
+What should a function written in assembly do with the registers it uses (besides eax and edx for return values)?
 --InteriorSeparator--
-Preserving register values that the function modifies to avoid corrupting the caller's state.
+Save their values on the stack at the beginning of the function and restore them before returning.
 --InteriorSeparator--
 hard
+--InteriorSeparator--
+21
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following instructions are used for managing the stack?
---InteriorSeparator--
-(right) push
-(wrong) mov
-(right) pop
-(wrong) add
---InteriorSeparator--
-easy
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If a function `foo` is called from `main`, what value is pushed onto the stack by the `call foo` instruction?
---InteriorSeparator--
-The address of the instruction in `main` immediately following the `call foo` instruction.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What memory management discipline is employed by the stack?
---InteriorSeparator--
-LIFO (Last-In, First-Out)
---InteriorSeparator--
-easy
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What are the two primary actions performed when pushing an operand onto the stack?
---InteriorSeparator--
-Decrementing ESP and copying the operand to the memory location pointed to by ESP.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Why are local variables stored on the stack?
---InteriorSeparator--
-Because their lifetime is limited to the execution of the function where they are defined.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which register(s) are commonly used to return values of functions depending on the size?
---InteriorSeparator--
-(right) AL
-(right) EAX
-(wrong) EBX
-(wrong) ESP
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What potential issue can arise if a function has a variable number of parameters and the stack is not cleaned up properly after the function call?
---InteriorSeparator--
-Subsequent `ret` instructions might jump to incorrect addresses, leading to unpredictable program behavior.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the role of the stack pointer (ESP)?
---InteriorSeparator--
-To point to the top of the stack, indicating the last item added.
---InteriorSeparator--
-easy
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-When calling a function, what is placed on the stack?
---InteriorSeparator--
-(right) Function arguments
-(wrong) Global variables
-(right) Return address
-(wrong) Heap memory
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What value is added to ESP when "pop eax" is executed if EAX is a 4-byte register?
---InteriorSeparator--
-4
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following registers should have their values saved when using them within a function, assuming their values need to be preserved across the function call?
---InteriorSeparator--
-(right) EBX
-(wrong) EAX
-(right) ESI
-(wrong) EDX
---InteriorSeparator--
-hard
---FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.21665162737758603}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.08835955363948171}]

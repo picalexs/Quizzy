@@ -93,26 +93,6 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-If Σan is convergent, what can be said about lim (an)?
-n→∞
---InteriorSeparator--
-(right) lim (an) = 0
-n→∞
-(wrong) lim (an) = 1
-n→∞
-(wrong) lim (an) = ∞
-n→∞
-(wrong) lim (an) = -1
-n→∞
---InteriorSeparator--
-medium
---InteriorSeparator--
-14
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 State Cauchy's convergence criterion for series.

@@ -166,7 +166,7 @@ The next state the parser transitions to from state 't' when encountering non-te
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-11, 26
+11
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -181,7 +181,7 @@ In the process of FIRST set calculation, which of the following conditions can a
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-4, 5
+4
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -235,7 +235,7 @@ What is the purpose of the "closure" operation in LR(1) automaton construction?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-20, 21
+20
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -370,7 +370,7 @@ What is the algorithm used to contruct LALR(1) parsers?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-32, 33
+32
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -385,17 +385,4 @@ medium
 5
 --FlashCardSeparator--
 
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What components does the transition table of the LR(0) automaton contain?
---InteriorSeparator--
-(wrong) The transition table of LR(0) automaton contains only one value
-(wrong) The transition table of LR(0) automaton contains terminals, non-terminals, and epsilon
-(right) The LR(0) automaton needs the FIRST set to define the transition
-(wrong) The LR(0) automaton needs the FOLLOW set to define the transition
---InteriorSeparator--
-medium
---FlashCardSeparator--
-None
 }], role=model}, finishReason=STOP, avgLogprobs=-0.24128670603507218}]

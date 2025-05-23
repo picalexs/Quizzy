@@ -1,9 +1,11 @@
-[{content={parts=[{text=--FlashCardSeparator--
+[{content={parts=[{text=Okay, here are 35 flashcards based on the provided text, formatted as requested.
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
 What is a variable-length code over a non-empty set A?
 --InteriorSeparator--
-A subset C of A+ such that C* is a free sub-monoid of A*.
+A subset C ⊆ A+ such that C* is a free sub-monoid of A*.
 --InteriorSeparator--
 Easy
 --InteriorSeparator--
@@ -13,12 +15,12 @@ Easy
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following conditions are equivalent to C being a code over A?
+Which of the following are equivalent conditions for C to be a code over A?
 --InteriorSeparator--
 (right) Any code sequence W ∈ C* can be uniquely decomposed into code words.
-(right) For any u1,...,um, v1,...,vn ∈ C, u1...um = v1...vn => n=m ∧ (∀i)(ui = vi).
-(wrong) C is a prefix code.
-(wrong) For any u1,...,um, v1,...,vn ∈ C, u1...um = v1...vn => um = vn.
+(wrong) C must be finite.
+(right) For any u1,...,um,v1,...,vn ∈ C, u1---um=v1---vn => u1=v1.
+(wrong) C must contain all elements of A.
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -27,49 +29,10 @@ Medium
 
 --FlashCardSeparator--
 Single
---InteriorSeparator--
-Give an example of a set that is NOT a code.
---InteriorSeparator--
-{a, ab, ba}
---InteriorSeparator--
-Easy
---InteriorSeparator--
-5
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
 --InteriorSeparator--
 What is a prefix code?
 --InteriorSeparator--
-(right) No code word is a prefix of any other code word.
-(wrong) All code words have the same length.
-(wrong) Every code word starts with the same symbol.
-(wrong) Code words are only composed of prefixes.
---InteriorSeparator--
-Medium
---InteriorSeparator--
-5
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a suffix code?
---InteriorSeparator--
-No code word is a suffix of any other code word.
---InteriorSeparator--
-Easy
---InteriorSeparator--
-5
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a block code?
---InteriorSeparator--
-All code words have the same length.
+A code where no code word is a prefix of any other code word.
 --InteriorSeparator--
 Easy
 --InteriorSeparator--
@@ -79,12 +42,24 @@ Easy
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to Sardinas-Patterson Theorem, when is C a code over A?
+Which of the following is true regarding the sets Ci defined in the Sardinas-Patterson theorem?
 --InteriorSeparator--
-(right) If C ∩ Ci = ∅ for any i ≥ 1
-(wrong) If C ∪ Ci ≠ ∅ for any i ≥ 1
-(wrong) If C = Ci for some i ≥ 1
-(wrong) If C ⊆ Ci for all i ≥ 1
+(right) C1 = {x ∈ A+ | (∃c ∈ C)(cx ∈ C)}
+(wrong) Ci only contains elements from C
+(right) Ci+1 = {x ∈ A+ | (∃c ∈ Ci)(cx ∈ C) ∨ (∃c ∈ C)(cx ∈ Ci)} for any i ≥ 1.
+(wrong) Ci is always a subset of C.
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+According to the Sardinas-Patterson Theorem, when is C a code over A?
+--InteriorSeparator--
+If and only if C ∩ Ci = ∅, for any i ≥ 1.
 --InteriorSeparator--
 Hard
 --InteriorSeparator--
@@ -94,9 +69,21 @@ Hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Who proposed Huffman codes and when?
+What is the output of the Sardinas-Patterson Algorithm if C is not a code?
 --InteriorSeparator--
-David Huffman in 1952.
+0
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Who proposed Huffman codes?
+--InteriorSeparator--
+David Huffman
 --InteriorSeparator--
 Easy
 --InteriorSeparator--
@@ -104,11 +91,14 @@ Easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is the characteristic of a Huffman code related to code word length and symbol probability?
+What are characteristics of Huffman Codes?
 --InteriorSeparator--
-It associates short code words to highly probable symbols and longer code words to symbols with smaller probabilities.
+(right) They are prefix codes
+(right) Associate shorter code words to highly probable symbols
+(wrong) They are suffix codes
+(wrong) They always use the same length code words.
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -118,7 +108,7 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define an information source.
+Define an information source (IS).
 --InteriorSeparator--
 A couple IS = (A, π), where A is a non-empty and at most countable set (source alphabet), and π is a probability distribution on A.
 --InteriorSeparator--
@@ -130,9 +120,9 @@ Easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How is the length of a homomorphism h with respect to an information source IS = (A,π) defined?
+What is the formula for calculating the average length of a homomorphism h with respect to an information source IS = (A, π)?
 --InteriorSeparator--
-Lh(IS) = Σ |h(a)|π(a) for all a in A.
+Lh(IS) = Σ |h(a)|π(a) for all a ∈ A
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -142,9 +132,9 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What are the two main characteristics of a Huffman encoding of an information source IS?
+What makes an encoding 'h' a Huffman encoding of IS?
 --InteriorSeparator--
-C = {h(a)|a ∈ A} is a prefix code and h has minimum length among all the prefix codes of IS.
+C = {h(a) | a ∈ A} is a prefix code, and h has minimum length among all prefix codes of IS.
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -152,14 +142,23 @@ Medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-In the Huffman algorithm, what is done when n ≥ 3?
+In the Huffman Algorithm, what happens when n = 2?
 --InteriorSeparator--
-(right) Compute a reduced source IS' for IS.
-(wrong) Assign codes directly to the two least probable symbols.
-(wrong) Terminate the algorithm.
-(wrong) Compute the entropy of the source.
+h(a1) = 0 and h(a2) = 1 (or vice-versa) is a Huffman code for IS.
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the Huffman Algorithm, how is a reduced source IS' computed when n ≥ 3?
+--InteriorSeparator--
+A' = {a1, a2, ..., an-2, an-1,n} and π' = {p1, p2, ..., pn-2, pn-1,n} where pn-1,n = pn-1 + pn.
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -169,34 +168,36 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In the Huffman algorithm, how is the Huffman code h for IS obtained from h' of IS'?
+If h' is a Huffman code for IS', how is the Huffman code h for IS constructed?
 --InteriorSeparator--
-h(x) = h'(x) if x is not a_{n-1} or a_n; h(x) = h'(x)0 if x = a_{n-1}; h(x) = h'(x)1 if x = a_n.
+h(x) = h'(x) if x ∉ {an-1, an}; h(x) = h'(x)0 if x = an-1; h(x) = h'(x)1 if x = an.
 --InteriorSeparator--
-Hard
+Medium
 --InteriorSeparator--
 14
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is a compression ratio?
+What is involved in data compression using Huffman Codes?
 --InteriorSeparator--
-The ratio of the size of the original data to the size of the compressed data.
+(right) Parse the text to compute the number of occurrences of each symbol
+(wrong) Always replace symbols with binary code words of equal length.
+(right) Compute a Huffman code for the information source.
+(wrong) Using lossy compression techniques exclusively.
 --InteriorSeparator--
-Easy
+Medium
 --InteriorSeparator--
 17
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-Which type of data compression allows the exact original data to be reconstructed?
+What is the difference between lossless and lossy data compression?
 --InteriorSeparator--
-(right) Lossless data compression.
-(wrong) Lossy data compression.
+Lossless allows the exact original data to be reconstructed, while lossy does not.
 --InteriorSeparator--
 Easy
 --InteriorSeparator--
@@ -206,11 +207,11 @@ Easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Is data compression using Huffman codes lossless or lossy?
+What limits lossless data compression?
 --InteriorSeparator--
-Lossless.
+The entropy of the information source.
 --InteriorSeparator--
-Easy
+Medium
 --InteriorSeparator--
 18
 --FlashCardSeparator--
@@ -218,9 +219,9 @@ Easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define entropy H(S) of an information source S with n symbols and probabilities p1, ..., pn.
+Define the entropy of an information source S with n symbols and probabilities p1, ..., pn.
 --InteriorSeparator--
-H(S) = Σ pi * log(1/pi) for i = 1 to n.
+H(S) = Σ pi * log2(1/pi) for i = 1 to n (mathematical convention: 0 * log(1/0) = 0).
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -230,39 +231,12 @@ Medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What is the range of the entropy H(p1, ..., pn)?
+Which statement are true regarding the entropy H(p1, . . . , pn)?
 --InteriorSeparator--
-(right) 0 ≤ H(p1, ..., pn) ≤ log n
-(wrong) 1 ≤ H(p1, ..., pn) ≤ n
-(wrong) -log n ≤ H(p1, ..., pn) ≤ log n
-(wrong) 0 ≤ H(p1, ..., pn) ≤ 1
---InteriorSeparator--
-Medium
---InteriorSeparator--
-20
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-When is H(p1, ..., pn) equal to 0?
---InteriorSeparator--
-If pi = 1 for some i.
---InteriorSeparator--
-Hard
---InteriorSeparator--
-20
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-When is H(p1, ..., pn) equal to log n?
---InteriorSeparator--
-(right) If pi = 1/n for any i.
-(wrong) If pi = 1 for any i.
-(wrong) If pi = n for any i.
-(wrong) Always
+(wrong) H(p1, . . . , pn) ≤ 0
+(right) 0 ≤ H(p1, . . . , pn) ≤ log n
+(right) H(p1, . . . , pn) = 0 if pi = 1 for some i
+(wrong) H(p1, . . . , pn) = log n if pi = 1 for some i
 --InteriorSeparator--
 Hard
 --InteriorSeparator--
@@ -272,9 +246,21 @@ Hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If S1 and S2 are two information sources, what is the entropy of the product S1 o S2?
+If S1 and S2 are two information sources, how is their product S1 o S2 defined?
 --InteriorSeparator--
-H(S1 o S2) = H(S1) + H(S2)
+S1 o S2 = ({(ai, bj) | 1 ≤ i ≤ n, 1 ≤ j ≤ m}, (pi * qj | 1 ≤ i ≤ n, 1 ≤ j ≤ m)).
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the entropy of Sk, where S is an information source and k is the number of times S is composed with itself?
+--InteriorSeparator--
+H(Sk) = kH(S)
 --InteriorSeparator--
 Hard
 --InteriorSeparator--
@@ -284,9 +270,9 @@ Hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-According to Shannon's noiseless coding theorem, how is H(S) related to Lh(S)?
+State Shannon's noiseless coding theorem (part 1).
 --InteriorSeparator--
-H(S) ≤ Lh(S) for any code h of S.
+H(S) ≤ Lh(S), for any code h of S.
 --InteriorSeparator--
 Hard
 --InteriorSeparator--
@@ -296,12 +282,12 @@ Hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to Shannon's noiseless coding theorem, what is the relationship between the entropy H(S) and the length Lh(S) of a Huffman code h of S?
+Which statement is true regarding Shannon's noiseless coding theorem?
 --InteriorSeparator--
-(right) H(S) ≤ Lh(S) < H(S) + 1
-(wrong) H(S) < Lh(S) < H(S) + 1
-(wrong) H(S) > Lh(S) > H(S) + 1
-(wrong) Lh(S) <= H(S)
+(wrong) For any code h of S, H(S) ≥ Lh(S)
+(right) H(S) ≤ Lh(S) < H(S) + 1, for any Huffman code h of S
+(wrong) The theorem places an upper bound on the minimum length of an encoding of a source S
+(right) lim k->∞ Lmin(Sk)/k = H(S), where Lmin(S’) is the average length of some Huffman code for S’.
 --InteriorSeparator--
 Hard
 --InteriorSeparator--
@@ -311,9 +297,9 @@ Hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the main drawback of standard Huffman encoding for large inputs?
+Why might adaptive Huffman coding be preferred over standard Huffman coding for large inputs?
 --InteriorSeparator--
-It requires two parsings of the input, making it time-consuming.
+It requires only one parsing of the input, making it less time-consuming.
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -323,24 +309,21 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is adaptive Huffman coding?
+What is the first step in Huffman encoding for an input W E Σ+
 --InteriorSeparator--
-An alternative method requiring only one parsing of the input, used in practice for large inputs.
+Determine the frequency of occurrences of each letter a in W
 --InteriorSeparator--
-Medium
+Easy
 --InteriorSeparator--
 23
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-In tree representation of binary codes, what do the code words correspond to?
+In the tree representation of binary codes, what do the code words correspond to?
 --InteriorSeparator--
-(right) Sequences of labels collected from the root to leaves.
-(wrong) The nodes of the tree.
-(wrong) The branches of the tree.
-(wrong) The depth of the tree.
+The sequences of labels collected from the root to leaves.
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -352,7 +335,7 @@ Single
 --InteriorSeparator--
 What is the initial step in adaptive Huffman coding?
 --InteriorSeparator--
-Start initially with a Huffman tree associated to the alphabet A, where each symbol has frequency 1.
+Start with a Huffman tree T0 associated to the alphabet A, where each symbol of A has frequency 1.
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -360,11 +343,14 @@ Medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is the sibling transformation?
+In the sibling transformation, what happens if the immediate successor has frequency k + 1 or greater?
 --InteriorSeparator--
-A process of swapping nodes in a Huffman tree to maintain sorted order after a symbol's frequency is incremented.
+(right) The nodes are still in sorted order
+(right) There is no need to change anything
+(wrong) The nodes need to be swapped with their parent
+(wrong) The nodes need to be swapped with the last successor
 --InteriorSeparator--
 Hard
 --InteriorSeparator--
@@ -372,16 +358,25 @@ Hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-During the sibling transformation, when should a node 'a' be swapped?
+In the sibling transformation, after comparing a to its successors, what is the next step?
 --InteriorSeparator--
-(right) If the immediate successor has a frequency k + 1 or greater, where k is the frequency of 'a' in Tn.
-(right) If the immediate successor has frequency less than k+1.
-(wrong) Always.
-(wrong) If the parent has the same frequency as 'a'.
+Increment the frequency of 'a' (from k to k+1).
 --InteriorSeparator--
-Hard
+Medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+After incrementing the frequency of 'a' in the sibling transformation, what happens next?
+--InteriorSeparator--
+If 'a' is the root, the loop halts; otherwise, the loop repeats with the parent of 'a'.
+--InteriorSeparator--
+Medium
 --InteriorSeparator--
 26
 --FlashCardSeparator--
@@ -401,9 +396,21 @@ Easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What kind of code is Huffman adaptive?
+Is Huffman adaptive a time-varying code?
 --InteriorSeparator--
-A time-varying code.
+Yes
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Where can you find more details regarding time-varying codes?
+--InteriorSeparator--
+[2] Ferucio Laurentiu Tiplea, Erkki Makinen, Dragos Trinca, and Costel Enea. Characterization results for time-varying codes. Fundamenta lnformaticae, 53(2):185—198, may 2002.
 --InteriorSeparator--
 Medium
 --InteriorSeparator--
@@ -411,32 +418,59 @@ Medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-Where can you find more information about time-varying codes?
+What pages should you read from textbook [1]?
 --InteriorSeparator--
-(right) [2] Ferucio Laurentiu Tiplea, Erkki Makinen, Dragos Trinca, and Costel Enea. Characterization results for time-varying codes. Fundamenta lnformaticae, 53(2):185—198, may 2002.
-(wrong) [1] Ferucio Laurentiu Tiplea. Algebraic Foundations of Computer Science.
-(wrong) The textbook
-(wrong) Nowhere
---InteriorSeparator--
-Medium
---InteriorSeparator--
-31
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-According to the material, what is the recommended course reading material?
---InteriorSeparator--
-(right) Pages 235-267 from textbook [1].
-(wrong) Chapter 1 from the book.
-(wrong) Pages 1-31
-(wrong) The slides only
+Pages 235-267
 --InteriorSeparator--
 Easy
 --InteriorSeparator--
 30
 --FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.1267994691995079}]
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Who is considered the father of information theory?
+--InteriorSeparator--
+(right) Claude Shannon
+(wrong) David Huffman
+(wrong) Newton Faller
+(wrong) Jeffrey Scott Vitter
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following can be used to compress data?
+--InteriorSeparator--
+(right) Huffman Codes
+(wrong) The Sardinas-Patterson Algorithm
+(wrong) Sibling Transformation
+(wrong) Time-varying Codes
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the compression ratio measure?
+--InteriorSeparator--
+(right) The ratio of the size of the original data to the size of the compressed data.
+(wrong) The size of the original data added to the size of the compressed data.
+(wrong) The size of the compressed data to the size of the original data.
+(wrong) The rate of compression.
+--InteriorSeparator--
+Easy
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.12059710072536095}]

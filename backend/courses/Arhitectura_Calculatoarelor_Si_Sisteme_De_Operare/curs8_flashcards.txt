@@ -1,9 +1,9 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What are the two main parts of the semester's course?
+What are the two main parts of the course?
 --InteriorSeparator--
-Hardware structure of a computer and Assembly language.
+Computer Architecture and Operating Systems
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -13,24 +13,24 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What are the four main topics covered under the "Hardware Structure" section?
+What is the final assessment for the lab?
 --InteriorSeparator--
-CPU, Peripheral Devices, Interrupt System, Operating System.
+A practical test
 --InteriorSeparator--
 easy
 --InteriorSeparator--
-2
+1
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following are components of the CPU structure?
+Which of the following are components of the CPU structure discussed?
 --InteriorSeparator--
 (right) Arithmetic and Logic Unit (ALU)
-(right) General Purpose Registers
-(wrong) Hard Disk Drive
-(wrong) Power Supply
+(right) Control Unit
+(wrong) Hard drive
+(wrong) External Bus
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -42,7 +42,7 @@ Single
 --InteriorSeparator--
 What is the function of the Program Counter (PC)?
 --InteriorSeparator--
-Holds the address of the next instruction to be executed.
+Stores the address of the next instruction to be executed.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -50,23 +50,14 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is the function of the Instruction Register (IR)?
+What is the purpose of interface registers?
 --InteriorSeparator--
-Holds the code of the last instruction fetched from memory.
---InteriorSeparator--
-medium
---InteriorSeparator--
-6
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the purpose of interface registers like MAR and MDR?
---InteriorSeparator--
-To facilitate communication with the system buses.
+(right) To ensure communication with the system buses.
+(wrong) To store temporary calculations.
+(wrong) To directly control the ALU.
+(right) Memory Address Register (MAR)
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -74,14 +65,11 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-How can CPU performance be improved?
+How can we improve CPU performance?
 --InteriorSeparator--
-(right) Using cache memory
-(wrong) Increasing the number of cores drastically
-(right) Executing instructions in parallel
-(wrong) Decreasing clock frequency
+By executing instructions in parallel.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -91,11 +79,11 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the concept of "pipelining" in CPU architecture?
+What is pipelining?
 --InteriorSeparator--
-The execution of an instruction is divided into multiple stages that can be overlapped with other instructions.
+A method of parallel instruction execution.
 --InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
 9
 --FlashCardSeparator--
@@ -103,47 +91,11 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the basic idea behind pipelining?
+What is the clock frequency of a pipeline determined by?
 --InteriorSeparator--
-To start executing a new instruction before the previous one is finished, utilizing different CPU resources in parallel.
---InteriorSeparator--
-hard
---InteriorSeparator--
-10
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Describe the main components of the Intel 8086 processor in relation to pipelining.
---InteriorSeparator--
-The Intel 8086 consists of a Bus Interface Unit (BIU) for external communication and an Execution Unit (EU) for actual operation execution, allowing for parallel work.
---InteriorSeparator--
-hard
---InteriorSeparator--
-11
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a pipeline stage?
---InteriorSeparator--
-A sequence of steps through which an instruction passes during its execution.
+The longest stage
 --InteriorSeparator--
 medium
---InteriorSeparator--
-13
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-How is clock frequency determined in a pipeline architecture?
---InteriorSeparator--
-By the longest stage in the pipeline.
---InteriorSeparator--
-hard
 --InteriorSeparator--
 14
 --FlashCardSeparator--
@@ -151,26 +103,14 @@ hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the initial steps in the execution of an instruction?
+Which registers are involed in the execution of an instruction?
 --InteriorSeparator--
-(right) Placing the PC value (instruction address) into MAR
-(right) Reading from memory
-(wrong) Writing the result to memory
-(wrong) Erasing cache memory
+(right) MAR
+(right) MDR
+(wrong) General purpose registers
+(wrong) Video card
 --InteriorSeparator--
-medium
---InteriorSeparator--
-15
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the execution of an instruction, what follows after retrieving the instruction code into the MDR?
---InteriorSeparator--
-The instruction code is deposited into the IR.
---InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 15
 --FlashCardSeparator--
@@ -178,9 +118,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What happens after the instruction is decoded by the control unit?
+What is the role of the Control Unit during instruction execution?
 --InteriorSeparator--
-The operand is read from memory.
+Decoding the instruction
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -190,9 +130,21 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the function of the ALU in the instruction execution process?
+What is the role of the ALU Operand register?
 --InteriorSeparator--
-To perform the desired operation on the operands.
+Storing operands for the ALU
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In what stage is the condition for a jump instruction checked?
+--InteriorSeparator--
+12
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -202,24 +154,12 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What steps are involved in writing the result to memory during instruction execution?
+What are the problems that can occur when not all instructions can be executed in parallel?
 --InteriorSeparator--
-(right) Depositing the result in MDR
-(right) Depositing the address in MAR
-(wrong) Clearing the cache
-(wrong) Incrementing the program counter
---InteriorSeparator--
-medium
---InteriorSeparator--
-18
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What are the general problems that can prevent instructions from being executed in parallel?
---InteriorSeparator--
-Dependencies and conflicts in accessing the same resource.
+(right) Dependencies
+(right) Resource conflict
+(wrong) Overheating
+(wrong) Not enough memory
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -227,16 +167,13 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-What types of dependencies can occur in pipelined execution?
+Name a type of dependency that can exist.
 --InteriorSeparator--
-(right) Structural
-(right) Data
-(wrong) Electrical
-(wrong) Thermal
+Structural dependency
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
 20
 --FlashCardSeparator--
@@ -244,7 +181,7 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define structural dependency.
+What is a structural dependency?
 --InteriorSeparator--
 When instructions in different stages require the same component.
 --InteriorSeparator--
@@ -254,13 +191,16 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-Provide examples of components that can cause structural dependencies.
+Where can structural dependencies occur?
 --InteriorSeparator--
-ALU and memory access.
+(right) ALU
+(right) Memory access
+(wrong) Hard drive
+(wrong) CPU Fan
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 22
 --FlashCardSeparator--
@@ -268,34 +208,23 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define data dependency.
+What happens in a data dependency?
 --InteriorSeparator--
-When one instruction calculates a result that another instruction needs as input, and the second instruction requires the result before the first instruction has produced it.
+The second instruction is blocked until the first instruction produces the result.
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 23
+--FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Describe how a data dependency might occur with the instructions `mov eax, 7` and `sub eax, 3`.
+What is a control dependency?
 --InteriorSeparator--
-The `sub` instruction needs the value written to `eax` by the `mov` instruction, but the `mov` instruction writes to `eax` in its last stage, potentially after the `sub` instruction has already started decoding and needs the value.
+When an instruction attempts to change the program counter before it is calculated.
 --InteriorSeparator--
 hard
---InteriorSeparator--
-24
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-How is the Program Counter (PC) typically updated?
---InteriorSeparator--
-By adding the size of the previous instruction's code to the old value.
---InteriorSeparator--
-medium
 --InteriorSeparator--
 25
 --FlashCardSeparator--
@@ -303,11 +232,77 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the types of jump instructions?
+How can a jump address be expressed?
+--InteriorSeparator--
+(right) Constant value
+(right) Value from a register
+(wrong) Color
+(wrong) Size
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+When is the jump address calculated?
+--InteriorSeparator--
+In the last stages of execution.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What problems are caused by control dependencies?
+--InteriorSeparator--
+(right) Pipeline emptying
+(right) Performance loss
+(wrong) Overclocking
+(wrong) Blue Screen
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the role of separation registers?
+--InteriorSeparator--
+To hold the result obtained at each stage
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What happens to PC, usually?
+--InteriorSeparator--
+We add to the old value the size of the code of the previous instruction
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+25
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Types of jumps
 --InteriorSeparator--
 (right) Unconditional
 (right) Conditional
-(wrong) Hypothetical
+(wrong) Mandatory
 (wrong) Optional
 --InteriorSeparator--
 medium
@@ -318,63 +313,36 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How can the jump address be expressed?
+What is contained in the IR?
 --InteriorSeparator--
-As a constant value, the value from a register, or the value from a memory location.
+The code of the last instruction fetched from memory.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-27
+6
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Why do jump instructions cause problems in pipelined execution?
+What are the two units that composed the processor Intel 8086?
 --InteriorSeparator--
-Because the target address is often calculated in the later stages of execution, by which time subsequent instructions have already started executing.
+Bus Interface Unit and Execution Unit
 --InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
-28
+11
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a key problem caused by control dependencies in pipelined execution?
+What is the problem with using the ALU for the PC update?
 --InteriorSeparator--
-The need to "flush" the pipeline, leading to performance loss.
---InteriorSeparator--
-hard
---InteriorSeparator--
-29
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the consequence of "flushing" the pipeline?
---InteriorSeparator--
-It leads to performance loss because of the complicated operations and the delay in finishing the first instruction, thus reducing the execution rate.
+Structural dependency
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-29
+22
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the role of separation registers in pipelining?
---InteriorSeparator--
-(right) Maintain the result obtained at each stage
-(wrong) Prevent overheating of the CPU
-(wrong) Increase the power consumption of the pipeline
-(right) Placed between stages
---InteriorSeparator--
-hard
---InteriorSeparator--
-14
---FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.15743534171101342}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.2097804825764054}]

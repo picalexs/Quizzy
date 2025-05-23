@@ -13,11 +13,11 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the definition of a candidate key?
+What is a candidate key?
 --InteriorSeparator--
 A superkey with the property that no proper subset of it is a superkey.
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 2
 --FlashCardSeparator--
@@ -35,26 +35,14 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a foreign key?
---InteriorSeparator--
-An attribute or set of attributes in a relation that refers to a candidate key of another relation.
---InteriorSeparator--
-easy
---InteriorSeparator--
-2
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following describes how to find a candidate key using functional dependencies?
+What are the characteristics of a prime attribute?
 --InteriorSeparator--
-(right) Find a combination of attributes that can uniquely determine a row.
-(wrong) Choose attributes from the right-hand side of dependencies.
-(wrong) Find attributes that appear only on the right side of dependencies.
-(wrong) Select any attribute from the relation schema.
+(right) Is part of a candidate key
+(wrong) Is never part of a candidate key
+(wrong) Is always on the right side of functional dependencies
+(right) Is always part of a candidate key.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -62,74 +50,26 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a prime attribute?
---InteriorSeparator--
-An attribute that is part of a candidate key.
---InteriorSeparator--
-easy
---InteriorSeparator--
-3
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is a non-prime attribute?
---InteriorSeparator--
-An attribute that is not part of any candidate key.
---InteriorSeparator--
-easy
---InteriorSeparator--
-3
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to the rules for identifying prime/non-prime attributes based on dependency locations, which of the following is true?
+Which of the following are considered attributes that appear within a dependency?
 --InteriorSeparator--
-(right) Attributes on the left side of dependencies are always prime.
-(wrong) Attributes in the middle are always non-prime.
-(wrong) Attributes on the right are always prime.
-(right) Attributes on the right are always non-prime.
+(right) Left
+(wrong) Center
+(right) Middle
+(right) Right
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
 6
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
---InteriorSeparator--
-Given U = {A, B, C, D, E, F} and E = {A -> BD, B -> C, DE -> F}, what attributes are definitely part of any candidate key?
---InteriorSeparator--
-A and E
---InteriorSeparator--
-hard
---InteriorSeparator--
-8
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Given U = {A, B} and E = {A -> B, B -> A}, what are the candidate keys?
---InteriorSeparator--
-A and B
---InteriorSeparator--
-hard
---InteriorSeparator--
-10
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
-When is a functional dependency X -> A considered full?
+What is a full dependency?
 --InteriorSeparator--
-If no proper subset X' of X exists such that X' -> A also holds.
+A dependency X -> A is full if there is no X' subset of X such that X' -> A.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -137,23 +77,11 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
---InteriorSeparator--
-In the context of functional dependencies, when is attribute A transitively dependent on X?
---InteriorSeparator--
-When there exists an attribute set Y such that X -> Y, Y -> A, A is not in Y, and Y does not determine X.
---InteriorSeparator--
-hard
---InteriorSeparator--
-12
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 When is a functional dependency X -> Y considered trivial?
 --InteriorSeparator--
-If Y is a subset of X.
+If and only if Y is a subset of X.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -163,14 +91,14 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Why is database normalization necessary?
+Why is normalization necessary in database design?
 --InteriorSeparator--
-(right) To eliminate redundancy.
-(right) To maintain data consistency.
-(wrong) To increase query execution speed.
-(wrong) To reduce the number of tables in the database.
+(right) To eliminate redundancy
+(right) To maintain data consistency
+(wrong) To speed up query execution
+(wrong) To reduce the size of the database
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
 14
 --FlashCardSeparator--
@@ -178,21 +106,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the main characteristic of 1NF (First Normal Form)?
+What is the primary goal of 1NF (First Normal Form)?
 --InteriorSeparator--
-All attribute domains are indivisible, and each attribute value is atomic.
---InteriorSeparator--
-easy
---InteriorSeparator--
-15
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What must be done to achieve 1NF when a relation has repeating groups?
---InteriorSeparator--
-Eliminate repeating groups, identify a key, and create a new relation with the key and the repeated value as an atomic attribute.
+To ensure that attribute domains are indivisible and each attribute value is atomic.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -202,33 +118,36 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the definition of 2NF (Second Normal Form)?
+In 2NF, what must be true of any non-prime attribute in a relation?
 --InteriorSeparator--
-A relation is in 2NF if it is in 1NF and every non-prime attribute is fully functionally dependent on every candidate key.
+It must be fully functionally dependent on every candidate key of the relation.
 --InteriorSeparator--
-easy
+hard
 --InteriorSeparator--
 19
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-Given R[A, B, C, D] and E = {AB -> C, B -> D, BC -> A}, is R in 2NF? Why or why not?
+In the context of normalization, what does it mean for an attribute to be transitively dependent on a key?
 --InteriorSeparator--
-No, because D is a non-prime attribute that is not fully dependent on the candidate keys (AB, BC) since B -> D.
+Attribute A in schema R is transitively dependent on key X if there exists an attribute Y such that X -> Y, Y -> A, A is not a subset of X, and A is not a subset of Y.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-20
+12
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-How do you normalize a relation that is not in 2NF?
+How can a relation be brought into 2NF if it isn't already?
 --InteriorSeparator--
-Identify candidate keys, find non-prime attributes, identify the key attributes the non-prime attributes depend on, and create a new relation with those attributes.
+(right) Identify candidate keys.
+(right) Find non-prime attributes.
+(wrong) Eliminate all transitive dependencies.
+(wrong) Create candidate keys with duplicate data.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -238,21 +157,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the definition of 3NF (Third Normal Form)?
+What is the defining characteristic of a relation in 3NF?
 --InteriorSeparator--
-A relation is in 3NF if it is in 2NF and no non-prime attribute is transitively dependent on any candidate key.
---InteriorSeparator--
-easy
---InteriorSeparator--
-25
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Given R[A, B, C] and E = {AB -> C, C -> A}, is R in 3NF? Why or why not?
---InteriorSeparator--
-Yes, because the non-prime attribute set is empty, therefore there are no transitive dependencies.
+It is in 2NF, and no non-prime attribute is transitively dependent on any key.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -262,23 +169,35 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the definition of BCNF (Boyce-Codd Normal Form)?
+According to Bill Kent's approximation, what should a non-key attribute provide about the key in 3NF?
 --InteriorSeparator--
-A relation is in BCNF if it is in 1NF and, for every non-trivial functional dependency X -> A, X is a superkey.
+A fact about the key, the whole key, and nothing but the key.
 --InteriorSeparator--
-easy
+medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is BCNF (Boyce-Codd Normal Form)?
+--InteriorSeparator--
+A relation is in BCNF if it is in 1NF and for every non-trivial functional dependency X -> A, X is a superkey.
+--InteriorSeparator--
+hard
 --InteriorSeparator--
 28
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-Is a relation in BCNF also in 3NF? Justify your answer.
+True or False: A relation that is in BCNF is also always in 3NF.
 --InteriorSeparator--
-Yes, a relation in BCNF is always in 3NF because BCNF is a stricter condition than 3NF, ensuring no non-key determinant exists for any attribute.
+True
 --InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
 29
 --FlashCardSeparator--
@@ -286,21 +205,9 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a lossless join decomposition?
+What condition must be met for a decomposition of a relation to be a lossless join decomposition?
 --InteriorSeparator--
-A decomposition of a relation schema where the join of the decomposed relations results in the original relation without introducing spurious tuples.
---InteriorSeparator--
-medium
---InteriorSeparator--
-30
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Given R[A, B, C] and E = {A -> B}, is the decomposition p1 = {R1[A, B], R2[A, C]} lossless?
---InteriorSeparator--
-Yes, because (R1 ∩ R2) -> R1 is in E+, since A -> B is in E+.
+R1 intersect R2 -> R1 or R1 intersect R2 -> R2
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -308,11 +215,14 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Multiple
 --InteriorSeparator--
-Describe the algorithm for lossless join decomposition into BCNF.
+What does the algorithm for lossless join decomposition into BCNF aim to achieve?
 --InteriorSeparator--
-Start with the original relation. While there's a relation not in BCNF, choose a dependency X -> A where X is not a superkey. Decompose the relation into X U {A} and the original relation minus A. Repeat until all relations are in BCNF.
+(right) To create a decomposition of a relation schema into BCNF schemas
+(wrong) To minimize the number of relations in the database.
+(wrong) To eliminate all functional dependencies.
+(right) To ensure no data loss during joins.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -320,71 +230,13 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
---InteriorSeparator--
-Given Absolvent(CNP, aNume, adresa, lCod, lNume, lOras, medie, prioritate) and E = {CNP -> aNume, adresa, medie, medie -> prioritate, lCod -> lNume, lOras}, what is the lossless join decomposition into BCNF?
---InteriorSeparator--
-{ R1[lCod, lNume, lOras], R2[medie, prioritate], R3[CNP, aNume, adresa, medie], R4[CNP, lCod] }
---InteriorSeparator--
-hard
---InteriorSeparator--
-35
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What is a multivalued dependency (MVD)?
 --InteriorSeparator--
-A dependency where, if two tuples agree on attribute set X, there exist tuples in the relation that swap the Y and Z components (where Z is U - XY).
+A constraint that specifies that the presence of certain values in one or more attributes implies the presence of a set of values for another attribute.
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 36
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-In the context of MVDs, when is X ->> Y trivial?
---InteriorSeparator--
-If Y is a subset of X or if X U Y = U.
---InteriorSeparator--
-hard
---InteriorSeparator--
-13
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the definition of 4NF (Fourth Normal Form)?
---InteriorSeparator--
-A relation is in 4NF if it is in 1NF and, for every non-trivial multivalued dependency X ->> A, X is a superkey for R.
---InteriorSeparator--
-easy
---InteriorSeparator--
-38
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Describe the algorithm for decomposing a relation into 4NF.
---InteriorSeparator--
-Start with the original relation. While there's a relation not in 4NF, choose a multivalued dependency X ->> A where X is not a superkey. Decompose the relation into X U {A} and the original relation minus A. Repeat until all relations are in 4NF.
---InteriorSeparator--
-hard
---InteriorSeparator--
-39
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-Given Student[cnp, nume, facultate, pasiune], cnp -> nume, cnp ->> facultate, and cnp ->> pasiune, what is the lossless join decomposition into 4NF?
---InteriorSeparator--
-{ S1[cnp, nume], S2[cnp, facultate], S3[cnp, pasiune] }
---InteriorSeparator--
-hard
---FlashCardSeparator--}], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=5024, endIndex=5149, uri=https://studyx.ai/homework/100137665-the-relational-schema-r-a-b-c-d-e-f-consists-of-atomic-attributes-and-the-given}]}, avgLogprobs=-0.08952610975731683}]

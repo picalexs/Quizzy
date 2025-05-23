@@ -1,11 +1,11 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the formula for calculating 'h' when the first and last nodes (x0 and xn) are specified in Newton interpolation on equidistant nodes?
+What is the formula for calculating the distance (h) between two consecutive nodes in Newton interpolation when the first and last nodes (x0 and xn) are given?
 --InteriorSeparator--
 h = (xn - x0) / n
 --InteriorSeparator--
-medium
+Easy
 --InteriorSeparator--
 2
 --FlashCardSeparator--
@@ -13,86 +13,26 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the definition of the first-order finite difference, Af(x)?
+If f(x) is a polynomial of degree 'm', what is the degree of Ak f(x) where k > m?
 --InteriorSeparator--
-Af(x) = f(x + h) - f(x)
+0
 --InteriorSeparator--
-easy
+Medium
 --InteriorSeparator--
-3
+4
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following is the correct formula for Akf(x), the k-th order finite difference?
+In Newton's progressive formula for equidistant nodes, which of the following terms are used?
 --InteriorSeparator--
-(right) Σ (from i=0 to k) [(-1)^(k-i) * C(k, i) * f(x + ih)]
-(wrong) Σ (from i=0 to k) [(-1)^i * C(k, i) * f(x + ih)]
-(wrong) Σ (from i=1 to k) [(-1)^(k-i) * C(k, i) * f(x + ih)]
-(right/wrong) Σ (from i=0 to k) [(-1)^(k-i) * (k choose i) * f(x + ih)]
+(right) Finite differences Af(x0), A2f(x0), ...
+(right)  t(t-1)...(t-k+1)
+(wrong) Divided differences
+(wrong) Derivatives of f(x) at x0
 --InteriorSeparator--
-hard
---InteriorSeparator--
-4
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If f(x) is a polynomial of degree 'm', what is the value of Akf(x) when k > m?
---InteriorSeparator--
-0
---InteriorSeparator--
-medium
---InteriorSeparator--
-4
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the relationship between divided differences and finite differences for [xi, xi+1]?
---InteriorSeparator--
-[xi, xi+1]f = Af(xi) / h
---InteriorSeparator--
-medium
---InteriorSeparator--
-4
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Express the general relationship between divided differences of order k and finite differences.
---InteriorSeparator--
-[xi, xi+1, ..., xi+k]f = Akf(xi) / (k! * h^k)
---InteriorSeparator--
-hard
---InteriorSeparator--
-5
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If x = x0 + th, how can (x - x0)(x - x1)...(x - xk-1) be expressed in terms of h and t?
---InteriorSeparator--
-hk * t * (t-1) * ... * (t-k+1)
---InteriorSeparator--
-medium
---InteriorSeparator--
-6
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the name of the formula obtained by substituting finite differences into the Newton form of the interpolation polynomial with equidistant nodes, using forward differences?
---InteriorSeparator--
-Newton's forward difference formula
---InteriorSeparator--
-easy
+Medium
 --InteriorSeparator--
 7
 --FlashCardSeparator--
@@ -100,83 +40,38 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the form of the interpolation point (x) used to derive Newton's backward difference formula with equidistant nodes?
+In the context of spline functions, what does the notation S(x) ∈ C[a, b] mean?
 --InteriorSeparator--
-x = xn + th
+S(x) is a continuous function on the interval [a, b].
 --InteriorSeparator--
-medium
+Easy
 --InteriorSeparator--
-8
+14
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-In the context of Newton's progressive/regressive formulas, what type of finite differences are required?
+Which of the following conditions must a cubic spline function S(x) satisfy to be considered a C2 spline?
 --InteriorSeparator--
-(right) Δf(x0), Δ²f(x0), ..., Δkf(x0), ..., Δⁿf(x0) for the progressive formula
-(wrong) Δf(xn), Δ²f(xn), ..., Δkf(xn), ..., Δⁿf(xn) - for progressive formula
-(right) Δf(xn-1), Δ²f(xn-2), ..., Δkf(xn-k), ..., Δⁿf(x0) - for the regressive formula
-(wrong) Δf(x0), Δ²f(x1), ..., Δkf(xk), ..., Δⁿf(xn) - for regressive formula
+(right) S(x) ∈ C2[a, b]
+(wrong) S(x) is linear.
+(right) Pi(x) are polynomials of degree 3
+(wrong) S(x) is discontinuous.
 --InteriorSeparator--
-hard
---InteriorSeparator--
-10
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What conditions must a function S(x) satisfy to be considered a cubic spline?
---InteriorSeparator--
-(right) S(x) ∈ C²[a, b]
-(right) Pi(x) are polynomials of degree 3, i = 0, ..., n-1
-(wrong) S(x) ∈ C¹[a, b]
-(wrong) Pi(x) are polynomials of degree 2, i = 0, ..., n-1
---InteriorSeparator--
-hard
+Medium
 --InteriorSeparator--
 17
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Given a function f:[a,b] -> R with known values yi = f(xi) , i = 0,...,n, what conditions are typically imposed to determine a cubic spline interpolant S(x)?
---InteriorSeparator--
-(right) S(xi) = yi, i = 0,...,n
-(wrong) S'(xi) = yi, i = 0,...,n
-(right) Continuity of S(x), S'(x) and S''(x) at the nodes xi, i = 1,...,n-1
-(wrong) Continuity of S(x) only at the nodes xi, i = 1,...,n-1
---InteriorSeparator--
-hard
---InteriorSeparator--
-19
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following approaches can be taken to add two supplementary conditions when determining cubic spline functions?
---InteriorSeparator--
-(right) Fix the slopes at the extremities of the interval [a, b].
-(right) Enforce periodicity of the first two derivatives
-(wrong) Only enforce continuity of the function itself at the interval endpoints.
-(wrong) Ensure the third derivative is zero at endpoints.
---InteriorSeparator--
-hard
---InteriorSeparator--
-19
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
-What condition defines a "not-a-knot" spline?
+What are the additional conditions imposed on a cubic spline to make it a "natural" cubic spline?
 --InteriorSeparator--
-The third derivative of the spline S is continuous at x1 and xn-1.
+S''(x0) = 0 and S''(xn) = 0 (The second derivative is zero at the endpoints)
 --InteriorSeparator--
-hard
+Hard
 --InteriorSeparator--
 20
 --FlashCardSeparator--
@@ -184,161 +79,92 @@ hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Given S''(xi) = ai, how is S''(x) expressed on the interval [xi, xi+1]?
+What does it mean for matrix H to have diagonal dominance?
 --InteriorSeparator--
-(right) S''(x) = ((x - xi) / hi) * ai+1 + ((xi+1 - x) / hi) * ai
-(wrong) S''(x) = ((x - xi+1) / hi) * ai+1 + ((xi - x) / hi) * ai
-(wrong) S''(x) = ((x - xi) / hi) * ai + ((xi+1 - x) / hi) * ai+1
-(wrong) S''(x) = ((x + xi) / hi) * ai+1 + ((xi+1 + x) / hi) * ai
+(right) The absolute value of the diagonal element is greater than or equal to the sum of the absolute values of the other elements in the row.
+(wrong) All elements of the matrix are positive.
+(wrong) The determinant of the matrix is zero.
+(wrong)  All the elements of the matrix are one.
 --InteriorSeparator--
-hard
+Medium
 --InteriorSeparator--
-23
+33
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the formula for 'bi' when calculating cubic spline functions?
+What is the condition for x* to be a solution to f(x)=0 using the Bisection method?
 --InteriorSeparator--
-bi = (yi+1 - yi) / hi - (hi / 6) * (ai+1 - ai)
+f(x*)=0
 --InteriorSeparator--
-hard
+Easy
 --InteriorSeparator--
-26
+39
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-When using the condition S'(a) = P0'(x0) = f'(a) for cubic splines, what is the resulting equation?
+In the Newton-Raphson method, what condition must be met by the derivative f'(xk) at each step?
 --InteriorSeparator--
-2h0*a0 + h0*a1= 6((y1-y0)/h0 - f'(a))
+f'(xk) ≠ 0
 --InteriorSeparator--
-hard
---InteriorSeparator--
-27
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the defining characteristic of matrix H in the linear system Ha = f for cubic spline interpolation?
---InteriorSeparator--
-H has a diagonally dominant matrix.
---InteriorSeparator--
-medium
---InteriorSeparator--
-32
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the objective function to be minimized in the least squares interpolation?
---InteriorSeparator--
-Σ (from r=0 to n) [Sf(xr; a0, a1, ..., am) - yr]^2
---InteriorSeparator--
-medium
---InteriorSeparator--
-35
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the defining characteristics of the matrix B in the system Ba = z, obtained from the least squares method?
---InteriorSeparator--
-(right) B is a (m+1)x(m+1) matrix.
-(right) bkj = Σ (from r=0 to n) [xr^(k+j)], k,j = 0,...,m
-(wrong) B is a (n+1)x(n+1) matrix.
-(wrong) bkj = Σ (from r=0 to n) [xr^(k*j)], k,j = 0,...,m
---InteriorSeparator--
-medium
---InteriorSeparator--
-37
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What condition is checked at each step of the bisection method to determine the next interval?
---InteriorSeparator--
-f(ak) * f(c) < 0 or f(bk) * f(c) < 0
---InteriorSeparator--
-medium
---InteriorSeparator--
-40
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the iterative formula for xk+1 in Newton's method (tangent method) for solving f(x) = 0?
---InteriorSeparator--
-xk+1 = xk - f(xk) / f'(xk)
---InteriorSeparator--
-medium
---InteriorSeparator--
-44
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-State the convergence criteria regarding f', f'' for newtons method
---InteriorSeparator--
-f'(x) ≠ 0 and f''(x) ≠ 0 ∀x ∈ [a,b]
---InteriorSeparator--
-medium
+Medium
 --InteriorSeparator--
 45
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is the iterative formula for xk+1 in the false position (regula falsi) method?
+What conditions are necessary for {xk; k ≥ 0} sequence, constructed with the tangent method, to be monoton, bounded, and convergent to the unique solution x* of the equation f(x)=0?
 --InteriorSeparator--
-xk+1 = (xk*f(xc) - xc*f(xk)) / (f(xc) - f(xk))
+(right) f ∈ C2[a,b]
+(right) f'(x) ≠ 0 and f''(x) ≠ 0 ∀x ∈ [a,b].
+(wrong) f ∈ C1[a,b]
+(wrong) f'(x) = 0
 --InteriorSeparator--
-hard
+Hard
 --InteriorSeparator--
-48
+46
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the iterative formula for xk+1 in the secant method?
+In the Secant method, how are the new elements obtained?
 --InteriorSeparator--
-xk+1 = xk - f(xk)*(xk - xk-1) / (f(xk) - f(xk-1))
+xk+1 = xk - f(xk)(xk - xk-1) / (f(xk) - f(xk-1))
 --InteriorSeparator--
-hard
+Medium
 --InteriorSeparator--
-52
+53
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In the Laguerre's method, what assumption is made about the distance between yk and the other roots (besides x1)?
+What is the convergence order for simple roots, using the Laguerre's method?
 --InteriorSeparator--
-yk is assumed to be at the same distance from all other roots.
+3
 --InteriorSeparator--
-medium
+Hard
 --InteriorSeparator--
-56
+60
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is the general iterative formula for solving a system of nonlinear equations F(X) = 0 using Newton's method?
+In the context of solving systems of nonlinear equations using Newton's method, what does VF(X(k)) represent?
 --InteriorSeparator--
-X(k+1) = X(k) - [VF(X(k))]^-1 * F(X(k))
+(right) The Jacobian matrix of F evaluated at X(k).
+(wrong) The gradient of F evaluated at X(k).
+(right) A matrix of partial derivatives of the component functions of F.
+(wrong) The Hessian matrix of F evaluated at X(k).
 --InteriorSeparator--
-medium
+Medium
 --InteriorSeparator--
 62
 --FlashCardSeparator--
@@ -346,24 +172,183 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the condition for a vector d to be a descent direction for a function f at point x?
+What is the formula to calculate the direction of maximum slope?
 --InteriorSeparator--
-∇f(x)ᵀd = (d, ∇f(x)) < 0
+dk = -Vf(xk)
 --InteriorSeparator--
-medium
+Easy
 --InteriorSeparator--
-72
+85
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does it mean for a function f to be convex?
+--InteriorSeparator--
+(right) f(αx1 + (1-α)x2) ≤ αf(x1) + (1-α)f(x2) for all x1, x2 ∈ Rn and α ∈ [0, 1]
+(wrong) f(αx1 + (1-α)x2) ≥ αf(x1) + (1-α)f(x2) for all x1, x2 ∈ Rn and α ∈ [0, 1]
+(wrong) f''(x) < 0 for all x
+(wrong) f(x) is linear
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+70
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is Armijo's rule?
+What condition must a vector 'd' satisfy to be a descent direction for a function 'f' at point 'x'?
 --InteriorSeparator--
-g(α) ≤ g(0) + δαg'(0), with δ ∈ (0,1)
+Vf(x)Td < 0
 --InteriorSeparator--
-hard
+Medium
 --InteriorSeparator--
-81
+72
 --FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.12550992303468844}]
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which are the techniques for inexact step adjustment?
+--InteriorSeparator--
+(right) Armijo's rule
+(right) Goldstein test
+(right) Wolfe test
+(wrong) Bisection method
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+84
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the method of steepest descent with quadratic cost, what is the formula for calculating the optimal step size (αk)?
+--InteriorSeparator--
+αk = gkTgk / gkTAgk
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+88
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+For a positive definite matrix A, what is the condition for vectors d1 and d2 to be A-orthogonal?
+--InteriorSeparator--
+d1TAd2 = 0
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+96
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the property of the xk sequence in conjugate gradient method, concerning x*, and what does it mean?
+--InteriorSeparator--
+xk -> x* , meaning xk converges to x* (the minimum).
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+100
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which options are true if the vectors {d0, d1, ..., dk} are A-conjugate?
+--InteriorSeparator--
+(right) Vectorii {do , d1 , . . . , d k } sunt liniar independenți.
+(wrong) diTAdj =(Adj,di)Rn = 1.
+(right)diTAdj =(Adj,di)Rn = 0 , ∀i≠j , i,j= 0,1,...,k
+(wrong) d0 = d1 = ... = dk
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+97
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the practical form of the conjugate gradient method, what is the formula for updating dk+1?
+--InteriorSeparator--
+dk+1 = -gk+1 + βkdk
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+103
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the preconditioning concept, what is the goal?
+--InteriorSeparator--
+To transform the system Ax=b into 2x=l;, with k(;l)<<k(A)
+--InteriorSeparator--
+Medium
+--InteriorSeparator--
+116
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which is the name of the subspace K(g0,k) = span{g0,Ag0,...,Akg0} and what does it stand for?
+--InteriorSeparator--
+(right) Krylov subspace.
+(right) Is the subspace generated by applying powers of matrix A to the initial gradient g0.
+(wrong) A subspace generated by random values.
+(wrong) Newton subspace.
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+104
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the nonlinear conjugate gradient method, what is the formula for the Fletcher-Reeves update βk?
+--InteriorSeparator--
+βk = gk+1Tgk+1 / gkTgk
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+110
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the types of preconditioner matrix?
+--InteriorSeparator--
+(right) Jacobi
+(wrong) Hilbert
+(right) SSOR
+(wrong) identity
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+119
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the Kantorovich inequality?
+--InteriorSeparator--
+(xTAx)(xTA-1x) / (xTx)^2 <= (C+c)^2 / 4Cc
+--InteriorSeparator--
+Hard
+--InteriorSeparator--
+92
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.222171159334784}]

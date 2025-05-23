@@ -1,10 +1,9 @@
-[{content={parts=[{text=```
---FlashCardSeparator--
+[{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the general term of a sequence denoted as (xn)n∈N?
+What is a sequence of real numbers defined as?
 --InteriorSeparator--
-xn
+A function f: N -> R
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -12,11 +11,14 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-Define a bounded sequence.
+Which of the following describe a bounded sequence (xn)n∈N?
 --InteriorSeparator--
-A sequence (xn)n∈N is bounded if there exist a, b ∈ R such that a ≤ xn ≤ b, ∀n ∈ N.
+(right) There exist α, β ∈ R such that α ≤ xn ≤ β, ∀n ∈ N
+(wrong)  xn+1 ≥ xn ∀n ∈ N
+(right) ∃M ∈ R, such that |xn| ≤ M, ∀n ∈ N.
+(wrong)  xn+1 < xn, ∀n ∈ N
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -24,28 +26,13 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following sequences are bounded?
---InteriorSeparator--
-(right) xn = (-1)^n
-(wrong) xn = n
-(wrong) xn = -n
-(right/wrong) xn = 1/n
---InteriorSeparator--
-medium
---InteriorSeparator--
-10, 19
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define a convergent sequence.
+If a real number sequence (xn)n∈N is convergent to l ∈ R, what is the notation?
 --InteriorSeparator--
-A sequence (xn)n∈N is convergent if there exists an element l ∈ R such that ∀ε > 0, ∃nε ∈ N: |xn - l| < ε, ∀n ≥ nε.
+xn -> l (n -> ∞) or lim (n -> ∞) xn = l
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
 12
 --FlashCardSeparator--
@@ -53,24 +40,126 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following statements are true regarding convergent sequences?
+When is a real number sequence (xn)n∈N considered divergent?
 --InteriorSeparator--
-(right) If a sequence has a limit, the limit is unique.
-(wrong) Every bounded sequence is convergent.
-(right) Every convergent sequence is bounded.
-(wrong) Every unbounded sequence is divergent
+(right) If it does not have a limit
+(wrong) If it is bounded.
+(right) If its limit is +∞
+(wrong) If it is monotonic
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-17, 18
+13
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-State the Bolzano-Weierstrass Theorem.
+What is the limit of the sequence xn = c, ∀n ∈ N, where c ∈ R?
 --InteriorSeparator--
-From any bounded sequence (xn)n∈N, a convergent subsequence (xnk)k∈N can be extracted.
+c
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does it mean for (nk)k∈N to be a subsequence of (xn)n∈N?
+--InteriorSeparator--
+(right) (nk)k∈N is a sequence of natural numbers.
+(right) (nk)k∈N is strictly increasing
+(wrong) (nk)k∈N converges to 0
+(wrong) (nk)k∈N is bounded
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If (xn)n∈N converges to x ∈ R, what can be said about any subsequence (xnk)k∈N?
+--InteriorSeparator--
+(xnk)k∈N converges to x
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What can be concluded if a sequence has a divergent subsequence?
+--InteriorSeparator--
+The sequence is divergent
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If (xn)n∈N and (yn)n∈N are convergent sequences to x ∈ R and y ∈ R respectively, which of the following is true?
+--InteriorSeparator--
+(right) lim (n->∞) (xn + yn) = x + y
+(wrong) lim (n->∞) (xn * yn) = x - y
+(wrong) lim (n->∞) (xn / yn) = x * y, if y != 0
+(right) lim (n->∞) (c * xn) = c * x, where c is a real number
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the Squeeze Theorem (Criteriul clestelui)?
+--InteriorSeparator--
+If xn ≤ zn ≤ yn, ∀n ∈ N, and lim (n->∞) xn = lim (n->∞) yn = l, then lim (n->∞) zn = l
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the Domination Criterion (Criteriul majorarii)?
+--InteriorSeparator--
+If |xn - x| ≤ an, ∀n ∈ N, and lim (n->∞) an = 0, then lim (n->∞) xn = x
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+State the Monotone Convergence Theorem (Weierstrass).
+--InteriorSeparator--
+A bounded monotone sequence is convergent.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the Bolzano-Weierstrass Theorem state?
+--InteriorSeparator--
+Every bounded sequence has a convergent subsequence.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -80,9 +169,9 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-State the Stolz-Cesàro Theorem.
+State Stolz-Cesaro Theorem.
 --InteriorSeparator--
-Let (xn)n∈N and (yn)n∈N be two sequences of real numbers such that (yn)n∈N is strictly monotone and unbounded. If lim (xn+1 - xn) / (yn+1 - yn) = l ∈ R, then lim (xn / yn) = l.
+If (xn) and (yn) are real sequences with (yn) strictly monotone and unbounded, and lim ((xn+1 - xn)/(yn+1 - yn)) = L, then lim (xn/yn) = L
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -94,7 +183,7 @@ Single
 --InteriorSeparator--
 Define a Cauchy sequence.
 --InteriorSeparator--
-A sequence (xn)n∈N is a Cauchy sequence if ∀ε > 0, ∃nε ∈ N: |xn - xm| < ε, ∀n, m ≥ nε.
+∀ε > 0, ∃nε ∈ N : |xn - xm| < ε, ∀n, m ∈ N, n, m ≥ nε
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -104,9 +193,21 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-State Cauchy's convergence criterion for sequences.
+Is every Cauchy sequence bounded?
 --InteriorSeparator--
-A sequence of real numbers (xn)n∈N is convergent if and only if it is a Cauchy sequence.
+Yes
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is every convergent sequence a Cauchy sequence?
+--InteriorSeparator--
+Yes
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -116,11 +217,11 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define a limit point of a sequence.
+Define a limit point of a sequence (xn)n∈N.
 --InteriorSeparator--
-x ∈ R is a limit point of the sequence (xn)n∈N if there exists a subsequence (xnk)k∈N such that xnk -> x.
+x ∈ R is a limit point of (xn)n∈N if there exists a subsequence (xnk)k∈N such that xnk -> x
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 34
 --FlashCardSeparator--
@@ -128,14 +229,14 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What is true about limit superior and limit inferior of a convergent sequence?
+Which of the following are true?
 --InteriorSeparator--
-(right) lim inf xn = lim sup xn = lim xn
+(right) lim inf xn ≤ lim sup xn
 (wrong) lim inf xn > lim sup xn
-(wrong) lim inf xn = -∞
-(wrong) lim sup xn = +∞
+(right) If (xn) is convergent to x, then L(xn) = {x}
+(wrong) L(xn) is always empty
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 37
 --FlashCardSeparator--
@@ -143,26 +244,35 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define a polynomial with coefficients in K.
+If lim (n->∞) (xn+1/xn) = l ∈ [0,+∞], what is the relation with lim (n->∞) nth root of (xn)?
 --InteriorSeparator--
-A polynomial with coefficients in K is a sequence (an)n∈N for which the terms are zero with the exception of a finite number of them.
+lim (n->∞) (nth root of (xn)) = l
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
-40
+38
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-What represents the algebraic form of a polynomial f?
+What is the set K in the context of polynomials?
 --InteriorSeparator--
-(right) f = anX^n + an-1X^(n-1) + ... + a1X + a0
-(wrong) f = (x-a1)(x-a2)...(x-an)
-(wrong) f = a^n
-(wrong) f = a0 + a1 + ...+ an
+A commutative field (corp comutativ), e.g., Q, R, C, Zp (p prime)
 --InteriorSeparator--
-easy
+medium
+--InteriorSeparator--
+39
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does K[X] represent?
+--InteriorSeparator--
+The set of polynomials in the indeterminate X with coefficients in K.
+--InteriorSeparator--
+medium
 --InteriorSeparator--
 41
 --FlashCardSeparator--
@@ -170,24 +280,21 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is K[X]?
+Define polynomial division with remainder.
 --InteriorSeparator--
-The set of polynomials in the indeterminate X with coefficients in K.
+For f, g ∈ K[X] with g != 0, there exist unique q, r ∈ K[X] such that f = gq + r and grad(r) < grad(g).
 --InteriorSeparator--
-easy
+hard
 --InteriorSeparator--
-41
+45
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-What is the remainder theorem?
+State the Remainder Theorem (Teorema restului).
 --InteriorSeparator--
-(right) The remainder of dividing a polynomial f ∈ K[X] by g = X - a ∈ K[X] is equal to f(a).
-(wrong) The remainder is always 0.
-(wrong) The remainder is the derivative of f at a.
-(wrong) The remainder is equal to g(a).
+The remainder of dividing f ∈ K[X] by X - a ∈ K[X] is f(a).
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -197,75 +304,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the degree of the zero polynomial?
+State Bezout's Theorem
 --InteriorSeparator--
-The degree of the zero polynomial is undefined or defined as -∞. (Note: not explicitly stated, but implied).
---InteriorSeparator--
-hard
---InteriorSeparator--
-41 (implied)
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are properties of the divisibility relation for polynomials?
---InteriorSeparator--
-(right) Reflexivity: f|f, ∀f ∈ K[X]
-(right) Transitivity: If f|g and g|h, then f|h
-(wrong) Symmetry: If f|g, then g|f
-(wrong) Only the zero polynomial can divide another polynomial.
---InteriorSeparator--
-medium
---InteriorSeparator--
-52
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Define the greatest common divisor (GCD) of two polynomials f and g.
---InteriorSeparator--
-A polynomial d ∈ K[X] is the GCD of polynomials f and g if d|f, d|g, and if d1 is another common divisor of f and g, then d1|d.
---InteriorSeparator--
-medium
---InteriorSeparator--
-52
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Define the least common multiple (LCM) of two polynomials f and g.
---InteriorSeparator--
-A polynomial m ∈ K[X] is the LCM of polynomials f and g if f|m, g|m, and for any m1 ∈ K[X] such that f|m1 and g|m1, it follows that m|m1.
---InteriorSeparator--
-medium
---InteriorSeparator--
-52
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-If a is a root of the polynomial f, then:
---InteriorSeparator--
-(right) f(a) = 0
-(right) f is divisible by (X-a)
-(wrong) f'(a) = 0
-(wrong) f is not divisible by (X-a)
---InteriorSeparator--
-easy
---InteriorSeparator--
-53
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Define a multiple root of order m for a polynomial f.
---InteriorSeparator--
-An element a ∈ K is a multiple root of order m if f is divisible by (X - a)^m but not divisible by (X - a)^(m+1).
+a is a root of f if and only if (X-a) divides f
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -273,18 +314,15 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-What does it mean for a polynomial function f to have a root 'a' with multiplicity p?
+What is the definition of a root 'a' of multiplicity 'm' of a polynomial f?
 --InteriorSeparator--
-(right) f(a) = f'(a) = ... = f^(p-1)(a) = 0 and f^(p)(a) ≠ 0
-(wrong) f(a) ≠ 0
-(wrong) Only f(a) = 0
-(wrong) f^(p)(a) = 0
+f is divisible by (X-a)^m but not by (X-a)^(m+1)
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-54
+53
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -292,7 +330,7 @@ Single
 --InteriorSeparator--
 State the Fundamental Theorem of Algebra.
 --InteriorSeparator--
-An algebraic equation of degree at least 1 with complex coefficients admits at least one complex solution.
+A non-constant polynomial with complex coefficients has at least one complex root.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -302,136 +340,15 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What is a reducible polynomial?
+When is a non-zero polynomial f ∈ K[X] called reducible over K?
 --InteriorSeparator--
-(right) A non-zero polynomial f ∈ K[X] is reducible over the field K if there exist g, h ∈ K[X] of degree at least 1, such that f = g * h.
-(wrong) A polynomial of degree 1.
-(wrong) A polynomial with only real roots.
-(wrong) A polynomial that cannot be factored.
---InteriorSeparator--
-medium
---InteriorSeparator--
-56
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What can you say about the irreducibility of a non-zero polynomial in R[X]?
---InteriorSeparator--
-If f ∈ R[X] is a non-zero polynomial, then it is irreducible only in the following cases: it is of degree 1, or it is of degree 2 but has no real roots.
+(right) If there exist g, h ∈ K[X] with degree at least 1
+(right) such that f = g*h
+(wrong) If degree(f) >= 1
+(wrong) If f has no roots in K.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-57
+56
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Given f ∈ C[X] of degree n with roots a1, ..., an ∈ C, what is the form of f?
---InteriorSeparator--
-(right) f = an(X - a1)(X - a2)...(X - an)
-(wrong) f = (X - a1)(X - a2)...(X - an)
-(wrong) f = an(X + a1)(X + a2)...(X + an)
-(wrong) f = (X^n - a1)(X^n - a2)...(X^n - an)
---InteriorSeparator--
-medium
---InteriorSeparator--
-57
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-True or false: Any sequence that contains two subsequences that converge to distinct limits, is divergent.
---InteriorSeparator--
-True
---InteriorSeparator--
-medium
---InteriorSeparator--
-20
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-How can you determine the coefficients of the quotient when dividing a polynomial f by g=(X-a)?
---InteriorSeparator--
-(right) Using Horner's scheme
-(wrong) Polynomial long division
-(wrong) By looking at the remainder
-(wrong) Using Bolzano–Weierstrass theorem
---InteriorSeparator--
-medium
---InteriorSeparator--
-50
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the formula for summing the terms of an arithmetic sequence?
---InteriorSeparator--
-(right) Sn = ((a1 + an)*n)/2
-(wrong) Sn = b1(1 - q^n)/(1 - q)
-(wrong) Sn =  n/2(2a+(n-1)d)
-(wrong) Sn = n/2(a+l)
---InteriorSeparator--
-easy
---InteriorSeparator--
-5
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the formula for summing the terms of a geometric sequence?
---InteriorSeparator--
-(right) Sn = b1(1 - q^n)/(1 - q)
-(wrong) Sn = ((a1 + an)*n)/2
-(wrong) Sn = n/2(2a+(n-1)d)
-(wrong) Sn = n/2(a+l)
---InteriorSeparator--
-easy
---InteriorSeparator--
-7
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If sequence (xn) is defined such that xn+1 >= xn for all n in N, then what kind of sequence is it?
---InteriorSeparator--
-It is a increasing sequence
---InteriorSeparator--
-easy
---InteriorSeparator--
-11
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If sequence (xn) is defined such that xn+1 > xn for all n in N, then what kind of sequence is it?
---InteriorSeparator--
-It is a strict increasing sequence
---InteriorSeparator--
-easy
---InteriorSeparator--
-11
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does it mean if a sequence is monotonically decreasing?
---InteriorSeparator--
-xn+1 <= xn ∀n ∈ N
---InteriorSeparator--
-easy
---InteriorSeparator--
-11
---FlashCardSeparator--
-
-```}], role=model}, finishReason=STOP, avgLogprobs=-0.12961432747849952}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.09663509590227043}]

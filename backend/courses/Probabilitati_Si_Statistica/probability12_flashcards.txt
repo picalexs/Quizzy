@@ -1,7 +1,7 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the first step in undertaking a significance test?
+What is the first step in conducting a significance test?
 --InteriorSeparator--
 Formulate the null hypothesis (H0)
 --InteriorSeparator--
@@ -11,14 +11,26 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of choosing a significance level (alpha)?
+--InteriorSeparator--
+To determine how significant the evidence must be to reject the null hypothesis.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Under what conditions can a Z-test be used even if the population isn't normally distributed?
+What conditions must be met to use a Z-test when the population is NOT normally distributed?
 --InteriorSeparator--
-(right) When the sample size is large (n ≥ 30)
-(wrong) When the population variance is unknown
-(right) According to the Central Limit Theorem
-(wrong) Only when the population is perfectly normal
+(right) The sample size is large (n >= 30)
+(wrong) The sample size is small (n < 30)
+(right) The population is approximately normal
+(wrong) The population variance is unknown
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -28,9 +40,21 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What distribution does the test statistic M follow in a Z-test for the mean of a population?
+In a Z-test, what distribution does the test statistic follow under the null hypothesis?
 --InteriorSeparator--
-Standard Normal Distribution N(0,1)
+Normal distribution
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What information is needed to conduct a Z-test for the mean of a population?
+--InteriorSeparator--
+The population variance must be known.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -40,14 +64,14 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the possible alternative hypotheses (Ha) in a Z-test regarding the population mean (μ) compared to a hypothesized mean (μ0)?
+What are the possible alternative hypotheses (Ha) for a one-sample Z-test regarding the population mean (µ) and a hypothesized value (µ0)?
 --InteriorSeparator--
-(wrong) Ha: μ = μ0
-(right) Ha: μ < μ0 (left-tailed)
-(right) Ha: μ > μ0 (right-tailed)
-(right) Ha: μ ≠ μ0 (two-tailed)
+(right) µ < µ0
+(wrong) µ = µ0
+(right) µ > µ0
+(wrong) µ != µ0
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 6
 --FlashCardSeparator--
@@ -55,21 +79,9 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If the calculated test score falls within the rejection region, what decision should be made regarding the null hypothesis?
+For a two-tailed Z-test with a significance level of α, how is the critical value (z*) determined?
 --InteriorSeparator--
-Reject H0 and accept Ha
---InteriorSeparator--
-easy
---InteriorSeparator--
-8
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In a Z-test, what is the formula for calculating the test score (z)?
---InteriorSeparator--
-z = (x̄ - μ0) / (σ/√n) where x̄ is the sample mean, μ0 is the hypothesized population mean, σ is the population standard deviation, and n is the sample size.
+z* = -qnorm(α/2) = qnorm(1 - α/2)
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -77,26 +89,53 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is the rejection region for a two-tailed hypothesis test?
+--InteriorSeparator--
+(wrong) (-∞, z*]
+(right) (-∞, -|z*|]
+(wrong) [z*, +∞)
+(right) [|z*|, +∞)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the critical value for a symmetric (two-tailed) alternative hypothesis in a Z-test, given a significance level of α?
+In the mouse example, if |z| < |z*| at α = 1%, what conclusion can be drawn?
 --InteriorSeparator--
-z* = -qnorm(α/2) or qnorm(1 - α/2)
+The attempt to reject the null hypothesis fails with a 1% significance level.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-7
+11
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-In what scenarios is a T-test more appropriate than a Z-test?
+When should a one-tailed alternative hypothesis (Ha) be used?
 --InteriorSeparator--
-(right) When the population standard deviation is unknown
-(right) When dealing with small sample sizes (n < 30) and approximately normal populations
-(wrong) When the population is known to be perfectly normal
-(wrong) When the sample mean is equal to the hypothesized population mean
+(wrong) When the sample mean is close to the hypothesized population mean.
+(right) When the sample mean is much larger than the hypothesized population mean.
+(right) When the sample mean is much smaller than the hypothesized population mean.
+(wrong) When the sample size is small.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+When is the T-test appropriate?
+--InteriorSeparator--
+When the population standard deviation is unknown.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -106,9 +145,21 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What distribution does the test statistic M follow in a T-test for the mean of a population?
+What distribution does the test statistic follow in a T-test?
 --InteriorSeparator--
-Student's t-distribution with (n-1) degrees of freedom: T(n-1)
+Student's t-distribution
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What replaces the population standard deviation in the T-test formula?
+--InteriorSeparator--
+The sample standard deviation.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -118,21 +169,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What distinguishes the T-test from the Z-test formula when testing the mean of a population?
+What is the formula for the t-score in a one-sample t-test?
 --InteriorSeparator--
-The population standard deviation (σ) is replaced by the sample standard deviation (s).
---InteriorSeparator--
-medium
---InteriorSeparator--
-17
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In a T-test, what is the formula for calculating the test score (t)?
---InteriorSeparator--
-t = (x̄ - μ0) / (s/√n) where x̄ is the sample mean, μ0 is the hypothesized population mean, s is the sample standard deviation, and n is the sample size.
+t = (x̄ - µ0) / (s / √n)
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -142,21 +181,48 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How do you determine the critical t-value (t*) for a right-tailed alternative hypothesis with a significance level of α and n-1 degrees of freedom?
+What is the critical value (t*) for a left-tailed T-test?
 --InteriorSeparator--
-t* = qt(1 - α, n - 1)
+t* = qt(α, n-1)
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 19
 --FlashCardSeparator--
 
 --FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+How does the calculation of the test statistic in a T-test differ from that in a Z-test?
+--InteriorSeparator--
+(right) T-test uses the sample standard deviation.
+(wrong) Z-test uses the sample mean.
+(right) T-test uses t-distribution.
+(wrong) Z-test uses degree of freedom.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+17, 5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What are dependent samples?
+In the Carbon Monoxide example, what is the degree of freedom?
 --InteriorSeparator--
-Samples where the data for both populations comes from the same or related sources
+4
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+23
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+When comparing two populations, what are the two types of samples that can be used?
+--InteriorSeparator--
+Independent and dependent samples
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -164,14 +230,11 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-What characterizes independent samples when comparing two populations?
+What determines the dependency or independency of two samples?
 --InteriorSeparator--
-(wrong) Data comes from same source
-(right) Data sources are unrelated
-(wrong) Sample sizes must be equal
-(wrong) Samples must have same mean
+The source of the data.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -181,11 +244,11 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Give the formula for the Z-statistic when testing the difference between two population means with known variances.
+In comparing the means of two populations with known variances, what distribution does the test statistic follow?
 --InteriorSeparator--
-Z = ((x̄1 - x̄2) - (μ1 - μ2)) / √(σ1²/n1 + σ2²/n2)
+Standard normal distribution
 --InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
 31
 --FlashCardSeparator--
@@ -193,11 +256,38 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In a Z-test for the difference of two means, what value is typically assumed for (μ1 - μ2) under the null hypothesis?
+What is the assumption for the null hypothesis when testing the difference between the means of two populations?
 --InteriorSeparator--
-0 (indicating no difference between the population means)
+The difference between the means is a fixed value.
 --InteriorSeparator--
-easy
+medium
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If the score z belongs to the rejection area, what must be done?
+--InteriorSeparator--
+Accept Ha and reject H0
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+When undertaking a test on the means of two populations, what is commonly assumed?
+--InteriorSeparator--
+(right) The two means are equal.
+(wrong) The two standard deviations are unequal.
+(right)  µ1 - µ2 = 0.
+(wrong) The sample sizes are equal.
+--InteriorSeparator--
+medium
 --InteriorSeparator--
 36
 --FlashCardSeparator--
@@ -205,21 +295,21 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the F-test used for?
+When should we compare the standard deviations?
 --InteriorSeparator--
-To test the equality of variances of two normal populations.
+When comparing two populations.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
-12
+43
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a critical assumption for the F-test regarding the populations being compared?
+What distribution is used for testing the equality of variances between two normal populations?
 --InteriorSeparator--
-Normality.
+Fisher Distribution.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -227,11 +317,14 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What are the properties of the F distribution?
+What are the key properties of the F-distribution?
 --InteriorSeparator--
-It takes only non-negative values and is asymmetric
+(right) F has nonnegative values.
+(right) F is asymmetric.
+(wrong) F is symmetric.
+(wrong) F has negative values.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -241,21 +334,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Give the formula for the F statistic for testing the equality of two variances.
+In a F-test, how is a one-tailed alternative hypothesis set up?
 --InteriorSeparator--
-F = s1²/s2² where s1² and s2² are the sample variances.
---InteriorSeparator--
-hard
---InteriorSeparator--
-44
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-When performing a two-tailed F-test for equality of variances, how is the F-statistic calculated?
---InteriorSeparator--
-Divide the larger sample variance by the smaller sample variance.
+σ1^2/σ2^2 > 1
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -265,36 +346,36 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What are the degrees of freedom for an F-distribution used to compare variances?
+In a F-test, how is the F-score calculated?
 --InteriorSeparator--
-n1-1 and n2-1, where n1 and n2 are the sample sizes of the two groups.
+F = s1^2 / s2^2
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
-45
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What decision rule applies in a right-tailed F-test for comparing two variances?
---InteriorSeparator--
-Reject H0 if the calculated F statistic is greater than the critical F-value.
---InteriorSeparator--
-medium
---InteriorSeparator--
-48
+47
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What is the first step you should take before performing a T-test to compare the means of two populations when the population variances are unknown?
+When the variances are unequal and a T-test is performed, what is the degree of freedom?
 --InteriorSeparator--
-(wrong) Assume equal variances.
-(right) Perform an F-test to determine if the variances are equal.
-(wrong) Always use the T-test formula for unequal variances.
-(wrong) Perform a Z-test for two means.
+(right) min(n1 - 1, n2 - 1)
+(wrong) n1 + n2 -2
+(wrong) n1 -1
+(wrong) n2 -1
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+58
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the first step in a T-test when variances are unknown and two populations are considered?
+--InteriorSeparator--
+Perform an F-test relating to the ratio of the two variances.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -304,51 +385,12 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If an F-test indicates that the variances of two populations are equal, which formula should be used to calculate the t-statistic for comparing the means?
+What is the difference in the calculation of the t score if the dispersion are equals versus when the dispersions are different?
 --InteriorSeparator--
-The pooled variance formula (t = (x̄1 - x̄2) - (μ1 - μ2) / (Sp * sqrt(1/n1 + 1/n2)
---InteriorSeparator--
-hard
---InteriorSeparator--
-56
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What degrees of freedom are used when performing a T-test to compare the means of two independent populations with unequal variances?
---InteriorSeparator--
-min(n1-1, n2-1)
+The formula of the combined variance and the degree of freedom.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-56
+58
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If an F-test determines that the variances of two populations are unequal, which formula should be used to calculate the t-statistic for comparing the means?
---InteriorSeparator--
-t = (x̄1 - x̄2) - (μ1 - μ2) / (sqrt(s1²/n1 + s2²/n2))
---InteriorSeparator--
-hard
---InteriorSeparator--
-56
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-When comparing the means of two independent populations with unknown variances, what factors determine the appropriate T-test formula and degrees of freedom?
---InteriorSeparator--
-(right) Whether the variances are equal or unequal, as determined by an F-test
-(right) The sample sizes (n1 and n2) of the two populations
-(wrong) The known population means
-(wrong) The significance level (α)
---InteriorSeparator--
-hard
---InteriorSeparator--
-55-56
---FlashCardSeparator--
-}], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=1840, endIndex=1968, uri=https://studyx.ai/homework/108866854-show-slide-shows-timings-notes-activity-10-minutes-1-most-of-the-teacher-s-claim-that-the}, {startIndex=3658, endIndex=3787, uri=https://makemeanalyst.com/inference-for-one-sample-paired-means/}]}, avgLogprobs=-0.14835468264118165}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.19307744324487858}]

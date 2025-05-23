@@ -386,17 +386,4 @@ medium
 53
 --FlashCardSeparator--
 
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What actions are taken in large scale Engineering Projects regarding testing?
---InteriorSeparator--
-(right) Writing detailed test cases
-(right) Authoring a test report
-(wrong) Avoid manual testing
-(wrong) Skip test reports
---InteriorSeparator--
-medium
---FlashCardSeparator--
-55
 ```}], role=model}, finishReason=STOP, avgLogprobs=-0.2042072374966212}]

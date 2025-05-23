@@ -289,18 +289,6 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-According to the Hartman et al., 1990 theorem, under what conditions can a function be approximated with arbitrarily small error using RBF Networks?
---InteriorSeparator--
-Provided a sufficiently large k and the width of each kernel can be separately specified.
---InteriorSeparator--
-hard
---InteriorSeparator--
-16
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 What is Case-Based Reasoning (CBR)?
 --InteriorSeparator--
 Instance-based learning applied to instance spaces with rich symbolic logic descriptions.
@@ -374,27 +362,6 @@ Using the EM algorithm.
 hard
 --InteriorSeparator--
 15
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the training rule wj for minimizing the error in Locally Weighted Regression using gradient descent with k nearest neighbors, where:
-wj is the weight for attribute j
-K(d(xq, x)) is the kernel function of the distance between the query point xq and a neighboring point x
-f(x) is the actual target value for x
-f^(x) is the predicted target value for x
-aj(x) is the value of attribute j for x
-η is the learning rate
---InteriorSeparator--
-(wrong) wj ← wj - η Σ K(d(xq, x))(f(x) - f^(x))aj(x)
-(right) wj ← wj + η Σ K(d(xq, x))(f(x) - f^(x))aj(x)
-(wrong) wj ← wj + Σ K(d(xq, x))(f(x) - f^(x))aj(x)
-(wrong) wj ← wj - η Σ K(d(xq, x))(f(x) - f^(x))
---InteriorSeparator--
-hard
---InteriorSeparator--
-12
 --FlashCardSeparator--
 
 --FlashCardSeparator--

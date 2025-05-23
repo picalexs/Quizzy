@@ -38,7 +38,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain the geometrical interpretation of transforming the SVM optimization problem from equation (4) to equation (5).
 --InteriorSeparator--
@@ -50,7 +50,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain the geometrical interpretation of transforming the SVM optimization problem from equation (5) to equation (6).
 --InteriorSeparator--
@@ -89,7 +89,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What is Slater's condition and why is it important in the context of SVM?
 --InteriorSeparator--
@@ -116,7 +116,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How is the dual form (D) of the SVM problem related to the primal form (P)?
 --InteriorSeparator--
@@ -164,7 +164,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How does Slater's condition apply to the C-SVM optimization problem (P')?
 --InteriorSeparator--
@@ -188,7 +188,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What is the main difference between the dual form (D') for C-SVM and the dual form (D) for hard-margin SVM?
 --InteriorSeparator--
@@ -212,128 +212,5 @@ In C-SVM, how can w0 be obtained from the relationships derived?
 hard
 --InteriorSeparator--
 30
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-In C-SVM, how are support vectors identified given a solution to the dual problem (D')?
---InteriorSeparator--
-Support vectors are the instances xi for which αi > 0. If αi ∈ (0, C), then yi(w * xi + w0) = 1.
---InteriorSeparator--
-hard
---InteriorSeparator--
-32
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the context of C-SVM, how is a new instance x' classified?
---InteriorSeparator--
-Classified positively if w * x' + w0 >= 0, and negatively otherwise.
---InteriorSeparator--
-easy
---InteriorSeparator--
-33
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-How is the parameter Λ related to C in the unconstrained formulation of SVM using the hinge loss function?
---InteriorSeparator--
-Λ = 2C
---InteriorSeparator--
-hard
---InteriorSeparator--
-38
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the key features of the unconstrained formulation of the C-SVM optimization problem?
---InteriorSeparator--
-(right) Absence of restrictions on variables.
-(right) Balancing simplicity (reflected by the term ||w||^2) and generalization (reflected by the term Λ Σmax(1 - yi(w * xi + w0), 0)).
-(wrong) Only simplicity is pursued
-(wrong) Presence of restrictions on variables
---InteriorSeparator--
-medium
---InteriorSeparator--
-38
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the Sequential Minimal Optimization (SMO) algorithm, what optimization strategy is used?
---InteriorSeparator--
-Coordinate ascent
---InteriorSeparator--
-medium
---InteriorSeparator--
-41
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-What are the formulas for updating α1 and α2 in the SMO algorithm?
---InteriorSeparator--
-α2_new,unclipped = α2_old + y2(E1 - E2) / η and α1_new,unclipped = α1_old + y1y2(α2_old - α2_new,unclipped) where η = -||φ(x1) - φ(x2)||^2
---InteriorSeparator--
-hard
---InteriorSeparator--
-41
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-How do you determine the bounds L and H for clipping α2 in the SMO algorithm if y1 != y2?
---InteriorSeparator--
-L = max(0, α2 - α1) and H = min(C, C + α2 - α1)
---InteriorSeparator--
-hard
---InteriorSeparator--
-46
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-What are the complementarity (KKT) constraints used for stopping the SMO algorithm?
---InteriorSeparator--
-NOT [(αi < C AND yiEi < -tol) OR (αi > 0 AND yiEi > tol)] for i = 1, ..., m, where tol is a positive constant.
---InteriorSeparator--
-hard
---InteriorSeparator--
-48
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-What is a sufficient condition to achieve zero training error in a SVM with RBF kernel, assuming distinct training instances?
---InteriorSeparator--
-The RBF kernel parameter γ must be small enough, specifically γ < a / √ln(m-1) where ‘a’ is the minimum distance between any two training points and m is the number of training instances.
---InteriorSeparator--
-hard
---InteriorSeparator--
-62
---FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-In one-class SVM with Max Margin, what is the primal optimization problem attempting to achieve?
---InteriorSeparator--
-It seeks to find a direction w ∈ Rd that maximally separates the data from the origin.
---InteriorSeparator--
-hard
---InteriorSeparator--
-83
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.17565178185125763}]

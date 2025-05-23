@@ -1,21 +1,10 @@
-[{content={parts=[{text=--FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the conjugate transpose of matrix A, denoted as AH?
---InteriorSeparator--
-AH is obtained by transposing A and taking the complex conjugate of each element.
---InteriorSeparator--
-medium
---InteriorSeparator--
-3
---FlashCardSeparator--
-
+[{content={parts=[{text=```
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If A is a real matrix (A ∈ Rm×n), what is the relationship between its transpose (AT) and its conjugate transpose (AH)?
+What does AH represent in the context of matrices?
 --InteriorSeparator--
-For real matrices, the conjugate transpose is equal to the transpose (AH = AT).
+The conjugate transpose (adjoint) of matrix A.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -25,9 +14,33 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the result of multiplying a matrix A by the j-th column of the identity matrix, denoted as Aej?
+If A is a real matrix, how does its adjoint (AH) relate to its transpose (AT)?
 --InteriorSeparator--
-Aej results in the j-th column of matrix A.
+AH = AT
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What type of vector is usually assumed when dealing with a vector x ∈ Rⁿ?
+--InteriorSeparator--
+Column vector.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the result of multiplying matrix A by the j-th standard basis vector ej (Aej)?
+--InteriorSeparator--
+The j-th column of matrix A.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -35,16 +48,25 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-Which of the following are properties of the transpose of a matrix (AT)?
+How is the scalar product of two vectors x and y defined in Cⁿ?
 --InteriorSeparator--
-(right) (A + B)T = AT + BT
-(wrong) (A + B)T = AT - BT
-(right) (AB)T = BTAT
-(wrong) (AB)T = ATBT
+(x, y) = Σ(xi * conj(yi)), where the sum is from i=1 to n, and conj(yi) is the complex conjugate of yi.
 --InteriorSeparator--
 medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the result of (AT)T ?
+--InteriorSeparator--
+A
+--InteriorSeparator--
+easy
 --InteriorSeparator--
 8
 --FlashCardSeparator--
@@ -52,9 +74,36 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the definition of an orthogonal matrix A?
+For real matrices A, x, and y, what is the relationship between (Ax, y) and (x, ATy)?
 --InteriorSeparator--
-An orthogonal matrix A satisfies the condition ATA = AAT = In, where In is the identity matrix.
+(Ax, y) = (x, ATy)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following is true about a symmetric matrix A?
+--InteriorSeparator--
+(right) A = AT
+(wrong) A = AH
+(wrong) ATA = In
+(wrong) AHA = In
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What defines a unitary matrix A?
+--InteriorSeparator--
+AHA = A AH = In
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -64,11 +113,11 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the defining characteristic of a lower triangular matrix A?
+What is the defining characteristic of a lower triangular matrix?
 --InteriorSeparator--
-In a lower triangular matrix A, all elements above the main diagonal are zero (aij = 0 for j > i).
+aij = 0 for j > i
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 11
 --FlashCardSeparator--
@@ -76,24 +125,48 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the defining characteristic of an upper triangular matrix A?
+Define an upper triangular matrix A.
 --InteriorSeparator--
-In an upper triangular matrix A, all elements below the main diagonal are zero (aij = 0 for j < i).
+aij = 0 for j < i
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 12
 --FlashCardSeparator--
 
 --FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the identity matrix denoted by?
+--InteriorSeparator--
+In
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How is a diagonal matrix D defined using its diagonal elements d1, d2, ..., dn?
+--InteriorSeparator--
+D = diag[d1, d2, ..., dn]
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+14
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following are properties that a norm ||x|| must satisfy for all vectors x and y in a vector space?
+Which of the following conditions must a norm ||x|| satisfy for all vectors x in a vector space X?
 --InteriorSeparator--
-(right) ||x|| ≥ 0; ||x|| = 0 if and only if x = 0
-(right) ||x + y|| ≤ ||x|| + ||y||
+(right) ||x|| ≥ 0 and ||x|| = 0 if and only if x = 0
+(right) ||αx|| = |α| ||x|| for all scalars α
+(wrong) ||x|| ≤ 0
 (wrong) ||x + y|| ≥ ||x|| + ||y||
-(wrong) ||αx|| = α||x||, where α is a scalar and α>=0
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -101,25 +174,16 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-Define the city-block norm (Manhattan norm) for a vector x in Cn or Rn.
+Which of the following is the formula for the city-block (Manhattan) norm?
 --InteriorSeparator--
-||x||1 = Σ|xi| (sum from i=1 to n of the absolute values of the components).
+(right) ||x||₁ = Σ|xi|
+(wrong) ||x||₂ = √(Σ|xi|²)
+(wrong) ||x||∞ = max{|xi|}
+(wrong)  ||x|| = √(Σ xi)
 --InteriorSeparator--
-easy
---InteriorSeparator--
-16
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Define the Euclidean norm for a vector x in Cn or Rn.
---InteriorSeparator--
-||x||2 = √(Σ|xi|2) (square root of the sum from i=1 to n of the squared absolute values of the components).
---InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 16
 --FlashCardSeparator--
@@ -127,21 +191,9 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define the Chebyshev norm for a vector x in Cn or Rn.
+If ||⋅||v is a vector norm and P is a non-singular matrix, is ||x||P = ||Px||v also a vector norm?
 --InteriorSeparator--
-||x||∞ = max{|xi| : i = 1,...,n} (the maximum of the absolute values of the components).
---InteriorSeparator--
-easy
---InteriorSeparator--
-16
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What condition must a matrix P satisfy for the application ||x||P = ||Px||V to be a valid vector norm, given that ||.||V is a vector norm?
---InteriorSeparator--
-P must be a nonsingular matrix (det(P) ≠ 0).
+Yes
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -149,14 +201,11 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-Which of the following are required conditions for a function (.,.) to be considered an inner product on a vector space X?
+What is the condition for (x, x) in the definition of an inner product?
 --InteriorSeparator--
-(right) (x, x) ≥ 0 for all x in X, and (x, x) = 0 if and only if x = 0
-(right) (x, y) = conjugate((y, x)) for all x, y in X
-(wrong) (αx, y) = α(y, x) for all x, y in X and scalar α
-(wrong) (x + y, z) = (x, z) - (y, z) for all x, y, z in X
+(x,x) ≥ 0, ∀x ∈ X, and (x,x) = 0 if and only if x = 0
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -168,7 +217,7 @@ Single
 --InteriorSeparator--
 State the Cauchy-Schwarz inequality.
 --InteriorSeparator--
-|(x, y)| ≤ √( (x, x) ) √( (y, y) ) for all x, y in X.
+|(x, y)| ≤ √(x, x)√(y, y) for all x, y ∈ X
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -180,7 +229,7 @@ Single
 --InteriorSeparator--
 How is the Euclidean norm induced from an inner product defined?
 --InteriorSeparator--
-||x||2 = ||x|| = √( (x, x) ).
+||x||₂ = √(x, x)
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -188,26 +237,14 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the formula for the Frobenius norm of a matrix A?
---InteriorSeparator--
-||A||F = √(ΣΣ|aij|2) (square root of the sum of the squares of the absolute values of all elements).
---InteriorSeparator--
-medium
---InteriorSeparator--
-22
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following properties must a matrix norm ||A|| satisfy?
+Which of the following are properties of a matrix norm ||A||?
 --InteriorSeparator--
-(right) ||A|| ≥ 0 for all matrices A, and ||A|| = 0 if and only if A = 0.
-(right) ||αA|| = |α| ||A|| for all scalars α and matrices A.
-(wrong) ||A + B|| ≥ ||A|| + ||B|| for all matrices A and B.
-(wrong) ||AB|| >= ||A|| ||B|| for all matrices A and B.
+(right) ||A|| ≥ 0 and ||A|| = 0 if and only if A = 0
+(right) ||αA|| = |α| ||A|| for any scalar α
+(wrong) ||AB|| ≥ ||A|| ||B||
+(wrong) ||A + B|| ≥ ||A|| + ||B||
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -215,11 +252,35 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-If ||⋅||V is a vector norm, how is the natural (or induced) matrix norm ||A||i defined?
+Is the Frobenius norm a matrix norm?
 --InteriorSeparator--
-||A||i = max{ ||Ax||V / ||x||V : x ∈ Rn, x ≠ 0 } = max{ ||Ax||V : ||x||V ≤ 1 } = sup{ ||Ax||V : ||x||V = 1 }
+Yes
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the matrix norm defined by HAHm = maX{|aij‘ ; i = 1,...,n, j = 1,...,n} a valid matrix norm?
+--InteriorSeparator--
+Yes
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define the natural (induced) matrix norm.
+--InteriorSeparator--
+||A|| = max{||Ax||v / ||x||v : x ∈ Rⁿ, x ≠ 0}
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -231,9 +292,9 @@ Single
 --InteriorSeparator--
 Is the Frobenius norm a natural norm?
 --InteriorSeparator--
-No, the Frobenius norm is not a natural norm.
+No.
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 25
 --FlashCardSeparator--
@@ -241,9 +302,9 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the matrix norm induced by the vector norm ||x||1 = Σ|xi|?
+For ||x||₁ = Σ|xi|, what is the induced matrix norm ||A||₁?
 --InteriorSeparator--
-||A||1 = max{Σ|aij| : j = 1, 2, ..., n} (the maximum column sum of the absolute values).
+||A||₁ = max{Σ|aij| ; j = 1, 2, ..., n}, where the sum is over i.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -253,9 +314,9 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the matrix norm induced by the vector norm ||x||∞ = max{|xi| : i = 1, ..., n}?
+For ||x||∞ = max{|xi|}, what is the induced matrix norm ||A||∞?
 --InteriorSeparator--
-||A||∞ = max{Σ|aij| : i = 1, 2, ..., n} (the maximum row sum of the absolute values).
+||A||∞ = max{Σ|aij| ; i = 1, 2, ..., n}, where the sum is over j.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -263,11 +324,11 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-Given vector norms ||⋅||V and ||⋅||V,P, and the relationship ||x||V,P = ||Px||V, how is the induced matrix norm ||A||i,P related to ||PAP-1||i?
+If ||x||v,p = ||Px||v, how is the induced matrix norm ||A||p defined in terms of ||PAP⁻¹||i?
 --InteriorSeparator--
-||A||i,P = ||PAP-1||i
+||A||p = ||PAP⁻¹||i
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -279,19 +340,7 @@ Single
 --InteriorSeparator--
 Define an eigenvalue (λ) and corresponding eigenvector (x) of a matrix A.
 --InteriorSeparator--
-An eigenvalue λ is a complex number such that Ax = λx for a nonzero vector x, called the eigenvector.
---InteriorSeparator--
-easy
---InteriorSeparator--
-28
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What equation must be satisfied to find the eigenvalues of a matrix A?
---InteriorSeparator--
-det(λIn - A) = 0.
+Ax = λx, where x ≠ 0
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -301,11 +350,11 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the characteristic polynomial associated with matrix A?
+How is the characteristic polynomial pA(λ) of a matrix A defined?
 --InteriorSeparator--
 pA(λ) = det(λIn - A)
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 29
 --FlashCardSeparator--
@@ -313,21 +362,21 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Define the spectral radius ρ(A) of a matrix A.
+What is the spectral radius ρ(A) of a matrix A?
 --InteriorSeparator--
-ρ(A) = max{|λi| : i = 1, ..., n}, where λi are the eigenvalues of A.
+ρ(A) = max{|λi|}, where λi are the eigenvalues of A.
 --InteriorSeparator--
-easy
+hard
 --InteriorSeparator--
 29
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-What is the spectral norm of a matrix A, denoted as ||A||2?
+What is the name for the matrix norm induced by the Euclidean vector norm (||x||₂), and how is it calculated?
 --InteriorSeparator--
-||A||2 = √(ρ(ATA)), where ρ(ATA) is the spectral radius of ATA.
+Spectral norm: ||A||₂ = √(ρ(ATA))
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -335,14 +384,14 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
-What is the relationship between the spectral radius ρ(A) and any natural matrix norm ||A||?
+What relationship exists between the spectral radius ρ(A) and any natural matrix norm ||A||?
 --InteriorSeparator--
-ρ(A) ≤ ||A|| for any natural matrix norm ||A||.
+ρ(A) ≤ ||A||
 --InteriorSeparator--
 hard
 --InteriorSeparator--
 30
 --FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.07934734601553423}]
+```}], role=model}, finishReason=STOP, avgLogprobs=-0.06792716822997043}]
