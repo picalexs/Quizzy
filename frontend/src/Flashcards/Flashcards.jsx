@@ -21,8 +21,8 @@ const Flashcards = () => {
     const [showKeyboardInput, setShowKeyboardInput] = useState(false);
     const [inputText, setInputText] = useState('');
     const [isMobile, setIsMobile] = useState(false);
+    const [score, setScore] = useState(null);
 
-    // Culorii pentru ratings
     const ratingColors = {
         0: "#2D852D",  // Good (😊) - Green
         1: "#E2A54D",  // Neutral (😐) - Yellow/Orange
@@ -62,7 +62,6 @@ const Flashcards = () => {
                         // Extragem opțiunile și răspunsul corect
                         const options = card.answers.map(answer => answer.optionText);
                         const correctAnswer = card.answers.find(answer => answer.correct)?.optionText;
-
                         processedCard.options = options;
                         processedCard.correctAnswer = correctAnswer;
                     } else {
@@ -102,19 +101,6 @@ const Flashcards = () => {
         };
     }, []);
 
-    // Afișam loading sau eroare
-    if (loading) {
-        return <div className="flashcard-app"><div className="loading">Loading flashcards...</div></div>;
-    }
-
-    if (error) {
-        return <div className="flashcard-app"><div className="error">{error}</div></div>;
-    }
-
-    if (flashcards.length === 0) {
-        return <div className="flashcard-app"><div className="no-flashcards">No flashcards available.</div></div>;
-    }
-
     const current = flashcards[index];
 
     const nextCard = () => {
@@ -124,6 +110,8 @@ const Flashcards = () => {
             setSelectedOption(null);
             setFeedbackMessage(null);
             setShowKeyboardInput(false);
+            setScore(null);
+            setInputText('');
         }
     };
 
@@ -134,6 +122,8 @@ const Flashcards = () => {
             setSelectedOption(null);
             setFeedbackMessage(null);
             setShowKeyboardInput(false);
+            setScore(null);
+            setInputText('');
         }
     };
 
@@ -163,6 +153,8 @@ const Flashcards = () => {
         setSelectedOption(null);
         setFeedbackMessage(null);
         setShowKeyboardInput(false);
+        setScore(null);
+        setInputText('');
     };
 
     const toggleKeyboardInput = () => {
@@ -176,9 +168,39 @@ const Flashcards = () => {
         setInputText(e.target.value);
     };
 
+    const handleSubmitInput = async () => {
+        if (!inputText.trim()) return;
+
+        setShowAnswer(true);
+        console.log('Sending:', {
+            question: current.question,
+            //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",
+            officialAnswer: current.answer,
+            usersAnswer: inputText
+        });
+        try {
+            const res = await api.post('/api/gemini/compare-users-answer-to-the-official-answer',  {
+
+                    question: current.question,
+                    //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",
+                    officialAnswer: current.answer,
+                    usersAnswer: inputText
+
+            });
+            setScore(res.data);
+        } catch (err) {
+            console.error('Comparison error:', err);
+            setFeedbackMessage("Error comparing your answer");
+        }
+    };
+
     const navigateBack = () => {
         navigate('/graph-algorithms');
     };
+
+    if (loading) return <div className="flashcard-app"><div className="loading">Loading flashcards...</div></div>;
+    if (error) return <div className="flashcard-app"><div className="error">{error}</div></div>;
+    if (flashcards.length === 0) return <div className="flashcard-app"><div className="no-flashcards">No flashcards available.</div></div>;
 
     return (
         <div className="flashcard-app">
@@ -246,25 +268,34 @@ const Flashcards = () => {
                                     </div>
                                 )}
                             </div>
+
+                            <div className="keyboard-icon-container" onClick={toggleKeyboardInput}>
+                                <span className="keyboard-icon">⌨️</span>
+                            </div>
+
+                            {showKeyboardInput && (
+                                <div className="keyboard-input-container">
+                                    <input
+                                        type="text"
+                                        className="keyboard-input"
+                                        value={inputText}
+                                        onChange={handleInputChange}
+                                        placeholder="Type the answer"
+                                        autoFocus
+                                        style={{ marginLeft: isMobile ? '40px' : '60px', width: isMobile ? 'calc(100% - 50px)' : 'calc(100% - 75px)' }}
+                                    />
+                                    <button className="submit-answer-btn" onClick={handleSubmitInput}>
+                                        Submit
+                                    </button>
+                                </div>
+                            )}
+
+                            {score !== null && (
+                                <div className="feedback-message">
+                                    Your answer is {score}% correct
+                                </div>
+                            )}
                         </>
-                    )}
-
-                    <div className="keyboard-icon-container" onClick={toggleKeyboardInput}>
-                        <span className="keyboard-icon">⌨️</span>
-                    </div>
-
-                    {showKeyboardInput && (
-                        <div className="keyboard-input-container">
-                            <input
-                                type="text"
-                                className="keyboard-input"
-                                value={inputText}
-                                onChange={handleInputChange}
-                                placeholder="Type the answer"
-                                autoFocus
-                                style={{ marginLeft: isMobile ? '40px' : '60px', width: isMobile ? 'calc(100% - 50px)' : 'calc(100% - 75px)' }}
-                            />
-                        </div>
                     )}
 
                     {showAnswer && feedbackMessage && (
