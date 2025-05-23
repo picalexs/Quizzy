@@ -56,7 +56,8 @@ public class UserController {
             null,
             null,
             "Please use POST method with email and password",
-            false
+            false,
+                null
         ));
     }
 
@@ -77,7 +78,8 @@ public class UserController {
                             null,
                             null,
                             "Email and password are required",
-                            false
+                            false,
+                                null
                         ));
             }
 
@@ -92,7 +94,8 @@ public class UserController {
                     user.getEmail(),
                     user.getRole(),
                     "Login successful",
-                    true
+                    true,
+                        user.getId()
                 ));
             } else {
                 logger.warn("Login failed for user: {}", email);
@@ -102,7 +105,8 @@ public class UserController {
                             email,
                             null,
                             "Invalid credentials",
-                            false
+                            false,
+                                null
                         ));
             }
         } catch (Exception e) {
@@ -113,7 +117,8 @@ public class UserController {
                         loginRequest.getEmail(),
                         null,
                         "An error occurred during login",
-                        false
+                        false,
+                            null
                     ));
         }
     }
@@ -132,7 +137,8 @@ public class UserController {
                             req.getEmail(),
                             null,
                             "Email already exists",
-                            false
+                            false,
+                                null
                         ));
             }
             userService.createUser(req);
@@ -142,7 +148,8 @@ public class UserController {
                 req.getEmail(),
                 req.getRole(),
                 "User registered successfully",
-                true
+                true,
+                    null
             ));
         } catch (Exception e) {
             logger.error("Error during registration process", e);
@@ -152,7 +159,8 @@ public class UserController {
                         req.getEmail(),
                         null,
                         "An error occurred during registration",
-                        false
+                        false,
+                            null
                     ));
         }
     }
