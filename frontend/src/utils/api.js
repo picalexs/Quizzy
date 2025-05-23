@@ -6,6 +6,8 @@ const BASE_URL =
         ? envUrl
         : 'http://localhost:3000';
 
+console.log(BASE_URL);
+
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
     headers: { 'Content-Type': 'application/json' },

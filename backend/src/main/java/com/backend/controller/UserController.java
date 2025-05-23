@@ -49,6 +49,25 @@ public class UserController {
         return userService.findById(id).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/email/{email}")
+    public ResponseEntity<User> getUserByEmailPath(@PathVariable String email) {
+        logger.info("Getting user by email path: {}", email);
+        try {
+            // Decode the email since it may be URL encoded
+            String decodedEmail = java.net.URLDecoder.decode(email, "UTF-8");
+            logger.info("Decoded email: {}", decodedEmail);
+            return userService.findByEmail(decodedEmail)
+                    .map(ResponseEntity::ok)
+                    .orElseGet(() -> {
+                        logger.warn("User not found for email: {}", decodedEmail);
+                        return ResponseEntity.notFound().build();
+                    });
+        } catch (java.io.UnsupportedEncodingException e) {
+            logger.error("Error decoding email parameter: {}", email, e);
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
     @GetMapping("/profile")
     public ResponseEntity<User> getUserByEmail(@RequestParam String email) {
         logger.info("Getting user profile by email: {}", email);
