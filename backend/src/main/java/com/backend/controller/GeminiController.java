@@ -3,20 +3,32 @@ package com.backend.controller;
 import com.backend.service.GeminiService;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/gemini")
+@CrossOrigin(origins = "http://localhost:5173")
 @RequiredArgsConstructor
 public class GeminiController {
 
     private final GeminiService geminiService;
+
+    @GetMapping("/test-gemini")
+    public String testGemini() {
+        return "Gemini controller is working!";
+    }
 
     @PostMapping("/generate")
     public String generateResponse(@RequestParam String inputFilePath) throws IOException {
@@ -58,27 +70,57 @@ public class GeminiController {
     }
 
     @PostMapping("/compare-users-answer-to-the-official-answer")
-    public Double compareUsersAnswerToOfficialAnswer(@RequestParam String question, @RequestParam String officialAnswer, @RequestParam String usersAnswer) throws IOException {
-        String prompt = "Given question: " + question + "\n" + "Given official answer: " + officialAnswer + "\n Compare the official answer to the user's answer and give back a procentage of how correct the user's answer is. Your answer should be only a rational number, no extra symbol (example: 87.5) \n User's answer: " + usersAnswer;
+    public ResponseEntity<Double> compareUsersAnswerToOfficialAnswer(@RequestBody Map<String, String> request) {
+        try {
 
-        // Get the generated content from Gemini API
-        String generatedContent1 = geminiService.getGeminiResponse(prompt);
-        String generatedContent2 = geminiService.getGeminiResponse(prompt);
-        String generatedContent3 = geminiService.getGeminiResponse(prompt);
-        String generatedContent4 = geminiService.getGeminiResponse(prompt);
-        String generatedContent5 = geminiService.getGeminiResponse(prompt);
+            String question = request.get("question");
+            String officialAnswer = request.get("officialAnswer");
+            String usersAnswer = request.get("usersAnswer");
 
-        Double percentage1 = Double.parseDouble(extractOnlyTheNumber(generatedContent1));
-        Double percentage2 = Double.parseDouble(extractOnlyTheNumber(generatedContent2));
-        Double percentage3 = Double.parseDouble(extractOnlyTheNumber(generatedContent3));
-        Double percentage4 = Double.parseDouble(extractOnlyTheNumber(generatedContent4));
-        Double percentage5 = Double.parseDouble(extractOnlyTheNumber(generatedContent5));
+            System.out.println("Question: " + question);
+            System.out.println("Official: " + officialAnswer);
+            System.out.println("User: " + usersAnswer);
 
-        if(percentage1 == 0.0 || percentage2 == 0.0 || percentage3 == 0.0 || percentage4 == 0.0 || percentage5 == 0.0) {
-            return 0.0;
+            String prompt = "Given question: " + question + "\n" + "Given official answer: " + officialAnswer + "\n Compare the official answer to the user's answer and give back a procentage of how correct the user's answer is. Your answer should be only a rational number, no extra symbol (example: 87.5) \n User's answer: " + usersAnswer;
+
+
+            List<Double> percentages = new ArrayList<>();
+
+            boolean isZero = false;
+
+            for (int i = 0; i < 5; i++) {
+                try {
+                    String generatedContent = geminiService.getGeminiResponse(prompt);
+                    String numberStr = extractOnlyTheNumber(generatedContent);
+                    Double percentage = Double.parseDouble(numberStr);
+                    if(percentage==0.0){
+                        isZero=true;
+                    }
+                    percentages.add(percentage);
+                } catch (Exception e) {
+                    System.err.println("Error parsing response " + (i+1) + ": " + e.getMessage());
+                    percentages.add(0.0);
+                }
+            }
+            double average=0.0;
+            if(isZero){
+                average=0.0;
+            }
+            else{
+                average = percentages.stream()
+                        .mapToDouble(Double::doubleValue)
+                        .average()
+                        .orElse(0.0);
+
+            }
+
+            return ResponseEntity.ok(average);
+
+        } catch (Exception e) {
+            System.err.println("Error in compareUsersAnswerToOfficialAnswer: " + e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException("Error processing comparison", e);
         }
-
-        return (percentage1 + percentage2 + percentage3 + percentage4 + percentage5) / 5.0;
     }
 
     private String extractOnlyTheNumber(String json) {
