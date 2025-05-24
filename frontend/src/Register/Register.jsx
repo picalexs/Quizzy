@@ -10,7 +10,8 @@ function Register() {
         email: '',
         password: '',
         confirmPassword: '',
-        role: 'student' // Default role
+        role: 'student',
+        secretCode: ''
     });
     const [showPassword, setShowPassword] = useState(false);
     const [mesaj, setMesaj] = useState('');
@@ -27,11 +28,12 @@ function Register() {
             confirmPassword: 'Confirmă parola',
             butonRegister: 'Înregistrare',
             butonLogin: 'Am deja cont',
-            succes: 'Cont creat cu succes! 🎓',
+            succes: 'Cont creat cu succes!',
             eroareParola: 'Parolele nu coincid.',
             eroareCampuri: 'Te rugăm să completezi toate câmpurile.',
             eroareEmail: 'Adresa de email este deja folosită.',
             eroareParolaScurta: 'Parola trebuie să aibă minim 6 caractere.',
+            secretCode: 'Cod Secret'
         },
         en: {
             titlu: 'Create new account',
@@ -42,11 +44,12 @@ function Register() {
             confirmPassword: 'Confirm Password',
             butonRegister: 'Register',
             butonLogin: 'I already have an account',
-            succes: 'Account created successfully! 🎓',
+            succes: 'Account created successfully!',
             eroareParola: 'Passwords do not match.',
             eroareCampuri: 'Please fill in all fields.',
             eroareEmail: 'Email address is already in use.',
             eroareParolaScurta: 'Password must be at least 6 characters long.',
+            secretCode: 'Secret Code'
         }
     };
 
@@ -67,8 +70,7 @@ function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        // Validări
+
         if (!formData.firstName || !formData.lastName || !formData.email || !formData.password || !formData.confirmPassword) {
             setMesaj(t.eroareCampuri);
             return;
@@ -85,33 +87,33 @@ function Register() {
         }
 
         try {
-            console.log('Attempting registration for:', formData.email);
-            const response = await api.post("/users/register", {
+            const payload = {
                 firstName: formData.firstName,
                 lastName: formData.lastName,
                 email: formData.email,
                 password: formData.password,
                 role: formData.role
-            });
+            };
+
+            if (formData.role === 'teacher') {
+                payload.secretCode = formData.secretCode;
+            }
+
+            const response = await api.post("/users/register", payload);
 
             if (!response) {
-                console.error('No response received from server');
                 setMesaj("Eroare de conexiune cu serverul.");
                 return;
             }
 
             const data = response.data;
-            console.log('Registration response:', { status: response.status, success: data.success });
 
             if (data.success) {
-                console.log('Registration successful');
                 setMesaj(t.succes);
                 setTimeout(() => {
-                    console.log('Redirecting to login');
                     navigate("/login");
                 }, 2000);
             } else {
-                console.warn('Registration failed:', data.message);
                 if (data.message.includes("exists")) {
                     setMesaj(t.eroareEmail);
                 } else {
@@ -155,6 +157,27 @@ function Register() {
                         value={formData.email}
                         onChange={handleInputChange}
                     />
+
+                    <select
+                        name="role"
+                        value={formData.role}
+                        onChange={handleInputChange}
+                        className="dropdown-role"
+                    >
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                    </select>
+
+                    {formData.role === 'teacher' && (
+                        <input
+                            type="text"
+                            name="secretCode"
+                            placeholder={t.secretCode}
+                            value={formData.secretCode}
+                            onChange={handleInputChange}
+                        />
+                    )}
+
                     <div className="password-wrapper">
                         <input
                             type={showPassword ? 'text' : 'password'}
