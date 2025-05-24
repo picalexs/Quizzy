@@ -7,7 +7,7 @@ Communication, knowledge sharing, and data exploitation.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
-3-6
+3
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -124,7 +124,7 @@ Which of the following is a benefit of an architecture based on "The Web is the 
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-21-22
+21
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -226,7 +226,7 @@ What are the characteristics of Web services?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-40-41
+40
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -340,7 +340,7 @@ Orchestration is centralized, while choreography is decentralized.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-58-59
+58
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -434,21 +434,6 @@ How is the format of a resource representation specified?
 medium
 --InteriorSeparator--
 68
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which HTTP methods are considered 'safe' in RESTful services?
---InteriorSeparator--
-(right) GET
-(wrong) POST
-(wrong) PATCH
-(wrong) PUT
---InteriorSeparator--
-hard
---InteriorSeparator--
-73-77
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -553,7 +538,7 @@ What are the advantages of a layered system in REST architecture?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-94-95
+94
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -626,21 +611,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are some common methods for specifying the API version?
---InteriorSeparator--
-(right) In the HTTP request header
-(right) As part of the URL
-(wrong) In the request body
-(wrong) As a cookie
---InteriorSeparator--
-medium
---InteriorSeparator--
-132-134
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What does continuous versioning mean for an API?
@@ -674,21 +644,6 @@ By commas.
 medium
 --InteriorSeparator--
 137
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Where can format information be provided for resource representation?
---InteriorSeparator--
-(right) In the URL as a parameter
-(right) In the Accept header of the HTTP request
-(wrong) In the server's response cookie
-(wrong) In the user agent string of the request
---InteriorSeparator--
-hard
---InteriorSeparator--
-138-140
 --FlashCardSeparator--
 
 --FlashCardSeparator--

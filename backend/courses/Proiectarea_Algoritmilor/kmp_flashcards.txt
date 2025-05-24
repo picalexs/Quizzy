@@ -34,7 +34,7 @@ What is the primary goal of the KMP algorithm?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-1, 3
+1
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -161,18 +161,6 @@ Because shifting the pattern by the entire string's length results in no progres
 hard
 --InteriorSeparator--
 5
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What value is assigned to f[0] when calculating the prefix function?
---InteriorSeparator--
-0
---InteriorSeparator--
-easy
---InteriorSeparator--
-10
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -334,16 +322,6 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In the KMP algorithm, what is the relationship between the frontier of a string of length k and a frontier of a string of length k-1?
---InteriorSeparator--
-The frontier of length k extends a frontier of length k-1 by one symbol.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 What does the notation S[i..j] represent?
 --InteriorSeparator--
 The substring of S starting at index i and ending at index j.
@@ -351,87 +329,5 @@ The substring of S starting at index i and ending at index j.
 easy
 --InteriorSeparator--
 1
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In calculating the prefix function, what does `k = f[i-1]` initialize 'k' to?
---InteriorSeparator--
-The longest frontier of the string P[0..i-2].
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following best describes the role of the prefix function (f) in the KMP algorithm?
---InteriorSeparator--
-(right) It helps determine the next viable displacement when a mismatch occurs.
-(wrong) It calculates the hash of the pattern for faster comparisons.
-(right) It precomputes the length of the longest proper prefix which is also a suffix for prefixes of the pattern.
-(wrong) It predicts the likelihood of the next character matching.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-When the while loop in the KMP search algorithm terminates, which of the following conditions determine if a match was found?
---InteriorSeparator--
-(right) k == m
-(wrong) i > n
-(wrong) i == n - m
-(wrong) k == 0
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which scenarios lead to i + k increasing in each iteration of the KMP main loop?
---InteriorSeparator--
-(right) When there is a character match (T[i + k] == P[k])
-(right) When there is a mismatch at the first character of the pattern (k == 0)
-(wrong) When there is a mismatch and k != 0
-(wrong) None of the above
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What happens when calculating the prefix function, and the characters P[k] and P[i] do not match?
---InteriorSeparator--
-The algorithm considers the next smaller frontier by setting k = f[k-1].
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following is true about the frontiers of a string?
---InteriorSeparator--
-(right) A string can have multiple frontiers.
-(wrong) A string has only one frontier.
-(wrong) The longest frontier is always half the length of the string
-(right) The empty string is a frontier of every string.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the context of string searching, what is a 'displacement'?
---InteriorSeparator--
-The starting position of the pattern within the text.
---InteriorSeparator--
-easy
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.1831107385936394}]

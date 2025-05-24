@@ -61,7 +61,7 @@ Which memory areas are NOT initialized by default when the OS executes a native 
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-20, 21
+20
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -248,7 +248,7 @@ Attempting to directly access a private member (Age) from outside the class.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-78, 84
+78
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -275,7 +275,7 @@ What is the role of the OS when it executes a dynamically linked application?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-17, 19
+17
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -314,7 +314,7 @@ What are limitations of using functions to interact with structures in C (compar
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-56, 57, 58, 59
+56
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -392,7 +392,7 @@ What is a static data member?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-87, 88
+87
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -421,13 +421,4 @@ easy
 --InteriorSeparator--
 6
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the example provided on page 92, if `d1.x = 7; d2.y = d3.z + 1; d3.z = 10;`, what is the final value of d2.y?
---InteriorSeparator--
-Compiler error
---InteriorSeparator--
-hard
---FlashCardSeparator--}], role=model}, finishReason=STOP, avgLogprobs=-0.20458467047470355}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.20458467047470355}]

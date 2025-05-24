@@ -350,18 +350,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the definition of range?
---InteriorSeparator--
-The difference between the largest and smallest value in the sample.
---InteriorSeparator--
-easy
---FlashCardSeparator--
-36
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 What is the formula for sample variance?
@@ -374,16 +362,6 @@ What is the formula for sample variance?
 hard
 --InteriorSeparator--
 38
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Why is (n-1) used in the denominator of the sample variance formula instead of n?
---InteriorSeparator--
-To obtain an unbiased estimator of the population variance.
---InteriorSeparator--
-hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -426,15 +404,5 @@ What is the 1.5 * IQR rule used for?
 hard
 --InteriorSeparator--
 46
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-According to the rule on page 46, what values can be classified as outliers?
---InteriorSeparator--
-Values not in the interval (mean-2s, mean+2s) where s is the standard deviation
---InteriorSeparator--
-hard
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.2141338235971267}]

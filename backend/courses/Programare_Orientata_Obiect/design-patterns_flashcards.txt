@@ -11,21 +11,6 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are creational design patterns?
---InteriorSeparator--
-(right) Singleton
-(wrong) Composite
-(wrong) Visitor
-(right) Object Factory
---InteriorSeparator--
-medium
---InteriorSeparator--
-2, 7, 64
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What is the core idea behind the Singleton pattern?
@@ -65,7 +50,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Why is it generally not recommended to declare a move constructor or move assignment operator for a Singleton class?
 --InteriorSeparator--
@@ -131,7 +116,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What is a potential drawback of the Composite pattern regarding component restrictions?
 --InteriorSeparator--
@@ -167,7 +152,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 In the initial relationship between classes for arithmetic expressions, which object-oriented design principles are violated before applying the Composite pattern?
 --InteriorSeparator--
@@ -233,7 +218,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Why might the Visitor pattern be considered to potentially "destroy the encapsulation" of the elements it visits?
 --InteriorSeparator--
@@ -299,7 +284,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How does the Object Factory pattern address the Open/Closed Principle (OCP) in the "ShapeContainer" counter-example?
 --InteriorSeparator--
@@ -338,7 +323,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How does the Abstract Factory respect the open/closed principle?
 --InteriorSeparator--
@@ -348,15 +333,4 @@ hard
 --InteriorSeparator--
 72
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Hard
---InteriorSeparator--
-How does the "ExprManager" relate to the standard structure of the Abstract Factory pattern?
---InteriorSeparator--
-It acts as the Client, responsible for (de)serialization and utilizing the factory to create objects.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
 }], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=7629, endIndex=7752, uri=https://www.scribd.com/document/613015109/4-1-Design-patterns-lecture-notes-R19}]}, avgLogprobs=-0.14694686371374613}]

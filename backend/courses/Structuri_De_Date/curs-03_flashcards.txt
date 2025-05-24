@@ -197,16 +197,6 @@ Hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What does O(n^2) represent in the context of algorithm efficiency?
---InteriorSeparator--
-A quadratic time complexity.
---InteriorSeparator--
-Easy
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 When is the empirical analysis of algorithm efficiency particularly useful?
@@ -270,29 +260,6 @@ Establish the recurrence relation.
 Medium
 --InteriorSeparator--
 19
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the context of algorithm efficiency analysis, what is meant by "Big O" notation?
---InteriorSeparator--
-It is used to describe the upper bound of an algorithm's growth rate as the input size increases.
---InteriorSeparator--
-Easy
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is a key difference between recursive and iterative approaches to solving problems?
---InteriorSeparator--
-(wrong) Recursive solutions are always more efficient
-(right) Recursive solutions use function calls, while iterative solutions use loops
-(wrong) Iterative solutions use a stack to manage state.
-(right) Recursive solutions may have higher memory overhead due to stack usage
---InteriorSeparator--
-Medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--

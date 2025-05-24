@@ -80,7 +80,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What happens if you try to capture the same variable twice in a lambda capture list (e.g., `[=, &a]` where 'a' is used in the body)?
 --InteriorSeparator--
@@ -146,7 +146,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 If a lambda captures all variables by copy (`[=]`) but doesn't actually *use* any of those captured variables in its body, is it implicitly convertible to a function pointer?
 --InteriorSeparator--
@@ -158,7 +158,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain the difference between `std::function` and function pointers when using lambdas.
 --InteriorSeparator--
@@ -185,7 +185,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What potential issue arises when using `std::function` with a lambda that captures a local variable by reference, especially if the lambda is used outside the scope where the local variable was defined?
 --InteriorSeparator--
@@ -209,7 +209,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 In C++20, can you explicitly specify the template parameters when calling a generic lambda defined with `<typename T>`? For example, if you have `auto f = []<typename T>(T x){ /* ... */ };`, can you call it like `f<int>(5)`?
 --InteriorSeparator--
@@ -233,7 +233,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Why does marking a lambda as `mutable` enable modification of captured variables by value?
 --InteriorSeparator--
@@ -260,7 +260,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 If you initialize a lambda capture with `[counter = 0]`, what is the data type of `counter`?
 --InteriorSeparator--
@@ -284,7 +284,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 In C++17, how can we ensure that a lambda expression is evaluated at compile time?
 --InteriorSeparator--

@@ -34,7 +34,7 @@ Which method(s) can be used to wait for a thread to finish in Rust?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-5, 6, 18
+5
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -52,25 +52,13 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does the `thread::Builder` allow you to set when creating a thread?
---InteriorSeparator--
-Name and stack size
---InteriorSeparator--
-medium
---InteriorSeparator--
-4, 9
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 What keyword is used to force a closure to take ownership of variables it references?
 --InteriorSeparator--
 move
 --InteriorSeparator--
 easy
 --InteriorSeparator--
-13, 15
+13
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -143,7 +131,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How can you prevent a data type from being moved to another thread?
 --InteriorSeparator--
@@ -151,7 +139,7 @@ Implement the Drop trait
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-32, 33
+32
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -179,7 +167,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What does TLS stand for?
 --InteriorSeparator--
@@ -191,7 +179,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 When is TLS data initialized?
 --InteriorSeparator--
@@ -227,7 +215,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What is a `PoisonError` in the context of mutexes?
 --InteriorSeparator--
@@ -235,7 +223,7 @@ An error indicating a thread panicked while holding the lock.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-57, 58
+57
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -250,7 +238,7 @@ What can you do when you encounter a `PoisonError`?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-58, 59
+58
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -266,7 +254,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What are the limitations of atomic operations?
 --InteriorSeparator--
@@ -290,7 +278,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What is the purpose of the `Ordering` enum in atomic operations?
 --InteriorSeparator--
@@ -299,21 +287,6 @@ Specifies memory ordering constraints.
 hard
 --InteriorSeparator--
 78
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are valid `Ordering` options for atomic operations?
---InteriorSeparator--
-(right) Relaxed
-(right) Acquire
-(right) SeqCst
-(wrong) Strict
---InteriorSeparator--
-medium
---InteriorSeparator--
-78, 81
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -329,7 +302,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 When should you use Arc over Rc?
 --InteriorSeparator--
@@ -404,7 +377,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What happens when a thread calls `wait` on a `Barrier`?
 --InteriorSeparator--

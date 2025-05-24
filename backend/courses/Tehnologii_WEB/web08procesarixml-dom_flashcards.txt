@@ -23,7 +23,7 @@ Which of the following are types of XML processing?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-6, 7
+6
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -50,7 +50,7 @@ Which of the following are characteristics of DOM?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-14, 15
+14
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -104,7 +104,7 @@ Which of the following properties are provided by the Node interface?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-40, 41
+40
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -201,19 +201,6 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following is NOT a possible return type of an XPath expression?
---InteriorSeparator--
-(wrong) Array
-(right) Node
-(right) Boolean
-(right) String
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 In XPath, what does the "//" operator represent?
@@ -223,19 +210,6 @@ Recursive traversal
 medium
 --InteriorSeparator--
 57
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What does the wildcard (*) select in XPath?
---InteriorSeparator--
-(right) All child elements of the context node
-(wrong) The root element of the document
-(wrong) All attributes of the context node
-(wrong) The parent node of the context node
---InteriorSeparator--
-hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -278,19 +252,6 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What does the `contains()` function in XPath check?
---InteriorSeparator--
-(right) If a string contains a specified substring
-(wrong) The number of elements with a specific attribute
-(wrong) If two nodes are equal
-(wrong) The sum of numerical values in a node-set
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What class in PHP is used to represent an XML document for DOM processing?
@@ -314,7 +275,7 @@ Which of the following are used for DOM implementations?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-87, 88
+87
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -354,19 +315,6 @@ document
 easy
 --InteriorSeparator--
 111
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is innerHTML property used for in DOM HTML?
---InteriorSeparator--
-(right) Provide HTML code within an Element node
-(wrong) Provide Text content within an Element node
-(wrong) Get the value of an attribute
-(wrong) Remove an attribute
---InteriorSeparator--
-hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -423,138 +371,4 @@ medium
 140
 --FlashCardSeparator--
 
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Which method prevents the default behavior of an event?
---InteriorSeparator--
-preventDefault()
---InteriorSeparator--
-easy
---InteriorSeparator--
-157
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the read-only properties of the object `StorageEvent`?
---InteriorSeparator--
-(right) key
-(right) oldValue
-(wrong) newValue
-(wrong) localStorage
---InteriorSeparator--
-hard
---InteriorSeparator--
-173
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the primary purpose of Web Storage?
---InteriorSeparator--
-Persistent data storage at the client-side (browser)
---InteriorSeparator--
-easy
---InteriorSeparator--
-167
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the two attributes that specify the storage type in Web Storage?
---InteriorSeparator--
-(right) sessionStorage
-(right) localStorage
-(wrong) globalStorage
-(wrong) tempStorage
---InteriorSeparator--
-medium
---InteriorSeparator--
-170, 171
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-How are custom HTML5 attributes prefixed?
---InteriorSeparator--
-data-
---InteriorSeparator--
-easy
---InteriorSeparator--
-178
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What does AJAX stand for?
---InteriorSeparator--
-(right) Asynchronous JavaScript And XML
-(wrong) Advanced JQuery and XML
-(wrong) Asynchronous Java and XHTML
-(wrong) Advanced JavaScript and XHTML
---InteriorSeparator--
-easy
---InteriorSeparator--
-183
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What object facilitates asynchronous data transfer via HTTP in AJAX?
---InteriorSeparator--
-XMLHttpRequest
---InteriorSeparator--
-easy
---InteriorSeparator--
-188
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which method is used to initiate an HTTP connection with a server in XMLHttpRequest?
---InteriorSeparator--
-(right) open()
-(wrong) connect()
-(wrong) send()
-(wrong) transmit()
---InteriorSeparator--
-medium
---InteriorSeparator--
-191
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What property of XMLHttpRequest provides the status code of the HTTP response?
---InteriorSeparator--
-status
---InteriorSeparator--
-easy
---InteriorSeparator--
-199
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which are the methods in which Javascript is used to receive and read JSON data asynchronously?
---InteriorSeparator--
-(right) XMLHttpRequest
-(right) Fetch API
-(wrong) JQuery
-(wrong) React
---InteriorSeparator--
-medium
---InteriorSeparator--
-183, 215
---FlashCardSeparator--
 ```}], role=model}, finishReason=STOP, avgLogprobs=-0.1711354815020855}]

@@ -322,17 +322,6 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Which Windows 10 version introduces WSL 2?
---InteriorSeparator--
-V2004
---InteriorSeparator--
-hard
---FlashCardSeparator--
-19
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 List the three components of WSL 1's architecture.
 --InteriorSeparator--
 1) User mode session manager service

@@ -1,11 +1,11 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the primary purpose of paging in memory management?
+What type of memory allocation does paging enable?
 --InteriorSeparator--
-To allow a process's memory allocation to be non-contiguous.
+Non-contiguous
 --InteriorSeparator--
-Easy
+easy
 --InteriorSeparator--
 3
 --FlashCardSeparator--
@@ -13,14 +13,14 @@ Easy
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following are characteristics of frames in the context of paging?
+Which of the following are characteristics of frames in physical memory?
 --InteriorSeparator--
-(right) Fixed-size blocks of physical memory
-(wrong) Variable-size blocks of logical memory
-(right/wrong) Constant size for a given OS
-(wrong) Always smaller than pages
+(right) Fixed length
+(right) Blocks
+(wrong) Variable length
+(wrong) Segments
 --InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
 3
 --FlashCardSeparator--
@@ -28,11 +28,11 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is internal fragmentation in the context of paging?
+What is the primary advantage of non-contiguous memory allocation schemes?
 --InteriorSeparator--
-Unused space within an allocated page because the process size isn't an exact multiple of the page size.
+Elimination of external fragmentation.
 --InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
 4
 --FlashCardSeparator--
@@ -40,11 +40,38 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What two components form a logical address in a paged memory system?
+What is a disadvantage of paging in regards to memory usage?
 --InteriorSeparator--
-Page number and offset.
+Internal fragmentation.
 --InteriorSeparator--
-Easy
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are the two components of a logical address in a paged system?
+--InteriorSeparator--
+Page number and displacement.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is used to map pages to page frames to translate from logical to physical addresses?
+--InteriorSeparator--
+(right) Page table
+(wrong) Segment Table
+(wrong) TLB
+(wrong) Virtual Address Space
+--InteriorSeparator--
+medium
 --InteriorSeparator--
 5
 --FlashCardSeparator--
@@ -52,23 +79,74 @@ Easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the role of a page table in paging?
+What is a key advantage of paging in terms of memory management?
 --InteriorSeparator--
-To translate logical addresses into physical addresses.
+Supports memory sharing.
 --InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
-5
+8
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does the Page Table Base Register (PTBR) contain?
+What is a disadvantage of paging that requires a solution like TLB?
 --InteriorSeparator--
-The starting address of the page table in memory.
+Each memory access requires an extra access to the page table.
 --InteriorSeparator--
-Medium
+hard
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Where can page tables be stored?
+--InteriorSeparator--
+Hardware registers or main memory.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Why is storing page tables in hardware registers not always ideal?
+--InteriorSeparator--
+(right) It becomes expensive as the page table size increases.
+(right) Access to hardware registers is privileged.
+(wrong) Slower than main memory.
+(wrong) Registers cannot store enough data.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+10
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does PTBR stand for and what is its function?
+--InteriorSeparator--
+Page Table Base Register, contains the base address of the page table.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the function of the Translation Look-aside Buffer (TLB)?
+--InteriorSeparator--
+It caches page table entries for faster address translation.
+--InteriorSeparator--
+medium
 --InteriorSeparator--
 11
 --FlashCardSeparator--
@@ -76,26 +154,14 @@ Medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What is the purpose of a Translation Look-aside Buffer (TLB)?
+What type of memory is the TLB?
 --InteriorSeparator--
-(right) To cache page table entries for faster address translation
-(wrong) To store the entire page table in hardware
-(wrong) To replace the page table entirely
-(right/wrong) To reduce the number of memory accesses
+(right) Associative memory
+(wrong) Static RAM
+(wrong) Dynamic RAM
+(wrong) Sequential memory
 --InteriorSeparator--
-Medium
---InteriorSeparator--
-11, 12
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What fundamental characteristic distinguishes a TLB from regular memory?
---InteriorSeparator--
-TLB uses content-addressable memory (CAM), addressing by content rather than address.
---InteriorSeparator--
-Hard
+hard
 --InteriorSeparator--
 12
 --FlashCardSeparator--
@@ -103,11 +169,11 @@ Hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is Hit_ratio in the context of TLB performance?
+What is a hit ratio in the context of TLB?
 --InteriorSeparator--
-The percentage of times a requested page number is found in the TLB.
+The percentage of times a page number is found in the TLB.
 --InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
 14
 --FlashCardSeparator--
@@ -115,23 +181,38 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the main reason for using multi-level page tables?
+What information, besides address translation, might page table entries contain?
 --InteriorSeparator--
-To reduce the size of the page tables.
+Memory protection information (access restrictions).
 --InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
-15
+14
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In a two-level page table, how is a logical address typically divided?
+What is the purpose of using multi-level page tables?
 --InteriorSeparator--
-Outer page table index, inner page table index, and offset.
+To reduce the size of the page tables.
 --InteriorSeparator--
-Medium
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In a multi-level page table scheme, what happens if a section of the page table is not needed?
+--InteriorSeparator--
+(right) The section is not allocated.
+(wrong) It is allocated and filled with zeros.
+(wrong) It is allocated and marked as unused.
+(wrong) A default mapping is used for that section.
+--InteriorSeparator--
+hard
 --InteriorSeparator--
 16
 --FlashCardSeparator--
@@ -139,11 +220,11 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What information is stored in an inverted page table?
+Instead of having an entry for each virtual page, which page table has an entry for each physical page?
 --InteriorSeparator--
-A mapping of physical page numbers to (PID, virtual page number) pairs.
+Inverted page table.
 --InteriorSeparator--
-Hard
+hard
 --InteriorSeparator--
 19
 --FlashCardSeparator--
@@ -151,11 +232,26 @@ Hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a major disadvantage of inverted page tables?
+What information does an entry in an inverted page table contain?
 --InteriorSeparator--
-Difficulty in supporting shared memory.
+(PID, virtual page number).
 --InteriorSeparator--
-Hard
+hard
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the disadvantages of using inverted page tables?
+--InteriorSeparator--
+(right) Difficulties in supporting shared memory.
+(right) Slow search times.
+(wrong) Increased memory overhead.
+(wrong) Complex address translation.
+--InteriorSeparator--
+hard
 --InteriorSeparator--
 21
 --FlashCardSeparator--
@@ -163,26 +259,23 @@ Hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the primary difference between segmentation and paging?
+What technique can be used to improve search times with inverted page tables?
 --InteriorSeparator--
-Segmentation uses variable-sized segments, while paging uses fixed-size pages.
+Hashing.
 --InteriorSeparator--
-Medium
+hard
 --InteriorSeparator--
-22
+21
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-From the user's perspective, what does segmentation represent?
+What is segmentations?
 --InteriorSeparator--
-(right) A view of memory as a collection of logical units
-(right) Program divided in logical units
-(wrong) An arbitrary division of physical memory
-(wrong) A collection of fixed-size blocks
+Paging with variable-size pages.
 --InteriorSeparator--
-Medium
+easy
 --InteriorSeparator--
 22
 --FlashCardSeparator--
@@ -190,23 +283,35 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How is a logical address specified in segmentation?
+From a user's perspective, what does segmentation represent?
 --InteriorSeparator--
-(segment name, offset).
+A collection of memory chunks of varying sizes (program, procedure, function, stack, etc.).
 --InteriorSeparator--
-Easy
+medium
 --InteriorSeparator--
-25
+22
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is stored in a segment table?
+In segmentation, how do programmers specify addresses?
 --InteriorSeparator--
-The starting address of each segment in physical memory.
+(segment name, displacement).
 --InteriorSeparator--
-Medium
+medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is contained within the segment table of each process?
+--InteriorSeparator--
+The start address of the segment in physical memory.
+--InteriorSeparator--
+medium
 --InteriorSeparator--
 26
 --FlashCardSeparator--
@@ -216,24 +321,27 @@ Multiple
 --InteriorSeparator--
 Which of the following are advantages of segmentation?
 --InteriorSeparator--
-(right) Logical division of the address space
-(right) Simple memory sharing
-(wrong) Elimination of external fragmentation
-(wrong) Fixed segment sizes
+(right) Logical division of virtual space.
+(right) Simple memory sharing.
+(wrong) Elimination of internal fragmentation.
+(wrong) Fixed memory allocation.
 --InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
 29
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is a major disadvantage of segmentation?
+Which of the following are disadvantages of segmentation?
 --InteriorSeparator--
-External fragmentation.
+(right) Segments must fit in memory.
+(right) External fragmentation.
+(wrong) Increased TLB misses
+(wrong) Complex page table management
 --InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
 30
 --FlashCardSeparator--
@@ -241,11 +349,38 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the key idea behind segmented paging?
+What technique can be used to eliminate fragmentation in segmentation?
 --InteriorSeparator--
-Dividing segments into pages to alleviate external fragmentation.
+Compaction (defragmentation).
 --InteriorSeparator--
-Medium
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the key feature of segmented paging?
+--InteriorSeparator--
+Each segment is divided into pages.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+31
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What two disadvantages of pure segmentation does segmented paging address?
+--InteriorSeparator--
+(right) Contiguous allocation
+(right) External fragmentation
+(wrong) Internal fragmentation
+(wrong) Small virtual address space
+--InteriorSeparator--
+hard
 --InteriorSeparator--
 31
 --FlashCardSeparator--
@@ -253,11 +388,11 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How does segmented paging address the disadvantages of pure segmentation?
+What is the format of a virtual address in a segmented paging system?
 --InteriorSeparator--
-By eliminating the need for contiguous allocation and reducing external fragmentation.
+(segment, page, displacement).
 --InteriorSeparator--
-Hard
+medium
 --InteriorSeparator--
 31
 --FlashCardSeparator--
@@ -265,23 +400,11 @@ Hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the key concept behind virtual memory?
+What is the main idea behind virtual memory?
 --InteriorSeparator--
-The ability to address a memory space larger than the physical memory available.
+To have the capacity to address more memory than is physically available.
 --InteriorSeparator--
-Easy
---InteriorSeparator--
-34
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the technique of swapping?
---InteriorSeparator--
-Moving "chunks" of memory between RAM and disk.
---InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
 36
 --FlashCardSeparator--
@@ -289,105 +412,27 @@ Medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the principle of locality?
+How does virtual memory achieve its goal of addressing more memory than physically available?
 --InteriorSeparator--
-The tendency for memory accesses to cluster in time and space.
+By swapping parts of memory to disk.
 --InteriorSeparator--
-Medium
+medium
 --InteriorSeparator--
-38
+36
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the two types of locality described?
+What is the main advantage of virtual memory?
 --InteriorSeparator--
-(right) Temporal locality
-(right) Spatial locality
-(wrong) Logical locality
-(wrong) Physical locality
+(right) The logical address space can be much larger than the physical memory.
+(right) Only a portion of the program needs to be resident in memory for execution.
+(wrong) Faster memory access
+(wrong) Elimination of external fragmentation
 --InteriorSeparator--
-Easy
+medium
 --InteriorSeparator--
-39
+36
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is temporal locality?
---InteriorSeparator--
-The tendency to access recently accessed locations in the near future.
---InteriorSeparator--
-Medium
---InteriorSeparator--
-39
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is spatial locality?
---InteriorSeparator--
-The tendency to access locations near recently accessed locations in the near future.
---InteriorSeparator--
-Medium
---InteriorSeparator--
-39
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Why is the principle of locality important for virtual memory?
---InteriorSeparator--
-It justifies the use of swapping and caching techniques to improve performance.
---InteriorSeparator--
-Hard
---InteriorSeparator--
-38, 39
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What are the two implementation techniques for memory virtualization?
---InteriorSeparator--
-Paging on demand and segmentation on demand.
---InteriorSeparator--
-Medium
---InteriorSeparator--
-37, 42
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What could cause Trashing?
---InteriorSeparator--
-(right) Bad Locality
-(wrong) Good Locality
-(wrong) Large page sizes
-(wrong) A small number of processes
---InteriorSeparator--
-Hard
---InteriorSeparator--
-40
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Why should arrays be processed by row instead of by column?
---InteriorSeparator--
-(right) Arrays are stored in memory by row
-(wrong) Compilers don't allow column processing
-(wrong) Column processing is too difficult to implement
-(right) To reduce memory miss rate
---InteriorSeparator--
-Hard
---InteriorSeparator--
-40, 41
---FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.1504853312652287}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.1523201214110298}]

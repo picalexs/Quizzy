@@ -132,7 +132,7 @@ Multiple
 --InteriorSeparator--
 What is the status value returned by `exit` truncated to?
 --InteriorSeparator--
-(right) `status & 0xFF`
+(right) status & 0xFF
 (wrong) status
 (wrong) 0
 (wrong) 255
@@ -301,7 +301,7 @@ What is the role of the `init` process (PID 1)?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-12, 18
+12
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -328,7 +328,7 @@ What information is NOT included in the operating system's process table?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-4-5
+4
 --FlashCardSeparator--
 
 --FlashCardSeparator--

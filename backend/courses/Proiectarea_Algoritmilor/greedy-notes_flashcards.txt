@@ -178,7 +178,7 @@ What are the key characteristics of greedy algorithms?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-5, 6
+5
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -334,18 +334,6 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is guaranteed if a problem can be modeled as a matroid?
---InteriorSeparator--
-The greedy algorithm produces the optimal solution.
---InteriorSeparator--
-hard
---InteriorSeparator--
-9, 13
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 What is the goal of the Minimum Spanning Tree (MST) problem?
 --InteriorSeparator--
 To find a tree connecting all vertices of a graph with the minimum total edge cost.
@@ -404,27 +392,5 @@ What are the advantages of using matroids to solve optimization problems?
 hard
 --InteriorSeparator--
 13
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the algorithmic paradigm that the algorithm of Prim for finding the Minimal Spanning Tree uses?
---InteriorSeparator--
-Greedy algorithm.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What must be done to prove the correctness of a greedy algorithm for a specific optimization problem?
---InteriorSeparator--
-Show that the problem has the greedy-choice property and optimal substructure property.
---InteriorSeparator--
-hard
---InteriorSeparator--
-12
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.1787459690101578}]

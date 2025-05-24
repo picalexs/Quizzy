@@ -151,7 +151,7 @@ Why is the sigmoid function used in neural networks?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-19, 20
+19
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -279,7 +279,7 @@ What does 𝑔(𝑥) represent when predicting a probability function using a NN
 P(f(x) = 1)
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 38
 --FlashCardSeparator--
 
@@ -321,7 +321,7 @@ Name an alternative optimization method for training ANNs.
 (wrong) Incremental programming
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 43
 --FlashCardSeparator--
 
@@ -333,21 +333,8 @@ What is discussed in Chapter 6 regarding ANNs?
 A Bayesian justification for minimizing the sum of square errors.
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 44
 --FlashCardSeparator--
 
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the expressive power of ANNs regarding Boolean functions?
---InteriorSeparator--
-(right) Every boolean function can be represented by a network with a single hidden layer
-(wrong) Boolean functions cannot be represented by ANNs.
-(wrong) ANNs can only represent linearly separable Boolean functions
-(wrong) Representing all Boolean function require no hidden layers.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-45
 }], role=model}, finishReason=STOP, avgLogprobs=-0.19688810785132718}]

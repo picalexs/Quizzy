@@ -247,18 +247,6 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In deadlock detection, what is the wait-for graph?
---InteriorSeparator--
-A graph representing which process is waiting for which resource.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---InteriorSeparator--
-44
---FlashCardSeparator--
-Single
---InteriorSeparator--
 What is the complexity of the deadlock detection algorithm for resources with multiple instances?
 --InteriorSeparator--
 O(n^2 * m), where n is the number of processes and m is the number of resources.
@@ -336,18 +324,4 @@ medium
 --InteriorSeparator--
 58
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the key differences between deadlock prevention and deadlock avoidance?
---InteriorSeparator--
-(right) Prevention eliminates one of the four necessary conditions for deadlock, while avoidance uses controlled allocation.
-(right) Avoidance requires knowledge of future resource needs, while prevention does not.
-(wrong) Avoidance always results in better resource utilization than prevention.
-(wrong) Prevention requires runtime overhead, while avoidance does not.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-29, 32
 }], role=model}, finishReason=STOP, avgLogprobs=-0.14203504320386645}]

@@ -269,36 +269,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the primary use case for the "if let" statement in Rust?
---InteriorSeparator--
-Matching an expression with a specified pattern, often with enums or structs.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If "if let" condition always matches what warning is thrown?
---InteriorSeparator--
-irrefutable ‘if let’ pattern
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the key difference between the behavior of "if let" in Rust and a similar `if` statement in C++ when dealing with variable assignment and evaluation?
---InteriorSeparator--
-In Rust, "if let" creates a new, shadowed variable with a limited scope, while in C++, the same variable is used and its value affects the conditional evaluation.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 Which types of matches are commonly performed in an "if let" statement?
@@ -311,26 +281,6 @@ Which types of matches are commonly performed in an "if let" statement?
 medium
 --InteriorSeparator--
 98
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the primary use case for the "let else" statement in Rust?
---InteriorSeparator--
-Matching an expression with a specified pattern, and panicking if the match fails.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If the pattern in a "let else" statement does not match the expression, what happens?
---InteriorSeparator--
-An error is thrown, typically using `panic!`.
---InteriorSeparator--
-hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -371,7 +321,7 @@ What does Rust's comprehensive compiling error system provide?
 (wrong) Suggestions for alternative libraries
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 65
 --FlashCardSeparator--
 
@@ -383,7 +333,7 @@ Is O initialization in Rust used for global variables?
 No.
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 61
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.17835133111298973}]

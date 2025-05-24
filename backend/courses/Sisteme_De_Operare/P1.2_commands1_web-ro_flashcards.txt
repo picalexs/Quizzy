@@ -438,15 +438,4 @@ easy
 --InteriorSeparator--
 19
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What type of files can extensions such as .c, .cpp, .txt, and .sh generally be classified as?
---InteriorSeparator--
-Normal files
---InteriorSeparator--
-hard
---FlashCardSeparator--
-14
 }], role=model}, finishReason=STOP, avgLogprobs=-0.09569726323350325}]

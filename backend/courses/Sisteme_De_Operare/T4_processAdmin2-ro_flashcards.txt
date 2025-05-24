@@ -327,7 +327,7 @@ Describe multilevel queue scheduling with feedback.
 Allows processes to migrate between queues based on their behavior.
 --InteriorSeparator--
 medium
---FlashCardSeparator--
+--InteriorSeparator--
 35
 --FlashCardSeparator--
 
@@ -366,58 +366,7 @@ What is CPU time reservation in the context of real-time scheduling?
 Guaranteeing that a task can execute for a specific amount of time within a given time period.
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 36
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are some problems associated with multiprocessor scheduling?
---InteriorSeparator--
-(right) The type of processors (homogeneous vs. heterogeneous)
-(right) The type of scheduling queues (common vs. per-processor)
-(wrong) The brand of CPU used in different processors
-(wrong) The size of the processors' caches
---InteriorSeparator--
-medium
---InteriorSeparator--
-37
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is SMP (symmetric multiprocessing)?
---InteriorSeparator--
-A system where any process can be scheduled on any available processor.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-37
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is "processor affinity"?
---InteriorSeparator--
-The tendency of a process to prefer running on the same CPU to preserve cache data.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-37
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What are the two types of Processor Affinity?
---InteriorSeparator--
-Soft Affinity and Hard Affinity
---InteriorSeparator--
-hard
---FlashCardSeparator--
-37
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.17679006317515433}]

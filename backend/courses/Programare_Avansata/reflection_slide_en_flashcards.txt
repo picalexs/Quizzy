@@ -453,19 +453,6 @@ Hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-True or false, import statements include code directly into the class they are in.
---InteriorSeparator--
-(wrong) True
-(right) False
---InteriorSeparator--
-Easy
---InteriorSeparator--
-4
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
 What is the purpose of packages in java?
 --InteriorSeparator--
 (right) To group classes together

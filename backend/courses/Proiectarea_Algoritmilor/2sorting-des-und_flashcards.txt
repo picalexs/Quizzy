@@ -12,21 +12,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following sorting algorithms are mentioned in the provided material?
---InteriorSeparator--
-(right) BubbleSort
-(right) InsertSort
-(wrong) MergeSort
-(wrong) QuickSort
---InteriorSeparator--
-easy
---InteriorSeparator--
-2, 3, 11, 16
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 In BubbleSort, what is (a[i] > a[i+1]) called?
@@ -50,7 +35,7 @@ What is the purpose of the `askIth` function in the BubbleSort algorithm?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-6, 7
+6
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -77,7 +62,7 @@ Which of the following is an invariant of the *outer* while loop in the BubbleSo
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-9, 10
+9
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -104,7 +89,7 @@ In InsertSort, what happens when `a[i] > temp` within the inner while loop?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-13, 14
+13
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -216,18 +201,6 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-Why is short-circuit evaluation important for the boolean expressions in the InsertSort and HeapSort algorithms?
---InteriorSeparator--
-To prevent array index out-of-bounds errors.
---InteriorSeparator--
-hard
---InteriorSeparator--
-14, 20
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 What is a key property that `insertInHeap` aims to maintain, related to the input parameter `n`?
@@ -239,19 +212,7 @@ What is a key property that `insertInHeap` aims to maintain, related to the inpu
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-20, 21
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the algorithmic complexity of bubble sort?
---InteriorSeparator--
-O(n^2)
---InteriorSeparator--
-medium
---InteriorSeparator--
-N/A
+20
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -266,19 +227,7 @@ Considering the invariants of the outer while loop for bubble sort, what does th
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-9, 10
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does `r` represent in the HeapSort algorithm?
---InteriorSeparator--
-The index of the last element in the unsorted portion of the array.
---InteriorSeparator--
-medium
---InteriorSeparator--
-20, 22
+9
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -293,7 +242,7 @@ What is the general strategy to re-establish the heap property in HeapSort?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-19, 20, 21
+19
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -324,18 +273,6 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-According to the description, what sorting algorithms are covered in detail?
---InteriorSeparator--
-BubbleSort, InsertSort, and HeapSort
---InteriorSeparator--
-easy
---InteriorSeparator--
-2, 3, 11, 16
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 What is the relationship between 'j' and 'k' in the 'insertInHeap' algorithm?
@@ -347,7 +284,7 @@ What is the relationship between 'j' and 'k' in the 'insertInHeap' algorithm?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-20, 21
+20
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -428,7 +365,7 @@ What does the outer while loop condition (r >= 1) in the `heapSort` algorithm su
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-20, 22
+20
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -455,6 +392,6 @@ What can we deduce from the statement 'if (i != j-1) a[i+1] = temp;' in the Inse
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-14, 15
+14
 --FlashCardSeparator--
 ```}], role=model}, finishReason=STOP, avgLogprobs=-0.2584142456595939}]

@@ -239,36 +239,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is the output of the following code?
-
-```java
-public class Example {
-    public static <T> void printArray(T[] arr) {
-        for (T element : arr) {
-            System.out.print(element + " ");
-        }
-    }
-
-    public static void main(String[] args) {
-        Integer[] nums = {1, 2, 3};
-        printArray(nums);
-    }
-}
-```
---InteriorSeparator--
-(right) 1 2 3
-(wrong) [1, 2, 3]
-(wrong) NullPointerException
-(wrong) Compile time error
---InteriorSeparator--
-hard
---InteriorSeparator--
-8
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 Given the class definition: `class MyClass<T extends List<?>> { ... }`, what does the `?` wildcard represent within the `List`?
@@ -278,19 +248,6 @@ An unknown type.
 hard
 --InteriorSeparator--
 12
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Consider the following generic method: `public static <T extends Comparable<T>> T findMax(T[] arr)`. What does `Comparable<T>` enforce?
---InteriorSeparator--
-(right) Elements of type `T` must be able to compare themselves to other elements of type `T`.
-(wrong) Elements of type `T` must be comparable to any object.
-(right) The type T must implement the Comparable interface.
-(wrong) Only subclasses of the Comparable class can be used.
---InteriorSeparator--
-hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -321,16 +278,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the raw type of `List<String>`?
---InteriorSeparator--
-`List`
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 Which of the following methods would correctly iterate through a `List<?>`?
@@ -346,16 +293,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the main purpose of using generics with Collections in Java?
---InteriorSeparator--
-To ensure type safety and eliminate the need for casting when retrieving elements from the collection.
---InteriorSeparator--
-easy
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 Which of the following statements about wildcard types are correct?
@@ -368,15 +305,5 @@ Which of the following statements about wildcard types are correct?
 hard
 --InteriorSeparator--
 12
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the difference between `List<Object>` and `List<?>`?
---InteriorSeparator--
-`List<Object>` is a list of objects, while `List<?>` is a list of an unknown type; `List<Integer>` can be assigned to `List<?>` but not `List<Object>`.
---InteriorSeparator--
-hard
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, citationMetadata={citationSources=[{startIndex=6468, endIndex=6663, uri=https://github.com/Himanshut0012/Generics-learning}]}, avgLogprobs=-0.1561096237575052}]

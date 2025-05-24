@@ -177,7 +177,7 @@ What problem arises when an attribute has many values, and how is it addressed?
 Gain will select it, so use GainRatio instead.
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 22
 --FlashCardSeparator--
 
@@ -189,7 +189,7 @@ How are attributes with different costs handled in decision tree learning?
 Replace gain by a cost-sensitive measure, like Gain/Cost or (Gain - Cost).
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 23
 --FlashCardSeparator--
 
@@ -216,7 +216,7 @@ Define overfitting in the context of decision tree learning.
 When a hypothesis performs better on the training data than on the entire distribution of data, and there exists another hypothesis that performs better on the entire distribution.
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 26
 --FlashCardSeparator--
 
@@ -236,30 +236,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-Describe the process of reduced-error pruning.
---InteriorSeparator--
-Split data, evaluate the impact of pruning nodes on the validation set, and greedily remove the node that most improves validation set accuracy.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-29
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Describe the process of rule post-pruning.
---InteriorSeparator--
-Convert the tree to rules, prune each rule independently, and then sort the rules based on estimated accuracy.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-31
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 Which of the following are ensemble learning methods using decision trees?
@@ -273,51 +249,4 @@ medium
 --InteriorSeparator--
 32
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the AdaBoost algorithm, how are the weights of incorrectly classified instances adjusted?
---InteriorSeparator--
-Their weights are increased, forcing the learner to concentrate on more difficult cases.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-32
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-How does the Bagging algorithm construct new trees?
---InteriorSeparator--
-Each tree is independently constructed using a bootstrap sample of the data set.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-32
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the final classification in Bagging based on?
---InteriorSeparator--
-Simple majority voting.
---InteriorSeparator--
-easy
---FlashCardSeparator--
-32
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the main difference between Random Forests and Bagging?
---InteriorSeparator--
-Random Forests adds an additional layer of randomness through random feature selection at each node.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-35
 }], role=model}, finishReason=STOP, avgLogprobs=-0.13123239717720303}]

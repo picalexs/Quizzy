@@ -1,21 +1,21 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the probability of event A occurring given that event B has already occurred?
+What are the two key concepts that significantly enhance the power of probability theory?
 --InteriorSeparator--
-P(A|B) = P(A ∩ B) / P(B) if P(B) > 0
+Conditioning and independence.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
-5
+3
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the name given to P(A|B)?
+What is the formula for conditional probability P(A|B)?
 --InteriorSeparator--
-The probability of A conditioned by event B.
+P(A ∩ B) / P(B), where P(B) > 0
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -25,24 +25,12 @@ easy
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What does it mean for two events A and B to be independent?
+Which of the following statements are true regarding independent events A and B?
 --InteriorSeparator--
 (right) P(A ∩ B) = P(A) * P(B)
-(wrong) P(A|B) = P(B|A)
-(right/wrong) The occurrence of one does not affect the probability of the other.
-(wrong) P(A ∪ B) = P(A) + P(B)
---InteriorSeparator--
-medium
---InteriorSeparator--
-9
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If A and B are independent events, what is the relationship between P(A) and P(A|B)?
---InteriorSeparator--
-P(A) = P(A|B)
+(wrong) P(A | B) = 0
+(right) If P(A|B) = P(A), the events are independent
+(wrong) Independent events cannot occur together
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -52,11 +40,11 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-If A and B are independent, which of the following pairs of events are also independent?
+Which pairs of events are also independent if events A and B are independent?
 --InteriorSeparator--
-(right) A and B (complement of B)
-(right) A (complement of A) and B
-(wrong) A U B and A ∩ B
+(right) A and B complement
+(right) A complement and B
+(wrong) A ∪ B and A ∩ B
 (wrong) A and B
 --InteriorSeparator--
 medium
@@ -67,9 +55,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What condition must be satisfied for events A1, A2, ..., Ak to be independent as a whole?
+What is meant by events being independent in "ensemble" or "in ansamblu" or "in totality"?
 --InteriorSeparator--
-P(A1 ∩ A2 ∩ ... ∩ Ak) = P(A1) * P(A2) * ... * P(Ak) for any {i1, i2, ..., ik} ⊆ I, where k ∈ N, k ≥ 2.
+For any subset of events, the probability of their intersection equals the product of their individual probabilities.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -79,9 +67,9 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If C ⊆ Ω, give the definition of A and B are independent conditioned by C.
+Define conditional independence of A and B given C.
 --InteriorSeparator--
-P(A ∩ B|C) = P(A|C) * P(B|C)
+P(A ∩ B | C) = P(A | C) * P(B | C)
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -91,21 +79,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the formula for the total probability if {A1, A2, ..., An} form a partition of the sample space Ω?
+What is the law of total probability?
 --InteriorSeparator--
-P(B) = Σ [P(B|Ai) * P(Ai)] for i = 1 to n
---InteriorSeparator--
-medium
---InteriorSeparator--
-18
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does the formula for total probability calculates?
---InteriorSeparator--
-The probability of an event by considering all possible scenarios given by a partition of the sample space.
+P(B) = Σ P(B|Ai) * P(Ai), where {A1, A2, ..., An} form a partition of the sample space.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -113,13 +89,16 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is the formula of Bayes theorem?
+According to Bayes' Theorem, what is the formula for calculating the a posteriori probability P(Ak|B)?
 --InteriorSeparator--
-P(Ak|B) = [P(B|Ak) * P(Ak)] / Σ [P(B|Ai) * P(Ai)] for i = 1 to n
+(wrong) P(Ak)*P(B) / P(B|Ak)
+(right) [P(B|Ak) * P(Ak)] / Σ[P(B|Ai) * P(Ai)]
+(wrong) P(B|Ak) / P(Ak)*P(B)
+(wrong) Σ[P(B|Ai) * P(Ai)] / [P(B|Ak) * P(Ak)]
 --InteriorSeparator--
-hard
+medium
 --InteriorSeparator--
 21
 --FlashCardSeparator--
@@ -127,9 +106,9 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In Bayes' Theorem, what are P(B|Ak) called?
+What is the purpose of Bayes' Theorem?
 --InteriorSeparator--
-Probabilities a priori
+To update the probability of an event based on new evidence.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -139,21 +118,9 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In Bayes' Theorem, what are P(Ak|B) called?
+State the conditional version of the Law of Total Probability.
 --InteriorSeparator--
-Probabilities a posteriori
---InteriorSeparator--
-easy
---InteriorSeparator--
-21
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Give the conditionat version of the formula of total probability.
---InteriorSeparator--
-P(A|B) = P(C|B) * P(A|B ∩ C) + P(C'|B) * P(A|B ∩ C')
+P(A|B) = P(C|B) * P(A|B ∩ C) + P(C complement|B) * P(A|B ∩ C complement)
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -163,11 +130,38 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-According to exercise 1.9, when the events A and B are independents if:
+If event A is independent of event B, does that necessarily imply conditional independence of A and B given event C?
 --InteriorSeparator--
-P(A) + P(B) = P(A ∩ B) + P(A ∪ B)
+No, unconditional independence does not imply conditional independence, and vice versa.
 --InteriorSeparator--
 hard
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does it mean if P(A|B) = P(A)?
+--InteriorSeparator--
+(right) A and B are independent.
+(wrong) A is a subset of B.
+(wrong) B is a subset of A.
+(wrong) A and B are mutually exclusive.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+9
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Provide the formula for P(A complement | B)
+--InteriorSeparator--
+1 - P(A|B)
+--InteriorSeparator--
+medium
 --InteriorSeparator--
 36
 --FlashCardSeparator--
@@ -175,24 +169,24 @@ hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to exercise 1.10, what are the formulas for: (a) P(A'|B) and (b) P(A ∪ B|A ∩ B) ?
+What is the definition of mutually independent events?
 --InteriorSeparator--
-(wrong) (a) 1+P(A)*P(B); (b) P(A|A)*P(B|B)
-(wrong) (a) 1−P(B); (b) P(A|A)*P(B|B)
-(right) (a) 1 − P(B)*P(A|B); (b) P(A|A ∩ B)+P(B|A ∩ B)
-(wrong) (a) 1−P(A|B); (b) P(A|A ∪ B)+P(B|A ∪ B)
+(wrong) P(A ∩ B) = 0 for all pairs of events
+(right) The events are pairwise independent
+(wrong) If any subset of events are independent, the entire set are independent
+(right) Events can be mutually independent without being independent in totality
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-36
+38
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Exercise 1.15: What conclusion can you draw about the three events A, B, and C?
+If events A, B, and C are independent in ensemble, are A, B, and C complement also independent?
 --InteriorSeparator--
-The three random events are mutually independent without being independent as a whole.
+Yes.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -202,51 +196,12 @@ hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to exercise II.2, what are we trying to find?
+Which of the following are valid interpretations of "A suggests B"?
 --InteriorSeparator--
-(wrong) (a) The probability that the door will not be opened; (b) If the door has been opened, what is the probability that it has not been locked?
-(wrong) (a) The probability that the door can be opened; (b) If the door has been opened, what is the probability that it was locked?
-(right) (a) The probability that the door can be opened (without turning back after another key); (b) If we opened the door, what is the probability that it was locked?
-(wrong) (a) What is the probability that the door will be opened?; (b) If we have opened the door, what is the probability that the key was on the panel?
---InteriorSeparator--
-hard
---InteriorSeparator--
-40
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Exercise II.7: What events occurs with extraction of balls from the urn?
---InteriorSeparator--
-(right) If the ball is white, it is put back together with another white ball.
-(right) If the ball is red, it is put back together with two other red balls.
-(wrong) If the ball is white, it is put back together with two other white ball.
-(wrong) If the ball is red, it is put back together with another red balls.
---InteriorSeparator--
-hard
---InteriorSeparator--
-43
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Exercise II.15 (a): Show that A suggests B if and only if...
---InteriorSeparator--
-...B suggests A.
---InteriorSeparator--
-hard
---InteriorSeparator--
-47
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Exercise II.15 (b): If A is a possible event, then A suggests B if and only if...
---InteriorSeparator--
-...A does not suggest B'.
+(right) P(A|B) > P(A)
+(wrong) P(A|B) < P(A)
+(right) P(B|A) > P(B)
+(wrong) P(B|A) < P(B)
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -256,93 +211,15 @@ hard
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-According to exercise II.16: What data do we know?
+What does the formula P(A ∩ B|C) = P(A|C) * P(B|C) indicate?
 --InteriorSeparator--
-(right) Each student comes to class independently with probability p1, if the weather is good.
-(right) Each student comes to class independently with probability p2, if the weather is bad.
-(wrong) Students only come to class when the weather is bad.
-(wrong) The probability, q, that the weather will be good on a given day is known.
---InteriorSeparator--
-hard
---InteriorSeparator--
-48
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-True or False: Independence in its whole is a very powerful condition that it is verified quite rarely in practice.
---InteriorSeparator--
-True.
+(wrong) A and B are independent.
+(right) A and B are conditionally independent given C.
+(wrong) A and C are independent.
+(wrong) B and C are independent.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-14
+15
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-Does the unconditional independence of two random events A and B necessarily imply conditional independence and vice versa?
---InteriorSeparator--
-No.
---InteriorSeparator--
-medium
---InteriorSeparator--
-17
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the context of probability, what does the term "partition" refer to?
---InteriorSeparator--
-A set of mutually exclusive and collectively exhaustive events.
---InteriorSeparator--
-medium
---InteriorSeparator--
-18
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following is an example of conditional probability?
---InteriorSeparator--
-(right) The probability of rain, given that it is cloudy.
-(wrong) The probability of rolling a 6 on a die.
-(right/wrong) The probability that a patient has a disease given a positive test result.
-(wrong) The probability of drawing an ace from a deck of cards.
---InteriorSeparator--
-easy
---InteriorSeparator--
-5
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are real-world applications that make use of probability theory?
---InteriorSeparator--
-(wrong) Marketing strategies
-(right/wrong) Risk Assessment
-(wrong) Software design
-(right) Financial Modeling
---InteriorSeparator--
-easy
---InteriorSeparator--
-3
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the significance of conditional probability and independence in probability theory?
---InteriorSeparator--
-They are essential concepts that allow calculating probabilities of events through others and the theory would just be a measure theory of subsets without them.
---InteriorSeparator--
-medium
---InteriorSeparator--
-3
---FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.1978476758718122}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.23613788152145126}]

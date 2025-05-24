@@ -247,18 +247,6 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the importance of ergodicity regarding the states of a Markov Chain?
---InteriorSeparator--
-A state is ergodic if it is aperiodic and positive recurrent.
---InteriorSeparator--
-hard
---InteriorSeparator--
-N/A
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 Define qij.
 --InteriorSeparator--
 The probability that, starting from state si, the first transition to state sj appears after t steps.
@@ -389,29 +377,5 @@ What memory space does the randomized algorithm use for s-t connectivity?
 medium
 --InteriorSeparator--
 34
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the correctness probability of the s-t connectivity algorithm?
---InteriorSeparator--
-At least 1/2, and it only errs when it reports "no path" when a path exists.
---InteriorSeparator--
-medium
---InteriorSeparator--
-35
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the time limit in steps used for determining connectivity between two nodes?
---InteriorSeparator--
-4n^3 steps
---InteriorSeparator--
-hard
---InteriorSeparator--
-35
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.12904085496784914}]

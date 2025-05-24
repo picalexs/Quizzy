@@ -1,9 +1,9 @@
 [{content={parts=[{text=--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a key characteristic of problems suitable for backtracking and branch & bound techniques?
+What is a key characteristic of NP-complete problems that motivates the use of backtracking and branch & bound?
 --InteriorSeparator--
-The lack of known polynomial solutions, like NP-complete or NP-hard problems.
+No one knows polynomial solutions for them.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -13,9 +13,9 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the core principle of exhaustive search?
+What is the fundamental approach used by exhaustive search?
 --InteriorSeparator--
-Enumerating all possible solutions, filtering the valid ones, and saving the optimum.
+Enumerating or generating all possible solutions.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -25,9 +25,48 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-Why is backtracking an improvement over exhaustive search?
+What is a significant drawback of exhaustive search?
 --InteriorSeparator--
-It checks the validity of partial solutions and prunes branches of the execution tree early on.
+Combinatorial explosion
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are common examples of combinatorial explosion in exhaustive search?
+--InteriorSeparator--
+(right) Permutations, orderings
+(right) Binary assignments and subsets
+(wrong) Linear assignments
+(wrong) Integer assignments
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+6
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the generic iterative implementation of exhaustive search, what is the purpose of the `validSolution` function?
+--InteriorSeparator--
+To filter out solutions that do not meet the problem's criteria.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What key improvement does backtracking offer over exhaustive search?
+--InteriorSeparator--
+It checks the validity of partial solutions to prune branches.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -37,12 +76,12 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-In the context of the N-Queens problem, what condition(s) indicate two queens are attacking each other?
+In the context of the N-Queens problem, which of the following conditions indicates that two queens are attacking each other?
 --InteriorSeparator--
-(right) They are on the same column.
 (right) They are on the same diagonal.
+(right) They are on the same column.
 (wrong) They are on different rows and columns.
-(wrong) They are in different quadrants of the board.
+(wrong) They are on adjacent squares.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -52,9 +91,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What data structure is suitable for representing queen positions in the N-Queens problem, considering only rows and columns restrictions?
+In the N-Queens problem, if we sort the x values of the placed queens, what permutation do we get?
 --InteriorSeparator--
-An array representing a permutation of column indices for each row.
+The identity permutation.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -64,24 +103,33 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a CNF formula in the context of the SAT problem?
+What does the `underAttack` function in the N-Queens solution check?
 --InteriorSeparator--
-A conjunction (AND) of one or more clauses, where each clause is a disjunction (OR) of literals.
+Whether a square is attacked by a queen from higher rows.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-21
+17
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-In the SAT problem, what does a literal represent?
+What is the significance of "undoing the choice" when backtracking in the N-Queens problem?
 --InteriorSeparator--
-(right) A variable (e.g., x).
-(right) The negation of a variable (e.g., ¬x).
-(wrong) A clause.
-(wrong) The entire formula.
+It allows exploration of other possible placements on the same level after a recursive call returns.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the goal of the SAT problem?
+--InteriorSeparator--
+To find a {true, false} assignment to variables that makes the formula true.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -89,11 +137,50 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the CNF form of a SAT problem, what are clauses composed of?
+--InteriorSeparator--
+(right) Disjunctions of literals
+(wrong) Conjunctions of variables
+(wrong) Disjunctions of variables
+(right) Literals
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+21
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-How does backtracking improve upon exhaustive search in solving the SAT problem?
+How are literals represented in an array for SAT problems, and what does the sign indicate?
 --InteriorSeparator--
-By pruning branches of the search tree when a partial assignment leads to unsatisfiable clauses.
+By the indices of the variables, with a negative sign indicating negation.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+22
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In the SAT exhaustive search approach, when can the search stop if a satisfying assignment is found?
+--InteriorSeparator--
+At the first satisfying assignment.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the primary goal of backtracking in solving SAT problems?
+--InteriorSeparator--
+To prune branches of the search tree that cannot lead to a solution.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -103,9 +190,48 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In Branch and Bound, what is the purpose of estimating an optimistic scenario for a partial solution?
+In SAT backtracking, what condition makes a clause "unsatisfied regardless of yet-unassigned variables"?
 --InteriorSeparator--
-To determine if the partial solution has any chance of reaching the optimum, allowing for pruning if not.
+When the clause contains only assigned variables, and all are assigned to the opposite value.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+28
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+In the `possiblySatisfying` function for SAT backtracking, what does `unSATLit` represent?
+--InteriorSeparator--
+(right) The number of unsatisfied literals
+(wrong) The number of unassigned literals
+(wrong) The number of satisfied clauses
+(right) Number of unsatisfied literals in a clause
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of setting `val[level] = ?` after a recursive call in the SAT backtracking implementation?
+--InteriorSeparator--
+To undo the choice made and explore other possible values for the current level.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the main characteristic that differentiates Branch & Bound from Backtracking?
+--InteriorSeparator--
+Branch & Bound is used for optimization problems
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -115,24 +241,21 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the role of `bestSoFar` in a branch and bound algorithm for a maximization problem?
+How does Branch & Bound utilize 'bestSoFar' and 'maxRest' to potentially prune branches in a maximization problem?
 --InteriorSeparator--
-It stores the best solution found so far, used as a benchmark for pruning partial solutions.
+If `partialProfit + maxRest` is less than or equal to `bestSoFar`, the branch is pruned.
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 39
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
+Single
 --InteriorSeparator--
-In the context of the 0-1 Knapsack problem, what does the term "0-1" indicate?
+In the Discrete Knapsack problem, what are the constraints on selecting an object?
 --InteriorSeparator--
-(right) An item is either fully included or fully excluded from the knapsack.
-(wrong) The profit of each item is either 0 or 1.
-(wrong) The weight of each item is either 0 or 1.
-(wrong) Half of an item can be included
+Each object can be taken as a whole or not at all.
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -140,13 +263,28 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
+Multiple
 --InteriorSeparator--
-What is a simple way to calculate an upper bound (`maxRest`) on the remaining profit in the Knapsack problem during branch and bound?
+In the Knapsack problem, how is 'use[i]' defined in a partial solution?
 --InteriorSeparator--
-Sum the values of all remaining objects, assuming the capacity constraint will have no effect.
+(right) 'use[i] = 1' if object 'i' is included in the knapsack
+(wrong) 'use[i] = 0' if the object's value equals zero
+(wrong) 'use[i] = -1' if the object should be excluded
+(right) 'use[i] = 0' if object 'i' is not included in the knapsack
 --InteriorSeparator--
 medium
+--InteriorSeparator--
+41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How is `maxRest` computed in the Knapsack problem, and why is it considered an optimistic estimate?
+--InteriorSeparator--
+It's computed as the sum of values of the remaining objects, assuming the capacity restriction will have no effect.
+--InteriorSeparator--
+hard
 --InteriorSeparator--
 42
 --FlashCardSeparator--
@@ -154,9 +292,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-In the branch and bound approach to the Knapsack problem, what condition must be met to continue exploring a partial solution?
+In the Knapsack implementation, what two conditions must be met to continue branching in the `branchAndBound` method?
 --InteriorSeparator--
-The partial weight must be less than or equal to the knapsack's capacity, and the partial profit plus the upper bound on the remaining profit must be greater than the best solution found so far.
+`partialWeight <= W` and `partialProfit + maxRest[level+1] > bestSoFar`.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -164,11 +302,26 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which improvements can be made to the Branch & Bound solution for the knapsack problem?
+--InteriorSeparator--
+(right) Initialize bestSoFar with the greedy strategy for the discrete knapsack.
+(wrong) Compute maxRest by using dynamic programming for continuous knapsack.
+(right) Compute maxRest by running the greedy strategy for the continuous version of the knapsack
+(wrong) Initialize bestSoFar to 0
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+47
+--FlashCardSeparator--
+
+--FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a Hamiltonian cycle in an undirected graph?
+What is a Hamiltonian Cycle in an undirected graph?
 --InteriorSeparator--
-A closed loop that visits every node exactly once, with consecutive nodes connected by an edge.
+A closed loop in which every node is visited exactly once, and consecutive nodes are connected by an edge.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -178,9 +331,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How does the Traveling Salesperson Problem (TSP) differ from finding a Hamiltonian cycle?
+What distinguishes the Traveling Salesperson Problem (TSP) from finding a Hamiltonian Cycle?
 --InteriorSeparator--
-TSP seeks the *minimum cost* Hamiltonian cycle, considering edge costs.
+TSP seeks the minimum cost Hamiltonian Cycle.
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -190,9 +343,9 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the initial step in solving the TSP using branch and bound, considering the exponential nature of the problem?
+In TSP, if inexistent edges are assigned infinite costs, what is the implication for cycles containing such edges?
 --InteriorSeparator--
-Fix the first node to a constant node, reducing the search space to (n-1)! permutations.
+Invalid cycles effectively become suboptimal.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -200,203 +353,14 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What does the variable *rest* represent in the context of TSP Branch & Bound?
---InteriorSeparator--
-(right) The set of nodes that have not yet been visited in the current partial solution.
-(wrong) The total cost of the edges that are not in the current solution.
-(wrong) the current number of cities left to visit.
-(wrong) the total number of nodes in the graph.
---InteriorSeparator--
-easy
---InteriorSeparator--
-60
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
-How can one calculate a lower bound on the cost of completing a partial solution in TSP using Branch & Bound?
+How can the minRest be computed for TSP using the cheapest edges, and what does it represent?
 --InteriorSeparator--
-Sum the partial cost with the minimum cost of n-level-2 edges plus the minimum cost edges connecting to the start and end.
+It represents a lower bound on the cost of completing the cycle. It consists of the minimum cost of n-level-2 edges, the min edge from h[level] to rest, and the min edge from rest to h[0].
 --InteriorSeparator--
 hard
 --InteriorSeparator--
 57
 --FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What does the 'level' variable represent within the recursive backtracking algorithm?
---InteriorSeparator--
-(right) The layer of the recursive search being explored.
-(wrong) The current recursion depth.
-(wrong) The maximum number of recusive calls that can be made.
-(wrong) The difficulty of the problem at the point in the recursion.
---InteriorSeparator--
-easy
---InteriorSeparator--
-9
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What should be done when a recursive call returns in a backtracking algorithm, after a choice has been made for the current level?
---InteriorSeparator--
-The choice should be "undone" to explore other possibilities at the current level.
---InteriorSeparator--
-medium
---InteriorSeparator--
-20
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the stopping condition for exhaustive search in a problem with n decision levels?
---InteriorSeparator--
-When all levels (1 to n) have been decided and the candidate solution can be validated
---InteriorSeparator--
-easy
---InteriorSeparator--
-9
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are examples of "layers" in the context of building a solution incrementally?
---InteriorSeparator--
-(right) n variable assignments
-(right) Permutations of n elements
-(wrong) Cost of traveling between cities
-(wrong) The total weight of the knapsack
---InteriorSeparator--
-easy
---InteriorSeparator--
-8
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does 'combinatorial explosion' refer to in the context of exhaustive search?
---InteriorSeparator--
-The number of candidate solutions growing very quickly as the problem size increases
---InteriorSeparator--
-easy
---InteriorSeparator--
-6
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the two main components required for branch and bound?
---InteriorSeparator--
-(right) A method for calulating an upper bound on the profit of a partial solution
-(right) A method for calculating the best solution so far
-(wrong) An admissable heuristic to guide the search
-(wrong) A representation of the problem as a CNF Formula
---InteriorSeparator--
-easy
---InteriorSeparator--
-39
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the first step when using greedy strategy to determine `bestSoFar` in the knapsack problem?
---InteriorSeparator--
-Sort the objects decreasingly by the ratio of v[i] / w[i]
---InteriorSeparator--
-hard
---InteriorSeparator--
-47
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which are valid improvements to branch and bound implementation for the knapsack problem?
---InteriorSeparator--
-(right) Use greedy strategy to compute an initial bestSoFar solution
-(right) Compute maxRest by running the greedy strategy
-(wrong) Using dynamic programming for small subproblems
-(wrong) Using a hash table to avoid exploring duplicate subproblems.
---InteriorSeparator--
-medium
---InteriorSeparator--
-47
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does pruning a branch mean in backtracking and branch & bound?
---InteriorSeparator--
-Stopping exploration of a particular partial solution because it's determined to be invalid or suboptimal.
---InteriorSeparator--
-medium
---InteriorSeparator--
-10
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which condition allows to stop exploring the DFS tree in the SAT problem when backtracking?
---InteriorSeparator--
-(right) When a clause cannot be satisfied regardless of unassigned variables
-(wrong) When the variable assignment can not be saved in memory
-(wrong) When the length of the code exceeds a certain limit.
-(wrong) When the runtime of the algorithm exceeds a limit.
---InteriorSeparator--
-hard
---InteriorSeparator--
-28
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following could significantly improve the efficiency of backtracking?
---InteriorSeparator--
-(right) Adaptive variable assignment ordering.
-(right) Detection of one-literal clauses.
-(wrong) Randomly assigning variables.
-(wrong) Always assigning variables in the same order.
---InteriorSeparator--
-hard
---InteriorSeparator--
-34
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In TSP, what condition must be checked before exploring the next node in the cycle?
---InteriorSeparator--
-The partialCost plus the lower bound minRest must be smaller than bestSoFar.
---InteriorSeparator--
-hard
---InteriorSeparator--
-60
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-How is validity checked in the backtracking solution to the N Queens problem?
---InteriorSeparator--
-By checking if the current square is under attack by a previously placed queen.
---InteriorSeparator--
-medium
---InteriorSeparator--
-17
---FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.3275626495765832}]
+}], role=model}, finishReason=STOP, avgLogprobs=-0.181116779134533}]

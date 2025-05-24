@@ -142,17 +142,6 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is a device-status table used for?
---InteriorSeparator--
-Contains an entry for each I/O device indicating its type, address, and state.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-15
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
 What is the primary characteristic of main memory?
 --InteriorSeparator--
 It is the only large storage media that the CPU can access directly.

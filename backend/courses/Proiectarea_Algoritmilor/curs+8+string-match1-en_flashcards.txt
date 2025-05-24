@@ -49,7 +49,7 @@ Which of the following are true regarding the naive string searching algorithm?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-10-11
+10
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -62,21 +62,6 @@ shift[C] = (m - 1) - (the last occurrence position of C in pattern)
 hard
 --InteriorSeparator--
 26
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-According to the Good Suffix Rule, if p[i-1] does not match, what are the possible cases for shifting?
---InteriorSeparator--
-(right) Shift to the closest copy of p[j..m-1] preceded by a character != p[i-1] (Case 1)
-(wrong) Shift to align the longest prefix of p with any suffix of s
-(right) Shift such that the suffix of s[0..i+m-j-1] is matched by a prefix of p (Case 2)
-(wrong) Shift by a fixed value, regardless of the pattern
---InteriorSeparator--
-hard
---InteriorSeparator--
-33-36
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -211,17 +196,7 @@ Given the regular expression 'ab*', which of the following strings are in L(ab*)
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-78-79
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the length of the empty string?
---InteriorSeparator--
-Zero
---InteriorSeparator--
-4
+78
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -303,19 +278,6 @@ If p[k] == s[i] and k == m - 1
 medium
 --InteriorSeparator--
 66
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are components of an automaton?
---InteriorSeparator--
-(right) Input alphabet
-(wrong) Output alphabet
-(right) States
-(wrong) Heuristic Function
---InteriorSeparator--
-72
 --FlashCardSeparator--
 
 --FlashCardSeparator--

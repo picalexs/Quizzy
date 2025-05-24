@@ -89,7 +89,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What happens if one process closes one end of an anonymous pipe?
 --InteriorSeparator--
@@ -125,7 +125,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Does the `mkfifo` primitive automatically open the FIFO for reading and writing?
 --InteriorSeparator--
@@ -149,7 +149,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What does it mean for opening a named pipe to be blocking, and how does the kernel handle the synchronization?
 --InteriorSeparator--
@@ -161,7 +161,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Where is the data stored in a named pipe, and what determines the retention period?
 --InteriorSeparator--
@@ -188,7 +188,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Are pipes bi-directional or uni-directional and what are the implications?
 --InteriorSeparator--
@@ -200,7 +200,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What is the unit of information for pipes, and how can the capacity be configured?
 --InteriorSeparator--
@@ -224,7 +224,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What happens when reading from an empty pipe with blocking behavior? And what is the exception case?
 --InteriorSeparator--
@@ -236,7 +236,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What happens when writing to a full pipe with blocking behavior? Also, what is an exception and what signal is generated?
 --InteriorSeparator--
@@ -311,7 +311,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What are the two key factors that cause synchronization issues in the one-to-many communication pattern?
 --InteriorSeparator--
@@ -323,7 +323,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 What is a possible solution for handling variable length messages in a one-to-many communication pattern?
 --InteriorSeparator--
@@ -335,7 +335,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How can we ensure that a message is read exactly by the "reader" to whom it was intended in a one-to-many communication pattern?
 --InteriorSeparator--
@@ -347,7 +347,7 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How can problems of synchronizing data integrity in many-to-one communication pattern be generated?
 --InteriorSeparator--
@@ -383,7 +383,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How can a semaphore be implemented using FIFO pipes?
 --InteriorSeparator--

@@ -22,7 +22,7 @@ What are the characteristics of a well-defined algorithm, according to the defin
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-7-8
+7
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -35,21 +35,6 @@ Algorithms + Data Structures = Programs
 easy
 --InteriorSeparator--
 11
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the key properties of an algorithm?
---InteriorSeparator--
-(right) Input
-(right) Output
-(right) Termination
-(right) Correctness
---InteriorSeparator--
-medium
---InteriorSeparator--
-9,12
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -142,7 +127,7 @@ What are examples of elementary data types?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-23-24
+23
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -230,18 +215,6 @@ Zero times
 medium
 --InteriorSeparator--
 32
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the fundamental difference in execution between a `while` loop and a `repeat...until` loop?
---InteriorSeparator--
-A `repeat...until` loop always executes at least once, while a `while` loop may not execute at all if the condition is initially false.
---InteriorSeparator--
-hard
---InteriorSeparator--
-32, 34
 --FlashCardSeparator--
 
 --FlashCardSeparator--

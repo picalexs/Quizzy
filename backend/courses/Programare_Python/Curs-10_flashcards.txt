@@ -403,7 +403,7 @@ In the server-side Python code, what happens if the client sends the message "ex
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-3, 8
+3
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -445,6 +445,6 @@ Which of the following best describes Python's HTTP server capabilities?
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-22-23
+22
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.1496086629619591}]

@@ -1,21 +1,10 @@
-[{content={parts=[{text=--FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the final configuration of an algorithm's execution if the execution is finite?
---InteriorSeparator--
-A configuration with no successor configurations.
---InteriorSeparator--
-easy
---InteriorSeparator--
-5
---FlashCardSeparator--
-
+[{content={parts=[{text=```
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-When is a problem P considered solvable (computable)?
+What is a decision problem?
 --InteriorSeparator--
-If there exists an algorithm A that solves P.
+A decision problem is a problem that has an answer (output) of the form "YES" or "NO" (equivalently, "true" or "false").
 --InteriorSeparator--
 easy
 --InteriorSeparator--
@@ -25,14 +14,14 @@ easy
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following are ways to define the size of values?
+Which of the following are ways to define the size of values for data types?
 --InteriorSeparator--
 (right) Uniform
 (right) Logarithmic
 (wrong) Exponential
 (wrong) Quadratic
 --InteriorSeparator--
-easy
+medium
 --InteriorSeparator--
 10
 --FlashCardSeparator--
@@ -40,23 +29,38 @@ easy
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the time cost of an expression evaluation?
+What is the uniform dimension of the integer 'n'?
 --InteriorSeparator--
-The sum of the time costs of the operations included in the expression.
+|n|unif : 1
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does the time cost of an instruction execution step depend on?
+--InteriorSeparator--
+(right) The state
+(right) The executed instruction
+(wrong) The algorithm's name
+(wrong) The programming language
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-16
+17
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-How is the size (space) of a computation defined?
+How is the size (space) of a state defined?
 --InteriorSeparator--
-The maximum size of the state during the computation.
+The sum of sizes of the values stored in the state.
 --InteriorSeparator--
-medium
+easy
 --InteriorSeparator--
 20
 --FlashCardSeparator--
@@ -64,24 +68,12 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Given a problem P and a deterministic algorithm A that solves P, how is the size of an instance *p* defined?
+According to the reading, if 'n' is the size of an instance, which of the following is true about the worst-case time complexity?
 --InteriorSeparator--
-(right) The size of its initial configuration
-(wrong) The number of lines in the algorithm A
-(right) sized((A, Op))
-(wrong) The length of the algorithm execution
---InteriorSeparator--
-medium
---InteriorSeparator--
-26
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the worst-case time complexity, TA,d(n), defined as?
---InteriorSeparator--
-sup{timed(A, p) | p ∈ P, sized(p) = n}
+(right) TA(n) = sup{timed(A, p) | p ∈ P, sized(p) = n}
+(wrong) TA(n) = inf{timed(A, p) | p ∈ P, sized(p) = n}
+(wrong) TA(n) = timed(A, p) where p is the easiest instance to solve
+(wrong) TA(n) = sized(p)
 --InteriorSeparator--
 medium
 --InteriorSeparator--
@@ -91,31 +83,35 @@ medium
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If there is one algorithm solving it, then there are an infinity. Why?
+What does it mean for a problem P to have the worst-case time complexity O(f(n))?
 --InteriorSeparator--
-A problem may be solved by many algorithms.
+There is an algorithm A that solves P and TA(n) = O(f(n)).
 --InteriorSeparator--
 medium
+--InteriorSeparator--
+34
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-If an algorithm A solves P with the worst-case execution time O(f(n)), what can we say about the time complexity of P?
+What does it mean for a problem P to have the worst-case time complexity Ω(f(n))?
 --InteriorSeparator--
-P has the worst-case time complexity O(f(n)).
+Any algorithm A that solves P has TA(n) : Ω(f(n)).
 --InteriorSeparator--
-medium
+hard
+--InteriorSeparator--
+36
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What does it mean for algorithm A to be optimal for problem P?
+When is an algorithm considered optimal for a problem P?
 --InteriorSeparator--
-A solves P and P has the worst-case time complexity Ω(TA(n)).
+A is an optimal algorithm if it solves P and P has the worst-case time complexity Ω(TA(n)).
 --InteriorSeparator--
-medium
+hard
 --InteriorSeparator--
 37
 --FlashCardSeparator--
@@ -123,32 +119,22 @@ medium
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the properties for the output of the SORT problem?
+What are the properties of the output of the SORT problem?
 --InteriorSeparator--
-(right) Sorted
-(right) Permutation of the input
-(wrong) Reversed
-(wrong) Contains only unique elements
+(right) The output is sorted (non-decreasingly ordered)
+(right) The output is a permutation of the input.
+(wrong) The output is the reverse of the input.
+(wrong) The output contains only unique elements from the input.
 --InteriorSeparator--
 medium
+--InteriorSeparator--
+39
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the worst-case number of comparisons for BubbleSort?
---InteriorSeparator--
-n * (n-1) / 2
---InteriorSeparator--
-medium
---InteriorSeparator--
-41
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the time complexity of the sorting problem in the computational model of decision trees?
+What is the worst-case time complexity of the sorting problem in the computational model of decision trees?
 --InteriorSeparator--
 Ω(n log n)
 --InteriorSeparator--
@@ -160,62 +146,36 @@ hard
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the key idea behind polynomial reduction of problems?
+Define Turing/Cook Reduction
 --InteriorSeparator--
-Leveraging algorithms for one problem to solve another.
---InteriorSeparator--
-easy
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the implication of P reducing to Q, if P is a difficult problem?
---InteriorSeparator--
-Q is difficult as well.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In Turing/Cook reduction, what is the time complexity relationship between pre/post processing and the instance of Q?
---InteriorSeparator--
-The pre/post processing must be polynomial time.
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the time complexity of while-body in terms of vertices for the worst-case?
---InteriorSeparator--
-0(1)
+A problem P polynomially reduces to (a solvable problem) Q if we can design an algorithm for P using a polynomial-time preprocessor for P to Q and postprocessor for Q to P, possible calling the algorith for Q several times (but of polynomial times).
 --InteriorSeparator--
 hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
 --InteriorSeparator--
-In the decision tree model for sorting algorithms, what do external nodes represent?
---InteriorSeparator--
-Permutations of the input elements.
---InteriorSeparator--
-hard
+55
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What constitutes a Karp reduction?
+Which of the following are true regarding polynomial reduction?
 --InteriorSeparator--
-(right) Polynomial-time preprocessing
-(wrong) Multiple calls to the solving algorithm
-(right) Direct mapping of the solution
-(wrong) Post-processing of the result
+(right) It can be used for algorithm design.
+(right) It can be used to prove the limits of problem-solving.
+(wrong) It only applies to optimization problems.
+(wrong) It always reduces a complex problem to an easier one.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+54
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is Karp reduction?
+--InteriorSeparator--
+Let P and Q be decision problems. The problem P polynomially reduces to (the solvable) Q if we can design an algorithm that solves P with a polynomial-time preprocessor from P to Q.
 --InteriorSeparator--
 hard
 --InteriorSeparator--
@@ -223,169 +183,176 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-If P has time complexity Q(f(n)) and P reduces to Q in O(g(n)), what is the complexity of Q?
---InteriorSeparator--
-Ω(f(n) - g(n))
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following are necessary for an algorithm A to solve a problem P?
+What is the time complexity of InsertSort in the worst case?
 --InteriorSeparator--
-(right) Concepts in the problem domain are represented by data structures
-(wrong) Algorithm A must be the most efficient possible.
-(right) The execution from the initial configuration ends in a final configuration with the correct output
-(wrong) The algorithm must use only constant space.
---InteriorSeparator--
-medium
---InteriorSeparator--
-6
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the time complexity for while loop in the algorithm HeapSort?
---InteriorSeparator--
-O(n log n)
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the size of a computation?
---InteriorSeparator--
-The maximum size of the states during the computation.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the time complexity for insertInHeap?
---InteriorSeparator--
-O(log k), where k is the heap size.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What kind of problem requires an output of the form "YES" or "NO"?
---InteriorSeparator--
-A decision problem.
+(right) O(n^2)
+(wrong) O(n)
+(wrong) O(log n)
+(wrong) O(n log n)
 --InteriorSeparator--
 easy
+--InteriorSeparator--
+43
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What must be mentioned for each value of each data type?
+What is the relationship between Karp reduction and Turing/Cook reduction?
 --InteriorSeparator--
-The size of representation.
+Karp reduction is a particular case of the Turing/Cook reduction.
 --InteriorSeparator--
 medium
+--InteriorSeparator--
+61
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does the option -m in alki do?
+--InteriorSeparator--
+Displays the final state.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+4
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-Which of the following are types of costs used in Alk interpreter?
+What does it mean for an algorithm to be deterministic?
 --InteriorSeparator--
-(right) Uniform
-(right) Logarithmic
-(wrong) Quadratic
-(wrong) Cubic
---InteriorSeparator--
-medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What does ADS(n) represent?
---InteriorSeparator--
-The set of decision trees for sorting sequences of length n.
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is time complexity of algorithm insertSort?
---InteriorSeparator--
-O(n^2)
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What are the variants for the subset sum problem?
---InteriorSeparator--
-SSD1, SSD2, and SSD3.
+(right) For any execution and for any configuration, there is at most one successor configuration.
+(wrong) The algorithm always produces the correct output in a predetermined amount of time.
+(wrong) The algorithm uses randomness to improve its performance.
+(wrong) The algorithm requires minimal memory space.
 --InteriorSeparator--
 medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the logarithmic dimension of the integer 'n'?
+--InteriorSeparator--
+|n|10g = log2 abs(n)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+11
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What are the three phases of Turing/Cook Reduction?
+In the example of the time cost of operations, what is the uniform time complexity of an integer addition operation?
 --InteriorSeparator--
-(right) Preprocess
-(right) Call algorithm for Q
-(wrong) Sort
-(right) Postprocess
+(right) O(1)
+(wrong) O(log(a+b))
+(wrong) O(a+b)
+(wrong) O(n)
 --InteriorSeparator--
 medium
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
 --InteriorSeparator--
-What are properties of reductions?
---InteriorSeparator--
-(right) If P has the time complexity Q(f(n)) and P o<g(,,) Q (Karp version) the Q has the time complexity Q(f(n) — g(n)).
-(right) If Q has the time complexity O(f(n)) and P o<g(,,) Q (Karp version) then P has the time complexity O(f(n) + g(n)).
-(wrong) If P has the time complexity O(f(n)) and P o<g(,,) Q (Karp version) the Q has the time complexity O(f(n) — g(n)).
-(wrong) If Q has the time complexity Q(f(n)) and P o<g(,,) Q (Karp version) then P has the time complexity Q(f(n) + g(n)).
---InteriorSeparator--
-hard
+14
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Single
 --InteriorSeparator--
-What is the name of the algorithm that determines if a decision tree solves the sorting problem?
+What does Sized(a) represents, where 'a' is a state?
 --InteriorSeparator--
-A decision tree t solves the sorting problem if for any input input a = (a0, . . .,an-1), the computation of t for a terminates in π s.t. aπ(0) < . . . < aπ(n-1).
+The dimension of a state a.
 --InteriorSeparator--
-hard
+easy
+--InteriorSeparator--
+26
 --FlashCardSeparator--
 
 --FlashCardSeparator--
 Multiple
 --InteriorSeparator--
-What is the definition of Computation in Decision Tree for Sorting?
+What factors are considered when analyzing the complexity of BubbleSort?
 --InteriorSeparator--
-(right) A path from the root to the frontier
-(wrong) Swapping two array elements
-(right) Should terminate on the frontier
-(wrong) Computation of the array sizes
+(right) Instance size
+(right) Measured operations
+(wrong) Programming language
+(wrong) Compiler optimization
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why is it important to formally define the computational model of comparisons-based algorithms?
+--InteriorSeparator--
+To answer questions regarding the minimal number of comparisons in the worst-case for sorting algorithms and to determine which algorithms require the minimal number of comparisons.
 --InteriorSeparator--
 hard
+--InteriorSeparator--
+47
 --FlashCardSeparator--
-}], role=model}, finishReason=STOP, avgLogprobs=-0.19997169166986195}]
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the nodes in a decision tree for n elements?
+--InteriorSeparator--
+(right) Internal nodes: i?j, i, j ∈ {0, 1, ..., n-1}
+(right) External nodes: permutations of the set {0, 1, ..., n-1}
+(wrong) Internal nodes: values from the input array
+(wrong) External nodes: sorted array
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+49
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If P has the time complexity Ω(f(n)) and P ≤g(n) Q (Karp version), what can be said about the time complexity of Q?
+--InteriorSeparator--
+Q has the time complexity Ω(f(n) - g(n)).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+64
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+If Q has the time complexity O(f(n)) and P ≤g(n) Q (Karp version), what can be said about the time complexity of P?
+--InteriorSeparator--
+(right) P has the time complexity O(f(n) + g(n)).
+(wrong) P has the time complexity O(f(n) - g(n)).
+(wrong) P has the time complexity O(f(n) * g(n)).
+(wrong) P has the time complexity O(f(n) / g(n)).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+64
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the time complexity for the worst case of computing timeSum with uniform cost, as shown in the example?
+--InteriorSeparator--
+O(n)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+```}], role=model}, finishReason=STOP, avgLogprobs=-0.16195601048348196}]

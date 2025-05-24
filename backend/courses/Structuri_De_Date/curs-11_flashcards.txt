@@ -353,16 +353,6 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the maximum number of probes, on average, for a successful search in a hash table with open addressing, assuming uniform hashing and a load factor α < 1?
---InteriorSeparator--
-(1/α)*ln(1/(1-α))
---InteriorSeparator--
-hard
---FlashCardSeparator--
-
---FlashCardSeparator--
 Multiple
 --InteriorSeparator--
 Which of the following are common uses for hash tables?

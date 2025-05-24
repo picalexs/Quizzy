@@ -101,7 +101,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain a potential issue with the simple semaphore solution to the Dining-Philosophers problem.
 --InteriorSeparator--
@@ -125,7 +125,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Describe how the monitor solution to the Dining Philosophers problem avoids deadlock.
 --InteriorSeparator--
@@ -133,7 +133,7 @@ By ensuring that a philosopher only picks up chopsticks if both are available, p
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-13, 14
+13
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -161,7 +161,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 How do Windows dispatcher objects indicate whether a resource is available or not?
 --InteriorSeparator--
@@ -209,7 +209,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain how disabling kernel preemption on a single-CPU system effectively replaces spinlocks.
 --InteriorSeparator--
@@ -260,7 +260,7 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain the key difference between named and unnamed POSIX semaphores regarding inter-process communication.
 --InteriorSeparator--
@@ -280,7 +280,7 @@ semaphore.h
 --InteriorSeparator--
 easy
 --InteriorSeparator--
-23, 24
+23
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -296,7 +296,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain why POSIX condition variables are typically used with a POSIX mutex lock.
 --InteriorSeparator--
@@ -347,7 +347,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Describe the sequence of steps that occur when a Java thread calls `notify()`.
 --InteriorSeparator--
@@ -395,7 +395,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain how a condition variable is created and used in conjunction with a `ReentrantLock` in Java to manage threads waiting for a specific condition to be met.
 --InteriorSeparator--
@@ -403,7 +403,7 @@ A condition variable is created using `lock.newCondition()`. Threads wait using 
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-37, 38, 39
+37
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -431,7 +431,7 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Hard
+Single
 --InteriorSeparator--
 Explain how functional programming languages can help avoid data races.
 --InteriorSeparator--

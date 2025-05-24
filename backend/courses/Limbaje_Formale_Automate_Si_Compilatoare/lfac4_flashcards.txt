@@ -39,7 +39,7 @@ Multiple
 --InteriorSeparator--
 Which of the following regular expressions describe the language of all strings of a's and b's?
 --InteriorSeparator--
-(a|b)*
+(right) (a|b)*
 (wrong) a*b*
 (wrong) ab
 (wrong) a|b
@@ -66,8 +66,8 @@ Multiple
 --InteriorSeparator--
 Which of the following properties hold true for regular expressions?
 --InteriorSeparator--
-p|(q|r) ≡ (p|q)|r
-p • ε ≡ ε • p ≡ p
+(right) p|(q|r) ≡ (p|q)|r
+(right) p • ε ≡ ε • p ≡ p
 (wrong) p|p ≡ p*
 (wrong) ε|p* ≡ p
 --InteriorSeparator--
@@ -98,36 +98,6 @@ A stack (STIVA2)
 medium
 --InteriorSeparator--
 17
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following closure properties hold for type 3 languages (regular languages)?
---InteriorSeparator--
-Union
-Intersection
-(wrong) Complementation
-(wrong) None of the above
---InteriorSeparator--
-hard
---InteriorSeparator--
-3-8
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What does 'generateState()' do in the algorithm for converting a regular expression to a finite automaton?
---InteriorSeparator--
-Generates a new, unique state
-Increments a counter to ensure state uniqueness
-(wrong) Returns a random state
-(wrong) Checks for duplicate states
---InteriorSeparator--
-hard
---InteriorSeparator--
-24
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -167,22 +137,6 @@ easy
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the components of a Context-Free Grammar (CFG)?
---InteriorSeparator--
-Non-terminals
-Terminals
-Start symbol
-Production rules
-(wrong) Regular expressions
---InteriorSeparator--
-easy
---InteriorSeparator--
-36
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What is the purpose of the 'build_tree()' function in the regular expression to automaton conversion algorithm?
@@ -191,7 +145,7 @@ It constructs a portion of the syntax tree based on operators and operands from 
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-18-19
+18
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -223,8 +177,8 @@ Multiple
 --InteriorSeparator--
 If a node N in the syntax tree is labeled with '|' (union), what epsilon transitions are added to the automaton?
 --InteriorSeparator--
-δ(N.i, ε) includes S.i and D.i
-δ(S.f, ε) includes N.f and δ(D.f, ε) includes N.f
+(right) δ(N.i, ε) includes S.i and D.i
+(right) δ(S.f, ε) includes N.f and δ(D.f, ε) includes N.f
 (wrong) δ(N.i, ε) includes N.f
 (wrong) δ(S.f, ε) includes D.i
 --InteriorSeparator--
@@ -251,192 +205,6 @@ Single
 What does L(E)* represent in terms of regular expression E?
 --InteriorSeparator--
 The Kleene star of the language described by E, i.e., zero or more concatenations of strings from L(E).
---InteriorSeparator--
-easy
---InteriorSeparator--
-11
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which statement is correct?
---InteriorSeparator--
-L1 \ L2 = L1 ∩ (Σ* \ L2)
-If L is a type 3 language, then its complement is also a type 3 language.
-(wrong) The concatenation of two type 3 languages is not a type 3 language.
-(wrong) The union of a type 2 language with a type 3 language results in a type 3 language.
---InteriorSeparator--
-medium
---InteriorSeparator--
-6
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What condition must be met for two regular expressions, E1 and E2, to be considered equivalent?
---InteriorSeparator--
-L(E1) = L(E2)
---InteriorSeparator--
-easy
---InteriorSeparator--
-13
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What is a regular expression?
---InteriorSeparator--
-An algebraic representation of Type 3 languages.
-A pattern describing a set of strings.
-(wrong) Another name for context-free grammar.
-(wrong) A special kind of programming language.
---InteriorSeparator--
-easy
---InteriorSeparator--
-11
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the significance of epsilon transitions (ε-transitions) in the automaton constructed from a regular expression?
---InteriorSeparator--
-They allow the automaton to change state without consuming any input symbol.
---InteriorSeparator--
-medium
---InteriorSeparator--
-7-9
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What does the expression (0|1) * (0|1) represent?
---InteriorSeparator--
-All strings of 0s and 1s.
-All strings of 0s and 1s with a length of at least one.
-(wrong) {0, 1}
-(wrong) The empty string.
---InteriorSeparator--
-medium
---InteriorSeparator--
-13
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-If N is a node labelled with 'a' (a terminal symbol) in the tree, and you are constructing the equivalent automaton, what transition is created?
---InteriorSeparator--
-δ(N.i, a) = N.f
---InteriorSeparator--
-hard
---InteriorSeparator--
-27
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What type of languages does a Context-Free Grammar generate?
---InteriorSeparator--
-Type 2 Languages
---InteriorSeparator--
-easy
---InteriorSeparator--
-36
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What characterizes a context-free grammar (CFG)?
---InteriorSeparator--
-Productions of the form A -> α, where A is a non-terminal and α is a string of terminals and non-terminals.
-The left-hand side of each production rule consists of a single non-terminal.
-(wrong) It requires a finite number of states.
-(wrong) All productions must be in Chomsky Normal Form.
---InteriorSeparator--
-medium
---InteriorSeparator--
-36
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-In the algorithm for regular expression to automaton conversion, what is the purpose of traversing the tree in postorder?
---InteriorSeparator--
-To ensure that the automata for subexpressions are constructed before combining them into larger automata.
---InteriorSeparator--
-hard
---InteriorSeparator--
-24
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-According to the provided algorithm, how many states does the equivalent automaton have in relation to the regular expression?
---InteriorSeparator--
-p = 2(n - m) where n is the number of symbols in E, and m is the number of parentheses and occurrences of concatenation.
---InteriorSeparator--
-hard
---InteriorSeparator--
-23
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What are the sets N and T in the definition of a context-free grammar?
---InteriorSeparator--
-N is the set of non-terminals and T is the set of terminals.
---InteriorSeparator--
-easy
---InteriorSeparator--
-36
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which of the following are true regarding the closure properties of regular languages?
---InteriorSeparator--
-The complement of a regular language is regular.
-The union of two regular languages is regular.
-(wrong) The intersection of a regular language with a context-free language is always context-free.
-(wrong) The reversal of a regular language is not regular.
---InteriorSeparator--
-medium
---InteriorSeparator--
-4-6
---FlashCardSeparator--
-
---FlashCardSeparator--
-Single
---InteriorSeparator--
-What is the role of the start symbol, 'S', in a context-free grammar G = (N, T, S, P)?
---InteriorSeparator--
-It is the initial non-terminal symbol from which derivations begin.
---InteriorSeparator--
-easy
---InteriorSeparator--
-36
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Which is the definition of L(E1|E2)?
---InteriorSeparator--
-The union of L(E1) and L(E2).
-The set of strings that are in L(E1) or L(E2) or both.
-(wrong) The concatenation of L(E1) and L(E2).
-(wrong) The set of strings that are in both L(E1) and L(E2).
 --InteriorSeparator--
 easy
 --InteriorSeparator--

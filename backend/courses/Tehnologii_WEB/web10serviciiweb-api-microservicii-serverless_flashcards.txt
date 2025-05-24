@@ -38,21 +38,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the two main categories of microservices?
---InteriorSeparator--
-(right) Functional services
-(wrong) External services
-(right) Infrastructure services
-(wrong) Monolithic services
---InteriorSeparator--
-medium
---InteriorSeparator--
-10-13
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What type of communication is usually preferred between microservices?
@@ -379,7 +364,7 @@ What is JWT used for in conjunction with OpenID Connect?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-87, 88
+87
 --FlashCardSeparator--
 
 --FlashCardSeparator--

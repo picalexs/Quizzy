@@ -11,21 +11,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What are the benefits of memory mapping files?
---InteriorSeparator--
-(right) Allows direct read and write access to files in memory, as if accessing variables.
-(wrong) Requires explicit read/write system calls for file access.
-(right/wrong) Enables shared memory communication between processes.
-(wrong) Eliminates the need for a file system.
---InteriorSeparator--
-medium
---InteriorSeparator--
-4
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What is the function used to map a file into memory?
@@ -127,7 +112,7 @@ What is the difference between `MAP_PRIVATE` and `MAP_SHARED` flags in `mmap()`?
 --InteriorSeparator--
 medium
 --InteriorSeparator--
-7, 9
+7
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -320,21 +305,6 @@ hard
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-In the example mmap_ex1, what does this demonstrate about mmap?
---InteriorSeparator--
-(wrong) The process of writing directly to a file using a mmap call.
-(right/wrong) A private mapping with read only permissions.
-(wrong) Shared memory between processes
-(wrong) The use of write permissions
---InteriorSeparator--
-medium
---InteriorSeparator--
-15
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 In example mmap_ex1b.c, how are invalid user inputs handled?
@@ -383,21 +353,6 @@ medium
 --FlashCardSeparator--
 
 --FlashCardSeparator--
-Multiple
---InteriorSeparator--
-What do the txt2bin_write-mapped-file and bin2txt_read-mapped-file examples demonstrate?
---InteriorSeparator--
-(right) Reimplementing file I/O operations using memory mappings instead of standard I/O functions.
-(wrong) Creating a shared memory segment
-(right/wrong) Reading and writing integers to a file.
-(wrong) Deleting a file from the disk
---InteriorSeparator--
-medium
---InteriorSeparator--
-19
---FlashCardSeparator--
-
---FlashCardSeparator--
 Single
 --InteriorSeparator--
 What does the `Demo 'data race'_shmem #1` example illustrate?
@@ -407,35 +362,5 @@ The Producer-Consumer pattern using shared memory (mmap), but without synchroniz
 hard
 --InteriorSeparator--
 19
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-Why is it necessary to use a synchronization mechanism with mmap?
---InteriorSeparator--
-(wrong) To prevent memory leaks
-(right/wrong) To prevent issues, such as a data race when two processes are sharing memory.
-(wrong) To ensure that the writes actually get written to disk.
-(wrong) Mmap calls synchronization mechanisms automatically.
---InteriorSeparator--
-hard
---InteriorSeparator--
-19
---FlashCardSeparator--
-
---FlashCardSeparator--
-Multiple
---InteriorSeparator--
-According to the reading material, what are the advantages of using mmap?
---InteriorSeparator--
-(right/wrong) Ability to access file contents as if they were in memory.
-(wrong) Faster access speed than reading directly from a file.
-(right/wrong) Shared memory between processes.
-(wrong) No need to copy data.
---InteriorSeparator--
-hard
---InteriorSeparator--
-3, 4
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.19550613397926608}]

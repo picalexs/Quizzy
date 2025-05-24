@@ -166,7 +166,7 @@ How can the Monte Carlo method be used to estimate areas when the boundaries are
 --InteriorSeparator--
 hard
 --InteriorSeparator--
-18-19
+18
 --FlashCardSeparator--
 
 --FlashCardSeparator--
@@ -306,7 +306,7 @@ What does the Law of Large Numbers state about FN (the Monte Carlo estimator)?
 P (lim FN = H) = 1
 --InteriorSeparator--
 hard
---FlashCardSeparator--
+--InteriorSeparator--
 22
 --FlashCardSeparator--
 }], role=model}, finishReason=STOP, avgLogprobs=-0.2671737784038248}]
