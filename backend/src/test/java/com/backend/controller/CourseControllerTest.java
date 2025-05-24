@@ -23,6 +23,9 @@ class CourseControllerTest {
     @Mock
     private EnrollmentService enrollmentService;
 
+    @Mock
+    private com.backend.repository.FlashcardRepository flashcardRepository;
+
     @InjectMocks
     private CourseController courseController;
 
@@ -198,14 +201,45 @@ class CourseControllerTest {
     // Test for retrieving all courses
     @Test
     void shouldReturnAllCourses() {
-        List<Course> courses = Arrays.asList(new Course(), new Course());
+        // Arrange
+        Course course1 = new Course();
+        course1.setId(1L);
+        course1.setTitle("Course 1");
+        course1.setDescription("Description 1");
+        course1.setSemestru("1");
+        
+        Course course2 = new Course();
+        course2.setId(2L);
+        course2.setTitle("Course 2");
+        course2.setDescription("Description 2");
+        course2.setSemestru("2");
+        
+        List<Course> courses = Arrays.asList(course1, course2);
 
         when(courseService.getAllCourses()).thenReturn(courses);
+        when(flashcardRepository.countByCourseId(1L)).thenReturn(5L);
+        when(flashcardRepository.countByCourseId(2L)).thenReturn(10L);
 
-        ResponseEntity<Collection<Course>> response = courseController.getAllUsers();
+        // Act
+        ResponseEntity<List<Map<String, Object>>> response = courseController.getAllCourses();
 
+        // Assert
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(2, response.getBody().size());
+        
+        Map<String, Object> courseMap1 = response.getBody().get(0);
+        assertEquals(1L, courseMap1.get("id"));
+        assertEquals("Course 1", courseMap1.get("title"));
+        assertEquals("Description 1", courseMap1.get("description"));
+        assertEquals("1", courseMap1.get("semestru"));
+        assertEquals(5L, courseMap1.get("flashcardCount"));
+        
+        Map<String, Object> courseMap2 = response.getBody().get(1);
+        assertEquals(2L, courseMap2.get("id"));
+        assertEquals("Course 2", courseMap2.get("title"));
+        assertEquals("Description 2", courseMap2.get("description"));
+        assertEquals("2", courseMap2.get("semestru"));
+        assertEquals(10L, courseMap2.get("flashcardCount"));
     }
 
     // Test for retrieving all courses when no courses exist
@@ -213,7 +247,7 @@ class CourseControllerTest {
     void shouldReturnEmptyListIfNoCourses() {
         when(courseService.getAllCourses()).thenReturn(Collections.emptyList());
 
-        ResponseEntity<Collection<Course>> response = courseController.getAllUsers();
+        ResponseEntity<List<Map<String, Object>>> response = courseController.getAllCourses();
 
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(0, response.getBody().size());
