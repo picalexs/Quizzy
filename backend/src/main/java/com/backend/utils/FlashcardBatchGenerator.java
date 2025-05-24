@@ -47,7 +47,6 @@ public class FlashcardBatchGenerator {
             return;
         }
 
-        // Procesează mai întâi fișierele .txt din directorul curent
         for (File file : files) {
             if (file.isFile() && file.getName().endsWith(".txt") && !file.getName().contains("_flashcards")) {
                 String fileRelativePath = relativePath.isEmpty() ?
@@ -58,7 +57,6 @@ public class FlashcardBatchGenerator {
             }
         }
 
-        // Apoi parcurge recursiv subdirectoarele
         for (File file : files) {
             if (file.isDirectory()) {
                 String newRelativePath = relativePath.isEmpty() ?
@@ -75,11 +73,9 @@ public class FlashcardBatchGenerator {
         try {
             System.out.println("📄 Procesez fișierul: " + relativePath);
 
-            // Creează parametrii pentru form data
             MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
             map.add("inputFilePath", relativePath);
 
-            // Setează header-ele pentru form data
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
@@ -94,7 +90,6 @@ public class FlashcardBatchGenerator {
                 System.out.println("❌ Eroare HTTP " + response.getStatusCode() + " pentru " + relativePath);
             }
 
-            // Adaugă o pauză mică între cereri pentru a nu suprasolicita API-ul
             Thread.sleep(1000);
 
         } catch (Exception e) {
@@ -103,7 +98,6 @@ public class FlashcardBatchGenerator {
         }
     }
 
-    // Metodă publică pentru a putea fi apelată manual din alte părți ale aplicației
     public void generateFlashcardsForSpecificCourse(String courseName) {
         String courseDirectory = BASE_DIRECTORY + "/" + courseName;
         File courseFolder = new File(courseDirectory);

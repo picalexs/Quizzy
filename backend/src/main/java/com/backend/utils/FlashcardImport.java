@@ -63,7 +63,6 @@ public class FlashcardImport {
             try {
                 String fileContent = Files.readString(filePath);
 
-                // Extract material from file path
                 Material material = findMaterialForFlashcardFile(filePath, baseDir);
 
                 if (material == null) {
@@ -90,19 +89,14 @@ public class FlashcardImport {
         return totalImported;
     }
 
-    /**
-     * Finds the corresponding Material for a flashcard file based on its path and filename.
-     */
     private Material findMaterialForFlashcardFile(Path flashcardFilePath, String baseDir) {
         try {
-            // Extract filename without extension and remove "_flashcards" suffix
             String fileName = flashcardFilePath.getFileName().toString();
             if (!fileName.endsWith("_flashcards.txt")) {
                 System.err.println("EROARE: Numele fisierului nu respecta formatul asteptat: " + fileName);
                 return null;
             }
 
-            // Extract the base name (e.g., "agr1" from "agr1_flashcards.txt")
             String baseName = fileName.substring(0, fileName.length() - "_flashcards.txt".length());
             String expectedPdfName = baseName + ".pdf";
 
@@ -110,7 +104,6 @@ public class FlashcardImport {
             System.out.println("BaseDir: " + baseDir);
             System.out.println("Nume fisier PDF asteptat: " + expectedPdfName);
 
-            // Get the relative path from baseDir to the flashcard file
             Path baseDirectory = Paths.get(baseDir);
             Path relativePath = baseDirectory.relativize(flashcardFilePath);
 
@@ -118,19 +111,15 @@ public class FlashcardImport {
 
             String expectedMaterialPath;
 
-            // Check if relativePath has a parent (i.e., it's in a subdirectory)
             if (relativePath.getParent() != null) {
-                // Replace the flashcard filename with the expected PDF filename
                 Path expectedPdfPath = relativePath.getParent().resolve(expectedPdfName);
                 expectedMaterialPath = expectedPdfPath.toString().replace("\\", "/");
             } else {
-                // File is directly in the base directory
                 expectedMaterialPath = expectedPdfName;
             }
 
             System.out.println("Cautam materialul cu path-ul: " + expectedMaterialPath);
 
-            // Search for material with this path - try multiple approaches
             Material material = findMaterialByPath(expectedMaterialPath, expectedPdfName, baseName);
 
             if (material != null) {
@@ -148,9 +137,6 @@ public class FlashcardImport {
         }
     }
 
-    /**
-     * Helper method to find material using multiple search strategies
-     */
     private Material findMaterialByPath(String expectedMaterialPath, String expectedPdfName, String baseName) {
         // Strategy 1: Exact path match
         Material material = materialService.findByPath(expectedMaterialPath);
@@ -234,7 +220,6 @@ public class FlashcardImport {
 
                 if (existingOpt.isPresent()) {
                     flashcard = existingOpt.get();
-                    // Update material if it's different
                     if (!flashcard.getMaterial().getId().equals(material.getId())) {
                         flashcard.setMaterial(material);
                         System.out.println("Actualizat materialul pentru flashcard existent: " + questionText);
@@ -253,22 +238,18 @@ public class FlashcardImport {
                         flashcard.setAnswers(new HashSet<>());
                     }
 
-                    // Save flashcard first to generate ID
                     flashcard = flashcardRepository.save(flashcard);
                     count++;
                 }
 
-                // Update answers after flashcard is saved and has an ID
                 updateAnswers(fc, flashcard);
 
-                // Save flashcard again with updated answers
                 flashcardRepository.save(flashcard);
 
             } catch (Exception e) {
                 System.err.println("EROARE la procesarea flashcard-ului: " + fc.getQuestion());
                 System.err.println("Eroare: " + e.getMessage());
                 e.printStackTrace();
-                // Continue with next flashcard instead of failing completely
             }
         }
 
@@ -282,7 +263,6 @@ public class FlashcardImport {
 
         if (fcDTO.getAnswers() == null) return;
 
-        // Clear existing answers to avoid duplicates
         Set<AnswerFC> existingAnswers = new HashSet<>(flashcard.getAnswers());
 
         for (AnswerFCDTO answerDTO : fcDTO.getAnswers()) {
@@ -295,7 +275,6 @@ public class FlashcardImport {
                     answer.setOptionText(optionText);
                     answer.setCorrect(answerDTO.isCorrect());
 
-                    // Save the answer immediately to generate ID
                     answer = answerFCRepository.save(answer);
                     flashcard.getAnswers().add(answer);
 
@@ -303,15 +282,11 @@ public class FlashcardImport {
                     System.err.println("EROARE la salvarea raspunsului: " + optionText);
                     System.err.println("Lungime text: " + (optionText != null ? optionText.length() : "null"));
                     System.err.println("Eroare: " + e.getMessage());
-                    // Continue with next answer instead of failing completely
                 }
             }
         }
     }
 
-    /**
-     * Truncate option text if it's too long for the database field
-     */
     private String truncateOptionText(String optionText) {
         if (optionText == null) {
             return null;
@@ -321,7 +296,6 @@ public class FlashcardImport {
             return optionText;
         }
 
-        // Truncate and add ellipsis
         String truncated = optionText.substring(0, MAX_OPTION_TEXT_LENGTH - 3) + "...";
         System.out.println("AVERTISMENT: Text raspuns prea lung, s-a trunchiat la " + MAX_OPTION_TEXT_LENGTH + " caractere");
         System.out.println("Text original: " + optionText.substring(0, Math.min(100, optionText.length())) + "...");
@@ -351,14 +325,12 @@ public class FlashcardImport {
                     answer.setOptionText(optionText);
                     answer.setCorrect(answerDTO.isCorrect());
 
-                    // Save the answer to generate ID
                     answer = answerFCRepository.save(answer);
                     answers.add(answer);
 
                 } catch (Exception e) {
                     System.err.println("EROARE la crearea raspunsului: " + optionText);
                     System.err.println("Eroare: " + e.getMessage());
-                    // Continue with next answer
                 }
             }
         }
