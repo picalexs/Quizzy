@@ -3,7 +3,7 @@ import axios from 'axios';
 const envUrl = import.meta.env.VITE_BACKEND_URL;
 const BASE_URL =
     typeof envUrl === 'string' && envUrl.trim() !== ''
-        ? envUrl + '/api'
+        ? envUrl
         : 'http://localhost:3000';
 
 const axiosInstance = axios.create({
