@@ -58,7 +58,7 @@ const Flashcards = () => {
                     };
 
                     // Verificăm dacă este o întrebare cu opțiuni multiple
-                    if (card.questionType === 'Teorie') {
+                    if (card.questionType === 'Multiple') {
                         // Extragem opțiunile și răspunsul corect
                         const options = card.answers.map(answer => answer.optionText);
                         const correctAnswer = card.answers.find(answer => answer.correct)?.optionText;
