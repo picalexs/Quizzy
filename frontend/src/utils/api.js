@@ -6,28 +6,18 @@ const BASE_URL =
         ? envUrl + '/api'
         : 'http://localhost:3000';
 
-console.log('API Base URL:', BASE_URL);
-
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
     headers: { 'Content-Type': 'application/json' },
 });
 
-// Request interceptor to add JWT token and log details
+// Request interceptor to add JWT token
 axiosInstance.interceptors.request.use(
     (config) => {
         const token = localStorage.getItem('authToken');
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
-        //DEBUG REMOVE LATER
-        console.log(`Making ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
-        console.log('Headers:', config.headers);
-        if (config.data) {
-            console.log('Body:', config.data);
-        }
-
-        
         return config;
     },
     (error) => Promise.reject(error)

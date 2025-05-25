@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master , CD-Routing-fix ]
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
