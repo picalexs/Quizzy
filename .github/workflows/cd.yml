@@ -129,11 +129,10 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ec2-user
-          key: ${{ secrets.EC2_SSH_KEY }}
+          username: ec2-user          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd quizzy-app
-            echo "VITE_BACKEND_URL=http://backend:3000" > .env
+            echo "VITE_BACKEND_URL=http://52.28.16.232" > .env
             echo "SPRING_DATASOURCE_URL=${{ secrets.SPRING_DATASOURCE_URL }}" >> .env
             echo "SPRING_DATASOURCE_USERNAME=${{ secrets.SPRING_DATASOURCE_USERNAME }}" >> .env
             echo "SPRING_DATASOURCE_PASSWORD=${{ secrets.SPRING_DATASOURCE_PASSWORD }}" >> .env

@@ -3,10 +3,10 @@ import axios from 'axios';
 const envUrl = import.meta.env.VITE_BACKEND_URL;
 const BASE_URL =
     typeof envUrl === 'string' && envUrl.trim() !== ''
-        ? envUrl
+        ? envUrl + '/api'
         : 'http://localhost:3000';
 
-console.log(BASE_URL);
+console.log('API Base URL:', BASE_URL);
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
