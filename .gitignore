@@ -8,6 +8,7 @@ backend/target/
 .idea/
 .DS_Store
 .vscode
+node_modules/
 
 ### STS ###
 backend/.apt_generated
