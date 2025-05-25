@@ -23,6 +23,8 @@ const FlashcardsProf = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [originalAnswers, setOriginalAnswers] = useState([]);
 
+    const [updateSuccess, setUpdateSuccess] = useState(false);
+
     // Debug the API endpoints and structure
     useEffect(() => {
         const checkApiEndpoints = async () => {
@@ -166,13 +168,12 @@ const FlashcardsProf = () => {
                 // Use TestAnswerController to get answers
                 const answersResponse = await api.get(`/answers/question/${question.id}`);
                 console.log("TestAnswerController - Raw answers from API:", answersResponse.data);
-                
+
                 if (answersResponse.data && Array.isArray(answersResponse.data)) {
-                    // Convert to our format
                     const formattedAnswers = answersResponse.data.map(ans => ({
                         id: ans.id,
                         text: ans.optionText,
-                        isCorrect: ans.isCorrect
+                        isCorrect: ans.correct
                     }));
                     setAnswers(formattedAnswers);
                     setOriginalAnswers(formattedAnswers);
@@ -192,6 +193,7 @@ const FlashcardsProf = () => {
                         setAnswers([]);
                         setOriginalAnswers([]);
                     }
+
                 }
             } catch (err) {
                 console.error("Error loading answers from TestAnswerController:", err);
@@ -360,15 +362,33 @@ const FlashcardsProf = () => {
                 }
                 
                 // Refresh questions list using TestQuestionController
-                await fetchQuestions();
+                ///await fetchQuestions();
+
+                const answersResponse = await api.get(`/answers/question/${currentQuestionId}`);
+                console.log("TestAnswerController - Raw answers from API:", answersResponse.data);
+
+                if (answersResponse.data && Array.isArray(answersResponse.data)) {
+                    const formattedAnswers = answersResponse.data.map(ans => ({
+                        id: ans.id,
+                        text: ans.optionText,
+                        isCorrect: ans.correct
+                    }));
+                    setAnswers(formattedAnswers);
+                    setOriginalAnswers(formattedAnswers);
+                    console.log("TestAnswerController - Loaded answers with isCorrect values:", formattedAnswers.map(a => a.isCorrect));
+                }
+                setUpdateSuccess(true);
+                setTimeout(() => setUpdateSuccess(false), 3000);
                 
                 // Reset form
-                setCurrentQuestionId(null);
+                /*setCurrentQuestionId(null);
                 setIsEditing(false);
                 setQuestion('');
                 setAnswers([]);
                 setOriginalAnswers([]);
                 setShowAddBox(false);
+                */
+
             } else {
                 // Create new question using TestQuestionController
                 const questionData = {
@@ -559,9 +579,19 @@ const FlashcardsProf = () => {
                         </div>
 
                         <div className="flashcardsProf-add-box-buttons">
-                            <button className="flashcardsProf-save-btn" onClick={handleSaveFlashcard} disabled={saving}>
-                                {saving ? "Saving..." : isEditing ? "Update question" : "Save question"}
-                            </button>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                <button
+                                    className="flashcardsProf-save-btn"
+                                    onClick={handleSaveFlashcard}
+                                    disabled={saving}
+                                >
+                                    {saving ? "Saving..." : isEditing ? "Update question" : "Save question"}
+                                </button>
+                                {updateSuccess && (
+                                    <span style={{ color: "green", fontSize: "0.9rem" }}>Update successful</span>
+                                )}
+                            </div>
+
                             <button 
                                 className="flashcardsProf-delete-btn" 
                                 onClick={handleDeleteQuestion}

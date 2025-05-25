@@ -1,6 +1,7 @@
 package com.backend.controller;
 
 import com.backend.dto.TestDTO;
+import com.backend.model.TestEntity;
 import com.backend.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,12 +23,12 @@ public class TestController {
     }
 
     @GetMapping
-    public ResponseEntity<Collection<TestDTO>> getAllTests() {
+    public ResponseEntity<Collection<TestEntity>> getAllTests() {
         return ResponseEntity.ok(testService.getAllTests());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TestDTO> getTestById(@PathVariable Long id) {
+    public ResponseEntity<TestEntity> getTestById(@PathVariable Long id) {
         return ResponseEntity.ok(testService.getTestById(id));
     }
 
@@ -47,9 +48,8 @@ public class TestController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTestById(@PathVariable Long id) {
-        testService.deleteTestById(id);
-        return ResponseEntity.noContent().build();
+    public ResponseEntity<String> deleteTestById(@PathVariable Long id) {
+        return ResponseEntity.ok(testService.deleteTestById(id));
     }
 
     @GetMapping("/professor/{professorId}")

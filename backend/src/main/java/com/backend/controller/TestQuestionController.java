@@ -33,14 +33,20 @@ public class TestQuestionController {
     }
 
     @PostMapping
-    public ResponseEntity<TestQuestionDTO> createTestQuestion(@RequestBody TestQuestionDTO testQuestion) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(testQuestionService.createQuestion(testQuestion));
+    public ResponseEntity<TestQuestionDTO> createTestQuestion(@RequestBody TestQuestionDTO testQuestionDTO) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(testQuestionService.createQuestion(testQuestionDTO));
+    }
+
+    @PostMapping("/multiple")
+    public ResponseEntity<List<TestQuestionDTO>> createMultipleTestQuestions(@RequestBody List<TestQuestionDTO> questions) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(testQuestionService.createMultipleQuestions(questions));
     }
 
     @PostMapping("/save")
     public ResponseEntity<TestQuestionDTO> saveQuestion(@RequestBody TestQuestionDTO testQuestion) {
         return ResponseEntity.status(HttpStatus.CREATED).body(testQuestionService.saveQuestion(testQuestion));
     }
+
     @PostMapping("/bulk")
     public ResponseEntity<List<TestQuestionDTO>> createMultipleQuestions(@RequestBody List<TestQuestionDTO> questions) {
         return ResponseEntity.status(HttpStatus.CREATED).body(testQuestionService.createMultipleQuestions(questions));

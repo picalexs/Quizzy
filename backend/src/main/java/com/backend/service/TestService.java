@@ -10,13 +10,11 @@ import com.backend.repository.TestRepository;
 import com.backend.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -46,25 +44,37 @@ public class TestService {
 
     @Transactional
     public TestDTO createTest(TestDTO testDTO) {
-        return Optional.ofNullable(testDTO)
-                .filter(t -> t.getId() == null)
-                .map(this::saveTest)
-                .orElseThrow(() -> new IllegalArgumentException("New test must not have an ID"));
+
+        TestMapper mapper = new TestMapper(courseRepository, userRepository);
+        TestEntity test = mapper.toEntity(testDTO);
+
+        Objects.requireNonNull(test, "Test entity must not be null");
+        if (test.getId() != null) {
+            throw new IllegalArgumentException("New test must have no ID");
+        }
+
+        User creator = test.getProfessor();
+        if (creator == null) {
+            throw new IllegalArgumentException("Test must have an associated professor/admin");
+        }
+
+        String role = creator.getRole();
+        if (!("PROFESOR".equalsIgnoreCase(role) || "ADMIN".equalsIgnoreCase(role))) {
+            throw new AccessDeniedException("Only professors or admins can create tests");
+        }
+        return testMapper.toDTO(testRepository.save(test));
     }
 
     @Transactional(readOnly = true)
-    public Collection<TestDTO> getAllTests() {
-        return testRepository.findAll().stream()
-                .map(testMapper::toDTO)
-                .collect(Collectors.toList());
+    public Collection<TestEntity> getAllTests() {
+        return new ArrayList<>(testRepository.findAll());
     }
 
     @Transactional(readOnly = true)
-    public TestDTO getTestById(Long id) {
+    public TestEntity getTestById(Long id) {
         return Optional.ofNullable(id)
                 .filter(i -> i > 0)
                 .flatMap(testRepository::findById)
-                .map(testMapper::toDTO)
                 .orElseThrow(() -> new EntityNotFoundException("Test not found with id " + id));
     }
 
@@ -230,7 +240,7 @@ public class TestService {
     }
 
     @Transactional
-    public void deleteTestById(Long id) {
+    public String deleteTestById(Long id) {
         Optional.ofNullable(id)
                 .filter(i -> i > 0)
                 .ifPresentOrElse(
@@ -244,11 +254,11 @@ public class TestService {
                             throw new IllegalArgumentException("Invalid test ID");
                         }
                 );
+        return "Test deleted successfully";
     }
 
     @Transactional
     public TestDTO updateTest(Long id, TestDTO testDTO) {
-        // Validate input
         if (testDTO == null) {
             throw new IllegalArgumentException("TestDTO must not be null");
         }
@@ -257,20 +267,23 @@ public class TestService {
             throw new IllegalArgumentException("Invalid test ID");
         }
 
-        // Check if test exists
         TestEntity existingTest = testRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Test not found with id " + id));
 
-        // Validate required fields
         if (testDTO.getTitle() == null || testDTO.getDate() == null ||
                 testDTO.getProfessorId() == null || testDTO.getCourseId() == null) {
             throw new IllegalArgumentException("All required fields must be provided");
         }
 
-        // Update fields
-        updateTestFields(existingTest, testDTO);
+        if(testMapper.toEntity(testDTO).getProfessor() == null) {
+            throw new IllegalArgumentException("Test must have an associated professor/admin");
+        }
 
-        // Save and return
+        if(  !("PROFESOR".equalsIgnoreCase(testMapper.toEntity(testDTO).getProfessor().getRole()) || "ADMIN".equalsIgnoreCase(testMapper.toEntity(testDTO).getProfessor().getRole()) )  ) {
+            throw new AccessDeniedException("Only professors or admins can update tests");
+        }
+
+        updateTestFields(existingTest, testDTO);
         return testMapper.toDTO(testRepository.save(existingTest));
     }
 
