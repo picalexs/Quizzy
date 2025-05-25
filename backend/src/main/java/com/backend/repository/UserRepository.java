@@ -15,25 +15,25 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     Collection<User> allUsers();
 
     Optional<User> findByEmail(String email);
-    
+
     @Modifying
     @Transactional
     @Query("UPDATE User u SET u.firstName = :firstName WHERE u.id = :id")
     int updateFirstName(@Param("id") Integer id, @Param("firstName") String firstName);
-    
+
     @Modifying
     @Transactional
     @Query("UPDATE User u SET u.lastName = :lastName WHERE u.id = :id")
     int updateLastName(@Param("id") Integer id, @Param("lastName") String lastName);
-    
+
     @Modifying
     @Transactional
     @Query("UPDATE User u SET u.email = :email WHERE u.id = :id")
     int updateEmail(@Param("id") Integer id, @Param("email") String email);
-    
+
     @Modifying
     @Transactional
     @Query("UPDATE User u SET u.password = :password WHERE u.id = :id")
     int updatePassword(@Param("id") Integer id, @Param("password") String password);
-    
+
 }
