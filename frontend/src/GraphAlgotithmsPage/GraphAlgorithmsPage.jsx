@@ -108,23 +108,3 @@ function GraphAlgorithmPage() {
                         <h2 className="graph-section-title">Files</h2>
                         <h2 className="graph-file-count">6</h2>
                     </div>
-
-                    {[1, 2, 3].map((i) => (
-                        <div key={i}>
-                            <div className="graph-file-entry">
-                                <FaFilePdf size={40} color="#E74C3C" />
-                                <div className="graph-file-text">
-                                    <p className="graph-file-name">{`Agr${i}`}</p>
-                                    <p className="graph-file-details">{`${30 + i * 2} pages | ${3 + i} flashcards`}</p>
-                                </div>
-                            </div>
-                            {i < 3 && <div className="graph-divider-small"></div>}
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}
-
-export default GraphAlgorithmPage;

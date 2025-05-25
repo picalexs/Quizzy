@@ -1,6 +1,6 @@
-package com.backend.controller;
+    package com.backend.controller;
 
-import com.backend.service.GeminiService;
+    import com.backend.service.GeminiService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +23,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class GeminiController {
 
-    private final GeminiService geminiService;
+        private final GeminiService geminiService;
 
     @GetMapping("/test-gemini")
     public String testGemini() {
@@ -35,39 +35,39 @@ public class GeminiController {
         return geminiService.processFile(inputFilePath);
     }
 
-    @PostMapping("/generate-with-prompt")
-    public String generateResponseWithPrompt(
-            @RequestParam String inputFilePath) throws IOException {
+        @PostMapping("/generate-with-prompt")
+        public String generateResponseWithPrompt(
+                @RequestParam String inputFilePath) throws IOException {
 
-        String prompt = "Create 35 flashcards with essential information from the material provided. Format single choice answers as:\n\n--FlashCardSeparator--\nSingle\n--InteriorSeparator--\ndetailed question\n--InteriorSeparator--\nanswer\n--InteriorSeparator--\ndifficulty\n--InteriorSeparator--\npageIndex\n--FlashCardSeparator--\n\nFormat multiple choice answers as:\n\n--FlashCardSeparator--\nMultiple\n--InteriorSeparator--\ndetailed question\n--InteriorSeparator--\n(right) answer option\n(right/wrong) answer option\n(wrong) answer option\n(wrong) answer option\n--InteriorSeparator--\ndifficulty\n--InteriorSeparator--\npageIndex\n--FlashCardSeparator--\n\nEnsure:\n- Mix of single and multiple choice questions\n- Difficulties: easy, medium, hard\n- Minimum 10 hard questions\n- 1-2 correct answers for multiple choice\n- No emojis or additional commentary";
+            String prompt = "Create 35 flashcards with essential information from the material provided. Format single choice answers as:\n\n--FlashCardSeparator--\nSingle\n--InteriorSeparator--\ndetailed question\n--InteriorSeparator--\nanswer\n--InteriorSeparator--\ndifficulty\n--InteriorSeparator--\npageIndex\n--FlashCardSeparator--\n\nFormat multiple choice answers as:\n\n--FlashCardSeparator--\nMultiple\n--InteriorSeparator--\ndetailed question\n--InteriorSeparator--\n(right) answer option\n(right/wrong) answer option\n(wrong) answer option\n(wrong) answer option\n--InteriorSeparator--\ndifficulty\n--InteriorSeparator--\npageIndex\n--FlashCardSeparator--\n\nEnsure:\n- Mix of single and multiple choice questions\n- Difficulties: easy, medium, hard\n- Minimum 10 hard questions\n- 1-2 correct answers for multiple choice\n- No emojis or additional commentary";
 
-        // Get the generated content from Gemini API
-        String generatedContent = geminiService.processFileWithPrompt(inputFilePath, prompt);
+            // Get the generated content from Gemini API
+            String generatedContent = geminiService.processFileWithPrompt(inputFilePath, prompt);
 
-        // Get the base path to the courses directory
-        String coursesBasePath = System.getProperty("user.dir") + File.separator + "courses";
+            // Get the base path to the courses directory
+            String coursesBasePath = System.getProperty("user.dir") + File.separator + "courses";
 
-        // Parse the relative file path to determine output directory and filename
-        Path relativePath = Paths.get(inputFilePath);
-        String filename = relativePath.getFileName().toString();
-        String filenameWithoutExtension = filename.substring(0, filename.lastIndexOf('.'));
-        String outputFilename = filenameWithoutExtension + "_flashcards.txt";
+            // Parse the relative file path to determine output directory and filename
+            Path relativePath = Paths.get(inputFilePath);
+            String filename = relativePath.getFileName().toString();
+            String filenameWithoutExtension = filename.substring(0, filename.lastIndexOf('.'));
+            String outputFilename = filenameWithoutExtension + "_flashcards.txt";
 
-        // Create the output path in the same directory as the input file
-        Path outputPath = Paths.get(coursesBasePath).resolve(relativePath.getParent()).resolve(outputFilename);
+            // Create the output path in the same directory as the input file
+            Path outputPath = Paths.get(coursesBasePath).resolve(relativePath.getParent()).resolve(outputFilename);
 
-        try {
-            // Ensure the directory exists
-            Files.createDirectories(outputPath.getParent());
+            try {
+                // Ensure the directory exists
+                Files.createDirectories(outputPath.getParent());
 
-            // Write the content to the file
-            Files.writeString(outputPath, generatedContent);
+                // Write the content to the file
+                Files.writeString(outputPath, generatedContent);
 
-            return "ok - Saved to " + outputPath;
-        } catch (Exception e) {
-            return "Error saving flashcards: " + e.getMessage();
+                return "ok - Saved to " + outputPath;
+            } catch (Exception e) {
+                return "Error saving flashcards: " + e.getMessage();
+            }
         }
-    }
 
     @PostMapping("/compare-users-answer-to-the-official-answer")
     public ResponseEntity<Double> compareUsersAnswerToOfficialAnswer(@RequestBody Map<String, String> request) {
@@ -123,18 +123,18 @@ public class GeminiController {
         }
     }
 
-    private String extractOnlyTheNumber(String json) {
-        int start = json.indexOf("text=");
-        if (start == -1) {
-            throw new IllegalArgumentException("Could not find 'text=' in the response: " + json);
+        private String extractOnlyTheNumber(String json) {
+            int start = json.indexOf("text=");
+            if (start == -1) {
+                throw new IllegalArgumentException("Could not find 'text=' in the response: " + json);
+            }
+            start += 5;
+
+            int end = json.indexOf("\\n", start);
+            if (end == -1) end = json.indexOf("\n", start);
+            if (end == -1) end = json.indexOf("}", start);
+            if (end == -1) end = json.length(); // fallback
+
+            return json.substring(start, end).trim();
         }
-        start += 5;
-
-        int end = json.indexOf("\\n", start);
-        if (end == -1) end = json.indexOf("\n", start);
-        if (end == -1) end = json.indexOf("}", start);
-        if (end == -1) end = json.length(); // fallback
-
-        return json.substring(start, end).trim();
     }
-}
