@@ -129,7 +129,8 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ec2-user          key: ${{ secrets.EC2_SSH_KEY }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd quizzy-app
             echo "VITE_BACKEND_URL=http://52.28.16.232" > .env
