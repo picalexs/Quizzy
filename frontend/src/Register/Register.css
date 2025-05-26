@@ -1,10 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 .register-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(135deg, #F5F7FA 0%, #E4E7EB 100%);
-    padding: 20px;
+    padding: 0; /* Remove top padding space */
+    width: 100vw;
+    overflow-x: hidden; /* Prevent mobile overflow */
 }
 
 .register-header {
@@ -45,23 +58,35 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
 }
 
-.register-container input {
+/* Force all form fields to match full width of form */
+.register-container form > * {
+    width: 100%;
+}
+
+.register-container input,
+.role-select-wrapper select,
+.secret-code-input {
     padding: 12px 15px;
     border: 1px solid #E4E7EB;
     border-radius: 8px;
     font-size: 16px;
     transition: border-color 0.3s;
-    box-sizing: border-box;
     width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
 }
 
-.register-container input:focus {
+.register-container input:focus,
+.role-select-wrapper select:focus,
+.secret-code-input:focus {
     outline: none;
     border-color: #173B61;
 }
 
+/* ✅ Password Wrapper Matching Style */
 .password-wrapper {
     position: relative;
     display: flex;
@@ -70,23 +95,34 @@
 }
 
 .password-wrapper input {
+    padding: 12px 45px 12px 15px;
+    border: 1px solid #E4E7EB;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
     width: 100%;
-    padding-right: 40px;
     box-sizing: border-box;
+    min-width: 0;
+}
+
+.password-wrapper input:focus {
+    outline: none;
+    border-color: #173B61;
 }
 
 .toggle-password {
     position: absolute;
-    right: 10px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    font-size: 18px;
+    color: #173B61;
+    padding: 0;
 }
-
-.toggle-password:focus {
-    outline: none;
-}
+/* ✅ End of password toggle styling */
 
 .register-buttons {
     display: flex;
@@ -95,7 +131,8 @@
     flex-wrap: wrap;
 }
 
-.register-button, .login-button {
+.register-button,
+.login-button {
     flex: 1 1 45%;
     min-width: 150px;
     padding: 12px;
@@ -183,6 +220,7 @@
     flex-direction: column;
     gap: 6px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .role-select-wrapper label {
@@ -191,33 +229,9 @@
     font-size: 14px;
 }
 
-.role-select-wrapper select {
-    padding: 12px;
-    border: 1px solid #E4E7EB;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-    background-color: white;
-}
-
-.role-select-wrapper select:focus {
-    border-color: #173B61;
-    outline: none;
-}
-
 .secret-code-input {
-    padding: 12px;
-    border: 1px solid #E4E7EB;
-    border-radius: 8px;
-    font-size: 16px;
     margin-top: -5px;
-    transition: border-color 0.3s;
     background-color: white;
-}
-
-.secret-code-input:focus {
-    border-color: #173B61;
-    outline: none;
 }
 
 .teacher-extra {
@@ -237,7 +251,8 @@
         padding: 10px 20px;
     }
 
-    .logo-facultate, .quizzy-logo {
+    .logo-facultate,
+    .quizzy-logo {
         height: 40px;
     }
 
@@ -245,7 +260,8 @@
         flex-direction: column;
     }
 
-    .register-button, .login-button {
+    .register-button,
+    .login-button {
         flex-basis: 100%;
         min-width: auto;
     }

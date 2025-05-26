@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 150px; /* Ensures space for the header */
+    padding-top: 15px; /* Ensures space for the header */
     font-family: 'Ubuntu', sans-serif;
     position: relative;
     box-sizing: border-box;
@@ -26,6 +26,7 @@
 input {
     color: #173B61;
     box-sizing: border-box;
+    border-radius: 30px; /* Added default rounded corners */
 }
 
 input::placeholder {
@@ -78,11 +79,28 @@ input::placeholder {
     width: 100%;
     max-width: 400px;
     padding: 15px 20px;
-    border-radius: 30px;
+    border-radius: 30px !important; /* Force rounded corners */
     border: none;
     outline: none;
     box-sizing: border-box;
     color: #173B61;
+}
+
+/* Autofill fix for password and other inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    border-radius: 30px !important; /* Keep rounded corners */
+    box-shadow: 0 0 0px 1000px #fff inset !important; /* Override yellow autofill background */
+    -webkit-text-fill-color: #173B61 !important; /* Text color */
+}
+
+/* Firefox autofill */
+input:-moz-autofill {
+    border-radius: 30px !important;
+    box-shadow: 0 0 0px 1000px #fff inset !important;
+    -moz-text-fill-color: #173B61 !important;
 }
 
 .password-wrapper {
