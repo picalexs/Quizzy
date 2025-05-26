@@ -11,7 +11,6 @@ import Flashcards from "./Flashcards/Flashcards.jsx";
 import PDFViewer from './PDFViewer/PDFViewer.jsx';
 import CoursePage from './CoursePage/CoursePage.jsx';
 
-import Flashcards from "./Flashcards/Flashcards.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

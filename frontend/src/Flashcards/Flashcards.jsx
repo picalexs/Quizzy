@@ -57,17 +57,17 @@ const Flashcards = () => {
                         questionType: card.questionType
                     };
 
-                    // Verificăm dacă este o întrebare cu opțiuni multiple
                     if (card.questionType === 'Multiple') {
-                        // Extragem opțiunile și răspunsul corect
                         const options = card.answers.map(answer => answer.optionText);
                         const correctAnswer = card.answers.find(answer => answer.correct)?.optionText;
                         processedCard.options = options;
                         processedCard.correctAnswer = correctAnswer;
                     } else {
-                        // Pentru întrebări cu răspuns simplu
+                        // Caută fie .text, fie .optionText
                         processedCard.answer = card.answers.find(answer => answer.correct)?.text ||
+                            card.answers.find(answer => answer.correct)?.optionText ||
                             card.answers[0]?.text ||
+                            card.answers[0]?.optionText ||
                             "No answer provided";
                     }
 
