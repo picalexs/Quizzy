@@ -3,29 +3,21 @@ import axios from 'axios';
 const envUrl = import.meta.env.VITE_BACKEND_URL;
 const BASE_URL =
     typeof envUrl === 'string' && envUrl.trim() !== ''
-        ? envUrl
-        : '';
+        ? envUrl + '/api'
+        : 'http://localhost:3000';
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
     headers: { 'Content-Type': 'application/json' },
 });
 
-// Request interceptor to add JWT token and log details
+// Request interceptor to add JWT token
 axiosInstance.interceptors.request.use(
     (config) => {
         const token = localStorage.getItem('authToken');
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
-        //DEBUG REMOVE LATER
-        console.log(`Making ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
-        console.log('Headers:', config.headers);
-        if (config.data) {
-            console.log('Body:', config.data);
-        }
-
-        
         return config;
     },
     (error) => Promise.reject(error)
@@ -49,10 +41,30 @@ axiosInstance.interceptors.response.use(
     }
 );
 
+// Create a separate instance for binary file downloads
+const binaryAxiosInstance = axios.create({
+    baseURL: BASE_URL,
+    responseType: 'blob',
+});
+
+// Copy the auth interceptor to the binary instance
+binaryAxiosInstance.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem('authToken');
+        if (token) {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        console.log(`Making binary ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
+        return config;
+    },
+    (error) => Promise.reject(error)
+);
+
 // Export helper functions for API calls
 export const api = {
     get: (url) => axiosInstance.get(url),
     post: (url, data) => axiosInstance.post(url, data),
     put: (url, data) => axiosInstance.put(url, data),
     delete: (url) => axiosInstance.delete(url),
+    getBinaryFile: (url, headers = {}) => binaryAxiosInstance.get(url, { headers })
 };

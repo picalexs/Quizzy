@@ -12,13 +12,14 @@ services:
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
     ports:
       - "3000:3000"
-
   frontend:
     build:
       context: ./frontend
+      args:
+        VITE_BACKEND_URL: http://52.28.16.232
     image: quizzy-frontend
     environment:
-      - VITE_BACKEND_URL=http://backend:3000
+      VITE_BACKEND_URL: http://52.28.16.232
     ports:
       - "80:80"
     depends_on:
