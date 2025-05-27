@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/flashcards" element={<Flashcards />} />
             <Route path="/course/:id" element={<CoursePage />} />
             <Route path="/Material/path/*" element={<PDFViewer />} />
-            <Route path="/flashcards" element={<Flashcards />} />
+            <Route path="/flashcards/:materialId" element={<Flashcards />} />
 
         </Routes>
     </BrowserRouter>
