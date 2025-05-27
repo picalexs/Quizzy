@@ -1,6 +1,7 @@
 package com.backend.controller;
 
 import com.backend.model.Flashcard;
+import com.backend.model.FlashcardSession;
 import com.backend.service.FlashcardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -45,6 +46,11 @@ public class FlashcardController {
         return flashcardService.getFlashcardById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("course/{courseId}")
+    public ResponseEntity<List<Flashcard>> getFlashcardsByCourseId(@PathVariable Long courseId) {
+        return ResponseEntity.ok(flashcardService.getFlashcardsByCourseId(courseId));
     }
 
     @PostMapping
