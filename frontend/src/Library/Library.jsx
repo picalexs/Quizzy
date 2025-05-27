@@ -12,7 +12,7 @@ const Library = () => {
     // Funcție pentru a obține userId pe baza email-ului
     const fetchUserIdByEmail = async (email) => {
         try {
-            const response = await api.get(`/users/email/${email}`);
+            const response = await api.get(`/users/profile?email=${encodeURIComponent(email)}`);
             const user = response.data;
             if (!user.id) {
                 throw new Error('User ID not found in response');
