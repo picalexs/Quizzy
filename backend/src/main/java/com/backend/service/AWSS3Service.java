@@ -1,5 +1,7 @@
 package com.backend.service;
 
+import com.backend.dto.MaterialDTO;
+import com.backend.model.Material;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.InputStreamResource;
@@ -15,10 +17,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class AWSS3Service {
@@ -125,6 +124,35 @@ public class AWSS3Service {
         }
     }
 
+    public void deletePdfFromS3(String bucketName, String s3Path) {
+        if (bucketName == null || bucketName.trim().isEmpty()) {
+            throw new IllegalArgumentException("Bucket name cannot be null or empty");
+        }
+        if (s3Path == null || s3Path.trim().isEmpty()) {
+            throw new IllegalArgumentException("S3 path cannot be null or empty");
+        }
+
+        try {
+            logger.info("Attempting to delete PDF from S3 - Bucket: {}, Key: {}", bucketName, s3Path);
+
+            DeleteObjectRequest deleteObjectRequest = DeleteObjectRequest.builder()
+                    .bucket(bucketName)
+                    .key(s3Path)
+                    .build();
+
+            s3Client.deleteObject(deleteObjectRequest);
+
+            logger.info("Successfully deleted PDF from S3 - Bucket: {}, Key: {}", bucketName, s3Path);
+
+        } catch (S3Exception e) {
+            logger.error("Failed to delete PDF from S3 - Bucket: {}, Key: {}, Error: {}",
+                    bucketName, s3Path, e.awsErrorDetails() != null ? e.awsErrorDetails().errorMessage() : e.getMessage(), e);
+            throw new RuntimeException("Error deleting PDF from S3: " +
+                    (e.awsErrorDetails() != null ? e.awsErrorDetails().errorMessage() : e.getMessage()), e);
+        }
+    }
+
+
     public boolean doesObjectExist(String bucketName, String s3Path) {
         if (bucketName == null || bucketName.trim().isEmpty()) {
             throw new IllegalArgumentException("Bucket name cannot be null or empty");
@@ -216,6 +244,7 @@ public class AWSS3Service {
 
     public Map<String, File> getPdfFilesWithKeys(String bucketName) {
         if (bucketName == null || bucketName.trim().isEmpty()) {
+            logger.error("Invalid bucket name {} !",bucketName);
             throw new IllegalArgumentException("Bucket name cannot be null or empty");
         }
 
