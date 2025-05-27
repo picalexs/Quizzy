@@ -79,37 +79,17 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.9rem; /*trebuie modificat nu se aliniaza cu new flashcard*/
+    padding: 1.9rem;
     width: 22.43%;
     height: 75%;
     top: 18%;
-    overflow-y: auto; /* activează scrollul vertical doar când e necesar */
-    scrollbar-width: none; /* Firefox */
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .flashcardsProf-saved-cards::-webkit-scrollbar {
     display: none;
 }
-
-
-.flashcardsProf-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #173B61;
-}
-
-.flashcardsProf-card-question {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.flashcardsProf-card-answer {
-    margin-left: 1rem;
-    margin-bottom: 0.3rem;
-}
-
 
 .flashcardsProf-card {
     background-color: #fff;
@@ -122,8 +102,6 @@
     flex-direction: column;
     gap: 0.5rem;
 }
-
-
 
 /* Divider */
 .flashcardsProf-delimitation {
@@ -190,8 +168,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    overflow-y: auto; /* activează scrollul vertical doar când e necesar */
-    scrollbar-width: none; /* Firefox */
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .flashcardsProf-add-box::-webkit-scrollbar {
@@ -300,7 +278,7 @@
 
 .flashcardsProf-add-box-buttons {
     display: flex;
-    justify-content: flex-end; /* aliniază butoanele la dreapta */
+    justify-content: flex-end;
     gap: 1rem;
     margin-top: auto;
     padding-top: 1rem;
@@ -405,14 +383,12 @@
     .flashcardsProf-card-question {
         font-weight: bold;
         margin-bottom: 0.5rem;
-
     }
 
     .flashcardsProf-card-answer {
         margin-left: 1rem;
         margin-bottom: 0.3rem;
     }
-
 
     .flashcardsProf-delimitation {
         left: 28%;
@@ -436,75 +412,18 @@
     }
 }
 
-
 @media (max-width: 600px) {
     .flashcardsProf-white-header-text {
         font-size: 1rem;
         overflow-y: auto;
     }
 
-    /* Buton Save */
-    .flashcardsProf-save-btn {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        padding: 0.5rem 0.4rem;
-        font-size: 0.8rem;
-        font-weight: 500;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .flashcardsProf-save-btn:hover {
-        background-color: #218838;
-    }
-
-    /* Buton Delete */
-    .flashcardsProf-delete-btn {
-        background-color: #dc3545;
-        color: white;
-        border: none;
-        padding: 0.5rem 0.4rem;
-        font-size: 0.8rem;
-        font-weight: 500;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .flashcardsProf-delete-btn:hover {
-        background-color: #c82333;
-    }
-
-    /* Buton Cancel */
-    .flashcardsProf-cancel-btn {
-        background-color: #E2A54D;
-        color: white;
-        border: none;
-        padding: 0.5rem 0.2rem;
-        font-size: 0.8rem;
-        font-weight: 500;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    
-    /* Back to Course button */
+    .flashcardsProf-save-btn,
+    .flashcardsProf-delete-btn,
+    .flashcardsProf-cancel-btn,
     .flashcardsProf-back-btn {
-        background-color: #173B61;
-        color: white;
-        border: none;
-        padding: 0.5rem 0.2rem;
+        padding: 0.5rem 0.4rem;
         font-size: 0.8rem;
-        font-weight: 500;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    
-    .flashcardsProf-cancel-btn:hover {
-        background-color: #d1943f;
     }
 }
 

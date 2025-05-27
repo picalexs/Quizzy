@@ -23,6 +23,8 @@ function CoursePage() {
   const [unenrolling, setUnenrolling] = useState(false)
   const [notification, setNotification] = useState(null)
   const [materials, setMaterials] = useState([])
+  const [viewMode, setViewMode] = useState('flashcards') // 'flashcards' or 'tests'
+  const [tests, setTests] = useState([])
   const sliderRef = useRef(null)
 
   useEffect(() => {
@@ -70,33 +72,36 @@ function CoursePage() {
     }
   }, [id])
 
-  // Initial data loading
+  // Add function to fetch questions for the course
+  const fetchQuestions = useCallback(async () => {
+    if (!id) return;
+    try {
+      const response = await api.get(`/questions/course/${id}`);
+      setTests(response.data || []);
+    } catch (err) {
+      console.error("Error fetching questions:", err);
+    }
+  }, [id]);
+
+  // Modify useEffect to fetch questions
   useEffect(() => {
     if (courseFromState) {
-      // If course is from state, still check enrollment
-      checkEnrollment()
-
-      // Try to fetch materials
-      const fetchMaterials = async () => {
+      checkEnrollment();
+      const fetchData = async () => {
         try {
-          const materialsResponse = await api.get(`/Material/course/${id}`)
-          setMaterials(materialsResponse.data || [])
+          const materialsResponse = await api.get(`/Material/course/${id}`);
+          setMaterials(materialsResponse.data || []);
+          await fetchQuestions();
         } catch (err) {
-          console.error("Error fetching materials:", err)
+          console.error("Error fetching data:", err);
         }
-      }
-      fetchMaterials()
+      };
+      fetchData();
     } else {
-      fetchCourse()
+      fetchCourse();
+      fetchQuestions();
     }
-  }, [id, courseFromState, fetchCourse, checkEnrollment])
-
-  // Check enrollment whenever course changes or enrollment actions happen
-  useEffect(() => {
-    if (course) {
-      checkEnrollment()
-    }
-  }, [course, enrolling, unenrolling, checkEnrollment])
+  }, [id, courseFromState, fetchCourse, checkEnrollment, fetchQuestions]);
 
   const handleEnroll = async () => {
     setEnrolling(true)
@@ -195,6 +200,39 @@ function CoursePage() {
     ],
   }
 
+  // Add function to handle creating a new test
+  const handleAddTest = () => {
+    if (!id) {
+      console.error("Course ID is missing");
+      return;
+    }
+    
+    navigate('/flashcardsProf', {
+      state: {
+        courseId: id,
+        courseTitle: course?.title || 'Unknown Course',
+        createNewTest: true
+      }
+    });
+  };
+
+  // Add function to handle viewing/editing a test
+  const handleViewTest = (question) => {
+    if (!question?.id) {
+      console.error("Question ID is missing");
+      return;
+    }
+    
+    navigate('/flashcardsProf', {
+      state: {
+        courseId: id,
+        courseTitle: course?.title || 'Unknown Course',
+        questionId: question.id,
+        question: question
+      }
+    });
+  };
+
   if (loading)
     return (
       <div className="graph-container">
@@ -283,36 +321,89 @@ function CoursePage() {
 
         <div className="graph-divider"></div>
 
-        <div className="graph-flashcards">
-          <div className="flashcards-header">
-            <h2 className="graph-section-title">Flashcards</h2>
-            <div className="flashcards-buttons">
-              <button className="flashcard-add-button" onClick={handleAddFlashcard}>+</button>
-            </div>
-          </div>
-          {allFlashcards.length > 0 ? (
-            <div className="flashcard-section">
-              <Slider ref={sliderRef} {...sliderSettings}>
-                {allFlashcards.map((fc, idx) => (
-                  <div className="graph-flashcard" key={fc.id || idx}>
-                    <h3>{fc.question || "No question available"}</h3>
-                    {fc.answer && <p>{fc.answer}</p>}
-                  </div>
-                ))}
-              </Slider>
-              <div className="dots-only-container">
-                {allFlashcards.map((_, index) => (
-                  <div key={index} className={`custom-dot ${index === 0 ? "active" : ""}`} />
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="graph-no-flashcards">
-              <p>No flashcards available for this course yet.</p>
-              <p className="graph-no-flashcards-sub">Check back later for study materials!</p>
-            </div>
-          )}
+        <div className="view-toggle-container">
+          <button 
+            className={`toggle-button ${viewMode === 'flashcards' ? 'active' : ''}`}
+            onClick={() => setViewMode('flashcards')}
+          >
+            Flashcards
+          </button>
+          <button 
+            className={`toggle-button ${viewMode === 'tests' ? 'active' : ''}`}
+            onClick={() => setViewMode('tests')}
+          >
+            Tests
+          </button>
         </div>
+
+        {viewMode === 'flashcards' ? (
+          <>
+            <div className="graph-flashcards">
+              <div className="flashcards-header">
+                <h2 className="graph-section-title">Flashcards</h2>
+              </div>
+              {allFlashcards.length > 0 ? (
+                <div className="flashcard-section">
+                  <Slider ref={sliderRef} {...sliderSettings}>
+                    {allFlashcards.map((fc, idx) => (
+                      <div className="graph-flashcard" key={fc.id || idx}>
+                        <h3>{fc.question || "No question available"}</h3>
+                        {fc.answer && <p>{fc.answer}</p>}
+                      </div>
+                    ))}
+                  </Slider>
+                  <div className="dots-only-container">
+                    {allFlashcards.map((_, index) => (
+                      <div key={index} className={`custom-dot ${index === 0 ? "active" : ""}`} />
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="graph-no-flashcards">
+                  <p>No flashcards available for this course yet.</p>
+                  <p className="graph-no-flashcards-sub">Check back later for study materials!</p>
+                </div>
+              )}
+            </div>
+          </>
+        ) : (
+          <div className="graph-flashcards">
+            <div className="flashcards-header">
+              <h2 className="graph-section-title">Questions</h2>
+              <button className="graph-add-button" onClick={handleAddTest}>+</button>
+            </div>
+            {tests.length > 0 ? (
+              <div className="flashcard-section">
+                <Slider ref={sliderRef} {...sliderSettings}>
+                  {tests.map((question) => (
+                    <div className="graph-flashcard" key={question.id} onClick={() => handleViewTest(question)}>
+                      <h3>{question.questionText}</h3>
+                      {question.answers && question.answers.length > 0 && (
+                        <div className="answers-preview">
+                          {question.answers.map((answer, index) => (
+                            <p key={index} className={answer.correct ? 'correct-answer' : ''}>
+                              {answer.optionText}
+                            </p>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </Slider>
+                <div className="dots-only-container">
+                  {tests.map((_, index) => (
+                    <div key={index} className={`custom-dot ${index === 0 ? "active" : ""}`} />
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="graph-no-flashcards">
+                <p>No questions available for this course yet.</p>
+                <p className="graph-no-flashcards-sub">Click the + button to create your first question!</p>
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="graph-divider"></div>
 

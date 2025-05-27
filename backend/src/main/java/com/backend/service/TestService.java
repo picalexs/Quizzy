@@ -44,7 +44,6 @@ public class TestService {
 
     @Transactional
     public TestDTO createTest(TestDTO testDTO) {
-
         TestMapper mapper = new TestMapper(courseRepository, userRepository);
         TestEntity test = mapper.toEntity(testDTO);
 
@@ -53,15 +52,11 @@ public class TestService {
             throw new IllegalArgumentException("New test must have no ID");
         }
 
-        User creator = test.getProfessor();
-        if (creator == null) {
-            throw new IllegalArgumentException("Test must have an associated professor/admin");
+        // Set current date if none provided
+        if (test.getDate() == null) {
+            test.setDate(new Date());
         }
 
-        String role = creator.getRole();
-        if (!("PROFESOR".equalsIgnoreCase(role) || "ADMIN".equalsIgnoreCase(role))) {
-            throw new AccessDeniedException("Only professors or admins can create tests");
-        }
         return testMapper.toDTO(testRepository.save(test));
     }
 
