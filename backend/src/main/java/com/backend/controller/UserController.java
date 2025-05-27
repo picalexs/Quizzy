@@ -100,12 +100,12 @@ public class UserController {
             String email = loginRequest.getEmail();
             String password = loginRequest.getPassword();
 
-            if (email == null || password == null) {
-                logger.warn("Login failed - email or password is null");
+            if (email == null || email.trim().isEmpty() || password == null || password.trim().isEmpty()) {
+                logger.warn("Login failed - email or password is null or empty");
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                         .body(new LoginResponse(
                             null,
-                            null,
+                            email,
                             null,
                             "Email and password are required",
                             false
@@ -117,27 +117,28 @@ public class UserController {
             if (userOpt.isPresent()) {
                 User user = userOpt.get();
                 String token = userService.generateJwtForUser(email);
-                logger.info("Login successful for user: {}", email);
+                String userRole = user.getRole().toLowerCase(); // Ensure role is lowercase
+                logger.info("Login successful for user: {} with role: {}", email, userRole);
                 return ResponseEntity.ok(new LoginResponse(
                     token,
                     user.getEmail(),
-                    user.getRole(),
-                    "Login successful",
+                    userRole,
+                    "Login successful as " + userRole,
                     true
                 ));
             } else {
-                logger.warn("Login failed for user: {}", email);
+                logger.warn("Login failed for user: {} - invalid credentials", email);
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                         .body(new LoginResponse(
                             null,
                             email,
                             null,
-                            "Invalid credentials",
+                            "Invalid email or password",
                             false
                         ));
             }
         } catch (Exception e) {
-            logger.error("Error during login process", e);
+            logger.error("Error during login process for email: {}", loginRequest.getEmail(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new LoginResponse(
                         null,
@@ -154,7 +155,64 @@ public class UserController {
                 consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<LoginResponse> register(@Valid @RequestBody RegisterRequest req) {
         try {
-            logger.info("Registration attempt for email: {}", req.getEmail());
+            logger.info("Registration attempt for email: {} with role: {}", req.getEmail(), req.getRole());
+            
+            // Validate role
+            if (req.getRole() == null || req.getRole().trim().isEmpty()) {
+                logger.warn("Registration failed - role is null or empty: {}", req.getEmail());
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                        .body(new LoginResponse(
+                            null,
+                            req.getEmail(),
+                            null,
+                            "Role is required",
+                            false
+                        ));
+            }
+            
+            String role = req.getRole().toLowerCase(); // Convert to lowercase for consistency
+            
+            // Validate that role is either student or profesor
+            if (!role.equals("student") && !role.equals("profesor")) {
+                logger.warn("Registration failed - invalid role: {} for email: {}", role, req.getEmail());
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                        .body(new LoginResponse(
+                            null,
+                            req.getEmail(),
+                            null,
+                            "Role must be either student or profesor",
+                            false
+                        ));
+            }
+            
+            // For profesor registration, validate the secret key
+            if (role.equals("profesor")) {
+                if (req.getProfessorSecret() == null || req.getProfessorSecret().trim().isEmpty()) {
+                    logger.warn("Registration failed - professor secret not provided for email: {}", req.getEmail());
+                    return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                            .body(new LoginResponse(
+                                null,
+                                req.getEmail(),
+                                null,
+                                "Professor secret key is required for professor registration",
+                                false
+                            ));
+                }
+                
+                if (!userService.validateProfessorSecret(req.getProfessorSecret())) {
+                    logger.warn("Registration failed - invalid professor secret for email: {}", req.getEmail());
+                    return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                            .body(new LoginResponse(
+                                null,
+                                req.getEmail(),
+                                null,
+                                "Invalid professor secret key",
+                                false
+                            ));
+                }
+                logger.info("Professor secret validated successfully for email: {}", req.getEmail());
+            }
+            
             if (userService.checkIfExists(req.getEmail())) {
                 logger.warn("Registration failed - email already exists: {}", req.getEmail());
                 return ResponseEntity.status(CONFLICT)
@@ -166,17 +224,28 @@ public class UserController {
                             false
                         ));
             }
+            
             userService.createUser(req);
-            logger.info("Registration successful for user: {}", req.getEmail());
+            logger.info("Registration successful for user: {} with role: {}", req.getEmail(), role);
             return ResponseEntity.ok(new LoginResponse(
                 null,
                 req.getEmail(),
-                req.getRole(),
-                "User registered successfully",
+                role,
+                "User registered successfully as " + role,
                 true
             ));
+        } catch (IllegalArgumentException e) {
+            logger.error("Registration validation error for email: {}: {}", req.getEmail(), e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body(new LoginResponse(
+                        null,
+                        req.getEmail(),
+                        null,
+                        e.getMessage(),
+                        false
+                    ));
         } catch (Exception e) {
-            logger.error("Error during registration process", e);
+            logger.error("Error during registration process for email: {}", req.getEmail(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new LoginResponse(
                         null,

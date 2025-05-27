@@ -22,6 +22,9 @@ public class RegisterRequest {
     @NotBlank(message = "Role is required")
     private String role;
 
+    // Optional field for professor registration
+    private String professorSecret;
+
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName; }
 
@@ -36,4 +39,7 @@ public class RegisterRequest {
 
     public String getRole() { return role; }
     public void setRole(String role) { this.role = role; }
+
+    public String getProfessorSecret() { return professorSecret; }
+    public void setProfessorSecret(String professorSecret) { this.professorSecret = professorSecret; }
 }
