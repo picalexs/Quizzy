@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
 
@@ -46,4 +47,8 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
 
     @Query("SELECT COUNT(f) FROM Flashcard f WHERE f.material.course.id = :courseId")
     Long countByCourseId(@Param("courseId") Long courseId);
+
+    @Query("SELECT f FROM Flashcard f WHERE f.material.course.id = :courseId")
+    List<Flashcard> findAllByCourseId(@Param("courseId") Long courseId);
+
 }
