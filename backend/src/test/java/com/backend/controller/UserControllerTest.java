@@ -51,8 +51,8 @@ class UserControllerTest {
     @Test
     void shouldReturnAllUsers() {
         List<User> users = new ArrayList<>();
-        users.add(createSampleUser(1, "john@example.com", "STUDENT"));
-        users.add(createSampleUser(2, "jane@example.com", "PROFESSOR"));
+        users.add(createSampleUser(1, "john@example.com", "student"));
+        users.add(createSampleUser(2, "jane@example.com", "profesor"));
 
         when(userService.getAllUsers()).thenReturn(users);
 
@@ -66,7 +66,7 @@ class UserControllerTest {
     @Test
     void shouldReturnUserById() {
         Integer userId = 1;
-        User user = createSampleUser(userId, "john@example.com", "STUDENT");
+        User user = createSampleUser(userId, "john@example.com", "student");
 
         when(userService.findById(userId)).thenReturn(Optional.of(user));
 
@@ -90,6 +90,46 @@ class UserControllerTest {
     }
 
     @Test
+    void shouldReturnUserByEmailPath() {
+        String email = "john@example.com";
+        User user = createSampleUser(1, email, "student");
+
+        when(userService.findByEmail(email)).thenReturn(Optional.of(user));
+
+        ResponseEntity<User> response = userController.getUserByEmailPath(email);
+
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(email, response.getBody().getEmail());
+        verify(userService).findByEmail(email);
+    }
+
+    @Test
+    void shouldReturnNotFoundForInvalidEmailPath() {
+        String email = "nonexistent@example.com";
+
+        when(userService.findByEmail(email)).thenReturn(Optional.empty());
+
+        ResponseEntity<User> response = userController.getUserByEmailPath(email);
+
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+        verify(userService).findByEmail(email);
+    }
+
+    @Test
+    void shouldReturnUserProfile() {
+        String email = "john@example.com";
+        User user = createSampleUser(1, email, "student");
+
+        when(userService.findByEmail(email)).thenReturn(Optional.of(user));
+
+        ResponseEntity<User> response = userController.getUserByEmail(email);
+
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(email, response.getBody().getEmail());
+        verify(userService).findByEmail(email);
+    }
+
+    @Test
     void shouldReturnLoginPage() {
         ResponseEntity<LoginResponse> response = userController.getLoginPage();
 
@@ -97,17 +137,19 @@ class UserControllerTest {
         assertNotNull(response.getBody());
         assertFalse(response.getBody().isSuccess());
         assertEquals("", response.getBody().getToken());
+        assertEquals("Please use POST method with email and password", response.getBody().getMessage());
     }
 
     @Test
-    void shouldLoginSuccessfully() {
+    void shouldLoginSuccessfullyWithUserId() {
         String email = "john@example.com";
         String password = "password";
         String token = "jwt-token";
-        String role = "STUDENT";
+        String role = "student";
+        Integer userId = 1;
 
         LoginRequest loginRequest = new LoginRequest(email, password);
-        User user = createSampleUser(1, email, role);
+        User user = createSampleUser(userId, email, role);
 
         when(userService.checkCredentials(email, password)).thenReturn(Optional.of(user));
         when(userService.generateJwtForUser(email)).thenReturn(token);
@@ -120,6 +162,8 @@ class UserControllerTest {
         assertEquals(token, response.getBody().getToken());
         assertEquals(email, response.getBody().getEmail());
         assertEquals(role, response.getBody().getRole());
+        assertEquals(userId, response.getBody().getUserId());
+        assertEquals("Login successful as " + role, response.getBody().getMessage());
         verify(userService).checkCredentials(email, password);
         verify(userService).generateJwtForUser(email);
     }
@@ -138,37 +182,155 @@ class UserControllerTest {
         assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
         assertNotNull(response.getBody());
         assertFalse(response.getBody().isSuccess());
-        assertEquals("Invalid credentials", response.getBody().getMessage());
+        assertEquals("Invalid email or password", response.getBody().getMessage());
         verify(userService).checkCredentials(email, password);
         verify(userService, never()).generateJwtForUser(anyString());
     }
 
     @Test
-    void shouldRegisterSuccessfully() {
+    void shouldReturnBadRequestForEmptyEmailOrPassword() {
+        LoginRequest loginRequest = new LoginRequest("", "password");
+
+        ResponseEntity<LoginResponse> response = userController.login(loginRequest);
+
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertFalse(response.getBody().isSuccess());
+        assertEquals("Email and password are required", response.getBody().getMessage());
+        verify(userService, never()).checkCredentials(anyString(), anyString());
+    }
+
+    @Test
+    void shouldRegisterStudentSuccessfully() {
         RegisterRequest request = new RegisterRequest();
         request.setFirstName("John");
         request.setLastName("Doe");
         request.setEmail("new@example.com");
         request.setPassword("password123");
-        request.setRole("STUDENT");
-
-        String token = "new-jwt-token";
+        request.setRole("student");
 
         when(userService.checkIfExists(request.getEmail())).thenReturn(false);
         doNothing().when(userService).createUser(request);
-        when(userService.generateJwtForUser(request.getEmail())).thenReturn(token);
 
         ResponseEntity<LoginResponse> response = userController.register(request);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
         assertTrue(response.getBody().isSuccess());
-        //assertEquals(token, response.getBody().getToken());
         assertEquals(request.getEmail(), response.getBody().getEmail());
-        assertEquals(request.getRole(), response.getBody().getRole());
+        assertEquals("student", response.getBody().getRole());
+        assertEquals("User registered successfully as student", response.getBody().getMessage());
         verify(userService).checkIfExists(request.getEmail());
         verify(userService).createUser(request);
-        //verify(userService).generateJwtForUser(request.getEmail());
+    }
+
+    @Test
+    void shouldRegisterProfesorWithValidSecret() {
+        RegisterRequest request = new RegisterRequest();
+        request.setFirstName("Jane");
+        request.setLastName("Doe");
+        request.setEmail("profesor@example.com");
+        request.setPassword("password123");
+        request.setRole("profesor");
+        request.setProfessorSecret("valid-secret-key");
+
+        when(userService.checkIfExists(request.getEmail())).thenReturn(false);
+        when(userService.validateProfessorSecret("valid-secret-key")).thenReturn(true);
+        doNothing().when(userService).createUser(request);
+
+        ResponseEntity<LoginResponse> response = userController.register(request);
+
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody().isSuccess());
+        assertEquals(request.getEmail(), response.getBody().getEmail());
+        assertEquals("profesor", response.getBody().getRole());
+        assertEquals("User registered successfully as profesor", response.getBody().getMessage());
+        verify(userService).validateProfessorSecret("valid-secret-key");
+        verify(userService).checkIfExists(request.getEmail());
+        verify(userService).createUser(request);
+    }
+
+    @Test
+    void shouldReturnUnauthorizedForInvalidProfesorSecret() {
+        RegisterRequest request = new RegisterRequest();
+        request.setFirstName("Jane");
+        request.setLastName("Doe");
+        request.setEmail("profesor@example.com");
+        request.setPassword("password123");
+        request.setRole("profesor");
+        request.setProfessorSecret("invalid-secret");
+
+        when(userService.validateProfessorSecret("invalid-secret")).thenReturn(false);
+
+        ResponseEntity<LoginResponse> response = userController.register(request);
+
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertFalse(response.getBody().isSuccess());
+        assertEquals("Invalid professor secret key", response.getBody().getMessage());
+        verify(userService).validateProfessorSecret("invalid-secret");
+        verify(userService, never()).checkIfExists(anyString());
+        verify(userService, never()).createUser(any());
+    }
+
+    @Test
+    void shouldReturnBadRequestForMissingProfesorSecret() {
+        RegisterRequest request = new RegisterRequest();
+        request.setFirstName("Jane");
+        request.setLastName("Doe");
+        request.setEmail("profesor@example.com");
+        request.setPassword("password123");
+        request.setRole("profesor");
+        // No professor secret provided
+
+        ResponseEntity<LoginResponse> response = userController.register(request);
+
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertFalse(response.getBody().isSuccess());
+        assertEquals("Professor secret key is required for professor registration", response.getBody().getMessage());
+        verify(userService, never()).validateProfessorSecret(anyString());
+        verify(userService, never()).checkIfExists(anyString());
+        verify(userService, never()).createUser(any());
+    }
+
+    @Test
+    void shouldReturnBadRequestForInvalidRole() {
+        RegisterRequest request = new RegisterRequest();
+        request.setFirstName("John");
+        request.setLastName("Doe");
+        request.setEmail("invalid@example.com");
+        request.setPassword("password123");
+        request.setRole("admin"); // Invalid role
+
+        ResponseEntity<LoginResponse> response = userController.register(request);
+
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertFalse(response.getBody().isSuccess());
+        assertEquals("Role must be either student or profesor", response.getBody().getMessage());
+        verify(userService, never()).checkIfExists(anyString());
+        verify(userService, never()).createUser(any());
+    }
+
+    @Test
+    void shouldReturnBadRequestForEmptyRole() {
+        RegisterRequest request = new RegisterRequest();
+        request.setFirstName("John");
+        request.setLastName("Doe");
+        request.setEmail("empty@example.com");
+        request.setPassword("password123");
+        request.setRole(""); // Empty role
+
+        ResponseEntity<LoginResponse> response = userController.register(request);
+
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertFalse(response.getBody().isSuccess());
+        assertEquals("Role is required", response.getBody().getMessage());
+        verify(userService, never()).checkIfExists(anyString());
+        verify(userService, never()).createUser(any());
     }
 
     @Test
@@ -178,7 +340,7 @@ class UserControllerTest {
         request.setLastName("Doe");
         request.setEmail("existing@example.com");
         request.setPassword("password123");
-        request.setRole("STUDENT");
+        request.setRole("student");
 
         when(userService.checkIfExists(request.getEmail())).thenReturn(true);
 
@@ -190,7 +352,6 @@ class UserControllerTest {
         assertEquals("Email already exists", response.getBody().getMessage());
         verify(userService).checkIfExists(request.getEmail());
         verify(userService, never()).createUser(any(RegisterRequest.class));
-        verify(userService, never()).generateJwtForUser(anyString());
     }
     
     // Tests for update methods

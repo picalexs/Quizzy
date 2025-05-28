@@ -43,6 +43,7 @@ axiosInstance.interceptors.response.use(
             console.log('Unauthorized response, clearing auth data');
             localStorage.removeItem('authToken');
             localStorage.removeItem('user');
+            localStorage.removeItem('userRole');
             window.location.href = '/login';
         }
         return Promise.reject(error);

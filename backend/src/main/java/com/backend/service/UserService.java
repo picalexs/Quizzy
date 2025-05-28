@@ -7,6 +7,7 @@ import com.backend.config.JwtUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,9 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;  // Injectam JwtUtil
+
+    @Value("${professor.secret.key}")
+    private String professorSecretKey;
 
     @Autowired
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtUtil jwtUtil) {
@@ -80,17 +84,34 @@ public class UserService {
         return userRepository.findByEmail(email).isPresent();
     }
 
+    public boolean validateProfessorSecret(String providedSecret) {
+        if (providedSecret == null || professorSecretKey == null) {
+            return false;
+        }
+        return professorSecretKey.equals(providedSecret);
+    }
+
     public void createUser(RegisterRequest req) {
         try {
-            logger.info("Creating new user with email: {}", req.getEmail());
+            logger.info("Creating new user with email: {} and role: {}", req.getEmail(), req.getRole());
+            
+            // Validate professor secret if role is PROFESOR
+            if ("PROFESOR".equalsIgnoreCase(req.getRole())) {
+                if (!validateProfessorSecret(req.getProfessorSecret())) {
+                    logger.warn("Invalid professor secret provided for user: {}", req.getEmail());
+                    throw new IllegalArgumentException("Invalid professor secret key");
+                }
+                logger.info("Professor secret validated successfully for user: {}", req.getEmail());
+            }
+            
             User u = new User();
             u.setFirstName(req.getFirstName());
             u.setLastName(req.getLastName());
             u.setEmail(req.getEmail());
-            u.setRole(req.getRole());
+            u.setRole(req.getRole().toLowerCase()); // Store role in lowercase
             u.setPassword(passwordEncoder.encode(req.getPassword()));
             userRepository.save(u);
-            logger.info("User created successfully: {}", req.getEmail());
+            logger.info("User created successfully: {} with role: {}", req.getEmail(), req.getRole());
         } catch (Exception e) {
             logger.error("Error creating user: {}", req.getEmail(), e);
             throw e;

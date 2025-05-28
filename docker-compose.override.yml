@@ -24,6 +24,7 @@ services:
       GEMINI_API_KEY: AIzaSyAUWUg9b-ZsVmTo8lmwr5VewpF28wnDEH8
       AWS_ACCESS_KEY_ID: blabla
       AWS_SECRET_ACCESS_KEY: secretdiscreet
+      professor.secret.key: fiiCelMaiTare
     ports:
       - "3000:3000"
     depends_on:

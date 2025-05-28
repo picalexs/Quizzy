@@ -73,4 +73,12 @@ public class LoginResponse {
     public void setSuccess(boolean success) {
         this.success = success;
     }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 } 
