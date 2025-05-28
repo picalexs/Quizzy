@@ -71,6 +71,7 @@ function Login() {
                 console.log('Login successful, saving token');
                 localStorage.setItem("authToken", data.token);
                 localStorage.setItem("user", data.email);
+                localStorage.setItem("userId", data.userId); // ✅ Trebuie să existe acum!
                 setMesaj(t.succes);
                 setTimeout(() => {
                     console.log('Redirecting to dashboard');

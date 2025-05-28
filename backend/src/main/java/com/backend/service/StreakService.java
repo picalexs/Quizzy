@@ -78,7 +78,7 @@ public class StreakService {
             }
             // Dacă s-a sărit o zi => resetăm streak
             else {
-                streak.setCurrentStreak(1);
+                streak.setCurrentStreak(0);
                 streak.setLastCompletedDate(today);
             }
 
@@ -86,13 +86,37 @@ public class StreakService {
             // Nu există un streak anterior => creăm unul nou
             streak = new Streak();
             streak.setUser(new User(userId)); // Cannot resolve constructor 'User(Integer)'
-            streak.setCurrentStreak(1);
+            streak.setCurrentStreak(0);
             streak.setLastCompletedDate(today);
         }
 
         streakRepository.save(streak);
     }
     public Optional<Streak> getLatestStreakForUser(Integer userId) {
-        return streakRepository.findTopByUserIdOrderByLastCompletedDateDesc(userId);
+        Optional<Streak> optionalStreak = streakRepository.findTopByUserIdOrderByLastCompletedDateDesc(userId);
+
+        if (optionalStreak.isPresent()) {
+            Streak streak = optionalStreak.get();
+
+            // Calculează diferența de zile
+            long millisInADay = 24 * 60 * 60 * 1000L;
+            long diff = System.currentTimeMillis() - streak.getLastCompletedDate().getTime();
+            long daysDiff = diff / millisInADay;
+
+            if (daysDiff > 2) {
+                streak.setCurrentStreak(0);
+                streakRepository.save(streak); // salvează resetarea
+            }
+
+            return Optional.of(streak);
+        } else {
+            // Dacă nu există streak, returnează un streak cu currentStreak = 0
+            Streak newStreak = new Streak();
+            newStreak.setUser(new User(userId));
+            newStreak.setCurrentStreak(0);
+            newStreak.setLastCompletedDate(null); // sau poți pune o dată default, gen 1970-01-01
+            return Optional.of(newStreak);
+        }
     }
+
 }
