@@ -72,6 +72,7 @@ function Login() {
                 localStorage.setItem("authToken", data.token);
                 localStorage.setItem("user", data.email);
                 localStorage.setItem("userRole", data.role);
+                localStorage.setItem("userId", data.userId); // ✅ Trebuie să existe acum!
                 setMesaj(t.succes);
                 setTimeout(() => {
                     console.log('Redirecting to dashboard');

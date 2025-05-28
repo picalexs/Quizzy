@@ -3,7 +3,7 @@ import axios from 'axios';
 const envUrl = import.meta.env.VITE_BACKEND_URL;
 const BASE_URL =
     typeof envUrl === 'string' && envUrl.trim() !== ''
-        ? envUrl + '/api'
+        ? envUrl
         : 'http://localhost:3000';
 
 const axiosInstance = axios.create({
@@ -18,6 +18,14 @@ axiosInstance.interceptors.request.use(
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
+        //DEBUG REMOVE LATER
+        console.log(`Making ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
+        console.log('Headers:', config.headers);
+        if (config.data) {
+            console.log('Body:', config.data);
+        }
+
+
         return config;
     },
     (error) => Promise.reject(error)

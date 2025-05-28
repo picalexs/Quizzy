@@ -147,7 +147,13 @@ function CoursePage() {
     else if (label === "Explore") navigate("/explore")
     else if (label === "Profile") navigate("/profile")
   }
-
+  const handleStartLearning = () => {
+    if (materials.length > 0 && materials[0].id) {
+      navigate(`/flashcards/${materials[0].id}`)
+    } else {
+      setNotification("Nu există materiale cu flashcard-uri disponibile.")
+    }
+  }
   const goToNextSlide = () => {
     if (sliderRef.current) {
       sliderRef.current.slickNext()
@@ -265,7 +271,7 @@ function CoursePage() {
               {enrolling ? "Enrolling..." : "Enroll"}
             </button>
           )}
-          <button className="graph-start-button" onClick={() => alert("Start learning!")}>
+          <button className="graph-start-button" onClick={handleStartLearning}>
             Start learning ►
           </button>
         </div>

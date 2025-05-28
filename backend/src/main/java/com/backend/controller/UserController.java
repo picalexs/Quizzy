@@ -156,7 +156,7 @@ public class UserController {
     public ResponseEntity<LoginResponse> register(@Valid @RequestBody RegisterRequest req) {
         try {
             logger.info("Registration attempt for email: {} with role: {}", req.getEmail(), req.getRole());
-            
+
             // Validate role
             if (req.getRole() == null || req.getRole().trim().isEmpty()) {
                 logger.warn("Registration failed - role is null or empty: {}", req.getEmail());
@@ -169,9 +169,9 @@ public class UserController {
                             false
                         ));
             }
-            
+
             String role = req.getRole().toLowerCase(); // Convert to lowercase for consistency
-            
+
             // Validate that role is either student or profesor
             if (!role.equals("student") && !role.equals("profesor")) {
                 logger.warn("Registration failed - invalid role: {} for email: {}", role, req.getEmail());
@@ -184,7 +184,7 @@ public class UserController {
                             false
                         ));
             }
-            
+
             // For profesor registration, validate the secret key
             if (role.equals("profesor")) {
                 if (req.getProfessorSecret() == null || req.getProfessorSecret().trim().isEmpty()) {
@@ -198,7 +198,7 @@ public class UserController {
                                 false
                             ));
                 }
-                
+
                 if (!userService.validateProfessorSecret(req.getProfessorSecret())) {
                     logger.warn("Registration failed - invalid professor secret for email: {}", req.getEmail());
                     return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
@@ -212,7 +212,7 @@ public class UserController {
                 }
                 logger.info("Professor secret validated successfully for email: {}", req.getEmail());
             }
-            
+
             if (userService.checkIfExists(req.getEmail())) {
                 logger.warn("Registration failed - email already exists: {}", req.getEmail());
                 return ResponseEntity.status(CONFLICT)
@@ -224,7 +224,7 @@ public class UserController {
                             false
                         ));
             }
-            
+
             userService.createUser(req);
             logger.info("Registration successful for user: {} with role: {}", req.getEmail(), role);
             return ResponseEntity.ok(new LoginResponse(
