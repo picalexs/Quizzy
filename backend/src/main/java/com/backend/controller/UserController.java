@@ -124,7 +124,8 @@ public class UserController {
                     user.getEmail(),
                     userRole,
                     "Login successful as " + userRole,
-                    true
+                    true,
+                    user.getId()
                 ));
             } else {
                 logger.warn("Login failed for user: {} - invalid credentials", email);

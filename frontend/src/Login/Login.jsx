@@ -89,6 +89,7 @@ function Login() {
                 localStorage.removeItem('authToken');
                 localStorage.removeItem('user');
                 localStorage.removeItem('userRole');
+                localStorage.removeItem('userId');
             }
             setMesaj("Eroare de conexiune cu serverul.");
         }
