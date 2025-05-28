@@ -11,7 +11,7 @@ function Register() {
         password: '',
         confirmPassword: '',
         role: 'student',
-        secretCode: ''
+        professorSecret: ''
     });
     const [showPassword, setShowPassword] = useState(false);
     const [mesaj, setMesaj] = useState('');
@@ -33,7 +33,7 @@ function Register() {
             eroareCampuri: 'Te rugăm să completezi toate câmpurile.',
             eroareEmail: 'Adresa de email este deja folosită.',
             eroareParolaScurta: 'Parola trebuie să aibă minim 6 caractere.',
-            secretCode: 'Cod Secret'
+            professorSecret: 'Cod Secret Profesor'
         },
         en: {
             titlu: 'Create new account',
@@ -49,7 +49,7 @@ function Register() {
             eroareCampuri: 'Please fill in all fields.',
             eroareEmail: 'Email address is already in use.',
             eroareParolaScurta: 'Password must be at least 6 characters long.',
-            secretCode: 'Secret Code'
+            professorSecret: 'Professor Secret Code'
         }
     };
 
@@ -95,8 +95,8 @@ function Register() {
                 role: formData.role
             };
 
-            if (formData.role === 'teacher') {
-                payload.secretCode = formData.secretCode;
+            if (formData.role === 'profesor') {
+                payload.professorSecret = formData.professorSecret;
             }
 
             const response = await api.post("/users/register", payload);
@@ -165,15 +165,15 @@ function Register() {
                         className="dropdown-role"
                     >
                         <option value="student">Student</option>
-                        <option value="teacher">Teacher</option>
+                        <option value="profesor">Professor</option>
                     </select>
 
-                    {formData.role === 'teacher' && (
+                    {formData.role === 'profesor' && (
                         <input
                             type="text"
-                            name="secretCode"
-                            placeholder={t.secretCode}
-                            value={formData.secretCode}
+                            name="professorSecret"
+                            placeholder={t.professorSecret}
+                            value={formData.professorSecret}
                             onChange={handleInputChange}
                         />
                     )}
