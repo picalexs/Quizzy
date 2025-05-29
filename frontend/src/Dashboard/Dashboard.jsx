@@ -13,7 +13,7 @@ const Dashboard = () => {
 
     // Preluăm userId-ul salvat în localStorage
     const userId = localStorage.getItem('userId');
-
+    console.log("User ID from localStorage:", userId);
     // Obținem data curentă
     const currentDate = new Date();
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

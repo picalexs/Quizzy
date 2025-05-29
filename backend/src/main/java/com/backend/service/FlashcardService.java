@@ -82,4 +82,8 @@ public class FlashcardService {
     public List<Flashcard> getByPageIndexAndMaterialId(Integer pageIndex, Long materialId) {
         return flashcardRepository.findByPageIndexAndMaterialId(pageIndex, materialId);
     }
+
+    public List<Flashcard> getFlashcardsByCourseId(Long courseId) {
+        return flashcardRepository.findAllByCourseId(courseId);
+    }
 }
