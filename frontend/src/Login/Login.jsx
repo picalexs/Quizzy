@@ -68,9 +68,11 @@ function Login() {
             console.log('Login response:', { status: response.status, success: data.success });
 
             if (data.success) {
-                console.log('Login successful, saving token');
+                console.log('Login successful, saving token and role');
                 localStorage.setItem("authToken", data.token);
                 localStorage.setItem("user", data.email);
+                localStorage.setItem("userRole", data.role);
+                localStorage.setItem("userId", data.userId); // ✅ Trebuie să existe acum!
                 setMesaj(t.succes);
                 setTimeout(() => {
                     console.log('Redirecting to dashboard');
@@ -82,6 +84,13 @@ function Login() {
             }
         } catch (error) {
             console.error("Eroare la autentificare:", error);
+            if (error.response && error.response.status === 401) {
+                // Clear auth data on unauthorized response
+                localStorage.removeItem('authToken');
+                localStorage.removeItem('user');
+                localStorage.removeItem('userRole');
+                localStorage.removeItem('userId');
+            }
             setMesaj("Eroare de conexiune cu serverul.");
         }
     };
