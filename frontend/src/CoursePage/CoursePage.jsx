@@ -25,7 +25,14 @@ function CoursePage() {
   const [materials, setMaterials] = useState([])
   const [viewMode, setViewMode] = useState('flashcards') // 'flashcards' or 'tests'
   const [tests, setTests] = useState([])
+  const [userRole, setUserRole] = useState(null)
   const sliderRef = useRef(null)
+
+  useEffect(() => {
+    // Get user role from localStorage when component mounts
+    const role = localStorage.getItem('userRole')
+    setUserRole(role)
+  }, [])
 
   useEffect(() => {
     if (notification) {
@@ -156,7 +163,10 @@ function CoursePage() {
   };
 
   const handleNavClick = (label) => {
-    if (label === "Home") navigate("/dashboard")
+    if (label === "Home") {
+      navigate("/dashboard")
+      window.location.reload()
+    }
     else if (label === "Library") navigate("/library")
     else if (label === "Explore") navigate("/explore")
     else if (label === "Profile") navigate("/profile")
@@ -376,13 +386,20 @@ function CoursePage() {
           <div className="graph-flashcards">
             <div className="flashcards-header">
               <h2 className="graph-section-title">Questions</h2>
-              <button className="graph-add-button" onClick={handleAddTest}>+</button>
+              {userRole !== 'student' && (
+                <button className="graph-add-button" onClick={handleAddTest}>+</button>
+              )}
             </div>
             {tests.length > 0 ? (
               <div className="flashcard-section">
                 <Slider ref={sliderRef} {...sliderSettings}>
                   {tests.map((question) => (
-                    <div className="graph-flashcard" key={question.id} onClick={() => handleViewTest(question)}>
+                    <div 
+                      className={`graph-flashcard ${userRole !== 'student' ? 'clickable' : ''}`} 
+                      key={question.id} 
+                      onClick={() => userRole !== 'student' ? handleViewTest(question) : null}
+                      style={userRole === 'student' ? { cursor: 'default' } : {}}
+                    >
                       <h3>{question.questionText}</h3>
                       {question.answers && question.answers.length > 0 && (
                         <div className="answers-preview">
