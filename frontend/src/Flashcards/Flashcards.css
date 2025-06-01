@@ -610,3 +610,11 @@
         font-size: 14px;
     }
 }
+
+.material-info {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+    margin-top: 46px;
+}
