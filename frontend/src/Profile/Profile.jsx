@@ -24,8 +24,8 @@ function Profile() {
         lastName: '',
         email: '',
         password: ''
-    });
-    const [showPassword, setShowPassword] = useState(false);
+    });    const [showPassword, setShowPassword] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const fetchUserProfile = async () => {
@@ -175,16 +175,19 @@ function Profile() {
                 password: error.response?.data || 'Password update failed'
             }));
         }
-    };
-
-    const handleClick = (label) => {
+    };    const handleClick = (label) => {
         if (label === "Home") navigate('/dashboard');
         else if (label === "Library") navigate('/library');
         else if (label === "Explore") navigate('/explore');
         else if (label === "Profile") navigate('/profile');
+        
+        // Close mobile menu when navigating
+        setIsMobileMenuOpen(false);
     };
 
-    return (
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };    return (
         <div className="profile-container">
             {/* Logo Quizzy */}
             <div className="profile-logo">
@@ -196,38 +199,88 @@ function Profile() {
                 <img src="/logo-fac-homepage.svg" alt="FII Logo" style={{ width: '100%', height: '100%' }} />
             </div>
 
-            {/* Sidebar buttons */}
-            <button
-                className={`profile-icon-wrapper profile-icon-home ${location.pathname === '/dashboard' ? 'active' : ''}`}
-                onClick={() => handleClick("Home")}
-            >
-                <img src="/home-logo.svg" alt="Home" className="profile-icon-image" />
-                <span className="profile-icon-text">Home</span>
-            </button>
+            {/* Burger Menu Button */}
+            <button className="profile-burger-menu" onClick={toggleMobileMenu}>
+                <div className={`profile-burger-line ${isMobileMenuOpen ? 'active' : ''}`}></div>
+                <div className={`profile-burger-line ${isMobileMenuOpen ? 'active' : ''}`}></div>
+                <div className={`profile-burger-line ${isMobileMenuOpen ? 'active' : ''}`}></div>
+            </button>            {/* Mobile Menu Overlay */}
+            <div className={`profile-mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+                {/* Logo header section in mobile menu */}
+                <div className="profile-mobile-logo-header">
+                    <div className="profile-mobile-quizzy-logo">
+                        <img src="/quizzy-logo-homepage.svg" alt="Quizzy Logo" className="profile-mobile-quizzy-image" />
+                    </div>
+                    <div className="profile-mobile-fii-logo-header">
+                        <img src="/logo-fac-homepage.svg" alt="FII Logo" className="profile-mobile-fii-header-image" />
+                    </div>
+                </div>
 
-            <button
-                className={`profile-icon-wrapper profile-icon-library ${location.pathname === '/library' ? 'active' : ''}`}
-                onClick={() => handleClick("Library")}
-            >
-                <img src="/library-logo.svg" alt="Library" className="profile-icon-image" />
-                <span className="profile-icon-text">Library</span>
-            </button>
+                <button
+                    className={`profile-mobile-menu-item ${location.pathname === '/dashboard' ? 'active' : ''}`}
+                    onClick={() => handleClick("Home")}
+                >
+                    <img src="/home-logo.svg" alt="Home" className="profile-mobile-icon" />
+                    <span>Home</span>
+                </button>
 
-            <button
-                className={`profile-icon-wrapper profile-icon-explore ${location.pathname === '/explore' ? 'active' : ''}`}
-                onClick={() => handleClick("Explore")}
-            >
-                <img src="/explore-logo.svg" alt="Explore" className="profile-icon-image" />
-                <span className="profile-icon-text">Explore</span>
-            </button>
+                <button
+                    className={`profile-mobile-menu-item ${location.pathname === '/library' ? 'active' : ''}`}
+                    onClick={() => handleClick("Library")}
+                >
+                    <img src="/library-logo.svg" alt="Library" className="profile-mobile-icon" />
+                    <span>Library</span>
+                </button>
 
-            <button
-                className={`profile-icon-wrapper profile-icon-profile ${location.pathname === '/profile' ? 'active' : ''}`}
-                onClick={() => handleClick("Profile")}
-            >
-                <img src="/profile-logo.svg" alt="Profile" className="profile-icon-image" />
-                <span className="profile-icon-text">Profile</span>
-            </button>
+                <button
+                    className={`profile-mobile-menu-item ${location.pathname === '/explore' ? 'active' : ''}`}
+                    onClick={() => handleClick("Explore")}
+                >
+                    <img src="/explore-logo.svg" alt="Explore" className="profile-mobile-icon" />
+                    <span>Explore</span>
+                </button>                <button
+                    className={`profile-mobile-menu-item ${location.pathname === '/profile' ? 'active' : ''}`}
+                    onClick={() => handleClick("Profile")}
+                >
+                    <img src="/profile-logo.svg" alt="Profile" className="profile-mobile-icon" />
+                    <span>Profile</span>
+                </button>
+            </div>
+
+            {/* Desktop Sidebar buttons */}
+            <div className="profile-desktop-sidebar">
+                <button
+                    className={`profile-icon-wrapper profile-icon-home ${location.pathname === '/dashboard' ? 'active' : ''}`}
+                    onClick={() => handleClick("Home")}
+                >
+                    <img src="/home-logo.svg" alt="Home" className="profile-icon-image" />
+                    <span className="profile-icon-text">Home</span>
+                </button>
+
+                <button
+                    className={`profile-icon-wrapper profile-icon-library ${location.pathname === '/library' ? 'active' : ''}`}
+                    onClick={() => handleClick("Library")}
+                >
+                    <img src="/library-logo.svg" alt="Library" className="profile-icon-image" />
+                    <span className="profile-icon-text">Library</span>
+                </button>
+
+                <button
+                    className={`profile-icon-wrapper profile-icon-explore ${location.pathname === '/explore' ? 'active' : ''}`}
+                    onClick={() => handleClick("Explore")}
+                >
+                    <img src="/explore-logo.svg" alt="Explore" className="profile-icon-image" />
+                    <span className="profile-icon-text">Explore</span>
+                </button>
+
+                <button
+                    className={`profile-icon-wrapper profile-icon-profile ${location.pathname === '/profile' ? 'active' : ''}`}
+                    onClick={() => handleClick("Profile")}
+                >
+                    <img src="/profile-logo.svg" alt="Profile" className="profile-icon-image" />
+                    <span className="profile-icon-text">Profile</span>
+                </button>
+            </div>
 
             {/* Form */}
             <div className="profile-white-box">
