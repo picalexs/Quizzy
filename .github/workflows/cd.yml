@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master , Testing-CD-fix ]
   workflow_dispatch:
 
 permissions:
