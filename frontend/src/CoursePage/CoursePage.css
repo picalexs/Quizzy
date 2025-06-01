@@ -5,7 +5,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-y: auto;
+  overflow: hidden;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -23,14 +23,18 @@ body {
   left: 90px;
   width: 61px;
   height: 48px;
+  z-index: 10;
 }
 
 .graph-box {
-  width: 1088px;
+  max-width: 1088px;
+  width: calc(100vw - 340px);
+  min-width: 600px;
   height: 1000px;
   position: absolute;
   top: 16px;
-  left: 176px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #efeae6;
   box-shadow: 0 0 8px 2px rgba(23, 59, 97, 0.64) inset;
   border-radius: 8px;
@@ -102,9 +106,10 @@ body {
 .graph-logo-fii {
   position: absolute;
   top: 24px;
-  left: 1288px;
+  right: 90px;
   width: 49px;
   height: 48px;
+  z-index: 10;
 }
 
 .graph-icon-home {
@@ -126,12 +131,18 @@ body {
 .graph-content-box {
   position: absolute;
   top: 16px;
-  left: 176px;
-  width: 1088px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1088px;
+  width: calc(100vw - 340px);
+  min-width: 600px;
   background-color: transparent;
   padding: 40px;
   z-index: 2;
   box-sizing: border-box;
+  overflow-x: hidden;
+  max-height: calc(100vh - 32px);
+  overflow-y: hidden;
 }
 
 .graph-header {
@@ -252,9 +263,16 @@ body {
   border-radius: 30px;
   border: 5px solid #173b61;
   padding: 20px;
-  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .graph-flashcard:hover {
@@ -263,45 +281,64 @@ body {
   z-index: 5;
 }
 
-.graph-files {
-  margin-top: 30px;
+.graph-flashcard h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #173b61;
+  margin: 0 0 8px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.graph-files-container {
-  max-height: 300px;
+.graph-flashcard p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.graph-flashcard .answers-preview {
+  margin-top: 8px;
+  font-size: 12px;
+  max-height: 60px;
   overflow-y: auto;
-  padding-right: 15px;
-  border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s ease;
 }
 
-.graph-files-container:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+/* Custom scrollbar for answers preview */
+.graph-flashcard .answers-preview::-webkit-scrollbar {
+  width: 4px;
 }
 
-/* Custom scrollbar styling */
-.graph-files-container::-webkit-scrollbar {
-  width: 8px;
+.graph-flashcard .answers-preview::-webkit-scrollbar-track {
+  background: rgba(23, 59, 97, 0.1);
+  border-radius: 2px;
 }
 
-.graph-files-container::-webkit-scrollbar-track {
-  background: rgba(23, 59, 97, 0.05);
-  border-radius: 10px;
-}
-
-.graph-files-container::-webkit-scrollbar-thumb {
-  background: rgba(23, 59, 97, 0.2);
-  border-radius: 10px;
+.graph-flashcard .answers-preview::-webkit-scrollbar-thumb {
+  background: rgba(23, 59, 97, 0.3);
+  border-radius: 2px;
   transition: background 0.3s ease;
 }
 
-.graph-files-container::-webkit-scrollbar-thumb:hover {
-  background: rgba(23, 59, 97, 0.4);
+.graph-flashcard .answers-preview::-webkit-scrollbar-thumb:hover {
+  background: rgba(23, 59, 97, 0.5);
 }
 
 .graph-file-header {
@@ -332,6 +369,9 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  min-height: 60px;
+  box-sizing: border-box;
 }
 
 .graph-file-entry:last-child {
@@ -345,6 +385,9 @@ body {
 
 .graph-file-text {
   margin-left: 20px;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .slick-track {
@@ -370,12 +413,32 @@ body {
   color: #173b61;
   font-size: 16px;
   margin: 0 0 5px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .graph-file-details {
   color: #777;
   font-size: 14px;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .graph-enroll-button {
@@ -409,8 +472,10 @@ body {
 
 .graph-container {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   background-color: #173b61;
+  overflow: hidden;
 }
 
 .graph-notification {
@@ -474,10 +539,45 @@ body {
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .graph-file-text {
-  flex-grow: 1;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Files container styles */
+.graph-files {
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.graph-files-container {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+}
+
+.graph-files-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.graph-files-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.graph-files-container::-webkit-scrollbar-thumb {
+  background: rgba(23, 59, 97, 0.3);
+  border-radius: 3px;
+}
+
+.graph-files-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(23, 59, 97, 0.5);
 }
 
 /* Flashcard section with navigation */
@@ -707,4 +807,696 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+/* Responsive design for flashcards */
+@media screen and (max-width: 1024px) {
+  .graph-flashcard {
+    padding: 18px;
+  }
+  
+  .graph-flashcard h3 {
+    font-size: 15px;
+  }
+  
+  .graph-flashcard p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .graph-flashcard {
+    min-height: 120px;
+    max-height: 180px;
+    padding: 15px;
+  }
+  
+  .graph-flashcard h3 {
+    font-size: 14px;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+  
+  .graph-flashcard p {
+    font-size: 12px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+  
+  .graph-flashcard .answers-preview {
+    font-size: 11px;
+    max-height: 50px;
+  }
+    .graph-flashcard .answers-preview p {
+    font-size: 10px;
+  }
+
+  /* File entry responsive styling */
+  .graph-file-entry {
+    padding: 10px 12px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .graph-file-text {
+    margin-left: 15px;
+  }
+
+  .graph-file-name {
+    font-size: 14px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .graph-file-details {
+    font-size: 12px;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+  
+  .graph-section-title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .graph-flashcard {
+    min-height: 110px;
+    max-height: 160px;
+    padding: 12px;
+  }
+  
+  .graph-flashcard h3 {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+  
+  .graph-flashcard p {
+    font-size: 11px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  
+  .graph-section-title {
+    font-size: 16px;
+  }
+  
+  .graph-file-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .graph-file-count {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .graph-flashcard {
+    min-height: 100px;
+    max-height: 150px;
+    padding: 12px;
+  }
+  
+  .graph-flashcard h3 {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+  
+  .graph-flashcard p {
+    font-size: 11px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  
+  .graph-flashcard .answers-preview {
+    font-size: 10px;
+    max-height: 40px;
+  }
+    .graph-flashcard .answers-preview p {
+    font-size: 9px;
+    padding: 1px 3px;
+  }
+
+  /* File entry responsive styling for mobile */
+  .graph-file-entry {
+    padding: 8px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .graph-file-text {
+    margin-left: 0;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .graph-file-name {
+    font-size: 13px;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+
+  .graph-file-details {
+    font-size: 11px;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+  
+  .graph-section-title {
+    font-size: 14px;
+  }
+  
+  .graph-add-button {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    margin-left: 5px;
+  }
+  
+  .flashcards-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  
+  .graph-file-header {
+    margin-bottom: 15px;
+  }
+}
+
+/* Responsive styles for content box */
+@media screen and (max-width: 1400px) {
+  .graph-content-box {
+    width: calc(100vw - 280px);
+    padding: 35px;
+  }
+  
+  .graph-box {
+    width: calc(100vw - 280px);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .graph-content-box {
+    width: calc(100vw - 240px);
+    padding: 30px;
+  }
+  
+  .graph-box {
+    width: calc(100vw - 240px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .graph-content-box {
+    width: calc(100vw - 40px);
+    padding: 25px;
+    max-height: calc(100vh - 20px);
+    overflow-y: hidden;
+    min-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .graph-box {
+    width: calc(100vw - 40px);
+    min-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .graph-files-container {
+    max-height: 250px;
+  }
+  
+  /* Show burger menu for tablets and below */
+  .burger-menu-button {
+    display: flex !important;
+  }
+  
+  /* Hide desktop navigation */
+  .graph-icon-wrapper {
+    display: none !important;
+  }
+  
+  .graph-logo,
+  .graph-logo-fii {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .graph-content-box {
+    width: calc(100vw - 40px);
+    padding: 20px;
+    overflow-y: hidden;
+    min-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .graph-box {
+    width: calc(100vw - 40px);
+    min-width: 400px;
+    height: calc(100vh - 32px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .graph-files-container {
+    max-height: 200px;
+  }
+  
+  .graph-header {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .graph-title {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .graph-buttons-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .graph-content-box {
+    width: calc(100vw - 40px);
+    padding: 15px;
+    min-width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .graph-box {
+    width: calc(100vw - 40px);
+    min-width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .graph-files-container {
+    max-height: 180px;
+  }
+  
+  .graph-title {
+    font-size: 24px;
+  }
+  
+  .graph-buttons-container {
+    gap: 10px;
+  }
+  
+  .graph-unenroll-button,
+  .graph-enrolled-button,
+  .graph-enroll-button {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  
+  .graph-start-button {
+    width: 150px;
+    height: 45px;
+    font-size: 14px;
+  }
+  
+  /* Adjust burger menu for smaller screens */
+  .burger-menu-content {
+    width: 280px;
+    padding: 70px 15px 15px;
+  }
+  
+  .burger-menu-button {
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    left: 15px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .graph-content-box {
+    width: calc(100vw - 40px);
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 280px;
+  }
+  
+  .graph-box {
+    width: calc(100vw - 40px);
+    min-width: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .graph-files-container {
+    max-height: 150px;
+  }
+  
+  .graph-header {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+  
+  .graph-title {
+    font-size: 20px;
+  }
+  
+  .graph-buttons-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .graph-unenroll-button,
+  .graph-enrolled-button,
+  .graph-enroll-button {
+    width: 100%;
+    height: 36px;
+    font-size: 13px;
+  }
+  
+  .graph-start-button {
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+  }
+  
+  .view-toggle-container {
+    margin: 0.5rem 0;
+  }
+  
+  .toggle-button {
+    padding: 0.4rem 1rem;
+    font-size: 14px;
+  }
+  
+  /* Smaller burger menu for very small screens */
+  .burger-menu-content {
+    width: 250px;
+    padding: 60px 10px 10px;
+  }
+  
+  .burger-menu-button {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+  }
+  
+  .burger-menu-item {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  
+  .burger-menu-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .burger-menu-logo {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .burger-menu-logo-fii {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Burger Menu Styles */
+.burger-menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #173b61;
+  border: none;
+  border-radius: 8px;
+  color: #efeae6;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.burger-menu-button:hover {
+  background-color: #1e4b7b;
+  transform: scale(1.05);
+}
+
+.burger-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  animation: fadeIn 0.3s ease;
+}
+
+.burger-menu-content {
+  width: 300px;
+  height: 100vh;
+  background-color: #173b61;
+  padding: 80px 20px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  animation: slideInLeft 0.3s ease;
+  overflow-y: auto;
+}
+
+.burger-menu-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.burger-menu-logo {
+  width: 80px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-menu-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.burger-menu-logo-fii {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-menu-logo-fii img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.burger-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.burger-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  color: #efeae6;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.burger-menu-item:hover {
+  background-color: rgba(239, 234, 230, 0.1);
+  transform: translateX(5px);
+}
+
+.burger-menu-item-active {
+  background-color: #efeae6;
+  color: #173b61;
+  font-weight: 700;
+}
+
+.burger-menu-item-active:hover {
+  background-color: #e6e1dd;
+  color: #173b61;
+}
+
+.burger-menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.burger-menu-item-active .burger-menu-icon {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%) contrast(88%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Desktop navigation - visible by default */
+.graph-icon-wrapper {
+  position: absolute;
+  width: 64px;
+  height: 72px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: transform 0.2s ease;
+}
+
+.graph-logo {
+  position: absolute;
+  top: 24px;
+  left: 90px;
+  width: 61px;
+  height: 48px;
+  z-index: 10;
+}
+
+.graph-logo-fii {
+  position: absolute;
+  top: 24px;
+  right: 90px;
+  width: 49px;
+  height: 48px;
+  z-index: 10;
+}
+
+.burger-menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #173b61;
+  border: none;
+  border-radius: 8px;
+  color: #efeae6;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none; /* Hidden by default on desktop */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Show desktop navigation and hide burger menu on large screens */
+@media screen and (min-width: 1025px) {
+  .burger-menu-button {
+    display: none !important;
+  }
+  
+  .graph-icon-wrapper {
+    display: flex !important;
+  }
+  
+  .graph-logo,
+  .graph-logo-fii {
+    display: block !important;
+  }
+}
+
+/* Show burger menu and hide desktop navigation on tablet and mobile */
+@media screen and (max-width: 1024px) {
+  .burger-menu-button {
+    display: flex !important;
+  }
+  
+  .graph-icon-wrapper {
+    display: none !important;
+  }
+  
+  .graph-logo,
+  .graph-logo-fii {
+    display: none !important;
+  }
+  
+  .graph-content-box {
+    width: calc(100vw - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 25px;
+    max-height: calc(100vh - 20px);
+    overflow-y: hidden;
+    min-width: 500px;
+  }
+  
+  .graph-box {
+    width: calc(100vw - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 500px;
+  }
+  
+  .graph-files-container {
+    max-height: 250px;
+  }
 }
