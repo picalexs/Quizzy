@@ -1,0 +1,353 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the page where the course description can be found?
+--InteriorSeparator--
+Page 2
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+2
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Where can the online course notes be found?
+--InteriorSeparator--
+http://profs.info.uaic.ro/~olariu/curent/AG/AG_ro.html
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following are components of the final grade?
+--InteriorSeparator--
+(right) Seminar Activity
+(right) Final Exam
+(wrong) Attendance
+(wrong) Extra Credit Assignments
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the minimum score required from seminars and homework to be able to take the final exam?
+--InteriorSeparator--
+30 points
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the passing score in the course?
+--InteriorSeparator--
+80 points
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What formats are acceptable for submitting homework solutions?
+--InteriorSeparator--
+(right) LaTeX
+(right) Word (Write)
+(wrong) Plain Text
+(wrong) PDF Only
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following topics are part of the course content?
+--InteriorSeparator--
+(right) Graph Theory Vocabulary
+(right) Minimum Cost Spanning Trees
+(wrong) Calculus
+(wrong) Differential Equations
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are graphs used for in social network analysis?
+--InteriorSeparator--
+Determining characteristics such as connectivity, density, and influence of users.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are some applications of graph coloring?
+--InteriorSeparator--
+(right) Map coloring
+(right) Scheduling courses
+(wrong) Database management
+(wrong) Quantum computation
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the main application for maximum value flows in networks?
+--InteriorSeparator--
+Improving traffic conditions by determining the level of congestion in transportation networks.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the notation for the cardinality of a set X?
+--InteriorSeparator--
+|X|
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define a graph G.
+--InteriorSeparator--
+A pair G = (V, E) where V is a finite, non-empty set of nodes (vertices) and E is a subset of 2^V which is the set of edges.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the possible conditions for node 'v' in a graph?
+--InteriorSeparator--
+(right) Isolated
+(right) Pendant
+(wrong) Connected
+(wrong) Central
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a stable set in a graph G = (V, E)?
+--InteriorSeparator--
+A subset S of V such that no two vertices in S are adjacent (no edge exists between them).
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is α(G)?
+--InteriorSeparator--
+The maximum cardinality of a stable set in G.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the problem of finding the maximum stable set (SM) NP-complete?
+--InteriorSeparator--
+Yes
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define a matching (independent set of edges) in a graph G = (V, E).
+--InteriorSeparator--
+A subset M of E such that no two edges in M share a common vertex.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is ν(G)?
+--InteriorSeparator--
+The maximum cardinality of a matching in G.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Was the maximum matching problem (P2) proven to be in P?
+--InteriorSeparator--
+Yes, by Edmonds (1965)
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define a node coloring of a graph G = (V, E) using p colors.
+--InteriorSeparator--
+A function c: V -> {1, ..., p} such that c(u) ≠ c(v) for every edge uv in E.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is χ(G)?
+--InteriorSeparator--
+The minimum number of colors needed to color the vertices of G.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the problem of finding a p-coloring of a graph (COL) NP-complete for p ≥ 3?
+--InteriorSeparator--
+Yes
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+32
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define an edge coloring of a graph G = (V, E) using p colors.
+--InteriorSeparator--
+A function c: E -> {1, ..., p} such that c(e) ≠ c(f) for every pair of adjacent edges e and f.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is χ'(G)?
+--InteriorSeparator--
+The minimum number of colors needed to color the edges of G.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the problem of finding a p-edge coloring of a graph NP-complete for p ≥ 3?
+--InteriorSeparator--
+Yes.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+35
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Define isomorphic graphs G1 = (V1, E1) and G2 = (V2, E2).
+--InteriorSeparator--
+There exists a bijection φ: V1 -> V2 such that for any two vertices u1, u2 in V1, u1 and u2 are adjacent in G1 if and only if φ(u1) and φ(u2) are adjacent in G2.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+36
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the graph isomorphism problem known to be in P or NP-complete?
+--InteriorSeparator--
+No. It is not known if it is in P or NP-complete.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which graph parameters are equal for the non-isomorphic graphs illustrated on page 39?
+--InteriorSeparator--
+(right) Order
+(right) Size
+(right) Degree Sequence
+(wrong) Number of connected components
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+39
+}], role=model}, finishReason=STOP, avgLogprobs=-0.12001598061755014}]
