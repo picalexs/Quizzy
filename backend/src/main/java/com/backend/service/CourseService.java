@@ -6,6 +6,7 @@ import com.backend.model.Course;
 import com.backend.repository.CourseRepository;
 import com.backend.repository.UserRepository;
 import com.backend.repository.FlashcardRepository;
+import com.backend.repository.MaterialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,12 +22,14 @@ public class CourseService {
     private final CourseRepository courseRepository;
     private final UserRepository userRepository;
     private final FlashcardRepository flashcardRepository;
+    private final MaterialRepository materialRepository;
 
     @Autowired
-    public CourseService(CourseRepository courseRepository, UserRepository userRepository, FlashcardRepository flashcardRepository) {
+    public CourseService(CourseRepository courseRepository, UserRepository userRepository, FlashcardRepository flashcardRepository, MaterialRepository materialRepository) {
         this.courseRepository = courseRepository;
         this.userRepository = userRepository;
         this.flashcardRepository = flashcardRepository;
+        this.materialRepository = materialRepository;
     }
 
     public Course createCourse(CourseDTO courseDTO) {
@@ -102,5 +105,15 @@ public class CourseService {
             return Map.of();
         }
         return flashcardRepository.getFlashcardCountsByCourseIds(courseIds);
+    }
+    
+    /**
+     * Get material counts for multiple courses in batch to avoid N+1 query problem
+     */
+    public Map<Long, Long> getMaterialCountsByCourseIds(List<Long> courseIds) {
+        if (courseIds.isEmpty()) {
+            return Map.of();
+        }
+        return materialRepository.getMaterialCountsByCourseIds(courseIds);
     }
 }
