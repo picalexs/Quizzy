@@ -16,7 +16,6 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 @RequiredArgsConstructor
@@ -25,10 +24,6 @@ public class FlashcardBatchGenerator {
     private final RestTemplate restTemplate = new RestTemplate();
     private final String GENERATE_URL = "http://localhost:3000/api/gemini/generate-with-prompt";
     private final String BASE_DIRECTORY = "courses";
-    
-    // Progress tracking
-    private final AtomicInteger totalFiles = new AtomicInteger(0);
-    private final AtomicInteger processedFiles = new AtomicInteger(0);
 
     //@PostConstruct
     public void generateAllFlashcards() {
@@ -39,30 +34,9 @@ public class FlashcardBatchGenerator {
             return;
         }
 
-        // First pass: count total files
-        totalFiles.set(0);
-        processedFiles.set(0);
-        countFiles(coursesFolder);
-        
         System.out.println("🚀 Încep procesarea din directorul: " + BASE_DIRECTORY);
-        System.out.println("📊 Total fișiere de procesat: " + totalFiles.get());
-        
         processDirectory(coursesFolder, "");
-        
-        System.out.println("✨ Procesarea completă! Procesate: " + processedFiles.get() + "/" + totalFiles.get());
-    }
-    
-    private void countFiles(File directory) {
-        File[] files = directory.listFiles();
-        if (files == null) return;
-        
-        for (File file : files) {
-            if (file.isFile() && file.getName().endsWith(".txt") && !file.getName().contains("_flashcards")) {
-                totalFiles.incrementAndGet();
-            } else if (file.isDirectory()) {
-                countFiles(file);
-            }
-        }
+        System.out.println("✨ Procesarea completă!");
     }
 
     private void processDirectory(File directory, String relativePath) {
@@ -97,8 +71,7 @@ public class FlashcardBatchGenerator {
 
     private void processTextFile(String relativePath) {
         try {
-            int current = processedFiles.incrementAndGet();
-            System.out.println("📄 Procesez fișierul (" + current + "/" + totalFiles.get() + "): " + relativePath);
+            System.out.println("📄 Procesez fișierul: " + relativePath);
 
             MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
             map.add("inputFilePath", relativePath);
@@ -111,7 +84,7 @@ public class FlashcardBatchGenerator {
             ResponseEntity<String> response = restTemplate.postForEntity(GENERATE_URL, request, String.class);
 
             if (response.getStatusCode().is2xxSuccessful()) {
-                System.out.println("✅ Flashcard-uri generate pentru: " + relativePath + " (" + current + "/" + totalFiles.get() + " complete)");
+                System.out.println("✅ Flashcard-uri generate pentru: " + relativePath);
                 System.out.println("📝 Răspuns: " + response.getBody());
             } else {
                 System.out.println("❌ Eroare HTTP " + response.getStatusCode() + " pentru " + relativePath);
@@ -124,14 +97,6 @@ public class FlashcardBatchGenerator {
             e.printStackTrace();
         }
     }
-    
-    public int getTotalFiles() {
-        return totalFiles.get();
-    }
-    
-    public int getProcessedFiles() {
-        return processedFiles.get();
-    }
 
     public void generateFlashcardsForSpecificCourse(String courseName) {
         String courseDirectory = BASE_DIRECTORY + "/" + courseName;
@@ -142,16 +107,8 @@ public class FlashcardBatchGenerator {
             return;
         }
 
-        // Count files for this course
-        totalFiles.set(0);
-        processedFiles.set(0);
-        countFiles(courseFolder);
-
         System.out.println("🚀 Procesez cursul: " + courseName);
-        System.out.println("📊 Total fișiere de procesat: " + totalFiles.get());
-        
         processDirectory(courseFolder, courseName);
-        
-        System.out.println("✨ Procesarea cursului " + courseName + " completă! Procesate: " + processedFiles.get() + "/" + totalFiles.get());
+        System.out.println("✨ Procesarea cursului " + courseName + " completă!");
     }
 }

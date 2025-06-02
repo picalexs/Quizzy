@@ -3,7 +3,6 @@ package com.backend.controller;
 import com.backend.model.Course;
 import com.backend.model.Enrollment;
 import com.backend.model.User;
-import com.backend.repository.CourseRepository;
 import com.backend.repository.FlashcardRepository;
 import com.backend.service.CourseService;
 import com.backend.service.EnrollmentService;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.foreign.MemorySegment;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -115,12 +113,6 @@ public class EnrollmentController {
     @GetMapping("/student/{studentId}")
     public ResponseEntity<List<Map<String, Object>>> getEnrolledCoursesByStudent(@PathVariable Integer studentId) {
         List<Course> courses = courseService.getEnrolledCoursesByStudentId(studentId);
-        
-        // Get all course IDs for batch queries
-        List<Long> courseIds = courses.stream().map(Course::getId).toList();
-        Map<Long, Long> flashcardCounts = courseService.getFlashcardCountsByCourseIds(courseIds);
-        Map<Long, Long> materialCounts = courseService.getMaterialCountsByCourseIds(courseIds);
-        
         List<Map<String, Object>> result = new ArrayList<>();
         for (Course c : courses) {
             Map<String, Object> map = new HashMap<>();
@@ -128,9 +120,8 @@ public class EnrollmentController {
             map.put("title", c.getTitle());
             map.put("description", c.getDescription());
             map.put("semestru", c.getSemestru());
-            map.put("flashcardCount", flashcardCounts.getOrDefault(c.getId(), 0L));
-            map.put("materialCount", materialCounts.getOrDefault(c.getId(), 0L));
-            // Remove materials to avoid lazy loading - they can be fetched separately when needed
+            map.put("flashcardCount", flashcardRepository.countByCourseId(c.getId()));
+            map.put("materials", c.getMaterials());
             result.add(map);
         }
         return ResponseEntity.ok(result);
