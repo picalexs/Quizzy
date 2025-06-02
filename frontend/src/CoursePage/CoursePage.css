@@ -474,7 +474,7 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #173b61;
+  background: linear-gradient(180deg, #173B61 40%, #EFEAE6 100%);
   overflow: hidden;
 }
 
