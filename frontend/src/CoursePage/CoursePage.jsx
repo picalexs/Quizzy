@@ -23,7 +23,8 @@ function CoursePage() {
   const [unenrolling, setUnenrolling] = useState(false)
   const [notification, setNotification] = useState(null)
   const [materials, setMaterials] = useState([])
-  const [viewMode, setViewMode] = useState('flashcards') // 'flashcards' or 'tests'  const [tests, setTests] = useState([])
+  const [viewMode, setViewMode] = useState('flashcards') // 'flashcards' or 'tests'
+  const [tests, setTests] = useState([])
   const [userRole, setUserRole] = useState(null)
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const sliderRef = useRef(null)
