@@ -135,11 +135,22 @@ const Flashcards = () => {
         setSelectedOption(option);
         setShowAnswer(true);
 
-        if (option === current.correctAnswer) {
+        const isCorrect = option === current.correctAnswer;
+
+        if (isCorrect) {
             setFeedbackMessage("Correct!");
+            // Aplicăm automat feedback-ul "good" (😊)
+            handleFeedback('good', 0);
         } else {
             setFeedbackMessage("Wrong!");
+            // Aplicăm automat feedback-ul "bad" (😡)
+            handleFeedback('bad', 2);
         }
+
+        // Trecem automat la următorul card după 1.5 secunde
+        setTimeout(() => {
+            nextCard();
+        }, 1500);
     };
 
     const handleFeedback = (type, ratingIndex) => {
@@ -170,29 +181,67 @@ const Flashcards = () => {
         setInputText(e.target.value);
     };
 
+    // NOUĂ: Funcție pentru gestionarea tastei Enter
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSubmitInput();
+        }
+    };
+
+    // ACTUALIZATĂ: Funcția handleSubmitInput cu auto-hide
     const handleSubmitInput = async () => {
         if (!inputText.trim()) return;
 
         setShowAnswer(true);
         console.log('Sending:', {
             question: current.question,
-            //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",
             officialAnswer: current.answer,
             usersAnswer: inputText
         });
+
         try {
-            const res = await api.post('/api/gemini/compare-users-answer-to-the-official-answer',  {
-
-                    question: current.question,
-                    //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",
-                    officialAnswer: current.answer,
-                    usersAnswer: inputText
-
+            const res = await api.post('/api/gemini/compare-users-answer-to-the-official-answer', {
+                question: current.question,
+                officialAnswer: current.answer,
+                usersAnswer: inputText
             });
-            setScore(res.data);
+
+            const scoreValue = res.data;
+            setScore(scoreValue);
+
+            // Determină rating-ul automat în funcție de procentaj
+            let autoRating;
+            if (scoreValue >= 80) {
+                autoRating = 0; // Good (😊)
+            } else if (scoreValue >= 50) {
+                autoRating = 1; // Neutral (😐)
+            } else {
+                autoRating = 2; // Bad (😡)
+            }
+
+            // Aplică rating-ul automat
+            handleFeedback('auto', autoRating);
+
+            // ACTUALIZAT: Ascunde bara după submit și resetează input-ul
+            setTimeout(() => {
+                setShowKeyboardInput(false);
+                setInputText('');
+            }, 1500); // Dispare după 1.5 secunde
+
+            // Trece automat la următorul flashcard după 2 secunde
+            setTimeout(() => {
+                nextCard();
+            }, 2000);
+
         } catch (err) {
             console.error('Comparison error:', err);
             setFeedbackMessage("Error comparing your answer");
+
+            // Ascunde bara și în caz de eroare
+            setTimeout(() => {
+                setShowKeyboardInput(false);
+                setInputText('');
+            }, 1500);
         }
     };
 
@@ -238,8 +287,6 @@ const Flashcards = () => {
 
                     {current.options ? (
                         <div className="flashcard-options-container">
-                            <div className="instruction-text">Select 1 correct answer</div>
-
                             <div className="flashcard-options">
                                 {current.options.map((option, i) => {
                                     const isCorrect = showAnswer && option === current.correctAnswer;
@@ -287,9 +334,9 @@ const Flashcards = () => {
                                         className="keyboard-input"
                                         value={inputText}
                                         onChange={handleInputChange}
+                                        onKeyPress={handleKeyPress}
                                         placeholder="Type the answer"
                                         autoFocus
-                                        style={{ marginLeft: isMobile ? '40px' : '60px', width: isMobile ? 'calc(100% - 50px)' : 'calc(100% - 75px)' }}
                                     />
                                     <button className="submit-answer-btn" onClick={handleSubmitInput}>
                                         Submit
@@ -314,6 +361,8 @@ const Flashcards = () => {
 
                 <div className="rating-container">
                     <button className="nav-btn-circle" onClick={prevCard}>&lt;</button>
+                    {/* Pentru întrebările multiple choice, butoanele de rating sunt doar vizuale
+                        deoarece feedback-ul se aplică automat */}
                     <button className="rating-btn" onClick={() => handleFeedback('bad', 2)}>😡</button>
                     <button className="rating-btn" onClick={() => handleFeedback('neutral', 1)}>😐</button>
                     <button className="rating-btn" onClick={() => handleFeedback('good', 0)}>😊</button>
