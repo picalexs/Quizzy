@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Flashcards.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { api } from '../utils/api';
 
 const Flashcards = () => {
     const navigate = useNavigate();
     const { materialId } = useParams(); // dacă dorești să preiei flashcards după materialId din URL
+    const location = useLocation();
+    const { courseId, courseTitle } = location.state || {};
 
     // State pentru flashcards
     const [flashcards, setFlashcards] = useState([]);
@@ -195,7 +197,12 @@ const Flashcards = () => {
     };
 
     const navigateBack = () => {
-        navigate('/graph-algorithms');
+        if (courseId) {
+            navigate(`/course/${courseId}`);
+        } else {
+            // Fallback to library if no course ID is provided
+            navigate('/library');
+        }
     };
 
     if (loading) return <div className="flashcard-app"><div className="loading">Loading flashcards...</div></div>;

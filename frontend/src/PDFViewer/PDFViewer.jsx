@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { api } from '../utils/api';
 import './PDFViewer.css';
 
 function PDFViewer() {
     // Extract the full path from the URL
     const location = useLocation();
+    const navigate = useNavigate();
     const fullPath = location.pathname.replace('/Material/path/', '');
     const stateTitle = location.state?.title;
+    const { courseId, courseTitle } = location.state || {};
 
     const [pageMode, setPageMode] = useState('single');
     const [pdfUrl, setPdfUrl] = useState('');
@@ -101,13 +103,42 @@ function PDFViewer() {
         setDisplayMode(prevMode => prevMode === 'iframe' ? 'object' : 'iframe');
     };
 
+    const navigateBack = () => {
+        if (courseId) {
+            navigate(`/course/${courseId}`);
+        } else {
+            // Fallback to library if no course ID is provided
+            navigate('/library');
+        }
+    };
+
     return (
         <div className="App">
             <header className="App-header">
                 <div className="App-container">
                     <div className="Pdf-header">
                         <div className="Pdf-section dark">
-                            <h1 className="Pdf-title">{title}</h1>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                <button 
+                                    onClick={navigateBack}
+                                    style={{
+                                        background: 'rgba(255, 255, 255, 0.2)',
+                                        border: '1px solid rgba(255, 255, 255, 0.3)',
+                                        color: 'white',
+                                        borderRadius: '4px',
+                                        padding: '8px 12px',
+                                        cursor: 'pointer',
+                                        fontSize: '16px',
+                                        transition: 'background 0.3s'
+                                    }}
+                                    onMouseOver={(e) => e.target.style.background = 'rgba(255, 255, 255, 0.3)'}
+                                    onMouseOut={(e) => e.target.style.background = 'rgba(255, 255, 255, 0.2)'}
+                                    title={courseTitle ? `Back to ${courseTitle}` : 'Back to course'}
+                                >
+                                    ← Back
+                                </button>
+                                <h1 className="Pdf-title">{title}</h1>
+                            </div>
                             {error && <p className="Pdf-error">{error}</p>}
                             {directUrl && (
                                 <p className="Pdf-direct-link">

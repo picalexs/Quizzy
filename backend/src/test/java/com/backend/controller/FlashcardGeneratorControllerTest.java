@@ -9,6 +9,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -21,149 +24,139 @@ class FlashcardGeneratorControllerTest {
     @InjectMocks
     private FlashcardGeneratorController flashcardGeneratorController;
 
+
     @Test
-    void shouldGenerateFlashcardsSuccessfully() {
+    void shouldReturnAlreadyRunningWhenGenerationInProgress() throws InterruptedException {
         // Given
-        doNothing().when(flashcardBatchGenerator).generateAllFlashcards();
+        when(flashcardBatchGenerator.getTotalFiles()).thenReturn(10);
+        when(flashcardBatchGenerator.getProcessedFiles()).thenReturn(0);
+        
+        doAnswer(invocation -> {
+            // Simulate long running operation
+            TimeUnit.MILLISECONDS.sleep(100);
+            return null;
+        }).when(flashcardBatchGenerator).generateAllFlashcards();
+
+        // When - start first generation
+        ResponseEntity<Map<String, Object>> firstResponse = flashcardGeneratorController.generateFlashcards();
+        
+        // Give some time for the async operation to start
+        TimeUnit.MILLISECONDS.sleep(10);
+        
+        // Try to start second generation immediately
+        ResponseEntity<Map<String, Object>> secondResponse = flashcardGeneratorController.generateFlashcards();
+
+        // Then
+        assertEquals(HttpStatus.OK, firstResponse.getStatusCode());
+        assertEquals("started", firstResponse.getBody().get("status"));
+        
+        assertEquals(HttpStatus.OK, secondResponse.getStatusCode());
+        assertEquals("already_running", secondResponse.getBody().get("status"));
+        assertTrue(secondResponse.getBody().get("message").toString().contains("deja în desfășurare"));
+        assertNotNull(secondResponse.getBody().get("progress"));
+    }
+
+    @Test
+    void shouldReturnGenerationStatusWithProgress() {
+        // Given
+        when(flashcardBatchGenerator.getTotalFiles()).thenReturn(100);
+        when(flashcardBatchGenerator.getProcessedFiles()).thenReturn(50);
 
         // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
+        ResponseEntity<Map<String, Object>> response = flashcardGeneratorController.getGenerationStatus();
 
         // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("✅ Generarea flashcard-urilor s-a încheiat cu succes!", response.getBody());
-        verify(flashcardBatchGenerator).generateAllFlashcards();
-    }
-
-    @Test
-    void shouldReturnErrorWhenGenerationFails() {
-        // Given
-        String errorMessage = "File not found";
-        doThrow(new RuntimeException(errorMessage)).when(flashcardBatchGenerator).generateAllFlashcards();
-
-        // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
-
-        // Then
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertTrue(response.getBody().contains("❌ Eroare la generarea flashcard-urilor:"));
-        assertTrue(response.getBody().contains(errorMessage));
-        verify(flashcardBatchGenerator).generateAllFlashcards();
-    }
-
-    @Test
-    void shouldHandleNullPointerException() {
-        // Given
-        doThrow(new NullPointerException("Null reference")).when(flashcardBatchGenerator).generateAllFlashcards();
-
-        // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
-
-        // Then
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertTrue(response.getBody().contains("❌ Eroare la generarea flashcard-urilor:"));
-        assertTrue(response.getBody().contains("Null reference"));
-        verify(flashcardBatchGenerator).generateAllFlashcards();
-    }
-
-    @Test
-    void shouldHandleIllegalArgumentException() {
-        // Given
-        String errorMessage = "Invalid argument provided";
-        doThrow(new IllegalArgumentException(errorMessage)).when(flashcardBatchGenerator).generateAllFlashcards();
-
-        // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
-
-        // Then
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertTrue(response.getBody().contains("❌ Eroare la generarea flashcard-urilor:"));
-        assertTrue(response.getBody().contains(errorMessage));
-        verify(flashcardBatchGenerator).generateAllFlashcards();
-    }
-
-    @Test
-    void shouldHandleIOException() {
-        // Given
-        String errorMessage = "IO error occurred";
-        doThrow(new RuntimeException(errorMessage)).when(flashcardBatchGenerator).generateAllFlashcards();
-
-        // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
-
-        // Then
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertTrue(response.getBody().contains("❌ Eroare la generarea flashcard-urilor:"));
-        assertTrue(response.getBody().contains(errorMessage));
-        verify(flashcardBatchGenerator).generateAllFlashcards();
-    }
-
-    @Test
-    void shouldCallGenerateAllFlashcardsOnlyOnce() {
-        // Given
-        doNothing().when(flashcardBatchGenerator).generateAllFlashcards();
-
-        // When
-        flashcardGeneratorController.generateFlashcards();
-
-        // Then
-        verify(flashcardBatchGenerator, times(1)).generateAllFlashcards();
-        verifyNoMoreInteractions(flashcardBatchGenerator);
-    }
-
-    @Test
-    void shouldReturnResponseEntityWithStringBody() {
-        // Given
-        doNothing().when(flashcardBatchGenerator).generateAllFlashcards();
-
-        // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
-
-        // Then
-        assertNotNull(response);
         assertNotNull(response.getBody());
-        assertInstanceOf(String.class, response.getBody());
+        
+        Map<String, Object> responseBody = response.getBody();
+        assertEquals(false, responseBody.get("isGenerating"));
+        assertEquals("idle", responseBody.get("status"));
+        
+        @SuppressWarnings("unchecked")
+        Map<String, Object> progress = (Map<String, Object>) responseBody.get("progress");
+        assertNotNull(progress);
+        assertEquals(100, progress.get("totalFiles"));
+        assertEquals(50, progress.get("processedFiles"));
+        assertEquals(50.0, progress.get("percentage"));
     }
 
     @Test
-    void shouldHandleExceptionWithNullMessage() {
+    void shouldCalculateProgressPercentageCorrectly() {
         // Given
-        doThrow(new RuntimeException()).when(flashcardBatchGenerator).generateAllFlashcards();
+        when(flashcardBatchGenerator.getTotalFiles()).thenReturn(75);
+        when(flashcardBatchGenerator.getProcessedFiles()).thenReturn(25);
 
         // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
+        ResponseEntity<Map<String, Object>> response = flashcardGeneratorController.getGenerationStatus();
 
         // Then
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        assertTrue(response.getBody().contains("❌ Eroare la generarea flashcard-urilor:"));
-        verify(flashcardBatchGenerator).generateAllFlashcards();
+        @SuppressWarnings("unchecked")
+        Map<String, Object> progress = (Map<String, Object>) response.getBody().get("progress");
+        assertEquals(33.33, progress.get("percentage"));
     }
 
     @Test
-    void shouldReturnCorrectErrorStatusCode() {
+    void shouldHandleZeroTotalFilesInProgress() {
         // Given
-        doThrow(new RuntimeException("Test error")).when(flashcardBatchGenerator).generateAllFlashcards();
+        when(flashcardBatchGenerator.getTotalFiles()).thenReturn(0);
+        when(flashcardBatchGenerator.getProcessedFiles()).thenReturn(0);
 
         // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
+        ResponseEntity<Map<String, Object>> response = flashcardGeneratorController.getGenerationStatus();
 
         // Then
-        assertEquals(500, response.getStatusCodeValue());
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
-        verify(flashcardBatchGenerator).generateAllFlashcards();
+        @SuppressWarnings("unchecked")
+        Map<String, Object> progress = (Map<String, Object>) response.getBody().get("progress");
+        assertEquals(0.0, progress.get("percentage"));
     }
 
+
     @Test
-    void shouldReturnCorrectSuccessStatusCode() {
+    void shouldReturnCorrectStatusCodeForGenerationStatus() {
         // Given
-        doNothing().when(flashcardBatchGenerator).generateAllFlashcards();
+        when(flashcardBatchGenerator.getTotalFiles()).thenReturn(0);
+        when(flashcardBatchGenerator.getProcessedFiles()).thenReturn(0);
 
         // When
-        ResponseEntity<String> response = flashcardGeneratorController.generateFlashcards();
+        ResponseEntity<Map<String, Object>> response = flashcardGeneratorController.getGenerationStatus();
 
         // Then
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        verify(flashcardBatchGenerator).generateAllFlashcards();
+    }
+
+    @Test
+    void shouldIncludeProgressInformationInAlreadyRunningResponse() throws InterruptedException {
+        // Given
+        when(flashcardBatchGenerator.getTotalFiles()).thenReturn(20);
+        when(flashcardBatchGenerator.getProcessedFiles()).thenReturn(5);
+        
+        doAnswer(invocation -> {
+            TimeUnit.MILLISECONDS.sleep(100);
+            return null;
+        }).when(flashcardBatchGenerator).generateAllFlashcards();
+
+        // When
+        flashcardGeneratorController.generateFlashcards();
+        TimeUnit.MILLISECONDS.sleep(10); // Let the first operation start
+        
+        ResponseEntity<Map<String, Object>> response = flashcardGeneratorController.generateFlashcards();
+
+        // Then
+        assertNotNull(response.getBody().get("progress"));
+        @SuppressWarnings("unchecked")
+        Map<String, Object> progress = (Map<String, Object>) response.getBody().get("progress");
+        assertEquals(20, progress.get("totalFiles"));
+        assertEquals(5, progress.get("processedFiles"));
+        assertEquals(25.0, progress.get("percentage"));
+    }
+
+    @Test
+    void shouldHaveCorrectEndpointMapping() {
+        // This test ensures the controller has the expected endpoints
+        // The actual annotations are tested through integration tests
+        assertNotNull(flashcardGeneratorController);
+        assertTrue(flashcardGeneratorController.getClass().isAnnotationPresent(org.springframework.web.bind.annotation.RestController.class));
     }
 } 
