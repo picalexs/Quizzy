@@ -34,7 +34,7 @@ const Library = () => {
             setCourses(data.map(course => ({
                 title: course.title,
                 flashcards: course.flashcardCount || 0,
-                files: course.materials?.length || 0,
+                files: course.materialCount || 0,
                 path: `/course/${course.id}`
             })));
         } catch (err) {

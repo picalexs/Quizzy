@@ -5,23 +5,31 @@ import com.backend.mapper.CourseMapper;
 import com.backend.model.Course;
 import com.backend.repository.CourseRepository;
 import com.backend.repository.UserRepository;
+import com.backend.repository.FlashcardRepository;
+import com.backend.repository.MaterialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CourseService {
 
     private final CourseRepository courseRepository;
     private final UserRepository userRepository;
+    private final FlashcardRepository flashcardRepository;
+    private final MaterialRepository materialRepository;
 
     @Autowired
-    public CourseService(CourseRepository courseRepository, UserRepository userRepository) {
+    public CourseService(CourseRepository courseRepository, UserRepository userRepository, FlashcardRepository flashcardRepository, MaterialRepository materialRepository) {
         this.courseRepository = courseRepository;
         this.userRepository = userRepository;
+        this.flashcardRepository = flashcardRepository;
+        this.materialRepository = materialRepository;
     }
 
     public Course createCourse(CourseDTO courseDTO) {
@@ -87,5 +95,25 @@ public class CourseService {
 
     public List<Course> getEnrolledCoursesByStudentId(Integer studentId) {
         return courseRepository.findEnrolledCoursesByStudentId(studentId);
+    }
+    
+    /**
+     * Get flashcard counts for multiple courses in batch to avoid N+1 query problem
+     */
+    public Map<Long, Long> getFlashcardCountsByCourseIds(List<Long> courseIds) {
+        if (courseIds.isEmpty()) {
+            return Map.of();
+        }
+        return flashcardRepository.getFlashcardCountsByCourseIds(courseIds);
+    }
+    
+    /**
+     * Get material counts for multiple courses in batch to avoid N+1 query problem
+     */
+    public Map<Long, Long> getMaterialCountsByCourseIds(List<Long> courseIds) {
+        if (courseIds.isEmpty()) {
+            return Map.of();
+        }
+        return materialRepository.getMaterialCountsByCourseIds(courseIds);
     }
 }
