@@ -149,7 +149,12 @@ function CoursePage() {
   }
   const handleStartLearning = () => {
     if (materials.length > 0 && materials[0].id) {
-      navigate(`/flashcards/${materials[0].id}`)
+      navigate(`/flashcards/${materials[0].id}`, { 
+        state: { 
+          courseId: id,
+          courseTitle: course?.title || 'Course'
+        } 
+      })
     } else {
       setNotification("Nu există materiale cu flashcard-uri disponibile.")
     }
