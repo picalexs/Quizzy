@@ -382,13 +382,13 @@ const FlashcardsProf = () => {
                                 {saving ? 'Saving...' : (isEditing ? 'Update question' : 'Save question')}
                             </button>
                         </div>
+                    </div>
+                )}
 
-                        {error && (
-                            <div className="flashcardsProf-error-notification">
-                                <p>{error}</p>
-                                {errorDetails && <p className="flashcardsProf-error-details">{errorDetails}</p>}
-                            </div>
-                        )}
+                {error && (
+                    <div className="flashcardsProf-error-notification">
+                        <p>{error}</p>
+                        {errorDetails && <p className="flashcardsProf-error-details">{errorDetails}</p>}
                     </div>
                 )}
             </div>
