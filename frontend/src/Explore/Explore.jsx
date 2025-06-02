@@ -119,7 +119,7 @@ const Explore = () => {
                                 <div className="library-course-title">{course.title}</div>
                                 <div className="library-course-info">
                                     <span className="library-number">{course.flashcardCount || 0}</span> Flashcards |
-                                    <span className="library-number">{course.materials?.length || 0}</span> Files
+                                    <span className="library-number">{course.materialCount || 0}</span> Files
                                 </div>
                             </div>
                         </div>
