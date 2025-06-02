@@ -179,7 +179,7 @@ const Flashcards = () => {
             usersAnswer: inputText
         });
         try {
-            const res = await api.post('/api/gemini/compare-users-answer-to-the-official-answer',  {
+            const res = await api.post('/gemini/compare-users-answer-to-the-official-answer',  {
 
                     question: current.question,
                     //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",

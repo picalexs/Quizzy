@@ -7,6 +7,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.beans.factory.annotation.Value;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
@@ -19,11 +20,17 @@ import java.nio.file.Paths;
 
 @Component
 @RequiredArgsConstructor
-public class FlashcardBatchGenerator {
-
+public class FlashcardBatchGenerator {    
     private final RestTemplate restTemplate = new RestTemplate();
-    private final String GENERATE_URL = "http://localhost:3000/api/gemini/generate-with-prompt";
+    
+    @Value("${app.backend.base-url:http://localhost:3000}")
+    private String backendBaseUrl;
+    
     private final String BASE_DIRECTORY = "courses";
+    
+    private String getGenerateUrl() {
+        return backendBaseUrl + "/gemini/generate-with-prompt";
+    }
 
     //@PostConstruct
     public void generateAllFlashcards() {
@@ -81,7 +88,7 @@ public class FlashcardBatchGenerator {
 
             HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
 
-            ResponseEntity<String> response = restTemplate.postForEntity(GENERATE_URL, request, String.class);
+            ResponseEntity<String> response = restTemplate.postForEntity(getGenerateUrl(), request, String.class);
 
             if (response.getStatusCode().is2xxSuccessful()) {
                 System.out.println("✅ Flashcard-uri generate pentru: " + relativePath);
