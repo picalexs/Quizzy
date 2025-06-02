@@ -37,6 +37,11 @@ public class CourseController {
     @GetMapping
     public ResponseEntity<List<Map<String, Object>>> getAllCourses() {
         List<Course> courses = (List<Course>) courseService.getAllCourses();
+        
+        // Get all course IDs for batch flashcard count query
+        List<Long> courseIds = courses.stream().map(Course::getId).toList();
+        Map<Long, Long> flashcardCounts = courseService.getFlashcardCountsByCourseIds(courseIds);
+        
         List<Map<String, Object>> result = new ArrayList<>();
         for (Course c : courses) {
             Map<String, Object> map = new HashMap<>();
@@ -44,8 +49,8 @@ public class CourseController {
             map.put("title", c.getTitle());
             map.put("description", c.getDescription());
             map.put("semestru", c.getSemestru());
-            map.put("flashcardCount", flashcardRepository.countByCourseId(c.getId()));
-            map.put("materials", c.getMaterials());
+            map.put("flashcardCount", flashcardCounts.getOrDefault(c.getId(), 0L));
+            // Remove materials to avoid lazy loading - they can be fetched separately when needed
             result.add(map);
         }
         return ResponseEntity.ok(result);
