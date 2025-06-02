@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Flashcards.css';
-import { useNavigate, useParams, useLocation } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { api } from '../utils/api';
 
 const Flashcards = () => {
     const navigate = useNavigate();
     const { materialId } = useParams(); // dacă dorești să preiei flashcards după materialId din URL
-    const location = useLocation();
-    const { courseId, courseTitle } = location.state || {};
 
     // State pentru flashcards
     const [flashcards, setFlashcards] = useState([]);
@@ -32,20 +30,35 @@ const Flashcards = () => {
         "-1": "#CCCCCC" // Default - Gray (not rated)
     };
 
-    // Preluăm flashcards de la API
+    // Preluăm flashcards prioritizate de la API
     useEffect(() => {
         const fetchFlashcards = async () => {
             try {
                 setLoading(true);
                 let response;
 
+                // Numărul de flashcards care vor fi încărcate
+                const limitCards = 20;
+                console.log('Încărcare flashcards prioritizate...');
+
+                // Obținem ID-ul utilizatorului din localStorage
+                const userId = localStorage.getItem('userId');
+                if (!userId) {
+                    console.error('Nu s-a găsit ID-ul utilizatorului');
+                    setError('Nu s-a găsit ID-ul utilizatorului. Vă rugăm să vă autentificați.');
+                    setLoading(false);
+                    return;
+                }
+
                 // Verificăm dacă avem materialId pentru a face cererea corespunzătoare
                 if (materialId) {
-                    response = await api.get(`/Flashcard/material/${materialId}`);
+                    // Folosim noul endpoint pentru flashcards prioritizate după material și utilizator
+                    console.log(`Încărcare ${limitCards} flashcards prioritizate pentru materialul ${materialId} și utilizatorul ${userId}`);
+                    response = await api.get(`/Flashcard/prioritized/material/${materialId}/user/${userId}?limit=${limitCards}`);
                 } else {
-                    // Dacă nu avem materialId, luăm toate flashcards-urile
-                    // Sau poți înlocui cu userId dacă vrei să le filtrezi după user
-                    response = await api.get('/Flashcard');
+                    // Dacă nu avem materialId, luăm flashcards prioritizate după utilizator
+                    console.log(`Încărcare ${limitCards} flashcards prioritizate pentru utilizatorul ${userId}`);
+                    response = await api.get(`/Flashcard/prioritized/user/${userId}?limit=${limitCards}`);
                 }
 
                 // Procesăm datele primite pentru a le face compatibile cu componenta
@@ -59,7 +72,7 @@ const Flashcards = () => {
                         questionType: card.questionType
                     };
 
-                    if (card.questionType === 'Multiple'||card.questionType === 'Teorie') {
+                    if (card.questionType === 'Multiple') {
                         const options = card.answers.map(answer => answer.optionText);
                         const correctAnswer = card.answers.find(answer => answer.correct)?.optionText;
                         processedCard.options = options;
@@ -129,23 +142,71 @@ const Flashcards = () => {
         }
     };
 
-    const handleOptionSelect = (option) => {
+    const handleOptionSelect = async (option) => {
         if (showAnswer) return;
 
         setSelectedOption(option);
         setShowAnswer(true);
 
-        if (option === current.correctAnswer) {
+        const isCorrect = option === current.correctAnswer;
+        if (isCorrect) {
             setFeedbackMessage("Correct!");
         } else {
             setFeedbackMessage("Wrong!");
         }
+
+        // Trimitem răspunsul către backend pentru a actualiza progresul
+        if (current && current.id) {
+            try {
+                // Pentru răspunsurile cu opțiuni multiple, trimitem direct la selectare
+                // quality: 5 pentru corect, 1 pentru greșit
+                const quality = isCorrect ? 5 : 1;
+
+                console.log(`Trimitere răspuns pentru flashcard ID ${current.id}, quality: ${quality}, isCorrect: ${isCorrect}`);
+
+                const response = await api.post('/Flashcard/response', {
+                    flashcardId: current.id,
+                    userId: localStorage.getItem('userId'),
+                    quality: quality,
+                    isCorrect: isCorrect
+                });
+
+                console.log('Răspunsul a fost înregistrat cu succes:', response.data);
+            } catch (error) {
+                console.error('Eroare la trimiterea răspunsului:', error);
+            }
+        }
     };
 
-    const handleFeedback = (type, ratingIndex) => {
+    const handleFeedback = async (type, ratingIndex) => {
+        // Actualizăm starea locală
         const newRatings = [...ratings];
         newRatings[index] = ratingIndex;
         setRatings(newRatings);
+
+        // Trimitem răspunsul către backend pentru a actualiza progresul
+        if (current && current.id) {
+            try {
+                console.log(`Trimitere răspuns pentru flashcard ID ${current.id}, quality: ${4 - ratingIndex}`);
+
+                // Convertim ratingIndex (0=bun, 1=neutru, 2=rău) la quality (5=perfect, 3=greu, 1=foarte greu)
+                // în algoritmul SM-2, quality este între 0-5, unde 0-2 = eșec, 3-5 = succes
+                const quality = 4 - ratingIndex; // 0 -> 4, 1 -> 3, 2 -> 2
+                const isCorrect = ratingIndex <= 1; // Considerăm răspunsurile bune și neutre ca fiind corecte
+
+                // Trimitem răspunsul către backend
+                const response = await api.post('/Flashcard/response', {
+                    flashcardId: current.id,
+                    userId: localStorage.getItem('userId'),
+                    quality: quality,
+                    isCorrect: isCorrect
+                });
+
+                console.log('Răspunsul a fost înregistrat cu succes:', response.data);
+            } catch (error) {
+                console.error('Eroare la trimiterea răspunsului:', error);
+            }
+        }
     };
 
     const resetRatings = () => {
@@ -183,10 +244,10 @@ const Flashcards = () => {
         try {
             const res = await api.post('/api/gemini/compare-users-answer-to-the-official-answer',  {
 
-                    question: current.question,
-                    //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",
-                    officialAnswer: current.answer,
-                    usersAnswer: inputText
+                question: current.question,
+                //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",
+                officialAnswer: current.answer,
+                usersAnswer: inputText
 
             });
             setScore(res.data);
@@ -194,19 +255,10 @@ const Flashcards = () => {
             console.error('Comparison error:', err);
             setFeedbackMessage("Error comparing your answer");
         }
-        
-        // Close keyboard input and clear text after submission
-        setShowKeyboardInput(false);
-        setInputText('');
     };
 
     const navigateBack = () => {
-        if (courseId) {
-            navigate(`/course/${courseId}`);
-        } else {
-            // Fallback to library if no course ID is provided
-            navigate('/library');
-        }
+        navigate('/graph-algorithms');
     };
 
     if (loading) return <div className="flashcard-app"><div className="loading">Loading flashcards...</div></div>;
@@ -242,7 +294,7 @@ const Flashcards = () => {
 
                     {current.options ? (
                         <div className="flashcard-options-container">
-                            {/* <div className="instruction-text">Select 1 correct answer</div> */}
+                            <div className="instruction-text">Select 1 correct answer</div>
 
                             <div className="flashcard-options">
                                 {current.options.map((option, i) => {
@@ -260,13 +312,6 @@ const Flashcards = () => {
                                     );
                                 })}
                             </div>
-
-                            {selectedOption && (
-                                <div className="material-info">
-                                    This question comes from the course {materialId}
-                                </div>
-                            )}
-
                         </div>
                     ) : (
                         <>
@@ -274,13 +319,7 @@ const Flashcards = () => {
                                 {showAnswer && <hr className={`answer-divider ${isMobile ? 'mobile-divider' : ''}`} />}
 
                                 {showAnswer ? (
-                                    <div className={`flashcard-answer centered ${isMobile ? 'mobile-answer' : ''}`}>
-
-                                        <div>{current.answer}</div>
-                                        <div className="material-info">
-                                            This question comes from the course {materialId}
-                                        </div>
-                                    </div>
+                                    <div className={`flashcard-answer centered ${isMobile ? 'mobile-answer' : ''}`}>{current.answer}</div>
                                 ) : (
                                     <div className="answer-button-container">
                                         <button
@@ -291,7 +330,6 @@ const Flashcards = () => {
                                         </button>
                                     </div>
                                 )}
-
                             </div>
 
                             <div className="keyboard-icon-container" onClick={toggleKeyboardInput}>

@@ -207,22 +207,18 @@ class CourseControllerTest {
         course1.setTitle("Course 1");
         course1.setDescription("Description 1");
         course1.setSemestru("1");
-        
+
         Course course2 = new Course();
         course2.setId(2L);
         course2.setTitle("Course 2");
         course2.setDescription("Description 2");
         course2.setSemestru("2");
-        
+
         List<Course> courses = Arrays.asList(course1, course2);
-        
-        // Mock the batch queries for flashcard and material counts
-        Map<Long, Long> flashcardCounts = Map.of(1L, 5L, 2L, 10L);
-        Map<Long, Long> materialCounts = Map.of(1L, 3L, 2L, 7L);
 
         when(courseService.getAllCourses()).thenReturn(courses);
-        when(courseService.getFlashcardCountsByCourseIds(Arrays.asList(1L, 2L))).thenReturn(flashcardCounts);
-        when(courseService.getMaterialCountsByCourseIds(Arrays.asList(1L, 2L))).thenReturn(materialCounts);
+        when(flashcardRepository.countByCourseId(1L)).thenReturn(5L);
+        when(flashcardRepository.countByCourseId(2L)).thenReturn(10L);
 
         // Act
         ResponseEntity<List<Map<String, Object>>> response = courseController.getAllCourses();
@@ -230,30 +226,26 @@ class CourseControllerTest {
         // Assert
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(2, response.getBody().size());
-        
+
         Map<String, Object> courseMap1 = response.getBody().get(0);
         assertEquals(1L, courseMap1.get("id"));
         assertEquals("Course 1", courseMap1.get("title"));
         assertEquals("Description 1", courseMap1.get("description"));
         assertEquals("1", courseMap1.get("semestru"));
         assertEquals(5L, courseMap1.get("flashcardCount"));
-        assertEquals(3L, courseMap1.get("materialCount"));
-        
+
         Map<String, Object> courseMap2 = response.getBody().get(1);
         assertEquals(2L, courseMap2.get("id"));
         assertEquals("Course 2", courseMap2.get("title"));
         assertEquals("Description 2", courseMap2.get("description"));
         assertEquals("2", courseMap2.get("semestru"));
         assertEquals(10L, courseMap2.get("flashcardCount"));
-        assertEquals(7L, courseMap2.get("materialCount"));
     }
 
     // Test for retrieving all courses when no courses exist
     @Test
     void shouldReturnEmptyListIfNoCourses() {
         when(courseService.getAllCourses()).thenReturn(Collections.emptyList());
-        when(courseService.getFlashcardCountsByCourseIds(Collections.emptyList())).thenReturn(Collections.emptyMap());
-        when(courseService.getMaterialCountsByCourseIds(Collections.emptyList())).thenReturn(Collections.emptyMap());
 
         ResponseEntity<List<Map<String, Object>>> response = courseController.getAllCourses();
 

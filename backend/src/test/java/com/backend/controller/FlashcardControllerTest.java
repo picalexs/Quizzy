@@ -125,9 +125,11 @@ class FlashcardControllerTest {
     void shouldReturnDueFlashcards() {
         Date date = new Date();
         List<Flashcard> flashcards = Arrays.asList(new Flashcard());
+        // Align with updated service method signature (date, userId)
         when(flashcardService.getDueFlashcards(date, 1)).thenReturn(flashcards);
 
-        ResponseEntity<List<Flashcard>> response = flashcardController.getDueFlashcards(date, 1);
+        // Use the actual getDueUntilDate method that now exists in the controller
+        ResponseEntity<List<Flashcard>> response = flashcardController.getDueUntilDate(1, date, 10);
 
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(1, response.getBody().size());
