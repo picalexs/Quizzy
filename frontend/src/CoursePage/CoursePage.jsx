@@ -137,6 +137,8 @@ function CoursePage() {
     navigate(`/Material/path/${material}`, {
       state: {
         title: material.split("/").pop().replace(".pdf", "") || "Document",
+        courseId: id,
+        courseTitle: course?.title || 'Course'
       },
     })
   }
