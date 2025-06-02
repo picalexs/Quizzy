@@ -59,7 +59,7 @@ const Flashcards = () => {
                         questionType: card.questionType
                     };
 
-                    if (card.questionType === 'Multiple') {
+                    if (card.questionType === 'Multiple'||card.questionType === 'Teorie') {
                         const options = card.answers.map(answer => answer.optionText);
                         const correctAnswer = card.answers.find(answer => answer.correct)?.optionText;
                         processedCard.options = options;
@@ -243,6 +243,10 @@ const Flashcards = () => {
                 setInputText('');
             }, 1500);
         }
+
+        // Close keyboard input and clear text after submission
+        setShowKeyboardInput(false);
+        setInputText('');
     };
 
     const navigateBack = () => {
@@ -287,6 +291,8 @@ const Flashcards = () => {
 
                     {current.options ? (
                         <div className="flashcard-options-container">
+                            {/* <div className="instruction-text">Select 1 correct answer</div> */}
+
                             <div className="flashcard-options">
                                 {current.options.map((option, i) => {
                                     const isCorrect = showAnswer && option === current.correctAnswer;
@@ -303,6 +309,13 @@ const Flashcards = () => {
                                     );
                                 })}
                             </div>
+
+                            {selectedOption && (
+                                <div className="material-info">
+                                    This question comes from the course {materialId}
+                                </div>
+                            )}
+
                         </div>
                     ) : (
                         <>
@@ -310,7 +323,13 @@ const Flashcards = () => {
                                 {showAnswer && <hr className={`answer-divider ${isMobile ? 'mobile-divider' : ''}`} />}
 
                                 {showAnswer ? (
-                                    <div className={`flashcard-answer centered ${isMobile ? 'mobile-answer' : ''}`}>{current.answer}</div>
+                                    <div className={`flashcard-answer centered ${isMobile ? 'mobile-answer' : ''}`}>
+
+                                        <div>{current.answer}</div>
+                                        <div className="material-info">
+                                            This question comes from the course {materialId}
+                                        </div>
+                                    </div>
                                 ) : (
                                     <div className="answer-button-container">
                                         <button
@@ -321,6 +340,7 @@ const Flashcards = () => {
                                         </button>
                                     </div>
                                 )}
+
                             </div>
 
                             <div className="keyboard-icon-container" onClick={toggleKeyboardInput}>
