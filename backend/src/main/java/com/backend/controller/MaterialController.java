@@ -226,10 +226,10 @@ public class MaterialController {
             if (!awsS3Service.doesObjectExist(bucketName, oldCoursePath)) {
                 response.put("status", "error");
                 response.put("message", "Old course not found in S3 at path: " + oldCoursePath);
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+                //return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response); // de decomentat
             }
 
-            awsS3Service.deletePdfFromS3(bucketName, oldCoursePath);
+            //awsS3Service.deletePdfFromS3(bucketName, oldCoursePath); // de decomentat
             System.out.println("Step 2: Successfully deleted old course from S3");
 
             // Step 3: Save new PDF to temporary location
@@ -245,7 +245,7 @@ public class MaterialController {
             }
 
             // Step 4: Upload new PDF to S3
-            Resource pdfResource = new InputStreamResource(Files.newInputStream(tempPdfFile));
+            Resource pdfResource = new FileSystemResource(tempPdfFile.toFile());
             awsS3Service.uploadPdfToS3(bucketName, newCoursePath, pdfResource);
             System.out.println("Step 4: Successfully uploaded new course to S3");
 
