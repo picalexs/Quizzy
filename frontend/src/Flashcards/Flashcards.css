@@ -97,25 +97,24 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    overflow: hidden; /* Added to contain all children properly */
+    overflow: hidden;
 }
 
-/* UPDATED: Repositioned question and increased top margin */
+/* FIXED: Better positioning for question */
 .flashcard-app .flashcard-question {
     font-size: 35px;
     font-weight: 600;
-    position: relative;
     text-align: center;
     width: 100%;
     color: #173B61;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .flashcard-app .centered {
     text-align: center;
     width: 100%;
 }
-
 
 /* New container for better layout of simple cards */
 .flashcard-app .flashcard-content {
@@ -127,28 +126,25 @@
     margin-top: 20px;
 }
 
-/* Divider line between question and answer */
+/* FIXED: Better divider positioning */
 .flashcard-app .answer-divider {
     width: 90%;
     border: 0;
     height: 1px;
     background-color: #ccc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 20px auto;
+    position: relative;
 }
 
+/* FIXED: Better answer positioning */
 .flashcard-app .flashcard-answer {
-    position: absolute;
-    top: 70%;
-    transform: translateY(-50%);
     font-weight: 400;
     font-size: 20px;
     color: #173B61;
     text-align: center;
     width: 100%;
     padding: 0 15px;
+    margin-top: 20px;
 }
 
 /* Container for button positioning */
@@ -158,6 +154,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .flashcard-app .flashcard-options-container {
@@ -166,7 +163,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px; /* Added to ensure content isn't hidden by feedback message */
+    padding-bottom: 70px; /* Increased to prevent overlap with keyboard input */
 }
 
 .flashcard-app .flashcard-options {
@@ -174,8 +171,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-top: 3px; /* Reduced from 20px */
-    margin-bottom: 25px; /* Added margin bottom */
+    margin-top: 3px;
+    margin-bottom: 25px;
 }
 
 .flashcard-app .option-card {
@@ -190,7 +187,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Added for positioning the X marker */
+    position: relative;
 }
 
 .flashcard-app .option-card:hover:not(.correct):not(.incorrect) {
@@ -334,7 +331,7 @@
     transform: scale(1.1);
 }
 
-/* UPDATED Keyboard Icon - fixed positioning */
+/* FIXED: Better keyboard icon positioning */
 .flashcard-app .keyboard-icon-container {
     position: absolute;
     bottom: 15px;
@@ -357,16 +354,18 @@
 
 .flashcard-app .keyboard-icon {
     font-size: 20px;
+    color: #EFEAE6;
 }
 
-/* UPDATED keyboard input container - full width background */
+/* FIXED: Better keyboard input container positioning */
 .flashcard-app .keyboard-input-container {
     position: absolute;
     bottom: 0;
-    left: 0; /* Start from the left edge */
+    left: 0;
     right: 0;
     background: #173B61;
     padding: 15px;
+    padding-left: 80px; /* More space for keyboard button */
     display: flex;
     align-items: center;
     border-bottom-left-radius: 24px;
@@ -417,6 +416,14 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.flashcard-app .material-info {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+    margin-top: 46px;
+}
+
 /* MEDIA QUERIES PENTRU RESPONSIVE DESIGN */
 
 /* Pentru tablete */
@@ -428,10 +435,22 @@
 
     .flashcard-app .flashcard {
         padding: 1.5rem 1rem;
+        min-height: 280px;
     }
 
     .flashcard-app .flashcard-question {
         font-size: 28px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .flashcard-app .flashcard-answer {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .flashcard-app .answer-divider {
+        margin: 15px auto;
     }
 
     .flashcard-app .option-card {
@@ -439,6 +458,10 @@
         min-height: 45px;
         font-size: 16px;
         padding: 0.75rem;
+    }
+
+    .flashcard-app .flashcard-options-container {
+        padding-bottom: 80px;
     }
 
     .flashcard-app .rating-container {
@@ -462,12 +485,36 @@
         font-size: 18px;
     }
 
-    .flashcard-app .flashcard-answer {
+    .flashcard-app .feedback-message {
         font-size: 18px;
     }
 
-    .flashcard-app .feedback-message {
+    /* Keyboard adjustments for tablet */
+    .flashcard-app .keyboard-icon-container {
+        width: 36px;
+        height: 36px;
+        bottom: 12px;
+        left: 15px;
+    }
+
+    .flashcard-app .keyboard-icon {
         font-size: 18px;
+    }
+
+    .flashcard-app .keyboard-input-container {
+        padding: 12px;
+        padding-left: 65px;
+    }
+
+    .flashcard-app .keyboard-input {
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .flashcard-app .submit-answer-btn {
+        padding: 6px 14px;
+        font-size: 13px;
+        min-width: 70px;
     }
 }
 
@@ -488,6 +535,16 @@
     .flashcard-app .flashcard-question {
         font-size: 22px;
         margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .flashcard-app .flashcard-answer {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .flashcard-app .answer-divider {
+        margin: 10px auto;
     }
 
     .flashcard-app .instruction-text {
@@ -500,19 +557,22 @@
         gap: 12px;
     }
 
+    .flashcard-app .flashcard-options-container {
+        padding-bottom: 90px; /* More space for mobile keyboard input */
+    }
+
     .flashcard-app .option-card {
         font-size: 14px;
         padding: 0.6rem;
     }
 
-    .flashcard-app .flashcard-answer {
-        font-size: 16px;
-        top: 60%;
-    }
-
     .flashcard-app .show-answer-btn {
         padding: 0.6rem 1.2rem;
         font-size: 16px;
+    }
+
+    .flashcard-app .answer-button-container {
+        padding-bottom: 10px;
     }
 
     .flashcard-app .rating-container {
@@ -543,11 +603,12 @@
         padding: 0.4rem;
     }
 
+    /* FIXED: Better mobile keyboard layout */
     .flashcard-app .keyboard-icon-container {
         width: 34px;
         height: 34px;
-        bottom: 12px;
-        left: 12px;
+        bottom: 10px;
+        left: 10px;
     }
 
     .flashcard-app .keyboard-icon {
@@ -556,13 +617,13 @@
 
     .flashcard-app .keyboard-input-container {
         padding: 10px;
+        padding-left: 55px; /* Proper space for mobile keyboard button */
     }
 
     .flashcard-app .keyboard-input {
-        height: 36px;
+        height: 34px;
         font-size: 14px;
-        margin-left: 40px !important;
-        width: calc(100% - 50px) !important;
+        padding: 0 12px;
     }
 
     .flashcard-app .submit-answer-btn {
@@ -572,33 +633,45 @@
         min-width: 60px;
     }
 
-    /* Ajustare pentru orientare landscape pe telefon */
-    @media (max-height: 480px) {
+    /* FIXED: Better landscape orientation handling */
+    @media (max-height: 500px) and (orientation: landscape) {
         .flashcard-app .flashcard-container {
             height: auto;
-            min-height: 85vh;
+            min-height: 90vh;
         }
 
         .flashcard-app .flashcard {
             min-height: 200px;
+            padding: 0.75rem;
         }
 
         .flashcard-app .flashcard-question {
             font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
 
         .flashcard-app .flashcard-answer {
-            position: relative;
-            top: auto;
-            transform: none;
-            margin-top: 15px;
+            font-size: 14px;
+            margin-top: 10px;
         }
 
         .flashcard-app .answer-divider {
-            position: relative;
-            top: auto;
-            transform: none;
-            margin: 15px auto;
+            margin: 8px auto;
+        }
+
+        .flashcard-app .flashcard-options-container {
+            padding-bottom: 70px;
+        }
+
+        .flashcard-app .rating-container {
+            gap: 0.3rem;
+        }
+
+        .flashcard-app .rating-btn {
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
         }
     }
 }
@@ -613,14 +686,18 @@
         font-size: 18px;
     }
 
+    .flashcard-app .flashcard-answer {
+        font-size: 14px;
+    }
+
     .flashcard-app .option-card {
         font-size: 13px;
         padding: 0.5rem;
         min-height: 40px;
     }
 
-    .flashcard-app .flashcard-answer {
-        font-size: 14px;
+    .flashcard-app .flashcard-options-container {
+        padding-bottom: 85px;
     }
 
     .flashcard-app .rating-btn {
@@ -634,12 +711,20 @@
         height: 28px;
         font-size: 14px;
     }
-}
 
-.material-info {
-    font-size: 0.9em;
-    color: #555;
-    margin-bottom: 10px;
-    font-style: italic;
-    margin-top: 46px;
+    .flashcard-app .keyboard-input-container {
+        padding: 8px;
+        padding-left: 50px;
+    }
+
+    .flashcard-app .keyboard-input {
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .flashcard-app .submit-answer-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+        min-width: 50px;
+    }
 }

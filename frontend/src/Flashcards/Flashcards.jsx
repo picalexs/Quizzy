@@ -188,7 +188,7 @@ const Flashcards = () => {
         }
     };
 
-    // ACTUALIZATĂ: Funcția handleSubmitInput cu auto-hide
+    // ACTUALIZATĂ: Funcția handleSubmitInput cu auto-hide mai rapid
     const handleSubmitInput = async () => {
         if (!inputText.trim()) return;
 
@@ -222,11 +222,11 @@ const Flashcards = () => {
             // Aplică rating-ul automat
             handleFeedback('auto', autoRating);
 
-            // ACTUALIZAT: Ascunde bara după submit și resetează input-ul
+            // ACTUALIZAT: Ascunde bara după submit și resetează input-ul - MODIFICAT la 500ms
             setTimeout(() => {
                 setShowKeyboardInput(false);
                 setInputText('');
-            }, 1500); // Dispare după 1.5 secunde
+            }, 500); // Modificat din 1500 la 500
 
             // Trece automat la următorul flashcard după 2 secunde
             setTimeout(() => {
@@ -237,11 +237,11 @@ const Flashcards = () => {
             console.error('Comparison error:', err);
             setFeedbackMessage("Error comparing your answer");
 
-            // Ascunde bara și în caz de eroare
+            // Ascunde bara și în caz de eroare - MODIFICAT la 500ms
             setTimeout(() => {
                 setShowKeyboardInput(false);
                 setInputText('');
-            }, 1500);
+            }, 500); // Modificat din 1500 la 500
         }
 
         // Close keyboard input and clear text after submission
