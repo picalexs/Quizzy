@@ -194,6 +194,10 @@ const Flashcards = () => {
             console.error('Comparison error:', err);
             setFeedbackMessage("Error comparing your answer");
         }
+        
+        // Close keyboard input and clear text after submission
+        setShowKeyboardInput(false);
+        setInputText('');
     };
 
     const navigateBack = () => {
@@ -257,9 +261,11 @@ const Flashcards = () => {
                                 })}
                             </div>
 
-                            <div className="material-info">
-                                This question comes from the course {materialId}
-                            </div>
+                            {selectedOption && (
+                                <div className="material-info">
+                                    This question comes from the course {materialId}
+                                </div>
+                            )}
 
                         </div>
                     ) : (
