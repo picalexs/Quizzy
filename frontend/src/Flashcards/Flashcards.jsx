@@ -258,7 +258,7 @@ const Flashcards = () => {
                             </div>
 
                             <div className="material-info">
-                                Această întrebare provine din cursul {materialId}
+                                This question comes from the course {materialId}
                             </div>
 
                         </div>
@@ -272,7 +272,7 @@ const Flashcards = () => {
 
                                         <div>{current.answer}</div>
                                         <div className="material-info">
-                                            Această întrebare provine din cursul {materialId}
+                                            This question comes from the course {materialId}
                                         </div>
                                     </div>
                                 ) : (
