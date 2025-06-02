@@ -1,6 +1,6 @@
 "use client"
 
-import { FaFilePdf, FaBars, FaTimes } from "react-icons/fa"
+import { FaFilePdf } from "react-icons/fa"
 import "./CoursePage.css"
 import { useNavigate, useParams, useLocation } from "react-router-dom"
 import Slider from "react-slick"
@@ -8,13 +8,13 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { useEffect, useState, useCallback, useRef } from "react"
 import { api } from "../utils/api"
+import BurgerMenu from "../components/BurgerMenu/BurgerMenu.jsx"
 
 function CoursePage() {
   const navigate = useNavigate()
   const { id } = useParams()
   const location = useLocation()
   const courseFromState = location.state?.course
-
   const [course, setCourse] = useState(courseFromState || null)
   const [loading, setLoading] = useState(!courseFromState)
   const [error, setError] = useState(null)
@@ -26,7 +26,6 @@ function CoursePage() {
   const [viewMode, setViewMode] = useState('flashcards') // 'flashcards' or 'tests'
   const [tests, setTests] = useState([])
   const [userRole, setUserRole] = useState(null)
-  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const sliderRef = useRef(null)
 
   useEffect(() => {
@@ -163,28 +162,7 @@ function CoursePage() {
         courseTitle: course?.title || 'Unknown Course'
       }
     });
-  };
-  // Add function to handle burger menu toggle
-  const toggleBurgerMenu = () => {
-    setIsBurgerMenuOpen(!isBurgerMenuOpen)
-  }
-
-  // Add function to close burger menu when clicking outside
-  const closeBurgerMenu = () => {
-    setIsBurgerMenuOpen(false)
-  }
-
-  const handleNavClick = (label) => {
-    closeBurgerMenu() // Close burger menu when navigating
-    if (label === "Home") {
-      navigate("/dashboard")
-      window.location.reload()
-    }
-    else if (label === "Library") navigate("/library")
-    else if (label === "Explore") navigate("/explore")
-    else if (label === "Profile") navigate("/profile")
-  }
-  const handleStartLearning = () => {
+  };  const handleStartLearning = () => {
     if (materials.length > 0 && materials[0].id) {
       navigate(`/flashcards/${materials[0].id}`, { 
         state: { 
@@ -267,6 +245,17 @@ function CoursePage() {
     });
   };
 
+  // Simple navigation function for desktop buttons
+  const handleDesktopNavClick = (label) => {
+    if (label === "Home") {
+      navigate("/dashboard")
+      window.location.reload()
+    }
+    else if (label === "Library") navigate("/library")
+    else if (label === "Explore") navigate("/explore")
+    else if (label === "Profile") navigate("/profile")
+  }
+
   if (loading)
     return (
       <div className="graph-container">
@@ -293,56 +282,9 @@ function CoursePage() {
   // Get flashcards from materials
   const allFlashcards = materials.flatMap((mat) => (mat.flashcards ? mat.flashcards : []))
   return (
-    <div className="graph-container" onClick={closeBurgerMenu}>
-      {notification && <div className="graph-notification">{notification}</div>}
-
-      {/* Burger Menu Button */}
-      <button className="burger-menu-button" onClick={(e) => {
-        e.stopPropagation()
-        toggleBurgerMenu()
-      }}>
-        {isBurgerMenuOpen ? <FaTimes /> : <FaBars />}
-      </button>
-
-      {/* Burger Menu Overlay */}
-      {isBurgerMenuOpen && (
-        <div className="burger-menu-overlay" onClick={(e) => e.stopPropagation()}>
-          <div className="burger-menu-content">
-            {/* Logos in burger menu */}
-            <div className="burger-menu-logos">
-              <div className="burger-menu-logo">
-                <img src="/quizzy-logo-homepage.svg" alt="Quizzy Logo" />
-              </div>
-              <div className="burger-menu-logo-fii">
-                <img src="/logo-fac-homepage.svg" alt="FII Logo" />
-              </div>
-            </div>
-            
-            {/* Navigation items in burger menu */}
-            <div className="burger-menu-nav">
-              <button className="burger-menu-item" onClick={() => handleNavClick("Home")}>
-                <img src="/home-logo.svg" alt="Home" className="burger-menu-icon" />
-                <span>Home</span>
-              </button>
-              
-              <button className="burger-menu-item burger-menu-item-active">
-                <img src="/library-logo.svg" alt="Library" className="burger-menu-icon" />
-                <span>Library</span>
-              </button>
-              
-              <button className="burger-menu-item" onClick={() => handleNavClick("Explore")}>
-                <img src="/explore-logo.svg" alt="Explore" className="burger-menu-icon" />
-                <span>Explore</span>
-              </button>
-              
-              <button className="burger-menu-item" onClick={() => handleNavClick("Profile")}>
-                <img src="/profile-logo.svg" alt="Profile" className="burger-menu-icon" />
-                <span>Profile</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+    <div className="graph-container">
+      {notification && <div className="graph-notification">{notification}</div>}      {/* Burger Menu Component */}
+      <BurgerMenu currentPage="Library" />
 
       {/* Desktop logos */}
       <div className="graph-logo">
@@ -353,10 +295,8 @@ function CoursePage() {
         <img src="/logo-fac-homepage.svg" alt="FII Logo" />
       </div>
 
-      <div className="graph-box" />
-
-      {/* Desktop sidebar buttons */}
-      <button className="graph-icon-wrapper graph-icon-home" onClick={() => handleNavClick("Home")}>
+      <div className="graph-box" />      {/* Desktop sidebar buttons */}
+      <button className="graph-icon-wrapper graph-icon-home" onClick={() => handleDesktopNavClick("Home")}>
         <img src="/home-logo.svg" alt="Home" className="graph-icon-image" />
         <span className="graph-icon-text">Home</span>
       </button>
@@ -367,12 +307,12 @@ function CoursePage() {
         <div className="graph-icon-text">Library</div>
       </button>
 
-      <button className="graph-icon-wrapper graph-icon-explore" onClick={() => handleNavClick("Explore")}>
+      <button className="graph-icon-wrapper graph-icon-explore" onClick={() => handleDesktopNavClick("Explore")}>
         <img src="/explore-logo.svg" alt="Explore" className="graph-icon-image" />
         <span className="graph-icon-text">Explore</span>
       </button>
 
-      <button className="graph-icon-wrapper graph-icon-profile" onClick={() => handleNavClick("Profile")}>
+      <button className="graph-icon-wrapper graph-icon-profile" onClick={() => handleDesktopNavClick("Profile")}>
         <img src="/profile-logo.svg" alt="Profile" className="graph-icon-image" />
         <span className="graph-icon-text">Profile</span>
       </button>

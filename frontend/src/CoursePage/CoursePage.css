@@ -5,15 +5,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-family: "Ubuntu", sans-serif;
 }
 
 .graph-background {
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  min-height: 100vh; /* Use min-height to allow content to expand beyond viewport */
   background: linear-gradient(180deg, #173b61 40%, #efeae6 100%);
 }
 
@@ -28,9 +25,9 @@ body {
 
 .graph-box {
   max-width: 1088px;
-  width: calc(100vw - 340px);
+  width: calc(100vw - 200px);
   min-width: 600px;
-  height: 1000px;
+  min-height: calc(100vh - 32px); /* Use min-height to allow expansion */
   position: absolute;
   top: 16px;
   left: 50%;
@@ -39,8 +36,9 @@ body {
   box-shadow: 0 0 8px 2px rgba(23, 59, 97, 0.64) inset;
   border-radius: 8px;
   z-index: 1;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* Allow box to expand with content while maintaining minimum height */
+  height: auto;
+  padding-bottom: 20px; /* Add bottom padding for visual spacing */
 }
 
 .graph-icon-wrapper {
@@ -134,15 +132,15 @@ body {
   left: 50%;
   transform: translateX(-50%);
   max-width: 1088px;
-  width: calc(100vw - 340px);
+  width: calc(100vw - 200px);
   min-width: 600px;
   background-color: transparent;
-  padding: 40px;
+  padding: 40px 20px 20px 20px; /* Reduced horizontal padding to expand closer to edges */
   z-index: 2;
   box-sizing: border-box;
-  overflow-x: hidden;
-  max-height: calc(100vh - 32px);
-  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;  min-height: calc(100vh - 32px); /* Use min-height instead of max-height to allow content to expand */
+  /* Remove overflow hidden to allow natural content flow and page-level scrolling */
 }
 
 .graph-header {
@@ -152,6 +150,8 @@ body {
   padding: 0 40px;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 500; /* Ensure course title appears below burger menu but above other content */
 }
 
 .graph-title {
@@ -161,6 +161,8 @@ body {
   margin: 0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   flex: 1;
+  position: relative;
+  z-index: 500; /* Ensure title doesn't overlap with burger menu */
 }
 
 .graph-buttons-container {
@@ -344,7 +346,8 @@ body {
 .graph-file-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center; /* Ensure vertical alignment */
+  margin-bottom: 15px; /* Reduced margin for tighter layout */
 }
 
 .graph-file-count {
@@ -372,6 +375,15 @@ body {
   overflow: hidden;
   min-height: 60px;
   box-sizing: border-box;
+  width: 100%; /* Ensure file entries don't exceed container width */
+  max-width: 100%; /* Prevent overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative; /* Establish containing block */
+  contain: layout style; /* Contain layout and style to prevent overflow */
+  /* Aggressive containment measures */
+  clip-path: inset(0); /* Force clipping to entry bounds */
+  isolation: isolate; /* Create stacking context */
 }
 
 .graph-file-entry:last-child {
@@ -388,6 +400,12 @@ body {
   flex: 1;
   min-width: 0;
   overflow: hidden;
+  max-width: 100%; /* Prevent text container from overflowing */
+  position: relative; /* Establish containing block */
+  contain: layout style; /* Contain layout and style changes */
+  /* Ensure text stays within bounds */
+  width: 0; /* Force flex item to respect container bounds */
+  flex-grow: 1; /* Allow growth within container */
 }
 
 .slick-track {
@@ -415,6 +433,7 @@ body {
   margin: 0 0 5px 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-word; /* Force break long words */
   hyphens: auto;
   line-height: 1.3;
   display: -webkit-box;
@@ -423,6 +442,7 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 100%; /* Ensure text doesn't exceed container */
 }
 
 .graph-file-details {
@@ -431,6 +451,7 @@ body {
   margin: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-word; /* Force break long words */
   hyphens: auto;
   line-height: 1.2;
   display: -webkit-box;
@@ -439,20 +460,13 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 100%; /* Ensure text doesn't exceed container */
 }
 
 .graph-enroll-button {
   width: 124px;
   height: 44px;
-  background: linear-gradient(
-    90.83deg,
-    #f59192 -0.82%,
-    #9f73ab 15.44%,
-    #3bafbe 36.04%,
-    #7bc497 52.98%,
-    #d7a555 83.01%,
-    #e9644d 99.37%
-  );
+  background-color: #e2a54d;
   color: white;
   border: none;
   border-radius: 24px;
@@ -462,20 +476,22 @@ body {
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(226, 165, 77, 0.4);
 }
 
 .graph-enroll-button:hover {
+  background-color: #e6b76a;
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(226, 165, 77, 0.5);
 }
 
 .graph-container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh; /* Allow container to expand beyond viewport */
   width: 100vw;
   background: linear-gradient(180deg, #173B61 40%, #EFEAE6 100%);
-  overflow: hidden;
+  overflow-y: auto; /* Enable page-level scrolling */
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .graph-notification {
@@ -545,21 +561,37 @@ body {
 
 .graph-file-text {
   flex: 1;
-  min-width: 0;
+  min-width: 0; /* Allow flex item to shrink below content size */
   overflow: hidden;
+  max-width: 100%; /* Prevent text container from overflowing */
 }
 
 /* Files container styles */
 .graph-files {
-  margin: 30px 0;
+  margin: 20px 0 10px 0; /* Reduced top margin, smaller bottom margin */
   overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure files section doesn't exceed parent width */
+  max-width: 100%; /* Prevent overflow */
+  min-height: 0; /* Allow flex item to shrink */
+  position: relative; /* Establish containing block */
+  contain: layout style size; /* Strict containment to prevent overflow */
 }
 
 .graph-files-container {
-  max-height: 300px;
-  overflow-y: auto;
+  max-height: 400px; /* Set max height instead of fixed height */
+  min-height: 200px; /* Ensure minimum height for usability */
+  overflow-y: auto; /* Keep internal scrolling for PDF browsing */
   overflow-x: hidden;
-  padding-right: 5px;
+  padding: 0 8px 0 0; /* Right padding for scrollbar space */
+  box-sizing: border-box;
+  width: 100%; /* Ensure container doesn't exceed parent width */
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative; /* Establish containing block for children */
+  /* Remove aggressive containment that prevents natural flow */
 }
 
 .graph-files-container::-webkit-scrollbar {
@@ -850,12 +882,14 @@ body {
     .graph-flashcard .answers-preview p {
     font-size: 10px;
   }
-
   /* File entry responsive styling */
   .graph-file-entry {
     padding: 10px 12px;
     flex-direction: row;
     align-items: flex-start;
+    width: 100%; /* Ensure file entries don't exceed container width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculations */
   }
 
   .graph-file-text {
@@ -897,19 +931,21 @@ body {
     -webkit-line-clamp: 2;
     line-clamp: 2;
   }
-  
-  .graph-section-title {
+    .graph-section-title {
     font-size: 16px;
   }
   
   .graph-file-header {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
   }
   
   .graph-file-count {
-    align-self: flex-end;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
   }
 }
 
@@ -940,13 +976,15 @@ body {
     font-size: 9px;
     padding: 1px 3px;
   }
-
   /* File entry responsive styling for mobile */
   .graph-file-entry {
     padding: 8px 10px;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    width: 100%; /* Ensure file entries don't exceed container width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculations */
   }
 
   .graph-file-text {
@@ -993,7 +1031,7 @@ body {
 @media screen and (max-width: 1400px) {
   .graph-content-box {
     width: calc(100vw - 280px);
-    padding: 35px;
+    padding: 35px 20px;
   }
   
   .graph-box {
@@ -1004,7 +1042,7 @@ body {
 @media screen and (max-width: 1280px) {
   .graph-content-box {
     width: calc(100vw - 240px);
-    padding: 30px;
+    padding: 30px 20px;
   }
   
   .graph-box {
@@ -1012,31 +1050,84 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .graph-content-box {
+    width: calc(100vw - 240px);
+    padding: 30px 20px;
+    min-width: 500px;
+  }
+    .graph-box {
+    width: calc(100vw - 240px);
+    min-width: 500px;  }    .graph-files-container {
+    height: 350px; /* Increased height for tablet landscape */
+    padding-right: 8px;
+    width: 100%; /* Ensure container doesn't exceed parent width */
+    max-width: 100%; /* Prevent overflow */
+  }
+  
+  /* Keep desktop navigation visible */
+  .graph-icon-wrapper {
+    display: flex !important;
+  }
+  
+  .graph-logo,
+  .graph-logo-fii {
+    display: block !important;
+  }
+  
+  /* Hide burger menu */
+  .burger-menu-button {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .graph-content-box {
     width: calc(100vw - 40px);
-    padding: 25px;
-    max-height: calc(100vh - 20px);
-    overflow-y: hidden;
-    min-width: 500px;
+    padding: 20px 15px;
+    min-width: 400px;
     left: 50%;
     transform: translateX(-50%);
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
   }
   
   .graph-box {
     width: calc(100vw - 40px);
-    min-width: 500px;
+    min-width: 400px;
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
     left: 50%;
     transform: translateX(-50%);
+    top: 80px; /* Add space for burger menu */  }    .graph-files-container {
+    height: 320px; /* Increased height for mobile files container */
+    padding-right: 8px;
+    width: 100%; /* Ensure container doesn't exceed parent width */
+    max-width: 100%; /* Prevent overflow */
   }
   
-  .graph-files-container {
-    max-height: 250px;
+  .graph-header {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+    z-index: 500; /* Ensure proper layering below burger menu */
   }
   
-  /* Show burger menu for tablets and below */
+  .graph-title {
+    font-size: 28px;
+    text-align: center;
+    z-index: 500; /* Prevent overlap with burger menu */
+  }
+  
+  .graph-buttons-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Show burger menu for 768px and below */
   .burger-menu-button {
     display: flex !important;
+    z-index: 1000; /* Ensure burger menu is always on top */
   }
   
   /* Hide desktop navigation */
@@ -1050,53 +1141,15 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .graph-content-box {
-    width: calc(100vw - 40px);
-    padding: 20px;
-    overflow-y: hidden;
-    min-width: 400px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .graph-box {
-    width: calc(100vw - 40px);
-    min-width: 400px;
-    height: calc(100vh - 32px);
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .graph-files-container {
-    max-height: 200px;
-  }
-  
-  .graph-header {
-    padding: 0 20px;
-    flex-direction: column;
-    gap: 15px;
-    align-items: stretch;
-  }
-  
-  .graph-title {
-    font-size: 28px;
-    text-align: center;
-  }
-  
-  .graph-buttons-container {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-
 @media screen and (max-width: 640px) {
   .graph-content-box {
     width: calc(100vw - 40px);
-    padding: 15px;
+    padding: 15px 10px;
     min-width: 320px;
     left: 50%;
     transform: translateX(-50%);
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
   }
   
   .graph-box {
@@ -1104,14 +1157,17 @@ body {
     min-width: 320px;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  .graph-files-container {
-    max-height: 180px;
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */  }  .graph-files-container {
+    height: 300px; /* Increased height for small mobile screens */
+    padding-right: 8px;
+    width: 100%; /* Ensure container doesn't exceed parent width */
+    max-width: 100%; /* Prevent overflow */
   }
   
   .graph-title {
     font-size: 24px;
+    z-index: 500; /* Prevent overlap with burger menu */
   }
   
   .graph-buttons-container {
@@ -1145,27 +1201,35 @@ body {
     top: 15px;
     left: 15px;
     font-size: 18px;
+    z-index: 1000; /* Ensure burger menu is always on top */
   }
 }
 
 @media screen and (max-width: 480px) {
   .graph-content-box {
     width: calc(100vw - 40px);
-    padding: 10px;
+    padding: 10px 8px;
     left: 50%;
     transform: translateX(-50%);
     min-width: 280px;
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
   }
   
   .graph-box {
     width: calc(100vw - 40px);
     min-width: 280px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .graph-files-container {
-    max-height: 150px;
+    left: 50%;    transform: translateX(-50%);
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */  }
+    .graph-files-container {
+    height: 250px; /* Fixed height for smallest mobile screens */
+    padding-right: 8px;
+    margin: 0 -5px; /* Extend to edges for maximum space utilization */
+    padding-left: 5px;
+    width: 100%; /* Ensure container doesn't exceed parent width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and margins in width calculations */
   }
   
   .graph-header {
@@ -1184,15 +1248,10 @@ body {
   
   .graph-unenroll-button,
   .graph-enrolled-button,
-  .graph-enroll-button {
-    width: 100%;
-    height: 36px;
-    font-size: 13px;
-  }
-  
+  .graph-enroll-button,
   .graph-start-button {
     width: 100%;
-    height: 40px;
+    height: 36px;
     font-size: 13px;
   }
   
@@ -1292,10 +1351,12 @@ body {
 
 .burger-menu-logos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 40px;
   gap: 20px;
+  padding: 0 20px;
 }
 
 .burger-menu-logo {
@@ -1448,8 +1509,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Show desktop navigation and hide burger menu on large screens */
-@media screen and (min-width: 1025px) {
+/* Show desktop navigation and hide burger menu on tablet and larger screens */
+@media screen and (min-width: 769px) {
   .burger-menu-button {
     display: none !important;
   }
@@ -1462,10 +1523,233 @@ body {
   .graph-logo-fii {
     display: block !important;
   }
+  
+  .graph-box {
+    width: calc(100vw - 200px);
+    min-width: 600px;
+  }
+  
+  .graph-content-box {
+    width: calc(100vw - 200px);
+    min-width: 600px;
+  }
+  
+  /* Position navigation icons with proper spacing from container */
+  .graph-icon-home,
+  .graph-icon-library,
+  .graph-icon-explore,
+  .graph-icon-profile {
+    left: calc(50vw - calc(100vw - 200px)/2 - 80px);
+  }
+  
+  /* Position logos with proper spacing from container */
+  .graph-logo {
+    left: calc(50vw - calc(100vw - 200px)/2 - 80px);
+  }
+  
+  .graph-logo-fii {
+    right: calc(50vw - calc(100vw - 200px)/2 - 80px);
+  }
 }
 
-/* Show burger menu and hide desktop navigation on tablet and mobile */
-@media screen and (max-width: 1024px) {
+/* Responsive sizing for smaller desktop screens */
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+  .graph-box {
+    width: calc(100vw - 180px);
+    min-width: 550px;
+  }
+  
+  .graph-content-box {
+    width: calc(100vw - 180px);
+    min-width: 550px;
+    padding: 30px;
+  }
+  
+  /* Position navigation icons with proper spacing from container */
+  .graph-icon-home,
+  .graph-icon-library,
+  .graph-icon-explore,
+  .graph-icon-profile {
+    left: calc(50vw - calc(100vw - 180px)/2 - 80px);
+  }
+  
+  /* Position logos with proper spacing from container */
+  .graph-logo {
+    left: calc(50vw - calc(100vw - 180px)/2 - 80px);
+  }
+  
+  .graph-logo-fii {
+    right: calc(50vw - calc(100vw - 180px)/2 - 80px);
+  }
+}
+
+/* Additional responsive breakpoints for better experience */
+
+/* Large desktop - optimize for better use of space */
+@media screen and (min-width: 1400px) {
+  .graph-box {
+    width: calc(100vw - 300px);
+    max-width: 1200px;
+  }
+  
+  .graph-content-box {
+    width: calc(100vw - 300px);
+    max-width: 1200px;
+    padding: 50px;
+  }
+  
+  /* Position navigation icons with proper spacing from container */
+  .graph-icon-home,
+  .graph-icon-library,
+  .graph-icon-explore,
+  .graph-icon-profile {
+    left: calc(50vw - calc(100vw - 300px)/2 - 80px);
+  }
+  
+  /* Position logos with proper spacing from container */
+  .graph-logo {
+    left: calc(50vw - calc(100vw - 300px)/2 - 80px);
+  }
+  
+  .graph-logo-fii {
+    right: calc(50vw - calc(100vw - 300px)/2 - 80px);
+  }
+}
+
+/* Medium desktop */
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+  .graph-box {
+    width: calc(100vw - 180px);
+  }
+  
+  .graph-content-box {
+    width: calc(100vw - 180px);
+    padding: 35px;
+  }
+  
+  /* Position navigation icons with proper spacing from container */
+  .graph-icon-home,
+  .graph-icon-library,
+  .graph-icon-explore,
+  .graph-icon-profile {
+    left: calc(50vw - calc(100vw - 180px)/2 - 80px);
+  }
+  
+  /* Position logos with proper spacing from container */
+  .graph-logo {
+    left: calc(50vw - calc(100vw - 180px)/2 - 80px);
+  }
+  
+  .graph-logo-fii {
+    right: calc(50vw - calc(100vw - 180px)/2 - 80px);
+  }
+}
+
+/* Small desktop / Large tablet */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  .graph-box {
+    width: calc(100vw - 160px);
+    min-width: 500px;
+  }
+  
+  .graph-content-box {
+    width: calc(100vw - 160px);
+    min-width: 500px;
+    padding: 25px;
+  }
+  
+  .graph-icon-wrapper {
+    width: 60px;
+    height: 68px;
+  }
+  
+  .graph-icon-image {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .graph-icon-text {
+    font-size: 11px;
+  }
+  
+  /* Position navigation icons with proper spacing from container */
+  .graph-icon-home,
+  .graph-icon-library,
+  .graph-icon-explore,
+  .graph-icon-profile {
+    left: calc(50vw - calc(100vw - 160px)/2 - 70px);
+  }
+  
+  /* Position logos with proper spacing from container - slightly smaller logos */
+  .graph-logo {
+    left: calc(50vw - calc(100vw - 160px)/2 - 70px);
+    width: 55px;
+    height: 43px;
+  }
+  
+  .graph-logo-fii {
+    right: calc(50vw - calc(100vw - 160px)/2 - 70px);
+    width: 44px;
+    height: 43px;
+  }
+}
+
+/* Mobile landscape / Small tablet - Burger menu appears */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .burger-menu-button {
+    display: flex !important;
+    z-index: 1000; /* Ensure burger menu is always on top */
+  }
+  
+  .graph-icon-wrapper {
+    display: none !important;
+  }
+  
+  .graph-logo,
+  .graph-logo-fii {
+    display: none !important;
+  }  .graph-content-box {
+    width: calc(100vw - 30px);
+    padding: 20px;
+    min-width: 300px;
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
+  }
+  
+  .graph-box {
+    width: calc(100vw - 30px);    min-width: 300px;
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */}
+    .graph-files-container {
+    height: 280px; /* Fixed height for mobile landscape files container */
+    margin: 0 -15px; /* Extend closer to container edges */
+    padding: 0 15px; /* Maintain content spacing */
+    width: 100%; /* Ensure container doesn't exceed parent width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and margins in width calculations */
+  }
+  
+  .graph-header {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    z-index: 500; /* Prevent overlap with burger menu */
+  }
+  
+  .graph-title {
+    font-size: 24px;
+    z-index: 500; /* Prevent overlap with burger menu */
+  }
+  
+  .graph-buttons-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Mobile portrait - Burger menu appears */
+@media screen and (max-width: 480px) {
   .burger-menu-button {
     display: flex !important;
   }
@@ -1477,26 +1761,47 @@ body {
   .graph-logo,
   .graph-logo-fii {
     display: none !important;
+  }  .graph-content-box {
+    width: calc(100vw - 20px);
+    padding: 15px 5px;
+    min-width: 280px;
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
+  }
+    .graph-box {
+    width: calc(100vw - 20px);
+    min-width: 280px;
+    top: 80px; /* Add space for burger menu */
+    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
   }
   
-  .graph-content-box {
-    width: calc(100vw - 40px);
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 25px;
-    max-height: calc(100vh - 20px);
-    overflow-y: hidden;
-    min-width: 500px;
+  .graph-header {
+    padding: 0 10px;
+    margin-bottom: 20px;  }  .graph-files-container {
+    height: 220px; /* Fixed height for smallest screens */
+    padding-right: 8px;
+    margin: 0 -5px; /* Extend to edges for maximum space utilization */
+    padding-left: 5px;
+    width: 100%; /* Ensure container doesn't exceed parent width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and margins in width calculations */
   }
   
-  .graph-box {
-    width: calc(100vw - 40px);
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 500px;
+  .graph-title {
+    font-size: 20px;
   }
   
-  .graph-files-container {
-    max-height: 250px;
+  .graph-buttons-container {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .graph-unenroll-button,
+  .graph-enrolled-button,
+  .graph-enroll-button,
+  .graph-start-button {
+    font-size: 14px;
+    padding: 8px 15px;
+    height: 40px;
   }
 }
