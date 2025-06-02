@@ -13,6 +13,7 @@ import com.backend.service.CourseService;
 import com.backend.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -20,13 +21,16 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.HandlerMapping;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.util.*;
 
 @RestController
 @RequestMapping("/Material")
@@ -38,7 +42,15 @@ public class MaterialController {
     private String bucketName;
     private final CourseService courseService;
     private final MaterialService materialService;
-    private final AWSS3Service awsS3Service;
+
+    @Autowired
+    private AWSS3Service awsS3Service;
+
+    @Autowired
+    private PDFController pdfController;
+
+    @Autowired
+    private FlashcardController flashcardController;
 
     @Autowired
     public MaterialController(MaterialService materialService, CourseService courseService, AWSS3Service awsS3Service) {
@@ -166,5 +178,160 @@ public class MaterialController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
+    }
+
+    @PostMapping("/replace-course")
+    public ResponseEntity<Map<String, Object>> replaceCourseInS3(
+            @RequestParam String oldCoursePath,
+            @RequestParam MultipartFile newCourseFile,
+            @RequestParam String newCoursePath,
+            @RequestParam(required = false, defaultValue = "1") Integer userId) {
+
+        Map<String, Object> response = new HashMap<>();
+        String bucketName = "quizzy-s3-bucket";
+        String tempPdfPath = null;
+        String textOutputPath = null;
+
+        try {
+            // Step 1: Validate input parameters
+            if (oldCoursePath == null || oldCoursePath.trim().isEmpty()) {
+                response.put("status", "error");
+                response.put("message", "Old course path cannot be null or empty");
+                return ResponseEntity.badRequest().body(response);
+            }
+
+            if (newCoursePath == null || newCoursePath.trim().isEmpty()) {
+                response.put("status", "error");
+                response.put("message", "New course path cannot be null or empty");
+                return ResponseEntity.badRequest().body(response);
+            }
+
+            if (newCourseFile == null || newCourseFile.isEmpty()) {
+                response.put("status", "error");
+                response.put("message", "New course file cannot be null or empty");
+                return ResponseEntity.badRequest().body(response);
+            }
+
+            if (!newCourseFile.getOriginalFilename().toLowerCase().endsWith(".pdf")) {
+                response.put("status", "error");
+                response.put("message", "New course file must be a PDF");
+                return ResponseEntity.badRequest().body(response);
+            }
+
+            System.out.println("Step 1: Starting course replacement process");
+            System.out.println("Old course path: " + oldCoursePath);
+            System.out.println("New course path: " + newCoursePath);
+
+            // Step 2: Check if old course exists and delete it
+            if (!awsS3Service.doesObjectExist(bucketName, oldCoursePath)) {
+                response.put("status", "error");
+                response.put("message", "Old course not found in S3 at path: " + oldCoursePath);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+            }
+
+            awsS3Service.deletePdfFromS3(bucketName, oldCoursePath);
+            System.out.println("Step 2: Successfully deleted old course from S3");
+
+            // Step 3: Save new PDF to temporary location
+            tempPdfPath = "/tmp/new_course_" + System.currentTimeMillis() + ".pdf";
+            Path tempPdfFile = Paths.get(tempPdfPath);
+
+            try {
+                Files.copy(newCourseFile.getInputStream(), tempPdfFile, StandardCopyOption.REPLACE_EXISTING);
+                System.out.println("Step 3: New PDF saved to temporary file: " + tempPdfPath);
+            } catch (IOException e) {
+                System.err.println("Step 3 FAILED: Could not save PDF to temp file - " + e.getMessage());
+                throw e;
+            }
+
+            // Step 4: Upload new PDF to S3
+            Resource pdfResource = new InputStreamResource(Files.newInputStream(tempPdfFile));
+            awsS3Service.uploadPdfToS3(bucketName, newCoursePath, pdfResource);
+            System.out.println("Step 4: Successfully uploaded new course to S3");
+
+            // Step 5: Convert PDF to text
+            String projectDir = System.getProperty("user.dir");
+            String courseName = extractCourseNameFromPath(newCoursePath);
+            textOutputPath = "courses/" + courseName + "/" + courseName + ".txt";
+            String fullTextPath = Paths.get(projectDir, textOutputPath).toString();
+
+            // Create output directory if it doesn't exist
+            Path outputPath = Paths.get(fullTextPath);
+            Path parentDir = outputPath.getParent();
+            if (parentDir != null) {
+                Files.createDirectories(parentDir);
+                System.out.println("Step 5a: Created directories: " + parentDir.toString());
+            }
+
+            // Call PDF to text conversion using RestTemplate or direct method call
+            ResponseEntity<String> conversionResult = pdfController.convertPdfToImage(newCoursePath, textOutputPath);
+
+            if (conversionResult.getStatusCode() != HttpStatus.OK) {
+                throw new RuntimeException("PDF to text conversion failed: " + conversionResult.getBody());
+            }
+            System.out.println("Step 5: PDF successfully converted to text at: " + fullTextPath);
+
+            // Step 6: Generate flashcards from the text file
+            String flashcardFilePath = fullTextPath.replace(".txt", "_flashcards.txt");
+
+            ResponseEntity<Map<String, Object>> flashcardResult = flashcardController.generateFlashcardsFromFile(
+                    flashcardFilePath, userId);
+
+            if (flashcardResult.getStatusCode() != HttpStatus.OK) {
+                Map<String, Object> flashcardError = flashcardResult.getBody();
+                throw new RuntimeException("Flashcard generation failed: " +
+                        (flashcardError != null ? flashcardError.get("message") : "Unknown error"));
+            }
+
+            Map<String, Object> flashcardResponse = flashcardResult.getBody();
+            int importedFlashcards = (Integer) flashcardResponse.get("importedCount");
+            System.out.println("Step 6: Successfully generated " + importedFlashcards + " flashcards");
+
+            // Step 7: Prepare success response
+            response.put("status", "success");
+            response.put("message", "Course replaced successfully");
+            response.put("oldCoursePath", oldCoursePath);
+            response.put("newCoursePath", newCoursePath);
+            response.put("textFilePath", fullTextPath);
+            response.put("flashcardFilePath", flashcardFilePath);
+            response.put("importedFlashcards", importedFlashcards);
+            response.put("courseName", courseName);
+
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            System.err.println("Course replacement failed: " + e.getMessage());
+            e.printStackTrace();
+
+            response.put("status", "error");
+            response.put("message", "Course replacement failed: " + e.getMessage());
+            response.put("oldCoursePath", oldCoursePath);
+            response.put("newCoursePath", newCoursePath);
+
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+
+        } finally {
+            // Cleanup temporary files
+            if (tempPdfPath != null) {
+                try {
+                    Path tempFile = Paths.get(tempPdfPath);
+                    if (Files.exists(tempFile)) {
+                        Files.delete(tempFile);
+                        System.out.println("Cleanup: Deleted temporary PDF file");
+                    }
+                } catch (IOException e) {
+                    System.err.println("Failed to delete temporary PDF file: " + tempPdfPath + " - " + e.getMessage());
+                }
+            }
+        }
+    }
+
+    // Helper method to extract course name from S3 path
+    private String extractCourseNameFromPath(String s3Path) {
+        String fileName = s3Path.substring(s3Path.lastIndexOf('/') + 1);
+        if (fileName.toLowerCase().endsWith(".pdf")) {
+            return fileName.substring(0, fileName.length() - 4);
+        }
+        return fileName;
     }
 }
