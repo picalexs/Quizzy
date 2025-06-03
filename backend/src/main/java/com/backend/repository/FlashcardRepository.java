@@ -1,7 +1,9 @@
 package com.backend.repository;
 
 import com.backend.model.Flashcard;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -52,6 +54,12 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
 
     @Query("SELECT f FROM Flashcard f WHERE f.material.course.id = :courseId")
     List<Flashcard> findAllByCourseId(@Param("courseId") Long courseId);
+
+    @Modifying
+    @Transactional
+    @Query("DELETE FROM Flashcard f WHERE f.material.id = :materialId")
+    void deleteByMaterialId(@Param("materialId") Long materialId);
+
     /**
      * Get flashcard counts for multiple courses in batch to avoid N+1 query problem
      */
@@ -89,4 +97,5 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
     List<Flashcard> findAllFlashcardsByMaterialIdAndUserId(
             @Param("materialId") Long materialId,
             @Param("userId") Integer userId);
+
 }

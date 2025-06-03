@@ -247,6 +247,47 @@ public class FlashcardController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
         }
     }
+    @PostMapping("/generate-file")
+    public ResponseEntity<Map<String, Object>> generateFlashcardsFromFile(
+            @RequestParam String filePath,
+            @RequestParam(required = false, defaultValue = "1") Integer userId) {
+        try {
+            File file = new File(filePath);
+            if (!file.exists()) {
+                Map<String, Object> errorResponse = new HashMap<>();
+                errorResponse.put("status", "error");
+                errorResponse.put("message", "File not found: " + filePath);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
+            }
+
+            if (!file.getName().endsWith("_flashcards.txt")) {
+                Map<String, Object> errorResponse = new HashMap<>();
+                errorResponse.put("status", "error");
+                errorResponse.put("message", "Invalid file format. Expected *_flashcards.txt file");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+            }
+
+            String baseDir = file.getParent();
+
+            int importedCount = flashcardImport.importFlashcardsFromSingleFile(filePath, baseDir, userId);
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("status", "success");
+            response.put("importedCount", importedCount);
+            response.put("fileName", file.getName());
+            response.put("filePath", filePath);
+
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            Map<String, Object> errorResponse = new HashMap<>();
+            errorResponse.put("status", "error");
+            errorResponse.put("message", e.getMessage());
+            errorResponse.put("filePath", filePath);
+
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
+        }
+    }
 
     @GetMapping("/due/today")
     public ResponseEntity<List<Flashcard>> getDueForToday(@RequestParam("userId") Integer userId,
@@ -646,7 +687,6 @@ public class FlashcardController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(result);
         }
     }
-
     @GetMapping("/courses")
     public ResponseEntity<Map<String, Object>> getAvailableCourses() {
         try {

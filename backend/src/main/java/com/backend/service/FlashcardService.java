@@ -4,6 +4,7 @@ import com.backend.model.Flashcard;
 import com.backend.model.FlashcardProgress;
 import com.backend.repository.FlashcardRepository;
 import com.backend.utils.FlashcardPrioritizer;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -90,6 +91,11 @@ public class FlashcardService {
 
     public List<Flashcard> getFlashcardsByCourseId(Long courseId) {
         return flashcardRepository.findAllByCourseId(courseId);
+    }
+
+    @Transactional
+    public void deleteByMaterialId(Long materialId) {
+        flashcardRepository.deleteByMaterialId(materialId);
     }
 
 
