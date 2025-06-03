@@ -8,7 +8,7 @@ const Flashcards = () => {
     const { materialId } = useParams(); // dacă dorești să preiei flashcards după materialId din URL
     const location = useLocation();
     const { courseId, courseTitle, startingFlashcardId } = location.state || {};
-
+    const userId = localStorage.getItem('userId');
 
 
     // State pentru flashcards
