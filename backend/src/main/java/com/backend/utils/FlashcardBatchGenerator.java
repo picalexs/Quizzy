@@ -95,7 +95,7 @@ public class FlashcardBatchGenerator {
         }
     }
 
-    private void processTextFile(String relativePath) {
+    public void processTextFile(String relativePath) {
         try {
             int current = processedFiles.incrementAndGet();
             System.out.println("📄 Procesez fișierul (" + current + "/" + totalFiles.get() + "): " + relativePath);

@@ -2,6 +2,7 @@ package com.backend.service;
 
 import com.backend.model.AnswerFC;
 import com.backend.repository.AnswerFCRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,17 @@ public class AnswerFCService {
 
     public void deleteAnswer(Long id) {
         answerFCRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void deleteAnswersByFlashcardId(Long flashcardId) {
+        answerFCRepository.deleteByFlashcardId(flashcardId);
+    }
+
+    @Transactional
+    public void deleteAnswersByFlashcardIds(List<Long> flashcardIds) {
+        if (flashcardIds != null && !flashcardIds.isEmpty()) {
+            answerFCRepository.deleteByFlashcardIds(flashcardIds);
+        }
     }
 }

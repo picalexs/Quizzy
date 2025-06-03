@@ -60,7 +60,7 @@ public class FlashcardGeneratorController {
         response.put("message", "🚀 Generarea flashcard-urilor a început în background. Folosiți /api/flashcards/generation-status pentru a verifica progresul.");
         return ResponseEntity.ok(response);
     }
-    
+
     @GetMapping("/generation-status")
     public ResponseEntity<Map<String, Object>> getGenerationStatus() {
         Map<String, Object> response = new HashMap<>();
@@ -73,6 +73,37 @@ public class FlashcardGeneratorController {
         }
         
         return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/generate-single")
+    public ResponseEntity<Map<String, Object>> generateSingleFlashcard(@RequestParam String filePath) {
+        Map<String, Object> response = new HashMap<>();
+
+        try {
+            // Validate input
+            if (filePath == null || filePath.trim().isEmpty()) {
+                response.put("status", "error");
+                response.put("message", "❌ Calea către fișier este obligatorie");
+                return ResponseEntity.badRequest().body(response);
+            }
+
+            // Call existing processTextFile method
+            flashcardBatchGenerator.processTextFile(filePath.trim());
+
+            response.put("status", "success");
+            response.put("message", "✅ Flashcard generat cu succes pentru: " + filePath);
+            response.put("filePath", filePath);
+
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            response.put("status", "error");
+            response.put("message", "❌ Eroare la generarea flashcard-ului: " + e.getMessage());
+            response.put("filePath", filePath);
+            System.err.println("❌ Eroare la generarea flashcard-ului pentru " + filePath + ": " + e.getMessage());
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().body(response);
+        }
     }
     
     private Map<String, Object> getProgressInfo() {
