@@ -6,6 +6,7 @@ import org.mockito.*;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
+import software.amazon.awssdk.awscore.exception.AwsErrorDetails;
 import software.amazon.awssdk.core.ResponseInputStream;
 import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.http.AbortableInputStream;
@@ -170,6 +171,105 @@ class AWSS3ServiceTest {
                 s3Service.uploadPdfToS3(null, "key", res));
         assertThrows(IllegalArgumentException.class, () ->
                 s3Service.uploadPdfToS3("bucket", " ", res));
+    }
+
+    // --- deletePdfFromS3 ---
+    @Test
+    void deletePdfFromS3_validParameters_deletesSuccessfully() {
+        String bucket = "test-bucket";
+        String key = "path/to/file.pdf";
+
+        when(s3Client.deleteObject(any(DeleteObjectRequest.class)))
+                .thenReturn(DeleteObjectResponse.builder().build());
+
+        s3Service.deletePdfFromS3(bucket, key);
+
+        verify(s3Client).deleteObject(any(DeleteObjectRequest.class));
+    }
+
+    @Test
+    void deletePdfFromS3_s3Exception_throwsRuntimeException() {
+        String bucket = "test-bucket";
+        String key = "path/to/file.pdf";
+
+        S3Exception s3Exception = (S3Exception) S3Exception.builder()
+                .message("Delete failed")
+                .statusCode(500)
+                .build();
+
+        when(s3Client.deleteObject(any(DeleteObjectRequest.class)))
+                .thenThrow(s3Exception);
+
+        RuntimeException ex = assertThrows(RuntimeException.class, () ->
+                s3Service.deletePdfFromS3(bucket, key));
+
+        assertTrue(ex.getMessage().contains("Error deleting PDF from S3"));
+        assertTrue(ex.getMessage().contains("Delete failed"));
+        assertEquals(s3Exception, ex.getCause());
+    }
+
+    @Test
+    void deletePdfFromS3_s3ExceptionWithAwsErrorDetails_throwsRuntimeExceptionWithAwsMessage() {
+        String bucket = "test-bucket";
+        String key = "path/to/file.pdf";
+
+        S3Exception s3Exception = mock(S3Exception.class);
+        AwsErrorDetails errorDetails = mock(AwsErrorDetails.class);
+
+        when(errorDetails.errorMessage()).thenReturn("AWS specific error message");
+        when(s3Exception.awsErrorDetails()).thenReturn(errorDetails);
+
+        when(s3Client.deleteObject(any(DeleteObjectRequest.class)))
+                .thenThrow(s3Exception);
+
+        RuntimeException ex = assertThrows(RuntimeException.class, () ->
+                s3Service.deletePdfFromS3(bucket, key));
+
+        assertTrue(ex.getMessage().contains("Error deleting PDF from S3"));
+        assertTrue(ex.getMessage().contains("AWS specific error message"));
+    }
+
+    @Test
+    void deletePdfFromS3_nullBucketName_throwsIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.deletePdfFromS3(null, "valid-key"));
+    }
+
+    @Test
+    void deletePdfFromS3_emptyBucketName_throwsIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.deletePdfFromS3("", "valid-key"));
+
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.deletePdfFromS3("   ", "valid-key"));
+    }
+
+    @Test
+    void deletePdfFromS3_nullS3Path_throwsIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.deletePdfFromS3("valid-bucket", null));
+    }
+
+    @Test
+    void deletePdfFromS3_emptyS3Path_throwsIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.deletePdfFromS3("valid-bucket", ""));
+
+        assertThrows(IllegalArgumentException.class, () ->
+                s3Service.deletePdfFromS3("valid-bucket", "   "));
+    }
+
+    @Test
+    void deletePdfFromS3_objectNotFound_stillSucceeds() {
+        String bucket = "test-bucket";
+        String key = "nonexistent/file.pdf";
+
+        when(s3Client.deleteObject(any(DeleteObjectRequest.class)))
+                .thenReturn(DeleteObjectResponse.builder().build());
+
+        assertDoesNotThrow(() -> s3Service.deletePdfFromS3(bucket, key));
+
+        verify(s3Client).deleteObject(any(DeleteObjectRequest.class));
     }
 
     // --- doesObjectExist ---
