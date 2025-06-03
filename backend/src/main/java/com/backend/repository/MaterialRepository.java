@@ -35,9 +35,6 @@ public interface MaterialRepository extends JpaRepository<Material, Long> {
            "GROUP BY m.course.id")
     List<Object[]> findMaterialCountsByCourseIds(@Param("courseIds") List<Long> courseIds);
 
-    /**
-     * Helper method to convert the query result to a Map
-     */
     default Map<Long, Long> getMaterialCountsByCourseIds(List<Long> courseIds) {
         return findMaterialCountsByCourseIds(courseIds)
                 .stream()

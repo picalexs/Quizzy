@@ -70,7 +70,7 @@ public class PDFtoText {
         System.out.println("All pdfs have been parsed successfully.");
     }
 
-    private static String imageToText(BufferedImage image) {
+    public static String imageToText(BufferedImage image) {
         try (TessBaseAPI api = new TessBaseAPI()) {
 
             String tessDataPath = System.getProperty("user.dir") + File.separator + "tessdata";
@@ -109,7 +109,6 @@ public class PDFtoText {
     }
 
     public static boolean pdfToImage(String pdfPath, String textPath) {
-
         if(pdfPath.contains("success.pdf")) {
             try (FileWriter writer = new FileWriter(textPath)) {
                 writer.write("test");
