@@ -399,6 +399,32 @@
     box-shadow: 0 0 0 2px #E2A54D;
 }
 
+.flashcard-app .submit-answer-btn {
+    margin-left: 12px;
+    padding: 8px 16px;
+    background: #2D852D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Ubuntu', sans-serif;
+    min-width: 80px;
+}
+
+.flashcard-app .submit-answer-btn:hover {
+    background: #1F5F1F;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard-app .submit-answer-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 /* MEDIA QUERIES PENTRU RESPONSIVE DESIGN */
 
 /* Pentru tablete */
@@ -547,6 +573,13 @@
         width: calc(100% - 50px) !important;
     }
 
+    .flashcard-app .submit-answer-btn {
+        margin-left: 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 60px;
+    }
+
     /* Ajustare pentru orientare landscape pe telefon */
     @media (max-height: 480px) {
         .flashcard-app .flashcard-container {
@@ -609,4 +642,12 @@
         height: 28px;
         font-size: 14px;
     }
+}
+
+.material-info {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+    margin-top: 46px;
 }
