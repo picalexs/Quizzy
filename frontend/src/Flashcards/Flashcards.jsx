@@ -215,7 +215,9 @@ const Flashcards = () => {
             const res = await api.post('/api/gemini/compare-users-answer-to-the-official-answer', {
                 question: current.question,
                 officialAnswer: current.answer,
-                usersAnswer: inputText
+                usersAnswer: inputText,
+                flashcardId: current.id,
+                userId: userId
             });
 
             const scoreValue = res.data;
