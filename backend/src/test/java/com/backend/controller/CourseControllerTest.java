@@ -216,9 +216,13 @@ class CourseControllerTest {
 
         List<Course> courses = Arrays.asList(course1, course2);
 
+        // Mock the batch queries for flashcard and material counts
+        Map<Long, Long> flashcardCounts = Map.of(1L, 5L, 2L, 10L);
+        Map<Long, Long> materialCounts = Map.of(1L, 3L, 2L, 7L);
+
         when(courseService.getAllCourses()).thenReturn(courses);
-        when(flashcardRepository.countByCourseId(1L)).thenReturn(5L);
-        when(flashcardRepository.countByCourseId(2L)).thenReturn(10L);
+        when(courseService.getFlashcardCountsByCourseIds(Arrays.asList(1L, 2L))).thenReturn(flashcardCounts);
+        when(courseService.getMaterialCountsByCourseIds(Arrays.asList(1L, 2L))).thenReturn(materialCounts);
 
         // Act
         ResponseEntity<List<Map<String, Object>>> response = courseController.getAllCourses();
@@ -233,6 +237,7 @@ class CourseControllerTest {
         assertEquals("Description 1", courseMap1.get("description"));
         assertEquals("1", courseMap1.get("semestru"));
         assertEquals(5L, courseMap1.get("flashcardCount"));
+        assertEquals(3L, courseMap1.get("materialCount"));
 
         Map<String, Object> courseMap2 = response.getBody().get(1);
         assertEquals(2L, courseMap2.get("id"));
@@ -240,12 +245,15 @@ class CourseControllerTest {
         assertEquals("Description 2", courseMap2.get("description"));
         assertEquals("2", courseMap2.get("semestru"));
         assertEquals(10L, courseMap2.get("flashcardCount"));
+        assertEquals(7L, courseMap2.get("materialCount"));
     }
 
     // Test for retrieving all courses when no courses exist
     @Test
     void shouldReturnEmptyListIfNoCourses() {
         when(courseService.getAllCourses()).thenReturn(Collections.emptyList());
+        when(courseService.getFlashcardCountsByCourseIds(Collections.emptyList())).thenReturn(Collections.emptyMap());
+        when(courseService.getMaterialCountsByCourseIds(Collections.emptyList())).thenReturn(Collections.emptyMap());
 
         ResponseEntity<List<Map<String, Object>>> response = courseController.getAllCourses();
 

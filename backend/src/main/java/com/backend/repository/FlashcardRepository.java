@@ -7,6 +7,9 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
 
@@ -49,6 +52,26 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
 
     @Query("SELECT f FROM Flashcard f WHERE f.material.course.id = :courseId")
     List<Flashcard> findAllByCourseId(@Param("courseId") Long courseId);
+    /**
+     * Get flashcard counts for multiple courses in batch to avoid N+1 query problem
+     */
+    @Query("SELECT f.material.course.id as courseId, COUNT(f) as count " +
+            "FROM Flashcard f " +
+            "WHERE f.material.course.id IN :courseIds " +
+            "GROUP BY f.material.course.id")
+    List<Object[]> findFlashcardCountsByCourseIds(@Param("courseIds") List<Long> courseIds);
+
+    /**
+     * Helper method to convert the query result to a Map
+     */
+    default Map<Long, Long> getFlashcardCountsByCourseIds(List<Long> courseIds) {
+        return findFlashcardCountsByCourseIds(courseIds)
+                .stream()
+                .collect(Collectors.toMap(
+                        row -> (Long) row[0],    // courseId
+                        row -> (Long) row[1]     // count
+                ));
+    }
 
     @Query("SELECT f FROM Flashcard f")
     List<Flashcard> findAllFlashcards();
