@@ -26,6 +26,7 @@ const Flashcards = () => {
     const [inputText, setInputText] = useState('');
     const [isMobile, setIsMobile] = useState(false);
     const [score, setScore] = useState(null);
+    const [selectedOptions, setSelectedOptions] = useState([]);
 
     const ratingColors = {
         0: "#2D852D",  // Good (😊) - Green
@@ -122,6 +123,7 @@ const Flashcards = () => {
             setIndex(index + 1);
             setShowAnswer(false);
             setSelectedOption(null);
+            setSelectedOptions([]);
             setFeedbackMessage(null);
             setShowKeyboardInput(false);
             setScore(null);
@@ -134,6 +136,7 @@ const Flashcards = () => {
             setIndex(index - 1);
             setShowAnswer(false);
             setSelectedOption(null);
+            setSelectedOptions([]);
             setFeedbackMessage(null);
             setShowKeyboardInput(false);
             setScore(null);
@@ -144,22 +147,36 @@ const Flashcards = () => {
     const handleOptionSelect = (option) => {
         if (showAnswer) return;
 
-        setSelectedOption(option);
+        setSelectedOptions(prev => {
+            if (prev.includes(option)) {
+                return prev.filter(item => item !== option);
+            } else {
+                return [...prev, option];
+            }
+        });
+    };
+
+    const handleCheckAnswers = () => {
+        if (showAnswer) return;
+
         setShowAnswer(true);
 
-        const isCorrect = option === current.correctAnswer;
+        const correctAnswers = Array.isArray(current.correctAnswer)
+            ? current.correctAnswer
+            : [current.correctAnswer];
 
-        if (isCorrect) {
+        const isAllCorrect =
+            selectedOptions.length === correctAnswers.length &&
+            selectedOptions.every(option => correctAnswers.includes(option));
+
+        if (isAllCorrect) {
             setFeedbackMessage("Correct!");
-            // Aplicăm automat feedback-ul "good" (😊)
             handleFeedback('good', 0);
         } else {
             setFeedbackMessage("Wrong!");
-            // Aplicăm automat feedback-ul "bad" (😡)
             handleFeedback('bad', 2);
         }
 
-        // Trecem automat la următorul card după 1.5 secunde
         setTimeout(() => {
             nextCard();
         }, 1500);
@@ -176,6 +193,7 @@ const Flashcards = () => {
         setIndex(0);
         setShowAnswer(false);
         setSelectedOption(null);
+        setSelectedOptions([]);
         setFeedbackMessage(null);
         setShowKeyboardInput(false);
         setScore(null);
@@ -223,44 +241,34 @@ const Flashcards = () => {
             const scoreValue = res.data;
             setScore(scoreValue);
 
-            // Determină rating-ul automat în funcție de procentaj
             let autoRating;
             if (scoreValue >= 80) {
-                autoRating = 0; // Good (😊)
+                autoRating = 0;
             } else if (scoreValue >= 50) {
-                autoRating = 1; // Neutral (😐)
+                autoRating = 1;
             } else {
-                autoRating = 2; // Bad (😡)
+                autoRating = 2;
             }
 
-            // Aplică rating-ul automat
             handleFeedback('auto', autoRating);
 
-            // ACTUALIZAT: Ascunde bara după submit și resetează input-ul - MODIFICAT la 500ms
-            setTimeout(() => {
-                setShowKeyboardInput(false);
-                setInputText('');
-            }, 500); // Modificat din 1500 la 500
+            // Hide keyboard input immediately
+            setShowKeyboardInput(false);
+            setInputText('');
 
-            // Trece automat la următorul flashcard după 2 secunde
+            // Move to next card after showing the score
             setTimeout(() => {
                 nextCard();
-            }, 2000);
+            }, 1500);
 
         } catch (err) {
             console.error('Comparison error:', err);
             setFeedbackMessage("Error comparing your answer");
 
-            // Ascunde bara și în caz de eroare - MODIFICAT la 500ms
-            setTimeout(() => {
-                setShowKeyboardInput(false);
-                setInputText('');
-            }, 500); // Modificat din 1500 la 500
+            // Hide keyboard input immediately on error too
+            setShowKeyboardInput(false);
+            setInputText('');
         }
-
-        // Close keyboard input and clear text after submission
-        setShowKeyboardInput(false);
-        setInputText('');
     };
 
     const navigateBack = () => {
@@ -305,18 +313,40 @@ const Flashcards = () => {
 
                     {current.options ? (
                         <div className="flashcard-options-container">
-                            {/* <div className="instruction-text">Select 1 correct answer</div> */}
-
                             <div className="flashcard-options">
                                 {current.options.map((option, i) => {
-                                    const isCorrect = showAnswer && option === current.correctAnswer;
-                                    const isWrong = showAnswer && option !== current.correctAnswer;
+                                    const isSelected = selectedOptions.includes(option);
+                                    const correctAnswers = Array.isArray(current.correctAnswer)
+                                        ? current.correctAnswer
+                                        : [current.correctAnswer];
+                                    const isCorrectAnswer = correctAnswers.includes(option);
+
+                                    // Determine the class names based on state
+                                    let className = 'option-card';
+
+                                    if (showAnswer) {
+                                        // When answer is shown
+                                        if (isCorrectAnswer) {
+                                            className += ' correct';
+                                        } else {
+                                            className += ' incorrect';
+                                        }
+                                        // Add selected class if this was one of user's choices
+                                        if (isSelected) {
+                                            className += ' selected';
+                                        }
+                                    } else {
+                                        // Before answer is shown, only show selection
+                                        if (isSelected) {
+                                            className += ' selected';
+                                        }
+                                    }
 
                                     return (
                                         <div
                                             key={i}
                                             onClick={() => handleOptionSelect(option)}
-                                            className={`option-card ${isCorrect ? 'correct' : ''} ${isWrong && showAnswer ? 'incorrect' : ''} ${selectedOption === option && !showAnswer ? 'selected' : ''}`}
+                                            className={className}
                                         >
                                             {option}
                                         </div>
@@ -324,12 +354,15 @@ const Flashcards = () => {
                                 })}
                             </div>
 
-                            {selectedOption && (
-                                <div className="material-info">
-                                    This question comes from the course {materialId}
-                                </div>
+                            {!showAnswer && selectedOptions.length > 0 && (
+                                <button
+                                    className="show-answer-btn"
+                                    onClick={handleCheckAnswers}
+                                    style={{ marginTop: '1rem' }}
+                                >
+                                    Check Answers
+                                </button>
                             )}
-
                         </div>
                     ) : (
                         <>
