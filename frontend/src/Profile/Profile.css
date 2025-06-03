@@ -56,145 +56,6 @@ html, body {
 
 /* Sidebar buttons - removed wrapper positioning to match other pages */
 
-/* Burger Menu */
-.profile-burger-menu {
-    display: none;
-    position: fixed;
-    left: 8px;
-    top: 24px;
-    z-index: 1000;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-}
-
-.profile-burger-line {
-    width: 25px;
-    height: 3px;
-    background-color: #EFEAE6;
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
-.profile-burger-line.active:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.profile-burger-line.active:nth-child(2) {
-    opacity: 0;
-}
-
-.profile-burger-line.active:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* Mobile Menu */
-.profile-mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 250px;
-    height: 100vh;
-    background: rgba(23, 59, 97, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 999;
-    transition: left 0.3s ease;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.profile-mobile-menu.open {
-    left: 0;
-}
-
-.profile-mobile-menu-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px 20px;
-    background: none;
-    border: none;
-    color: #EFEAE6;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.2s ease;
-    text-align: left;
-}
-
-.profile-mobile-menu-item:hover {
-    background-color: rgba(239, 234, 230, 0.1);
-}
-
-.profile-mobile-menu-item.active {
-    background-color: #EFEAE6;
-    color: #173B61;
-    font-weight: 700;
-}
-
-.profile-mobile-icon {
-    width: 24px;
-    height: 24px;
-}
-
-/* Mobile Logo Header Section */
-.profile-mobile-logo-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(239, 234, 230, 0.2);
-}
-
-.profile-mobile-quizzy-logo {
-    display: flex;
-    align-items: center;
-}
-
-.profile-mobile-quizzy-image {
-    width: 80px;
-    height: 32px;
-    opacity: 0.9;
-}
-
-.profile-mobile-fii-logo-header {
-    display: flex;
-    align-items: center;
-}
-
-.profile-mobile-fii-header-image {
-    width: 32px;
-    height: 26px;
-    opacity: 0.8;
-}
-
-/* FII Logo in mobile menu */
-.profile-mobile-fii-logo {
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-top: 1px solid rgba(239, 234, 230, 0.2);
-}
-
-.profile-mobile-fii-image {
-    width: 40px;
-    height: 32px;
-    opacity: 0.8;
-}
-
 .profile-icon-wrapper {
     position: absolute;
     width: 64px;
@@ -507,7 +368,7 @@ html, body {
         margin: 0 20px;
     }
     
-    /* Hide desktop sidebar and show burger menu */
+    /* Hide desktop sidebar navigation */
     .profile-desktop-sidebar {
         display: none;
     }
@@ -516,10 +377,7 @@ html, body {
         display: none !important;
     }
     
-    .profile-burger-menu {
-        display: flex;
-    }
-      /* Hide Quizzy logo on mobile (replaced by burger menu) */
+    /* Hide Quizzy logo on mobile (replaced by burger menu) */
     .profile-logo {
         display: none;
     }

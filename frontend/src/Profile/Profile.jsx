@@ -2,6 +2,7 @@ import './Profile.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { api } from '../utils/api.js';
+import BurgerMenu from '../components/BurgerMenu/BurgerMenu.jsx';
 
 function Profile() {
     const navigate = useNavigate();
@@ -15,8 +16,7 @@ function Profile() {
     });
     const [passwordData, setPasswordData] = useState({
         newPassword: '',
-        confirmPassword: ''
-    });
+        confirmPassword: ''    });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [updateStatus, setUpdateStatus] = useState({
@@ -24,8 +24,8 @@ function Profile() {
         lastName: '',
         email: '',
         password: ''
-    });    const [showPassword, setShowPassword] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    });
+    const [showPassword, setShowPassword] = useState(false);
 
     useEffect(() => {
         const fetchUserProfile = async () => {
@@ -180,15 +180,11 @@ function Profile() {
         else if (label === "Library") navigate('/library');
         else if (label === "Explore") navigate('/explore');
         else if (label === "Profile") navigate('/profile');
-        
-        // Close mobile menu when navigating
-        setIsMobileMenuOpen(false);
-    };
-
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
     };    return (
         <div className="profile-container">
+            {/* Burger Menu Component */}
+            <BurgerMenu currentPage="profile" />
+
             {/* Logo Quizzy */}
             <div className="profile-logo">
                 <img src="/quizzy-logo-homepage.svg" alt="Quizzy Logo" style={{ width: '100%', height: '100%' }} />
@@ -197,54 +193,6 @@ function Profile() {
             {/* Logo FII */}
             <div className="profile-logo-fii">
                 <img src="/logo-fac-homepage.svg" alt="FII Logo" style={{ width: '100%', height: '100%' }} />
-            </div>
-
-            {/* Burger Menu Button */}
-            <button className="profile-burger-menu" onClick={toggleMobileMenu}>
-                <div className={`profile-burger-line ${isMobileMenuOpen ? 'active' : ''}`}></div>
-                <div className={`profile-burger-line ${isMobileMenuOpen ? 'active' : ''}`}></div>
-                <div className={`profile-burger-line ${isMobileMenuOpen ? 'active' : ''}`}></div>
-            </button>            {/* Mobile Menu Overlay */}
-            <div className={`profile-mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-                {/* Logo header section in mobile menu */}
-                <div className="profile-mobile-logo-header">
-                    <div className="profile-mobile-quizzy-logo">
-                        <img src="/quizzy-logo-homepage.svg" alt="Quizzy Logo" className="profile-mobile-quizzy-image" />
-                    </div>
-                    <div className="profile-mobile-fii-logo-header">
-                        <img src="/logo-fac-homepage.svg" alt="FII Logo" className="profile-mobile-fii-header-image" />
-                    </div>
-                </div>
-
-                <button
-                    className={`profile-mobile-menu-item ${location.pathname === '/dashboard' ? 'active' : ''}`}
-                    onClick={() => handleClick("Home")}
-                >
-                    <img src="/home-logo.svg" alt="Home" className="profile-mobile-icon" />
-                    <span>Home</span>
-                </button>
-
-                <button
-                    className={`profile-mobile-menu-item ${location.pathname === '/library' ? 'active' : ''}`}
-                    onClick={() => handleClick("Library")}
-                >
-                    <img src="/library-logo.svg" alt="Library" className="profile-mobile-icon" />
-                    <span>Library</span>
-                </button>
-
-                <button
-                    className={`profile-mobile-menu-item ${location.pathname === '/explore' ? 'active' : ''}`}
-                    onClick={() => handleClick("Explore")}
-                >
-                    <img src="/explore-logo.svg" alt="Explore" className="profile-mobile-icon" />
-                    <span>Explore</span>
-                </button>                <button
-                    className={`profile-mobile-menu-item ${location.pathname === '/profile' ? 'active' : ''}`}
-                    onClick={() => handleClick("Profile")}
-                >
-                    <img src="/profile-logo.svg" alt="Profile" className="profile-mobile-icon" />
-                    <span>Profile</span>
-                </button>
             </div>
 
             {/* Desktop Sidebar buttons */}
