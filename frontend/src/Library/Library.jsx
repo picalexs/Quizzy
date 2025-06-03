@@ -1,150 +1,137 @@
 import React, { useState, useEffect } from 'react';
-import './Library.css';
-import { useNavigate } from 'react-router-dom';
+import './Library.css'; 
+import BurgerMenu from '../components/BurgerMenu/BurgerMenu'; 
+import { useNavigate, useLocation } from 'react-router-dom';
 import { api } from '../utils/api';
 
-const Library = () => {
+const Explore = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Funcție pentru a obține userId pe baza email-ului
-    const fetchUserIdByEmail = async (email) => {
-        try {
-            const response = await api.get(`/users/profile?email=${encodeURIComponent(email)}`);
-            const user = response.data;
-            if (!user.id) {
-                throw new Error('User ID not found in response');
-            }
-            localStorage.setItem('userId', user.id);
-            return user.id;
-        } catch (err) {
-            setError(err.response?.data?.message || err.message);
-            setLoading(false);
-            return null;
-        }
-    };
-
-    // Funcție pentru a obține cursurile la care utilizatorul este înscris
-    const fetchEnrolledCourses = async (userId) => {
-        try {
-            const response = await api.get(`/enrollments/student/${userId}`);
-            const data = response.data;
-            setCourses(data.map(course => ({
-                title: course.title,
-                flashcards: course.flashcardCount || 0,
-                files: course.materialCount || 0,
-                path: `/course/${course.id}`
-            })));
-        } catch (err) {
-            setError(err.response?.data?.message || err.message);
-        } finally {
-            setLoading(false);
-        }
-    };
+    const currentPath = location.pathname;
 
     useEffect(() => {
-        const init = async () => {
-            let userId = localStorage.getItem('userId');
-            if (!userId) {
-                const email = localStorage.getItem('user');
-                if (!email) {
-                    setError('User email not found');
-                    setLoading(false);
-                    return;
-                }
-                userId = await fetchUserIdByEmail(email);
-                if (!userId) return;
+        const fetchCourses = async () => {
+            setLoading(true);
+            setError(null);
+            try {
+                const response = await api.get('/courses');
+                setCourses(response.data);
+            } catch (err) {
+                setError(err.response?.data?.message || err.message);
+            } finally {
+                setLoading(false);
             }
-            fetchEnrolledCourses(userId);
         };
-        init();
-        // eslint-disable-next-line
+        fetchCourses();
     }, []);
 
-    const handleClick = (label) => {
+    const handleClick = (label) => { 
         if (label === "Home") {
             navigate('/dashboard');
         } else if (label === "Profile") {
             navigate('/profile');
         } else if (label === "Explore") {
             navigate('/explore');
+        } else if (label === "Library") {
+            navigate('/library');
         }
     };
 
+    const getActiveClass = (route) => {
+        return currentPath === route ? 'active' : '';
+    };
+
     return (
-        <div className="library-container">
-            <div className="library-logo">
-                <img src="/quizzy-logo-homepage.svg" alt="Logo" style={{ width: '100%', height: '100%' }} />
-            </div>
+        <>
+            {}
+            <BurgerMenu currentPage={location.pathname} />
 
-            <div className="library-inner-box" />
+            <div className="explore-container">
+                {}
+                <div className="explore-logo">
+                    <img src="/quizzy-logo-homepage.svg" alt="Logo" style={{ width: '100%', height: '100%' }} />
+                </div>
 
-            {/* Sidebar Buttons */}
-            <button className="library-icon-wrapper library-icon-home" onClick={() => handleClick("Home")}>
-                <img src="/home-logo.svg" alt="Home" className="library-icon-image" />
-                <span className="library-icon-text">Home</span>
-            </button>
+                {}
+                <div className="explore-logo-fii">
+                    <img src="/logo-fac-homepage.svg" alt="FII" style={{ width: '100%', height: '100%' }} />
+                </div>
 
-            <div className="library-icon-wrapper library-icon-library active">
-                <div className="library-rectangle-library"></div>
-                <img src="/library-logo.svg" alt="Library" className="library-icon-image" />
-                <div className="library-icon-text">Library</div>
-            </div>
+                {}
+                
+                <div className="explore-inner-box" /> 
+                {/* <div className="explore-white-box" /> */}
 
-            <button className="library-icon-wrapper library-icon-explore" onClick={() => handleClick("Explore")}>
-                <img src="/explore-logo.svg" alt="Explore" className="library-icon-image" />
-                <span className="library-icon-text">Explore</span>
-            </button>
 
-            <button className="library-icon-wrapper library-icon-profile" onClick={() => handleClick("Profile")}>
-                <img src="/profile-logo.svg" alt="Profile" className="library-icon-image" />
-                <span className="library-icon-text">Profile</span>
-            </button>
+                {}
+                <button
+                    className={`explore-icon-wrapper explore-icon-home ${getActiveClass('/dashboard')}`}
+                    onClick={() => handleClick("Home")}
+                >
+                    {getActiveClass('/dashboard') && <div className="explore-rectangle-home"></div>}
+                    <img src="/home-logo.svg" alt="Home" className="explore-icon-image" />
+                    <div className="explore-icon-text">Home</div>
+                </button>
+                <button
+                    className={`explore-icon-wrapper explore-icon-library ${getActiveClass('/library')}`}
+                    onClick={() => handleClick("Library")}
+                >
+                    {getActiveClass('/library') && <div className="explore-rectangle-home"></div>}
+                    <img src="/library-logo.svg" alt="Library" className="explore-icon-image" />
+                    <span className="explore-icon-text">Library</span>
+                </button>
+                <button
+                    className={`explore-icon-wrapper explore-icon-explore ${getActiveClass('/explore')}`}
+                    onClick={() => handleClick("Explore")}
+                >
+                    {getActiveClass('/explore') && <div className="explore-rectangle-home"></div>}
+                    <img src="/explore-logo.svg" alt="Explore" className="explore-icon-image" />
+                    <span className="explore-icon-text">Explore</span>
+                </button>
+                <button
+                    className={`explore-icon-wrapper explore-icon-profile ${getActiveClass('/profile')}`}
+                    onClick={() => handleClick("Profile")}
+                >
+                    {getActiveClass('/profile') && <div className="explore-rectangle-home"></div>}
+                    <img src="/profile-logo.svg" alt="Profile" className="explore-icon-image" />
+                    <span className="explore-icon-text">Profile</span>
+                </button>
 
-            <div className="library-logo-fii-library">
-                <img src="/logo-fac-homepage.svg" alt="FII" style={{ width: '100%', height: '100%' }} />
-            </div>
-
-            {/* Cards Section */}
-            <div className="library-cards-container">
-                {loading ? (
-                    <div className="library-loading">Loading your courses...</div>
-                ) : error ? (
-                    <div className="library-error">Error: {error}</div>
-                ) : courses.length === 0 ? (
-                    <div className="library-empty">
-                        You are not enrolled in any courses yet
-                        <button
-                            className="library-explore-button"
-                            onClick={() => navigate('/explore')}
-                        >
-                            Explore Courses
-                        </button>
-                    </div>
-                ) : (
-                    courses.map((course, index) => (
-                        <div
-                            key={index}
-                            className="library-card"
-                            onClick={() => course.path && navigate(course.path)}
-                            style={{ cursor: course.path ? 'pointer' : 'default' }}
-                        >
-                            <div className="library-card-header" />
-                            <div className="library-card-header-text">
-                                <div className="library-course-title">{course.title}</div>
-                                <div className="library-course-info">
-                                    <span className="library-number">{course.flashcards}</span> Flashcards |
-                                    <span className="library-number">{course.files}</span> Files
+                {/* Cards Section */}
+                <div className="library-cards-container"> 
+                    {loading ? (
+                        <div className="library-loading">Loading courses...</div>
+                    ) : error ? (
+                        <div className="library-error">Error: {error}</div>
+                    ) : courses.length === 0 ? (
+                        <div className="library-empty">No courses available</div>
+                    ) : (
+                        courses.map((course, index) => (
+                            <div
+                                key={course.id || index}
+                                className="library-card" // Recomand redenumirea în explore-card
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => navigate(`/course/${course.id}`, { state: { course } })}
+                            >
+                                <div className="library-card-header" /> {/* explore-card-header */}
+                                <div className="library-card-header-text"> {/* explore-card-content */}
+                                    <div className="library-course-title">{course.title}</div> {/* explore-course-title */}
+                                    <div className="library-course-info"> {/* explore-course-info */}
+                                        <span className="library-number">{course.flashcardCount || 0}</span> Flashcards |
+                                        <span className="library-number">{course.materialCount || 0}</span> Files
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))
-                )}
+                        ))
+                    )}
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
-export default Library;
+export default Explore;

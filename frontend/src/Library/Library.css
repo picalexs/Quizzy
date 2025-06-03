@@ -1,799 +1,375 @@
-/* Main container */
-html, body {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: linear-gradient(180deg, #173B61 40%, #EFEAE6 100%);
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+
+:root {
+  --primary-blue: #173b61;
+  --primary-beige: #efeae6;
+  --accent-orange: #e2a54d;
+  --text-gray: #666;
+  --shadow-color: rgba(23, 59, 97, 0.64);
+  --spacing-xs: clamp(0.25rem, 1vw, 0.5rem);
+  --spacing-sm: clamp(0.5rem, 2vw, 1rem);
+  --spacing-md: clamp(1rem, 2.5vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 3vw, 2rem);
+  --spacing-xl: clamp(2rem, 4vw, 3rem);
+  --font-size-xs: clamp(0.625rem, 1.5vw, 0.75rem);
+  --font-size-sm: clamp(0.75rem, 2vw, 0.875rem);
+  --font-size-base: clamp(0.875rem, 2.5vw, 1rem);
+  --font-size-lg: clamp(1rem, 3vw, 1.125rem);
+  --button-height: clamp(3.5rem, 6vh, 4.5rem);
+  --logo-size: var(--button-height);
+  --icon-size: clamp(1.5rem, 4vw, 2.25rem);
+  --button-spacing: clamp(0.5rem, 1vh, 1rem);
+  --left-logo-position: clamp(1rem, 5vw, 5.625rem);
+  --right-logo-position: clamp(1rem, 3vw, 1.5rem);
+  --left-logo-end: calc(var(--left-logo-position) + var(--logo-size));
+  --right-logo-end: calc(var(--right-logo-position) + clamp(2.5rem, 5vw, 3.5rem));
+  --logo-to-box-gap: clamp(2rem, 4vw, 3rem);
+  --vertical-margin: clamp(1rem, 3vh, 2rem);
+  --card-min-width: 280px;
+  --card-max-width: 380px;
+  --card-gap: clamp(1.5rem, 3vw, 2rem);
 }
 
-/* Logo Quizzy */
-.library-logo {
-    width: 61px;
-    height: 48px;
-    left: 90px;
-    top: 24px;
-    position: absolute;
+.libpg-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(180deg, var(--primary-blue) 40%, var(--primary-beige) 100%);
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* FII logo */
-.library-logo-fii-library {
-    width: 49px;
-    height: 48px;
-    left: 1288px;
-    top: 24px;
-    position: absolute;
+.libpg-logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  position: absolute;
+  left: var(--left-logo-position);
+  top: var(--vertical-margin);
+  z-index: 10;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.libpg-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* Inner white box */
-.library-inner-box {
-    width: 1088px;
-    height: 1500px;
-    position: absolute;
-    top: 16px;
-    left: 176px;
-    background: #EFEAE6;
-    box-shadow: 0px 0px 8px 2px rgba(23, 59, 97, 0.64) inset;
-    border-radius: 8px;
+.libpg-logo-fii {
+  width: clamp(2.5rem, 5vw, 3.5rem);
+  height: clamp(2.5rem, 5vw, 3.5rem);
+  position: absolute;
+  right: var(--right-logo-position);
+  top: var(--vertical-margin);
+  z-index: 10; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.libpg-logo-fii img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* Sidebar buttons */
-.library-icon-wrapper {
-    position: absolute;
-    width: 64px;
-    height: 72px;
-    background: none;
+.libpg-inner-box {
+  position: absolute;
+  top: var(--vertical-margin);
+  bottom: var(--vertical-margin);
+  height: auto;
+  left: calc(var(--left-logo-end) + var(--logo-to-box-gap));
+  right: calc(var(--right-logo-end) + var(--logo-to-box-gap));
+  width: auto;
+  background: var(--primary-beige);
+  border-radius: clamp(0.5rem, 1vw, 0.5rem);
+  box-shadow: 0 0 clamp(0.25rem, 1vw, 0.5rem) clamp(0.125rem, 0.5vw, 0.125rem) var(--shadow-color) inset;
+  padding: var(--spacing-md);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.libpg-icon-wrapper {
+  position: absolute;
+  width: clamp(3rem, 6vw, 4rem);
+  height: var(--button-height);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: transform 0.2s ease;
+  border-radius: clamp(0.25rem, 0.5vw, 0.5rem);
+}
+.libpg-icon-wrapper:hover { transform: scale(1.05); }
+.libpg-icon-home {
+  top: calc(var(--vertical-margin) + var(--logo-size) + clamp(1.5rem, 3vh, 2rem));
+  left: var(--left-logo-position);
+}
+.libpg-icon-library {
+  top: calc(var(--vertical-margin) + var(--logo-size) + clamp(1.5rem, 3vh, 2rem) + var(--button-height) + var(--button-spacing));
+  left: var(--left-logo-position);
+}
+.libpg-icon-explore {
+  top: calc(var(--vertical-margin) + var(--logo-size) + clamp(1.5rem, 3vh, 2rem) + (var(--button-height) + var(--button-spacing)) * 2);
+  left: var(--left-logo-position);
+}
+.libpg-icon-profile {
+  top: calc(var(--vertical-margin) + var(--logo-size) + clamp(1.5rem, 3vh, 2rem) + (var(--button-height) + var(--button-spacing)) * 3);
+  left: var(--left-logo-position);
+}
+.libpg-icon-image {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  z-index: 1;
+}
+.libpg-icon-text {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  margin-top: clamp(0.125rem, 0.5vw, 0.25rem);
+  z-index: 1;
+  color: var(--primary-beige);
+  text-align: center;
+}
+.libpg-icon-wrapper.active .libpg-icon-text {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+.libpg-icon-wrapper.active .libpg-icon-image {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%) contrast(88%);
+}
+.libpg-rectangle-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: clamp(0.25rem, 0.5vw, 0.5rem);
+  background-color: var(--primary-beige);
+  z-index: -1;
+}
+
+.libpg-cards-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
+  gap: var(--card-gap);
+  overflow-y: auto;
+  box-sizing: border-box;
+  justify-content: center;
+  align-content: start;
+}
+
+.libpg-card {
+  background: var(--primary-beige);
+  border-radius: clamp(0.75rem, 2vw, 1rem);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: clamp(8rem, 18vh, 11.25rem);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 0.125rem solid var(--primary-blue);
+  box-sizing: border-box;
+  position: relative;
+  min-width: var(--card-min-width);
+  max-width: var(--card-max-width);
+  width: 100%;
+  justify-self: center;
+  margin: 0;
+}
+.libpg-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-beige);
+  border-radius: calc(clamp(0.75rem, 2vw, 1rem) - 0.125rem);
+  z-index: -1;
+}
+.libpg-card:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+.libpg-card-header {
+  background: var(--accent-orange);
+  height: clamp(2.5rem, 6vh, 3.125rem);
+  width: 100%;
+  border-top-left-radius: calc(clamp(0.75rem, 2vw, 1rem) - 0.125rem);
+  border-top-right-radius: calc(clamp(0.75rem, 2vw, 1rem) - 0.125rem);
+  flex-shrink: 0;
+}
+.libpg-card-content {
+  padding: var(--spacing-sm);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: visible;
+  min-height: 0;
+}
+.libpg-course-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  overflow: visible;
+  text-overflow: unset;
+  display: block;
+  white-space: normal;
+}
+.libpg-course-info {
+  font-size: var(--font-size-xs);
+  color: var(--text-gray);
+  margin-top: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+}
+.libpg-number {
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.libpg-loading,
+.libpg-error,
+.libpg-empty {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: var(--spacing-md);
+  font-size: var(--font-size-lg);
+  color: var(--primary-blue);
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+.libpg-error { color: #dc3545; }
+.libpg-empty { gap: var(--spacing-md); }
+
+.libpg-action-button {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--primary-blue);
+    color: var(--primary-beige);
     border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    transition: transform 0.2s ease;
-}
-
-.library-icon-wrapper:hover {
-    transform: scale(1.05);
-}
-
-.library-icon-wrapper.active {
-    background-color: #EFEAE6;
-    border-radius: 8px;
-}
-
-.library-icon-image {
-    width: 36px;
-    height: 36px;
-    z-index: 1;
-}
-
-.library-icon-text {
-    font-size: 12px;
-    font-family: Ubuntu, sans-serif;
-    font-weight: 500;
-    margin-top: 4px;
-    z-index: 1;
-    color: #EFEAE6;
-}
-
-.library-icon-wrapper.active .library-icon-text {
-    color: #173B61;
-    font-weight: 700;
-}
-
-.library-icon-wrapper.active .library-icon-image {
-    filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%) contrast(88%);
-}
-
-/* Positioning */
-.library-icon-home {
-    top: 96px;
-    left: 88px;
-}
-
-.library-icon-library {
-    top: 170px;
-    left: 88px;
-}
-
-.library-icon-explore {
-    top: 244px;
-    left: 88px;
-}
-
-.library-icon-profile {
-    top: 318px;
-    left: 88px;
-}
-
-/* Rectangle indicator for active */
-.library-rectangle-library {
-    position: absolute;
-    width: 64px;
-    height: 72px;
-    border-radius: 8px;
-    background-color: #EFEAE6;
-    z-index: -1;
-}
-
-/* Cards container */
-.library-cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 20px;
-    padding: 20px;
-    position: absolute;
-    top: 35px;
-    left: 200px;
-    overflow: hidden;
-    box-sizing: border-box;
-    height: auto;
-}
-
-/* Individual card */
-.library-card {
-    position: relative;
-    width: 320px;
-    height: 160px;
-    background: #EFEAE6;
-    border-radius: 16px;
-    outline: 2px solid #173B61;
-    cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
-    box-sizing: border-box;
-}
-
-.library-card:hover {
-    background: #D1C6B1;
-    transform: scale(1.05);
-}
-
-.library-card:active {
-    transform: scale(0.98);
-}
-
-/* Card header */
-.library-card-header {
-    width: 100%;
-    height: 36px;
-    background: #E2A54D;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-}
-
-/* Card text container */
-.library-card-header-text {
-    position: absolute;
-    top: 44px;
-    left: 16px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #173B61;
-}
-
-.library-course-title {
-    color: #173B61;
-    font-size: 32px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.library-course-info {
-    color: #173B61;
-    font-size: 16px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 300;
-}
-
-.library-course-info .library-number {
-    font-weight: 700;
-}
-
-@media(max-width: 1024px) {
-    html, body {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background: linear-gradient(180deg, #173B61 40%, #EFEAE6 100%);
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Logo Quizzy */
-    .library-logo {
-        width: 61px;
-        height: 48px;
-        left: 20px;
-        top: 24px;
-        position: absolute;
-    }
-    .library-logo-fii-library {
-        width: 49px;
-        height: 48px;
-        left: 966px;
-        top: 24px;
-        position: absolute;
-    }
-
-    /* Inner white box */
-    .library-inner-box {
-        width: 850px;
-        height: 1500px;
-        position: absolute;
-        top: 16px;
-        left: 100px;
-        background: #EFEAE6;
-        box-shadow: 0px 0px 8px 2px rgba(23, 59, 97, 0.64) inset;
-        border-radius: 8px;
-    }
-    .library-icon-home {
-        top: 96px;
-        left: 20px;
-    }
-
-    .library-icon-library {
-        top: 170px;
-        left: 20px;
-    }
-
-    .library-icon-explore {
-        top: 244px;
-        left: 20px;
-    }
-
-    .library-icon-profile {
-        top: 318px;
-        left: 20px;
-    }
-    .library-icon-wrapper {
-        position: absolute;
-        width: 64px;
-        height: 72px;
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 3;
-        transition: transform 0.2s ease;
-    }
-
-    .library-icon-wrapper:hover {
-        transform: scale(1.05);
-    }
-
-    .library-icon-wrapper.active {
-        background-color: #EFEAE6;
-        border-radius: 8px;
-    }
-
-    .library-icon-image {
-        width: 36px;
-        height: 36px;
-        z-index: 1;
-    }
-
-    .library-icon-text {
-        font-size: 12px;
-        font-family: Ubuntu, sans-serif;
-        font-weight: 500;
-        margin-top: 4px;
-        z-index: 1;
-        color: #EFEAE6;
-    }
-
-    .library-icon-wrapper.active .library-icon-text {
-        color: #173B61;
-        font-weight: 700;
-    }
-
-    .library-icon-wrapper.active .library-icon-image {
-        filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%) contrast(88%);
-    }
-    .library-cards-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 60px;
-        padding: 20px;
-        position: absolute;
-        top: 64px;
-        left: 155px;
-        overflow: hidden;
-        box-sizing: border-box;
-        height: auto;
-    }
-    .library-card {
-        position: relative;
-        width: 320px;
-        height: 160px;
-        background: #EFEAE6;
-        border-radius: 16px;
-        outline: 2px solid #173B61;
-        cursor: pointer;
-        transition: transform 0.3s ease, background 0.3s ease;
-        box-sizing: border-box;
-    }
-
-    .library-card:hover {
-        background: #D1C6B1;
-        transform: scale(1.05);
-    }
-
-    .library-card:active {
-        transform: scale(0.98);
-    }
-
-    /* Card header */
-    .library-card-header {
-        width: 100%;
-        height: 36px;
-        background: #E2A54D;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-    }
-
-    /* Card text container */
-    .library-card-header-text {
-        position: absolute;
-        top: 44px;
-        left: 16px;
-        font-size: 18px;
-        font-weight: 700;
-        color: #173B61;
-    }
-
-    .library-course-title {
-        color: #173B61;
-        font-size: 32px;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
-
-    .library-course-info {
-        color: #173B61;
-        font-size: 16px;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 300;
-    }
-
-    .library-course-info .library-number {
-        font-weight: 700;
-    }
-
-}
-@media(max-width: 768px) {
-    html, body {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background: linear-gradient(180deg, #173B61 40%, #EFEAE6 100%);
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Logo Quizzy */
-    .library-logo {
-        width: 61px;
-        height: 48px;
-        left: 25px;
-        top: 24px;
-        position: absolute;
-    }
-    .library-logo-fii-library {
-        width: 49px;
-        height: 48px;
-        left: 700px;
-        top: 24px;
-        position: absolute;
-    }
-
-    /* Inner white box */
-    .library-inner-box {
-        width: 590px;
-        height: 900px;
-        position: absolute;
-        top: 16px;
-        left: 100px;
-        background: #EFEAE6;
-        box-shadow: 0px 0px 8px 2px rgba(23, 59, 97, 0.64) inset;
-        border-radius: 8px;
-    }
-    .library-icon-home {
-        top: 96px;
-        left: 20px;
-    }
-
-    .library-icon-library {
-        top: 170px;
-        left: 20px;
-    }
-
-    .library-icon-explore {
-        top: 244px;
-        left: 20px;
-    }
-
-    .library-icon-profile {
-        top: 318px;
-        left: 20px;
-    }
-    .library-icon-wrapper {
-        position: absolute;
-        width: 64px;
-        height: 72px;
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 3;
-        transition: transform 0.2s ease;
-    }
-
-    .library-icon-wrapper:hover {
-        transform: scale(1.05);
-    }
-
-    .library-icon-wrapper.active {
-        background-color: #EFEAE6;
-        border-radius: 8px;
-    }
-
-    .library-icon-image {
-        width: 36px;
-        height: 36px;
-        z-index: 1;
-    }
-
-    .library-icon-text {
-        font-size: 12px;
-        font-family: Ubuntu, sans-serif;
-        font-weight: 500;
-        margin-top: 4px;
-        z-index: 1;
-        color: #EFEAE6;
-    }
-
-    .library-icon-wrapper.active .library-icon-text {
-        color: #173B61;
-        font-weight: 700;
-    }
-
-    .library-icon-wrapper.active .library-icon-image {
-        filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%) contrast(88%);
-    }
-    .library-cards-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 60px;
-        padding: 20px;
-        position: absolute;
-        top: 64px;
-        left: 105px;
-        overflow: hidden;
-        box-sizing: border-box;
-        height: auto;
-    }
-    .library-card {
-        position: relative;
-        width: 240px;
-        height: 160px;
-        background: #EFEAE6;
-        border-radius: 16px;
-        outline: 2px solid #173B61;
-        cursor: pointer;
-        transition: transform 0.3s ease, background 0.3s ease;
-        box-sizing: border-box;
-    }
-
-    .library-card:hover {
-        background: #D1C6B1;
-        transform: scale(1.05);
-    }
-
-    .library-card:active {
-        transform: scale(0.98);
-    }
-
-    /* Card header */
-    .library-card-header {
-        width: 100%;
-        height: 36px;
-        background: #E2A54D;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-    }
-
-    /* Card text container */
-    .library-card-header-text {
-        position: absolute;
-        top: 44px;
-        left: 16px;
-        font-size: 18px;
-        font-weight: 700;
-        color: #173B61;
-    }
-
-    .library-course-title {
-        color: #173B61;
-        font-size: 32px;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
-
-    .library-course-info {
-        color: #173B61;
-        font-size: 16px;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 300;
-    }
-
-    .library-course-info .library-number {
-        font-weight: 700;
-    }
-}
-@media(max-width: 480px) {
-    html, body {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background: linear-gradient(180deg, #173B61 40%, #EFEAE6 100%);
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        overflow-y: auto;
-    }
-
-    /* Logo Quizzy */
-    .library-logo {
-        width: 61px;
-        height: 48px;
-        left: 10px;
-        top: 24px;
-        position: absolute;
-    }
-    .library-logo-fii-library {
-        width: 49px;
-        height: 48px;
-        left: 370px;
-        top: 24px;
-        position: absolute;
-    }
-
-    /* Inner white box */
-    .library-inner-box {
-        width: 280px;
-        height: 900px;
-        position: absolute;
-        top: 16px;
-        left: 80px;
-        background: #EFEAE6;
-        box-shadow: 0px 0px 8px 2px rgba(23, 59, 97, 0.64) inset;
-        border-radius: 8px;
-    }
-    .library-icon-home {
-        top: 96px;
-        left: 10px;
-    }
-
-    .library-icon-library {
-        top: 170px;
-        left: 10px;
-    }
-
-    .library-icon-explore {
-        top: 244px;
-        left: 10px;
-    }
-
-    .library-icon-profile {
-        top: 318px;
-        left: 10px;
-    }
-    .library-icon-wrapper {
-        position: absolute;
-        width: 64px;
-        height: 72px;
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 3;
-        transition: transform 0.2s ease;
-    }
-
-    .library-icon-wrapper:hover {
-        transform: scale(1.05);
-    }
-
-    .library-icon-wrapper.active {
-        background-color: #EFEAE6;
-        border-radius: 8px;
-    }
-
-    .library-icon-image {
-        width: 36px;
-        height: 36px;
-        z-index: 1;
-    }
-
-    .library-icon-text {
-        font-size: 12px;
-        font-family: Ubuntu, sans-serif;
-        font-weight: 500;
-        margin-top: 4px;
-        z-index: 1;
-        color: #EFEAE6;
-    }
-
-    .library-icon-wrapper.active .library-icon-text {
-        color: #173B61;
-        font-weight: 700;
-    }
-
-    .library-icon-wrapper.active .library-icon-image {
-        filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%) contrast(88%);
-    }
-    .library-cards-container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 40px 50px;
-        padding: 20px;
-        position: absolute;
-        top: 24px;
-        left: 80px;
-        overflow: hidden;
-        box-sizing: border-box;
-        height: auto;
-    }
-    .library-card {
-        position: relative;
-        width: 240px;
-        height: 160px;
-        background: #EFEAE6;
-        border-radius: 16px;
-        outline: 2px solid #173B61;
-        cursor: pointer;
-        transition: transform 0.3s ease, background 0.3s ease;
-        box-sizing: border-box;
-    }
-
-    .library-card:hover {
-        background: #D1C6B1;
-        transform: scale(1.05);
-    }
-
-    .library-card:active {
-        transform: scale(0.98);
-    }
-
-    /* Card header */
-    .library-card-header {
-        width: 100%;
-        height: 36px;
-        background: #E2A54D;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-    }
-
-    /* Card text container */
-    .library-card-header-text {
-        position: absolute;
-        top: 44px;
-        left: 16px;
-        font-size: 18px;
-        font-weight: 700;
-        color: #173B61;
-    }
-
-    .library-course-title {
-        color: #173B61;
-        font-size: 32px;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
-
-    .library-course-info {
-        color: #173B61;
-        font-size: 16px;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 300;
-    }
-
-    .library-course-info .library-number {
-        font-weight: 700;
-    }
-
-}
-
-.library-loading,
-.library-error,
-.library-empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 200px;
-    font-size: 1.2rem;
-    color: #666;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-.library-error {
-    color: #dc3545;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-}
-
-.library-empty {
-    color: #6c757d;
-    background-color: #e9ecef;
-    border: 1px solid #dee2e6;
-}
-
-.library-login-button,
-.library-explore-button {
-    display: block;
-    margin: 20px auto 0;
-    padding: 12px 24px;
-    background-color: #173B61;
-    color: #EFEAE6;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: clamp(0.25rem, 0.5vw, 0.5rem);
+    font-size: var(--font-size-base);
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
 }
-
-.library-login-button:hover,
-.library-explore-button:hover {
+.libpg-action-button:hover {
     background-color: #1f4d7a;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+}
+.libpg-action-button:active { transform: translateY(0); }
+
+
+
+@media (max-width: 768px) { 
+  
+  .libpg-logo, 
+  .libpg-icon-wrapper,
+  .libpg-rectangle-active {
+    display: none !important; 
+  }
+
+
+  .libpg-logo-fii {
+      top: var(--spacing-md); 
+      right: var(--spacing-md);
+      width: 50px;  
+      height: 50px; 
+      z-index: 990; 
+  }
+
+  .libpg-inner-box {
+    left: var(--spacing-md); 
+    right: var(--spacing-md);
+    top: calc(var(--spacing-md) + 50px + var(--spacing-md)); 
+    bottom: var(--spacing-md);
+    width: auto; 
+    height: auto; 
+    padding: var(--spacing-sm); 
+    z-index: 1; 
+  }
+  
+
 }
 
-.library-login-button:active,
-.library-explore-button:active {
-    transform: scale(0.98);
+@media (min-width: 480px) and (max-width: 767px) {
+  .libpg-cards-container { justify-items: center; }
+  .libpg-inner-box {
+    left: calc(var(--left-logo-end) + var(--logo-to-box-gap) / 2);
+    right: calc(var(--right-logo-end) + var(--logo-to-box-gap) / 2);
+  }
+}
+@media (max-width: 479px) {
+  .libpg-cards-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .libpg-card { width: 100%; }
+
+  .libpg-inner-box {
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+    top: var(--spacing-sm);
+    bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
+  }
+  .libpg-icon-home, .libpg-icon-library, .libpg-icon-explore, .libpg-icon-profile {
+      left: var(--spacing-sm);
+  }
 }
 
-.library-empty,
-.library-error {
-    text-align: center;
-    padding: 40px 20px;
+@media (max-width: 200px) {
+  :root {
+    --button-height: clamp(2.8rem, 6vh, 3rem);
+    --button-spacing: clamp(0.2rem, 1vh, 0.4rem);
+    --icon-size: clamp(1.2rem, 4vw, 1.5rem);
+    --font-size-xs: clamp(0.55rem, 1.5vw, 0.65rem);
+    --left-logo-position: clamp(0.5rem, 2vw, 1rem);
+    --logo-size: clamp(2.8rem, 6vh, 3rem);
+    --vertical-margin: clamp(0.5rem, 2vh, 1rem);
+    --right-logo-position: clamp(0.5rem, 2vw, 1rem); 
+    --spacing-md: clamp(0.75rem, 2vw, 1rem); 
+  }
+   .libpg-inner-box {
+    top: calc(var(--spacing-sm) + 40px + var(--spacing-sm)); 
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+    bottom: var(--spacing-sm);
+  }
+   .libpg-logo-fii { 
+      height: 40px;
+      width: auto;
+      top: var(--spacing-sm);
+      right: var(--spacing-sm);
+  }
 }
-
-.library-empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
