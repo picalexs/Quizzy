@@ -19,35 +19,76 @@ body {
   background: linear-gradient(180deg, #173b61 40%, #efeae6 100%);
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 40px 20px;
+  padding: 40px 20px 40px 140px; /* Left padding for sidebar */
   box-sizing: border-box;
   position: relative;
 }
 
-/* Quizzy Logo positioned on left side */
-.graph-logo {
-  position: absolute;
-  top: 40px;
-  left: 100px;
-  width: 61px;
-  height: 48px;
-  z-index: 10;
-}
-
 /* FII Logo positioned on right side */
 .graph-logo-fii {
-  position: absolute;
-  top: 40px;
-  right: 40px;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
   width: 49px;
   height: 48px;
   z-index: 10;
 }
 
-/* Navigation Icons positioned on left side below logo */
+.graph-logo-fii img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Quizzy Logo positioned on left side */
+.graph-logo {
+  width: 61px;
+  height: 48px;
+  margin-bottom: 2.5rem; /* Increased space between logo and navigation */
+  flex-shrink: 0;
+  position: relative;
+  z-index: 20;
+}
+
+.graph-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Sidebar Container */
+.graph-sidebar {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 15;
+  padding: 1rem;
+  gap: 1rem; /* Reduced gap for better vertical alignment */
+  background: transparent;
+  box-sizing: border-box;
+  min-width: 80px;
+  isolation: isolate; /* Create a stacking context */
+  width: 80px; /* Fixed width to prevent horizontal spreading */
+}
+
+/* Navigation Container */
+.graph-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  z-index: 15;
+  width: 100%;
+}
+
+/* Navigation Icons */
 .graph-icon-wrapper {
-  position: absolute;
-  left: 90px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,28 +97,13 @@ body {
   height: 72px;
   background: none;
   border: none;
-  padding: 0;
+  padding: 0.5rem;
   margin: 0;
   cursor: pointer;
   transition: transform 0.2s ease;
   border-radius: 8px;
+  box-sizing: border-box;
   z-index: 10;
-}
-
-.graph-icon-wrapper:nth-child(4) { /* Home */
-  top: 100px;
-}
-
-.graph-icon-wrapper:nth-child(5) { /* Library */
-  top: 180px;
-}
-
-.graph-icon-wrapper:nth-child(6) { /* Explore */
-  top: 260px;
-}
-
-.graph-icon-wrapper:nth-child(7) { /* Profile */
-  top: 340px;
 }
 
 /* Centered main content box */
@@ -98,31 +124,90 @@ body {
 }
 
 .graph-icon-active {
-  background-color: #efeae6;
+  background-color: #efeae6 !important;
   border-radius: 8px;
+  position: relative;
+  z-index: 20 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(23, 59, 97, 0.3) !important;
+}
+
+.graph-rectangle-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #173b61 !important;
+  border-radius: 2px 0 0 2px;
+  z-index: 25 !important;
 }
 
 .graph-icon-image {
   width: 36px;
   height: 36px;
+  flex-shrink: 0;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+  object-fit: contain;
 }
 
 .graph-icon-text {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Ubuntu, sans-serif;
   font-weight: 500;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   color: #efeae6;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .graph-icon-active .graph-icon-text {
-  color: #173b61;
+  color: #173b61 !important;
   font-weight: 700;
+  position: relative;
+  z-index: 15 !important;
+  display: block;
+  text-shadow: none !important;
 }
 
 .graph-icon-active .graph-icon-image {
   filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%)
-    contrast(88%);
+    contrast(88%) !important;
+  position: relative;
+  z-index: 15 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+  transform: scale(1.1) !important;
+  background: transparent !important;
+}
+
+/* Additional library icon visibility fixes */
+.graph-icon-active .graph-icon-image[src*="library-logo"] {
+  fill: #173b61 !important;
+  stroke: #173b61 !important;
+  color: #173b61 !important;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%) contrast(88%) !important;
+  z-index: 30 !important;
+  position: relative !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure SVG elements within the library icon are visible */
+.graph-icon-active .graph-icon-image[src*="library-logo"] svg,
+.graph-icon-active .graph-icon-image[src*="library-logo"] svg * {
+  fill: #173b61 !important;
+  stroke: #173b61 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .graph-logo-fii {
@@ -1034,6 +1119,16 @@ body {
   
   .graph-icon-text {
     font-size: 11px;
+  }
+  
+  .graph-logo {
+    width: 55px;
+    height: 43px;
+  }
+  
+  .graph-logo-fii {
+    width: 44px;
+    height: 43px;
   }
 }
 
