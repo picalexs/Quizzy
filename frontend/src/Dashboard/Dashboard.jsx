@@ -2,13 +2,28 @@ import React, { useEffect, useState } from 'react';
 import './Dashboard.css';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../utils/api';
+import BurgerMenu from '../components/BurgerMenu/BurgerMenu';
 
 const Dashboard = () => {
     const navigate = useNavigate();
     const [streak, setStreak] = useState(null);
 
     const username = localStorage.getItem('user') || '';
-    const prenume = username.split('.')[0]?.charAt(0).toUpperCase() + username.split('.')[0]?.slice(1).toLowerCase();
+    // Extract first name from email address or username
+    const extractFirstName = (userStr) => {
+        if (!userStr) return '';
+        
+        // If it's an email, get the part before @
+        const emailPart = userStr.includes('@') ? userStr.split('@')[0] : userStr;
+        
+        // Get the first part before any dot or underscore
+        const firstName = emailPart.split(/[._]/)[0];
+        
+        // Capitalize first letter and make rest lowercase
+        return firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
+    };
+    
+    const prenume = extractFirstName(username);
     const userId = localStorage.getItem('userId');
 
     const currentDate = new Date();
@@ -42,27 +57,31 @@ const Dashboard = () => {
 
     const handleClick = (label) => {
         navigate(`/${label.toLowerCase()}`);
-    };
-
-    return (
+    };    return (
         <div className="dashboard-wrapper">
+            {/* Burger Menu for tablet and mobile */}
+            <BurgerMenu currentPage="dashboard" />
+            
             <header className="dashboard-header">
-                <img src="/quizzy-logo-homepage.svg" alt="Quizzy Logo" className="logo" />
-                <img src="/logo-fac-homepage.svg" alt="FII Logo" className="logo" />
+                {/* Header can be used for other elements if needed */}
             </header>
 
             <main className="dashboard-main">
-                <aside className="dashboard-sidebar">
-                    {['Home', 'Library', 'Explore', 'Profile'].map((item) => (
-                        <button
-                            key={item}
-                            className={`sidebar-button ${item === 'Home' ? 'active' : ''}`}
-                            onClick={() => handleClick(item)}
-                        >
-                            <img src={`/${item.toLowerCase()}-logo.svg`} alt={item} className="icon" />
-                            <span>{item}</span>
-                        </button>
-                    ))}
+                {/* Left sidebar with Quizzy logo and navigation */}
+                <aside className="dashboard-sidebar left">
+                    <img src="/quizzy-logo-homepage.svg" alt="Quizzy Logo" className="sidebar-logo" />
+                    <div className="sidebar-navigation">
+                        {['Home', 'Library', 'Explore', 'Profile'].map((item) => (
+                            <button
+                                key={item}
+                                className={`sidebar-button ${item === 'Home' ? 'active' : ''}`}
+                                onClick={() => handleClick(item)}
+                            >
+                                <img src={`/${item.toLowerCase()}-logo.svg`} alt={item} className="icon" />
+                                <span>{item}</span>
+                            </button>
+                        ))}
+                    </div>
                 </aside>
 
                 <section className="dashboard-content">
@@ -97,10 +116,13 @@ const Dashboard = () => {
                                         <p>{weekDayDate} {weekDayMonth}</p>
                                     </div>
                                 </div>
-                            );
-                        })}
-                    </div>
-                </section>
+                            );                        })}
+                    </div>                </section>
+
+                {/* Right sidebar with FII logo */}
+                <aside className="dashboard-sidebar right">
+                    <img src="/logo-fac-homepage.svg" alt="FII Logo" className="sidebar-fii-logo" />
+                </aside>
             </main>
         </div>
     );
