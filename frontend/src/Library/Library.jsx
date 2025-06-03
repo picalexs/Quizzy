@@ -13,21 +13,44 @@ const Explore = () => {
 
     const currentPath = location.pathname;
 
+    // Get user information from localStorage
+    const userRole = localStorage.getItem('userRole');
+    const userId = localStorage.getItem('userId');
+
     useEffect(() => {
         const fetchCourses = async () => {
             setLoading(true);
             setError(null);
             try {
-                const response = await api.get('/courses');
+                let response;
+                
+                // Check user role and fetch appropriate courses
+                if (userRole === 'student' && userId) {
+                    // For students, fetch only enrolled courses
+                    response = await api.get(`/enrollments/student/${userId}`);
+                } else if (userRole === 'profesor' && userId) {
+                    // For professors, fetch courses they teach
+                    // TODO: This endpoint needs to be implemented in the backend
+                    response = await api.get(`/courses/professor/${userId}`);
+                } else {
+                    // Fallback to all courses if role/userId not available
+                    response = await api.get('/courses');
+                }
+                
                 setCourses(response.data);
             } catch (err) {
-                setError(err.response?.data?.message || err.message);
+                // If student endpoint returns 204 (no content), set empty array
+                if (err.response?.status === 204) {
+                    setCourses([]);
+                } else {
+                    setError(err.response?.data?.message || err.message);
+                }
             } finally {
                 setLoading(false);
             }
         };
         fetchCourses();
-    }, []);
+    }, [userRole, userId]);
 
     const handleClick = (label) => { 
         if (label === "Home") {
@@ -99,16 +122,21 @@ const Explore = () => {
                     {getActiveClass('/profile') && <div className="explore-rectangle-home"></div>}
                     <img src="/profile-logo.svg" alt="Profile" className="explore-icon-image" />
                     <span className="explore-icon-text">Profile</span>
-                </button>
-
-                {/* Cards Section */}
+                </button>                {/* Cards Section */}
                 <div className="library-cards-container"> 
                     {loading ? (
                         <div className="library-loading">Loading courses...</div>
                     ) : error ? (
                         <div className="library-error">Error: {error}</div>
                     ) : courses.length === 0 ? (
-                        <div className="library-empty">No courses available</div>
+                        <div className="library-empty">
+                            {userRole === 'student' 
+                                ? "You are not enrolled in any courses yet" 
+                                : userRole === 'profesor'
+                                ? "You are not teaching any courses yet"
+                                : "No courses available"
+                            }
+                        </div>
                     ) : (
                         courses.map((course, index) => (
                             <div
