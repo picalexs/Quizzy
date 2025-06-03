@@ -4,6 +4,7 @@ import com.backend.dto.MaterialDTO;
 import com.backend.model.Course;
 import com.backend.model.Material;
 import com.backend.repository.MaterialRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,7 +44,7 @@ public class MaterialService {
                 .orElseThrow(() -> new RuntimeException("Course not found with ID: " + materialDTO.getCourseId()));
 
         Material material = new Material();
-        material.setId(null);
+        //material.setId(null);
         material.setName(materialDTO.getName());
         material.setPath(materialDTO.getPath());
         material.setCourse(course);
@@ -63,6 +64,7 @@ public class MaterialService {
                 .orElseThrow(() -> new RuntimeException("Material not found with id: " + id));
     }
 
+    @Transactional
     public void deleteMaterial(Long id) {
         materialRepository.deleteById(id);
     }

@@ -89,6 +89,49 @@ public class FlashcardImport {
         return totalImported;
     }
 
+    @Transactional
+    public int importFlashcardsFromSingleFile(String filePath, String baseDir, Integer userId) throws IOException {
+        Integer actualUserId = (userId != null) ? userId : DEFAULT_USER_ID;
+        User user = userRepository.getReferenceById(actualUserId);
+
+        Path flashcardFilePath = Paths.get(filePath);
+
+        if (!Files.exists(flashcardFilePath)) {
+            throw new IOException("Fișierul specificat nu există: " + filePath);
+        }
+
+        if (!flashcardFilePath.getFileName().toString().endsWith("_flashcards.txt")) {
+            throw new IllegalArgumentException("Fișierul trebuie să aibă extensia '_flashcards.txt'");
+        }
+
+        try {
+            System.out.println("Procesez fișierul: " + flashcardFilePath);
+
+            String fileContent = Files.readString(flashcardFilePath);
+
+            Material material = findMaterialForFlashcardFile(flashcardFilePath, baseDir);
+
+            if (material == null) {
+                throw new RuntimeException("Nu s-a găsit materialul pentru fișierul: " + filePath);
+            }
+
+            FlashCardParser parser = new FlashCardParser(fileContent);
+            List<FlashcardDTO> flashcards = parser.getParsedText();
+
+            int imported = importFlashcardsForMaterial(flashcards, material, user);
+
+            System.out.println("Importate " + imported + " flashcard-uri din " + flashcardFilePath +
+                    " pentru materialul: " + material.getName() + " (ID: " + material.getId() + ")");
+
+            return imported;
+
+        } catch (Exception e) {
+            System.err.println("EROARE la procesarea fișierului " + flashcardFilePath + ": " + e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException("Eroare la procesarea fișierului: " + e.getMessage(), e);
+        }
+    }
+
     private Material findMaterialForFlashcardFile(Path flashcardFilePath, String baseDir) {
         try {
             String fileName = flashcardFilePath.getFileName().toString();

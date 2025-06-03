@@ -2,6 +2,7 @@ package com.backend.service;
 
 import com.backend.model.Flashcard;
 import com.backend.repository.FlashcardRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -85,5 +86,10 @@ public class FlashcardService {
 
     public List<Flashcard> getFlashcardsByCourseId(Long courseId) {
         return flashcardRepository.findAllByCourseId(courseId);
+    }
+
+    @Transactional
+    public void deleteByMaterialId(Long materialId) {
+        flashcardRepository.deleteByMaterialId(materialId);
     }
 }
