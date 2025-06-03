@@ -33,13 +33,16 @@ function CoursePage() {
     const role = localStorage.getItem('userRole')
     setUserRole(role)
   }, [])
-
   useEffect(() => {
     if (notification) {
-      const timer = setTimeout(() => {
-        setNotification(null)
-      }, 3000)
-      return () => clearTimeout(timer)
+      // Use longer timeout for file replacement operations
+      const timeout = notification.includes('Replacing') ? 0 : 5000; // Don't auto-hide "Replacing..." messages
+      if (timeout > 0) {
+        const timer = setTimeout(() => {
+          setNotification(null)
+        }, timeout)
+        return () => clearTimeout(timer)
+      }
     }
   }, [notification])
 
@@ -244,6 +247,94 @@ function CoursePage() {
       }
     });
   };
+  // Add function to handle replacing a file
+  const handleReplaceFile = async (materialId, materialName) => {
+    if (!materialId) {
+      console.error("Material ID is missing");
+      return;
+    }
+    
+    // Create a file input element
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.pdf';
+    fileInput.style.display = 'none';
+    
+    // Handle file selection
+    fileInput.onchange = async (event) => {
+      const file = event.target.files[0];
+      if (!file) {
+        return;
+      }
+      
+      // Validate file type
+      if (!file.name.toLowerCase().endsWith('.pdf')) {
+        setNotification('Please select a PDF file');
+        return;
+      }
+      
+      try {
+        setNotification(`Replacing "${materialName}"...`);
+        
+        // Find the material to get its path
+        const material = materials.find(mat => mat.id === materialId);
+        if (!material) {
+          setNotification('Material not found');
+          return;
+        }
+        
+        // Get the current user ID
+        const userId = localStorage.getItem('userId') || '1';
+        
+        // Create FormData for file upload
+        const formData = new FormData();
+        formData.append('oldCoursePath', material.path);
+        formData.append('newCourseFile', file);
+        formData.append('userId', userId);
+        
+        console.log('Replacing file with data:', {
+          oldCoursePath: material.path,
+          newFileName: file.name,
+          userId: userId
+        });
+        
+        // Call the replace course API
+        const response = await api.postFile('/Material/replace-course', formData);
+        
+        if (response.data.status === 'success') {
+          setNotification(`Successfully replaced "${materialName}" with "${file.name}"`);
+          
+          // Refresh materials to show the updated file
+          try {
+            const materialsResponse = await api.get(`/Material/course/${id}`);
+            setMaterials(materialsResponse.data || []);
+          } catch (refreshErr) {
+            console.error("Error refreshing materials:", refreshErr);
+          }
+          
+          // Show flashcard generation status
+          if (response.data.flashcardStatus === 'success') {
+            setNotification(`File replaced successfully! Generated ${response.data.importedFlashcards} new flashcards.`);
+          } else if (response.data.flashcardStatus === 'failed') {
+            setNotification(`File replaced successfully, but flashcard generation failed: ${response.data.flashcardError}`);
+          }
+          
+        } else {
+          setNotification(`Failed to replace file: ${response.data.message}`);
+        }
+        
+      } catch (error) {
+        console.error('Error replacing file:', error);
+        const errorMessage = error.response?.data?.message || error.message || 'Failed to replace file';
+        setNotification(`Error: ${errorMessage}`);
+      }
+    };
+    
+    // Trigger file picker
+    document.body.appendChild(fileInput);
+    fileInput.click();
+    document.body.removeChild(fileInput);
+  };
 
   // Simple navigation function for desktop buttons
   const handleDesktopNavClick = (label) => {
@@ -280,44 +371,48 @@ function CoursePage() {
   console.log("Materials:", materials)
 
   // Get flashcards from materials
-  const allFlashcards = materials.flatMap((mat) => (mat.flashcards ? mat.flashcards : []))
-  return (
+  const allFlashcards = materials.flatMap((mat) => (mat.flashcards ? mat.flashcards : []))  ;  return (
     <div className="graph-container">
-      {notification && <div className="graph-notification">{notification}</div>}      {/* Burger Menu Component */}
+      {notification && <div className="graph-notification">{notification}</div>}
+      
+      {/* Burger Menu Component */}
       <BurgerMenu currentPage="Library" />
 
-      {/* Desktop logos */}
+      {/* Quizzy Logo */}
       <div className="graph-logo">
         <img src="/quizzy-logo-homepage.svg" alt="Logo" />
       </div>
-
-      <div className="graph-logo-fii">
-        <img src="/logo-fac-homepage.svg" alt="FII Logo" />
-      </div>
-
-      <div className="graph-box" />      {/* Desktop sidebar buttons */}
-      <button className="graph-icon-wrapper graph-icon-home" onClick={() => handleDesktopNavClick("Home")}>
+      
+      {/* Navigation Icons */}
+      <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Home")}>
         <img src="/home-logo.svg" alt="Home" className="graph-icon-image" />
         <span className="graph-icon-text">Home</span>
       </button>
 
-      <button className="graph-icon-wrapper graph-icon-library graph-icon-active">
+      <button className="graph-icon-wrapper graph-icon-active">
         <div className="graph-rectangle-active"></div>
         <img src="/library-logo.svg" alt="Library" className="graph-icon-image" />
         <div className="graph-icon-text">Library</div>
       </button>
 
-      <button className="graph-icon-wrapper graph-icon-explore" onClick={() => handleDesktopNavClick("Explore")}>
+      <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Explore")}>
         <img src="/explore-logo.svg" alt="Explore" className="graph-icon-image" />
         <span className="graph-icon-text">Explore</span>
       </button>
 
-      <button className="graph-icon-wrapper graph-icon-profile" onClick={() => handleDesktopNavClick("Profile")}>
+      <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Profile")}>
         <img src="/profile-logo.svg" alt="Profile" className="graph-icon-image" />
         <span className="graph-icon-text">Profile</span>
       </button>
+      
+      {/* FII Logo positioned on right border */}
+      <div className="graph-logo-fii">
+        <img src="/logo-fac-homepage.svg" alt="FII Logo" />
+      </div>
 
-      <div className="graph-content-box">
+      {/* Main Content Box */}
+      <div className="graph-box">
+        <div className="graph-content-box">
         <div className="graph-header">
           <h1 className="graph-title">{course.title}</h1>
           <div className="graph-buttons-container">
@@ -441,10 +536,8 @@ function CoursePage() {
             <h2 className="graph-section-title">Files</h2>
             <h2 className="graph-file-count">{materials.length}</h2>
           </div>
-          <div className="graph-files-container">
-          {materials.length > 0 ? (
-            materials.map((mat, i) => (
-              <div key={mat.id || i}>
+          <div className="graph-files-container">          {materials.length > 0 ? (
+            materials.map((mat, i) => (              <div key={mat.id || i}>
                 <div className="graph-file-entry clickable" onClick={() => handleMaterialClick(mat.path)}>
                   <FaFilePdf size={40} color="#E74C3C" />
                   <div className="graph-file-text">
@@ -454,19 +547,31 @@ function CoursePage() {
                       {mat.flashcards ? ` ${mat.flashcards.length} flashcards` : " No flashcards"}
                     </p>
                   </div>
+                  {userRole !== 'student' && (
+                    <button 
+                      className="graph-replace-button" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleReplaceFile(mat.id, mat.name);
+                      }}
+                      title="Replace this file"
+                    >
+                      ↻
+                    </button>
+                  )}
                 </div>
                 {i < materials.length - 1 && <div className="graph-divider-small"></div>}
               </div>
             ))
           ) : (
             <div className="graph-file-entry">No files available.</div>
-          )}
-          </div>
+          )}          </div>
         </div>
+      </div>
       </div>
       {error && <div className="library-error">{error}</div>}
     </div>
   )
 }
 
-export default CoursePage
+export default CoursePage;
