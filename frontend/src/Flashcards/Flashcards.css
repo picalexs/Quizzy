@@ -403,6 +403,7 @@
     transition: all 0.2s ease;
     font-family: 'Ubuntu', sans-serif;
     min-width: 80px;
+    flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 .flashcard-app .submit-answer-btn:hover {
@@ -421,7 +422,7 @@
     color: #555;
     margin-bottom: 10px;
     font-style: italic;
-    margin-top: 46px;
+    margin-top: 20px; /* FIXED: Reduced from 46px to 20px */
 }
 
 /* MEDIA QUERIES PENTRU RESPONSIVE DESIGN */
@@ -489,6 +490,10 @@
         font-size: 18px;
     }
 
+    .flashcard-app .material-info {
+        margin-top: 15px; /* FIXED: Better spacing for tablet */
+    }
+
     /* Keyboard adjustments for tablet */
     .flashcard-app .keyboard-icon-container {
         width: 36px;
@@ -503,7 +508,8 @@
 
     .flashcard-app .keyboard-input-container {
         padding: 12px;
-        padding-left: 65px;
+        padding-left: 60px; /* FIXED: Better spacing */
+        padding-right: 12px;
     }
 
     .flashcard-app .keyboard-input {
@@ -535,16 +541,17 @@
     .flashcard-app .flashcard-question {
         font-size: 22px;
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 15px; /* FIXED: Better spacing */
     }
 
     .flashcard-app .flashcard-answer {
         font-size: 16px;
-        margin-top: 10px;
+        margin-top: 15px; /* FIXED: Better spacing */
+        padding: 0 10px; /* FIXED: Better padding for mobile */
     }
 
     .flashcard-app .answer-divider {
-        margin: 10px auto;
+        margin: 15px auto; /* FIXED: Better spacing */
     }
 
     .flashcard-app .instruction-text {
@@ -558,7 +565,7 @@
     }
 
     .flashcard-app .flashcard-options-container {
-        padding-bottom: 90px; /* More space for mobile keyboard input */
+        padding-bottom: 85px; /* FIXED: Better spacing for mobile keyboard input */
     }
 
     .flashcard-app .option-card {
@@ -572,7 +579,7 @@
     }
 
     .flashcard-app .answer-button-container {
-        padding-bottom: 10px;
+        padding-bottom: 15px; /* FIXED: Better spacing */
     }
 
     .flashcard-app .rating-container {
@@ -603,7 +610,13 @@
         padding: 0.4rem;
     }
 
-    /* FIXED: Better mobile keyboard layout */
+    .flashcard-app .material-info {
+        margin-top: 10px; /* FIXED: Much better spacing for mobile */
+        font-size: 0.8em; /* FIXED: Slightly smaller text for mobile */
+        padding: 0 10px; /* FIXED: Better padding */
+    }
+
+    /* FIXED: Much better mobile keyboard layout */
     .flashcard-app .keyboard-icon-container {
         width: 34px;
         height: 34px;
@@ -616,21 +629,26 @@
     }
 
     .flashcard-app .keyboard-input-container {
-        padding: 10px;
-        padding-left: 55px; /* Proper space for mobile keyboard button */
+        padding: 12px; /* FIXED: Better overall padding */
+        padding-left: 50px; /* FIXED: Better space for mobile keyboard button */
+        padding-right: 12px; /* FIXED: Ensure right padding */
+        min-height: 50px; /* FIXED: Ensure minimum height */
+        box-sizing: border-box; /* FIXED: Ensure proper box model */
     }
 
     .flashcard-app .keyboard-input {
-        height: 34px;
+        height: 36px; /* FIXED: Better height */
         font-size: 14px;
         padding: 0 12px;
+        min-width: 0; /* FIXED: Allow input to shrink */
     }
 
     .flashcard-app .submit-answer-btn {
-        margin-left: 8px;
-        padding: 6px 12px;
+        margin-left: 10px; /* FIXED: Better margin */
+        padding: 8px 12px; /* FIXED: Better padding */
         font-size: 12px;
-        min-width: 60px;
+        min-width: 65px; /* FIXED: Better minimum width */
+        height: 36px; /* FIXED: Match input height */
     }
 
     /* FIXED: Better landscape orientation handling */
@@ -664,6 +682,11 @@
             padding-bottom: 70px;
         }
 
+        .flashcard-app .material-info {
+            margin-top: 8px;
+            font-size: 0.75em;
+        }
+
         .flashcard-app .rating-container {
             gap: 0.3rem;
         }
@@ -672,6 +695,21 @@
             width: 35px;
             height: 35px;
             font-size: 16px;
+        }
+
+        .flashcard-app .keyboard-input-container {
+            padding: 8px;
+            padding-left: 45px;
+            min-height: 44px;
+        }
+
+        .flashcard-app .keyboard-input {
+            height: 32px;
+        }
+
+        .flashcard-app .submit-answer-btn {
+            height: 32px;
+            padding: 6px 10px;
         }
     }
 }
@@ -688,6 +726,7 @@
 
     .flashcard-app .flashcard-answer {
         font-size: 14px;
+        padding: 0 8px; /* FIXED: Better padding for very small screens */
     }
 
     .flashcard-app .option-card {
@@ -712,19 +751,30 @@
         font-size: 14px;
     }
 
+    .flashcard-app .material-info {
+        margin-top: 8px;
+        font-size: 0.75em;
+        padding: 0 8px;
+    }
+
     .flashcard-app .keyboard-input-container {
-        padding: 8px;
-        padding-left: 50px;
+        padding: 10px; /* FIXED: Better padding */
+        padding-left: 45px; /* FIXED: Better left padding */
+        padding-right: 10px; /* FIXED: Better right padding */
+        min-height: 48px; /* FIXED: Better minimum height */
     }
 
     .flashcard-app .keyboard-input {
         height: 32px;
         font-size: 13px;
+        padding: 0 10px;
     }
 
     .flashcard-app .submit-answer-btn {
-        padding: 5px 10px;
+        padding: 6px 8px; /* FIXED: Better padding */
         font-size: 11px;
-        min-width: 50px;
+        min-width: 55px; /* FIXED: Better minimum width */
+        height: 32px; /* FIXED: Match input height */
+        margin-left: 8px; /* FIXED: Better margin */
     }
 }

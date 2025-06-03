@@ -7,7 +7,9 @@ const Flashcards = () => {
     const navigate = useNavigate();
     const { materialId } = useParams(); // dacă dorești să preiei flashcards după materialId din URL
     const location = useLocation();
-    const { courseId, courseTitle } = location.state || {};
+    const { courseId, courseTitle, startingFlashcardId } = location.state || {};
+
+
 
     // State pentru flashcards
     const [flashcards, setFlashcards] = useState([]);
@@ -88,6 +90,16 @@ const Flashcards = () => {
 
         fetchFlashcards();
     }, [materialId]);
+
+    // Set starting flashcard index if provided
+    useEffect(() => {
+        if (startingFlashcardId && flashcards.length > 0) {
+            const startingIndex = flashcards.findIndex(card => card.id === startingFlashcardId);
+            if (startingIndex !== -1) {
+                setIndex(startingIndex);
+            }
+        }
+    }, [startingFlashcardId, flashcards]);
 
     // Detectăm dispozitivul mobil (cod existent)
     useEffect(() => {
