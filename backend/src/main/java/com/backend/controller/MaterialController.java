@@ -1,7 +1,9 @@
 package com.backend.controller;
 
 import com.backend.model.Course;
+import com.backend.model.Flashcard;
 import com.backend.repository.FlashcardRepository;
+import com.backend.service.AnswerFCService;
 import com.backend.utils.FlashcardBatchGenerator;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
@@ -33,6 +35,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/Material")
@@ -58,6 +61,9 @@ public class MaterialController {
 
     @Autowired
     private FlashcardRepository flashcardRepository;
+
+    @Autowired
+    private AnswerFCService answerFCService;
 
     @Autowired
     public MaterialController(MaterialService materialService, CourseService courseService, AWSS3Service awsS3Service) {
@@ -198,7 +204,7 @@ public class MaterialController {
         String textOutputPath = null;
 
         try {
-            // Step 1: Validate input parameters
+            // Validate input parameters
             if (oldCoursePath == null || oldCoursePath.trim().isEmpty()) {
                 response.put("status", "error");
                 response.put("message", "Old course path cannot be null or empty");
@@ -217,24 +223,24 @@ public class MaterialController {
                 return ResponseEntity.badRequest().body(response);
             }
 
-            // Step 1.1: Generate new course path
+            // Generate new course path
             String newFileName = newCourseFile.getOriginalFilename();
             String directoryPath = oldCoursePath.substring(0, oldCoursePath.lastIndexOf('/') + 1);
             String newCoursePath = directoryPath + newFileName;
 
-            System.out.println("Step 1: Starting course replacement process");
+            System.out.println("Starting course replacement process");
             System.out.println("Old course path: " + oldCoursePath);
             System.out.println("New course path: " + newCoursePath);
             System.out.println("New file name: " + newFileName);
 
-            // Step 1.5: Find and store old material info before operations
-            System.out.println("🔍 DEBUG: Searching for material with exact path: '" + oldCoursePath + "'");
+            // Find and store old material info before operations
+            System.out.println("Searching for material with exact path: '" + oldCoursePath + "'");
 
             Material oldMaterial = findMaterialByPathFlexible(oldCoursePath);
             if (oldMaterial == null) {
-                System.out.println("⚠️  DEBUG: Exact path not found, trying partial match");
+                System.out.println("Exact path not found, trying partial match");
                 List<Material> oldMaterials = materialService.findByPathContaining(oldCoursePath);
-                System.out.println("🔍 DEBUG: Found " + oldMaterials.size() + " materials with partial path match");
+                System.out.println("Found " + oldMaterials.size() + " materials with partial path match");
 
                 for (int i = 0; i < oldMaterials.size(); i++) {
                     Material mat = oldMaterials.get(i);
@@ -244,10 +250,10 @@ public class MaterialController {
 
                 if (!oldMaterials.isEmpty()) {
                     oldMaterial = oldMaterials.get(0);
-                    System.out.println("✅ DEBUG: Using first matched material: " + oldMaterial.getPath());
+                    System.out.println("Using first matched material: " + oldMaterial.getPath());
                 }
             } else {
-                System.out.println("✅ DEBUG: Found exact material match: " + oldMaterial.getPath());
+                System.out.println("Found exact material match: " + oldMaterial.getPath());
             }
 
             Long courseId = null;
@@ -255,13 +261,13 @@ public class MaterialController {
             if (oldMaterial != null) {
                 courseId = oldMaterial.getCourse().getId();
                 oldMaterialName = oldMaterial.getName();
-                System.out.println("Step 1.5: Found old material - ID: " + oldMaterial.getId() +
+                System.out.println("Found old material - ID: " + oldMaterial.getId() +
                         ", Course ID: " + courseId + ", Name: " + oldMaterialName);
             } else {
-                System.out.println("Step 1.5: WARNING - Old material not found in database for path: " + oldCoursePath);
+                System.out.println("WARNING - Old material not found in database for path: " + oldCoursePath);
             }
 
-            // Step 2: Check if old course exists and delete it from S3
+            // Check if old course exists and delete it from S3
             if (!awsS3Service.doesObjectExist(bucketName, oldCoursePath)) {
                 response.put("status", "error");
                 response.put("message", "Old course not found in S3 at path: " + oldCoursePath);
@@ -269,28 +275,29 @@ public class MaterialController {
             }
 
             awsS3Service.deletePdfFromS3(bucketName, oldCoursePath);
-            System.out.println("Step 2: Successfully deleted old course from S3");
+            System.out.println("Successfully deleted old course from S3");
 
-            // Step 3: Save new PDF to temporary location
-            tempPdfPath = "/tmp/new_course_" + System.currentTimeMillis() + ".pdf";
+            // Save new PDF to temporary location
+            String tempDir = System.getProperty("java.io.tmpdir");
+            tempPdfPath = Paths.get(tempDir, "new_course_" + System.currentTimeMillis() + ".pdf").toString();
             Path tempPdfFile = Paths.get(tempPdfPath);
 
             try {
                 Files.copy(newCourseFile.getInputStream(), tempPdfFile, StandardCopyOption.REPLACE_EXISTING);
-                System.out.println("Step 3: New PDF saved to temporary file: " + tempPdfPath);
+                System.out.println("New PDF saved to temporary file: " + tempPdfPath);
             } catch (IOException e) {
-                System.err.println("Step 3 FAILED: Could not save PDF to temp file - " + e.getMessage());
+                System.err.println("Could not save PDF to temp file - " + e.getMessage());
                 throw e;
             }
 
-            // Step 4: Upload new PDF to S3 with the new path
+            // Upload new PDF to S3 with the new path
             Resource pdfResource = new FileSystemResource(tempPdfFile.toFile());
             awsS3Service.uploadPdfToS3(bucketName, newCoursePath, pdfResource);
-            System.out.println("Step 4: Successfully uploaded new course to S3");
+            System.out.println("Successfully uploaded new course to S3");
 
-            // **FIXED STEP 4.5: Update database IMMEDIATELY after S3 upload with separate transaction**
+            // Update database immediately after S3 upload
             Material newMaterial = updateMaterialInDatabase(oldMaterial, newCoursePath, newFileName, courseId);
-            System.out.println("Step 4.5: Database updated successfully - Material ID: " +
+            System.out.println("Database updated successfully - Material ID: " +
                     (newMaterial != null ? newMaterial.getId() : "null"));
 
             // Initialize variables for flashcard generation results
@@ -300,10 +307,16 @@ public class MaterialController {
             String flashcardError = null;
 
             try {
-                // Step 5: Convert PDF to text
+                // Convert PDF to text
                 String projectDir = System.getProperty("user.dir");
+
+                // Extract course name (directory) and file name separately
                 String courseName = extractCourseNameFromPath(newCoursePath);
-                textOutputPath = "courses/" + courseName + "/" + courseName + ".txt";
+                String fileName = extractFileNameFromPath(newCoursePath);
+                String textFileName = fileName.substring(0, fileName.lastIndexOf('.'));
+
+                // Create text file path: courses/Algoritmica_Grafurilor/agr1.txt
+                textOutputPath = "courses/" + courseName + "/" + textFileName + ".txt";
                 String fullTextPath = Paths.get(projectDir, textOutputPath).toString();
 
                 // Create output directory if it doesn't exist
@@ -311,7 +324,7 @@ public class MaterialController {
                 Path parentDir = outputPath.getParent();
                 if (parentDir != null) {
                     Files.createDirectories(parentDir);
-                    System.out.println("Step 5a: Created directories: " + parentDir.toString());
+                    System.out.println("Created directories: " + parentDir.toString());
                 }
 
                 // Call PDF to text conversion
@@ -320,44 +333,47 @@ public class MaterialController {
                 if (conversionResult.getStatusCode() != HttpStatus.OK) {
                     throw new RuntimeException("PDF to text conversion failed: " + conversionResult.getBody());
                 }
-                System.out.println("Step 5: PDF successfully converted to text at: " + fullTextPath);
+                System.out.println("PDF successfully converted to text at: " + fullTextPath);
 
-                // Step 6: Generate flashcards from the text file with retry logic
-                String relativeTextPath = courseName + "/" + courseName + ".txt";
+                // Generate flashcards from the text file with retry logic
+                String relativeTextPath = courseName + "/" + textFileName + ".txt";
                 flashcardFilePath = fullTextPath.replace(".txt", "_flashcards.txt");
 
                 // Retry configuration
-                int maxRetries = 3;
+                int maxRetries = 10;
                 int retryDelay = 2000; // 2 seconds between retries
                 boolean flashcardSuccess = false;
+                boolean oldFlashcardsDeleted = false;
 
                 for (int attempt = 1; attempt <= maxRetries && !flashcardSuccess; attempt++) {
-                    System.out.println("Step 6 - Attempt " + attempt + "/" + maxRetries + ": Starting flashcard generation process");
+                    System.out.println("Attempt " + attempt + "/" + maxRetries + ": Starting flashcard generation process");
 
                     try {
-                        // Step 6a: Generate the flashcards using FlashcardBatchGenerator
-                        System.out.println("Step 6a (Attempt " + attempt + "): Generating flashcards using FlashcardBatchGenerator");
-                        System.out.println("🔍 Sending path to FlashcardBatchGenerator: " + relativeTextPath);
+                        // Generate the flashcards using FlashcardBatchGenerator
+                        System.out.println("Generating flashcards using FlashcardBatchGenerator");
+                        System.out.println("Sending path to FlashcardBatchGenerator: " + relativeTextPath);
 
                         flashcardBatchGenerator.processTextFile(relativeTextPath);
-                        System.out.println("✅ Step 6a (Attempt " + attempt + "): Successfully generated flashcards file");
+                        System.out.println("Successfully generated flashcards file");
 
-                        // Step 6b: Delete old flashcards before importing new ones
-                        if (newMaterial != null && newMaterial.getId() != null) {
-                            System.out.println("Step 6b (Attempt " + attempt + "): Deleting old flashcards for material ID: " + newMaterial.getId());
+                        // Delete old flashcards before first import attempt (only once)
+                        if (!oldFlashcardsDeleted && newMaterial != null && newMaterial.getId() != null) {
+                            System.out.println("Deleting old flashcards for material ID: " + newMaterial.getId());
                             try {
                                 deleteOldFlashcards(newMaterial.getId());
-                                System.out.println("✅ Successfully deleted old flashcards for material ID: " + newMaterial.getId());
+                                oldFlashcardsDeleted = true;
+                                System.out.println("Successfully deleted old flashcards for material ID: " + newMaterial.getId());
                             } catch (Exception e) {
-                                System.err.println("⚠️ Warning: Failed to delete old flashcards: " + e.getMessage());
-                                // Continue with import even if deletion fails
+                                System.err.println("Warning: Failed to delete old flashcards: " + e.getMessage());
+                                oldFlashcardsDeleted = true;
                             }
-                        } else {
-                            System.out.println("⚠️ Warning: No material ID available for flashcard deletion");
+                        } else if (!oldFlashcardsDeleted) {
+                            System.out.println("Warning: No material ID available for flashcard deletion");
+                            oldFlashcardsDeleted = true;
                         }
 
-                        // Step 6c: Import the generated flashcards
-                        System.out.println("Step 6c (Attempt " + attempt + "): Importing new flashcards from generated file");
+                        // Import the generated flashcards
+                        System.out.println("Importing new flashcards from generated file");
                         ResponseEntity<Map<String, Object>> flashcardResult = flashcardController.generateFlashcardsFromFile(
                                 flashcardFilePath, userId);
 
@@ -372,8 +388,8 @@ public class MaterialController {
                                 importedFlashcards = (Integer) flashcardResponse.get("importedCount");
                                 flashcardStatus = "success";
                                 flashcardSuccess = true;
-                                System.out.println("✅ Step 6 (Attempt " + attempt + "): Successfully generated and imported " +
-                                        importedFlashcards + " new flashcards");
+                                System.out.println("Successfully imported " + importedFlashcards + " new flashcards");
+
                             } else {
                                 throw new RuntimeException("Import returned OK but with invalid or empty data: " + flashcardResponse);
                             }
@@ -386,16 +402,14 @@ public class MaterialController {
                         }
 
                     } catch (Exception e) {
-                        System.err.println("❌ Step 6 (Attempt " + attempt + "/" + maxRetries + "): Flashcard generation failed: " + e.getMessage());
+                        System.err.println("Flashcard generation failed: " + e.getMessage());
 
                         if (attempt == maxRetries) {
-                            // Last attempt failed
                             flashcardError = "All " + maxRetries + " attempts failed. Last error: " + e.getMessage();
                             flashcardStatus = "failed";
-                            System.err.println("💥 Step 6: All flashcard generation attempts exhausted. Final error: " + flashcardError);
+                            System.err.println("All flashcard generation attempts exhausted. Final error: " + flashcardError);
                         } else {
-                            // Wait before next attempt
-                            System.out.println("⏳ Waiting " + (retryDelay/1000) + " seconds before retry...");
+                            System.out.println("Waiting " + (retryDelay/1000) + " seconds before retry...");
                             try {
                                 Thread.sleep(retryDelay);
                             } catch (InterruptedException ie) {
@@ -407,19 +421,17 @@ public class MaterialController {
                 }
 
                 if (flashcardSuccess) {
-                    System.out.println("🎉 Flashcard generation completed successfully after " +
-                            (flashcardSuccess ? "attempt" : "attempts"));
+                    System.out.println("Flashcard generation completed successfully!");
                 }
 
             } catch (Exception e) {
                 flashcardError = e.getMessage();
                 flashcardStatus = "failed";
-                System.err.println("Step 5-6: Flashcard generation process failed: " + e.getMessage());
+                System.err.println("Flashcard generation process failed: " + e.getMessage());
                 e.printStackTrace();
-                // Continue without throwing - database is already updated
             }
 
-            // Step 7: Prepare response (always success since DB and S3 operations completed)
+            // Prepare response (always success since DB and S3 operations completed)
             response.put("status", "success");
             response.put("message", "Course replaced successfully in S3 and database");
             response.put("oldCoursePath", oldCoursePath);
@@ -469,25 +481,19 @@ public class MaterialController {
         }
     }
 
-    /**
-     * Updates the material in database immediately after S3 operations
-     * Uses separate transaction to ensure immediate commit
-     */
     @Transactional
     protected Material updateMaterialInDatabase(Material oldMaterial, String newCoursePath,
                                                 String newFileName, Long courseId) {
         try {
             if (oldMaterial != null) {
-                // Update the existing material with new path and name
                 oldMaterial.setPath(newCoursePath);
                 oldMaterial.setName(newFileName);
 
                 Material updatedMaterial = materialService.updateMaterial(oldMaterial.getId(), oldMaterial);
-                System.out.println("✅ Successfully updated existing material - ID: " + updatedMaterial.getId());
+                System.out.println("Successfully updated existing material - ID: " + updatedMaterial.getId());
                 return updatedMaterial;
 
             } else if (courseId != null) {
-                // Create new material if old one wasn't found
                 Optional<Course> courseOpt = courseService.getCourseById(courseId);
                 if (courseOpt.isPresent()) {
                     MaterialDTO newMaterialDTO = new MaterialDTO();
@@ -496,82 +502,114 @@ public class MaterialController {
                     newMaterialDTO.setCourseId(courseId);
 
                     Material newMaterial = materialService.createMaterial(newMaterialDTO);
-                    System.out.println("✅ Successfully created new material - ID: " + newMaterial.getId());
+                    System.out.println("Successfully created new material - ID: " + newMaterial.getId());
                     return newMaterial;
                 } else {
-                    System.err.println("❌ Course not found with ID: " + courseId);
+                    System.err.println("Course not found with ID: " + courseId);
                 }
             }
         } catch (Exception e) {
-            System.err.println("❌ Error updating material in database: " + e.getMessage());
+            System.err.println("Error updating material in database: " + e.getMessage());
             e.printStackTrace();
-            throw e; // Re-throw to trigger rollback of this specific transaction
+            throw e;
         }
 
         return null;
     }
 
-    /**
-     * Deletes old flashcards for a specific material before importing new ones
-     */
     @Transactional
     protected void deleteOldFlashcards(Long materialId) {
         try {
-            // Assuming you have FlashcardRepository injected
-            // You'll need to add this field at the top of your class:
-            // @Autowired
-            // private FlashcardRepository flashcardRepository;
+            // Obține toate flashcard-urile pentru materialul specificat
+            List<Flashcard> flashcards = flashcardRepository.findByMaterialId(materialId);
 
-            flashcardRepository.deleteByMaterialId(materialId);
-            System.out.println("✅ Deleted old flashcards for material ID: " + materialId);
+            if (!flashcards.isEmpty()) {
+                // Extrage ID-urile flashcard-urilor
+                List<Long> flashcardIds = flashcards.stream()
+                        .map(Flashcard::getId)
+                        .collect(Collectors.toList());
+
+                System.out.println("Found " + flashcardIds.size() + " flashcards to delete for material ID: " + materialId);
+
+                // Șterge toate răspunsurile (AnswerFC) pentru aceste flashcard-uri
+                answerFCService.deleteAnswersByFlashcardIds(flashcardIds);
+                System.out.println("Deleted all answers for flashcards: " + flashcardIds);
+
+                // Apoi șterge flashcard-urile
+                flashcardRepository.deleteByMaterialId(materialId);
+                System.out.println("Deleted all flashcards for material ID: " + materialId);
+            } else {
+                System.out.println("No flashcards found for material ID: " + materialId);
+            }
+
         } catch (Exception e) {
-            System.err.println("❌ Error deleting old flashcards for material ID " + materialId + ": " + e.getMessage());
+            System.err.println("Error deleting old flashcards and answers for material ID " + materialId + ": " + e.getMessage());
             throw e;
         }
     }
 
     private Material findMaterialByPathFlexible(String targetPath) {
-        System.out.println("🔍 Flexible search for path: '" + targetPath + "'");
+        System.out.println("Flexible search for path: '" + targetPath + "'");
 
-        // 1. Exact match
+        // Exact match
         Material exact = materialService.findByPath(targetPath);
         if (exact != null) {
-            System.out.println("✅ Found exact match: " + exact.getPath());
+            System.out.println("Found exact match: " + exact.getPath());
             return exact;
         }
 
-        // 2. Partial match
+        // Partial match
         List<Material> partialMatches = materialService.findByPathContaining(targetPath);
         if (!partialMatches.isEmpty()) {
-            System.out.println("✅ Found " + partialMatches.size() + " partial matches");
+            System.out.println("Found " + partialMatches.size() + " partial matches");
             return partialMatches.get(0);
         }
 
-        // 3. Try without "cursuri/" prefix if it exists
+        // Try without "cursuri/" prefix if it exists
         if (targetPath.startsWith("cursuri/")) {
-            String withoutPrefix = targetPath.substring(8); // Remove "cursuri/"
+            String withoutPrefix = targetPath.substring(8);
             List<Material> noPrefixMatches = materialService.findByPathContaining(withoutPrefix);
             if (!noPrefixMatches.isEmpty()) {
-                System.out.println("✅ Found match without 'cursuri/' prefix: " + noPrefixMatches.get(0).getPath());
+                System.out.println("Found match without 'cursuri/' prefix: " + noPrefixMatches.get(0).getPath());
                 return noPrefixMatches.get(0);
             }
         }
 
-        // 4. Try similarity search (extract filename and search by it)
+        // Try similarity search (extract filename and search by it)
         String filename = targetPath.substring(targetPath.lastIndexOf('/') + 1);
         List<Material> filenameMatches = materialService.findByNameContaining(filename);
         if (!filenameMatches.isEmpty()) {
-            System.out.println("✅ Found match by filename '" + filename + "': " + filenameMatches.get(0).getPath());
+            System.out.println("Found match by filename '" + filename + "': " + filenameMatches.get(0).getPath());
             return filenameMatches.get(0);
         }
 
-        System.out.println("❌ No material found for path: " + targetPath);
+        System.out.println("No material found for path: " + targetPath);
         return null;
+    }
+
+
+    // Helper method to extract file name from S3 path
+    private String extractFileNameFromPath(String s3Path) {
+        return s3Path.substring(s3Path.lastIndexOf('/') + 1);
     }
 
     // Helper method to extract course name from S3 path
     private String extractCourseNameFromPath(String s3Path) {
-        String fileName = s3Path.substring(s3Path.lastIndexOf('/') + 1);
+        String normalizedPath = s3Path.startsWith("/") ? s3Path.substring(1) : s3Path;
+        String[] pathParts = normalizedPath.split("/");
+
+        // Expected format: cursuri/CourseName/filename.pdf
+        if (pathParts.length >= 2 && "cursuri".equals(pathParts[0])) {
+            return pathParts[1];
+        }
+
+        // Fallback: return the directory before the filename
+        if (pathParts.length >= 2) {
+            return pathParts[pathParts.length - 2];
+        }
+
+        // Last resort: return filename without extension
+        String fileName = pathParts[pathParts.length - 1];
         if (fileName.toLowerCase().endsWith(".pdf")) {
             return fileName.substring(0, fileName.length() - 4);
         }
