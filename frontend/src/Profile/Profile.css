@@ -26,7 +26,7 @@ html, body {
     width: 61px;
     height: 48px;
     position: fixed;
-    left: max(20px, calc(50% - 632px)); /* Align with navigation icons */
+    left: max(15px, calc((100vw - min(calc(100vw - 160px), 1800px))/2 - min(calc(100vw - 160px), 1800px)/2 - 30px)); /* Centered in left margin */
     top: 24px; /* Same horizontal line as FII logo */
     z-index: 10;
 }
@@ -36,7 +36,7 @@ html, body {
     width: 49px;
     height: 48px;
     position: fixed;
-    left: min(calc(100vw - 80px), calc(50% + 576px)); /* Prevent going off-screen on smaller laptops */
+    right: max(15px, calc((100vw - min(calc(100vw - 160px), 1800px))/2 - min(calc(100vw - 160px), 1800px)/2 - 24px)); /* Centered in right margin */
     top: 24px; /* Same top position as Quizzy logo, higher to avoid burger menu */
     z-index: 10;
 }
@@ -44,8 +44,8 @@ html, body {
 /* White box */
 .profile-white-box {
     position: relative;
-    width: min(1088px, 80vw);
-    min-height: 800px;
+    width: min(calc(100vw - 160px), 1800px); /* Ensure minimum 160px total margin for navigation elements */
+    min-height: calc(100vh - 60px);
     margin: 0 auto;
     background: #EFEAE6;
     border-radius: 8px;
@@ -224,22 +224,22 @@ html, body {
 /* Positioning buttons via CSS - Responsive positioning relative to white container */
 .profile-icon-home {
     top: 96px;
-    left: max(20px, calc(50% - 632px)); /* 50% - (1088px/2 + 88px gap) */
+    left: max(15px, calc((100vw - min(calc(100vw - 160px), 1800px))/2 - min(calc(100vw - 160px), 1800px)/2 - 32px)); /* Centered in left margin */
 }
 
 .profile-icon-library {
     top: 170px;
-    left: max(20px, calc(50% - 632px)); /* 50% - (1088px/2 + 88px gap) */
+    left: max(15px, calc((100vw - min(calc(100vw - 160px), 1800px))/2 - min(calc(100vw - 160px), 1800px)/2 - 32px)); /* Centered in left margin */
 }
 
 .profile-icon-explore {
     top: 244px;
-    left: max(20px, calc(50% - 632px)); /* 50% - (1088px/2 + 88px gap) */
+    left: max(15px, calc((100vw - min(calc(100vw - 160px), 1800px))/2 - min(calc(100vw - 160px), 1800px)/2 - 32px)); /* Centered in left margin */
 }
 
 .profile-icon-profile {
     top: 318px;
-    left: max(20px, calc(50% - 632px)); /* 50% - (1088px/2 + 88px gap) */
+    left: max(15px, calc((100vw - min(calc(100vw - 160px), 1800px))/2 - min(calc(100vw - 160px), 1800px)/2 - 32px)); /* Centered in left margin */
 }
 
 .profile-icon-image {
@@ -399,32 +399,99 @@ html, body {
     gap: 10px;
 }
 
+/* Large screens - utilize more space */
+@media(min-width: 1400px) {
+    .profile-white-box {
+        width: min(calc(100vw - 200px), 2000px); /* Ensure minimum 200px total margin for larger navigation elements */
+        padding: 50px;
+    }
+    
+    /* Update logo positions for larger screens */
+    .profile-logo {
+        left: max(15px, calc((100vw - min(calc(100vw - 200px), 2000px))/2 - min(calc(100vw - 200px), 2000px)/2 - 30px));
+    }
+    
+    .profile-logo-fii {
+        right: max(15px, calc((100vw - min(calc(100vw - 200px), 2000px))/2 - min(calc(100vw - 200px), 2000px)/2 - 24px));
+    }
+    
+    /* Update navigation icon positions */
+    .profile-icon-home,
+    .profile-icon-library,
+    .profile-icon-explore,
+    .profile-icon-profile {
+        left: max(15px, calc((100vw - min(calc(100vw - 200px), 2000px))/2 - min(calc(100vw - 200px), 2000px)/2 - 32px));
+    }
+}
+
+/* Extra large screens */
+@media(min-width: 1800px) {
+    .profile-white-box {
+        width: min(calc(100vw - 300px), 2400px); /* Ensure minimum 300px total margin for ultra-wide screens */
+        padding: 60px;
+    }
+    
+    /* Update logo positions for extra large screens */
+    .profile-logo {
+        left: max(20px, calc((100vw - min(calc(100vw - 300px), 2400px))/2 - min(calc(100vw - 300px), 2400px)/2 - 30px));
+    }
+    
+    .profile-logo-fii {
+        right: max(20px, calc((100vw - min(calc(100vw - 300px), 2400px))/2 - min(calc(100vw - 300px), 2400px)/2 - 24px));
+    }
+    
+    /* Update navigation icon positions */
+    .profile-icon-home,
+    .profile-icon-library,
+    .profile-icon-explore,
+    .profile-icon-profile {
+        left: max(20px, calc((100vw - min(calc(100vw - 300px), 2400px))/2 - min(calc(100vw - 300px), 2400px)/2 - 32px));
+    }
+}
+
 @media(max-width: 1200px) {
     .profile-white-box {
-        width: min(900px, 85vw);
+        width: min(calc(100vw - 180px), 1000px); /* Ensure minimum 180px total margin */
+    }
+    
+    /* Update logo positions for medium screens */
+    .profile-logo {
+        left: max(10px, calc((100vw - min(calc(100vw - 180px), 1000px))/2 - min(calc(100vw - 180px), 1000px)/2 - 30px));
+    }
+    
+    .profile-logo-fii {
+        right: max(10px, calc((100vw - min(calc(100vw - 180px), 1000px))/2 - min(calc(100vw - 180px), 1000px)/2 - 24px));
+    }
+    
+    /* Update navigation icon positions */
+    .profile-icon-home,
+    .profile-icon-library,
+    .profile-icon-explore,
+    .profile-icon-profile {
+        left: max(10px, calc((100vw - min(calc(100vw - 180px), 1000px))/2 - min(calc(100vw - 180px), 1000px)/2 - 32px));
     }
 }
 
 @media(max-width: 1024px) {
     .profile-white-box {
-        width: min(750px, 90vw);
+        width: min(calc(100vw - 160px), 850px); /* Ensure minimum 160px total margin */
     }
     
-    /* Adjust logo positions for medium screens */
+    /* Update logo positions for smaller screens */
     .profile-logo {
-        left: 20px;
+        left: max(8px, calc((100vw - min(calc(100vw - 160px), 850px))/2 - min(calc(100vw - 160px), 850px)/2 - 30px));
     }
     
     .profile-logo-fii {
-        left: calc(100vw - 80px);
+        right: max(8px, calc((100vw - min(calc(100vw - 160px), 850px))/2 - min(calc(100vw - 160px), 850px)/2 - 24px));
     }
     
-    /* Move navigation icons to scale with container - responsive positioning */
+    /* Update navigation icon positions */
     .profile-icon-home,
     .profile-icon-library,
     .profile-icon-explore,
     .profile-icon-profile {
-        left: max(10px, calc(50% - 463px)); /* 50% - (750px/2 + 88px gap) */
+        left: max(8px, calc((100vw - min(calc(100vw - 160px), 850px))/2 - min(calc(100vw - 160px), 850px)/2 - 32px));
     }
 }
 
