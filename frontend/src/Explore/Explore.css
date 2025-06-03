@@ -98,16 +98,20 @@ body {
 .explore-inner-box,
 .explore-white-box {
   position: absolute;
-  top: var(--vertical-margin);
-  bottom: var(--vertical-margin);
-  height: auto;
-  left: calc(var(--left-logo-end) + var(--logo-to-box-gap));
-  right: calc(var(--right-logo-end) + var(--logo-to-box-gap));
-  width: auto;
+
+  /* Mai mult spațiu sus și jos pentru centrare verticală vizuală */
+  top: calc(var(--vertical-margin));
+  bottom: calc(var(--vertical-margin));
+
+  /* Mai mult spațiu față de iconițele laterale pentru centrare orizontală */
+  left: calc(var(--left-logo-end) + 1vw);
+  right: calc(var(--right-logo-end) + 3.7vw);
+
   background: var(--primary-beige);
   border-radius: clamp(0.5rem, 1vw, 0.5rem);
   box-shadow: 0 0 clamp(0.25rem, 1vw, 0.5rem) clamp(0.125rem, 0.5vw, 0.125rem) var(--shadow-color) inset;
 }
+
 
 .explore-icon-wrapper {
   position: absolute;
