@@ -25,7 +25,7 @@ html, body {
 .profile-logo {
     width: 61px;
     height: 48px;
-    position: fixed;
+    position: absolute;
     left: max(15px, calc((100vw - min(calc(100vw - 160px), 1800px))/2 - min(calc(100vw - 160px), 1800px)/2 - 30px)); /* Centered in left margin */
     top: 24px; /* Same horizontal line as FII logo */
     z-index: 10;
@@ -35,7 +35,7 @@ html, body {
 .profile-logo-fii {
     width: 49px;
     height: 48px;
-    position: fixed;
+    position: absolute;
     right: max(15px, calc((100vw - min(calc(100vw - 160px), 1800px))/2 - min(calc(100vw - 160px), 1800px)/2 - 24px)); /* Centered in right margin */
     top: 24px; /* Same top position as Quizzy logo, higher to avoid burger menu */
     z-index: 10;
