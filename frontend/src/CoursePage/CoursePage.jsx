@@ -143,6 +143,17 @@ function CoursePage() {
     })
   }
 
+  const handleFlashcardClick = (flashcard, materialId) => {
+    // Navigate to the flashcards page with the specific material
+    navigate(`/flashcards/${materialId}`, {
+      state: {
+        courseId: id,
+        courseTitle: course?.title || 'Course',
+        startingFlashcardId: flashcard.id // Optional: if you want to start at a specific flashcard
+      }
+    });
+  };
+
   const handleNavClick = (label) => {
     if (label === "Home") navigate("/dashboard")
     else if (label === "Library") navigate("/library")
@@ -294,26 +305,41 @@ function CoursePage() {
             </div>
           </div>
           {allFlashcards.length > 0 ? (
-            <div className="flashcard-section">
-              <Slider ref={sliderRef} {...sliderSettings}>
-                {allFlashcards.map((fc, idx) => (
-                  <div className="graph-flashcard" key={fc.id || idx}>
-                    <h3>{fc.question || "No question available"}</h3>
-                    {fc.answer && <p>{fc.answer}</p>}
-                  </div>
-                ))}
-              </Slider>
-              <div className="dots-only-container">
-                {allFlashcards.map((_, index) => (
-                  <div key={index} className={`custom-dot ${index === 0 ? "active" : ""}`} />
-                ))}
+              <div className="flashcard-section">
+                <Slider ref={sliderRef} {...sliderSettings}>
+                  {materials.map((material) =>
+                      material.flashcards?.map((fc, idx) => (
+                          <div
+                              className="graph-flashcard clickable-flashcard"
+                              key={fc.id || `${material.id}-${idx}`}
+                              onClick={() => handleFlashcardClick(fc, material.id)}
+                              style={{ cursor: 'pointer' }}
+                          >
+                            <h3>{fc.question || "No question available"}</h3>
+                            {fc.questionType === 'Multiple' || fc.questionType === 'Teorie' ? (
+                                <p className="flashcard-preview-type">Multiple Choice Question</p>
+                            ) : (
+                                fc.answer && <p className="flashcard-preview-answer">{fc.answer.substring(0, 100)}...</p>
+                            )}
+                            <div className="flashcard-preview-footer">
+                              <span className="material-name">{material.name}</span>
+                              <span className="click-hint">Click to study →</span>
+                            </div>
+                          </div>
+                      ))
+                  ).flat()}
+                </Slider>
+                <div className="dots-only-container">
+                  {allFlashcards.map((_, index) => (
+                      <div key={index} className={`custom-dot ${index === 0 ? "active" : ""}`} />
+                  ))}
+                </div>
               </div>
-            </div>
           ) : (
-            <div className="graph-no-flashcards">
-              <p>No flashcards available for this course yet.</p>
-              <p className="graph-no-flashcards-sub">Check back later for study materials!</p>
-            </div>
+              <div className="graph-no-flashcards">
+                <p>No flashcards available for this course yet.</p>
+                <p className="graph-no-flashcards-sub">Check back later for study materials!</p>
+              </div>
           )}
         </div>
 

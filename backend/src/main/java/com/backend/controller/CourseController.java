@@ -37,12 +37,12 @@ public class CourseController {
     @GetMapping(value = {"", "/"})
     public ResponseEntity<List<Map<String, Object>>> getAllCourses() {
         List<Course> courses = (List<Course>) courseService.getAllCourses();
-        
+
         // Get all course IDs for batch queries
         List<Long> courseIds = courses.stream().map(Course::getId).toList();
         Map<Long, Long> flashcardCounts = courseService.getFlashcardCountsByCourseIds(courseIds);
         Map<Long, Long> materialCounts = courseService.getMaterialCountsByCourseIds(courseIds);
-        
+
         List<Map<String, Object>> result = new ArrayList<>();
         for (Course c : courses) {
             Map<String, Object> map = new HashMap<>();

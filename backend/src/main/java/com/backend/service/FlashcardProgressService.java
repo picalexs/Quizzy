@@ -17,6 +17,32 @@ public class FlashcardProgressService {
         this.flashcardProgressRepository = flashcardProgressRepository;
     }
 
+    public FlashcardProgress processFlashcardResponse(Long flashcardId, Integer userId, int quality, boolean isCorrect) {
+        FlashcardProgress progress = flashcardProgressRepository.findByFlashcardIdAndUserId(flashcardId, userId);
+
+        if (progress == null) {
+            System.out.println("AVERTISMENT: Nu s-a găsit progres pentru flashcard ID " + flashcardId +
+                    " și user ID " + userId + ". Returnează null pentru tratare în controller.");
+            return null;
+        }
+
+        com.backend.utils.SpacedRepetitionAlgorithm.updateProgress(progress, quality);
+
+        System.out.println("Actualizat progres pentru flashcard ID " + flashcardId +
+                ", user ID " + userId +
+                ", quality=" + quality +
+                ", repetitions=" + progress.getRepetitions() +
+                ", interval=" + progress.getInterval() +
+                ", easeFactor=" + progress.getEaseFactor() +
+                ", dueDate=" + progress.getDueDate());
+
+        return flashcardProgressRepository.save(progress);
+    }
+
+    public FlashcardProgress findByFlashcardAndUser(Long flashcardId, Integer userId) {
+        return flashcardProgressRepository.findByFlashcardIdAndUserId(flashcardId, userId);
+    }
+
     public List<FlashcardProgress> getAllFlashcardProgress() {
         return flashcardProgressRepository.findAll();
     }

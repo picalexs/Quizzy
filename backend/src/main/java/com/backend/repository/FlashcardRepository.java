@@ -35,18 +35,18 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
 
     @Query("SELECT f FROM Flashcard f WHERE f.question = :questionText")
     Flashcard findByQuestion(@Param("questionText") String questionText);
-    
+
     @Query("SELECT f FROM Flashcard f WHERE f.pageIndex = :pageIndex")
     List<Flashcard> findByPageIndex(@Param("pageIndex") Integer pageIndex);
-    
+
     @Query("SELECT f FROM Flashcard f WHERE f.pageIndex = :pageIndex AND f.user.id = :userId")
     List<Flashcard> findByPageIndexAndUserId(
-            @Param("pageIndex") Integer pageIndex, 
+            @Param("pageIndex") Integer pageIndex,
             @Param("userId") Integer userId);
-    
+
     @Query("SELECT f FROM Flashcard f WHERE f.pageIndex = :pageIndex AND f.material.id = :materialId")
     List<Flashcard> findByPageIndexAndMaterialId(
-            @Param("pageIndex") Integer pageIndex, 
+            @Param("pageIndex") Integer pageIndex,
             @Param("materialId") Long materialId);
 
     @Query("SELECT COUNT(f) FROM Flashcard f WHERE f.material.course.id = :courseId")
@@ -64,9 +64,9 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
      * Get flashcard counts for multiple courses in batch to avoid N+1 query problem
      */
     @Query("SELECT f.material.course.id as courseId, COUNT(f) as count " +
-           "FROM Flashcard f " +
-           "WHERE f.material.course.id IN :courseIds " +
-           "GROUP BY f.material.course.id")
+            "FROM Flashcard f " +
+            "WHERE f.material.course.id IN :courseIds " +
+            "GROUP BY f.material.course.id")
     List<Object[]> findFlashcardCountsByCourseIds(@Param("courseIds") List<Long> courseIds);
 
     /**
@@ -76,10 +76,26 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
         return findFlashcardCountsByCourseIds(courseIds)
                 .stream()
                 .collect(Collectors.toMap(
-                    row -> (Long) row[0],    // courseId
-                    row -> (Long) row[1]     // count
+                        row -> (Long) row[0],    // courseId
+                        row -> (Long) row[1]     // count
                 ));
     }
 
+    @Query("SELECT f FROM Flashcard f")
+    List<Flashcard> findAllFlashcards();
+
+    @Query("SELECT f FROM Flashcard f WHERE f.user.id = :userId")
+    List<Flashcard> findAllFlashcardsByUserId(@Param("userId") Integer userId);
+
+    @Query("SELECT f FROM Flashcard f WHERE f.material.course.id = :courseId")
+    List<Flashcard> findAllFlashcardsByCourseId(@Param("courseId") Long courseId);
+
+    @Query("SELECT f FROM Flashcard f WHERE f.material.id = :materialId")
+    List<Flashcard> findAllFlashcardsByMaterialId(@Param("materialId") Long materialId);
+
+    @Query("SELECT f FROM Flashcard f WHERE f.material.id = :materialId AND f.user.id = :userId")
+    List<Flashcard> findAllFlashcardsByMaterialIdAndUserId(
+            @Param("materialId") Long materialId,
+            @Param("userId") Integer userId);
 
 }

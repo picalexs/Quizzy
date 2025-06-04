@@ -51,7 +51,7 @@ const Dashboard = () => {
                     setStreak(1);
                 });
         } else {
-            setStreak(1);
+            setStreak(0);
         }
     }, [userId]);
 

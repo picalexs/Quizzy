@@ -28,7 +28,7 @@ public class FlashcardBatchGenerator {
     private String backendBaseUrl;
     
     private final String BASE_DIRECTORY = "courses";
-    
+
     // Progress tracking
     private final AtomicInteger totalFiles = new AtomicInteger(0);
     private final AtomicInteger processedFiles = new AtomicInteger(0);
@@ -50,19 +50,19 @@ public class FlashcardBatchGenerator {
         totalFiles.set(0);
         processedFiles.set(0);
         countFiles(coursesFolder);
-        
+
         System.out.println("🚀 Încep procesarea din directorul: " + BASE_DIRECTORY);
         System.out.println("📊 Total fișiere de procesat: " + totalFiles.get());
-        
+
         processDirectory(coursesFolder, "");
-        
+
         System.out.println("✨ Procesarea completă! Procesate: " + processedFiles.get() + "/" + totalFiles.get());
     }
-    
+
     private void countFiles(File directory) {
         File[] files = directory.listFiles();
         if (files == null) return;
-        
+
         for (File file : files) {
             if (file.isFile() && file.getName().endsWith(".txt") && !file.getName().contains("_flashcards")) {
                 totalFiles.incrementAndGet();
@@ -131,14 +131,12 @@ public class FlashcardBatchGenerator {
             e.printStackTrace();
         }
     }
-    
-    public int getTotalFiles() {
-        return totalFiles.get();
-    }
-    
-    public int getProcessedFiles() {
-        return processedFiles.get();
-    }
+        public int getTotalFiles() {
+            return totalFiles.get();
+        }
+        public int getProcessedFiles() {
+            return processedFiles.get();
+        }
 
     public void generateFlashcardsForSpecificCourse(String courseName) {
         String courseDirectory = BASE_DIRECTORY + "/" + courseName;
@@ -149,16 +147,16 @@ public class FlashcardBatchGenerator {
             return;
         }
 
-        // Count files for this course
-        totalFiles.set(0);
-        processedFiles.set(0);
-        countFiles(courseFolder);
+            // Count files for this course
+            totalFiles.set(0);
+            processedFiles.set(0);
+            countFiles(courseFolder);
 
-        System.out.println("🚀 Procesez cursul: " + courseName);
-        System.out.println("📊 Total fișiere de procesat: " + totalFiles.get());
-        
-        processDirectory(courseFolder, courseName);
-        
-        System.out.println("✨ Procesarea cursului " + courseName + " completă! Procesate: " + processedFiles.get() + "/" + totalFiles.get());
+            System.out.println("🚀 Procesez cursul: " + courseName);
+            System.out.println("📊 Total fișiere de procesat: " + totalFiles.get());
+
+            processDirectory(courseFolder, courseName);
+
+            System.out.println("✨ Procesarea cursului " + courseName + " completă! Procesate: " + processedFiles.get() + "/" + totalFiles.get());
     }
 }

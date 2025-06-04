@@ -10,7 +10,9 @@ import lombok.Setter;
 import java.util.Date;
 
 @Entity
-@Table(name = "flashcardprogress")
+@Table(name = "flashcardprogress", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"userid", "flashcardid"})
+})
 @Getter
 @Setter
 @NoArgsConstructor
@@ -48,6 +50,24 @@ public class FlashcardProgress {
     @Column(name = "lastreviewed", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastReviewed;
+
+    @Column(name = "confidencelevel", nullable = false)
+    private Integer confidenceLevel;
+
+    @Column(name = "consecutivefailures", nullable = false)
+    private Integer consecutiveFailures;
+
+    @Column(name = "learningstage", nullable = false)
+    private Integer learningStage;
+
+    @Column(name = "retentionscore", nullable = false)
+    private Double retentionScore;
+
+    @Column(name = "studytimems", nullable = false)
+    private Long studyTimeMs;
+
+    @Column(name = "totalfailures", nullable = false)
+    private Integer totalFailures;
 
 
     public Long getId() {
@@ -97,5 +117,53 @@ public class FlashcardProgress {
     }
     public void setLastReviewed(Date lastReviewed) {
         this.lastReviewed = lastReviewed;
+    }
+
+    public Integer getConfidenceLevel() {
+        return confidenceLevel;
+    }
+
+    public void setConfidenceLevel(Integer confidenceLevel) {
+        this.confidenceLevel = confidenceLevel;
+    }
+
+    public Integer getConsecutiveFailures() {
+        return consecutiveFailures;
+    }
+
+    public void setConsecutiveFailures(Integer consecutiveFailures) {
+        this.consecutiveFailures = consecutiveFailures;
+    }
+
+    public Integer getLearningStage() {
+        return learningStage;
+    }
+
+    public void setLearningStage(Integer learningStage) {
+        this.learningStage = learningStage;
+    }
+
+    public Double getRetentionScore() {
+        return retentionScore;
+    }
+
+    public void setRetentionScore(Double retentionScore) {
+        this.retentionScore = retentionScore;
+    }
+
+    public Long getStudyTimeMs() {
+        return studyTimeMs;
+    }
+
+    public void setStudyTimeMs(Long studyTimeMs) {
+        this.studyTimeMs = studyTimeMs;
+    }
+
+    public Integer getTotalFailures() {
+        return totalFailures;
+    }
+
+    public void setTotalFailures(Integer totalFailures) {
+        this.totalFailures = totalFailures;
     }
 }
