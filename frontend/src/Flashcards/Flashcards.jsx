@@ -352,7 +352,12 @@ const Flashcards = () => {
     };
 
     const navigateBack = () => {
-        navigate('/graph-algorithms');
+        if (courseId) {
+            navigate(`/course/${courseId}`);
+        } else {
+            // Fallback to library if no course ID is provided
+            navigate('/library');
+        }
     };
 
     if (loading) return <div className="flashcard-app"><div className="loading">Loading flashcards...</div></div>;
