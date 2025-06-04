@@ -75,7 +75,7 @@ class FlashcardControllerTest {
 
         ResponseEntity<Flashcard> response = flashcardController.createFlashcard(flashcard);
 
-        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(201, response.getStatusCodeValue());
         assertEquals(1L, response.getBody().getId());
     }
 
@@ -96,7 +96,7 @@ class FlashcardControllerTest {
 
         ResponseEntity<Void> response = flashcardController.deleteFlashcard(1L);
 
-        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(204, response.getStatusCodeValue());
     }
 
     @Test
