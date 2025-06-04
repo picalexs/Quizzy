@@ -305,7 +305,8 @@ const Flashcards = () => {
         });
 
         try {
-            const res = await api.post('/api/gemini/compare-users-answer-to-the-official-answer', {
+            const res = await api.post('/gemini/compare-users-answer-to-the-official-answer',  {
+
                 question: current.question,
                 officialAnswer: current.answer,
                 usersAnswer: inputText,

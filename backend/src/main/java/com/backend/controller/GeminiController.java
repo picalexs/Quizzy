@@ -26,8 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/gemini")
-@CrossOrigin(origins = "http://localhost:5173")
+@RequestMapping("/gemini")
 @RequiredArgsConstructor
 public class GeminiController {
 

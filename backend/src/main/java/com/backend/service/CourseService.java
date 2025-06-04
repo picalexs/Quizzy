@@ -97,6 +97,11 @@ public class CourseService {
         return courseRepository.findEnrolledCoursesByStudentId(studentId);
     }
 
+    public List<Course> getCoursesByProfessorId(Integer professorId) {
+        return courseRepository.findByProfessorId(professorId);
+    }
+
+
     /**
      * Get flashcard counts for multiple courses in batch to avoid N+1 query problem
      */

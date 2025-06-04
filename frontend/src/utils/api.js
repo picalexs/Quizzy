@@ -4,43 +4,32 @@ const envUrl = import.meta.env.VITE_BACKEND_URL;
 const BASE_URL =
     typeof envUrl === 'string' && envUrl.trim() !== ''
         ? envUrl
-        : 'http://localhost:3000';
+        : 'http://localhost:3000'; 
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
     headers: { 'Content-Type': 'application/json' },
 });
 
-// Request interceptor to add JWT token
 axiosInstance.interceptors.request.use(
     (config) => {
         const token = localStorage.getItem('authToken');
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
-        //DEBUG REMOVE LATER
-        console.log(`Making ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
-        console.log('Headers:', config.headers);
-        if (config.data) {
-            console.log('Body:', config.data);
-        }
-
-
         return config;
     },
     (error) => Promise.reject(error)
 );
 
-// Response interceptor for logging and handling 401
+
 axiosInstance.interceptors.response.use(
     (response) => {
         console.log(`Response status: ${response.status}`);
-        console.log('Response data:', response.data);
         return response;
     },
     (error) => {
         if (error.response && error.response.status === 401) {
-            console.log('Unauthorized response, clearing auth data');
             localStorage.removeItem('authToken');
             localStorage.removeItem('user');
             localStorage.removeItem('userRole');
@@ -50,24 +39,47 @@ axiosInstance.interceptors.response.use(
     }
 );
 
-// Create a separate instance for binary file downloads
 const binaryAxiosInstance = axios.create({
     baseURL: BASE_URL,
     responseType: 'blob',
 });
 
-// Copy the auth interceptor to the binary instance
 binaryAxiosInstance.interceptors.request.use(
     (config) => {
         const token = localStorage.getItem('authToken');
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
-        console.log(`Making binary ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
         return config;
     },
     (error) => Promise.reject(error)
 );
+
+
+binaryAxiosInstance.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if (error.response && error.response.status === 401) {
+            console.log('Interceptor (Binary): Unauthorized response (401) received.');
+            if (window.location.pathname !== '/login') {
+                console.log('Interceptor (Binary): Not on /login page. Clearing auth data and redirecting to /login.');
+                localStorage.removeItem('authToken');
+                localStorage.removeItem('user');
+                localStorage.removeItem('userRole');
+                localStorage.removeItem('userId');
+                window.location.href = '/login';
+            } else {
+                 console.log('Interceptor (Binary): Already on /login page. Skipping redirect.');
+                localStorage.removeItem('authToken');
+                localStorage.removeItem('user');
+                localStorage.removeItem('userRole');
+                localStorage.removeItem('userId');
+            }
+        }
+        return Promise.reject(error);
+    }
+);
+
 
 // Export helper functions for API calls
 export const api = {
