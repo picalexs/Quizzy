@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/s3")
+@RequestMapping("/s3")
 @CrossOrigin(origins = "*")
 public class AWSS3Controller {
 
@@ -30,7 +30,7 @@ public class AWSS3Controller {
 
     /**
      * Download PDF from S3
-     * GET /api/s3/download/{bucketName}?path={s3Path}
+     * GET /s3/download/{bucketName}?path={s3Path}
      */
     @GetMapping("/download/{bucketName}")
     public ResponseEntity<Resource> downloadPdf(
@@ -64,7 +64,7 @@ public class AWSS3Controller {
 
     /**
      * Upload PDF to S3
-     * POST /api/s3/upload/{bucketName}?path={s3Path}
+     * POST /s3/upload/{bucketName}?path={s3Path}
      */
     @PostMapping("/upload/{bucketName}")
     public ResponseEntity<Map<String, String>> uploadPdf(
@@ -114,7 +114,7 @@ public class AWSS3Controller {
 
     /**
      * Delete PDF from S3
-     * DELETE /api/s3/delete/{bucketName}?path={s3Path}
+     * DELETE /s3/delete/{bucketName}?path={s3Path}
      */
     @DeleteMapping("/delete/{bucketName}")
     public ResponseEntity<Map<String, String>> deletePdf(
@@ -147,7 +147,7 @@ public class AWSS3Controller {
 
     /**
      * Check if object exists in S3
-     * GET /api/s3/exists/{bucketName}?path={s3Path}
+     * GET /s3/exists/{bucketName}?path={s3Path}
      */
     @GetMapping("/exists/{bucketName}")
     public ResponseEntity<Map<String, Object>> checkObjectExists(
@@ -180,7 +180,7 @@ public class AWSS3Controller {
 
     /**
      * Get list of all PDF files from S3 bucket
-     * GET /api/s3/list/{bucketName}
+     * GET /s3/list/{bucketName}
      */
     @GetMapping("/list/{bucketName}")
     public ResponseEntity<Map<String, Object>> listPdfFiles(@PathVariable String bucketName) {
@@ -217,7 +217,7 @@ public class AWSS3Controller {
 
     /**
      * Get PDF files with their S3 keys
-     * GET /api/s3/list-with-keys/{bucketName}
+     * GET /s3/list-with-keys/{bucketName}
      */
     @GetMapping("/list-with-keys/{bucketName}")
     public ResponseEntity<Map<String, Object>> listPdfFilesWithKeys(@PathVariable String bucketName) {
@@ -253,7 +253,7 @@ public class AWSS3Controller {
 
     /**
      * Health check endpoint
-     * GET /api/s3/health
+     * GET /s3/health
      */
     @GetMapping("/health")
     public ResponseEntity<Map<String, String>> healthCheck() {

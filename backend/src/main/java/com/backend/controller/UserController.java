@@ -24,7 +24,7 @@ import java.util.Optional;
 import java.util.Optional;
 
 import static org.springframework.http.HttpStatus.CONFLICT;
-@CrossOrigin(origins = "http://localhost:5173")
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
