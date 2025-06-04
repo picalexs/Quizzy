@@ -105,7 +105,9 @@ public class GeminiController {
             for (int i = 0; i < 5; i++) {
                 try {
                     String generatedContent = geminiService.getGeminiResponse(prompt);
+                    System.out.println("Gemini Response " + (i+1) + ": " + generatedContent);
                     String numberStr = extractOnlyTheNumber(generatedContent);
+                    System.out.println("Extracted number " + (i+1) + ": " + numberStr);
                     Double percentage = Double.parseDouble(numberStr);
                     if(percentage==0.0){
                         isZero=true;
@@ -113,6 +115,7 @@ public class GeminiController {
                     percentages.add(percentage);
                 } catch (Exception e) {
                     System.err.println("Error parsing response " + (i+1) + ": " + e.getMessage());
+                    System.err.println("Raw response was: " + (i < 1 ? "Not captured" : "Check previous logs"));
                     percentages.add(0.0);
                 }
             }
@@ -127,6 +130,8 @@ public class GeminiController {
                         .orElse(0.0);
             }
 
+            System.out.println("Final average: " + average);
+
             FlashcardProgress fp = flashcardProgressService.getByFlashcardIdAndUserId(flashcardId, userId);
             if (fp == null) {
                 fp = new FlashcardProgress();
@@ -140,19 +145,24 @@ public class GeminiController {
                 fp.setRepetitions(1);
                 fp.setLastReviewed(new Timestamp(System.currentTimeMillis()));
                 if (average <= 33.33) {
-                    fp.setEaseFactor(2); // pt ca aparent 2 reprezinta bad for some reason that nobody knows
+                    fp.setEaseFactor(2.0); // pt ca aparent 2 reprezinta bad for some reason that nobody knows
                 }
                 else if (average >= 66.66) {
-                    fp.setEaseFactor(0); // Ai raspuns corect, bravo, nota 0 din 2 ! - suna bine, nu?
+                    fp.setEaseFactor(1.3); // Ai raspuns corect, bravo
                 }
                 else {
-                    fp.setEaseFactor(1);
+                    fp.setEaseFactor(1.6);
                 }
 
-                /// cand implementati spaced repetition schimbati valorile de sub comentariul asta, momentan sunt puse random doar ca sa nu dea eroare (nu pot fi nule)
-                fp.setRepetitions(0);
-                fp.setInterval(0);
+                // Set all the required NOT NULL fields with default values
+                fp.setInterval(1);
                 fp.setDueDate(new Timestamp(System.currentTimeMillis()));
+                fp.setConfidenceLevel((int) Math.round(average / 20)); // Convert percentage to 1-5 scale
+                fp.setConsecutiveFailures(average <= 33.33 ? 1 : 0);
+                fp.setLearningStage(1); // Starting stage
+                fp.setRetentionScore(average);
+                fp.setStudyTimeMs(0L); // Default study time
+                fp.setTotalFailures(average <= 33.33 ? 1 : 0);
 
                 flashcardProgressService.createFlashcardProgress(fp);
             }
@@ -162,12 +172,20 @@ public class GeminiController {
                 fp.setRepetitions(rp + 1);
                 fp.setLastReviewed(new Timestamp(System.currentTimeMillis()));
                 if (average <= 33.33) {
-                    fp.setEaseFactor(2); // pt ca aparent 2 reprezinta bad for some reason that nobody knows
+                    fp.setEaseFactor(2.0); // pt ca aparent 2 reprezinta bad for some reason that nobody knows
+                    fp.setConsecutiveFailures(fp.getConsecutiveFailures() + 1);
+                    fp.setTotalFailures(fp.getTotalFailures() + 1);
                 } else if (average >= 66.66) {
-                    fp.setEaseFactor(0); // Ai raspuns corect, bravo, nota 0 din 2 ! - suna bine, nu?
+                    fp.setEaseFactor(1.3); // Ai raspuns corect, bravo
+                    fp.setConsecutiveFailures(0); // Reset consecutive failures on good answer
                 } else {
-                    fp.setEaseFactor(1);
+                    fp.setEaseFactor(1.6);
+                    fp.setConsecutiveFailures(0); // Reset consecutive failures on medium answer
                 }
+                
+                // Update other fields
+                fp.setConfidenceLevel((int) Math.round(average / 20)); // Convert percentage to 1-5 scale
+                fp.setRetentionScore(average);
 
                 flashcardProgressService.updateFlashcardProgress(fp.getId(), fp);
             }
@@ -182,17 +200,48 @@ public class GeminiController {
     }
 
     private String extractOnlyTheNumber(String json) {
-        int start = json.indexOf("text=");
-        if (start == -1) {
-            throw new IllegalArgumentException("Could not find 'text=' in the response: " + json);
+        try {
+            System.out.println("Attempting to extract number from: " + json);
+            
+            // Try to find the text content in the response
+            int start = json.indexOf("text=");
+            if (start == -1) {
+                // Alternative approach - look for just the number pattern in the entire string
+                String numberPattern = "\\d+(?:\\.\\d+)?";
+                java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(numberPattern);
+                java.util.regex.Matcher matcher = pattern.matcher(json);
+                if (matcher.find()) {
+                    String number = matcher.group();
+                    System.out.println("Found number using regex pattern: " + number);
+                    return number;
+                }
+                throw new IllegalArgumentException("Could not find 'text=' or number pattern in the response: " + json);
+            }
+            start += 5;
+
+            int end = json.indexOf("\\n", start);
+            if (end == -1) end = json.indexOf("\n", start);
+            if (end == -1) end = json.indexOf("}", start);
+            if (end == -1) end = json.length(); // fallback
+
+            String extracted = json.substring(start, end).trim();
+            System.out.println("Extracted text: " + extracted);
+            
+            // Try to extract just the number from the extracted text
+            String numberPattern = "\\d+(?:\\.\\d+)?";
+            java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(numberPattern);
+            java.util.regex.Matcher matcher = pattern.matcher(extracted);
+            if (matcher.find()) {
+                String number = matcher.group();
+                System.out.println("Found number: " + number);
+                return number;
+            }
+            
+            return extracted;
+        } catch (Exception e) {
+            System.err.println("Error in extractOnlyTheNumber: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
         }
-        start += 5;
-
-        int end = json.indexOf("\\n", start);
-        if (end == -1) end = json.indexOf("\n", start);
-        if (end == -1) end = json.indexOf("}", start);
-        if (end == -1) end = json.length(); // fallback
-
-        return json.substring(start, end).trim();
     }
 }
