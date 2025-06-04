@@ -121,9 +121,20 @@ function Register() {
                 }
             }
         } catch (error) {
-            console.error("Eroare la înregistrare:", error);
-            setMesaj("Eroare de conexiune cu serverul.");
-        }
+                console.error("Eroare la inregistrare:", error);
+
+                if (error.response) {
+                    const serverMessage = error.response.data?.message;
+
+                    if (error.response.status === 400 || error.response.status === 409) {
+                        setMesaj(serverMessage || t.eroareEmail);
+                    } else {
+                        setMesaj("Eroare la server.");
+                    }
+                } else {
+                    setMesaj("Eroare de conexiune cu serverul.");
+                }
+            }
     };
 
     return (
