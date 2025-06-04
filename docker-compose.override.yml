@@ -21,10 +21,10 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mydb
       SPRING_DATASOURCE_USERNAME: myuser
       SPRING_DATASOURCE_PASSWORD: mypass
-      GEMINI_API_KEY: AIzaSyAUWUg9b-ZsVmTo8lmwr5VewpF28wnDEH8
-      AWS_ACCESS_KEY_ID: blabla
-      AWS_SECRET_ACCESS_KEY: secretdiscreet
-      professor.secret.key: fiiCelMaiTare
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      PROFESSOR_SECRET_KEY: ${PROFESSOR_SECRET_KEY}
     ports:
       - "3000:3000"
     depends_on:

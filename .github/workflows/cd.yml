@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master . S3-credentials-fix ]
   workflow_dispatch:
 
 permissions:
@@ -140,6 +140,7 @@ jobs:
             echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> .env
             echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> .env
             echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" >> .env
+            echo "PROFESSOR_SECRET_KEY=${{ secrets.PROFESSOR_SECRET_KEY }}" >> .env
 
             if ! command -v docker &> /dev/null; then
               sudo dnf update -y
