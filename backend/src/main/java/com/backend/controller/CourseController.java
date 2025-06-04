@@ -32,9 +32,9 @@ public class CourseController {
         this.courseService = courseService;
         this.enrollmentService = enrollmentService;
         this.flashcardRepository = flashcardRepository;
-    }
-
-    @GetMapping
+    }    
+    
+    @GetMapping(value = {"", "/"})
     public ResponseEntity<List<Map<String, Object>>> getAllCourses() {
         List<Course> courses = (List<Course>) courseService.getAllCourses();
         
