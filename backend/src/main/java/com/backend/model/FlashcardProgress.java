@@ -10,7 +10,9 @@ import lombok.Setter;
 import java.util.Date;
 
 @Entity
-@Table(name = "flashcardprogress")
+@Table(name = "flashcardprogress", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"userid", "flashcardid"})
+})
 @Getter
 @Setter
 @NoArgsConstructor

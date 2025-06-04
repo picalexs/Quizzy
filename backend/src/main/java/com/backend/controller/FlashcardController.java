@@ -590,7 +590,7 @@ public class FlashcardController {
                             ", dueDate=" + existingProgress.getDueDate());
 
                     try {
-                        updatedProgress = flashcardProgressService.createFlashcardProgress(existingProgress);
+                        updatedProgress = flashcardProgressService.updateFlashcardProgress(existingProgress.getId(), existingProgress);
                     } catch (Exception e) {
                         System.out.println("EROARE SPECIFICĂ la salvarea în baza de date: " + e.getMessage());
                         e.printStackTrace();

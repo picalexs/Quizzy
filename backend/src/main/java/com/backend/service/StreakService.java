@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -118,5 +119,25 @@ public class StreakService {
             return Optional.of(newStreak);
         }
     }
+
+    public void updateStreakIfYesterday(Integer userId) {
+        List<Streak> streaks = streakRepository.findByUserId(userId);
+
+        if (streaks == null || streaks.isEmpty()) {
+            return; // Nu există streak-uri pentru utilizator
+        }
+
+        for (Streak streak : streaks) {
+            LocalDate lastCompleted = streak.getLastCompletedDate().toLocalDate();
+            LocalDate yesterday = LocalDate.now().minusDays(1);
+
+            if (lastCompleted.equals(yesterday)) {
+                streak.setCurrentStreak(streak.getCurrentStreak() + 1);
+                streak.setLastCompletedDate(Date.valueOf(LocalDate.now()));
+                streakRepository.save(streak);
+            }
+        }
+    }
+
 
 }
