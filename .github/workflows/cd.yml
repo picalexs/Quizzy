@@ -2,7 +2,7 @@ name: CD Pipeline
 
 on:
   push:
-    branches: [ master , S3-credentials-fix ]
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
