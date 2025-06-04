@@ -24,6 +24,7 @@ import java.util.Optional;
 import java.util.Optional;
 
 import static org.springframework.http.HttpStatus.CONFLICT;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {

@@ -18,29 +18,18 @@ axiosInstance.interceptors.request.use(
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
-        //DEBUG REMOVE LATER
-        console.log(`Making ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
-        console.log('Headers:', config.headers);
-        if (config.data) {
-            console.log('Body:', config.data);
-        }
-
-
         return config;
     },
     (error) => Promise.reject(error)
 );
 
-// Response interceptor for logging and handling 401
+// Response interceptor for handling 401
 axiosInstance.interceptors.response.use(
     (response) => {
-        console.log(`Response status: ${response.status}`);
-        console.log('Response data:', response.data);
         return response;
     },
     (error) => {
         if (error.response && error.response.status === 401) {
-            console.log('Unauthorized response, clearing auth data');
             localStorage.removeItem('authToken');
             localStorage.removeItem('user');
             localStorage.removeItem('userRole');
@@ -63,7 +52,6 @@ binaryAxiosInstance.interceptors.request.use(
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
-        console.log(`Making binary ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
         return config;
     },
     (error) => Promise.reject(error)
