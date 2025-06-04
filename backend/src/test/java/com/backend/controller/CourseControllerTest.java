@@ -207,15 +207,15 @@ class CourseControllerTest {
         course1.setTitle("Course 1");
         course1.setDescription("Description 1");
         course1.setSemestru("1");
-        
+
         Course course2 = new Course();
         course2.setId(2L);
         course2.setTitle("Course 2");
         course2.setDescription("Description 2");
         course2.setSemestru("2");
-        
+
         List<Course> courses = Arrays.asList(course1, course2);
-        
+
         // Mock the batch queries for flashcard and material counts
         Map<Long, Long> flashcardCounts = Map.of(1L, 5L, 2L, 10L);
         Map<Long, Long> materialCounts = Map.of(1L, 3L, 2L, 7L);
@@ -230,7 +230,7 @@ class CourseControllerTest {
         // Assert
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(2, response.getBody().size());
-        
+
         Map<String, Object> courseMap1 = response.getBody().get(0);
         assertEquals(1L, courseMap1.get("id"));
         assertEquals("Course 1", courseMap1.get("title"));
@@ -238,7 +238,7 @@ class CourseControllerTest {
         assertEquals("1", courseMap1.get("semestru"));
         assertEquals(5L, courseMap1.get("flashcardCount"));
         assertEquals(3L, courseMap1.get("materialCount"));
-        
+
         Map<String, Object> courseMap2 = response.getBody().get(1);
         assertEquals(2L, courseMap2.get("id"));
         assertEquals("Course 2", courseMap2.get("title"));

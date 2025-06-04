@@ -30,17 +30,17 @@ public interface MaterialRepository extends JpaRepository<Material, Long> {
      * Get material counts for multiple courses in batch to avoid N+1 query problem
      */
     @Query("SELECT m.course.id as courseId, COUNT(m) as count " +
-           "FROM Material m " +
-           "WHERE m.course.id IN :courseIds " +
-           "GROUP BY m.course.id")
+            "FROM Material m " +
+            "WHERE m.course.id IN :courseIds " +
+            "GROUP BY m.course.id")
     List<Object[]> findMaterialCountsByCourseIds(@Param("courseIds") List<Long> courseIds);
 
     default Map<Long, Long> getMaterialCountsByCourseIds(List<Long> courseIds) {
         return findMaterialCountsByCourseIds(courseIds)
                 .stream()
                 .collect(Collectors.toMap(
-                    row -> (Long) row[0],    // courseId
-                    row -> (Long) row[1]     // count
+                        row -> (Long) row[0],    // courseId
+                        row -> (Long) row[1]     // count
                 ));
     }
 

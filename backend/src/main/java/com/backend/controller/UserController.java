@@ -24,7 +24,7 @@ import java.util.Optional;
 import java.util.Optional;
 
 import static org.springframework.http.HttpStatus.CONFLICT;
-@CrossOrigin(origins = "http://localhost:5173")
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -374,4 +374,12 @@ public class UserController {
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
+    // POST /users/streak/check?userId=X
+    @PostMapping("/streak/check")
+    public ResponseEntity<String> checkAndUpdateStreak(@RequestParam Integer userId) {
+        streakService.updateStreakIfYesterday(userId);
+        return ResponseEntity.ok("Verificare completă pentru streak-ul utilizatorului cu ID: " + userId);
+    }
+
 }

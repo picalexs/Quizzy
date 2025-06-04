@@ -1,6 +1,12 @@
 package com.backend.controller;
 
+import com.backend.model.Flashcard;
+import com.backend.model.FlashcardProgress;
+import com.backend.model.User;
+import com.backend.service.FlashcardProgressService;
+import com.backend.service.FlashcardService;
 import com.backend.service.GeminiService;
+import com.backend.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -10,8 +16,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
@@ -22,6 +30,15 @@ class GeminiControllerTest {
 
     @Mock
     private GeminiService geminiService;
+    
+    @Mock
+    private FlashcardProgressService flashcardProgressService;
+    
+    @Mock
+    private FlashcardService flashcardService;
+    
+    @Mock
+    private UserService userService;
 
     @InjectMocks
     private GeminiController geminiController;
@@ -89,15 +106,32 @@ class GeminiControllerTest {
     }
 
     @Test
-    void shouldCompareUsersAnswerSuccessfully() {
+    void shouldCompareUsersAnswerSuccessfullyForNewUser() {
         // Given
         Map<String, String> request = new HashMap<>();
         request.put("question", "What is 2+2?");
         request.put("officialAnswer", "4");
         request.put("usersAnswer", "4");
+        request.put("flashcardId", "1");
+        request.put("userId", "1");
 
+        User mockUser = new User();
+        mockUser.setId(1);
+        Flashcard mockFlashcard = new Flashcard();
+        mockFlashcard.setId(1L);
+
+        when(flashcardProgressService.getByFlashcardIdAndUserId(1L, 1)).thenReturn(null);
+        when(userService.findById(1)).thenReturn(Optional.of(mockUser));
+        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.of(mockFlashcard));
+        when(flashcardProgressService.createFlashcardProgress(any(FlashcardProgress.class))).thenReturn(new FlashcardProgress());
+        
+        // Mock 5 Gemini responses for averaging
         when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn("text=90.0\\n");
+            .thenReturn("text=90.0\\n")
+            .thenReturn("text=88.0\\n")
+            .thenReturn("text=92.0\\n")
+            .thenReturn("text=89.0\\n")
+            .thenReturn("text=91.0\\n");
 
         // When
         ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
@@ -105,62 +139,211 @@ class GeminiControllerTest {
         // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
-        assertTrue(response.getBody() >= 0 && response.getBody() <= 100);
+        assertTrue(response.getBody() >= 85 && response.getBody() <= 95); // Should be around 90
+        verify(flashcardProgressService).createFlashcardProgress(any(FlashcardProgress.class));
+        verify(geminiService, times(5)).getGeminiResponse(anyString());
     }
 
     @Test
-    void shouldReturnZeroWhenUserAnswerIsCompletelyWrong() {
+    void shouldUpdateExistingFlashcardProgress() {
         // Given
         Map<String, String> request = new HashMap<>();
         request.put("question", "What is 2+2?");
         request.put("officialAnswer", "4");
-        request.put("usersAnswer", "wrong answer");
+        request.put("usersAnswer", "4");
+        request.put("flashcardId", "1");
+        request.put("userId", "1");
 
+        FlashcardProgress existingProgress = new FlashcardProgress();
+        existingProgress.setId(1L);
+        existingProgress.setRepetitions(3);
+        existingProgress.setConsecutiveFailures(0);
+        existingProgress.setTotalFailures(1);
+
+        when(flashcardProgressService.getByFlashcardIdAndUserId(1L, 1)).thenReturn(existingProgress);
+        when(flashcardProgressService.updateFlashcardProgress(eq(1L), any(FlashcardProgress.class))).thenReturn(existingProgress);
+        
+        // Mock 5 good responses
         when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn("text=0.0\\n");
+            .thenReturn("text=75.0\\n")
+            .thenReturn("text=73.0\\n")
+            .thenReturn("text=77.0\\n")
+            .thenReturn("text=74.0\\n")
+            .thenReturn("text=76.0\\n");
 
         // When
         ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
 
         // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(0.0, response.getBody());
+        assertTrue(response.getBody() >= 70 && response.getBody() <= 80);
+        verify(flashcardProgressService).updateFlashcardProgress(eq(1L), any(FlashcardProgress.class));
+        verify(geminiService, times(5)).getGeminiResponse(anyString());
     }
 
     @Test
-    void shouldHandlePartiallyCorrectAnswer() {
+    void shouldHandleZeroScoreCorrectly() {
         // Given
         Map<String, String> request = new HashMap<>();
-        request.put("question", "Explain photosynthesis");
-        request.put("officialAnswer", "Process where plants convert light into energy using chlorophyll");
-        request.put("usersAnswer", "Plants use light to make energy");
+        request.put("question", "What is 2+2?");
+        request.put("officialAnswer", "4");
+        request.put("usersAnswer", "completely wrong");
+        request.put("flashcardId", "1");
+        request.put("userId", "1");
 
+        User mockUser = new User();
+        mockUser.setId(1);
+        Flashcard mockFlashcard = new Flashcard();
+        mockFlashcard.setId(1L);
+
+        when(flashcardProgressService.getByFlashcardIdAndUserId(1L, 1)).thenReturn(null);
+        when(userService.findById(1)).thenReturn(Optional.of(mockUser));
+        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.of(mockFlashcard));
+        when(flashcardProgressService.createFlashcardProgress(any(FlashcardProgress.class))).thenReturn(new FlashcardProgress());
+        
+        // Mock responses with at least one zero
         when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn("text=75.5\\n");
+            .thenReturn("text=0.0\\n")
+            .thenReturn("text=5.0\\n")
+            .thenReturn("text=2.0\\n")
+            .thenReturn("text=1.0\\n")
+            .thenReturn("text=3.0\\n");
 
         // When
         ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
 
         // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertTrue(response.getBody() > 0 && response.getBody() < 100);
+        assertEquals(0.0, response.getBody()); // Should be 0.0 when any response is zero
     }
 
     @Test
-    void shouldHandleInvalidRequestGracefully() {
+    void shouldSetCorrectEaseFactorForBadAnswer() {
         // Given
-        Map<String, String> invalidRequest = new HashMap<>();
-        // Missing required fields
+        Map<String, String> request = new HashMap<>();
+        request.put("question", "What is 2+2?");
+        request.put("officialAnswer", "4");
+        request.put("usersAnswer", "wrong");
+        request.put("flashcardId", "1");
+        request.put("userId", "1");
+
+        User mockUser = new User();
+        mockUser.setId(1);
+        Flashcard mockFlashcard = new Flashcard();
+        mockFlashcard.setId(1L);
+
+        when(flashcardProgressService.getByFlashcardIdAndUserId(1L, 1)).thenReturn(null);
+        when(userService.findById(1)).thenReturn(Optional.of(mockUser));
+        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.of(mockFlashcard));
+        when(flashcardProgressService.createFlashcardProgress(any(FlashcardProgress.class))).thenReturn(new FlashcardProgress());
         
+        // Mock responses for bad answer (≤33.33)
         when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn("text=0.0\\n");
+            .thenReturn("text=30.0\\n")
+            .thenReturn("text=25.0\\n")
+            .thenReturn("text=33.0\\n")
+            .thenReturn("text=28.0\\n")
+            .thenReturn("text=31.0\\n");
 
         // When
-        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(invalidRequest);
+        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
 
         // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(0.0, response.getBody());
+        assertTrue(response.getBody() <= 35); // Bad answer
+        
+        // Verify that createFlashcardProgress is called with correct ease factor
+        verify(flashcardProgressService).createFlashcardProgress(argThat(fp -> 
+            fp.getEaseFactor() == 2.0 && // Bad answer should set ease factor to 2.0
+            fp.getConsecutiveFailures() == 1 &&
+            fp.getTotalFailures() == 1
+        ));
+    }
+
+    @Test
+    void shouldSetCorrectEaseFactorForGoodAnswer() {
+        // Given
+        Map<String, String> request = new HashMap<>();
+        request.put("question", "What is 2+2?");
+        request.put("officialAnswer", "4");
+        request.put("usersAnswer", "4");
+        request.put("flashcardId", "1");
+        request.put("userId", "1");
+
+        User mockUser = new User();
+        mockUser.setId(1);
+        Flashcard mockFlashcard = new Flashcard();
+        mockFlashcard.setId(1L);
+
+        when(flashcardProgressService.getByFlashcardIdAndUserId(1L, 1)).thenReturn(null);
+        when(userService.findById(1)).thenReturn(Optional.of(mockUser));
+        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.of(mockFlashcard));
+        when(flashcardProgressService.createFlashcardProgress(any(FlashcardProgress.class))).thenReturn(new FlashcardProgress());
+        
+        // Mock responses for good answer (≥66.66)
+        when(geminiService.getGeminiResponse(anyString()))
+            .thenReturn("text=85.0\\n")
+            .thenReturn("text=90.0\\n")
+            .thenReturn("text=88.0\\n")
+            .thenReturn("text=87.0\\n")
+            .thenReturn("text=89.0\\n");
+
+        // When
+        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertTrue(response.getBody() >= 85); // Good answer
+        
+        // Verify that createFlashcardProgress is called with correct ease factor
+        verify(flashcardProgressService).createFlashcardProgress(argThat(fp -> 
+            fp.getEaseFactor() == 1.3 && // Good answer should set ease factor to 1.3
+            fp.getConsecutiveFailures() == 0 &&
+            fp.getTotalFailures() == 0
+        ));
+    }
+
+    @Test
+    void shouldSetCorrectEaseFactorForMediumAnswer() {
+        // Given
+        Map<String, String> request = new HashMap<>();
+        request.put("question", "What is 2+2?");
+        request.put("officialAnswer", "4");
+        request.put("usersAnswer", "approximately 4");
+        request.put("flashcardId", "1");
+        request.put("userId", "1");
+
+        User mockUser = new User();
+        mockUser.setId(1);
+        Flashcard mockFlashcard = new Flashcard();
+        mockFlashcard.setId(1L);
+
+        when(flashcardProgressService.getByFlashcardIdAndUserId(1L, 1)).thenReturn(null);
+        when(userService.findById(1)).thenReturn(Optional.of(mockUser));
+        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.of(mockFlashcard));
+        when(flashcardProgressService.createFlashcardProgress(any(FlashcardProgress.class))).thenReturn(new FlashcardProgress());
+        
+        // Mock responses for medium answer (33.34 - 66.65)
+        when(geminiService.getGeminiResponse(anyString()))
+            .thenReturn("text=50.0\\n")
+            .thenReturn("text=55.0\\n")
+            .thenReturn("text=52.0\\n")
+            .thenReturn("text=48.0\\n")
+            .thenReturn("text=53.0\\n");
+
+        // When
+        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertTrue(response.getBody() >= 45 && response.getBody() <= 60); // Medium answer
+        
+        // Verify that createFlashcardProgress is called with correct ease factor
+        verify(flashcardProgressService).createFlashcardProgress(argThat(fp -> 
+            fp.getEaseFactor() == 1.6 && // Medium answer should set ease factor to 1.6
+            fp.getConsecutiveFailures() == 0 &&
+            fp.getTotalFailures() == 0
+        ));
     }
 
     @Test
@@ -170,6 +353,18 @@ class GeminiControllerTest {
         request.put("question", "Test question");
         request.put("officialAnswer", "Test answer");
         request.put("usersAnswer", "Test user answer");
+        request.put("flashcardId", "1");
+        request.put("userId", "1");
+
+        User mockUser = new User();
+        mockUser.setId(1);
+        Flashcard mockFlashcard = new Flashcard();
+        mockFlashcard.setId(1L);
+
+        when(flashcardProgressService.getByFlashcardIdAndUserId(1L, 1)).thenReturn(null);
+        when(userService.findById(1)).thenReturn(Optional.of(mockUser));
+        when(flashcardService.getFlashcardById(1L)).thenReturn(Optional.of(mockFlashcard));
+        when(flashcardProgressService.createFlashcardProgress(any(FlashcardProgress.class))).thenReturn(new FlashcardProgress());
 
         when(geminiService.getGeminiResponse(anyString()))
             .thenThrow(new RuntimeException("Gemini API error"));
@@ -183,108 +378,54 @@ class GeminiControllerTest {
     }
 
     @Test
-    void shouldHandleMultipleGeminiCallsForAveraging() {
+    void shouldHandleInvalidRequestParameters() {
         // Given
-        Map<String, String> request = new HashMap<>();
-        request.put("question", "What is the capital of France?");
-        request.put("officialAnswer", "Paris");
-        request.put("usersAnswer", "Paris");
+        Map<String, String> invalidRequest = new HashMap<>();
+        invalidRequest.put("question", "Test question");
+        // Missing other required fields
 
-        when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn("text=95.0\\n")
-            .thenReturn("text=93.0\\n")
-            .thenReturn("text=97.0\\n")
-            .thenReturn("text=94.0\\n")
-            .thenReturn("text=96.0\\n");
-
-        // When
-        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
-
-        // Then
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertNotNull(response.getBody());
-        verify(geminiService, times(5)).getGeminiResponse(anyString());
-        // Average of 95, 93, 97, 94, 96 should be 95.0
-        assertEquals(95.0, response.getBody(), 0.1);
-    }
-
-    @Test
-    void shouldHandleEmptyRequestGracefully() {
-        // Given
-        Map<String, String> emptyRequest = new HashMap<>();
-        
-        when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn("text=0.0\\n");
-
-        // When
-        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(emptyRequest);
-
-        // Then
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(0.0, response.getBody());
-    }
-
-    @Test
-    void shouldThrowExceptionForNullRequest() {
-        // When & Then - This should actually throw NPE when trying to access null map
+        // When & Then
         assertThrows(RuntimeException.class, () -> 
-            geminiController.compareUsersAnswerToOfficialAnswer(null));
+            geminiController.compareUsersAnswerToOfficialAnswer(invalidRequest));
     }
 
     @Test
-    void shouldExtractNumberFromValidResponse() {
+    void shouldHandleUserNotFound() {
         // Given
         Map<String, String> request = new HashMap<>();
-        request.put("question", "Test");
-        request.put("officialAnswer", "Test");
-        request.put("usersAnswer", "Test");
+        request.put("question", "What is 2+2?");
+        request.put("officialAnswer", "4");
+        request.put("usersAnswer", "4");
+        request.put("flashcardId", "1");
+        request.put("userId", "999"); // Non-existent user
 
-        when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn("text=85.5\\n");
+        when(flashcardProgressService.getByFlashcardIdAndUserId(1L, 999)).thenReturn(null);
+        when(userService.findById(999)).thenReturn(Optional.empty());
 
-        // When
-        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
-
-        // Then
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertNotNull(response.getBody());
+        // When & Then
+        assertThrows(RuntimeException.class, () -> 
+            geminiController.compareUsersAnswerToOfficialAnswer(request));
     }
 
     @Test
-    void shouldHandleInvalidNumberFormat() {
+    void shouldHandleFlashcardNotFound() {
         // Given
         Map<String, String> request = new HashMap<>();
-        request.put("question", "Test");
-        request.put("officialAnswer", "Test");
-        request.put("usersAnswer", "Test");
+        request.put("question", "What is 2+2?");
+        request.put("officialAnswer", "4");
+        request.put("usersAnswer", "4");
+        request.put("flashcardId", "999"); // Non-existent flashcard
+        request.put("userId", "1");
 
-        when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn("text=invalid\\n");
+        User mockUser = new User();
+        mockUser.setId(1);
 
-        // When
-        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
+        when(flashcardProgressService.getByFlashcardIdAndUserId(999L, 1)).thenReturn(null);
+        when(userService.findById(1)).thenReturn(Optional.of(mockUser));
+        when(flashcardService.getFlashcardById(999L)).thenReturn(Optional.empty());
 
-        // Then
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(0.0, response.getBody()); // Should return 0.0 when parsing fails
-    }
-
-    @Test
-    void shouldHandleNullGeminiResponse() {
-        // Given
-        Map<String, String> request = new HashMap<>();
-        request.put("question", "Test");
-        request.put("officialAnswer", "Test");
-        request.put("usersAnswer", "Test");
-
-        when(geminiService.getGeminiResponse(anyString()))
-            .thenReturn(null);
-
-        // When
-        ResponseEntity<Double> response = geminiController.compareUsersAnswerToOfficialAnswer(request);
-
-        // Then
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(0.0, response.getBody()); // Should return 0.0 when response is null
+        // When & Then
+        assertThrows(RuntimeException.class, () -> 
+            geminiController.compareUsersAnswerToOfficialAnswer(request));
     }
 } 

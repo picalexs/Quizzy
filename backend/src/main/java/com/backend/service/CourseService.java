@@ -26,11 +26,11 @@ public class CourseService {
 
     @Autowired
     public CourseService(CourseRepository courseRepository, UserRepository userRepository, FlashcardRepository flashcardRepository, MaterialRepository materialRepository) {
-        this.courseRepository = courseRepository;
-        this.userRepository = userRepository;
-        this.flashcardRepository = flashcardRepository;
-        this.materialRepository = materialRepository;
-    }
+            this.courseRepository = courseRepository;
+            this.userRepository = userRepository;
+            this.flashcardRepository = flashcardRepository;
+            this.materialRepository = materialRepository;
+        }
 
     public Course createCourse(CourseDTO courseDTO) {
 
@@ -96,7 +96,12 @@ public class CourseService {
     public List<Course> getEnrolledCoursesByStudentId(Integer studentId) {
         return courseRepository.findEnrolledCoursesByStudentId(studentId);
     }
-    
+
+    public List<Course> getCoursesByProfessorId(Integer professorId) {
+        return courseRepository.findByProfessorId(professorId);
+    }
+
+
     /**
      * Get flashcard counts for multiple courses in batch to avoid N+1 query problem
      */
@@ -106,7 +111,7 @@ public class CourseService {
         }
         return flashcardRepository.getFlashcardCountsByCourseIds(courseIds);
     }
-    
+
     /**
      * Get material counts for multiple courses in batch to avoid N+1 query problem
      */

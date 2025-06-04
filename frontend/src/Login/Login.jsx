@@ -44,6 +44,7 @@ function Login() {
     };
 
     const handleLogin = async (e) => {
+        
         e.preventDefault();
 
         if (!username || !parola) {
@@ -78,21 +79,28 @@ function Login() {
                     console.log('Redirecting to dashboard');
                     navigate("/dashboard");
                 }, 1000);
-            } else {
+                } else {
                 console.warn('Login failed:', data.message);
                 setMesaj(data.message || t.eroare);
-            }
-        } catch (error) {
+
+}
+            } catch (error) {
             console.error("Eroare la autentificare:", error);
-            if (error.response && error.response.status === 401) {
-                // Clear auth data on unauthorized response
-                localStorage.removeItem('authToken');
-                localStorage.removeItem('user');
-                localStorage.removeItem('userRole');
-                localStorage.removeItem('userId');
+
+            if (error.response) {
+                const serverMessage = error.response.data?.message;
+
+                if (error.response.status === 401 || error.response.status === 400) {
+                    setMesaj(serverMessage || t.eroare);
+                } else {
+                    setMesaj("Eroare la server.");
+                }
+            } else {
+                setMesaj("Eroare de conexiune cu serverul.");
             }
-            setMesaj("Eroare de conexiune cu serverul.");
         }
+
+
     };
 
     return (
@@ -160,15 +168,16 @@ function Login() {
                     </div>
 
                     <div className="oauth-buttons">
-                        <button className="google-login-button">
+                        <button type="button" className="google-login-button">
                             <img src="/google-foto-logo.png" alt="Google" className="oauth-logo" />
                             Sign in with Google
                         </button>
-                        <button className="apple-login-button">
+                        <button type="button" className="apple-login-button">
                             <img src="/apple-logo.png" alt="Apple" className="oauth-logo" />
                             Sign in with Apple
                         </button>
                     </div>
+
                 </form>
 
                 {mesaj && (

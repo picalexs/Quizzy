@@ -30,7 +30,7 @@ class FlashcardGeneratorControllerTest {
         // Given
         when(flashcardBatchGenerator.getTotalFiles()).thenReturn(10);
         when(flashcardBatchGenerator.getProcessedFiles()).thenReturn(0);
-        
+
         doAnswer(invocation -> {
             // Simulate long running operation
             TimeUnit.MILLISECONDS.sleep(100);
@@ -39,17 +39,17 @@ class FlashcardGeneratorControllerTest {
 
         // When - start first generation
         ResponseEntity<Map<String, Object>> firstResponse = flashcardGeneratorController.generateFlashcards();
-        
+
         // Give some time for the async operation to start
         TimeUnit.MILLISECONDS.sleep(10);
-        
+
         // Try to start second generation immediately
         ResponseEntity<Map<String, Object>> secondResponse = flashcardGeneratorController.generateFlashcards();
 
         // Then
         assertEquals(HttpStatus.OK, firstResponse.getStatusCode());
         assertEquals("started", firstResponse.getBody().get("status"));
-        
+
         assertEquals(HttpStatus.OK, secondResponse.getStatusCode());
         assertEquals("already_running", secondResponse.getBody().get("status"));
         assertTrue(secondResponse.getBody().get("message").toString().contains("deja în desfășurare"));
@@ -68,11 +68,11 @@ class FlashcardGeneratorControllerTest {
         // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
-        
+
         Map<String, Object> responseBody = response.getBody();
         assertEquals(false, responseBody.get("isGenerating"));
         assertEquals("idle", responseBody.get("status"));
-        
+
         @SuppressWarnings("unchecked")
         Map<String, Object> progress = (Map<String, Object>) responseBody.get("progress");
         assertNotNull(progress);
@@ -131,7 +131,7 @@ class FlashcardGeneratorControllerTest {
         // Given
         when(flashcardBatchGenerator.getTotalFiles()).thenReturn(20);
         when(flashcardBatchGenerator.getProcessedFiles()).thenReturn(5);
-        
+
         doAnswer(invocation -> {
             TimeUnit.MILLISECONDS.sleep(100);
             return null;
@@ -140,7 +140,7 @@ class FlashcardGeneratorControllerTest {
         // When
         flashcardGeneratorController.generateFlashcards();
         TimeUnit.MILLISECONDS.sleep(10); // Let the first operation start
-        
+
         ResponseEntity<Map<String, Object>> response = flashcardGeneratorController.generateFlashcards();
 
         // Then

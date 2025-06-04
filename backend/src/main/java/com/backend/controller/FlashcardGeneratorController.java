@@ -13,12 +13,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
 @RestController
-@RequestMapping("/api/flashcards")
+@RequestMapping("/flashcards")
 @RequiredArgsConstructor
 public class FlashcardGeneratorController {
 
     private final FlashcardBatchGenerator flashcardBatchGenerator;
-    
+
     // Track the generation status
     private final AtomicBoolean isGenerating = new AtomicBoolean(false);
     private final AtomicReference<String> lastStatus = new AtomicReference<>("idle");
@@ -27,7 +27,7 @@ public class FlashcardGeneratorController {
     @PostMapping("/generate-all")
     public ResponseEntity<Map<String, Object>> generateFlashcards() {
         Map<String, Object> response = new HashMap<>();
-        
+
         // Check if already running
         if (isGenerating.get()) {
             response.put("status", "already_running");
@@ -35,12 +35,12 @@ public class FlashcardGeneratorController {
             response.put("progress", getProgressInfo());
             return ResponseEntity.ok(response);
         }
-        
+
         // Start the async operation
         isGenerating.set(true);
         lastStatus.set("started");
         lastError.set(null);
-        
+
         CompletableFuture.runAsync(() -> {
             try {
                 lastStatus.set("processing");
@@ -55,9 +55,9 @@ public class FlashcardGeneratorController {
                 isGenerating.set(false);
             }
         });
-        
+
         response.put("status", "started");
-        response.put("message", "🚀 Generarea flashcard-urilor a început în background. Folosiți /api/flashcards/generation-status pentru a verifica progresul.");
+        response.put("message", "🚀 Generarea flashcard-urilor a început în background. Folosiți /flashcards/generation-status pentru a verifica progresul.");
         return ResponseEntity.ok(response);
     }
 
@@ -67,11 +67,11 @@ public class FlashcardGeneratorController {
         response.put("isGenerating", isGenerating.get());
         response.put("status", lastStatus.get());
         response.put("progress", getProgressInfo());
-        
+
         if (lastError.get() != null) {
             response.put("error", lastError.get());
         }
-        
+
         return ResponseEntity.ok(response);
     }
 
@@ -105,22 +105,22 @@ public class FlashcardGeneratorController {
             return ResponseEntity.internalServerError().body(response);
         }
     }
-    
+
+
     private Map<String, Object> getProgressInfo() {
         Map<String, Object> progress = new HashMap<>();
         progress.put("totalFiles", flashcardBatchGenerator.getTotalFiles());
         progress.put("processedFiles", flashcardBatchGenerator.getProcessedFiles());
-        
+
         int total = flashcardBatchGenerator.getTotalFiles();
         int processed = flashcardBatchGenerator.getProcessedFiles();
-        
+
         if (total > 0) {
             double percentage = (double) processed / total * 100;
             progress.put("percentage", Math.round(percentage * 100.0) / 100.0);
         } else {
             progress.put("percentage", 0.0);
         }
-        
         return progress;
     }
 }

@@ -7,7 +7,8 @@ const Flashcards = () => {
     const navigate = useNavigate();
     const { materialId } = useParams(); // dacă dorești să preiei flashcards după materialId din URL
     const location = useLocation();
-    const { courseId, courseTitle } = location.state || {};
+    const { courseId, courseTitle, startingFlashcardId } = location.state || {};
+    const userId = localStorage.getItem('userId');
 
     // State pentru flashcards
     const [flashcards, setFlashcards] = useState([]);
@@ -24,6 +25,8 @@ const Flashcards = () => {
     const [inputText, setInputText] = useState('');
     const [isMobile, setIsMobile] = useState(false);
     const [score, setScore] = useState(null);
+    const [selectedOptions, setSelectedOptions] = useState([]);
+    const [streakUpdated, setStreakUpdated] = useState(false);
 
     const ratingColors = {
         0: "#2D852D",  // Good (😊) - Green
@@ -32,20 +35,35 @@ const Flashcards = () => {
         "-1": "#CCCCCC" // Default - Gray (not rated)
     };
 
-    // Preluăm flashcards de la API
+    // Preluăm flashcards prioritizate de la API
     useEffect(() => {
         const fetchFlashcards = async () => {
             try {
                 setLoading(true);
                 let response;
 
+                // Numărul de flashcards care vor fi încărcate
+                const limitCards = 20;
+                console.log('Încărcare flashcards prioritizate...');
+
+                // Obținem ID-ul utilizatorului din localStorage
+                const userId = localStorage.getItem('userId');
+                if (!userId) {
+                    console.error('Nu s-a găsit ID-ul utilizatorului');
+                    setError('Nu s-a găsit ID-ul utilizatorului. Vă rugăm să vă autentificați.');
+                    setLoading(false);
+                    return;
+                }
+
                 // Verificăm dacă avem materialId pentru a face cererea corespunzătoare
                 if (materialId) {
-                    response = await api.get(`/Flashcard/material/${materialId}`);
+                    // Folosim noul endpoint pentru flashcards prioritizate după material și utilizator
+                    console.log(`Încărcare ${limitCards} flashcards prioritizate pentru materialul ${materialId} și utilizatorul ${userId}`);
+                    response = await api.get(`/Flashcard/prioritized/material/${materialId}/user/${userId}?limit=${limitCards}`);
                 } else {
-                    // Dacă nu avem materialId, luăm toate flashcards-urile
-                    // Sau poți înlocui cu userId dacă vrei să le filtrezi după user
-                    response = await api.get('/Flashcard');
+                    // Dacă nu avem materialId, luăm flashcards prioritizate după utilizator
+                    console.log(`Încărcare ${limitCards} flashcards prioritizate pentru utilizatorul ${userId}`);
+                    response = await api.get(`/Flashcard/prioritized/user/${userId}?limit=${limitCards}`);
                 }
 
                 // Procesăm datele primite pentru a le face compatibile cu componenta
@@ -59,7 +77,7 @@ const Flashcards = () => {
                         questionType: card.questionType
                     };
 
-                    if (card.questionType === 'Multiple'||card.questionType === 'Teorie') {
+                    if (card.questionType === 'Multiple') {
                         const options = card.answers.map(answer => answer.optionText);
                         const correctAnswer = card.answers.find(answer => answer.correct)?.optionText;
                         processedCard.options = options;
@@ -89,6 +107,16 @@ const Flashcards = () => {
         fetchFlashcards();
     }, [materialId]);
 
+    // Set starting flashcard index if provided
+    useEffect(() => {
+        if (startingFlashcardId && flashcards.length > 0) {
+            const startingIndex = flashcards.findIndex(card => card.id === startingFlashcardId);
+            if (startingIndex !== -1) {
+                setIndex(startingIndex);
+            }
+        }
+    }, [startingFlashcardId, flashcards]);
+
     // Detectăm dispozitivul mobil (cod existent)
     useEffect(() => {
         const checkScreenSize = () => {
@@ -110,6 +138,7 @@ const Flashcards = () => {
             setIndex(index + 1);
             setShowAnswer(false);
             setSelectedOption(null);
+            setSelectedOptions([]);
             setFeedbackMessage(null);
             setShowKeyboardInput(false);
             setScore(null);
@@ -122,6 +151,7 @@ const Flashcards = () => {
             setIndex(index - 1);
             setShowAnswer(false);
             setSelectedOption(null);
+            setSelectedOptions([]);
             setFeedbackMessage(null);
             setShowKeyboardInput(false);
             setScore(null);
@@ -129,23 +159,108 @@ const Flashcards = () => {
         }
     };
 
-    const handleOptionSelect = (option) => {
+    const handleOptionSelect = async (option) => {
         if (showAnswer) return;
 
-        setSelectedOption(option);
-        setShowAnswer(true);
+        setSelectedOptions(prev => {
+            if (prev.includes(option)) {
+                return prev.filter(item => item !== option);
+            } else {
+                return [...prev, option];
+            }
+        });
+    };
 
-        if (option === current.correctAnswer) {
-            setFeedbackMessage("Correct!");
-        } else {
-            setFeedbackMessage("Wrong!");
+    const checkAndUpdateStreak = async () => {
+        if (streakUpdated) return; // nu actualiza de mai multe ori pe sesiune
+        try {
+            await api.post(`/users/streak/check?userId=${userId}`, null, { params: { userId } });
+            console.log("Streak actualizat");
+            setStreakUpdated(true);
+        } catch (err) {
+            console.error("Eroare la actualizarea streak-ului:", err);
         }
     };
 
-    const handleFeedback = (type, ratingIndex) => {
+
+    const handleCheckAnswers = async () => {
+        if (showAnswer) return;
+
+        setShowAnswer(true);
+
+        const correctAnswers = Array.isArray(current.correctAnswer)
+            ? current.correctAnswer
+            : [current.correctAnswer];
+
+        const isAllCorrect =
+            selectedOptions.length === correctAnswers.length &&
+            selectedOptions.every(option => correctAnswers.includes(option));
+
+        if (isAllCorrect) {
+            setFeedbackMessage("Correct!");
+            handleFeedback('good', 0);
+            checkAndUpdateStreak();
+        } else {
+            setFeedbackMessage("Wrong!");
+            handleFeedback('bad', 2);
+        }
+
+        // Trimitem răspunsul către backend pentru a actualiza progresul
+        if (current && current.id) {
+            try {
+                // Pentru răspunsurile cu opțiuni multiple, trimitem direct la selectare
+                // quality: 5 pentru corect, 1 pentru greșit
+                const quality = isAllCorrect ? 5 : 1;
+
+                console.log(`Trimitere răspuns pentru flashcard ID ${current.id}, quality: ${quality}, isCorrect: ${isAllCorrect}`);
+
+                const response = await api.post('/Flashcard/response', {
+                    flashcardId: current.id,
+                    userId: localStorage.getItem('userId'),
+                    quality: quality,
+                    isCorrect: isAllCorrect
+                });
+
+                console.log('Răspunsul a fost înregistrat cu succes:', response.data);
+            } catch (error) {
+                console.error('Eroare la trimiterea răspunsului:', error);
+            }
+        }
+
+        setTimeout(() => {
+            nextCard();
+        }, 1500);
+    };
+
+    const handleFeedback = async (type, ratingIndex) => {
+        // Actualizăm starea locală
         const newRatings = [...ratings];
         newRatings[index] = ratingIndex;
         setRatings(newRatings);
+
+        // Trimitem răspunsul către backend pentru a actualiza progresul
+        if (current && current.id) {
+            try {
+                console.log(`Trimitere răspuns pentru flashcard ID ${current.id}, quality: ${4 - ratingIndex}`);
+
+                // Convertim ratingIndex (0=bun, 1=neutru, 2=rău) la quality (5=perfect, 3=greu, 1=foarte greu)
+                // în algoritmul SM-2, quality este între 0-5, unde 0-2 = eșec, 3-5 = succes
+                const quality = 4 - ratingIndex; // 0 -> 4, 1 -> 3, 2 -> 2
+                const isCorrect = ratingIndex <= 1; // Considerăm răspunsurile bune și neutre ca fiind corecte
+
+                // Trimitem răspunsul către backend
+                const response = await api.post('/Flashcard/response', {
+                    flashcardId: current.id,
+                    userId: localStorage.getItem('userId'),
+                    quality: quality,
+                    isCorrect: isCorrect
+                });
+
+                console.log('Răspunsul a fost înregistrat cu succes:', response.data);
+            } catch (error) {
+                console.error('Eroare la trimiterea răspunsului:', error);
+            }
+        }
     };
 
     const resetRatings = () => {
@@ -153,6 +268,7 @@ const Flashcards = () => {
         setIndex(0);
         setShowAnswer(false);
         setSelectedOption(null);
+        setSelectedOptions([]);
         setFeedbackMessage(null);
         setShowKeyboardInput(false);
         setScore(null);
@@ -170,34 +286,69 @@ const Flashcards = () => {
         setInputText(e.target.value);
     };
 
+    // NOUĂ: Funcție pentru gestionarea tastei Enter
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSubmitInput();
+        }
+    };
+
+    // ACTUALIZATĂ: Funcția handleSubmitInput cu auto-hide mai rapid
     const handleSubmitInput = async () => {
         if (!inputText.trim()) return;
 
         setShowAnswer(true);
         console.log('Sending:', {
             question: current.question,
-            //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",
             officialAnswer: current.answer,
             usersAnswer: inputText
         });
+
         try {
-            const res = await api.post('/api/gemini/compare-users-answer-to-the-official-answer',  {
+            const res = await api.post('/gemini/compare-users-answer-to-the-official-answer',  {
 
-                    question: current.question,
-                    //officialAnswer: "Coada functioneaza pe principiul first-in-first-out, pe cand stiva merge pe principiul last-in-first-out",
-                    officialAnswer: current.answer,
-                    usersAnswer: inputText
-
+                question: current.question,
+                officialAnswer: current.answer,
+                usersAnswer: inputText,
+                flashcardId: current.id,
+                userId: userId
             });
-            setScore(res.data);
+
+            const scoreValue = res.data;
+            setScore(scoreValue);
+
+            let autoRating;
+            if (scoreValue >= 80) {
+                autoRating = 0;
+            } else if (scoreValue >= 50) {
+                autoRating = 1;
+            } else {
+                autoRating = 2;
+            }
+            if (autoRating === 0) {
+                checkAndUpdateStreak(); // <-- Aici
+            }
+
+
+            handleFeedback('auto', autoRating);
+
+            // Hide keyboard input immediately
+            setShowKeyboardInput(false);
+            setInputText('');
+
+            // Move to next card after showing the score
+            setTimeout(() => {
+                nextCard();
+            }, 1500);
+
         } catch (err) {
             console.error('Comparison error:', err);
             setFeedbackMessage("Error comparing your answer");
+
+            // Hide keyboard input immediately on error too
+            setShowKeyboardInput(false);
+            setInputText('');
         }
-        
-        // Close keyboard input and clear text after submission
-        setShowKeyboardInput(false);
-        setInputText('');
     };
 
     const navigateBack = () => {
@@ -242,18 +393,42 @@ const Flashcards = () => {
 
                     {current.options ? (
                         <div className="flashcard-options-container">
-                            {/* <div className="instruction-text">Select 1 correct answer</div> */}
+                            <div className="instruction-text">Select 1 correct answer</div>
 
                             <div className="flashcard-options">
                                 {current.options.map((option, i) => {
-                                    const isCorrect = showAnswer && option === current.correctAnswer;
-                                    const isWrong = showAnswer && option !== current.correctAnswer;
+                                    const isSelected = selectedOptions.includes(option);
+                                    const correctAnswers = Array.isArray(current.correctAnswer)
+                                        ? current.correctAnswer
+                                        : [current.correctAnswer];
+                                    const isCorrectAnswer = correctAnswers.includes(option);
+
+                                    // Determine the class names based on state
+                                    let className = 'option-card';
+
+                                    if (showAnswer) {
+                                        // When answer is shown
+                                        if (isCorrectAnswer) {
+                                            className += ' correct';
+                                        } else {
+                                            className += ' incorrect';
+                                        }
+                                        // Add selected class if this was one of user's choices
+                                        if (isSelected) {
+                                            className += ' selected';
+                                        }
+                                    } else {
+                                        // Before answer is shown, only show selection
+                                        if (isSelected) {
+                                            className += ' selected';
+                                        }
+                                    }
 
                                     return (
                                         <div
                                             key={i}
                                             onClick={() => handleOptionSelect(option)}
-                                            className={`option-card ${isCorrect ? 'correct' : ''} ${isWrong && showAnswer ? 'incorrect' : ''} ${selectedOption === option && !showAnswer ? 'selected' : ''}`}
+                                            className={className}
                                         >
                                             {option}
                                         </div>
@@ -261,12 +436,15 @@ const Flashcards = () => {
                                 })}
                             </div>
 
-                            {selectedOption && (
-                                <div className="material-info">
-                                    This question comes from the course {materialId}
-                                </div>
+                            {!showAnswer && selectedOptions.length > 0 && (
+                                <button
+                                    className="show-answer-btn"
+                                    onClick={handleCheckAnswers}
+                                    style={{ marginTop: '1rem' }}
+                                >
+                                    Check Answers
+                                </button>
                             )}
-
                         </div>
                     ) : (
                         <>
@@ -274,13 +452,7 @@ const Flashcards = () => {
                                 {showAnswer && <hr className={`answer-divider ${isMobile ? 'mobile-divider' : ''}`} />}
 
                                 {showAnswer ? (
-                                    <div className={`flashcard-answer centered ${isMobile ? 'mobile-answer' : ''}`}>
-
-                                        <div>{current.answer}</div>
-                                        <div className="material-info">
-                                            This question comes from the course {materialId}
-                                        </div>
-                                    </div>
+                                    <div className={`flashcard-answer centered ${isMobile ? 'mobile-answer' : ''}`}>{current.answer}</div>
                                 ) : (
                                     <div className="answer-button-container">
                                         <button
@@ -291,7 +463,6 @@ const Flashcards = () => {
                                         </button>
                                     </div>
                                 )}
-
                             </div>
 
                             <div className="keyboard-icon-container" onClick={toggleKeyboardInput}>
@@ -305,9 +476,9 @@ const Flashcards = () => {
                                         className="keyboard-input"
                                         value={inputText}
                                         onChange={handleInputChange}
+                                        onKeyPress={handleKeyPress}
                                         placeholder="Type the answer"
                                         autoFocus
-                                        style={{ marginLeft: isMobile ? '40px' : '60px', width: isMobile ? 'calc(100% - 50px)' : 'calc(100% - 75px)' }}
                                     />
                                     <button className="submit-answer-btn" onClick={handleSubmitInput}>
                                         Submit
@@ -332,6 +503,8 @@ const Flashcards = () => {
 
                 <div className="rating-container">
                     <button className="nav-btn-circle" onClick={prevCard}>&lt;</button>
+                    {/* Pentru întrebările multiple choice, butoanele de rating sunt doar vizuale
+                        deoarece feedback-ul se aplică automat */}
                     <button className="rating-btn" onClick={() => handleFeedback('bad', 2)}>😡</button>
                     <button className="rating-btn" onClick={() => handleFeedback('neutral', 1)}>😐</button>
                     <button className="rating-btn" onClick={() => handleFeedback('good', 0)}>😊</button>
