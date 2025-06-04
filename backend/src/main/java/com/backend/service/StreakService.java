@@ -111,14 +111,20 @@ public class StreakService {
 
             return Optional.of(streak);
         } else {
-            // Dacă nu există streak, returnează un streak cu currentStreak = 0
+            // Creează și salvează un streak nou cu data de ieri
             Streak newStreak = new Streak();
-            newStreak.setUser(new User(userId));
+            newStreak.setUser(new User(userId));  // presupune că userul există deja
             newStreak.setCurrentStreak(0);
-            newStreak.setLastCompletedDate(null); // sau poți pune o dată default, gen 1970-01-01
-            return Optional.of(newStreak);
+
+            // Setează data de ieri
+            LocalDate yesterday = LocalDate.now().minusDays(1);
+            newStreak.setLastCompletedDate(Date.valueOf(yesterday));
+
+            Streak savedStreak = streakRepository.save(newStreak);
+            return Optional.of(savedStreak);
         }
     }
+
 
     public void updateStreakIfYesterday(Integer userId) {
         List<Streak> streaks = streakRepository.findByUserId(userId);

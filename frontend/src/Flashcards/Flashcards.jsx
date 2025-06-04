@@ -174,7 +174,7 @@ const Flashcards = () => {
     const checkAndUpdateStreak = async () => {
         if (streakUpdated) return; // nu actualiza de mai multe ori pe sesiune
         try {
-            await api.post('/streak/check', null, { params: { userId } });
+            await api.post(`/users/streak/check?userId=${userId}`, null, { params: { userId } });
             console.log("Streak actualizat");
             setStreakUpdated(true);
         } catch (err) {
