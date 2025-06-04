@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 @RestController
-@RequestMapping("/api/pdf")
+@RequestMapping("/pdf")
 public class PDFController {
 
     private final AWSS3Service awss3Service;

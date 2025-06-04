@@ -57,7 +57,7 @@ public class FlashcardGeneratorController {
         });
         
         response.put("status", "started");
-        response.put("message", "🚀 Generarea flashcard-urilor a început în background. Folosiți /api/flashcards/generation-status pentru a verifica progresul.");
+        response.put("message", "🚀 Generarea flashcard-urilor a început în background. Folosiți /flashcards/generation-status pentru a verifica progresul.");
         return ResponseEntity.ok(response);
     }
 
