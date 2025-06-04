@@ -26,6 +26,7 @@ const Flashcards = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [score, setScore] = useState(null);
     const [selectedOptions, setSelectedOptions] = useState([]);
+    const [streakUpdated, setStreakUpdated] = useState(false);
 
     const ratingColors = {
         0: "#2D852D",  // Good (😊) - Green
@@ -170,6 +171,18 @@ const Flashcards = () => {
         });
     };
 
+    const checkAndUpdateStreak = async () => {
+        if (streakUpdated) return; // nu actualiza de mai multe ori pe sesiune
+        try {
+            await api.post(`/users/streak/check?userId=${userId}`, null, { params: { userId } });
+            console.log("Streak actualizat");
+            setStreakUpdated(true);
+        } catch (err) {
+            console.error("Eroare la actualizarea streak-ului:", err);
+        }
+    };
+
+
     const handleCheckAnswers = async () => {
         if (showAnswer) return;
 
@@ -186,6 +199,7 @@ const Flashcards = () => {
         if (isAllCorrect) {
             setFeedbackMessage("Correct!");
             handleFeedback('good', 0);
+            checkAndUpdateStreak();
         } else {
             setFeedbackMessage("Wrong!");
             handleFeedback('bad', 2);
@@ -310,6 +324,10 @@ const Flashcards = () => {
             } else {
                 autoRating = 2;
             }
+            if (autoRating === 0) {
+                checkAndUpdateStreak(); // <-- Aici
+            }
+
 
             handleFeedback('auto', autoRating);
 
