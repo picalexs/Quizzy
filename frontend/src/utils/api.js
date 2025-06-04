@@ -17,16 +17,11 @@ axiosInstance.interceptors.request.use(
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
-        //DEBUG REMOVE LATER
-        console.log(`Making ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
-        console.log('Headers:', config.headers);
-        if (config.data) {
-            console.log('Body:', config.data);
-        }
         return config;
     },
     (error) => Promise.reject(error)
 );
+
 
 axiosInstance.interceptors.response.use(
     (response) => {
@@ -35,21 +30,10 @@ axiosInstance.interceptors.response.use(
     },
     (error) => {
         if (error.response && error.response.status === 401) {
-            console.log('Interceptor: Unauthorized response (401) received.');
-            if (window.location.pathname !== '/login') {
-                console.log('Interceptor: Not on /login page. Clearing auth data and redirecting to /login.');
-                localStorage.removeItem('authToken');
-                localStorage.removeItem('user');
-                localStorage.removeItem('userRole');
-                localStorage.removeItem('userId'); 
-                window.location.href = '/login'; 
-            } else {
-                console.log('Interceptor: Already on /login page. Skipping redirect. Auth data might still be cleared.');
-                localStorage.removeItem('authToken');
-                localStorage.removeItem('user');
-                localStorage.removeItem('userRole');
-                localStorage.removeItem('userId');
-            }
+            localStorage.removeItem('authToken');
+            localStorage.removeItem('user');
+            localStorage.removeItem('userRole');
+            window.location.href = '/login';
         }
         return Promise.reject(error);
     }
@@ -66,7 +50,6 @@ binaryAxiosInstance.interceptors.request.use(
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
-        console.log(`Making binary ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
         return config;
     },
     (error) => Promise.reject(error)
