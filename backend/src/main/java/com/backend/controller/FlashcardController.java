@@ -377,12 +377,12 @@ public class FlashcardController {
         System.out.println("DEBUG: CERERE COMPLETĂ PRIMITĂ LA /response: " + response);
         System.out.println("DEBUG: FlashcardId=" + response.getFlashcardId() + ", UserId=" + response.getUserId() + ", Quality=" + response.getQuality() + ", isCorrect=" + response.isCorrect());
         // Trace complet al stivei pentru debugging
-        try {
+       /*  try {
             throw new Exception("Trace stack pentru debugging");
         } catch (Exception e) {
             System.out.println("DEBUG TRACE (ignorati acest stack trace, este doar pentru debugging):");
             e.printStackTrace();
-        }
+        }*/
         Map<String, Object> result = new HashMap<>();
 
         System.out.println("======== ÎNCEPUTUL PROCESĂRII RĂSPUNSULUI FLASHCARD ========");
