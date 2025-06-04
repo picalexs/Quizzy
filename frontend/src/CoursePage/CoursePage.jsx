@@ -372,38 +372,41 @@ function CoursePage() {
 
   // Get flashcards from materials
   const allFlashcards = materials.flatMap((mat) => (mat.flashcards ? mat.flashcards : []))  ;  return (
-    <div className="graph-container">
+    <div className={`graph-container ${userRole === 'student' ? 'student-view' : 'professor-view'}`}>
       {notification && <div className="graph-notification">{notification}</div>}
       
       {/* Burger Menu Component */}
-      <BurgerMenu currentPage="Library" />
-
-      {/* Quizzy Logo */}
+      <BurgerMenu currentPage="Library" />      {/* Quizzy Logo positioned in top left */}
       <div className="graph-logo">
         <img src="/quizzy-logo-homepage.svg" alt="Logo" />
       </div>
-      
-      {/* Navigation Icons */}
-      <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Home")}>
-        <img src="/home-logo.svg" alt="Home" className="graph-icon-image" />
-        <span className="graph-icon-text">Home</span>
-      </button>
 
-      <button className="graph-icon-wrapper graph-icon-active">
-        <div className="graph-rectangle-active"></div>
-        <img src="/library-logo.svg" alt="Library" className="graph-icon-image" />
-        <div className="graph-icon-text">Library</div>
-      </button>
+      {/* Sidebar Container */}
+      <div className="graph-sidebar">        
+        {/* Navigation Container */}
+        <div className="graph-nav">
+          <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Home")}>
+            <img src="/home-logo.svg" alt="Home" className="graph-icon-image" />
+            <span className="graph-icon-text">Home</span>
+          </button>
 
-      <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Explore")}>
-        <img src="/explore-logo.svg" alt="Explore" className="graph-icon-image" />
-        <span className="graph-icon-text">Explore</span>
-      </button>
+          <button className="graph-icon-wrapper graph-icon-active">
+            <div className="graph-rectangle-active"></div>
+            <img src="/library-logo.svg" alt="Library" className="graph-icon-image" />
+            <div className="graph-icon-text">Library</div>
+          </button>
 
-      <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Profile")}>
-        <img src="/profile-logo.svg" alt="Profile" className="graph-icon-image" />
-        <span className="graph-icon-text">Profile</span>
-      </button>
+          <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Explore")}>
+            <img src="/explore-logo.svg" alt="Explore" className="graph-icon-image" />
+            <span className="graph-icon-text">Explore</span>
+          </button>
+
+          <button className="graph-icon-wrapper" onClick={() => handleDesktopNavClick("Profile")}>
+            <img src="/profile-logo.svg" alt="Profile" className="graph-icon-image" />
+            <span className="graph-icon-text">Profile</span>
+          </button>
+        </div>
+      </div>
       
       {/* FII Logo positioned on right border */}
       <div className="graph-logo-fii">

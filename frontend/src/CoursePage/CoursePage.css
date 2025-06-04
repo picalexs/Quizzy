@@ -8,6 +8,10 @@ body {
   padding: 0;
   font-family: "Ubuntu", sans-serif;
   overflow-x: hidden;
+  transform: none !important;
+  transform-style: flat !important;
+  will-change: auto !important;
+  perspective: none !important;
 }
 
 .graph-container {
@@ -19,19 +23,30 @@ body {
   background: linear-gradient(180deg, #173b61 40%, #efeae6 100%);
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 40px 20px 40px 140px; /* Left padding for sidebar */
+  padding: 20px 0; /* Remove horizontal padding to prevent overlap */
   box-sizing: border-box;
   position: relative;
+  z-index: 0;
+  transform: none;
+  will-change: auto;
+  /* Ensure fixed elements are not affected by container */
+  contain: layout;
 }
 
-/* FII Logo positioned on right side */
+/* FII Logo positioned symmetrically on right side */
 .graph-logo-fii {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  width: 49px;
+  position: fixed !important;
+  top: 2rem !important;
+  right: 2rem !important;
+  width: 61px; /* Match Quizzy logo width */
   height: 48px;
-  z-index: 10;
+  z-index: 1000 !important; /* Match Quizzy logo z-index */
+  will-change: auto !important;
+  transform: none !important;
+  backface-visibility: hidden;
+  /* Additional fixes to ensure it stays fixed */
+  transform: translate3d(0, 0, 0) !important;
+  contain: layout style !important;
 }
 
 .graph-logo-fii img {
@@ -40,14 +55,24 @@ body {
   object-fit: contain;
 }
 
-/* Quizzy Logo positioned on left side */
+/* Quizzy Logo positioned fixed in top left */
 .graph-logo {
+  position: fixed !important;
+  top: 2rem !important;
+  left: 2rem !important;
   width: 61px;
   height: 48px;
-  margin-bottom: 2.5rem; /* Increased space between logo and navigation */
   flex-shrink: 0;
-  position: relative;
-  z-index: 20;
+  z-index: 1000 !important; /* High z-index to stay above scrolling content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: auto !important;
+  transform: none !important;
+  backface-visibility: hidden;
+  /* Additional fixes to ensure it stays fixed */
+  transform: translate3d(0, 0, 0) !important;
+  contain: layout style !important;
 }
 
 .graph-logo img {
@@ -59,30 +84,36 @@ body {
 
 /* Sidebar Container */
 .graph-sidebar {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
+  position: fixed !important;
+  top: 6rem !important; /* Positioned to align with logo center */
+  left: 2rem !important;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 15;
-  padding: 1rem;
-  gap: 1rem; /* Reduced gap for better vertical alignment */
+  z-index: 999 !important; /* High z-index but below logos */
+  padding: 0;
+  gap: 0;
   background: transparent;
   box-sizing: border-box;
-  min-width: 80px;
-  isolation: isolate; /* Create a stacking context */
-  width: 80px; /* Fixed width to prevent horizontal spreading */
+  min-width: 61px;
+  isolation: isolate;
+  width: 61px; /* Match logo width for perfect alignment */
+  will-change: auto !important;
+  transform: none !important;
+  backface-visibility: hidden;
+  /* Additional fixes to ensure it stays fixed */
+  transform: translate3d(0, 0, 0) !important;
+  contain: layout style !important;
 }
 
 /* Navigation Container */
 .graph-nav {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem; /* Reduced gap for better vertical alignment */
   align-items: center;
   position: relative;
-  z-index: 15;
+  z-index: 998;
   width: 100%;
 }
 
@@ -93,11 +124,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 64px;
+  width: 61px; /* Match logo width exactly for perfect alignment */
   height: 72px;
   background: none;
   border: none;
-  padding: 0.5rem;
+  padding: 0; /* Remove padding to align perfectly with logo */
   margin: 0;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -106,17 +137,29 @@ body {
   z-index: 10;
 }
 
-/* Centered main content box */
+/* Centered main content box - fully responsive and wider */
 .graph-box {
-  max-width: 1088px;
-  min-width: 600px;
-  width: 100%;
+  width: clamp(320px, 85%, 1400px);
+  max-width: calc(100vw - 180px); /* Ensure enough space for fixed sidebar (61px + margins) on both sides */
+  min-width: 320px;
   background: #efeae6;
   box-shadow: 0 0 8px 2px rgba(23, 59, 97, 0.64) inset;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  margin-left: max(140px, 10%); /* Ensure content starts after the sidebar */
+  margin-right: auto;
+  transition: width 0.3s ease, max-width 0.3s ease;
+  position: relative;
+  z-index: 1; /* Ensure main content is below fixed navigation */
+  /* Prevent any transforms that might affect fixed positioning */
+  transform: none !important;
+  transform-style: flat !important;
+  will-change: auto !important;
+  contain: layout !important;
+  /* Ensure this container doesn't create a new stacking context that affects fixed elements */
+  isolation: auto !important;
 }
 
 .graph-icon-wrapper:hover {
@@ -205,14 +248,8 @@ body {
 .graph-icon-active .graph-icon-image[src*="library-logo"] svg,
 .graph-icon-active .graph-icon-image[src*="library-logo"] svg * {
   fill: #173b61 !important;
-  stroke: #173b61 !important;
-  visibility: visible !important;
+  stroke: #173b61 !important;  visibility: visible !important;
   opacity: 1 !important;
-}
-
-.graph-logo-fii {
-  width: 49px;
-  height: 48px;
 }
 
 .graph-content-box {
@@ -950,295 +987,9 @@ body {
   transform: scale(0.95);
 }
 
-/* Responsive design for flashcards */
-@media screen and (max-width: 1024px) {
-  .graph-flashcard {
-    padding: 18px;
-  }
-  
-  .graph-flashcard h3 {
-    font-size: 15px;
-  }
-  
-  .graph-flashcard p {
-    font-size: 13px;
-  }
-}
+/* ===== COMPREHENSIVE RESPONSIVE DESIGN ===== */
 
-@media screen and (max-width: 768px) {
-  .graph-container {
-    flex-direction: column;
-    padding-top: 80px; /* Space for burger menu */
-  }
-  
-  /* Hide desktop navigation icons and logos on mobile */
-  .graph-icon-wrapper {
-    display: none !important;
-  }
-  
-  .graph-logo,
-  .graph-logo-fii {
-    display: none !important;
-  }
-  
-  /* Show burger menu on mobile */
-  .burger-menu-button {
-    display: flex !important;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #173b61;
-    border: none;
-    border-radius: 8px;
-    color: #efeae6;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .graph-box {
-    margin: 0;
-    min-width: 100%;
-    border-radius: 0;
-  }
-  
-  .graph-content-box {
-    padding: 20px 15px;
-  }
-  
-  .graph-header {
-    flex-direction: column;
-    gap: 15px;
-    align-items: stretch;
-    text-align: center;
-  }
-  
-  .graph-title {
-    font-size: 28px;
-  }
-    .graph-buttons-container {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  /* Hide replace buttons on mobile */
-  .graph-replace-button {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .graph-content-box {
-    padding: 15px 10px;
-  }
-  
-  .graph-title {
-    font-size: 24px;
-  }
-  
-  .graph-buttons-container {
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  /* Ensure navigation elements are hidden on smallest screens */
-  .graph-icon-wrapper {
-    display: none !important;
-  }
-  
-  .graph-logo,
-  .graph-logo-fii {
-    display: none !important;
-  }
-    .graph-unenroll-button,
-  .graph-enrolled-button,
-  .graph-enroll-button,
-  .graph-start-button {
-    width: 100%;
-    height: 40px;
-    font-size: 14px;
-  }
-  
-  /* Hide replace buttons on small mobile screens */
-  .graph-replace-button {
-    display: none !important;
-  }
-}
-
-/* Large desktop optimizations */
-@media screen and (min-width: 1400px) {
-  .graph-box {
-    max-width: 1200px;
-  }
-  
-  .graph-content-box {
-    padding: 50px 40px;
-  }
-}
-
-/* Medium desktop */
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
-  .graph-box {
-    width: calc(100vw - 180px);
-  }
-  
-  .graph-content-box {
-    width: calc(100vw - 180px);
-    padding: 35px;
-  }
-}
-
-/* Small desktop / Large tablet */
-@media screen and (min-width: 769px) and (max-width: 999px) {
-  .graph-box {
-    width: calc(100vw - 160px);
-    min-width: 500px;
-  }
-  
-  .graph-content-box {
-    width: calc(100vw - 160px);
-    min-width: 500px;
-    padding: 25px;
-  }
-  
-  .graph-icon-wrapper {
-    width: 60px;
-    height: 68px;
-  }
-  
-  .graph-icon-image {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .graph-icon-text {
-    font-size: 11px;
-  }
-  
-  .graph-logo {
-    width: 55px;
-    height: 43px;
-  }
-  
-  .graph-logo-fii {
-    width: 44px;
-    height: 43px;
-  }
-}
-
-/* Mobile landscape / Small tablet - Burger menu appears */
-@media screen and (max-width: 768px) and (min-width: 481px) {
-  .burger-menu-button {
-    display: flex !important;
-    z-index: 1000;
-  }
-  
-  .graph-icon-wrapper {
-    display: none !important;
-  }
-  
-  .graph-logo,
-  .graph-logo-fii {
-    display: none !important;
-  }
-  
-  .graph-container {
-    flex-direction: column;
-    padding-top: 80px;
-  }
-  
-  .graph-content-box {
-    padding: 20px;
-    min-width: 300px;
-  }
-  
-  .graph-box {
-    margin: 0;
-    min-width: 300px;
-    border-radius: 0;
-  }
-  
-  .graph-files-container {
-    max-height: 280px;
-  }
-  
-  .graph-header {
-    padding: 0 20px;
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-  }
-  
-  .graph-title {
-    font-size: 24px;
-  }
-    .graph-buttons-container {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  /* Hide replace buttons on mobile landscape */
-  .graph-replace-button {
-    display: none !important;
-  }
-}
-
-/* Additional mobile portrait styles - specific overrides */
-@media screen and (max-width: 480px) {
-  .graph-content-box {
-    width: calc(100vw - 20px);
-    padding: 15px 5px;
-    min-width: 280px;
-    top: 80px; /* Add space for burger menu */
-    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
-  }
-  
-  .graph-box {
-    width: calc(100vw - 20px);
-    min-width: 280px;
-    top: 80px; /* Add space for burger menu */
-    min-height: calc(100vh - 90px); /* Use min-height to allow content expansion */
-  }
-  
-  .graph-header {
-    padding: 0 10px;
-    margin-bottom: 20px;
-  }.graph-files-container {
-    height: 220px; /* Fixed height for smallest screens */
-    padding-right: 8px;
-    margin: 0 -5px; /* Extend to edges for maximum space utilization */
-    padding-left: 5px;
-    width: 100%; /* Ensure container doesn't exceed parent width */
-    max-width: 100%; /* Prevent overflow */
-    box-sizing: border-box; /* Include padding and margins in width calculations */
-  }
-  
-  .graph-title {
-    font-size: 20px;
-  }
-  
-  .graph-buttons-container {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .graph-unenroll-button,
-  .graph-enrolled-button,
-  .graph-enroll-button,
-  .graph-start-button {
-    font-size: 14px;
-    padding: 8px 15px;
-    height: 40px;
-  }
-}
-
-/* Burger Menu Styles */
+/* Burger Menu Styles - Hidden by default on desktop */
 .burger-menu-button {
   position: fixed;
   top: 20px;
@@ -1264,141 +1015,13 @@ body {
   transform: scale(1.05);
 }
 
-.burger-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  animation: fadeIn 0.3s ease;
-}
-
-.burger-menu-content {
-  width: 300px;
-  height: 100vh;
-  background-color: #173b61;
-  padding: 80px 20px 20px;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-  animation: slideInLeft 0.3s ease;
-  overflow-y: auto;
-}
-
-.burger-menu-logos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  gap: 20px;
-  padding: 0 20px;
-}
-
-.burger-menu-logo {
-  width: 80px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.burger-menu-logo img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.burger-menu-logo-fii {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.burger-menu-logo-fii img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.burger-menu-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.burger-menu-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px 20px;
-  background: none;
-  border: none;
-  color: #efeae6;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  text-align: left;
-  width: 100%;
-}
-
-.burger-menu-item:hover {
-  background-color: rgba(239, 234, 230, 0.1);
-  transform: translateX(5px);
-}
-
-.burger-menu-item-active {
-  background-color: #efeae6;
-  color: #173b61;
-  font-weight: 700;
-}
-
-.burger-menu-item-active:hover {
-  background-color: #e6e1dd;
-  color: #173b61;
-}
-
-.burger-menu-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.burger-menu-item-active .burger-menu-icon {
-  filter: brightness(0) saturate(100%) invert(18%) sepia(28%) saturate(1556%) hue-rotate(169deg) brightness(91%) contrast(88%);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-/* Desktop navigation - visible by default */
+/* Desktop Navigation - Visible by default */
 .graph-icon-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 64px;
+  width: 61px;
   height: 72px;
   background: none;
   border: none;
@@ -1415,106 +1038,218 @@ body {
 }
 
 .graph-logo-fii {
-  width: 49px;
+  width: 61px; /* Match Quizzy logo width for perfect symmetry */
   height: 48px;
   flex-shrink: 0;
 }
 
-.burger-menu-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #173b61;
-  border: none;
-  border-radius: 8px;
-  color: #efeae6;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 1000;
-  display: none; /* Hidden by default on desktop */
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Show desktop navigation and hide burger menu on tablet and larger screens */
-@media screen and (min-width: 769px) {
+/* --- GLOBAL DESKTOP NAVIGATION FIXES --- */
+@media screen and (min-width: 900px) {
+  .graph-logo {
+    position: fixed !important;
+    top: 2rem !important;
+    left: 2rem !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    will-change: auto !important;
+    transform: none !important;
+  }
+  .graph-logo-fii {
+    position: fixed !important;
+    top: 2rem !important;
+    right: 2rem !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    will-change: auto !important;
+    transform: none !important;
+  }
+  .graph-sidebar {
+    position: fixed !important;
+    top: 6rem !important;
+    left: 2rem !important;
+    z-index: 999 !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    min-width: 61px;
+    width: 61px;
+    will-change: auto !important;
+    transform: none !important;
+  }
   .burger-menu-button {
     display: none !important;
   }
-  
-  .graph-icon-wrapper {
+  .graph-box {
+    margin-left: 110px !important; /* 61px sidebar + 2rem gap */
+    margin-right: 110px !important; /* 61px logo + 2rem gap */
+    max-width: calc(100vw - 220px) !important;
+    box-sizing: border-box;
+    z-index: 1 !important;
+  }
+}
+
+/* --- ENSURE NO OVERLAP ON ALL DESKTOP BREAKPOINTS --- */
+@media screen and (min-width: 1200px) {
+  /* No extra margin or max-width rules here, handled above */
+}
+
+/* --- TABLET AND BELOW: HIDE DESKTOP NAVIGATION --- */
+@media screen and (max-width: 899px) {
+  .graph-logo,
+  .graph-logo-fii,
+  .graph-sidebar {
+    display: none !important;
+  }
+  .burger-menu-button {
     display: flex !important;
   }
+  .graph-box {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100vw !important;
+  }
+}
+
+/* FORCE FIXED POSITIONING FOR ALL NAVIGATION ELEMENTS */
+.graph-logo,
+.graph-logo-fii,
+.graph-sidebar {
+  position: fixed !important;
+  will-change: auto !important;
+  transform: none !important;
+  translate: none !important;
+  scale: none !important;
+  rotate: none !important;
+  backface-visibility: hidden !important;
+  perspective: none !important;
+  transform-style: flat !important;
+}
+
+/* ===== FLUID RESPONSIVE BREAKPOINTS ===== */
+
+/* Extra Large Desktop (1600px+) */
+@media screen and (min-width: 1600px) {
+  .graph-container {
+    padding: 20px 0; /* Remove horizontal padding to prevent navigation overlap */
+  }
   
+  .graph-box {
+    width: clamp(1000px, 85%, 1800px);
+    max-width: calc(100vw - 140px); /* Account for fixed sidebar space */
+  }
+  
+  .graph-content-box {
+    padding: 50px 60px;
+  }
+  
+  .graph-title {
+    font-size: clamp(32px, 2.5vw, 40px);
+  }
+  
+  /* Ensure fixed positioning for navigation elements */
   .graph-logo,
+  .graph-logo-fii,
+  .graph-sidebar {
+    position: fixed !important;
+  }
+  
+  /* Fixed dimensions for logos and icons */
+  .graph-logo {
+    width: 61px !important;
+    height: 48px !important;
+  }
+  
   .graph-logo-fii {
-    display: block !important;
+    width: 61px !important;
+    height: 48px !important;
   }
   
-  .graph-box {
-    flex: 1;
-    min-width: 600px;
-  }
-  
-  .graph-content-box {
-    flex: 1;
-  }
-}
-
-/* Responsive sizing for smaller desktop screens */
-@media screen and (max-width: 1200px) and (min-width: 769px) {
-  .graph-box {
-    flex: 1;
-    min-width: 550px;
-  }
-  
-  .graph-content-box {
-    padding: 30px;
-  }
-}
-
-/* Additional responsive breakpoints for better experience */
-
-/* Large desktop - optimize for better use of space */
-@media screen and (min-width: 1400px) {
-  .graph-box {
-    max-width: 1200px;
-  }
-  
-  .graph-content-box {
-    padding: 50px;
-  }
-}
-
-/* Medium desktop */
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
-  .graph-box {
-    flex: 1;
-  }
-  
-  .graph-content-box {
-    padding: 35px;
-  }
-}
-
-/* Small desktop / Large tablet */
-@media screen and (min-width: 769px) and (max-width: 999px) {
-  .graph-box {
-    flex: 1;
-    min-width: 500px;
-  }
-  
-  .graph-content-box {
-    padding: 25px;
+  .graph-sidebar {
+    width: 61px !important;
   }
   
   .graph-icon-wrapper {
-    width: 60px;
-    height: 68px;
+    width: 61px !important;
+    height: 72px !important;
+  }
+}
+
+/* Large Desktop (1200px - 1599px) */
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  .graph-container {
+    padding: 20px 0; /* Remove horizontal padding to prevent navigation overlap */
+  }
+  
+  .graph-box {
+    width: clamp(800px, 85%, 1500px);
+    max-width: calc(100vw - 140px); /* Account for fixed sidebar space */
+  }
+  
+  .graph-content-box {
+    padding: 40px 50px;
+  }
+  
+  .graph-title {
+    font-size: clamp(30px, 2.2vw, 36px);
+  }
+  
+  /* Ensure fixed positioning for navigation elements */
+  .graph-logo,
+  .graph-logo-fii,
+  .graph-sidebar {
+    position: fixed !important;
+  }
+  
+  /* Fixed dimensions for logos and icons */
+  .graph-logo {
+    width: 61px !important;
+    height: 48px !important;
+  }
+  
+  .graph-logo-fii {
+    width: 61px !important;
+    height: 48px !important;
+  }
+  
+  .graph-sidebar {
+    width: 61px !important;
+  }
+  
+  .graph-icon-wrapper {
+    width: 61px !important;
+    height: 72px !important;
+  }
+}
+
+/* Medium Desktop (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .graph-container {
+    padding: 20px 0; /* Remove horizontal padding to prevent navigation overlap */
+  }
+  
+  .graph-box {
+    width: clamp(500px, 88%, 1200px);
+    max-width: calc(100vw - 140px); /* Ensure enough space for fixed sidebar */
+  }
+  
+  .graph-content-box {
+    padding: 35px 40px;
+  }
+  
+  /* Ensure fixed positioning for navigation elements */
+  .graph-logo,
+  .graph-logo-fii,
+  .graph-sidebar {
+    position: fixed !important;
+  }
+  
+  .graph-sidebar {
+    width: 61px !important; /* Keep consistent with main logo size */
+  }
+  
+  .graph-icon-wrapper {
+    width: 61px !important;
+    height: 72px !important;
   }
   
   .graph-icon-image {
@@ -1525,43 +1260,120 @@ body {
   .graph-icon-text {
     font-size: 11px;
   }
-  
   .graph-logo {
-    width: 55px;
-    height: 43px;
+    width: 61px !important;
+    height: 48px !important;
   }
   
   .graph-logo-fii {
-    width: 44px;
-    height: 43px;
+    width: 61px !important; /* Match Quizzy logo width for perfect symmetry */
+    height: 48px !important;
+  }
+  
+  .graph-title {
+    font-size: clamp(28px, 2vw, 32px);
   }
 }
 
-/* Mobile and tablet responsive */
-@media screen and (max-width: 768px) {
+/* Small Desktop / Large Tablet (769px - 991px) */
+@media screen and (min-width: 900px) and (max-width: 991px) {
+  .graph-container {
+    padding: 20px 0; /* Remove horizontal padding to prevent navigation overlap */
+  }
+  
+  .graph-box {
+    width: clamp(450px, 90%, 900px);
+    max-width: calc(100vw - 140px); /* Ensure enough space for fixed sidebar */
+  }
+  
+  .graph-content-box {
+    padding: 30px 35px;
+  }
+  
+  /* Ensure fixed positioning for navigation elements */
+  .graph-logo,
+  .graph-logo-fii,
+  .graph-sidebar {
+    position: fixed !important;
+  }
+  
+  .graph-sidebar {
+    width: 61px !important; /* Keep consistent dimensions */
+  }
+  
+  .graph-icon-wrapper {
+    width: 61px !important;
+    height: 72px !important;
+  }
+  
+  .graph-icon-image {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .graph-icon-text {
+    font-size: 10px;
+  }
+  
+  .graph-logo {
+    width: 61px !important;
+    height: 48px !important;
+  }
+  
+  .graph-logo-fii {
+    width: 61px !important; /* Keep consistent dimensions */
+    height: 48px !important;
+  }
+  
+  .graph-title {
+    font-size: clamp(26px, 1.8vw, 30px);
+  }
+  
+  .graph-header {
+    padding: 0 30px;
+  }
+  
+  .graph-files-container {
+    max-height: 350px;
+  }
+}
+
+/* Tablet Portrait and below (max-width: 899px) - Hide navigation */
+@media screen and (max-width: 899px) {
   .graph-container {
     flex-direction: column;
-    padding-top: 80px;
+    padding: 80px 20px 20px 20px;
   }
   
-  /* Hide desktop navigation on mobile */
-  .desktop-nav {
-    display: none;
+  /* Hide desktop navigation */
+  .graph-sidebar {
+    display: none !important;
   }
   
-  /* Show burger menu on mobile */
+  .graph-icon-wrapper {
+    display: none !important;
+  }
+  
+  .graph-logo,
+  .graph-logo-fii {
+    display: none !important;
+  }
+  
+  /* Show burger menu */
   .burger-menu-button {
     display: flex !important;
   }
   
   .graph-box {
-    margin: 0;
+    width: 100%;
     min-width: 100%;
-    border-radius: 0;
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 0;
   }
   
   .graph-content-box {
-    padding: 20px 15px;
+    padding: 25px 20px;
   }
   
   .graph-header {
@@ -1569,27 +1381,72 @@ body {
     gap: 15px;
     align-items: stretch;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 15px;
+    margin-bottom: 25px;
   }
   
   .graph-title {
-    font-size: 28px;
+    font-size: clamp(24px, 4vw, 28px);
   }
   
   .graph-buttons-container {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+  }
+    .graph-files-container {
+    max-height: 300px;
   }
   
-  .graph-files-container {
-    max-height: 280px;
+  /* Hide replace buttons on mobile ONLY for student accounts */
+  .student-view .graph-replace-button {
+    display: none !important;
+  }
+  
+  /* Keep replace buttons visible for professors on mobile */
+  .professor-view .graph-replace-button {
+    display: flex !important;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  
+  /* Optimize flashcards for tablet */
+  .graph-flashcard {
+    padding: 16px;
+    min-height: 80px;
+    max-height: 160px;
+  }
+  
+  .graph-flashcard h3 {
+    font-size: 14px;
+  }
+  
+  .graph-flashcard p {
+    font-size: 12px;
+  }
+  
+  /* Adjust slick slider for tablets */
+  .slick-track {
+    padding: 15px 0;
+  }
+  
+  .slick-slide {
+    padding: 0 8px;
   }
 }
 
-@media screen and (max-width: 480px) {
+/* Mobile Landscape / Small Tablet (481px - 640px) */
+@media screen and (max-width: 640px) and (min-width: 481px) {
+  .graph-container {
+    padding: 70px 15px 15px 15px;
+  }
+  
   .graph-content-box {
-    padding: 15px 10px;
+    padding: 20px 15px;
   }
   
   .graph-header {
@@ -1597,12 +1454,49 @@ body {
   }
   
   .graph-title {
-    font-size: 24px;
+    font-size: clamp(22px, 3.5vw, 26px);
+  }
+  
+  .graph-files-container {
+    max-height: 280px;
+  }
+  
+  .burger-menu-button {
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    left: 15px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile Portrait (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .graph-container {
+    padding: 60px 10px 10px 10px;
+  }
+  
+  .graph-box {
+    border-radius: 4px;
+  }
+  
+  .graph-content-box {
+    padding: 15px 10px;
+  }
+  
+  .graph-header {
+    padding: 0 5px;
+    margin-bottom: 20px;
+  }
+  
+  .graph-title {
+    font-size: clamp(20px, 5vw, 24px);
   }
   
   .graph-buttons-container {
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    width: 100%;
   }
   
   .graph-unenroll-button,
@@ -1610,11 +1504,450 @@ body {
   .graph-enroll-button,
   .graph-start-button {
     width: 100%;
-    height: 40px;
+    height: 44px;
     font-size: 14px;
+    padding: 10px 15px;
   }
   
   .graph-files-container {
-    max-height: 220px;
+    max-height: 250px;
+    padding-right: 4px;
+  }
+  
+  .graph-file-entry {
+    padding: 10px 12px;
+    min-height: 50px;
+  }
+  
+  .graph-file-name {
+    font-size: 14px;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+  
+  .graph-file-details {
+    font-size: 12px;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+  
+  .graph-flashcard {
+    padding: 12px;
+    min-height: 70px;
+    max-height: 140px;
+  }
+  
+  .graph-flashcard h3 {
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  
+  .graph-flashcard p {
+    font-size: 11px;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+  
+  .burger-menu-button {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+  }
+  
+  .graph-section-title {
+    font-size: 18px;
+  }
+  
+  /* Optimize add button for mobile */
+  .graph-add-button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  
+  /* Adjust slick slider for mobile */
+  .slick-slide {
+    padding: 0 5px;
+  }
+  
+  .slick-list {
+    margin: 0 -5px;
+  }
+}
+
+/* Ultra Small Mobile (below 360px) */
+@media screen and (max-width: 359px) {
+  .graph-container {
+    padding: 55px 5px 5px 5px;
+  }
+  
+  .graph-content-box {
+    padding: 10px 8px;
+  }
+  
+  .graph-title {
+    font-size: 18px;
+  }
+  
+  .graph-files-container {
+    max-height: 200px;
+  }
+  
+  .graph-file-entry {
+    padding: 8px 10px;
+    min-height: 45px;
+  }
+  
+  .burger-menu-button {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+/* ===== FLUID RESPONSIVENESS FOR DRAG RESIZE ===== */
+
+/* Container queries for fluid resizing */
+@container (min-width: 1400px) {
+  .graph-box {
+    width: clamp(1000px, 88%, 1800px);
+    max-width: 1800px;
+  }
+}
+
+@container (max-width: 1399px) and (min-width: 1000px) {
+  .graph-box {
+    width: clamp(800px, 85%, 1500px);
+    max-width: 1500px;
+  }
+}
+
+@container (max-width: 999px) and (min-width: 600px) {
+  .graph-box {
+    width: clamp(500px, 90%, 1200px);
+    max-width: 1200px;
+  }
+}
+
+/* Fixed dimensions for logos and navigation to prevent resize distortion */
+@media screen and (min-width: 769px) {
+  .graph-logo,
+  .graph-logo-fii {
+    width: 61px !important;
+    height: 48px !important;
+    flex-shrink: 0 !important;
+    min-width: 61px !important;
+    max-width: 61px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    position: fixed !important;
+    z-index: 1000 !important; /* Ensure always on top */
+  }
+  
+  .graph-sidebar {
+    width: 61px !important;
+    min-width: 61px !important;
+    max-width: 61px !important;
+    position: fixed !important;
+    z-index: 999 !important; /* Below logos but above content */
+  }
+  
+  .graph-icon-wrapper {
+    width: 61px !important;
+    height: 72px !important;
+    flex-shrink: 0 !important;
+    min-width: 61px !important;
+    max-width: 61px !important;
+    min-height: 72px !important;
+    max-height: 72px !important;
+    /* Remove position relative - let parent sidebar handle positioning */
+  }
+  
+  .graph-icon-image {
+    flex-shrink: 0 !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    max-width: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+  }
+  
+  /* Ensure main content doesn't overlap with fixed navigation */
+  .graph-box {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    z-index: 1 !important;
+  }
+}
+
+/* Specific breakpoint adjustments to prevent overlap */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .graph-box {
+    max-width: calc(100vw - 180px) !important; /* Extra space for navigation */
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .graph-box {
+    max-width: calc(100vw - 140px) !important; /* Standard space for larger screens */
+  }
+}
+
+/* Ensure smooth transitions for all interactive elements */
+.graph-box,
+.graph-content-box,
+.graph-header,
+.graph-title,
+.graph-buttons-container,
+.graph-files-container,
+.graph-flashcard,
+.graph-icon-wrapper,
+.graph-sidebar {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure responsive images and media */
+img, 
+video, 
+iframe, 
+object, 
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive typography scaling */
+.graph-title {
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.graph-section-title {
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.3;
+}
+
+/* Responsive button scaling */
+.graph-unenroll-button,
+.graph-enrolled-button,
+.graph-enroll-button,
+.graph-start-button {
+  min-height: 40px;
+  padding: clamp(8px, 1vw, 12px) clamp(15px, 2vw, 20px);
+  font-size: clamp(14px, 1.2vw, 16px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive spacing for better mobile experience */
+@media (hover: none) and (pointer: coarse) {
+  .graph-buttons-container {
+    gap: 15px;
+  }
+  
+  .graph-icon-wrapper {
+    padding: 12px 8px;
+  }
+  
+  .graph-flashcard {
+    margin-bottom: 15px;
+  }
+}
+
+/* Ensure navigation stays fixed and doesn't interfere with content on desktop */
+@media screen and (min-width: 900px) {
+  /* Force fixed positioning for all navigation elements with highest specificity */
+  .graph-logo,
+  .graph-logo-fii,
+  .graph-sidebar {
+    position: fixed !important;
+    z-index: 1000 !important;
+  }
+  
+  /* Ensure navigation elements can't be moved by any other CSS */
+  .graph-sidebar {
+    z-index: 999 !important;
+  }
+  
+  .graph-nav {
+    z-index: 998 !important;
+  }
+  
+  /* Ensure main content has proper spacing from fixed navigation */
+  .graph-container {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .graph-box {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Prevent any transform or position changes that could affect fixed positioning */
+  .graph-sidebar,
+  .graph-nav,
+  .graph-icon-wrapper {
+    transform: none !important;
+    will-change: auto !important;
+  }
+  
+  /* Ensure icon wrappers don't interfere with parent positioning */
+  .graph-icon-wrapper {
+    position: relative; /* Relative to fixed parent, not viewport */
+  }
+}
+
+/* ===== FINAL OVERRIDE: ABSOLUTELY LOCK LOGOS IN PLACE ===== */
+/* This rule has the highest specificity to prevent any scroll-related movement */
+html body .graph-container .graph-logo,
+html body .graph-container .graph-logo-fii,
+html body .graph-container .graph-sidebar {
+  position: fixed !important;
+  will-change: auto !important;
+  transform: none !important;
+  translate: none !important;
+  scale: none !important;
+  rotate: none !important;
+  backface-visibility: hidden !important;
+  perspective: none !important;
+  transform-style: flat !important;
+  z-index: 1000 !important;
+  contain: none !important;
+  isolation: auto !important;
+}
+
+/* Ensure logos stay at exact positions */
+html body .graph-container .graph-logo {
+  top: 2rem !important;
+  left: 2rem !important;
+}
+
+html body .graph-container .graph-logo-fii {
+  top: 2rem !important;
+  right: 2rem !important;
+}
+
+html body .graph-container .graph-sidebar {
+  top: 6rem !important;
+  left: 2rem !important;
+  z-index: 999 !important;
+}
+
+/* ABSOLUTE FINAL OVERRIDE - MAXIMUM SPECIFICITY FOR FIXED POSITIONING */
+/* This ensures logos never move during scroll or any other interactions */
+body .graph-container .graph-logo,
+body .graph-container .graph-logo-fii,
+body .graph-container .graph-sidebar {
+  position: fixed !important;
+  z-index: 1000 !important;
+}
+
+body .graph-container .graph-logo {
+  top: 2rem !important;
+  left: 2rem !important;
+}
+
+body .graph-container .graph-logo-fii {
+  top: 2rem !important;
+  right: 2rem !important;
+}
+
+body .graph-container .graph-sidebar {
+  top: 6rem !important;
+  left: 2rem !important;
+  z-index: 999 !important;
+}
+
+/* Additional fixes to ensure fixed positioning works correctly */
+.graph-logo,
+.graph-logo-fii,
+.graph-sidebar {
+  /* Force hardware acceleration and create separate layer */
+  transform: translate3d(0, 0, 0) !important;
+  /* Prevent any transforms from affecting positioning */
+  transform-style: flat !important;
+  /* Ensure elements are always visible */
+  visibility: visible !important;
+  opacity: 1 !important;
+  /* Force browser to treat as fixed */
+  position: fixed !important;
+}
+
+/* Ensure main content doesn't interfere with fixed elements */
+.graph-box {
+  /* Remove any transforms that might affect fixed positioning */
+  transform: none !important;
+  transform-style: flat !important;
+  will-change: auto !important;
+  contain: layout !important;
+}
+
+/* Override any external library CSS that might affect fixed positioning */
+.graph-logo,
+.graph-logo-fii,
+.graph-sidebar {
+  /* Ensure these elements are never affected by any external CSS */
+  position: fixed !important;
+  transform: translate3d(0, 0, 0) !important;
+  will-change: auto !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+  contain: layout style !important;
+}
+
+/* Prevent React Slick from interfering with fixed positioning */
+.slick-slider,
+.slick-list,
+.slick-track,
+.slick-slide {
+  transform: none !important;
+  will-change: auto !important;
+  contain: layout !important;
+}
+
+/* Override any global styles that might affect the layout */
+* {
+  backface-visibility: hidden;
+}
+
+/* Aggressive fix to ensure logos and navigation never scroll */
+@supports (position: fixed) {
+  .graph-logo {
+    position: fixed !important;
+    top: 2rem !important;
+    left: 2rem !important;
+    z-index: 9999 !important;
+    transform: translateZ(0) !important;
+  }
+  
+  .graph-logo-fii {
+    position: fixed !important;
+    top: 2rem !important;
+    right: 2rem !important;
+    z-index: 9999 !important;
+    transform: translateZ(0) !important;
+  }
+  
+  .graph-sidebar {
+    position: fixed !important;
+    top: 6rem !important;
+    left: 2rem !important;
+    z-index: 9998 !important;
+    transform: translateZ(0) !important;
+  }
+}
+
+/* Fallback for browsers that might not support fixed positioning correctly */
+@supports not (position: fixed) {
+  .graph-logo,
+  .graph-logo-fii,
+  .graph-sidebar {
+    position: absolute !important;
   }
 }
