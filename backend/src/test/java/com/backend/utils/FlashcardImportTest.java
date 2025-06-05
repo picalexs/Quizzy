@@ -67,7 +67,11 @@ public class FlashcardImportTest {
 
         savedFlashcards = new ArrayList<>();
 
+        // Mock user repository to handle both existing user case and creation case
+        when(userRepository.findById(1)).thenReturn(Optional.of(testUser));
+        when(userRepository.save(any(User.class))).thenReturn(testUser);
         when(userRepository.getReferenceById(1)).thenReturn(testUser);
+        
         when(materialRepository.getReferenceById(1L)).thenReturn(testMaterial);
         when(materialService.findByPath("test.pdf")).thenReturn(testMaterial);
         when(materialService.findByPathContaining("test.pdf")).thenReturn(Arrays.asList(testMaterial));
@@ -429,5 +433,64 @@ public class FlashcardImportTest {
         assertEquals(0, savedFlashcards.get(0).getLevel()); // easy
         assertEquals(1, savedFlashcards.get(1).getLevel()); // medium
         assertEquals(2, savedFlashcards.get(2).getLevel()); // hard
+    }
+
+    @Test
+    void testImportWithUserCreation() throws IOException {
+        // Test the case where user doesn't exist and needs to be created
+        when(userRepository.findById(1)).thenReturn(Optional.empty());
+        
+        String content = """
+            --FlashCardSeparator--
+            Single
+            --InteriorSeparator--
+            Test question for user creation?
+            --InteriorSeparator--
+            Test answer
+            --InteriorSeparator--
+            easy
+            --InteriorSeparator--
+            1
+            --FlashCardSeparator--
+            """;
+
+        Path flashcardFile = tempDir.resolve("test_flashcards.txt");
+        Files.writeString(flashcardFile, content);
+
+        int imported = flashcardImport.importFlashcardsFromDirectory(tempDir.toString(), 1);
+        assertEquals(1, imported);
+        
+        // Verify that userRepository.save was called to create the user
+        verify(userRepository).save(any(User.class));
+    }
+
+    @Test 
+    void testImportWithUserCreationFailure() throws IOException {
+        // Test the case where user doesn't exist and user creation fails
+        when(userRepository.findById(1)).thenReturn(Optional.empty());
+        when(userRepository.save(any(User.class))).thenReturn(null); // Simulate save failure
+        
+        String content = """
+            --FlashCardSeparator--
+            Single
+            --InteriorSeparator--
+            Test question?
+            --InteriorSeparator--
+            Test answer
+            --InteriorSeparator--
+            easy
+            --InteriorSeparator--
+            1
+            --FlashCardSeparator--
+            """;
+
+        Path flashcardFile = tempDir.resolve("test_flashcards.txt");
+        Files.writeString(flashcardFile, content);
+
+        RuntimeException exception = assertThrows(RuntimeException.class, () ->
+                flashcardImport.importFlashcardsFromDirectory(tempDir.toString(), 1)
+        );
+        
+        assertTrue(exception.getMessage().contains("Nu s-a putut obține user-ul default"));
     }
 }
