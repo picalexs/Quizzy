@@ -286,104 +286,108 @@ const FlashcardsProf = () => {
                     </div>
                 </div>
 
-                <button className="flashcardsProf-new-flashcard" onClick={handleNewQuestion}>
-                    <span className="flashcardsProf-new-flashcard-text">+ New test question</span>
-                </button>
+                <div className="flashcardsProf-content-area">
+                    <div className="flashcardsProf-left-panel">
+                        <button className="flashcardsProf-new-flashcard" onClick={handleNewQuestion}>
+                            <span className="flashcardsProf-new-flashcard-text">+ New test question</span>
+                        </button>
 
-                <div className="flashcardsProf-saved-cards">
-                    {savedQuestions.map((q) => (
-                        <div 
-                            key={q.id} 
-                            className="flashcardsProf-card"
-                            onClick={() => handleQuestionClick(q)}
-                        >
-                            {q.questionText}
-                        </div>
-                    ))}
-                </div>
-
-                <div className="flashcardsProf-delimitation"></div>
-
-                {showAddBox && (
-                    <div className="flashcardsProf-add-box">
-                        <div className="flashcardsProf-add-box-question">
-                            <input
-                                type="text"
-                                value={question}
-                                onChange={(e) => setQuestion(e.target.value)}
-                                placeholder="Enter your question"
-                                className="flashcardsProf-input"
-                            />
-                        </div>
-
-                        <div className="flashcardsProf-add-delimitation"></div>
-
-                        <div className="flashcardsProf-answer-section">
-                            <div className="flashcardsProf-answer-header">
-                                <span>Answers</span>
-                                <button 
-                                    className="flashcardsProf-add-answer-btn"
-                                    onClick={handleAddAnswer}
+                        <div className="flashcardsProf-saved-cards">
+                            {savedQuestions.map((q) => (
+                                <div 
+                                    key={q.id} 
+                                    className={`flashcardsProf-card ${currentQuestionId === q.id ? 'active' : ''}`}
+                                    onClick={() => handleQuestionClick(q)}
                                 >
-                                    + Add answer
-                                </button>
-                            </div>
-
-                            {answers.map((answer, index) => (
-                                <div key={index} className="flashcardsProf-answer-row">
-                                    <input
-                                        type="text"
-                                        value={answer.text}
-                                        onChange={(e) => handleAnswerChange(index, e.target.value)}
-                                        placeholder="Enter answer"
-                                        className="flashcardsProf-input"
-                                    />
-                                    <button
-                                        className={`flashcardsProf-correct-toggle ${answer.isCorrect ? 'correct' : 'wrong'}`}
-                                        onClick={() => toggleCorrect(index)}
-                                    >
-                                        {answer.isCorrect ? 'Correct' : 'Wrong'}
-                                    </button>
-                                    <button
-                                        className="flashcardsProf-delete-answer-btn"
-                                        onClick={() => deleteAnswer(index)}
-                                    >
-                                        Delete
-                                    </button>
+                                    {q.questionText}
                                 </div>
                             ))}
                         </div>
-
-                        <div className="flashcardsProf-add-box-buttons">
-                            <button 
-                                className="flashcardsProf-cancel-btn" 
-                                onClick={() => {
-                                    setShowAddBox(false);
-                                    setCurrentQuestionId(null);
-                                    setIsEditing(false);
-                                }}
-                            >
-                                Cancel
-                            </button>
-                            {isEditing && (
-                                <button 
-                                    className="flashcardsProf-delete-btn" 
-                                    onClick={() => handleDeleteQuestion(currentQuestionId)}
-                                    disabled={deleting}
-                                >
-                                    {deleting ? 'Deleting...' : 'Delete question'}
-                                </button>
-                            )}
-                            <button
-                                className="flashcardsProf-save-btn" 
-                                onClick={handleSave}
-                                disabled={saving}
-                            >
-                                {saving ? 'Saving...' : (isEditing ? 'Update question' : 'Save question')}
-                            </button>
-                        </div>
                     </div>
-                )}
+
+                    <div className="flashcardsProf-right-panel">
+                        {showAddBox && (
+                            <div className="flashcardsProf-add-box">
+                                <div className="flashcardsProf-add-box-question">
+                                    <input
+                                        type="text"
+                                        value={question}
+                                        onChange={(e) => setQuestion(e.target.value)}
+                                        placeholder="Enter your question"
+                                        className="flashcardsProf-input"
+                                    />
+                                </div>
+
+                                <div className="flashcardsProf-add-delimitation"></div>
+
+                                <div className="flashcardsProf-answer-section">
+                                    <div className="flashcardsProf-answer-header">
+                                        <span>Answers</span>
+                                        <button 
+                                            className="flashcardsProf-add-answer-btn"
+                                            onClick={handleAddAnswer}
+                                        >
+                                            + Add answer
+                                        </button>
+                                    </div>
+
+                                    {answers.map((answer, index) => (
+                                        <div key={index} className="flashcardsProf-answer-row">
+                                            <input
+                                                type="text"
+                                                value={answer.text}
+                                                onChange={(e) => handleAnswerChange(index, e.target.value)}
+                                                placeholder="Enter answer"
+                                                className="flashcardsProf-input"
+                                            />
+                                            <button
+                                                className={`flashcardsProf-correct-toggle ${answer.isCorrect ? 'correct' : 'wrong'}`}
+                                                onClick={() => toggleCorrect(index)}
+                                            >
+                                                {answer.isCorrect ? 'Correct' : 'Wrong'}
+                                            </button>
+                                            <button
+                                                className="flashcardsProf-delete-answer-btn"
+                                                onClick={() => deleteAnswer(index)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="flashcardsProf-add-box-buttons">
+                                    <button 
+                                        className="flashcardsProf-cancel-btn" 
+                                        onClick={() => {
+                                            setShowAddBox(false);
+                                            setCurrentQuestionId(null);
+                                            setIsEditing(false);
+                                        }}
+                                    >
+                                        Cancel
+                                    </button>
+                                    {isEditing && (
+                                        <button 
+                                            className="flashcardsProf-delete-btn" 
+                                            onClick={() => handleDeleteQuestion(currentQuestionId)}
+                                            disabled={deleting}
+                                        >
+                                            {deleting ? 'Deleting...' : 'Delete question'}
+                                        </button>
+                                    )}
+                                    <button
+                                        className="flashcardsProf-save-btn" 
+                                        onClick={handleSave}
+                                        disabled={saving}
+                                    >
+                                        {saving ? 'Saving...' : (isEditing ? 'Update question' : 'Save question')}
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
 
                 {error && (
                     <div className="flashcardsProf-error-notification">

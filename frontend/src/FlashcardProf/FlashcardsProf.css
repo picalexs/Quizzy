@@ -21,14 +21,13 @@
     width: 100%;
     max-width: 1392px;
     border-radius: 20px;
-    overflow-y: auto;
+    overflow: hidden; /* Changed from overflow-y: auto */
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     position: relative;
-    padding-bottom: 2rem;
-    height: 100%;
+    height: calc(100vh - 4rem); /* Fixed height calculation */
 }
 
 /* Header */
@@ -37,15 +36,15 @@
     padding: 2rem;
     text-align: center;
     border-radius: 24px;
-    max-height: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem; /* Reduced margin */
+    flex-shrink: 0; /* Prevent shrinking */
+    position: relative;
 }
 
 .flashcardsProf-white-header-text {
-    position: relative;
     font-size: 1.7rem;
     font-weight: bold;
     color: #173B61;
@@ -54,21 +53,55 @@
     width: 100%;
 }
 
+/* Back button */
+.flashcardsProf-back-btn {
+    position: absolute;
+    left: 2rem;
+    background-color: #173B61;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flashcardsProf-back-btn:hover {
+    background-color: #0f2948;
+}
+
+/* Main content area */
+.flashcardsProf-content-area {
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+    padding: 0 2rem 2rem 2rem; /* Added bottom padding */
+    overflow: hidden;
+}
+
+/* Left side - New question button and saved questions */
+.flashcardsProf-left-panel {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 1rem;
+    margin-bottom: 1rem; /* Added bottom margin to show blue background */
+}
+
 /* New flashcard button */
 .flashcardsProf-new-flashcard {
-    position: relative;
-    text-align: center;
     background-color: #E2A54D;
     transition: background-color 0.3s ease;
-    width: 23.54%;
-    height: auto;
-    left: 2.97%;
-    margin-bottom: 1rem;
     border-radius: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    cursor: pointer;
+    border: none;
+    padding: 1rem;
+    flex-shrink: 0;
 }
 
 .flashcardsProf-new-flashcard:hover {
@@ -81,24 +114,29 @@
     color: #173B61;
     text-align: center;
     width: 100%;
-    padding: 0.5rem;
 }
 
+/* Saved cards */
 .flashcardsProf-saved-cards {
-    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.9rem;
-    width: 22.43%;
-    height: calc(65vh - 150px);
-    margin-left: 2.97%;
     overflow-y: auto;
-    scrollbar-width: none;
+    flex: 1;
+    padding-right: 0.5rem;
 }
 
 .flashcardsProf-saved-cards::-webkit-scrollbar {
-    display: none;
+    width: 6px;
+}
+
+.flashcardsProf-saved-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.flashcardsProf-saved-cards::-webkit-scrollbar-thumb {
+    background: #EFEAE6;
+    border-radius: 3px;
 }
 
 .flashcardsProf-card {
@@ -108,11 +146,9 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     color: #173B61;
     font-size: 1.05rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
     cursor: pointer;
     transition: transform 0.2s ease;
+    flex-shrink: 0;
 }
 
 .flashcardsProf-card.active {
@@ -124,34 +160,41 @@
     transform: translateY(-2px);
 }
 
-/* Divider */
-.flashcardsProf-delimitation {
-    position: relative;
-    width: 0.1%;
-    height: 100%;
-    top: -1.9%;
-    left: 30%;
-    background-color: #EFEAE6;
+/* Right side - Edit panel */
+.flashcardsProf-right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    border-left: 2px solid #EFEAE6;
+    overflow: hidden;
+    margin-bottom: 1rem; /* Added bottom margin to show blue background */
 }
 
 /* Flashcard creation box */
 .flashcardsProf-add-box {
-    position: absolute;
     background-color: #EFEAE6;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    box-sizing: border-box;
-    width: 61.94%;
-    height: 78%;
-    top: 16.4%;
-    left: 32.6%;
     border-radius: 24px;
+    height: calc(100% - 1rem); /* Adjusted height to account for margin */
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-.flashcardsProf-add-box.visible {
-    display: flex;
+.flashcardsProf-add-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.flashcardsProf-add-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.flashcardsProf-add-box::-webkit-scrollbar-thumb {
+    background: #173B61;
+    border-radius: 3px;
 }
 
 /* Add question */
@@ -159,7 +202,7 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    background-color: #EFEAE6;
+    background-color: #fff;
     padding: 0.75rem 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -171,21 +214,11 @@
     background-color: #f8f8f8;
 }
 
-.flashcardsProf-add-box-question-expanded input {
-    border: none;
-    outline: none;
-    font-size: 1.1rem;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    box-sizing: border-box;
-}
-
 /* Inner divider */
 .flashcardsProf-add-delimitation {
     width: 100%;
-    height: 0.09%;
+    height: 1px;
     background-color: #173B61;
-    margin-top: 1rem;
 }
 
 /* Answer section */
@@ -193,12 +226,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    flex: 1;
     overflow-y: auto;
-    scrollbar-width: none;
-}
-
-.flashcardsProf-add-box::-webkit-scrollbar {
-    display: none;
 }
 
 /* Header */
@@ -209,6 +238,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .flashcardsProf-add-answer-btn {
@@ -238,6 +268,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    flex-shrink: 0;
 }
 
 .flashcardsProf-answer-row.correct {
@@ -271,6 +302,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex-shrink: 0;
 }
 
 .flashcardsProf-correct-toggle.correct {
@@ -295,6 +327,7 @@
     font-size: 0.95rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex-shrink: 0;
 }
 
 .flashcardsProf-delete-answer-btn:hover {
@@ -308,9 +341,10 @@
     margin-top: auto;
     padding-top: 1rem;
     border-top: 1px solid #ccc;
+    flex-shrink: 0;
 }
 
-/* Buton Save */
+/* Button styles */
 .flashcardsProf-save-btn {
     background-color: #28a745;
     color: white;
@@ -333,7 +367,6 @@
     opacity: 0.65;
 }
 
-/* Buton Delete */
 .flashcardsProf-delete-btn {
     background-color: #dc3545;
     color: white;
@@ -350,7 +383,6 @@
     background-color: #c82333;
 }
 
-/* Buton Cancel */
 .flashcardsProf-cancel-btn {
     background-color: #E2A54D;
     color: white;
@@ -367,151 +399,6 @@
     background-color: #d1943f;
 }
 
-/* Back to Course button */
-.flashcardsProf-back-btn {
-    background-color: #173B61;
-    color: white;
-    border: none;
-    padding: 0.5rem 0.8rem;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.flashcardsProf-back-btn:hover {
-    background-color: #0f2948;
-}
-
-/* Responsive styling */
-@media (max-width: 768px) {
-    .flashcardsProf-container {
-        padding: 1rem;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .flashcardsProf-blue-box {
-        position: relative;
-        overflow-y: auto;
-        height: auto;
-        min-height: fit-content;
-        padding-bottom: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .flashcardsProf-white-header {
-        position: relative;
-        margin-bottom: 1rem;
-    }
-
-    .flashcardsProf-white-header-text {
-        font-size: 1.4rem;
-        white-space: normal;
-    }
-
-    .flashcardsProf-new-flashcard {
-        position: relative;
-        width: 94%;
-        left: 3%;
-        margin: 1rem auto 2rem;
-        height: auto;
-    }
-
-    .flashcardsProf-saved-cards {
-        position: relative;
-        width: 94%;
-        left: 0;
-        height: auto;
-        max-height: 50vh;
-        margin-left: 3%;
-        top: 0;
-        margin-bottom: 1rem;
-        overflow-y: auto;
-    }
-
-    .flashcardsProf-delimitation {
-        display: none;
-    }
-
-    .flashcardsProf-add-box {
-        position: relative;
-        width: 94%;
-        left: 3%;
-        height: auto;
-        min-height: fit-content;
-        top: 0;
-        margin-bottom: 1rem;
-        overflow-y: visible;
-    }
-
-    .flashcardsProf-answer-section {
-        position: relative;
-        height: auto;
-        min-height: fit-content;
-        overflow-y: visible;
-    }
-
-    .flashcardsProf-answer-row {
-        flex-direction: column;
-        gap: 0.8rem;
-        padding: 1rem;
-    }
-
-    .flashcardsProf-input {
-        width: 100%;
-    }
-
-    .flashcardsProf-correct-toggle,
-    .flashcardsProf-delete-answer-btn {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-
-    .flashcardsProf-add-box-buttons {
-        position: relative;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .flashcardsProf-save-btn,
-    .flashcardsProf-cancel-btn,
-    .flashcardsProf-delete-btn {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .flashcardsProf-container {
-        padding: 0.5rem;
-        height: auto;
-        overflow-y: auto;
-    }
-
-    .flashcardsProf-blue-box {
-        padding-bottom: 1rem;
-        height: auto;
-    }
-
-    .flashcardsProf-white-header-text {
-        font-size: 1.2rem;
-    }
-
-    .flashcardsProf-new-flashcard-text {
-        font-size: 1.2rem;
-    }
-
-    .flashcardsProf-add-box {
-        padding: 1rem;
-    }
-}
-
 /* Error notification */
 .flashcardsProf-error-notification {
     position: fixed;
@@ -525,108 +412,6 @@
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.3s ease;
-}
-/* Responsive styling */
-@media (max-height: 768px) {
-    .flashcardsProf-container {
-        padding: 1rem;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .flashcardsProf-blue-box {
-        position: relative;
-        overflow-y: auto;
-        height: auto;
-        min-height: fit-content;
-        padding-bottom: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .flashcardsProf-white-header {
-        position: relative;
-        margin-bottom: 1rem;
-    }
-
-    .flashcardsProf-white-header-text {
-        font-size: 1.4rem;
-        white-space: normal;
-    }
-
-    .flashcardsProf-new-flashcard {
-        position: relative;
-        width: 94%;
-        left: 3%;
-        margin: 1rem auto 2rem;
-        height: auto;
-    }
-
-    .flashcardsProf-saved-cards {
-        position: relative;
-        width: 94%;
-        left: 0;
-        height: auto;
-        max-height: 50vh;
-        margin-left: 3%;
-        top: 0;
-        margin-bottom: 1rem;
-        overflow-y: auto;
-    }
-
-    .flashcardsProf-delimitation {
-        display: none;
-    }
-
-    .flashcardsProf-add-box {
-        position: relative;
-        width: 94%;
-        left: 3%;
-        height: auto;
-        min-height: fit-content;
-        top: 0;
-        margin-bottom: 1rem;
-        overflow-y: visible;
-    }
-
-    .flashcardsProf-answer-section {
-        position: relative;
-        height: auto;
-        min-height: fit-content;
-        overflow-y: visible;
-    }
-
-    .flashcardsProf-answer-row {
-        flex-direction: column;
-        gap: 0.8rem;
-        padding: 1rem;
-    }
-
-    .flashcardsProf-input {
-        width: 100%;
-    }
-
-    .flashcardsProf-correct-toggle,
-    .flashcardsProf-delete-answer-btn {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-
-    .flashcardsProf-add-box-buttons {
-        position: relative;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .flashcardsProf-save-btn,
-    .flashcardsProf-cancel-btn,
-    .flashcardsProf-delete-btn {
-        width: 100%;
-    }
 }
 
 .flashcardsProf-error-notification p {
@@ -649,4 +434,62 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Loading */
+.flashcardsProf-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: #173B61;
+}
+
+/* Remove old positioning styles */
+.flashcardsProf-delimitation {
+    display: none;
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+    .flashcardsProf-content-area {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 2rem 2rem 2rem; /* Keep bottom padding on mobile */
+    }
+    
+    .flashcardsProf-left-panel {
+        width: 100%;
+        margin-bottom: 1rem; /* Keep margin on mobile */
+    }
+    
+    .flashcardsProf-right-panel {
+        border-left: none;
+        border-top: 2px solid #EFEAE6;
+        padding-left: 0;
+        padding-top: 1rem;
+        margin-bottom: 1rem; /* Keep margin on mobile */
+    }
+    
+    .flashcardsProf-saved-cards {
+        max-height: 30vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .flashcardsProf-container {
+        padding: 1rem;
+    }
+    
+    .flashcardsProf-content-area {
+        padding: 0 1rem 1rem 1rem; /* Reduced padding on mobile */
+    }
+    
+    .flashcardsProf-left-panel,
+    .flashcardsProf-right-panel {
+        margin-bottom: 0.5rem; /* Smaller margin on mobile */
+    }
+    
+    /* ...existing mobile styles... */
 }
