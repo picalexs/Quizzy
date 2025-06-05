@@ -113,119 +113,132 @@ function PDFViewer() {
     };
 
     return (
-        <div className="App">
-            <header className="App-header">
-                <div className="App-container">
-                    <div className="Pdf-header">
-                        <div className="Pdf-section dark">
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                <button 
-                                    onClick={navigateBack}
-                                    style={{
-                                        background: 'rgba(255, 255, 255, 0.2)',
-                                        border: '1px solid rgba(255, 255, 255, 0.3)',
-                                        color: 'white',
-                                        borderRadius: '4px',
-                                        padding: '8px 12px',
-                                        cursor: 'pointer',
-                                        fontSize: '16px',
-                                        transition: 'background 0.3s'
-                                    }}
-                                    onMouseOver={(e) => e.target.style.background = 'rgba(255, 255, 255, 0.3)'}
-                                    onMouseOut={(e) => e.target.style.background = 'rgba(255, 255, 255, 0.2)'}
-                                    title={courseTitle ? `Back to ${courseTitle}` : 'Back to course'}
-                                >
-                                    ← Back
-                                </button>
-                                <h1 className="Pdf-title">{title}</h1>
-                            </div>
-                            {error && <p className="Pdf-error">{error}</p>}
-                            {directUrl && (
-                                <p className="Pdf-direct-link">
-                                    <a 
-                                        href={directUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        style={{color: 'white', textDecoration: 'underline'}}
-                                    >
-                                        Open PDF in New Tab
-                                    </a>
-                                </p>
-                            )}
-                        </div>
-
-                        <div className="Pdf-section light">
-                            <div className="page-toggle-buttons">
-                                <button
-                                    className={`toggle-btn ${pageMode === 'single' ? 'active' : ''}`}
-                                    onClick={() => setPageMode('single')}
-                                    title="Single Page"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M4 4H20V20H4V4ZM6 6V18H18V6H6Z" />
-                                    </svg>
-                                </button>
-                                <button
-                                    className={`toggle-btn ${pageMode === 'continuous' ? 'active' : ''}`}
-                                    onClick={() => setPageMode('continuous')}
-                                    title="Continuous Pages"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M3 3H9V9H3V3ZM15 3H21V9H15V3ZM3 15H9V21H3V15ZM15 15H21V21H15V15Z" />
-                                    </svg>
-                                </button>
-                                <button 
-                                    className="toggle-btn"
-                                    onClick={toggleDisplayMode} 
-                                    title="Toggle Display Mode"
-                                >
-                                    {displayMode === 'iframe' ? 'Use Object Tag' : 'Use Iframe'}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        id="iframe-wrapper"
-                        style={{
-                            width: '100%',
-                            height: '800px',
-                            overflow: pageMode === 'single' ? 'hidden' : 'auto',
-                        }}
+        <div className="pdf-viewer-container">
+            {/* Header */}
+            <div className="pdf-header">
+                <div className="header-left">
+                    <button 
+                        onClick={navigateBack}
+                        className="back-button"
+                        title={courseTitle ? `Back to ${courseTitle}` : 'Back to course'}
                     >
-                        {loading ? (
-                            <div className="pdf-loading">Loading PDF...</div>
-                        ) : pdfUrl ? (
-                            displayMode === 'iframe' ? (
-                                <iframe
-                                    id="pdf-iframe"
-                                    title="PDF Preview"
-                                    src={pdfUrl}
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 'none' }}
-                                    allowFullScreen={true}
-                                />
-                            ) : (
-                                <object
-                                    data={pdfUrl}
-                                    type="application/pdf"
-                                    width="100%"
-                                    height="100%"
-                                >
-                                    <p>Your browser does not support PDFs. 
-                                        <a href={pdfUrl} download={`${title}.pdf`}>Download the PDF</a> instead.
-                                    </p>
-                                </object>
-                            )
-                        ) : (
-                            <div className="pdf-loading">
-                                {error ? 'Failed to load PDF.' : 'Preparing PDF...'}
-                            </div>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8.5 2.5l-6 6 6 6V11h7V5H8.5V2.5z"/>
+                        </svg>
+                        Back
+                    </button>
+                    <h1 className="pdf-title">{title}</h1>
+                </div>
+                
+                <div className="header-right">
+                    <div className="toolbar">
+                        <button
+                            className={`toolbar-btn ${pageMode === 'single' ? 'active' : ''}`}
+                            onClick={() => setPageMode('single')}
+                            title="Single Page View"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M3 2h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1zm1 2v8h8V4H4z"/>
+                            </svg>
+                        </button>
+                        
+                        <button
+                            className={`toolbar-btn ${pageMode === 'continuous' ? 'active' : ''}`}
+                            onClick={() => setPageMode('continuous')}
+                            title="Continuous View"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M2 2h4v4H2V2zm8 0h4v4h-4V2zM2 10h4v4H2v-4zm8 0h4v4h-4v-4z"/>
+                            </svg>
+                        </button>
+                        
+                        <div className="toolbar-divider"></div>
+                        
+                        <button 
+                            className="toolbar-btn"
+                            onClick={toggleDisplayMode} 
+                            title={`Switch to ${displayMode === 'iframe' ? 'Object' : 'Iframe'} renderer`}
+                        >
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 4a4 4 0 100 8 4 4 0 000-8zM0 8a8 8 0 1116 0A8 8 0 010 8z"/>
+                            </svg>
+                            {displayMode === 'iframe' ? 'Object' : 'Iframe'}
+                        </button>
+
+                        {directUrl && (
+                            <a 
+                                href={directUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="toolbar-btn external-link"
+                                title="Open in new tab"
+                            >
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M6.22 8.72a.75.75 0 001.06 1.06l5.22-5.22v1.69a.75.75 0 001.5 0V3.75a.75.75 0 00-.75-.75h-2.5a.75.75 0 000 1.5h1.69L6.22 8.72z"/>
+                                    <path d="M3.5 6.75c0-.69.56-1.25 1.25-1.25H7A.75.75 0 007 4H4.75A2.75 2.75 0 002 6.75v4.5A2.75 2.75 0 004.75 14h4.5A2.75 2.75 0 0012 11.25V9a.75.75 0 00-1.5 0v2.25c0 .69-.56 1.25-1.25 1.25h-4.5c-.69 0-1.25-.56-1.25-1.25v-4.5z"/>
+                                </svg>
+                            </a>
                         )}
                     </div>
                 </div>
-            </header>
+            </div>
+
+            {/* Error Display */}
+            {error && (
+                <div className="error-banner">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 15A7 7 0 118 1a7 7 0 010 14zm0 1A8 8 0 108 0a8 8 0 000 16z"/>
+                        <path d="M7.002 11a1 1 0 112 0 1 1 0 01-2 0zM7.1 4.995a.905.905 0 111.8 0l-.35 3.507a.552.552 0 01-1.1 0L7.1 4.995z"/>
+                    </svg>
+                    {error}
+                </div>
+            )}
+
+            {/* PDF Content */}
+            <div className="pdf-content">
+                {loading ? (
+                    <div className="loading-container">
+                        <div className="loading-spinner"></div>
+                        <p>Loading PDF...</p>
+                    </div>
+                ) : pdfUrl ? (
+                    <div 
+                        className="pdf-viewer-wrapper"
+                        style={{
+                            overflow: pageMode === 'single' ? 'hidden' : 'auto'
+                        }}
+                    >
+                        {displayMode === 'iframe' ? (
+                            <iframe
+                                title="PDF Viewer"
+                                src={pdfUrl}
+                                className="pdf-iframe"
+                                allowFullScreen={true}
+                            />
+                        ) : (
+                            <object
+                                data={pdfUrl}
+                                type="application/pdf"
+                                className="pdf-object"
+                            >
+                                <div className="pdf-fallback">
+                                    <p>Your browser doesn't support PDF viewing.</p>
+                                    <a href={pdfUrl} download={`${title}.pdf`} className="download-link">
+                                        Download PDF
+                                    </a>
+                                </div>
+                            </object>
+                        )}
+                    </div>
+                ) : (
+                    <div className="no-content">
+                        <svg width="48" height="48" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M5.854 4.854a.5.5 0 10-.708-.708l-3.5 3.5a.5.5 0 000 .708l3.5 3.5a.5.5 0 00.708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 01.708-.708l3.5 3.5a.5.5 0 010 .708l-3.5 3.5a.5.5 0 01-.708-.708L13.293 8l-3.147-3.146z"/>
+                        </svg>
+                        <p>PDF could not be loaded</p>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

@@ -1,0 +1,410 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What type of files will the online course notes be posted as?
+--InteriorSeparator--
+.pdf
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the components of the final grade?
+--InteriorSeparator--
+(right) Seminar activity and tests
+(right) Homework assignments
+(wrong) Attendance
+(wrong) Extra credit projects
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the minimum point requirement from seminar activity and homework to be eligible for the written exam?
+--InteriorSeparator--
+30
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What topics are covered in the course?
+--InteriorSeparator--
+(right) Graph theory vocabulary
+(right) Minimum cost spanning trees
+(wrong) Database management
+(wrong) Quantum physics
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the term for the measure of clustering in social network analysis?
+--InteriorSeparator--
+Level of segmentation
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are some applications of graph theory?
+--InteriorSeparator--
+(right) Efficient connection of communication points
+(right) Optimizing routes for mail delivery
+(wrong) Optimizing stock trading algorithms
+(wrong) Development of new energy sources
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are applications of graph coloring?
+--InteriorSeparator--
+(right) Planning courses/seminars
+(right) Allocating radio frequencies
+(wrong) Calculating financial risk
+(wrong) Designing building architecture
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What real-world applications use stable matching algorithms based on graph theory?
+--InteriorSeparator--
+(right) Assigning residents to hospitals
+(right) Kidney donor matching
+(wrong) Online advertising
+(wrong) Airplane routing
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are applications of graph theory in computer science?
+--InteriorSeparator--
+(right) Modeling web documents
+(right) Verifying software systems
+(wrong) Microprocessor design
+(wrong) Telecommunication satellites trajectory design
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does |X| represent for a finite set X?
+--InteriorSeparator--
+The cardinality of X
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the definition of a graph G?
+--InteriorSeparator--
+A pair G = (V, E), where V is a finite non-empty set of nodes and E is a subset of 2V representing the edges.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does dG(v) represent?
+--InteriorSeparator--
+The degree of node v in graph G
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a stable set (or independent set) of nodes S in a graph G = (V, E)?
+--InteriorSeparator--
+S ⊆ V such that (S 2) ∩ E = ∅.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is α(G)?
+--InteriorSeparator--
+The maximum cardinality of a stable set in G (the independence number of G)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the problem of determining the existence of a stable set S in G with |S| ≥ k NP-complete?
+--InteriorSeparator--
+Yes
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+26
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a matching (independent set of edges) in a graph G = (V, E)?
+--InteriorSeparator--
+M ⊆ E such that for any e, f ∈ M, if e ≠ f, then e ∩ f = ∅.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does ν(G) represent?
+--InteriorSeparator--
+The maximum cardinality of a matching in G (the matching number of G)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+27
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a p-coloring of a graph G = (V, E)?
+--InteriorSeparator--
+A function c: V -> {1, ..., p} such that c(u) ≠ c(v) for every uv ∈ E.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is χ(G)?
+--InteriorSeparator--
+The minimum value of p such that G has a p-coloring
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a p-edge coloring of a graph G = (V, E)?
+--InteriorSeparator--
+A function c: E -> {1, ..., p} such that c(e) ≠ c(f) for every e, f ∈ E with |e ∩ f| = 1.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is χ'(G)?
+--InteriorSeparator--
+The minimum value of p such that G has a p-edge coloring.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+When are two graphs G1 = (V1, E1) and G2 = (V2, E2) isomorphic?
+--InteriorSeparator--
+If there exists a bijection φ: V1 -> V2 such that for any two nodes u1, u2 ∈ V1, u1 and v1 are adjacent in G1 if and only if φ(u1) and φ(u2) are adjacent in G2.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+36
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Is the graph isomorphism problem known to be in P or NP-complete?
+--InteriorSeparator--
+No
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Two graphs can have the same order, size and degree sequence and still not be isomorphic. True or False?
+--InteriorSeparator--
+True
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+39
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Prove that 6 is the smallest value of n ∈ N, n ≥ 3 for which the following statement is true: in any graph with at least n nodes there exist three distinct nodes which are pairwise adjacent or pairwise non-adjacent.
+--InteriorSeparator--
+This is Ramsey number R(3,3). For n = 5, it is possible to construct a graph where the statement is not true. However, for n = 6 the statement becomes true, hence 6 is the smallest such value.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following degree sequences are graphic (can be represented by a graph)?
+--InteriorSeparator--
+(right) 3, 3, 3, 3, 5, 6, 6, 6, 6, 6, 6
+(wrong) 1, 1, 3, 3, 3, 3, 5, 6, 8, 9
+(wrong) 3, 3, 3, 3, 3, 5, 6, 6, 6, 6, 6, 6, 6, 6 (bipartite)
+(right) 3, 3, 3, 3, 3, 5, 6, 6, 6, 6, 6, 6, 6, 6 (not bipartite)
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+42
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Why does generating all paths between two nodes in a sparse graph using backtracking become inefficient?
+--InteriorSeparator--
+The number of paths between two nodes can grow exponentially, even in sparse graphs.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+43
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+How can graph theory be used to model and solve the problem of scheduling exams?
+--InteriorSeparator--
+(right) By constructing a graph where nodes represent exams and edges represent conflicting exams, you can use graph coloring to determine the minimum number of days needed.
+(wrong) The number of edges in the graph represents the maximum number of exams that can be scheduled on one day.
+(right) The independence number of the graph represents the maximum number of exams that can be organized on the same day
+(wrong) By constructing a graph where nodes represent students and edges represent exams
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+44
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Explain why the greedy approach to exam scheduling might fail.
+--InteriorSeparator--
+The greedy approach does not necessarily minimize the total number of days required.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+45
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+How can graph theory be applied to register allocation in compilers?
+--InteriorSeparator--
+By constructing a graph where nodes represent variables and edges indicate when variables are used simultaneously, graph coloring can be used to determine the minimum number of registers needed.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+46
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+Explain why the greedy approach to register allocation is flawed.
+--InteriorSeparator--
+The greedy algorithm could make sub-optimal decisions early and might end up using more registers than necessary in the long run.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+47
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What properties must an self-complementary graph G have, if G = G'?
+--InteriorSeparator--
+(right) Must be connected
+(right) |G| ≡ 0 or 1 mod 4
+(wrong) Must be planar
+(wrong) Must be bipartite
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+48
+}], role=model}, finishReason=STOP, avgLogprobs=-0.16262275076429808}]
