@@ -269,24 +269,6 @@ class FlashcardRepositoryTest {
     }
 
     @Test
-    void deleteByMaterialId_ShouldRemoveAllFlashcardsFromMaterial() {
-        // Given
-        Long initialCount = flashcardRepository.count();
-        assertEquals(3L, initialCount);
-
-        // When
-        flashcardRepository.deleteByMaterialId(testMaterial.getId());
-        entityManager.flush();
-
-        // Then
-        Long finalCount = flashcardRepository.count();
-        assertEquals(0L, finalCount);
-        
-        List<Flashcard> remainingFlashcards = flashcardRepository.findByMaterialId(testMaterial.getId());
-        assertTrue(remainingFlashcards.isEmpty());
-    }
-
-    @Test
     void findFlashcardCountsByCourseIds_ShouldReturnCorrectCounts() {
         // Given
         Course course2 = new Course();

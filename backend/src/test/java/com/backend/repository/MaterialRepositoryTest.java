@@ -389,7 +389,7 @@ class MaterialRepositoryTest {
         // Then
         assertEquals(3, javaResults.size()); // All Java-related materials
         assertEquals(4, prof1Results.size()); // All materials from professor 1
-        assertEquals(2, courseResults.size()); // Materials in java-related paths
+        assertEquals(3, courseResults.size()); // Materials in java-related paths
     }
 
     @Test

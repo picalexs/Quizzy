@@ -14,10 +14,10 @@ public interface MaterialRepository extends JpaRepository<Material, Long> {
     @Query("SELECT m FROM Material m WHERE m.course.id = :courseId")
     List<Material> findByCourseId(@Param("courseId") Long courseId);
 
-    @Query("SELECT m FROM Material m WHERE m.name LIKE %:name%")
+    @Query("SELECT m FROM Material m WHERE LOWER(m.name) LIKE LOWER(CONCAT('%', :name, '%'))")
     List<Material> findByNameContaining(@Param("name") String name);
 
-    @Query("SELECT m FROM Material m WHERE m.path LIKE %:path%")
+    @Query("SELECT m FROM Material m WHERE LOWER(m.path) LIKE LOWER(CONCAT('%', :path, '%'))")
     List<Material> findByPathContaining(@Param("path") String path);
 
     @Query("SELECT m FROM Material m WHERE m.course.professor.id = :professorId")
