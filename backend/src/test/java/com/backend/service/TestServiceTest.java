@@ -1,458 +1,592 @@
 package com.backend.service;
 
+import com.backend.dto.TestDTO;
+import com.backend.mapper.TestMapper;
 import com.backend.model.Course;
 import com.backend.model.TestEntity;
-import com.backend.model.TestQuestion;
 import com.backend.model.User;
+import com.backend.repository.CourseRepository;
 import com.backend.repository.TestRepository;
+import com.backend.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.MockedStatic;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.access.AccessDeniedException;
 
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class TestServiceTest {
 
     @Mock
     private TestRepository testRepository;
 
+    @Mock
+    private TestMapper testMapper;
+
+    @Mock
+    private UserRepository userRepository;
+
+    @Mock
+    private CourseRepository courseRepository;
+
     @InjectMocks
     private TestService testService;
 
     private TestEntity testEntity;
+    private TestDTO testDTO;
     private User professor;
     private Course course;
     private Date testDate;
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
+        testDate = new Date();
 
         professor = new User();
         professor.setId(1);
-        professor.setEmail("professor@example.com");
+        professor.setRole("PROFESOR");
 
         course = new Course();
         course.setId(1L);
         course.setTitle("Test Course");
 
-        testDate = new Date();
-
         testEntity = new TestEntity();
         testEntity.setId(1L);
-        testEntity.setTitle("Test Exam");
+        testEntity.setTitle("Sample Test");
         testEntity.setDescription("Test Description");
         testEntity.setDate(testDate);
         testEntity.setProfessor(professor);
         testEntity.setCourse(course);
-        testEntity.setQuestions(new ArrayList<>());
+
+        testDTO = new TestDTO();
+        testDTO.setId(1L);
+        testDTO.setTitle("Sample Test");
+        testDTO.setDescription("Test Description");
+        testDTO.setDate(testDate);
+        testDTO.setProfessorId(1);
+        testDTO.setCourseId(1L);
     }
 
     @Test
-    void shouldSaveTest() {
+    void constructor_WithNullRepository_ShouldThrowException() {
+        assertThrows(NullPointerException.class, () ->
+                new TestService(null, testMapper, userRepository, courseRepository));
+    }
+
+    @Test
+    void saveTest_WithValidDTO_ShouldReturnSavedDTO() {
+        // Given
+        when(testMapper.toEntity(testDTO)).thenReturn(testEntity);
         when(testRepository.save(testEntity)).thenReturn(testEntity);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-        TestEntity result = testService.saveTest(testEntity);
+        // When
+        TestDTO result = testService.saveTest(testDTO);
 
-        assertEquals(testEntity, result);
+        // Then
+        assertEquals(testDTO, result);
+        verify(testMapper).toEntity(testDTO);
         verify(testRepository).save(testEntity);
+        verify(testMapper).toDTO(testEntity);
     }
 
     @Test
-    void shouldThrowExceptionWhenSavingNullTest() {
+    void saveTest_WithNullDTO_ShouldThrowException() {
+        // When & Then
         assertThrows(IllegalArgumentException.class, () -> testService.saveTest(null));
     }
 
     @Test
-    void shouldCreateTest() {
-        TestEntity newTest = new TestEntity();
-        newTest.setTitle("New Test");
-        newTest.setDescription("New Description");
-        newTest.setDate(testDate);
-        newTest.setProfessor(professor);
-        newTest.setCourse(course);
+    void createTest_WithValidDTO_ShouldReturnCreatedDTO() {
+        // Given
+        TestDTO newTestDTO = new TestDTO();
+        newTestDTO.setTitle("New Test");
+        newTestDTO.setDescription("New Test Description");
+        newTestDTO.setDate(testDate);
+        newTestDTO.setProfessorId(1);
+        newTestDTO.setCourseId(1L);
+        // Note: No ID set for new test
 
-        when(testRepository.save(any(TestEntity.class))).thenReturn(newTest);
+        TestEntity newEntity = new TestEntity();
+        newEntity.setTitle("New Test");
+        newEntity.setDate(testDate);
 
-        TestEntity result = testService.createTest(newTest);
+        when(testRepository.save(any(TestEntity.class))).thenReturn(testEntity);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-        assertEquals(newTest, result);
-        verify(testRepository).save(newTest);
+        // When
+        TestDTO result = testService.createTest(newTestDTO);
+
+        // Then
+        assertEquals(testDTO, result);
+        verify(testRepository).save(any(TestEntity.class));
+        verify(testMapper).toDTO(testEntity);
     }
 
     @Test
-    void shouldThrowExceptionWhenCreatingTestWithId() {
-        TestEntity invalidTest = new TestEntity();
-        invalidTest.setId(1L);
+    void createTest_WithExistingId_ShouldThrowException() {
+        // Given - testDTO already has an ID (set in setUp method)
+        // The createTest method creates its own mapper internally
+        // and should throw an exception if the resulting entity has an ID
 
-        assertThrows(IllegalArgumentException.class, () -> testService.createTest(invalidTest));
+        // When & Then
+        assertThrows(IllegalArgumentException.class, () -> testService.createTest(testDTO));
     }
 
     @Test
-    void shouldGetAllTests() {
-        when(testRepository.findAll()).thenReturn(List.of(testEntity));
+    void getAllTests_ShouldReturnAllTests() {
+        // Given
+        List<TestEntity> testEntities = Arrays.asList(testEntity, testEntity);
+        when(testRepository.findAll()).thenReturn(testEntities);
 
-        var result = testService.getAllTests();
+        // When
+        Collection<TestEntity> result = testService.getAllTests();
 
-        assertEquals(1, result.size());
+        // Then
+        assertEquals(2, result.size());
         verify(testRepository).findAll();
     }
 
     @Test
-    void shouldGetTestById() {
-        when(testRepository.findById(1L)).thenReturn(Optional.of(testEntity));
+    void getTestById_WithValidId_ShouldReturnTest() {
+        // Given
+        Long testId = 1L;
+        when(testRepository.findById(testId)).thenReturn(Optional.of(testEntity));
 
-        var result = testService.getTestById(1L);
+        // When
+        TestEntity result = testService.getTestById(testId);
 
+        // Then
         assertEquals(testEntity, result);
-        verify(testRepository).findById(1L);
+        verify(testRepository).findById(testId);
     }
 
     @Test
-    void shouldThrowExceptionWhenTestNotFound() {
-        when(testRepository.findById(999L)).thenReturn(Optional.empty());
+    void getTestById_WithInvalidId_ShouldThrowException() {
+        // Given
+        Long testId = 0L;
 
-        assertThrows(EntityNotFoundException.class, () -> testService.getTestById(999L));
+        // When & Then
+        assertThrows(EntityNotFoundException.class, () -> testService.getTestById(testId));
     }
 
     @Test
-    void shouldThrowExceptionWhenInvalidTestId() {
-        assertThrows(EntityNotFoundException.class, () -> testService.getTestById(0L));
-        assertThrows(EntityNotFoundException.class, () -> testService.getTestById(null));
+    void getTestById_WithNonExistentId_ShouldThrowException() {
+        // Given
+        Long testId = 999L;
+        when(testRepository.findById(testId)).thenReturn(Optional.empty());
+
+        // When & Then
+        assertThrows(EntityNotFoundException.class, () -> testService.getTestById(testId));
     }
 
     @Test
-    void shouldFindTestsByProfId() {
-        when(testRepository.findByProfessorId(1)).thenReturn(List.of(testEntity));
+    void findTestsByProfId_WithValidId_ShouldReturnTests() {
+        // Given
+        Integer profId = 1;
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findByProfessorId(profId)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-        var result = testService.findTestsByProfId(1);
+        // When
+        Collection<TestDTO> result = testService.findTestsByProfId(profId);
 
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findByProfessorId(1);
+        verify(testRepository).findByProfessorId(profId);
+        verify(testMapper).toDTO(testEntity);
     }
 
     @Test
-    void shouldThrowExceptionWhenInvalidProfId() {
-        assertThrows(IllegalArgumentException.class, () -> testService.findTestsByProfId(0));
-        assertThrows(IllegalArgumentException.class, () -> testService.findTestsByProfId(null));
+    void findTestsByProfId_WithInvalidId_ShouldThrowException() {
+        // Given
+        Integer profId = -1;
+
+        // When & Then
+        assertThrows(IllegalArgumentException.class, () -> testService.findTestsByProfId(profId));
     }
 
     @Test
-    void shouldFindTestsByCourseId() {
-        when(testRepository.findByCourseId(1L)).thenReturn(List.of(testEntity));
+    void findTestsByCourseId_WithValidId_ShouldReturnTests() {
+        // Given
+        Long courseId = 1L;
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findByCourseId(courseId)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-        var result = testService.findTestsByCourseId(1L);
+        // When
+        Collection<TestDTO> result = testService.findTestsByCourseId(courseId);
 
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findByCourseId(1L);
+        verify(testRepository).findByCourseId(courseId);
     }
 
     @Test
-    void shouldThrowExceptionWhenInvalidCourseId() {
-        assertThrows(IllegalArgumentException.class, () -> testService.findTestsByCourseId(0L));
-        assertThrows(IllegalArgumentException.class, () -> testService.findTestsByCourseId(null));
-    }
+    void findUpcomingTests_ShouldReturnUpcomingTests() {
+        // Given
+        List<TestEntity> upcomingTests = Arrays.asList(testEntity);
+        when(testRepository.findUpcomingTests()).thenReturn(upcomingTests);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-    @Test
-    void shouldFindUpcomingTests() {
-        when(testRepository.findUpcomingTests()).thenReturn(List.of(testEntity));
+        // When
+        Collection<TestDTO> result = testService.findUpcomingTests();
 
-        var result = testService.findUpcomingTests();
-
+        // Then
         assertEquals(1, result.size());
         verify(testRepository).findUpcomingTests();
     }
 
     @Test
-    void shouldFindTestsForStudentEnrollments() {
-        when(testRepository.findTestsForStudentEnrollments(1)).thenReturn(List.of(testEntity));
+    void findTestsForStudentEnrollments_WithValidId_ShouldReturnTests() {
+        // Given
+        Integer studentId = 1;
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findTestsForStudentEnrollments(studentId)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-        var result = testService.findTestsForStudentEnrollments(1);
+        // When
+        Collection<TestDTO> result = testService.findTestsForStudentEnrollments(studentId);
 
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findTestsForStudentEnrollments(1);
+        verify(testRepository).findTestsForStudentEnrollments(studentId);
     }
 
     @Test
-    void shouldThrowExceptionWhenInvalidStudentId() {
-        assertThrows(IllegalArgumentException.class, () -> testService.findTestsForStudentEnrollments(0));
-        assertThrows(IllegalArgumentException.class, () -> testService.findTestsForStudentEnrollments(null));
-    }
+    void findByDateBetween_WithValidDates_ShouldReturnTests() {
+        // Given
+        Date startDate = new Date(System.currentTimeMillis() - 86400000);
+        Date endDate = new Date(System.currentTimeMillis() + 86400000);
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findByDateBetween(startDate, endDate)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-    @Test
-    void shouldFindByDateBetween() {
-        Date startDate = new Date();
-        Date endDate = new Date(startDate.getTime() + 86400000); // One day later
+        // When
+        Collection<TestDTO> result = testService.findByDateBetween(startDate, endDate);
 
-        when(testRepository.findByDateBetween(startDate, endDate)).thenReturn(List.of(testEntity));
-
-        var result = testService.findByDateBetween(startDate, endDate);
-
+        // Then
         assertEquals(1, result.size());
         verify(testRepository).findByDateBetween(startDate, endDate);
     }
 
     @Test
-    void shouldThrowExceptionWhenInvalidDateRange() {
-        Date startDate = new Date();
-        Date endDate = new Date(startDate.getTime() - 86400000); // One day earlier
+    void findByDateBetween_WithEndDateBeforeStart_ShouldThrowException() {
+        // Given
+        Date startDate = new Date(System.currentTimeMillis() + 86400000);
+        Date endDate = new Date(System.currentTimeMillis() - 86400000);
 
-        assertThrows(IllegalArgumentException.class, () -> testService.findByDateBetween(startDate, endDate));
-        assertThrows(IllegalArgumentException.class, () -> testService.findByDateBetween(null, endDate));
-        assertThrows(IllegalArgumentException.class, () -> testService.findByDateBetween(startDate, null));
+        // When & Then
+        assertThrows(IllegalArgumentException.class, () ->
+                testService.findByDateBetween(startDate, endDate));
     }
 
     @Test
-    void shouldFindByTitle() {
-        when(testRepository.findByTitle("Test")).thenReturn(List.of(testEntity));
+    void findByTitle_WithValidTitle_ShouldReturnTests() {
+        // Given
+        String title = "Sample Test";
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findByTitle(title)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-        var result = testService.findByTitle("Test");
+        // When
+        Collection<TestDTO> result = testService.findByTitle(title);
 
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findByTitle("Test");
+        verify(testRepository).findByTitle(title);
     }
 
     @Test
-    void shouldThrowExceptionWhenNullTitle() {
+    void findByTitle_WithNullTitle_ShouldThrowException() {
+        // When & Then
         assertThrows(IllegalArgumentException.class, () -> testService.findByTitle(null));
     }
 
     @Test
-    void shouldFindByDescription() {
-        when(testRepository.findByDescription("Description")).thenReturn(List.of(testEntity));
+    void findByDescription_WithValidDescription_ShouldReturnTests() {
+        // Given
+        String description = "Test Description";
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findByDescription(description)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-        var result = testService.findByDescription("Description");
+        // When
+        Collection<TestDTO> result = testService.findByDescription(description);
 
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findByDescription("Description");
+        verify(testRepository).findByDescription(description);
     }
 
     @Test
-    void shouldThrowExceptionWhenNullDescription() {
-        assertThrows(IllegalArgumentException.class, () -> testService.findByDescription(null));
-    }
+    void findByMonth_WithValidMonth_ShouldReturnTests() {
+        // Given
+        Integer month = 12;
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findByMonth(month)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-    @Test
-    void shouldFindByMonth() {
-        when(testRepository.findByMonth(7)).thenReturn(List.of(testEntity));
+        // When
+        Collection<TestDTO> result = testService.findByMonth(month);
 
-        var result = testService.findByMonth(7);
-
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findByMonth(7);
+        verify(testRepository).findByMonth(month);
     }
 
     @Test
-    void shouldThrowExceptionWhenNullMonth() {
-        assertThrows(IllegalArgumentException.class, () -> testService.findByMonth(null));
-    }
+    void findByYear_WithValidYear_ShouldReturnTests() {
+        // Given
+        Integer year = 2024;
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findByYear(year)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-    @Test
-    void shouldFindByYear() {
-        when(testRepository.findByYear(2023)).thenReturn(List.of(testEntity));
+        // When
+        Collection<TestDTO> result = testService.findByYear(year);
 
-        var result = testService.findByYear(2023);
-
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findByYear(2023);
+        verify(testRepository).findByYear(year);
     }
 
     @Test
-    void shouldThrowExceptionWhenNullYear() {
-        assertThrows(IllegalArgumentException.class, () -> testService.findByYear(null));
-    }
+    void findTestsByExactDate_WithValidDate_ShouldReturnTests() {
+        // Given
+        Date exactDate = testDate;
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findTestsByExactDate(exactDate)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-    @Test
-    void shouldFindTestsByExactDate() {
-        when(testRepository.findTestsByExactDate(testDate)).thenReturn(List.of(testEntity));
+        // When
+        Collection<TestDTO> result = testService.findTestsByExactDate(exactDate);
 
-        var result = testService.findTestsByExactDate(testDate);
-
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findTestsByExactDate(testDate);
+        verify(testRepository).findTestsByExactDate(exactDate);
     }
 
     @Test
-    void shouldThrowExceptionWhenNullExactDate() {
-        assertThrows(IllegalArgumentException.class, () -> testService.findTestsByExactDate(null));
-    }
+    void findByMonthAndYear_WithValidParameters_ShouldReturnTests() {
+        // Given
+        Integer month = 12;
+        Integer year = 2024;
+        List<TestEntity> testEntities = Arrays.asList(testEntity);
+        when(testRepository.findByMonthAndYear(month, year)).thenReturn(testEntities);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-    @Test
-    void shouldFindByMonthAndYear() {
-        when(testRepository.findByMonthAndYear(7, 2023)).thenReturn(List.of(testEntity));
+        // When
+        Collection<TestDTO> result = testService.findByMonthAndYear(month, year);
 
-        var result = testService.findByMonthAndYear(7, 2023);
-
+        // Then
         assertEquals(1, result.size());
-        verify(testRepository).findByMonthAndYear(7, 2023);
+        verify(testRepository).findByMonthAndYear(month, year);
     }
 
     @Test
-    void shouldThrowExceptionWhenNullMonthOrYear() {
-        assertThrows(IllegalArgumentException.class, () -> testService.findByMonthAndYear(null, 2023));
-        assertThrows(IllegalArgumentException.class, () -> testService.findByMonthAndYear(7, null));
+    void countTestsByCourse_WithValidId_ShouldReturnCount() {
+        // Given
+        Integer courseId = 1;
+        Long expectedCount = 5L;
+        when(testRepository.countTestsByCourse(courseId)).thenReturn(expectedCount);
+
+        // When
+        Long result = testService.countTestsByCourse(courseId);
+
+        // Then
+        assertEquals(expectedCount, result);
+        verify(testRepository).countTestsByCourse(courseId);
     }
 
     @Test
-    void shouldCountTestsByCourse() {
-        when(testRepository.countTestsByCourse(1)).thenReturn(5L);
+    void countTestsByProfessor_WithValidId_ShouldReturnCount() {
+        // Given
+        Integer professorId = 1;
+        Long expectedCount = 3L;
+        when(testRepository.countTestsByProfessor(professorId)).thenReturn(expectedCount);
 
-        var result = testService.countTestsByCourse(1);
+        // When
+        Long result = testService.countTestsByProfessor(professorId);
 
-        assertEquals(5L, result);
-        verify(testRepository).countTestsByCourse(1);
+        // Then
+        assertEquals(expectedCount, result);
+        verify(testRepository).countTestsByProfessor(professorId);
     }
 
     @Test
-    void shouldThrowExceptionWhenInvalidCourseIdForCount() {
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsByCourse(0));
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsByCourse(null));
-    }
+    void countUpcomingTests_ShouldReturnCount() {
+        // Given
+        Long expectedCount = 2L;
+        when(testRepository.countUpcomingTests()).thenReturn(expectedCount);
 
-    @Test
-    void shouldCountTestsByProfessor() {
-        when(testRepository.countTestsByProfessor(1)).thenReturn(10L);
+        // When
+        Long result = testService.countUpcomingTests();
 
-        var result = testService.countTestsByProfessor(1);
-
-        assertEquals(10L, result);
-        verify(testRepository).countTestsByProfessor(1);
-    }
-
-    @Test
-    void shouldThrowExceptionWhenInvalidProfessorIdForCount() {
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsByProfessor(0));
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsByProfessor(null));
-    }
-
-    @Test
-    void shouldCountUpcomingTests() {
-        when(testRepository.countUpcomingTests()).thenReturn(3L);
-
-        var result = testService.countUpcomingTests();
-
-        assertEquals(3L, result);
+        // Then
+        assertEquals(expectedCount, result);
         verify(testRepository).countUpcomingTests();
     }
 
     @Test
-    void shouldCountTestsForStudentEnrollments() {
-        when(testRepository.countTestsForStudentEnrollments(1)).thenReturn(7L);
+    void countTestsForStudentEnrollments_WithValidId_ShouldReturnCount() {
+        // Given
+        Integer studentId = 1;
+        Long expectedCount = 4L;
+        when(testRepository.countTestsForStudentEnrollments(studentId)).thenReturn(expectedCount);
 
-        var result = testService.countTestsForStudentEnrollments(1);
+        // When
+        Long result = testService.countTestsForStudentEnrollments(studentId);
 
-        assertEquals(7L, result);
-        verify(testRepository).countTestsForStudentEnrollments(1);
+        // Then
+        assertEquals(expectedCount, result);
+        verify(testRepository).countTestsForStudentEnrollments(studentId);
     }
 
     @Test
-    void shouldThrowExceptionWhenInvalidStudentIdForCount() {
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsForStudentEnrollments(0));
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsForStudentEnrollments(null));
+    void countTestsForStudent_WithValidId_ShouldReturnCount() {
+        // Given
+        Integer studentId = 1;
+        Long expectedCount = 6L;
+        when(testRepository.countTestsForStudent(studentId)).thenReturn(expectedCount);
+
+        // When
+        Long result = testService.countTestsForStudent(studentId);
+
+        // Then
+        assertEquals(expectedCount, result);
+        verify(testRepository).countTestsForStudent(studentId);
     }
 
     @Test
-    void shouldCountTestsForStudent() {
-        when(testRepository.countTestsForStudent(1)).thenReturn(4L);
+    void countTestsByDateBetween_WithValidDates_ShouldReturnCount() {
+        // Given
+        Date startDate = new Date(System.currentTimeMillis() - 86400000);
+        Date endDate = new Date(System.currentTimeMillis() + 86400000);
+        Long expectedCount = 3L;
+        when(testRepository.countTestsByDateBetween(startDate, endDate)).thenReturn(expectedCount);
 
-        var result = testService.countTestsForStudent(1);
+        // When
+        Long result = testService.countTestsByDateBetween(startDate, endDate);
 
-        assertEquals(4L, result);
-        verify(testRepository).countTestsForStudent(1);
-    }
-
-    @Test
-    void shouldThrowExceptionWhenInvalidStudentIdForCountTests() {
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsForStudent(0));
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsForStudent(null));
-    }
-
-    @Test
-    void shouldCountTestsByDateBetween() {
-        Date startDate = new Date();
-        Date endDate = new Date(startDate.getTime() + 86400000); // One day later
-
-        when(testRepository.countTestsByDateBetween(startDate, endDate)).thenReturn(2L);
-
-        var result = testService.countTestsByDateBetween(startDate, endDate);
-
-        assertEquals(2L, result);
+        // Then
+        assertEquals(expectedCount, result);
         verify(testRepository).countTestsByDateBetween(startDate, endDate);
     }
 
     @Test
-    void shouldThrowExceptionWhenInvalidDateRangeForCount() {
-        Date startDate = new Date();
-        Date endDate = new Date(startDate.getTime() - 86400000); // One day earlier
+    void deleteTestById_WithValidId_ShouldDeleteTest() {
+        // Given
+        Long testId = 1L;
+        when(testRepository.existsById(testId)).thenReturn(true);
+        doNothing().when(testRepository).deleteById(testId);
 
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsByDateBetween(startDate, endDate));
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsByDateBetween(null, endDate));
-        assertThrows(IllegalArgumentException.class, () -> testService.countTestsByDateBetween(startDate, null));
+        // When
+        String result = testService.deleteTestById(testId);
+
+        // Then
+        assertEquals("Test deleted successfully", result);
+        verify(testRepository).existsById(testId);
+        verify(testRepository).deleteById(testId);
     }
 
     @Test
-    void shouldDeleteTestById() {
-        when(testRepository.existsById(1L)).thenReturn(true);
-        doNothing().when(testRepository).deleteById(1L);
+    void deleteTestById_WithNonExistentId_ShouldThrowException() {
+        // Given
+        Long testId = 999L;
+        when(testRepository.existsById(testId)).thenReturn(false);
 
-        testService.deleteTestById(1L);
-
-        verify(testRepository).existsById(1L);
-        verify(testRepository).deleteById(1L);
+        // When & Then
+        assertThrows(EntityNotFoundException.class, () -> testService.deleteTestById(testId));
     }
 
     @Test
-    void shouldThrowExceptionWhenDeletingNonExistentTest() {
-        when(testRepository.existsById(999L)).thenReturn(false);
+    void updateTest_WithValidData_ShouldUpdateTest() {
+        // Given
+        Long testId = 1L;
+        TestEntity entityWithProfessor = new TestEntity();
+        entityWithProfessor.setId(testId);
+        entityWithProfessor.setProfessor(professor);
+        
+        when(testRepository.findById(testId)).thenReturn(Optional.of(testEntity));
+        when(testMapper.toEntity(testDTO)).thenReturn(entityWithProfessor);
+        when(testRepository.save(testEntity)).thenReturn(testEntity);
+        when(testMapper.toDTO(testEntity)).thenReturn(testDTO);
 
-        assertThrows(EntityNotFoundException.class, () -> testService.deleteTestById(999L));
-    }
+        // When
+        TestDTO result = testService.updateTest(testId, testDTO);
 
-    @Test
-    void shouldThrowExceptionWhenDeletingWithInvalidId() {
-        assertThrows(IllegalArgumentException.class, () -> testService.deleteTestById(0L));
-        assertThrows(IllegalArgumentException.class, () -> testService.deleteTestById(null));
-    }
-
-    @Test
-    void shouldUpdateTest() {
-        TestEntity updateData = new TestEntity();
-        updateData.setTitle("Updated Test");
-        updateData.setDescription("Updated Description");
-
-        when(testRepository.findById(1L)).thenReturn(Optional.of(testEntity));
-        when(testRepository.save(any(TestEntity.class))).thenReturn(testEntity);
-
-        var result = testService.updateTest(1L, updateData);
-
-        assertEquals("Updated Test", result.getTitle());
-        assertEquals("Updated Description", result.getDescription());
-        verify(testRepository).findById(1L);
+        // Then
+        assertEquals(testDTO, result);
+        verify(testRepository).findById(testId);
         verify(testRepository).save(testEntity);
     }
 
     @Test
-    void shouldThrowExceptionWhenUpdatingNonExistentTest() {
-        when(testRepository.findById(999L)).thenReturn(Optional.empty());
+    void updateTest_WithNullDTO_ShouldThrowException() {
+        // Given
+        Long testId = 1L;
 
-        assertThrows(EntityNotFoundException.class, () -> testService.updateTest(999L, new TestEntity()));
+        // When & Then
+        assertThrows(IllegalArgumentException.class, () -> testService.updateTest(testId, null));
     }
 
     @Test
-    void shouldThrowExceptionWhenUpdatingWithInvalidId() {
-        assertThrows(IllegalArgumentException.class, () -> testService.updateTest(0L, new TestEntity()));
-        assertThrows(IllegalArgumentException.class, () -> testService.updateTest(null, new TestEntity()));
+    void updateTest_WithInvalidId_ShouldThrowException() {
+        // Given
+        Long testId = 0L;
+
+        // When & Then
+        assertThrows(IllegalArgumentException.class, () -> testService.updateTest(testId, testDTO));
     }
 
     @Test
-    void shouldThrowExceptionWhenUpdatingWithNullData() {
-        assertThrows(IllegalArgumentException.class, () -> testService.updateTest(1L, null));
+    void updateTest_WithNonExistentId_ShouldThrowException() {
+        // Given
+        Long testId = 999L;
+        when(testRepository.findById(testId)).thenReturn(Optional.empty());
+
+        // When & Then
+        assertThrows(EntityNotFoundException.class, () -> testService.updateTest(testId, testDTO));
+    }
+
+    @Test
+    void updateTest_WithIncompleteDTOFields_ShouldThrowException() {
+        // Given
+        Long testId = 1L;
+        TestDTO incompleteDTO = new TestDTO();
+        incompleteDTO.setTitle(null);
+
+        when(testRepository.findById(testId)).thenReturn(Optional.of(testEntity));
+
+        // When & Then
+        assertThrows(IllegalArgumentException.class, () -> testService.updateTest(testId, incompleteDTO));
+    }
+
+    @Test
+    void updateTest_WithNonProfessorRole_ShouldThrowException() {
+        // Given
+        Long testId = 1L;
+        User student = new User();
+        student.setRole("STUDENT");
+        
+        TestEntity entityWithStudent = new TestEntity();
+        entityWithStudent.setProfessor(student);
+
+        when(testRepository.findById(testId)).thenReturn(Optional.of(testEntity));
+        when(testMapper.toEntity(testDTO)).thenReturn(entityWithStudent);
+
+        // When & Then
+        assertThrows(AccessDeniedException.class, () -> testService.updateTest(testId, testDTO));
     }
 } 

@@ -1,21 +1,23 @@
 package com.backend.controller;
 
-import com.backend.model.TestAnswer;
+import com.backend.dto.TestAnswerDTO;
 import com.backend.service.TestAnswerService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
-import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class TestAnswerControllerTest {
 
     @Mock
@@ -24,167 +26,382 @@ class TestAnswerControllerTest {
     @InjectMocks
     private TestAnswerController testAnswerController;
 
+    private TestAnswerDTO testAnswerDTO;
+    private TestAnswerDTO secondAnswerDTO;
+
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
+        testAnswerDTO = new TestAnswerDTO();
+        testAnswerDTO.setId(1L);
+        testAnswerDTO.setOptionText("Paris");
+        testAnswerDTO.setCorrect(true);
+        testAnswerDTO.setQuestionId(1L);
+
+        secondAnswerDTO = new TestAnswerDTO();
+        secondAnswerDTO.setId(2L);
+        secondAnswerDTO.setOptionText("London");
+        secondAnswerDTO.setCorrect(false);
+        secondAnswerDTO.setQuestionId(1L);
     }
 
     @Test
-    void getAllAnswers_ShouldReturn200() {
-        List<TestAnswer> answers = Arrays.asList(new TestAnswer(), new TestAnswer());
+    void getAllAnswers_ShouldReturnAllAnswers() {
+        // Given
+        List<TestAnswerDTO> answers = Arrays.asList(testAnswerDTO, secondAnswerDTO);
         when(testAnswerService.getAllAnswers()).thenReturn(answers);
 
-        ResponseEntity<Collection<TestAnswer>> response = testAnswerController.getAllAnswers();
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.getAllAnswers();
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answers, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+        verify(testAnswerService).getAllAnswers();
     }
 
     @Test
-    void getAnswerById_ShouldReturn200() {
-        TestAnswer answer = new TestAnswer();
-        when(testAnswerService.getAnswerById(1L)).thenReturn(answer);
+    void getAnswerById_WithValidId_ShouldReturnAnswer() {
+        // Given
+        Long answerId = 1L;
+        when(testAnswerService.getAnswerById(answerId)).thenReturn(testAnswerDTO);
 
-        ResponseEntity<TestAnswer> response = testAnswerController.getAnswerById(1L);
+        // When
+        ResponseEntity<TestAnswerDTO> response = testAnswerController.getAnswerById(answerId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answer, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(testAnswerDTO.getId(), response.getBody().getId());
+        assertEquals(testAnswerDTO.getOptionText(), response.getBody().getOptionText());
+        assertEquals(testAnswerDTO.isCorrect(), response.getBody().isCorrect());
+        verify(testAnswerService).getAnswerById(answerId);
     }
 
     @Test
-    void createAnswer_ShouldReturn201() {
-        TestAnswer answer = new TestAnswer();
-        when(testAnswerService.createAnswer(answer)).thenReturn(answer);
+    void createAnswer_WithValidAnswer_ShouldCreateAnswer() {
+        // Given
+        when(testAnswerService.createAnswer(any(TestAnswerDTO.class))).thenReturn(testAnswerDTO);
 
-        ResponseEntity<TestAnswer> response = testAnswerController.createAnswer(answer);
+        // When
+        ResponseEntity<TestAnswerDTO> response = testAnswerController.createAnswer(testAnswerDTO);
 
-        assertEquals(201, response.getStatusCodeValue());
-        assertEquals(answer, response.getBody());
+        // Then
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(testAnswerDTO.getId(), response.getBody().getId());
+        assertEquals(testAnswerDTO.getOptionText(), response.getBody().getOptionText());
+        verify(testAnswerService).createAnswer(testAnswerDTO);
     }
 
     @Test
-    void updateAnswer_ShouldReturn200() {
-        TestAnswer answer = new TestAnswer();
-        when(testAnswerService.updateAnswer(eq(1L), any(TestAnswer.class))).thenReturn(answer);
+    void saveAnswer_WithValidAnswer_ShouldSaveAnswer() {
+        // Given
+        when(testAnswerService.saveAnswer(any(TestAnswerDTO.class))).thenReturn(testAnswerDTO);
 
-        ResponseEntity<TestAnswer> response = testAnswerController.updateAnswer(1L, answer);
+        // When
+        ResponseEntity<TestAnswerDTO> response = testAnswerController.saveAnswer(testAnswerDTO);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answer, response.getBody());
+        // Then
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(testAnswerDTO.getId(), response.getBody().getId());
+        verify(testAnswerService).saveAnswer(testAnswerDTO);
     }
 
     @Test
-    void deleteAnswer_ShouldReturn204() {
-        doNothing().when(testAnswerService).deleteAnswerById(1L);
+    void updateAnswer_WithValidData_ShouldUpdateAnswer() {
+        // Given
+        Long answerId = 1L;
+        when(testAnswerService.updateAnswer(eq(answerId), any(TestAnswerDTO.class))).thenReturn(testAnswerDTO);
 
-        ResponseEntity<Void> response = testAnswerController.deleteAnswer(1L);
+        // When
+        ResponseEntity<TestAnswerDTO> response = testAnswerController.updateAnswer(answerId, testAnswerDTO);
 
-        assertEquals(204, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(testAnswerDTO.getId(), response.getBody().getId());
+        verify(testAnswerService).updateAnswer(answerId, testAnswerDTO);
     }
 
     @Test
-    void getAnswersByQuestionId_ShouldReturn200() {
-        List<TestAnswer> answers = Arrays.asList(new TestAnswer());
-        when(testAnswerService.getAnswersByQuestionId(1L)).thenReturn(answers);
+    void deleteAnswer_WithValidId_ShouldDeleteAnswer() {
+        // Given
+        Long answerId = 1L;
+        doNothing().when(testAnswerService).deleteAnswerById(answerId);
 
-        ResponseEntity<Collection<TestAnswer>> response = testAnswerController.getAnswersByQuestionId(1L);
+        // When
+        ResponseEntity<Void> response = testAnswerController.deleteAnswer(answerId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answers, response.getBody());
+        // Then
+        assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
+        assertNull(response.getBody());
+        verify(testAnswerService).deleteAnswerById(answerId);
     }
 
     @Test
-    void getAnswersByTestId_ShouldReturn200() {
-        List<TestAnswer> answers = Arrays.asList(new TestAnswer());
-        when(testAnswerService.getAnswersByTestId(1L)).thenReturn(answers);
+    void getAnswersByQuestionId_WithValidQuestionId_ShouldReturnAnswers() {
+        // Given
+        Long questionId = 1L;
+        List<TestAnswerDTO> answers = Arrays.asList(testAnswerDTO, secondAnswerDTO);
+        when(testAnswerService.getAnswersByQuestionId(questionId)).thenReturn(answers);
 
-        ResponseEntity<Collection<TestAnswer>> response = testAnswerController.getAnswersByTestId(1L);
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.getAnswersByQuestionId(questionId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answers, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+        verify(testAnswerService).getAnswersByQuestionId(questionId);
     }
 
     @Test
-    void getCorrectAnswersByQuestionId_ShouldReturn200() {
-        List<TestAnswer> answers = Arrays.asList(new TestAnswer());
-        when(testAnswerService.getCorrectAnswersByQuestionId(1L)).thenReturn(answers);
+    void getAnswersByTestId_WithValidTestId_ShouldReturnAnswers() {
+        // Given
+        Long testId = 1L;
+        List<TestAnswerDTO> answers = Arrays.asList(testAnswerDTO, secondAnswerDTO);
+        when(testAnswerService.getAnswersByTestId(testId)).thenReturn(answers);
 
-        ResponseEntity<Collection<TestAnswer>> response = testAnswerController.getCorrectAnswersByQuestionId(1L);
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.getAnswersByTestId(testId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answers, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+        verify(testAnswerService).getAnswersByTestId(testId);
     }
 
     @Test
-    void getIncorrectAnswersByQuestionId_ShouldReturn200() {
-        List<TestAnswer> answers = Arrays.asList(new TestAnswer());
-        when(testAnswerService.getIncorrectAnswersByQuestionId(1L)).thenReturn(answers);
+    void getCorrectAnswersByQuestionId_WithValidQuestionId_ShouldReturnCorrectAnswers() {
+        // Given
+        Long questionId = 1L;
+        List<TestAnswerDTO> correctAnswers = Arrays.asList(testAnswerDTO); // Only correct answer
+        when(testAnswerService.getCorrectAnswersByQuestionId(questionId)).thenReturn(correctAnswers);
 
-        ResponseEntity<Collection<TestAnswer>> response = testAnswerController.getIncorrectAnswersByQuestionId(1L);
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.getCorrectAnswersByQuestionId(questionId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answers, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        assertTrue(response.getBody().iterator().next().isCorrect());
+        verify(testAnswerService).getCorrectAnswersByQuestionId(questionId);
     }
 
     @Test
-    void getCorrectAnswersByTestId_ShouldReturn200() {
-        List<TestAnswer> answers = Arrays.asList(new TestAnswer());
-        when(testAnswerService.getCorrectAnswersByTestId(1L)).thenReturn(answers);
+    void getIncorrectAnswersByQuestionId_WithValidQuestionId_ShouldReturnIncorrectAnswers() {
+        // Given
+        Long questionId = 1L;
+        List<TestAnswerDTO> incorrectAnswers = Arrays.asList(secondAnswerDTO); // Only incorrect answer
+        when(testAnswerService.getIncorrectAnswersByQuestionId(questionId)).thenReturn(incorrectAnswers);
 
-        ResponseEntity<Collection<TestAnswer>> response = testAnswerController.getCorrectAnswersByTestId(1L);
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.getIncorrectAnswersByQuestionId(questionId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answers, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        assertFalse(response.getBody().iterator().next().isCorrect());
+        verify(testAnswerService).getIncorrectAnswersByQuestionId(questionId);
     }
 
     @Test
-    void searchAnswersByOptionText_ShouldReturn200() {
-        List<TestAnswer> answers = Arrays.asList(new TestAnswer());
-        when(testAnswerService.findByOptionTextContaining("keyword")).thenReturn(answers);
+    void getCorrectAnswersByTestId_WithValidTestId_ShouldReturnCorrectAnswers() {
+        // Given
+        Long testId = 1L;
+        List<TestAnswerDTO> correctAnswers = Arrays.asList(testAnswerDTO);
+        when(testAnswerService.getCorrectAnswersByTestId(testId)).thenReturn(correctAnswers);
 
-        ResponseEntity<Collection<TestAnswer>> response = testAnswerController.searchAnswersByOptionText("keyword");
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.getCorrectAnswersByTestId(testId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(answers, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        assertTrue(response.getBody().iterator().next().isCorrect());
+        verify(testAnswerService).getCorrectAnswersByTestId(testId);
     }
 
     @Test
-    void countAnswersByQuestionId_ShouldReturn200() {
-        when(testAnswerService.countAnswersByQuestionId(1L)).thenReturn(4L);
+    void searchAnswersByOptionText_WithValidKeyword_ShouldReturnMatchingAnswers() {
+        // Given
+        String keyword = "Paris";
+        List<TestAnswerDTO> matchingAnswers = Arrays.asList(testAnswerDTO);
+        when(testAnswerService.findByOptionTextContaining(keyword)).thenReturn(matchingAnswers);
 
-        ResponseEntity<Long> response = testAnswerController.countAnswersByQuestionId(1L);
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.searchAnswersByOptionText(keyword);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(4L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        assertTrue(response.getBody().iterator().next().getOptionText().contains(keyword));
+        verify(testAnswerService).findByOptionTextContaining(keyword);
     }
 
     @Test
-    void countCorrectAnswersByQuestionId_ShouldReturn200() {
-        when(testAnswerService.countCorrectAnswersByQuestionId(1L)).thenReturn(2L);
+    void countAnswersByQuestionId_WithValidQuestionId_ShouldReturnCount() {
+        // Given
+        Long questionId = 1L;
+        Long expectedCount = 4L;
+        when(testAnswerService.countAnswersByQuestionId(questionId)).thenReturn(expectedCount);
 
-        ResponseEntity<Long> response = testAnswerController.countCorrectAnswersByQuestionId(1L);
+        // When
+        ResponseEntity<Long> response = testAnswerController.countAnswersByQuestionId(questionId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(2L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testAnswerService).countAnswersByQuestionId(questionId);
     }
 
     @Test
-    void countAnswersByTestId_ShouldReturn200() {
-        when(testAnswerService.countAnswersByTestId(1L)).thenReturn(10L);
+    void countCorrectAnswersByQuestionId_WithValidQuestionId_ShouldReturnCorrectCount() {
+        // Given
+        Long questionId = 1L;
+        Long expectedCount = 1L;
+        when(testAnswerService.countCorrectAnswersByQuestionId(questionId)).thenReturn(expectedCount);
 
-        ResponseEntity<Long> response = testAnswerController.countAnswersByTestId(1L);
+        // When
+        ResponseEntity<Long> response = testAnswerController.countCorrectAnswersByQuestionId(questionId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(10L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testAnswerService).countCorrectAnswersByQuestionId(questionId);
     }
 
     @Test
-    void countCorrectAnswersByTestId_ShouldReturn200() {
-        when(testAnswerService.countCorrectAnswersByTestId(1L)).thenReturn(5L);
+    void countAnswersByTestId_WithValidTestId_ShouldReturnCount() {
+        // Given
+        Long testId = 1L;
+        Long expectedCount = 20L;
+        when(testAnswerService.countAnswersByTestId(testId)).thenReturn(expectedCount);
 
-        ResponseEntity<Long> response = testAnswerController.countCorrectAnswersByTestId(1L);
+        // When
+        ResponseEntity<Long> response = testAnswerController.countAnswersByTestId(testId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(5L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testAnswerService).countAnswersByTestId(testId);
+    }
+
+    @Test
+    void countCorrectAnswersByTestId_WithValidTestId_ShouldReturnCorrectCount() {
+        // Given
+        Long testId = 1L;
+        Long expectedCount = 5L;
+        when(testAnswerService.countCorrectAnswersByTestId(testId)).thenReturn(expectedCount);
+
+        // When
+        ResponseEntity<Long> response = testAnswerController.countCorrectAnswersByTestId(testId);
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testAnswerService).countCorrectAnswersByTestId(testId);
+    }
+
+    @Test
+    void createAnswers_WithValidAnswers_ShouldCreateMultipleAnswers() {
+        // Given
+        Collection<TestAnswerDTO> answers = Arrays.asList(testAnswerDTO, secondAnswerDTO);
+        when(testAnswerService.createAnswers(anyCollection())).thenReturn(answers);
+
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.createAnswers(answers);
+
+        // Then
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+        verify(testAnswerService).createAnswers(answers);
+    }
+
+    @Test
+    void saveAnswers_WithValidAnswers_ShouldSaveMultipleAnswers() {
+        // Given
+        Collection<TestAnswerDTO> answers = Arrays.asList(testAnswerDTO, secondAnswerDTO);
+        when(testAnswerService.saveAnswers(anyCollection())).thenReturn(answers);
+
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.saveAnswers(answers);
+
+        // Then
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+        verify(testAnswerService).saveAnswers(answers);
+    }
+
+    @Test
+    void getAllAnswers_WhenNoAnswers_ShouldReturnEmptyCollection() {
+        // Given
+        when(testAnswerService.getAllAnswers()).thenReturn(Collections.emptyList());
+
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.getAllAnswers();
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody().isEmpty());
+        verify(testAnswerService).getAllAnswers();
+    }
+
+    @Test
+    void getAnswersByQuestionId_WhenNoAnswers_ShouldReturnEmptyCollection() {
+        // Given
+        Long questionId = 1L;
+        when(testAnswerService.getAnswersByQuestionId(questionId)).thenReturn(Collections.emptyList());
+
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.getAnswersByQuestionId(questionId);
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody().isEmpty());
+        verify(testAnswerService).getAnswersByQuestionId(questionId);
+    }
+
+    @Test
+    void searchAnswersByOptionText_WhenNoMatches_ShouldReturnEmptyCollection() {
+        // Given
+        String keyword = "nonexistent";
+        when(testAnswerService.findByOptionTextContaining(keyword)).thenReturn(Collections.emptyList());
+
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.searchAnswersByOptionText(keyword);
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody().isEmpty());
+        verify(testAnswerService).findByOptionTextContaining(keyword);
+    }
+
+    @Test
+    void createAnswers_WithEmptyCollection_ShouldReturnEmptyCollection() {
+        // Given
+        Collection<TestAnswerDTO> emptyAnswers = Collections.emptyList();
+        when(testAnswerService.createAnswers(emptyAnswers)).thenReturn(emptyAnswers);
+
+        // When
+        ResponseEntity<Collection<TestAnswerDTO>> response = testAnswerController.createAnswers(emptyAnswers);
+
+        // Then
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody().isEmpty());
+        verify(testAnswerService).createAnswers(emptyAnswers);
     }
 }

@@ -64,6 +64,7 @@ public class GeminiService {
                 return response.getBody().get("candidates").toString();
             } else {
                 return "Error: No valid response from Gemini API";
+                
             }
         } catch (Exception e) {
             return "Error while contacting Gemini API: " + e.getMessage();

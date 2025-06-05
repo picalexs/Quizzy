@@ -192,11 +192,11 @@ public class MaterialController {
         }
     }
 
+
     @PostMapping("/replace-course")
     public ResponseEntity<Map<String, Object>> replaceCourseInS3(
             @RequestParam String oldCoursePath,
-            @RequestParam MultipartFile newCourseFile,
-            @RequestParam(required = false, defaultValue = "1") Integer userId) {
+            @RequestParam MultipartFile newCourseFile) {
 
         Map<String, Object> response = new HashMap<>();
         String bucketName = "quizzy-s3-bucket";
@@ -258,11 +258,16 @@ public class MaterialController {
 
             Long courseId = null;
             String oldMaterialName = null;
+            String oldCourseName = null;
             if (oldMaterial != null) {
                 courseId = oldMaterial.getCourse().getId();
                 oldMaterialName = oldMaterial.getName();
+                oldCourseName = extractCourseNameFromPath(oldMaterial.getPath());
                 System.out.println("Found old material - ID: " + oldMaterial.getId() +
-                        ", Course ID: " + courseId + ", Name: " + oldMaterialName);
+                        ", Course ID: " + courseId + ", Name: " + oldMaterialName + ", Course: " + oldCourseName);
+
+                // Delete old text and flashcard files BEFORE processing
+                deleteOldTextAndFlashcardFiles(oldMaterial.getPath(), oldMaterialName);
             } else {
                 System.out.println("WARNING - Old material not found in database for path: " + oldCoursePath);
             }
@@ -374,8 +379,8 @@ public class MaterialController {
 
                         // Import the generated flashcards
                         System.out.println("Importing new flashcards from generated file");
-                        ResponseEntity<Map<String, Object>> flashcardResult = flashcardController.generateFlashcardsFromFile(
-                                flashcardFilePath, userId);
+                        ResponseEntity<Map<String, Object>> flashcardResult =
+                                flashcardController.generateFlashcardsFromFile(flashcardFilePath, 1);
 
                         if (flashcardResult.getStatusCode() == HttpStatus.OK) {
                             Map<String, Object> flashcardResponse = flashcardResult.getBody();
@@ -478,6 +483,60 @@ public class MaterialController {
                     System.err.println("Failed to delete temporary PDF file: " + tempPdfPath + " - " + e.getMessage());
                 }
             }
+        }
+    }
+
+    /**
+     * Deletes old text and flashcard files before processing new material
+     */
+    private void deleteOldTextAndFlashcardFiles(String oldPath, String oldMaterialName) {
+        try {
+            String projectDir = System.getProperty("user.dir");
+            String oldCourseName = extractCourseNameFromPath(oldPath);
+
+            if (oldMaterialName != null && oldCourseName != null) {
+                // Remove .pdf extension to get base filename
+                String baseFileName = oldMaterialName;
+                if (baseFileName.toLowerCase().endsWith(".pdf")) {
+                    baseFileName = baseFileName.substring(0, baseFileName.length() - 4);
+                }
+
+                // Construct paths for old files
+                String oldTextFilePath = Paths.get(projectDir, "courses", oldCourseName, baseFileName + ".txt").toString();
+                String oldFlashcardFilePath = Paths.get(projectDir, "courses", oldCourseName, baseFileName + "_flashcards.txt").toString();
+
+                // Delete old text file
+                Path oldTextFile = Paths.get(oldTextFilePath);
+                if (Files.exists(oldTextFile)) {
+                    try {
+                        Files.delete(oldTextFile);
+                        System.out.println("Successfully deleted old text file: " + oldTextFilePath);
+                    } catch (IOException e) {
+                        System.err.println("Failed to delete old text file: " + oldTextFilePath + " - " + e.getMessage());
+                    }
+                } else {
+                    System.out.println("Old text file not found (skipping): " + oldTextFilePath);
+                }
+
+                // Delete old flashcard file
+                Path oldFlashcardFile = Paths.get(oldFlashcardFilePath);
+                if (Files.exists(oldFlashcardFile)) {
+                    try {
+                        Files.delete(oldFlashcardFile);
+                        System.out.println("Successfully deleted old flashcard file: " + oldFlashcardFilePath);
+                    } catch (IOException e) {
+                        System.err.println("Failed to delete old flashcard file: " + oldFlashcardFilePath + " - " + e.getMessage());
+                    }
+                } else {
+                    System.out.println("Old flashcard file not found (skipping): " + oldFlashcardFilePath);
+                }
+            } else {
+                System.out.println("Cannot determine old file paths - missing material name or course name");
+            }
+
+        } catch (Exception e) {
+            System.err.println("Error during old file cleanup: " + e.getMessage());
+            // Don't throw the exception - this is cleanup and shouldn't stop the main process
         }
     }
 

@@ -50,9 +50,7 @@ public class FlashcardImport {
 
     @Transactional
     public int importFlashcardsFromDirectory(String baseDir, Integer userId) throws IOException {
-        Integer actualUserId = (userId != null) ? userId : DEFAULT_USER_ID;
-        User user = userRepository.getReferenceById(actualUserId);
-
+        User user = getOrCreateDefaultUser();
         int totalImported = 0;
 
         List<Path> flashcardFiles = findFlashcardFiles(Paths.get(baseDir));
@@ -91,8 +89,8 @@ public class FlashcardImport {
 
     @Transactional
     public int importFlashcardsFromSingleFile(String filePath, String baseDir, Integer userId) throws IOException {
-        Integer actualUserId = (userId != null) ? userId : DEFAULT_USER_ID;
-        User user = userRepository.getReferenceById(actualUserId);
+        // Ignoră complet userId-ul primit și folosește mereu default user
+        User user = getOrCreateDefaultUser();
 
         Path flashcardFilePath = Paths.get(filePath);
 
@@ -129,6 +127,36 @@ public class FlashcardImport {
             System.err.println("EROARE la procesarea fișierului " + flashcardFilePath + ": " + e.getMessage());
             e.printStackTrace();
             throw new RuntimeException("Eroare la procesarea fișierului: " + e.getMessage(), e);
+        }
+    }
+
+    /**
+     * Obține user-ul cu ID 1 sau îl creează dacă nu există
+     */
+    private User getOrCreateDefaultUser() {
+        try {
+            Optional<User> userOpt = userRepository.findById(DEFAULT_USER_ID);
+            if (userOpt.isPresent()) {
+                System.out.println("Folosesc user-ul existent cu ID: " + DEFAULT_USER_ID);
+                return userOpt.get();
+            }
+
+            // Dacă nu există user cu ID 1, creează unul
+            System.out.println("User cu ID " + DEFAULT_USER_ID + " nu există. Creez user default...");
+            User defaultUser = new User();
+            defaultUser.setId(DEFAULT_USER_ID);
+            // Setează alte proprietăți ale user-ului dacă sunt necesare
+            // defaultUser.setName("Default User");
+            // defaultUser.setEmail("default@example.com");
+
+            User savedUser = userRepository.save(defaultUser);
+            System.out.println("User default creat cu ID: " + savedUser.getId());
+            return savedUser;
+
+        } catch (Exception e) {
+            System.err.println("EROARE la obținerea/crearea user-ului default: " + e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException("Nu s-a putut obține user-ul default", e);
         }
     }
 
@@ -286,13 +314,13 @@ public class FlashcardImport {
                 }
 
                 updateAnswers(fc, flashcard);
-
                 flashcardRepository.save(flashcard);
 
             } catch (Exception e) {
                 System.err.println("EROARE la procesarea flashcard-ului: " + fc.getQuestion());
                 System.err.println("Eroare: " + e.getMessage());
                 e.printStackTrace();
+                // Continuă cu următorul flashcard în loc să oprească totul
             }
         }
 

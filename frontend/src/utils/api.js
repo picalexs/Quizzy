@@ -4,7 +4,7 @@ const envUrl = import.meta.env.VITE_BACKEND_URL;
 const BASE_URL =
     typeof envUrl === 'string' && envUrl.trim() !== ''
         ? envUrl
-        : 'http://localhost:3000'; 
+        : 'http://localhost:3000';
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
@@ -80,6 +80,24 @@ binaryAxiosInstance.interceptors.response.use(
     }
 );
 
+// Create a separate instance for file uploads
+const fileUploadAxiosInstance = axios.create({
+    baseURL: BASE_URL,
+    headers: { 'Content-Type': 'multipart/form-data' },
+});
+
+// Copy the auth interceptor to the file upload instance
+fileUploadAxiosInstance.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem('authToken');
+        if (token) {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        console.log(`Making file upload ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
+        return config;
+    },
+    (error) => Promise.reject(error)
+);
 
 // Export helper functions for API calls
 export const api = {
@@ -87,5 +105,6 @@ export const api = {
     post: (url, data) => axiosInstance.post(url, data),
     put: (url, data) => axiosInstance.put(url, data),
     delete: (url) => axiosInstance.delete(url),
-    getBinaryFile: (url, headers = {}) => binaryAxiosInstance.get(url, { headers })
+    getBinaryFile: (url, headers = {}) => binaryAxiosInstance.get(url, { headers }),
+    postFile: (url, formData) => fileUploadAxiosInstance.post(url, formData)
 };

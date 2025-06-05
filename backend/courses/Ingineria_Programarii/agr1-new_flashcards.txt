@@ -1,0 +1,414 @@
+[{content={parts=[{text=--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What types of files will the online course notes be posted as?
+--InteriorSeparator--
+.pdf
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What concepts are emphasized in seminars?
+--InteriorSeparator--
+(right) Aprofundarea conceptelor introduse la curs
+(wrong) Learning about unrelated topics
+(right) Discussing solutions to proposed exercises
+(wrong) Socializing with other students
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+4
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the maximum possible score for activity during seminars?
+--InteriorSeparator--
+18 points
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are the components of the final grade?
+--InteriorSeparator--
+(right) Seminar
+(wrong) Class attendance
+(right) Homework
+(right) Final exam
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+5
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+In what format should homework solutions be submitted?
+--InteriorSeparator--
+LaTeX or Word (Write)
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+7
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are some topics covered in the course?
+--InteriorSeparator--
+(right) Graph theory vocabulary
+(right) Minimum cost spanning trees
+(wrong) Advanced calculus
+(right) Network flows
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+8
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the purpose of graph algorithms mentioned in this course, in general?
+--InteriorSeparator--
+To design efficient algorithms for solving combinatorial optimization problems.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+3
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What are graphs used for in social network analysis?
+--InteriorSeparator--
+Graphs are used to determine connection levels, density, influence of users, and segmentation.
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is network analysis used for?
+--InteriorSeparator--
+(right) Data mining and aggregation
+(right) Security analysis
+(wrong) Quantum Physics
+(right) Behavior analysis and prediction
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+11
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What real-world problem does the study of Eulerian paths/circuits solve?
+--InteriorSeparator--
+The Chinese Postman Problem
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+12
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What are some applications of graph coloring?
+--InteriorSeparator--
+(right) Map coloring
+(right) Scheduling courses
+(wrong) Solving differential equations
+(right) Memory register allocation
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+13
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What type of problem can stable matchings solve?
+--InteriorSeparator--
+The allocation of donated organs for transplant
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+15
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What applications exist for graph theory in informatics?
+--InteriorSeparator--
+(right) Database management
+(right) Software verification
+(wrong) Astrophysics
+(right) Data compression
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+16
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+If |X| = k, what is X called?
+--InteriorSeparator--
+A k-set
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+17
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the order of a graph G?
+--InteriorSeparator--
+|V(G)|
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+18
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Given an edge e in graph G that connects nodes u and v, what can you say about the relationship of u and v?
+--InteriorSeparator--
+(right) u and v are adjacent
+(wrong) u and v are disjoint
+(right) e is incident with u and v
+(wrong) e is external to u and v
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+19
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does dG(v) represent?
+--InteriorSeparator--
+The degree of node v in graph G
+--InteriorSeparator--
+easy
+--InteriorSeparator--
+20
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is a stable set (independent set) of nodes in a graph G?
+--InteriorSeparator--
+(right) A subset of nodes where no two nodes are adjacent
+(wrong) A subset of nodes where all nodes are adjacent
+(right) A subset S of V such that S x S intersected with E is empty
+(wrong) The shortest path between any two nodes
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is alpha(G) denoted as?
+--InteriorSeparator--
+The maximum cardinality of a stable set of G.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+24
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What makes the maximum stable set problem (P1) and the maximum matching problem (P2) different, even though both require determining a maximum cardinality member?
+--InteriorSeparator--
+(right) The families of sets relative to a given graph are different
+(wrong) The number of nodes is different
+(wrong) One looks for minimum set and other for maximum
+(wrong) P1 is in P while P2 is not
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+29
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is a p-coloring of a graph G?
+--InteriorSeparator--
+A function c: V -> {1,...,p} such that c(u) != c(v) for every uv in E.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Given a p-coloring of a graph, what can be said about the set of nodes with the same color?
+--InteriorSeparator--
+(right) It is a stable set
+(wrong) It contains only adjacent nodes
+(right) It's also called a color class
+(wrong) It induces a complete subgraph
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the chromatic number X(G) of a graph G?
+--InteriorSeparator--
+The smallest value of p such that G has a p-coloring.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+30
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is a p-edge coloring of a graph G?
+--InteriorSeparator--
+(right)  A function c : E —> {1, . . .p} such that C(e) 51$ C(f) for any e,f E E with \e O f‘ : 1.
+(wrong) A function c: V -> {1,...,p} such that c(u) != c(v) for every uv in E.
+(right) A function assigning one of p colors to each edge
+(wrong) Same as a graph coloring
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the edge chromatic number x’(G) of a graph G?
+--InteriorSeparator--
+The smallest value of p such that G has a p-edge coloring.
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+33
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What does it mean for two graphs G1 and G2 to be isomorphic?
+--InteriorSeparator--
+(right) There exists a bijection between their node sets that induces a bijection between their edge sets.
+(wrong) They have the same number of nodes and edges, but different connections
+(right) There is a mapping that preserves adjacency.
+(wrong) They have different number of nodes and edges
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+36
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the running time of the best known algorithm for testing graph isomorphism?
+--InteriorSeparator--
+Quasipolynomial
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+38
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+Which of the following properties must be true about two graphs for them to be isomorphic?
+--InteriorSeparator--
+(right) Same order
+(right) Same size
+(right) Same degree sequences
+(wrong) Same node labels
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+39
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What is the statement of Exercise 2 about graphs with at least n nodes?
+--InteriorSeparator--
+In any graph with at least n nodes there are three distinct nodes that are pairwise adjacent or pairwise non-adjacent.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+41
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Multiple
+--InteriorSeparator--
+What is a key consideration in the problem of register allocation within a compiler?
+--InteriorSeparator--
+(wrong) Keeping the maximum possible number of variables in registers
+(right) Minimizing the number of registers used.
+(wrong) Maximizing the number of operations a CPU can perform per second
+(right) Holding the most-used variables in fast access registers.
+--InteriorSeparator--
+hard
+--InteriorSeparator--
+46
+--FlashCardSeparator--
+
+--FlashCardSeparator--
+Single
+--InteriorSeparator--
+What does it mean for a graph G to be self-complementary?
+--InteriorSeparator--
+G is isomorphic to its complement, G
+--InteriorSeparator--
+medium
+--InteriorSeparator--
+48
+--FlashCardSeparator--
+}], role=model}, finishReason=STOP, avgLogprobs=-0.22478636447149797}]

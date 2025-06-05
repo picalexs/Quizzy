@@ -1,20 +1,24 @@
 package com.backend.controller;
 
+import com.backend.dto.TestDTO;
 import com.backend.model.TestEntity;
 import com.backend.service.TestService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.*;
 
-import org.springframework.http.ResponseEntity;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
-import static org.mockito.MockitoAnnotations.openMocks;
 
+@ExtendWith(MockitoExtension.class)
 class TestControllerTest {
 
     @Mock
@@ -23,241 +27,421 @@ class TestControllerTest {
     @InjectMocks
     private TestController testController;
 
-    private TestEntity testSample;
+    private TestEntity testEntity;
+    private TestDTO testDTO;
+    private Date testDate;
 
     @BeforeEach
     void setUp() {
-        openMocks(this);
+        testDate = new Date();
+        
+        testEntity = new TestEntity();
+        testEntity.setId(1L);
+        testEntity.setTitle("Sample Test");
+        testEntity.setDescription("Test Description");
+        testEntity.setDate(testDate);
 
-        testSample = new TestEntity();
-        testSample.setId(1L);
-        testSample.setTitle("Sample Test");
-        testSample.setDate(new Date());
+        testDTO = new TestDTO();
+        testDTO.setId(1L);
+        testDTO.setTitle("Sample Test");
+        testDTO.setDescription("Test Description");
+        testDTO.setDate(testDate);
+        testDTO.setProfessorId(1);
+        testDTO.setCourseId(1L);
     }
 
     @Test
-    void shouldReturnAllTests() {
-        List<TestEntity> tests = List.of(testSample);
+    void getAllTests_ShouldReturnAllTests() {
+        // Given
+        List<TestEntity> tests = Arrays.asList(testEntity, testEntity);
         when(testService.getAllTests()).thenReturn(tests);
 
+        // When
         ResponseEntity<Collection<TestEntity>> response = testController.getAllTests();
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(tests, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+        verify(testService).getAllTests();
     }
 
     @Test
-    void shouldReturnTestById() {
-        when(testService.getTestById(1L)).thenReturn(testSample);
+    void getTestById_WithValidId_ShouldReturnTest() {
+        // Given
+        Long testId = 1L;
+        when(testService.getTestById(testId)).thenReturn(testEntity);
 
-        ResponseEntity<TestEntity> response = testController.getTestById(1L);
+        // When
+        ResponseEntity<TestEntity> response = testController.getTestById(testId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(testSample, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(testEntity.getId(), response.getBody().getId());
+        assertEquals(testEntity.getTitle(), response.getBody().getTitle());
+        verify(testService).getTestById(testId);
     }
 
     @Test
-    void shouldCreateTest() {
-        when(testService.createTest(testSample)).thenReturn(testSample);
+    void createTest_WithValidTestDTO_ShouldCreateTest() {
+        // Given
+        when(testService.createTest(any(TestDTO.class))).thenReturn(testDTO);
 
-        ResponseEntity<TestEntity> response = testController.createTest(testSample);
+        // When
+        ResponseEntity<TestDTO> response = testController.createTest(testDTO);
 
-        assertEquals(201, response.getStatusCodeValue());
-        assertEquals(testSample, response.getBody());
+        // Then
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(testDTO.getId(), response.getBody().getId());
+        assertEquals(testDTO.getTitle(), response.getBody().getTitle());
+        verify(testService).createTest(testDTO);
     }
 
     @Test
-    void shouldSaveTest() {
-        when(testService.saveTest(testSample)).thenReturn(testSample);
+    void saveTest_WithValidTestDTO_ShouldSaveTest() {
+        // Given
+        when(testService.saveTest(any(TestDTO.class))).thenReturn(testDTO);
 
-        ResponseEntity<TestEntity> response = testController.saveTest(testSample);
+        // When
+        ResponseEntity<TestDTO> response = testController.saveTest(testDTO);
 
-        assertEquals(201, response.getStatusCodeValue());
-        assertEquals(testSample, response.getBody());
+        // Then
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(testDTO.getId(), response.getBody().getId());
+        verify(testService).saveTest(testDTO);
     }
 
     @Test
-    void shouldUpdateTest() {
-        when(testService.updateTest(1L, testSample)).thenReturn(testSample);
+    void updateTest_WithValidData_ShouldUpdateTest() {
+        // Given
+        Long testId = 1L;
+        when(testService.updateTest(eq(testId), any(TestDTO.class))).thenReturn(testDTO);
 
-        ResponseEntity<TestEntity> response = testController.updateTest(1L, testSample);
+        // When
+        ResponseEntity<TestDTO> response = testController.updateTest(testId, testDTO);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(testSample, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(testDTO.getId(), response.getBody().getId());
+        verify(testService).updateTest(testId, testDTO);
     }
 
     @Test
-    void shouldDeleteTestById() {
-        ResponseEntity<Void> response = testController.deleteTestById(1L);
+    void deleteTestById_WithValidId_ShouldDeleteTest() {
+        // Given
+        Long testId = 1L;
+        String deleteMessage = "Test deleted successfully";
+        when(testService.deleteTestById(testId)).thenReturn(deleteMessage);
 
-        assertEquals(204, response.getStatusCodeValue());
-        verify(testService).deleteTestById(1L);
+        // When
+        ResponseEntity<String> response = testController.deleteTestById(testId);
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(deleteMessage, response.getBody());
+        verify(testService).deleteTestById(testId);
     }
 
     @Test
-    void shouldReturnTestsByProfessorId() {
-        when(testService.findTestsByProfId(100)).thenReturn(List.of(testSample));
+    void getTestsByProfessorId_WithValidProfessorId_ShouldReturnTests() {
+        // Given
+        Integer professorId = 1;
+        List<TestDTO> tests = Arrays.asList(testDTO, testDTO);
+        when(testService.findTestsByProfId(professorId)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByProfessorId(100);
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByProfessorId(professorId);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+        verify(testService).findTestsByProfId(professorId);
+    }
+
+    @Test
+    void getTestsByCourseId_WithValidCourseId_ShouldReturnTests() {
+        // Given
+        Long courseId = 1L;
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findTestsByCourseId(courseId)).thenReturn(tests);
+
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByCourseId(courseId);
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
         assertEquals(1, response.getBody().size());
+        verify(testService).findTestsByCourseId(courseId);
     }
 
     @Test
-    void shouldReturnTestsByCourseId() {
-        when(testService.findTestsByCourseId(10L)).thenReturn(List.of(testSample));
+    void getTestsByStudentId_WithValidStudentId_ShouldReturnTests() {
+        // Given
+        Integer studentId = 1;
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findTestsForStudentEnrollments(studentId)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByCourseId(10L);
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByStudentId(studentId);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
         assertEquals(1, response.getBody().size());
+        verify(testService).findTestsForStudentEnrollments(studentId);
     }
 
     @Test
-    void shouldReturnTestsByStudentId() {
-        when(testService.findTestsForStudentEnrollments(5)).thenReturn(List.of(testSample));
+    void getUpcomingTests_ShouldReturnUpcomingTests() {
+        // Given
+        List<TestDTO> upcomingTests = Arrays.asList(testDTO);
+        when(testService.findUpcomingTests()).thenReturn(upcomingTests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByStudentId(5);
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getUpcomingTests();
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
         assertEquals(1, response.getBody().size());
+        verify(testService).findUpcomingTests();
     }
 
     @Test
-    void shouldReturnUpcomingTests() {
-        when(testService.findUpcomingTests()).thenReturn(List.of(testSample));
+    void getTestsByDateRange_WithValidDateRange_ShouldReturnTests() {
+        // Given
+        Date startDate = new Date(System.currentTimeMillis() - 86400000); // 1 day ago
+        Date endDate = new Date(System.currentTimeMillis() + 86400000);   // 1 day from now
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findByDateBetween(startDate, endDate)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getUpcomingTests();
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByDateRange(startDate, endDate);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        verify(testService).findByDateBetween(startDate, endDate);
     }
 
     @Test
-    void shouldReturnTestsByDateRange() {
-        Date start = new Date(System.currentTimeMillis() - 1000 * 60 * 60);
-        Date end = new Date(System.currentTimeMillis() + 1000 * 60 * 60);
-        when(testService.findByDateBetween(start, end)).thenReturn(List.of(testSample));
+    void getTestsByTitle_WithValidTitle_ShouldReturnTests() {
+        // Given
+        String title = "Sample";
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findByTitle(title)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByDateRange(start, end);
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByTitle(title);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        verify(testService).findByTitle(title);
     }
 
     @Test
-    void shouldReturnTestsByTitle() {
-        when(testService.findByTitle("Sample")).thenReturn(List.of(testSample));
+    void getTestsByDescription_WithValidDescription_ShouldReturnTests() {
+        // Given
+        String description = "Test Description";
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findByDescription(description)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByTitle("Sample");
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByDescription(description);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        verify(testService).findByDescription(description);
     }
 
     @Test
-    void shouldReturnTestsByDescription() {
-        when(testService.findByDescription("desc")).thenReturn(List.of(testSample));
+    void getTestsByMonth_WithValidMonth_ShouldReturnTests() {
+        // Given
+        Integer month = 12;
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findByMonth(month)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByDescription("desc");
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByMonth(month);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        verify(testService).findByMonth(month);
     }
 
     @Test
-    void shouldReturnTestsByMonth() {
-        when(testService.findByMonth(4)).thenReturn(List.of(testSample));
+    void getTestsByYear_WithValidYear_ShouldReturnTests() {
+        // Given
+        Integer year = 2024;
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findByYear(year)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByMonth(4);
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByYear(year);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        verify(testService).findByYear(year);
     }
 
     @Test
-    void shouldReturnTestsByYear() {
-        when(testService.findByYear(2025)).thenReturn(List.of(testSample));
+    void getTestsByExactDate_WithValidDate_ShouldReturnTests() {
+        // Given
+        Date exactDate = testDate;
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findTestsByExactDate(exactDate)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByYear(2025);
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByExactDate(exactDate);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        verify(testService).findTestsByExactDate(exactDate);
     }
 
     @Test
-    void shouldReturnTestsByExactDate() {
-        Date date = new Date();
-        when(testService.findTestsByExactDate(date)).thenReturn(List.of(testSample));
+    void getTestsByMonthAndYear_WithValidMonthAndYear_ShouldReturnTests() {
+        // Given
+        Integer month = 12;
+        Integer year = 2024;
+        List<TestDTO> tests = Arrays.asList(testDTO);
+        when(testService.findByMonthAndYear(month, year)).thenReturn(tests);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByExactDate(date);
+        // When
+        ResponseEntity<Collection<TestDTO>> response = testController.getTestsByMonthAndYear(month, year);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(1, response.getBody().size());
+        verify(testService).findByMonthAndYear(month, year);
     }
 
     @Test
-    void shouldReturnTestsByMonthAndYear() {
-        when(testService.findByMonthAndYear(4, 2025)).thenReturn(List.of(testSample));
+    void countTestsByCourse_WithValidCourseId_ShouldReturnCount() {
+        // Given
+        Integer courseId = 1;
+        Long expectedCount = 5L;
+        when(testService.countTestsByCourse(courseId)).thenReturn(expectedCount);
 
-        ResponseEntity<Collection<TestEntity>> response = testController.getTestsByMonthAndYear(4, 2025);
+        // When
+        ResponseEntity<Long> response = testController.countTestsByCourse(courseId);
 
-        assertEquals(200, response.getStatusCodeValue());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testService).countTestsByCourse(courseId);
     }
 
     @Test
-    void shouldCountTestsByCourse() {
-        when(testService.countTestsByCourse(1)).thenReturn(2L);
+    void countTestsByProfessor_WithValidProfessorId_ShouldReturnCount() {
+        // Given
+        Integer professorId = 1;
+        Long expectedCount = 3L;
+        when(testService.countTestsByProfessor(professorId)).thenReturn(expectedCount);
 
-        ResponseEntity<Long> response = testController.countTestsByCourse(1);
+        // When
+        ResponseEntity<Long> response = testController.countTestsByProfessor(professorId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(2L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testService).countTestsByProfessor(professorId);
     }
 
     @Test
-    void shouldCountTestsByProfessor() {
-        when(testService.countTestsByProfessor(1)).thenReturn(3L);
+    void countUpcomingTests_ShouldReturnCount() {
+        // Given
+        Long expectedCount = 2L;
+        when(testService.countUpcomingTests()).thenReturn(expectedCount);
 
-        ResponseEntity<Long> response = testController.countTestsByProfessor(1);
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(3L, response.getBody());
-    }
-
-    @Test
-    void shouldCountUpcomingTests() {
-        when(testService.countUpcomingTests()).thenReturn(4L);
-
+        // When
         ResponseEntity<Long> response = testController.countUpcomingTests();
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(4L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testService).countUpcomingTests();
     }
 
     @Test
-    void shouldCountTestsByStudent() {
-        when(testService.countTestsForStudent(10)).thenReturn(1L);
+    void countTestsByStudent_WithValidStudentId_ShouldReturnCount() {
+        // Given
+        Integer studentId = 1;
+        Long expectedCount = 4L;
+        when(testService.countTestsForStudent(studentId)).thenReturn(expectedCount);
 
-        ResponseEntity<Long> response = testController.countTestsByStudent(10);
+        // When
+        ResponseEntity<Long> response = testController.countTestsByStudent(studentId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(1L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testService).countTestsForStudent(studentId);
     }
 
     @Test
-    void shouldCountTestsByStudentEnrollments() {
-        when(testService.countTestsForStudentEnrollments(10)).thenReturn(5L);
+    void countTestsByStudentEnrollments_WithValidStudentId_ShouldReturnCount() {
+        // Given
+        Integer studentId = 1;
+        Long expectedCount = 6L;
+        when(testService.countTestsForStudentEnrollments(studentId)).thenReturn(expectedCount);
 
-        ResponseEntity<Long> response = testController.countTestsByStudentEnrollments(10);
+        // When
+        ResponseEntity<Long> response = testController.countTestsByStudentEnrollments(studentId);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(5L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testService).countTestsForStudentEnrollments(studentId);
     }
 
     @Test
-    void shouldCountTestsByDateRange() {
-        Date start = new Date();
-        Date end = new Date();
-        when(testService.countTestsByDateBetween(start, end)).thenReturn(6L);
+    void countTestsByDateRange_WithValidDateRange_ShouldReturnCount() {
+        // Given
+        Date startDate = new Date(System.currentTimeMillis() - 86400000);
+        Date endDate = new Date(System.currentTimeMillis() + 86400000);
+        Long expectedCount = 3L;
+        when(testService.countTestsByDateBetween(startDate, endDate)).thenReturn(expectedCount);
 
-        ResponseEntity<Long> response = testController.countTestsByDateRange(start, end);
+        // When
+        ResponseEntity<Long> response = testController.countTestsByDateRange(startDate, endDate);
 
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(6L, response.getBody());
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(expectedCount, response.getBody());
+        verify(testService).countTestsByDateBetween(startDate, endDate);
+    }
+
+    @Test
+    void getAllTests_WhenNoTests_ShouldReturnEmptyCollection() {
+        // Given
+        when(testService.getAllTests()).thenReturn(Collections.emptyList());
+
+        // When
+        ResponseEntity<Collection<TestEntity>> response = testController.getAllTests();
+
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody().isEmpty());
+        verify(testService).getAllTests();
     }
 }
