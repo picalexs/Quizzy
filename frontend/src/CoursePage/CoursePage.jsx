@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css"
 import { useEffect, useState, useCallback, useRef } from "react"
 import { api } from "../utils/api"
 import BurgerMenu from "../components/BurgerMenu/BurgerMenu.jsx"
+import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner.jsx"
 
 function CoursePage() {
   const navigate = useNavigate()
@@ -26,12 +27,18 @@ function CoursePage() {
   const [viewMode, setViewMode] = useState('flashcards') // 'flashcards' or 'tests'
   const [tests, setTests] = useState([])
   const [userRole, setUserRole] = useState(null)
+  const [flashcardsLoading, setFlashcardsLoading] = useState(true)
+  const [filesLoading, setFilesLoading] = useState(true)
   const sliderRef = useRef(null)
 
   useEffect(() => {
     // Get user role from localStorage when component mounts
     const role = localStorage.getItem('userRole')
     setUserRole(role)
+    
+    // Set initial loading states
+    setFlashcardsLoading(true)
+    setFilesLoading(true)
   }, [])
   useEffect(() => {
     if (notification) {
@@ -58,9 +65,12 @@ function CoursePage() {
       try {
         const materialsResponse = await api.get(`/Material/course/${id}`)
         setMaterials(materialsResponse.data || [])
+        // Disable loading when materials are loaded
+        setFilesLoading(false)
       } catch (materialErr) {
         console.error("Error fetching materials:", materialErr)
         setMaterials([])
+        setFilesLoading(false)
       }
     } catch (err) {
       setError(err.response?.data?.message || err.message)
@@ -88,8 +98,11 @@ function CoursePage() {
     try {
       const response = await api.get(`/questions/course/${id}`);
       setTests(response.data || []);
+      // Disable loading when questions are loaded
+      setFlashcardsLoading(false);
     } catch (err) {
       console.error("Error fetching questions:", err);
+      setFlashcardsLoading(false);
     }
   }, [id]);
 
@@ -101,9 +114,14 @@ function CoursePage() {
         try {
           const materialsResponse = await api.get(`/Material/course/${id}`);
           setMaterials(materialsResponse.data || []);
+          // Disable files loading when materials are loaded
+          setFilesLoading(false);
           await fetchQuestions();
         } catch (err) {
           console.error("Error fetching data:", err);
+          // Disable loading on error
+          setFilesLoading(false);
+          setFlashcardsLoading(false);
         }
       };
       fetchData();
@@ -484,7 +502,9 @@ function CoursePage() {
             <div className="flashcards-header">
               <h2 className="graph-section-title">Flashcards</h2>
             </div>
-            {allFlashcards.length > 0 ? (
+            {flashcardsLoading ? (
+              <LoadingSpinner />
+            ) : allFlashcards.length > 0 ? (
               <div className="flashcard-section">
                 <Slider ref={sliderRef} {...sliderSettings}>
                   {materials.map((material) =>
@@ -530,7 +550,9 @@ function CoursePage() {
                 <button className="graph-add-button" onClick={handleAddTest}>+</button>
               )}
             </div>
-            {tests.length > 0 ? (
+            {flashcardsLoading ? (
+              <LoadingSpinner />
+            ) : tests.length > 0 ? (
               <div className="flashcard-section">
                 <Slider ref={sliderRef} {...sliderSettings}>
                   {tests.map((question) => (
@@ -577,7 +599,10 @@ function CoursePage() {
             <h2 className="graph-section-title">Files</h2>
             <h2 className="graph-file-count">{materials.length}</h2>
           </div>
-          <div className="graph-files-container">          {materials.length > 0 ? (
+          <div className="graph-files-container">
+          {filesLoading ? (
+            <LoadingSpinner />
+          ) : materials.length > 0 ? (
             materials.map((mat, i) => (              <div key={mat.id || i}>
                 <div className="graph-file-entry clickable" onClick={() => handleMaterialClick(mat.path)}>
                   <FaFilePdf size={40} color="#E74C3C" />
