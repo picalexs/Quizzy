@@ -450,15 +450,15 @@ function CoursePage() {
               <button className="graph-enrolled-button" disabled>
                 Enrolled
               </button>
+              <button className="graph-start-button" onClick={handleStartLearning}>
+                Start learning ►
+              </button>
             </>
           ) : (
             <button className="graph-enroll-button" onClick={handleEnroll} disabled={enrolling}>
               {enrolling ? "Enrolling..." : "Enroll"}
             </button>
           )}
-          <button className="graph-start-button" onClick={handleStartLearning}>
-            Start learning ►
-          </button>
           </div>
         </div>
 
