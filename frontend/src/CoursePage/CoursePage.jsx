@@ -562,7 +562,9 @@ function CoursePage() {
             ) : (
               <div className="graph-no-flashcards">
                 <p>No questions available for this course yet.</p>
-                <p className="graph-no-flashcards-sub">Click the + button to create your first question!</p>
+                {userRole !== 'student' && (
+                  <p className="graph-no-flashcards-sub">Click the + button to create a test!</p>
+                )}
               </div>
             )}
           </div>
