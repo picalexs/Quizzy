@@ -121,11 +121,18 @@ function CoursePage() {
       const response = await api.post(`/enrollments?userId=${userId}&courseId=${id}`)
       if (response.status === 200) {
         setEnrolled(true)
-        setNotification("Successfully enrolled in course!")
+        // Don't show success notification
         fetchCourse() // Refresh data after enrollment
       }
     } catch (err) {
-      setNotification(err.response?.data?.message || "Failed to enroll in course")
+      // Check if response has data (string) or a nested message object
+      const errorMessage = err.response?.data || err.response?.data?.message || "Failed to enroll in course";
+      // Replace the backend message with the requested format
+      if (errorMessage.includes("maximum limit of 4 enrolled courses")) {
+        setNotification("you allready have enrolled in 4 courses");
+      } else {
+        setNotification(errorMessage);
+      }
     } finally {
       setEnrolling(false)
     }
@@ -138,7 +145,7 @@ function CoursePage() {
     try {
       await api.delete(`/enrollments/${userId}/course/${id}`)
       setEnrolled(false)
-      setNotification("Successfully unenrolled from course")
+      // Don't show success notification
       fetchCourse() // Refresh data after unenrollment
     } catch (err) {
       setNotification(err.response?.data?.message || err.message)
@@ -185,7 +192,8 @@ function CoursePage() {
         } 
       })
     } else {
-      setNotification("Nu există materiale cu flashcard-uri disponibile.")
+      // Don't show notification
+      console.log("No materials with flashcards available");
     }
   }
 
@@ -388,7 +396,7 @@ function CoursePage() {
 
   return (
     <div className={`graph-container ${userRole === 'student' ? 'student-view' : 'professor-view'}`}>
-      {notification && <div className="graph-notification">{notification}</div>}
+      {/* Removed general notification display */}
       
       {/* Burger Menu Component */}
       <BurgerMenu currentPage="Library" />      {/* Quizzy Logo positioned in top left */}
@@ -601,6 +609,12 @@ function CoursePage() {
       </div>
       </div>
       {error && <div className="library-error">{error}</div>}
+              {notification && notification.includes('allready') && (
+          <div className="notification error">
+            {notification}
+          </div>
+        )}
+      {/* Remove any other notification displays */}
     </div>
   )
 }
