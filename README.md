@@ -2,6 +2,8 @@
 
 Quizzy is a web application designed to help students prepare for their bachelor final exams. This platform provides interactive learning through AI-generated quizzes and flashcards tailored to the course material. Students can also access course PDFs directly from the site, making it a comprehensive study companion.
 
+Quizzy is a collaborative group project developed as part of a Software Development course, involving a team of 30 members. Utilized the SCRUM methodology for agile project management to ensure effective collaboration and timely delivery.
+
 ---
 
 ## Features
@@ -15,9 +17,21 @@ Quizzy is a web application designed to help students prepare for their bachelor
 
 ## Screenshots
 
-<!-- Add your screenshots here, for example: -->
-![Screenshot 1](path/to/screenshot1.png)
-![Screenshot 2](path/to/screenshot2.png)
+**Login Screen**  
+The login screen provides a secure and welcoming entry point for students to access the Quizzy platform.  
+![Screenshot 1](Screenshots/login.png)
+
+**Home Dashboard**  
+The home dashboard gives students an overview of their progress, upcoming exams, and quick access to learning materials.  
+![Screenshot 2](Screenshots/home.png)
+
+**Course PDF Viewer**  
+Easily access and read course material PDFs within the platform, so all study resources are in one place.  
+![Screenshot 3](Screenshots/pdf.png)
+
+**Quiz Interface**  
+Engage with AI-generated quizzes that adapt to your learning pace and help reinforce key concepts.  
+![Screenshot 4](Screenshots/quizz.png)
 
 ---
 
@@ -34,19 +48,36 @@ Quizzy is a web application designed to help students prepare for their bachelor
 
 ## DevOps & Cloud Architecture
 
-As part of the DevOps team, I contributed to designing and implementing the cloud architecture and essential services for Quizzy. Our infrastructure leverages several AWS services:
+As part of the DevOps team, I contributed to designing and implementing the cloud architecture and essential services for Quizzy. Our infrastructure leverages several AWS services to ensure reliability, scalability, and security:
 
-- **EC2:** For scalable compute resources.
-- **S3:** For file and asset storage, including course PDFs.
-- **ECR:** To store and manage Docker container images.
-- **RDS:** For reliable and scalable database management.
-- **CloudWatch:** For monitoring, logging, and alerting.
+- **EC2:** Hosts our backend and frontend applications using Docker containers, enabling scalable compute resources.
+- **S3:** Stores files and assets, including course PDFs, for reliable and cost-effective storage.
+- **ECR:** Serves as a container registry to manage and version Docker images.
+- **RDS:** Provides a managed, scalable, and secure relational database.
+- **CloudWatch:** Facilitates monitoring, logging, and alerting across all AWS resources.
 
-We used **Docker** for containerizing both frontend and backend applications, ensuring consistent deployment environments and scalability.
+We used **Docker** to containerize both the frontend and backend, ensuring consistent environments for development, testing, and production. Docker Compose is used for orchestrating multi-service development environments.
 
-Our CI/CD pipeline is managed with **GitHub Actions**:
-- **Continuous Integration:** Runs Maven JUnit unit tests to ensure code quality.
-- **Continuous Deployment:** On successful builds and pushes to the `main` branch, a custom script automatically deploys the application to AWS.
+### CI/CD Pipeline
+
+Our CI/CD pipeline is orchestrated with **GitHub Actions** and designed for robustness and automation:
+
+- **Continuous Integration:**  
+  On every push and pull request, Maven JUnit unit tests are automatically run to guarantee code quality and prevent regressions.
+- **Continuous Deployment:**  
+  When code is merged into the `main` branch:
+  1. The application is built and Docker images are created.
+  2. If the build succeeds, Docker images are pushed to **AWS ECR** as a backup and for version control.
+  3. The latest Docker image is then deployed to our **EC2** instances, ensuring the running application is always up-to-date.
+
+### Security & Access Control
+
+- **Branch Protection:**  
+  GitHub branches are protected to maintain code integrity. Force pushes are disabled, and direct pushes to protected branches are not allowed. Merging into `main` requires a Pull Request (PR) that must be reviewed and approved by at least one other team member **plus a DevOps team member** before merging.
+- **IAM Security:**  
+  We implement strict IAM (Identity and Access Management) policies using secured IAM accounts. Each service and user is assigned minimal necessary permissions, following the principle of least privilege.
+
+These practices ensure that our deployment processes are automated, traceable, and secure, and that only thoroughly reviewed and tested code reaches production.
 
 ---
 
